@@ -52,6 +52,36 @@ BUILT_RE = re.compile(r"(?:[Cc]onstructed|built)\D{0,25}?(\d{4})")
 GONE_KEYWORDS_RE = re.compile(r"razed|demolished|no longer stands|collapsed|torn down|was removed in", re.I)
 
 
+def _packed_dms(text: str) -> tuple[int, int, float] | None:
+    """Split "37.2235" into (37, 22, 35.0) when the digits after the point read as
+    minutes and seconds (both under 60), else None. "119.25417" -> (119, 25, 41.7)."""
+    whole, _, frac = text.partition(".")
+    if len(frac) < 4:
+        return None
+    minutes, seconds = int(frac[:2]), float(frac[2:4] + "." + (frac[4:] or "0"))
+    if minutes >= 60 or seconds >= 60:
+        return None
+    return int(whole), minutes, seconds
+
+
+def parse_gps(lat_text: str, lon_text: str) -> tuple[float, float, str]:
+    """Decimal degrees from the page's "GPS location is 37.2235&deg;N / 119.1048&deg;W".
+
+    The site writes most pages in decimal degrees but some in degrees-minutes-seconds
+    packed after the point (DD.MMSS): Mt. Tom's 37.2235/119.1048 is 37 22' 35",
+    119 10' 48", which matches FFLA and NHLR to 0.1 km where the decimal reading is 18 km
+    off (likewise Mule, Needles, Tobias and Jordan Peaks). A page is read as packed DMS when
+    both values have at least four digits after the point and both read as valid minutes and
+    seconds; a decimal page fails that test on at least one value (Deadwood's 119.68652,
+    Goat's 119.54944) or has fewer digits (Bald Mountain's 36.020)."""
+    lat_dms, lon_dms = _packed_dms(lat_text), _packed_dms(lon_text)
+    if lat_dms and lon_dms:
+        def dd(d: tuple[int, int, float]) -> float:
+            return d[0] + d[1] / 60 + d[2] / 3600
+        return dd(lat_dms), -dd(lon_dms), "packed_dms"
+    return float(lat_text), -float(lon_text), "decimal"  # west longitude is given as positive
+
+
 def strip_tags(s: str) -> str:
     s = re.sub(r"<br\s*/?>", " ", s, flags=re.I)
     s = re.sub(r"<[^>]+>", "", s)
@@ -60,17 +90,17 @@ def strip_tags(s: str) -> str:
 
 def parse_detail(html: str) -> dict:
     gps_m = GPS_RE.search(html)
-    lat = lon = None
+    lat = lon = coord_format = None
     if gps_m:
-        lat = float(gps_m.group(1))
-        lon = -float(gps_m.group(2))  # page always gives west longitude as a positive number
+        lat, lon, coord_format = parse_gps(gps_m.group(1), gps_m.group(2))
+        coord_text = f"{gps_m.group(1)} N / {gps_m.group(2)} W"
 
     nhlr_m = NHLR_RE.search(html)
     registers = []
     nhlr_year = None
     if nhlr_m:
         date_str, number = nhlr_m.group(1), nhlr_m.group(2)
-        registers.append({"register": "NHLR", "number": number, "state_number": None})
+        registers.append({"register": "NHLR", "number": f"US {int(number)}", "state_number": None})
         parts = date_str.split("/")
         if len(parts) == 3:
             nhlr_year = int(parts[2])
@@ -132,6 +162,8 @@ def parse_detail(html: str) -> dict:
 
     return {
         "lat": lat, "lon": lon,
+        "coord_format": coord_format,
+        "coord_text": coord_text if gps_m else None,
         "registers": registers,
         "elevation_ft": elevation_ft,
         "agency_raw": agency_raw,
@@ -200,6 +232,8 @@ def main() -> None:
             "rental": None,
             "extra": {
                 "ownership": d["ownership"],
+                "coord_format": d["coord_format"],
+                **({"coord_text": d["coord_text"]} if d["coord_format"] == "packed_dms" else {}),
                 **({"elevation_ft": d["elevation_ft"]} if d["elevation_ft"] else {}),
                 **({"design": d["design"]} if d["design"] else {}),
                 **({"height_ft": d["height_ft"]} if d["height_ft"] else {}),

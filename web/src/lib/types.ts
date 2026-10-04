@@ -66,13 +66,24 @@ export interface Rental {
   access_note?: string | null;
   description?: string | null;
   checked?: string | null;
+  /**
+   * Set when another source records the lookout as gone or burned while recreation.gov still
+   * lists it ("FFLA reports this lookout burned in 2026, but recreation.gov still lists it.
+   * Check with the forest before booking."). `available` is then false: the listing is shown
+   * with this warning above its link, and the lookout is not counted as rentable.
+   */
+  warning?: string | null;
 }
 
 export interface TowerEvent {
   year?: number | null;
   event: string;
   note?: string | null;
+  /** Source id the event comes from. */
   from?: string | null;
+  /** For "relocated": the place the structure was moved from, and to. */
+  moved_from?: string | null;
+  moved_to?: string | null;
 }
 
 export interface Photo {
@@ -93,7 +104,10 @@ export interface Photo {
 export interface Link {
   label: string;
   url: string;
+  /** "relocated_from" / "relocated_to" link two tower pages (by `id`); others are external. */
   kind?: string | null;
+  /** Tower id, for links to another Firefinder tower page. */
+  id?: string | null;
 }
 
 export interface SourceRef {
@@ -128,6 +142,8 @@ export interface TowerRecord {
   design?: string | null;
   height_m?: number | null;
   status: string;
+  /** A note on the status, shown beside it ("Sources suggest it is gone."). */
+  status_note?: string | null;
   registers?: Register[] | null;
   agency?: string | null;
   ownership?: string | null;

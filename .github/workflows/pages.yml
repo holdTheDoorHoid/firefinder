@@ -39,6 +39,11 @@ jobs:
       - name: Test the data pipeline
         run: python3 -m unittest discover -s pipeline
 
+      # Schema and vocabulary checks over data/towers (ids, coordinates inside the US, vocab
+      # values, required keys). Fails the build on errors; an empty folder passes.
+      - name: Validate tower records
+        run: python3 pipeline/validate.py
+
       # --fallback-fixtures: while data/towers/ is still empty, build from the sample records
       # in web/fixtures/. The script then prints a large "USING FIXTURE DATA" banner, adds a
       # warning to this run's summary, and the site shows a "Sample data" notice. Once

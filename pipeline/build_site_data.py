@@ -104,19 +104,19 @@ KNOWN_SOURCES: dict[str, dict[str, str]] = {
         "license": "CC0 1.0",
         "credit": "Wikidata",
     },
-    "firelookout-com": {
+    "firelookout_com": {
         "title": "firelookout.com state maps",
         "url": "https://www.firelookout.com/",
         "license": "No licence stated; facts only",
         "credit": "firelookout.com",
     },
-    "pa-storymap": {
+    "pa_storymap": {
         "title": "Pennsylvania fire towers StoryMap",
         "url": "https://www.arcgis.com/home/item.html?id=ed47c97ebe7246868ce8ef3e7139a0b4",
         "license": "No licence stated; facts only",
         "credit": "Pennsylvania fire towers StoryMap (ArcGIS)",
     },
-    "andyarthur-ny": {
+    "andyarthur_ny": {
         "title": "New York fire towers (andyarthur.org)",
         "url": "https://andyarthur.org/",
         "license": "CC BY 3.0",
@@ -128,7 +128,13 @@ KNOWN_SOURCES: dict[str, dict[str, str]] = {
         "license": "Facts only",
         "credit": "Confederated Salish and Kootenai Tribes",
     },
-    "fire-lookouts-org": {
+    "idaho_fl": {
+        "title": "Idaho Fire Lookouts (idahofirelookouts.com)",
+        "url": "https://www.idahofirelookouts.com/",
+        "license": "No licence stated; facts only",
+        "credit": "idahofirelookouts.com",
+    },
+    "fire_lookouts_org": {
         "title": "fire-lookouts.org (Sierra National Forest)",
         "url": "https://fire-lookouts.org/",
         "license": "Reuse allowed with credit",

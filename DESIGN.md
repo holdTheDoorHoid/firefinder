@@ -154,25 +154,135 @@ use the vocabularies in §3.4. Keep the original strings in `type_raw` / `status
 
 ### 3.5 Merge (`pipeline/merge.py`)
 
-Canonical files are the source of truth. Merge **adds and refreshes, never deletes**:
+Canonical files are the source of truth. Merge **adds and refreshes, never deletes**: a tower
+file keeps its id forever, a tower whose source records all disappear is kept as it is, and
+fields listed in `locked` (set by research or a human edit) are never overwritten. Run
+`python3 pipeline/merge.py`, then `python3 pipeline/validate.py`; the merge also writes a review
+file, `data/merge_report.json` (counts, conflicts, near misses, records it could not place).
+Re-running with unchanged inputs writes nothing. A new source extract in `data/sources/` is
+picked up with no code change (unknown sources rank last in every field).
 
-1. Match each source record to a tower, in order: an existing `sources[].key`; a shared register
-   number; then proximity (< 400 m, or < 1.5 km with a strong name match) within the same region.
-2. Unmatched records in scope create a new tower.
-3. Field precedence for facts: NHLR/FFLOS detail page > FFLA table > RIDB (rentals and
-   coordinates of rentals) > Wikidata > OSM > regional. Fields listed in `locked` (set by
-   research or a human edit) are never overwritten.
-4. Disagreements are recorded in `conflicts` (coordinates > 500 m apart, status mismatch,
-   different build years), not silently resolved.
-5. `verification` is upgraded to `facts` when ≥2 independent sources agree on location and status.
+**Matching**, per source in the order NHLR, FFLOS, FFLA, RIDB, fire-lookouts.org,
+firelookout.com, idahofirelookouts.com, PA StoryMap, andyarthur.org, CSKT, Wikidata, OSM:
+
+1. **Key**: the record's key is already in a tower's `sources[].key`.
+2. **Register number**. NHLR and FFLOS number their entries separately ("NHLR US 674" is
+   Apache Maid, AZ; "FFLOS US 674" is Buzzard Butte, OR), so the register name is part of the
+   key. US numbers decide; state numbers ("WI 49") only when no US number matches. A register
+   match more than 5 km away is not taken when the record is a relocated or replica entry, or
+   when there is a matching tower on the spot (the review file lists both cases).
+3. **Place and name**: towers nearby in the same state, best name first, then nearest.
+   Accepted when names agree strongly (score ≥ 0.85) within 1.5 km (3 km for idahofirelookouts.com
+   and RIDB, whose pins are rougher; 15 km for CSKT's dead-reckoned positions); when names agree
+   partly (≥ 0.5) or one is generic ("Fire Tower", unnamed) within 400 m; or within 100 m whatever
+   the names (different names for one tower are common: Pequawket = Kearsarge North). Across a
+   state line only 400 m with a strong name, or 100 m.
+4. **Name only**, for records with no coordinates, after every source: a unique same-name
+   tower in the state (and county, when both give one). Otherwise the record is listed in the
+   review file as unplaced; it does not make a tower, since a tower needs a position.
+5. Anything else **starts a new tower**.
+
+Name comparison drops case, punctuation, accents and the words that only say "lookout"
+(Lookout, L.O., Fire, Tower, Station, Cabin…), expands Mtn/Mt/Pk, and compares the remaining
+core with Peak / Mountain / Butte removed: "Bald Mtn. L.O." = "Bald Mountain Lookout" (1.0),
+"Abbot Butte" ≈ "Abbot" (0.95), "Bald Mountain" vs "Bald Knob" only 0.6. North/South,
+Upper/Lower, Big/Little and different numbers mark different places (0.2). A one-letter slip
+in a long name still counts as strong. A parenthetical is an alternate name ("Putnam
+(Liberty)"), except a structure-history note (below); "(North)", "(#2)" stay part of the name.
+
+**Moved, copied and rebuilt structures.** FFLA writes them as "<where it is now> (<note>)":
+"State Fair (Relocated Padlock Hill)", "Crystal Ridge (Relocated Stranger Mtn, WA)",
+"Kellogg Peak (Replica)", "Missoula Aerial Fire Depot (Hornet Peak Replica)", "Wilson Hill WMA #1
+(Parts from Whites Hill)" (NHLR does the same in a few names). The note is never a name to match
+on: the site the structure came from is a different place. The record is named the way a
+visitor looks for it, the lookout's own name first and where it is now second, "Padlock Hill
+Lookout (now at the State Fair)", id `us-ny-padlock-hill-at-state-fair`; a replica is "Hornet
+Peak Lookout replica (at the Missoula Aerial Fire Depot)", `us-mt-hornet-peak-replica`. It gets a
+`relocated` event with `moved_from` / `moved_to`. If the original site has its own record (a
+strong name match in the origin's state; several: the one sources call gone, then the nearest,
+the rest listed in the report), the two link to each other with links of kind `relocated_from`
+/ `relocated_to` (`id` plus a relative `url`), and the original site's status becomes
+`relocated` when its sources say the lookout is gone. "Parts from" links both ways but leaves
+the original's status alone. The report's `relocations` lists every case.
+
+**State notes in names** are taken out the same way, and the original text kept in
+`other_names` for search: "(Demolished)", "(Removed)", "(Burned)", "(Gone)", "(site only)" →
+status `gone`; "(Collapsed)", "(Ruins)" → `ruins`; "(likely gone)" → no status claim plus
+`status_note` "Sources suggest it is gone."; "(unknown)", "(same as X?)" → a `status_note`;
+"(Private)", "(Closed)" → that access level; "(Non-fire Tower)", like FFLA's status "Non-fire" and
+type "Non-fire Tower" → hidden, "Not a fire lookout (FFLA lists it as a non-fire tower)".
+`status_note` (text or null) is shown beside the status on the tower page and in the map panel.
+Alternate names and qualifiers ("(Loc 2)", "(Liberty)", "(Name Unknown)") stay.
+
+**Same source, one tower**: never, except for sources that list one lookout twice, and only
+when the two records agree on name and place: FFLA repeated table rows (50 m), firelookout.com
+border lookouts on two state maps (100 m), idahofirelookouts.com repeat posts (100 m), OSM
+node + way (100 m; 50 m if unnamed), Wikidata (100 m), RIDB facility + campground (300 m).
+
+**Field precedence** (first source with a value wins; `unknown` is not a value):
+
+| Field | Precedence |
+|---|---|
+| name | NHLR, FFLOS > RIDB (cleaned) > FFLA > firelookout.com > fire-lookouts.org > andyarthur.org > PA StoryMap > CSKT > Wikidata > idahofirelookouts.com > OSM. A bare name borrows "Lookout"/"Fire Tower" only if another source spells it that way; every other name goes to `other_names` |
+| location | NHLR, FFLOS > FFLA > fire-lookouts.org > firelookout.com > OSM > Wikidata > RIDB > andyarthur.org > PA StoryMap > idahofirelookouts.com > CSKT, with *corroborated precedence*: if the winner is confirmed by no other lineage and lies > 500 m from a position that is, the best confirmed position wins (NHLR's Taylor Mountain, ID sits 253 km outside its own county). Rows outside their own state are used last |
+| status | FFLA > NHLR, FFLOS > RIDB > fire-lookouts.org > andyarthur.org > PA StoryMap > CSKT > firelookout.com > idahofirelookouts.com > OSM > Wikidata. OSM features imported from GNIS make no status claim (FFLA calls a third of them gone); a "standing" row named "(Replica)" is `replica` |
+| kind | FFLA > NHLR, FFLOS > RIDB > firelookout.com > fire-lookouts.org > PA StoryMap > andyarthur.org > CSKT > OSM > Wikidata > idahofirelookouts.com |
+| built (and its events) | NHLR, FFLOS > firelookout.com > fire-lookouts.org > PA StoryMap > RIDB > Wikidata > CSKT > idahofirelookouts.com > OSM > andyarthur.org > FFLA; one source's build dates are used, others' go to `conflicts` |
+| elevation | NHLR, FFLOS > firelookout.com > fire-lookouts.org > RIDB > Wikidata > CSKT > OSM |
+| design, height | NHLR, FFLOS > firelookout.com > fire-lookouts.org > PA StoryMap > CSKT (> Wikidata > OSM for height) |
+| county | NHLR, FFLOS > FFLA > firelookout.com > PA StoryMap > CSKT > andyarthur.org > fire-lookouts.org > Wikidata |
+| agency | NHLR, FFLOS > RIDB > firelookout.com > fire-lookouts.org > PA StoryMap > andyarthur.org > CSKT > OSM |
+| rental | RIDB only. If the tower's status is gone/ruins (Flag Point, OR: FFLA "Burned 2026"), warn, don't hide: the listing is kept with `available: false` (not counted or filtered as rentable) and a `warning` ("FFLA reports this lookout burned in 2026, but recreation.gov still lists it. Check with the forest before booking."), which the site shows above the listing link |
+| registers | union of all sources; on a tower with an NHLR/FFLOS record, that register's own number wins and a different copy goes to `conflicts` |
+| events, photos, links | union, de-duplicated (events by event + year, photos by URL, links by URL) |
+
+**Ownership and access** only where a source says so: CSKT → tribal, access `permission`;
+RIDB (USFS/BLM) → federal; NY DEC and PA state forests → state (via those extracts); an agency
+naming a National Forest/Park, BLM or Fish & Wildlife on a register page → federal; tribal
+ownership from any source → access `permission`; FFLA's status "Private" → private. Otherwise
+`unknown`. OSM's `access=*` tag describes the structure, not the land, so it is kept only as
+`access.note`.
+
+**Conflicts** (`{field, values:[{source, value}], distance_m, note}`, chosen value first):
+`location` when a source is > 500 m from the shown position (CSKT excluded: approximate);
+`status` when sources differ (gone, ruins and relocated count as the same); `built` when build
+years differ by 2 or more (one year is usually built vs completed; often it is first structure vs
+current one); `kind` when tree/camp vs structure decides visibility;
+`registers` as above.
+
+**Verification**: `facts` when two independent sources agree on location (within 500 m of the
+shown position) and status; otherwise `unverified`. NHLR, FFLOS, FFLA and firelookout.com count
+as one lineage for this (FFLA carries the register numbers, and 3,173 of firelookout.com's 3,266
+coordinates are byte-identical to an FFLA row). `researched`/`verified` are never downgraded.
+
+**Out of scope** (kept, `hidden: true` with a `hidden_reason`): kind `tree` or `camp`; FFLA bare
+lookout points (types Firefinder, Map Board, Alidade, Obs Pt…) with no structure from another
+source; FFLA "Proposed/Planned/Never Built"; FFLA's "Sites determined NOT to have been used as
+wildland fire lookouts"; single records hidden by a human decision (`HIDE_KEYS` in merge.py,
+e.g. OSM's "East Lookout Tower" on Guam: "Not confirmed as a fire lookout").
+
+**Ids**: `us-<st>-<slug>` from the display name without trailing "Lookout"/"Tower" words (also
+before a parenthetical: "Pilot Peak Lookout (Payette NF)" → `pilot-peak-payette-nf`); moved and
+replica structures as above; new
+towers are numbered `-2`, `-3`… in a fixed order (state, slug, north to south, first key), so a
+re-run from scratch gives the same ids and a new record never takes an existing id.
+
+**Photos** are `{file, thumb, url, source_url, credit, license, caption, year}`; until mirrored,
+`file`/`thumb` are null, `url` is the remote image (Wikimedia via `Special:FilePath`) and
+`source_url` the page it came from. Credit is the photographer "via" the site, or the site.
+**Links** carry a credit-ready `label` and a `kind`: `relocated_from` / `relocated_to` (another
+tower page, by `id`), `register`, `rental`, `association` (FFLA
+state list), `wikipedia`, `site` (hobbyist and regional pages), `agency`, `website`, `commons`,
+`wikidata`, `osm`. **`sources[]`** lists, per record, the fields it supplied.
 
 ### 3.6 What the site loads
 
 `pipeline/build_site_data.py` writes `web/public/data/`:
 
-- `towers.geojson`: every visible tower as a point. Minimal properties for map styling and
-  filtering: `id, name, region, kind, status, rentable, built (year|null), registered (bool),
-  verification, access`.
+- `towers.geojson`: every visible tower as a point, coordinates rounded to 5 dp. Short
+  property names (missing key = null/false; the legend is repeated in `meta.json` → `format`):
+  `i` id, `n` name, `r` state, `c` county, `k` kind, `s` status, `v` verification, `a` access,
+  `b` year built, `rt` 1 if rentable, `rg` 1 if on a register, `o` other names joined by `|`.
 - `t/<id>.json`: the full canonical record plus the story HTML, when one exists.
 - `meta.json`: counts, source list with retrieved dates, and build date.
 
