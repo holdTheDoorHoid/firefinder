@@ -1,0 +1,131 @@
+{
+  "id": "us-wv-pigeon-roost",
+  "name": "Pigeon Roost Tower Site",
+  "other_names": [],
+  "country": "US",
+  "region": "WV",
+  "county": "Grant",
+  "location": {
+    "lat": 39.185767,
+    "lon": -79.217394,
+    "precision": "exact",
+    "from": "fflos"
+  },
+  "elevation_m": 880.0,
+  "kind": "tower",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "FFLOS",
+      "number": "US 1654",
+      "state_number": "WV 45",
+      "url": "http://firetower.org/lookouts/us/wv/pigeon-roost-tower-site/"
+    }
+  ],
+  "agency": "U.S. Forest Service and State of West Virginia",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1943,
+      "event": "built",
+      "note": "'Built' field on FFLOS detail page",
+      "from": "fflos"
+    },
+    {
+      "year": 2017,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: January 26, 2017",
+      "from": "fflos"
+    }
+  ],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLOS register entry US 1654 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/wv/pigeon-roost-tower-site/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA West Virginia lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/wv/",
+      "kind": "association"
+    },
+    {
+      "label": "Eastern US Lookouts",
+      "url": "http://easternuslookouts.weebly.com/pigeon-roost.html",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "fflos",
+      "key": "fflos:US 1654",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "ownership",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:wv:pigeon-roost:39.1874:-79.2237",
+      "fields": [
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 39.185767,
+            "lon": -79.217394
+          }
+        },
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 39.18742,
+            "lon": -79.2237
+          }
+        }
+      ],
+      "distance_m": 574,
+      "note": "They share a register number."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

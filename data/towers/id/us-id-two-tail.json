@@ -1,0 +1,114 @@
+{
+  "id": "us-id-two-tail",
+  "name": "Two Tail",
+  "other_names": [
+    "Two Tail Peak"
+  ],
+  "country": "US",
+  "region": "ID",
+  "county": "Boundary",
+  "location": {
+    "lat": 48.67157,
+    "lon": -116.18158,
+    "precision": "exact",
+    "from": "ffla"
+  },
+  "elevation_m": null,
+  "kind": "platform",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [],
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLA Idaho lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/id",
+      "kind": "association"
+    },
+    {
+      "label": "Two Tail on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/id/twotail.html",
+      "kind": "site"
+    },
+    {
+      "label": "Two Tail Peak on idahofirelookouts.com",
+      "url": "https://www.idahofirelookouts.com/northern-idaho/two-tail-peak/",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "ffla",
+      "key": "ffla:id:two-tail:48.6716:-116.1816",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:id:two-tail:48.6716:-116.1816",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "idaho_fl",
+      "key": "idaho_fl:two-tail-peak:48.6799:-116.1788",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 48.67157,
+            "lon": -116.18158
+          }
+        },
+        {
+          "source": "idaho_fl",
+          "value": {
+            "lat": 48.67994,
+            "lon": -116.1788
+          }
+        }
+      ],
+      "distance_m": 953,
+      "note": null
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

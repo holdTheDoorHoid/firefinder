@@ -1,0 +1,145 @@
+{
+  "id": "us-wa-pelke-divide",
+  "name": "Pelke Divide Lookout Site",
+  "other_names": [],
+  "country": "US",
+  "region": "WA",
+  "county": "Pend Oreille",
+  "location": {
+    "lat": 48.46937,
+    "lon": -117.067745,
+    "precision": "exact",
+    "from": "fflos"
+  },
+  "elevation_m": 1539.2,
+  "kind": "platform",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "FFLOS",
+      "number": "US 2029",
+      "state_number": "WA 500",
+      "url": "http://firetower.org/lookouts/us/wa/pelke-divide-lookout-site/"
+    }
+  ],
+  "agency": "U.S. Forest Service",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "'Built' field on FFLOS detail page",
+      "from": "fflos"
+    },
+    {
+      "year": 2020,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: April 17, 2020",
+      "from": "fflos"
+    }
+  ],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLOS register entry US 2029 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/wa/pelke-divide-lookout-site/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Washington lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/wa/",
+      "kind": "association"
+    },
+    {
+      "label": "Pelke Divide on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/wa/pelkedivide.html",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "fflos",
+      "key": "fflos:US 2029",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "ownership",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:wa:pelke-divide:48.4510:-117.1096",
+      "fields": [
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:wa:pelke-divide:48.4510:-117.1096",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 48.46937,
+            "lon": -117.067745
+          }
+        },
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 48.45099,
+            "lon": -117.10962
+          }
+        },
+        {
+          "source": "firelookout_com",
+          "value": {
+            "lat": 48.45099,
+            "lon": -117.10962
+          }
+        }
+      ],
+      "distance_m": 3703,
+      "note": "They share a register number."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

@@ -1,0 +1,139 @@
+{
+  "id": "us-nm-washington-pass",
+  "name": "Washington Pass Lookout",
+  "other_names": [],
+  "country": "US",
+  "region": "NM",
+  "county": "San Juan",
+  "location": {
+    "lat": 36.0854,
+    "lon": -108.852,
+    "precision": "exact",
+    "from": "nhlr"
+  },
+  "elevation_m": 2797.8,
+  "kind": "tower",
+  "design": null,
+  "height_m": null,
+  "status": "standing",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "NHLR",
+      "number": "US 435",
+      "state_number": "NM 10",
+      "url": "http://nhlr.org/lookouts/us/nm/washington-pass-lookout/"
+    }
+  ],
+  "agency": "Navajo Indian Reservation",
+  "ownership": "tribal",
+  "access": {
+    "level": "permission",
+    "note": "On tribal land. Ask the tribe before visiting."
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "'Built' field on NHLR detail page",
+      "from": "nhlr"
+    },
+    {
+      "year": 2002,
+      "event": "nhlr_registered",
+      "note": "Date registered per NHLR detail page: July 20, 2002",
+      "from": "nhlr"
+    }
+  ],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/2193/us435_washington_pass.gif",
+      "source_url": "http://nhlr.org/lookouts/us/nm/washington-pass-lookout/",
+      "credit": "National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "NHLR register entry US 435 (nhlr.org)",
+      "url": "http://nhlr.org/lookouts/us/nm/washington-pass-lookout/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA New Mexico lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/nm/",
+      "kind": "association"
+    }
+  ],
+  "sources": [
+    {
+      "source": "nhlr",
+      "key": "nhlr:US 435",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "ownership",
+        "access",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:nm:washington-pass:36.0781:-108.8584",
+      "fields": [
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 36.0854,
+            "lon": -108.852
+          }
+        },
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 36.0781,
+            "lon": -108.85839
+          }
+        }
+      ],
+      "distance_m": 994,
+      "note": "They share a register number."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

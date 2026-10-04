@@ -1,0 +1,127 @@
+{
+  "id": "us-id-buck-butte",
+  "name": "Buck Butte",
+  "other_names": [],
+  "country": "US",
+  "region": "ID",
+  "county": "Clearwater",
+  "location": {
+    "lat": 46.59436,
+    "lon": -115.97507,
+    "precision": "exact",
+    "from": "ffla"
+  },
+  "elevation_m": 1339.3,
+  "kind": "tree",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [],
+  "agency": "CTPA",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLA Idaho lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/id",
+      "kind": "association"
+    },
+    {
+      "label": "Buck Butte on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/id/buckbutte.html",
+      "kind": "site"
+    },
+    {
+      "label": "Buck Butte on idahofirelookouts.com",
+      "url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/buck-butte/",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "ffla",
+      "key": "ffla:id:buck-butte:46.5944:-115.9751",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:id:buck-butte:46.5944:-115.9751",
+      "fields": [
+        "elevation_m",
+        "agency",
+        "links"
+      ]
+    },
+    {
+      "source": "idaho_fl",
+      "key": "idaho_fl:buck-butte:46.5946:-115.9754",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "gone"
+        },
+        {
+          "source": "firelookout_com",
+          "value": "standing"
+        },
+        {
+          "source": "idaho_fl",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "idahofirelookouts.com's status is read from a short summary."
+    },
+    {
+      "field": "kind",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "tree"
+        },
+        {
+          "source": "firelookout_com",
+          "value": "tower"
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources disagree on whether this was a structure or a tree/camp site."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": true,
+  "hidden_reason": "Tree platform: out of scope (structures only)",
+  "updated": "2026-10-04"
+}

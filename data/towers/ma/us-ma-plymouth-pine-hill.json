@@ -1,0 +1,209 @@
+{
+  "id": "us-ma-plymouth-pine-hill",
+  "name": "Plymouth (Pine Hill) Fire Tower",
+  "other_names": [
+    "Plymouth (Manomet Hill) Fire Tower Site",
+    "Plymouth Fire Tower"
+  ],
+  "country": "US",
+  "region": "MA",
+  "county": "Plymouth",
+  "location": {
+    "lat": 41.9159,
+    "lon": -70.59,
+    "precision": "exact",
+    "from": "nhlr"
+  },
+  "elevation_m": 114.3,
+  "kind": "tower",
+  "design": null,
+  "height_m": null,
+  "status": "standing",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "NHLR",
+      "number": "US 538",
+      "state_number": "MA 5",
+      "url": "http://nhlr.org/lookouts/us/ma/plymouth-pine-hill-fire-tower/"
+    },
+    {
+      "register": "FFLOS",
+      "number": "US 1548",
+      "state_number": "MA 55",
+      "url": "http://firetower.org/lookouts/us/ma/plymouth-manomet-hill-fire-tower-site/"
+    }
+  ],
+  "agency": "Mass. Bureau of Forest Fire Control",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1966,
+      "event": "built",
+      "note": "'Built' field on NHLR detail page",
+      "from": "nhlr"
+    },
+    {
+      "year": 2003,
+      "event": "nhlr_registered",
+      "note": "Date registered per NHLR detail page: December 15, 2003",
+      "from": "nhlr"
+    },
+    {
+      "year": 2014,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: March 27, 2014",
+      "from": "fflos"
+    }
+  ],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/1889/us538_plymouth.jpg",
+      "source_url": "http://nhlr.org/lookouts/us/ma/plymouth-pine-hill-fire-tower/",
+      "credit": "National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "NHLR register entry US 538 (nhlr.org)",
+      "url": "http://nhlr.org/lookouts/us/ma/plymouth-pine-hill-fire-tower/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLOS register entry US 1548 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/ma/plymouth-manomet-hill-fire-tower-site/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Massachusetts Fire Tower - Plymouth (Pine Hill) Tower",
+      "url": "http://www.firelookout.org/lookouts/ma/plymouth3.htm",
+      "kind": "site"
+    },
+    {
+      "label": "FLLA Massachusetts Fire Towers - Plymouth Tower (Manomet Hill)",
+      "url": "http://www.firelookout.org/lookouts/ma/plymouth2.htm",
+      "kind": "site"
+    },
+    {
+      "label": "OpenStreetMap node 12371041072",
+      "url": "https://www.openstreetmap.org/node/12371041072",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "nhlr",
+      "key": "nhlr:US 538",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "status",
+        "registers",
+        "agency",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "fflos",
+      "key": "fflos:US 1548",
+      "fields": [
+        "registers",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/12371041072",
+      "fields": [
+        "kind",
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 41.9159,
+            "lon": -70.59
+          }
+        },
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 41.92722,
+            "lon": -70.59083
+          }
+        }
+      ],
+      "distance_m": 1261,
+      "note": null
+    },
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    },
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1966
+        },
+        {
+          "source": "fflos",
+          "value": 1942
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

@@ -203,7 +203,8 @@ STATUS_MAP = {
 }
 
 STATUS_YEAR_RE = re.compile(r"^(standing|gone|new|removed|burned)\s+(\d{4})$", re.I)
-STATUS_YEAR_EVENT = {"new": "built", "removed": "removed", "burned": "burned"}
+# "New 2026" on a lookout with an older build date means a new structure on the site, so it is a rebuild, not the first build.
+STATUS_YEAR_EVENT = {"new": "rebuilt", "removed": "removed", "burned": "burned"}
 
 
 def map_kind(raw: str, stats: Counter) -> str:

@@ -1,0 +1,112 @@
+{
+  "id": "us-id-mammoth-mountain",
+  "name": "Mammoth Mountain",
+  "other_names": [],
+  "country": "US",
+  "region": "ID",
+  "county": "Idaho",
+  "location": {
+    "lat": 45.45716,
+    "lon": -115.48364,
+    "precision": "exact",
+    "from": "ffla"
+  },
+  "elevation_m": null,
+  "kind": "camp",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [],
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLA Idaho lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/id",
+      "kind": "association"
+    },
+    {
+      "label": "Mammoth Mtn. on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/id/mammothmtn.html",
+      "kind": "site"
+    },
+    {
+      "label": "Mammoth Mountain on idahofirelookouts.com",
+      "url": "https://www.idahofirelookouts.com/selway-region/mammoth-mountain/",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "ffla",
+      "key": "ffla:id:mammoth-mountain:45.4572:-115.4836",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:id:mammoth-mtn:45.4572:-115.4836",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "idaho_fl",
+      "key": "idaho_fl:mammoth-mountain:45.4644:-115.4804",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 45.45716,
+            "lon": -115.48364
+          }
+        },
+        {
+          "source": "idaho_fl",
+          "value": {
+            "lat": 45.46435,
+            "lon": -115.4804
+          }
+        }
+      ],
+      "distance_m": 838,
+      "note": null
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": true,
+  "hidden_reason": "Camp or tent site: out of scope (structures only)",
+  "updated": "2026-10-04"
+}

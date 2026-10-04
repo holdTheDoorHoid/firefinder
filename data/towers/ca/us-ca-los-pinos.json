@@ -1,0 +1,157 @@
+{
+  "id": "us-ca-los-pinos",
+  "name": "Los Pinos Lookout",
+  "other_names": [
+    "Los Pinos Mountain"
+  ],
+  "country": "US",
+  "region": "CA",
+  "county": "San Diego",
+  "location": {
+    "lat": 32.73448,
+    "lon": -116.57768,
+    "precision": "exact",
+    "from": "ffla"
+  },
+  "elevation_m": 1464.6,
+  "kind": "tower",
+  "design": null,
+  "height_m": null,
+  "status": "standing",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "NHLR",
+      "number": "US 742",
+      "state_number": "CA 81",
+      "url": "http://nhlr.org/lookouts/us/ca/los-pinos-lookout/"
+    }
+  ],
+  "agency": "U.S. Forest Service",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1964,
+      "event": "built",
+      "note": "'Built' field on NHLR detail page",
+      "from": "nhlr"
+    },
+    {
+      "year": 2008,
+      "event": "nhlr_registered",
+      "note": "Date registered per NHLR detail page: June 19, 2008",
+      "from": "nhlr"
+    }
+  ],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/1325/us742_los_pinos.jpg",
+      "source_url": "http://nhlr.org/lookouts/us/ca/los-pinos-lookout/",
+      "credit": "National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "NHLR register entry US 742 (nhlr.org)",
+      "url": "http://nhlr.org/lookouts/us/ca/los-pinos-lookout/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA California lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/ca/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA San Diego - Riverside Chapter",
+      "url": "http://www.socalfirelookouts.org",
+      "kind": "site"
+    },
+    {
+      "label": "OpenStreetMap way 361101205",
+      "url": "https://www.openstreetmap.org/way/361101205",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "nhlr",
+      "key": "nhlr:US 742",
+      "fields": [
+        "name",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "ownership",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:ca:los-pinos-mountain:32.7345:-116.5777",
+      "fields": [
+        "location",
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/361101205",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 32.73448,
+            "lon": -116.57768
+          }
+        },
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 32.73333,
+            "lon": -116.58333
+          }
+        }
+      ],
+      "distance_m": 544,
+      "note": "They share a register number."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

@@ -1,0 +1,146 @@
+{
+  "id": "us-or-cummings-peak-grant-county",
+  "name": "Cummings Peak Lookout Site (Grant County)",
+  "other_names": [
+    "Cummings Peak"
+  ],
+  "country": "US",
+  "region": "OR",
+  "county": "Grant",
+  "location": {
+    "lat": 44.496543,
+    "lon": -119.332631,
+    "precision": "exact",
+    "from": "fflos"
+  },
+  "elevation_m": 1200.6,
+  "kind": "ground",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "FFLOS",
+      "number": "US 1777",
+      "state_number": "OR 517",
+      "url": "http://firetower.org/lookouts/us/or/cummings-peak-lookout-site-grant-county/"
+    }
+  ],
+  "agency": "Oregon Department of Forestry",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1930,
+      "event": "built",
+      "note": "'Built' field on FFLOS detail page",
+      "from": "fflos"
+    },
+    {
+      "year": 2019,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: November 1, 2019",
+      "from": "fflos"
+    }
+  ],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLOS register entry US 1777 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/or/cummings-peak-lookout-site-grant-county/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Oregon lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/or/",
+      "kind": "association"
+    },
+    {
+      "label": "Cummings Peak on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/or/cummingspeak.html",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "fflos",
+      "key": "fflos:US 1777",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:or:cummings-peak:44.4657:-119.3130",
+      "fields": [
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:or:cummings-peak:44.4657:-119.3130",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 44.496543,
+            "lon": -119.332631
+          }
+        },
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 44.46567,
+            "lon": -119.31297
+          }
+        },
+        {
+          "source": "firelookout_com",
+          "value": {
+            "lat": 44.46567,
+            "lon": -119.31297
+          }
+        }
+      ],
+      "distance_m": 3771,
+      "note": "They share a register number."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

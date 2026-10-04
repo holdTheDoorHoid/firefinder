@@ -1,0 +1,159 @@
+{
+  "id": "us-ca-allen",
+  "name": "Allen Lookout",
+  "other_names": [],
+  "country": "US",
+  "region": "CA",
+  "county": "San Mateo",
+  "location": {
+    "lat": 37.38709,
+    "lon": -122.29501,
+    "precision": "exact",
+    "from": "ffla"
+  },
+  "elevation_m": 672.7,
+  "kind": "tower",
+  "design": null,
+  "height_m": null,
+  "status": "standing",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "NHLR",
+      "number": "US 1147",
+      "state_number": "CA 112",
+      "url": "http://nhlr.org/lookouts/us/ca/allen-lookout/"
+    }
+  ],
+  "agency": "California Department of Forestry & Fire Protection",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1966,
+      "event": "built",
+      "note": "'Built' field on NHLR detail page",
+      "from": "nhlr"
+    },
+    {
+      "year": 2016,
+      "event": "nhlr_registered",
+      "note": "Date registered per NHLR detail page: November 27, 2016",
+      "from": "nhlr"
+    }
+  ],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/3013/photo1_img_3030.jpg",
+      "source_url": "http://nhlr.org/lookouts/us/ca/allen-lookout/",
+      "credit": "Scott McClintock, via National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/3014/mcclintock.jpg",
+      "source_url": "http://nhlr.org/lookouts/us/ca/allen-lookout/",
+      "credit": "Scott McClintock, via National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": "View from Catwalk",
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "NHLR register entry US 1147 (nhlr.org)",
+      "url": "http://nhlr.org/lookouts/us/ca/allen-lookout/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA California lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/ca/",
+      "kind": "association"
+    },
+    {
+      "label": "OpenStreetMap node 8340139380",
+      "url": "https://www.openstreetmap.org/node/8340139380",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "nhlr",
+      "key": "nhlr:US 1147",
+      "fields": [
+        "name",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:ca:allen:37.3871:-122.2950",
+      "fields": [
+        "location",
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/8340139380",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 37.38709,
+            "lon": -122.29501
+          }
+        },
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 37.384386,
+            "lon": -122.289853
+          }
+        }
+      ],
+      "distance_m": 546,
+      "note": "They share a register number."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

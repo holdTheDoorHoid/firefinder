@@ -2049,7 +2049,9 @@ def conflicts_for(rec: dict, members: list[Rec], loc_src: Rec | None, status_src
         # One year apart is usually "built" vs "completed" or a season's slip: not reported.
         if by_source and max(by_source.values()) - min(by_source.values()) >= BUILT_CONFLICT_YEARS:
             values = [{"source": src, "value": b} for src, b in by_source.items()]
-            out.append({"field": "built", "values": values, "distance_m": None, "note": None})
+            out.append({"field": "built", "values": values, "distance_m": None,
+                        "note": "Sources give different build years. Often one counts the first lookout on the site "
+                                "and another the structure there now."})
     # Kind, only where it decides whether the lookout is shown.
     kinds = {}
     for m in sorted(members, key=lambda m: (source_rank("kind", m.source), m.key)):

@@ -1,0 +1,159 @@
+{
+  "id": "us-wa-haystack-mountain-snohomish-county",
+  "name": "Haystack Mountain Lookout Site (Snohomish County)",
+  "other_names": [
+    "Haystack Mountain"
+  ],
+  "country": "US",
+  "region": "WA",
+  "county": "Snohomish",
+  "location": {
+    "lat": 47.809462,
+    "lon": -121.751159,
+    "precision": "exact",
+    "from": "fflos"
+  },
+  "elevation_m": 1094.2,
+  "kind": "tower",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "FFLOS",
+      "number": "US 1961",
+      "state_number": "WA 461",
+      "url": "http://firetower.org/lookouts/us/wa/haystack-mountain-lookout-site-snohomish-county/"
+    }
+  ],
+  "agency": "U.S. Forest Service",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1957,
+      "event": "built",
+      "note": "'Built' field on FFLOS detail page",
+      "from": "fflos"
+    },
+    {
+      "year": 2020,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: April 2, 2020",
+      "from": "fflos"
+    }
+  ],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://firetower.org/media/3343/haystack-mtn-snohomish-co-lo-site.jpg",
+      "source_url": "http://firetower.org/lookouts/us/wa/haystack-mountain-lookout-site-snohomish-county/",
+      "credit": "Eric Willhite, via Former Fire Lookout Sites Register (firetower.org)",
+      "license": "All rights reserved",
+      "caption": "Haystack Mountain Lookout site",
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "FFLOS register entry US 1961 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/wa/haystack-mountain-lookout-site-snohomish-county/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Washington lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/wa/",
+      "kind": "association"
+    },
+    {
+      "label": "Haystack Mtn. on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/wa/haystackmtnfs.html",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "fflos",
+      "key": "fflos:US 1961",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "ownership",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:wa:haystack-mountain:47.8233:-121.6773",
+      "fields": [
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:wa:haystack-mtn:47.8233:-121.6773",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 47.809462,
+            "lon": -121.751159
+          }
+        },
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 47.82333,
+            "lon": -121.67731
+          }
+        },
+        {
+          "source": "firelookout_com",
+          "value": {
+            "lat": 47.82333,
+            "lon": -121.67731
+          }
+        }
+      ],
+      "distance_m": 5726,
+      "note": "They share a register number."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

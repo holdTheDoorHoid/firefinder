@@ -1,0 +1,137 @@
+{
+  "id": "us-co-soda-point",
+  "name": "Soda Point Lookout",
+  "other_names": [],
+  "country": "US",
+  "region": "CO",
+  "county": "Montezuma",
+  "location": {
+    "lat": 37.07307,
+    "lon": -108.27353,
+    "precision": "exact",
+    "from": "nhlr"
+  },
+  "elevation_m": 2011.7,
+  "kind": "platform",
+  "design": null,
+  "height_m": null,
+  "status": "standing",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "NHLR",
+      "number": "US 876",
+      "state_number": "CO 14",
+      "url": "http://nhlr.org/lookouts/us/co/soda-point-lookout/"
+    }
+  ],
+  "agency": "Bureau of Indian Affairs",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1945,
+      "event": "built",
+      "note": "'Built' field on NHLR detail page",
+      "from": "nhlr"
+    },
+    {
+      "year": 2010,
+      "event": "nhlr_registered",
+      "note": "Date registered per NHLR detail page: March 16, 2010",
+      "from": "nhlr"
+    }
+  ],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/1420/us876_soda_point.jpg",
+      "source_url": "http://nhlr.org/lookouts/us/co/soda-point-lookout/",
+      "credit": "National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "NHLR register entry US 876 (nhlr.org)",
+      "url": "http://nhlr.org/lookouts/us/co/soda-point-lookout/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Colorado lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/co/",
+      "kind": "association"
+    }
+  ],
+  "sources": [
+    {
+      "source": "nhlr",
+      "key": "nhlr:US 876",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:co:soda-point:37.1286:-108.4667",
+      "fields": [
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 37.07307,
+            "lon": -108.27353
+          }
+        },
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 37.12861,
+            "lon": -108.46667
+          }
+        }
+      ],
+      "distance_m": 18208,
+      "note": "They share a register number."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

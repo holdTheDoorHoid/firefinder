@@ -1,0 +1,112 @@
+{
+  "id": "us-id-monumental-peak",
+  "name": "Monumental Peak",
+  "other_names": [],
+  "country": "US",
+  "region": "ID",
+  "county": "Valley",
+  "location": {
+    "lat": 44.46618,
+    "lon": -115.71875,
+    "precision": "exact",
+    "from": "ffla"
+  },
+  "elevation_m": null,
+  "kind": "camp",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [],
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLA Idaho lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/id",
+      "kind": "association"
+    },
+    {
+      "label": "Monumental Peak on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/id/monumentalpeak309.html",
+      "kind": "site"
+    },
+    {
+      "label": "Monumental Peak on idahofirelookouts.com",
+      "url": "https://www.idahofirelookouts.com/west-central/monumental-peak/",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "ffla",
+      "key": "ffla:id:monumental-peak:44.4662:-115.7188",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:id:monumental-peak:44.4662:-115.7188",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "idaho_fl",
+      "key": "idaho_fl:monumental-peak:44.4641:-115.7121",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 44.46618,
+            "lon": -115.71875
+          }
+        },
+        {
+          "source": "idaho_fl",
+          "value": {
+            "lat": 44.46406,
+            "lon": -115.71206
+          }
+        }
+      ],
+      "distance_m": 581,
+      "note": null
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": true,
+  "hidden_reason": "Camp or tent site: out of scope (structures only)",
+  "updated": "2026-10-04"
+}

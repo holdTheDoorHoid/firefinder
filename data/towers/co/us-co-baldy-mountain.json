@@ -1,0 +1,124 @@
+{
+  "id": "us-co-baldy-mountain",
+  "name": "Baldy Mountain Tower Site",
+  "other_names": [],
+  "country": "US",
+  "region": "CO",
+  "county": "La Plata",
+  "location": {
+    "lat": 37.36359,
+    "lon": -107.78292,
+    "precision": "exact",
+    "from": "fflos"
+  },
+  "elevation_m": 2988.6,
+  "kind": "unknown",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "FFLOS",
+      "number": "US 531",
+      "state_number": "CO 3",
+      "url": "http://firetower.org/lookouts/us/co/baldy-mountain-tower-site/"
+    }
+  ],
+  "agency": "U.S. Forest Service",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 2009,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: September 18, 2009",
+      "from": "fflos"
+    }
+  ],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLOS register entry US 531 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/co/baldy-mountain-tower-site/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Colorado lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/co/",
+      "kind": "association"
+    },
+    {
+      "label": "Colorado/Utah FFLA Chapter website",
+      "url": "http://www.firelookout.org/cohost-co/index.html",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "fflos",
+      "key": "fflos:US 531",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "ownership",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:co:baldy-mountain:37.3628:-107.7933",
+      "fields": [
+        "status",
+        "registers",
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 37.36359,
+            "lon": -107.78292
+          }
+        },
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 37.36278,
+            "lon": -107.79333
+          }
+        }
+      ],
+      "distance_m": 924,
+      "note": "They share a register number."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

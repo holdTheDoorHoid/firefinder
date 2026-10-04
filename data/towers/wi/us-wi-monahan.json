@@ -1,0 +1,222 @@
+{
+  "id": "us-wi-monahan",
+  "name": "Monahan Lookout",
+  "other_names": [],
+  "country": "US",
+  "region": "WI",
+  "county": "Vilas",
+  "location": {
+    "lat": 46.08305,
+    "lon": -89.38247,
+    "precision": "exact",
+    "from": "ffla"
+  },
+  "elevation_m": 557.5,
+  "kind": "tower",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "NHLR",
+      "number": "US 584",
+      "state_number": "WI 3",
+      "url": "http://nhlr.org/lookouts/us/wi/monahan-lookout/"
+    },
+    {
+      "register": "FFLOS",
+      "number": "US 2099",
+      "state_number": "WI 4",
+      "url": "http://firetower.org/lookouts/us/wi/monahan-lookout-site/"
+    }
+  ],
+  "agency": "Wisconsin Department of Natural Resources",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "'Built' field on NHLR detail page",
+      "from": "nhlr"
+    },
+    {
+      "year": 2004,
+      "event": "nhlr_registered",
+      "note": "Date registered per NHLR detail page: July 20, 2004",
+      "from": "nhlr"
+    },
+    {
+      "year": 2023,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: December 31, 2023",
+      "from": "fflos"
+    }
+  ],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/2899/us584_monahan.jpg",
+      "source_url": "http://nhlr.org/lookouts/us/wi/monahan-lookout/",
+      "credit": "National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://firetower.org/media/4148/us584_monahan.jpg",
+      "source_url": "http://firetower.org/lookouts/us/wi/monahan-lookout-site/",
+      "credit": "K. Posto, via Former Fire Lookout Sites Register (firetower.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://firetower.org/media/4150/img_0293.jpeg",
+      "source_url": "http://firetower.org/lookouts/us/wi/monahan-lookout-site/",
+      "credit": "Mitchell Moore, via Former Fire Lookout Sites Register (firetower.org)",
+      "license": "All rights reserved",
+      "caption": "USGS survey marker after tower demolition",
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "NHLR register entry US 584 (nhlr.org)",
+      "url": "http://nhlr.org/lookouts/us/wi/monahan-lookout/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLOS register entry US 2099 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/wi/monahan-lookout-site/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Wisconsin lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/wi/",
+      "kind": "association"
+    },
+    {
+      "label": "OpenStreetMap node 353894185",
+      "url": "https://www.openstreetmap.org/node/353894185",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "nhlr",
+      "key": "nhlr:US 584",
+      "fields": [
+        "name",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "fflos",
+      "key": "fflos:US 2099",
+      "fields": [
+        "registers",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:wi:monahan:46.0831:-89.3825",
+      "fields": [
+        "location",
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/353894185",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 46.08305,
+            "lon": -89.38247
+          }
+        },
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 46.09389,
+            "lon": -89.39278
+          }
+        },
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 46.09389,
+            "lon": -89.39278
+          }
+        }
+      ],
+      "distance_m": 1444,
+      "note": "They share a register number."
+    },
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "gone"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

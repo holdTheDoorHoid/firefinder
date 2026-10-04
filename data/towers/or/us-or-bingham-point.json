@@ -1,0 +1,139 @@
+{
+  "id": "us-or-bingham-point",
+  "name": "Bingham Point Lookout Site",
+  "other_names": [],
+  "country": "US",
+  "region": "OR",
+  "county": "Harney",
+  "location": {
+    "lat": 43.94082,
+    "lon": -119.2406,
+    "precision": "exact",
+    "from": "fflos"
+  },
+  "elevation_m": 1801.4,
+  "kind": "camp",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "FFLOS",
+      "number": "US 1054",
+      "state_number": "OR 412",
+      "url": "http://firetower.org/lookouts/us/or/bingham-point-lookout-site/"
+    }
+  ],
+  "agency": "U.S.Forest Service",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 2011,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: June 13, 2011",
+      "from": "fflos"
+    }
+  ],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLOS register entry US 1054 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/or/bingham-point-lookout-site/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Oregon lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/or/",
+      "kind": "association"
+    },
+    {
+      "label": "Bingham Point on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/or/binghampoint.html",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "fflos",
+      "key": "fflos:US 1054",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "ownership",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:or:bingham-point:44.1255:-118.3641",
+      "fields": [
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:or:bingham-point:44.1255:-118.3641",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 43.94082,
+            "lon": -119.2406
+          }
+        },
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 44.12545,
+            "lon": -118.36412
+          }
+        },
+        {
+          "source": "firelookout_com",
+          "value": {
+            "lat": 44.12545,
+            "lon": -118.36412
+          }
+        }
+      ],
+      "distance_m": 73013,
+      "note": "They share a register number."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": true,
+  "hidden_reason": "Camp or tent site: out of scope (structures only)",
+  "updated": "2026-10-04"
+}

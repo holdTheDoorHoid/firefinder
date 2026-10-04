@@ -1,0 +1,118 @@
+{
+  "id": "us-me-haystack-mountain-tower-site-i",
+  "name": "Haystack Mountain Tower Site I",
+  "other_names": [],
+  "country": "US",
+  "region": "ME",
+  "county": "Aroostook",
+  "location": {
+    "lat": 46.66131,
+    "lon": -68.26667,
+    "precision": "exact",
+    "from": "fflos"
+  },
+  "elevation_m": 204.5,
+  "kind": "tower",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "FFLOS",
+      "number": "US 76",
+      "state_number": "ME 2",
+      "url": "http://firetower.org/lookouts/us/me/haystack-mountain-tower-site-i/"
+    }
+  ],
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 2008,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: September 15, 2008",
+      "from": "fflos"
+    }
+  ],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLOS register entry US 76 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/me/haystack-mountain-tower-site-i/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Maine lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/me/",
+      "kind": "association"
+    }
+  ],
+  "sources": [
+    {
+      "source": "fflos",
+      "key": "fflos:US 76",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "registers",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:me:haystack-mountain:46.6669:-68.2321",
+      "fields": [
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 46.66131,
+            "lon": -68.26667
+          }
+        },
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 46.66695,
+            "lon": -68.23208
+          }
+        }
+      ],
+      "distance_m": 2713,
+      "note": "They share a register number."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

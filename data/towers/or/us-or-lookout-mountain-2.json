@@ -1,0 +1,94 @@
+{
+  "id": "us-or-lookout-mountain-2",
+  "name": "Lookout Mountain",
+  "other_names": [],
+  "country": "US",
+  "region": "OR",
+  "county": "Marion",
+  "location": {
+    "lat": 44.8786,
+    "lon": -122.39413,
+    "precision": "exact",
+    "from": "ffla"
+  },
+  "elevation_m": null,
+  "kind": "tower",
+  "design": null,
+  "height_m": null,
+  "status": "standing",
+  "status_note": null,
+  "registers": [],
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLA Oregon lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/or/",
+      "kind": "association"
+    },
+    {
+      "label": "Lookout Mtn. on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/or/lookoutmtnodf34.html",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "ffla",
+      "key": "ffla:or:lookout-mountain:44.8786:-122.3941",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:or:lookout-mtn:44.8786:-122.3941",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "standing"
+        },
+        {
+          "source": "firelookout_com",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "firelookout.com lists it, but not on its map of standing lookouts."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

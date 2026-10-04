@@ -1,0 +1,140 @@
+{
+  "id": "us-wa-hoh-oil-city",
+  "name": "Hoh (Oil City) Lookout Site",
+  "other_names": [
+    "AWS Hoh (Oil City)"
+  ],
+  "country": "US",
+  "region": "WA",
+  "county": "Jefferson",
+  "location": {
+    "lat": 47.76805,
+    "lon": -124.41194,
+    "precision": "exact",
+    "from": "fflos"
+  },
+  "elevation_m": 370.0,
+  "kind": "ground",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "FFLOS",
+      "number": "US 1186",
+      "state_number": "WA 87",
+      "url": "http://firetower.org/lookouts/us/wa/hoh-oil-city-lookout-site/"
+    }
+  ],
+  "agency": "Washington Division of Forestry/DNR",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 2012,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: January 13, 2012",
+      "from": "fflos"
+    }
+  ],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLOS register entry US 1186 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/wa/hoh-oil-city-lookout-site/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Washington lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/wa/",
+      "kind": "association"
+    },
+    {
+      "label": "Hoh (Oil City) on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/wa/hohoilcity.html",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "fflos",
+      "key": "fflos:US 1186",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:wa:aws-hoh-oil-city:47.7659:-124.4193",
+      "fields": [
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:wa:hoh-oil-city:47.7659:-124.4193",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 47.76805,
+            "lon": -124.41194
+          }
+        },
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 47.76595,
+            "lon": -124.41928
+          }
+        },
+        {
+          "source": "firelookout_com",
+          "value": {
+            "lat": 47.76595,
+            "lon": -124.41928
+          }
+        }
+      ],
+      "distance_m": 596,
+      "note": "They share a register number."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

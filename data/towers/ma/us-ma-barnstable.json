@@ -1,0 +1,202 @@
+{
+  "id": "us-ma-barnstable",
+  "name": "Barnstable Fire Tower",
+  "other_names": [],
+  "country": "US",
+  "region": "MA",
+  "county": "Barnstable",
+  "location": {
+    "lat": 41.685167,
+    "lon": -70.357667,
+    "precision": "exact",
+    "from": "nhlr"
+  },
+  "elevation_m": 20.1,
+  "kind": "tower",
+  "design": null,
+  "height_m": null,
+  "status": "standing",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "NHLR",
+      "number": "US 559",
+      "state_number": "MA 9",
+      "url": "http://nhlr.org/lookouts/us/ma/barnstable-fire-tower/"
+    },
+    {
+      "register": "FFLOS",
+      "number": "US 35",
+      "state_number": "MA 35",
+      "url": "http://firetower.org/lookouts/us/ma/barnstable-tower-site/"
+    }
+  ],
+  "agency": "Mass. Bureau of Forest Fire Control",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1947,
+      "event": "built",
+      "note": "'Built' field on NHLR detail page",
+      "from": "nhlr"
+    },
+    {
+      "year": 2004,
+      "event": "nhlr_registered",
+      "note": "Date registered per NHLR detail page: February 2, 2004",
+      "from": "nhlr"
+    },
+    {
+      "year": 2008,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: September 3, 2008",
+      "from": "fflos"
+    }
+  ],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/1847/us559_barnstable.jpg",
+      "source_url": "http://nhlr.org/lookouts/us/ma/barnstable-fire-tower/",
+      "credit": "National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://firetower.org/media/1147/los035_barnstable_site.jpg",
+      "source_url": "http://firetower.org/lookouts/us/ma/barnstable-tower-site/",
+      "credit": "Former Fire Lookout Sites Register (firetower.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://firetower.org/media/1148/los035_barnstable_former_tower.jpg",
+      "source_url": "http://firetower.org/lookouts/us/ma/barnstable-tower-site/",
+      "credit": "Former Fire Lookout Sites Register (firetower.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "NHLR register entry US 559 (nhlr.org)",
+      "url": "http://nhlr.org/lookouts/us/ma/barnstable-fire-tower/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLOS register entry US 35 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/ma/barnstable-tower-site/",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap node 3139436576",
+      "url": "https://www.openstreetmap.org/node/3139436576",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "nhlr",
+      "key": "nhlr:US 559",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "status",
+        "registers",
+        "agency",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "fflos",
+      "key": "fflos:US 35",
+      "fields": [
+        "registers",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/3139436576",
+      "fields": [
+        "kind",
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 41.685167,
+            "lon": -70.357667
+          }
+        },
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 41.6835,
+            "lon": -70.34283
+          }
+        }
+      ],
+      "distance_m": 1246,
+      "note": null
+    },
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

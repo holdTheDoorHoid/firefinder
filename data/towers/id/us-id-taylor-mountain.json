@@ -1,0 +1,211 @@
+{
+  "id": "us-id-taylor-mountain",
+  "name": "Taylor Mountain Lookout",
+  "other_names": [],
+  "country": "US",
+  "region": "ID",
+  "county": "Lemhi",
+  "location": {
+    "lat": 44.88525,
+    "lon": -114.21598,
+    "precision": "exact",
+    "from": "ffla"
+  },
+  "elevation_m": 2259.8,
+  "kind": "ground",
+  "design": null,
+  "height_m": null,
+  "status": "standing",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "NHLR",
+      "number": "US 1445",
+      "state_number": "ID 138",
+      "url": "http://nhlr.org/lookouts/us/id/taylor-mountain-lookout/"
+    }
+  ],
+  "agency": "US Forest Service - Salmon-Challis National Forest",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1930,
+      "event": "built",
+      "note": "'Built' field on NHLR detail page",
+      "from": "nhlr"
+    },
+    {
+      "year": 2020,
+      "event": "nhlr_registered",
+      "note": "Date registered per NHLR detail page: October 2, 2020",
+      "from": "nhlr"
+    }
+  ],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/4330/taylormtn2013a-steve-sidlo.jpg",
+      "source_url": "http://nhlr.org/lookouts/us/id/taylor-mountain-lookout/",
+      "credit": "Steve Sidlo, via National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": "Taylor Mountain Lookout - 2013",
+      "year": 2013
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://www.firelookout.com/id/taylormtn2013a.jpg",
+      "source_url": "https://www.firelookout.com/id/taylormtn321.html",
+      "credit": "Steve Sidlo, via firelookout.com",
+      "license": null,
+      "caption": "Taylor Mtn. in 2013",
+      "year": 2013
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://www.firelookout.com/id/taylormtn2013b.jpg",
+      "source_url": "https://www.firelookout.com/id/taylormtn321.html",
+      "credit": "Steve Sidlo, via firelookout.com",
+      "license": null,
+      "caption": "Taylor Mtn. in 2013",
+      "year": 2013
+    }
+  ],
+  "links": [
+    {
+      "label": "NHLR register entry US 1445 (nhlr.org)",
+      "url": "http://nhlr.org/lookouts/us/id/taylor-mountain-lookout/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Idaho lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/id",
+      "kind": "association"
+    },
+    {
+      "label": "Taylor Mountain Lookout - Forest Lookouts Page",
+      "url": "https://idaholookouts.weebly.com/taylor-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Taylor Mtn. on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/id/taylormtn321.html",
+      "kind": "site"
+    },
+    {
+      "label": "Taylor Mountain Lookout on idahofirelookouts.com",
+      "url": "https://www.idahofirelookouts.com/southern-idaho/taylor-mountain-lookout/",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "nhlr",
+      "key": "nhlr:US 1445",
+      "fields": [
+        "name",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "ownership",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:id:taylor-mountain:44.8852:-114.2160",
+      "fields": [
+        "location",
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:id:taylor-mtn:44.8852:-114.2160",
+      "fields": [
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "idaho_fl",
+      "key": "idaho_fl:taylor-mountain-lookout:44.8849:-114.2162",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 44.88525,
+            "lon": -114.21598
+          }
+        },
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 43.306043,
+            "lon": -111.920731
+          }
+        }
+      ],
+      "distance_m": 253814,
+      "note": "They share a register number."
+    },
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "standing"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "firelookout_com",
+          "value": "standing"
+        },
+        {
+          "source": "idaho_fl",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered. idahofirelookouts.com's status is read from a short summary."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

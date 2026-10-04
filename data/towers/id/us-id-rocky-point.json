@@ -1,0 +1,112 @@
+{
+  "id": "us-id-rocky-point",
+  "name": "Rocky Point",
+  "other_names": [],
+  "country": "US",
+  "region": "ID",
+  "county": "Latah",
+  "location": {
+    "lat": 46.84568,
+    "lon": -116.87758,
+    "precision": "exact",
+    "from": "ffla"
+  },
+  "elevation_m": 1139.0,
+  "kind": "platform",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [],
+  "agency": "PTPA",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLA Idaho lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/id",
+      "kind": "association"
+    },
+    {
+      "label": "Rocky Point on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/id/rockypoint272a.html",
+      "kind": "site"
+    },
+    {
+      "label": "Rocky Point on idahofirelookouts.com",
+      "url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/rocky-point/",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "ffla",
+      "key": "ffla:id:rocky-point:46.8457:-116.8776",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:id:rocky-point:46.8457:-116.8776",
+      "fields": [
+        "elevation_m",
+        "agency",
+        "links"
+      ]
+    },
+    {
+      "source": "idaho_fl",
+      "key": "idaho_fl:rocky-point:46.8466:-116.8782",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "gone"
+        },
+        {
+          "source": "firelookout_com",
+          "value": "standing"
+        },
+        {
+          "source": "idaho_fl",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "idahofirelookouts.com's status is read from a short summary."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

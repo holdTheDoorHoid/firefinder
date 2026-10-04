@@ -1,0 +1,112 @@
+{
+  "id": "us-id-sheep-mountain-4",
+  "name": "Sheep Mountain",
+  "other_names": [],
+  "country": "US",
+  "region": "ID",
+  "county": "Elmore",
+  "location": {
+    "lat": 43.69908,
+    "lon": -115.49175,
+    "precision": "exact",
+    "from": "ffla"
+  },
+  "elevation_m": null,
+  "kind": "camp",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [],
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLA Idaho lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/id",
+      "kind": "association"
+    },
+    {
+      "label": "Sheep Mtn. on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/id/sheepmtn320b.html",
+      "kind": "site"
+    },
+    {
+      "label": "Sheep Mountain on idahofirelookouts.com",
+      "url": "https://www.idahofirelookouts.com/southern-idaho/sheep-mountain/",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "ffla",
+      "key": "ffla:id:sheep-mountain:43.6991:-115.4917",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:id:sheep-mtn:43.6991:-115.4917",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "idaho_fl",
+      "key": "idaho_fl:sheep-mountain:43.6973:-115.4998",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 43.69908,
+            "lon": -115.49175
+          }
+        },
+        {
+          "source": "idaho_fl",
+          "value": {
+            "lat": 43.69728,
+            "lon": -115.49977
+          }
+        }
+      ],
+      "distance_m": 675,
+      "note": null
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": true,
+  "hidden_reason": "Camp or tent site: out of scope (structures only)",
+  "updated": "2026-10-04"
+}

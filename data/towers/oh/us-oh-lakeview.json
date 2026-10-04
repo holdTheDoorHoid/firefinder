@@ -1,0 +1,121 @@
+{
+  "id": "us-oh-lakeview",
+  "name": "Lakeview Tower Site",
+  "other_names": [
+    "Lakeview (Salt Fork)"
+  ],
+  "country": "US",
+  "region": "OH",
+  "county": "Guernsey",
+  "location": {
+    "lat": 40.095139,
+    "lon": -81.664278,
+    "precision": "exact",
+    "from": "fflos"
+  },
+  "elevation_m": 329.2,
+  "kind": "tower",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "FFLOS",
+      "number": "US 1563",
+      "state_number": "OH 9",
+      "url": "http://firetower.org/lookouts/us/oh/lakeview-tower-site/"
+    }
+  ],
+  "agency": "Ohio Department of Natural Resources",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 2014,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: September 3, 2014",
+      "from": "fflos"
+    }
+  ],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLOS register entry US 1563 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/oh/lakeview-tower-site/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Ohio lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/oh/",
+      "kind": "association"
+    }
+  ],
+  "sources": [
+    {
+      "source": "fflos",
+      "key": "fflos:US 1563",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:oh:lakeview-salt-fork:40.0951:-81.5498",
+      "fields": [
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 40.095139,
+            "lon": -81.664278
+          }
+        },
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 40.09511,
+            "lon": -81.54984
+          }
+        }
+      ],
+      "distance_m": 9734,
+      "note": "They share a register number."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

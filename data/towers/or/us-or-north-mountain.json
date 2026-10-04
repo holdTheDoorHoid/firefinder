@@ -1,0 +1,145 @@
+{
+  "id": "us-or-north-mountain",
+  "name": "North Mountain Lookout SIte",
+  "other_names": [],
+  "country": "US",
+  "region": "OR",
+  "county": "Clackamas",
+  "location": {
+    "lat": 45.386522,
+    "lon": -121.940748,
+    "precision": "exact",
+    "from": "fflos"
+  },
+  "elevation_m": 1238.7,
+  "kind": "tower",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "FFLOS",
+      "number": "US 1760",
+      "state_number": "OR 505",
+      "url": "http://firetower.org/lookouts/us/or/north-mountain-lookout-site/"
+    }
+  ],
+  "agency": "U.S. Forest Service",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "'Built' field on FFLOS detail page",
+      "from": "fflos"
+    },
+    {
+      "year": 2019,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: September 18, 2019",
+      "from": "fflos"
+    }
+  ],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLOS register entry US 1760 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/or/north-mountain-lookout-site/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Oregon lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/or/",
+      "kind": "association"
+    },
+    {
+      "label": "North Mtn. on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/or/northmtn.html",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "fflos",
+      "key": "fflos:US 1760",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "ownership",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:or:north-mountain:45.3969:-121.9537",
+      "fields": [
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:or:north-mtn:45.3969:-121.9537",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 45.386522,
+            "lon": -121.940748
+          }
+        },
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 45.39689,
+            "lon": -121.95369
+          }
+        },
+        {
+          "source": "firelookout_com",
+          "value": {
+            "lat": 45.39689,
+            "lon": -121.95369
+          }
+        }
+      ],
+      "distance_m": 1533,
+      "note": "They share a register number."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

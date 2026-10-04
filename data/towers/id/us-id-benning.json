@@ -1,0 +1,114 @@
+{
+  "id": "us-id-benning",
+  "name": "Benning",
+  "other_names": [
+    "Benning Mountain"
+  ],
+  "country": "US",
+  "region": "ID",
+  "county": "Bonner",
+  "location": {
+    "lat": 48.3254,
+    "lon": -116.10125,
+    "precision": "exact",
+    "from": "ffla"
+  },
+  "elevation_m": null,
+  "kind": "tower",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [],
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLA Idaho lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/id",
+      "kind": "association"
+    },
+    {
+      "label": "Benning on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/id/benning.html",
+      "kind": "site"
+    },
+    {
+      "label": "Benning Mountain on idahofirelookouts.com",
+      "url": "https://www.idahofirelookouts.com/northern-idaho/benning-mountain/",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "ffla",
+      "key": "ffla:id:benning:48.3254:-116.1012",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:id:benning:48.3254:-116.1012",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "idaho_fl",
+      "key": "idaho_fl:benning-mountain:48.3380:-116.0838",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 48.3254,
+            "lon": -116.10125
+          }
+        },
+        {
+          "source": "idaho_fl",
+          "value": {
+            "lat": 48.33799,
+            "lon": -116.08378
+          }
+        }
+      ],
+      "distance_m": 1905,
+      "note": null
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

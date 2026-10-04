@@ -1,0 +1,180 @@
+{
+  "id": "us-mt-jackson-ranger",
+  "name": "Jackson Ranger Station Lookout",
+  "other_names": [],
+  "country": "US",
+  "region": "MT",
+  "county": "Beaverhead",
+  "location": {
+    "lat": 45.3583,
+    "lon": -113.38854,
+    "precision": "exact",
+    "from": "nhlr"
+  },
+  "elevation_m": 1998.9,
+  "kind": "tower",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "NHLR",
+      "number": "US 1566",
+      "state_number": "MT 112",
+      "url": "http://nhlr.org/lookouts/us/mt/jackson-ranger-station-lookout/"
+    }
+  ],
+  "agency": "Private Property",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1930,
+      "event": "built",
+      "note": "'Built' field on NHLR detail page",
+      "from": "nhlr"
+    },
+    {
+      "year": 2022,
+      "event": "nhlr_registered",
+      "note": "Date registered per NHLR detail page: April 14, 2022",
+      "from": "nhlr"
+    }
+  ],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/4731/jacksonrs2021.jpg",
+      "source_url": "http://nhlr.org/lookouts/us/mt/jackson-ranger-station-lookout/",
+      "credit": "National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://www.firelookout.com/mt/jacksonrs2021.jpg",
+      "source_url": "https://www.firelookout.com/mt/jacksonrs.html",
+      "credit": "Luke Channer, via firelookout.com",
+      "license": null,
+      "caption": "Jackson R.S. in 2021",
+      "year": 2021
+    }
+  ],
+  "links": [
+    {
+      "label": "NHLR register entry US 1566 (nhlr.org)",
+      "url": "http://nhlr.org/lookouts/us/mt/jackson-ranger-station-lookout/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Montana lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/mt/",
+      "kind": "association"
+    },
+    {
+      "label": "Jackson Ranger Station on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/mt/jacksonrs.html",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "nhlr",
+      "key": "nhlr:US 1566",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:mt:jackson-ranger-station:45.3683:-113.4093",
+      "fields": [
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:mt:jackson-ranger-station:45.3583:-113.3885",
+      "fields": [
+        "kind",
+        "ownership",
+        "photos",
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 45.3583,
+            "lon": -113.38854
+          }
+        },
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 45.36826,
+            "lon": -113.40933
+          }
+        }
+      ],
+      "distance_m": 1966,
+      "note": "They share a register number."
+    },
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "gone"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "firelookout_com",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

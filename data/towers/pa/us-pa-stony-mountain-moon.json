@@ -1,0 +1,195 @@
+{
+  "id": "us-pa-stony-mountain-moon",
+  "name": "Stony Mountain \"Moon\" Lookout",
+  "other_names": [
+    "Stony Mountain Tower Site"
+  ],
+  "country": "US",
+  "region": "PA",
+  "county": "Dauphin",
+  "location": {
+    "lat": 40.433698,
+    "lon": -76.775803,
+    "precision": "exact",
+    "from": "nhlr"
+  },
+  "elevation_m": 497.7,
+  "kind": "tower",
+  "design": null,
+  "height_m": 30.5,
+  "status": "standing",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "NHLR",
+      "number": "US 1262",
+      "state_number": "PA 27",
+      "url": "http://nhlr.org/lookouts/us/pa/stony-mountain-moon-lookout/"
+    },
+    {
+      "register": "FFLOS",
+      "number": "US 498",
+      "state_number": "PA 327",
+      "url": "http://firetower.org/lookouts/us/pa/stony-mountain-tower-site/"
+    }
+  ],
+  "agency": "Pennsylvania Bureau of Forestry",
+  "ownership": "state",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1922,
+      "event": "built",
+      "note": "'Built' field on NHLR detail page",
+      "from": "nhlr"
+    },
+    {
+      "year": 2008,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: September 16, 2008",
+      "from": "fflos"
+    },
+    {
+      "year": 2018,
+      "event": "nhlr_registered",
+      "note": "Date registered per NHLR detail page: January 15, 2018",
+      "from": "nhlr"
+    }
+  ],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/3358/stony-mountain.jpg",
+      "source_url": "http://nhlr.org/lookouts/us/pa/stony-mountain-moon-lookout/",
+      "credit": "Brandon Spaulding, via National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://www.arcgis.com/sharing/rest/content/items/ed47c97ebe7246868ce8ef3e7139a0b4/resources/ER5ReOghve2sMbe3HZagr.jpeg",
+      "source_url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
+      "credit": "Shawn Lesitsky -- PA Fire Towers StoryMap (Esri ArcGIS StoryMaps)",
+      "license": null,
+      "caption": "Stony Mountain",
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "NHLR register entry US 1262 (nhlr.org)",
+      "url": "http://nhlr.org/lookouts/us/pa/stony-mountain-moon-lookout/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLOS register entry US 498 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/pa/stony-mountain-tower-site/",
+      "kind": "register"
+    },
+    {
+      "label": "Stony Valley history website",
+      "url": "http://stonyvalley.com/",
+      "kind": "site"
+    },
+    {
+      "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
+      "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "nhlr",
+      "key": "nhlr:US 1262",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "status",
+        "registers",
+        "agency",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "fflos",
+      "key": "fflos:US 498",
+      "fields": [
+        "registers",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "pa_storymap",
+      "key": "pa_storymap:stony-mountain:40.4336:-76.7761",
+      "fields": [
+        "kind",
+        "height_m",
+        "ownership",
+        "photos",
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        },
+        {
+          "source": "pa_storymap",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    },
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1922
+        },
+        {
+          "source": "pa_storymap",
+          "value": 1967
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
+  "verification": "facts",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

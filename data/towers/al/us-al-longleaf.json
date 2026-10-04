@@ -1,0 +1,175 @@
+{
+  "id": "us-al-longleaf",
+  "name": "Longleaf Lookout Tower",
+  "other_names": [],
+  "country": "US",
+  "region": "AL",
+  "county": "Butler",
+  "location": {
+    "lat": 31.649477,
+    "lon": -86.890528,
+    "precision": "exact",
+    "from": "nhlr"
+  },
+  "elevation_m": 98.5,
+  "kind": "unknown",
+  "design": null,
+  "height_m": null,
+  "status": "standing",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "NHLR",
+      "number": "US 855",
+      "state_number": "AL 33",
+      "url": "http://nhlr.org/lookouts/us/al/longleaf-lookout-tower/"
+    },
+    {
+      "register": "FFLOS",
+      "number": "US 1753",
+      "state_number": "AL 24",
+      "url": "http://firetower.org/lookouts/us/al/longleaf-fire-tower-site/"
+    }
+  ],
+  "agency": "Jerry Watson, Owner",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1939,
+      "event": "built",
+      "note": "'Built' field on NHLR detail page",
+      "from": "nhlr"
+    },
+    {
+      "year": 2009,
+      "event": "nhlr_registered",
+      "note": "Date registered per NHLR detail page: December 18, 2009",
+      "from": "nhlr"
+    },
+    {
+      "year": 2019,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: September 15, 2019",
+      "from": "fflos"
+    }
+  ],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/1045/us855_longleaf.jpg",
+      "source_url": "http://nhlr.org/lookouts/us/al/longleaf-lookout-tower/",
+      "credit": "National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://firetower.org/media/2252/longleaf.jpg",
+      "source_url": "http://firetower.org/lookouts/us/al/longleaf-fire-tower-site/",
+      "credit": "Andrew Zerbe, via Former Fire Lookout Sites Register (firetower.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "NHLR register entry US 855 (nhlr.org)",
+      "url": "http://nhlr.org/lookouts/us/al/longleaf-lookout-tower/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLOS register entry US 1753 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/al/longleaf-fire-tower-site/",
+      "kind": "register"
+    }
+  ],
+  "sources": [
+    {
+      "source": "nhlr",
+      "key": "nhlr:US 855",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "status",
+        "registers",
+        "agency",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "fflos",
+      "key": "fflos:US 1753",
+      "fields": [
+        "registers",
+        "events",
+        "photos",
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 31.649477,
+            "lon": -86.890528
+          }
+        },
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 31.65,
+            "lon": -86.8835
+          }
+        }
+      ],
+      "distance_m": 668,
+      "note": null
+    },
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

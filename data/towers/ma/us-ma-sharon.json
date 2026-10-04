@@ -1,0 +1,177 @@
+{
+  "id": "us-ma-sharon",
+  "name": "Sharon Fire Tower",
+  "other_names": [
+    "Sharon Tower Site #1"
+  ],
+  "country": "US",
+  "region": "MA",
+  "county": "Norfolk",
+  "location": {
+    "lat": 42.12389,
+    "lon": -71.21444,
+    "precision": "exact",
+    "from": "nhlr"
+  },
+  "elevation_m": 44.2,
+  "kind": "unknown",
+  "design": null,
+  "height_m": null,
+  "status": "standing",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "NHLR",
+      "number": "US 560",
+      "state_number": "MA 10",
+      "url": "http://nhlr.org/lookouts/us/ma/sharon-fire-tower/"
+    },
+    {
+      "register": "FFLOS",
+      "number": "US 23",
+      "state_number": "MA 23",
+      "url": "http://firetower.org/lookouts/us/ma/sharon-tower-site-1/"
+    }
+  ],
+  "agency": "Mass. Bureau of Forest Fire Control",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1966,
+      "event": "built",
+      "note": "'Built' field on NHLR detail page",
+      "from": "nhlr"
+    },
+    {
+      "year": 2004,
+      "event": "nhlr_registered",
+      "note": "Date registered per NHLR detail page: February 2, 2004",
+      "from": "nhlr"
+    },
+    {
+      "year": 2008,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: September 3, 2008",
+      "from": "fflos"
+    }
+  ],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/1894/us560_sharon.jpg",
+      "source_url": "http://nhlr.org/lookouts/us/ma/sharon-fire-tower/",
+      "credit": "National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://firetower.org/media/1173/los023_sharon_1.jpg",
+      "source_url": "http://firetower.org/lookouts/us/ma/sharon-tower-site-1/",
+      "credit": "Former Fire Lookout Sites Register (firetower.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "NHLR register entry US 560 (nhlr.org)",
+      "url": "http://nhlr.org/lookouts/us/ma/sharon-fire-tower/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLOS register entry US 23 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/ma/sharon-tower-site-1/",
+      "kind": "register"
+    }
+  ],
+  "sources": [
+    {
+      "source": "nhlr",
+      "key": "nhlr:US 560",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "status",
+        "registers",
+        "agency",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "fflos",
+      "key": "fflos:US 23",
+      "fields": [
+        "registers",
+        "events",
+        "photos",
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 42.12389,
+            "lon": -71.21444
+          }
+        },
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 42.11333,
+            "lon": -71.21683
+          }
+        }
+      ],
+      "distance_m": 1191,
+      "note": null
+    },
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

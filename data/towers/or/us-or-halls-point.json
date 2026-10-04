@@ -1,0 +1,195 @@
+{
+  "id": "us-or-halls-point",
+  "name": "Halls Point Lookout",
+  "other_names": [],
+  "country": "US",
+  "region": "OR",
+  "county": "Jackson",
+  "location": {
+    "lat": 42.80712,
+    "lon": -122.55533,
+    "precision": "exact",
+    "from": "nhlr"
+  },
+  "elevation_m": 1362.5,
+  "kind": "ground",
+  "design": "R-6",
+  "height_m": null,
+  "status": "standing",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "NHLR",
+      "number": "US 491",
+      "state_number": "OR 84",
+      "url": "http://nhlr.org/lookouts/us/or/halls-point-lookout/"
+    }
+  ],
+  "agency": "U.S. Forest Service",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "staffed",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1956,
+      "event": "built",
+      "note": "'Built' field on NHLR detail page",
+      "from": "nhlr"
+    },
+    {
+      "year": 2003,
+      "event": "nhlr_registered",
+      "note": "Date registered per NHLR detail page: March 31, 2003",
+      "from": "nhlr"
+    }
+  ],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/2468/us491_halls_point.gif",
+      "source_url": "http://nhlr.org/lookouts/us/or/halls-point-lookout/",
+      "credit": "National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://www.firelookout.com/or/hallspoint1.jpg",
+      "source_url": "https://www.firelookout.com/or/hallspoint.html",
+      "credit": "the Dave Bula collection and Dominic Luebbers, via firelookout.com",
+      "license": null,
+      "caption": "Halls Point L.O.",
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://www.firelookout.com/or/hallspoint2001.jpg",
+      "source_url": "https://www.firelookout.com/or/hallspoint.html",
+      "credit": "the Dave Bula collection and Dominic Luebbers, via firelookout.com",
+      "license": null,
+      "caption": "Halls Point in 2001",
+      "year": 2001
+    }
+  ],
+  "links": [
+    {
+      "label": "NHLR register entry US 491 (nhlr.org)",
+      "url": "http://nhlr.org/lookouts/us/or/halls-point-lookout/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Oregon lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/or/",
+      "kind": "association"
+    },
+    {
+      "label": "Halls Point on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/or/hallspoint.html",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "nhlr",
+      "key": "nhlr:US 491",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "ownership",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:or:halls-point:42.8039:-122.5491",
+      "fields": [
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:or:halls-point:42.8039:-122.5491",
+      "fields": [
+        "design",
+        "staffing",
+        "photos",
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 42.80712,
+            "lon": -122.55533
+          }
+        },
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 42.80388,
+            "lon": -122.54906
+          }
+        },
+        {
+          "source": "firelookout_com",
+          "value": {
+            "lat": 42.80388,
+            "lon": -122.54906
+          }
+        }
+      ],
+      "distance_m": 626,
+      "note": "They share a register number."
+    },
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1956
+        },
+        {
+          "source": "firelookout_com",
+          "value": 1930
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

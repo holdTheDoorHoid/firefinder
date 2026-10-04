@@ -1,0 +1,212 @@
+{
+  "id": "us-or-stephenson-mountain",
+  "name": "Stephenson Mountain Lookout",
+  "other_names": [],
+  "country": "US",
+  "region": "OR",
+  "county": "Jefferson",
+  "location": {
+    "lat": 44.58235,
+    "lon": -120.45198,
+    "precision": "exact",
+    "from": "nhlr"
+  },
+  "elevation_m": 1764.2,
+  "kind": "three_story",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "NHLR",
+      "number": "US 659",
+      "state_number": "OR 110",
+      "url": "http://nhlr.org/lookouts/us/or/stephenson-mountain-lookout/"
+    }
+  ],
+  "agency": "Oregon Department of Forestry",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 1963,
+      "event": "built",
+      "note": "'Built' field on NHLR detail page",
+      "from": "nhlr"
+    },
+    {
+      "year": 2006,
+      "event": "nhlr_registered",
+      "note": "Date registered per NHLR detail page: March 15, 2006",
+      "from": "nhlr"
+    },
+    {
+      "year": 2026,
+      "event": "burned",
+      "note": "From FFLA status column value 'Burned 2026'",
+      "from": "ffla"
+    }
+  ],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/2557/us659_stephenson_mtn.jpg",
+      "source_url": "http://nhlr.org/lookouts/us/or/stephenson-mountain-lookout/",
+      "credit": "National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/5861/466b3b90-20ea-4ad9-a8fd-43db0edab812.jpeg",
+      "source_url": "http://nhlr.org/lookouts/us/or/stephenson-mountain-lookout/",
+      "credit": "US Forest Service Employee, via National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": "Stephenson Lookout on July 21, 2026",
+      "year": 2026
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/5862/737d86b7-2243-45a4-a37f-24063e359cb2.jpeg",
+      "source_url": "http://nhlr.org/lookouts/us/or/stephenson-mountain-lookout/",
+      "credit": "Oregon Department of Forestry, via National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": "Stephenson Lookout during the Box Springs Fire",
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://nhlr.org/media/5863/865324ae-0686-4a70-b008-0bdb85118cc8.jpeg",
+      "source_url": "http://nhlr.org/lookouts/us/or/stephenson-mountain-lookout/",
+      "credit": "National Historic Lookout Register (nhlr.org)",
+      "license": "All rights reserved",
+      "caption": "Lookout prior to the Box Springs Fire.",
+      "year": null
+    }
+  ],
+  "links": [
+    {
+      "label": "NHLR register entry US 659 (nhlr.org)",
+      "url": "http://nhlr.org/lookouts/us/or/stephenson-mountain-lookout/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Oregon lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/or/",
+      "kind": "association"
+    },
+    {
+      "label": "Stephenson Mtn. on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/or/stephenson.html",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "nhlr",
+      "key": "nhlr:US 659",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:or:stephenson-mountain:44.5899:-120.5016",
+      "fields": [
+        "kind",
+        "status",
+        "registers",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:or:stephenson-mtn:44.5899:-120.5016",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 44.58235,
+            "lon": -120.45198
+          }
+        },
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 44.58987,
+            "lon": -120.50164
+          }
+        },
+        {
+          "source": "firelookout_com",
+          "value": {
+            "lat": 44.58987,
+            "lon": -120.50164
+          }
+        }
+      ],
+      "distance_m": 4021,
+      "note": "They share a register number."
+    },
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "gone"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "firelookout_com",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered. firelookout.com lists it, but not on its map of standing lookouts."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

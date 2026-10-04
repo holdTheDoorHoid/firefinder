@@ -1,0 +1,139 @@
+{
+  "id": "us-or-parkdale-ranger",
+  "name": "Parkdale Ranger Station Lookout Site",
+  "other_names": [],
+  "country": "US",
+  "region": "OR",
+  "county": "Hood River",
+  "location": {
+    "lat": 45.534,
+    "lon": -121.5906,
+    "precision": "exact",
+    "from": "fflos"
+  },
+  "elevation_m": 518.2,
+  "kind": "tower",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "FFLOS",
+      "number": "US 635",
+      "state_number": "OR 69",
+      "url": "http://firetower.org/lookouts/us/or/parkdale-ranger-station-lookout-site/"
+    }
+  ],
+  "agency": "U.S. Forest Service",
+  "ownership": "federal",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 2010,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: September 19, 2010",
+      "from": "fflos"
+    }
+  ],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLOS register entry US 635 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/or/parkdale-ranger-station-lookout-site/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Oregon lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/or/",
+      "kind": "association"
+    },
+    {
+      "label": "Parkdale Ranger Station on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/or/parkdalers.html",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "fflos",
+      "key": "fflos:US 635",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "registers",
+        "agency",
+        "ownership",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:or:parkdale-ranger-station:45.5201:-121.5910",
+      "fields": [
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:or:parkdale-ranger-station:45.5201:-121.5910",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 45.534,
+            "lon": -121.5906
+          }
+        },
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 45.52006,
+            "lon": -121.59098
+          }
+        },
+        {
+          "source": "firelookout_com",
+          "value": {
+            "lat": 45.52006,
+            "lon": -121.59098
+          }
+        }
+      ],
+      "distance_m": 1550,
+      "note": "They share a register number."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

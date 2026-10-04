@@ -1,0 +1,125 @@
+{
+  "id": "us-de-dagsboro",
+  "name": "Dagsboro Tower Site",
+  "other_names": [],
+  "country": "US",
+  "region": "DE",
+  "county": "Sussex",
+  "location": {
+    "lat": 38.55883,
+    "lon": -75.25033,
+    "precision": "exact",
+    "from": "fflos"
+  },
+  "elevation_m": 7.9,
+  "kind": "tower",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [
+    {
+      "register": "FFLOS",
+      "number": "US 70",
+      "state_number": "DE 1",
+      "url": "http://firetower.org/lookouts/us/de/dagsboro-tower-site/"
+    }
+  ],
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [
+    {
+      "year": 2008,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: September 11, 2008",
+      "from": "fflos"
+    }
+  ],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLOS register entry US 70 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/de/dagsboro-tower-site/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLA Delaware lookout list (firelookout.org)",
+      "url": "https://firelookout.org/?page_id=156",
+      "kind": "association"
+    }
+  ],
+  "sources": [
+    {
+      "source": "fflos",
+      "key": "fflos:US 70",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "registers",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:de:dagsboro:38.5647:-75.2506",
+      "fields": [
+        "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla",
+      "key": "ffla:de:dagsboro:38.5647:-75.2506:1",
+      "fields": [
+        "registers"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 38.55883,
+            "lon": -75.25033
+          }
+        },
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 38.56472,
+            "lon": -75.25056
+          }
+        }
+      ],
+      "distance_m": 655,
+      "note": "They share a register number."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

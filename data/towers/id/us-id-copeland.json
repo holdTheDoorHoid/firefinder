@@ -1,0 +1,112 @@
+{
+  "id": "us-id-copeland",
+  "name": "Copeland",
+  "other_names": [
+    "Copeland Ranger Station"
+  ],
+  "country": "US",
+  "region": "ID",
+  "county": "Boundary",
+  "location": {
+    "lat": 48.90406,
+    "lon": -116.38946,
+    "precision": "exact",
+    "from": "ffla"
+  },
+  "elevation_m": null,
+  "kind": "tower",
+  "design": null,
+  "height_m": null,
+  "status": "standing",
+  "status_note": null,
+  "registers": [],
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLA Idaho lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/id",
+      "kind": "association"
+    },
+    {
+      "label": "Copeland on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/id/copelandrs.html",
+      "kind": "site"
+    },
+    {
+      "label": "Copeland Ranger Station on idahofirelookouts.com",
+      "url": "https://www.idahofirelookouts.com/northern-idaho/copeland-ranger-station/",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "ffla",
+      "key": "ffla:id:copeland:48.9041:-116.3895",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:id:copeland:48.9041:-116.3895",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "idaho_fl",
+      "key": "idaho_fl:copeland-ranger-station:48.9034:-116.3904",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "standing"
+        },
+        {
+          "source": "firelookout_com",
+          "value": "gone"
+        },
+        {
+          "source": "idaho_fl",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "firelookout.com lists it, but not on its map of standing lookouts. idahofirelookouts.com's status is read from a short summary."
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}

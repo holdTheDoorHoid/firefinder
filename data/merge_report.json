@@ -16,6 +16,11 @@
    "retrieved": "2026-10-04",
    "file": "ffla.json"
   },
+  "fflos": {
+   "records": 2120,
+   "retrieved": "2026-10-04",
+   "file": "fflos.json"
+  },
   "fire_lookouts_org": {
    "records": 19,
    "retrieved": "2026-10-04",
@@ -30,6 +35,11 @@
    "records": 998,
    "retrieved": "2026-10-04",
    "file": "idaho_fl.json"
+  },
+  "nhlr": {
+   "records": 1850,
+   "retrieved": "2026-10-04",
+   "file": "nhlr.json"
   },
   "osm": {
    "records": 1028,
@@ -53,12 +63,12 @@
   }
  },
  "files": {
-  "written": 7,
-  "unchanged": 6309
+  "written": 215,
+  "unchanged": 6620
  },
  "counts": {
-  "towers": 6316,
-  "visible": 5747,
+  "towers": 6835,
+  "visible": 6266,
   "hidden": 569,
   "hidden_by_reason": {
    "Camp or tent site: out of scope (structures only)": 469,
@@ -69,85 +79,85 @@
    "Not confirmed as a fire lookout": 1
   },
   "visible_by_status": {
-   "gone": 3618,
-   "standing": 1660,
-   "unknown": 358,
-   "relocated": 86,
+   "gone": 3791,
+   "standing": 2140,
+   "unknown": 221,
+   "relocated": 88,
    "ruins": 15,
-   "replica": 10
+   "replica": 11
   },
   "visible_by_kind": {
-   "tower": 3841,
+   "tower": 3847,
    "ground": 1037,
+   "unknown": 760,
    "two_story": 263,
-   "unknown": 248,
-   "platform": 219,
+   "platform": 220,
    "enclosed_tower": 110,
    "three_story": 29
   },
   "visible_by_region": {
-   "AL": 33,
-   "AR": 23,
+   "AL": 124,
+   "AR": 38,
    "AZ": 126,
    "CA": 522,
    "CO": 55,
-   "CT": 7,
+   "CT": 17,
    "DE": 5,
-   "FL": 32,
-   "GA": 13,
+   "FL": 61,
+   "GA": 41,
    "IA": 1,
-   "ID": 832,
-   "IL": 32,
-   "IN": 40,
-   "KY": 12,
-   "LA": 14,
-   "MA": 18,
+   "ID": 831,
+   "IL": 33,
+   "IN": 41,
+   "KY": 30,
+   "LA": 23,
+   "MA": 96,
    "MD": 54,
-   "ME": 148,
-   "MI": 15,
+   "ME": 151,
+   "MI": 21,
    "MN": 222,
-   "MO": 26,
-   "MS": 43,
+   "MO": 44,
+   "MS": 86,
    "MT": 506,
-   "NC": 34,
+   "NC": 51,
    "ND": 10,
    "NE": 8,
    "NH": 74,
-   "NJ": 22,
+   "NJ": 34,
    "NM": 102,
    "NV": 5,
    "NY": 174,
    "OH": 53,
-   "OK": 4,
-   "OR": 812,
-   "PA": 63,
-   "RI": 20,
-   "SC": 32,
-   "SD": 31,
-   "TN": 44,
+   "OK": 7,
+   "OR": 813,
+   "PA": 105,
+   "RI": 22,
+   "SC": 66,
+   "SD": 30,
+   "TN": 99,
    "TX": 162,
    "UT": 16,
-   "VA": 218,
+   "VA": 219,
    "VT": 45,
-   "WA": 634,
+   "WA": 637,
    "WI": 216,
-   "WV": 113,
+   "WV": 114,
    "WY": 76
   },
   "visible_by_verification": {
-   "unverified": 4798,
-   "facts": 949
+   "unverified": 5239,
+   "facts": 1027
   },
-  "multi_source_towers": 3821,
+  "multi_source_towers": 4817,
   "towers_by_number_of_sources": {
-   "1": 2495,
-   "2": 2577,
-   "3": 1099,
-   "4": 123,
-   "5+": 22
+   "1": 2018,
+   "2": 1942,
+   "3": 2385,
+   "4": 336,
+   "5+": 154
   },
   "rentable": 76,
-  "registered": 2817
+  "registered": 3564
  },
  "matching": {
   "note": "How each source record found its tower on this run. 'key' means it was matched on an earlier run and found again by its key; delete data/towers to see a fresh run's methods.",
@@ -159,8 +169,12 @@
     "key": 6
    },
    "ffla": {
-    "key": 5838,
-    "unplaced": 138
+    "key": 5845,
+    "unplaced": 131
+   },
+   "fflos": {
+    "key": 1790,
+    "unplaced": 330
    },
    "fire_lookouts_org": {
     "key": 19
@@ -170,6 +184,10 @@
    },
    "idaho_fl": {
     "key": 998
+   },
+   "nhlr": {
+    "key": 1848,
+    "unplaced": 2
    },
    "osm": {
     "key": 1028
@@ -186,76 +204,193 @@
    }
   },
   "cross_region_matches": 0,
-  "register_clashes": 12
+  "register_clashes": 54
  },
  "conflicts": {
   "by_field": {
-   "status": 134,
-   "location": 109,
-   "built": 44,
+   "status": 265,
+   "location": 255,
+   "built": 215,
+   "registers": 5,
    "kind": 5
   },
   "by_field_and_sources": {
    "built": {
-    "firelookout_com+ridb": 18,
-    "firelookout_com+wikidata": 10,
-    "firelookout_com+osm": 7,
+    "firelookout_com+nhlr": 140,
+    "firelookout_com+nhlr+ridb": 12,
+    "nhlr+pa_storymap": 10,
+    "firelookout_com+ridb": 6,
+    "fire_lookouts_org+nhlr": 5,
+    "nhlr+wikidata": 5,
+    "firelookout_com+wikidata": 5,
+    "firelookout_com+osm": 5,
+    "nhlr+ridb": 4,
+    "firelookout_com+nhlr+wikidata": 4,
     "firelookout_com+osm+wikidata": 4,
-    "ffla+fire_lookouts_org": 1,
-    "fire_lookouts_org+wikidata": 1,
-    "firelookout_com+idaho_fl+wikidata": 1,
-    "firelookout_com+ridb+wikidata": 1,
-    "firelookout_com+osm+ridb": 1
+    "fflos+nhlr": 3
    },
    "kind": {
     "ffla+firelookout_com": 5
    },
    "location": {
-    "ffla+idaho_fl": 91,
-    "ffla+ridb": 10,
-    "ffla+firelookout_com": 5,
-    "ffla+fire_lookouts_org": 1,
-    "ffla+osm": 1,
-    "ffla+wikidata": 1
+    "ffla+idaho_fl": 83,
+    "ffla+fflos+firelookout_com": 52,
+    "ffla+nhlr": 47,
+    "ffla+fflos": 31,
+    "nhlr+ridb": 10,
+    "ffla+firelookout_com+nhlr": 9,
+    "fflos+nhlr": 6,
+    "idaho_fl+nhlr": 5,
+    "nhlr+osm": 3,
+    "fflos+idaho_fl": 3,
+    "ffla+firelookout_com": 2,
+    "fire_lookouts_org+nhlr": 1
+   },
+   "registers": {
+    "ffla+nhlr": 2,
+    "ffla+fflos": 2,
+    "nhlr+osm": 1
    },
    "status": {
-    "ffla+firelookout_com": 56,
-    "ffla+firelookout_com+idaho_fl": 40,
-    "ffla+osm": 19,
-    "ffla+firelookout_com+osm": 5,
-    "ffla+firelookout_com+idaho_fl+osm": 4,
-    "ffla+ridb": 3,
-    "ffla+fire_lookouts_org": 3,
-    "ffla+firelookout_com+osm+ridb": 2,
-    "ffla+firelookout_com+idaho_fl+osm+ridb": 1,
-    "ffla+firelookout_com+ridb": 1
+    "ffla+firelookout_com": 34,
+    "ffla+nhlr": 28,
+    "ffla+firelookout_com+idaho_fl+nhlr": 26,
+    "fflos+nhlr": 19,
+    "ffla+fflos+nhlr": 19,
+    "ffla+firelookout_com+nhlr": 19,
+    "ffla+firelookout_com+idaho_fl": 18,
+    "ffla+fflos+firelookout_com": 16,
+    "ffla+fflos+firelookout_com+nhlr": 16,
+    "ffla+fflos": 10,
+    "fflos+nhlr+pa_storymap": 8,
+    "ffla+osm": 7
    }
   },
   "location_distance": {
-   "0.5-1 km": 52,
-   "1-5 km": 57
+   "0.5-1 km": 101,
+   "1-5 km": 121,
+   "5-25 km": 23,
+   ">25 km": 10
   },
   "examples": {
    "built": [
     {
-     "id": "us-ca-jordan-peak",
-     "name": "Jordan Peak Fire Lookout",
+     "id": "us-ca-baker-point",
+     "name": "Baker Point Lookout",
      "values": [
       {
+       "source": "nhlr",
+       "value": 1950
+      },
+      {
        "source": "fire_lookouts_org",
+       "value": 1943
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-bald-mountain-sequoia-nf",
+     "name": "Bald Mountain Lookout (Sequoia NF)",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": 1954
+      },
+      {
+       "source": "fire_lookouts_org",
+       "value": 1936
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-black-mountain-san-bernadino-nf",
+     "name": "Black Mountain Lookout (San Bernadino NF)",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": 1962
+      },
+      {
+       "source": "ridb",
+       "value": 1926
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-copernicus-peak",
+     "name": "Copernicus Peak Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": 1931
+      },
+      {
+       "source": "wikidata",
+       "value": 1938
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-deadwood-peak",
+     "name": "Deadwood Peak Lookout",
+     "values": [
+      {
+       "source": "nhlr",
        "value": 1934
       },
       {
-       "source": "ffla",
-       "value": 2026
+       "source": "fire_lookouts_org",
+       "value": 1905
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-henness-ridge",
+     "name": "Henness Ridge Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": 1934
+      },
+      {
+       "source": "wikidata",
+       "value": 1939
+      },
+      {
+       "source": "osm",
+       "value": 1939
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-red-top",
+     "name": "Red Top Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": 1934
+      },
+      {
+       "source": "fire_lookouts_org",
+       "value": 1938
       }
      ],
      "distance_m": null
     },
     {
      "id": "us-ca-signal-peak",
-     "name": "Signal Peak Fire Lookout",
+     "name": "Signal Peak Lookout",
      "values": [
+      {
+       "source": "nhlr",
+       "value": 1951
+      },
       {
        "source": "fire_lookouts_org",
        "value": 1900
@@ -268,9 +403,73 @@
      "distance_m": null
     },
     {
+     "id": "us-ca-tobias-peak",
+     "name": "Tobias Peak Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": 1935
+      },
+      {
+       "source": "fire_lookouts_org",
+       "value": 1921
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-west-prospect-peak",
+     "name": "West Prospect Peak Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": 1935
+      },
+      {
+       "source": "wikidata",
+       "value": 1912
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-co-devils-head",
+     "name": "Devil's Head Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": 1912
+      },
+      {
+       "source": "wikidata",
+       "value": 1951
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-id-austin-ridge",
+     "name": "Austin Ridge Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": 1960
+      },
+      {
+       "source": "firelookout_com",
+       "value": 1932
+      }
+     ],
+     "distance_m": null
+    },
+    {
      "id": "us-id-bald-mountain-3",
      "name": "Bald Mountain Lookout",
      "values": [
+      {
+       "source": "nhlr",
+       "value": 1960
+      },
       {
        "source": "firelookout_com",
        "value": 1913
@@ -283,193 +482,31 @@
      "distance_m": null
     },
     {
-     "id": "us-id-carey-dome",
-     "name": "Carey Dome Fire Lookout",
+     "id": "us-id-bear-mountain",
+     "name": "Bear Mountain Lookout",
      "values": [
       {
+       "source": "nhlr",
+       "value": 1951
+      },
+      {
        "source": "firelookout_com",
-       "value": 1934
-      },
-      {
-       "source": "wikidata",
-       "value": 1934
-      },
-      {
-       "source": "idaho_fl",
-       "value": 1932
+       "value": 1922
       }
      ],
      "distance_m": null
     },
     {
-     "id": "us-id-castle-butte",
-     "name": "Castle Butte Lookout",
+     "id": "us-id-beaver-ridge",
+     "name": "Beaver Ridge Lookout",
      "values": [
       {
-       "source": "firelookout_com",
-       "value": 1928
-      },
-      {
-       "source": "ridb",
-       "value": 1950
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-id-deadwood-lookout-cabin",
-     "name": "Deadwood Lookout Cabin",
-     "values": [
-      {
-       "source": "firelookout_com",
-       "value": 1916
-      },
-      {
-       "source": "ridb",
-       "value": 1934
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-id-indian-mica",
-     "name": "Indian (Mica)",
-     "values": [
-      {
-       "source": "firelookout_com",
-       "value": 1910
-      },
-      {
-       "source": "wikidata",
-       "value": 1933
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-id-scurvy-mountain",
-     "name": "Scurvy Mountain Lookout",
-     "values": [
-      {
-       "source": "firelookout_com",
-       "value": 1917
-      },
-      {
-       "source": "ridb",
-       "value": 1952
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-id-surveyors",
-     "name": "Surveyors Lookout",
-     "values": [
-      {
-       "source": "firelookout_com",
-       "value": 1964
-      },
-      {
-       "source": "ridb",
-       "value": 1931
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-mt-apgar-mountain",
-     "name": "Apgar Mountain",
-     "values": [
-      {
-       "source": "firelookout_com",
-       "value": 1927
-      },
-      {
-       "source": "wikidata",
-       "value": 1930
-      },
-      {
-       "source": "osm",
-       "value": 1929
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-mt-cougar-peak",
-     "name": "Cougar Peak Lookout",
-     "values": [
-      {
-       "source": "firelookout_com",
-       "value": 1930
-      },
-      {
-       "source": "ridb",
-       "value": 1952
-      },
-      {
-       "source": "wikidata",
-       "value": 1952
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-mt-garnet-mountain",
-     "name": "Garnet Mountain Fire Lookout",
-     "values": [
-      {
-       "source": "firelookout_com",
-       "value": 1930
-      },
-      {
-       "source": "ridb",
-       "value": 1962
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-mt-garver-mountain",
-     "name": "Garver Mountain Lookout",
-     "values": [
-      {
-       "source": "firelookout_com",
-       "value": 1929
-      },
-      {
-       "source": "ridb",
+       "source": "nhlr",
        "value": 1963
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-mt-granite-butte",
-     "name": "Granite Butte Lookout",
-     "values": [
-      {
-       "source": "firelookout_com",
-       "value": 1934
       },
       {
-       "source": "ridb",
-       "value": 1962
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-mt-guardian-of-the-gulch",
-     "name": "Guardian of the Gulch",
-     "values": [
-      {
        "source": "firelookout_com",
-       "value": 1869
-      },
-      {
-       "source": "wikidata",
-       "value": 1876
+       "value": 1919
       }
      ],
      "distance_m": null
@@ -538,7 +575,7 @@
     },
     {
      "id": "us-wa-meadow-butte",
-     "name": "Meadow Butte",
+     "name": "Meadow Butte Lookout",
      "values": [
       {
        "source": "ffla",
@@ -554,14 +591,266 @@
    ],
    "location": [
     {
-     "id": "us-ca-buck-rock",
-     "name": "Buck Rock Lookout",
+     "id": "us-al-longleaf",
+     "name": "Longleaf Lookout Tower",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": {
+        "lat": 31.649477,
+        "lon": -86.890528
+       }
+      },
+      {
+       "source": "fflos",
+       "value": {
+        "lat": 31.65,
+        "lon": -86.8835
+       }
+      }
+     ],
+     "distance_m": 668
+    },
+    {
+     "id": "us-ar-push-mountain",
+     "name": "Push Mountain Firetower",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": {
+        "lat": 36.0845,
+        "lon": -92.37017
+       }
+      },
+      {
+       "source": "osm",
+       "value": {
+        "lat": 36.079967,
+        "lon": -92.371653
+       }
+      }
+     ],
+     "distance_m": 521
+    },
+    {
+     "id": "us-az-black-rock",
+     "name": "Black Rock Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": {
+        "lat": 36.792819,
+        "lon": -113.751968
+       }
+      },
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 36.77328,
+        "lon": -113.80833
+       }
+      }
+     ],
+     "distance_m": 5469
+    },
+    {
+     "id": "us-az-chediski",
+     "name": "Chediski Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": {
+        "lat": 34.1361,
+        "lon": -110.723044
+       }
+      },
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 34.18336,
+        "lon": -110.66383
+       }
+      }
+     ],
+     "distance_m": 7570
+    },
+    {
+     "id": "us-az-escudilla",
+     "name": "Escudilla Lookout",
      "values": [
       {
        "source": "ffla",
        "value": {
-        "lat": 36.73727,
-        "lon": -118.86067
+        "lat": 33.94733,
+        "lon": -109.12169
+       }
+      },
+      {
+       "source": "nhlr",
+       "value": {
+        "lat": 33.9565,
+        "lon": -109.12485
+       }
+      }
+     ],
+     "distance_m": 1060
+    },
+    {
+     "id": "us-az-hopi",
+     "name": "Hopi Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": {
+        "lat": 36.07627,
+        "lon": -112.15431
+       }
+      },
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 36.07144,
+        "lon": -112.15458
+       }
+      }
+     ],
+     "distance_m": 538
+    },
+    {
+     "id": "us-az-horsethief-2",
+     "name": "Horsethief Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": {
+        "lat": 34.16225,
+        "lon": -112.22017
+       }
+      },
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 34.16244,
+        "lon": -112.29272
+       }
+      }
+     ],
+     "distance_m": 6675
+    },
+    {
+     "id": "us-az-hutch-mountain",
+     "name": "Hutch Mountain Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": {
+        "lat": 34.8025,
+        "lon": -111.3825
+       }
+      },
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 34.80194,
+        "lon": -111.39017
+       }
+      }
+     ],
+     "distance_m": 703
+    },
+    {
+     "id": "us-az-promontory",
+     "name": "Promontory Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 34.36717,
+        "lon": -111.01275
+       }
+      },
+      {
+       "source": "nhlr",
+       "value": {
+        "lat": 34.377,
+        "lon": -111.02225
+       }
+      }
+     ],
+     "distance_m": 1398
+    },
+    {
+     "id": "us-az-red-mountain",
+     "name": "Red Mountain Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": {
+        "lat": 31.50427,
+        "lon": -110.71872
+       }
+      },
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 31.50656,
+        "lon": -110.72633
+       }
+      }
+     ],
+     "distance_m": 765
+    },
+    {
+     "id": "us-az-whitney-pass",
+     "name": "Whitney Pass Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": {
+        "lat": 36.532447,
+        "lon": -114.048327
+       }
+      },
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 36.53264,
+        "lon": -108.04803
+       }
+      }
+     ],
+     "distance_m": 536024
+    },
+    {
+     "id": "us-ca-allen",
+     "name": "Allen Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 37.38709,
+        "lon": -122.29501
+       }
+      },
+      {
+       "source": "nhlr",
+       "value": {
+        "lat": 37.384386,
+        "lon": -122.289853
+       }
+      }
+     ],
+     "distance_m": 546
+    },
+    {
+     "id": "us-ca-buck-rock",
+     "name": "Buck Rock Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": {
+        "lat": 36.736,
+        "lon": -118.859765
        }
       },
       {
@@ -572,304 +861,336 @@
        }
       }
      ],
-     "distance_m": 636
+     "distance_m": 532
     },
     {
-     "id": "us-ca-eddy-gulch",
-     "name": "Eddy Gulch Lookout",
+     "id": "us-ca-crystal-peak",
+     "name": "Crystal Peak Lookout Site",
      "values": [
+      {
+       "source": "fflos",
+       "value": {
+        "lat": 39.557949,
+        "lon": -120.088684
+       }
+      },
       {
        "source": "ffla",
        "value": {
-        "lat": 41.23955,
-        "lon": -123.10623
+        "lat": 39.59928,
+        "lon": -120.0707
        }
+      }
+     ],
+     "distance_m": 4847
+    },
+    {
+     "id": "us-ca-eagle-rock-arapaho-roosevelt-national-forest",
+     "name": "Eagle Rock Lookout Site (Arapaho-Roosevelt National Forest)",
+     "values": [
+      {
+       "source": "fflos",
+       "value": {
+        "lat": 40.743083,
+        "lon": -123.326017
+       }
+      },
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 40.74935,
+        "lon": -123.32471
+       }
+      }
+     ],
+     "distance_m": 706
+    }
+   ],
+   "registers": [
+    {
+     "id": "us-ca-pilot-peak",
+     "name": "Pilot Peak Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": "US 600"
+      },
+      {
+       "source": "ffla",
+       "value": "US 1394"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-pilot-peak-stanislaus-national-forest",
+     "name": "Pilot Peak Lookout (Stanislaus National Forest)",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": "US 1394"
+      },
+      {
+       "source": "ffla",
+       "value": "US 600"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-mt-star-peak",
+     "name": "Star Peak Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": "US 178"
       },
       {
        "source": "osm",
-       "value": {
-        "lat": 41.24553,
-        "lon": -123.102422
-       }
+       "value": "US 178;MT 17"
       }
      ],
-     "distance_m": 737
+     "distance_m": null
     },
     {
-     "id": "us-ca-hirz-mountain",
-     "name": "Hirz Mountain Lookout",
+     "id": "us-or-bell-mountain-douglas-county",
+     "name": "Bell Mountain Lookout Site (Douglas County)",
      "values": [
       {
-       "source": "ffla",
-       "value": {
-        "lat": 40.89705,
-        "lon": -122.24581
-       }
+       "source": "fflos",
+       "value": "US 761"
       },
       {
-       "source": "ridb",
-       "value": {
-        "lat": 40.91361,
-        "lon": -122.2625
-       }
+       "source": "ffla",
+       "value": "US 669"
       }
      ],
-     "distance_m": 2315
+     "distance_m": null
     },
     {
-     "id": "us-id-agatha-creek",
-     "name": "Agatha Creek Lookout",
+     "id": "us-or-bell-mountain-tillamook-county",
+     "name": "Bell Mountain Lookout Site (Tillamook County)",
      "values": [
       {
-       "source": "ffla",
-       "value": {
-        "lat": 47.28445,
-        "lon": -116.05416
-       }
+       "source": "fflos",
+       "value": "US 669"
       },
       {
-       "source": "idaho_fl",
-       "value": {
-        "lat": 47.29747,
-        "lon": -116.05012
-       }
-      }
-     ],
-     "distance_m": 1479
-    },
-    {
-     "id": "us-id-benning",
-     "name": "Benning",
-     "values": [
-      {
        "source": "ffla",
-       "value": {
-        "lat": 48.3254,
-        "lon": -116.10125
-       }
-      },
-      {
-       "source": "idaho_fl",
-       "value": {
-        "lat": 48.33799,
-        "lon": -116.08378
-       }
+       "value": "US 761"
       }
      ],
-     "distance_m": 1905
-    },
-    {
-     "id": "us-id-big-sand",
-     "name": "Big Sand",
-     "values": [
-      {
-       "source": "ffla",
-       "value": {
-        "lat": 46.29051,
-        "lon": -114.56508
-       }
-      },
-      {
-       "source": "idaho_fl",
-       "value": {
-        "lat": 46.29603,
-        "lon": -114.56899
-       }
-      }
-     ],
-     "distance_m": 683
-    },
-    {
-     "id": "us-id-black-mare",
-     "name": "Black Mare",
-     "values": [
-      {
-       "source": "ffla",
-       "value": {
-        "lat": 44.82013,
-        "lon": -115.7892
-       }
-      },
-      {
-       "source": "idaho_fl",
-       "value": {
-        "lat": 44.80462,
-        "lon": -115.79623
-       }
-      }
-     ],
-     "distance_m": 1812
-    },
-    {
-     "id": "us-id-black-mountain-3",
-     "name": "Black Mountain",
-     "values": [
-      {
-       "source": "ffla",
-       "value": {
-        "lat": 43.10515,
-        "lon": -111.12257
-       }
-      },
-      {
-       "source": "idaho_fl",
-       "value": {
-        "lat": 43.11825,
-        "lon": -111.12966
-       }
-      }
-     ],
-     "distance_m": 1566
-    },
-    {
-     "id": "us-id-boulder-mountain",
-     "name": "Boulder Mountain",
-     "values": [
-      {
-       "source": "ffla",
-       "value": {
-        "lat": 48.75127,
-        "lon": -116.99501
-       }
-      },
-      {
-       "source": "idaho_fl",
-       "value": {
-        "lat": 48.75992,
-        "lon": -117.02495
-       }
-      }
-     ],
-     "distance_m": 2396
-    },
-    {
-     "id": "us-id-brown-creek-2",
-     "name": "Brown Creek #2 Lookout",
-     "values": [
-      {
-       "source": "ffla",
-       "value": {
-        "lat": 46.32278,
-        "lon": -115.82422
-       }
-      },
-      {
-       "source": "idaho_fl",
-       "value": {
-        "lat": 46.31556,
-        "lon": -115.80472
-       }
-      }
-     ],
-     "distance_m": 1699
-    },
-    {
-     "id": "us-id-buck-mountain",
-     "name": "Buck Mountain Lookout",
-     "values": [
-      {
-       "source": "ffla",
-       "value": {
-        "lat": 48.5622,
-        "lon": -116.14932
-       }
-      },
-      {
-       "source": "idaho_fl",
-       "value": {
-        "lat": 48.5641,
-        "lon": -116.16046
-       }
-      }
-     ],
-     "distance_m": 847
-    },
-    {
-     "id": "us-id-bugle-ridge",
-     "name": "Bugle Ridge Lookout",
-     "values": [
-      {
-       "source": "ffla",
-       "value": {
-        "lat": 48.83736,
-        "lon": -116.79745
-       }
-      },
-      {
-       "source": "idaho_fl",
-       "value": {
-        "lat": 48.85216,
-        "lon": -116.79134
-       }
-      }
-     ],
-     "distance_m": 1705
-    },
-    {
-     "id": "us-id-butler-blacktail",
-     "name": "Butler (Blacktail)",
-     "values": [
-      {
-       "source": "ffla",
-       "value": {
-        "lat": 48.11893,
-        "lon": -116.51886
-       }
-      },
-      {
-       "source": "idaho_fl",
-       "value": {
-        "lat": 48.13047,
-        "lon": -116.52547
-       }
-      }
-     ],
-     "distance_m": 1374
-    },
-    {
-     "id": "us-id-canyon-meadows-g-s",
-     "name": "Canyon Meadows G.S.",
-     "values": [
-      {
-       "source": "ffla",
-       "value": {
-        "lat": 46.32184,
-        "lon": -115.59248
-       }
-      },
-      {
-       "source": "idaho_fl",
-       "value": {
-        "lat": 46.32055,
-        "lon": -115.60249
-       }
-      }
-     ],
-     "distance_m": 782
-    },
-    {
-     "id": "us-id-cape-horn-peak",
-     "name": "Cape Horn Peak Lookout",
-     "values": [
-      {
-       "source": "ffla",
-       "value": {
-        "lat": 47.99567,
-        "lon": -116.52182
-       }
-      },
-      {
-       "source": "idaho_fl",
-       "value": {
-        "lat": 47.99153,
-        "lon": -116.49637
-       }
-      }
-     ],
-     "distance_m": 1949
+     "distance_m": null
     }
    ],
    "status": [
+    {
+     "id": "us-al-carpenter",
+     "name": "Carpenter Lookout Tower",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": "standing"
+      },
+      {
+       "source": "fflos",
+       "value": "gone"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-al-crooked-oak",
+     "name": "Crooked Oak Lookout Tower",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": "standing"
+      },
+      {
+       "source": "fflos",
+       "value": "gone"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-al-desoto-falls",
+     "name": "DeSoto Falls Tower",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": "standing"
+      },
+      {
+       "source": "fflos",
+       "value": "gone"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-al-longleaf",
+     "name": "Longleaf Lookout Tower",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": "standing"
+      },
+      {
+       "source": "fflos",
+       "value": "gone"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-al-luverne",
+     "name": "Luverne Lookout Tower",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": "standing"
+      },
+      {
+       "source": "fflos",
+       "value": "gone"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-al-orvin",
+     "name": "Orvin Lookout Tower",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": "standing"
+      },
+      {
+       "source": "fflos",
+       "value": "gone"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-al-searles",
+     "name": "Searles Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": "standing"
+      },
+      {
+       "source": "fflos",
+       "value": "gone"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-az-atascosa",
+     "name": "Atascosa Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "gone"
+      },
+      {
+       "source": "nhlr",
+       "value": "standing"
+      },
+      {
+       "source": "wikidata",
+       "value": "gone"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-az-barfoot",
+     "name": "Barfoot Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "gone"
+      },
+      {
+       "source": "nhlr",
+       "value": "standing"
+      },
+      {
+       "source": "fflos",
+       "value": "gone"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-az-big-lake",
+     "name": "Big Lake Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "gone"
+      },
+      {
+       "source": "nhlr",
+       "value": "standing"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-az-mormon-lake",
+     "name": "Mormon Lake Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "gone"
+      },
+      {
+       "source": "nhlr",
+       "value": "standing"
+      },
+      {
+       "source": "fflos",
+       "value": "gone"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-az-red-hill",
+     "name": "Red Hill Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "gone"
+      },
+      {
+       "source": "nhlr",
+       "value": "standing"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-az-round-mountain",
+     "name": "Round Mountain Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "gone"
+      },
+      {
+       "source": "nhlr",
+       "value": "standing"
+      }
+     ],
+     "distance_m": null
+    },
     {
      "id": "us-az-willow-mountain",
      "name": "Willow Mountain Fire Lookout",
@@ -886,211 +1207,20 @@
      "distance_m": null
     },
     {
-     "id": "us-ca-bear-basin-lookout-and-cabin",
-     "name": "Bear Basin Lookout and Cabin",
-     "values": [
-      {
-       "source": "ffla",
-       "value": "relocated"
-      },
-      {
-       "source": "ridb",
-       "value": "standing"
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-ca-black-rock-mountain",
-     "name": "Black Rock Mountain Lookout",
-     "values": [
-      {
-       "source": "ffla",
-       "value": "standing"
-      },
-      {
-       "source": "osm",
-       "value": "ruins"
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-ca-blue-ridge",
-     "name": "Blue Ridge Lookout Tower",
-     "values": [
-      {
-       "source": "ffla",
-       "value": "standing"
-      },
-      {
-       "source": "osm",
-       "value": "ruins"
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-ca-china-peak",
-     "name": "China Peak Lookout",
+     "id": "us-ca-baltic-peak",
+     "name": "Baltic Peak Lookout",
      "values": [
       {
        "source": "ffla",
        "value": "gone"
       },
       {
-       "source": "osm",
-       "value": "standing"
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-ca-goat-mountain",
-     "name": "Goat Mountain Lookout",
-     "values": [
-      {
-       "source": "ffla",
-       "value": "gone"
-      },
-      {
-       "source": "osm",
-       "value": "standing"
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-ca-ironside-mountain",
-     "name": "Ironside Mountain Lookout",
-     "values": [
-      {
-       "source": "ffla",
-       "value": "gone"
-      },
-      {
-       "source": "osm",
-       "value": "standing"
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-ca-kettle-rock",
-     "name": "Kettle Rock Lookout",
-     "values": [
-      {
-       "source": "ffla",
-       "value": "gone"
-      },
-      {
-       "source": "osm",
-       "value": "standing"
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-ca-mule-peak",
-     "name": "Mule Peak Fire Lookout",
-     "values": [
-      {
-       "source": "ffla",
-       "value": "gone"
-      },
-      {
-       "source": "fire_lookouts_org",
-       "value": "standing"
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-ca-red-mountain-3",
-     "name": "Red Mountain Lookout",
-     "values": [
-      {
-       "source": "ffla",
-       "value": "gone"
-      },
-      {
-       "source": "osm",
-       "value": "standing"
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-ca-red-top",
-     "name": "Red Top",
-     "values": [
-      {
-       "source": "ffla",
+       "source": "nhlr",
        "value": "standing"
       },
       {
-       "source": "fire_lookouts_org",
+       "source": "fflos",
        "value": "gone"
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-ca-shelton-butte",
-     "name": "Shelton Butte Lookout",
-     "values": [
-      {
-       "source": "ffla",
-       "value": "gone"
-      },
-      {
-       "source": "osm",
-       "value": "standing"
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-ca-slate-mountain",
-     "name": "Slate Mountain Lookout",
-     "values": [
-      {
-       "source": "ffla",
-       "value": "gone"
-      },
-      {
-       "source": "osm",
-       "value": "standing"
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-ca-the-needles",
-     "name": "The Needles",
-     "values": [
-      {
-       "source": "ffla",
-       "value": "gone"
-      },
-      {
-       "source": "fire_lookouts_org",
-       "value": "standing"
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-ca-valley-view",
-     "name": "Valley View Lookout",
-     "values": [
-      {
-       "source": "ffla",
-       "value": "gone"
-      },
-      {
-       "source": "osm",
-       "value": "standing"
       }
      ],
      "distance_m": null
@@ -1099,14 +1229,84 @@
   }
  },
  "near_misses": {
-  "count": 29,
+  "count": 33,
   "by_type": {
-   "same_name_apart": 29
+   "close_different_names": 3,
+   "same_name_apart": 30
   },
   "pairs": [
    {
+    "type": "close_different_names",
+    "distance_m": 113,
+    "name_score": 0.284,
+    "a": {
+     "id": "us-ct-governors-hill",
+     "name": "Governors Hill Tower Site",
+     "status": "gone",
+     "sources": [
+      "fflos"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-ct-oxford",
+     "name": "Oxford Lookout Tower",
+     "status": "unknown",
+     "sources": [
+      "osm"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "close_different_names",
+    "distance_m": 314,
+    "name_score": 0.0,
+    "a": {
+     "id": "us-ma-mount-toby",
+     "name": "Mount Toby Fire Tower",
+     "status": "unknown",
+     "sources": [
+      "wikidata"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-ma-sunderland",
+     "name": "Sunderland Fire Tower",
+     "status": "standing",
+     "sources": [
+      "nhlr"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "close_different_names",
+    "distance_m": 336,
+    "name_score": 0.189,
+    "a": {
+     "id": "us-ma-vineyard",
+     "name": "Vineyard Fire Tower",
+     "status": "standing",
+     "sources": [
+      "nhlr"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-ma-west-tisbury",
+     "name": "West Tisbury Fire Tower",
+     "status": "standing",
+     "sources": [
+      "osm"
+     ],
+     "hidden": false
+    }
+   },
+   {
     "type": "same_name_apart",
-    "distance_m": 2050,
+    "distance_m": 4625,
     "name_score": 1.0,
     "a": {
      "id": "us-az-horsethief",
@@ -1119,10 +1319,11 @@
     },
     "b": {
      "id": "us-az-horsethief-2",
-     "name": "Horsethief",
+     "name": "Horsethief Lookout",
      "status": "standing",
      "sources": [
-      "ffla"
+      "ffla",
+      "nhlr"
      ],
      "hidden": false
     }
@@ -1152,14 +1353,15 @@
    },
    {
     "type": "same_name_apart",
-    "distance_m": 2019,
+    "distance_m": 2027,
     "name_score": 1.0,
     "a": {
      "id": "us-co-sandoval-mesa",
-     "name": "Sandoval Mesa",
+     "name": "Sandoval Mesa Lookout",
      "status": "gone",
      "sources": [
-      "ffla"
+      "ffla",
+      "nhlr"
      ],
      "hidden": false
     },
@@ -1535,15 +1737,16 @@
    },
    {
     "type": "same_name_apart",
-    "distance_m": 3265,
+    "distance_m": 3263,
     "name_score": 0.85,
     "a": {
      "id": "us-id-squaw-butte",
-     "name": "Squaw Butte",
+     "name": "Squaw Butte Lookout",
      "status": "standing",
      "sources": [
       "ffla",
-      "firelookout_com"
+      "firelookout_com",
+      "nhlr"
      ],
      "hidden": false
     },
@@ -1559,25 +1762,26 @@
    },
    {
     "type": "same_name_apart",
-    "distance_m": 7559,
+    "distance_m": 7570,
     "name_score": 1.0,
     "a": {
-     "id": "us-id-surveyors",
-     "name": "Surveyors Lookout",
-     "status": "standing",
-     "sources": [
-      "ffla",
-      "firelookout_com",
-      "ridb"
-     ],
-     "hidden": false
-    },
-    "b": {
      "id": "us-id-surveyors-ridge",
      "name": "Surveyors Ridge Lookout",
      "status": "unknown",
      "sources": [
       "idaho_fl"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-surveyors-ridge-2",
+     "name": "Surveyors Ridge Lookout",
+     "status": "standing",
+     "sources": [
+      "ffla",
+      "firelookout_com",
+      "nhlr",
+      "ridb"
      ],
      "hidden": false
     }
@@ -1632,6 +1836,99 @@
    },
    {
     "type": "same_name_apart",
+    "distance_m": 3064,
+    "name_score": 0.85,
+    "a": {
+     "id": "us-ma-carver",
+     "name": "Carver Fire Tower",
+     "status": "standing",
+     "sources": [
+      "nhlr"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-ma-carver-tower-site-1",
+     "name": "Carver Tower Site #1",
+     "status": "gone",
+     "sources": [
+      "fflos"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 4922,
+    "name_score": 0.85,
+    "a": {
+     "id": "us-ma-rehoboth",
+     "name": "Rehoboth Fire Tower",
+     "status": "standing",
+     "sources": [
+      "nhlr"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-ma-rehoboth-tower-site-1",
+     "name": "Rehoboth Tower Site #1",
+     "status": "gone",
+     "sources": [
+      "fflos"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 7856,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-ma-sandwich",
+     "name": "Sandwich Fire Tower",
+     "status": "standing",
+     "sources": [
+      "osm"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-ma-sandwich-2",
+     "name": "Sandwich Fire Tower",
+     "status": "standing",
+     "sources": [
+      "nhlr"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 9494,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-me-rocky-mountain",
+     "name": "Rocky Mountain Tower Site",
+     "status": "gone",
+     "sources": [
+      "fflos"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-me-rocky-mountain-2",
+     "name": "Rocky Mountain Lookout",
+     "status": "standing",
+     "sources": [
+      "ffla",
+      "nhlr"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
     "distance_m": 1528,
     "name_score": 1.0,
     "a": {
@@ -1649,29 +1946,6 @@
      "status": "gone",
      "sources": [
       "ffla"
-     ],
-     "hidden": false
-    }
-   },
-   {
-    "type": "same_name_apart",
-    "distance_m": 1966,
-    "name_score": 1.0,
-    "a": {
-     "id": "us-mt-jackson-ranger",
-     "name": "Jackson Ranger Station",
-     "status": "gone",
-     "sources": [
-      "ffla"
-     ],
-     "hidden": false
-    },
-    "b": {
-     "id": "us-mt-jackson-ranger-2",
-     "name": "Jackson Ranger Station",
-     "status": "standing",
-     "sources": [
-      "firelookout_com"
      ],
      "hidden": false
     }
@@ -1701,46 +1975,24 @@
    },
    {
     "type": "same_name_apart",
-    "distance_m": 4124,
+    "distance_m": 3991,
     "name_score": 1.0,
     "a": {
-     "id": "us-or-spion-copp",
-     "name": "Spion Copp",
-     "status": "gone",
+     "id": "us-tn-fall-creek-falls",
+     "name": "Fall Creek Falls Fire Lookout Tower",
+     "status": "standing",
      "sources": [
-      "ffla"
+      "osm",
+      "wikidata"
      ],
      "hidden": false
     },
     "b": {
-     "id": "us-or-spion-copp-2",
-     "name": "Spion Copp",
-     "status": "gone",
+     "id": "us-tn-fall-creek-falls-2",
+     "name": "Fall Creek Falls Lookout Tower",
+     "status": "standing",
      "sources": [
-      "firelookout_com"
-     ],
-     "hidden": false
-    }
-   },
-   {
-    "type": "same_name_apart",
-    "distance_m": 4449,
-    "name_score": 0.85,
-    "a": {
-     "id": "us-sd-pilger-mountain",
-     "name": "Pilger Mountain",
-     "status": "gone",
-     "sources": [
-      "ffla"
-     ],
-     "hidden": false
-    },
-    "b": {
-     "id": "us-sd-pilger-peak",
-     "name": "Pilger Peak",
-     "status": "gone",
-     "sources": [
-      "firelookout_com"
+      "nhlr"
      ],
      "hidden": false
     }
@@ -1767,40 +2019,113 @@
      ],
      "hidden": false
     }
-   },
-   {
-    "type": "same_name_apart",
-    "distance_m": 4328,
-    "name_score": 1.0,
-    "a": {
-     "id": "us-wa-naneum-ridge",
-     "name": "Naneum Ridge",
-     "status": "gone",
-     "sources": [
-      "ffla"
-     ],
-     "hidden": false
-    },
-    "b": {
-     "id": "us-wa-naneum-ridge-2",
-     "name": "Naneum Ridge",
-     "status": "gone",
-     "sources": [
-      "firelookout_com"
-     ],
-     "hidden": false
-    }
    }
   ]
  },
  "review": [
   {
    "type": "matched_different_names",
+   "key": "nhlr:US 899",
+   "name": "Pioneer Tower",
+   "tower": "us-al-pioneer",
+   "tower_name": "Pioneer Tower",
+   "score": 0.27
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/358985743",
+   "name": "Pleasant Grove Lookout Tower",
+   "tower": "us-al-pioneer",
+   "tower_name": "Pioneer Tower",
+   "score": 0.27
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 776",
+   "name": "Smith Mountain Fire Lookout Tower",
+   "tower": "us-al-smith-mountain",
+   "tower_name": "Smith Mountain Fire Lookout Tower",
+   "score": 0.189
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/13900459645",
+   "name": "Jerry W. Bynum Fire Lookout Tower",
+   "tower": "us-al-smith-mountain",
+   "tower_name": "Smith Mountain Fire Lookout Tower",
+   "score": 0.189
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "nhlr:US 1574",
+    "ffla:az:black-rock:36.7733:-113.8083"
+   ],
+   "registers": [
+    "NHLR US 1574"
+   ],
+   "tower": "us-az-black-rock",
+   "distance_m": 5469
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "nhlr:US 202",
+    "ffla:az:chediski:34.1834:-110.6638"
+   ],
+   "registers": [
+    "NHLR US 202"
+   ],
+   "tower": "us-az-chediski",
+   "distance_m": 7570
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "nhlr:US 527",
+    "ffla:az:horsethief:34.1624:-112.2927"
+   ],
+   "registers": [
+    "NHLR US 527"
+   ],
+   "tower": "us-az-horsethief-2",
+   "distance_m": 6675
+  },
+  {
+   "type": "matched_different_names",
    "key": "osm:node/359286418",
    "name": "Camp Wood 2 Lookout Tower",
    "tower": "us-az-hyde-mountain",
-   "tower_name": "Hyde Mountain",
+   "tower_name": "Hyde Mountain Lookout",
    "score": 0.138
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "nhlr:US 1573",
+    "ffla:az:whitney-pass:36.5326:-108.0480"
+   ],
+   "registers": [
+    "NHLR US 1573"
+   ],
+   "tower": "us-az-whitney-pass",
+   "distance_m": 536024
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 1289",
+   "name": "Castro Peak Lookout",
+   "tower": "us-ca-castro-peak-at-henninger-flats",
+   "tower_name": "Castro Peak Lookout (now at Henninger Flats)",
+   "score": 0.18
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ffla:ca:henninger-flats-relocated-castro:34.1933:-118.0901",
+   "name": "Henninger Flats",
+   "tower": "us-ca-castro-peak-at-henninger-flats",
+   "tower_name": "Castro Peak Lookout (now at Henninger Flats)",
+   "score": 0.09
   },
   {
    "type": "matched_different_names",
@@ -1820,58 +2145,318 @@
   },
   {
    "type": "matched_different_names",
+   "key": "nhlr:US 752",
+   "name": "Estelle Mountain Lookout",
+   "tower": "us-ca-estelle-mountain-at-hemet-ryan",
+   "tower_name": "Estelle Mountain Lookout (now at Hemet-Ryan)",
+   "score": 0.225
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ffla:ca:hemet-ryan-relocated-estelle:33.7302:-117.0219",
+   "name": "Hemet-Ryan",
+   "tower": "us-ca-estelle-mountain-at-hemet-ryan",
+   "tower_name": "Estelle Mountain Lookout (now at Hemet-Ryan)",
+   "score": 0.225
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 1375",
+   "name": "Hayden Hill Lookout",
+   "tower": "us-ca-hayden-hill-at-big-valley-museum",
+   "tower_name": "Hayden Hill Lookout (now at the Big Valley Museum)",
+   "score": 0.216
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ffla:ca:big-valley-museum-relocated-hayden-hill:41.1223:-121.1384",
+   "name": "Big Valley Museum",
+   "tower": "us-ca-hayden-hill-at-big-valley-museum",
+   "tower_name": "Hayden Hill Lookout (now at the Big Valley Museum)",
+   "score": 0.216
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 1390",
+   "name": "Mount Ingalls Lookout",
+   "tower": "us-ca-mount-ingalls-at-quincy-fairgrounds",
+   "tower_name": "Mount Ingalls Lookout (now at the Quincy Fairgrounds)",
+   "score": 0.3
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ffla:ca:quincy-fairgrounds-relocated-ingalls:39.9397:-120.9147",
+   "name": "Quincy Fairgrounds",
+   "tower": "us-ca-mount-ingalls-at-quincy-fairgrounds",
+   "tower_name": "Mount Ingalls Lookout (now at the Quincy Fairgrounds)",
+   "score": 0.3
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 687",
+    "ffla:ca:ranger-peak:33.8444:-116.8254"
+   ],
+   "registers": [
+    "FFLOS US 687"
+   ],
+   "tower": "us-ca-ranger-peak",
+   "distance_m": 7346
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 1395",
+   "name": "Salisbury Portrero Lookout - AWS Post",
+   "tower": "us-ca-salisbury-portero-aws-at-black-willow-spring",
+   "tower_name": "Salisbury Portero AWS Lookout (now at Black Willow Spring)",
+   "score": 0.263
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ffla:ca:black-willow-spring-relocated-salisbury-portero-aws:34.8325:-119.7638",
+   "name": "Black Willow Spring",
+   "tower": "us-ca-salisbury-portero-aws-at-black-willow-spring",
+   "tower_name": "Salisbury Portero AWS Lookout (now at Black Willow Spring)",
+   "score": 0.22
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 852",
+    "ffla:ca:san-juan:33.5967:-117.5097"
+   ],
+   "registers": [
+    "FFLOS US 852"
+   ],
+   "tower": "us-ca-san-juan",
+   "distance_m": 8187
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 535",
+    "ffla:co:eagle-s-nest:37.4779:-108.5457"
+   ],
+   "registers": [
+    "FFLOS US 535"
+   ],
+   "tower": "us-co-eagles-nest-mcphee",
+   "distance_m": 6127
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "nhlr:US 876",
+    "ffla:co:soda-point:37.1286:-108.4667"
+   ],
+   "registers": [
+    "NHLR US 876"
+   ],
+   "tower": "us-co-soda-point",
+   "distance_m": 18208
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 1795",
+   "name": "Marion County Airfield Fire Tower",
+   "tower": "us-fl-marion-county-airfield",
+   "tower_name": "Marion County Airfield Fire Tower",
+   "score": 0.243
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/358695030",
+   "name": "Dunnellon Forestry Lookout Tower",
+   "tower": "us-fl-marion-county-airfield",
+   "tower_name": "Marion County Airfield Fire Tower",
+   "score": 0.195
+  },
+  {
+   "type": "matched_different_names",
    "key": "ridb:233128",
    "name": "Lookout Butte Lookout",
-   "tower": "us-id-lookout-butte-2",
-   "tower_name": "Lookout Butte Lookout",
+   "tower": "us-id-black-butte",
+   "tower_name": "Black Butte Lookout",
    "score": 0.3
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 714",
+   "name": "Cold Mountain Lookout",
+   "tower": "us-id-cold-mountain-at-payette-lake-holm",
+   "tower_name": "Cold Mountain Lookout (now at Payette Lake – Holm)",
+   "score": 0.189
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ffla:id:payette-lake-holm-relocated-cold-mountain:44.9525:-116.0458",
+   "name": "Payette Lake – Holm",
+   "tower": "us-id-cold-mountain-at-payette-lake-holm",
+   "tower_name": "Cold Mountain Lookout (now at Payette Lake – Holm)",
+   "score": 0.189
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 1448",
+   "name": "Gold Fork Lookout",
+   "tower": "us-id-gold-fork-at-crawford-work-center",
+   "tower_name": "Gold Fork Lookout (now at the Crawford Work Center)",
+   "score": 0.277
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ffla:id:crawford-work-center-relocated-gold-fork:44.5293:-115.9822",
+   "name": "Crawford Work Center",
+   "tower": "us-id-gold-fork-at-crawford-work-center",
+   "tower_name": "Gold Fork Lookout (now at the Crawford Work Center)",
+   "score": 0.277
   },
   {
    "type": "matched_different_names",
    "key": "osm:way/1411254054",
    "name": "Chase Lookout",
-   "tower": "us-id-lookout-mountain-4",
-   "tower_name": "Lookout Mountain Lookout",
-   "score": 0.0
+   "tower": "us-id-lookout-mountain-custer-county",
+   "tower_name": "Lookout Mountain Lookout (Custer County)",
+   "score": 0.318
   },
   {
    "type": "matched_different_names",
-   "key": "ffla:in:ouabache:40.7228:-85.1065",
-   "name": "Ouabache",
-   "tower": "us-in-ouabache",
-   "tower_name": "Ouabache",
-   "score": 0.189
+   "key": "nhlr:US 715",
+   "name": "Sloans Point Lookout",
+   "tower": "us-id-sloans-creek-point-at-cent-id-hist-museum",
+   "tower_name": "Sloans Creek Point Lookout (now at the Cent. ID Hist. Museum)",
+   "score": 0.133
   },
   {
    "type": "matched_different_names",
-   "key": "osm:node/4733207522",
-   "name": "Well's County Fire Tower",
-   "tower": "us-in-ouabache",
-   "tower_name": "Ouabache",
-   "score": 0.189
+   "key": "ffla:id:cent-id-hist-museum-tower-relocated-sloans-creek-point:44.9090:-116.1091",
+   "name": "Cent. ID Hist. Museum – Tower",
+   "tower": "us-id-sloans-creek-point-at-cent-id-hist-museum",
+   "tower_name": "Sloans Creek Point Lookout (now at the Cent. ID Hist. Museum)",
+   "score": 0.133
   },
   {
    "type": "matched_different_names",
-   "key": "ffla:in:willow-valley:38.6943:-86.7269",
-   "name": "Willow Valley",
-   "tower": "us-in-willow-valley",
-   "tower_name": "Willow Valley",
-   "score": 0.0
+   "key": "nhlr:US 1455",
+   "name": "Split Creek Point Lookout",
+   "tower": "us-id-split-creek-point-at-cent-id-hist-museum-cab",
+   "tower_name": "Split Creek Point Lookout (now at the Cent. ID Hist. Museum – Cab)",
+   "score": 0.232
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ffla:id:cent-id-hist-museum-cab-relocated-split-creek-point:44.9095:-116.1090",
+   "name": "Cent. ID Hist. Museum – Cab",
+   "tower": "us-id-split-creek-point-at-cent-id-hist-museum-cab",
+   "tower_name": "Split Creek Point Lookout (now at the Cent. ID Hist. Museum – Cab)",
+   "score": 0.232
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 831",
+    "ffla:id:swan-peak:47.5067:-116.6405"
+   ],
+   "registers": [
+    "FFLOS US 831"
+   ],
+   "tower": "us-id-swan-peak",
+   "distance_m": 334977
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "nhlr:US 1445",
+    "ffla:id:taylor-mountain:44.8852:-114.2160"
+   ],
+   "registers": [
+    "NHLR US 1445"
+   ],
+   "tower": "us-id-taylor-mountain",
+   "distance_m": 253814
   },
   {
    "type": "matched_different_names",
    "key": "osm:node/1688032313",
    "name": "MSF firetower",
    "tower": "us-in-willow-valley",
-   "tower_name": "Willow Valley",
+   "tower_name": "Willow Valley Fire Tower",
    "score": 0.0
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 558",
+   "name": "Acushnet Fire Tower",
+   "tower": "us-ma-acushnet",
+   "tower_name": "Acushnet Fire Tower",
+   "score": 0.189
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/257494507",
+   "name": "Mendall Hill Fire Tower",
+   "tower": "us-ma-acushnet",
+   "tower_name": "Acushnet Fire Tower",
+   "score": 0.095
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 49",
+   "name": "MacAllester Fire Tower",
+   "tower": "us-ma-macallester",
+   "tower_name": "MacAllester Fire Tower",
+   "score": 0.212
+  },
+  {
+   "type": "matched_different_names",
+   "key": "fflos:US 19",
+   "name": "Dover Tower Site #1",
+   "tower": "us-ma-macallester",
+   "tower_name": "MacAllester Fire Tower",
+   "score": 0.212
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/358265378",
+   "name": "Walker Lookout Tower",
+   "tower": "us-ma-savoy",
+   "tower_name": "Savoy Fire Tower",
+   "score": 0.164
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 625",
+   "name": "Sudbury Fire Tower",
+   "tower": "us-ma-sudbury",
+   "tower_name": "Sudbury Fire Tower",
+   "score": 0.106
+  },
+  {
+   "type": "matched_different_names",
+   "key": "fflos:US 36",
+   "name": "Framingham Tower Site",
+   "tower": "us-ma-sudbury",
+   "tower_name": "Sudbury Fire Tower",
+   "score": 0.106
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "nhlr:US 696",
+    "ffla:md:church-creek:38.4742:-76.1427"
+   ],
+   "registers": [
+    "NHLR US 696"
+   ],
+   "tower": "us-md-church-creek-forestry",
+   "distance_m": 16592
   },
   {
    "type": "matched_different_names",
    "key": "ffla:me:greenville-visitor-center-relocated-squaw-mountain:45.4260:-69.5923",
    "name": "Greenville Visitor Center",
-   "tower": "us-me-big-moose-mountain-at-greenville-visitor-center",
-   "tower_name": "Big Moose Mountain Lookout Tower (now at the Greenville Visitor Center)",
+   "tower": "us-me-squaw-mountain-at-greenville-visitor-center",
+   "tower_name": "Squaw Mountain Lookout (now at the Greenville Visitor Center)",
    "score": 0.116
   },
   {
@@ -1889,6 +2474,38 @@
    "tower": "us-me-streaked-mountain",
    "tower_name": "Streaked Mountain",
    "score": 0.164
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 710",
+   "name": "Bemidji Fire Tower",
+   "tower": "us-mn-bemidji-at-camp-wilderness",
+   "tower_name": "Bemidji Fire Tower (now at Camp Wilderness)",
+   "score": 0.086
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ffla:mn:camp-wilderness-relocated-bemidji:47.0949:-94.9454",
+   "name": "Camp Wilderness",
+   "tower": "us-mn-bemidji-at-camp-wilderness",
+   "tower_name": "Bemidji Fire Tower (now at Camp Wilderness)",
+   "score": 0.257
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 270",
+   "name": "Boulder Hill Fire Tower",
+   "tower": "us-mn-boulder-hill-at-forest-history-center",
+   "tower_name": "Boulder Hill Fire Tower (now at the Forest History Center)",
+   "score": 0.18
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ffla:mn:forest-history-center-relocated-boulder-hill:47.2295:-93.5656",
+   "name": "Forest History Center",
+   "tower": "us-mn-boulder-hill-at-forest-history-center",
+   "tower_name": "Boulder Hill Fire Tower (now at the Forest History Center)",
+   "score": 0.24
   },
   {
    "type": "matched_different_names",
@@ -1940,6 +2557,58 @@
   },
   {
    "type": "matched_different_names",
+   "key": "nhlr:US 1659",
+   "name": "Hinds Lookout Tower",
+   "tower": "us-ms-hinds",
+   "tower_name": "Hinds Lookout Tower",
+   "score": 0.3
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/357997213",
+   "name": "Raymond Lookout Tower",
+   "tower": "us-ms-hinds",
+   "tower_name": "Hinds Lookout Tower",
+   "score": 0.3
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 1613",
+   "name": "Union Lookout Tower",
+   "tower": "us-ms-union",
+   "tower_name": "Union Lookout Tower",
+   "score": 0.164
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/357997086",
+   "name": "Center Lookout Tower",
+   "tower": "us-ms-union",
+   "tower_name": "Union Lookout Tower",
+   "score": 0.164
+  },
+  {
+   "type": "matched_different_names",
+   "key": "fflos:US 2089",
+   "name": "Jocko #2 Lookout",
+   "tower": "us-mt-jocko-2",
+   "tower_name": "Jocko #2 Lookout",
+   "score": 0.2
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "nhlr:US 1114",
+    "ffla:mt:keeler-mountain:48.3204:-115.8947"
+   ],
+   "registers": [
+    "NHLR US 1114"
+   ],
+   "tower": "us-mt-keeler-mountain",
+   "distance_m": 30535
+  },
+  {
+   "type": "matched_different_names",
    "key": "ffla:mt:fort-missoula-historical-museum-relocated-sliderock:46.8429:-114.0643",
    "name": "Fort Missoula Historical Museum",
    "tower": "us-mt-sliderock-at-fort-missoula-historical-museum",
@@ -1958,41 +2627,33 @@
    "type": "matched_different_names",
    "key": "ffla:nh:kearsarge-north:44.1058:-71.0941",
    "name": "Kearsarge North",
-   "tower": "us-nh-kearsarge-north",
-   "tower_name": "Kearsarge North",
+   "tower": "us-nh-pequawket",
+   "tower_name": "Pequawket Fire Tower",
    "score": 0.235
   },
   {
-   "type": "matched_different_names",
-   "key": "wikidata:Q86926982",
-   "name": "Pequawket Fire Tower",
-   "tower": "us-nh-kearsarge-north",
-   "tower_name": "Kearsarge North",
-   "score": 0.235
+   "type": "register_match_far",
+   "keys": [
+    "nhlr:US 316",
+    "ffla:nm:atole:36.7754:-106.7491"
+   ],
+   "registers": [
+    "NHLR US 316"
+   ],
+   "tower": "us-nm-atole",
+   "distance_m": 9002
   },
   {
-   "type": "matched_different_names",
-   "key": "ffla:ny:speculator-relocated-makomis:43.4973:-74.3590",
-   "name": "Speculator",
-   "tower": "us-ny-makomis-at-speculator",
-   "tower_name": "Makomis Fire Tower (now at Speculator)",
-   "score": 0.106
-  },
-  {
-   "type": "matched_different_names",
-   "key": "osm:node/12219609354",
-   "name": "Makomis Fire Tower",
-   "tower": "us-ny-makomis-at-speculator",
-   "tower_name": "Makomis Fire Tower (now at Speculator)",
-   "score": 0.212
-  },
-  {
-   "type": "matched_different_names",
-   "key": "ffla:ny:ferncliff-forest-relocated-orangeburg-sc:41.9566:-73.9269",
-   "name": "Ferncliff Forest",
-   "tower": "us-ny-orangeburg-at-ferncliff-forest",
-   "tower_name": "Orangeburg Lookout (from South Carolina, now at Ferncliff Forest)",
-   "score": 0.171
+   "type": "register_match_far",
+   "keys": [
+    "nhlr:US 681",
+    "ffla:ny:black-rock:41.3975:-74.0239"
+   ],
+   "registers": [
+    "NHLR US 681"
+   ],
+   "tower": "us-ny-black-rock-forest",
+   "distance_m": 7116
   },
   {
    "type": "matched_different_names",
@@ -2022,9 +2683,21 @@
    "type": "matched_different_names",
    "key": "osm:node/357599527",
    "name": "Pines Lookout Tower",
-   "tower": "us-ny-rock-rift-mountain",
-   "tower_name": "Rock Rift Mountain",
+   "tower": "us-ny-rock-rift",
+   "tower_name": "Rock Rift Fire Tower",
    "score": 0.138
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 545",
+    "ffla:ny:washburn-mountain:42.1066:-73.5155"
+   ],
+   "registers": [
+    "FFLOS US 545"
+   ],
+   "tower": "us-ny-washburn-mountain",
+   "distance_m": 7399
   },
   {
    "type": "matched_different_names",
@@ -2036,26 +2709,250 @@
   },
   {
    "type": "matched_different_names",
-   "key": "osm:node/11172389843",
-   "name": "Armintrout Fire Tower",
-   "tower": "us-oh-armintrout-at-ohio-exposition-center",
-   "tower_name": "Armintrout Fire Tower (now at the Ohio Exposition Center)",
-   "score": 0.24
+   "key": "nhlr:US 1024",
+   "name": "Keystone Fire Tower",
+   "tower": "us-oh-keystone-at-scioto-grove-metro-park",
+   "tower_name": "Keystone Fire Tower (now at Scioto Grove Metro Park)",
+   "score": 0.257
   },
   {
    "type": "matched_different_names",
-   "key": "pa_storymap:mount-dunlap:39.7259:-77.4875",
-   "name": "Mount Dunlap",
-   "tower": "us-pa-mount-dunlap",
-   "tower_name": "Mount Dunlap",
-   "score": 0.12
+   "key": "ffla:oh:scioto-grove-metro-park-relocated-keystone:39.8523:-83.0219",
+   "name": "Scioto Grove Metro Park",
+   "tower": "us-oh-keystone-at-scioto-grove-metro-park",
+   "tower_name": "Keystone Fire Tower (now at Scioto Grove Metro Park)",
+   "score": 0.257
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 1563",
+    "ffla:oh:lakeview-salt-fork:40.0951:-81.5498"
+   ],
+   "registers": [
+    "FFLOS US 1563"
+   ],
+   "tower": "us-oh-lakeview",
+   "distance_m": 9734
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 1564",
+    "ffla:oh:leavittsville:40.5117:-81.1933"
+   ],
+   "registers": [
+    "FFLOS US 1564"
+   ],
+   "tower": "us-oh-leavittsville",
+   "distance_m": 9393
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 879",
+   "name": "Snake Ridge Lookout Tower",
+   "tower": "us-oh-snake-ridge-at-wayne-nf-headquarters",
+   "tower_name": "Snake Ridge Lookout Tower (now at the Wayne NF Headquarters)",
+   "score": 0.248
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ffla:oh:wayne-nf-headquarters-relocated-snake-ridge:39.4028:-82.1666",
+   "name": "Wayne NF Headquarters",
+   "tower": "us-oh-snake-ridge-at-wayne-nf-headquarters",
+   "tower_name": "Snake Ridge Lookout Tower (now at the Wayne NF Headquarters)",
+   "score": 0.186
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 561",
+    "ffla:or:alder-springs:44.6299:-121.5538"
+   ],
+   "registers": [
+    "FFLOS US 561"
+   ],
+   "tower": "us-or-alder-springs",
+   "distance_m": 264230
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 563",
+    "ffla:or:badger-butte:45.2943:-121.5522"
+   ],
+   "registers": [
+    "FFLOS US 563"
+   ],
+   "tower": "us-or-badger-butte-2",
+   "distance_m": 48250
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 1054",
+    "ffla:or:bingham-point:44.1255:-118.3641"
+   ],
+   "registers": [
+    "FFLOS US 1054"
+   ],
+   "tower": "us-or-bingham-point",
+   "distance_m": 73013
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 764",
+    "ffla:or:black-rock:43.1600:-122.4640"
+   ],
+   "registers": [
+    "FFLOS US 764"
+   ],
+   "tower": "us-or-black-rock",
+   "distance_m": 14484
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 765",
+    "ffla:or:blue-ridge:43.2711:-124.0865"
+   ],
+   "registers": [
+    "FFLOS US 765"
+   ],
+   "tower": "us-or-blue-ridge",
+   "distance_m": 20248
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 1816",
+    "ffla:or:grants-pass:42.4446:-123.3093"
+   ],
+   "registers": [
+    "FFLOS US 1816"
+   ],
+   "tower": "us-or-grants-pass",
+   "distance_m": 7855
+  },
+  {
+   "type": "matched_different_names",
+   "key": "fflos:US 973",
+   "name": "Lookout Mountain Lookout Site-DNF",
+   "tower": "us-or-lookout-mountain-lookout-site-dnf",
+   "tower_name": "Lookout Mountain Lookout Site-DNF",
+   "score": 0.0
+  },
+  {
+   "type": "matched_different_names",
+   "key": "fflos:US 1071",
+   "name": "Lookout Mountain Lookout Site-MNF",
+   "tower": "us-or-lookout-mountain-lookout-site-mnf",
+   "tower_name": "Lookout Mountain Lookout Site-MNF",
+   "score": 0.0
+  },
+  {
+   "type": "matched_different_names",
+   "key": "fflos:US 1072",
+   "name": "Lookout Mountain Lookout Site-ONF",
+   "tower": "us-or-lookout-mountain-lookout-site-onf",
+   "tower_name": "Lookout Mountain Lookout Site-ONF",
+   "score": 0.18
+  },
+  {
+   "type": "matched_different_names",
+   "key": "fflos:US 1124",
+   "name": "Lookout Mountain Lookout Site-WWNF I",
+   "tower": "us-or-lookout-mountain-lookout-site-wwnf-i",
+   "tower_name": "Lookout Mountain Lookout Site-WWNF I",
+   "score": 0.0
+  },
+  {
+   "type": "matched_different_names",
+   "key": "fflos:US 1123",
+   "name": "Lookout Mountain Lookout Site-WWNF II",
+   "tower": "us-or-lookout-mountain-lookout-site-wwnf-ii",
+   "tower_name": "Lookout Mountain Lookout Site-WWNF II",
+   "score": 0.0
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 1841",
+    "ffla:or:north-powder:44.9295:-118.1598"
+   ],
+   "registers": [
+    "FFLOS US 1841"
+   ],
+   "tower": "us-or-north-powder",
+   "distance_m": 21923
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "nhlr:US 335",
+    "ffla:or:pig-iron:43.2642:-122.3799"
+   ],
+   "registers": [
+    "NHLR US 335"
+   ],
+   "tower": "us-or-pig-iron",
+   "distance_m": 9329
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "nhlr:US 471",
+    "ffla:or:rajneesh-ranch:44.8331:-120.6243"
+   ],
+   "registers": [
+    "NHLR US 471"
+   ],
+   "tower": "us-or-rajneesh-ranch",
+   "distance_m": 11607
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 647",
+    "ffla:or:salmon-mountain:45.1791:-121.9807"
+   ],
+   "registers": [
+    "FFLOS US 647"
+   ],
+   "tower": "us-or-salmon-mountain",
+   "distance_m": 9613
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 1768",
+    "ffla:or:sugarloaf-mountain:42.8380:-124.2349"
+   ],
+   "registers": [
+    "FFLOS US 1768"
+   ],
+   "tower": "us-or-sugarloaf-mountain-clatsop-county",
+   "distance_m": 337283
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "nhlr:US 147",
+    "ffla:or:wanoga-butte:43.9139:-121.5554"
+   ],
+   "registers": [
+    "NHLR US 147"
+   ],
+   "tower": "us-or-wanoga-butte",
+   "distance_m": 17946
   },
   {
    "type": "matched_different_names",
    "key": "osm:node/357364481",
    "name": "Blue Ridge Lookout Tower",
    "tower": "us-pa-mount-dunlap",
-   "tower_name": "Mount Dunlap",
+   "tower_name": "Mount Dunlap Fire Tower",
    "score": 0.12
   },
   {
@@ -2076,6 +2973,22 @@
   },
   {
    "type": "matched_different_names",
+   "key": "fflos:US 55",
+   "name": "Blackstone Valley Tower Site",
+   "tower": "us-ri-blackstone-valley",
+   "tower_name": "Blackstone Valley Tower Site",
+   "score": 0.208
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ffla:ri:durfee-hill:41.8919:-71.7439",
+   "name": "Durfee Hill",
+   "tower": "us-ri-blackstone-valley",
+   "tower_name": "Blackstone Valley Tower Site",
+   "score": 0.208
+  },
+  {
+   "type": "matched_different_names",
    "key": "wikidata:Q86925971",
    "name": "Fall Creek Falls Fire Lookout Tower",
    "tower": "us-tn-fall-creek-falls",
@@ -2089,6 +3002,54 @@
    "tower": "us-tn-fall-creek-falls",
    "tower_name": "Fall Creek Falls Fire Lookout Tower",
    "score": 0.144
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 1831",
+   "name": "Green Top Fire Lookout",
+   "tower": "us-tn-green-top",
+   "tower_name": "Green Top Fire Lookout",
+   "score": 0.0
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:way/1254486624",
+   "name": "Bluff Mountain Fire Tower",
+   "tower": "us-tn-green-top",
+   "tower_name": "Green Top Fire Lookout",
+   "score": 0.0
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 992",
+   "name": "Hiwassee Knobs Fire Tower",
+   "tower": "us-tn-hiwassee-knobs",
+   "tower_name": "Hiwassee Knobs Fire Tower",
+   "score": 0.216
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/356895225",
+   "name": "Madisonville Lookout Tower",
+   "tower": "us-tn-hiwassee-knobs",
+   "tower_name": "Hiwassee Knobs Fire Tower",
+   "score": 0.216
+  },
+  {
+   "type": "matched_different_names",
+   "key": "fflos:US 1952",
+   "name": "Coles District Tower Site",
+   "tower": "us-va-coles-district",
+   "tower_name": "Coles District Tower Site",
+   "score": 0.064
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ffla:va:independent-hill:38.6563:-77.4415",
+   "name": "Independent Hill",
+   "tower": "us-va-coles-district",
+   "tower_name": "Coles District Tower Site",
+   "score": 0.193
   },
   {
    "type": "matched_different_names",
@@ -2110,32 +3071,44 @@
    "type": "matched_different_names",
    "key": "ffla:wa:cbfic-relocated-badger-mountain:47.6946:-120.2109",
    "name": "CBFIC",
-   "tower": "us-wa-badger-mountain-at-cbfic",
-   "tower_name": "Badger Mountain Lookout (now at CBFIC)",
+   "tower": "us-wa-badger-mountain-lookout-site-at-cbfic",
+   "tower_name": "Badger Mountain Lookout Site (now at CBFIC)",
    "score": 0.164
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 1158",
+    "ffla:wa:burnt-hill:47.3568:-123.8633"
+   ],
+   "registers": [
+    "FFLOS US 1158"
+   ],
+   "tower": "us-wa-burnt-hill",
+   "distance_m": 7007
   },
   {
    "type": "matched_different_names",
    "key": "ffla:wa:cbfic-relocated-chelan-butte:47.6962:-120.2097",
    "name": "CBFIC",
-   "tower": "us-wa-chelan-butte-at-cbfic",
-   "tower_name": "Chelan Butte Lookout (now at CBFIC)",
+   "tower": "us-wa-chelan-butte-lookout-site-at-cbfic",
+   "tower_name": "Chelan Butte Lookout Site (now at CBFIC)",
    "score": 0.164
   },
   {
    "type": "matched_different_names",
    "key": "ffla:wa:cbfic-relocated-flattop:47.6949:-120.2103",
    "name": "CBFIC",
-   "tower": "us-wa-flattop-at-cbfic",
-   "tower_name": "Flattop Lookout (now at CBFIC)",
+   "tower": "us-wa-flattop-mountain-at-cbfic",
+   "tower_name": "Flattop Mountain Lookout (now at CBFIC)",
    "score": 0.113
   },
   {
    "type": "matched_different_names",
    "key": "osm:way/1284537632",
    "name": "East Flattop Lookout",
-   "tower": "us-wa-flattop-at-cbfic",
-   "tower_name": "Flattop Lookout (now at CBFIC)",
+   "tower": "us-wa-flattop-mountain-at-cbfic",
+   "tower_name": "Flattop Mountain Lookout (now at CBFIC)",
    "score": 0.113
   },
   {
@@ -2143,7 +3116,7 @@
    "key": "ffla:wa:colville-museum-relocated-graves-mountain:48.5514:-117.9078",
    "name": "Colville Museum",
    "tower": "us-wa-graves-mountain-at-colville-museum",
-   "tower_name": "Graves Mountain Lookout Tower (now at the Colville Museum)",
+   "tower_name": "Graves Mountain Lookout (now at the Colville Museum)",
    "score": 0.27
   },
   {
@@ -2151,24 +3124,84 @@
    "key": "osm:way/506144632",
    "name": "Graves Mountain Lookout Tower",
    "tower": "us-wa-graves-mountain-at-colville-museum",
-   "tower_name": "Graves Mountain Lookout Tower (now at the Colville Museum)",
+   "tower_name": "Graves Mountain Lookout (now at the Colville Museum)",
    "score": 0.27
   },
   {
-   "type": "matched_different_names",
-   "key": "ffla:wi:dyracuse:44.1731:-89.7840",
-   "name": "Dyracuse",
-   "tower": "us-wi-dyracuse",
-   "tower_name": "Dyracuse",
-   "score": 0.474
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 1961",
+    "ffla:wa:haystack-mountain:47.8233:-121.6773"
+   ],
+   "registers": [
+    "FFLOS US 1961"
+   ],
+   "tower": "us-wa-haystack-mountain-snohomish-county",
+   "distance_m": 5726
   },
   {
    "type": "matched_different_names",
-   "key": "osm:node/353893420",
-   "name": "Dorro Couche Lookout Tower",
-   "tower": "us-wi-dyracuse",
-   "tower_name": "Dyracuse",
-   "score": 0.474
+   "key": "nhlr:US 1549",
+   "name": "Lorena Butte Lookout",
+   "tower": "us-wa-lorena-butte-at-lefever",
+   "tower_name": "Lorena Butte Lookout (now at Lefever)",
+   "score": 0.277
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ffla:wa:lefever-relocated-lorena-butte:45.7997:-120.7982",
+   "name": "Lefever",
+   "tower": "us-wa-lorena-butte-at-lefever",
+   "tower_name": "Lorena Butte Lookout (now at Lefever)",
+   "score": 0.277
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 1917",
+    "ffla:wa:octopus-mount:47.7493:-124.1778"
+   ],
+   "registers": [
+    "FFLOS US 1917"
+   ],
+   "tower": "us-wa-mount-octopus",
+   "distance_m": 224238
+  },
+  {
+   "type": "matched_different_names",
+   "key": "fflos:US 1549",
+   "name": "Pierson Ridge Tower Site",
+   "tower": "us-wa-pierson-ridge",
+   "tower_name": "Pierson Ridge Tower Site",
+   "score": 0.2
+  },
+  {
+   "type": "register_match_far",
+   "keys": [
+    "fflos:US 1255",
+    "ffla:wa:proffitts-point:47.7129:-121.2777"
+   ],
+   "registers": [
+    "FFLOS US 1255"
+   ],
+   "tower": "us-wa-proffitts-point",
+   "distance_m": 44064
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:US 1176",
+   "name": "Whittaker Station Fire Tower",
+   "tower": "us-wv-gauley-mountain-tower-site-at-cass-scenic-rr",
+   "tower_name": "Gauley Mountain Tower Site (now at Cass Scenic RR)",
+   "score": 0.171
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ffla:wv:cass-scenic-rr-relocated-gauley-mountain:38.4064:-79.9478",
+   "name": "Cass Scenic RR",
+   "tower": "us-wv-gauley-mountain-tower-site-at-cass-scenic-rr",
+   "tower_name": "Gauley Mountain Tower Site (now at Cass Scenic RR)",
+   "score": 0.257
   },
   {
    "type": "rental_on_gone_lookout",
@@ -2177,6 +3210,2330 @@
   }
  ],
  "unplaced": [
+  {
+   "key": "nhlr:US 619",
+   "name": "Norwell Fire Tower",
+   "region": "MA",
+   "county": "Plymouth",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "nhlr:US 988",
+   "name": "Knightower",
+   "region": "NY",
+   "county": null,
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 109",
+   "name": "Haystack Mountain Tower Site II",
+   "region": "ME",
+   "county": "Aroostook",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 121",
+   "name": "Tri County Tower Site",
+   "region": "PA",
+   "county": "Blair",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 122",
+   "name": "Trout Run Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 123",
+   "name": "Tunnel Hill Tower Site",
+   "region": "PA",
+   "county": null,
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 124",
+   "name": "Tuscarora Tower Site",
+   "region": "PA",
+   "county": "Fulton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 125",
+   "name": "Tussey Mountain Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 126",
+   "name": "Tyrone Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 127",
+   "name": "Upper Beam Field Tower Site",
+   "region": "PA",
+   "county": "Westmoreland",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 128",
+   "name": "USGS Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 129",
+   "name": "Victory Tower Site",
+   "region": "PA",
+   "county": "Venango",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 130",
+   "name": "Virginia Rocks Tower Site",
+   "region": "PA",
+   "county": "Franklin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 132",
+   "name": "Walters Run Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 134",
+   "name": "Weiss Hollow Tower Site",
+   "region": "PA",
+   "county": "Elk",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 135",
+   "name": "West Branch Tower Site",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 136",
+   "name": "West Fall Tower Site",
+   "region": "PA",
+   "county": "Pike",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 137",
+   "name": "West Hill Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 138",
+   "name": "West Pike Tower Site",
+   "region": "PA",
+   "county": "Potter",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 140",
+   "name": "Whipple Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 141",
+   "name": "White Deer Mountain Tower Site",
+   "region": "PA",
+   "county": "Union",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 142",
+   "name": "White Rocks Tower Site",
+   "region": "PA",
+   "county": "Franklin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 143",
+   "name": "Whittaker Tower Site",
+   "region": "PA",
+   "county": "Pike",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 145",
+   "name": "Williamsport Road Tower Site",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 146",
+   "name": "Winslow Tower Site",
+   "region": "PA",
+   "county": "Elk",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 147",
+   "name": "Work Hill Tower Site",
+   "region": "PA",
+   "county": "Fayette",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 148",
+   "name": "Yorkville Tower Site",
+   "region": "PA",
+   "county": "Schuylkill",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 150",
+   "name": "Zook Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 1553",
+   "name": "Woonsocket Tower Site",
+   "region": "RI",
+   "county": "Providence",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 1554",
+   "name": "Tower Hill Tower Site",
+   "region": "RI",
+   "county": "Providence",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 1684",
+   "name": "Mountain View Tower Site",
+   "region": "WV",
+   "county": "Pocahontas",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 1685",
+   "name": "Signal Knob Tower Site",
+   "region": "WV",
+   "county": "Pocahontas",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 1687",
+   "name": "Tip Top Tower Site",
+   "region": "WV",
+   "county": "Preston",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 1692",
+   "name": "Potato Hill Tower Site",
+   "region": "WV",
+   "county": "Webster",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 1693",
+   "name": "Turkey Mountain Tower Site",
+   "region": "WV",
+   "county": "Webster",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 17",
+   "name": "Needham Tower Site",
+   "region": "MA",
+   "county": "Norfolk",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 172",
+   "name": "Amberson Ridge Tower Site",
+   "region": "PA",
+   "county": "Perry",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 173",
+   "name": "Ardell Farm Tower Site",
+   "region": "PA",
+   "county": "Clearfield",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 174",
+   "name": "Aristes Tower Site",
+   "region": "PA",
+   "county": "Columbia",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 175",
+   "name": "Asaph Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 176",
+   "name": "Aughanbaugh Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 177",
+   "name": "Baer Mountain Tower Site",
+   "region": "PA",
+   "county": "Adams",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 178",
+   "name": "Bailey Tower Site",
+   "region": "PA",
+   "county": "Monroe",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 179",
+   "name": "Bailey Run Fork Tower Site",
+   "region": "PA",
+   "county": "Potter",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 180",
+   "name": "Baker Oven Tower Site",
+   "region": "PA",
+   "county": "Union",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 181",
+   "name": "Bald Eagle Tower Site",
+   "region": "PA",
+   "county": "Westmoreland",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 182",
+   "name": "Bald Knob Tower Site (Huntingdon County)",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 183",
+   "name": "Bald Knob Tower Site (Somerset County)",
+   "region": "PA",
+   "county": "Somerset",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 184",
+   "name": "Bald Knob Tower Site (Centre County)",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 185",
+   "name": "Bald Knob Tower Site (Westmoreland County)",
+   "region": "PA",
+   "county": "Westmoreland",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 186",
+   "name": "Bald Mountain Tower Site",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 187",
+   "name": "Baldwin Run Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 188",
+   "name": "Bally Tower Site",
+   "region": "PA",
+   "county": null,
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 189",
+   "name": "Banning Point Tower Site",
+   "region": "PA",
+   "county": "Fayette",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 190",
+   "name": "Barree Tower Site",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 191",
+   "name": "Bear Run Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 193",
+   "name": "Bell Branch Tower Site",
+   "region": "PA",
+   "county": "Potter",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 194",
+   "name": "Berkey Hill Tower Site",
+   "region": "PA",
+   "county": null,
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 195",
+   "name": "Beyer Camp Tower Site",
+   "region": "PA",
+   "county": "Clearfield",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 196",
+   "name": "Biedler Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 197",
+   "name": "Big Fire Line Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 198",
+   "name": "Big Knob Tower Site (Perry County)",
+   "region": "PA",
+   "county": "Perry",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 199",
+   "name": "Big Knob Tower Site (Fulton County)",
+   "region": "PA",
+   "county": "Fulton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 200",
+   "name": "Big Pine Vista Tower Site",
+   "region": "PA",
+   "county": "Pike",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 201",
+   "name": "Big Poe Mountain Tower Site (Centre County)",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 202",
+   "name": "Big Poe Mountain Tower Site (Perry County)",
+   "region": "PA",
+   "county": "Perry",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 203",
+   "name": "Big Ridge Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 204",
+   "name": "Big Shiney Tower Site",
+   "region": "PA",
+   "county": "Lackawanna",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 205",
+   "name": "Big Turn Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 206",
+   "name": "Birch Rocks Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 207",
+   "name": "Bixel Farm Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 208",
+   "name": "Black Moshannon Tower Site",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 210",
+   "name": "Blue Hill Tower Site",
+   "region": "PA",
+   "county": "Clearfield",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 212",
+   "name": "Blue Mountain Tower Site",
+   "region": "PA",
+   "county": "Mifflin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 213",
+   "name": "Blue Ridge Tower Site",
+   "region": "PA",
+   "county": "Mifflin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 215",
+   "name": "Boones Mountain Tower Site",
+   "region": "PA",
+   "county": "Clearfield",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 216",
+   "name": "Booney Tower Site",
+   "region": "PA",
+   "county": "Snyder",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 217",
+   "name": "Bower Mountain Tower Site",
+   "region": "PA",
+   "county": "Perry",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 219",
+   "name": "Branch Mountain Tower Site",
+   "region": "PA",
+   "county": "Union",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 220",
+   "name": "Brewer Patch Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 221",
+   "name": "Broad Mountain Tower Site (Carbon County II)",
+   "region": "PA",
+   "county": "Carbon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 222",
+   "name": "Broad Mountain Tower Site (Carbon County III)",
+   "region": "PA",
+   "county": "Carbon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 223",
+   "name": "Broad Mountain Tower Site (Carbon County I)",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 224",
+   "name": "Broad Ridge Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 225",
+   "name": "Brockton Tower Site",
+   "region": "PA",
+   "county": "Schuylkill",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 226",
+   "name": "Brush Mountain Tower Site",
+   "region": "PA",
+   "county": "Blair",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 227",
+   "name": "Brush Ridge Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 228",
+   "name": "Buck Horn Tower Site",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 229",
+   "name": "Buck Ridge Tower Site (Cumberland County)",
+   "region": "PA",
+   "county": "Cumberland",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 230",
+   "name": "Buck Ridge Tower Site (Mifflin County)",
+   "region": "PA",
+   "county": "Mifflin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 232",
+   "name": "Buffalo Mountain Tower Site",
+   "region": "PA",
+   "county": "Union",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 233",
+   "name": "Bull Run Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 234",
+   "name": "Bulls Head Tower Site",
+   "region": "PA",
+   "county": "Schuylkill",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 235",
+   "name": "Bushkill Lookout Tower Site",
+   "region": "PA",
+   "county": "Monroe",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 236",
+   "name": "Cabin Tower Site",
+   "region": "PA",
+   "county": "Fayette",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 237",
+   "name": "Caledonia Pike Tower Site",
+   "region": "PA",
+   "county": "Clearfield",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 238",
+   "name": "Canal Rock Tower Site",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 239",
+   "name": "Catawissa Tower Site",
+   "region": "PA",
+   "county": "Columbia",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 240",
+   "name": "Chickaree Tower Site",
+   "region": "PA",
+   "county": "Cambria",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 241",
+   "name": "Chimney Rocks Tower Site (Franklin County)",
+   "region": "PA",
+   "county": "Franklin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 242",
+   "name": "Chimney Rocks Tower Site (Perry County)",
+   "region": "PA",
+   "county": "Perry",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 243",
+   "name": "Christmans Tower Site",
+   "region": "PA",
+   "county": "Carbon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 245",
+   "name": "Clessin Mountain Tower Site",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 247",
+   "name": "Coalmont Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 250",
+   "name": "Confluence Knob Tower Site",
+   "region": "PA",
+   "county": "Somerset",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 251",
+   "name": "Conococochegue Tower Site",
+   "region": "PA",
+   "county": "Perry",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 252",
+   "name": "Corwin's Farm Tower Site",
+   "region": "PA",
+   "county": "Potter",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 253",
+   "name": "Cove Mountain Tower Site",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 254",
+   "name": "Cow Catcher Tower Site",
+   "region": "PA",
+   "county": "Franklin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 255",
+   "name": "Cowan Tower Site",
+   "region": "PA",
+   "county": "Fulton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 256",
+   "name": "Crader's Tower Site",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 257",
+   "name": "Crandall Tower Site",
+   "region": "PA",
+   "county": "Potter",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 258",
+   "name": "Cresco Tower Site",
+   "region": "PA",
+   "county": "Monroe",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 259",
+   "name": "Cross Mountain Tower Site",
+   "region": "PA",
+   "county": "Franklin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 260",
+   "name": "Crune Lookout Tower Site",
+   "region": "PA",
+   "county": "Cameron",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 261",
+   "name": "Cummings Tower Site",
+   "region": "PA",
+   "county": "Westmoreland",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 262",
+   "name": "Dancing Ridge Tower Site I",
+   "region": "PA",
+   "county": "Monroe",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 264",
+   "name": "Delaware Water Gap Tower Site",
+   "region": "PA",
+   "county": "Monroe",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 265",
+   "name": "Delroy Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 266",
+   "name": "Devil's Half Acre Tower Site",
+   "region": "PA",
+   "county": "Cumberland",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 267",
+   "name": "Diehl's Hill Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 269",
+   "name": "Dunlo Tower Site",
+   "region": "PA",
+   "county": "Cambria",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 270",
+   "name": "Eagle Knob Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 271",
+   "name": "Eastern Kettle Tower Site",
+   "region": "PA",
+   "county": "Snyder",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 272",
+   "name": "Edgemere Tower Site",
+   "region": "PA",
+   "county": "Pike",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 273",
+   "name": "Eldridge Tower Site",
+   "region": "PA",
+   "county": "Forest",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 275",
+   "name": "Elk Knob Tower Site",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 276",
+   "name": "Elliott Tower Site",
+   "region": "PA",
+   "county": "Jefferson",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 278",
+   "name": "Ewing Path Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 279",
+   "name": "Exeter Tower Site",
+   "region": "PA",
+   "county": "Luzerne",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 280",
+   "name": "Exeter Lookout Tower Site",
+   "region": "PA",
+   "county": "Luzerne",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 281",
+   "name": "Faunce Tower Site",
+   "region": "PA",
+   "county": "Clearfield",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 282",
+   "name": "First Mountain Tower Site (Centre County)",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 283",
+   "name": "First Mountain Tower Site (Clinton County)",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 284",
+   "name": "Flag Staff Tower Site",
+   "region": "PA",
+   "county": "Carbon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 285",
+   "name": "Flat Ridge Tower Site",
+   "region": "PA",
+   "county": "Pike",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 286",
+   "name": "Flat Rock Tower Site",
+   "region": "PA",
+   "county": "Clearfield",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 287",
+   "name": "Foresters Tower Site",
+   "region": "PA",
+   "county": "Monroe",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 288",
+   "name": "Fork Hill Tower Site (Clinton County)",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 289",
+   "name": "Fork Hill Tower Site (Tioga County)",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 29",
+   "name": "Harwich Tower Site",
+   "region": "MA",
+   "county": "Barnstable",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 290",
+   "name": "Fort Hill Knob Tower Site",
+   "region": "PA",
+   "county": "Somerset",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 291",
+   "name": "Four Mile Hill Tower Site",
+   "region": "PA",
+   "county": "Clearfield",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 292",
+   "name": "Fox Hill Tower Site",
+   "region": "PA",
+   "county": "Luzerne",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 295",
+   "name": "Frying Pan Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 296",
+   "name": "Furnace Road Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 297",
+   "name": "Gleason Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 299",
+   "name": "Glen Summit Tower Site",
+   "region": "PA",
+   "county": "Luzerne",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 30",
+   "name": "Holbrook Tower Site",
+   "region": "MA",
+   "county": "Norfolk",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 300",
+   "name": "Good Springs Tower Site",
+   "region": "PA",
+   "county": "Schuylkill",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 302",
+   "name": "Goodwin Knob Tower Site",
+   "region": "PA",
+   "county": "Fayette",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 303",
+   "name": "Governor Dick Hill Tower Site",
+   "region": "PA",
+   "county": "Lebanon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 304",
+   "name": "Grassflat Tower Site",
+   "region": "PA",
+   "county": "Clearfield",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 305",
+   "name": "Greens Knob Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 306",
+   "name": "Grove Mountain Tower Site",
+   "region": "PA",
+   "county": "Cameron",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 307",
+   "name": "Haldeman Tower Site",
+   "region": "PA",
+   "county": "Dauphin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 308",
+   "name": "Hall's Rocks Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 310",
+   "name": "Harrison Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 311",
+   "name": "Hartley Tower Site",
+   "region": "PA",
+   "county": "Union",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 312",
+   "name": "Harveys Tower Site",
+   "region": "PA",
+   "county": "Luzerne",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 313",
+   "name": "Hazelton Tower Site",
+   "region": "PA",
+   "county": "Luzerne",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 314",
+   "name": "Head of Bailey Run Tower Site",
+   "region": "PA",
+   "county": "Cameron",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 315",
+   "name": "Hege Ridge Tower Site",
+   "region": "PA",
+   "county": "Perry",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 316",
+   "name": "Hemingway Tower Site",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 318",
+   "name": "High Rock Tower Site",
+   "region": "PA",
+   "county": "Adams",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 319",
+   "name": "High Top Tower Site II",
+   "region": "PA",
+   "county": "Snyder",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 320",
+   "name": "High Top Tower Site I",
+   "region": "PA",
+   "county": "Snyder",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 321",
+   "name": "Highland Fling Tower Site",
+   "region": "PA",
+   "county": "Cambria",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 322",
+   "name": "Hog Back Tower Site",
+   "region": "PA",
+   "county": "Union",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 323",
+   "name": "Holmes Hurst Tower Site",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 324",
+   "name": "Hostein Tower Site",
+   "region": "PA",
+   "county": "Cambria",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 325",
+   "name": "Hough Mountain Tower Site",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 327",
+   "name": "Hunting Tower Site",
+   "region": "PA",
+   "county": "Pike",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 328",
+   "name": "Huntly Hill Tower Site",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 329",
+   "name": "Indian Shanty Tower Site",
+   "region": "PA",
+   "county": "Potter",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 33",
+   "name": "Plymouth Tower Site #1",
+   "region": "MA",
+   "county": "Plymouth",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 330",
+   "name": "Jacoby I Tower Site",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 331",
+   "name": "Jacoby II Tower Site",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 332",
+   "name": "Johnson Tower Site",
+   "region": "PA",
+   "county": "Mifflin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 333",
+   "name": "Johnson Nursery Tower Site",
+   "region": "PA",
+   "county": "Clearfield",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 334",
+   "name": "Jones Mountain Tower Site",
+   "region": "PA",
+   "county": "Union",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 336",
+   "name": "Keating Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 337",
+   "name": "Kecksburg Tower Site",
+   "region": "PA",
+   "county": "Westmoreland",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 338",
+   "name": "Keefer's Gap Tower Site",
+   "region": "PA",
+   "county": "Franklin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 340",
+   "name": "Kinney Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 341",
+   "name": "Kinzua Tower Site",
+   "region": "PA",
+   "county": "Warren",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 342",
+   "name": "Knevil Hill Tower Site",
+   "region": "PA",
+   "county": "Lackawanna",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 343",
+   "name": "Knob Tower Site",
+   "region": "PA",
+   "county": "Bedford",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 344",
+   "name": "Laurel Run Tower Site (Centre County)",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 345",
+   "name": "Laurel Run Tower Site (Huntingdon County)",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 346",
+   "name": "Laurel Summit Tower Site",
+   "region": "PA",
+   "county": "Westmoreland",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 347",
+   "name": "Lebo Tower Site",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 349",
+   "name": "Lehigh Platform Tower Site",
+   "region": "PA",
+   "county": "Luzerne",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 350",
+   "name": "Lightner Hill Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 351",
+   "name": "Lincoln Farm Tower Site",
+   "region": "PA",
+   "county": "Elk",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 352",
+   "name": "Little Baer Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 353",
+   "name": "Little Bailey Tower Site",
+   "region": "PA",
+   "county": null,
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 354",
+   "name": "Little Flat Tower Site II",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 355",
+   "name": "Little Flat Tower Site I",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 356",
+   "name": "Little Mountain Tower Site",
+   "region": "PA",
+   "county": "Franklin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 357",
+   "name": "Little Shinny Tower Site",
+   "region": "PA",
+   "county": "Luzerne",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 358",
+   "name": "Lonesome Pine Tower Site",
+   "region": "PA",
+   "county": "Franklin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 359",
+   "name": "Long Mountain Tower Site (Cumberland County)",
+   "region": "PA",
+   "county": "Cumberland",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 360",
+   "name": "Long Mountain Tower Site (Mifflin County)",
+   "region": "PA",
+   "county": "Mifflin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 361",
+   "name": "Long Ridge Tower Site (Clinton County)",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 362",
+   "name": "Long Ridge Tower Site (Lycoming County)",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 363",
+   "name": "Lookout Mountain Tower Site",
+   "region": "PA",
+   "county": "Potter",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 364",
+   "name": "Low Knob Tower Site",
+   "region": "PA",
+   "county": "Pike",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 365",
+   "name": "Lykens Tower Site",
+   "region": "PA",
+   "county": "Dauphin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 366",
+   "name": "Maple Hill Tower Site (Lycoming County)",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 368",
+   "name": "Marshburg Tower Site",
+   "region": "PA",
+   "county": "McKean",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 370",
+   "name": "McAdoo Rocks Tower Site",
+   "region": "PA",
+   "county": "Schuylkill",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 371",
+   "name": "McDade Tower Site",
+   "region": "PA",
+   "county": "McKean",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 372",
+   "name": "McElhattan Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 373",
+   "name": "McNitt Tower Site",
+   "region": "PA",
+   "county": "Mifflin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 374",
+   "name": "McNuff Tower Site",
+   "region": "PA",
+   "county": "Potter",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 375",
+   "name": "Meadow Ridge Tower Site",
+   "region": "PA",
+   "county": "Pike",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 376",
+   "name": "Mercer Tower Site",
+   "region": "PA",
+   "county": "Pike",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 377",
+   "name": "Middle Ridge I Tower Site",
+   "region": "PA",
+   "county": "Snyder",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 378",
+   "name": "Middle Ridge II Tower Site",
+   "region": "PA",
+   "county": "Snyder",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 379",
+   "name": "Middleswarth Tower Site",
+   "region": "PA",
+   "county": "Snyder",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 380",
+   "name": "Mill Run Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 381",
+   "name": "Milliken Tower Site",
+   "region": "PA",
+   "county": "Mifflin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 382",
+   "name": "Montdale Tower Site",
+   "region": "PA",
+   "county": "Lackawanna",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 383",
+   "name": "Moores Run Tower Site",
+   "region": "PA",
+   "county": "Potter",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 384",
+   "name": "Morris Point Tower Site",
+   "region": "PA",
+   "county": "Westmoreland",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 385",
+   "name": "Mosier Hill Tower Site",
+   "region": "PA",
+   "county": "Monroe",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 388",
+   "name": "Mount Pleasant Tower Site",
+   "region": "PA",
+   "county": "Schuylkill",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 389",
+   "name": "Mount Pocono Tower Site",
+   "region": "PA",
+   "county": "Monroe",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 390",
+   "name": "Mount Tom Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 391",
+   "name": "Mud Lick Tower Site",
+   "region": "PA",
+   "county": "Potter",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 392",
+   "name": "Musser Path Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 394",
+   "name": "Negro Barrens Tower Site",
+   "region": "PA",
+   "county": "Monroe",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 395",
+   "name": "Negro Mountain Tower Site",
+   "region": "PA",
+   "county": "Somerset",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 396",
+   "name": "Nippenose Road Tower Site",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 397",
+   "name": "Nittany Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 398",
+   "name": "Normalville Knob Tower Site",
+   "region": "PA",
+   "county": "Somerset",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 399",
+   "name": "North Tower Site",
+   "region": "PA",
+   "county": "Pike",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 401",
+   "name": "North Side Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 402",
+   "name": "Oak Knob Tower Site",
+   "region": "PA",
+   "county": "Franklin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 403",
+   "name": "Oak Ridge Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 404",
+   "name": "Ohiopyle Knob Tower Site",
+   "region": "PA",
+   "county": "Fayette",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 405",
+   "name": "Old Forge Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 406",
+   "name": "Old Town Tower Site",
+   "region": "PA",
+   "county": "Clearfield",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 407",
+   "name": "Owls Nest Tower Site",
+   "region": "PA",
+   "county": "Elk",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 408",
+   "name": "Paddy Mountain Tower Site",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 409",
+   "name": "Pagoda Tower Site",
+   "region": "PA",
+   "county": "Berks",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 410",
+   "name": "Panther Tower Site",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 411",
+   "name": "Panther Rock Tower Site",
+   "region": "PA",
+   "county": "Cameron",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 412",
+   "name": "Paper Mill Knob Tower Site",
+   "region": "PA",
+   "county": "Potter",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 414",
+   "name": "Perry Tower Site",
+   "region": "PA",
+   "county": "Pike",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 415",
+   "name": "Pimple Hill Tower Site",
+   "region": "PA",
+   "county": "Monroe",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 416",
+   "name": "Pinafore Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 417",
+   "name": "Pindleton Tower Site",
+   "region": "PA",
+   "county": "Cambria",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 418",
+   "name": "Pine Flat Tower Site",
+   "region": "PA",
+   "county": "Westmoreland",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 419",
+   "name": "Pine Grove Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 420",
+   "name": "Pine Hill Tower Site (Lackawanna County)",
+   "region": "PA",
+   "county": "Lackawanna",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 421",
+   "name": "Pine Hill Tower Site (Potter County)",
+   "region": "PA",
+   "county": "Potter",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 422",
+   "name": "Pine Mountain Tower Site",
+   "region": "PA",
+   "county": "Franklin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 423",
+   "name": "Pine Swamp Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 424",
+   "name": "Pine Watch Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 425",
+   "name": "Piney Mountain Tower Site",
+   "region": "PA",
+   "county": "Adams",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 426",
+   "name": "Plantation Tower Site",
+   "region": "PA",
+   "county": "Clearfield",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 427",
+   "name": "Pocono Knob Tower Site",
+   "region": "PA",
+   "county": "Monroe",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 428",
+   "name": "Poe Mountain Tower Site",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 429",
+   "name": "Pole Steeple Tower Site",
+   "region": "PA",
+   "county": "Cumberland",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 430",
+   "name": "Polk Hill Tower Site",
+   "region": "PA",
+   "county": "Franklin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 431",
+   "name": "Pond Field Knob Tower Site",
+   "region": "PA",
+   "county": "Fayette",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 432",
+   "name": "Preserve Lookout Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 433",
+   "name": "Primrose Tower Site",
+   "region": "PA",
+   "county": "Monroe",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 436",
+   "name": "Purdue Tower Site",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 437",
+   "name": "Rarick Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 438",
+   "name": "Rathburn Place Tower Site",
+   "region": "PA",
+   "county": "Elk",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 439",
+   "name": "Rattlesnake Ridge Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 441",
+   "name": "Raven Rock Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 442",
+   "name": "Red Ridge Tower Site",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 443",
+   "name": "Red Ridge Point Tower Site",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 444",
+   "name": "Riansares Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 445",
+   "name": "Ricketts Tower Site",
+   "region": "PA",
+   "county": "Wyoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 446",
+   "name": "Ridge Lookout Tower Site",
+   "region": "PA",
+   "county": "Cameron",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 447",
+   "name": "Rising Mountain Tower Site (Perry County)",
+   "region": "PA",
+   "county": "Perry",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 448",
+   "name": "Rising Mountain Tower Site (Franklin County)",
+   "region": "PA",
+   "county": "Franklin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 449",
+   "name": "Ritchie Hill Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 450",
+   "name": "Roberts Branch Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 451",
+   "name": "Robertsdale Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 452",
+   "name": "Rock Ridge Tower Site I",
+   "region": "PA",
+   "county": "Potter",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 453",
+   "name": "Rock Ridge Tower Site II",
+   "region": "PA",
+   "county": "Potter",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 454",
+   "name": "Rocky Mountain Tower Site I",
+   "region": "PA",
+   "county": "Franklin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 455",
+   "name": "Rocky Mountain Tower Site II",
+   "region": "PA",
+   "county": "Franklin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 456",
+   "name": "Rogers Tower Site",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 457",
+   "name": "Round Mountain Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 458",
+   "name": "Round Top Tower Site (Lycoming County)",
+   "region": "PA",
+   "county": "Lycoming",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 459",
+   "name": "Round Top Tower Site (Centre County)",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 461",
+   "name": "Round Top Tower Site (Potter County)",
+   "region": "PA",
+   "county": "Potter",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 462",
+   "name": "Royal Ridge Tower Site",
+   "region": "PA",
+   "county": "Mifflin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 463",
+   "name": "Saeger Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 465",
+   "name": "Sand Bed Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 466",
+   "name": "Sand Knob Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 468",
+   "name": "Sand Mountain Tower Site (Union County I)",
+   "region": "PA",
+   "county": "Union",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 469",
+   "name": "Sand Mountain Tower Site (Centre County I)",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 470",
+   "name": "Sand Mountain Tower Site (Centre County II)",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 471",
+   "name": "Sandy Sod Tower Site",
+   "region": "PA",
+   "county": "Franklin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 472",
+   "name": "Scalp Level Tower Site",
+   "region": "PA",
+   "county": "Cambria",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 473",
+   "name": "Schoonover Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 474",
+   "name": "Scrub Flat Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 475",
+   "name": "Scrub Oak Tower Site",
+   "region": "PA",
+   "county": "Lackawanna",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 476",
+   "name": "Second Mountain Tower Site I",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 477",
+   "name": "Second Mountain Tower Site II",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 481",
+   "name": "Shenandoah Tower Site",
+   "region": "PA",
+   "county": "Schuylkill",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 482",
+   "name": "Shermans Mountain Tower Site I",
+   "region": "PA",
+   "county": "Perry",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 485",
+   "name": "Slate Ridge Tower Site",
+   "region": "PA",
+   "county": "Mifflin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 487",
+   "name": "Smithfield Tower Site",
+   "region": "PA",
+   "county": null,
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 488",
+   "name": "Snow Hill Tower Site",
+   "region": "PA",
+   "county": "Monroe",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 489",
+   "name": "South Tower Site",
+   "region": "PA",
+   "county": "Pike",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 490",
+   "name": "South Side Tower Site",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 492",
+   "name": "Spruce Mountain Tower Site",
+   "region": "PA",
+   "county": "Mifflin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 495",
+   "name": "Saint Petersburg Tower Site",
+   "region": "PA",
+   "county": "Clarion",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 496",
+   "name": "Staley's Knob Tower Site",
+   "region": "PA",
+   "county": "Adams",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 497",
+   "name": "Stone Mountain Tower Site",
+   "region": "PA",
+   "county": "Huntingdon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 499",
+   "name": "Stony Point Tower Site",
+   "region": "PA",
+   "county": "Union",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 502",
+   "name": "Summit Colliery Tower Site",
+   "region": "PA",
+   "county": "Carbon",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 504",
+   "name": "Tannery Hill Tower Site",
+   "region": "PA",
+   "county": "Tioga",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 505",
+   "name": "Tark Hill Tower Site",
+   "region": "PA",
+   "county": "Lackawanna",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 506",
+   "name": "The Knob Tower Site (Union County)",
+   "region": "PA",
+   "county": "Union",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 507",
+   "name": "The Knob Tower Site (Clinton County)",
+   "region": "PA",
+   "county": "Clinton",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 508",
+   "name": "Thick Mountain Tower Site",
+   "region": "PA",
+   "county": "Mifflin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 509",
+   "name": "Thickhead Tower Site",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 511",
+   "name": "Three Runs Tower Site (Clearfield County)",
+   "region": "PA",
+   "county": "Clearfield",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 512",
+   "name": "Treaster Tower Site",
+   "region": "PA",
+   "county": "Centre",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 513",
+   "name": "Treaster High Top Tower Site",
+   "region": "PA",
+   "county": "Mifflin",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 514",
+   "name": "Tree Top Tower Site",
+   "region": "PA",
+   "county": "Pike",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "fflos:US 53",
+   "name": "Sandwich/Camp Edwards Army Base #1 Tower Site",
+   "region": "MA",
+   "county": "Barnstable",
+   "reason": "no coordinates; several same-name lookouts in the state"
+  },
   {
    "key": "ffla:az:moore-creek-perley-creek:null:null",
    "name": "Moore Creek/ Perley Creek",
@@ -2350,13 +5707,6 @@
    "name": "Goose Pond",
    "region": "IN",
    "county": "Greene",
-   "reason": "no coordinates; no same-name lookout in the state"
-  },
-  {
-   "key": "ffla:in:ofs-cool-springs-relocated-spears:null:null",
-   "name": "OFS Cool Springs",
-   "region": "IN",
-   "county": "Dubois",
    "reason": "no coordinates; no same-name lookout in the state"
   },
   {
@@ -2759,20 +6109,6 @@
    "reason": "no coordinates; no same-name lookout in the state"
   },
   {
-   "key": "ffla:or:north-fork-station:null:null",
-   "name": "North Fork Station",
-   "region": "OR",
-   "county": "Clackamas",
-   "reason": "no coordinates; no same-name lookout in the state"
-  },
-  {
-   "key": "ffla:or:rock-creek-g-s:null:null",
-   "name": "Rock Creek G.S.",
-   "region": "OR",
-   "county": "Wasco",
-   "reason": "no coordinates; no same-name lookout in the state"
-  },
-  {
    "key": "ffla:or:summit-g-s:null:null",
    "name": "Summit G.S.",
    "region": "OR",
@@ -2913,20 +6249,6 @@
    "reason": "no coordinates; no same-name lookout in the state"
   },
   {
-   "key": "ffla:wa:dave-kresek-relocated-long-mountain-id:null:null",
-   "name": "Dave Kresek",
-   "region": "WA",
-   "county": "Spokane",
-   "reason": "no coordinates; no same-name lookout in the state"
-  },
-  {
-   "key": "ffla:wa:fosback-relocated-monumental-mountain:null:null",
-   "name": "Fosback",
-   "region": "WA",
-   "county": "Stevens",
-   "reason": "no coordinates; no same-name lookout in the state"
-  },
-  {
    "key": "ffla:wa:friday-harbor-relocated-three-corner-rock:null:null",
    "name": "Friday Harbor",
    "region": "WA",
@@ -2938,13 +6260,6 @@
    "name": "Gold Mountain",
    "region": "WA",
    "county": "Stevens",
-   "reason": "no coordinates; no same-name lookout in the state"
-  },
-  {
-   "key": "ffla:wa:moclips:null:null",
-   "name": "Moclips",
-   "region": "WA",
-   "county": "Grays Harbor",
    "reason": "no coordinates; no same-name lookout in the state"
   },
   {
@@ -3029,13 +6344,6 @@
    "name": "Mountain View",
    "region": "WV",
    "county": "Pocahontas",
-   "reason": "no coordinates; no same-name lookout in the state"
-  },
-  {
-   "key": "ffla:wv:niges-cliff:null:null",
-   "name": "Niges Cliff",
-   "region": "WV",
-   "county": "Pendleton",
    "reason": "no coordinates; no same-name lookout in the state"
   },
   {
@@ -3158,7 +6466,29 @@
    "reason": "no coordinates; no same-name lookout in the state"
   }
  ],
- "coordinates_not_used": [],
+ "coordinates_not_used": [
+  {
+   "key": "fflos:US 2046",
+   "name": "Brokeoff Mountain Lookout Site",
+   "region": "CA",
+   "lat": -121.560126,
+   "lon": -121.560126
+  },
+  {
+   "key": "nhlr:US 619",
+   "name": "Norwell Fire Tower",
+   "region": "MA",
+   "lat": 70.82194,
+   "lon": -70.82194
+  },
+  {
+   "key": "fflos:US 30",
+   "name": "Holbrook Tower Site",
+   "region": "MA",
+   "lat": 42.160633,
+   "lon": 42.160633
+  }
+ ],
  "coordinates_outside_own_state": [
   {
    "key": "ffla:az:whitney-pass:36.5326:-108.0480",
@@ -3170,7 +6500,32 @@
     "NM"
    ],
    "tower": "us-az-whitney-pass",
+   "used_for_location": false
+  },
+  {
+   "key": "nhlr:US 821",
+   "name": "Jadie Tower",
+   "region": "OK",
+   "lat": 33.931667,
+   "lon": -91.55,
+   "inside": [
+    "AR",
+    "MS"
+   ],
+   "tower": "us-ok-jadie",
    "used_for_location": true
+  },
+  {
+   "key": "fflos:US 1601",
+   "name": "Joe's Point Lookout Site",
+   "region": "WA",
+   "lat": 45.427267,
+   "lon": -121.420554,
+   "inside": [
+    "OR"
+   ],
+   "tower": "us-or-joes-point",
+   "used_for_location": false
   },
   {
    "key": "ridb:254088",
@@ -3188,8 +6543,26 @@
  ],
  "relocations": [
   {
+   "id": "us-al-jimmy-k-lanier",
+   "name": "Jimmy K. Lanier Fire Lookout Tower",
+   "kind": "relocated",
+   "note": "Relocated",
+   "origin": null,
+   "origin_id": null,
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-ar-bar-of-ranch",
+   "name": "Bar ōf Ranch Tower",
+   "kind": "relocated",
+   "note": "Relocated",
+   "origin": null,
+   "origin_id": null,
+   "origin_alternatives": []
+  },
+  {
    "id": "us-az-mount-ord-at-rim-country-museum",
-   "name": "Mount Ord Lookout Tower (now at the Rim Country Museum)",
+   "name": "Mount Ord Lookout (now at the Rim Country Museum)",
    "kind": "relocated",
    "note": "Relocated Mount Ord",
    "origin": "Mount Ord",
@@ -3197,14 +6570,14 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-ca-blue-ridge-at-tulare-county-fairgrounds",
-   "name": "Blue Ridge Lookout (now at the Tulare County Fairgrounds)",
+   "id": "us-ca-blue-ridge-lookout-site-at-tulare-county-fairgrounds",
+   "name": "Blue Ridge Lookout Site (now at the Tulare County Fairgrounds)",
    "kind": "relocated",
    "note": "Relocated Blue Ridge",
    "origin": "Blue Ridge",
-   "origin_id": "us-ca-blue-ridge-2",
+   "origin_id": "us-ca-blue-ridge-tulare-county",
    "origin_alternatives": [
-    "us-ca-blue-ridge-3",
+    "us-ca-blue-ridge-2",
     "us-ca-blue-ridge"
    ]
   },
@@ -3281,12 +6654,12 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-co-white-pine-at-running-deer-natural-area",
-   "name": "White Pine Lookout (now at Running Deer Natural Area)",
+   "id": "us-co-west-white-pine-mountain-tower-site-at-running-deer-natural-area",
+   "name": "West White Pine Mountain Tower Site (now at Running Deer Natural Area)",
    "kind": "relocated",
    "note": "Relocated White Pine",
    "origin": "White Pine",
-   "origin_id": "us-co-white-pine",
+   "origin_id": "us-co-west-white-pine-mountain",
    "origin_alternatives": []
   },
   {
@@ -3295,15 +6668,15 @@
    "kind": "relocated",
    "note": "Relocated Black Mountain",
    "origin": "Black Mountain",
-   "origin_id": "us-id-black-mountain",
+   "origin_id": "us-id-black-mountain-boundary-county",
    "origin_alternatives": [
     "us-mt-black-peak",
     "us-id-black-peak",
     "us-id-black-peak-2",
-    "us-id-lookout-butte-2",
     "us-id-black-butte",
-    "us-id-black-mountain-3",
-    "us-id-black-mountain-2"
+    "us-id-black-butte-2",
+    "us-id-black-mountain-2",
+    "us-id-black-mountain"
    ]
   },
   {
@@ -3381,6 +6754,15 @@
    "origin_alternatives": []
   },
   {
+   "id": "us-in-spears-at-ofs-cool-springs",
+   "name": "Spears Lookout (now at OFS Cool Springs)",
+   "kind": "relocated",
+   "note": "Relocated Spears",
+   "origin": "Spears",
+   "origin_id": "us-in-spears-john-spears",
+   "origin_alternatives": []
+  },
+  {
    "id": "us-md-brandywine-at-fairview-outdoor-center",
    "name": "Brandywine Lookout (now at the Fairview Outdoor Center)",
    "kind": "relocated",
@@ -3390,12 +6772,12 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-md-church-creek-at-church-creek-display",
-   "name": "Church Creek Lookout (now at the Church Creek Display)",
+   "id": "us-md-church-creek-forestry-at-church-creek-display",
+   "name": "Church Creek Forestry Tower (now at the Church Creek Display)",
    "kind": "relocated",
    "note": "Relocated Church Creek",
    "origin": "Church Creek",
-   "origin_id": "us-md-church-creek",
+   "origin_id": "us-md-church-creek-forestry",
    "origin_alternatives": []
   },
   {
@@ -3426,17 +6808,8 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-me-big-moose-mountain-at-greenville-visitor-center",
-   "name": "Big Moose Mountain Lookout Tower (now at the Greenville Visitor Center)",
-   "kind": "relocated",
-   "note": "Relocated Squaw Mountain",
-   "origin": "Squaw Mountain",
-   "origin_id": "us-me-big-moose-mountain-squaw-mountain",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-me-chase-mountain-at-patten-lumbermens-museum",
-   "name": "Chase Mountain Lookout (now at the Patten Lumbermen’s Museum)",
+   "id": "us-me-chase-mountain-tower-site-at-patten-lumbermens-museum",
+   "name": "Chase Mountain Tower Site (now at the Patten Lumbermen’s Museum)",
    "kind": "relocated",
    "note": "Relocated Chase Mountain",
    "origin": "Chase Mountain",
@@ -3444,8 +6817,8 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-me-frye-mountain-at-swan-island-wma",
-   "name": "Frye Mountain Lookout (now at Swan Island WMA)",
+   "id": "us-me-frye-mountain-tower-site-at-swan-island-wma",
+   "name": "Frye Mountain Tower Site (now at Swan Island WMA)",
    "kind": "relocated",
    "note": "Relocated Frye Mountain",
    "origin": "Frye Mountain",
@@ -3471,6 +6844,15 @@
    "origin_alternatives": []
   },
   {
+   "id": "us-me-squaw-mountain-at-greenville-visitor-center",
+   "name": "Squaw Mountain Lookout (now at the Greenville Visitor Center)",
+   "kind": "relocated",
+   "note": "Relocated Squaw Mountain",
+   "origin": "Squaw Mountain",
+   "origin_id": "us-me-squaw-mountain",
+   "origin_alternatives": []
+  },
+  {
    "id": "us-me-trout-mountain",
    "name": "Trout Mountain (moved from Alabama)",
    "kind": "relocated",
@@ -3481,7 +6863,7 @@
   },
   {
    "id": "us-mn-bemidji-at-camp-wilderness",
-   "name": "Bemidji Lookout (now at Camp Wilderness)",
+   "name": "Bemidji Fire Tower (now at Camp Wilderness)",
    "kind": "relocated",
    "note": "Relocated Bemidji",
    "origin": "Bemidji",
@@ -3490,7 +6872,7 @@
   },
   {
    "id": "us-mn-boulder-hill-at-forest-history-center",
-   "name": "Boulder Hill Lookout (now at the Forest History Center)",
+   "name": "Boulder Hill Fire Tower (now at the Forest History Center)",
    "kind": "relocated",
    "note": "Relocated Boulder Hill",
    "origin": "Boulder Hill",
@@ -3517,7 +6899,7 @@
   },
   {
    "id": "us-mn-minnesota-state-fair-replica",
-   "name": "Minnesota State Fair Fire Tower (replica)",
+   "name": "Minnesota State Fair Lookout (replica)",
    "kind": "replica",
    "note": "Replica",
    "origin": null,
@@ -3646,8 +7028,8 @@
    ]
   },
   {
-   "id": "us-ny-kings-park-at-oak-orchard-wma",
-   "name": "Kings Park Lookout (now at Oak Orchard WMA)",
+   "id": "us-ny-kings-park-lookout-site-at-oak-orchard-wma",
+   "name": "Kings Park Lookout Site (now at Oak Orchard WMA)",
    "kind": "relocated",
    "note": "Relocated Kings Park",
    "origin": "Kings Park",
@@ -3660,7 +7042,7 @@
    "kind": "relocated",
    "note": "Relocated Makomis",
    "origin": "Makomis",
-   "origin_id": "us-ny-makomis-mountain",
+   "origin_id": "us-ny-makomis-fire-tower-original",
    "origin_alternatives": []
   },
   {
@@ -3782,7 +7164,7 @@
   },
   {
    "id": "us-oh-keystone-at-scioto-grove-metro-park",
-   "name": "Keystone Lookout (now at Scioto Grove Metro Park)",
+   "name": "Keystone Fire Tower (now at Scioto Grove Metro Park)",
    "kind": "relocated",
    "note": "Relocated Keystone",
    "origin": "Keystone",
@@ -3790,8 +7172,8 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-oh-sewellsville-at-bethesda",
-   "name": "Sewellsville Lookout (now at Bethesda)",
+   "id": "us-oh-sewellsville-tower-site-at-bethesda",
+   "name": "Sewellsville Tower Site (now at Bethesda)",
    "kind": "relocated",
    "note": "Relocated Sewellsville",
    "origin": "Sewellsville",
@@ -3800,7 +7182,7 @@
   },
   {
    "id": "us-oh-snake-ridge-at-wayne-nf-headquarters",
-   "name": "Snake Ridge Lookout (now at the Wayne NF Headquarters)",
+   "name": "Snake Ridge Lookout Tower (now at the Wayne NF Headquarters)",
    "kind": "relocated",
    "note": "Relocated Snake Ridge",
    "origin": "Snake Ridge",
@@ -3826,17 +7208,17 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-tx-jefferson-moved",
-   "name": "Jefferson Lookout (moved from its original spot)",
+   "id": "us-tx-jefferson-lookout-site-moved",
+   "name": "Jefferson Lookout Site (moved from its original spot)",
    "kind": "relocated",
    "note": "Relocated Jefferson – Loc 1",
    "origin": "Jefferson",
-   "origin_id": "us-tx-jefferson-loc-1",
+   "origin_id": "us-tx-jefferson",
    "origin_alternatives": []
   },
   {
    "id": "us-tx-spring",
-   "name": "Spring (moved from Montana)",
+   "name": "Spring Fire Tower (moved from Montana)",
    "kind": "relocated",
    "note": "Relocated from MT",
    "origin": null,
@@ -3864,12 +7246,12 @@
    ]
   },
   {
-   "id": "us-va-long-mountain-at-rhudy",
-   "name": "Long Mountain Lookout (now at Rhudy)",
+   "id": "us-va-long-mountain-tower-site-at-rhudy",
+   "name": "Long Mountain Tower Site (now at Rhudy)",
    "kind": "relocated",
    "note": "Relocated Long Mountain",
    "origin": "Long Mountain",
-   "origin_id": "us-va-long-mountain-rustburg",
+   "origin_id": "us-va-long-mountain",
    "origin_alternatives": []
   },
   {
@@ -3909,12 +7291,12 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-va-white-oak-mountain-at-hawthorne",
-   "name": "White Oak Mountain Lookout (now at Hawthorne)",
+   "id": "us-va-white-oak-tower-site-at-hawthorne",
+   "name": "White Oak Tower Site (now at Hawthorne)",
    "kind": "relocated",
    "note": "Relocated White Oak Mountain",
    "origin": "White Oak Mountain",
-   "origin_id": "us-va-white-oak-mountain",
+   "origin_id": "us-va-white-oak",
    "origin_alternatives": []
   },
   {
@@ -3936,8 +7318,8 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wa-badger-mountain-at-cbfic",
-   "name": "Badger Mountain Lookout (now at CBFIC)",
+   "id": "us-wa-badger-mountain-lookout-site-at-cbfic",
+   "name": "Badger Mountain Lookout Site (now at CBFIC)",
    "kind": "relocated",
    "note": "Relocated Badger Mountain",
    "origin": "Badger Mountain",
@@ -3947,8 +7329,8 @@
    ]
   },
   {
-   "id": "us-wa-buttermilk-butte-at-reynaud",
-   "name": "Buttermilk Butte Lookout (now at Reynaud)",
+   "id": "us-wa-buttermilk-butte-lookout-site-at-reynaud",
+   "name": "Buttermilk Butte Lookout Site (now at Reynaud)",
    "kind": "relocated",
    "note": "Relocated Buttermilk Butte",
    "origin": "Buttermilk Butte",
@@ -3956,8 +7338,8 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wa-chelan-butte-at-cbfic",
-   "name": "Chelan Butte Lookout (now at CBFIC)",
+   "id": "us-wa-chelan-butte-lookout-site-at-cbfic",
+   "name": "Chelan Butte Lookout Site (now at CBFIC)",
    "kind": "relocated",
    "note": "Relocated Chelan Butte",
    "origin": "Chelan Butte",
@@ -3967,8 +7349,8 @@
    ]
   },
   {
-   "id": "us-wa-chewelah-peak-at-scranton",
-   "name": "Chewelah Peak Lookout (now at Scranton)",
+   "id": "us-wa-chewelah-peak-lookout-site-at-scranton",
+   "name": "Chewelah Peak Lookout Site (now at Scranton)",
    "kind": "relocated",
    "note": "Relocated Chewelah Peak",
    "origin": "Chewelah Peak",
@@ -3976,8 +7358,8 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wa-deming-at-forks-timber-museum",
-   "name": "Deming Lookout (now at the Forks Timber Museum)",
+   "id": "us-wa-deming-lookout-site-at-forks-timber-museum",
+   "name": "Deming Lookout Site (now at the Forks Timber Museum)",
    "kind": "relocated",
    "note": "Relocated Deming",
    "origin": "Deming",
@@ -3986,7 +7368,7 @@
   },
   {
    "id": "us-wa-fire-lookout-museum-replica",
-   "name": "Fire Lookout Museum (replica)",
+   "name": "Fire Lookout Museum Lookout (replica)",
    "kind": "replica",
    "note": "Replica",
    "origin": null,
@@ -3994,31 +7376,33 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wa-first-thought-mountain-at-orient",
-   "name": "First Thought Mountain Lookout (now at Orient)",
+   "id": "us-wa-first-thought-lookout-site-at-orient",
+   "name": "First Thought Lookout Site (now at Orient)",
    "kind": "relocated",
    "note": "Relocated First Thought",
    "origin": "First Thought",
-   "origin_id": "us-wa-first-thought-mountain",
+   "origin_id": "us-wa-first-thought",
    "origin_alternatives": []
   },
   {
-   "id": "us-wa-flagstaff-mountain-at-northport",
-   "name": "Flagstaff Mountain Lookout (now at Northport)",
+   "id": "us-wa-flagstaff-at-northport",
+   "name": "Flagstaff Lookout (now at Northport)",
    "kind": "relocated",
    "note": "Relocated Flagstaff",
    "origin": "Flagstaff",
-   "origin_id": "us-wa-flagstaff-mountain",
+   "origin_id": "us-wa-flagstaff",
    "origin_alternatives": []
   },
   {
-   "id": "us-wa-flattop-at-cbfic",
-   "name": "Flattop Lookout (now at CBFIC)",
+   "id": "us-wa-flattop-mountain-at-cbfic",
+   "name": "Flattop Mountain Lookout (now at CBFIC)",
    "kind": "relocated",
    "note": "Relocated Flattop",
    "origin": "Flattop",
-   "origin_id": "us-wa-flattop",
-   "origin_alternatives": []
+   "origin_id": "us-wa-flattop-mountain",
+   "origin_alternatives": [
+    "us-wa-flattop"
+   ]
   },
   {
    "id": "us-wa-franson-peak-at-molson-museum",
@@ -4030,8 +7414,8 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wa-goat-peak-at-teanaway-valley",
-   "name": "Goat Peak Lookout (now at Teanaway Valley)",
+   "id": "us-wa-goat-peak-lookout-site-at-teanaway-valley",
+   "name": "Goat Peak Lookout Site (now at Teanaway Valley)",
    "kind": "relocated",
    "note": "Relocated Goat Peak",
    "origin": "Goat Peak",
@@ -4047,11 +7431,20 @@
   },
   {
    "id": "us-wa-graves-mountain-at-colville-museum",
-   "name": "Graves Mountain Lookout Tower (now at the Colville Museum)",
+   "name": "Graves Mountain Lookout (now at the Colville Museum)",
    "kind": "relocated",
    "note": "Relocated Graves Mountain",
    "origin": "Graves Mountain",
    "origin_id": "us-wa-graves-mountain",
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-wa-long-mountain-at-dave-kresek",
+   "name": "Long Mountain Lookout (from Idaho, now at Dave Kresek)",
+   "kind": "relocated",
+   "note": "Relocated Long Mountain, ID",
+   "origin": "Long Mountain",
+   "origin_id": "us-id-long-mountain",
    "origin_alternatives": []
   },
   {
@@ -4060,8 +7453,19 @@
    "kind": "relocated",
    "note": "Relocated Lorena Butte",
    "origin": "Lorena Butte",
-   "origin_id": "us-wa-lorena-butte",
+   "origin_id": "us-wa-pierson-ridge",
    "origin_alternatives": []
+  },
+  {
+   "id": "us-wa-monumental-mountain-lookout-site-at-fosback",
+   "name": "Monumental Mountain Lookout Site (now at Fosback)",
+   "kind": "relocated",
+   "note": "Relocated Monumental Mountain",
+   "origin": "Monumental Mountain",
+   "origin_id": "us-wa-monumental-mountain-colville-nf",
+   "origin_alternatives": [
+    "us-wa-monumental-mountain-stevens-county"
+   ]
   },
   {
    "id": "us-wa-mount-peak-replica",
@@ -4094,8 +7498,8 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wa-north-baldy-at-big-meadow-lake",
-   "name": "North Baldy Lookout (now at Big Meadow Lake)",
+   "id": "us-wa-north-baldy-lookout-site-at-big-meadow-lake",
+   "name": "North Baldy Lookout Site (now at Big Meadow Lake)",
    "kind": "relocated",
    "note": "Relocated North Baldy",
    "origin": "North Baldy",
@@ -4103,17 +7507,19 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wa-rainier-at-islandwood",
-   "name": "Rainier Tower (now at Islandwood)",
+   "id": "us-wa-rainier-lookout-site-at-islandwood",
+   "name": "Rainier Lookout Site (now at Islandwood)",
    "kind": "relocated",
    "note": "Relocated Rainier",
    "origin": "Rainier",
    "origin_id": "us-wa-rainier",
-   "origin_alternatives": []
+   "origin_alternatives": [
+    "us-wa-huckleberry-mountain-mt-rainier"
+   ]
   },
   {
    "id": "us-wa-rocky-butte",
-   "name": "Rocky Butte (moved from an unknown site)",
+   "name": "Rocky Butte Area Tower (moved from an unknown site)",
    "kind": "relocated",
    "note": "Relocated from unknown",
    "origin": null,
@@ -4121,8 +7527,8 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wa-salmon-river-at-buckley-foothills-museum",
-   "name": "Salmon River Lookout (now at the Buckley Foothills Museum)",
+   "id": "us-wa-salmon-river-lookout-site-at-buckley-foothills-museum",
+   "name": "Salmon River Lookout Site (now at the Buckley Foothills Museum)",
    "kind": "relocated",
    "note": "Relocated Salmon River",
    "origin": "Salmon River",
@@ -4130,8 +7536,8 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wa-stampede-pass-at-camp-waskowitz",
-   "name": "Stampede Pass Lookout (now at Camp Waskowitz)",
+   "id": "us-wa-stampede-pass-lookout-site-at-camp-waskowitz",
+   "name": "Stampede Pass Lookout Site (now at Camp Waskowitz)",
    "kind": "relocated",
    "note": "Relocated Stampede Pass",
    "origin": "Stampede Pass",
@@ -4175,8 +7581,8 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wv-briery-knob-at-nettie-fd",
-   "name": "Briery Knob Lookout (now at Nettie FD)",
+   "id": "us-wv-briery-knob-tower-site-at-nettie-fd",
+   "name": "Briery Knob Tower Site (now at Nettie FD)",
    "kind": "relocated",
    "note": "Relocated Briery Knob",
    "origin": "Briery Knob",
@@ -4184,8 +7590,8 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wv-cottle-knob-at-pocahontas-co-h-s",
-   "name": "Cottle Knob Lookout (now at Pocahontas Co. H.S.)",
+   "id": "us-wv-cottle-knob-tower-site-at-pocahontas-co-h-s",
+   "name": "Cottle Knob Tower Site (now at Pocahontas Co. H.S.)",
    "kind": "relocated",
    "note": "Relocated Cottle Knob",
    "origin": "Cottle Knob",
@@ -4193,8 +7599,8 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wv-gauley-mountain-at-cass-scenic-rr",
-   "name": "Gauley Mountain Lookout (now at Cass Scenic RR)",
+   "id": "us-wv-gauley-mountain-tower-site-at-cass-scenic-rr",
+   "name": "Gauley Mountain Tower Site (now at Cass Scenic RR)",
    "kind": "relocated",
    "note": "Relocated Gauley Mountain",
    "origin": "Gauley Mountain",
@@ -4202,8 +7608,8 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wv-mikes-knob-at-richwood-vfd",
-   "name": "Mikes Knob Lookout (now at Richwood VFD)",
+   "id": "us-wv-mikes-knob-tower-site-at-richwood-vfd",
+   "name": "Mikes Knob Tower Site (now at Richwood VFD)",
    "kind": "relocated",
    "note": "Relocated Mikes Knob",
    "origin": "Mikes Knob",
@@ -4211,25 +7617,126 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wv-rich-mountain-at-snowshoe-mountain",
-   "name": "Rich Mountain Lookout (now at Snowshoe Mountain)",
+   "id": "us-wv-rich-mountain-tower-site-at-snowshoe-mountain",
+   "name": "Rich Mountain Tower Site (now at Snowshoe Mountain)",
    "kind": "relocated",
    "note": "Relocated Rich Mountain",
    "origin": "Rich Mountain",
-   "origin_id": "us-wv-rich-mountain",
+   "origin_id": "us-wv-rich-mountain-randolph-county",
    "origin_alternatives": [
-    "us-wv-rich-mountain-2"
+    "us-wv-rich-mountain-greenbrier-county"
    ]
   },
   {
-   "id": "us-wy-slash-ridge-at-grand-encampment-museum",
-   "name": "Slash Ridge Lookout (now at the Grand Encampment Museum)",
+   "id": "us-wy-slash-ridge-lookout-original-site-at-grand-encampment-museum",
+   "name": "Slash Ridge Lookout Original Site (now at the Grand Encampment Museum)",
    "kind": "relocated",
    "note": "Relocated Slash Ridge",
    "origin": "Slash Ridge",
-   "origin_id": "us-wy-slash-ridge",
+   "origin_id": "us-wy-slash-ridge-lookout-original",
    "origin_alternatives": []
   }
  ],
- "rental_hints_without_ridb": []
+ "rental_hints_without_ridb": [
+  {
+   "id": "us-ca-mccarthy-point",
+   "name": "McCarthy Point Lookout",
+   "key": "nhlr:US 583"
+  },
+  {
+   "id": "us-ca-orr-mountain",
+   "name": "Orr Mountain Lookout",
+   "key": "nhlr:US 1009"
+  },
+  {
+   "id": "us-ca-post-creek-fireman-lookout-house",
+   "name": "Post Creek Fireman-Lookout House",
+   "key": "nhlr:US 1363"
+  },
+  {
+   "id": "us-ca-robbs-peak",
+   "name": "Robbs Peak Lookout",
+   "key": "nhlr:US 599"
+  },
+  {
+   "id": "us-id-bishop-mountain",
+   "name": "Bishop Mountain Lookout",
+   "key": "nhlr:US 27"
+  },
+  {
+   "id": "us-id-butts-creek-point",
+   "name": "Butts Creek Point Lookout",
+   "key": "nhlr:US 1011"
+  },
+  {
+   "id": "us-id-lookout-butte",
+   "name": "Lookout Butte Lookout",
+   "key": "nhlr:US 769"
+  },
+  {
+   "id": "us-ky-hickory-flats",
+   "name": "Hickory Flats Fire Tower",
+   "key": "nhlr:US 447"
+  },
+  {
+   "id": "us-mt-gird-point",
+   "name": "Gird Point Lookout",
+   "key": "nhlr:US 459"
+  },
+  {
+   "id": "us-mt-strawberry",
+   "name": "Strawberry Lookout",
+   "key": "nhlr:US 631"
+  },
+  {
+   "id": "us-nm-dark-canyon",
+   "name": "Dark Canyon Lookout",
+   "key": "nhlr:US 1108"
+  },
+  {
+   "id": "us-or-courtney-butte",
+   "name": "Courtney Butte Lookout",
+   "key": "nhlr:US 1184"
+  },
+  {
+   "id": "us-or-fairview-peak",
+   "name": "Fairview Peak Lookout",
+   "key": "nhlr:US 472"
+  },
+  {
+   "id": "us-or-sand-mountain",
+   "name": "Sand Mountain Lookout",
+   "key": "nhlr:US 1"
+  },
+  {
+   "id": "us-or-tamarack-mountain",
+   "name": "Tamarack Mountain Lookout",
+   "key": "nhlr:US 1516"
+  },
+  {
+   "id": "us-wa-hidden-lake-peak",
+   "name": "Hidden Lake Peak Lookout",
+   "key": "nhlr:US 175"
+  },
+  {
+   "id": "us-wa-lorena-butte-at-lefever",
+   "name": "Lorena Butte Lookout (now at Lefever)",
+   "key": "nhlr:US 1549"
+  },
+  {
+   "id": "us-wa-mount-spokane-at-quartz-mountain",
+   "name": "Mount Spokane Lookout (now at Quartz Mountain)",
+   "key": "nhlr:US 1558"
+  },
+  {
+   "id": "us-wa-park-butte",
+   "name": "Park Butte Lookout",
+   "key": "nhlr:US 533"
+  },
+  {
+   "id": "us-wv-thorny-mountain",
+   "name": "Thorny Mountain Fire Tower",
+   "key": "nhlr:US 63"
+  }
+ ]
 }

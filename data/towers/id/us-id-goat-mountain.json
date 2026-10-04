@@ -1,0 +1,112 @@
+{
+  "id": "us-id-goat-mountain",
+  "name": "Goat Mountain Lookout",
+  "other_names": [],
+  "country": "US",
+  "region": "ID",
+  "county": "Boundary",
+  "location": {
+    "lat": 48.7778,
+    "lon": -116.05948,
+    "precision": "exact",
+    "from": "ffla"
+  },
+  "elevation_m": null,
+  "kind": "ground",
+  "design": null,
+  "height_m": null,
+  "status": "gone",
+  "status_note": null,
+  "registers": [],
+  "agency": null,
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": null
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "FFLA Idaho lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/id",
+      "kind": "association"
+    },
+    {
+      "label": "Goat Mtn. on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/id/goatmtn234.html",
+      "kind": "site"
+    },
+    {
+      "label": "Goat Mountain Lookout on idahofirelookouts.com",
+      "url": "https://www.idahofirelookouts.com/northern-idaho/goat-mountain-lookout/",
+      "kind": "site"
+    }
+  ],
+  "sources": [
+    {
+      "source": "ffla",
+      "key": "ffla:id:goat-mountain:48.7778:-116.0595",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:id:goat-mtn:48.7778:-116.0595",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "idaho_fl",
+      "key": "idaho_fl:goat-mountain-lookout:48.7731:-116.0529",
+      "fields": [
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 48.7778,
+            "lon": -116.05948
+          }
+        },
+        {
+          "source": "idaho_fl",
+          "value": {
+            "lat": 48.77311,
+            "lon": -116.05292
+          }
+        }
+      ],
+      "distance_m": 709,
+      "note": null
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-04"
+}
