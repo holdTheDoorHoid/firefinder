@@ -14,7 +14,7 @@
   "elevation_m": 234.7,
   "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -26,7 +26,7 @@
     }
   ],
   "agency": "Indiana Department of Natural Resources",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -74,9 +74,19 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=757",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Indiana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/in/",
       "kind": "association"
+    },
+    {
+      "label": "McCORMICK'S CREEK (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/mccormicks-creek.html",
+      "kind": "site"
     },
     {
       "label": "OpenStreetMap node 660270929",
@@ -107,6 +117,15 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ga:mccormicks-creek",
+      "fields": [
+        "height_m",
+        "ownership",
         "links"
       ]
     },

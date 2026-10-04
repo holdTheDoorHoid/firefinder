@@ -1,10 +1,10 @@
 {
   "id": "us-mo-unnamed",
-  "name": "Unnamed lookout",
+  "name": "CABOOL",
   "other_names": [],
   "country": "US",
   "region": "MO",
-  "county": null,
+  "county": "Texas",
   "location": {
     "lat": 37.157579,
     "lon": -92.145062,
@@ -14,11 +14,11 @@
   "elevation_m": null,
   "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 36.6,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Missouri Department of Conservation",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -38,12 +38,28 @@
   "photos": [],
   "links": [
     {
+      "label": "CABOOL (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/cabool.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap way 1308061154",
       "url": "https://www.openstreetmap.org/way/1308061154",
       "kind": "osm"
     }
   ],
   "sources": [
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:cabool",
+      "fields": [
+        "name",
+        "county",
+        "height_m",
+        "agency",
+        "links"
+      ]
+    },
     {
       "source": "osm",
       "key": "osm:way/1308061154",

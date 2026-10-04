@@ -12,9 +12,9 @@
     "from": "fflos"
   },
   "elevation_m": 922.0,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 18.3,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -25,8 +25,8 @@
       "url": "http://firetower.org/lookouts/us/pa/blue-knob-tower-site/"
     }
   ],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Blue Knob State Park",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -55,6 +55,11 @@
       "label": "FFLOS register entry US 211 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/pa/blue-knob-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Blue Knob (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/blue-knob.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -71,9 +76,42 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:pa:blue-knob",
+      "fields": [
+        "kind",
+        "height_m",
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 40.295354,
+            "lon": -78.573906
+          }
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": {
+            "lat": 40.2886,
+            "lon": -78.5614
+          }
+        }
+      ],
+      "distance_m": 1300,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

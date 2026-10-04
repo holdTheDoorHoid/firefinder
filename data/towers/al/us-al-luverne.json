@@ -12,7 +12,7 @@
     "from": "nhlr"
   },
   "elevation_m": 136.9,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -32,7 +32,7 @@
     }
   ],
   "agency": "Alabama Forestry Commission",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -109,6 +109,11 @@
       "label": "FFLOS register entry US 1954 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/al/luverne-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "LUVERNE (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/luverne.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -137,6 +142,15 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:al:luverne",
+      "fields": [
+        "kind",
+        "ownership",
+        "links"
+      ]
     }
   ],
   "conflicts": [
@@ -149,6 +163,10 @@
         },
         {
           "source": "fflos",
+          "value": "gone"
+        },
+        {
+          "source": "eastern_us_lookouts",
           "value": "gone"
         }
       ],

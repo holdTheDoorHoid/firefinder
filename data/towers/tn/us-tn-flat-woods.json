@@ -23,6 +23,12 @@
       "number": "US 1080",
       "state_number": "TN 21",
       "url": "http://nhlr.org/lookouts/us/tn/flat-woods-lookout/"
+    },
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "FD 1595",
+      "url": null
     }
   ],
   "agency": "Tennessee Division of Forestry",
@@ -68,6 +74,16 @@
       "kind": "register"
     },
     {
+      "label": "Flat Woods (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
+      "label": "Flat Woods (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/flatwood.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 356895208",
       "url": "https://www.openstreetmap.org/node/356895208",
       "kind": "osm"
@@ -91,16 +107,31 @@
       ]
     },
     {
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:wyt001",
+      "fields": [
+        "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:tn:flatwood",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/356895208",
       "fields": [
-        "kind",
         "links"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

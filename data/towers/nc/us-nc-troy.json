@@ -1,15 +1,15 @@
 {
   "id": "us-nc-troy",
-  "name": "Troy Lookout Tower",
+  "name": "Troy Lookout",
   "other_names": [],
   "country": "US",
   "region": "NC",
-  "county": null,
+  "county": "Montgomery",
   "location": {
-    "lat": 35.342641,
-    "lon": -79.891435,
+    "lat": 35.3425,
+    "lon": -79.89166,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
   "elevation_m": 200.0,
   "kind": "tower",
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Troy Lookout (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/nctowers.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357800130",
       "url": "https://www.openstreetmap.org/node/357800130",
       "kind": "osm"
@@ -45,13 +50,21 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/357800130",
+      "source": "tnlandforms",
+      "key": "tnlandforms:nc:nct185",
       "fields": [
         "name",
         "location",
-        "elevation_m",
+        "county",
         "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/357800130",
+      "fields": [
+        "elevation_m",
         "links"
       ]
     }

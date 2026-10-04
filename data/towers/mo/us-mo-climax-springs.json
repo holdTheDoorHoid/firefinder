@@ -6,20 +6,20 @@
   "region": "MO",
   "county": "Camden",
   "location": {
-    "lat": 38.1035,
-    "lon": -93.0295,
+    "lat": 38.1033,
+    "lon": -93.0292,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "central_us_lookouts"
   },
   "elevation_m": null,
   "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 18.3,
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Missouri Conservation Commission",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Climax Springs (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/climax-springs.html",
+      "kind": "site"
+    },
+    {
       "label": "Wikidata item Q5133642",
       "url": "https://www.wikidata.org/wiki/Q5133642",
       "kind": "wikidata"
@@ -45,13 +50,23 @@
   ],
   "sources": [
     {
-      "source": "wikidata",
-      "key": "wikidata:Q5133642",
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:climax-springs",
       "fields": [
         "name",
         "location",
         "county",
         "kind",
+        "height_m",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q5133642",
+      "fields": [
         "links"
       ]
     }

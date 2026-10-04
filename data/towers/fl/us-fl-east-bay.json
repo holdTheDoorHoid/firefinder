@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "FL",
-  "county": null,
+  "county": "Franklin",
   "location": {
     "lat": 29.828895,
     "lon": -84.889202,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "East Bay (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/east-bay.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358695098",
       "url": "https://www.openstreetmap.org/node/358695098",
       "kind": "osm"
@@ -45,10 +50,18 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:fl:east-bay",
+      "fields": [
+        "name",
+        "county",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358695098",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

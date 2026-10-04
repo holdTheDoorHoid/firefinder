@@ -4,18 +4,18 @@
   "other_names": [],
   "country": "US",
   "region": "TN",
-  "county": null,
+  "county": "Hickman",
   "location": {
-    "lat": 35.656076,
-    "lon": -87.364916,
+    "lat": 35.656,
+    "lon": -87.3649,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 292.0,
+  "elevation_m": 293.5,
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
   "registers": [],
   "agency": null,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Weatherly (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 356895191",
       "url": "https://www.openstreetmap.org/node/356895191",
       "kind": "osm"
@@ -45,13 +50,22 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/356895191",
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:hit006",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/356895191",
+      "fields": [
         "links"
       ]
     }

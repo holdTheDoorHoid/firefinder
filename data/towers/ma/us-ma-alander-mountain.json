@@ -12,7 +12,7 @@
     "from": "fflos"
   },
   "elevation_m": 653.8,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "gone",
@@ -25,7 +25,7 @@
       "url": "http://firetower.org/lookouts/us/ma/alander-mountain-tower-site/"
     }
   ],
-  "agency": null,
+  "agency": "Alander Mt",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -76,6 +76,11 @@
       "label": "FFLOS register entry US 544 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ma/alander-mountain-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Alander Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/alander-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -93,9 +98,40 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ma:alander-mountain",
+      "fields": [
+        "kind",
+        "agency",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 42.0925,
+            "lon": -73.504444
+          }
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": {
+            "lat": 42.08759,
+            "lon": -73.50512
+          }
+        }
+      ],
+      "distance_m": 549,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

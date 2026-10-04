@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "LA",
-  "county": null,
+  "county": "Grant",
   "location": {
     "lat": 31.550686,
     "lon": -92.568001,
@@ -12,7 +12,7 @@
     "from": "fflos"
   },
   "elevation_m": 72.8,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "gone",
@@ -71,6 +71,11 @@
       "label": "FFLOS register entry US 856 (firetower.org)",
       "url": "http://firetower.org/images/maps/LOS856_Colfax_map.jpg",
       "kind": "register"
+    },
+    {
+      "label": "COLFAX (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/colfax.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -87,6 +92,15 @@
         "ownership",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:la:colfax",
+      "fields": [
+        "county",
+        "kind",
         "links"
       ]
     }

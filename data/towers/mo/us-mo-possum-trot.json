@@ -15,11 +15,11 @@
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Clark National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
   ],
   "links": [
     {
+      "label": "Possum Trot (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/possum-trot.html",
+      "kind": "site"
+    },
+    {
       "label": "Wikidata item Q107536837",
       "url": "https://www.wikidata.org/wiki/Q107536837",
       "kind": "wikidata"
@@ -56,14 +61,24 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:possum-trot",
+      "fields": [
+        "name",
+        "county",
+        "kind",
+        "status",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q107536837",
       "fields": [
-        "name",
         "location",
-        "county",
         "elevation_m",
-        "kind",
         "photos",
         "links"
       ]

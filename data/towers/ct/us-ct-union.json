@@ -1,10 +1,12 @@
 {
   "id": "us-ct-union",
-  "name": "Union Lookout Tower",
-  "other_names": [],
+  "name": "Walker Mountain (Union)",
+  "other_names": [
+    "Union Lookout Tower"
+  ],
   "country": "US",
   "region": "CT",
-  "county": null,
+  "county": "Windham",
   "location": {
     "lat": 41.998152,
     "lon": -72.15091,
@@ -38,6 +40,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Walker Mountain (Union) (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/walker-mountain.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 359273384",
       "url": "https://www.openstreetmap.org/node/359273384",
       "kind": "osm"
@@ -45,10 +52,18 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ct:walker-mountain",
+      "fields": [
+        "name",
+        "county",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/359273384",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

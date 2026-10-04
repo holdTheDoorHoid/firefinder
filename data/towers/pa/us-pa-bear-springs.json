@@ -1,23 +1,32 @@
 {
   "id": "us-pa-bear-springs",
-  "name": "Bear Springs",
-  "other_names": [],
+  "name": "Tark Hill Tower Site",
+  "other_names": [
+    "Bear Springs"
+  ],
   "country": "US",
   "region": "PA",
-  "county": "Luzerne",
+  "county": "Lackawanna",
   "location": {
-    "lat": 41.26276,
-    "lon": -75.7062,
+    "lat": 41.2629,
+    "lon": -75.7061,
     "precision": "exact",
-    "from": "pa_storymap"
+    "from": "eastern_us_lookouts"
   },
   "elevation_m": null,
   "kind": "tower",
   "design": "Aermotor",
   "height_m": 24.4,
-  "status": "standing",
+  "status": "gone",
   "status_note": null,
-  "registers": [],
+  "registers": [
+    {
+      "register": "FFLOS",
+      "number": "US 505",
+      "state_number": "PA 334",
+      "url": "http://firetower.org/lookouts/us/pa/tark-hill-tower-site/"
+    }
+  ],
   "agency": "State Game Lands #91",
   "ownership": "state",
   "access": {
@@ -42,6 +51,12 @@
       "from": "pa_storymap"
     },
     {
+      "year": 2008,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: September 16, 2008",
+      "from": "fflos"
+    },
+    {
       "year": 2018,
       "event": "replaced",
       "note": null,
@@ -62,32 +77,78 @@
   ],
   "links": [
     {
+      "label": "FFLOS register entry US 505 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/pa/tark-hill-tower-site/",
+      "kind": "register"
+    },
+    {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
       "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
+      "kind": "site"
+    },
+    {
+      "label": "Tark Hill (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/tark-hill.html",
       "kind": "site"
     }
   ],
   "sources": [
     {
+      "source": "fflos",
+      "key": "fflos:US 505",
+      "fields": [
+        "name",
+        "county",
+        "status",
+        "registers",
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "pa_storymap",
       "key": "pa_storymap:bear-springs:41.2628:-75.7062",
       "fields": [
-        "name",
-        "location",
-        "county",
         "kind",
         "design",
         "height_m",
-        "status",
         "agency",
         "ownership",
         "events",
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:pa:tark-hill",
+      "fields": [
+        "location",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "fflos",
+          "value": "gone"
+        },
+        {
+          "source": "pa_storymap",
+          "value": "standing"
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

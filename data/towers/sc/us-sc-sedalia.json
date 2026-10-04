@@ -1,10 +1,10 @@
 {
   "id": "us-sc-sedalia",
-  "name": "Sedalia Lookout Tower",
+  "name": "SEDALIA Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "SC",
-  "county": null,
+  "county": "Union",
   "location": {
     "lat": 34.612911,
     "lon": -81.713992,
@@ -15,11 +15,11 @@
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "SEDALIA (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/sedalia.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357111644",
       "url": "https://www.openstreetmap.org/node/357111644",
       "kind": "osm"
@@ -45,10 +50,21 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:sc:sedalia",
+      "fields": [
+        "name",
+        "county",
+        "status",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/357111644",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

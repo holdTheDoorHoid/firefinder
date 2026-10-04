@@ -4,14 +4,14 @@
   "other_names": [],
   "country": "US",
   "region": "GA",
-  "county": null,
+  "county": "Harris",
   "location": {
-    "lat": 32.773093,
-    "lon": -84.803784,
+    "lat": 32.77319,
+    "lon": -84.80354,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 380.0,
+  "elevation_m": 371.9,
   "kind": "tower",
   "design": null,
   "height_m": null,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Martins Knob Lookout Tower (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/gatowers.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358748618",
       "url": "https://www.openstreetmap.org/node/358748618",
       "kind": "osm"
@@ -45,13 +50,21 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/358748618",
+      "source": "tnlandforms",
+      "key": "tnlandforms:ga:ga034",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/358748618",
+      "fields": [
         "links"
       ]
     }

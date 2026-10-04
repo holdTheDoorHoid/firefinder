@@ -1,10 +1,10 @@
 {
   "id": "us-mo-floyd",
-  "name": "Floyd Lookout Tower",
+  "name": "FLOYD Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "MO",
-  "county": null,
+  "county": "Washington",
   "location": {
     "lat": 37.981763,
     "lon": -90.977879,
@@ -15,11 +15,11 @@
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Clark National Forest - 38N-1W-36",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "FLOYD (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/floyd.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358066510",
       "url": "https://www.openstreetmap.org/node/358066510",
       "kind": "osm"
@@ -45,10 +50,21 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:floyd",
+      "fields": [
+        "name",
+        "county",
+        "status",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358066510",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

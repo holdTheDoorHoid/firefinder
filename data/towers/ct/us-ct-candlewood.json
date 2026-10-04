@@ -1,10 +1,12 @@
 {
   "id": "us-ct-candlewood",
-  "name": "Candlewood Lookout Tower",
-  "other_names": [],
+  "name": "Candlewood Mountain",
+  "other_names": [
+    "Candlewood Lookout Tower"
+  ],
   "country": "US",
   "region": "CT",
-  "county": null,
+  "county": "Litchfield",
   "location": {
     "lat": 41.567594,
     "lon": -73.450122,
@@ -38,6 +40,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Candlewood Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/candlewood-mountain.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 359273298",
       "url": "https://www.openstreetmap.org/node/359273298",
       "kind": "osm"
@@ -45,10 +52,18 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ct:candlewood-mountain",
+      "fields": [
+        "name",
+        "county",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/359273298",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

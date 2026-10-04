@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "LA",
-  "county": null,
+  "county": "Beauregard",
   "location": {
     "lat": 30.7211,
     "lon": -93.5058,
@@ -12,7 +12,7 @@
     "from": "nhlr"
   },
   "elevation_m": 51.8,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -93,6 +93,21 @@
       "label": "FFLOS register entry US 2085 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/la/merryville-fire-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=350",
+      "kind": "register"
+    },
+    {
+      "label": "Merryville Lookout Tower (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/List_of_fire_lookout_towers_in_Louisiana",
+      "kind": "site"
+    },
+    {
+      "label": "MERRYVILLE (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/merryville.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -120,6 +135,22 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "wikipedia_lookout_lists",
+      "key": "wikipedia_lookout_lists:la:merryville-lookout-tower",
+      "fields": [
+        "county",
+        "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:la:merryville",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
@@ -132,6 +163,10 @@
         },
         {
           "source": "fflos",
+          "value": "gone"
+        },
+        {
+          "source": "wikipedia_lookout_lists",
           "value": "gone"
         }
       ],

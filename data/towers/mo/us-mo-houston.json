@@ -1,10 +1,10 @@
 {
   "id": "us-mo-houston",
-  "name": "Houston Fire Tower",
+  "name": "HOUSTON Fire Tower",
   "other_names": [],
   "country": "US",
   "region": "MO",
-  "county": null,
+  "county": "Texas",
   "location": {
     "lat": 37.339292,
     "lon": -92.089111,
@@ -14,12 +14,12 @@
   "elevation_m": null,
   "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 36.6,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Missouri Conservation Commission",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": "OpenStreetMap tags the structure access=yes."
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "HOUSTON (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/houston.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 12729567032",
       "url": "https://www.openstreetmap.org/node/12729567032",
       "kind": "osm"
@@ -45,10 +50,21 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:houston",
+      "fields": [
+        "name",
+        "county",
+        "height_m",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/12729567032",
       "fields": [
-        "name",
         "location",
         "kind",
         "status",

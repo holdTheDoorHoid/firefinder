@@ -6,10 +6,10 @@
   "region": "PA",
   "county": "Blair",
   "location": {
-    "lat": 40.49722,
-    "lon": -78.13233,
+    "lat": 40.4966,
+    "lon": -78.1317,
     "precision": "exact",
-    "from": "pa_storymap"
+    "from": "eastern_us_lookouts"
   },
   "elevation_m": null,
   "kind": "tower",
@@ -59,6 +59,11 @@
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
       "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
       "kind": "site"
+    },
+    {
+      "label": "The Loop (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/the-loop.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -67,7 +72,6 @@
       "key": "pa_storymap:loop-tower:40.4972:-78.1323",
       "fields": [
         "name",
-        "location",
         "county",
         "kind",
         "height_m",
@@ -76,6 +80,14 @@
         "ownership",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:pa:the-loop",
+      "fields": [
+        "location",
         "links"
       ]
     }

@@ -12,7 +12,7 @@
     "from": "nhlr"
   },
   "elevation_m": 407.2,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -26,7 +26,7 @@
     }
   ],
   "agency": "Missouri Department of Conservation",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -72,6 +72,11 @@
       "label": "NHLR register entry US 973 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/mo/mountain-view-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Mountain View (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/mountain-view.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -90,9 +95,34 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:mountain-view",
+      "fields": [
+        "kind",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "central_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

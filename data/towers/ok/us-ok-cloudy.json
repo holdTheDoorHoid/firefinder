@@ -1,10 +1,10 @@
 {
   "id": "us-ok-cloudy",
-  "name": "Cloudy Lookout Tower",
+  "name": "CLOUDY Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "OK",
-  "county": null,
+  "county": "Pushmataha",
   "location": {
     "lat": 34.389751,
     "lon": -95.250281,
@@ -18,7 +18,7 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "S",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "CLOUDY (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/cloudy.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357411625",
       "url": "https://www.openstreetmap.org/node/357411625",
       "kind": "osm"
@@ -45,10 +50,19 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:ok:cloudy",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/357411625",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

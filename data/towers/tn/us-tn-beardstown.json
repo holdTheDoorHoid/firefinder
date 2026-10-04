@@ -1,7 +1,9 @@
 {
   "id": "us-tn-beardstown",
   "name": "Beardstown Lookout Tower",
-  "other_names": [],
+  "other_names": [
+    "Lobelville"
+  ],
   "country": "US",
   "region": "TN",
   "county": "Perry",
@@ -12,7 +14,7 @@
     "from": "nhlr"
   },
   "elevation_m": 250.9,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -72,6 +74,11 @@
       "label": "NHLR register entry US 1272 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/tn/beardstown-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Lobelville (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -90,9 +97,33 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:pet002",
+      "fields": [
+        "kind",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "tnlandforms",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

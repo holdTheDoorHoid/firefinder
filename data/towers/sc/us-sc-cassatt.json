@@ -1,10 +1,10 @@
 {
   "id": "us-sc-cassatt",
-  "name": "Cassatt Lookout Tower",
+  "name": "CASSATT Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "SC",
-  "county": null,
+  "county": "Kershaw",
   "location": {
     "lat": 34.387932,
     "lon": -80.45424,
@@ -13,13 +13,13 @@
   },
   "elevation_m": 135.0,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 30.5,
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "South Carolina Forestry Commission",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -35,8 +35,34 @@
   },
   "rental": null,
   "events": [],
-  "photos": [],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://easternuslookouts.weebly.com/uploads/1/5/9/1/1591048/2572547_orig.jpg",
+      "source_url": "https://easternuslookouts.weebly.com/cassatt.html",
+      "credit": "easternuslookouts.weebly.com",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://easternuslookouts.weebly.com/uploads/1/5/9/1/1591048/2162990_orig.png",
+      "source_url": "https://easternuslookouts.weebly.com/cassatt.html",
+      "credit": "easternuslookouts.weebly.com",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
   "links": [
+    {
+      "label": "CASSATT (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/cassatt.html",
+      "kind": "site"
+    },
     {
       "label": "OpenStreetMap node 357111545",
       "url": "https://www.openstreetmap.org/node/357111545",
@@ -45,10 +71,23 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:sc:cassatt",
+      "fields": [
+        "name",
+        "county",
+        "design",
+        "height_m",
+        "agency",
+        "ownership",
+        "photos",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/357111545",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

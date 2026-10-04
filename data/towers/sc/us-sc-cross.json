@@ -1,10 +1,10 @@
 {
   "id": "us-sc-cross",
-  "name": "Cross Lookout Tower",
+  "name": "CROSS Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "SC",
-  "county": null,
+  "county": "Berkeley",
   "location": {
     "lat": 33.281554,
     "lon": -80.169532,
@@ -15,11 +15,11 @@
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "South Carolina Forestry Commission",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -35,8 +35,24 @@
   },
   "rental": null,
   "events": [],
-  "photos": [],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://easternuslookouts.weebly.com/uploads/1/5/9/1/1591048/1711228_orig.png",
+      "source_url": "https://easternuslookouts.weebly.com/cross.html",
+      "credit": "easternuslookouts.weebly.com",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
   "links": [
+    {
+      "label": "CROSS (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/cross.html",
+      "kind": "site"
+    },
     {
       "label": "OpenStreetMap node 357111590",
       "url": "https://www.openstreetmap.org/node/357111590",
@@ -45,10 +61,22 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:sc:cross",
+      "fields": [
+        "name",
+        "county",
+        "status",
+        "agency",
+        "ownership",
+        "photos",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/357111590",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

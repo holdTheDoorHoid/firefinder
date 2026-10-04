@@ -4,14 +4,14 @@
   "other_names": [],
   "country": "US",
   "region": "GA",
-  "county": null,
+  "county": "Warren",
   "location": {
-    "lat": 33.483469,
-    "lon": -82.762916,
+    "lat": 33.48347,
+    "lon": -82.76292,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 197.0,
+  "elevation_m": 198.4,
   "kind": "tower",
   "design": null,
   "height_m": null,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Barnett Lookout Tower (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/gatowers.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358748502",
       "url": "https://www.openstreetmap.org/node/358748502",
       "kind": "osm"
@@ -45,13 +50,21 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/358748502",
+      "source": "tnlandforms",
+      "key": "tnlandforms:ga:ga008",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/358748502",
+      "fields": [
         "status",
         "links"
       ]

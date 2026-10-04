@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "LA",
-  "county": null,
+  "county": "Rapides",
   "location": {
     "lat": 31.1389,
     "lon": -92.4732,
@@ -12,9 +12,9 @@
     "from": "nhlr"
   },
   "elevation_m": 34.7,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 53.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -66,6 +66,16 @@
       "label": "NHLR register entry US 64 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/la/woodworth-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=64",
+      "kind": "register"
+    },
+    {
+      "label": "WOODWORTH (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/woodworth.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -81,6 +91,16 @@
         "agency",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:la:woodworth",
+      "fields": [
+        "county",
+        "kind",
+        "height_m",
         "links"
       ]
     }

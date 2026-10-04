@@ -4,20 +4,27 @@
   "other_names": [],
   "country": "US",
   "region": "GA",
-  "county": null,
+  "county": "Camden",
   "location": {
-    "lat": 31.056764,
-    "lon": -81.632988,
+    "lat": 31.0569,
+    "lon": -81.63316,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 9.0,
+  "elevation_m": 9.1,
   "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "unknown",
   "status_note": null,
-  "registers": [],
+  "registers": [
+    {
+      "register": "GFC",
+      "number": "US 842",
+      "state_number": null,
+      "url": null
+    }
+  ],
   "agency": null,
   "ownership": "unknown",
   "access": {
@@ -38,6 +45,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Hazzards Neck Lookout Tower (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/gatowers.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358748588",
       "url": "https://www.openstreetmap.org/node/358748588",
       "kind": "osm"
@@ -45,13 +57,22 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/358748588",
+      "source": "tnlandforms",
+      "key": "tnlandforms:ga:ga025",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/358748588",
+      "fields": [
         "links"
       ]
     }

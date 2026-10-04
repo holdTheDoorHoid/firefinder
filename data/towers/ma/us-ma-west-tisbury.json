@@ -1,10 +1,12 @@
 {
   "id": "us-ma-west-tisbury",
-  "name": "West Tisbury Fire Tower",
-  "other_names": [],
+  "name": "Airfield Hill",
+  "other_names": [
+    "West Tisbury Fire Tower"
+  ],
   "country": "US",
   "region": "MA",
-  "county": null,
+  "county": "Dukes",
   "location": {
     "lat": 41.42403,
     "lon": -70.671852,
@@ -18,7 +20,7 @@
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "c.1950:",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -38,6 +40,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Airfield Hill (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/airfield-hill.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 12215345774",
       "url": "https://www.openstreetmap.org/node/12215345774",
       "kind": "osm"
@@ -45,10 +52,19 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ma:airfield-hill",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/12215345774",
       "fields": [
-        "name",
         "location",
         "kind",
         "status",

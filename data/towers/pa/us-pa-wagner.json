@@ -12,7 +12,7 @@
     "from": "fflos"
   },
   "elevation_m": 563.0,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "gone",
@@ -55,6 +55,11 @@
       "label": "FFLOS register entry US 131 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/pa/wagner-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "WAGNER (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/wagner.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -69,6 +74,14 @@
         "status",
         "registers",
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:pa:wagner",
+      "fields": [
+        "kind",
         "links"
       ]
     }

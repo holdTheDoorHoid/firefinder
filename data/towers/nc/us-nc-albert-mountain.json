@@ -23,6 +23,12 @@
       "number": "US 70",
       "state_number": "NC 2",
       "url": "http://nhlr.org/lookouts/us/nc/albert-mountain-lookout/"
+    },
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "FB 3510",
+      "url": null
     }
   ],
   "agency": "U.S. Forest Service",
@@ -74,6 +80,16 @@
       "kind": "register"
     },
     {
+      "label": "Albert Mountain (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/nctowers.html",
+      "kind": "site"
+    },
+    {
+      "label": "Albert Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/albert-mountain.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357805545",
       "url": "https://www.openstreetmap.org/node/357805545",
       "kind": "osm"
@@ -98,10 +114,25 @@
       ]
     },
     {
+      "source": "tnlandforms",
+      "key": "tnlandforms:nc:nct002",
+      "fields": [
+        "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:nc:albert-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/357805545",
       "fields": [
-        "kind",
         "links"
       ]
     }

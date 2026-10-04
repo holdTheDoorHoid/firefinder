@@ -12,7 +12,7 @@
     "from": "nhlr"
   },
   "elevation_m": 57.6,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -26,7 +26,7 @@
     }
   ],
   "agency": "Privately Owned",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -116,6 +116,11 @@
       "label": "NHLR register entry US 1750 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ar/cominto-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "COMINTO (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/cominto.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -132,6 +137,15 @@
         "agency",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:ar:cominto",
+      "fields": [
+        "kind",
+        "ownership",
         "links"
       ]
     }

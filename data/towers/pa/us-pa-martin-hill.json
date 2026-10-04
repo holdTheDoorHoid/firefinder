@@ -12,7 +12,7 @@
     "from": "fflos"
   },
   "elevation_m": 829.1,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "gone",
@@ -25,8 +25,8 @@
       "url": "http://firetower.org/lookouts/us/pa/martin-hill-tower-site/"
     }
   ],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Buchanan State Forest",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -55,6 +55,11 @@
       "label": "FFLOS register entry US 369 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/pa/martin-hill-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Martin Hill (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/martin-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -69,6 +74,16 @@
         "status",
         "registers",
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:pa:martin-hill",
+      "fields": [
+        "kind",
+        "agency",
+        "ownership",
         "links"
       ]
     }

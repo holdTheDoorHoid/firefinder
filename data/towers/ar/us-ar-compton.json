@@ -12,9 +12,9 @@
     "from": "nhlr"
   },
   "elevation_m": 734.6,
-  "kind": "unknown",
-  "design": null,
-  "height_m": null,
+  "kind": "tower",
+  "design": "Aermotor",
+  "height_m": 25.9,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -26,7 +26,7 @@
     }
   ],
   "agency": "Ed Porter",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -102,6 +102,16 @@
       "label": "NHLR register entry US 839 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ar/compton-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=848",
+      "kind": "register"
+    },
+    {
+      "label": "COMPTON (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/compton.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -118,6 +128,17 @@
         "agency",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:ar:compton",
+      "fields": [
+        "kind",
+        "design",
+        "height_m",
+        "ownership",
         "links"
       ]
     }

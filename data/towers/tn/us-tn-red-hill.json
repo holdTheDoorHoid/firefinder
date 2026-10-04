@@ -4,18 +4,18 @@
   "other_names": [],
   "country": "US",
   "region": "TN",
-  "county": null,
+  "county": "Bradley",
   "location": {
-    "lat": 35.034804,
-    "lon": -84.917629,
+    "lat": 35.0345,
+    "lon": -84.9177,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 358.0,
+  "elevation_m": 354.2,
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "gone",
   "status_note": null,
   "registers": [],
   "agency": null,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Red Hill (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 356895241",
       "url": "https://www.openstreetmap.org/node/356895241",
       "kind": "osm"
@@ -45,13 +50,22 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/356895241",
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:brt002",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/356895241",
+      "fields": [
         "links"
       ]
     }

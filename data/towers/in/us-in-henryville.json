@@ -16,7 +16,7 @@
   "elevation_m": 315.5,
   "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 12.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,7 +28,7 @@
     }
   ],
   "agency": "Indiana Division of Forestry",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": "OpenStreetMap tags the structure access=no."
@@ -80,9 +80,19 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=1150",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Indiana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/in/",
       "kind": "association"
+    },
+    {
+      "label": "HENRYVILLE (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/henryville.html",
+      "kind": "site"
     },
     {
       "label": "Website (in.gov)",
@@ -118,6 +128,15 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ga:henryville",
+      "fields": [
+        "height_m",
+        "ownership",
         "links"
       ]
     },

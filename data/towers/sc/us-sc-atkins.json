@@ -12,9 +12,9 @@
     "from": "nhlr"
   },
   "elevation_m": 47.2,
-  "kind": "unknown",
-  "design": null,
-  "height_m": null,
+  "kind": "tower",
+  "design": "Aermotor",
+  "height_m": 33.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -26,7 +26,7 @@
     }
   ],
   "agency": "South Carolina Forestry Commission",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -86,6 +86,16 @@
       "label": "NHLR register entry US 983 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/sc/atkins-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=1055",
+      "kind": "register"
+    },
+    {
+      "label": "ATKINS (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/atkins.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -102,6 +112,17 @@
         "agency",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:sc:atkins",
+      "fields": [
+        "kind",
+        "design",
+        "height_m",
+        "ownership",
         "links"
       ]
     }

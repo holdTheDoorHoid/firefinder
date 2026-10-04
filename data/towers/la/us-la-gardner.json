@@ -1,10 +1,10 @@
 {
   "id": "us-la-gardner",
-  "name": "Gardner Lookout Tower",
+  "name": "GARDNER Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "LA",
-  "county": null,
+  "county": "Rapides",
   "location": {
     "lat": 31.232201,
     "lon": -92.691102,
@@ -18,8 +18,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Kisatchie National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "GARDNER (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/gardner.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358393652",
       "url": "https://www.openstreetmap.org/node/358393652",
       "kind": "osm"
@@ -45,10 +50,20 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:la:gardner",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358393652",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

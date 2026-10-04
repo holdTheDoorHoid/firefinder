@@ -1,10 +1,10 @@
 {
   "id": "us-la-oberlin",
-  "name": "Oberlin Lookout Tower",
+  "name": "OBERLIN Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "LA",
-  "county": null,
+  "county": "Allen",
   "location": {
     "lat": 30.604105,
     "lon": -92.7738,
@@ -18,8 +18,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Louisiana Forestry Commission",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "OBERLIN (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/oberlin.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358380308",
       "url": "https://www.openstreetmap.org/node/358380308",
       "kind": "osm"
@@ -45,10 +50,20 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:la:oberlin",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358380308",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

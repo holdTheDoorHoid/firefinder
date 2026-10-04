@@ -1,10 +1,10 @@
 {
   "id": "us-mi-bates",
-  "name": "Bates Fire Tower",
+  "name": "BATES Fire Tower",
   "other_names": [],
   "country": "US",
   "region": "MI",
-  "county": null,
+  "county": "Iron",
   "location": {
     "lat": 46.101808,
     "lon": -88.539875,
@@ -15,11 +15,18 @@
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
-  "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "registers": [
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "RL 1564",
+      "url": null
+    }
+  ],
+  "agency": "Ottawa National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +45,16 @@
   "photos": [],
   "links": [
     {
+      "label": "Bates Fire Tower (michiganfiretower.com)",
+      "url": "https://michiganfiretower.com/fire-towers/bates-fire-tower/",
+      "kind": "site"
+    },
+    {
+      "label": "BATES (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/bates.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 353999890",
       "url": "https://www.openstreetmap.org/node/353999890",
       "kind": "osm"
@@ -45,10 +62,29 @@
   ],
   "sources": [
     {
+      "source": "michigan_fire_tower",
+      "key": "michigan_fire_tower:mi:bates-fire-tower",
+      "fields": [
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:mi:bates",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/353999890",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

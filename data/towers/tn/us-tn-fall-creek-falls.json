@@ -1,19 +1,19 @@
 {
   "id": "us-tn-fall-creek-falls",
-  "name": "Fall Creek Falls Fire Lookout Tower",
+  "name": "Bradden Knob Fire Tower",
   "other_names": [
-    "Bradden Knob Fire Tower"
+    "Fall Creek Falls Fire Lookout Tower"
   ],
   "country": "US",
   "region": "TN",
   "county": "Bledsoe",
   "location": {
-    "lat": 35.669434,
-    "lon": -85.306347,
+    "lat": 35.6696,
+    "lon": -85.3059,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 617.5,
+  "elevation_m": 615.1,
   "kind": "tower",
   "design": null,
   "height_m": 24.4,
@@ -65,6 +65,11 @@
   ],
   "links": [
     {
+      "label": "Bradden Knob (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
       "label": "Wikidata item Q86925971",
       "url": "https://www.wikidata.org/wiki/Q86925971",
       "kind": "wikidata"
@@ -77,12 +82,22 @@
   ],
   "sources": [
     {
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:blt002",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "elevation_m",
+        "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q86925971",
       "fields": [
-        "name",
-        "county",
-        "elevation_m",
         "height_m",
         "registers",
         "events",
@@ -94,15 +109,12 @@
       "source": "osm",
       "key": "osm:way/1094656625",
       "fields": [
-        "location",
-        "kind",
-        "status",
         "links"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,10 +1,10 @@
 {
   "id": "us-la-abita",
-  "name": "Abita Lookout Tower",
+  "name": "Abita lookout tower",
   "other_names": [],
   "country": "US",
   "region": "LA",
-  "county": null,
+  "county": "St. Tammany",
   "location": {
     "lat": 30.437334,
     "lon": -90.045674,
@@ -14,11 +14,11 @@
   "elevation_m": 9.0,
   "kind": "tower",
   "design": null,
-  "height_m": null,
-  "status": "unknown",
+  "height_m": 30.5,
+  "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "7N",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -38,6 +38,16 @@
   "photos": [],
   "links": [
     {
+      "label": "Abita lookout tower (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/List_of_fire_lookout_towers_in_Louisiana",
+      "kind": "site"
+    },
+    {
+      "label": "ABITA (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/abita-springs.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358394019",
       "url": "https://www.openstreetmap.org/node/358394019",
       "kind": "osm"
@@ -45,13 +55,31 @@
   ],
   "sources": [
     {
+      "source": "wikipedia_lookout_lists",
+      "key": "wikipedia_lookout_lists:la:abita-lookout-tower",
+      "fields": [
+        "name",
+        "county",
+        "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:la:abita-springs",
+      "fields": [
+        "height_m",
+        "agency",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358394019",
       "fields": [
-        "name",
         "location",
         "elevation_m",
-        "kind",
         "links"
       ]
     }

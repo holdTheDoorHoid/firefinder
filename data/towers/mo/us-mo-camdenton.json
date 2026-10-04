@@ -12,9 +12,9 @@
     "from": "nhlr"
   },
   "elevation_m": 321.0,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 18.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -26,7 +26,7 @@
     }
   ],
   "agency": "Missouri Department of Conservation",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -72,6 +72,11 @@
       "label": "NHLR register entry US 1261 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/mo/camdenton-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "CAMDENTON (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/camdenton.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -90,9 +95,35 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:camdenton",
+      "fields": [
+        "kind",
+        "height_m",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "central_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

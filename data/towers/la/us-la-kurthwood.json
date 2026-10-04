@@ -1,10 +1,10 @@
 {
   "id": "us-la-kurthwood",
-  "name": "Kurthwood Fire Tower",
+  "name": "KURTHWOOD Fire Tower",
   "other_names": [],
   "country": "US",
   "region": "LA",
-  "county": null,
+  "county": "Vernon",
   "location": {
     "lat": 31.30544,
     "lon": -93.167258,
@@ -18,7 +18,7 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "4N-8W-Sec.26",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "KURTHWOOD (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/kurthwood.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358393684",
       "url": "https://www.openstreetmap.org/node/358393684",
       "kind": "osm"
@@ -45,10 +50,19 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:la:kurthwood",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358393684",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

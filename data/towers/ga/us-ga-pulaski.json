@@ -4,20 +4,33 @@
   "other_names": [],
   "country": "US",
   "region": "GA",
-  "county": null,
+  "county": "Pulaski",
   "location": {
     "lat": 32.25544,
-    "lon": -83.479933,
+    "lon": -83.48017,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 97.0,
+  "elevation_m": 92.0,
   "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "unknown",
   "status_note": null,
-  "registers": [],
+  "registers": [
+    {
+      "register": "BLL",
+      "number": "US 64710",
+      "state_number": null,
+      "url": null
+    },
+    {
+      "register": "GFC",
+      "number": "US 335",
+      "state_number": null,
+      "url": null
+    }
+  ],
   "agency": null,
   "ownership": "unknown",
   "access": {
@@ -38,6 +51,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Pulaski Lookout Tower (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/gatowers.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358748675",
       "url": "https://www.openstreetmap.org/node/358748675",
       "kind": "osm"
@@ -45,13 +63,22 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/358748675",
+      "source": "tnlandforms",
+      "key": "tnlandforms:ga:ga045",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/358748675",
+      "fields": [
         "links"
       ]
     }

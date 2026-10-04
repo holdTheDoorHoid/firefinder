@@ -1,10 +1,10 @@
 {
   "id": "us-ms-hilda",
-  "name": "Hilda Lookout Tower",
+  "name": "HILDA Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "MS",
-  "county": null,
+  "county": "Jackson",
   "location": {
     "lat": 30.430997,
     "lon": -88.653474,
@@ -18,7 +18,7 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Mississippi Forest Service",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "HILDA (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/hilda.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357997137",
       "url": "https://www.openstreetmap.org/node/357997137",
       "kind": "osm"
@@ -45,10 +50,19 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ms:hilda",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/357997137",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

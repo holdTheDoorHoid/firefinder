@@ -4,18 +4,18 @@
   "other_names": [],
   "country": "US",
   "region": "TN",
-  "county": null,
+  "county": "Grainger",
   "location": {
-    "lat": 36.326795,
-    "lon": -83.475998,
+    "lat": 36.32678,
+    "lon": -83.47587,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": null,
+  "elevation_m": 756.5,
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
   "registers": [],
   "agency": null,
@@ -38,6 +38,16 @@
   "photos": [],
   "links": [
     {
+      "label": "Avondale (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
+      "label": "AVONDALE (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/avondale.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap way 909749289",
       "url": "https://www.openstreetmap.org/way/909749289",
       "kind": "osm"
@@ -45,12 +55,29 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:way/909749289",
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:grt001",
       "fields": [
         "name",
         "location",
+        "county",
+        "elevation_m",
         "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:tn:avondale",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/909749289",
+      "fields": [
         "links"
       ]
     }

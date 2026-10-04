@@ -1,10 +1,12 @@
 {
   "id": "us-ar-magazine",
-  "name": "Magazine Lookout Tower",
-  "other_names": [],
+  "name": "Magazine Mountain",
+  "other_names": [
+    "Magazine Lookout Tower"
+  ],
   "country": "US",
   "region": "AR",
-  "county": null,
+  "county": "Logan",
   "location": {
     "lat": 35.163114,
     "lon": -93.678848,
@@ -18,8 +20,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "St. Francis National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +40,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Magazine Mountain (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/magazine.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 359020876",
       "url": "https://www.openstreetmap.org/node/359020876",
       "kind": "osm"
@@ -45,10 +52,20 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:ar:magazine",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/359020876",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

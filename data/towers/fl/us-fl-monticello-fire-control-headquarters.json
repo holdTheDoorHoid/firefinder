@@ -1,10 +1,12 @@
 {
   "id": "us-fl-monticello-fire-control-headquarters",
-  "name": "Monticello Fire Control Headquarters Fire Tower",
-  "other_names": [],
+  "name": "Monticello Fc Hq",
+  "other_names": [
+    "Monticello Fire Control Headquarters Fire Tower"
+  ],
   "country": "US",
   "region": "FL",
-  "county": null,
+  "county": "Jefferson",
   "location": {
     "lat": 30.510939,
     "lon": -83.876757,
@@ -13,9 +15,9 @@
   },
   "elevation_m": 69.0,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
-  "status": "unknown",
+  "design": "Aermotor",
+  "height_m": 30.5,
+  "status": "gone",
   "status_note": null,
   "registers": [],
   "agency": null,
@@ -38,6 +40,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Monticello Fc Hq (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/monticello1.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358719663",
       "url": "https://www.openstreetmap.org/node/358719663",
       "kind": "osm"
@@ -45,10 +52,21 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:fl:monticello1",
+      "fields": [
+        "name",
+        "county",
+        "design",
+        "height_m",
+        "status",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358719663",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

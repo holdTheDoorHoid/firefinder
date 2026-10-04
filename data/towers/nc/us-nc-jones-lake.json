@@ -4,21 +4,21 @@
   "other_names": [],
   "country": "US",
   "region": "NC",
-  "county": null,
+  "county": "Bladen",
   "location": {
-    "lat": 34.690693,
-    "lon": -78.595768,
+    "lat": 34.69055,
+    "lon": -78.59527,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
   "elevation_m": 23.0,
   "kind": "tower",
   "design": null,
-  "height_m": null,
-  "status": "unknown",
+  "height_m": 30.2,
+  "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "North Carolina Division of Forest Resources",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -38,6 +38,16 @@
   "photos": [],
   "links": [
     {
+      "label": "Jones Lake (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/nctowers.html",
+      "kind": "site"
+    },
+    {
+      "label": "Jones Lake (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/jones-lake.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357809771",
       "url": "https://www.openstreetmap.org/node/357809771",
       "kind": "osm"
@@ -45,13 +55,31 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/357809771",
+      "source": "tnlandforms",
+      "key": "tnlandforms:nc:nct098",
       "fields": [
         "name",
         "location",
-        "elevation_m",
+        "county",
         "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:nc:jones-lake",
+      "fields": [
+        "height_m",
+        "status",
+        "agency",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/357809771",
+      "fields": [
+        "elevation_m",
         "access",
         "links"
       ]

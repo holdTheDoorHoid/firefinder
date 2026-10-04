@@ -6,16 +6,16 @@
   "region": "TN",
   "county": "Marion",
   "location": {
-    "lat": 35.158105,
-    "lon": -85.655613,
+    "lat": 35.158,
+    "lon": -85.6554,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "tnlandforms"
   },
   "elevation_m": 619.4,
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
   "registers": [
     {
@@ -45,6 +45,16 @@
   "photos": [],
   "links": [
     {
+      "label": "Big Hill (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
+      "label": "Big Hill (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/big-hill-m.html",
+      "kind": "site"
+    },
+    {
       "label": "Wikidata item Q107406946",
       "url": "https://www.wikidata.org/wiki/Q107406946",
       "kind": "wikidata"
@@ -52,14 +62,29 @@
   ],
   "sources": [
     {
-      "source": "wikidata",
-      "key": "wikidata:Q107406946",
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:mit002",
       "fields": [
         "name",
         "location",
         "county",
         "elevation_m",
         "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:tn:big-hill-m",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q107406946",
+      "fields": [
         "registers",
         "links"
       ]

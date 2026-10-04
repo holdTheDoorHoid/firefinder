@@ -1,7 +1,9 @@
 {
   "id": "us-nj-batsto-manor-house",
   "name": "Batsto Manor House Lookout",
-  "other_names": [],
+  "other_names": [
+    "Batsto Mansion House Station"
+  ],
   "country": "US",
   "region": "NJ",
   "county": "Burlington",
@@ -12,7 +14,7 @@
     "from": "nhlr"
   },
   "elevation_m": 21.9,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -26,7 +28,7 @@
     }
   ],
   "agency": "New Jersey Division of Parks and Forestry",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -69,6 +71,16 @@
       "license": "All rights reserved",
       "caption": null,
       "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Batsto_Mansion_with_Fire_Tower.jpg",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_New_Jersey_Forest_Fire_Service_fire_towers",
+      "credit": "Wikimedia Commons, via Wikipedia",
+      "license": "See Wikimedia Commons file page (varies per photo)",
+      "caption": "Batsto Mansion House Station",
+      "year": null
     }
   ],
   "links": [
@@ -76,6 +88,11 @@
       "label": "NHLR register entry US 79 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/nj/batsto-manor-house-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Batsto Mansion House Station (Wikipedia (List of New Jersey Forest Fire Service fire towers))",
+      "url": "https://en.wikipedia.org/wiki/List_of_New_Jersey_Forest_Fire_Service_fire_towers",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -94,9 +111,35 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "nj_forest_fire_towers",
+      "key": "nj_forest_fire_towers:nj:batsto-mansion-house-station",
+      "fields": [
+        "kind",
+        "ownership",
+        "photos",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "nj_forest_fire_towers",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

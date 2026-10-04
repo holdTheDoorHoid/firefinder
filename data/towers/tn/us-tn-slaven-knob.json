@@ -4,20 +4,27 @@
   "other_names": [],
   "country": "US",
   "region": "TN",
-  "county": null,
+  "county": "Scott",
   "location": {
-    "lat": 36.592415,
-    "lon": -84.558125,
+    "lat": 36.5923,
+    "lon": -84.5581,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 451.0,
+  "elevation_m": 459.9,
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
-  "registers": [],
+  "registers": [
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "GB 2625",
+      "url": null
+    }
+  ],
   "agency": null,
   "ownership": "unknown",
   "access": {
@@ -38,6 +45,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Slaven Knob (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 356888183",
       "url": "https://www.openstreetmap.org/node/356888183",
       "kind": "osm"
@@ -45,13 +57,23 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/356888183",
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:sct003",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/356888183",
+      "fields": [
         "links"
       ]
     }

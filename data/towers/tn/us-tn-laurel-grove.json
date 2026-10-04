@@ -4,18 +4,18 @@
   "other_names": [],
   "country": "US",
   "region": "TN",
-  "county": null,
+  "county": "Anderson",
   "location": {
-    "lat": 36.110357,
-    "lon": -84.230757,
+    "lat": 36.11021,
+    "lon": -84.23051,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 522.0,
+  "elevation_m": 531.3,
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
   "registers": [],
   "agency": null,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Laurel Grove (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 356895216",
       "url": "https://www.openstreetmap.org/node/356895216",
       "kind": "osm"
@@ -45,13 +50,22 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/356895216",
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:ant002",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/356895216",
+      "fields": [
         "links"
       ]
     }

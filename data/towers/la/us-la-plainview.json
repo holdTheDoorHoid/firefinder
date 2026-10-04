@@ -1,10 +1,10 @@
 {
   "id": "us-la-plainview",
-  "name": "Plainview Lookout Tower",
+  "name": "PLAINVIEW Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "LA",
-  "county": null,
+  "county": "Rapides",
   "location": {
     "lat": 30.933641,
     "lon": -92.766921,
@@ -18,7 +18,7 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "3S-4W-Sec.34",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "PLAINVIEW (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/plainview.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358393749",
       "url": "https://www.openstreetmap.org/node/358393749",
       "kind": "osm"
@@ -45,10 +50,19 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:la:plainview",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358393749",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

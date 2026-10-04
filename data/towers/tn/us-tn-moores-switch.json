@@ -4,20 +4,27 @@
   "other_names": [],
   "country": "US",
   "region": "TN",
-  "county": null,
+  "county": "Hickman",
   "location": {
-    "lat": 35.808558,
-    "lon": -87.48178,
+    "lat": 35.8087,
+    "lon": -87.4819,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 238.0,
+  "elevation_m": 243.2,
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
-  "registers": [],
+  "registers": [
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "FD 1528",
+      "url": null
+    }
+  ],
   "agency": null,
   "ownership": "unknown",
   "access": {
@@ -38,6 +45,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Moores Switch (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 356895230",
       "url": "https://www.openstreetmap.org/node/356895230",
       "kind": "osm"
@@ -45,13 +57,23 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/356895230",
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:hit004",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/356895230",
+      "fields": [
         "links"
       ]
     }

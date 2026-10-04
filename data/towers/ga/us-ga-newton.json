@@ -12,7 +12,7 @@
     "from": "nhlr"
   },
   "elevation_m": 50.6,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -23,6 +23,18 @@
       "number": "US 958",
       "state_number": "GA 16",
       "url": "http://nhlr.org/lookouts/us/ga/newton-firetower/"
+    },
+    {
+      "register": "BLL",
+      "number": "US 41123",
+      "state_number": null,
+      "url": null
+    },
+    {
+      "register": "GFC",
+      "number": "US 212",
+      "state_number": null,
+      "url": null
     }
   ],
   "agency": "Georgia Forestry Commission",
@@ -102,6 +114,11 @@
       "label": "NHLR register entry US 958 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ga/newton-firetower/",
       "kind": "register"
+    },
+    {
+      "label": "newton (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/gatowers.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -118,6 +135,15 @@
         "agency",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "tnlandforms",
+      "key": "tnlandforms:ga:ga099",
+      "fields": [
+        "kind",
+        "registers",
         "links"
       ]
     }

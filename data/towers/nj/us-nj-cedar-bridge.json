@@ -14,7 +14,7 @@
   "elevation_m": 53.9,
   "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 30.0,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -26,7 +26,7 @@
     }
   ],
   "agency": "New Jersey Forest Fire Service",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -68,6 +68,16 @@
       "kind": "register"
     },
     {
+      "label": "Cedar Bridge Station (Wikipedia (List of New Jersey Forest Fire Service fire towers))",
+      "url": "https://en.wikipedia.org/wiki/List_of_New_Jersey_Forest_Fire_Service_fire_towers",
+      "kind": "site"
+    },
+    {
+      "label": "Cedar Bridge (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/cedar-bridge.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 5579305023",
       "url": "https://www.openstreetmap.org/node/5579305023",
       "kind": "osm"
@@ -91,10 +101,26 @@
       ]
     },
     {
+      "source": "nj_forest_fire_towers",
+      "key": "nj_forest_fire_towers:nj:cedar-bridge-station",
+      "fields": [
+        "kind",
+        "height_m",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:nj:cedar-bridge",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/5579305023",
       "fields": [
-        "kind",
         "links"
       ]
     }

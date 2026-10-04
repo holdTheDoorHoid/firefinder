@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "AR",
-  "county": null,
+  "county": "St Francis",
   "location": {
     "lat": 35.08692,
     "lon": -90.92911,
@@ -12,7 +12,7 @@
     "from": "nhlr"
   },
   "elevation_m": 64.9,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -25,8 +25,8 @@
       "url": "http://nhlr.org/lookouts/us/ar/pinetree-lookout-tower/"
     }
   ],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Arkansas Forestry Commission",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -86,6 +86,11 @@
       "label": "NHLR register entry US 1695 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ar/pinetree-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "PINETREE (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/pinetree.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -100,6 +105,17 @@
         "registers",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:ar:pinetree",
+      "fields": [
+        "county",
+        "kind",
+        "agency",
+        "ownership",
         "links"
       ]
     }

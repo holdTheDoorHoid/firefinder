@@ -4,12 +4,12 @@
   "other_names": [],
   "country": "US",
   "region": "NC",
-  "county": null,
+  "county": "Sampson",
   "location": {
-    "lat": 34.956557,
-    "lon": -78.357778,
+    "lat": 34.95638,
+    "lon": -78.35805,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
   "elevation_m": 42.0,
   "kind": "tower",
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Clinton (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/nctowers.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357809757",
       "url": "https://www.openstreetmap.org/node/357809757",
       "kind": "osm"
@@ -45,13 +50,21 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/357809757",
+      "source": "tnlandforms",
+      "key": "tnlandforms:nc:nct040",
       "fields": [
         "name",
         "location",
-        "elevation_m",
+        "county",
         "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/357809757",
+      "fields": [
+        "elevation_m",
         "links"
       ]
     }

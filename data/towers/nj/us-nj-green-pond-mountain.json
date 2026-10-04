@@ -12,7 +12,7 @@
     "from": "nhlr"
   },
   "elevation_m": 378.0,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -26,7 +26,7 @@
     }
   ],
   "agency": "Picatinny Arsenal",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -76,6 +76,16 @@
       "label": "NHLR register entry US 83 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/nj/green-pond-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Green Pond Mountain Lookout (Wikipedia (List of New Jersey Forest Fire Service fire towers))",
+      "url": "https://en.wikipedia.org/wiki/List_of_New_Jersey_Forest_Fire_Service_fire_towers",
+      "kind": "site"
+    },
+    {
+      "label": "Green Pond Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/green-pond-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -94,9 +104,41 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "nj_forest_fire_towers",
+      "key": "nj_forest_fire_towers:nj:green-pond-mountain-lookout",
+      "fields": [
+        "kind",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:nj:green-pond-mountain",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "nj_forest_fire_towers",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "KY",
-  "county": null,
+  "county": "Leslie",
   "location": {
     "lat": 37.023423,
     "lon": -83.405462,
@@ -15,7 +15,7 @@
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "gone",
   "status_note": null,
   "registers": [],
   "agency": null,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Beech Fork (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/beech-fork.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358614014",
       "url": "https://www.openstreetmap.org/node/358614014",
       "kind": "osm"
@@ -45,10 +50,19 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ky:beech-fork",
+      "fields": [
+        "name",
+        "county",
+        "status",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358614014",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

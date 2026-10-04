@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "CT",
-  "county": null,
+  "county": "New Haven",
   "location": {
     "lat": 41.533985,
     "lon": -73.135944,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Great Hill (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/great-hill.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 359284842",
       "url": "https://www.openstreetmap.org/node/359284842",
       "kind": "osm"
@@ -45,10 +50,18 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ct:great-hill",
+      "fields": [
+        "name",
+        "county",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/359284842",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

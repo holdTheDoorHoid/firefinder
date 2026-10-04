@@ -1,25 +1,34 @@
 {
   "id": "us-ga-brasstown-bald",
-  "name": "Brasstown Bald Lookout Tower",
-  "other_names": [],
+  "name": "Brasstown Lookout Tower",
+  "other_names": [
+    "Brasstown Bald"
+  ],
   "country": "US",
   "region": "GA",
-  "county": null,
+  "county": "Union",
   "location": {
-    "lat": 34.874282,
-    "lon": -83.810834,
+    "lat": 34.87426,
+    "lon": -83.81046,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 1445.0,
+  "elevation_m": 1443.2,
   "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "unknown",
   "status_note": null,
-  "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "registers": [
+    {
+      "register": "GFC",
+      "number": "US 906",
+      "state_number": null,
+      "url": null
+    }
+  ],
+  "agency": "Chattahoochee National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +47,16 @@
   "photos": [],
   "links": [
     {
+      "label": "Brasstown Lookout Tower (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/gatowers.html",
+      "kind": "site"
+    },
+    {
+      "label": "Brasstown Bald (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/brasstown-bald.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap way 268828676",
       "url": "https://www.openstreetmap.org/way/268828676",
       "kind": "osm"
@@ -45,13 +64,31 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:way/268828676",
+      "source": "tnlandforms",
+      "key": "tnlandforms:ga:ga006",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ga:brasstown-bald",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/268828676",
+      "fields": [
         "links"
       ]
     }

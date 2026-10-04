@@ -4,20 +4,33 @@
   "other_names": [],
   "country": "US",
   "region": "GA",
-  "county": null,
+  "county": "Sumter",
   "location": {
-    "lat": 32.095859,
-    "lon": -84.228309,
+    "lat": 32.096,
+    "lon": -84.22852,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 145.0,
+  "elevation_m": 141.1,
   "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "unknown",
   "status_note": null,
-  "registers": [],
+  "registers": [
+    {
+      "register": "BLL",
+      "number": "US 41120",
+      "state_number": null,
+      "url": null
+    },
+    {
+      "register": "GFC",
+      "number": "US 324",
+      "state_number": null,
+      "url": null
+    }
+  ],
   "agency": null,
   "ownership": "unknown",
   "access": {
@@ -38,6 +51,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Sumter Lookout Tower (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/gatowers.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358748724",
       "url": "https://www.openstreetmap.org/node/358748724",
       "kind": "osm"
@@ -45,13 +63,22 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/358748724",
+      "source": "tnlandforms",
+      "key": "tnlandforms:ga:ga052",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/358748724",
+      "fields": [
         "links"
       ]
     }

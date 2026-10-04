@@ -1,10 +1,10 @@
 {
   "id": "us-fl-frostproof",
-  "name": "Frostproof Fire Tower",
+  "name": "FROSTPROOF Fire Tower",
   "other_names": [],
   "country": "US",
   "region": "FL",
-  "county": null,
+  "county": "Polk",
   "location": {
     "lat": 27.733957,
     "lon": -81.592879,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "FROSTPROOF (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/frostproof.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358721933",
       "url": "https://www.openstreetmap.org/node/358721933",
       "kind": "osm"
@@ -45,10 +50,18 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:fl:frostproof",
+      "fields": [
+        "name",
+        "county",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358721933",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

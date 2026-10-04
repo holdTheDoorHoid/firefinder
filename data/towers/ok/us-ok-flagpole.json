@@ -1,10 +1,10 @@
 {
   "id": "us-ok-flagpole",
-  "name": "Flagpole Lookout Tower",
+  "name": "FLAGPOLE Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "OK",
-  "county": null,
+  "county": "Pushmataha",
   "location": {
     "lat": 34.602195,
     "lon": -95.415132,
@@ -18,7 +18,7 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "S",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "FLAGPOLE (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/flagpole.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357411630",
       "url": "https://www.openstreetmap.org/node/357411630",
       "kind": "osm"
@@ -45,10 +50,19 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:ok:flagpole",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/357411630",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

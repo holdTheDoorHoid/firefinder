@@ -4,20 +4,27 @@
   "other_names": [],
   "country": "US",
   "region": "TN",
-  "county": null,
+  "county": "Hamilton",
   "location": {
-    "lat": 35.148962,
-    "lon": -85.024117,
+    "lat": 35.149,
+    "lon": -85.0241,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 453.0,
+  "elevation_m": 455.7,
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "gone",
   "status_note": null,
-  "registers": [],
+  "registers": [
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "FC 1842",
+      "url": null
+    }
+  ],
   "agency": null,
   "ownership": "unknown",
   "access": {
@@ -38,6 +45,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Ooltewah (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 356895237",
       "url": "https://www.openstreetmap.org/node/356895237",
       "kind": "osm"
@@ -45,13 +57,23 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/356895237",
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:hmt002",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/356895237",
+      "fields": [
         "links"
       ]
     }

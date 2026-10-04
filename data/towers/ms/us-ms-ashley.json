@@ -1,10 +1,10 @@
 {
   "id": "us-ms-ashley",
-  "name": "Ashley Lookout Tower",
+  "name": "ASHLEY Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "MS",
-  "county": null,
+  "county": "Copiah",
   "location": {
     "lat": 31.783264,
     "lon": -90.21979,
@@ -18,7 +18,7 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Standing (Google Earth)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "ASHLEY (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/ashley.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357997061",
       "url": "https://www.openstreetmap.org/node/357997061",
       "kind": "osm"
@@ -45,10 +50,19 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ms:ashley",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/357997061",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

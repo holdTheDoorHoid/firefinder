@@ -12,7 +12,7 @@
     "from": "nhlr"
   },
   "elevation_m": 896.1,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -23,6 +23,12 @@
       "number": "US 728",
       "state_number": "NC 22",
       "url": "http://nhlr.org/lookouts/us/nc/walker-top-lookout/"
+    },
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "AE 8525",
+      "url": null
     }
   ],
   "agency": "Kenneth Suttles",
@@ -72,6 +78,11 @@
       "label": "NHLR register entry US 728 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/nc/walker-top-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Walkertop (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/nctowers.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -90,9 +101,40 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "tnlandforms",
+      "key": "tnlandforms:nc:nct190",
+      "fields": [
+        "kind",
+        "registers",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 35.64283,
+            "lon": -81.71959
+          }
+        },
+        {
+          "source": "tnlandforms",
+          "value": {
+            "lat": 35.64277,
+            "lon": -81.70305
+          }
+        }
+      ],
+      "distance_m": 1495,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

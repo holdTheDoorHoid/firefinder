@@ -12,7 +12,7 @@
     "from": "fflos"
   },
   "elevation_m": 293.5,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "gone",
@@ -23,9 +23,15 @@
       "number": "US 1592",
       "state_number": "TN 3",
       "url": "http://firetower.org/lookouts/us/tn/bon-aqua-lookout-tower-site/"
+    },
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "FD 1525",
+      "url": null
     }
   ],
-  "agency": null,
+  "agency": "Tennessee Division of Forestry",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -55,6 +61,16 @@
       "label": "FFLOS register entry US 1592 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/tn/bon-aqua-lookout-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Bon Aqua (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
+      "label": "Bon Aqua (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/bon-aqua.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -71,10 +87,27 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:hit001",
+      "fields": [
+        "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:tn:bon-aqua",
+      "fields": [
+        "agency",
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

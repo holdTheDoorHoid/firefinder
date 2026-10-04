@@ -12,7 +12,7 @@
     "from": "nhlr"
   },
   "elevation_m": 695.9,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -23,6 +23,12 @@
       "number": "US 991",
       "state_number": "TN 12",
       "url": "http://nhlr.org/lookouts/us/tn/springdale-lookout/"
+    },
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "GA 3532",
+      "url": null
     }
   ],
   "agency": "Tennessee Division of Forestry",
@@ -66,6 +72,16 @@
       "label": "NHLR register entry US 991 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/tn/springdale-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Springdale (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
+      "label": "SPRINGDALE (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/springdale.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -84,10 +100,26 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:clt002",
+      "fields": [
+        "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:tn:springdale",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

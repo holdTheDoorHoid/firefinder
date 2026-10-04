@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "LA",
-  "county": null,
+  "county": "Natchitoches",
   "location": {
     "lat": 31.45561,
     "lon": -93.18128,
@@ -14,7 +14,7 @@
   "elevation_m": 111.9,
   "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 25.0,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -84,6 +84,21 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=904",
+      "kind": "register"
+    },
+    {
+      "label": "Kisatchie Lookout Tower (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/List_of_fire_lookout_towers_in_Louisiana",
+      "kind": "site"
+    },
+    {
+      "label": "KISATCHIE (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/kisatchie.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358393683",
       "url": "https://www.openstreetmap.org/node/358393683",
       "kind": "osm"
@@ -107,16 +122,32 @@
       ]
     },
     {
+      "source": "wikipedia_lookout_lists",
+      "key": "wikipedia_lookout_lists:la:kisatchie-lookout-tower",
+      "fields": [
+        "county",
+        "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:la:kisatchie",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358393683",
       "fields": [
-        "kind",
         "links"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

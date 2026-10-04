@@ -1,10 +1,12 @@
 {
   "id": "us-sc-olanta",
-  "name": "Olanta Lookout Tower",
-  "other_names": [],
+  "name": "Lee-Matthews (Olanta)",
+  "other_names": [
+    "Olanta Lookout Tower"
+  ],
   "country": "US",
   "region": "SC",
-  "county": null,
+  "county": "Florence",
   "location": {
     "lat": 33.976827,
     "lon": -79.835346,
@@ -18,8 +20,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "South Carolina Forestry Commission",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +40,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Lee-Matthews (Olanta) (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/lee-matthews-olanta.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357111135",
       "url": "https://www.openstreetmap.org/node/357111135",
       "kind": "osm"
@@ -45,10 +52,20 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:sc:lee-matthews-olanta",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/357111135",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

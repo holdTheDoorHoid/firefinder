@@ -1,7 +1,9 @@
 {
   "id": "us-ga-old-fort",
   "name": "Old Fort Fire Tower",
-  "other_names": [],
+  "other_names": [
+    "fort mtn"
+  ],
   "country": "US",
   "region": "GA",
   "county": "Murray",
@@ -12,9 +14,9 @@
     "from": "nhlr"
   },
   "elevation_m": 839.1,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 15.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -26,7 +28,7 @@
     }
   ],
   "agency": "Georgia Department of Natural Resources",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -102,6 +104,16 @@
       "label": "NHLR register entry US 943 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ga/old-fort-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "fort mtn (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/gatowers.html",
+      "kind": "site"
+    },
+    {
+      "label": "Fort Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/fort-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -118,6 +130,23 @@
         "agency",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "tnlandforms",
+      "key": "tnlandforms:ga:ga073",
+      "fields": [
+        "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ga:fort-mountain",
+      "fields": [
+        "height_m",
+        "ownership",
         "links"
       ]
     }

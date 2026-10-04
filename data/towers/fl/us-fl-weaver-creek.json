@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "FL",
-  "county": null,
+  "county": "Santa Rosa",
   "location": {
     "lat": 30.521585,
     "lon": -86.902461,
@@ -18,8 +18,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Choctawhatchee National Forest >",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Weaver Creek (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/weaver-creek.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358709514",
       "url": "https://www.openstreetmap.org/node/358709514",
       "kind": "osm"
@@ -45,10 +50,20 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:fl:weaver-creek",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358709514",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

@@ -4,20 +4,27 @@
   "other_names": [],
   "country": "US",
   "region": "TN",
-  "county": null,
+  "county": "Anderson",
   "location": {
-    "lat": 36.139891,
-    "lon": -84.063569,
+    "lat": 36.13975,
+    "lon": -84.06383,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": null,
+  "elevation_m": 402.0,
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
-  "registers": [],
+  "registers": [
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "GB 2537",
+      "url": null
+    }
+  ],
   "agency": null,
   "ownership": "unknown",
   "access": {
@@ -38,6 +45,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Bluebird (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap way 1154376624",
       "url": "https://www.openstreetmap.org/way/1154376624",
       "kind": "osm"
@@ -45,12 +57,23 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:way/1154376624",
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:ant001",
       "fields": [
         "name",
         "location",
+        "county",
+        "elevation_m",
         "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1154376624",
+      "fields": [
         "links"
       ]
     }

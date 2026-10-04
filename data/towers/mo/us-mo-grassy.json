@@ -12,9 +12,9 @@
     "from": "fflos"
   },
   "elevation_m": 238.0,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 18.3,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -25,8 +25,8 @@
       "url": "http://firetower.org/lookouts/us/mo/grassy-lookout-tower-site/"
     }
   ],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Missouri Conservation Commission",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,12 +49,28 @@
       "from": "fflos"
     }
   ],
-  "photos": [],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://centraluslookouts.weebly.com/uploads/1/5/9/1/1591048/4040947_orig.jpg",
+      "source_url": "https://centraluslookouts.weebly.com/grassy.html",
+      "credit": "centraluslookouts.weebly.com",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
   "links": [
     {
       "label": "FFLOS register entry US 1593 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/mo/grassy-lookout-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "GRASSY (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/grassy.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -71,9 +87,43 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:grassy",
+      "fields": [
+        "kind",
+        "height_m",
+        "agency",
+        "ownership",
+        "photos",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 37.2826,
+            "lon": -90.0655
+          }
+        },
+        {
+          "source": "central_us_lookouts",
+          "value": {
+            "lat": 37.28381,
+            "lon": -90.07234
+          }
+        }
+      ],
+      "distance_m": 620,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

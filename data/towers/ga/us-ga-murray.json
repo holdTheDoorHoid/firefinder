@@ -1,7 +1,9 @@
 {
   "id": "us-ga-murray",
   "name": "Murray Fire Tower",
-  "other_names": [],
+  "other_names": [
+    "Cohutta Mountain"
+  ],
   "country": "US",
   "region": "GA",
   "county": "Murray",
@@ -12,7 +14,7 @@
     "from": "nhlr"
   },
   "elevation_m": 841.2,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -23,10 +25,22 @@
       "number": "US 1479",
       "state_number": "GA 29",
       "url": "http://nhlr.org/lookouts/us/ga/murray-fire-tower/"
+    },
+    {
+      "register": "BLL",
+      "number": "US 41138",
+      "state_number": null,
+      "url": null
+    },
+    {
+      "register": "GFC",
+      "number": "US 713",
+      "state_number": null,
+      "url": null
     }
   ],
   "agency": "Georgia Department of Natural Resoruces",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -55,6 +69,16 @@
       "label": "NHLR register entry US 1479 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ga/murray-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "murray (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/gatowers.html",
+      "kind": "site"
+    },
+    {
+      "label": "Cohutta Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/cohutta-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,6 +94,23 @@
         "registers",
         "agency",
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "tnlandforms",
+      "key": "tnlandforms:ga:ga107",
+      "fields": [
+        "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ga:cohutta-mountain",
+      "fields": [
+        "ownership",
         "links"
       ]
     }

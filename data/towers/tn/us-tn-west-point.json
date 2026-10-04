@@ -12,9 +12,9 @@
     "from": "nhlr"
   },
   "elevation_m": 290.8,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 24.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -106,6 +106,16 @@
       "label": "NHLR register entry US 1769 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/tn/west-point-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Westpoint (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
+      "label": "WESTPOINT (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/westpoint.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -124,9 +134,41 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:lwt003",
+      "fields": [
+        "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:tn:westpoint",
+      "fields": [
+        "height_m",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "tnlandforms",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -4,12 +4,12 @@
   "other_names": [],
   "country": "US",
   "region": "NC",
-  "county": null,
+  "county": "Brunswick",
   "location": {
-    "lat": 33.991838,
-    "lon": -78.438339,
+    "lat": 33.99166,
+    "lon": -78.43861,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
   "elevation_m": 19.0,
   "kind": "tower",
@@ -17,7 +17,14 @@
   "height_m": null,
   "status": "unknown",
   "status_note": null,
-  "registers": [],
+  "registers": [
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "DD 2597",
+      "url": null
+    }
+  ],
   "agency": null,
   "ownership": "unknown",
   "access": {
@@ -38,6 +45,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Shallotte (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/nctowers.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357809814",
       "url": "https://www.openstreetmap.org/node/357809814",
       "kind": "osm"
@@ -45,13 +57,22 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/357809814",
+      "source": "tnlandforms",
+      "key": "tnlandforms:nc:nct161",
       "fields": [
         "name",
         "location",
-        "elevation_m",
+        "county",
         "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/357809814",
+      "fields": [
+        "elevation_m",
         "links"
       ]
     }

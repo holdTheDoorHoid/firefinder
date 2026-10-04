@@ -2,7 +2,7 @@
   "id": "us-nc-wayah-bald-john-b-bryne-memorial",
   "name": "Wayah Bald (John B. Bryne Memorial) Tower",
   "other_names": [
-    "Wayah Bald Fire Tower"
+    "Wayah Bald"
   ],
   "country": "US",
   "region": "NC",
@@ -16,7 +16,7 @@
   "elevation_m": 1609.3,
   "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 7.6,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -25,6 +25,12 @@
       "number": "US 687",
       "state_number": "NC 9",
       "url": "http://nhlr.org/lookouts/us/nc/wayah-bald-john-b-bryne-memorial-tower/"
+    },
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "FB 2587",
+      "url": null
     }
   ],
   "agency": "U.S. Forest Service",
@@ -76,6 +82,21 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/nc/wayah-bald-john-b-bryne-memorial-tower/",
+      "kind": "register"
+    },
+    {
+      "label": "Wayah Bald (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/nctowers.html",
+      "kind": "site"
+    },
+    {
+      "label": "Wayah Bald (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/wayah-bald.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap way 789993754",
       "url": "https://www.openstreetmap.org/way/789993754",
       "kind": "osm"
@@ -100,15 +121,51 @@
       ]
     },
     {
+      "source": "tnlandforms",
+      "key": "tnlandforms:nc:nct195",
+      "fields": [
+        "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:nc:wayah-bald",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/789993754",
       "fields": [
-        "kind",
         "links"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

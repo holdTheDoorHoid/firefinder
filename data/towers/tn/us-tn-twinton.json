@@ -8,16 +8,16 @@
   "region": "TN",
   "county": "Overton",
   "location": {
-    "lat": 36.291417,
-    "lon": -85.138638,
+    "lat": 36.29129,
+    "lon": -85.13875,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "tnlandforms"
   },
   "elevation_m": 567.8,
   "kind": "tower",
   "design": null,
   "height_m": 24.4,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
   "registers": [
     {
@@ -27,7 +27,7 @@
       "url": "https://npgallery.nps.gov/AssetDetail/NRIS/100006707"
     }
   ],
-  "agency": null,
+  "agency": "Tennessee Division of Forestry",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -54,6 +54,16 @@
   "photos": [],
   "links": [
     {
+      "label": "Twinton (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
+      "label": "TWINTON (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/twinton.html",
+      "kind": "site"
+    },
+    {
       "label": "Wikidata item Q107407006",
       "url": "https://www.wikidata.org/wiki/Q107407006",
       "kind": "wikidata"
@@ -61,14 +71,30 @@
   ],
   "sources": [
     {
-      "source": "wikidata",
-      "key": "wikidata:Q107407006",
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:ovt004",
       "fields": [
         "name",
         "location",
         "county",
         "elevation_m",
         "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:tn:twinton",
+      "fields": [
+        "agency",
+        "links"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q107407006",
+      "fields": [
         "height_m",
         "registers",
         "events",

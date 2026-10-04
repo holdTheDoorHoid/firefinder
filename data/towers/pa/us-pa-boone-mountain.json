@@ -12,7 +12,7 @@
     "from": "fflos"
   },
   "elevation_m": 577.6,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "gone",
@@ -55,6 +55,11 @@
       "label": "FFLOS register entry US 214 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/pa/boone-mountain-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Boone Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/boone-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -71,9 +76,39 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:pa:boone-mountain",
+      "fields": [
+        "kind",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 41.238949,
+            "lon": -78.647247
+          }
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": {
+            "lat": 41.247,
+            "lon": -78.64669
+          }
+        }
+      ],
+      "distance_m": 896,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

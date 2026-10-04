@@ -4,20 +4,33 @@
   "other_names": [],
   "country": "US",
   "region": "GA",
-  "county": null,
+  "county": "Wilkinson",
   "location": {
-    "lat": 32.829493,
-    "lon": -83.239581,
+    "lat": 32.82959,
+    "lon": -83.23932,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 155.0,
+  "elevation_m": 156.1,
   "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "unknown",
   "status_note": null,
-  "registers": [],
+  "registers": [
+    {
+      "register": "BLL",
+      "number": "US 41093",
+      "state_number": null,
+      "url": null
+    },
+    {
+      "register": "GFC",
+      "number": "US 617",
+      "state_number": null,
+      "url": null
+    }
+  ],
   "agency": null,
   "ownership": "unknown",
   "access": {
@@ -38,6 +51,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Wilkinson Lookout Tower (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/gatowers.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358748762",
       "url": "https://www.openstreetmap.org/node/358748762",
       "kind": "osm"
@@ -45,13 +63,22 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/358748762",
+      "source": "tnlandforms",
+      "key": "tnlandforms:ga:ga061",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/358748762",
+      "fields": [
         "links"
       ]
     }

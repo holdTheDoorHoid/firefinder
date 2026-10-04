@@ -4,12 +4,12 @@
   "other_names": [],
   "country": "US",
   "region": "NC",
-  "county": null,
+  "county": "Mitchell",
   "location": {
-    "lat": 35.879923,
-    "lon": -82.10434,
+    "lat": 35.87972,
+    "lon": -82.10444,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
   "elevation_m": 1271.0,
   "kind": "tower",
@@ -17,8 +17,15 @@
   "height_m": null,
   "status": "unknown",
   "status_note": null,
-  "registers": [],
-  "agency": null,
+  "registers": [
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "FB 3948",
+      "url": null
+    }
+  ],
+  "agency": "North Carolina Division of Forest Resources",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -38,6 +45,16 @@
   "photos": [],
   "links": [
     {
+      "label": "Spruce Pine (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/nctowers.html",
+      "kind": "site"
+    },
+    {
+      "label": "Spruce Pine (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/spruce-pine.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357809817",
       "url": "https://www.openstreetmap.org/node/357809817",
       "kind": "osm"
@@ -45,13 +62,30 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/357809817",
+      "source": "tnlandforms",
+      "key": "tnlandforms:nc:nct175",
       "fields": [
         "name",
         "location",
-        "elevation_m",
+        "county",
         "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:nc:spruce-pine",
+      "fields": [
+        "agency",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/357809817",
+      "fields": [
+        "elevation_m",
         "links"
       ]
     }

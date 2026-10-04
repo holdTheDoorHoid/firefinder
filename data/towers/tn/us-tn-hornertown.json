@@ -4,18 +4,18 @@
   "other_names": [],
   "country": "US",
   "region": "TN",
-  "county": null,
+  "county": "Hickman",
   "location": {
-    "lat": 35.658471,
-    "lon": -87.613282,
+    "lat": 35.65876,
+    "lon": -87.61348,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 287.0,
+  "elevation_m": 287.7,
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
   "registers": [],
   "agency": null,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Hornertown (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 356895213",
       "url": "https://www.openstreetmap.org/node/356895213",
       "kind": "osm"
@@ -45,13 +50,22 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/356895213",
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:hit003",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/356895213",
+      "fields": [
         "links"
       ]
     }

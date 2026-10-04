@@ -4,22 +4,22 @@
   "other_names": [],
   "country": "US",
   "region": "GA",
-  "county": null,
+  "county": "Walker",
   "location": {
-    "lat": 34.623146,
-    "lon": -85.098425,
+    "lat": 34.62286,
+    "lon": -85.09745,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 556.0,
+  "elevation_m": 557.5,
   "kind": "tower",
   "design": null,
-  "height_m": null,
-  "status": "unknown",
+  "height_m": 18.3,
+  "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Chattahoochee National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -45,6 +45,16 @@
   "photos": [],
   "links": [
     {
+      "label": "Johns Mountain Lookout Tower (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/gatowers.html",
+      "kind": "site"
+    },
+    {
+      "label": "Johns Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/johns-mountain.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358748608",
       "url": "https://www.openstreetmap.org/node/358748608",
       "kind": "osm"
@@ -52,13 +62,32 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/358748608",
+      "source": "tnlandforms",
+      "key": "tnlandforms:ga:ga030",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ga:johns-mountain",
+      "fields": [
+        "height_m",
+        "status",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/358748608",
+      "fields": [
         "events",
         "links"
       ]

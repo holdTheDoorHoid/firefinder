@@ -1,23 +1,32 @@
 {
   "id": "us-tn-lookout-tower-number-sixteen",
-  "name": "Lookout Tower Number Sixteen",
-  "other_names": [],
+  "name": "Brimstone 16",
+  "other_names": [
+    "Lookout Tower Number Sixteen"
+  ],
   "country": "US",
   "region": "TN",
-  "county": null,
+  "county": "Scott",
   "location": {
-    "lat": 36.283394,
-    "lon": -84.468526,
+    "lat": 36.2835,
+    "lon": -84.4678,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 879.0,
+  "elevation_m": 888.2,
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "gone",
   "status_note": null,
-  "registers": [],
+  "registers": [
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "GB 2582",
+      "url": null
+    }
+  ],
   "agency": null,
   "ownership": "unknown",
   "access": {
@@ -38,6 +47,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Brimstone 16 (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 356895222",
       "url": "https://www.openstreetmap.org/node/356895222",
       "kind": "osm"
@@ -45,13 +59,23 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/356895222",
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:sct001",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/356895222",
+      "fields": [
         "links"
       ]
     }

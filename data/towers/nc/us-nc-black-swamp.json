@@ -4,12 +4,12 @@
   "other_names": [],
   "country": "US",
   "region": "NC",
-  "county": null,
+  "county": "Jones",
   "location": {
-    "lat": 34.875715,
-    "lon": -77.201342,
+    "lat": 34.87555,
+    "lon": -77.20166,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
   "elevation_m": 7.0,
   "kind": "tower",
@@ -18,8 +18,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Croatan National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +38,16 @@
   "photos": [],
   "links": [
     {
+      "label": "Black Swamp (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/nctowers.html",
+      "kind": "site"
+    },
+    {
+      "label": "Black Swamp (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/black-swamp.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357809750",
       "url": "https://www.openstreetmap.org/node/357809750",
       "kind": "osm"
@@ -45,13 +55,30 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/357809750",
+      "source": "tnlandforms",
+      "key": "tnlandforms:nc:nct016",
       "fields": [
         "name",
         "location",
-        "elevation_m",
+        "county",
         "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:nc:black-swamp",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/357809750",
+      "fields": [
+        "elevation_m",
         "links"
       ]
     }

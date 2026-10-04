@@ -1,10 +1,10 @@
 {
   "id": "us-sc-rosemary",
-  "name": "Rosemary Fire Tower",
+  "name": "ROSEMARY Fire Tower",
   "other_names": [],
   "country": "US",
   "region": "SC",
-  "county": null,
+  "county": "Sumter",
   "location": {
     "lat": 33.801485,
     "lon": -80.504019,
@@ -18,8 +18,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "South Carolina Forestry Commission",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "ROSEMARY (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/rosemary.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357111640",
       "url": "https://www.openstreetmap.org/node/357111640",
       "kind": "osm"
@@ -45,10 +50,20 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:sc:rosemary",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/357111640",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

@@ -1,10 +1,10 @@
 {
   "id": "us-ar-devils-knob",
-  "name": "Devils Knob Lookout Tower",
+  "name": "Devil's Knob Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "AR",
-  "county": null,
+  "county": "Johnson",
   "location": {
     "lat": 35.724138,
     "lon": -93.40508,
@@ -18,8 +18,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Ozark National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Devil's Knob (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/devils-knob.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358987259",
       "url": "https://www.openstreetmap.org/node/358987259",
       "kind": "osm"
@@ -45,10 +50,20 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:ar:devils-knob",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358987259",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

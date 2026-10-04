@@ -1,10 +1,10 @@
 {
   "id": "us-sc-ruby",
-  "name": "Ruby Lookout Tower",
+  "name": "RUBY Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "SC",
-  "county": null,
+  "county": "Chesterfield",
   "location": {
     "lat": 34.616033,
     "lon": -80.198043,
@@ -18,8 +18,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "South Carolina Forestry Commission",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "RUBY (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/ruby.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357111641",
       "url": "https://www.openstreetmap.org/node/357111641",
       "kind": "osm"
@@ -45,10 +50,20 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:sc:ruby",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/357111641",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

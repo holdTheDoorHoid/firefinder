@@ -1,7 +1,9 @@
 {
   "id": "us-ga-decatur-county",
   "name": "Decatur County Fire Tower",
-  "other_names": [],
+  "other_names": [
+    "west bainbridge"
+  ],
   "country": "US",
   "region": "GA",
   "county": "Decatur",
@@ -12,9 +14,9 @@
     "from": "nhlr"
   },
   "elevation_m": 30.5,
-  "kind": "unknown",
-  "design": null,
-  "height_m": null,
+  "kind": "tower",
+  "design": "Aermotor",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -23,10 +25,22 @@
       "number": "US 716",
       "state_number": "GA 11",
       "url": "http://nhlr.org/lookouts/us/ga/decatur-county-fire-tower/"
+    },
+    {
+      "register": "BLL",
+      "number": "US 41113",
+      "state_number": null,
+      "url": null
+    },
+    {
+      "register": "GFC",
+      "number": "US 219",
+      "state_number": null,
+      "url": null
     }
   ],
   "agency": "Georgia Forestry Commission",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -72,6 +86,16 @@
       "label": "NHLR register entry US 716 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ga/decatur-county-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "west bainbridge (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/gatowers.html",
+      "kind": "site"
+    },
+    {
+      "label": "Decatur County (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/decatur-county.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -88,6 +112,25 @@
         "agency",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "tnlandforms",
+      "key": "tnlandforms:ga:ga261",
+      "fields": [
+        "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ga:decatur-county",
+      "fields": [
+        "design",
+        "height_m",
+        "ownership",
         "links"
       ]
     }

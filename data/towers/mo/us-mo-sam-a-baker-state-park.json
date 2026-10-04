@@ -1,10 +1,12 @@
 {
   "id": "us-mo-sam-a-baker-state-park",
-  "name": "Sam A. Baker State Park Fire Tower",
-  "other_names": [],
+  "name": "Mudlick Mountain",
+  "other_names": [
+    "Sam A. Baker State Park Fire Tower"
+  ],
   "country": "US",
   "region": "MO",
-  "county": null,
+  "county": "Wayne",
   "location": {
     "lat": 37.261785,
     "lon": -90.524365,
@@ -14,12 +16,12 @@
   "elevation_m": null,
   "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 25.9,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Sam A. Baker State Park",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +40,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Mudlick Mountain (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/mudlick-mountain.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap way 1449929973",
       "url": "https://www.openstreetmap.org/way/1449929973",
       "kind": "osm"
@@ -45,10 +52,21 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:mudlick-mountain",
+      "fields": [
+        "name",
+        "county",
+        "height_m",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/1449929973",
       "fields": [
-        "name",
         "location",
         "kind",
         "status",

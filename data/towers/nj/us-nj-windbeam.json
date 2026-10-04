@@ -12,9 +12,9 @@
     "from": "fflos"
   },
   "elevation_m": 292.0,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 13.7,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -72,6 +72,11 @@
       "label": "FFLOS register entry US 1551 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/nj/windbeam-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "WINDBEAM (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/windbeam.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -88,6 +93,15 @@
         "agency",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:nj:windbeam",
+      "fields": [
+        "kind",
+        "height_m",
         "links"
       ]
     }

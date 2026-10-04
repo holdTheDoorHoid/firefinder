@@ -1,10 +1,10 @@
 {
   "id": "us-mo-pineview",
-  "name": "Pineview Lookout Tower",
+  "name": "PINEVIEW Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "MO",
-  "county": null,
+  "county": "Barry",
   "location": {
     "lat": 36.702923,
     "lon": -93.610098,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "PINEVIEW (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/pineview.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap way 1432426272",
       "url": "https://www.openstreetmap.org/way/1432426272",
       "kind": "osm"
@@ -45,10 +50,18 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:pineview",
+      "fields": [
+        "name",
+        "county",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/1432426272",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

@@ -12,7 +12,7 @@
     "from": "nhlr"
   },
   "elevation_m": 296.3,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -23,6 +23,12 @@
       "number": "US 1762",
       "state_number": "TN 66",
       "url": "http://nhlr.org/lookouts/us/tn/waynesboro-lookout-tower/"
+    },
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "FD 1605",
+      "url": null
     }
   ],
   "agency": "Tennessee Division of Forestry",
@@ -66,6 +72,11 @@
       "label": "NHLR register entry US 1762 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/tn/waynesboro-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Waynesboro (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -84,9 +95,34 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:wyt006",
+      "fields": [
+        "kind",
+        "registers",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "tnlandforms",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

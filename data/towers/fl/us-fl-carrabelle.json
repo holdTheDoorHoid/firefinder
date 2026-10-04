@@ -1,10 +1,10 @@
 {
   "id": "us-fl-carrabelle",
-  "name": "Carrabelle Lookout Tower",
+  "name": "CARRABELLE Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "FL",
-  "county": null,
+  "county": "Franklin",
   "location": {
     "lat": 29.851175,
     "lon": -84.642584,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "CARRABELLE (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/carrabelle.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 4697916865",
       "url": "https://www.openstreetmap.org/node/4697916865",
       "kind": "osm"
@@ -45,10 +50,18 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:fl:carrabelle",
+      "fields": [
+        "name",
+        "county",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/4697916865",
       "fields": [
-        "name",
         "location",
         "kind",
         "status",

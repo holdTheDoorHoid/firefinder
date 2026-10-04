@@ -1,10 +1,12 @@
 {
   "id": "us-ky-triangle",
-  "name": "Triangle Lookout Tower",
-  "other_names": [],
+  "name": "Morehead Triangle",
+  "other_names": [
+    "Triangle Lookout Tower"
+  ],
   "country": "US",
   "region": "KY",
-  "county": null,
+  "county": "Rowan",
   "location": {
     "lat": 38.175892,
     "lon": -83.407914,
@@ -18,8 +20,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Daniel Boone National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +40,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Morehead Triangle (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/morehead-triangle.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358614162",
       "url": "https://www.openstreetmap.org/node/358614162",
       "kind": "osm"
@@ -45,10 +52,20 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ky:morehead-triangle",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358614162",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

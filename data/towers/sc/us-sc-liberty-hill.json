@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "SC",
-  "county": null,
+  "county": "Kershaw",
   "location": {
     "lat": 34.475666,
     "lon": -80.803514,
@@ -18,8 +18,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "South Carolina Forestry Commission",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -35,8 +35,29 @@
   },
   "rental": null,
   "events": [],
-  "photos": [],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://easternuslookouts.weebly.com/uploads/1/5/9/1/1591048/3396144_orig.jpg",
+      "source_url": "https://easternuslookouts.weebly.com/liberty-hill.html",
+      "credit": "easternuslookouts.weebly.com",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
   "links": [
+    {
+      "label": "Liberty Hill (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/liberty-hill.html",
+      "kind": "site"
+    },
+    {
+      "label": "Satellite view (hillmap.com)",
+      "url": "http://www.hillmap.com/m/ag1zfmhpbGxtYXAtaGRychULEghTYXZlZE1hcBiAgICogr6wCgw",
+      "kind": "site"
+    },
     {
       "label": "OpenStreetMap node 357101767",
       "url": "https://www.openstreetmap.org/node/357101767",
@@ -45,10 +66,21 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:sc:liberty-hill",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "ownership",
+        "photos",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/357101767",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

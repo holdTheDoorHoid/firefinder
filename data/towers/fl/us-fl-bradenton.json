@@ -1,10 +1,10 @@
 {
   "id": "us-fl-bradenton",
-  "name": "Bradenton Fire Tower",
+  "name": "BRADENTON Fire Tower",
   "other_names": [],
   "country": "US",
   "region": "FL",
-  "county": null,
+  "county": "Manatee",
   "location": {
     "lat": 27.446625,
     "lon": -82.500552,
@@ -18,7 +18,7 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "T35S R18E",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "BRADENTON (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/bradenton.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358719636",
       "url": "https://www.openstreetmap.org/node/358719636",
       "kind": "osm"
@@ -45,10 +50,19 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:fl:bradenton",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358719636",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

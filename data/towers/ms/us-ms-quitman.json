@@ -1,10 +1,10 @@
 {
   "id": "us-ms-quitman",
-  "name": "Quitman Lookout Tower",
+  "name": "QUITMAN Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "MS",
-  "county": null,
+  "county": "Clarke",
   "location": {
     "lat": 31.975142,
     "lon": -88.624108,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "QUITMAN (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/quitman.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357997210",
       "url": "https://www.openstreetmap.org/node/357997210",
       "kind": "osm"
@@ -45,10 +50,18 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ms:quitman",
+      "fields": [
+        "name",
+        "county",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/357997210",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

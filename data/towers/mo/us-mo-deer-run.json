@@ -12,9 +12,9 @@
     "from": "nhlr"
   },
   "elevation_m": 338.3,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 25.9,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -26,7 +26,7 @@
     }
   ],
   "agency": "Missouri Department of Conservation",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -72,6 +72,11 @@
       "label": "NHLR register entry US 981 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/mo/deer-run-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Deer Run (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/deer-run.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -88,6 +93,16 @@
         "agency",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:deer-run",
+      "fields": [
+        "kind",
+        "height_m",
+        "ownership",
         "links"
       ]
     }

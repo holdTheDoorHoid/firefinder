@@ -1,10 +1,10 @@
 {
   "id": "us-fl-palmdale",
-  "name": "Palmdale Lookout Tower",
+  "name": "PALMDALE Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "FL",
-  "county": null,
+  "county": "Glades",
   "location": {
     "lat": 26.924815,
     "lon": -81.313344,
@@ -18,7 +18,7 @@
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Florida Forest Service",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "PALMDALE (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/palmdale.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 8303817021",
       "url": "https://www.openstreetmap.org/node/8303817021",
       "kind": "osm"
@@ -45,10 +50,19 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:fl:palmdale",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/8303817021",
       "fields": [
-        "name",
         "location",
         "kind",
         "height_m",

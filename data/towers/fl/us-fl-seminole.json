@@ -1,10 +1,10 @@
 {
   "id": "us-fl-seminole",
-  "name": "Seminole Lookout Tower",
+  "name": "SEMINOLE Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "FL",
-  "county": null,
+  "county": "Seminole",
   "location": {
     "lat": 28.646676,
     "lon": -81.135498,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "SEMINOLE (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/seminole1.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358706023",
       "url": "https://www.openstreetmap.org/node/358706023",
       "kind": "osm"
@@ -45,10 +50,18 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:fl:seminole1",
+      "fields": [
+        "name",
+        "county",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358706023",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

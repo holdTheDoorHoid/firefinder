@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "FL",
-  "county": null,
+  "county": "Wakulla",
   "location": {
     "lat": 30.223534,
     "lon": -84.47546,
@@ -18,8 +18,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Apalachicola National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Pope Still (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/pope-still.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358732399",
       "url": "https://www.openstreetmap.org/node/358732399",
       "kind": "osm"
@@ -45,10 +50,20 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:fl:pope-still",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358732399",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

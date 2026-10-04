@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "MO",
-  "county": null,
+  "county": "Barry",
   "location": {
     "lat": 36.528404,
     "lon": -93.833637,
@@ -14,12 +14,12 @@
   "elevation_m": 486.0,
   "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 30.5,
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Mark Twain National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Sugar Camp (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/sugar-camp.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358066670",
       "url": "https://www.openstreetmap.org/node/358066670",
       "kind": "osm"
@@ -45,10 +50,21 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:sugar-camp",
+      "fields": [
+        "name",
+        "county",
+        "height_m",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358066670",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

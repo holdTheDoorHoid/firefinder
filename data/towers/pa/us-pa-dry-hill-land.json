@@ -1,15 +1,17 @@
 {
   "id": "us-pa-dry-hill-land",
   "name": "Dry Hill Land",
-  "other_names": [],
+  "other_names": [
+    "Dry Land Hill"
+  ],
   "country": "US",
   "region": "PA",
   "county": "Luzerne",
   "location": {
-    "lat": 41.15115,
-    "lon": -75.65457,
+    "lat": 41.1511,
+    "lon": -75.655,
     "precision": "exact",
-    "from": "pa_storymap"
+    "from": "eastern_us_lookouts"
   },
   "elevation_m": null,
   "kind": "tower",
@@ -65,6 +67,11 @@
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
       "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
       "kind": "site"
+    },
+    {
+      "label": "Dry Land Hill (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/dry-land-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -73,7 +80,6 @@
       "key": "pa_storymap:dry-hill-land:41.1512:-75.6546",
       "fields": [
         "name",
-        "location",
         "county",
         "kind",
         "design",
@@ -85,9 +91,33 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:pa:dry-land-hill",
+      "fields": [
+        "location",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "pa_storymap",
+          "value": "standing"
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

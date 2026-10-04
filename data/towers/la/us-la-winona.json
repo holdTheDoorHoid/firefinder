@@ -1,10 +1,10 @@
 {
   "id": "us-la-winona",
-  "name": "Winona Lookout Tower",
+  "name": "WINONA Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "LA",
-  "county": null,
+  "county": "Winn",
   "location": {
     "lat": 32.029368,
     "lon": -92.654701,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "WINONA (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/winona.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358393796",
       "url": "https://www.openstreetmap.org/node/358393796",
       "kind": "osm"
@@ -45,10 +50,18 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:la:winona",
+      "fields": [
+        "name",
+        "county",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358393796",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

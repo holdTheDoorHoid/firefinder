@@ -12,9 +12,9 @@
     "from": "nhlr"
   },
   "elevation_m": 902.2,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 18.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -23,6 +23,12 @@
       "number": "US 994",
       "state_number": "TN 15",
       "url": "http://nhlr.org/lookouts/us/tn/chimney-top-fire-tower/"
+    },
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "GA 3395",
+      "url": null
     }
   ],
   "agency": "Tenneessee Division of Forestry",
@@ -66,6 +72,16 @@
       "label": "NHLR register entry US 994 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/tn/chimney-top-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Chimneytop (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
+      "label": "Chimney Top (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/chimney-top.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -84,10 +100,47 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:hwt006",
+      "fields": [
+        "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:tn:chimney-top",
+      "fields": [
+        "height_m",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "tnlandforms",
+          "value": "standing"
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

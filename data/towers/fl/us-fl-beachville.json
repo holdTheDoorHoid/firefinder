@@ -1,10 +1,10 @@
 {
   "id": "us-fl-beachville",
-  "name": "Beachville Fire Tower",
+  "name": "BEACHVILLE Fire Tower",
   "other_names": [],
   "country": "US",
   "region": "FL",
-  "county": null,
+  "county": "Suwannee",
   "location": {
     "lat": 29.997514,
     "lon": -82.862226,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "BEACHVILLE (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/beachville.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358721484",
       "url": "https://www.openstreetmap.org/node/358721484",
       "kind": "osm"
@@ -45,10 +50,18 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:fl:beachville",
+      "fields": [
+        "name",
+        "county",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358721484",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

@@ -13,8 +13,8 @@
   },
   "elevation_m": 389.8,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 16.8,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -78,6 +78,16 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/ok/carter-mountain-lookout/",
+      "kind": "register"
+    },
+    {
+      "label": "Carter Mountain (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/carter-mountain.html",
+      "kind": "site"
+    },
+    {
       "label": "Wikidata item Q86924974",
       "url": "https://www.wikidata.org/wiki/Q86924974",
       "kind": "wikidata"
@@ -101,10 +111,19 @@
       ]
     },
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:ok:carter-mountain",
+      "fields": [
+        "kind",
+        "design",
+        "height_m",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q86924974",
       "fields": [
-        "kind",
         "photos",
         "links"
       ]

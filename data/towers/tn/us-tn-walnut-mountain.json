@@ -4,20 +4,27 @@
   "other_names": [],
   "country": "US",
   "region": "TN",
-  "county": null,
+  "county": "Campbell",
   "location": {
-    "lat": 36.409668,
-    "lon": -84.176032,
+    "lat": 36.4095,
+    "lon": -84.1758,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 855.0,
+  "elevation_m": 863.2,
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
-  "registers": [],
+  "registers": [
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "GB 2535",
+      "url": null
+    }
+  ],
   "agency": null,
   "ownership": "unknown",
   "access": {
@@ -38,6 +45,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Walnut Mountain (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 356895190",
       "url": "https://www.openstreetmap.org/node/356895190",
       "kind": "osm"
@@ -45,13 +57,23 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/356895190",
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:cat006",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/356895190",
+      "fields": [
         "links"
       ]
     }

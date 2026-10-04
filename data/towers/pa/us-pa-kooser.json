@@ -1,15 +1,17 @@
 {
   "id": "us-pa-kooser",
   "name": "Kooser Tower",
-  "other_names": [],
+  "other_names": [
+    "Kooser Mountain"
+  ],
   "country": "US",
   "region": "PA",
   "county": "Somerset",
   "location": {
-    "lat": 40.05465,
-    "lon": -79.2782,
+    "lat": 40.0536,
+    "lon": -79.2785,
     "precision": "exact",
-    "from": "pa_storymap"
+    "from": "eastern_us_lookouts"
   },
   "elevation_m": null,
   "kind": "tower",
@@ -59,6 +61,11 @@
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
       "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
       "kind": "site"
+    },
+    {
+      "label": "Kooser Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/kooser-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -67,7 +74,6 @@
       "key": "pa_storymap:kooser-tower:40.0546:-79.2782",
       "fields": [
         "name",
-        "location",
         "county",
         "kind",
         "height_m",
@@ -76,6 +82,14 @@
         "ownership",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:pa:kooser-mountain",
+      "fields": [
+        "location",
         "links"
       ]
     }

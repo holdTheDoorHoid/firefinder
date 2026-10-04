@@ -1,10 +1,10 @@
 {
   "id": "us-ar-mountain-lookout-tower",
-  "name": "Mountain Lookout Tower",
+  "name": "White Oak Mountain",
   "other_names": [],
   "country": "US",
   "region": "AR",
-  "county": null,
+  "county": "Scott",
   "location": {
     "lat": 35.562782,
     "lon": -93.708212,
@@ -14,12 +14,12 @@
   "elevation_m": 582.0,
   "kind": "tower",
   "design": null,
-  "height_m": null,
-  "status": "unknown",
+  "height_m": 14.6,
+  "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Ouachita National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "White Oak Mountain (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/white-oak-mountain.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 359020873",
       "url": "https://www.openstreetmap.org/node/359020873",
       "kind": "osm"
@@ -45,10 +50,22 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:ar:white-oak-mountain",
+      "fields": [
+        "name",
+        "county",
+        "height_m",
+        "status",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/359020873",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

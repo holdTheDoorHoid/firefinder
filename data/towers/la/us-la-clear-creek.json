@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "LA",
-  "county": null,
+  "county": "Grant",
   "location": {
     "lat": 31.460737,
     "lon": -93.359997,
@@ -12,7 +12,7 @@
     "from": "fflos"
   },
   "elevation_m": 78.6,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "gone",
@@ -71,6 +71,11 @@
       "label": "FFLOS register entry US 916 (firetower.org)",
       "url": "http://firetower.org/images/maps/LOS916_Clear_Creek_map.jpg",
       "kind": "register"
+    },
+    {
+      "label": "Clear Creek (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/clear-creek.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -87,6 +92,15 @@
         "ownership",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:la:clear-creek",
+      "fields": [
+        "county",
+        "kind",
         "links"
       ]
     }

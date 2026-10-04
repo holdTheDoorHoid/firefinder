@@ -75,6 +75,16 @@
       "license": null,
       "caption": "Marienville Tower",
       "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://easternuslookouts.weebly.com/uploads/1/5/9/1/1591048/3553480_orig.png",
+      "source_url": "https://easternuslookouts.weebly.com/marienville.html",
+      "credit": "easternuslookouts.weebly.com",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -86,6 +96,11 @@
     {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
       "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
+      "kind": "site"
+    },
+    {
+      "label": "MARIENVILLE (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/marienville.html",
       "kind": "site"
     },
     {
@@ -123,6 +138,14 @@
       ]
     },
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:pa:marienville",
+      "fields": [
+        "photos",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/6836026780",
       "fields": [
@@ -131,6 +154,25 @@
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "pa_storymap",
+          "value": "standing"
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    },
     {
       "field": "built",
       "values": [

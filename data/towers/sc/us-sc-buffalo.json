@@ -1,12 +1,12 @@
 {
   "id": "us-sc-buffalo",
-  "name": "Buffalo Lookout Tower",
+  "name": "BUFFALO Lookout Tower",
   "other_names": [
     "Buffalo Lookout Tower (Demolished)"
   ],
   "country": "US",
   "region": "SC",
-  "county": null,
+  "county": "Kershaw",
   "location": {
     "lat": 34.547933,
     "lon": -80.483961,
@@ -20,8 +20,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "South Carolina Forestry Commission",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -40,6 +40,11 @@
   "photos": [],
   "links": [
     {
+      "label": "BUFFALO (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/buffalo.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357101694",
       "url": "https://www.openstreetmap.org/node/357101694",
       "kind": "osm"
@@ -47,10 +52,20 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:sc:buffalo",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/357101694",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",
@@ -60,7 +75,7 @@
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

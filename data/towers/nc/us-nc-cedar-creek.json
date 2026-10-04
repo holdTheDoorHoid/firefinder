@@ -4,12 +4,12 @@
   "other_names": [],
   "country": "US",
   "region": "NC",
-  "county": null,
+  "county": "Cumberland",
   "location": {
-    "lat": 34.932662,
-    "lon": -78.738977,
+    "lat": 34.93222,
+    "lon": -78.73916,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
   "elevation_m": 39.0,
   "kind": "tower",
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Cedar Creek (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/nctowers.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357810658",
       "url": "https://www.openstreetmap.org/node/357810658",
       "kind": "osm"
@@ -45,13 +50,21 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/357810658",
+      "source": "tnlandforms",
+      "key": "tnlandforms:nc:nct029",
       "fields": [
         "name",
         "location",
-        "elevation_m",
+        "county",
         "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/357810658",
+      "fields": [
+        "elevation_m",
         "links"
       ]
     }

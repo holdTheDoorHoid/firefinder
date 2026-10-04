@@ -12,9 +12,9 @@
     "from": "fflos"
   },
   "elevation_m": 816.3,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 18.3,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -55,6 +55,11 @@
       "label": "FFLOS register entry US 274 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/pa/elk-hill-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Elk Hill (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/elk-hill1.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -69,6 +74,15 @@
         "status",
         "registers",
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:pa:elk-hill1",
+      "fields": [
+        "kind",
+        "height_m",
         "links"
       ]
     }

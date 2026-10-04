@@ -1,10 +1,10 @@
 {
   "id": "us-fl-bermont",
-  "name": "Bermont Lookout Tower",
+  "name": "BERMONT Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "FL",
-  "county": null,
+  "county": "Charlotte",
   "location": {
     "lat": 26.94543,
     "lon": -81.753447,
@@ -18,7 +18,7 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "T40S R26E",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "BERMONT (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/bermont.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358719939",
       "url": "https://www.openstreetmap.org/node/358719939",
       "kind": "osm"
@@ -45,10 +50,19 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:fl:bermont",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358719939",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

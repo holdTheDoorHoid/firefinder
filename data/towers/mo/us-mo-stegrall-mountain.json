@@ -1,10 +1,10 @@
 {
   "id": "us-mo-stegrall-mountain",
-  "name": "Stegrall Mountain Lookout Tower",
+  "name": "Stegall Mountain",
   "other_names": [],
   "country": "US",
   "region": "MO",
-  "county": null,
+  "county": "Carter",
   "location": {
     "lat": 37.078578,
     "lon": -91.199906,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Stegall Mountain (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/stegall-mountain.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 12705996874",
       "url": "https://www.openstreetmap.org/node/12705996874",
       "kind": "osm"
@@ -45,10 +50,18 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:stegall-mountain",
+      "fields": [
+        "name",
+        "county",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/12705996874",
       "fields": [
-        "name",
         "location",
         "kind",
         "status",

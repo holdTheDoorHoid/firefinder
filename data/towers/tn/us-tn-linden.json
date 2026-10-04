@@ -4,18 +4,18 @@
   "other_names": [],
   "country": "US",
   "region": "TN",
-  "county": null,
+  "county": "Perry",
   "location": {
-    "lat": 35.631725,
-    "lon": -87.871362,
+    "lat": 35.6315,
+    "lon": -87.8714,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 251.0,
+  "elevation_m": 256.9,
   "kind": "tower",
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
   "registers": [],
   "agency": null,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Linden (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 356895219",
       "url": "https://www.openstreetmap.org/node/356895219",
       "kind": "osm"
@@ -45,13 +50,22 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/356895219",
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:pet001",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "status",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/356895219",
+      "fields": [
         "links"
       ]
     }

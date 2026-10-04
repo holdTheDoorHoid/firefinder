@@ -23,10 +23,16 @@
       "number": "US 685",
       "state_number": "NC 8",
       "url": "http://nhlr.org/lookouts/us/nc/barnett-knob-fire-tower/"
+    },
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "FB 2482",
+      "url": null
     }
   ],
   "agency": "Bureau of Indian Affairs",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -74,6 +80,16 @@
       "kind": "register"
     },
     {
+      "label": "Barnett Knob (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/nctowers.html",
+      "kind": "site"
+    },
+    {
+      "label": "Barnett Knob (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/barnett-knob.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 10181314157",
       "url": "https://www.openstreetmap.org/node/10181314157",
       "kind": "osm"
@@ -97,10 +113,26 @@
       ]
     },
     {
+      "source": "tnlandforms",
+      "key": "tnlandforms:nc:nct008",
+      "fields": [
+        "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:nc:barnett-knob",
+      "fields": [
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/10181314157",
       "fields": [
-        "kind",
         "height_m",
         "links"
       ]

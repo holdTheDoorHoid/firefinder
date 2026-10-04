@@ -1,10 +1,10 @@
 {
   "id": "us-fl-foley",
-  "name": "Foley Lookout Tower",
+  "name": "FOLEY Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "FL",
-  "county": null,
+  "county": "Taylor",
   "location": {
     "lat": 30.10087,
     "lon": -83.453288,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "FOLEY (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/foley.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358695998",
       "url": "https://www.openstreetmap.org/node/358695998",
       "kind": "osm"
@@ -45,10 +50,18 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:fl:foley",
+      "fields": [
+        "name",
+        "county",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358695998",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",
@@ -56,7 +69,29 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "osm",
+          "value": {
+            "lat": 30.10087,
+            "lon": -83.453288
+          }
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": {
+            "lat": 30.10586,
+            "lon": -83.44745
+          }
+        }
+      ],
+      "distance_m": 789,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

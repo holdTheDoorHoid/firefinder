@@ -4,20 +4,33 @@
   "other_names": [],
   "country": "US",
   "region": "GA",
-  "county": null,
+  "county": "Chattahoochee",
   "location": {
-    "lat": 32.310454,
-    "lon": -84.730787,
+    "lat": 32.30987,
+    "lon": -84.73104,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": 186.0,
+  "elevation_m": 186.5,
   "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "unknown",
   "status_note": null,
-  "registers": [],
+  "registers": [
+    {
+      "register": "BLL",
+      "number": "US 41098",
+      "state_number": null,
+      "url": null
+    },
+    {
+      "register": "GFC",
+      "number": "US 301",
+      "state_number": null,
+      "url": null
+    }
+  ],
   "agency": null,
   "ownership": "unknown",
   "access": {
@@ -38,6 +51,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Chattahoochee Lookout Tower (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/gatowers.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358748534",
       "url": "https://www.openstreetmap.org/node/358748534",
       "kind": "osm"
@@ -45,13 +63,22 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/358748534",
+      "source": "tnlandforms",
+      "key": "tnlandforms:ga:ga015",
       "fields": [
         "name",
         "location",
+        "county",
         "elevation_m",
         "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/358748534",
+      "fields": [
         "links"
       ]
     }

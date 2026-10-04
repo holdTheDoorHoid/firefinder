@@ -23,6 +23,12 @@
       "number": "US 42",
       "state_number": "NC 1",
       "url": "http://nhlr.org/lookouts/us/nc/yellow-mountain-lookout/"
+    },
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "AE 5681",
+      "url": null
     }
   ],
   "agency": "U.S. Forest Service",
@@ -68,6 +74,11 @@
       "kind": "register"
     },
     {
+      "label": "Yellow Mountain (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/nctowers.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap way 1491425300",
       "url": "https://www.openstreetmap.org/way/1491425300",
       "kind": "osm"
@@ -92,10 +103,18 @@
       ]
     },
     {
+      "source": "tnlandforms",
+      "key": "tnlandforms:nc:nct205",
+      "fields": [
+        "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/1491425300",
       "fields": [
-        "kind",
         "links"
       ]
     }

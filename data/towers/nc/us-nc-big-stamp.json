@@ -12,9 +12,9 @@
     "from": "fflos"
   },
   "elevation_m": 1352.4,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 9.1,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -23,6 +23,12 @@
       "number": "US 1737",
       "state_number": "NC 2",
       "url": "http://firetower.org/lookouts/us/nc/big-stamp-lookout-site/"
+    },
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "FB 3524",
+      "url": null
     }
   ],
   "agency": "U.S. Forest Service",
@@ -66,6 +72,16 @@
       "label": "FFLOS register entry US 1737 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/nc/big-stamp-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Big Stamp (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/nctowers.html",
+      "kind": "site"
+    },
+    {
+      "label": "Big Stamp (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/big-stamp.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -83,6 +99,23 @@
         "ownership",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "tnlandforms",
+      "key": "tnlandforms:nc:nct014",
+      "fields": [
+        "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:nc:big-stamp",
+      "fields": [
+        "height_m",
         "links"
       ]
     }

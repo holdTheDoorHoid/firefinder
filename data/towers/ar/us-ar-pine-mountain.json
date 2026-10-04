@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "AR",
-  "county": null,
+  "county": "Franklin",
   "location": {
     "lat": 35.629654,
     "lon": -94.366208,
@@ -18,8 +18,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Ozark National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Pine Mountain (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/pine-mountain.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 359010414",
       "url": "https://www.openstreetmap.org/node/359010414",
       "kind": "osm"
@@ -45,10 +50,20 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:ar:pine-mountain",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/359010414",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

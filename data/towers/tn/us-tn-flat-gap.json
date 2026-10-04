@@ -1,17 +1,19 @@
 {
   "id": "us-tn-flat-gap",
-  "name": "Flat Gap Firetower",
-  "other_names": [],
+  "name": "Jefferson City",
+  "other_names": [
+    "Flat Gap Firetower"
+  ],
   "country": "US",
   "region": "TN",
-  "county": null,
+  "county": "Jefferson",
   "location": {
-    "lat": 36.070253,
-    "lon": -83.488632,
+    "lat": 36.0702,
+    "lon": -83.4883,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
-  "elevation_m": null,
+  "elevation_m": 527.9,
   "kind": "tower",
   "design": null,
   "height_m": null,
@@ -38,6 +40,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Jefferson City (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap way 934458897",
       "url": "https://www.openstreetmap.org/way/934458897",
       "kind": "osm"
@@ -45,19 +52,28 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:way/934458897",
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:jet001",
       "fields": [
         "name",
         "location",
+        "county",
+        "elevation_m",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/934458897",
+      "fields": [
         "links"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

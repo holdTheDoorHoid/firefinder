@@ -1,10 +1,10 @@
 {
   "id": "us-mo-tecumseh",
-  "name": "Tecumseh Lookout Tower",
+  "name": "TECUMSEH Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "MO",
-  "county": null,
+  "county": "Ozark",
   "location": {
     "lat": 36.60024,
     "lon": -92.231361,
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "TECUMSEH (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/tecumseh.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 358066676",
       "url": "https://www.openstreetmap.org/node/358066676",
       "kind": "osm"
@@ -45,10 +50,18 @@
   ],
   "sources": [
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:tecumseh",
+      "fields": [
+        "name",
+        "county",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/358066676",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

@@ -12,7 +12,7 @@
     "from": "nhlr"
   },
   "elevation_m": 871.1,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -83,6 +83,16 @@
       "label": "FFLOS register entry US 1589 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/tn/meadow-creek-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Meadow Creek (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
+      "label": "Meadow Creek (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/meadow-creek.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -111,6 +121,21 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:cot003",
+      "fields": [
+        "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:tn:meadow-creek",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
@@ -124,13 +149,17 @@
         {
           "source": "fflos",
           "value": "gone"
+        },
+        {
+          "source": "tnlandforms",
+          "value": "standing"
         }
       ],
       "distance_m": null,
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

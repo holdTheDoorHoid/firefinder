@@ -1,15 +1,15 @@
 {
   "id": "us-mo-baldy",
-  "name": "Baldy Lookout Tower",
+  "name": "BALDY Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "MO",
   "county": "Ripley",
   "location": {
-    "lat": 36.786722,
-    "lon": -91.037629,
+    "lat": 36.7867,
+    "lon": -91.0375,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "central_us_lookouts"
   },
   "elevation_m": 263.0,
   "kind": "tower",
@@ -18,8 +18,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Mark Twain National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
   ],
   "links": [
     {
+      "label": "BALDY (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/baldy.html",
+      "kind": "site"
+    },
+    {
       "label": "Wikidata item Q107536483",
       "url": "https://www.wikidata.org/wiki/Q107536483",
       "kind": "wikidata"
@@ -56,14 +61,23 @@
   ],
   "sources": [
     {
-      "source": "wikidata",
-      "key": "wikidata:Q107536483",
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:baldy",
       "fields": [
         "name",
         "location",
         "county",
-        "elevation_m",
         "kind",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q107536483",
+      "fields": [
+        "elevation_m",
         "photos",
         "links"
       ]

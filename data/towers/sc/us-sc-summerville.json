@@ -1,10 +1,10 @@
 {
   "id": "us-sc-summerville",
-  "name": "Summerville Lookout Tower",
+  "name": "SUMMERVILLE Lookout Tower",
   "other_names": [],
   "country": "US",
   "region": "SC",
-  "county": null,
+  "county": "Dorchester",
   "location": {
     "lat": 32.933784,
     "lon": -80.177594,
@@ -18,8 +18,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "South Carolina Forestry Commission",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +38,11 @@
   "photos": [],
   "links": [
     {
+      "label": "SUMMERVILLE (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/summerville.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357110058",
       "url": "https://www.openstreetmap.org/node/357110058",
       "kind": "osm"
@@ -45,10 +50,20 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:sc:summerville",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/357110058",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

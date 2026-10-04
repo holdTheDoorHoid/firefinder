@@ -12,7 +12,7 @@
     "from": "nhlr"
   },
   "elevation_m": 263.0,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -26,7 +26,7 @@
     }
   ],
   "agency": "Perry County",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -72,6 +72,11 @@
       "label": "NHLR register entry US 1792 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/mo/perry-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "PERRY (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/perry.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -88,6 +93,15 @@
         "agency",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:perry",
+      "fields": [
+        "kind",
+        "ownership",
         "links"
       ]
     }

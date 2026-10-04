@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "SC",
-  "county": null,
+  "county": "Marion",
   "location": {
     "lat": 33.862706,
     "lon": -79.329554,
@@ -18,8 +18,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "South Carolina Forestry Commission",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -38,6 +38,16 @@
   "photos": [],
   "links": [
     {
+      "label": "Brittons Neck (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/brittons-neck.html",
+      "kind": "site"
+    },
+    {
+      "label": "Satellite view (hillmap.com)",
+      "url": "http://www.hillmap.com/m/ag1zfmhpbGxtYXAtaGRychULEghTYXZlZE1hcBiAgICogsXpCAw",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357095299",
       "url": "https://www.openstreetmap.org/node/357095299",
       "kind": "osm"
@@ -45,10 +55,20 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:sc:brittons-neck",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/357095299",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

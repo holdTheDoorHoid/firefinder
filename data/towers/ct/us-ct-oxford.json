@@ -1,10 +1,12 @@
 {
   "id": "us-ct-oxford",
-  "name": "Oxford Lookout Tower",
-  "other_names": [],
+  "name": "Hunters Mountain (Oxford)",
+  "other_names": [
+    "Oxford Lookout Tower"
+  ],
   "country": "US",
   "region": "CT",
-  "county": null,
+  "county": "New Haven",
   "location": {
     "lat": 41.412021,
     "lon": -73.129208,
@@ -38,6 +40,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Hunters Mountain (Oxford) (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/hunters-mountain.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 359273333",
       "url": "https://www.openstreetmap.org/node/359273333",
       "kind": "osm"
@@ -45,10 +52,18 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ct:hunters-mountain",
+      "fields": [
+        "name",
+        "county",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/359273333",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

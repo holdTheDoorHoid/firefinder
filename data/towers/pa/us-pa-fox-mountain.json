@@ -12,9 +12,9 @@
     "from": "fflos"
   },
   "elevation_m": 732.4,
-  "kind": "unknown",
-  "design": null,
-  "height_m": null,
+  "kind": "tower",
+  "design": "Aermotor",
+  "height_m": 6.1,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -61,6 +61,11 @@
       "label": "FFLOS register entry US 293 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/pa/fox-mountain-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Fox Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/fox-mountain1.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -75,6 +80,16 @@
         "status",
         "registers",
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:pa:fox-mountain1",
+      "fields": [
+        "kind",
+        "design",
+        "height_m",
         "links"
       ]
     }

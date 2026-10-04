@@ -4,12 +4,12 @@
   "other_names": [],
   "country": "US",
   "region": "NC",
-  "county": null,
+  "county": "Beaufort",
   "location": {
-    "lat": 35.524431,
-    "lon": -76.859903,
+    "lat": 35.52416,
+    "lon": -76.86027,
     "precision": "exact",
-    "from": "osm"
+    "from": "tnlandforms"
   },
   "elevation_m": 7.0,
   "kind": "tower",
@@ -17,7 +17,14 @@
   "height_m": null,
   "status": "unknown",
   "status_note": null,
-  "registers": [],
+  "registers": [
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "EY 4030",
+      "url": null
+    }
+  ],
   "agency": null,
   "ownership": "unknown",
   "access": {
@@ -38,6 +45,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Everett (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/nctowers.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 357809763",
       "url": "https://www.openstreetmap.org/node/357809763",
       "kind": "osm"
@@ -45,13 +57,22 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:node/357809763",
+      "source": "tnlandforms",
+      "key": "tnlandforms:nc:nct062",
       "fields": [
         "name",
         "location",
-        "elevation_m",
+        "county",
         "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/357809763",
+      "fields": [
+        "elevation_m",
         "links"
       ]
     }

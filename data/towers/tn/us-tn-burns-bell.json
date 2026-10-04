@@ -1,7 +1,9 @@
 {
   "id": "us-tn-burns-bell",
   "name": "Burns (Bell) Lookout Tower",
-  "other_names": [],
+  "other_names": [
+    "Bell"
+  ],
   "country": "US",
   "region": "TN",
   "county": "Dickson",
@@ -12,7 +14,7 @@
     "from": "nhlr"
   },
   "elevation_m": 264.6,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -23,6 +25,12 @@
       "number": "US 1778",
       "state_number": "TN 74",
       "url": "http://nhlr.org/lookouts/us/tn/burns-bell-lookout-tower/"
+    },
+    {
+      "register": "NGS",
+      "number": null,
+      "state_number": "GC 2560",
+      "url": null
     }
   ],
   "agency": "Tennessee Division of Forestry",
@@ -76,6 +84,16 @@
       "label": "NHLR register entry US 1778 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/tn/burns-bell-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Bell (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
+      "label": "BELL (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/bell1.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -94,9 +112,41 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:dit001",
+      "fields": [
+        "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:tn:bell1",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "tnlandforms",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

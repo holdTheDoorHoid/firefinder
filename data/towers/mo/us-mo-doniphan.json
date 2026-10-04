@@ -12,7 +12,7 @@
     "from": "nhlr"
   },
   "elevation_m": 199.0,
-  "kind": "unknown",
+  "kind": "tower",
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -26,7 +26,7 @@
     }
   ],
   "agency": "Missouri Department of Conservation",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -72,6 +72,11 @@
       "label": "NHLR register entry US 1776 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/mo/doniphan-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "DONIPHAN (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/doniphan.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -88,6 +93,15 @@
         "agency",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:doniphan",
+      "fields": [
+        "kind",
+        "ownership",
         "links"
       ]
     }
