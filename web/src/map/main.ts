@@ -31,6 +31,8 @@ import { L_CLUSTERS, L_POINTS, SRC, installOverlay, setSelection, setTopo, setTo
 import { Panel } from './panel.ts';
 import { initSearch } from './search-ui.ts';
 import { loadBaseStyle } from './style.ts';
+import type { SeenLayer } from '../view3d/viewshed-layer.ts';
+import type { TowerRecord } from '../lib/types.ts';
 
 const BASE = import.meta.env.BASE_URL;
 const US_BOUNDS: [[number, number], [number, number]] = [
@@ -127,7 +129,10 @@ async function main(): Promise<void> {
     closeBtn: $<HTMLButtonElement>('panel-close'),
     ctx,
     isHiddenByFilters: (id) => features.length > 0 && !shownIds.has(id),
-    onRender: (root) => bindChecklistButtons(root, checklist),
+    onRender: (root) => {
+      bindChecklistButtons(root, checklist);
+      syncSeenButtons(root);
+    },
     onClose: () => {
       state.selected = null;
       if (map) setSelection(map, null);
@@ -205,6 +210,94 @@ async function main(): Promise<void> {
     if (e.key !== 'Escape' || document.querySelector('dialog[open]')) return;
     if (filtersEl.hasAttribute('data-open')) setSheet(false);
     else if (panel.isOpen && !(e.target as Element).closest?.('.search')) panel.close();
+  });
+
+  /* ---------- 3D: view from the cab, what it could see ---------- */
+  let seen: SeenLayer | null = null;
+  let seenLoading: Promise<SeenLayer | null> | null = null;
+  function syncSeenButtons(root: ParentNode = document): void {
+    for (const b of root.querySelectorAll<HTMLButtonElement>('[data-action="viewshed"]')) {
+      const on = !!seen?.has(b.dataset.id!);
+      b.setAttribute('aria-pressed', String(on));
+      const label = b.querySelector('[data-viewshed-label]');
+      if (label) label.textContent = on ? 'Hide what it could see' : seen?.ids.length ? 'Add what it could see' : 'What it could see';
+    }
+  }
+  const getSeen = (): Promise<SeenLayer | null> => {
+    if (seen || !map) return Promise.resolve(seen);
+    const m = map;
+    seenLoading ??= import('../view3d/viewshed-layer.ts').then(({ SeenLayer }) => {
+      seen = new SeenLayer({
+        map: m,
+        host: mapbox,
+        base: BASE,
+        tower: (id) => byId.get(id),
+        towers: () => features,
+        theme: () => theme,
+        onChange: (ids, km) => {
+          state.seen = ids;
+          state.seenKm = ids.length && km !== 40 ? km : null;
+          writeUrl();
+          syncSeenButtons();
+        },
+      });
+      return seen;
+    });
+    return seenLoading;
+  };
+  const openCab = async (id: string) => {
+    let dlg = document.getElementById('cab-dialog') as HTMLDialogElement | null;
+    if (!dlg) {
+      dlg = document.createElement('dialog');
+      dlg.id = 'cab-dialog';
+      dlg.className = 'dialog dialog-wide';
+      dlg.setAttribute('aria-labelledby', 'cab-dialog-h');
+      document.body.append(dlg);
+    }
+    const f = byId.get(id);
+    dlg.innerHTML = html`<div class="dialog-inner">
+      <div class="dialog-head"><h2 id="cab-dialog-h">View from the cab: ${f?.properties.n ?? 'lookout'}</h2>
+        <button type="button" class="icon-btn" data-close-cab aria-label="Close the view">
+          <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button></div>
+      <div data-cab-host><p class="muted">Loading…</p></div>
+      <p class="fine">More about this lookout on <a href="${towerPath(id, ctx)}">its own page</a>.</p>
+    </div>`.value;
+    dlg.querySelector('[data-close-cab]')!.addEventListener('click', () => dlg!.close());
+    dlg.showModal();
+    try {
+      const [rec, { PanoramaView }] = await Promise.all([
+        getJson<TowerRecord>(`data/t/${id}.json`),
+        import('../view3d/panorama-view.ts'),
+      ]);
+      const view = new PanoramaView(dlg.querySelector<HTMLElement>('[data-cab-host]')!, {
+        tower: { id, name: rec.name, lat: rec.location.lat, lon: rec.location.lon, kind: rec.kind, status: rec.status, height_m: rec.height_m, elevation_m: rec.elevation_m },
+      });
+      dlg.addEventListener('close', () => view.destroy(), { once: true });
+      view.el.querySelector<HTMLElement>('.pv-viewport')?.focus();
+      await view.start();
+    } catch (err) {
+      console.error(err);
+      const host = dlg.querySelector('[data-cab-host]');
+      if (host) host.innerHTML = '<p class="notice tone-caution">The view could not be loaded. Check your connection and try again.</p>';
+    }
+  };
+  document.addEventListener('click', async (e) => {
+    const b = (e.target as Element).closest<HTMLButtonElement>('[data-action="view-cab"], [data-action="viewshed"]');
+    if (!b?.dataset.id) return;
+    if (b.dataset.action === 'view-cab') {
+      void openCab(b.dataset.id);
+      return;
+    }
+    const s = await getSeen();
+    if (!s) {
+      mapMessage.hidden = false;
+      mapMessage.textContent = 'The map is not available in this browser, so the view cannot be drawn on it.';
+      return;
+    }
+    const first = s.ids.length === 0;
+    await s.toggle(b.dataset.id);
+    if (first) s.fit(panel.coverage().right);
   });
 
   /* ---------- Search ---------- */
@@ -316,6 +409,7 @@ async function main(): Promise<void> {
     m.on('style.load', () => {
       const sel = state.selected ? byId.get(state.selected)?.geometry.coordinates ?? null : null;
       installOverlay(m, { data: collection, theme, base: BASE, topo: state.basemap === 'topo', selected: sel });
+      seen?.reinstall();
     });
     onThemeChange(async (eff) => {
       if (eff === theme) return;
@@ -358,6 +452,14 @@ async function main(): Promise<void> {
 
   /* ---------- Both ready: open a lookout named in the URL ---------- */
   if (!(await dataTask)) return;
+  if (state.seen.length && map) {
+    const ids = state.seen;
+    const km = state.seenKm ?? 40;
+    const m = map;
+    const go = async () => (await getSeen())?.set(ids, km);
+    if (m.isStyleLoaded()) void go();
+    else m.once('load', () => void go());
+  }
   if (state.selected) {
     const f = byId.get(state.selected);
     if (f) {
