@@ -110,6 +110,7 @@ export class PanoramaView {
   #resize: ResizeObserver | null = null;
   #theme = effectiveTheme();
   #run = 0;
+  #offTheme: () => void = () => {};
 
   constructor(host: HTMLElement, opts: PanoramaOptions) {
     this.#o = opts;
@@ -120,7 +121,7 @@ export class PanoramaView {
     this.el.dataset.state = 'idle';
     host.replaceChildren(this.el);
     this.#build();
-    onThemeChange((t) => {
+    this.#offTheme = onThemeChange((t) => {
       this.#theme = t;
       this.#draw();
     });
@@ -663,6 +664,7 @@ export class PanoramaView {
   }
 
   destroy(): void {
+    this.#offTheme();
     this.#resize?.disconnect();
     cancelAnimationFrame(this.#frame);
     this.#run++;
