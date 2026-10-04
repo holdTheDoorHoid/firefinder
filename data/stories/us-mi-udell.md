@@ -1,0 +1,13 @@
+## A steel tower in the Manistee pines
+
+The Udell Lookout Tower stands in the Manistee Ranger District of the Huron-Manistee National Forest, off Forest Road 5207 near Wellston, Michigan. The Manistee National Forest had only been created in 1933 when, in 1936, a fire control plan for the area called for the tower's construction.[^2][^3] The National Historic Lookout Register's page for the tower gives a different year in its summary description, saying it was "constructed by the CCC in 1940"; the earlier date is the one backed by Wikipedia and by the National Register of Historic Places' own period of significance for the site, which runs 1925–1949 with 1936 marked as the key year.[^1][^2][^3]
+
+It is a 100-foot steel skeleton tower, its angle-iron frame bolted together and galvanized against rust, resting on four concrete piers. At the top sits a boxy cab under a hipped roof, sheet-steel on the outside, with a wood floor and glass on all four sides so a lookout could scan the horizon in every direction. A house and garage were built for the site not long after the tower, then hauled off elsewhere roughly a decade later.[^2]
+
+Udell worked as a fire lookout into the 1960s, when the Forest Service leaned more on aerial patrols and ground towers like this one lost their job.[^2] It is now the last fire lookout tower standing in the Huron-Manistee National Forest.[^1][^2] The National Historic Lookout Register added it in 1991 as US 12 / MI 1, and the National Register of Historic Places listed it on August 22, 1996, citing its engineering and its place in the conservation history of the forest.[^1][^3]
+
+The tower is not kept open for climbing. Register visit reports from 2019 and 2020 describe the lower flights of stairs removed and the base wrapped in barbed wire, with the remaining wood and glass in poor shape, and graffiti visible from the ground.[^1] A small interpretive sign stands at the site, though the tower itself carries no register plaque, and visitors note that the access roads are easy to lose on a GPS.[^1] A Forest Service communications tower stands about a hundred yards off but does not encroach on the site.[^1] Udell is unstaffed, and whether any volunteer program covers it is unclear.[^1]
+
+[^1]: "Udell Lookout Tower", National Historic Lookout Register, http://nhlr.org/lookouts/us/mi/udell-lookout-tower/ (accessed 2026-10-04).
+[^2]: "Udell Lookout Tower", Wikipedia, https://en.wikipedia.org/wiki/Udell_Lookout_Tower (accessed 2026-10-04).
+[^3]: National Register of Historic Places listing detail, NPGallery, https://npgallery.nps.gov/AssetDetail/NRIS/95001013 (accessed 2026-10-04).

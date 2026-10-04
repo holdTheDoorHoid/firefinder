@@ -1,0 +1,17 @@
+Ute Mountain Lookout stands in the Ashley National Forest in Daggett County, Utah, a few miles southwest of Manila.[^2] The Civilian Conservation Corps built it in 1937 out of the Sheep Creek Canyon CCC camp, raising a 32-foot timber tower topped with a 14-by-14-foot L-4 cab and catwalk — living quarters set above the ground rather than a simple ground-level cab.[^1][^2][^3] The National Historic Lookout Register puts its elevation at 8,819 feet; Wikipedia, Wikidata and willhiteweb all give 8,834 feet instead.[^1][^2][^3][^5] From up there it looks out over roughly 360 square miles of forest and the northeastern Uinta Mountains.[^5]
+
+The Forest Service staffed it for three decades. The lookout register says the last watch was kept in 1968; a newspaper account instead says the tower closed in 1969, when rot was found in its legs.[^1][^4] A renovation in the early 1980s brought it back into use, and it reopened to the public in 1987 — though the National Historic Lookout Register credits the restoration to 1986, done by the Forest Service with a group of partner organizations. The two accounts don't quite agree on the year.[^1][^4]
+
+The tower was nominated to the National Register of Historic Places in 1978[^1] and formally listed on April 10, 1980, under reference number 80003895.[^2][^3] It was later entered in the National Historic Lookout Register as US 261 / UT 1, on March 1, 1998.[^1]
+
+Weather and age caught up with it again, and it closed a second time in 2008 after inspectors found structural deterioration.[^4] A more thorough restoration followed, and the tower was rededicated on September 20, 2014.[^5] By a 2019 Forest Service report, the tower and cab were in good condition inside and out, and a volunteer had staffed it through each of the previous three seasons.[^1]
+
+Today it is one of only two fire lookouts still standing in Utah,[^1] and the only one in the state with living quarters built above the ground.[^4][^5] It is no longer a primary fire-detection post, but it isn't empty: the Forest Service keeps it staffed by volunteers through the summer, and a wildland firefighter has given interpretive tours on Fridays and Saturdays in recent years, doubling as a spotter when no fire calls her away. Visitors who climb up often turn out to have childhood memories of visiting the tower decades before. The site has also run a seasonal homing-pigeon demonstration, echoing the message runners lookouts once relied on before two-way radios.[^4]
+
+The road in is gravel but drivable — it branches off the Sheep Creek Canyon Geologic Loop about 2.5 miles before Spirit Lake — and a hiking approach from Browne Lake is also an option.[^5]
+
+[^1]: Ute Mountain Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/ut/ute-mountain-lookout/ (accessed 2026-10-04).
+[^2]: Ute Mountain Fire Tower, Wikipedia, https://en.wikipedia.org/wiki/Ute_Mountain_Fire_Tower (accessed 2026-10-04).
+[^3]: Ute Mountain Fire Tower (Q7902610), Wikidata, https://www.wikidata.org/wiki/Q7902610 (accessed 2026-10-04).
+[^4]: "Renovated fire lookout tower open for tours in Daggett County," Deseret News, https://www.deseret.com/2015/8/14/20570233/renovated-fire-lookout-tower-open-for-tours-in-daggett-county/ (accessed 2026-10-04).
+[^5]: Ute Mountain Fire Lookout, willhiteweb.com, http://www.willhiteweb.com/uinta_mountains/ute/fire_lookout_129.htm (accessed 2026-10-04).

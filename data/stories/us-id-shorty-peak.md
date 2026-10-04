@@ -1,0 +1,18 @@
+## Shorty Peak Lookout
+
+Shorty Peak sits in the Selkirk Mountains of the old Kaniksu National Forest, now part of the Idaho Panhandle National Forests, about ten miles west-southwest of Porthill near the Canadian border.[^2] The first lookout here was a simple cupola cabin, built in 1927.[^1][^2] It did its job for decades before the Forest Service replaced it: construction on the present building began in 1963 and finished in 1964, a 14-by-14-foot R-6 flat-roofed cab with a catwalk, set on an eight-foot concrete base.[^1][^2]
+
+Firelookout.com, Rex Kamstra's long-running register of lookout personnel, names a handful of the people who staffed Shorty Peak over the years: Bill Hamilton in 1932–33, Burt Callahan in 1935, Larry Knight in 1936, Fred Brackebusch when the new tower went up in 1964, Ron Glover in 1965, Hollis Butler in 1967, Lawrence Fields and Ravio Kynnap splitting the 1969 season, Paula Stueve in 1972, Scot Anderson in 1978, and Shane Peterson in 1980.[^2] Like other lookouts in the area, the job meant memorizing the surrounding ridgelines well enough to place a wisp of smoke on a map, and reading it off an Osborne fire finder mounted in the center of the cab.[^4] Water was the hard part: there was none at the summit except snow, and the nearest spring was at least half a mile off and had to be hauled up by hand.[^4]
+
+By the 1960s the Forest Service was already turning to aircraft and other technology for fire detection, and many Panhandle lookouts like this one gradually lost their staff.[^5] Shorty Peak's own staffing history after 1980 is not recorded in the sources checked here, and it is not known when it stopped being staffed year-round.
+
+What survived is the building itself. The cab was refurbished in 2005 and is kept in good condition.[^3] It is reached by a 2.5-mile trail with about 1,300 feet of climbing, open to hikers and horseback riders, and the Forest Service now rents it out through recreation.gov as an overnight cabin that sleeps two.[^3] Inside are two twin beds, two chairs, two tables, hardwood floors, and the lookout's own historic fire finder and district map, kept for atmosphere rather than use.[^3] There is no running water or power, and a pit toilet sits within about a hundred yards.[^3] Visitors who have stayed describe wide views of the Selkirk and Purcell ranges and the Kootenai Valley reaching into British Columbia, clear-night stargazing, and — set against the convenience of recreation.gov — the real logistics of carrying up water and gear for the stay.[^4]
+
+Shorty Peak is public land, open to anyone who can book the rental or simply hike to see it; reservations fill quickly in summer and are best made months ahead.[^3][^4]
+
+[^1]: Shorty Peak Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/id/shorty-peak-lookout/ (accessed 2026-10-04).
+[^2]: Shorty Peak Fire Lookout Tower, firelookout.com (Rex Kamstra), https://www.firelookout.com/id/shortypeak.html (accessed 2026-10-04).
+[^3]: Shorty Peak Lookout, Recreation.gov campground listing #234386, https://www.recreation.gov/camping/campgrounds/234386 (accessed 2026-10-04).
+[^4]: Shorty Peak lookout offers spectacular views, Naturally North Idaho, https://www.naturallynorthidaho.com/2015/07/shorty-peak-lookout-offers-spectacular-views.htm (accessed 2026-10-04).
+[^5]: Fire Lookouts of Boundary County, Idaho, Naturally North Idaho, https://www.naturallynorthidaho.com/2011/03/fire-lookouts-of-boundary-county-idaho.htm (accessed 2026-10-04).
+[^6]: Shorty Peak, IDAHO: A Climbing Guide, https://www.idahoaclimbingguide.com/bookupdates/shorty-peak-6515/ (accessed 2026-10-04).

@@ -1,0 +1,47 @@
+{
+  "id": "us-or-hager-mountain",
+  "researched": "2026-10-04",
+  "summary": "An R-6 flat-top cab built in 1967 on a summit watched for smoke since 1915, now staffed in fire season and rentable as a winter cabin.",
+  "facts": {
+    "design": "R-6 flat top",
+    "height_m": null,
+    "status": "standing",
+    "status_note": "Hip roof replaced the original flat roof in 1992.",
+    "staffing": {"status": "staffed", "as_of": "2026"},
+    "access": {"level": "public", "note": "Staffed by USFS during fire season; rented out by the public Nov 15-May 15 via Recreation.gov, foot/snowshoe/ski access only."},
+    "visit": {"climbable": null, "drive_up": false, "trail_note": null},
+    "agency": "US Forest Service - Fremont National Forest"
+  },
+  "events": [
+    {"year": 1915, "event": "staffed", "note": "NHLR: 'Hager Mountain has been a fire detection site since 1915.'", "cite": [1]},
+    {"year": 1912, "event": "built", "note": "First structure, an octagonal cab", "cite": [2]},
+    {"year": 1936, "event": "replaced", "note": "L-4 cab replaced the 1912 octagonal cab", "cite": [2]},
+    {"year": 1967, "event": "built", "note": "Current R-6 flat-top cab built, replacing the L-4", "cite": [1, 2]},
+    {"year": 1992, "event": "modified", "note": "Flat roof replaced with a shallow hip roof", "cite": [1, 2]},
+    {"year": 2022, "event": "nhlr_registered", "note": "Registered on NHLR (US 1620, OR 143), nominated by Brad Eells, June 23 2022", "cite": [1]}
+  ],
+  "corrections": [
+    {
+      "field": "events",
+      "current": "events only lists built=1967 and nhlr_registered=2022",
+      "proposed": "Add 1912 (first octagonal cab), 1936 (L-4 cab), and 1992 (hip roof added) as events, per firelookout.com and NHLR's own description text.",
+      "evidence": "firelookout.com: 'Developed in 1912 with an octagonal cab, an L-4 cab replaced it in 1936. The present R-6 cab was built in 1967. Its flat roof was replaced by a new hip roof in 1992.' NHLR description text (not its structured 'Built' field) independently says fire detection began in 1915 and the roof was modified in 1992.",
+      "cite": [1, 2]
+    }
+  ],
+  "sources": [
+    {"n": 1, "title": "Hager Mountain Lookout", "publisher": "National Historic Lookout Register (nhlr.org)", "url": "http://nhlr.org/lookouts/us/or/hager-mountain-lookout/", "accessed": "2026-10-04"},
+    {"n": 2, "title": "Hager Mtn. Fire Lookout Tower", "publisher": "firelookout.com (Rex Kamstra)", "url": "https://www.firelookout.com/or/hagermtn.html", "accessed": "2026-10-04"},
+    {"n": 3, "title": "Hager Mountain Lookout", "publisher": "Recreation.gov", "url": "https://www.recreation.gov/camping/campgrounds/234187", "accessed": "2026-10-04"}
+  ],
+  "photos": [],
+  "confidence": "medium",
+  "notes_for_editor": "The tower record's 'conflicts' block (built: 1967 per NHLR vs 1912 per firelookout_com) is resolved by reading the prose on both cached pages rather than just their structured fields: both agree on a sequence (1912 octagonal cab -> 1936 L-4 -> 1967 R-6, the structure standing today), they just populate a single 'built' field with different points in that sequence. Recommend the record's events array capture the full sequence rather than one disputed year. NHLR's '1915' for first fire detection is one source only (not independently corroborated) and sits oddly close to, but not matching, the 1912 build year on firelookout.com -- plausibly detection started a few years before any structure went up, but this is not stated outright anywhere, so I left it as a direct citation rather than resolving it further. No additional cached source pages or useful web leads were found beyond NHLR, firelookout.com, and the Recreation.gov listing already in the tower record; did not use any of the 3 allotted web searches since the two cached register pages already agreed with each other almost completely once read past their structured fields. Fact-check correction: the draft's claim that NHLR's prose 'notes the discrepancy itself' between a 1915 fire-detection date and 'the register's own account of the first cab' was wrong -- NHLR's description never mentions a first cab or any 1912/1936 structure at all (only '...fire detection site since 1915. The current structure was constructed in 1967... roof was modified... in 1992.'); the 1912/1936 sequence comes solely from firelookout.com. That sentence was removed from the story. Also fixed: the story's 'flat-topped summit' was an invented/confused descriptor (likely conflated with the R-6 'flat top' cabin design) with no support in either cached source, so it was dropped; the elevation figure (7,188 ft) was misattributed to the Recreation.gov footnote when it is actually NHLR's number -- Recreation.gov's own page gives 7,195 ft, confirmed live. Both numbers are now attributed to their correct sources. All other checked claims (1912/1936/1967/1992 sequence, 2022 NHLR registration and Brad Eells nomination, rental season Nov 15-May 15, cabin dimensions/beds/stoves/capacity/no water, foot-snowshoe-ski-only access, Mount Hood/Shasta views) were confirmed against the cited sources and a live fetch of the Recreation.gov page.",
+  "verification": {
+    "checked": "2026-10-04",
+    "claims_checked": 14,
+    "unsupported_removed": 2,
+    "errors_fixed": 1,
+    "verdict": "fixed"
+  }
+}

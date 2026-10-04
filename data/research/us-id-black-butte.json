@@ -1,0 +1,51 @@
+{
+  "id": "us-id-black-butte",
+  "researched": "2026-10-04",
+  "summary": "A 1970 Region 6 flat-top lookout on Nez Perce National Forest, built over a 1925 fire camp and 1928 cupola cabin; the record's rental listing appears to actually belong to a separate nearby lookout.",
+  "facts": {
+    "design": "USFS Region 6 Flat Top cab on an 8-foot concrete block tower, built 1970, described by FFLA as a two-story structure",
+    "status": "unknown",
+    "status_note": "NHLR and FFLA (firelookout.org) list it as standing, but a separate site, Idaho Fire Lookouts, has its own entry for this same lookout (matching coordinates, elevation, and build history) in its Selway-region listing marked 'Abandoned'. A different 'Black Butte' that site marks abandoned in its West Central region is a distinct lookout near the Payette National Forest, not this one. Sources conflict; status should be treated as unconfirmed.",
+    "staffing": {"status": "unknown", "as_of": null},
+    "agency": "US Forest Service - Nez Perce National Forest"
+  },
+  "events": [
+    {"year": 1925, "event": "built", "note": "Fire-detection camp established at the site; the earliest documented watch presence, not a permanent structure", "cite": [1, 2]},
+    {"year": 1928, "event": "built", "note": "First permanent structure: a log cabin with a cupola", "cite": [1, 2]},
+    {"year": 1970, "event": "replaced", "note": "Current two-story lookout (Region 6 Flat Top cab on 8-ft concrete block tower) replaced the 1928 cupola cabin", "cite": [1, 2]}
+  ],
+  "corrections": [
+    {
+      "field": "other_names",
+      "current": "[\"Lookout Butte Lookout\"]",
+      "proposed": "[] (remove alias)",
+      "evidence": "NHLR and FFLA register Black Butte Lookout (NHLR US 1461, ID 153, 45.4895/-115.8751, elev. 6,731 ft, built 1970) and Lookout Butte Lookout (NHLR US 769, ID 59, 46.0458/-115.6597, elev. 5,869 ft, built 1962) as two separate, independently nominated lookouts about 40 miles apart (haversine distance between the two NHLR coordinate pairs, not 25 miles as first estimated) on the same forest, each with its own build history. They are not the same site.",
+      "cite": [1, 3, 4]
+    },
+    {
+      "field": "rental",
+      "current": "available: true, provider recreation.gov, ridb_facility_id 233128, description beginning 'Lookout Butte has a history that spans nearly 80 years...'",
+      "proposed": "Remove this rental block from Black Butte's record; it describes Lookout Butte Lookout, not Black Butte.",
+      "evidence": "The rental description's building history (45' pole tower 1923, cab added 1925, 50' L-4 cab tower 1935, current 1962 tower) and stated elevation (5,869 ft) match Lookout Butte Lookout's NHLR entry word for word, not Black Butte's documented 1925 camp / 1928 cupola / 1970 Region 6 Flat Top history or its 6,731 ft elevation. Black Butte's own NHLR entry does not mention a rental program.",
+      "cite": [1, 3]
+    }
+  ],
+  "sources": [
+    {"n": 1, "title": "Black Butte Lookout", "publisher": "National Historic Lookout Register (nhlr.org)", "url": "http://nhlr.org/lookouts/us/id/black-butte-lookout/", "accessed": "2026-10-04"},
+    {"n": 2, "title": "Black Butte Fire Lookout Tower", "publisher": "firelookout.com", "url": "https://www.firelookout.com/id/blackbutte291.html", "accessed": "2026-10-04"},
+    {"n": 3, "title": "Lookout Butte Lookout", "publisher": "National Historic Lookout Register (nhlr.org)", "url": "http://nhlr.org/lookouts/us/id/lookout-butte-lookout/", "accessed": "2026-10-04"},
+    {"n": 4, "title": "Idaho lookout list", "publisher": "Forest Fire Lookout Association (firelookout.org)", "url": "https://firelookout.org/lookouts/us/id", "accessed": "2026-10-04"},
+    {"n": 5, "title": "West Central region lookout list", "publisher": "Idaho Fire Lookouts", "url": "https://www.idahofirelookouts.com/west-central-region/", "accessed": "2026-10-04"},
+    {"n": 6, "title": "Black Butte Lookout", "publisher": "Idaho Fire Lookouts", "url": "https://www.idahofirelookouts.com/selway-region/black-butte-lookout/", "accessed": "2026-10-04"}
+  ],
+  "photos": [],
+  "confidence": "medium",
+  "notes_for_editor": "The tower record's 'rental' block and the 'Lookout Butte Lookout' alias both appear to actually describe a different, separately registered lookout (NHLR US 769) about 40 miles northeast of Black Butte on the same forest -- see the two proposed corrections. If that's confirmed, Lookout Butte Lookout likely needs (or already has) its own record with that rental data. Core build-history facts about Black Butte itself (1925 camp, 1928 cupola cabin, 1970 Region 6 Flat Top rebuild) are corroborated by two independent sources (NHLR and firelookout.com) and match in every detail, so confidence in those is good. However, current status is genuinely disputed: NHLR and FFLA (firelookout.org) list it as standing, while a separate, uncached Idaho Fire Lookouts page for this exact lookout (same coordinates/elevation/build history, in their Selway-region listing, source 6) marks it 'Abandoned' with no further detail. The original research checked only idahofirelookouts.com's West Central region page (source 5, which covers an unrelated same-named lookout) and missed this direct conflict. Confidence is capped at medium because of this unresolved status conflict and because the access/rental story still needs a human to verify and fix in the live record.",
+  "verification": {
+    "checked": "2026-10-04",
+    "claims_checked": 14,
+    "unsupported_removed": 1,
+    "errors_fixed": 2,
+    "verdict": "fixed"
+  }
+}

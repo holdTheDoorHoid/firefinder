@@ -1,6 +1,7 @@
 {
   "id": "us-la-mosley-hill",
   "name": "Mosley Hill Lookout",
+  "summary": "A 1949 steel Forest Service lookout in Kisatchie National Forest, staffed until 1981 and disassembled in 2006 for a highway project ahead of a planned move and restoration.",
   "other_names": [],
   "country": "US",
   "region": "LA",
@@ -13,10 +14,10 @@
   },
   "elevation_m": 66.8,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "design": "All-steel tower with a 13 ft x 13 ft metal cab and catwalk, unusually tall (about 110 ft) for the region",
+  "height_m": 33.5,
+  "status": "unknown",
+  "status_note": "Dismantled starting February 1, 2006 for relocation to a hill near the Catahoula Ranger District office for restoration and re-erection; whether that work was completed, and the tower's current condition and location, are not confirmed by the sources checked.",
   "registers": [
     {
       "register": "NHLR",
@@ -25,15 +26,15 @@
       "url": "http://nhlr.org/lookouts/us/la/mosley-hill-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Catahoula Ranger District",
   "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1981"
   },
   "visit": {
     "climbable": null,
@@ -43,22 +44,54 @@
   "rental": null,
   "events": [
     {
+      "year": 1949,
+      "event": "built",
+      "note": "All-steel tower and cab constructed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/la/mosley-hill-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/la/mosley-hill-lookout/",
+        "https://centraluslookouts.weebly.com/mosley-hill.html"
+      ]
+    },
+    {
+      "year": 1981,
+      "event": "staffed_last",
+      "note": "Register notes the tower was staffed until 1981",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/la/mosley-hill-lookout/"
+    },
+    {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 12, 2003",
-      "from": "nhlr"
+      "note": "Registered May 12, 2003 as US 513 / LA 4, nominated by District Archeologist Mark H. Gutzman",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/la/mosley-hill-lookout/"
+    },
+    {
+      "year": 2006,
+      "event": "relocated",
+      "note": "Cab removed from the tower February 1, 2006, the first stage of moving the steel tower and cab near the Catahoula Ranger District office, on the site of a former CCC camp, for restoration and erection; the move was prompted by a highway-widening project surveyed through the lookout's site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/la/mosley-hill-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/la/mosley-hill-lookout/",
+        "https://centraluslookouts.weebly.com/mosley-hill.html"
+      ]
     }
   ],
   "photos": [
     {
-      "file": null,
-      "thumb": null,
+      "file": "37/37a7c4a62281f17761b1e3eb0eef8212b911f27e.webp",
+      "thumb": "37/37a7c4a62281f17761b1e3eb0eef8212b911f27e.t.webp",
       "url": "http://nhlr.org/media/1808/us513_mosley_hill.gif",
       "source_url": "http://nhlr.org/lookouts/us/la/mosley-hill-lookout/",
       "credit": "National Historic Lookout Register (nhlr.org)",
       "license": "All rights reserved",
       "caption": null,
-      "year": null
+      "year": null,
+      "w": 302,
+      "h": 355
     }
   ],
   "links": [
@@ -98,10 +131,47 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-la-mosley-hill",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-04) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

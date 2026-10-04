@@ -1,0 +1,41 @@
+{
+  "id": "us-wa-clearwater-2",
+  "researched": "2026-10-04",
+  "summary": "A 1933 CCC-built Aermotor steel tower above the old Clearwater Ranger Station, with a 1935 CCC cabin now rented year-round and the tower kept in reserve for emergencies.",
+  "facts": {
+    "design": "Aermotor MC-39 steel tower",
+    "status": "standing",
+    "status_note": "Tower closed to public access; used only as an emergency/repeater site. Ground cabin at its base is rented year-round through Recreation.gov.",
+    "staffing": {"status": "unstaffed", "as_of": "2026"},
+    "access": {"level": "closed", "note": "Tower itself closed to public access per the Recreation.gov listing; OpenStreetMap separately tags the node access=no (no climbing tag found). The rental cabin at its base is open to paying guests year-round, with car access June 1-Oct 31."},
+    "visit": {"climbable": false, "drive_up": false, "trail_note": "Car access June 1 to October 31, weather permitting; snowshoe, ski or snowmobile the rest of the year (recreation.gov)."},
+    "agency": "US Forest Service - Umatilla National Forest"
+  },
+  "events": [
+    {"year": 1908, "event": "built", "note": "Clearwater Ranger Station established from a converted trapper's cabin (predates the current tower)", "cite": [1]},
+    {"year": 1933, "event": "built", "note": "Steel Aermotor MC-39 tower built by a ~200-man CCC camp working the Asotin District; conflicts with NHLR's own 'Built 1938' field", "cite": [1, 2]},
+    {"year": 1935, "event": "built", "note": "Ground cabin at the base of the tower built by the CCC", "cite": [2, 3]},
+    {"year": 2021, "event": "staffed_last", "note": "Tower pressed into service as a temporary radio repeater site during the Lick Creek (Dry Gulch) fire, August 2021; described as still available for emergencies rather than routinely staffed", "cite": [2]},
+    {"year": 2023, "event": "restored", "note": "Rental cabin updated inside and out", "cite": [4]}
+  ],
+  "corrections": [
+    {
+      "field": "events[built]",
+      "current": "1938 (per NHLR 'Built' field, used in the tower record)",
+      "proposed": "1933 for the steel tower; 1935 for the ground cabin",
+      "evidence": "NHLR's own description text and willhiteweb.com both describe the steel tower as built in 1933 by a CCC camp in the Asotin District, with the cabin following in 1935 - contradicting NHLR's separate 'Built 1938' field. Firelookout.com repeats 1938, so this may be a long-standing mix-up between the tower and some other feature rather than a typo.",
+      "cite": [1, 2, 3]
+    }
+  ],
+  "sources": [
+    {"n": 1, "title": "Clearwater Lookout - Umatilla National Forest", "publisher": "willhiteweb.com", "url": "http://www.willhiteweb.com/washington_fire_lookouts/clearwater_lookout/umatilla_national_forest_048.htm", "accessed": "2026-10-04"},
+    {"n": 2, "title": "Clearwater Lookout", "publisher": "National Historic Lookout Register (nhlr.org)", "url": "http://nhlr.org/lookouts/us/wa/clearwater-lookout/", "accessed": "2026-10-04"},
+    {"n": 3, "title": "Clearwater Fire Lookout Tower", "publisher": "firelookout.com", "url": "https://www.firelookout.com/wa/clearwater.html", "accessed": "2026-10-04"},
+    {"n": 4, "title": "Clearwater Lookout Cabin, Umatilla National Forest", "publisher": "Recreation.gov", "url": "https://www.recreation.gov/camping/campgrounds/234271", "accessed": "2026-10-04"},
+    {"n": 5, "title": "OpenStreetMap node 5907183991", "publisher": "OpenStreetMap", "url": "https://www.openstreetmap.org/node/5907183991", "accessed": "2026-10-04"}
+  ],
+  "photos": [],
+  "confidence": "medium",
+  "notes_for_editor": "Height is genuinely disputed across three sources (90 ft Umatilla NF inventory, 94 ft Kresek, 82 ft firelookout.com) and I left height_m out rather than pick one. The 'built 1938' field in the current tower record looks like an error against the CCC narrative that NHLR itself tells (1933 tower / 1935 cabin) - see the proposed correction. A same-named 'Clearwater Lookout Site' in the FFLOS register (firetower.org) is a different, unrelated former lookout near the Olympic Peninsula (~-124.3, 47.6) and was not used here. Distance from Pomeroy is also given two ways (15 mi per firelookout.com, 25 mi per the rental listing) - left out of the story as not load-bearing. Fact-check correction (2026-10-04): the draft had attributed firelookout.com's 82 ft figure to 'the Fire Lookout Museum' - that credit line is actually for the 1997 photo on that page, not the height, so the story and this file no longer carry that attribution. Also removed an unsupported claim that the tower is closed to 'climbing' (no cited source says this; the OSM node carries access=no but no climbing tag), and lightly reworded one sentence in the story that paraphrased willhiteweb.com too closely.",
+  "verification": {"checked": "2026-10-04", "claims_checked": 17, "unsupported_removed": 2, "errors_fixed": 2, "verdict": "fixed"}
+}

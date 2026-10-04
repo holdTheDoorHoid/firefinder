@@ -1,6 +1,7 @@
 {
   "id": "us-mi-udell",
   "name": "Udell Lookout Tower",
+  "summary": "The last fire lookout tower standing in the Huron-Manistee National Forest, built in 1936 and no longer open for climbing.",
   "other_names": [],
   "country": "US",
   "region": "MI",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 314.2,
   "kind": "tower",
-  "design": null,
+  "design": "Prefabricated steel-angle tower on concrete pedestals, enclosed hip-roofed steel cab",
   "height_m": 30.5,
   "status": "standing",
   "status_note": null,
@@ -31,66 +32,85 @@
       "url": "https://npgallery.nps.gov/AssetDetail/NRIS/95001013"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "Huron-Manistee National Forest, Manistee Ranger District",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Site reachable by forest road but tower is not climbable; no NHLR plaque, access roads poorly signed and unreliable by GPS"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2020"
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Off Forest Road 5207 near Wellston, Michigan; visit reports warn mapped/GPS routes can be wrong"
   },
   "rental": null,
   "events": [
     {
       "year": 1936,
       "event": "built",
-      "note": null,
-      "from": "wikidata"
+      "note": "Built under a 1936 fire control plan, three years after the Manistee National Forest's 1933 creation; the NHLR's own description text instead gives 1940 and credits the CCC, but this conflicts with Wikipedia and the NRHP period of significance (1925-1949, with 1936 marked as the key year)",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Udell_Lookout_Tower",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Udell_Lookout_Tower",
+        "https://npgallery.nps.gov/AssetDetail/NRIS/95001013"
+      ]
     },
     {
       "year": 1991,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 1, 1991",
-      "from": "nhlr"
+      "note": "Registered July 1, 1991 as US 12 / MI 1",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mi/udell-lookout-tower/"
+    },
+    {
+      "year": 1996,
+      "event": "nrhp_listed",
+      "note": "Listed on the National Register of Historic Places August 22, 1996, reference 95001013, for engineering and conservation significance",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/AssetDetail/NRIS/95001013"
     }
   ],
   "photos": [
     {
-      "file": null,
-      "thumb": null,
+      "file": "f5/f55e6884dda3b2110329c811d97b15fbf30fb53c.webp",
+      "thumb": "f5/f55e6884dda3b2110329c811d97b15fbf30fb53c.t.webp",
       "url": "http://nhlr.org/media/1915/us012_udell.gif",
       "source_url": "http://nhlr.org/lookouts/us/mi/udell-lookout-tower/",
       "credit": "National Historic Lookout Register (nhlr.org)",
       "license": "All rights reserved",
       "caption": null,
-      "year": null
+      "year": null,
+      "w": 200,
+      "h": 343
     },
     {
-      "file": null,
-      "thumb": null,
+      "file": "1a/1a01ae61d1b795796a600ba3ff3513394b18d9da.webp",
+      "thumb": "1a/1a01ae61d1b795796a600ba3ff3513394b18d9da.t.webp",
       "url": "http://nhlr.org/media/4438/udell.jpg",
       "source_url": "http://nhlr.org/lookouts/us/mi/udell-lookout-tower/",
       "credit": "National Historic Lookout Register (nhlr.org)",
       "license": "All rights reserved",
       "caption": null,
-      "year": null
+      "year": null,
+      "w": 1000,
+      "h": 668
     },
     {
-      "file": null,
-      "thumb": null,
-      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Udell_Lookout_Tower.jpg?width=1280",
+      "file": "1b/1b2bf7e915ee2952364a0e9f856c09b360cc1486.webp",
+      "thumb": "1b/1b2bf7e915ee2952364a0e9f856c09b360cc1486.t.webp",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Udell_Lookout_Tower.jpg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Udell_Lookout_Tower.jpg",
-      "credit": "Wikimedia Commons contributors",
-      "license": null,
+      "credit": "US Forest Service, via Wikimedia Commons",
+      "license": "Public domain",
       "caption": null,
-      "year": null
+      "year": null,
+      "w": 144,
+      "h": 192
     }
   ],
   "links": [
@@ -98,6 +118,11 @@
       "label": "NHLR register entry US 12 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/mi/udell-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "National Register of Historic Places listing detail, ref 95001013 (NPGallery, National Park Service)",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/95001013",
+      "kind": "reference"
     },
     {
       "label": "Wikipedia: Udell Lookout Tower",
@@ -152,10 +177,33 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mi-udell",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

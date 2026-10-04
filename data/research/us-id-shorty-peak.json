@@ -1,0 +1,41 @@
+{
+  "id": "us-id-shorty-peak",
+  "researched": "2026-10-04",
+  "summary": "A 1964 R-6 flattop replacing a 1927 cupola cabin in the Selkirks, with named lookouts back to 1932, now rented overnight through recreation.gov.",
+  "facts": {
+    "design": "R-6 flattop with catwalk on an 8-foot concrete base",
+    "status": "standing",
+    "staffing": {"status": "unknown", "as_of": "1980"},
+    "access": {"level": "public", "note": "Public land; reachable by a 2.5-mile trail. Rented overnight through recreation.gov; book months ahead for summer."},
+    "visit": {"climbable": true, "drive_up": false, "trail_note": "2.5-mile trail, about 1,300 ft of elevation gain, open to hikers and horseback riders"},
+    "agency": "U.S. Forest Service, Idaho Panhandle National Forests (Bonners Ferry Ranger District)"
+  },
+  "events": [
+    {"year": 1927, "event": "built", "note": "First lookout on Shorty Peak: a cupola cabin", "cite": [1, 2]},
+    {"year": 1963, "event": "rebuilt", "note": "Construction began on the present R-6 flattop cab", "cite": [2]},
+    {"year": 1964, "event": "rebuilt", "note": "Present 14x14 ft R-6 flattop with catwalk on an 8-ft concrete base completed, replacing the 1927 cupola", "cite": [1, 2]},
+    {"year": 2004, "event": "nhlr_registered", "note": "Registered on the National Historic Lookout Register, March 22, 2004", "cite": [1]},
+    {"year": 2005, "event": "renovated", "note": "Cabin refurbished", "cite": [3]}
+  ],
+  "corrections": [
+    {
+      "field": "conflicts",
+      "current": "conflicts[0] lists firelookout_com giving a build year of 1927, in disagreement with nhlr's 1964",
+      "proposed": "Not a real conflict: firelookout.com's own page text says the current R-6 cab was built in 1964 (construction started 1963), replacing a 1927 cupola cabin -- the same two-stage history nhlr.org gives. The 1927 value appears to have been pulled from the firelookout_com page's mention of the first lookout rather than the current structure. Consider re-tagging that source value as the 'first lookout' year rather than a disagreement over the standing structure's build year.",
+      "evidence": "data/raw/firelookout_com/id/shortypeak.html: \"First used in 1927 with a cupola cabin, the present 8' concrete base topped with an R-6 flat cab replaced it in 1964 (construction started in 1963).\"",
+      "cite": [2]
+    }
+  ],
+  "sources": [
+    {"n": 1, "title": "Shorty Peak Lookout", "publisher": "National Historic Lookout Register (nhlr.org)", "url": "http://nhlr.org/lookouts/us/id/shorty-peak-lookout/", "accessed": "2026-10-04"},
+    {"n": 2, "title": "Shorty Peak Fire Lookout Tower", "publisher": "firelookout.com (Rex Kamstra)", "url": "https://www.firelookout.com/id/shortypeak.html", "accessed": "2026-10-04"},
+    {"n": 3, "title": "Shorty Peak Lookout", "publisher": "Recreation.gov campground listing #234386", "url": "https://www.recreation.gov/camping/campgrounds/234386", "accessed": "2026-10-04"},
+    {"n": 4, "title": "Shorty Peak lookout offers spectacular views", "publisher": "Naturally North Idaho", "url": "https://www.naturallynorthidaho.com/2015/07/shorty-peak-lookout-offers-spectacular-views.htm", "accessed": "2026-10-04"},
+    {"n": 5, "title": "Fire Lookouts of Boundary County, Idaho", "publisher": "Naturally North Idaho", "url": "https://www.naturallynorthidaho.com/2011/03/fire-lookouts-of-boundary-county-idaho.htm", "accessed": "2026-10-04"},
+    {"n": 6, "title": "Shorty Peak", "publisher": "IDAHO: A Climbing Guide", "url": "https://www.idahoaclimbingguide.com/bookupdates/shorty-peak-6515/", "accessed": "2026-10-04"}
+  ],
+  "photos": [],
+  "confidence": "medium",
+  "notes_for_editor": "Good staffing list (names 1932-1980) came from firelookout.com's own page text, which also resolves the build-year 'conflict' already flagged on the tower record -- see the correction proposed above. Fact-check pass (2026-10-04) found the story had wrongly attributed that staffing list to the National Historic Lookout Register; NHLR's own page carries no staffing names at all, only firelookout.com does. Fixed in the story. Also removed an invented height_m value (2.4 m) that matched no source -- it appears to have been derived from the 8-foot concrete base rather than any stated structure height -- and dropped footnote [^6] (the climbing-guide page) from the recreation.gov rental sentence, since that page never mentions recreation.gov and states the rental runs first-come-first-served. Separately: recreation.gov's own page gives the cabin as 15'x15' on a 5-foot foundation, which doesn't match NHLR/firelookout.com's 14'x14' on an 8-foot base; the story's dimension sentence cites only NHLR/firelookout.com and is internally consistent, but a human may want to reconcile the two descriptions. No information found on staffing after 1980 or on when year-round staffing ended; left as unknown. The idahomagazine.com article 'Back to Shorty Peak' returned HTTP 403 and could not be read; it may be worth a human revisit if full text is reachable another way. idahofirelookouts.com's detail page for this lookout was not cached locally and was not fetched live (only its listing thumbnail is cached), so it is not cited here.",
+  "verification": {"checked": "2026-10-04", "claims_checked": 19, "unsupported_removed": 1, "errors_fixed": 3, "verdict": "fixed"}
+}

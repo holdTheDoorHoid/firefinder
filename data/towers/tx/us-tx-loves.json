@@ -1,6 +1,7 @@
 {
   "id": "us-tx-loves",
   "name": "Love's Lookout",
+  "summary": "A 1935 Texas Forest Service fire tower on a ridge named for Wesley Love, now standing but closed to climbers in a Jacksonville city park.",
   "other_names": [],
   "country": "US",
   "region": "TX",
@@ -13,8 +14,8 @@
   },
   "elevation_m": 214.3,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "design": "125-ft steel Aermotor tower with a 7x7 ft metal cab",
+  "height_m": 38.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,20 +29,41 @@
   "agency": "City of Jacksonville, Texas",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Public city park; the tower itself is not open to climb."
   },
   "staffing": {
-    "status": "unknown",
+    "status": "unstaffed",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
+    "climbable": false,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
   "events": [
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "Texas Forest Service built a 125-ft steel Aermotor tower with a 7x7 ft metal cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tx/loves-lookout/"
+    },
+    {
+      "year": 1970,
+      "event": "staffed_last",
+      "note": "NHLR entry says the tower remained active until 1970",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tx/loves-lookout/"
+    },
+    {
+      "year": 1980,
+      "event": "staffed_last",
+      "note": "Texas Escapes says the tower instead functioned into the 1980s until fire-spotting planes made it obsolete; conflicts with NHLR's 1970 date, year approximate",
+      "from": "research",
+      "source_url": "https://www.texasescapes.com/AllThingsHistorical/Loves-Lookout-504BB.htm"
+    },
     {
       "year": 1996,
       "event": "nhlr_registered",
@@ -51,14 +73,16 @@
   ],
   "photos": [
     {
-      "file": null,
-      "thumb": null,
+      "file": "18/180ceadedf0293c3ebcaf56dea345973b1381586.webp",
+      "thumb": "18/180ceadedf0293c3ebcaf56dea345973b1381586.t.webp",
       "url": "http://nhlr.org/media/2702/us168_loves.gif",
       "source_url": "http://nhlr.org/lookouts/us/tx/loves-lookout/",
       "credit": "National Historic Lookout Register (nhlr.org)",
       "license": "All rights reserved",
       "caption": null,
-      "year": null
+      "year": null,
+      "w": 424,
+      "h": 564
     }
   ],
   "links": [
@@ -66,6 +90,11 @@
       "label": "NHLR register entry US 168 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/tx/loves-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Love's Lookout in Texas (Texas Escapes (texasescapes.com))",
+      "url": "https://www.texasescapes.com/AllThingsHistorical/Loves-Lookout-504BB.htm",
+      "kind": "reference"
     },
     {
       "label": "FFLA Texas lookout list (firelookout.org)",
@@ -98,10 +127,32 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tx-loves",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "us-wa-clearwater-2",
   "name": "Clearwater Lookout",
+  "summary": "A 1933 CCC-built Aermotor steel tower above the old Clearwater Ranger Station, with a 1935 CCC cabin now rented year-round and the tower kept in reserve for emergencies.",
   "other_names": [
     "Clearwater Lookout Cabin"
   ],
@@ -15,7 +16,7 @@
   },
   "elevation_m": 1727.6,
   "kind": "tower",
-  "design": "Aermotor",
+  "design": "Aermotor MC-39 steel tower",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -30,17 +31,17 @@
   "agency": "US Forest Service - Umatilla National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=no."
+    "level": "closed",
+    "note": "Tower itself closed to public access per the Recreation.gov listing; OpenStreetMap separately tags the node access=no (no climbing tag found). The rental cabin at its base is open to paying guests year-round, with car access June 1-Oct 31."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2026"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "Car access June 1 to October 31, weather permitting; snowshoe, ski or snowmobile the rest of the year (recreation.gov)."
   },
   "rental": {
     "available": true,
@@ -58,48 +59,97 @@
   },
   "events": [
     {
+      "year": 1908,
+      "event": "built",
+      "note": "Clearwater Ranger Station established from a converted trapper's cabin (predates the current tower)",
+      "from": "research",
+      "source_url": "http://www.willhiteweb.com/washington_fire_lookouts/clearwater_lookout/umatilla_national_forest_048.htm"
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "Steel Aermotor MC-39 tower built by a ~200-man CCC camp working the Asotin District; conflicts with NHLR's own 'Built 1938' field",
+      "from": "research",
+      "source_url": "http://www.willhiteweb.com/washington_fire_lookouts/clearwater_lookout/umatilla_national_forest_048.htm",
+      "source_urls": [
+        "http://www.willhiteweb.com/washington_fire_lookouts/clearwater_lookout/umatilla_national_forest_048.htm",
+        "http://nhlr.org/lookouts/us/wa/clearwater-lookout/"
+      ]
+    },
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "Ground cabin at the base of the tower built by the CCC",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/clearwater-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/clearwater-lookout/",
+        "https://www.firelookout.com/wa/clearwater.html"
+      ]
+    },
+    {
       "year": 1938,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
     },
     {
+      "year": 2021,
+      "event": "staffed_last",
+      "note": "Tower pressed into service as a temporary radio repeater site during the Lick Creek (Dry Gulch) fire, August 2021; described as still available for emergencies rather than routinely staffed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/clearwater-lookout/"
+    },
+    {
       "year": 2022,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: April 11, 2022",
       "from": "nhlr"
+    },
+    {
+      "year": 2023,
+      "event": "restored",
+      "note": "Rental cabin updated inside and out",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/234271"
     }
   ],
   "photos": [
     {
-      "file": null,
-      "thumb": null,
+      "file": "40/4012afd0161b044a6ec967a26bfb06cc2a4b0b32.webp",
+      "thumb": "40/4012afd0161b044a6ec967a26bfb06cc2a4b0b32.t.webp",
       "url": "http://nhlr.org/media/4644/clearwater-lookout.jpg",
       "source_url": "http://nhlr.org/lookouts/us/wa/clearwater-lookout/",
       "credit": "Christine Estrada, via National Historic Lookout Register (nhlr.org)",
       "license": "All rights reserved",
       "caption": "Clearwater Lookout - 2018",
-      "year": 2018
+      "year": 2018,
+      "w": 1024,
+      "h": 768
     },
     {
-      "file": null,
-      "thumb": null,
+      "file": "a1/a132b80a4ae4552c557920315e645763d7925489.webp",
+      "thumb": "a1/a132b80a4ae4552c557920315e645763d7925489.t.webp",
       "url": "http://nhlr.org/media/4645/clearwater-unknown.jpg",
       "source_url": "http://nhlr.org/lookouts/us/wa/clearwater-lookout/",
       "credit": "Umatilla National Forest, via National Historic Lookout Register (nhlr.org)",
       "license": "All rights reserved",
       "caption": "Clearwater Lookout - Undated",
-      "year": null
+      "year": null,
+      "w": 487,
+      "h": 743
     },
     {
-      "file": null,
-      "thumb": null,
+      "file": "bd/bd54d6d96da6cf720dbcb5eb9855f12fe6ec9953.webp",
+      "thumb": "bd/bd54d6d96da6cf720dbcb5eb9855f12fe6ec9953.t.webp",
       "url": "http://www.firelookout.com/wa/clearwater1997.jpg",
       "source_url": "https://www.firelookout.com/wa/clearwater.html",
       "credit": "the Fire Lookout Museum, via firelookout.com",
       "license": null,
       "caption": "Clearwater in 1997",
-      "year": 1997
+      "year": 1997,
+      "w": 309,
+      "h": 359
     }
   ],
   "links": [
@@ -112,6 +162,11 @@
       "label": "Recreation.gov listing",
       "url": "https://www.recreation.gov/camping/campgrounds/234271",
       "kind": "rental"
+    },
+    {
+      "label": "Clearwater Lookout - Umatilla National Forest (willhiteweb.com)",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/clearwater_lookout/umatilla_national_forest_048.htm",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -185,6 +240,22 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-clearwater-2",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -208,7 +279,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

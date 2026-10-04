@@ -1,6 +1,7 @@
 {
   "id": "us-or-fall-mountain",
   "name": "Fall Mountain Lookout",
+  "summary": "Rentable L-4 lookout above the Malheur National Forest, built as an emergency post in 1930 and standing in its current 1933/1953 form today.",
   "other_names": [
     "Fall Mountain Lookout Cabin"
   ],
@@ -15,8 +16,8 @@
   },
   "elevation_m": 1798.9,
   "kind": "tower",
-  "design": "L-4",
-  "height_m": 4.6,
+  "design": "L-4 ground cab on an 18-foot pole tower",
+  "height_m": 5.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -27,20 +28,20 @@
       "url": "http://nhlr.org/lookouts/us/or/fall-mountain-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Malheur National Forest, Blue Mountain Ranger District",
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Reachable by vehicle; rented overnight through Recreation.gov. The final stretch of road is narrow, rutted and rough, and Recreation.gov recommends a high-clearance vehicle -- a rougher account than a 2007 renter's 'no ruts in road.' A telecom site is adjacent, with excellent cell reception but towers and generator noise intruding on the sunrise view from the catwalk."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2007"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "Wilderness trailheads roughly 30 minutes away by vehicle; multi-use trailhead at Starr Springs south of the tower."
   },
   "rental": {
     "available": true,
@@ -60,46 +61,68 @@
     {
       "year": 1930,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Established as an emergency fire lookout.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/fallmtn.html"
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "National Historic Lookout Register dates construction of the 18-foot pole tower and L-4 cab to 1933, rather than 1930.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/fall-mountain-lookout/"
+    },
+    {
+      "year": 1953,
+      "event": "rebuilt",
+      "note": "The pole tower was replaced; the L-4 cab remained largely original.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/fall-mountain-lookout/"
     },
     {
       "year": 1995,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 8, 1995",
-      "from": "nhlr"
+      "note": "Registered March 8, 1995 as NHLR US 115 / OR 15, nominated by Gary McAtee and Ron Johnson of the Oregon FFLA chapter.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/fall-mountain-lookout/"
     }
   ],
   "photos": [
     {
-      "file": null,
-      "thumb": null,
+      "file": "09/09225541a197ebf785d0d14f2c2ef8e74f26f288.webp",
+      "thumb": "09/09225541a197ebf785d0d14f2c2ef8e74f26f288.t.webp",
       "url": "http://nhlr.org/media/4993/fallmtn2009rk.jpg",
       "source_url": "http://nhlr.org/lookouts/us/or/fall-mountain-lookout/",
       "credit": "Ron Kemnow, via National Historic Lookout Register (nhlr.org)",
       "license": "All rights reserved",
       "caption": "Fall Mountain Lookout - 2009",
-      "year": 2009
+      "year": 2009,
+      "w": 642,
+      "h": 783
     },
     {
-      "file": null,
-      "thumb": null,
+      "file": "29/2950cf817b9a22d1e5a70e1c93c051653dc5a7ed.webp",
+      "thumb": "29/2950cf817b9a22d1e5a70e1c93c051653dc5a7ed.t.webp",
       "url": "http://nhlr.org/media/4994/fallmtn1942malnfarc.jpg",
       "source_url": "http://nhlr.org/lookouts/us/or/fall-mountain-lookout/",
       "credit": "Malheur National Forest Archives, via National Historic Lookout Register (nhlr.org)",
       "license": "All rights reserved",
       "caption": "Fall Mountain Lookout - 1942",
-      "year": 1942
+      "year": 1942,
+      "w": 626,
+      "h": 800
     },
     {
-      "file": null,
-      "thumb": null,
+      "file": "35/35a8d9c2975e05b155382ccc84aea02f56aa575e.webp",
+      "thumb": "35/35a8d9c2975e05b155382ccc84aea02f56aa575e.t.webp",
       "url": "http://www.firelookout.com/or/fallmtn.jpg",
       "source_url": "https://www.firelookout.com/or/fallmtn.html",
       "credit": "Rex Kamstra, via firelookout.com",
       "license": null,
       "caption": "Fall Mtn. L.O.",
-      "year": null
+      "year": null,
+      "w": 283,
+      "h": 351
     }
   ],
   "links": [
@@ -182,6 +205,23 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-fall-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -201,7 +241,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

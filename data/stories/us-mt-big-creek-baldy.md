@@ -1,0 +1,17 @@
+## Big Creek Baldy Lookout
+
+Big Creek Baldy sits in the Purcell Mountains, part of the Kootenai National Forest, about sixteen miles north of Libby, Montana.[^2][^3] The first structure on the peak was a simple log cabin, raised in 1928 by one account or 1929 by another.[^1][^2] It gave a lookout a roof, but not much of a view, so in 1934 a 30-foot wooden tower with a small 7-by-7-foot cab went up beside it; a 2016 newspaper account credits the construction, and the original cabin, to one builder, Stef Ludvikson.[^4]
+
+That tower lasted a little over three decades. In 1966 — one source gives 1967 — the Forest Service replaced it with the taller timber structure that still stands: a 41-foot tower topped by a 15-by-15-foot flattop R-6 cab, reached by 55 steps.[^1][^2][^4] A log cabin near its base served as a bunkhouse for fire-detection crews; one source describes it as moved to the site in the 1950s to replace an older, deteriorated building, which does not sit easily with the 1928/1929 date given for the original cabin elsewhere, so which structure is which is not entirely clear from the sources at hand.[^3] That cabin is still there but has had its roof deliberately caved in for safety.[^3]
+
+Staffed fire detection at Big Creek Baldy ended by the 1980s as aerial and other methods took over the job.[^3] The lookout did not sit empty for long: it entered the Forest Service's rental program in 1984, and by 2000 it had also been accepted onto the National Historic Lookout Register (US 341, MT 23).[^1][^4]
+
+Today the tower is one of the more popular lookout rentals in the Libby area, with views that take in Lake Koocanusa, the Yaak River valley, and the Turner Mountain ski area.[^4][^5] Sources differ slightly on the exact elevation — 5,732 feet per the National Historic Lookout Register, 5,768 or 5,780 feet elsewhere — a small discrepancy common to older lookout records.[^1][^2][^5]
+
+The lookout is open to overnight guests by reservation, typically mid-June through late September, and sleeps four in a double and a twin bed.[^5] There is no water or electricity on site — the nearest water source is Pipe Creek, about six miles downhill — so guests pack in their own supplies and pack out their trash.[^3][^5] Two trails descend from the tower through forest and open, rocky ground marked by cairns, and a high-clearance vehicle is recommended for the drive up.[^3][^5] It remains a working piece of Forest Service history rather than a museum piece: climb it, as a paying guest, and you are standing where a fire watcher once stood.
+
+[^1]: Big Creek Baldy Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/mt/big-creek-baldy-lookout/ (accessed 2026-10-04).
+[^2]: Big Creek Baldy Fire Lookout Tower, firelookout.com (Rex Kamstra), https://www.firelookout.com/mt/bigcreek.html (accessed 2026-10-04).
+[^3]: Explore It All: Big Creek Baldy Lookout, Kootenai National Forest, Montana, National Forest Foundation, https://www.nationalforests.org/article/explore-it-all-big-creek-baldy-lookout-kootenai-national-forest-montana/ (accessed 2026-10-04).
+[^4]: Former fire lookouts a tool for tourism, The Western News, https://thewesternnews.com/news/2016/jul/12/former-fire-lookouts-a-tool-for-tourism-12/ (accessed 2026-10-04).
+[^5]: Big Creek Baldy Lookout Rental, Recreation.gov, https://www.recreation.gov/camping/campgrounds/234399 (accessed 2026-10-04).

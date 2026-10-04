@@ -1,6 +1,7 @@
 {
   "id": "us-wy-wyoming-peak",
   "name": "Wyoming Peak Lookout",
+  "summary": "Wyoming's highest fire lookout site; an L-4 cab replaced earlier tent and stone camps in the 1930s, was abandoned in 1957, and collapsed around 2010.",
   "other_names": [],
   "country": "US",
   "region": "WY",
@@ -13,10 +14,10 @@
   },
   "elevation_m": 3467.1,
   "kind": "ground",
-  "design": null,
+  "design": "L-4 ground cab",
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "ruins",
+  "status_note": "Collapsed around 2010; OpenStreetMap and the FFLA's Wyoming list both show it gone, though the NHLR status field still reads 'standing' even as the NHLR page's own text describes the collapse.",
   "registers": [
     {
       "register": "NHLR",
@@ -25,40 +26,90 @@
       "url": "http://nhlr.org/lookouts/us/wy/wyoming-peak-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Bridger-Teton National Forest)",
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "No source describes current access or trail conditions; nothing remains to shelter in or climb."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2026"
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
   "rental": null,
   "events": [
     {
+      "year": 1931,
+      "event": "staffed_first",
+      "note": "Earliest recorded lookout staffer, Garland Toland, predating the L-4 cab, consistent with an earlier tent/stone camp on the summit.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wy/wyomingpeak.html"
+    },
+    {
+      "year": 1932,
+      "event": "built",
+      "note": "NHLR dates the lookout's service from 1932; a Forest Service history of BTNF lookouts counts 23 years of service ending 1957, which implies a start closer to 1934. Exact build year unresolved.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wy/wyoming-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wy/wyoming-peak-lookout/",
+        "https://buckrail.com/peak-into-the-past-with-history-of-wyo-btnf-fire-lookouts/"
+      ]
+    },
+    {
+      "year": 1940,
+      "event": "staffed_last",
+      "note": "Latest recorded staffer in available sources, Garland Toland.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wy/wyomingpeak.html"
+    },
+    {
+      "year": 1957,
+      "event": "abandoned",
+      "note": "Forest Service abandoned the lookout in favor of aerial fire detection.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wy/wyoming-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wy/wyoming-peak-lookout/",
+        "https://buckrail.com/peak-into-the-past-with-history-of-wyo-btnf-fire-lookouts/"
+      ]
+    },
+    {
+      "year": 2010,
+      "event": "destroyed",
+      "note": "Structure collapsed; NHLR gives 2010, firelookout.com gives 'early 2010s'.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wy/wyoming-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wy/wyoming-peak-lookout/",
+        "https://www.firelookout.com/wy/wyomingpeak.html"
+      ]
+    },
+    {
       "year": 2026,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 2, 2026",
-      "from": "nhlr"
+      "note": "Registered January 2, 2026, nominated by Dixie Boyle.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wy/wyoming-peak-lookout/"
     }
   ],
   "photos": [
     {
-      "file": null,
-      "thumb": null,
+      "file": "e7/e75635a0bac7e28b36c8d67d742f7df713032d75.webp",
+      "thumb": "e7/e75635a0bac7e28b36c8d67d742f7df713032d75.t.webp",
       "url": "http://nhlr.org/media/5741/wyoming-peak.jpg",
       "source_url": "http://nhlr.org/lookouts/us/wy/wyoming-peak-lookout/",
       "credit": "Dixie Boyle, via National Historic Lookout Register (nhlr.org)",
       "license": "All rights reserved",
       "caption": null,
-      "year": null
+      "year": null,
+      "w": 479,
+      "h": 322
     }
   ],
   "links": [
@@ -66,6 +117,11 @@
       "label": "NHLR register entry US 1784 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wy/wyoming-peak-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Peak into the Past With History of Wyo, BTNF Fire Lookouts (Buckrail)",
+      "url": "https://buckrail.com/peak-into-the-past-with-history-of-wyo-btnf-fire-lookouts/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Wyoming lookout list (firelookout.org)",
@@ -123,12 +179,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wy-wyoming-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "ruins"
+        },
         {
           "source": "nhlr",
           "value": "standing"
@@ -143,10 +219,16 @@
         }
       ],
       "distance_m": null,
-      "note": "NHLR lists lookouts that were standing when registered. firelookout.com lists it, but not on its map of standing lookouts."
+      "note": "Research (2026-10-04) gives ruins where the source records give standing. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

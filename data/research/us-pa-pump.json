@@ -1,0 +1,44 @@
+{
+  "id": "us-pa-pump",
+  "researched": "2026-10-04",
+  "summary": "A 1919 steel Aermotor tower in Tiadaghton State Forest, replacing a 1914 wood-and-tree lookout, found intact but decaying and unstaffed in a 2017 inspection.",
+  "facts": {
+    "design": "Aermotor",
+    "height_m": 18.3,
+    "status": "standing",
+    "status_note": "Described as intact but decayed in an April 2017 inspection.",
+    "staffing": {"status": "unstaffed", "as_of": "2017"},
+    "access": {"level": "unknown", "note": "No NHLR sign or directional markers; unmarked and easy to miss. A nearby former observer's cabin is privately leased -- treat it as private, not public forest land."},
+    "visit": {"climbable": true, "drive_up": null, "trail_note": null},
+    "agency": "Pennsylvania Bureau of Forestry"
+  },
+  "events": [
+    {"year": 1914, "event": "built", "note": "Original wood-and-tree lookout on this site, later replaced", "cite": [1, 2]},
+    {"year": 1919, "event": "built", "note": "Current 60-ft steel Aermotor tower erected for $939, replacing the 1914 wood-and-tree tower", "cite": [1, 2]},
+    {"year": 1935, "event": "rebuilt", "note": "Observer's cabin atop the tower replaced", "cite": [1]},
+    {"year": 2016, "event": "nhlr_registered", "note": "Registered July 24, 2016, nominated by Henry Isenberg", "cite": [1]}
+  ],
+  "corrections": [
+    {
+      "field": "conflicts",
+      "current": "Record lists a 1919/1914 built-year conflict between nhlr and pa_storymap as unresolved.",
+      "proposed": "Not a real conflict: both sources agree -- a 1914 wood-and-tree tower was replaced by the current 1919 steel Aermotor tower. Suggest marking the conflict resolved and adding the 1914 predecessor as its own event rather than a disagreement.",
+      "evidence": "NHLR detail page and the PA Fire Towers StoryMap both describe the 1919 tower as replacing a 1914 wood-and-tree structure on the same site.",
+      "cite": [1, 2]
+    }
+  ],
+  "sources": [
+    {"n": 1, "title": "Pump Station Fire Tower", "publisher": "National Historic Lookout Register (nhlr.org)", "url": "http://nhlr.org/lookouts/us/pa/pump-station-fire-tower/", "accessed": "2026-10-04"},
+    {"n": 2, "title": "Fire Towers of Pennsylvania (StoryMap)", "publisher": "Shawn Lesitsky, Esri ArcGIS StoryMaps", "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4", "accessed": "2026-10-04"}
+  ],
+  "photos": [],
+  "confidence": "medium",
+  "notes_for_editor": "The eastern_us_lookouts cached page for this tower (data/raw/eastern_us_lookouts/pumping-station.html) turned out to be a bare site-wide navigation index with no actual content on Pump Station, so it wasn't usable as a source. The NHLR page itself is the richest source here, including a detailed 2017 volunteer visit report (condition, staffing, access) that is normally not captured in the tower record. The 'conflict' in the tower JSON between nhlr (1919) and pa_storymap (1914) looks like a misread of agreeing sources rather than a real disagreement -- see the proposed correction. Did not attempt the PA StoryMap's embedded photo or the NHLR gallery images beyond what's already in the tower record.",
+  "verification": {
+    "checked": "2026-10-04",
+    "claims_checked": 17,
+    "unsupported_removed": 2,
+    "errors_fixed": 1,
+    "verdict": "fixed"
+  }
+}

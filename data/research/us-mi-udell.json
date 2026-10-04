@@ -1,0 +1,50 @@
+{
+  "id": "us-mi-udell",
+  "researched": "2026-10-04",
+  "summary": "The last fire lookout tower standing in the Huron-Manistee National Forest, built in 1936 and no longer open for climbing.",
+  "facts": {
+    "design": "Prefabricated steel-angle tower on concrete pedestals, enclosed hip-roofed steel cab",
+    "height_m": 30.5,
+    "status": "standing",
+    "status_note": "Lower flights of stairs removed and base wrapped in barbed wire; not climbable as of 2019-2020 visit reports",
+    "staffing": {"status": "unstaffed", "as_of": "2020"},
+    "access": {"level": "restricted", "note": "Site reachable by forest road but tower is not climbable; no NHLR plaque, access roads poorly signed and unreliable by GPS"},
+    "visit": {"climbable": false, "drive_up": null, "trail_note": "Off Forest Road 5207 near Wellston, Michigan; visit reports warn mapped/GPS routes can be wrong"},
+    "agency": "Huron-Manistee National Forest, Manistee Ranger District"
+  },
+  "events": [
+    {"year": 1936, "event": "built", "note": "Built under a 1936 fire control plan, three years after the Manistee National Forest's 1933 creation; the NHLR's own description text instead gives 1940 and credits the CCC, but this conflicts with Wikipedia and the NRHP period of significance (1925-1949, with 1936 marked as the key year)", "cite": [2, 3]},
+    {"year": 1991, "event": "nhlr_registered", "note": "Registered July 1, 1991 as US 12 / MI 1", "cite": [1]},
+    {"year": 1996, "event": "nrhp_listed", "note": "Listed on the National Register of Historic Places August 22, 1996, reference 95001013, for engineering and conservation significance", "cite": [3]}
+  ],
+  "corrections": [
+    {
+      "field": "events",
+      "current": "built: 1936 (from wikidata, no note)",
+      "proposed": "Keep 1936 as the built year, but add a note flagging that an NHLR visit-report page claims 1940/CCC construction, which conflicts with Wikipedia and the NRHP's 1925-1949 period of significance (1936 marked as key year)",
+      "evidence": "Wikipedia and NPGallery/NRHP detail page both support 1936; the NHLR page's own description text (not a dated visit report, but its general tower summary) says 'Constructed by the CCC in 1940, this tower is the last remaining tower in the Manistee National Forest.'",
+      "cite": [1, 2, 3]
+    },
+    {
+      "field": "events",
+      "current": "No nrhp_listed event in the record",
+      "proposed": "Add {\"year\": 1996, \"event\": \"nrhp_listed\", \"note\": \"Listed August 22, 1996, ref 95001013\", \"from\": \"nps\"}",
+      "evidence": "NPGallery NRHP detail page gives the listing date as August 22, 1996 for reference number 95001013, which matches the registers field already in the record but is missing as an event.",
+      "cite": [3]
+    }
+  ],
+  "sources": [
+    {"n": 1, "title": "Udell Lookout Tower", "publisher": "National Historic Lookout Register (nhlr.org)", "url": "http://nhlr.org/lookouts/us/mi/udell-lookout-tower/", "accessed": "2026-10-04"},
+    {"n": 2, "title": "Udell Lookout Tower", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Udell_Lookout_Tower", "accessed": "2026-10-04"},
+    {"n": 3, "title": "National Register of Historic Places listing detail, ref 95001013", "publisher": "NPGallery, National Park Service", "url": "https://npgallery.nps.gov/AssetDetail/NRIS/95001013", "accessed": "2026-10-04"}
+  ],
+  "confidence": "medium",
+  "notes_for_editor": "Built-year conflict (1936 vs. NHLR's 1940/CCC claim) is real and unresolved; I favored 1936 since both Wikipedia and the NRHP period of significance back it, but a human with access to the actual NRHP nomination PDF (not just the NPGallery detail page) could settle it outright. No cached local source pages existed for this tower beyond the NHLR page; no newspaper or Forest Service primary-source search was attempted beyond the two WebFetch calls used here (within the 3-search budget, no WebSearch calls were needed since WebFetch on known URLs sufficed).",
+  "verification": {
+    "checked": "2026-10-04",
+    "claims_checked": 16,
+    "unsupported_removed": 0,
+    "errors_fixed": 2,
+    "verdict": "fixed"
+  }
+}
