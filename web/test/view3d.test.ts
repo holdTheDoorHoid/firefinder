@@ -280,3 +280,12 @@ describe('cross-shots', () => {
     expect(scoreFor(20000).stars).toBe(0);
   });
 });
+
+describe('distances in words', () => {
+  it('uses feet for short distances and miles first otherwise', async () => {
+    const { milesKm } = await import('../src/view3d/describe.ts');
+    expect(milesKm(90)).toBe('300 ft (90 m)');
+    expect(milesKm(26_000)).toBe('16 mi (26 km)');
+    expect(milesKm(5_000)).toBe('3.1 mi (5.0 km)');
+  });
+});

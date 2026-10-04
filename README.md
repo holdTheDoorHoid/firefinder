@@ -11,7 +11,10 @@ lookout site:
   recreation.gov where it's bookable.
 - **History**: a sourced story of who built it, who staffed it and what happened to it.
 - **The view**: a simulated panorama from the cab and a map of what the lookout could
-  see. This works for towers that are long gone too. *(coming)*
+  see, worked out in your browser from terrain data. This works for towers that are long gone
+  too.
+- **Spot the smoke**: a short lesson in how two lookouts found a fire with the Osborne
+  Firefinder.
 
 It's named for the Osborne Firefinder, the round sighting table in every lookout cab.
 
@@ -39,4 +42,6 @@ histories: CC BY-SA 4.0. Photos keep their own rights; see the credit next to ea
 
 ## For developers
 
-See `DESIGN.md` (authoritative design and data model).
+See `DESIGN.md` (authoritative design and data model). The 3D views need Rust with the
+`wasm32-unknown-unknown` target and wasm-pack: `cd web && npm run wasm` once before
+`npm run dev`.

@@ -100,8 +100,9 @@
 
 @media (max-width: 559px) {
   .pv-viewport { min-height: 250px; }
-  .pv-heading { min-width: 0; flex: 1; }
-  .pv-turn { width: 100%; justify-content: space-between; }
+  .pv-turn { width: 100%; flex-wrap: wrap; justify-content: center; }
+  .pv-heading { order: -1; flex-basis: 100%; min-width: 0; margin: 0 0 4px; }
+  .pv-heading-label { display: inline; margin-right: 4px; }
   .pv-tools { width: 100%; justify-content: space-between; }
 }
 
@@ -114,7 +115,7 @@
 /* ---------- Map: dialog and viewshed card ---------- */
 .dialog-wide { width: min(1240px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); }
 .dialog-wide .dialog-inner { padding: 4px 18px 18px; }
-.dialog-wide .dialog-head h2 { font-size: 1.35rem; }
+.dialog-wide .dialog-head h2 { font-size: clamp(1.1rem, 0.8rem + 1.6vw, 1.35rem); }
 
 .seen-card {
   position: absolute; z-index: 4; left: 12px; bottom: 34px; width: min(300px, calc(100% - 24px));

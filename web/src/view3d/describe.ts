@@ -62,7 +62,7 @@ export function typicalFloor(kind: string, lon: number): Typical {
 /** "10.7 m (35 ft)" */
 export function metresFeet(m: number, decimals = 1): string {
   const ft = Math.round(m / 0.3048);
-  return `${m.toFixed(m >= 100 ? 0 : decimals)} m (${nf.format(ft)} ft)`;
+  return `${m >= 100 ? nf.format(Math.round(m)) : m.toFixed(decimals)} m (${nf.format(ft)} ft)`;
 }
 
 /**
@@ -165,6 +165,7 @@ export function angleDiff(a: number, b: number): number {
 
 /** "21 mi (34 km)" for the list; miles first for US readers. */
 export function milesKm(m: number): string {
+  if (m < 300) return `${nf.format(Math.round(m / 0.3048 / 10) * 10)} ft (${nf.format(Math.round(m / 10) * 10)} m)`;
   const mi = m / 1609.344;
   const km = m / 1000;
   const d = (v: number) => (v < 10 ? v.toFixed(1) : nf.format(Math.round(v)));

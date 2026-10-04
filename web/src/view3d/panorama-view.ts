@@ -134,6 +134,20 @@ export class PanoramaView {
     return this.#data;
   }
 
+  /** Bearing of the smoke drawn in the view (the lesson), once ready. */
+  get smokeAz(): number | null {
+    return this.#smoke?.az ?? null;
+  }
+
+  /** Where the smoke is relative to the sighting hair, in words (for screen readers). */
+  #smokeWords(): string | null {
+    if (!this.#smoke) return null;
+    const d = ((this.#smoke.az - this.#view.az + 540) % 360) - 180;
+    if (Math.abs(d) < 0.25) return 'The smoke is right on the sight.';
+    if (Math.abs(d) > 20) return null;
+    return `Smoke ${Math.abs(d).toFixed(1)} degrees to the ${d > 0 ? 'right' : 'left'} of the sight.`;
+  }
+
   /** Turn to an azimuth (degrees). */
   turnTo(az: number, announce = false): void {
     this.#view.az = wrap360(az);
@@ -395,6 +409,7 @@ export class PanoramaView {
         },
       );
       if (run !== this.#run) return;
+      const first = !this.#data;
       this.#data = data;
       if (smoke && data.extra.length === 2) {
         const [base, top] = data.extra as [Sighted, Sighted];
@@ -402,14 +417,23 @@ export class PanoramaView {
           az: base.az,
           baseAngle: base.angle,
           topAngle: top.angle,
-          widthDeg: Math.max((60 / base.distM) * (180 / Math.PI), 0.08),
+          widthDeg: Math.max((120 / base.distM) * (180 / Math.PI), 0.12),
           seed: Math.round(smoke.lat * 1e5) ^ Math.round(smoke.lon * 1e5),
         };
       }
       this.#items = this.#labelItems(data);
       this.el.dataset.state = 'ready';
       this.#q('[data-pv-loading]')!.hidden = true;
-      if (this.#view.pxPerDeg === 12 && !this.#customEye) this.#view.pxPerDeg = this.#canvasWidth() < 560 ? 9 : 12;
+      if (first) {
+        this.#view.pxPerDeg = this.#canvasWidth() < 560 ? 9 : 12;
+        // Where the whole skyline stays within a degree or so of level (plateaus, rolling
+        // eastern hills) true proportions show a flat line; start with heights doubled, which
+        // the button and the view both say.
+        if (skylineRelief(data) < 1.5) {
+          this.#view.exaggeration = 2;
+          this.#q('[data-stretch]')?.setAttribute('aria-pressed', 'true');
+        }
+      }
       this.#relayout();
       this.#updateHeading(false);
       this.#renderLists(data);
@@ -429,7 +453,8 @@ export class PanoramaView {
     const items: LabelItem[] = [];
     const seenLookouts = d.lookouts.filter((l) => l.visible);
     for (const p of d.peaks) {
-      // A lookout on this summit already names it.
+      // The summit the lookout stands on, and summits a lookout already names.
+      if (p.distM < 300) continue;
       if (seenLookouts.some((l) => Math.abs(l.distM - p.distM) < 500 && Math.abs(((l.az - p.az + 540) % 360) - 180) * (Math.PI / 180) * p.distM < 500)) continue;
       const sky = horizonAt(d, lastLayer, p.az);
       const onSkyline = p.angle >= sky - 0.05;
@@ -493,9 +518,15 @@ export class PanoramaView {
       const labels = placeLabels(this.#items, this.#view, L, measure);
       drawPanorama(ctx, d, this.#view, L, { labels, palette: P, smoke: this.#smoke, highlight: this.#highlight });
       if (this.#view.exaggeration !== 1) {
+        const text = `Heights drawn ×${this.#view.exaggeration}`;
         ctx.font = `700 11px ${FONT}`;
+        const w = ctx.measureText(text).width + 12;
+        ctx.fillStyle = P.labelHalo;
+        ctx.beginPath();
+        ctx.roundRect(6, L.ringTop - 24, w, 18, 9);
+        ctx.fill();
         ctx.fillStyle = P.accent;
-        ctx.fillText(`Heights drawn ×${this.#view.exaggeration}`, 8, L.ringTop - 8);
+        ctx.fillText(text, 12, L.ringTop - 11);
       }
       const ov = this.#overview;
       const octx = ov.getContext('2d')!;
@@ -514,11 +545,13 @@ export class PanoramaView {
     const a = this.#q('[data-pv-az]');
     if (a) a.textContent = azText;
     const ahead = this.#ahead();
+    const smoke = this.#smokeWords();
+    const azWords = this.#o.stepDeg && this.#o.stepDeg < 1 ? azimuthText(Math.round(az * 2) / 2, 1).replace('°', ' degrees') : `${Math.round(az) % 360} degrees`;
     this.#viewport.setAttribute('aria-valuenow', String(Math.round(az) % 360));
-    this.#viewport.setAttribute('aria-valuetext', `Looking ${bearing}, azimuth ${Math.round(az) % 360} degrees.${ahead ? ` Ahead: ${ahead}.` : ''}`);
+    this.#viewport.setAttribute('aria-valuetext', `Looking ${bearing}, azimuth ${azWords}.${ahead ? ` Ahead: ${ahead}.` : ''}${smoke ? ` ${smoke}` : ''}`);
     if (announce) {
       clearTimeout(this.#liveTimer);
-      this.#liveTimer = window.setTimeout(() => this.#announce(`${bearing}.${ahead ? ` Ahead: ${ahead}.` : ''}`), 350);
+      this.#liveTimer = window.setTimeout(() => this.#announce(`${bearing}.${ahead ? ` Ahead: ${ahead}.` : ''}${smoke ? ` ${smoke}` : ''}`), 350);
     }
   }
 
@@ -572,9 +605,10 @@ export class PanoramaView {
   #renderLists(d: PanoramaData): void {
     const host = this.#q('[data-pv-lists]');
     if (!host) return;
-    const peaks = [...d.peaks].sort((a, b) => scorePeak(b) - scorePeak(a));
+    const named = d.peaks.filter((p) => p.distM >= 300);
+    const peaks = [...named].sort((a, b) => scorePeak(b) - scorePeak(a));
     const top = new Set(peaks.slice(0, 12).map((p) => p.gnisId));
-    const byBearing = [...d.peaks].sort((a, b) => a.az - b.az);
+    const byBearing = [...named].sort((a, b) => a.az - b.az);
     const visibleLookouts = d.lookouts.filter((l) => l.visible).sort((a, b) => a.distM - b.distM);
     const hiddenLookouts = d.lookouts.length - visibleLookouts.length;
     const base = import.meta.env.BASE_URL;
@@ -595,12 +629,12 @@ export class PanoramaView {
         <p class="fine">${hiddenLookouts ? `${hiddenLookouts} more lookout ${hiddenLookouts === 1 ? 'site is' : 'sites are'} within range but hidden by terrain. ` : ''}Gone lookouts are shown at their old sites, so you can see which ones once watched each other. Their cabs are taken at typical heights.</p>
       </section>
       <section aria-labelledby="${this.#id}-pk">
-        <h3 class="h-small" id="${this.#id}-pk">Named peaks in sight <span class="pv-count">${d.peaks.length}</span></h3>
-        ${d.peaks.length
+        <h3 class="h-small" id="${this.#id}-pk">Named peaks in sight <span class="pv-count">${named.length}</span></h3>
+        ${named.length
           ? html`<ul class="pv-list">${byBearing.map(
               (p: PeakSight) => html`<li ${top.has(p.gnisId) ? '' : raw('data-extra hidden')}>${faceBtn(p, `p${p.gnisId}`, p.name)} ${where(p)} <span class="pv-elev">${aboutFeet(p.groundM)}</span></li>`,
             )}</ul>
-            ${d.peaks.length > top.size ? html`<p><button type="button" class="linklike" data-pv-more>Show all ${d.peaks.length}</button></p>` : ''}`
+            ${named.length > top.size ? html`<p><button type="button" class="linklike" data-pv-more>Show all ${named.length}</button></p>` : ''}`
           : html`<p class="fine">No named summits in line of sight${d.peaksChecked ? '' : ' (the list of peak names did not load)'}.</p>`}
         <p class="fine">Names from the USGS Geographic Names Information System. Heights are read from the terrain data and are approximate. Sorted by bearing, clockwise from north.</p>
       </section>`.value;
@@ -633,6 +667,20 @@ export class PanoramaView {
     cancelAnimationFrame(this.#frame);
     this.#run++;
   }
+}
+
+/** How much the far skyline rises and falls around the circle, degrees. */
+function skylineRelief(d: PanoramaData): number {
+  const row = (d.layersM.length - 1) * d.columns;
+  let lo = 90;
+  let hi = -90;
+  for (let c = 0; c < d.columns; c++) {
+    const a = d.horizon[row + c]!;
+    if (a < -89) continue;
+    lo = Math.min(lo, a);
+    hi = Math.max(hi, a);
+  }
+  return hi - lo;
 }
 
 function scorePeak(p: PeakSight): number {

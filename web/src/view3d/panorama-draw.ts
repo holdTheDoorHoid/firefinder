@@ -37,7 +37,7 @@ export const PALETTES: Record<Theme, Palette> = {
     skyHorizon: '#eef0ea',
     near: [74, 92, 76],
     far: [184, 197, 204],
-    lineNear: [22, 32, 25],
+    lineNear: [34, 46, 37],
     lineFar: [120, 137, 150],
     ink: '#1c2620',
     muted: '#56625a',
@@ -49,15 +49,15 @@ export const PALETTES: Record<Theme, Palette> = {
     labelHalo: 'rgba(244,241,232,0.88)',
     leader: 'rgba(28,38,32,0.45)',
     level: 'rgba(28,38,32,0.35)',
-    smoke: [248, 248, 244],
+    smoke: [128, 120, 112],
   },
   dark: {
     skyTop: '#0c131c',
     skyHorizon: '#26323b',
-    near: [10, 15, 12],
-    far: [70, 86, 98],
-    lineNear: [96, 116, 104],
-    lineFar: [120, 140, 156],
+    near: [24, 33, 28],
+    far: [88, 106, 120],
+    lineNear: [120, 140, 128],
+    lineFar: [134, 154, 170],
     ink: '#e9e5d9',
     muted: '#a2aca4',
     ringBg: '#19211c',
@@ -68,7 +68,7 @@ export const PALETTES: Record<Theme, Palette> = {
     labelHalo: 'rgba(17,23,19,0.85)',
     leader: 'rgba(233,229,217,0.45)',
     level: 'rgba(233,229,217,0.3)',
-    smoke: [214, 214, 210],
+    smoke: [214, 210, 202],
   },
 };
 
@@ -181,6 +181,11 @@ export interface PlacedLabel {
  * Greedy placement: best-scoring names first, each in the lowest free row above its anchor,
  * centred on it where possible. Names that do not fit are left for the list below the view.
  */
+/** Long names are cut on the view (the lists below give them in full). */
+export function clip(name: string, max = 28): string {
+  return name.length <= max ? name : `${name.slice(0, max - 1).trimEnd()}…`;
+}
+
 export function placeLabels(items: LabelItem[], view: View, layout: Layout, measure: (text: string, bold: boolean) => number): PlacedLabel[] {
   const rows: [number, number][][] = Array.from({ length: layout.labelRows }, () => []);
   const placed: PlacedLabel[] = [];
@@ -189,7 +194,7 @@ export function placeLabels(items: LabelItem[], view: View, layout: Layout, meas
     const ax = xOf(view, layout, item.sight.az);
     if (ax < -40 || ax > layout.width + 40) continue;
     const ay = yOf(layout, item.sight.angle);
-    const w = Math.max(measure(item.name, item.kind !== 'peak'), measure(item.sub, false)) + (item.kind === 'lookout' ? 16 : 0) + 8;
+    const w = Math.max(measure(clip(item.name), item.kind !== 'peak'), measure(item.sub, false)) + (item.kind === 'lookout' ? 16 : 0) + 8;
     const x = Math.min(Math.max(ax - w / 2, 2), layout.width - w - 2);
     if (ax < x + 3 || ax > x + w - 3) continue; // its leader would miss the label: wait until panned into view
     for (let r = layout.labelRows - 1; r >= 0; r--) {
@@ -290,7 +295,7 @@ export function drawPanorama(ctx: CanvasRenderingContext2D, data: PanoramaData, 
       pen = ridge;
     }
     ctx.strokeStyle = mix(P.lineNear, P.lineFar, t);
-    ctx.lineWidth = j < nl / 3 ? 1.3 : 1;
+    ctx.lineWidth = 1;
     ctx.lineJoin = 'round';
     ctx.lineCap = 'round';
     ctx.stroke(line);
@@ -332,7 +337,7 @@ export function drawPanorama(ctx: CanvasRenderingContext2D, data: PanoramaData, 
     }
     ctx.fillStyle = isLookout ? P.lookout : P.ink;
     ctx.font = `${isLookout ? 700 : 600} 12px ${FONT}`;
-    ctx.fillText(p.item.name, tx, top + 12);
+    ctx.fillText(clip(p.item.name), tx, top + 12);
     ctx.fillStyle = P.muted;
     ctx.font = `500 10.5px ${FONT}`;
     ctx.fillText(p.item.sub, tx, top + 23);
@@ -436,14 +441,14 @@ export function drawSmoke(ctx: CanvasRenderingContext2D, view: View, L: Layout, 
   const yb = yOf(L, s.baseAngle);
   const yt = yOf(L, s.topAngle);
   const r = rand(s.seed);
-  const w = Math.max(s.widthDeg * view.pxPerDeg, 2.5);
-  const n = 22;
+  const w = Math.max(s.widthDeg * view.pxPerDeg, 4);
+  const n = 26;
   for (let i = 0; i < n; i++) {
     const f = i / (n - 1);
     const y = yb + (yt - yb) * f;
     const drift = f * f * w * 3.2 + (r() - 0.5) * w * 0.6;
     const rad = w * (0.6 + f * 1.8) * (0.8 + r() * 0.4);
-    const alpha = 0.55 * (1 - f * 0.75);
+    const alpha = 0.8 * (1 - f * 0.7);
     const g = ctx.createRadialGradient(x0 + drift, y, 0, x0 + drift, y, rad);
     const [cr, cg, cb] = P.smoke;
     g.addColorStop(0, `rgba(${cr},${cg},${cb},${alpha})`);
