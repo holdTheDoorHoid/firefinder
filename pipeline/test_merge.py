@@ -436,6 +436,79 @@ class MovedStructures(unittest.TestCase):
             ws.close()
 
 
+class ReassignSameSpot(unittest.TestCase):
+    """DESIGN.md §3.5: within 100 m, a record with a clearly different name is reassigned to a
+    tower it strongly and uniquely names elsewhere in the region, instead of joining the near
+    one -- but only for RIDB/idahofirelookouts.com, whose pins are already known to be rougher
+    (see the Black Butte / Lookout Butte, ID story: recreation.gov's "Lookout Butte Lookout"
+    facility sits 45 m from Black Butte but is really Lookout Butte's listing, 64 km away)."""
+
+    def setUp(self):
+        self.ws = Workspace()
+
+    def tearDown(self):
+        self.ws.close()
+
+    def test_ridb_coordinate_error_is_reassigned(self):
+        rep = self.ws.run({
+            "nhlr": [rec("nhlr", "US1", "Black Butte Lookout", 45.0, -115.0, "ID"),
+                     rec("nhlr", "US2", "Lookout Butte Lookout", 45.577, -115.0, "ID")],
+            "ridb": [rec("ridb", "1", "LOOKOUT BUTTE LOOKOUT", 45.0004, -115.0, "ID",
+                         rental={"available": True, "provider": "recreation.gov",
+                                 "url": "https://www.recreation.gov/camping/campgrounds/1"})],
+        })
+        black_butte = self.ws.tower_with_key("nhlr:US1")
+        lookout_butte = self.ws.tower_with_key("nhlr:US2")
+        ridb_tower = self.ws.tower_with_key("ridb:1")
+        self.assertEqual(ridb_tower["id"], lookout_butte["id"])
+        self.assertNotEqual(ridb_tower["id"], black_butte["id"])
+        self.assertIsNone(black_butte["rental"])
+        self.assertIsNotNone(lookout_butte["rental"])
+        items = [r for r in rep["review"] if r["type"] == "reassigned_same_spot"]
+        self.assertEqual([i["key"] for i in items], ["ridb:1"])
+        self.assertEqual(items[0]["tower"], lookout_butte["id"])
+        self.assertEqual(items[0]["nearby_tower"], black_butte["id"])
+
+    def test_other_sources_keep_the_near_match(self):
+        # Same shape, but FFLA (not RIDB/idahofirelookouts.com): a same-spot, different-named
+        # record is a common real alternate name (Pequawket = Kearsarge North) far more often
+        # than a coordinate bug, so it stays with the near tower.
+        self.ws.run({
+            "nhlr": [rec("nhlr", "US1", "Black Butte Lookout", 45.0, -115.0, "ID"),
+                     rec("nhlr", "US2", "Lookout Butte Lookout", 45.577, -115.0, "ID")],
+            "ffla": [rec("ffla", "x", "Lookout Butte Lookout", 45.0004, -115.0, "ID")],
+        })
+        self.assertEqual(self.ws.tower_with_key("ffla:x")["id"], self.ws.tower_with_key("nhlr:US1")["id"])
+
+    def test_relocated_structure_site_is_not_treated_as_a_coordinate_error(self):
+        # The near tower's different name is already explained by the move: it is "<original
+        # name> (now at <Y>)"'s display site, not a RIDB pin that landed on the wrong tower.
+        rep = self.ws.run({
+            "ffla": [rec("ffla", "orig", "Sliderock", 46.9, -114.0, "MT", status="gone"),
+                     rec("ffla", "museum", "Fort Missoula Historical Museum (Relocated Sliderock)",
+                         46.87, -114.03, "MT")],
+            "ridb": [rec("ridb", "2", "Sliderock Lookout", 46.87, -114.03, "MT")],
+        })
+        museum = self.ws.tower_with_key("ffla:museum")
+        self.assertEqual(self.ws.tower_with_key("ridb:2")["id"], museum["id"])
+        self.assertFalse(any(r["type"] == "reassigned_same_spot" and r["key"] == "ridb:2" for r in rep["review"]))
+
+    def test_ambiguous_far_matches_are_left_for_a_human(self):
+        rep = self.ws.run({
+            "nhlr": [rec("nhlr", "US1", "Near Tower", 45.0, -115.0, "ID"),
+                     rec("nhlr", "US2", "Twin Peak", 45.3, -115.0, "ID"),
+                     rec("nhlr", "US3", "Twin Peak", 45.5, -115.2, "ID")],
+            "ridb": [rec("ridb", "3", "TWIN PEAK LOOKOUT", 45.0004, -115.0, "ID")],
+        })
+        near_tower = self.ws.tower_with_key("nhlr:US1")
+        self.assertEqual(self.ws.tower_with_key("ridb:3")["id"], near_tower["id"])
+        items = [r for r in rep["review"] if r["type"] == "reassign_same_spot_ambiguous"]
+        self.assertEqual([i["key"] for i in items], ["ridb:3"])
+        self.assertEqual(items[0]["nearby_tower"], near_tower["id"])
+        self.assertEqual(set(items[0]["towers"]),
+                         {self.ws.tower_with_key("nhlr:US2")["id"], self.ws.tower_with_key("nhlr:US3")["id"]})
+
+
 class SmallRules(unittest.TestCase):
     def test_one_year_build_difference_is_not_a_conflict(self):
         ws = Workspace()

@@ -93,8 +93,8 @@
   }
  },
  "files": {
-  "written": 247,
-  "unchanged": 7850
+  "written": 6,
+  "unchanged": 8091
  },
  "counts": {
   "towers": 8097,
@@ -208,7 +208,8 @@
     "unplaced": 496
    },
    "ffla": {
-    "key": 5845,
+    "key": 5843,
+    "register": 2,
     "unplaced": 131
    },
    "fflos": {
@@ -219,30 +220,35 @@
     "key": 19
    },
    "firelookout_com": {
-    "key": 3266
+    "key": 3264,
+    "spatial": 2
    },
    "idaho_fl": {
-    "key": 998
+    "key": 996,
+    "spatial": 2
    },
    "michigan_fire_tower": {
     "key": 7,
     "unplaced": 1
    },
    "nhlr": {
-    "key": 1848,
+    "key": 1846,
+    "new": 2,
     "unplaced": 2
    },
    "nj_forest_fire_towers": {
     "key": 23
    },
    "osm": {
-    "key": 1028
+    "key": 1026,
+    "spatial": 2
    },
    "pa_storymap": {
     "key": 47
    },
    "ridb": {
-    "key": 111,
+    "key": 110,
+    "spatial": 1,
     "unplaced": 2
    },
    "tnlandforms": {
@@ -261,7 +267,7 @@
  "conflicts": {
   "by_field": {
    "status": 284,
-   "location": 263,
+   "location": 264,
    "built": 215,
    "registers": 5,
    "kind": 5
@@ -269,16 +275,16 @@
   "by_field_and_sources": {
    "built": {
     "firelookout_com+nhlr": 140,
-    "firelookout_com+nhlr+ridb": 12,
+    "firelookout_com+nhlr+ridb": 13,
     "nhlr+pa_storymap": 10,
     "firelookout_com+ridb": 6,
     "fire_lookouts_org+nhlr": 5,
     "nhlr+wikidata": 5,
     "firelookout_com+wikidata": 5,
     "firelookout_com+osm": 5,
-    "nhlr+ridb": 4,
     "firelookout_com+nhlr+wikidata": 4,
     "firelookout_com+osm+wikidata": 4,
+    "nhlr+ridb": 3,
     "fflos+nhlr": 3
    },
    "kind": {
@@ -289,7 +295,7 @@
     "ffla+fflos+firelookout_com": 52,
     "ffla+nhlr": 47,
     "ffla+fflos": 31,
-    "nhlr+ridb": 10,
+    "nhlr+ridb": 11,
     "ffla+firelookout_com+nhlr": 9,
     "fflos+nhlr": 5,
     "idaho_fl+nhlr": 5,
@@ -322,7 +328,7 @@
    "0.5-1 km": 105,
    "1-5 km": 125,
    "5-25 km": 23,
-   ">25 km": 10
+   ">25 km": 11
   },
   "examples": {
    "built": [
@@ -2733,14 +2739,6 @@
   },
   {
    "type": "matched_different_names",
-   "key": "ridb:233128",
-   "name": "Lookout Butte Lookout",
-   "tower": "us-id-black-butte",
-   "tower_name": "Black Butte Lookout",
-   "score": 0.3
-  },
-  {
-   "type": "matched_different_names",
    "key": "nhlr:US 714",
    "name": "Cold Mountain Lookout",
    "tower": "us-id-cold-mountain-at-payette-lake-holm",
@@ -4030,6 +4028,16 @@
    "tower": "us-wv-gauley-mountain-tower-site-at-cass-scenic-rr",
    "tower_name": "Gauley Mountain Tower Site (now at Cass Scenic RR)",
    "score": 0.257
+  },
+  {
+   "type": "reassigned_same_spot",
+   "key": "ridb:233128",
+   "near_distance_m": 44,
+   "distance_m": 64084,
+   "score": 1.0,
+   "note": "'Lookout Butte Lookout' sits within 100 m of a differently-named tower but its name strongly matches a tower 64.1 km away; attached there instead of the near one.",
+   "tower": "us-id-lookout-butte",
+   "nearby_tower": "us-id-black-butte"
   },
   {
    "type": "rental_on_gone_lookout",
@@ -13128,11 +13136,6 @@
    "key": "nhlr:US 1011"
   },
   {
-   "id": "us-id-lookout-butte",
-   "name": "Lookout Butte Lookout",
-   "key": "nhlr:US 769"
-  },
-  {
    "id": "us-ky-hickory-flats",
    "name": "Hickory Flats Fire Tower",
    "key": "nhlr:US 447"
@@ -13215,22 +13218,6 @@
     "problem": "event 'fire_threat' (2017) is not in vocab.event; left out of the timeline"
    },
    {
-    "file": "us-az-lake-mountain.json",
-    "problem": "event 'modified' (1930) is not in vocab.event; left out of the timeline"
-   },
-   {
-    "file": "us-ca-baldy-mountain-happy-camp-baldy.json",
-    "problem": "event 'staffed' (1916) is not in vocab.event; left out of the timeline"
-   },
-   {
-    "file": "us-ca-baldy-mountain-happy-camp-baldy.json",
-    "problem": "event 'staffed' (1917) is not in vocab.event; left out of the timeline"
-   },
-   {
-    "file": "us-ca-baldy-mountain-happy-camp-baldy.json",
-    "problem": "event 'staffed' (1974) is not in vocab.event; left out of the timeline"
-   },
-   {
     "file": "us-ca-camp-six-lookout-at-bear-basin-butte.json",
     "problem": "event 'restoration_started' (1991) is not in vocab.event; left out of the timeline"
    },
@@ -13243,28 +13230,8 @@
     "problem": "event 'visit_report' (2007) is not in vocab.event; left out of the timeline"
    },
    {
-    "file": "us-or-hager-mountain.json",
-    "problem": "event 'staffed' (1915) is not in vocab.event; left out of the timeline"
-   },
-   {
-    "file": "us-or-hager-mountain.json",
-    "problem": "event 'modified' (1992) is not in vocab.event; left out of the timeline"
-   },
-   {
     "file": "us-ri-escoheag-hill.json",
     "problem": "event 'burglarized_note' (1952) is not in vocab.event; left out of the timeline"
-   },
-   {
-    "file": "us-wa-evergreen-mountain.json",
-    "problem": "event 'other' (1934) is not in vocab.event; left out of the timeline"
-   },
-   {
-    "file": "us-wa-evergreen-mountain.json",
-    "problem": "event 'staffed' (1940) is not in vocab.event; left out of the timeline"
-   },
-   {
-    "file": "us-wa-evergreen-mountain.json",
-    "problem": "event 'other' (1942) is not in vocab.event; left out of the timeline"
    },
    {
     "file": "us-wa-evergreen-mountain.json",

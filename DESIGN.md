@@ -187,8 +187,16 @@ the easternuslookouts and centraluslookouts weebly sites, Wikidata, OSM:
    Accepted when names agree strongly (score ≥ 0.85) within 1.5 km (3 km for idahofirelookouts.com
    and RIDB, whose pins are rougher; 15 km for CSKT's dead-reckoned positions); when names agree
    partly (≥ 0.5) or one is generic ("Fire Tower", unnamed) within 400 m; or within 100 m whatever
-   the names (different names for one tower are common: Pequawket = Kearsarge North). Across a
-   state line only 400 m with a strong name, or 100 m.
+   the names (different names for one tower are common: Pequawket = Kearsarge North) — **except**
+   for idahofirelookouts.com and RIDB: if the name there is clearly different (score < 0.5) from
+   every name at the near tower, and strongly (≥ 0.85) and uniquely names another tower in the
+   state within about 75 km, it joins that tower instead (the review file's
+   `reassigned_same_spot`; more than one strong match elsewhere is `reassign_same_spot_ambiguous`
+   and left on the near tower for a human). This is for the two sources' own coordinate errors,
+   not the common-alternate-name case above, so it never fires on a tower that is itself a
+   relocated/replica/parts-from structure's current site — RIDB's "Lookout Butte Lookout"
+   facility sits 45 m from Black Butte, ID (a coordinate slip) but is genuinely Lookout Butte's
+   listing, 64 km away. Across a state line only 400 m with a strong name, or 100 m.
 4. **Name only**, for records with no coordinates, after every source: a unique same-name
    tower in the state (and county, when both give one). Otherwise the record is listed in the
    review file as unplaced; it does not make a tower, since a tower needs a position.
