@@ -32,6 +32,14 @@ export interface RenderContext {
   repo: string;
   sources: Map<string, SourceInfo>;
   takedownEmail?: string | null;
+  /**
+   * Where mirrored photos are published, e.g. "https://example.github.io/firefinder-photos/"
+   * or "/firefinder/photos/". A photo's `file`/`thumb` (filled in by pipeline/merge.py from
+   * data/photos_manifest.json) resolve against this. Null/unset ("photosBase" in
+   * site.config.json) means photos are not hosted anywhere yet, so every photo falls back to
+   * the interim link-card/hotlink behaviour in photosSection, even one that has been mirrored.
+   */
+  photosBase?: string | null;
 }
 
 const SHORT_SOURCE: Record<string, string> = {
@@ -344,22 +352,85 @@ export function storyBlock(r: TowerRecord, ctx: RenderContext): SafeHtml {
 
 /* ---------- Photos ---------- */
 
+/** True only for a URL whose scheme is https (safeUrl already rejects dangerous schemes). */
+function isHttpsUrl(url: string | null | undefined): boolean {
+  const safe = safeUrl(url);
+  return !!safe && /^https:\/\//i.test(safe);
+}
+
+/** Hostname for the "View photo at <host>" card, without a leading "www.". */
+function photoHost(url: string | null | undefined): string | null {
+  const safe = safeUrl(url);
+  if (!safe) return null;
+  try {
+    return new URL(safe).hostname.replace(/^www\./, '');
+  } catch {
+    return null;
+  }
+}
+
+const PHOTO_PLACEHOLDER = raw(
+  '<svg class="photo-link-icon" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
+    '<rect x="2.5" y="4.5" width="19" height="15" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/>' +
+    '<circle cx="8.3" cy="10" r="1.7" fill="currentColor"/>' +
+    '<path d="M3.2 16.3 8.3 11l3.3 3.3 3-3 5.2 4.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '</svg>',
+);
+
+/**
+ * Resolves a mirrored file/thumb path against ctx.photosBase. Null when photosBase is not
+ * set ("photos are not hosted yet; use the interim link cards" -- site.config.json) or the
+ * path looks unsafe; in both cases the caller falls back to the interim handling below.
+ */
+function photoBaseUrl(path: string | null | undefined, ctx: RenderContext): string | null {
+  if (!path || path.includes('..') || !ctx.photosBase) return null;
+  const base = ctx.photosBase.endsWith('/') ? ctx.photosBase : `${ctx.photosBase}/`;
+  const safeBase = safeUrl(base);
+  return safeBase ? `${safeBase}${path.replace(/^\/+/, '')}` : null;
+}
+
+/**
+ * Interim handling for a photo with no usable mirrored copy -- either it has not been
+ * mirrored yet (pipeline/mirror_photos.py / data/photos_manifest.json), or it has but
+ * site.config.json's "photosBase" is not set because the owner has not decided where
+ * mirrored photos are hosted. `url` is the remote original. Two of our busiest sources
+ * (nhlr.org, firetower.org) reset the TLS handshake, so their photos only load over plain
+ * http; an https page cannot embed that without the browser blocking or breaking the image.
+ * Rather than emit a broken <img>, those get a plain link card that still carries the credit
+ * line; an https original still hotlinks directly.
+ */
 export function photosSection(r: TowerRecord, ctx: RenderContext): SafeHtml | null {
   const photos = (r.photos ?? []).filter((p) => p.file || p.url);
   if (!photos.length) return null;
-  const dataUrl = (path: string | null | undefined) => (path && !path.includes('..') ? `${ctx.base}data/${path.replace(/^\/+/, '')}` : null);
   return html`<div class="photos">${photos.map((p) => {
-    const full = dataUrl(p.file) ?? safeUrl(p.url);
-    const shown = dataUrl(p.thumb) ?? full;
+    const mirrored = photoBaseUrl(p.file, ctx);
+    const source = safeUrl(p.source_url);
+    const credit = html`<span class="credit-line">Photo: ${p.credit ?? 'credit unknown'}${p.license ? html` · ${p.license}` : ''}${source ? html` · <a href="${source}" rel="noopener">source</a>` : ''}</span>`;
+    const caption = p.caption || p.year
+      ? html`<span class="cap">${[p.caption?.replace(/[\s.]+$/, ''), p.year ? `(${p.year})` : null].filter(Boolean).join(' ')}</span>`
+      : '';
+
+    if (!mirrored && !isHttpsUrl(p.url)) {
+      // No usable mirrored copy, and the remote original is not https: link out instead of
+      // embedding it.
+      const remote = safeUrl(p.url) ?? source;
+      const host = photoHost(p.url) ?? photoHost(p.source_url) ?? 'the source site';
+      return html`<figure class="photo photo-link-card">
+        ${remote
+          ? html`<a class="photo-link" href="${remote}" rel="noopener">${PHOTO_PLACEHOLDER}<span>View photo at ${host}</span>${EXT}<span class="visually-hidden"> (opens another site)</span></a>`
+          : html`<span class="photo-link photo-link-unavailable">${PHOTO_PLACEHOLDER}<span>Photo unavailable</span></span>`}
+        <figcaption>${caption}${credit}</figcaption>
+      </figure>`;
+    }
+
+    const full = mirrored ?? safeUrl(p.url);
+    const shown = (mirrored && photoBaseUrl(p.thumb, ctx)) ?? full;
     if (!full || !shown) return '';
     const alt = p.caption ? p.caption : `Photo of ${r.name}${p.year ? `, ${p.year}` : ''}`;
-    const source = safeUrl(p.source_url);
+    const dims = p.w && p.h ? html` width="${p.w}" height="${p.h}"` : '';
     return html`<figure class="photo">
-      <a href="${full}"><img src="${shown}" alt="${alt}" loading="lazy" decoding="async"></a>
-      <figcaption>
-        ${p.caption || p.year ? html`<span class="cap">${[p.caption?.replace(/[\s.]+$/, ''), p.year ? `(${p.year})` : null].filter(Boolean).join(' ')}</span>` : ''}
-        <span class="credit-line">Photo: ${p.credit ?? 'credit unknown'}${p.license ? html` · ${p.license}` : ''}${source ? html` · <a href="${source}" rel="noopener">source</a>` : ''}</span>
-      </figcaption>
+      <a href="${full}"><img src="${shown}" alt="${alt}" loading="lazy" decoding="async"${dims}></a>
+      <figcaption>${caption}${credit}</figcaption>
     </figure>`;
   })}</div>
   <p class="fine">Photos keep their own rights and are shown with credit. Is one of these yours? You can <a href="${takedownIssueUrl(r, ctx)}">ask for a different credit or for removal</a>.</p>`;

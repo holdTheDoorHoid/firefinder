@@ -87,11 +87,11 @@ export interface TowerEvent {
 }
 
 export interface Photo {
-  /** Mirrored copy, relative to the data folder ("photos/<id>/1.jpg"). Preferred. */
+  /** Mirrored copy, relative to site.config.json's "photosBase" (e.g. "ab/abc123.webp"). */
   file?: string | null;
-  /** Smaller copy for grids, relative to the data folder. */
+  /** Smaller copy for grids, relative to "photosBase" the same way. */
   thumb?: string | null;
-  /** Original image URL; used when there is no mirrored file. */
+  /** Original image URL; used when there is no mirrored file, or photosBase is not set. */
   url?: string | null;
   /** The page the photo came from (for the credit link). */
   source_url?: string | null;
@@ -99,6 +99,9 @@ export interface Photo {
   license?: string | null;
   caption?: string | null;
   year?: number | null;
+  /** Pixel size of the original (from data/photos_manifest.json), for the <img> attributes. */
+  w?: number | null;
+  h?: number | null;
 }
 
 export interface Link {

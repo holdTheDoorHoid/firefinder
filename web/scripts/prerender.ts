@@ -40,6 +40,7 @@ const ctx: RenderContext = {
   repo: config.repo,
   sources: new Map<string, SourceInfo>(meta.sources.map((s) => [s.id, s])),
   takedownEmail: config.takedownEmail,
+  photosBase: config.photosBase ?? null,
 };
 const banner = fixtureBanner(meta).value;
 

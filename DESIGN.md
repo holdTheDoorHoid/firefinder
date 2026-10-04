@@ -64,10 +64,17 @@ data/
   sources/<source>.json     normalized extract from one source (list of source records, §3.2); committed
   towers/<region>/<id>.json one canonical record per lookout site (§3.3); the source of truth
   stories/<id>.md           researched narrative with footnotes (stage 2)
-  photos/<id>/<n>.jpg       mirrored photos, ≤1600 px long side (stage 1b)
+  photos_manifest.json      pipeline/mirror_photos.py's output (§3.5 "Photos"); committed
   raw/                      crawl cache, git-ignored
   vocab.json                controlled vocabularies (§3.4)
 ```
+
+The mirrored image files themselves are not under `data/`: `pipeline/mirror_photos.py` (stage
+1b) writes them outside the repo entirely, named by content hash (`<hh>/<sha1>.webp` full
+size, `<hh>/<sha1>.t.webp` thumbnail, so one photo reused across sources/towers is stored
+once), and records the mapping from each source url to its file in `photos_manifest.json`.
+Where the files themselves are published is a separate, still-open decision
+(`web/site.config.json`'s `photosBase`, §4).
 
 ### 3.2 Source record (`data/sources/<source>.json`)
 
@@ -270,9 +277,13 @@ replica structures as above; new
 towers are numbered `-2`, `-3`… in a fixed order (state, slug, north to south, first key), so a
 re-run from scratch gives the same ids and a new record never takes an existing id.
 
-**Photos** are `{file, thumb, url, source_url, credit, license, caption, year}`; until mirrored,
-`file`/`thumb` are null, `url` is the remote image (Wikimedia via `Special:FilePath`) and
-`source_url` the page it came from. Credit is the photographer "via" the site, or the site.
+**Photos** are `{file, thumb, url, source_url, credit, license, caption, year, w, h}`; until
+mirrored, `file`/`thumb` (and `w`/`h`) are null, `url` is the remote image (Wikimedia via
+`Special:FilePath`) and `source_url` the page it came from. Credit is the photographer "via"
+the site, or the site. `file`/`thumb` are filled in from `data/photos_manifest.json`
+(written by `pipeline/mirror_photos.py`, §4) each time `pipeline/merge.py` runs; a photo the
+mirror step could not use (download failed, or too small once decoded to be a real photo) is
+dropped rather than kept on the tower record as a dead link.
 **Links** carry a credit-ready `label` and a `kind`: `relocated_from` / `relocated_to` (another
 tower page, by `id`), `register`, `rental`, `association` (FFLA
 state list), `wikipedia`, `site` (hobbyist and regional pages), `agency`, `website`, `commons`,
@@ -353,8 +364,12 @@ state list), `wikipedia`, `site` (hobbyist and regional pages), `agency`, `websi
 1. **Facts map** (now): FFLA + NHLR + FFLOS + RIDB + OSM + Wikidata + regional extracts →
    merge → map + prerendered tower pages + checklist + credits; Pages deploy; weekly
    rental-refresh Action.
-1b. **Photos**: mirror register and other photos with credit, resized (≤1600 px plus a 400 px
-   thumbnail); takedown note.
+1b. **Photos** (done): mirrored with credit by `pipeline/mirror_photos.py`, resized (≤1024 px
+   full size -- dropped from the original ≤1200 px target to stay under the ~800 MB budget --
+   plus a ≤360 px thumbnail), `data/photos_manifest.json`, takedown note. Until
+   `web/site.config.json`'s `photosBase` is set, the site shows an interim "View photo at
+   <source site>" link card (or hotlinks an https original) instead of the mirrored copy;
+   hosting the mirrored files is still an open decision for the owner.
 2. **Stories**: research batches (Sonnet) for rentable and standing towers first. Each writes
    `data/stories/<id>.md` and locks the fields it confirmed.
 3. **3D**: Rust/WASM panorama + viewshed + smoke-spotting demo.
@@ -372,4 +387,8 @@ state list), `wikipedia`, `site` (hobbyist and regional pages), `agency`, `websi
   `agent/<name>`. It commits there and never pushes; the orchestrator merges to `main`.
 - Commits end with `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`.
 - Python 3.12 using the **standard library only** for the pipeline (CI needs no installs);
-  Node 24 for the site.
+  Node 24 for the site. **One exception**: `pipeline/mirror_photos.py` uses Pillow (the
+  system `python3`'s copy, 10.2 with WebP) for image decoding, EXIF/orientation handling and
+  WebP encoding. It is a dev-time tool an agent runs locally to mirror photos and write
+  `data/photos_manifest.json`; it never runs in CI, so the no-installs constraint does not
+  apply to it.
