@@ -265,6 +265,37 @@ class Matching(unittest.TestCase):
         self.assertEqual(set(t["photos"][0]), {"file", "thumb", "url", "source_url", "credit", "license", "caption", "year"})
         self.assertTrue(t["photos"][0]["url"].startswith("https://upload.wikimedia.org/wikipedia/commons/"))
 
+    def test_photographer_hidden_in_a_register_caption_is_credited(self):
+        # The DESIGN.md example: a register photo whose caption carries the photographer,
+        # while the structured credit field is empty (so photo_entry() falls back to just
+        # the site name) until extract_photo_credit() pulls it out of the caption.
+        self.ws.run({"nhlr": [rec("nhlr", "US1", "Model Lookout", 45.0, -116.0,
+                                  photos=[{"url": "http://nhlr.org/p.jpg", "credit": None,
+                                           "caption": "9/10/05--Cabin (Bob Eckler photo-courtesy Bill Starr)",
+                                           "year": None}])]})
+        photo = self.ws.tower_with_key("nhlr:US1")["photos"][0]
+        self.assertEqual(photo["caption"], "9/10/05--Cabin")
+        self.assertEqual(photo["credit"],
+                         "Bob Eckler (courtesy Bill Starr), via National Historic Lookout Register (nhlr.org)")
+
+    def test_a_caption_with_no_extractable_credit_is_untouched(self):
+        self.ws.run({"nhlr": [rec("nhlr", "US1", "Model Lookout", 45.0, -116.0,
+                                  photos=[{"url": "http://nhlr.org/p.jpg", "credit": None,
+                                           "caption": "Historical Photo", "year": None}])]})
+        photo = self.ws.tower_with_key("nhlr:US1")["photos"][0]
+        self.assertEqual(photo["caption"], "Historical Photo")
+        self.assertEqual(photo["credit"], "National Historic Lookout Register (nhlr.org)")
+
+    def test_an_existing_structured_credit_is_not_reparsed(self):
+        # The old (narrower) fetch_registers.py extraction already pulled this one out; the
+        # merge-time backfill only runs when the structured credit field is empty.
+        self.ws.run({"nhlr": [rec("nhlr", "US1", "Model Lookout", 45.0, -116.0,
+                                  photos=[{"url": "http://nhlr.org/p.jpg", "credit": "Jane Smith",
+                                           "caption": "1990 photo", "year": None}])]})
+        photo = self.ws.tower_with_key("nhlr:US1")["photos"][0]
+        self.assertEqual(photo["caption"], "1990 photo")
+        self.assertEqual(photo["credit"], "Jane Smith, via National Historic Lookout Register (nhlr.org)")
+
 
 class PhotoManifest(unittest.TestCase):
     """data/photos_manifest.json (pipeline/mirror_photos.py) fills in file/thumb/w/h, and a

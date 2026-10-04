@@ -61,6 +61,7 @@ DATA = REPO / "data"
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from state_bbox import STATE_BBOX, flag_coordinate  # noqa: E402
+from photo_credit import extract_photo_credit  # noqa: E402
 
 # Rough boxes for the territories, which state_bbox does not cover.
 TERRITORY_BBOX = {"PR": (17.8, 18.6, -67.4, -65.2), "VI": (17.6, 18.5, -65.1, -64.5),
@@ -1495,6 +1496,16 @@ def photo_entry(rec: Rec, p: dict) -> dict | None:
         return None
     site = SOURCE_SITE.get(rec.source, rec.source)
     credit = p.get("credit")
+    caption = p.get("caption") or None
+    if not credit and rec.source != "wikidata":
+        # A register photo's caption often carries the photographer where the structured
+        # credit field doesn't ("9/10/05--Cabin (Bob Eckler photo-courtesy Bill Starr)"), so
+        # the generic site-name fallback below never has to be the whole story. Applied here
+        # (not in the fetchers) so it also picks up every caption already committed, with no
+        # re-crawl needed.
+        caption, extracted = extract_photo_credit(caption)
+        if extracted:
+            credit = extracted
     if rec.source == "wikidata":
         author = (commons or {}).get("author")
         if author and (not credit or credit.lower().startswith("wikimedia commons")):
@@ -1516,7 +1527,7 @@ def photo_entry(rec: Rec, p: dict) -> dict | None:
         "source_url": source_url,
         "credit": credit,
         "license": p.get("license") or (commons or {}).get("license") or PHOTO_LICENSE.get(rec.source),
-        "caption": p.get("caption") or None,
+        "caption": caption,
         "year": year,
     }
 
