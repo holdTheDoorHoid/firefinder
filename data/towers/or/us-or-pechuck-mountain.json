@@ -1,6 +1,7 @@
 {
   "id": "us-or-pechuck-mountain",
   "name": "Pechuck Mountain Lookout",
+  "summary": "The only stone fire lookout left in Oregon, built 1932 near Molalla, unstaffed since the early 1960s, restored by volunteers starting 1991, and open to the public to visit and stay overnight free.",
   "other_names": [
     "Pechuck Lookout"
   ],
@@ -15,7 +16,7 @@
   },
   "elevation_m": 1291.7,
   "kind": "ground",
-  "design": null,
+  "design": "Stone-and-wood cupola",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -27,34 +28,87 @@
       "url": "http://nhlr.org/lookouts/us/or/pechuck-mountain-lookout/"
     }
   ],
-  "agency": "Bureau of Land Management",
+  "agency": "Bureau of Land Management (formerly Oregon Department of Forestry)",
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Listed as a visitor site on recreation.gov. Check the listing for seasonal closures."
+    "note": "Open to the public for day use and overnight stays, first-come first-served, no permit; reached via a long hike from Rooster Rock Trailhead on the Table Rock Trail, or a steep closed fire road from South Molalla River Road"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1964"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": false,
+    "trail_note": "Long, difficult hike from Rooster Rock Trailhead (Table Rock Wilderness) or steep closed fire road from South Molalla River Road; good map/orientation skills recommended"
   },
   "rental": null,
   "events": [
     {
+      "year": 1918,
+      "event": "other",
+      "note": "Fire detection site established with only a primitive rangefinder, no cabin yet",
+      "from": "research",
+      "source_url": "https://www.blm.gov/visit/pechuck-lookout"
+    },
+    {
       "year": 1932,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Stone-and-wood cupola cabin built by John Oblack and an unnamed Portland stonemason, using native stone",
+      "from": "research",
+      "source_url": "https://www.blm.gov/visit/pechuck-lookout",
+      "source_urls": [
+        "https://www.blm.gov/visit/pechuck-lookout",
+        "https://sandmountain.org/projects/pechuk-lookout/",
+        "http://nhlr.org/lookouts/us/or/pechuck-mountain-lookout/"
+      ]
+    },
+    {
+      "year": 1963,
+      "event": "staffed_last",
+      "note": "Sand Mountain Society states the lookout was staffed until 1963, under Oregon Department of Forestry management",
+      "from": "research",
+      "source_url": "https://sandmountain.org/projects/pechuk-lookout/"
+    },
+    {
+      "year": 1964,
+      "event": "closed",
+      "note": "BLM states it was determined in 1964 that Pechuck was no longer needed for fire suppression, due to aerial patrols and better roads",
+      "from": "research",
+      "source_url": "https://www.blm.gov/visit/pechuck-lookout"
     },
     {
       "year": 1990,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 18, 1990",
-      "from": "nhlr"
+      "note": "Listed on the National Historic Lookout Register, August 18, 1990, the second site registered",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/pechuck-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/pechuck-mountain-lookout/",
+        "https://www.blm.gov/visit/pechuck-lookout"
+      ]
+    },
+    {
+      "year": 1991,
+      "event": "restored",
+      "note": "Volunteer-led re-roofing project begins, organized by Jim Borders with the Molalla community and Sand Mountain Society members Doug Newman, Don Allen, and Bill Joy",
+      "from": "research",
+      "source_url": "https://sandmountain.org/projects/pechuk-lookout/"
+    },
+    {
+      "year": 1992,
+      "event": "other",
+      "note": "Added to the World Fire Lookout Register",
+      "from": "research",
+      "source_url": "https://www.blm.gov/visit/pechuck-lookout"
+    },
+    {
+      "year": 1995,
+      "event": "restored",
+      "note": "firelookout.com states the lookout was restored in 1995 (a separate or later restoration effort than the 1991 re-roofing)",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/pechuck.html"
     }
   ],
   "photos": [
@@ -112,6 +166,16 @@
       "label": "NHLR register entry US 2 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/or/pechuck-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Pechuck Lookout (Bureau of Land Management)",
+      "url": "https://www.blm.gov/visit/pechuck-lookout",
+      "kind": "reference"
+    },
+    {
+      "label": "Pechuck Lookout (Sand Mountain Society)",
+      "url": "https://sandmountain.org/projects/pechuk-lookout/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
@@ -190,10 +254,32 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-pechuck-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

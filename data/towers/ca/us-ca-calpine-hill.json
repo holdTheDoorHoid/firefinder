@@ -1,6 +1,7 @@
 {
   "id": "us-ca-calpine-hill",
   "name": "Calpine Hill Lookout",
+  "summary": "A 1934 CCC-built enclosed windmill-style tower on Tahoe NF, staffed every summer until 1975, now a popular Forest Service rental cab.",
   "other_names": [
     "Calpine Lookout"
   ],
@@ -15,7 +16,7 @@
   },
   "elevation_m": 1778.8,
   "kind": "enclosed_tower",
-  "design": null,
+  "design": "C-3, 14'x14' wooden cab with catwalk on an enclosed 17-foot tower, enclosed windmill-style; living quarters on first landing",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -27,20 +28,20 @@
       "url": "http://nhlr.org/lookouts/us/ca/calpine-hill-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Tahoe National Forest)",
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Restored and in the Forest Service rental program via Sierraville Ranger District; summer drive-up, winter access by snowshoe, ski, or snowmobile."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "Drive to base in summer; winter requires snowshoes, skis or snowmobile. Only the top observation cab is rented."
   },
   "rental": {
     "available": true,
@@ -60,14 +61,34 @@
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the Civilian Conservation Corps as an enclosed windmill-style lookout.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/calpine-hill-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/calpine-hill-lookout/",
+        "https://www.recreation.gov/camping/campgrounds/234131"
+      ]
+    },
+    {
+      "year": 1975,
+      "event": "staffed_last",
+      "note": "Actively used for fire detection every summer until 1975.",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/234131"
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 21, 2004",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, September 21, 2004 (per brief/NHLR record).",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/calpine-hill-lookout/"
+    },
+    {
+      "year": 2005,
+      "event": "other",
+      "note": "A renter reported being confronted and having their vehicle rammed by trespassers after midnight; incident reported to the sheriff.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/calpine-hill-lookout/"
     }
   ],
   "photos": [
@@ -136,10 +157,31 @@
         "rental",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-calpine-hill",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

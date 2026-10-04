@@ -1,0 +1,10 @@
+Acker Rock sits on a high rock formation roughly 2,000 feet above the valley floor in the Umpqua National Forest's Tiller Ranger District, a perch that made it an obvious spot for fire detection.[^1] The first lookout there was an L-4 cab built in 1934.[^1][^2] It was replaced in 1964 by the flat-roofed R-6 groundhouse that still stands today, a 12-by-12-foot one-room cabin set directly on the rock.[^1][^2] According to the Forest Service's own rental listing, that structure was lifted onto the cliff by helicopter sometime in the 1960s, consistent with the 1964 replacement date.[^3]
+
+The Tiller Ranger District once had more than a dozen staffed lookouts; today only Acker Rock and Pickett Butte remain.[^1][^3] Both nominally stay in service for fire spotting, though like most surviving lookouts, aerial surveillance has taken over most of that work.[^3]
+
+Acker Rock is part of the recreation rental program and is generally available from August 1 through November 15, weather and snow permitting; it isn't rented in winter because of wind and snow-load concerns for the building.[^3] Reaching the lookout requires a high-clearance, four-wheel or all-wheel-drive vehicle to the trailhead, followed by a moderately steep 0.4-mile hike in, so everything guests need has to be carried.[^3] Inside, the single room holds a bed, small table and chair, a propane heater, lanterns, a propane stove and oven, and a refrigerator; there's no water on site, so visitors bring their own or fill up at the Tiller Ranger Station on the way in.[^3] The lookout is listed on the National Historic Lookout Register, added September 1, 2000.[^4]
+
+[^1]: Acker Rock Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/or/acker-rock-lookout/ (accessed 2026-10-04).
+[^2]: Acker Rock Fire Lookout Cabin, firelookout.com, https://www.firelookout.com/or/ackerrock.html (accessed 2026-10-04).
+[^3]: Acker Rock Lookout, Recreation.gov, https://www.recreation.gov/camping/campgrounds/233322 (accessed 2026-10-04).
+[^4]: Acker Rock Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/or/acker-rock-lookout/ (accessed 2026-10-04).

@@ -1,0 +1,11 @@
+A fire lookout first went up on Sourdough Mountain in 1917, a cupola-style cabin built during the Mt. Baker National Forest era.[^1] That structure didn't last: the Civilian Conservation Corps tore it down and replaced it in 1933 with the L-4 groundhouse that still stands today, a 14.25-foot-square cab on a rock foundation, shiplap-sided and topped with a wood-shingled hip roof, with diagonally braced plywood shutters that swing open on each side for observation.[^2][^1]
+
+The mountain stayed under Forest Service control until 1967, when Congress created North Cascades National Park and the lookout was transferred to the National Park Service.[^1] It's best known today for who worked there in the 1950s: poet Gary Snyder staffed it in the summer of 1953, an experience that fed directly into his poem "Mid-August at Sourdough Mountain Lookout" and later "August on Sourdough, A Visit from Dick Brewer."[^2] Two years on, the Forest Service wouldn't rehire Snyder for another season, so his friend and fellow poet Philip Whalen took the post instead, writing his own well-known poem about the job, "Sourdough Mountain Lookout."[^2]
+
+The lookout was added to the National Register of Historic Places on February 10, 1989.[^2] Unlike many of its contemporaries it was never abandoned to the weather — the National Historic Lookout Register describes it as continuing in active service, and the Fire Lookout Museum says it's staffed every summer.[^1][^3] In August 2023, crews wrapped the structure in fire-resistant material as the nearby Sourdough Fire burned close by, a precaution rather than a sign of damage.[^2]
+
+It's a popular hike, reached by a roughly 5-mile trail up from the trailhead, and it isn't set up as a rental.[^2][^1] Because it's an active, sometimes-staffed Park Service lookout, visitors should admire it from outside rather than letting themselves in.
+
+[^1]: Sourdough Mountain Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/wa/sourdough-mountain-lookout/ (accessed 2026-10-04).
+[^2]: Sourdough Mountain Lookout, Wikipedia, https://en.wikipedia.org/wiki/Sourdough_Mountain_Lookout (accessed 2026-10-04).
+[^3]: Sourdough Mountain Lookout, firelookout.com (Fire Lookout Museum / Jennifer M. Weldon), https://www.firelookout.com/wa/sourdough.html (accessed 2026-10-04).

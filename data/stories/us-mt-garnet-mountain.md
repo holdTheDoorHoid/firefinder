@@ -1,0 +1,11 @@
+Fire watchers have worked from the top of Garnet Mountain since 1930, when the Forest Service set up a camp lookout there with no permanent building, just a crew keeping watch through the fire season.[^1] It took two decades before a real structure arrived: in 1950, a secondhand two-story, 9-by-9-foot frame cab was hauled up and set on the summit, a building that had started life as a Fish and Wildlife observation post on Lincoln Mountain.[^1][^3] That 1950 cab did not stay either. In 1962 it was replaced by the structure still there today, an R-6 flat cab on a 10-foot concrete base.[^1]
+
+The lookout sits at roughly 8,245 feet, with sightlines across the Spanish Peaks, the Gallatin Range, the Hyalite Ridge and the Gallatin River valley.[^2] It is in grizzly bear country, and gray wolves, mountain lions and bighorn sheep also share the mountain.[^2] Sources available don't say when staffed fire-watching at Garnet Mountain ended, or recount any specific fire the lookout was credited with spotting.
+
+The lookout was kept rather than retired outright, and like several other historic cabs in the region it was folded into the Forest Service's recreation rental program, where it has become one of the more popular lookouts available to rent.[^3] It was added to the National Historic Lookout Register in 2022 as US 1535.[^1]
+
+Getting there takes real effort: a 4.5-mile trail with a 2,800-foot climb in summer, open to motorized use on part of the route only in a limited season, or up to 10 miles of skiing, snowshoeing or snowmobiling in winter.[^2] The cabin sleeps four on bunk beds, is heated by a wood stove, and has no running water or electricity; it stays locked, with the door combination sent to guests ahead of their stay.[^2] As with any rental lookout, it's meant to be booked and visited through that system rather than entered without a reservation.
+
+[^1]: Garnet Mountain Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/mt/garnet-mountain-lookout/ (accessed 2026-10-04).
+[^2]: Garnet Mountain Fire Lookout, Recreation.gov / Custer Gallatin National Forest, https://www.recreation.gov/camping/campgrounds/234334 (accessed 2026-10-04).
+[^3]: Garnet Mtn. Fire Lookout Tower, firelookout.com, https://www.firelookout.com/mt/garnetmtn.html (accessed 2026-10-04).

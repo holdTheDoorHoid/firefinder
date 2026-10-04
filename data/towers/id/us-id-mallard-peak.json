@@ -1,6 +1,7 @@
 {
   "id": "us-id-mallard-peak",
   "name": "Mallard Peak Lookout",
+  "summary": "A 1929 L-4 prototype cab on the Clearwater/Idaho Panhandle boundary, abandoned in the late 1950s and volunteer-restored since 1981.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 2072.9,
   "kind": "ground",
-  "design": "L-4",
+  "design": "L-4 (one of the 1929 prototype cabs for the design)",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -34,37 +35,91 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=yes."
+    "level": "public",
+    "note": "Hike-in only, no road access; located in the Mallard-Larkins Pioneer Area."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1956 or 1957 (sources disagree)"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "Foot access only, within a roadless non-motorized trail area."
   },
   "rental": null,
   "events": [
     {
+      "year": 1914,
+      "event": "other",
+      "note": "First lookout camp established at Mallard Peak, manned by Red Stewart for at least 5 years.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/mallard-larkins-lookout/"
+    },
+    {
       "year": 1929,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Ground cabin built as one of the prototype cabs leading to the L-4 design.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/mallard-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/mallard-peak-lookout/",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/mallard-larkins-lookout/"
+      ]
+    },
+    {
+      "year": 1956,
+      "event": "staffed_last",
+      "note": "NHLR states last staffed in 1956.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/mallard-peak-lookout/"
     },
     {
       "year": 1957,
       "event": "abandoned",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Other sources give 1957 as decommissioning/abandonment year.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/mallardpeak.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/mallardpeak.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/mallard-larkins-lookout/"
+      ]
+    },
+    {
+      "year": 1981,
+      "event": "restored",
+      "note": "Initial stabilization by Don Mathis, Ray Kresek, and volunteers; Kresek unofficially staffed it that summer.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/mallard-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/mallard-peak-lookout/",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/mallard-larkins-lookout/"
+      ]
+    },
+    {
+      "year": 1992,
+      "event": "other",
+      "note": "Inland Empire Llama Association began providing annual maintenance support.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/mallard-peak-lookout/"
     },
     {
       "year": 1996,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 25, 1996",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, November 25, 1996.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/mallard-peak-lookout/"
+    },
+    {
+      "year": 2009,
+      "event": "modified",
+      "note": "Tim Grubham and family did restoration work with USFS approval.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/mallard-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/mallard-peak-lookout/",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/mallard-larkins-lookout/"
+      ]
     }
   ],
   "photos": [
@@ -269,10 +324,32 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-mallard-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,0 +1,11 @@
+Mount Fremont Lookout sits at the end of a bare, windswept ridge in the northern part of Mount Rainier National Park, above 7,000 feet, the highest lookout site in the park.[^1][^2] The National Park Service built it in 1934 (one account says construction actually happened in 1933), designing the two-story frame structure under the supervision of Acting Chief Architect Edwin A. Nickel, with help from the Emergency Conservation Works Association.[^2] The building is about 14 by 14 feet, with a balconied lookout cab on the upper level and storage below; cables anchored to buried deadmen keep it from blowing off the ridge in the wind that scours the site.[^1][^2]
+
+A known lookout from the 1930s was Ralph McFadden, recorded there in 1938.[^3] The tower is one of only four fire lookouts still standing in Mount Rainier National Park.[^2] A severe windstorm in 2006 tore the roof off, damaging Fremont along with the park's Gobbler's Knob lookout; both were later repaired.[^2] The National Historic Lookout Register description notes the building was "recently restored" as of its 2003 registration.[^1]
+
+Fremont was added to the National Register of Historic Places on March 13, 1991, as part of the larger Mount Rainier National Historic Landmark District, which recognizes the park's inventory of Park Service rustic-style architecture.[^2] It was separately registered on the National Historic Lookout Register on March 31, 2003.[^1]
+
+The lookout is no longer staffed for fire detection full-time; instead it's used for visitor services on summer weekends, with backcountry rangers on hand to talk with hikers.[^1][^2] It's reached by a trail from the Sunrise area of the park, a popular day hike with sweeping views back toward Mount Rainier itself.[^1][^2] The building is not open for overnight rental; it functions as a staffed seasonal outpost and a highlight of the Sunrise trail network.
+
+[^1]: Mount Fremont Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/wa/mount-fremont-lookout/ (accessed 2026-10-04).
+[^2]: Mount Fremont Fire Lookout, Wikipedia, https://en.wikipedia.org/wiki/Mount_Fremont_Fire_Lookout (accessed 2026-10-04).
+[^3]: Mt. Fremont Fire Lookout Tower, firelookout.com, https://www.firelookout.com/wa/fremont.html (accessed 2026-10-04).

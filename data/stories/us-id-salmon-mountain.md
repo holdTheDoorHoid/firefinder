@@ -1,0 +1,11 @@
+Salmon Mountain, in the Bitterroot National Forest's West Fork District near Darby, Idaho, has been used as a fire lookout point longer than almost anywhere else on that forest. A 1915 journal entry describes a phone line being run up the mountain so it could serve as an observation point, and a tent camp with a portable alidade on a stump, inside a rock wall, followed soon after.[^3] The first real structure, a log cabin with an observation cupola, went up in 1928; the National Historic Lookout Register instead dates that building to 1938, so the sources don't fully agree, but two independent accounts put it at 1928.[^1][^2][^3]
+
+That cabin gave way in 1949 to the lookout that still stands: a classic L-4 ground house with a catwalk, built on a roughly five-foot rock base.[^1][^3] It's now the only L-4 ground cab of its kind left in the area.[^1] The lookout sits in the Frank Church River of No Return Wilderness, just south of the Magruder Corridor, and also looks north into the Selway-Bitterroot Wilderness.[^1][^3]
+
+Salmon Mountain has a long staffing record, with named lookouts going back to Marion Carruthers in 1943 and continuing through decades of seasonal staff.[^2] It went unmanned for a stretch into the early 1980s, but staffing picked back up, and volunteers have continued to staff it in fire season since.[^2] Linda Ambelang is recorded as the last paid lookout before the volunteer era.[^2] The lookout was added to the National Register of Historic Places on April 6, 2018.[^3]
+
+Today Salmon Mountain is reached by a roughly 1.2-mile trail from the Magruder Corridor/Elk City Road, and it's staffed by a volunteer most summers rather than rented out.[^2][^3] Visitors who hike up during fire season may find a volunteer lookout on duty and can ask about the program, but it isn't a public rental cabin.
+
+[^1]: Salmon Mountain Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/id/salmon-mountain-lookout/ (accessed 2026-10-04).
+[^2]: Salmon Mountain Lookout, Idaho Fire Lookouts, https://www.idahofirelookouts.com/selway-region/salmon-mountain-lookout/ (accessed 2026-10-04).
+[^3]: Salmon Mountain Lookout, Wikipedia, https://en.wikipedia.org/wiki/Salmon_Mountain_Lookout (accessed 2026-10-04).

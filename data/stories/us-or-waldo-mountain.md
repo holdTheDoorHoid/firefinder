@@ -1,0 +1,12 @@
+Waldo Mountain has carried a fire lookout since 1926, when the Forest Service put up a small cabin on its summit in the Willamette National Forest, on the Cascade crest above Waldo Lake.[^1][^2] A cupola-style lookout replaced that cabin in 1929, and in turn gave way to the structure still standing today: a 15-by-15-foot R-6 flat-top cab built in 1957.[^1][^2][^3] (Wikipedia gives 1956 for the current building; the Forest Service, the National Historic Lookout Register, and the Forest Fire Lookout Association all give 1957, which this account follows.)[^2][^3][^4]
+
+The lookout earned its keep watching for strikes along the Cascade crest during lightning storms, one of the more fire-prone stretches of the Willamette.[^4] Despite being built in the 1950s, it was outfitted with original furniture and cabinetry, giving the cab an authentic, comfortable feel.[^4]
+
+Accounts differ on whether anyone still works the tower. The National Historic Lookout Register describes it as staffed on an emergency basis during lightning storms, while both the Forest Service and Wikipedia describe it as currently unstaffed and no longer a functioning lookout.[^1][^4][^2] It was added to the National Historic Lookout Register in November 1995.[^1]
+
+Waldo Mountain is not a drive-up site. Reaching it means a long, steep hike on Waldo Mountain Trail #3592 from Salmon Creek, through forest and ground burned by the Cedar Creek Fire; the Forest Service warns the trail is hard to follow near the top because fire damaged the route, and advises against the alternate approach from North Waldo Campground unless hikers are confident navigating several confusing junctions.[^4] The area remains subject to wildfire-related closures and warnings, so visitors should check current conditions before setting out.[^4] There is no indication the lookout is available to rent; it is open to the public as a day-hike destination only.
+
+[^1]: Waldo Mountain Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/or/waldo-mountain-lookout/ (accessed 2026-10-04).
+[^2]: Waldo Mountain Fire Lookout, Wikipedia, https://en.wikipedia.org/wiki/Waldo_Mountain_Fire_Lookout (accessed 2026-10-04).
+[^3]: Waldo Mtn. Fire Lookout Cabin, Forest Fire Lookout Association / firelookout.com, https://www.firelookout.com/or/waldo.html (accessed 2026-10-04).
+[^4]: Waldo Mountain Lookout, Willamette National Forest, U.S. Forest Service, https://www.fs.usda.gov/r06/willamette/recreation/waldo-mountain-lookout (accessed 2026-10-04).

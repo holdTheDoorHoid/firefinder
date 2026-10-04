@@ -1,0 +1,11 @@
+Star Peak holds the oldest lookout post in Montana: in 1907, a lookout on the then-Cabinet National Forest pitched a tent just below the summit, the earliest recorded lookout post anywhere in the state.[^1][^2] The peak looks out over the Scotchman Peaks area, the Cabinet Mountains Wilderness, and the Clark Fork Valley.[^3] Three years later, in 1910, Noxon's first ranger, Granville "Granny" Gordon, and his wife Pauline put up a stone cabin near the talus slope below the peak, and that cabin is still standing.[^2]
+
+A proper lookout structure came later. The first L-4 cab, with a gable roof, went up on the summit in 1930; the present L-4 cab on a stone base replaced it in 1952.[^1][^2] That 1952 cab is the one still in service, and today it's the only active lookout on the Kootenai National Forest's Cabinet Ranger District.[^1] A Forest Service trailhead page describes the current lookout as dating to 1910, which doesn't match the 1952 date given by the National Historic Lookout Register and firelookout.com; the 1910 date more likely belongs to the surviving stone cabin below the summit rather than the lookout cab itself.[^3]
+
+Known staff include Tommy Richards in 1959 and Mary Harker in 1967.[^2] The peak carried the name Squaw Peak for most of its history and was renamed Star Peak (or Star Mountain) in 2004.[^1][^2] It was added to the National Historic Lookout Register in 1996 as US 178, nominated by Gary Weber of the Forest Fire Lookout Association.[^1]
+
+Star Peak is reached by the Big Eddy Trail, with the trailhead ending around 6,167 feet.[^3] It lies about ten miles northwest of Noxon, in Sanders County.[^2] firelookout.com describes the lookout as available for emergencies, suggesting it isn't a standard overnight rental but is kept usable as shelter.[^2] No source consulted confirms a public booking program for Star Peak.
+
+[^1]: Star Peak Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/mt/star-peak-lookout/ (accessed 2026-10-04).
+[^2]: Squaw Peak (Star Mtn.) Fire Lookout Cabin, firelookout.com, https://www.firelookout.com/mt/squawpk.html (accessed 2026-10-04).
+[^3]: #998 Big Eddy Trailhead, Kootenai National Forest, U.S. Forest Service, https://www.fs.usda.gov/r01/kootenai/recreation/998-big-eddy-trailhead (accessed 2026-10-04).

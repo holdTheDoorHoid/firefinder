@@ -1,6 +1,7 @@
 {
   "id": "us-or-snow-camp",
   "name": "Snow Camp Lookout",
+  "summary": "A century-old lookout site whose 1958 cab burned in the 2002 Biscuit Fire and was rebuilt in 2004; now a Recreation.gov rental.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -29,16 +30,16 @@
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Rentable via Recreation.gov; drive within sight of tower, then a 200-yard hike (final stretch closed to public vehicles); entry by combination lock."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": false,
+    "trail_note": "Drive to within sight of the lookout, then hike the final 200 yards (public vehicles not permitted on that stretch)."
   },
   "rental": {
     "available": true,
@@ -56,16 +57,72 @@
   },
   "events": [
     {
+      "year": 1910,
+      "event": "built",
+      "note": "firelookout.com dates the site's origin to a 1910 tent camp; NHLR instead dates the first lookout to 1917. Sources disagree.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/snowcamp.html"
+    },
+    {
+      "year": 1917,
+      "event": "built",
+      "note": "NHLR states the first lookout was constructed in 1917.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/snow-camp-lookout/"
+    },
+    {
       "year": 1924,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "firelookout.com states a 14x14-ft cabin was constructed in 1924.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/snowcamp.html"
+    },
+    {
+      "year": 1958,
+      "event": "rebuilt",
+      "note": "Present (pre-2002) R-6 flat cab constructed, per both NHLR and firelookout.com.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/snow-camp-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/snow-camp-lookout/",
+        "https://www.firelookout.com/or/snowcamp.html"
+      ]
     },
     {
       "year": 1991,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 1, 1991",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, April 1, 1991.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/snow-camp-lookout/"
+    },
+    {
+      "year": 2002,
+      "event": "burned",
+      "note": "Lookout destroyed by the Biscuit Fire in August 2002.",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/234159",
+      "source_urls": [
+        "https://www.recreation.gov/camping/campgrounds/234159",
+        "https://www.firelookout.com/or/snowcamp.html"
+      ]
+    },
+    {
+      "year": 2004,
+      "event": "rebuilt",
+      "note": "Replacement rental cabin built two years after the fire.",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/234159",
+      "source_urls": [
+        "https://www.recreation.gov/camping/campgrounds/234159",
+        "https://www.firelookout.com/or/snowcamp.html"
+      ]
+    },
+    {
+      "year": 2017,
+      "event": "fire",
+      "note": "Chetco Bar Fire also left visible effects on the surrounding landscape.",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/234159"
     }
   ],
   "photos": [
@@ -174,10 +231,32 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-snow-camp",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

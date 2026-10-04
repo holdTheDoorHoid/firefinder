@@ -1,0 +1,37 @@
+{
+  "id": "us-ca-black-mountain-plumas-nf",
+  "researched": "2026-10-04",
+  "summary": "CCC-built 1934/35 R-5 design cab in Plumas NF, NHLR-listed 2007, converted to a Recreation.gov rental cabin in 2011.",
+  "facts": {
+    "design": "14'x14' C3 live-in cab with catwalk, Forest Service R-5 (California region) design, on an 11' enclosed timber tower",
+    "height_m": 3.4,
+    "status": "standing",
+    "access": {"level": "public", "note": "Rentable cabin via Recreation.gov; dirt road access, high-clearance vehicle recommended, combination lock code from Beckwourth Ranger District"},
+    "visit": {"climbable": true, "drive_up": false, "trail_note": "Dirt road, high-clearance recommended"},
+    "agency": "U.S. Forest Service"
+  },
+  "events": [
+    {"year": 1934, "event": "built", "note": "NHLR description says constructed in 1934 by the CCC, though the register's own 'Built' field elsewhere lists 1935", "cite": [1]},
+    {"year": 2007, "event": "nhlr_registered", "note": "Registered as NHLR US 692 on April 23, 2007", "cite": [1]},
+    {"year": 2011, "event": "rental_opened", "note": "Grand opening as a recreational rental on May 26, 2011, at $60/night", "cite": [1]}
+  ],
+  "evidence": [
+    {"cite": [1], "supports": "Built 1934 by CCC, design, dimensions, tower height", "quote": "Constructed in 1934 by the CCC, Black Mountain Lookout is a classic C3 14’x14’ live-in cab with catwalk of an original Forest Service R-5 design (California Region). It is mounted on an 11’ enclosed timber tower"},
+    {"cite": [1], "supports": "Built field shows 1935", "quote": "Built 1935"},
+    {"cite": [1], "supports": "Rental conversion in 2011 at $60/night", "quote": "Black Mt. L.O. Grand opening on the Plumas National Forest is open as a recreational rental effective May 26, 2011. The fee is $60 per night stay."},
+    {"cite": [1], "supports": "NHLR registration date", "quote": "Date Registered April 23, 2007"},
+    {"cite": [2], "supports": "Cabin sleeping capacity, amenities, and tent camping space", "quote": "The one-room lookout cabin is set on a tower, rising 10 feet above the ground. It is furnished with two single beds with mattresses, but can accommodate up to four people."},
+    {"cite": [2], "supports": "Access by combination lock and dirt road", "quote": "Entry to the cabin is by key; contact the Beckwourth Ranger District at (530) 836-2575 for the combination to the lock box"}
+  ],
+  "resolved_conflicts": [
+    {"field": "built year", "explanation": "NHLR's narrative description says 1934 ('Constructed in 1934 by the CCC') while its own structured 'Built' field says 1935. We reported both and treated the difference as likely reflecting start vs. completion/commission year rather than a factual error.", "cite": [1]},
+    {"field": "tower height", "explanation": "NHLR lists the tower as 11 feet; Recreation.gov separately describes the cabin as rising 10 feet above ground. These are close enough to likely be rounding of the same structure, not a true conflict, so we used the NHLR figure as primary.", "cite": [1, 2]}
+  ],
+  "sources": [
+    {"n": 1, "title": "Black Mountain Lookout (Plumas NF)", "publisher": "National Historic Lookout Register", "url": "http://nhlr.org/lookouts/us/ca/black-mountain-lookout-plumas-nf/", "accessed": "2026-10-04"},
+    {"n": 2, "title": "Black Mountain Lookout", "publisher": "Recreation.gov", "url": "https://www.recreation.gov/camping/campgrounds/233296", "accessed": "2026-10-04"}
+  ],
+  "confidence": "medium",
+  "notes_for_editor": "No staffing history (first/last staffed, notable fires) found in the sources checked; story says so plainly rather than guessing. Minor built-year (1934 vs 1935) and tower-height (10' vs 11') discrepancies between NHLR's narrative and structured fields/Recreation.gov are noted but not fully resolved.",
+  "verification": {"checked": "2026-10-04", "claims_checked": 11, "unsupported_removed": 0, "errors_fixed": 0, "quotes_spot_checked": 2, "quotes_not_found": 0, "verdict": "pass"}
+}

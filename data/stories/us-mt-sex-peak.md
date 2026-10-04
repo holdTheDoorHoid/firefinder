@@ -1,0 +1,11 @@
+Sex Peak's unusual name goes back to the 1920s, when two Forest Service men, forester I.V. Anderson and Cabinet National Forest supervisor Harry Baker, named the summit. The most common story is that they named it for whatever they happened to be talking about that day.[^1][^2] A first lookout went up on the peak before the current one; Recreation.gov dates it to the early 1920s, while firelookout.com describes that first cab as a 1930-vintage L-4, so the exact year is unclear.[^2][^3] Either way, it was replaced in 1948 by the L-4 groundhouse with a catwalk that still stands today.[^1][^2]
+
+The lookout was staffed into the mid-1970s, part of the Kootenai National Forest's fire-detection network.[^1][^2] One known staffer was reported in 1967: John and Debra Hubenthal.[^2] The name apparently lived up to itself at least once, when a Forest Service patrol plane flying low over the lookout in the 1960s reportedly spotted a couple sunbathing naked on the rocks nearby.[^2]
+
+After fire detection from the ground tower ended, the Forest Service refurbished the lookout and added it to its cabin rental program in 1986.[^1][^2] It was also listed on the National Historic Lookout Register, as US 179, on August 20, 1996.[^1]
+
+Sex Peak Lookout is still standing and still rentable today. The cabin is a 14-by-14-foot structure with windows on all sides and a surrounding catwalk, sleeping up to four people on two twin beds, with a table, chairs, a bench, and a wood stove for heat.[^3] There's no running water, so guests pack in their own, along with bedding, cooking gear, and other basics the Forest Service doesn't supply.[^3] The lookout sits at about 5,772 feet and is reachable by a roughly 20-mile drive on forest roads from the Cabinet Ranger Station, with the easterly stretch of the loop road subject to seasonal closures.[^3] From the catwalk, renters can look out over the Clark Fork Valley, the Bitterroot Mountains to the west, and the Cabinet Range to the east.[^3]
+
+[^1]: Sex Peak Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/mt/sex-peak-lookout/ (accessed 2026-10-04).
+[^2]: Sex Peak Fire Lookout Cabin, firelookout.com, https://www.firelookout.com/mt/sexpeak.html (accessed 2026-10-04).
+[^3]: Sex Peak. Lookout Rental, Recreation.gov, https://www.recreation.gov/camping/campgrounds/234433 (accessed 2026-10-04).

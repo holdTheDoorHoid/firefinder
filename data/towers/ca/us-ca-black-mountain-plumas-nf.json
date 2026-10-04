@@ -1,6 +1,7 @@
 {
   "id": "us-ca-black-mountain-plumas-nf",
   "name": "Black Mountain Lookout (Plumas NF)",
+  "summary": "CCC-built 1934/35 R-5 design cab in Plumas NF, NHLR-listed 2007, converted to a Recreation.gov rental cabin in 2011.",
   "other_names": [
     "Black Mountain Lookout"
   ],
@@ -15,8 +16,8 @@
   },
   "elevation_m": 2052.8,
   "kind": "enclosed_tower",
-  "design": null,
-  "height_m": null,
+  "design": "14'x14' C3 live-in cab with catwalk, Forest Service R-5 (California region) design, on an 11' enclosed timber tower",
+  "height_m": 3.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,16 +32,16 @@
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Rentable cabin via Recreation.gov; dirt road access, high-clearance vehicle recommended, combination lock code from Beckwourth Ranger District"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": false,
+    "trail_note": "Dirt road, high-clearance recommended"
   },
   "rental": {
     "available": true,
@@ -58,6 +59,13 @@
   },
   "events": [
     {
+      "year": 1934,
+      "event": "built",
+      "note": "NHLR description says constructed in 1934 by the CCC, though the register's own 'Built' field elsewhere lists 1935",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/black-mountain-lookout-plumas-nf/"
+    },
+    {
       "year": 1935,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
@@ -66,8 +74,16 @@
     {
       "year": 2007,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 23, 2007",
-      "from": "nhlr"
+      "note": "Registered as NHLR US 692 on April 23, 2007",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/black-mountain-lookout-plumas-nf/"
+    },
+    {
+      "year": 2011,
+      "event": "rental_opened",
+      "note": "Grand opening as a recreational rental on May 26, 2011, at $60/night",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/black-mountain-lookout-plumas-nf/"
     }
   ],
   "photos": [
@@ -220,10 +236,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-black-mountain-plumas-nf",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "pass",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "us-id-carey-dome",
   "name": "Carey Dome Fire Lookout",
+  "summary": "1934 Aermotor steel tower in Payette National Forest, NRHP-listed in 1994, still staffed in recent summers.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,8 +14,8 @@
   },
   "elevation_m": 2336.9,
   "kind": "tower",
-  "design": "Aermotor",
-  "height_m": null,
+  "design": "Aermotor 721 steel tower, 7x7 ft steel cab, 85 ft tall",
+  "height_m": 25.9,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,19 +32,19 @@
       "url": "https://npgallery.nps.gov/AssetDetail/NRIS/94000268"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Payette National Forest)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Active Forest Service lookout, drive-up access per idahofirelookouts.com; not a public rental"
   },
   "staffing": {
     "status": "staffed",
-    "as_of": null
+    "as_of": "2016"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
+    "climbable": false,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
@@ -51,14 +52,34 @@
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Aermotor steel tower assembled",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/carey-dome-fire-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/carey-dome-fire-lookout/",
+        "https://en.wikipedia.org/wiki/Carey_Dome_Fire_Lookout"
+      ]
+    },
+    {
+      "year": 1943,
+      "event": "modified",
+      "note": "Log cabin residence added",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Carey_Dome_Fire_Lookout"
+    },
+    {
+      "year": 1994,
+      "event": "nrhp_listed",
+      "note": "Listed on NRHP March 25, 1994",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Carey_Dome_Fire_Lookout"
     },
     {
       "year": 1998,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 1, 1998",
-      "from": "nhlr"
+      "note": "Registered on NHLR June 1, 1998",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/carey-dome-fire-lookout/"
     }
   ],
   "photos": [
@@ -207,6 +228,23 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-carey-dome",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -234,7 +272,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "pass",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

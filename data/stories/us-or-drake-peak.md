@@ -1,0 +1,9 @@
+Fire detection on Drake Peak, in the Warner Mountains of Lake County, Oregon, goes back further than the building standing there now. The spot was first used as a patrol lookout with fire-finding instruments installed in 1915, and a small building went up there sometime after.[^1] Sources differ on exactly where the next structure sat: the National Historic Lookout Register says a D-6 cupola was built on the peak itself in 1928, while firelookout.com places a D-6 cupola cabin on neighboring Light Peak, a half mile northeast, in 1926.[^1][^2] Either way, a standard Forest Service road was cut to the site in the summer of 1927, giving the lookout road access.[^1]
+
+In 1948 the Forest Service decided a lookout on Drake Peak itself would serve better, and built the present L-4 ground cab there, next to the older cupola, at a cost of $3,451.47.[^1][^2] At 8,352 feet, Drake Peak is the highest fire lookout with road access in Oregon.[^1] For decades afterward, Forest Service staff spent entire fire seasons stationed in the small cabin, keeping a lookout for any sign of fire across the Fremont-Winema National Forest; one hazard the lookout's own description calls out is that lightning occasionally strikes the propane tank beside the cabin.[^1][^3]
+
+The lookout still stands and now works as a Recreation.gov rental, sleeping up to four people on folding cots with a wood stove for heat.[^3] There's no water on site, though guests can haul water from Mud Creek Campground about six miles away.[^3] It's listed on the National Historic Lookout Register, registered in 2003.[^1]
+
+[^1]: Drake Peak Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/or/drake-peak-lookout/ (accessed 2026-10-04).
+[^2]: Drake Peak Fire Lookout Cabin, Fire Lookout, https://www.firelookout.com/or/drakepeak.html (accessed 2026-10-04).
+[^3]: Drake Peak Lookout, Recreation.gov, https://www.recreation.gov/camping/campgrounds/234185 (accessed 2026-10-04).

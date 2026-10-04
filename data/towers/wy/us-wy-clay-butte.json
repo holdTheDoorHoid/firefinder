@@ -1,6 +1,7 @@
 {
   "id": "us-wy-clay-butte",
   "name": "Clay Butte Lookout",
+  "summary": "CCC-built three-story 1941-43 lookout near Yellowstone, with a 1962 visitor center added and volunteer staffing since 1975.",
   "other_names": [],
   "country": "US",
   "region": "WY",
@@ -13,8 +14,8 @@
   },
   "elevation_m": 2973.3,
   "kind": "three_story",
-  "design": null,
-  "height_m": null,
+  "design": "three-story wood-sided structure of 8x8 beams, flattop 14x14 ft cab with catwalk, 26.25 ft tall",
+  "height_m": 8.0,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,23 +32,30 @@
       "url": "https://npgallery.nps.gov/AssetDetail/NRIS/13001065"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Shoshone National Forest)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "visitor center and lookout open to drive-up visitors in summer, off the Beartooth Scenic Highway via a short forest road; not a rental"
   },
   "staffing": {
     "status": "volunteer",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "reached via FS Rd 142, about half a mile off US-212"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1941,
+      "event": "built",
+      "note": "construction started under the CCC program",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Clay_Butte_Lookout"
+    },
     {
       "year": 1942,
       "event": "built",
@@ -55,10 +63,42 @@
       "from": "nhlr"
     },
     {
+      "year": 1943,
+      "event": "built",
+      "note": "construction completed after the CCC program was closed down (NHLR gives 1942 as the completion year)",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Clay_Butte_Lookout",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Clay_Butte_Lookout",
+        "http://nhlr.org/lookouts/us/wy/clay-butte-lookout/"
+      ]
+    },
+    {
+      "year": 1962,
+      "event": "modified",
+      "note": "visitor center structure added at the base",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wy/clay-butte-lookout/"
+    },
+    {
+      "year": 1975,
+      "event": "staffed_first",
+      "note": "staffed by volunteers starting in 1975, continuing as of this writing",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wy/clay-butte-lookout/"
+    },
+    {
       "year": 1998,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: June 1, 1998",
       "from": "nhlr"
+    },
+    {
+      "year": 2014,
+      "event": "nrhp_listed",
+      "note": "added to NRHP January 8, 2014",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Clay_Butte_Lookout"
     }
   ],
   "photos": [
@@ -182,6 +222,22 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wy-clay-butte",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -205,7 +261,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "pass",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

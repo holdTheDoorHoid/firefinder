@@ -1,6 +1,7 @@
 {
   "id": "us-mt-diamond-butte",
   "name": "Diamond Butte Lookout",
+  "summary": "A cabin moved from Yager Butte in 1958 and rebuilt as an R-6 flat cab on Diamond Butte in 1970, staffed until 2001 and now an off-season Forest Service rental.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 1307.9,
   "kind": "two_story",
-  "design": "R-6",
+  "design": "R-6 flat cab on a 10-foot concrete base",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -25,20 +26,20 @@
       "url": "http://nhlr.org/lookouts/us/mt/diamond-butte-lookout/"
     }
   ],
-  "agency": "Forest Service and BLM",
+  "agency": "Custer Gallatin National Forest / Bureau of Land Management",
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Reachable by car plus a short, steep 200-foot walk; rented through Recreation.gov, off-season only"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "200-foot walk up a steep hill from the parking area"
   },
   "rental": {
     "available": true,
@@ -58,16 +59,40 @@
   },
   "events": [
     {
+      "year": 1958,
+      "event": "relocated",
+      "note": "Cabin moved from Yager (Yeager) Butte to the current site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/diamond-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/diamond-butte-lookout/",
+        "https://www.recreation.gov/camping/campgrounds/234358"
+      ]
+    },
+    {
       "year": 1970,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Present R-6 flat cab on 10-ft concrete base built",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/diamond-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/diamond-butte-lookout/",
+        "https://www.firelookout.com/mt/diamondpeak.html"
+      ]
+    },
+    {
+      "year": 2001,
+      "event": "staffed_last",
+      "note": "Active fire lookout use until 2001 per Recreation.gov",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/234358"
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 12, 2022",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, April 12, 2022, as US 1529",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/diamond-butte-lookout/"
     }
   ],
   "photos": [
@@ -175,10 +200,32 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-diamond-butte",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

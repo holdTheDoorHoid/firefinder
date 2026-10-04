@@ -1,6 +1,7 @@
 {
   "id": "us-mt-wam-mountain",
   "name": "Wam Mountain Lookout",
+  "summary": "1931 gable-roofed L-4 on Wam Mountain, retired from fire detection in the 1950s and long a Recreation Rental, but Recreation.gov's listing now says it is no longer a rental.",
   "other_names": [
     "Mt. Wam Lookout Cabin",
     "Mount Wam"
@@ -17,7 +18,7 @@
   "elevation_m": 2170.5,
   "kind": "ground",
   "design": "L-4",
-  "height_m": null,
+  "height_m": 2170.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,20 +29,20 @@
       "url": "http://nhlr.org/lookouts/us/mt/wam-mountain-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Kootenai National Forest)",
   "ownership": "federal",
   "access": {
-    "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "level": "restricted",
+    "note": "Formerly bookable via Recreation.gov as a rental cabin; that listing now states 'No longer a rental,' with no explanation given. A short hiking trail (Wam Lookout Trail #339A) and a longer Pacific Northwest Trail approach both reach the site."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1950s"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "Reached by a roughly 0.3-mile trail (#339A) from a forest road, or via a longer route on the Pacific Northwest Trail; current rental/access status is unclear pending a Recreation.gov update."
   },
   "rental": {
     "available": true,
@@ -61,14 +62,34 @@
     {
       "year": 1931,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Built as a gable-roofed L-4 cab, described by NHLR as one of the last of that style.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/wam-mountain-lookout/"
+    },
+    {
+      "year": 1950,
+      "event": "staffed_last",
+      "note": "Last used for fire detection in the 1950s.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/wam-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/wam-mountain-lookout/",
+        "https://www.firelookout.com/mt/wam.html"
+      ]
     },
     {
       "year": 2000,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 12, 2000",
-      "from": "nhlr"
+      "note": "Listed on the National Historic Lookout Register as US 350 on May 12, 2000.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/wam-mountain-lookout/"
+    },
+    {
+      "year": 2026,
+      "event": "closed",
+      "note": "Recreation.gov listing now carries a 'No longer a rental' notice (observed as of this research date; no date given for when the change occurred).",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/234385"
     }
   ],
   "photos": [
@@ -107,6 +128,16 @@
       "label": "Recreation.gov listing",
       "url": "https://www.recreation.gov/camping/campgrounds/234385",
       "kind": "rental"
+    },
+    {
+      "label": "Wam Lookout Trail #339A (Hiking Project)",
+      "url": "https://www.hikingproject.com/trail/7080393/wam-lookout-trail-339a",
+      "kind": "reference"
+    },
+    {
+      "label": "Kootenai National Forest Inaccessible Roads and Trails Viewer Map Now Available (Montanian)",
+      "url": "https://montanian.com/local-news/2026/05/14/kootenai-national-forest-inaccessible-roads-and-trails-viewer-map-now-available/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
@@ -164,10 +195,33 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-wam-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

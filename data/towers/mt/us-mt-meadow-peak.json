@@ -1,6 +1,7 @@
 {
   "id": "us-mt-meadow-peak",
   "name": "Meadow Peak Lookout",
+  "summary": "Current 1957 L-4 tower on Meadow Peak replaced two earlier lookouts dating to 1928; staffed until the 1990s, NHLR-listed in 2000, and now a Forest Service rental.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -14,7 +15,7 @@
   "elevation_m": 2027.2,
   "kind": "tower",
   "design": "L-4",
-  "height_m": null,
+  "height_m": 3.0,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -25,20 +26,20 @@
       "url": "http://nhlr.org/lookouts/us/mt/meadow-peak-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Kootenai National Forest)",
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "High-clearance 4WD recommended; rough mountain road with loose rock."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1990s"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "Reached by rough 4WD road, not a maintained hiking trail."
   },
   "rental": {
     "available": true,
@@ -58,16 +59,60 @@
   },
   "events": [
     {
+      "year": 1928,
+      "event": "built",
+      "note": "First lookout: a cupola cabin.",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/10103111"
+    },
+    {
+      "year": 1936,
+      "event": "replaced",
+      "note": "Second lookout: a 15-foot L-4 tower.",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/10103111",
+      "source_urls": [
+        "https://www.recreation.gov/camping/campgrounds/10103111",
+        "https://www.firelookout.com/mt/meadowpk.html"
+      ]
+    },
+    {
       "year": 1957,
       "event": "built",
       "note": null,
       "from": "firelookout_com"
     },
     {
+      "year": 1957,
+      "event": "replaced",
+      "note": "Current 10-foot L-4 tower built by contractor Leonard Sheffield for about $6,299.",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/10103111"
+    },
+    {
+      "year": 1958,
+      "event": "staffed_first",
+      "note": "First staffed by Mr. and Mrs. Dave Griffith.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/meadow-peak-lookout/"
+    },
+    {
+      "year": 1990,
+      "event": "staffed_last",
+      "note": "Last staffed in the 1990s per Recreation.gov; NHLR (surveyed circa 2000) says unstaffed for at least 10 years.",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/10103111",
+      "source_urls": [
+        "https://www.recreation.gov/camping/campgrounds/10103111",
+        "http://nhlr.org/lookouts/us/mt/meadow-peak-lookout/"
+      ]
+    },
+    {
       "year": 2000,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 12, 2000",
-      "from": "nhlr"
+      "note": "Listed on the National Historic Lookout Register as US 344 on May 12, 2000.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/meadow-peak-lookout/"
     }
   ],
   "photos": [
@@ -211,10 +256,33 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-meadow-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

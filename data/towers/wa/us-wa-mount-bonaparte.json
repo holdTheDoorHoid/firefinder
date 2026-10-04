@@ -1,6 +1,7 @@
 {
   "id": "us-wa-mount-bonaparte",
   "name": "Mount Bonaparte Lookout",
+  "summary": "Active Forest Service lookout on the Colville National Forest, with a 1961 flattop tower and a 1914 cabin that was the forest's first permanent lookout.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -13,8 +14,8 @@
   },
   "elevation_m": 2199.1,
   "kind": "tower",
-  "design": "R-6",
-  "height_m": 4.9,
+  "design": "R-6 flattop cab on 20' timber tower",
+  "height_m": 6.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,20 +29,41 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=private."
+    "level": "public",
+    "note": "reached via trail #306 after hiking to the mountain from several trailheads"
   },
   "staffing": {
     "status": "staffed",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": false,
+    "trail_note": "last ascent via Bonaparte Trail #306"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1904,
+      "event": "staffed_first",
+      "note": "lone watchman with tent shelter on the summit",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Mount_Bonaparte_Lookout"
+    },
+    {
+      "year": 1914,
+      "event": "built",
+      "note": "12x12 ft log cabin with viewing platform, designed by Forest Supervisor C.C. Reed; first permanent lookout on the Colville National Forest",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Mount_Bonaparte_Lookout"
+    },
+    {
+      "year": 1930,
+      "event": "rebuilt",
+      "note": "taller lookout with crow's-nest cab built alongside the 1914 cabin, used through 1960",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Mount_Bonaparte_Lookout"
+    },
     {
       "year": 1961,
       "event": "built",
@@ -49,10 +71,36 @@
       "from": "firelookout_com"
     },
     {
+      "year": 1961,
+      "event": "replaced",
+      "note": "current 15x15 ft R-6 flattop cab on 20 ft timber tower built (firelookout.com gives 1963)",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Mount_Bonaparte_Lookout",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Mount_Bonaparte_Lookout",
+        "https://www.firelookout.com/wa/bonaparte.html"
+      ]
+    },
+    {
       "year": 1996,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: February 5, 1996",
-      "from": "nhlr"
+      "note": "registered on the National Historic Lookout Register, February 5, 1996",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/mount-bonaparte-lookout/"
+    },
+    {
+      "year": 2021,
+      "event": "fire",
+      "note": "Walker and Spur Mountain fires came close to the summit area",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Mount_Bonaparte_Lookout"
+    },
+    {
+      "year": 2025,
+      "event": "staffed",
+      "note": "staffing said to have transitioned from Forest Service to volunteers",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Mount_Bonaparte_Lookout"
     }
   ],
   "photos": [
@@ -347,10 +395,32 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-mount-bonaparte",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "us-wa-granite-mountain-2",
   "name": "Granite Mountain Lookout",
+  "summary": "A 1955/56 L-4 tower replacing a 1924 D-6 cupola on Granite Mountain near Snoqualmie Pass, volunteer-staffed June-September and reached by a steep 4-mile trail.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 1709.0,
   "kind": "tower",
-  "design": "L-4",
+  "design": "L-4 tower, 10 ft, replaced a 1924 D-6 cupola cabin",
   "height_m": 20.0,
   "status": "standing",
   "status_note": null,
@@ -25,23 +26,37 @@
       "url": "http://nhlr.org/lookouts/us/wa/granite-mountain-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Mt. Baker-Snoqualmie National Forest (volunteer-staffed via Snoqualmie Fire Lookouts Association)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reachable by trail; visitors welcome inside during the day when open and volunteer-staffed, but no camping at the lookout and no potable water on site."
   },
   "staffing": {
     "status": "volunteer",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": false,
+    "trail_note": "Granite Mountain Trail 1016 from Pratt Lake trailhead, about 4 miles one way with ~3,500-3,800 ft elevation gain; roughly 8 miles round trip per USFS."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1924,
+      "event": "built",
+      "note": "A D-6 cupola cabin was erected at the summit, replacing an earlier simple cabin.",
+      "from": "research",
+      "source_url": "https://www.snoqualmielookouts.org/granite-mountain-lookout"
+    },
+    {
+      "year": 1943,
+      "event": "other",
+      "note": "Served as an Aircraft Warning Service site during WWII.",
+      "from": "research",
+      "source_url": "https://www.snoqualmielookouts.org/granite-mountain-lookout"
+    },
     {
       "year": 1955,
       "event": "built",
@@ -49,10 +64,29 @@
       "from": "nhlr"
     },
     {
+      "year": 1955,
+      "event": "replaced",
+      "note": "NHLR and firelookout.com date the replacement with the current L-4 tower to 1955.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/granite-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/granite-mountain-lookout/",
+        "https://www.firelookout.com/wa/granitemtn128.html"
+      ]
+    },
+    {
+      "year": 1956,
+      "event": "replaced",
+      "note": "Snoqualmie Fire Lookouts Association dates the upgrade to the present L-4 tower to 1956.",
+      "from": "research",
+      "source_url": "https://www.snoqualmielookouts.org/granite-mountain-lookout"
+    },
+    {
       "year": 2015,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 9, 2015",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register June 9, 2015.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/granite-mountain-lookout/"
     }
   ],
   "photos": [
@@ -136,6 +170,16 @@
       "kind": "register"
     },
     {
+      "label": "Granite Mountain Lookout (Snoqualmie Fire Lookouts Association)",
+      "url": "https://www.snoqualmielookouts.org/granite-mountain-lookout",
+      "kind": "reference"
+    },
+    {
+      "label": "Granite Mountain Lookout (Mount Baker-Snoqualmie National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r06/mbs/recreation/granite-mountain-lookout",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Washington lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wa/",
       "kind": "association"
@@ -214,6 +258,22 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-granite-mountain-2",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -237,7 +297,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

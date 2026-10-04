@@ -1,6 +1,7 @@
 {
   "id": "us-id-square-mountain",
   "name": "Square Mountain Lookout",
+  "summary": "Square Mountain is a rare 1931 Nez Perce L-5 log cabin lookout, abandoned in the early 1970s and under restoration since 1999.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 2425.3,
   "kind": "ground",
-  "design": "L-5",
+  "design": "Nez Perce L-5 log cabin",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -25,34 +26,70 @@
       "url": "http://nhlr.org/lookouts/us/id/square-mountain-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Nez Perce National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=yes."
+    "level": "restricted",
+    "note": "Under restoration; drive-up route exists but not open to the public to enter or climb."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "Drive-up access; status listed as under restoration."
   },
   "rental": null,
   "events": [
     {
       "year": 1931,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built as a Nez Perce L-5 log cabin lookout.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/square-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/square-mountain-lookout/",
+        "https://www.firelookout.com/id/squaremtn.html"
+      ]
+    },
+    {
+      "year": 1972,
+      "event": "abandoned",
+      "note": "Lookout taken out of service in the early 1970s.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/square-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/square-mountain-lookout/",
+        "https://www.firelookout.com/id/squaremtn.html",
+        "https://www.idahofirelookouts.com/selway-region/square-mountain-lookout/"
+      ]
+    },
+    {
+      "year": 1972,
+      "event": "staffed_last",
+      "note": "David Emmons recorded as staffing the lookout in 1972.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/selway-region/square-mountain-lookout/"
+    },
+    {
+      "year": 1999,
+      "event": "restored",
+      "note": "Restoration work began.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/square-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/square-mountain-lookout/",
+        "https://www.idahofirelookouts.com/selway-region/square-mountain-lookout/"
+      ]
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: February 12, 2004",
-      "from": "nhlr"
+      "note": "Added to the National Historic Lookout Register on February 12, 2004.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/square-mountain-lookout/"
     }
   ],
   "photos": [
@@ -200,10 +237,31 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-square-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

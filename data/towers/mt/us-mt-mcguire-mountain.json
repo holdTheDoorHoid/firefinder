@@ -1,6 +1,7 @@
 {
   "id": "us-mt-mcguire-mountain",
   "name": "McGuire Mountain Lookout",
+  "summary": "A 1923/1924 D-6 cupola lookout used as a camp from 1921, abandoned by the mid-1940s, restored starting 1982-83, and now a rentable Kootenai National Forest cabin.",
   "other_names": [
     "McGuire"
   ],
@@ -15,7 +16,7 @@
   },
   "elevation_m": 2115.9,
   "kind": "ground",
-  "design": "D-6",
+  "design": "D-6 cupola cab, 12x12-ft wood frame with pyramidal roof and windowed cupola",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -27,20 +28,20 @@
       "url": "http://nhlr.org/lookouts/us/mt/mcguire-mountain-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Kootenai National Forest (Rexford Ranger District)",
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Reached by a 2.5-mile hike from Little Sutton Mountain trailhead; rented through Recreation.gov"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "2.5-mile hike from the parking area at Little Sutton Mountain"
   },
   "rental": {
     "available": true,
@@ -58,16 +59,68 @@
   },
   "events": [
     {
+      "year": 1921,
+      "event": "other",
+      "note": "First used as an unstructured camp lookout",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/mcguire.html"
+    },
+    {
+      "year": 1923,
+      "event": "built",
+      "note": "Recreation.gov gives 1923 as the construction year, conflicting with the 1924 date on NHLR/firelookout.com",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/234383"
+    },
+    {
       "year": 1924,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "D-6 cupola cab constructed; NHLR and firelookout.com both give 1924",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/mcguire-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/mcguire-mountain-lookout/",
+        "https://www.firelookout.com/mt/mcguire.html"
+      ]
+    },
+    {
+      "year": 1944,
+      "event": "abandoned",
+      "note": "Recreation.gov: abandoned around 1944 after over 20 years of active fire-detection use",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/234383"
+    },
+    {
+      "year": 1947,
+      "event": "abandoned",
+      "note": "NHLR: abandoned for 35 years before the 1982 restoration, implying abandonment around 1947",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/mcguire-mountain-lookout/"
+    },
+    {
+      "year": 1982,
+      "event": "restored",
+      "note": "NHLR and firelookout.com date the restoration to 1982 (NHLR) or 1983 (firelookout.com)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/mcguire-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/mcguire-mountain-lookout/",
+        "https://www.firelookout.com/mt/mcguire.html"
+      ]
+    },
+    {
+      "year": 1998,
+      "event": "restored",
+      "note": "Recreation.gov describes renovation spanning 1983 to 1998",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/234383"
     },
     {
       "year": 2000,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 12, 2000",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, May 12, 2000, as US 345",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/mcguire-mountain-lookout/"
     }
   ],
   "photos": [
@@ -175,6 +228,21 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-mcguire-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -200,7 +268,13 @@
       "note": "They share a register number."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

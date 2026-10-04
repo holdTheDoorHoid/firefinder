@@ -1,6 +1,7 @@
 {
   "id": "us-mt-apgar",
   "name": "Apgar Lookout",
+  "summary": "A 1930 Glacier National Park lookout that replaced a 1927 cabin burned two weeks after completion; still standing but boarded up.",
   "other_names": [
     "Apgar Mountain"
   ],
@@ -15,7 +16,7 @@
   },
   "elevation_m": 1563.0,
   "kind": "two_story",
-  "design": null,
+  "design": "Two-story wooden structure, enclosed 10-ft tower, 14x14-ft cab, pyramidal roof",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -36,31 +37,63 @@
   "agency": "National Park Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Reachable by trail; no source confirms public entry is permitted"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "Quarter mile below the summit of Apgar Mountain"
   },
   "rental": null,
   "events": [
     {
       "year": 1927,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Elevated platform and log cabin built",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/apgar.html"
+    },
+    {
+      "year": 1929,
+      "event": "destroyed",
+      "note": "First structure destroyed by fire two weeks after completion (per NHLR and Wikipedia text)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/apgar-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/apgar-lookout/",
+        "https://en.wikipedia.org/wiki/Apgar_Fire_Lookout"
+      ]
+    },
+    {
+      "year": 1930,
+      "event": "rebuilt",
+      "note": "Present two-story cab built; NHLR and NRHP give 1930, Wikipedia infobox and firelookout.com give 1929",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/apgar-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/apgar-lookout/",
+        "https://en.wikipedia.org/wiki/Apgar_Fire_Lookout",
+        "https://www.firelookout.com/mt/apgar.html"
+      ]
+    },
+    {
+      "year": 1986,
+      "event": "nrhp_listed",
+      "note": "Added to NRHP December 16, 1986 as part of Glacier National Park MRA",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Apgar_Fire_Lookout"
     },
     {
       "year": 1991,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 15, 1991",
-      "from": "nhlr"
+      "note": "Registered September 15, 1991 as US 33",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/apgar-lookout/"
     }
   ],
   "photos": [
@@ -196,6 +229,21 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-apgar",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -219,7 +267,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

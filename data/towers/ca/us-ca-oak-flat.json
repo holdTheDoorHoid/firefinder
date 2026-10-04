@@ -1,6 +1,7 @@
 {
   "id": "us-ca-oak-flat",
   "name": "Oak Flat Lookout",
+  "summary": "1934 steel L-4 tower on Greenhorn Mountain that caught fires into the 1980s and is now a Sequoia National Forest rental cabin.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 1486.5,
   "kind": "tower",
-  "design": null,
+  "design": "L-4 cab, 14x14 ft, on a steel tower with catwalk",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -29,16 +30,16 @@
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Recreation cabin rental; 4WD recommended for the final stretch of road."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1980s"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "Final approach is unimproved gravel road; last 0.7 miles up a spur road to the tower."
   },
   "rental": {
     "available": true,
@@ -58,14 +59,48 @@
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Newspaper reported construction of a new steel lookout tower on Oak Flat peak in September 1934; NHLR also lists 1934 as the build year.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/oak-flat-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/oak-flat-lookout/",
+        "https://californialookouts.weebly.com/oak-flat.html"
+      ]
+    },
+    {
+      "year": 1940,
+      "event": "fire",
+      "note": "Oak Flat lookout staff spotted the Rattlesnake Grade fire in July 1940.",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/oak-flat.html"
+    },
+    {
+      "year": 1945,
+      "event": "staffed",
+      "note": "Lookout guard Mrs. Andre Keown staffed the tower; radioed for emergency help after falling ill.",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/oak-flat.html"
+    },
+    {
+      "year": 1980,
+      "event": "staffed_last",
+      "note": "Recreation.gov describes the lookout as operational until the 1980s.",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/234601"
     },
     {
       "year": 1999,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 8, 1999",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register March 8, 1999.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/oak-flat-lookout/"
+    },
+    {
+      "year": 2022,
+      "event": "closed",
+      "note": "Closed to rental for the 2022 season for winter storm damage repairs.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/oak-flat-lookout/"
     }
   ],
   "photos": [
@@ -144,10 +179,32 @@
         "rental",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-oak-flat",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

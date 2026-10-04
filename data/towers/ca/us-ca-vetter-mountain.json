@@ -1,6 +1,7 @@
 {
   "id": "us-ca-vetter-mountain",
   "name": "Vetter Mountain Lookout",
+  "summary": "A 1935 ground-level lookout in the Angeles National Forest, burned in the 2009 Station Fire and rebuilt in 2019-2020 by ANFFLA and Southern California Edison, now staffed again by volunteers.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 1798.3,
   "kind": "ground",
-  "design": null,
+  "design": "14x14 ft ground-level ('C3') cab with steel shutters; rebuilt 2019-2020 in concrete board and steel framing",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -29,30 +30,73 @@
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Listed as a visitor site on recreation.gov. Check the listing for seasonal closures."
+    "note": "Popular day-hike destination off Angeles Crest Highway; open to visitors"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2026-10-04"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": false,
+    "trail_note": "Easy hike from the Chilao-Charlton Flats area; cab sits on the ground, accessible to visitors with limited mobility"
   },
   "rental": null,
   "events": [
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR gives 1935; ANFFLA's own tower-data table also gives 'Date Built: 1935' although the ANFFLA narrative text elsewhere says 1937",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/vetter-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/vetter-mountain-lookout/",
+        "http://www.anffla.org/vetter/"
+      ]
     },
     {
       "year": 1998,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 1, 1998",
-      "from": "nhlr"
+      "note": "Reopened to the public by ANFFLA volunteers May 30, 1998; registered on NHLR October 1, 1998",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/vetter-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/vetter-mountain-lookout/",
+        "http://www.anffla.org/vetter/"
+      ]
+    },
+    {
+      "year": 2009,
+      "event": "burned",
+      "note": "Destroyed by the Station Fire, September 1, 2009",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/vetter-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/vetter-mountain-lookout/",
+        "http://www.anffla.org/vetter/"
+      ]
+    },
+    {
+      "year": 2019,
+      "event": "rebuilt",
+      "note": "Reconstruction with Southern California Edison began September 18, 2019",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/vetter-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/vetter-mountain-lookout/",
+        "https://energized.edison.com/stories/vetter-mountain-fire-lookout-rebuilt-in-time-for-wildfire-season"
+      ]
+    },
+    {
+      "year": 2020,
+      "event": "restored",
+      "note": "Rebuild completed April 2020; first staffed again over July 4th weekend 2020",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/vetter-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/vetter-mountain-lookout/",
+        "http://www.anffla.org/vetter/"
+      ]
     }
   ],
   "photos": [
@@ -256,6 +300,11 @@
       "kind": "register"
     },
     {
+      "label": "Vetter Mountain (Angeles National Forest Fire Lookout Association)",
+      "url": "http://www.anffla.org/vetter/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -334,10 +383,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-vetter-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "pass",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

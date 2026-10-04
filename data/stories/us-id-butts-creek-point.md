@@ -1,0 +1,11 @@
+Butts Creek Point Lookout sits at about 7,840 feet on a prominent knob in what is now the Frank Church River of No Return Wilderness, roughly 40 miles northeast of Salmon, Idaho.[^1][^3] The Forest Service built it as an L-4 cab resting on a log-cribbing foundation; the parts were packed to the site by a string of ten mules.[^1][^3] Sources differ slightly on the year: the National Historic Lookout Register and Idaho Fire Lookouts both give 1934, while Wikipedia gives 1933.[^1][^2][^3] The 14-by-14-foot cab is enclosed in glass on every side, and the Forest Service says the outlook from inside reaches the Clearwater Mountains, the Bitterroot Mountains, the Bighorn Crags, and the Salmon River Mountains.[^3]
+
+Wikipedia reports the tower was in service from 1933 to 1982.[^3] The lookout register describes the staffing record as thin and believes it was staffed mainly during the 1960s and 1970s; the one specific name on record is Gary Gadwa, who staffed it in 1973–1974.[^2] No source consulted records any fire the lookout was specifically used to spot.
+
+The lookout's remoteness has preserved it rather than led to abandonment. Reaching it means crossing the Salmon River by boat and then hiking six miles with more than 5,000 feet of elevation gain, so it is rarely visited.[^1][^2] A former lookout, Dr. Phillip Krueger of Boise, now serves as steward, visiting twice a year to open and close the building for the season.[^1][^2] The structure was added to the National Historic Lookout Register on September 2, 2014, and listed on the National Register of Historic Places in 2018.[^1][^3]
+
+The lookout register lists the tower as available for rental, though given the difficulty of the approach, anyone interested should confirm current arrangements with the Salmon-Challis National Forest before planning a trip.[^1]
+
+[^1]: Butts Creek Point Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/id/butts-creek-point-lookout/ (accessed 2026-10-04).
+[^2]: Butts Creek Point Lookout, Idaho Fire Lookouts, https://www.idahofirelookouts.com/west-central/butts-creek-point-lookout/ (accessed 2026-10-04).
+[^3]: Butts Creek Point Fire Lookout, Wikipedia, https://en.wikipedia.org/wiki/Butts_Creek_Point_Fire_Lookout (accessed 2026-10-04).

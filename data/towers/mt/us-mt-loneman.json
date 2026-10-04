@@ -1,6 +1,7 @@
 {
   "id": "us-mt-loneman",
   "name": "Loneman Lookout",
+  "summary": "A Glacier National Park lookout above the Nyack valley with conflicting build dates (1929-1933) across sources; still standing.",
   "other_names": [
     "Loneman Mountain"
   ],
@@ -15,7 +16,7 @@
   },
   "elevation_m": 2152.5,
   "kind": "two_story",
-  "design": null,
+  "design": "Two-story wooden cab, 14x14-ft, similar to Apgar but with angle-braced catwalk",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -36,20 +37,27 @@
   "agency": "National Park Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Reachable by trail from Nyack Ranger Station; no source confirms public entry is permitted"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "Reached by trail from Nyack Ranger Station"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1928,
+      "event": "built",
+      "note": "firelookout.com describes an earlier 1928 cabin destroyed by fire; not corroborated elsewhere",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/loneman.html"
+    },
     {
       "year": 1929,
       "event": "built",
@@ -57,10 +65,50 @@
       "from": "firelookout_com"
     },
     {
+      "year": 1929,
+      "event": "rebuilt",
+      "note": "firelookout.com dates the present cab to 1929",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/loneman.html"
+    },
+    {
+      "year": 1930,
+      "event": "built",
+      "note": "NHLR description and Wikipedia infobox both give 1930 for the present structure",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/loneman-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/loneman-lookout/",
+        "https://en.wikipedia.org/wiki/Loneman_Fire_Lookout"
+      ]
+    },
+    {
+      "year": 1933,
+      "event": "other",
+      "note": "Wikipedia's article text separately states the structure was built in 1933, contradicting its own infobox",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Loneman_Fire_Lookout"
+    },
+    {
+      "year": 1986,
+      "event": "nrhp_listed",
+      "note": "Added to NRHP February 14, 1986",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Loneman_Fire_Lookout"
+    },
+    {
       "year": 1991,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 15, 1991",
-      "from": "nhlr"
+      "note": "Registered September 15, 1991 as US 36",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/loneman-lookout/"
+    },
+    {
+      "year": 1998,
+      "event": "restored",
+      "note": "Completely renovated in 1998",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/loneman.html"
     }
   ],
   "photos": [
@@ -232,10 +280,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-loneman",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

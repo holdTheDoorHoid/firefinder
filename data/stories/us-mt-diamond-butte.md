@@ -1,0 +1,11 @@
+Diamond Butte Lookout started out somewhere else. The cab now standing on the butte began as a cabin on Yager (also spelled Yeager) Butte, and in 1958 it was moved to its present site on Diamond Butte in the Custer National Forest, in what is now jointly managed by the Custer Gallatin National Forest and the Bureau of Land Management.[^1][^2] The structure people visit today, though, is newer than that move: the current building dates only to 1970, an R-6-style flat-roofed cab sitting on a concrete pedestal about ten feet tall.[^1][^3]
+
+The lookout sits at about 4,245 feet, a modest elevation for the Custer Gallatin but enough to command wide views over sparse, sage-covered hills toward the distant Bighorn Mountains, roughly 100 miles away.[^2] It served as a working fire lookout, staffed to watch for smoke in the dry Powder River country, until 2001.[^2] Records available do not say when fire-watch duty there first began, only that the current cab dates to 1970 and the site's use as a lookout continued for three more decades after that.
+
+After its active fire-spotting years ended, Diamond Butte was kept standing rather than torn down or left to decay, and it eventually joined the Forest Service's recreation rental program.[^1][^3] It was listed on the National Historic Lookout Register in 2022 as US 1529.[^1]
+
+Today the lookout is reachable by a long drive from Ashland, Montana, followed by a short, steep 200-foot walk up from the parking area to the cab itself.[^2] It can be rented off-season, sleeping up to four people, with a propane stove, heater and lights but no running water or electricity; guests haul their own gear up in a wagon kept in the lookout's basement.[^1][^2] Because it is an active rental on a working forest road system, visitors should book through the recreation booking system rather than show up and climb it unannounced.
+
+[^1]: Diamond Butte Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/mt/diamond-butte-lookout/ (accessed 2026-10-04).
+[^2]: Diamond Butte Lookout, Recreation.gov / Custer Gallatin National Forest, https://www.recreation.gov/camping/campgrounds/234358 (accessed 2026-10-04).
+[^3]: Diamond Butte Fire Lookout Tower, firelookout.com, https://www.firelookout.com/mt/diamondpeak.html (accessed 2026-10-04).

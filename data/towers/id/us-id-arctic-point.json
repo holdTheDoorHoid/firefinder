@@ -1,6 +1,7 @@
 {
   "id": "us-id-arctic-point",
   "name": "Arctic Point Lookout",
+  "summary": "Remote 1935/1936 Aermotor tower in Idaho's Frank Church Wilderness, unstaffed since 1997 and under long-term stabilization.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -34,31 +35,83 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Reachable only by an 18-mile foot or horseback trail in designated wilderness; not open for rental or climbing."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1997"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "18-mile trail, foot or horseback only"
   },
   "rental": null,
   "events": [
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR gives 1935 as the build year for the 72-foot Aermotor tower.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/arctic-point-lookout/"
+    },
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "NRHP documentation (via Wikipedia) gives 1936 instead.",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Arctic_Point_Fire_Lookout"
+    },
+    {
+      "year": 1939,
+      "event": "modified",
+      "note": "Rocky Mountain-style log cabin ground house added as lookout residence.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/arctic-point-lookout/",
+      "source_urls": [
+        "https://www.idahofirelookouts.com/west-central/arctic-point-lookout/",
+        "https://en.wikipedia.org/wiki/Arctic_Point_Fire_Lookout"
+      ]
+    },
+    {
+      "year": 1994,
+      "event": "nrhp_listed",
+      "note": "Listed on the National Register of Historic Places.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/arctic-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/arctic-point-lookout/",
+        "https://en.wikipedia.org/wiki/Arctic_Point_Fire_Lookout"
+      ]
+    },
+    {
+      "year": 1997,
+      "event": "abandoned",
+      "note": "Wikipedia/NRHP account: tower remained in service until 1997, when it was decommissioned; site unstaffed after this year.",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Arctic_Point_Fire_Lookout"
     },
     {
       "year": 1998,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 1, 1998",
-      "from": "nhlr"
+      "note": "Registered with the National Historic Lookout Register.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/arctic-point-lookout/"
+    },
+    {
+      "year": 2013,
+      "event": "other",
+      "note": "A bear damaged the ground cabin's porch logs, posts and decking while foraging for carpenter ants.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/arctic-point-lookout/"
+    },
+    {
+      "year": 2020,
+      "event": "restored",
+      "note": "Payette National Forest staff, packers and volunteers completed an 11-day, ~100-mile trip to stabilize the cabin.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/arctic-point-lookout/"
     }
   ],
   "photos": [
@@ -293,10 +346,33 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-arctic-point",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "us-or-waldo-mountain",
   "name": "Waldo Mountain Lookout",
+  "summary": "An R-6 flat-top cab built in 1957 on Waldo Mountain replaced two earlier lookouts and is reached only by a steep, fire-damaged trail.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 1918.7,
   "kind": "ground",
-  "design": "R-6",
+  "design": "R-6 flat-top ground cab, 15x15 ft",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,31 +29,56 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached by Waldo Mountain Trail #3592 from Salmon Creek; long, steep, and partly burned by the Cedar Creek Fire. No drive-up access."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "Waldo Mountain Trail #3592 from Salmon Creek; alternate route from North Waldo Campground is confusing and not recommended for casual hikers."
   },
   "rental": null,
   "events": [
     {
+      "year": 1926,
+      "event": "built",
+      "note": "First structure, a small cabin.",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Waldo_Mountain_Fire_Lookout"
+    },
+    {
+      "year": 1929,
+      "event": "replaced",
+      "note": "Cupola-style (D-6) lookout replaced the 1926 cabin.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/waldo-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/waldo-mountain-lookout/",
+        "https://en.wikipedia.org/wiki/Waldo_Mountain_Fire_Lookout"
+      ]
+    },
+    {
       "year": 1957,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Current R-6 flat-top cab built, replacing the cupola lookout; Wikipedia gives 1956 for this structure.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/waldo-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/waldo-mountain-lookout/",
+        "https://www.firelookout.com/or/waldo.html",
+        "https://www.fs.usda.gov/r06/willamette/recreation/waldo-mountain-lookout"
+      ]
     },
     {
       "year": 1995,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 24, 1995",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, November 24, 1995.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/waldo-mountain-lookout/"
     }
   ],
   "photos": [
@@ -136,6 +162,11 @@
       "kind": "register"
     },
     {
+      "label": "Waldo Mountain Lookout (Willamette National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r06/willamette/recreation/waldo-mountain-lookout",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -211,6 +242,21 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-waldo-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -230,7 +276,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

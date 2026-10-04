@@ -1,0 +1,9 @@
+A fire detection camp was first set up at Grave Point in 1922, and two years later crews built a log cupola cabin on the site.[^1][^2] That early cabin stood for three decades before the Nez Perce National Forest replaced it in 1954 with the 41-foot timber tower that's there now, topped with a 1936-model L-4 cab and catwalk.[^1] The lookout overlooks both the Salmon River and the Hells Canyon stretch of the Snake River, a vantage point that made it useful for more than just spotting smoke — for several years it was also used as a site for hacking falcons, a technique for releasing young raptors into the wild.[^1]
+
+Known staff include Kris Anderson, who worked the tower in 1981.[^3] Grave Point was added to the National Historic Lookout Register on April 24, 2009, as US 788.[^1]
+
+Today the tower is on emergency-use status rather than staffed every season, but by most accounts it's in sturdy shape.[^3] Visitors who have been there describe easy drive-up access even in winter, when conditions allow, and a wide western view across the Hells Canyon area; one group that visited suggested it would make a good addition to a lookout rental program with a bit of upkeep, though it is not currently listed as a rental.[^3] As with any Forest Service lookout, road and site conditions can change season to season, so checking current status with the Nez Perce-Clearwater National Forests before visiting is worthwhile.
+
+[^1]: Grave Point Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/id/grave-point-lookout/ (accessed 2026-10-04).
+[^2]: Grave Point Lookout, firelookout.com, https://www.firelookout.com/id/gravepoint.html (accessed 2026-10-04).
+[^3]: Grave Point Lookout, Idaho Fire Lookouts, https://www.idahofirelookouts.com/west-central/grave-point-lookout/ (accessed 2026-10-04).

@@ -1,6 +1,7 @@
 {
   "id": "us-or-indian-rock",
   "name": "Indian Rock Lookout",
+  "summary": "An R-6 flat-top ground cabin built in 1957 on the Malheur National Forest, replacing a 1929 cupola shelter, still staffed each summer and not available as a public rental.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 2232.4,
   "kind": "ground",
-  "design": "R-6",
+  "design": "R-6 flat top ground cabin",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -25,23 +26,37 @@
       "url": "http://nhlr.org/lookouts/us/or/indian-rock-lookout/"
     }
   ],
-  "agency": "US Forest Service - Malheur National Forest",
+  "agency": "U.S. Forest Service - Malheur National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Active staffed lookout on the Malheur National Forest, Blue Mountain Ranger District; not a public rental (the forest's rentable lookout is Fall Mountain, not Indian Rock)"
   },
   "staffing": {
     "status": "staffed",
-    "as_of": null
+    "as_of": "2023"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "No drive-up/trail detail found in sources consulted"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1929,
+      "event": "built",
+      "note": "Cupola from a standard D-6 lookout house erected as an initial shelter on Indian Rock, for about $85 plus contributed labor",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/indian-rock.html"
+    },
+    {
+      "year": 1953,
+      "event": "staffed",
+      "note": "Newspaper item describes a summer lookout staffer heading to Indian Rock Lookout",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/indian-rock.html"
+    },
     {
       "year": 1957,
       "event": "built",
@@ -49,10 +64,37 @@
       "from": "nhlr"
     },
     {
+      "year": 1957,
+      "event": "replaced",
+      "note": "New wooden ground house (R6 flat top) built by Forest Service crews, replacing the 1929 structure",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/indian-rock-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/indian-rock-lookout/",
+        "https://oregonlookouts.weebly.com/indian-rock.html",
+        "https://www.firelookout.com/or/indianrock.html"
+      ]
+    },
+    {
+      "year": 1976,
+      "event": "other",
+      "note": "Vandalism reported: propane tank regulator and copper tubing removed",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/indian-rock.html"
+    },
+    {
+      "year": 2022,
+      "event": "fire",
+      "note": "Crockets Knob Fire burned in August 2022 in the vicinity of Indian Rock; exact impact on the structure unclear from sources reviewed",
+      "from": "research",
+      "source_url": "https://cherylhill.net/firelookouts/category/malheur-national-forest/"
+    },
+    {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 3, 2022",
-      "from": "nhlr"
+      "note": "Added to the National Historic Lookout Register, July 3, 2022",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/indian-rock-lookout/"
     }
   ],
   "photos": [
@@ -160,6 +202,16 @@
       "kind": "register"
     },
     {
+      "label": "Indian Rock Lookout Wrapped (Every Lookout in Oregon, Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/category/malheur-national-forest/",
+      "kind": "reference"
+    },
+    {
+      "label": "Cabin Rentals (Malheur National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r06/malheur/recreation/cabin-rentals",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -235,10 +287,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-indian-rock",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "pass",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

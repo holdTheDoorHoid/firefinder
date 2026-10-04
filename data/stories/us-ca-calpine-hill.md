@@ -1,0 +1,10 @@
+The Civilian Conservation Corps built Calpine Hill Lookout in 1934 on the Tahoe National Forest, in an enclosed windmill-style design.[^1][^2] It's a C-3 cab, fourteen feet square, set on an enclosed 17-foot tower with a catwalk and living quarters on the first landing below the cab.[^1] Recreation.gov counts it as one of only three surviving examples of this enclosed windmill-style lookout left in the state.[^2]
+
+The tower did fire-detection work every summer from its construction until 1975, after which regular staffing ended.[^2] The National Historic Lookout Register notes that it may still be staffed occasionally today, during stretches of high lightning activity or elevated fire danger, per the local ranger station.[^1]
+
+Calpine Hill has had at least one frightening night as a rental. A visitor's account from July 2005, posted to the Register, describes being confronted after midnight by three people who rammed the renter's vehicle after being asked to leave, an incident that was reported to the sheriff.[^1] The writer raised concerns about site security and the existence of an unmarked back road bypassing the locked gate.[^1]
+
+Today the lookout is restored and run through the Forest Service rental program out of the Sierraville Ranger District.[^1][^2] Only the top room, the observation cab, is rented out; it has two twin beds, a dry sink, propane lighting, heat and cooking appliances, but no electricity or running water.[^2] The site sits at roughly 5,980 feet in the Sierra Nevada, about 40 miles from Truckee, and renters can drive to the base of the tower in summer, while winter access requires snowshoes, skis, or a snowmobile.[^2] Road conditions are reported as good and well marked for both summer and winter travel.[^1]
+
+[^1]: Calpine Hill Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/ca/calpine-hill-lookout/ (accessed 2026-10-04).
+[^2]: Calpine Lookout, Tahoe National Forest, Recreation.gov, https://www.recreation.gov/camping/campgrounds/234131 (accessed 2026-10-04).

@@ -1,6 +1,7 @@
 {
   "id": "us-mt-mount-brown",
   "name": "Mount Brown Lookout",
+  "summary": "Glacier National Park's oldest surviving lookout, staffed by a married couple in 1949-1951 and last staffed around 1971.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 2258.6,
   "kind": "two_story",
-  "design": null,
+  "design": "Two-story timber cab with short hip roof, one of three Glacier lookouts of this style",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -34,31 +35,79 @@
   "agency": "National Park Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Reached by a 7-mile trail; no source confirms public entry is permitted"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1971"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "7-mile trail to the lookout"
   },
   "rental": null,
   "events": [
     {
+      "year": 1928,
+      "event": "built",
+      "note": "Wikipedia infobox gives 1928",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Mount_Brown_Fire_Lookout"
+    },
+    {
       "year": 1929,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "NHLR and firelookout.com give 1929; NHLR calls it the oldest remaining lookout in the park",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/mount-brown-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/mount-brown-lookout/",
+        "https://www.firelookout.com/mt/mtbrown.html"
+      ]
+    },
+    {
+      "year": 1949,
+      "event": "staffed",
+      "note": "Staffed by Raymond and Marie Matheny from 1949 to 1951, per an NPS photo caption",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/mount-brown-lookout/"
+    },
+    {
+      "year": 1971,
+      "event": "staffed_last",
+      "note": "firelookout.com reports the lookout was staffed through 1971",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/mtbrown.html"
+    },
+    {
+      "year": 1986,
+      "event": "nrhp_listed",
+      "note": "Added to NRHP December 16, 1986",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Mount_Brown_Fire_Lookout"
     },
     {
       "year": 1991,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 15, 1991",
-      "from": "nhlr"
+      "note": "Registered 1991 as US 37",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/mount-brown-lookout/"
+    },
+    {
+      "year": 1999,
+      "event": "restored",
+      "note": "Rehabilitated in 1999",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/mtbrown.html"
+    },
+    {
+      "year": 2017,
+      "event": "fire",
+      "note": "Wrapped in fire-resistant material during the Sprague Fire",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Mount_Brown_Fire_Lookout"
     }
   ],
   "photos": [
@@ -230,10 +279,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-mount-brown",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

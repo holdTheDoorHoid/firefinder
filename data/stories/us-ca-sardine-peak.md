@@ -1,0 +1,10 @@
+The first lookout on Sardine Peak went up in 1915, a simple 4-A cab set on an enclosed wood tower overlooking the eastern Sierra Nevada.[^1] That structure didn't last as the Forest Service's standard; in 1935, the Civilian Conservation Corps rebuilt the site on the Tahoe National Forest with a 14-by-14-foot C-3 cab on a 17-foot enclosed tower.[^1][^2] At about 8,100 feet in the Sierraville Ranger District, it looks out on the Sierra Buttes and Sierra Valley to the north and west, with Truckee visible to the north.[^1]
+
+Sardine Peak is not currently staffed, and the NHLR notes that nearby Babbitt Peak, about six miles northeast, carries the active lookout duty for the area now.[^1] Beyond that, little detail survives in the available record about who staffed Sardine Peak over the decades or what fires it watched for — a gap typical of lookouts that were retired from fire detection before systematic staffing records became easy to find online.
+
+The tower survived long enough to be refurbished in 2009, and it's now part of the Forest Service's rental cabin program.[^1] Today only the top room, the observation cab, is rentable; it's furnished simply with two twin beds, a dry sink, a table and chairs, and propane lighting, heat, and cooking — there's no electricity or running water, and visitors haul in their own supplies.[^2] A vault toilet, picnic table, and fire ring sit below the tower.
+
+Getting there means driving dirt and gravel Forest Service roads out of Truckee or Sierraville, manageable for most of the route in an ordinary low-clearance two-wheel-drive car, but a locked iron gate stops vehicles short, so the final quarter mile has to be covered on foot.[^1][^2] Renters should call the Sierraville Ranger District ahead for road, weather, and fire-condition updates before heading out.[^2]
+
+[^1]: Sardine Peak Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/ca/sardine-peak-lookout/ (accessed 2026-10-04).
+[^2]: Sardine Peak Lookout Tower, Tahoe National Forest, Recreation.gov, https://www.recreation.gov/camping/campgrounds/252037 (accessed 2026-10-04).

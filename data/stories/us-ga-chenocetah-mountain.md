@@ -1,0 +1,10 @@
+Chenocetah Mountain Tower stands above Cornelia, Georgia, in the Chattahoochee National Forest.[^1] It was built as a public-works project during the Depression — the National Historic Lookout Register credits the Works Progress Administration, while Wikipedia attributes it to the Resettlement Administration, a related New Deal agency created to relocate and employ impoverished farmers; sources agree on the purpose, to let firefighters spot smoke across the forest.[^1][^2] The tower is unusual for the choice of material: a 40-foot stone tower rather than the steel skeleton towers common elsewhere, topped by a 14-by-14-foot wood cab under a peaked slate roof that flares out slightly at the eaves.[^1]
+
+Sources differ on exactly when it was finished. The National Historic Lookout Register gives a 1936 build date; Wikipedia says 1937, with the tower first dedicated on June 7, 1938, when Georgia Governor Eurith D. Rivers delivered the dedicatory address.[^1][^2] After World War II, the tower was rededicated in memory of three forest workers who died in the war.[^1][^2]
+
+Chenocetah stayed in active fire-watch service until 1975, then sat unused for over a decade. In 1989 the Georgia Forestry Commission began staffing it again during fire season.[^1][^2] The tower was added to the National Register of Historic Places in 1983, per the lookout register, though Wikipedia dates the listing to June 11, 1984.[^1][^2]
+
+Today the tower is cared for by its neighbors: residents living near the mountain formed the Chenocetah Conservation Corps, a volunteer group that maintains the grounds and surrounding landscape.[^1][^2] No source consulted describes current public access rules or whether the cab itself can be climbed, so visitors should check with the Chattahoochee National Forest before planning a trip.
+
+[^1]: Chenocetah Mountain Tower, National Historic Lookout Register, http://nhlr.org/lookouts/us/ga/chenocetah-mountain-tower/ (accessed 2026-10-04).
+[^2]: Chenocetah Fire Tower, Wikipedia, https://en.wikipedia.org/wiki/Chenocetah_Fire_Tower (accessed 2026-10-04).

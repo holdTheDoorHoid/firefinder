@@ -1,6 +1,7 @@
 {
   "id": "us-or-hershberger",
   "name": "Hershberger Lookout",
+  "summary": "A 1925 D-6 cupola lookout on the Rogue River National Forest, used as a WWII aircraft warning post, NRHP-listed in 2000, and still standing but not regularly staffed.",
   "other_names": [
     "Hershberger Mountain"
   ],
@@ -15,7 +16,7 @@
   },
   "elevation_m": 1853.5,
   "kind": "ground",
-  "design": "D-6",
+  "design": "D-6 cupola",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -33,34 +34,95 @@
       "url": "https://npgallery.nps.gov/AssetDetail/NRIS/00000507"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Rogue River National Forest)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached via Forest Roads 6510, 6515 and 530 north of Union Creek, OR; rough road, high-clearance recommended, short hike at end"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": false,
+    "trail_note": "Short hike from end of FR 530"
   },
   "rental": null,
   "events": [
     {
+      "year": 1913,
+      "event": "other",
+      "note": "District fire plan proposes a lookout line to Hershberger Mountain",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/hershberger-mountain.html"
+    },
+    {
+      "year": 1917,
+      "event": "other",
+      "note": "Earlier camp on the mountain predates the lookout structure",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/hershberger.html"
+    },
+    {
       "year": 1925,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "D-6 cupola lookout house constructed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/hershberger-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/hershberger-lookout/",
+        "https://en.wikipedia.org/wiki/Hershberger_Mountain_Lookout",
+        "https://www.firelookout.com/or/hershberger.html",
+        "https://oregonlookouts.weebly.com/hershberger-mountain.html"
+      ]
+    },
+    {
+      "year": 1943,
+      "event": "other",
+      "note": "End of the period of significance for fire-detection use (1925-1943) per NRHP nomination; served as WWII aircraft warning station",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/GetAsset/NRHP/00000507_text",
+      "source_urls": [
+        "https://npgallery.nps.gov/GetAsset/NRHP/00000507_text",
+        "https://www.hikingproject.com/gem/1051/hershberger-mountain-fire-lookout"
+      ]
     },
     {
       "year": 1991,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: October 15, 1991",
       "from": "nhlr"
+    },
+    {
+      "year": 1991,
+      "event": "other",
+      "note": "Refurbished in the 1980s per onX/Hiking Project summary (exact year not specified)",
+      "from": "research",
+      "source_url": "https://www.hikingproject.com/gem/1051/hershberger-mountain-fire-lookout"
+    },
+    {
+      "year": 2000,
+      "event": "nrhp_listed",
+      "note": "Listed on National Register of Historic Places, December 29, 2000",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Hershberger_Mountain_Lookout",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Hershberger_Mountain_Lookout",
+        "https://npgallery.nps.gov/GetAsset/NRHP/00000507_text"
+      ]
+    },
+    {
+      "year": 2012,
+      "event": "restored",
+      "note": "Refurbished with new roof, shutters, glass, and paint",
+      "from": "research",
+      "source_url": "https://www.hikingproject.com/gem/1051/hershberger-mountain-fire-lookout",
+      "source_urls": [
+        "https://www.hikingproject.com/gem/1051/hershberger-mountain-fire-lookout",
+        "https://oregonlookouts.weebly.com/hershberger-mountain.html"
+      ]
     }
   ],
   "photos": [
@@ -130,6 +192,21 @@
       "label": "NHLR register entry US 21 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/or/hershberger-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "National Register of Historic Places Registration Form (NRHP #00000507) (National Park Service / U.S. Forest Service)",
+      "url": "https://npgallery.nps.gov/GetAsset/NRHP/00000507_text",
+      "kind": "reference"
+    },
+    {
+      "label": "Hershberger Mountain Fire Lookout, Prospect, Oregon (Hiking Project (onX))",
+      "url": "https://www.hikingproject.com/gem/1051/hershberger-mountain-fire-lookout",
+      "kind": "reference"
+    },
+    {
+      "label": "Hershberger Mountain (Forest Lookouts (Oregon Lookouts, Rex's Fire Lookout Page))",
+      "url": "https://oregonlookouts.weebly.com/hershberger-mountain.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
@@ -209,10 +286,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-hershberger",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

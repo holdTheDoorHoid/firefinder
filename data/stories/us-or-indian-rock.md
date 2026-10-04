@@ -1,0 +1,13 @@
+Indian Rock's first lookout structure went up in December 1929: a cupola salvaged from a standard D-6 lookout house, set down on the rock as a shelter while a full cabin was planned to go underneath it, built for a reported $85 plus contributed labor.[^1][^2] Newspaper notices from the 1950s show the lookout staffed through the fire season, including a 1953 item about a college student from George Fox College heading up to Indian Rock in the Whitman National Forest for a summer's work.[^3] That older structure was replaced in September 1957, when Forest Service crews built a new wooden ground house on the Blue Mountain district; this is the USFS R6 "flat top" cabin that still stands today.[^4][^1]
+
+The lookout has not had an easy run since. A 1976 Blue Mountain Eagle item reported vandalism at the site, with a propane tank regulator and copper tubing stripped out.[^3] More recently, an August 2022 wildfire, the Crockets Knob Fire, burned in the vicinity of Indian Rock, though accounts of the blaze and the lookout's condition afterward vary and this research did not turn up a clear statement of damage to the structure itself.[^5]
+
+Indian Rock sits in what is now the Malheur National Forest, administered from the Blue Mountain Ranger District, and by multiple firsthand accounts it continues to be staffed by a fire lookout through the summer season.[^4][^6] A visitor in October 2023 recorded its status simply as "Staffed."[^6] The Malheur National Forest does rent out one of its lookouts to the public, but that is Fall Mountain Lookout, not Indian Rock, so this one is not available as a vacation rental.[^7] It was entered on the National Historic Lookout Register in July 2022.[^1]
+
+[^1]: Indian Rock Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/or/indian-rock-lookout/ (accessed 2026-10-04).
+[^2]: Indian Rock, Forest Lookouts (Oregon Lookouts, Rex's Fire Lookout Page), https://oregonlookouts.weebly.com/indian-rock.html (accessed 2026-10-04).
+[^3]: Indian Rock, Forest Lookouts (Oregon Lookouts, Rex's Fire Lookout Page), https://oregonlookouts.weebly.com/indian-rock.html (accessed 2026-10-04).
+[^4]: Indian Rock Fire Lookout Cabin, firelookout.com, https://www.firelookout.com/or/indianrock.html (accessed 2026-10-04).
+[^5]: Indian Rock Lookout Wrapped, Every Lookout in Oregon, Cheryl Hill, https://cherylhill.net/firelookouts/category/malheur-national-forest/ (accessed 2026-10-04).
+[^6]: Indian Rock, Every Lookout in Oregon, Cheryl Hill, https://cherylhill.net/firelookouts/category/malheur-national-forest/ (accessed 2026-10-04).
+[^7]: Cabin Rentals, Malheur National Forest, U.S. Forest Service, https://www.fs.usda.gov/r06/malheur/recreation/cabin-rentals (accessed 2026-10-04).

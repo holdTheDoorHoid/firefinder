@@ -1,6 +1,7 @@
 {
   "id": "us-wa-copper-mountain",
   "name": "Copper Mountain Lookout",
+  "summary": "A 1932/1934 Forest Service L-4 lookout in North Cascades National Park, transferred to NPS in 1968 and still staffed each summer, reached only by a 10-mile trail.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 1908.0,
   "kind": "ground",
-  "design": "L-4",
+  "design": "L-4 ground cabin, 14.25 x 14.25 ft, no catwalk",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -31,28 +32,57 @@
       "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88003446"
     }
   ],
-  "agency": "U.S. Dept. of the Interior",
+  "agency": "National Park Service (originally U.S. Forest Service, Mount Baker National Forest)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=private."
+    "level": "restricted",
+    "note": "Active staffed NPS lookout reached only by a 10-mile trail; not a public rental."
   },
   "staffing": {
     "status": "staffed",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "10-mile trail, per NHLR."
   },
   "rental": null,
   "events": [
     {
       "year": 1932,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "NHLR dates construction to 1932.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/copper-mountain-lookout/"
+    },
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "NRHP/Wikipedia dates the current structure to 1934.",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Copper_Mountain_Fire_Lookout"
+    },
+    {
+      "year": 1943,
+      "event": "other",
+      "note": "Staffed in winter 1943 by the Aircraft Warning Service to watch for enemy aircraft.",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Copper_Mountain_Fire_Lookout"
+    },
+    {
+      "year": 1968,
+      "event": "other",
+      "note": "North Cascades National Park created; area and lookout transferred from Forest Service to NPS.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/copper-mountain-lookout/"
+    },
+    {
+      "year": 1989,
+      "event": "nrhp_listed",
+      "note": "Added to the National Register of Historic Places February 10, 1989.",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Copper_Mountain_Fire_Lookout"
     },
     {
       "year": 1998,
@@ -222,6 +252,21 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-copper-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -245,7 +290,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "pass",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

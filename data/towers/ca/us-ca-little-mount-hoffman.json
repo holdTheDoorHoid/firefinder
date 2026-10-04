@@ -1,6 +1,7 @@
 {
   "id": "us-ca-little-mount-hoffman",
   "name": "Little Mount Hoffman Lookout",
+  "summary": "Shasta-Trinity groundhouse lookout, staffed until 1978, restored in 1994, and rented to the public since 1995.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 2212.8,
   "kind": "ground",
-  "design": null,
+  "design": "R-5/R-1 groundhouse with catwalk",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -29,16 +30,16 @@
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Rental cabin; reservation required, no walk-ins; renter picks up lock combination from McCloud Ranger District in advance."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1978"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "Last 4 miles are unpaved and difficult for RVs/trailers."
   },
   "rental": {
     "available": true,
@@ -60,14 +61,41 @@
     {
       "year": 1940,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR gives 1940 as the build year.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/little-mount-hoffman-lookout/"
+    },
+    {
+      "year": 1978,
+      "event": "staffed_last",
+      "note": "Regular Forest Service staffing/use ended.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/little-mount-hoffman-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/little-mount-hoffman-lookout/",
+        "https://www.recreation.gov/camping/campgrounds/234436"
+      ]
+    },
+    {
+      "year": 1994,
+      "event": "restored",
+      "note": null,
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/little-mount-hoffman-lookout/"
+    },
+    {
+      "year": 1995,
+      "event": "rental_opened",
+      "note": null,
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/little-mount-hoffman-lookout/"
     },
     {
       "year": 1998,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 2, 1998",
-      "from": "nhlr"
+      "note": "Registered March 2, 1998.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/little-mount-hoffman-lookout/"
     }
   ],
   "photos": [
@@ -170,10 +198,32 @@
         "rental",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-little-mount-hoffman",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "pass",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

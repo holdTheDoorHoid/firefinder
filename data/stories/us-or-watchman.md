@@ -1,0 +1,11 @@
+The Watchman sits on the western rim of Crater Lake, 8,025 feet up on a peak that surveyor William Gladstone Steel named in 1886 while measuring the lake's depth.[^1][^2] Crews working under the National Park Service put up the two-story stone-and-frame structure in 1931, finishing it early in the 1932 fire season; the agency's landscape architect, Merel S. Sager, picked the site.[^1][^2][^3] Built in the National Park Service rustic style, it was designed to do two jobs at once: watch for fire and serve as a trail-side museum for visitors climbing the rim.[^2]
+
+The lookout was one piece of a wider fire-detection network around Crater Lake that also drew on U.S. Forest Service and Bureau of Indian Affairs towers.[^2] A ranger normally staffed it through the fire season, radioing sightings back to park headquarters by short-wave; Civilian Conservation Corps crews helped fill that role during the 1930s.[^2] The Park Service kept the Watchman staffed every fire season until 1974, and intermittently afterward.[^2]
+
+The building was carefully restored in 1999 and remains in service today, with the Forest Fire Lookout Association describing recent staffing as summer seasonal.[^1][^3] It was added to the National Register of Historic Places on December 1, 1988, and later to the National Historic Lookout Register in December 2002.[^2][^1]
+
+Because it sits inside Crater Lake National Park, the Watchman is reached on foot, not by vehicle: a short, popular hike climbs from the Watchman Overlook on Rim Drive to the summit. The National Historic Lookout Register calls it possibly the most-visited lookout in Oregon, rivaled only by Lava Butte, thanks to its views straight down into the caldera.[^1] There's no indication it's available as a rental; it functions as a day-use destination and seasonal lookout within the park.
+
+[^1]: Watchman Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/or/watchman-lookout/ (accessed 2026-10-04).
+[^2]: Watchman Lookout Station, Wikipedia, https://en.wikipedia.org/wiki/Watchman_Lookout_Station (accessed 2026-10-04).
+[^3]: The Watchman Fire Lookout Tower, Forest Fire Lookout Association / firelookout.com, https://www.firelookout.com/or/watchman.html (accessed 2026-10-04).

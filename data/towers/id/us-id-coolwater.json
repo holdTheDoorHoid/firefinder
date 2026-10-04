@@ -1,6 +1,7 @@
 {
   "id": "us-id-coolwater",
   "name": "Coolwater Lookout",
+  "summary": "One of the oldest Lochsa-Selway lookout sites (1915 origin), now a 1953 L-4 cab tower staffed continuously into the 2020s.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,8 +14,8 @@
   },
   "elevation_m": 2112.0,
   "kind": "tower",
-  "design": "L-4",
-  "height_m": null,
+  "design": "10 ft treated-timber tower, hip-roof L-4 cab with catwalk (built 1953)",
+  "height_m": 3.0,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -25,34 +26,90 @@
       "url": "http://nhlr.org/lookouts/us/id/coolwater-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Nez Perce National Forest, Moose Creek Ranger District)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Active, staffed Forest Service lookout; rough high-clearance/4WD road or ~2 mile hike from first saddle, per idahofirelookouts.com visit report; not a public rental"
   },
   "staffing": {
     "status": "staffed",
-    "as_of": null
+    "as_of": "2025"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "Reachable by rough road (high-clearance/4WD recommended) or by hiking ~2 miles from the first saddle"
   },
   "rental": null,
   "events": [
     {
+      "year": 1915,
+      "event": "built",
+      "note": "Original 12x12 ft frame cabin built on the summit",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/coolwater-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/coolwater-lookout/",
+        "https://www.firelookout.com/id/coolwater.html"
+      ]
+    },
+    {
+      "year": 1916,
+      "event": "staffed_first",
+      "note": "Staffed by G.A. Burrows (idahofirelookouts.com dates the cabin's construction to 1916, one year later than NHLR/firelookout.com)",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/selway-region/coolwater-lookout/"
+    },
+    {
+      "year": 1931,
+      "event": "replaced",
+      "note": "Frame cabin replaced by 14x14 ft log cabin (dated 1926 by idahofirelookouts.com vs 1931 by NHLR); idahofirelookouts.com and firelookout.com also date the L-4 cab's construction to 1931, though NHLR gives 1936 for the L-4 and firelookout.com describes the L-4 as replacing the frame cabin directly rather than the log cabin",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/coolwater-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/coolwater-lookout/",
+        "https://www.idahofirelookouts.com/selway-region/coolwater-lookout/",
+        "https://www.firelookout.com/id/coolwater.html"
+      ]
+    },
+    {
       "year": 1953,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Current 10 ft treated-timber tower with hip-roof L-4 cab and catwalk constructed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/coolwater-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/coolwater-lookout/",
+        "https://www.idahofirelookouts.com/selway-region/coolwater-lookout/",
+        "https://www.firelookout.com/id/coolwater.html"
+      ]
+    },
+    {
+      "year": 1953,
+      "event": "relocated",
+      "note": "1931 L-4 cab moved ~100 ft down the mountain to make room for the present tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/coolwater-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/coolwater-lookout/",
+        "https://www.idahofirelookouts.com/selway-region/coolwater-lookout/",
+        "https://www.firelookout.com/id/coolwater.html"
+      ]
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 6, 2009",
-      "from": "nhlr"
+      "note": "Registered on NHLR April 6, 2009, nominated by Gary Weber",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/coolwater-lookout/"
+    },
+    {
+      "year": 2025,
+      "event": "staffed",
+      "note": "Tom Vandewater staffing recorded as continuing through 2025 per idahofirelookouts.com staff list",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/selway-region/coolwater-lookout/"
     }
   ],
   "photos": [
@@ -248,6 +305,23 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-coolwater",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -267,7 +341,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

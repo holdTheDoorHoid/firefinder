@@ -1,6 +1,7 @@
 {
   "id": "us-ca-pine-mountain",
   "name": "Pine Mountain Lookout",
+  "summary": "A 1933 BC-201 lookout-fireman cabin on Mendocino NF with a 180-degree view, used as a WWII aircraft warning post and now restored and rentable.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 1224.4,
   "kind": "ground",
-  "design": null,
+  "design": "BC-201 lookout-fireman cabin, windows on three sides, 180-degree viewing area",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -25,20 +26,20 @@
       "url": "http://nhlr.org/lookouts/us/ca/pine-mountain-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Mendocino National Forest)",
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Restored and in the Forest Service rental program; reached by car through a combination-locked gate, May through October."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "Accessible by car when the rental season is open; group size capped at six, no overnight camping elsewhere on site."
   },
   "rental": {
     "available": true,
@@ -61,14 +62,41 @@
     {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built as a BC-201 lookout-fireman cabin on the Mendocino National Forest.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/pine-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/pine-mountain-lookout/",
+        "https://www.recreation.gov/camping/campgrounds/234600"
+      ]
+    },
+    {
+      "year": 1942,
+      "event": "other",
+      "note": "Recreation.gov states regular fire-detection use ran until 1942, though staffing accounts below extend past this date.",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/234600"
+    },
+    {
+      "year": 1943,
+      "event": "staffed",
+      "note": "Mr. and Mrs. B.M. Bucknell took over as lookouts, replacing Ralph Johnson after he was injured.",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/pine-mountain.html"
+    },
+    {
+      "year": 1944,
+      "event": "staffed",
+      "note": "Earl Mersinger was injured fighting fire near the lookout; Mrs. Carl Capell and niece June Marie Bauer took over staffing.",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/pine-mountain.html"
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 20, 2009",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, April 20, 2009 (per brief/NHLR record).",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/pine-mountain-lookout/"
     }
   ],
   "photos": [
@@ -142,10 +170,31 @@
         "rental",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-pine-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "pass",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

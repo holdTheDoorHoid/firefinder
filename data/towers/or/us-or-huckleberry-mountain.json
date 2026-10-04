@@ -1,6 +1,7 @@
 {
   "id": "us-or-huckleberry-mountain",
   "name": "Huckleberry Mountain Lookout",
+  "summary": "A late-1930s L-4 ground-house lookout in the Willamette National Forest, restored by volunteers and still seasonally staffed by the Middle Fork Ranger District.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 1661.5,
   "kind": "ground",
-  "design": "L-4",
+  "design": "L-4 ground house with catwalk",
   "height_m": 1.2,
   "status": "standing",
   "status_note": null,
@@ -28,31 +29,61 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "public",
-    "note": "Listed as a visitor site on recreation.gov. Check the listing for seasonal closures."
+    "level": "restricted",
+    "note": "Reached by an easy 1/2-mile trail with no fee, but limited access while staffed; not available as an overnight rental"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2026 (per Forest Service recreation page)"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "Easy 1/2-mile trail; site has previously been affected by nearby fire closure orders"
   },
   "rental": null,
   "events": [
     {
+      "year": 1934,
+      "event": "built",
+      "note": "Per NHLR; conflicts with other sources giving 1938 or 1939",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/huckleberry-mountain-lookout/"
+    },
+    {
+      "year": 1938,
+      "event": "built",
+      "note": "Per Forest Service Willamette NF recreation page, hip-roof; conflicts with NHLR (1934) and firelookout.com (1939)",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r06/willamette/recreation/huckleberry-mountain-lookout"
+    },
+    {
       "year": 1939,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Per firelookout.com; conflicts with NHLR (1934) and the Forest Service page (1938)",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/huckleberry.html"
+    },
+    {
+      "year": 1990,
+      "event": "restored",
+      "note": "NHLR dates the volunteer/USFS restoration to 1990-1991",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/huckleberry-mountain-lookout/"
     },
     {
       "year": 1991,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 3, 1991",
-      "from": "nhlr"
+      "note": "Registered September 3, 1991 as US 26, nominated by Doug Newman",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/huckleberry-mountain-lookout/"
+    },
+    {
+      "year": 1994,
+      "event": "restored",
+      "note": "firelookout.com dates the restoration to 1994 and says it was made handicap-accessible; conflicts with NHLR's 1990-1991 date",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/huckleberry.html"
     }
   ],
   "photos": [
@@ -86,6 +117,11 @@
       "label": "NHLR register entry US 26 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/or/huckleberry-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Huckleberry Mountain Lookout (Willamette National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r06/willamette/recreation/huckleberry-mountain-lookout",
+      "kind": "reference"
     },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
@@ -166,6 +202,22 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-huckleberry-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -185,7 +237,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

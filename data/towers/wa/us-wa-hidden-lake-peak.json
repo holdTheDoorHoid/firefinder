@@ -1,6 +1,7 @@
 {
   "id": "us-wa-hidden-lake-peak",
   "name": "Hidden Lake Peak Lookout",
+  "summary": "A 1931 L-4 cab on Hidden Lake Peak, staffed until 1958, then saved from abandonment in 1961 by a volunteer club and still used as an emergency hiking shelter.",
   "other_names": [
     "Hidden Lake"
   ],
@@ -15,7 +16,7 @@
   },
   "elevation_m": 2051.9,
   "kind": "ground",
-  "design": "L-4",
+  "design": "L-4 gable-roof groundhouse cab",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -36,31 +37,58 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=permissive."
+    "level": "public",
+    "note": "Reachable by trail in the Mt. Baker-Snoqualmie National Forest; used as an emergency hiking shelter, not an active fire lookout."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1958"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": false,
+    "trail_note": "Popular hiking summit near North Cascades National Park."
   },
   "rental": null,
   "events": [
     {
       "year": 1931,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Gable-roof L-4 cab built by Larsen Bros. Construction atop Hidden Lake Peak.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/hidden-lake-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/hidden-lake-peak-lookout/",
+        "https://npgallery.nps.gov/AssetDetail/NRIS/87001184"
+      ]
+    },
+    {
+      "year": 1958,
+      "event": "staffed_last",
+      "note": "Staffing ended when the Forest Service closed many north Cascades lookouts.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/hidden-lake-peak-lookout/"
+    },
+    {
+      "year": 1961,
+      "event": "restored",
+      "note": "Dr. Fred Darvill and the Skagit Alpine Club obtained a special-use permit to restore and maintain the structure.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/hidden-lake-peak-lookout/"
+    },
+    {
+      "year": 1987,
+      "event": "nrhp_listed",
+      "note": "Listed on the National Register of Historic Places (significant year 1931 per nomination).",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001184"
     },
     {
       "year": 1996,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 9, 1996",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, July 9, 1996.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/hidden-lake-peak-lookout/"
     }
   ],
   "photos": [
@@ -216,6 +244,11 @@
       "kind": "register"
     },
     {
+      "label": "National Register of Historic Places nomination/asset detail, NRIS 87001184 (National Park Service / NPGallery)",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001184",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Washington lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wa/",
       "kind": "association"
@@ -305,10 +338,32 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-hidden-lake-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

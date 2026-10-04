@@ -1,6 +1,7 @@
 {
   "id": "us-wy-spruce-mountain",
   "name": "Spruce Mountain Lookout",
+  "summary": "CCC-era 1938 lookout tower in Medicine Bow National Forest, rebuilt as a taller R-6 tower and opened to public rental in 1997.",
   "other_names": [],
   "country": "US",
   "region": "WY",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 3047.1,
   "kind": "tower",
-  "design": "R-6",
+  "design": "R-6 tower (41-foot treated-timber, per firelookout.com; Recreation.gov instead says 55 feet)",
   "height_m": 9.1,
   "status": "standing",
   "status_note": null,
@@ -29,16 +30,16 @@
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Rental tower, drive-up most of the season; June snowdrifts may block the road."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2008"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "Guests may need to pack gear in on foot during early-season snow."
   },
   "rental": {
     "available": true,
@@ -59,22 +60,38 @@
   },
   "events": [
     {
+      "year": 1938,
+      "event": "built",
+      "note": "Original lookout built by CCC crews.",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/233989"
+    },
+    {
       "year": 1950,
       "event": "built",
       "note": null,
       "from": "firelookout_com"
     },
     {
+      "year": 1950,
+      "event": "staffed",
+      "note": "H. Arnold Maves listed as lookout personnel.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wy/sprucemtn.html"
+    },
+    {
       "year": 1997,
       "event": "rental_opened",
-      "note": null,
-      "from": "ridb"
+      "note": "Renovated and opened for overnight rental.",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/233989"
     },
     {
       "year": 2015,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 3, 2015",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register January 3, 2015.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wy/spruce-mountain-lookout/"
     }
   ],
   "photos": [
@@ -196,6 +213,22 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wy-spruce-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -215,7 +248,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

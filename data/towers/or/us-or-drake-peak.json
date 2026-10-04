@@ -1,6 +1,7 @@
 {
   "id": "us-or-drake-peak",
   "name": "Drake Peak Lookout",
+  "summary": "Patrol lookout since 1915, a D-6 cupola in the 1920s, then the present 1948 L-4 cab on Drake Peak, now the highest road-accessible lookout in Oregon and a Recreation.gov rental.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -29,16 +30,16 @@
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Rentable via Recreation.gov; combination lock code provided on booking."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "Road access to the summit; highest road-accessible lookout in Oregon per NHLR."
   },
   "rental": {
     "available": true,
@@ -56,16 +57,47 @@
   },
   "events": [
     {
+      "year": 1915,
+      "event": "other",
+      "note": "First used as a patrol lookout; fire-finding instruments installed.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/drake-peak-lookout/"
+    },
+    {
+      "year": 1927,
+      "event": "other",
+      "note": "Standard Forest Service road built to the site.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/drake-peak-lookout/"
+    },
+    {
+      "year": 1928,
+      "event": "built",
+      "note": "D-6 cupola built on Drake Peak per NHLR; firelookout.com instead places a D-6 cupola cabin on nearby Light Peak in 1926 -- sources disagree on location and year.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/drake-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/drake-peak-lookout/",
+        "https://www.firelookout.com/or/drakepeak.html"
+      ]
+    },
+    {
       "year": 1948,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Present L-4 ground house built new next to the cupola, cost $3,451.47.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/drake-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/drake-peak-lookout/",
+        "https://www.firelookout.com/or/drakepeak.html"
+      ]
     },
     {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 31, 2003",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register March 31, 2003.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/drake-peak-lookout/"
     }
   ],
   "photos": [
@@ -196,6 +228,21 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-drake-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -240,7 +287,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
