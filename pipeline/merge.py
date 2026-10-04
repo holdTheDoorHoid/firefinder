@@ -2067,20 +2067,23 @@ def hidden_for(rec: dict, members: list[Rec]) -> tuple[bool, str | None]:
     for m in members:
         if m.key in HIDE_KEYS:
             return True, HIDE_KEYS[m.key]
+    registered = any(m.source in ("nhlr", "fflos")
+                     or any(str(r.get("register") or "").upper() in ("NHLR", "FFLOS") for r in (m.raw.get("registers") or []))
+                     for m in members)
     for m in members:
-        if (m.status_info or {}).get("hidden_reason"):
+        if (m.status_info or {}).get("hidden_reason") and not registered:
             return True, m.status_info["hidden_reason"]
         nonfire = (re.search(r"non-?fire", str(m.raw.get("status_raw") or ""), re.I)
                    or re.search(r"non-?fire", str(m.raw.get("type_raw") or ""), re.I)
                    or re.search(r"non-?fire", str((m.annotation or {}).get("note") or ""), re.I))
-        if nonfire and not re.search(r"non-?wildfire", str(m.raw.get("status_raw") or ""), re.I):
+        # A tower on a lookout register stays visible whatever one table calls it (warn, don't hide).
+        if nonfire and not registered and not re.search(r"non-?wildfire", str(m.raw.get("status_raw") or ""), re.I):
             return True, f"Not a fire lookout ({SHORT_NAME.get(m.source, m.source)} lists it as a non-fire tower)"
     kind = rec.get("kind")
     if kind in HIDDEN_KIND_REASON:
         return True, HIDDEN_KIND_REASON[kind]
     structural = any(m.raw.get("kind") not in (None, "unknown", "tree", "camp") for m in members if m.source != "ffla")
     ffla = [m for m in members if m.source == "ffla"]
-    registered = any(m.source in ("nhlr", "fflos") for m in members)
     for m in ffla:
         st = str(m.raw.get("status_raw") or "").strip().lower()
         if st in NEVER_BUILT_STATUS and not registered and not structural:
