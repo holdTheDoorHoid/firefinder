@@ -49,6 +49,7 @@ Cache raw responses under `data/raw/` (git-ignored) so nothing is fetched twice.
 | **OpenStreetMap** | `emergency=fire_lookout` (~1,035) plus `man_made=tower`+`tower:type=observation` named *Lookout* | Overpass API | ODbL (compatible) |
 | **Wikidata** | Q748998 "fire lookout tower" (~319 with coords): Wikipedia links, NRHP ids (P649), Commons images (P18), inception | SPARQL | CC0 |
 | **Regional** | firelookout.com state maps (MT: 134 `GV_Draw_Marker` points, plus WA/OR/ID/WY/SD); PA StoryMap (48 towers, `…/items/ed47c97ebe7246868ce8ef3e7139a0b4/data?f=json`); andyarthur.org NY towers (CC BY 3.0); CSKT Flathead Reservation (6); fire-lookouts.org Sierra NF (~18, reuse allowed with credit); idahofirelookouts.com (not yet surveyed) | Mixed | Per source |
+| **Gap-state regional** (2026-10-04) | easternuslookouts.weebly.com / centraluslookouts.weebly.com, the same hobby-site template split by region (one page per tower; AL/CT/FL/GA/KY/MA/MI/MS/NJ/NC/PA/SC/TN and AR/LA/MO/OK); Wikipedia *List of fire lookout towers in Louisiana* and *List of New Jersey Forest Fire Service fire towers* (coordinate-bearing wikitables, CC BY-SA, facts only); michiganfiretower.com (a small young single-author site, 8 towers); tnlandforms.us (Tom Dunigan's independently surveyed GA/NC/TN tower lists, 929 towers, every one with coordinates) | Mixed | Per source; no licence stated on the two weebly sites or tnlandforms.us |
 | **FFLA resources** | `firelookout.org/resources/…`: *Lookout Rentals* (rentals outside recreation.gov: state parks and private), *Lookout Types and Historic Plans* (for the designs guide), *Historical Reference Documents*, *Staffing / Volunteer Opportunities* | HTML | Facts + links |
 | Later | USGS historical topos (public domain, `ngmdb.usgs.gov/arcgis/rest/services/topoview/ustOverlay(Auto)/MapServer`), NRHP NPS dataset, Library of Congress HABS/HAER (measured drawings, public domain), Forest History Society, state forestry lists, newspapers | — | — |
 
@@ -162,8 +163,10 @@ file, `data/merge_report.json` (counts, conflicts, near misses, records it could
 Re-running with unchanged inputs writes nothing. A new source extract in `data/sources/` is
 picked up with no code change (unknown sources rank last in every field).
 
-**Matching**, per source in the order NHLR, FFLOS, FFLA, RIDB, fire-lookouts.org,
-firelookout.com, idahofirelookouts.com, PA StoryMap, andyarthur.org, CSKT, Wikidata, OSM:
+**Matching**, per source in the order NHLR, FFLOS, FFLA, RIDB, fire-lookouts.org, tnlandforms.us,
+the NJ Forest Fire Service Wikipedia table, firelookout.com, idahofirelookouts.com,
+michiganfiretower.com, PA StoryMap, andyarthur.org, the Wikipedia per-state lookout lists, CSKT,
+the easternuslookouts and centraluslookouts weebly sites, Wikidata, OSM:
 
 1. **Key**: the record's key is already in a tower's `sources[].key`.
 2. **Register number**. NHLR and FFLOS number their entries separately ("NHLR US 674" is
@@ -223,15 +226,15 @@ node + way (100 m; 50 m if unnamed), Wikidata (100 m), RIDB facility + campgroun
 
 | Field | Precedence |
 |---|---|
-| name | NHLR, FFLOS > RIDB (cleaned) > FFLA > firelookout.com > fire-lookouts.org > andyarthur.org > PA StoryMap > CSKT > Wikidata > idahofirelookouts.com > OSM. A bare name borrows "Lookout"/"Fire Tower" only if another source spells it that way; every other name goes to `other_names` |
-| location | NHLR, FFLOS > FFLA > fire-lookouts.org > firelookout.com > OSM > Wikidata > RIDB > andyarthur.org > PA StoryMap > idahofirelookouts.com > CSKT, with *corroborated precedence*: if the winner is confirmed by no other lineage and lies > 500 m from a position that is, the best confirmed position wins (NHLR's Taylor Mountain, ID sits 253 km outside its own county). Rows outside their own state are used last |
-| status | FFLA > NHLR, FFLOS > RIDB > fire-lookouts.org > andyarthur.org > PA StoryMap > CSKT > firelookout.com > idahofirelookouts.com > OSM > Wikidata. OSM features imported from GNIS make no status claim (FFLA calls a third of them gone); a "standing" row named "(Replica)" is `replica` |
-| kind | FFLA > NHLR, FFLOS > RIDB > firelookout.com > fire-lookouts.org > PA StoryMap > andyarthur.org > CSKT > OSM > Wikidata > idahofirelookouts.com |
-| built (and its events) | NHLR, FFLOS > firelookout.com > fire-lookouts.org > PA StoryMap > RIDB > Wikidata > CSKT > idahofirelookouts.com > OSM > andyarthur.org > FFLA; one source's build dates are used, others' go to `conflicts` |
-| elevation | NHLR, FFLOS > firelookout.com > fire-lookouts.org > RIDB > Wikidata > CSKT > OSM |
-| design, height | NHLR, FFLOS > firelookout.com > fire-lookouts.org > PA StoryMap > CSKT (> Wikidata > OSM for height) |
-| county | NHLR, FFLOS > FFLA > firelookout.com > PA StoryMap > CSKT > andyarthur.org > fire-lookouts.org > Wikidata |
-| agency | NHLR, FFLOS > RIDB > firelookout.com > fire-lookouts.org > PA StoryMap > andyarthur.org > CSKT > OSM |
+| name | NHLR, FFLOS > RIDB (cleaned) > FFLA > firelookout.com > fire-lookouts.org > tnlandforms.us > NJFFS table > andyarthur.org > Wikipedia lists > PA StoryMap > CSKT > the weebly sites > Wikidata > idahofirelookouts.com > michiganfiretower.com > OSM. A bare name borrows "Lookout"/"Fire Tower" only if another source spells it that way; every other name goes to `other_names` |
+| location | NHLR, FFLOS > FFLA > fire-lookouts.org > tnlandforms.us > NJFFS table > firelookout.com > OSM > the weebly sites > Wikidata > RIDB > andyarthur.org > Wikipedia lists > PA StoryMap > idahofirelookouts.com > michiganfiretower.com > CSKT, with *corroborated precedence*: if the winner is confirmed by no other lineage and lies > 500 m from a position that is, the best confirmed position wins (NHLR's Taylor Mountain, ID sits 253 km outside its own county). Rows outside their own state are used last |
+| status | FFLA > NHLR, FFLOS > RIDB > fire-lookouts.org > tnlandforms.us > NJFFS table > andyarthur.org > Wikipedia lists > PA StoryMap > CSKT > firelookout.com > idahofirelookouts.com > michiganfiretower.com > OSM > the weebly sites > Wikidata. OSM features imported from GNIS make no status claim (FFLA calls a third of them gone); a "standing" row named "(Replica)" is `replica` |
+| kind | FFLA > NHLR, FFLOS > RIDB > firelookout.com > fire-lookouts.org > tnlandforms.us > NJFFS table > PA StoryMap > andyarthur.org > Wikipedia lists > CSKT > OSM > the weebly sites > Wikidata > idahofirelookouts.com > michiganfiretower.com |
+| built (and its events) | NHLR, FFLOS > firelookout.com > fire-lookouts.org > PA StoryMap > RIDB > the weebly sites > Wikidata > CSKT > idahofirelookouts.com > michiganfiretower.com > OSM > andyarthur.org > Wikipedia lists > FFLA; one source's build dates are used, others' go to `conflicts` |
+| elevation | NHLR, FFLOS > firelookout.com > fire-lookouts.org > tnlandforms.us > NJFFS table > RIDB > Wikidata > CSKT > OSM |
+| design, height | NHLR, FFLOS > firelookout.com > fire-lookouts.org > NJFFS table (height only) > PA StoryMap > CSKT > the weebly sites (> Wikidata > OSM for height) |
+| county | NHLR, FFLOS > FFLA > firelookout.com > PA StoryMap > CSKT > andyarthur.org > Wikipedia lists > fire-lookouts.org > tnlandforms.us > NJFFS table > the weebly sites > Wikidata > michiganfiretower.com |
+| agency | NHLR, FFLOS > RIDB > firelookout.com > fire-lookouts.org > tnlandforms.us > NJFFS table > PA StoryMap > andyarthur.org > CSKT > the weebly sites > OSM > michiganfiretower.com |
 | rental | RIDB only. If the tower's status is gone/ruins (Flag Point, OR: FFLA "Burned 2026"), warn, don't hide: the listing is kept with `available: false` (not counted or filtered as rentable) and a `warning` ("FFLA reports this lookout burned in 2026, but recreation.gov still lists it. Check with the forest before booking."), which the site shows above the listing link |
 | registers | union of all sources; on a tower with an NHLR/FFLOS record, that register's own number wins and a different copy goes to `conflicts` |
 | events, photos, links | union, de-duplicated (events by event + year, photos by URL, links by URL) |
