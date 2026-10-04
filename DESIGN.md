@@ -49,6 +49,7 @@ Cache raw responses under `data/raw/` (git-ignored) so nothing is fetched twice.
 | **OpenStreetMap** | `emergency=fire_lookout` (~1,035) plus `man_made=tower`+`tower:type=observation` named *Lookout* | Overpass API | ODbL (compatible) |
 | **Wikidata** | Q748998 "fire lookout tower" (~319 with coords): Wikipedia links, NRHP ids (P649), Commons images (P18), inception | SPARQL | CC0 |
 | **Regional** | firelookout.com state maps (MT: 134 `GV_Draw_Marker` points, plus WA/OR/ID/WY/SD); PA StoryMap (48 towers, `…/items/ed47c97ebe7246868ce8ef3e7139a0b4/data?f=json`); andyarthur.org NY towers (CC BY 3.0); CSKT Flathead Reservation (6); fire-lookouts.org Sierra NF (~18, reuse allowed with credit); idahofirelookouts.com (not yet surveyed) | Mixed | Per source |
+| **FFLA resources** | `firelookout.org/resources/…`: *Lookout Rentals* (rentals outside recreation.gov: state parks and private), *Lookout Types and Historic Plans* (for the designs guide), *Historical Reference Documents*, *Staffing / Volunteer Opportunities* | HTML | Facts + links |
 | Later | USGS historical topos (public domain, `ngmdb.usgs.gov/arcgis/rest/services/topoview/ustOverlay(Auto)/MapServer`), NRHP NPS dataset, Library of Congress HABS/HAER (measured drawings, public domain), Forest History Society, state forestry lists, newspapers | — | — |
 
 ---
