@@ -205,6 +205,15 @@ the rest listed in the report), the two link to each other with links of kind `r
 `relocated` when its sources say the lookout is gone. "Parts from" links both ways but leaves
 the original's status alone. The report's `relocations` lists every case.
 
+**State notes in names** are taken out the same way, and the original text kept in
+`other_names` for search: "(Demolished)", "(Removed)", "(Burned)", "(Gone)", "(site only)" →
+status `gone`; "(Collapsed)", "(Ruins)" → `ruins`; "(likely gone)" → no status claim plus
+`status_note` "Sources suggest it is gone."; "(unknown)", "(same as X?)" → a `status_note`;
+"(Private)", "(Closed)" → that access level; "(Non-fire Tower)", like FFLA's status "Non-fire" and
+type "Non-fire Tower" → hidden, "Not a fire lookout (FFLA lists it as a non-fire tower)".
+`status_note` (text or null) is shown beside the status on the tower page and in the map panel.
+Alternate names and qualifiers ("(Loc 2)", "(Liberty)", "(Name Unknown)") stay.
+
 **Same source, one tower**: never, except for sources that list one lookout twice, and only
 when the two records agree on name and place: FFLA repeated table rows (50 m), firelookout.com
 border lookouts on two state maps (100 m), idahofirelookouts.com repeat posts (100 m), OSM

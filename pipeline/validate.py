@@ -135,6 +135,8 @@ def check(rec: object, path: Path, vocab: dict) -> tuple[list[str], list[str]]:
     if not isinstance(rec.get("visit"), dict):
         errs.append("visit is not an object")
 
+    if rec.get("status_note") is not None and not (isinstance(rec["status_note"], str) and rec["status_note"].strip()):
+        errs.append("status_note is neither null nor text")
     for key in ("elevation_m", "height_m"):
         if rec.get(key) is not None and not _num(rec.get(key)):
             errs.append(f"{key} is not a number")

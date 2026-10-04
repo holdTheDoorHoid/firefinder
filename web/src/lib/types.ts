@@ -142,6 +142,8 @@ export interface TowerRecord {
   design?: string | null;
   height_m?: number | null;
   status: string;
+  /** A note on the status, shown beside it ("Sources suggest it is gone."). */
+  status_note?: string | null;
   registers?: Register[] | null;
   agency?: string | null;
   ownership?: string | null;

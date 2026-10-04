@@ -421,6 +421,33 @@ class SmallRules(unittest.TestCase):
             ws.close()
 
 
+class StatusNotes(unittest.TestCase):
+    def test_parse(self):
+        self.assertEqual(M.parse_status_note("Buffalo Lookout Tower (Demolished)")[1]["status"], "gone")
+        name, info = M.parse_status_note("Muzette Lookout Tower (likely gone)")
+        self.assertEqual((name, info["status"], info["note"]), ("Muzette Lookout Tower", "unknown", "Sources suggest it is gone."))
+        self.assertIn("hidden_reason", M.parse_status_note("Slide Mountain (Non-fire Tower)")[1])
+        self.assertEqual(M.parse_status_note("Orchard Point (unknown)")[0], "Orchard Point")
+        for keep in ("Barnum (Loc 2)", "Putnam (Liberty)", "South Rim TT-8 (Name Unknown)"):
+            self.assertEqual(M.parse_status_note(keep), (keep, None))
+
+    def test_merge(self):
+        ws = Workspace()
+        try:
+            ws.run({"osm": [rec("osm", "b", "Buffalo Lookout Tower (Demolished)", 34.7, -81.6, "SC"),
+                            rec("osm", "m", "Muzette Lookout Tower (likely gone)", 41.5, -78.0, "PA")],
+                    "ffla": [rec("ffla", "s", "Slide Mountain (Non-fire Tower)", 41.9991, -74.3859, "NY", status="gone"),
+                             rec("ffla", "o", "Orchard Point (unknown)", 39.0, -76.4, "MD")]})
+            t = ws.towers_by_id()
+            self.assertEqual((t["us-sc-buffalo"]["name"], t["us-sc-buffalo"]["status"]), ("Buffalo Lookout Tower", "gone"))
+            self.assertIn("Buffalo Lookout Tower (Demolished)", t["us-sc-buffalo"]["other_names"])
+            self.assertEqual((t["us-pa-muzette"]["status"], t["us-pa-muzette"]["status_note"]), ("unknown", "Sources suggest it is gone."))
+            self.assertEqual(t["us-ny-slide-mountain"]["hidden_reason"], "Not a fire lookout (FFLA lists it as a non-fire tower)")
+            self.assertEqual(t["us-md-orchard-point"]["name"], "Orchard Point")
+        finally:
+            ws.close()
+
+
 class PackedDMS(unittest.TestCase):
     def test_fire_lookouts_org_coordinates(self):
         import importlib.util

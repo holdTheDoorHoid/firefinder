@@ -94,3 +94,15 @@ describe('a moved lookout and its original site link to each other', () => {
     expect(renderTowerMain(bad, ctx).value).not.toContain('evil');
   });
 });
+
+describe('a status note from a source name', () => {
+  const r: TowerRecord = { ...base, id: 'us-pa-muzette', name: 'Muzette Lookout Tower', region: 'PA', status: 'unknown', status_note: 'Sources suggest it is gone.' };
+  it('is shown on the tower page and in the side panel', () => {
+    expect(renderTowerMain(r, ctx).value).toContain('Sources suggest it is gone.');
+    expect(renderPanel(r, ctx).value).toContain('Sources suggest it is gone.');
+  });
+  it('is shown on a standing lookout too', () => {
+    const s = renderTowerMain({ ...r, status: 'standing', status_note: 'FFLA marks this entry “unknown”: details are uncertain.' }, ctx).value;
+    expect(s).toContain('details are uncertain');
+  });
+});

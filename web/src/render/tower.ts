@@ -540,7 +540,9 @@ export function renderTowerMain(r: TowerRecord, ctx: RenderContext): SafeHtml {
       ${accessInfo(r).tone === 'stop' ? accessNotice(r) : ''}
       ${movedNotice(r, ctx)}
       ${unverifiedNotice(r, ctx)}
-      ${r.status !== 'standing' ? html`<p class="status-meaning">${icon(r.kind, r.status, false, 16)} <strong>${statusWording(r.status).label}:</strong> ${statusWording(r.status).meaning}</p>` : ''}
+      ${r.status !== 'standing' || r.status_note
+        ? html`<p class="status-meaning">${icon(r.kind, r.status, false, 16)} <strong>${statusWording(r.status).label}:</strong> ${r.status !== 'standing' ? statusWording(r.status).meaning : ''}${r.status_note ? html` ${r.status_note}` : ''}</p>`
+        : ''}
     </div>
     <nav class="jump" aria-label="On this page"><ul>${jump.map(([id, label]) => html`<li><a href="#${id}">${label}</a></li>`)}</ul></nav>
   </header>
@@ -626,6 +628,7 @@ export function renderPanel(r: TowerRecord, ctx: RenderContext, opts: { hiddenBy
     ${opts.hiddenByFilters ? html`<p class="notice tone-unknown" role="note">${INFO}<span>Your filters hide this lookout on the map. <button type="button" class="linklike" data-action="reset-filters">Reset filters</button></span></p>` : ''}
     ${accessNotice(r, { compact: true })}
     ${movedNotice(r, ctx)}
+    ${r.status_note ? html`<p class="fine status-note">${r.status_note}</p>` : ''}
     ${r.verification === 'unverified' ? html`<p class="fine warn-text">Unverified: from a single source, not yet checked.</p>` : ''}
     ${stay}
     <dl class="kv kv-panel">${factRows(r, { short: true }).map(([k, v]) => html`<div><dt>${k}</dt><dd>${v}</dd></div>`)}</dl>

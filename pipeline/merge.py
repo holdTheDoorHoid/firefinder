@@ -213,7 +213,7 @@ NOT_A_LOOKOUT_SECTION = "sites determined not to have been used as wildland fire
 
 TOWER_KEYS = [
     "id", "name", "other_names", "country", "region", "county", "location", "elevation_m",
-    "kind", "design", "height_m", "status", "registers", "agency", "ownership", "access",
+    "kind", "design", "height_m", "status", "status_note", "registers", "agency", "ownership", "access",
     "staffing", "visit", "rental", "events", "photos", "links", "sources", "conflicts",
     "verification", "locked", "hidden", "hidden_reason", "updated",
 ]
@@ -334,8 +334,8 @@ def name_tokens(s: str) -> list[str]:
     return [ABBREVIATIONS.get(t, t) for t in s.split()]
 
 
-_ANNOTATION_WORDS = re.compile(r"\b(relocated|replica|parts from|removed)\b", re.I)
-_ANNOTATION_RE = re.compile(r"\s*\((?P<body>[^()]*\b(?:relocated|replica|parts from|removed)\b[^()]*)\)", re.I)
+_ANNOTATION_WORDS = re.compile(r"\b(relocated|replica|parts from)\b", re.I)
+_ANNOTATION_RE = re.compile(r"\s*\((?P<body>[^()]*\b(?:relocated|replica|parts from)\b[^()]*)\)", re.I)
 STATE_BY_NAME = {v.lower(): k for k, v in STATE_NAMES.items()}
 
 
@@ -363,8 +363,7 @@ def parse_annotation(name: str | None) -> tuple[str | None, dict | None]:
       "Kellogg Peak (Replica)", "Missoula Aerial Fire Depot (Hornet Peak Replica)"
       "Mackenzie Center (Replica – from State Fair)"   a replica that was moved
       "Wilson Hill WMA #1 (Parts from Whites Hill)"  built with another tower's parts
-    NHLR does the same in a few names ("OFS Cool Springs Fire Tower (Relocated Spears)",
-    "Sleepy Creek Fire Tower (Removed)").
+    NHLR does the same in a few names ("OFS Cool Springs Fire Tower (Relocated Spears)").
     """
     if not name:
         return name, None
@@ -377,9 +376,6 @@ def parse_annotation(name: str | None) -> tuple[str | None, dict | None]:
                  "same_place": False, "unknown_origin": False, "replica_of": None, "note": None, "raw": body}
     low = body.lower()
     rest: str | None = None
-    if re.search(r"\bremoved\b", low) and not re.search(r"relocated|replica|parts", low):
-        ann["kind"] = "removed"
-        return site or name, ann
     if "parts from" in low:
         ann["kind"] = "parts"
         rest = re.split(r"parts from", body, flags=re.I)[1]
@@ -425,6 +421,52 @@ def parse_annotation(name: str | None) -> tuple[str | None, dict | None]:
         elif rest:
             ann["origin"] = expand_place(rest)
     return site or name, ann
+
+
+# Parenthetical notes about a lookout's state, not part of its name. Each becomes a status,
+# an access level, a note or a reason to hide (parse_status_note).
+_GONE_WORDS = r"demolished|removed|destroyed|razed|torn down|burned(?: down)?(?: \d{4})?|burnt|gone|site only"
+STATUS_NOTES = [
+    # (pattern for the whole parenthetical, what it means)
+    (re.compile(rf"^(?:{_GONE_WORDS})$", re.I), {"status": "gone"}),
+    (re.compile(r"^(?:collapsed|ruins?)$", re.I), {"status": "ruins"}),
+    (re.compile(r"^(?:likely|probably|possibly|maybe)\s+(?:gone|removed|demolished|destroyed)$|^(?:gone|removed)\s*\?$", re.I),
+     {"status": "unknown", "note": "Sources suggest it is gone."}),
+    (re.compile(r"^non-?fire(?:\s+(?:tower|lookout))?$", re.I),
+     {"hidden_reason": "Not a fire lookout ({src} lists it as a non-fire tower)"}),
+    (re.compile(r"^private$", re.I), {"access": "private", "note": "{src} marks it private."}),
+    (re.compile(r"^closed$", re.I), {"access": "closed", "note": "{src} marks it closed."}),
+    (re.compile(r"^(?:status\s+)?unknown$", re.I), {"note": "{src} marks this entry \u201cunknown\u201d: details are uncertain."}),
+    (re.compile(r"^same as (?P<other>.+?)\s*\?$", re.I), {"note": "{src} asks whether this is the same lookout as {other}."}),
+]
+_PAREN_RE = re.compile(r"\s*\(([^()]*)\)")
+
+
+def parse_status_note(name: str | None) -> tuple[str | None, dict | None]:
+    """Take a state note out of a name: "Buffalo Lookout Tower (Demolished)" -> status gone;
+    "Muzette Lookout Tower (likely gone)" -> status unknown and a note; "Slide Mountain
+    (Non-fire Tower)" -> hidden; "Orchard Point (unknown)" and "Big Stony (same as Stony
+    Creek?)" -> a note. Alternate names and qualifiers ("(Loc 2)", "(Liberty)") stay."""
+    if not name:
+        return name, None
+    for m in _PAREN_RE.finditer(name):
+        body = m.group(1).strip()
+        for pattern, meaning in STATUS_NOTES:
+            pm = pattern.match(body)
+            if pm:
+                info = {"raw": body, "original": name, **meaning}
+                if pm.groupdict().get("other"):
+                    info["other"] = pm.group("other")
+                plain = re.sub(r"\s+", " ", name[:m.start()] + " " + name[m.end():]).strip()
+                return plain or name, info
+    return name, None
+
+
+def status_note_text(info: dict, source: str) -> dict:
+    """Fill the source's short name into a status note's texts."""
+    src = SHORT_NAME.get(source, source)
+    return {k: (v.format(src=src, other=info.get("other", "")) if isinstance(v, str) and k in ("note", "hidden_reason") else v)
+            for k, v in info.items()}
 
 
 def name_variants(name: str | None, aliases: list[str] | None = None) -> list[str]:
@@ -684,6 +726,7 @@ class Rec:
     match_note: str | None = None
     bad_coords: str | None = None   # why the source's coordinates were not used, if so
     annotation: dict | None = None  # structure history from the name: see parse_annotation()
+    status_info: dict | None = None # state note from the name: see parse_status_note()
 
     @classmethod
     def build(cls, source: str, raw: dict, order: int) -> "Rec":
@@ -707,6 +750,8 @@ class Rec:
             elif isinstance(v, list):
                 aliases.extend(str(x) for x in v if x)
         plain, r.annotation = parse_annotation(clean_name(raw.get("name")))
+        plain, info = parse_status_note(plain)
+        r.status_info = status_note_text(info, source) if info else None
         r.display = clean_ridb_name(raw.get("name")) if source == "ridb" else plain
         r.forms = name_forms(plain, aliases)
         regs = [normalize_register(g) for g in raw.get("registers") or []]
@@ -1019,7 +1064,7 @@ class Matcher:
         sources say the lookout is gone, then the nearest; the others go to the report."""
         order = PRECEDENCE["name"]
         for t in self.towers:
-            noted = [m for m in t.members if m.annotation and m.annotation["kind"] in ("relocated", "replica", "parts", "removed")]
+            noted = [m for m in t.members if m.annotation and m.annotation["kind"] in ("relocated", "replica", "parts")]
             if not noted:
                 continue
             noted.sort(key=lambda m: (order.index(m.source) if m.source in order else len(order), m.key))
@@ -1032,7 +1077,7 @@ class Matcher:
                     ann["same_place"] = True  # "Ascutney, Mount (Relocated Mount Ascutney)"
             if ann.get("same_place"):
                 oforms = name_forms(ann.get("origin") or t.history.display)
-            elif not ann.get("origin") or ann.get("near") or ann["kind"] == "removed":
+            elif not ann.get("origin") or ann.get("near"):
                 continue
             else:
                 oforms = name_forms(ann["origin"])
@@ -1164,6 +1209,9 @@ def record_status(rec: Rec) -> str | None:
     """The record's status claim, or None. An OSM feature imported from GNIS (it carries
     gnis:feature_id) marks where a lookout is or was, not that it stands: FFLA calls 70 of the
     215 such "standing" features gone, against 19 of 388 for hand-mapped ones."""
+    if rec.status_info and "status" in rec.status_info:
+        st = rec.status_info["status"]  # "(Demolished)" -> gone; "(likely gone)" -> no claim
+        return None if st == "unknown" else st
     st = rec.raw.get("status")
     if st in (None, "unknown"):
         return None
@@ -1172,8 +1220,6 @@ def record_status(rec: Rec) -> str | None:
     kind = (rec.annotation or {}).get("kind")
     if st == "standing" and kind == "replica":
         return "replica"  # FFLA: "Kellogg Peak (Replica)"
-    if kind == "removed":
-        return "gone"     # NHLR: "Sleepy Creek Fire Tower (Removed)"
     return st
 
 
@@ -1230,6 +1276,8 @@ def record_ownership_any(rec: Rec) -> str | None:
 
 
 def record_access(rec: Rec) -> dict | None:
+    if rec.status_info and rec.status_info.get("access"):
+        return {"level": rec.status_info["access"], "note": rec.status_info.get("note")}
     if rec.source == "cskt" or (rec.extra.get("permission") and rec.extra.get("ownership") == "tribal"):
         return {"level": "permission",
                 "note": "On the Flathead Reservation. Ask the Confederated Salish and Kootenai Tribes before visiting."}
@@ -1548,7 +1596,7 @@ def link_relocations(resolved: list[tuple[Tower, dict]]) -> list[dict]:
     by_tower = {id(t): (t, r) for t, r in resolved}
     rows = []
     for t, r in resolved:
-        if not t.history or t.history.annotation["kind"] == "removed":
+        if not t.history:
             continue
         ann = t.history.annotation
         row = {"id": t.id, "name": r["name"], "kind": ann["kind"], "note": ann["raw"],
@@ -1637,6 +1685,8 @@ def resolve(tower: Tower, today: str, headers: dict) -> dict:
         for m in sorted(members, key=lambda m: (source_rank("name", m.source), m.key)):
             if m.display:
                 cand.append(m.display)
+            if m.status_info:
+                cand.append(m.status_info["original"])  # "Buffalo Lookout Tower (Demolished)", for search
             for k in ("aliases", "alt_name", "old_name"):
                 v = m.extra.get(k)
                 if isinstance(v, str):
@@ -1685,6 +1735,12 @@ def resolve(tower: Tower, today: str, headers: dict) -> dict:
     if status is None and "status" not in rec:
         status = "unknown"
     set_field("status", status, status_src)
+    # A note on the status from a name ("(likely gone)", "(unknown)"), shown with the status.
+    if "status" not in locked:
+        note, note_src = pick("status", members, lambda m: (m.status_info or {}).get("note") if not (m.status_info or {}).get("access") else None)
+        rec["status_note"] = note
+        if note_src is not None:
+            contributed[note_src.key].add("status")
 
     # Registers: union, with the register's own page as the url where we have it.
     if "registers" not in locked:
@@ -2011,6 +2067,14 @@ def hidden_for(rec: dict, members: list[Rec]) -> tuple[bool, str | None]:
     for m in members:
         if m.key in HIDE_KEYS:
             return True, HIDE_KEYS[m.key]
+    for m in members:
+        if (m.status_info or {}).get("hidden_reason"):
+            return True, m.status_info["hidden_reason"]
+        nonfire = (re.search(r"non-?fire", str(m.raw.get("status_raw") or ""), re.I)
+                   or re.search(r"non-?fire", str(m.raw.get("type_raw") or ""), re.I)
+                   or re.search(r"non-?fire", str((m.annotation or {}).get("note") or ""), re.I))
+        if nonfire and not re.search(r"non-?wildfire", str(m.raw.get("status_raw") or ""), re.I):
+            return True, f"Not a fire lookout ({SHORT_NAME.get(m.source, m.source)} lists it as a non-fire tower)"
     kind = rec.get("kind")
     if kind in HIDDEN_KIND_REASON:
         return True, HIDDEN_KIND_REASON[kind]
