@@ -436,6 +436,13 @@ tower (`--research` to point elsewhere), so a re-merge never loses research:
    `web/site.config.json`'s `photosBase` is set, the site shows an interim "View photo at
    <source site>" link card (or hotlinks an https original) instead of the mirrored copy;
    hosting the mirrored files is still an open decision for the owner.
+   `pipeline/commons_credits.py` (author/licence for the ~217 Wikidata-sourced Commons photos,
+   scraped 2 s apart from ordinary `/wiki/File:` pages since Commons' robots.txt blocks the API
+   and `Special:FilePath`) is a **manual step**, run by hand after a Wikidata re-fetch, not part
+   of the weekly rental-refresh Action: nothing in that Action re-fetches `data/sources/
+   wikidata.json`, so the same ~217 pages would otherwise be re-scraped from Commons every week
+   for no new information -- impolite for zero benefit, and unrelated to what that Action
+   actually refreshes. Re-run it by hand whenever `pipeline/fetch_wikidata.py` adds photos.
 2. **Stories**: research batches (Sonnet) for rentable and standing towers first. Each writes
    `data/stories/<id>.md` and locks the fields it confirmed.
 3. **3D**: Rust/WASM panorama + viewshed + smoke-spotting demo.
