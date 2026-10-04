@@ -78,6 +78,12 @@ impl Panorama {
 }
 
 pub fn panorama(field: &impl HeightField, obs: &Observer, p: &PanoramaParams) -> Panorama {
+    let steps = Steps::new(p.start_m, p.max_dist_m, p.min_step_m, p.rel_step, Some(field as &dyn HeightField));
+    panorama_with_steps(field, obs, p, &steps)
+}
+
+/// [`panorama`] with a precomputed marching schedule (shared with target sighting).
+pub fn panorama_with_steps(field: &impl HeightField, obs: &Observer, p: &PanoramaParams, steps: &Steps) -> Panorama {
     let earth = Earth::new(p.refraction_k);
     let eye = obs.eye_m();
     let columns = (360.0 / p.az_step_deg).round().max(1.0) as usize;
@@ -85,16 +91,17 @@ pub fn panorama(field: &impl HeightField, obs: &Observer, p: &PanoramaParams) ->
     let mut layers: Vec<f64> = DEFAULT_LAYERS_M.iter().copied().filter(|&b| b < p.max_dist_m).collect();
     layers.push(p.max_dist_m);
     let nl = layers.len();
-    let steps = Steps::new(p.start_m, p.max_dist_m, p.min_step_m, p.rel_step, Some(field as &dyn HeightField));
     let mut horizon = vec![-90f32; nl * columns];
     let mut crest = vec![f32::NAN; nl * columns];
     let mut skyline = vec![f32::NAN; columns];
     let mut nodata = 0u64;
     let mut samples = 0u64;
+    let mut heights = vec![0f32; steps.len()];
 
     for c in 0..columns {
         let az = (c as f64 * az_step).to_radians();
         let dir = obs.frame.direction(az);
+        field.heights_along(&obs.frame, dir, steps, steps.len(), &mut heights);
         let mut run = f64::NEG_INFINITY;
         let mut arg = f64::NAN;
         let mut layer = 0usize;
@@ -114,14 +121,13 @@ pub fn panorama(field: &impl HeightField, obs: &Observer, p: &PanoramaParams) ->
                 layer_start = layers[layer];
                 layer += 1;
             }
-            let v = obs.frame.origin.combine(steps.cos[i], dir, steps.sin[i]);
-            let h = field.height(v, d) as f64;
+            let h = heights[i] as f64;
             samples += 1;
             if h.is_nan() || !eye.is_finite() {
                 nodata += 1;
                 continue;
             }
-            let s = earth.slope(h, eye, d);
+            let s = steps.slope(&earth, i, h, eye);
             if s > run {
                 run = s;
                 arg = d;

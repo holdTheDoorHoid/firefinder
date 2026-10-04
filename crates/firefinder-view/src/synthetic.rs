@@ -117,7 +117,13 @@ fn a_cone_rises_where_expected_and_hides_what_is_behind_it() {
             Target { lat, lon, ..*t }
         })
         .collect();
-    let seen = sight_targets(&field, &obs, Earth::new(K), &targets, 60_000.0);
+    let steps = crate::sight::Steps::for_view(&field, 20.0, 60_000.0);
+    let seen = sight_targets(&field, &obs, Earth::new(K), &targets, 60_000.0, &steps, None);
+    let vis: Vec<bool> = seen.iter().map(|s| s.visible).collect();
+    assert_eq!(vis, vec![false, true, true, true, false]);
+    // The same answers with the panorama's quick rejection.
+    let pano = panorama(&field, &obs, &params(60_000.0, 0.1));
+    let seen = sight_targets(&field, &obs, Earth::new(K), &targets, 60_000.0, &steps, Some(&pano));
     let vis: Vec<bool> = seen.iter().map(|s| s.visible).collect();
     assert_eq!(vis, vec![false, true, true, true, false]);
     assert!((seen[1].az_deg - 90.0).abs() < 1e-6 && (seen[1].dist_m - 10_000.0).abs() < 1e-3);
@@ -236,4 +242,64 @@ fn observer_moves_to_the_local_high_point() {
     // No snapping asked for: stays put.
     let still = Observer::locate(&field, LAT, LON, 10.0, 0.0);
     assert_eq!(still.moved_m, 0.0);
+}
+
+/// Brute-force line of sight to the ground at a point: fine steps, nothing skipped except the
+/// last `skip_m` before the point (the viewshed compares a cell against terrain at least one
+/// cell nearer).
+fn exact_visible(field: &impl HeightField, obs: &Observer, lat: f64, lon: f64, skip_m: f64, earth: Earth) -> bool {
+    let v = crate::geo::unit(lat, lon);
+    let (d, az) = obs.frame.inverse(v);
+    let dir = obs.frame.direction(az);
+    let target = earth.slope(field.height(v, d) as f64, obs.eye_m(), d);
+    let mut x = 5.0;
+    while x < d - skip_m {
+        let h = field.height(obs.frame.walk(dir, x), x) as f64;
+        if earth.slope(h, obs.eye_m(), x) > target {
+            return false;
+        }
+        x += 5.0;
+    }
+    true
+}
+
+#[test]
+fn viewshed_agrees_with_brute_force_line_of_sight_on_rough_terrain() {
+    // Rolling ridges and valleys, 1–2 km high, waves 3–17 km long, at odd angles.
+    let terrain = |e: f64, n: f64| {
+        1_200.0
+            + 420.0 * (e / 2_700.0 + 0.3).sin() * (n / 3_900.0).cos()
+            + 260.0 * ((e * 0.6 + n * 0.8) / 1_500.0).sin()
+            + 180.0 * ((e * 0.9 - n * 0.4) / 900.0 + 1.1).cos()
+            + 90.0 * (n / 480.0).sin()
+    };
+    let field = Synthetic::new(LAT, LON, terrain);
+    let obs = Observer::at(LAT, LON, terrain(0.0, 0.0), 12.0);
+    let radius = 15_000.0;
+    let (x0, y0, x1, y1) = crate::geo::disc_bbox(LAT, LON, radius);
+    let grid = Grid::covering(x0, y0, x1, y1, LAT, 60.0, 2_000_000);
+    let mut counts = vec![0u8; grid.width * grid.height];
+    let stats = viewshed_into(&field, &obs, &grid, &ViewshedParams { radius_m: radius, target_m: 0.0, refraction_k: K }, &mut counts);
+    let cell = grid.cell_m(LAT);
+    let (mut checked, mut agree, mut seen) = (0, 0, 0);
+    // Every 37th cell inside the disc: about 1,500 cells.
+    for i in (0..counts.len()).step_by(37) {
+        let (ix, iy) = (i % grid.width, i / grid.width);
+        let (mx, my) = grid.cell_center(ix, iy);
+        let (lat, lon) = crate::geo::unmercator(mx, my);
+        let (d, _) = crate::geo::distance_azimuth(LAT, LON, lat, lon);
+        if d > radius || d < 2.0 * cell {
+            continue;
+        }
+        let exact = exact_visible(&field, &obs, lat, lon, cell, Earth::new(K));
+        checked += 1;
+        seen += usize::from(exact);
+        agree += usize::from(exact == (counts[i] == 1));
+    }
+    let rate = agree as f64 / checked as f64;
+    eprintln!("viewshed vs brute force: {agree} of {checked} cells agree ({:.1}%), {seen} seen", rate * 100.0);
+    assert!(checked > 1_000, "{checked}");
+    assert!(seen > checked / 20 && seen < checked * 19 / 20, "a meaningful mix of seen and hidden ground ({seen} of {checked})");
+    assert!(rate > 0.97, "viewshed agrees with brute force on {:.1}% of {checked} cells", rate * 100.0);
+    assert!(stats.cells_visible > 0);
 }

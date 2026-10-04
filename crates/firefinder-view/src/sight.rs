@@ -9,6 +9,7 @@
 
 use crate::dem::HeightField;
 use crate::geo::{EARTH_RADIUS_M, Frame, unit};
+use crate::panorama::Panorama;
 
 /// Curvature and refraction for slope computations.
 #[derive(Clone, Copy, Debug)]
@@ -112,6 +113,8 @@ pub struct Steps {
     pub d: Vec<f64>,
     pub cos: Vec<f64>,
     pub sin: Vec<f64>,
+    /// 1 / d, to turn height differences into slopes without dividing.
+    pub inv_d: Vec<f64>,
 }
 
 impl Steps {
@@ -124,22 +127,39 @@ impl Steps {
             d.push(x);
             let mut step = (x * rel_step).max(min_step);
             if let Some(f) = field {
-                step = step.min(f.spacing_m(x).max(min_step));
+                // No finer than ~0.4 terrain pixels (bilinear in between adds nothing), no
+                // coarser than one pixel (or a peak could slip between samples).
+                let spacing = f.spacing_m(x);
+                step = step.max(spacing * 0.4).min(spacing.max(min_step));
             }
             x += step;
         }
         d.push(max);
+        Steps::from_distances(d)
+    }
+
+    fn from_distances(d: Vec<f64>) -> Steps {
         let cos = d.iter().map(|x| (x / EARTH_RADIUS_M).cos()).collect();
         let sin = d.iter().map(|x| (x / EARTH_RADIUS_M).sin()).collect();
-        Steps { d, cos, sin }
+        let inv_d = d.iter().map(|x| 1.0 / x).collect();
+        Steps { d, cos, sin, inv_d }
+    }
+
+    /// Slope of terrain height `h` at step `i` seen from `eye`.
+    #[inline]
+    pub fn slope(&self, earth: &Earth, i: usize, h: f64, eye: f64) -> f64 {
+        (h - eye) * self.inv_d[i] - self.d[i] * earth.inv_2r
+    }
+
+    /// The schedule for a view out to `max_m`: 10 m steps near the eye, then 0.3% of the
+    /// distance, never coarser than the terrain spacing.
+    pub fn for_view(field: &dyn HeightField, start: f64, max_m: f64) -> Steps {
+        Steps::new(start, max_m, 10.0, 0.003, Some(field))
     }
 
     /// Evenly spaced steps (viewsheds).
     pub fn uniform(step: f64, count: usize) -> Steps {
-        let d: Vec<f64> = (1..=count).map(|k| k as f64 * step).collect();
-        let cos = d.iter().map(|x| (x / EARTH_RADIUS_M).cos()).collect();
-        let sin = d.iter().map(|x| (x / EARTH_RADIUS_M).sin()).collect();
-        Steps { d, cos, sin }
+        Steps::from_distances((1..=count).map(|k| k as f64 * step).collect())
     }
 
     pub fn len(&self) -> usize {
@@ -177,21 +197,31 @@ pub struct TargetSight {
 
 /// Which targets the observer can see. A target counts as visible when its top is not below
 /// the terrain between, ignoring the last stretch before it (2% of the distance, 150 m to
-/// 1.5 km) so a mountain is not hidden by its own near slope.
-pub fn sight_targets(field: &impl HeightField, obs: &Observer, earth: Earth, targets: &[Target], max_dist_m: f64) -> Vec<TargetSight> {
+/// 1.5 km) so a mountain is not hidden by its own near slope. `steps` is the marching schedule
+/// (normally the panorama's, see [`Steps::for_view`]); `pano`, when given, rejects targets
+/// that are plainly hidden without marching to them.
+pub fn sight_targets(
+    field: &impl HeightField,
+    obs: &Observer,
+    earth: Earth,
+    targets: &[Target],
+    max_dist_m: f64,
+    steps: &Steps,
+    pano: Option<&Panorama>,
+) -> Vec<TargetSight> {
     let eye = obs.eye_m();
+    let mut heights = vec![0f32; steps.len()];
     targets
         .iter()
         .map(|t| {
             let v = unit(t.lat, t.lon);
             let (dist, az) = obs.frame.inverse(v);
             let mut out = TargetSight { dist_m: dist, az_deg: az.to_degrees(), ground_m: f64::NAN, ..Default::default() };
+            out.angle_deg = f64::NAN;
+            out.clearance_deg = f64::NAN;
             if !(dist > 1.0) || dist > max_dist_m || !eye.is_finite() {
-                out.angle_deg = f64::NAN;
-                out.clearance_deg = f64::NAN;
                 return out;
             }
-            let dir = obs.frame.direction(az);
             // Highest ground near the target.
             let mut ground = field.height(v, dist) as f64;
             if t.snap_m > 0.0 {
@@ -208,27 +238,38 @@ pub fn sight_targets(field: &impl HeightField, obs: &Observer, earth: Earth, tar
             }
             out.ground_m = ground;
             if ground.is_nan() {
-                out.angle_deg = f64::NAN;
-                out.clearance_deg = f64::NAN;
                 return out;
             }
             let top = earth.slope(ground + t.above_ground_m, eye, dist);
             let guard = (dist * 0.02).clamp(150.0, 1_500.0);
-            let stop = dist - guard;
+            // Quick rejection from the panorama: the horizon of the layers wholly in front of
+            // the target, on the columns either side of it, less a quarter-degree margin. It can
+            // only under-estimate what hides the target, so nothing visible is rejected.
+            if let Some(p) = pano {
+                if let Some(j) = p.layers_m.iter().rposition(|&b| b <= dist - guard) {
+                    let cf = out.az_deg / p.az_step_deg;
+                    let c0 = (cf.floor() as usize) % p.columns;
+                    let c1 = (c0 + 1) % p.columns;
+                    let h = f64::from(p.horizon(j, c0).min(p.horizon(j, c1)));
+                    let angle = top.atan().to_degrees();
+                    if angle < h - 0.25 {
+                        out.angle_deg = angle;
+                        out.clearance_deg = angle - h;
+                        return out;
+                    }
+                }
+            }
+            let n = steps.d.partition_point(|&d| d < dist - guard);
+            field.heights_along(&obs.frame, obs.frame.direction(az), steps, n, &mut heights);
             let mut max = f64::NEG_INFINITY;
-            let spacing = field.spacing_m(0.0).max(5.0);
-            let mut d = spacing.min(20.0);
-            while d < stop {
-                let (s, c) = (d / EARTH_RADIUS_M).sin_cos();
-                let p = obs.frame.origin.combine(c, dir, s);
-                let h = field.height(p, d) as f64;
+            for i in 0..n {
+                let h = heights[i] as f64;
                 if h.is_finite() {
-                    let sl = earth.slope(h, eye, d);
+                    let sl = steps.slope(&earth, i, h, eye);
                     if sl > max {
                         max = sl;
                     }
                 }
-                d += (d * 0.004).max(field.spacing_m(d) * 0.5).max(5.0);
             }
             out.angle_deg = top.atan().to_degrees();
             out.clearance_deg = if max.is_finite() { out.angle_deg - max.atan().to_degrees() } else { 90.0 };

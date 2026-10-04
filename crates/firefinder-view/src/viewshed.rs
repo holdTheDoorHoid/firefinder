@@ -11,7 +11,7 @@
 use std::f64::consts::TAU;
 
 use crate::dem::HeightField;
-use crate::geo::{metres_per_mercator_unit, unit, unmercator};
+use crate::geo::{Vec3, metres_per_mercator_unit, unmercator};
 use crate::sight::{Earth, Observer, Steps};
 
 /// A north-up grid in normalised Web Mercator coordinates (row 0 is the north edge).
@@ -90,17 +90,17 @@ pub fn viewshed_into(field: &impl HeightField, obs: &Observer, grid: &Grid, p: &
 
     // horizon[r * k_count + k]: largest slope among samples 0..k (exclusive) on ray r.
     let mut horizon = vec![f32::NEG_INFINITY; rays * k_count];
+    let mut heights = vec![0f32; k_count];
     for r in 0..rays {
         let dir = obs.frame.direction(TAU * r as f64 / rays as f64);
+        field.heights_along(&obs.frame, dir, &steps, k_count, &mut heights);
         let mut run = f64::NEG_INFINITY;
         let row = &mut horizon[r * k_count..(r + 1) * k_count];
         for k in 0..k_count {
             row[k] = run as f32;
-            let d = steps.d[k];
-            let v = obs.frame.origin.combine(steps.cos[k], dir, steps.sin[k]);
-            let h = field.height(v, d) as f64;
+            let h = heights[k] as f64;
             if h.is_finite() {
-                let s = earth.slope(h, eye, d);
+                let s = steps.slope(&earth, k, h, eye);
                 if s > run {
                     run = s;
                 }
@@ -114,14 +114,21 @@ pub fn viewshed_into(field: &impl HeightField, obs: &Observer, grid: &Grid, p: &
     let iy0 = ((by0 - grid.my0) / grid.cell).floor().max(0.0) as usize;
     let ix1 = (((bx1 - grid.mx0) / grid.cell).ceil().max(0.0) as usize).min(grid.width);
     let iy1 = (((by1 - grid.my0) / grid.cell).ceil().max(0.0) as usize).min(grid.height);
+    // Cell centres as unit vectors from per-row latitude and per-column longitude terms.
+    let cols: Vec<(f64, f64)> = (ix0..ix1)
+        .map(|ix| {
+            let (mx, _) = grid.cell_center(ix, 0);
+            ((mx - 0.5) * TAU).sin_cos()
+        })
+        .collect();
     for iy in iy0..iy1 {
         let (_, my) = grid.cell_center(0, iy);
         let (row_lat, _) = unmercator(0.5, my);
+        let (slat, clat) = row_lat.to_radians().sin_cos();
         let cell_area = grid.cell_m(row_lat).powi(2);
         for ix in ix0..ix1 {
-            let (mx, my) = grid.cell_center(ix, iy);
-            let (lat, lon) = unmercator(mx, my);
-            let v = unit(lat, lon);
+            let (slon, clon) = cols[ix - ix0];
+            let v = Vec3::new(clat * clon, clat * slon, slat);
             let (d, az) = obs.frame.inverse(v);
             if d > p.radius_m {
                 continue;
@@ -130,7 +137,8 @@ pub fn viewshed_into(field: &impl HeightField, obs: &Observer, grid: &Grid, p: &
             let visible = if d < step {
                 true
             } else {
-                let h = field.height(v, d) as f64;
+                let (mx, _) = grid.cell_center(ix, iy);
+                let h = field.height_mercator(mx, my, v, d) as f64;
                 if h.is_nan() {
                     false
                 } else {

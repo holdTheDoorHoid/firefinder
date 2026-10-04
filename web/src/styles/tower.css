@@ -127,3 +127,10 @@
   .timeline li::after { left: calc(52px + 6px + 8px); }
   .kv > div { grid-template-columns: minmax(92px, 34%) minmax(0, 1fr); gap: 4px 12px; }
 }
+
+/* View from the cab: the start button before the panorama code loads (the rest is in view3d.css). */
+.pano-start { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 14px 0; }
+.btn-view { min-height: 48px; padding: 10px 20px; font-size: 1.02rem; }
+.btn-view[disabled] { opacity: 0.65; }
+.btn-icon { flex: none; }
+#view .notice { margin: 4px 0 6px; }

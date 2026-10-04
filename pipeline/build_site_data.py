@@ -506,6 +506,8 @@ def load_source_headers(sources_dir: Path, log: Log) -> dict[str, dict]:
             continue
         if not isinstance(data, dict):
             continue
+        if data.get("kind") == "reference":
+            continue  # not a list of lookouts (e.g. peaks_gnis.json, credited on the About page)
         sid = data.get("source") or path.stem
         headers[sid] = {
             "title": data.get("title"),

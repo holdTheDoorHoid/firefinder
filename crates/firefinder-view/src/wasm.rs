@@ -7,8 +7,8 @@ use wasm_bindgen::prelude::*;
 
 use crate::dem::{Level, TileSampler, TileStore, decode_terrarium};
 use crate::geo::{disc_bbox, pixel_size_m, tile_window};
-use crate::panorama::{PanoramaParams, panorama};
-use crate::sight::{Earth, Observer, Target, sight_targets};
+use crate::panorama::{PanoramaParams, panorama_with_steps};
+use crate::sight::{Earth, Observer, Steps, Target, sight_targets};
 use crate::viewshed::{Grid, ViewshedParams, viewshed_into};
 
 /// Terrain tiles are 256 px (AWS Terrain Tiles).
@@ -104,19 +104,20 @@ impl Engine {
         let field = sampler(&self.store, lat, lon, levels);
         let obs = Observer::locate(&field, lat, lon, above_ground_m, snap_m);
         let params = PanoramaParams { az_step_deg, max_dist_m, refraction_k, ..Default::default() };
-        let pano = panorama(&field, &obs, &params);
+        let steps = Steps::for_view(&field, params.start_m, max_dist_m);
+        let pano = panorama_with_steps(&field, &obs, &params, &steps);
         let targets: Vec<Target> = targets
             .chunks_exact(4)
             .map(|t| Target { lat: t[0], lon: t[1], above_ground_m: t[2], snap_m: t[3] })
             .collect();
-        let sights = sight_targets(&field, &obs, Earth::new(refraction_k), &targets, max_dist_m);
+        let sights = sight_targets(&field, &obs, Earth::new(refraction_k), &targets, max_dist_m, &steps, Some(&pano));
         PanoramaResult {
             columns: pano.columns,
             az_step_deg: pano.az_step_deg,
-            layers_m: pano.layers_m,
-            horizon_deg: pano.horizon_deg,
-            crest_m: pano.crest_m,
-            skyline_m: pano.skyline_m,
+            layers_m: pano.layers_m.clone(),
+            horizon_deg: pano.horizon_deg.clone(),
+            crest_m: pano.crest_m.clone(),
+            skyline_m: pano.skyline_m.clone(),
             observer: vec![obs.lat, obs.lon, obs.ground_m, obs.eye_m(), obs.moved_m, obs.recorded_ground_m],
             targets: sights
                 .iter()

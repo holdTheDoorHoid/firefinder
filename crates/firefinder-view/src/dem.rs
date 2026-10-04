@@ -10,7 +10,8 @@
 
 use std::collections::HashMap;
 
-use crate::geo::{Vec3, mercator_of};
+use crate::geo::{Frame, Vec3, mercator_of};
+use crate::sight::Steps;
 
 /// Stored value meaning "no data" (a tile that failed to load, or outside the cached tiles).
 pub const NODATA: u16 = u16::MAX;
@@ -155,6 +156,18 @@ pub trait HeightField {
     fn height(&self, v: Vec3, dist_m: f64) -> f32;
     /// Roughly how far apart the height samples are at this distance, in metres.
     fn spacing_m(&self, dist_m: f64) -> f64;
+    /// Heights at the first `n` step distances along a great circle leaving `frame`'s origin in
+    /// direction `dir`. Tile samplers override this with a faster path.
+    fn heights_along(&self, frame: &Frame, dir: Vec3, steps: &Steps, n: usize, out: &mut [f32]) {
+        for i in 0..n {
+            let v = frame.origin.combine(steps.cos[i], dir, steps.sin[i]);
+            out[i] = self.height(v, steps.d[i]);
+        }
+    }
+    /// Height at normalised Web Mercator coordinates (`v` is the same point as a unit vector).
+    fn height_mercator(&self, _mx: f64, _my: f64, v: Vec3, dist_m: f64) -> f32 {
+        self.height(v, dist_m)
+    }
 }
 
 /// One zoom level of a sampler: a window of tiles plus the distance it serves up to.
@@ -163,6 +176,7 @@ pub struct Level<'a> {
     pub max_dist_m: f64,
     pub spacing_m: f64,
     size: usize,
+    shift: u32,
     world_px: f64,
     world_tiles: i64,
     tx0: i64,
@@ -194,11 +208,13 @@ impl<'a> Level<'a> {
                 tiles.push(store.get(&key).filter(|t| t.size == tile_size));
             }
         }
+        assert!(tile_size.is_power_of_two(), "tile size must be a power of two");
         Level {
             z,
             max_dist_m,
             spacing_m,
             size: tile_size,
+            shift: tile_size.trailing_zeros(),
             world_px: (world_tiles as f64) * tile_size as f64,
             world_tiles,
             tx0,
@@ -245,6 +261,24 @@ impl<'a> Level<'a> {
         let fx = (px - x0) as f32;
         let fy = (py - y0) as f32;
         let (ix, iy) = (x0 as i64, y0 as i64);
+        // Fast path: all four pixels in one tile (tile sizes are powers of two).
+        let mask = self.size as i64 - 1;
+        let (lx, ly) = (ix & mask, iy & mask);
+        if lx < mask && ly < mask && iy >= 0 {
+            let tx = (ix >> self.shift) - self.tx0;
+            let ty = (iy >> self.shift) - self.ty0;
+            if tx >= 0 && tx < self.nx && ty >= 0 && ty < self.ny {
+                if let Some(t) = self.tiles[(ty * self.nx + tx) as usize] {
+                    let i = ly as usize * self.size + lx as usize;
+                    let (q00, q10, q01, q11) = (t.data[i], t.data[i + 1], t.data[i + self.size], t.data[i + self.size + 1]);
+                    if q00 != NODATA && q10 != NODATA && q01 != NODATA && q11 != NODATA {
+                        let top = f32::from(q00) * (1.0 - fx) + f32::from(q10) * fx;
+                        let bottom = f32::from(q01) * (1.0 - fx) + f32::from(q11) * fx;
+                        return (top * (1.0 - fy) + bottom * fy) / UNITS_PER_M;
+                    }
+                }
+            }
+        }
         let h00 = self.pixel(ix, iy);
         let h10 = self.pixel(ix + 1, iy);
         let h01 = self.pixel(ix, iy + 1);
@@ -290,7 +324,76 @@ impl HeightField for TileSampler<'_> {
     fn spacing_m(&self, dist_m: f64) -> f64 {
         self.levels.iter().find(|l| dist_m <= l.max_dist_m).or(self.levels.last()).map_or(30.0, |l| l.spacing_m)
     }
+
+    #[inline]
+    fn height_mercator(&self, mx: f64, my: f64, _v: Vec3, dist_m: f64) -> f32 {
+        let mut started = false;
+        for level in &self.levels {
+            if !started && dist_m > level.max_dist_m {
+                continue;
+            }
+            started = true;
+            let h = level.sample(mx, my);
+            if !h.is_nan() {
+                return h;
+            }
+        }
+        f32::NAN
+    }
+
+    /// Mercator coordinates are computed exactly every [`KNOT`] steps and interpolated in
+    /// between (a great circle is so nearly straight in Mercator over a few km that the error
+    /// is centimetres), and the zoom level advances with distance instead of being searched.
+    fn heights_along(&self, frame: &Frame, dir: Vec3, steps: &Steps, n: usize, out: &mut [f32]) {
+        if n == 0 || self.levels.is_empty() {
+            return;
+        }
+        let merc = |i: usize| mercator_of(frame.origin.combine(steps.cos[i], dir, steps.sin[i]));
+        let mut li = 0usize;
+        let mut sample = |mx: f64, my: f64, d: f64| -> f32 {
+            while li + 1 < self.levels.len() && d > self.levels[li].max_dist_m {
+                li += 1;
+            }
+            for level in &self.levels[li..] {
+                let h = level.sample(mx, my);
+                if !h.is_nan() {
+                    return h;
+                }
+            }
+            f32::NAN
+        };
+        let (mut ax, mut ay) = merc(0);
+        out[0] = sample(ax, ay, steps.d[0]);
+        let mut a = 0usize;
+        while a + 1 < n {
+            let b = (a + KNOT).min(n - 1);
+            let (bx, by) = merc(b);
+            let mut bxu = bx;
+            if bxu - ax > 0.5 {
+                bxu -= 1.0;
+            } else if bxu - ax < -0.5 {
+                bxu += 1.0;
+            }
+            let (da, span) = (steps.d[a], steps.d[b] - steps.d[a]);
+            for t in a + 1..=b {
+                let f = (steps.d[t] - da) / span;
+                let mut mx = ax + (bxu - ax) * f;
+                if mx < 0.0 {
+                    mx += 1.0;
+                } else if mx >= 1.0 {
+                    mx -= 1.0;
+                }
+                out[t] = sample(mx, ay + (by - ay) * f, steps.d[t]);
+            }
+            a = b;
+            ax = bx;
+            ay = by;
+        }
+    }
 }
+
+/// Exact Mercator positions every this many steps along a ray; interpolated between.
+const KNOT: usize = 16;
 
 #[cfg(test)]
 mod tests {
