@@ -53,35 +53,34 @@
   }
  },
  "files": {
-  "written": 6316,
-  "unchanged": 0
+  "written": 7,
+  "unchanged": 6309
  },
  "counts": {
   "towers": 6316,
-  "visible": 5740,
-  "hidden": 576,
+  "visible": 5747,
+  "hidden": 569,
   "hidden_by_reason": {
    "Camp or tent site: out of scope (structures only)": 469,
    "Tree platform: out of scope (structures only)": 64,
-   "Lookout point with no structure: out of scope (structures only)": 37,
-   "Not a fire lookout (FFLA lists it as a non-fire tower)": 3,
-   "Never built (FFLA lists it as \"Never Built\")": 1,
+   "Lookout point with no structure: out of scope (structures only)": 32,
+   "Not a fire lookout (FFLA lists it as a non-fire tower)": 2,
    "Never built (FFLA lists it as \"Planned\")": 1,
    "Not confirmed as a fire lookout": 1
   },
   "visible_by_status": {
-   "gone": 3614,
-   "standing": 1659,
-   "unknown": 356,
+   "gone": 3618,
+   "standing": 1660,
+   "unknown": 358,
    "relocated": 86,
    "ruins": 15,
    "replica": 10
   },
   "visible_by_kind": {
-   "tower": 3839,
+   "tower": 3841,
    "ground": 1037,
    "two_story": 263,
-   "unknown": 243,
+   "unknown": 248,
    "platform": 219,
    "enclosed_tower": 110,
    "three_story": 29
@@ -90,8 +89,8 @@
    "AL": 33,
    "AR": 23,
    "AZ": 126,
-   "CA": 521,
-   "CO": 54,
+   "CA": 522,
+   "CO": 55,
    "CT": 7,
    "DE": 5,
    "FL": 32,
@@ -104,7 +103,7 @@
    "LA": 14,
    "MA": 18,
    "MD": 54,
-   "ME": 147,
+   "ME": 148,
    "MI": 15,
    "MN": 222,
    "MO": 26,
@@ -120,7 +119,7 @@
    "NY": 174,
    "OH": 53,
    "OK": 4,
-   "OR": 811,
+   "OR": 812,
    "PA": 63,
    "RI": 20,
    "SC": 32,
@@ -130,13 +129,13 @@
    "UT": 16,
    "VA": 218,
    "VT": 45,
-   "WA": 632,
+   "WA": 634,
    "WI": 216,
-   "WV": 112,
+   "WV": 113,
    "WY": 76
   },
   "visible_by_verification": {
-   "unverified": 4791,
+   "unverified": 4798,
    "facts": 949
   },
   "multi_source_towers": 3821,
@@ -148,53 +147,45 @@
    "5+": 22
   },
   "rentable": 76,
-  "registered": 2810
+  "registered": 2817
  },
  "matching": {
   "note": "How each source record found its tower on this run. 'key' means it was matched on an earlier run and found again by its key; delete data/towers to see a fresh run's methods.",
   "by_source": {
    "andyarthur_ny": {
-    "spatial": 34
+    "key": 34
    },
    "cskt": {
-    "spatial": 6
+    "key": 6
    },
    "ffla": {
-    "name": 4,
-    "new": 5777,
-    "spatial": 57,
+    "key": 5838,
     "unplaced": 138
    },
    "fire_lookouts_org": {
-    "register": 12,
-    "spatial": 7
+    "key": 19
    },
    "firelookout_com": {
-    "new": 29,
-    "spatial": 3237
+    "key": 3266
    },
    "idaho_fl": {
-    "new": 49,
-    "spatial": 949
+    "key": 998
    },
    "osm": {
-    "new": 365,
-    "register": 44,
-    "spatial": 619
+    "key": 1028
    },
    "pa_storymap": {
-    "new": 47
+    "key": 47
    },
    "ridb": {
-    "spatial": 111,
+    "key": 111,
     "unplaced": 2
    },
    "wikidata": {
-    "new": 49,
-    "spatial": 239
+    "key": 288
    }
   },
-  "cross_region_matches": 17,
+  "cross_region_matches": 0,
   "register_clashes": 12
  },
  "conflicts": {
@@ -1901,6 +1892,22 @@
   },
   {
    "type": "matched_different_names",
+   "key": "ffla:mn:kathio-state-park-relocated-from-near-isle:46.1310:-93.7362",
+   "name": "Kathio State Park",
+   "tower": "us-mn-kathio-state-park",
+   "tower_name": "Kathio State Park (moved from near Isle)",
+   "score": 0.36
+  },
+  {
+   "type": "matched_different_names",
+   "key": "wikidata:Q107539928",
+   "name": "Mille Lacs Kathio Observation Tower",
+   "tower": "us-mn-kathio-state-park",
+   "tower_name": "Kathio State Park (moved from near Isle)",
+   "score": 0.36
+  },
+  {
+   "type": "matched_different_names",
    "key": "ffla:mn:big-bog-relocated-pine-island:48.1701:-94.5119",
    "name": "Big Bog",
    "tower": "us-mn-pine-island-at-big-bog",
@@ -1933,22 +1940,6 @@
   },
   {
    "type": "matched_different_names",
-   "key": "ffla:mn:kathio-state-park-relocated-from-near-isle:46.1310:-93.7362",
-   "name": "Kathio State Park",
-   "tower": "us-mn-kathio-state-park",
-   "tower_name": "Kathio State Park (moved from near Isle)",
-   "score": 0.36
-  },
-  {
-   "type": "matched_different_names",
-   "key": "wikidata:Q107539928",
-   "name": "Mille Lacs Kathio Observation Tower",
-   "tower": "us-mn-kathio-state-park",
-   "tower_name": "Kathio State Park (moved from near Isle)",
-   "score": 0.36
-  },
-  {
-   "type": "matched_different_names",
    "key": "ffla:mt:fort-missoula-historical-museum-relocated-sliderock:46.8429:-114.0643",
    "name": "Fort Missoula Historical Museum",
    "tower": "us-mt-sliderock-at-fort-missoula-historical-museum",
@@ -1978,6 +1969,22 @@
    "tower": "us-nh-kearsarge-north",
    "tower_name": "Kearsarge North",
    "score": 0.235
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ffla:ny:speculator-relocated-makomis:43.4973:-74.3590",
+   "name": "Speculator",
+   "tower": "us-ny-makomis-at-speculator",
+   "tower_name": "Makomis Fire Tower (now at Speculator)",
+   "score": 0.106
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/12219609354",
+   "name": "Makomis Fire Tower",
+   "tower": "us-ny-makomis-at-speculator",
+   "tower_name": "Makomis Fire Tower (now at Speculator)",
+   "score": 0.212
   },
   {
    "type": "matched_different_names",
@@ -2021,22 +2028,6 @@
   },
   {
    "type": "matched_different_names",
-   "key": "ffla:ny:speculator-relocated-makomis:43.4973:-74.3590",
-   "name": "Speculator",
-   "tower": "us-ny-makomis-at-speculator",
-   "tower_name": "Makomis Fire Tower (now at Speculator)",
-   "score": 0.106
-  },
-  {
-   "type": "matched_different_names",
-   "key": "osm:node/12219609354",
-   "name": "Makomis Fire Tower",
-   "tower": "us-ny-makomis-at-speculator",
-   "tower_name": "Makomis Fire Tower (now at Speculator)",
-   "score": 0.212
-  },
-  {
-   "type": "matched_different_names",
    "key": "ffla:oh:ohio-exposition-center-relocated-armintrout:39.9952:-82.9886",
    "name": "Ohio Exposition Center",
    "tower": "us-oh-armintrout-at-ohio-exposition-center",
@@ -2050,6 +2041,54 @@
    "tower": "us-oh-armintrout-at-ohio-exposition-center",
    "tower_name": "Armintrout Fire Tower (now at the Ohio Exposition Center)",
    "score": 0.24
+  },
+  {
+   "type": "matched_different_names",
+   "key": "pa_storymap:mount-dunlap:39.7259:-77.4875",
+   "name": "Mount Dunlap",
+   "tower": "us-pa-mount-dunlap",
+   "tower_name": "Mount Dunlap",
+   "score": 0.12
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/357364481",
+   "name": "Blue Ridge Lookout Tower",
+   "tower": "us-pa-mount-dunlap",
+   "tower_name": "Mount Dunlap",
+   "score": 0.12
+  },
+  {
+   "type": "matched_different_names",
+   "key": "pa_storymap:summit-tower:40.7784:-78.2499",
+   "name": "Summit Tower",
+   "tower": "us-pa-summit",
+   "tower_name": "Summit Tower",
+   "score": 0.225
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/357364298",
+   "name": "Sandy Ridge Fire Tower",
+   "tower": "us-pa-summit",
+   "tower_name": "Summit Tower",
+   "score": 0.225
+  },
+  {
+   "type": "matched_different_names",
+   "key": "wikidata:Q86925971",
+   "name": "Fall Creek Falls Fire Lookout Tower",
+   "tower": "us-tn-fall-creek-falls",
+   "tower_name": "Fall Creek Falls Fire Lookout Tower",
+   "score": 0.216
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:way/1094656625",
+   "name": "Bradden Knob Fire Tower",
+   "tower": "us-tn-fall-creek-falls",
+   "tower_name": "Fall Creek Falls Fire Lookout Tower",
+   "score": 0.144
   },
   {
    "type": "matched_different_names",
@@ -2130,65 +2169,6 @@
    "tower": "us-wi-dyracuse",
    "tower_name": "Dyracuse",
    "score": 0.474
-  },
-  {
-   "type": "matched_different_names",
-   "key": "pa_storymap:mount-dunlap:39.7259:-77.4875",
-   "name": "Mount Dunlap",
-   "tower": "us-pa-mount-dunlap",
-   "tower_name": "Mount Dunlap",
-   "score": 0.12
-  },
-  {
-   "type": "matched_different_names",
-   "key": "osm:node/357364481",
-   "name": "Blue Ridge Lookout Tower",
-   "tower": "us-pa-mount-dunlap",
-   "tower_name": "Mount Dunlap",
-   "score": 0.12
-  },
-  {
-   "type": "matched_different_names",
-   "key": "pa_storymap:summit-tower:40.7784:-78.2499",
-   "name": "Summit Tower",
-   "tower": "us-pa-summit",
-   "tower_name": "Summit Tower",
-   "score": 0.225
-  },
-  {
-   "type": "matched_different_names",
-   "key": "osm:node/357364298",
-   "name": "Sandy Ridge Fire Tower",
-   "tower": "us-pa-summit",
-   "tower_name": "Summit Tower",
-   "score": 0.225
-  },
-  {
-   "type": "matched_different_names",
-   "key": "wikidata:Q86925971",
-   "name": "Fall Creek Falls Fire Lookout Tower",
-   "tower": "us-tn-fall-creek-falls",
-   "tower_name": "Fall Creek Falls Fire Lookout Tower",
-   "score": 0.216
-  },
-  {
-   "type": "matched_different_names",
-   "key": "osm:way/1094656625",
-   "name": "Bradden Knob Fire Tower",
-   "tower": "us-tn-fall-creek-falls",
-   "tower_name": "Fall Creek Falls Fire Lookout Tower",
-   "score": 0.144
-  },
-  {
-   "type": "register_match_far_skipped",
-   "key": "osm:way/1100906757",
-   "distance_m": 11321,
-   "registers": [
-    "NHLR ME 3",
-    "NHLR US 67"
-   ],
-   "tower": "us-me-big-moose-mountain-squaw-mountain",
-   "nearby_tower": "us-me-big-moose-mountain-at-greenville-visitor-center"
   },
   {
    "type": "rental_on_gone_lookout",
@@ -3217,21 +3197,24 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-ca-hayden-hill-at-big-valley-museum",
-   "name": "Hayden Hill Lookout (now at the Big Valley Museum)",
+   "id": "us-ca-blue-ridge-at-tulare-county-fairgrounds",
+   "name": "Blue Ridge Lookout (now at the Tulare County Fairgrounds)",
    "kind": "relocated",
-   "note": "Relocated Hayden Hill",
-   "origin": "Hayden Hill",
-   "origin_id": "us-ca-hayden-hill",
-   "origin_alternatives": []
+   "note": "Relocated Blue Ridge",
+   "origin": "Blue Ridge",
+   "origin_id": "us-ca-blue-ridge-2",
+   "origin_alternatives": [
+    "us-ca-blue-ridge-3",
+    "us-ca-blue-ridge"
+   ]
   },
   {
-   "id": "us-ca-salisbury-portero-aws-at-black-willow-spring",
-   "name": "Salisbury Portero AWS Lookout (now at Black Willow Spring)",
+   "id": "us-ca-castro-peak-at-henninger-flats",
+   "name": "Castro Peak Lookout (now at Henninger Flats)",
    "kind": "relocated",
-   "note": "Relocated Salisbury Portero AWS",
-   "origin": "Salisbury Portero AWS",
-   "origin_id": null,
+   "note": "Relocated Castro",
+   "origin": "Castro",
+   "origin_id": "us-ca-castro-peak",
    "origin_alternatives": []
   },
   {
@@ -3253,12 +3236,12 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-ca-castro-peak-at-henninger-flats",
-   "name": "Castro Peak Lookout (now at Henninger Flats)",
+   "id": "us-ca-hayden-hill-at-big-valley-museum",
+   "name": "Hayden Hill Lookout (now at the Big Valley Museum)",
    "kind": "relocated",
-   "note": "Relocated Castro",
-   "origin": "Castro",
-   "origin_id": "us-ca-castro-peak",
+   "note": "Relocated Hayden Hill",
+   "origin": "Hayden Hill",
+   "origin_id": "us-ca-hayden-hill",
    "origin_alternatives": []
   },
   {
@@ -3289,16 +3272,13 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-ca-blue-ridge-at-tulare-county-fairgrounds",
-   "name": "Blue Ridge Lookout (now at the Tulare County Fairgrounds)",
+   "id": "us-ca-salisbury-portero-aws-at-black-willow-spring",
+   "name": "Salisbury Portero AWS Lookout (now at Black Willow Spring)",
    "kind": "relocated",
-   "note": "Relocated Blue Ridge",
-   "origin": "Blue Ridge",
-   "origin_id": "us-ca-blue-ridge-2",
-   "origin_alternatives": [
-    "us-ca-blue-ridge-3",
-    "us-ca-blue-ridge"
-   ]
+   "note": "Relocated Salisbury Portero AWS",
+   "origin": "Salisbury Portero AWS",
+   "origin_id": null,
+   "origin_alternatives": []
   },
   {
    "id": "us-co-white-pine-at-running-deer-natural-area",
@@ -3327,23 +3307,12 @@
    ]
   },
   {
-   "id": "us-id-split-creek-point-at-cent-id-hist-museum-cab",
-   "name": "Split Creek Point Lookout (now at the Cent. ID Hist. Museum – Cab)",
+   "id": "us-id-cold-mountain-at-payette-lake-holm",
+   "name": "Cold Mountain Lookout (now at Payette Lake – Holm)",
    "kind": "relocated",
-   "note": "Relocated Split Creek Point",
-   "origin": "Split Creek Point",
-   "origin_id": "us-id-split-creek-point-2",
-   "origin_alternatives": [
-    "us-id-split-creek-point"
-   ]
-  },
-  {
-   "id": "us-id-sloans-creek-point-at-cent-id-hist-museum",
-   "name": "Sloans Creek Point Lookout (now at the Cent. ID Hist. Museum)",
-   "kind": "relocated",
-   "note": "Relocated Sloans Creek Point",
-   "origin": "Sloans Creek Point",
-   "origin_id": "us-id-sloans-creek-point",
+   "note": "Relocated Cold Mountain",
+   "origin": "Cold Mountain",
+   "origin_id": "us-id-cold-mountain",
    "origin_alternatives": []
   },
   {
@@ -3356,12 +3325,12 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-id-stranger-mountain-at-crystal-ridge",
-   "name": "Stranger Mountain Lookout (from Washington, now at Crystal Ridge)",
-   "kind": "relocated",
-   "note": "Relocated Stranger Mtn, WA",
-   "origin": "Stranger Mountain",
-   "origin_id": "us-wa-stranger-mountain",
+   "id": "us-id-kellogg-peak-replica",
+   "name": "Kellogg Peak Lookout (replica)",
+   "kind": "replica",
+   "note": "Replica",
+   "origin": null,
+   "origin_id": null,
    "origin_alternatives": []
   },
   {
@@ -3374,21 +3343,32 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-id-kellogg-peak-replica",
-   "name": "Kellogg Peak Lookout (replica)",
-   "kind": "replica",
-   "note": "Replica",
-   "origin": null,
-   "origin_id": null,
+   "id": "us-id-sloans-creek-point-at-cent-id-hist-museum",
+   "name": "Sloans Creek Point Lookout (now at the Cent. ID Hist. Museum)",
+   "kind": "relocated",
+   "note": "Relocated Sloans Creek Point",
+   "origin": "Sloans Creek Point",
+   "origin_id": "us-id-sloans-creek-point",
    "origin_alternatives": []
   },
   {
-   "id": "us-id-cold-mountain-at-payette-lake-holm",
-   "name": "Cold Mountain Lookout (now at Payette Lake – Holm)",
+   "id": "us-id-split-creek-point-at-cent-id-hist-museum-cab",
+   "name": "Split Creek Point Lookout (now at the Cent. ID Hist. Museum – Cab)",
    "kind": "relocated",
-   "note": "Relocated Cold Mountain",
-   "origin": "Cold Mountain",
-   "origin_id": "us-id-cold-mountain",
+   "note": "Relocated Split Creek Point",
+   "origin": "Split Creek Point",
+   "origin_id": "us-id-split-creek-point-2",
+   "origin_alternatives": [
+    "us-id-split-creek-point"
+   ]
+  },
+  {
+   "id": "us-id-stranger-mountain-at-crystal-ridge",
+   "name": "Stranger Mountain Lookout (from Washington, now at Crystal Ridge)",
+   "kind": "relocated",
+   "note": "Relocated Stranger Mtn, WA",
+   "origin": "Stranger Mountain",
+   "origin_id": "us-wa-stranger-mountain",
    "origin_alternatives": []
   },
   {
@@ -3401,12 +3381,12 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-md-quantico-at-chesapeake-fire-museum",
-   "name": "Quantico Lookout (now at the Chesapeake Fire Museum)",
+   "id": "us-md-brandywine-at-fairview-outdoor-center",
+   "name": "Brandywine Lookout (now at the Fairview Outdoor Center)",
    "kind": "relocated",
-   "note": "Relocated Quantico",
-   "origin": "Quantico",
-   "origin_id": "us-md-quantico",
+   "note": "Relocated Brandywine",
+   "origin": "Brandywine",
+   "origin_id": "us-md-brandywine",
    "origin_alternatives": []
   },
   {
@@ -3416,15 +3396,6 @@
    "note": "Relocated Church Creek",
    "origin": "Church Creek",
    "origin_id": "us-md-church-creek",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-md-brandywine-at-fairview-outdoor-center",
-   "name": "Brandywine Lookout (now at the Fairview Outdoor Center)",
-   "kind": "relocated",
-   "note": "Relocated Brandywine",
-   "origin": "Brandywine",
-   "origin_id": "us-md-brandywine",
    "origin_alternatives": []
   },
   {
@@ -3446,21 +3417,12 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-me-norway-bluff-at-ashland-logging-museum",
-   "name": "Norway Bluff Lookout (now at the Ashland Logging Museum)",
+   "id": "us-md-quantico-at-chesapeake-fire-museum",
+   "name": "Quantico Lookout (now at the Chesapeake Fire Museum)",
    "kind": "relocated",
-   "note": "Relocated Norway Bluff",
-   "origin": "Norway Bluff",
-   "origin_id": "us-me-norway-bluff",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-me-opportunity-farm-at-fryeburg-fairgrounds",
-   "name": "Opportunity Farm Lookout (now at the Fryeburg Fairgrounds)",
-   "kind": "relocated",
-   "note": "Relocated Opportunity Farm",
-   "origin": "Opportunity Farm",
-   "origin_id": "us-me-opportunity-farm-new-gloucester",
+   "note": "Relocated Quantico",
+   "origin": "Quantico",
+   "origin_id": "us-md-quantico",
    "origin_alternatives": []
   },
   {
@@ -3491,21 +3453,30 @@
    "origin_alternatives": []
   },
   {
+   "id": "us-me-norway-bluff-at-ashland-logging-museum",
+   "name": "Norway Bluff Lookout (now at the Ashland Logging Museum)",
+   "kind": "relocated",
+   "note": "Relocated Norway Bluff",
+   "origin": "Norway Bluff",
+   "origin_id": "us-me-norway-bluff",
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-me-opportunity-farm-at-fryeburg-fairgrounds",
+   "name": "Opportunity Farm Lookout (now at the Fryeburg Fairgrounds)",
+   "kind": "relocated",
+   "note": "Relocated Opportunity Farm",
+   "origin": "Opportunity Farm",
+   "origin_id": "us-me-opportunity-farm-new-gloucester",
+   "origin_alternatives": []
+  },
+  {
    "id": "us-me-trout-mountain",
    "name": "Trout Mountain (moved from Alabama)",
    "kind": "relocated",
    "note": "Relocated from Alabama",
    "origin": null,
    "origin_id": null,
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-mn-pine-island-at-big-bog",
-   "name": "Pine Island Lookout (now at Big Bog)",
-   "kind": "relocated",
-   "note": "Relocated Pine Island",
-   "origin": "Pine Island",
-   "origin_id": "us-mn-pine-island",
    "origin_alternatives": []
   },
   {
@@ -3518,30 +3489,12 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-mn-waskish-at-cloverleaf",
-   "name": "Waskish Lookout (now at Cloverleaf)",
-   "kind": "relocated",
-   "note": "Relocated Waskish",
-   "origin": "Waskish",
-   "origin_id": "us-mn-waskish",
-   "origin_alternatives": []
-  },
-  {
    "id": "us-mn-boulder-hill-at-forest-history-center",
    "name": "Boulder Hill Lookout (now at the Forest History Center)",
    "kind": "relocated",
    "note": "Relocated Boulder Hill",
    "origin": "Boulder Hill",
    "origin_id": "us-mn-boulder-hill",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-mn-pinewood-at-forestry-education-center",
-   "name": "Pinewood Fire Tower (now at the Forestry Education Center)",
-   "kind": "relocated",
-   "note": "Relocated Pinewood",
-   "origin": "Pinewood",
-   "origin_id": "us-mn-pinewood",
    "origin_alternatives": []
   },
   {
@@ -3572,23 +3525,30 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-mt-sliderock-at-fort-missoula-historical-museum",
-   "name": "Sliderock Lookout (now at the Fort Missoula Historical Museum)",
+   "id": "us-mn-pine-island-at-big-bog",
+   "name": "Pine Island Lookout (now at Big Bog)",
    "kind": "relocated",
-   "note": "Relocated Sliderock",
-   "origin": "Sliderock",
-   "origin_id": "us-mt-sliderock",
-   "origin_alternatives": [
-    "us-mt-slide-rock-mountain"
-   ]
+   "note": "Relocated Pine Island",
+   "origin": "Pine Island",
+   "origin_id": "us-mn-pine-island",
+   "origin_alternatives": []
   },
   {
-   "id": "us-mt-hornet-peak-replica",
-   "name": "Hornet Peak Lookout replica (at the Missoula Aerial Fire Depot)",
-   "kind": "replica",
-   "note": "Hornet Peak Replica",
-   "origin": null,
-   "origin_id": null,
+   "id": "us-mn-pinewood-at-forestry-education-center",
+   "name": "Pinewood Fire Tower (now at the Forestry Education Center)",
+   "kind": "relocated",
+   "note": "Relocated Pinewood",
+   "origin": "Pinewood",
+   "origin_id": "us-mn-pinewood",
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-mn-waskish-at-cloverleaf",
+   "name": "Waskish Lookout (now at Cloverleaf)",
+   "kind": "relocated",
+   "note": "Relocated Waskish",
+   "origin": "Waskish",
+   "origin_id": "us-mn-waskish",
    "origin_alternatives": []
   },
   {
@@ -3598,6 +3558,15 @@
    "note": "Relocated Blackpine Mountain",
    "origin": "Blackpine Mountain",
    "origin_id": "us-mt-blackpine-mountain",
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-mt-hornet-peak-replica",
+   "name": "Hornet Peak Lookout replica (at the Missoula Aerial Fire Depot)",
+   "kind": "replica",
+   "note": "Hornet Peak Replica",
+   "origin": null,
+   "origin_id": null,
    "origin_alternatives": []
   },
   {
@@ -3617,6 +3586,17 @@
    "origin": "Roberts Mountain",
    "origin_id": "us-mt-roberts-shortys",
    "origin_alternatives": []
+  },
+  {
+   "id": "us-mt-sliderock-at-fort-missoula-historical-museum",
+   "name": "Sliderock Lookout (now at the Fort Missoula Historical Museum)",
+   "kind": "relocated",
+   "note": "Relocated Sliderock",
+   "origin": "Sliderock",
+   "origin_id": "us-mt-sliderock",
+   "origin_alternatives": [
+    "us-mt-slide-rock-mountain"
+   ]
   },
   {
    "id": "us-nd-salyer-nwr-hq-at-rugby",
@@ -3646,12 +3626,12 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-ny-whiteface-mountain-at-adirondack-experience",
-   "name": "Whiteface Mountain Lookout (now at the Adirondack Experience)",
+   "id": "us-ny-cornell-hill-at-wilton-camp-saratoga",
+   "name": "Cornell Hill Lookout (now at Wilton/Camp Saratoga)",
    "kind": "relocated",
-   "note": "Relocated Whiteface",
-   "origin": "Whiteface",
-   "origin_id": "us-ny-whiteface-mountain",
+   "note": "Relocated Cornell Hill",
+   "origin": "Cornell Hill",
+   "origin_id": "us-ny-cornell-hill",
    "origin_alternatives": []
   },
   {
@@ -3664,60 +3644,6 @@
    "origin_alternatives": [
     "us-ny-west-mountain"
    ]
-  },
-  {
-   "id": "us-ny-tooley-pond-mountain-at-cathedral-rock",
-   "name": "Tooley Pond Mountain Lookout (now at Cathedral Rock)",
-   "kind": "relocated",
-   "note": "Relocated Tooley Pond",
-   "origin": "Tooley Pond",
-   "origin_id": "us-ny-tooley-pond-mountain",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-ny-science-hill-at-ellicottville-cte-school",
-   "name": "Science Hill Lookout (now at the Ellicottville CTE School)",
-   "kind": "relocated",
-   "note": "Relocated Science Hill",
-   "origin": "Science Hill",
-   "origin_id": "us-ny-science-hill",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-ny-orangeburg-at-ferncliff-forest",
-   "name": "Orangeburg Lookout (from South Carolina, now at Ferncliff Forest)",
-   "kind": "relocated",
-   "note": "Relocated Orangeburg, SC",
-   "origin": "Orangeburg",
-   "origin_id": null,
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-ny-west-bay-at-grafton-lakes-visitor-center",
-   "name": "West Bay Lookout (from Florida, now at the Grafton Lakes Visitor Center)",
-   "kind": "relocated",
-   "note": "Relocated West Bay, FL",
-   "origin": "West Bay",
-   "origin_id": null,
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-ny-moosehead-mountain-at-industry-city",
-   "name": "Moosehead Mountain Lookout (now at Industry City)",
-   "kind": "relocated",
-   "note": "Relocated Moosehead",
-   "origin": "Moosehead",
-   "origin_id": "us-ny-moosehead-mountain",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-ny-number-four-at-lowville-demonstration-forest",
-   "name": "Number Four Fire Tower (now at Lowville Demonstration Forest)",
-   "kind": "relocated",
-   "note": "Relocated Number Four",
-   "origin": "Number Four",
-   "origin_id": "us-ny-number-four",
-   "origin_alternatives": []
   },
   {
    "id": "us-ny-kings-park-at-oak-orchard-wma",
@@ -3738,12 +3664,12 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-ny-padlock-hill-at-state-fair",
-   "name": "Padlock Hill Lookout (now at the State Fair)",
+   "id": "us-ny-moosehead-mountain-at-industry-city",
+   "name": "Moosehead Mountain Lookout (now at Industry City)",
    "kind": "relocated",
-   "note": "Relocated Padlock Hill",
-   "origin": "Padlock Hill",
-   "origin_id": "us-ny-padlock-hill",
+   "note": "Relocated Moosehead",
+   "origin": "Moosehead",
+   "origin_id": "us-ny-moosehead-mountain",
    "origin_alternatives": []
   },
   {
@@ -3756,12 +3682,75 @@
    "origin_alternatives": []
   },
   {
+   "id": "us-ny-number-four-at-lowville-demonstration-forest",
+   "name": "Number Four Fire Tower (now at Lowville Demonstration Forest)",
+   "kind": "relocated",
+   "note": "Relocated Number Four",
+   "origin": "Number Four",
+   "origin_id": "us-ny-number-four",
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-ny-orangeburg-at-ferncliff-forest",
+   "name": "Orangeburg Lookout (from South Carolina, now at Ferncliff Forest)",
+   "kind": "relocated",
+   "note": "Relocated Orangeburg, SC",
+   "origin": "Orangeburg",
+   "origin_id": null,
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-ny-padlock-hill-at-state-fair",
+   "name": "Padlock Hill Lookout (now at the State Fair)",
+   "kind": "relocated",
+   "note": "Relocated Padlock Hill",
+   "origin": "Padlock Hill",
+   "origin_id": "us-ny-padlock-hill",
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-ny-science-hill-at-ellicottville-cte-school",
+   "name": "Science Hill Lookout (now at the Ellicottville CTE School)",
+   "kind": "relocated",
+   "note": "Relocated Science Hill",
+   "origin": "Science Hill",
+   "origin_id": "us-ny-science-hill",
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-ny-tooley-pond-mountain-at-cathedral-rock",
+   "name": "Tooley Pond Mountain Lookout (now at Cathedral Rock)",
+   "kind": "relocated",
+   "note": "Relocated Tooley Pond",
+   "origin": "Tooley Pond",
+   "origin_id": "us-ny-tooley-pond-mountain",
+   "origin_alternatives": []
+  },
+  {
    "id": "us-ny-venetia-at-upper-esopus",
    "name": "Venetia Lookout (from Florida, now at Upper Esopus)",
    "kind": "relocated",
    "note": "Relocated Venetia, FL",
    "origin": "Venetia",
    "origin_id": null,
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-ny-west-bay-at-grafton-lakes-visitor-center",
+   "name": "West Bay Lookout (from Florida, now at the Grafton Lakes Visitor Center)",
+   "kind": "relocated",
+   "note": "Relocated West Bay, FL",
+   "origin": "West Bay",
+   "origin_id": null,
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-ny-whiteface-mountain-at-adirondack-experience",
+   "name": "Whiteface Mountain Lookout (now at the Adirondack Experience)",
+   "kind": "relocated",
+   "note": "Relocated Whiteface",
+   "origin": "Whiteface",
+   "origin_id": "us-ny-whiteface-mountain",
    "origin_alternatives": []
   },
   {
@@ -3783,24 +3772,6 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-ny-cornell-hill-at-wilton-camp-saratoga",
-   "name": "Cornell Hill Lookout (now at Wilton/Camp Saratoga)",
-   "kind": "relocated",
-   "note": "Relocated Cornell Hill",
-   "origin": "Cornell Hill",
-   "origin_id": "us-ny-cornell-hill",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-oh-sewellsville-at-bethesda",
-   "name": "Sewellsville Lookout (now at Bethesda)",
-   "kind": "relocated",
-   "note": "Relocated Sewellsville",
-   "origin": "Sewellsville",
-   "origin_id": "us-oh-sewellsville",
-   "origin_alternatives": []
-  },
-  {
    "id": "us-oh-armintrout-at-ohio-exposition-center",
    "name": "Armintrout Fire Tower (now at the Ohio Exposition Center)",
    "kind": "relocated",
@@ -3819,30 +3790,21 @@
    "origin_alternatives": []
   },
   {
+   "id": "us-oh-sewellsville-at-bethesda",
+   "name": "Sewellsville Lookout (now at Bethesda)",
+   "kind": "relocated",
+   "note": "Relocated Sewellsville",
+   "origin": "Sewellsville",
+   "origin_id": "us-oh-sewellsville",
+   "origin_alternatives": []
+  },
+  {
    "id": "us-oh-snake-ridge-at-wayne-nf-headquarters",
    "name": "Snake Ridge Lookout (now at the Wayne NF Headquarters)",
    "kind": "relocated",
    "note": "Relocated Snake Ridge",
    "origin": "Snake Ridge",
    "origin_id": "us-oh-snake-ridge",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-tx-jefferson-moved",
-   "name": "Jefferson Lookout (moved from its original spot)",
-   "kind": "relocated",
-   "note": "Relocated Jefferson – Loc 1",
-   "origin": "Jefferson",
-   "origin_id": "us-tx-jefferson-loc-1",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-tx-spring",
-   "name": "Spring (moved from Montana)",
-   "kind": "relocated",
-   "note": "Relocated from MT",
-   "origin": null,
-   "origin_id": null,
    "origin_alternatives": []
   },
   {
@@ -3864,39 +3826,30 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-va-negrofoot-at-field-day-of-the-past",
-   "name": "Negrofoot Lookout (now at Field Day of the Past)",
+   "id": "us-tx-jefferson-moved",
+   "name": "Jefferson Lookout (moved from its original spot)",
    "kind": "relocated",
-   "note": "Relocated Negrofoot",
-   "origin": "Negrofoot",
-   "origin_id": "us-va-negrofoot-upper-hanover",
+   "note": "Relocated Jefferson – Loc 1",
+   "origin": "Jefferson",
+   "origin_id": "us-tx-jefferson-loc-1",
    "origin_alternatives": []
   },
   {
-   "id": "us-va-short-pump-at-gillies-creek",
-   "name": "Short Pump Lookout (now at Gillies Creek)",
+   "id": "us-tx-spring",
+   "name": "Spring (moved from Montana)",
    "kind": "relocated",
-   "note": "Relocated Short Pump",
-   "origin": "Short Pump",
-   "origin_id": "us-va-short-pump-upper-henrico",
+   "note": "Relocated from MT",
+   "origin": null,
+   "origin_id": null,
    "origin_alternatives": []
   },
   {
-   "id": "us-va-white-oak-mountain-at-hawthorne",
-   "name": "White Oak Mountain Lookout (now at Hawthorne)",
+   "id": "us-va-capron-at-southampton-ag-forestry-center",
+   "name": "Capron Lookout (now at the Southampton Ag & Forestry Center)",
    "kind": "relocated",
-   "note": "Relocated White Oak Mountain",
-   "origin": "White Oak Mountain",
-   "origin_id": "us-va-white-oak-mountain",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-va-morris-knob-at-matthews-state-forest",
-   "name": "Morris Knob Lookout (now at Matthews State Forest)",
-   "kind": "relocated",
-   "note": "Relocated Morris Knob",
-   "origin": "Morris Knob",
-   "origin_id": "us-va-morris-knob",
+   "note": "Relocated Capron",
+   "origin": "Capron",
+   "origin_id": "us-va-capron",
    "origin_alternatives": []
   },
   {
@@ -3920,6 +3873,33 @@
    "origin_alternatives": []
   },
   {
+   "id": "us-va-morris-knob-at-matthews-state-forest",
+   "name": "Morris Knob Lookout (now at Matthews State Forest)",
+   "kind": "relocated",
+   "note": "Relocated Morris Knob",
+   "origin": "Morris Knob",
+   "origin_id": "us-va-morris-knob",
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-va-negrofoot-at-field-day-of-the-past",
+   "name": "Negrofoot Lookout (now at Field Day of the Past)",
+   "kind": "relocated",
+   "note": "Relocated Negrofoot",
+   "origin": "Negrofoot",
+   "origin_id": "us-va-negrofoot-upper-hanover",
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-va-short-pump-at-gillies-creek",
+   "name": "Short Pump Lookout (now at Gillies Creek)",
+   "kind": "relocated",
+   "note": "Relocated Short Pump",
+   "origin": "Short Pump",
+   "origin_id": "us-va-short-pump-upper-henrico",
+   "origin_alternatives": []
+  },
+  {
    "id": "us-va-sounding-knob-moved",
    "name": "Sounding Knob Fire Tower (moved from its original spot)",
    "kind": "relocated",
@@ -3929,12 +3909,12 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-va-capron-at-southampton-ag-forestry-center",
-   "name": "Capron Lookout (now at the Southampton Ag & Forestry Center)",
+   "id": "us-va-white-oak-mountain-at-hawthorne",
+   "name": "White Oak Mountain Lookout (now at Hawthorne)",
    "kind": "relocated",
-   "note": "Relocated Capron",
-   "origin": "Capron",
-   "origin_id": "us-va-capron",
+   "note": "Relocated White Oak Mountain",
+   "origin": "White Oak Mountain",
+   "origin_id": "us-va-white-oak-mountain",
    "origin_alternatives": []
   },
   {
@@ -3956,33 +3936,6 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wa-north-baldy-at-big-meadow-lake",
-   "name": "North Baldy Lookout (now at Big Meadow Lake)",
-   "kind": "relocated",
-   "note": "Relocated North Baldy",
-   "origin": "North Baldy",
-   "origin_id": "us-wa-north-baldy",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-wa-salmon-river-at-buckley-foothills-museum",
-   "name": "Salmon River Lookout (now at the Buckley Foothills Museum)",
-   "kind": "relocated",
-   "note": "Relocated Salmon River",
-   "origin": "Salmon River",
-   "origin_id": "us-wa-salmon-river",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-wa-stampede-pass-at-camp-waskowitz",
-   "name": "Stampede Pass Lookout (now at Camp Waskowitz)",
-   "kind": "relocated",
-   "note": "Relocated Stampede Pass",
-   "origin": "Stampede Pass",
-   "origin_id": "us-wa-stampede-pass",
-   "origin_alternatives": []
-  },
-  {
    "id": "us-wa-badger-mountain-at-cbfic",
    "name": "Badger Mountain Lookout (now at CBFIC)",
    "kind": "relocated",
@@ -3992,6 +3945,15 @@
    "origin_alternatives": [
     "us-wa-badger-peak"
    ]
+  },
+  {
+   "id": "us-wa-buttermilk-butte-at-reynaud",
+   "name": "Buttermilk Butte Lookout (now at Reynaud)",
+   "kind": "relocated",
+   "note": "Relocated Buttermilk Butte",
+   "origin": "Buttermilk Butte",
+   "origin_id": "us-wa-buttermilk-butte",
+   "origin_alternatives": []
   },
   {
    "id": "us-wa-chelan-butte-at-cbfic",
@@ -4005,39 +3967,12 @@
    ]
   },
   {
-   "id": "us-wa-flattop-at-cbfic",
-   "name": "Flattop Lookout (now at CBFIC)",
+   "id": "us-wa-chewelah-peak-at-scranton",
+   "name": "Chewelah Peak Lookout (now at Scranton)",
    "kind": "relocated",
-   "note": "Relocated Flattop",
-   "origin": "Flattop",
-   "origin_id": "us-wa-flattop",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-wa-stranger-mountain-at-colville-fairgrounds",
-   "name": "Stranger Mountain Lookout (now at the Colville Fairgrounds)",
-   "kind": "relocated",
-   "note": "Relocated Stranger Mountain",
-   "origin": "Stranger Mountain",
-   "origin_id": "us-wa-stranger-mountain",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-wa-graves-mountain-at-colville-museum",
-   "name": "Graves Mountain Lookout Tower (now at the Colville Museum)",
-   "kind": "relocated",
-   "note": "Relocated Graves Mountain",
-   "origin": "Graves Mountain",
-   "origin_id": "us-wa-graves-mountain",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-wa-fire-lookout-museum-replica",
-   "name": "Fire Lookout Museum (replica)",
-   "kind": "replica",
-   "note": "Replica",
-   "origin": null,
-   "origin_id": null,
+   "note": "Relocated Chewelah Peak",
+   "origin": "Chewelah Peak",
+   "origin_id": "us-wa-chewelah-peak",
    "origin_alternatives": []
   },
   {
@@ -4050,39 +3985,21 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wa-rainier-at-islandwood",
-   "name": "Rainier Tower (now at Islandwood)",
-   "kind": "relocated",
-   "note": "Relocated Rainier",
-   "origin": "Rainier",
-   "origin_id": "us-wa-rainier",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-wa-lorena-butte-at-lefever",
-   "name": "Lorena Butte Lookout (now at Lefever)",
-   "kind": "relocated",
-   "note": "Relocated Lorena Butte",
-   "origin": "Lorena Butte",
-   "origin_id": "us-wa-lorena-butte",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-wa-franson-peak-at-molson-museum",
-   "name": "Franson Peak Lookout (now at the Molson Museum)",
-   "kind": "relocated",
-   "note": "Relocated Franson Peak",
-   "origin": "Franson Peak",
-   "origin_id": "us-wa-franson-peak",
-   "origin_alternatives": []
-  },
-  {
-   "id": "us-wa-newport-replica",
-   "name": "Newport (replica)",
+   "id": "us-wa-fire-lookout-museum-replica",
+   "name": "Fire Lookout Museum (replica)",
    "kind": "replica",
    "note": "Replica",
    "origin": null,
    "origin_id": null,
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-wa-first-thought-mountain-at-orient",
+   "name": "First Thought Mountain Lookout (now at Orient)",
+   "kind": "relocated",
+   "note": "Relocated First Thought",
+   "origin": "First Thought",
+   "origin_id": "us-wa-first-thought-mountain",
    "origin_alternatives": []
   },
   {
@@ -4095,12 +4012,55 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wa-first-thought-mountain-at-orient",
-   "name": "First Thought Mountain Lookout (now at Orient)",
+   "id": "us-wa-flattop-at-cbfic",
+   "name": "Flattop Lookout (now at CBFIC)",
    "kind": "relocated",
-   "note": "Relocated First Thought",
-   "origin": "First Thought",
-   "origin_id": "us-wa-first-thought-mountain",
+   "note": "Relocated Flattop",
+   "origin": "Flattop",
+   "origin_id": "us-wa-flattop",
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-wa-franson-peak-at-molson-museum",
+   "name": "Franson Peak Lookout (now at the Molson Museum)",
+   "kind": "relocated",
+   "note": "Relocated Franson Peak",
+   "origin": "Franson Peak",
+   "origin_id": "us-wa-franson-peak",
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-wa-goat-peak-at-teanaway-valley",
+   "name": "Goat Peak Lookout (now at Teanaway Valley)",
+   "kind": "relocated",
+   "note": "Relocated Goat Peak",
+   "origin": "Goat Peak",
+   "origin_id": "us-wa-goat-peak-2",
+   "origin_alternatives": [
+    "us-wa-american-ridge-goat-peak",
+    "us-wa-goat-mountain-3",
+    "us-wa-goat-mountain-2",
+    "us-wa-goat-butte",
+    "us-wa-goat-mountain",
+    "us-wa-goat-peak"
+   ]
+  },
+  {
+   "id": "us-wa-graves-mountain-at-colville-museum",
+   "name": "Graves Mountain Lookout Tower (now at the Colville Museum)",
+   "kind": "relocated",
+   "note": "Relocated Graves Mountain",
+   "origin": "Graves Mountain",
+   "origin_id": "us-wa-graves-mountain",
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-wa-lorena-butte-at-lefever",
+   "name": "Lorena Butte Lookout (now at Lefever)",
+   "kind": "relocated",
+   "note": "Relocated Lorena Butte",
+   "origin": "Lorena Butte",
+   "origin_id": "us-wa-lorena-butte",
    "origin_alternatives": []
   },
   {
@@ -4125,12 +4085,30 @@
    ]
   },
   {
-   "id": "us-wa-buttermilk-butte-at-reynaud",
-   "name": "Buttermilk Butte Lookout (now at Reynaud)",
+   "id": "us-wa-newport-replica",
+   "name": "Newport (replica)",
+   "kind": "replica",
+   "note": "Replica",
+   "origin": null,
+   "origin_id": null,
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-wa-north-baldy-at-big-meadow-lake",
+   "name": "North Baldy Lookout (now at Big Meadow Lake)",
    "kind": "relocated",
-   "note": "Relocated Buttermilk Butte",
-   "origin": "Buttermilk Butte",
-   "origin_id": "us-wa-buttermilk-butte",
+   "note": "Relocated North Baldy",
+   "origin": "North Baldy",
+   "origin_id": "us-wa-north-baldy",
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-wa-rainier-at-islandwood",
+   "name": "Rainier Tower (now at Islandwood)",
+   "kind": "relocated",
+   "note": "Relocated Rainier",
+   "origin": "Rainier",
+   "origin_id": "us-wa-rainier",
    "origin_alternatives": []
   },
   {
@@ -4143,37 +4121,30 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wa-chewelah-peak-at-scranton",
-   "name": "Chewelah Peak Lookout (now at Scranton)",
+   "id": "us-wa-salmon-river-at-buckley-foothills-museum",
+   "name": "Salmon River Lookout (now at the Buckley Foothills Museum)",
    "kind": "relocated",
-   "note": "Relocated Chewelah Peak",
-   "origin": "Chewelah Peak",
-   "origin_id": "us-wa-chewelah-peak",
+   "note": "Relocated Salmon River",
+   "origin": "Salmon River",
+   "origin_id": "us-wa-salmon-river",
    "origin_alternatives": []
   },
   {
-   "id": "us-wa-goat-peak-at-teanaway-valley",
-   "name": "Goat Peak Lookout (now at Teanaway Valley)",
+   "id": "us-wa-stampede-pass-at-camp-waskowitz",
+   "name": "Stampede Pass Lookout (now at Camp Waskowitz)",
    "kind": "relocated",
-   "note": "Relocated Goat Peak",
-   "origin": "Goat Peak",
-   "origin_id": "us-wa-goat-peak-2",
-   "origin_alternatives": [
-    "us-wa-american-ridge-goat-peak",
-    "us-wa-goat-mountain-3",
-    "us-wa-goat-mountain-2",
-    "us-wa-goat-butte",
-    "us-wa-goat-mountain",
-    "us-wa-goat-peak"
-   ]
+   "note": "Relocated Stampede Pass",
+   "origin": "Stampede Pass",
+   "origin_id": "us-wa-stampede-pass",
+   "origin_alternatives": []
   },
   {
-   "id": "us-wi-silver-lake-at-collins-marsh",
-   "name": "Silver Lake Lookout (from Michigan, now at Collins Marsh)",
+   "id": "us-wa-stranger-mountain-at-colville-fairgrounds",
+   "name": "Stranger Mountain Lookout (now at the Colville Fairgrounds)",
    "kind": "relocated",
-   "note": "Relocated Silver Lake, MI",
-   "origin": "Silver Lake",
-   "origin_id": null,
+   "note": "Relocated Stranger Mountain",
+   "origin": "Stranger Mountain",
+   "origin_id": "us-wa-stranger-mountain",
    "origin_alternatives": []
   },
   {
@@ -4195,12 +4166,12 @@
    "origin_alternatives": []
   },
   {
-   "id": "us-wv-gauley-mountain-at-cass-scenic-rr",
-   "name": "Gauley Mountain Lookout (now at Cass Scenic RR)",
+   "id": "us-wi-silver-lake-at-collins-marsh",
+   "name": "Silver Lake Lookout (from Michigan, now at Collins Marsh)",
    "kind": "relocated",
-   "note": "Relocated Gauley Mountain",
-   "origin": "Gauley Mountain",
-   "origin_id": "us-wv-gauley-mountain",
+   "note": "Relocated Silver Lake, MI",
+   "origin": "Silver Lake",
+   "origin_id": null,
    "origin_alternatives": []
   },
   {
@@ -4219,6 +4190,15 @@
    "note": "Relocated Cottle Knob",
    "origin": "Cottle Knob",
    "origin_id": "us-wv-cottle-knob",
+   "origin_alternatives": []
+  },
+  {
+   "id": "us-wv-gauley-mountain-at-cass-scenic-rr",
+   "name": "Gauley Mountain Lookout (now at Cass Scenic RR)",
+   "kind": "relocated",
+   "note": "Relocated Gauley Mountain",
+   "origin": "Gauley Mountain",
+   "origin_id": "us-wv-gauley-mountain",
    "origin_alternatives": []
   },
   {

@@ -279,9 +279,10 @@ state list), `wikipedia`, `site` (hobbyist and regional pages), `agency`, `websi
 
 `pipeline/build_site_data.py` writes `web/public/data/`:
 
-- `towers.geojson`: every visible tower as a point. Minimal properties for map styling and
-  filtering: `id, name, region, kind, status, rentable, built (year|null), registered (bool),
-  verification, access`.
+- `towers.geojson`: every visible tower as a point, coordinates rounded to 5 dp. Short
+  property names (missing key = null/false; the legend is repeated in `meta.json` → `format`):
+  `i` id, `n` name, `r` state, `c` county, `k` kind, `s` status, `v` verification, `a` access,
+  `b` year built, `rt` 1 if rentable, `rg` 1 if on a register, `o` other names joined by `|`.
 - `t/<id>.json`: the full canonical record plus the story HTML, when one exists.
 - `meta.json`: counts, source list with retrieved dates, and build date.
 
