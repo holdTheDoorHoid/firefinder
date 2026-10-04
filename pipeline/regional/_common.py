@@ -60,9 +60,20 @@ def _robots_allows(url: str, ua: str) -> bool:
         rp = urllib.robotparser.RobotFileParser()
         rp.set_url(base + "/robots.txt")
         try:
-            rp.read()
+            # Not rp.read(): it fetches robots.txt with urllib's default,
+            # un-headered opener, and some hosts (e.g. Wikipedia, which
+            # requires a descriptive User-Agent on every request including
+            # this one) answer that with 403. robotparser treats a 401/403
+            # fetching robots.txt as "disallow everything", which would then
+            # wrongly block a host that is actually fine with our real,
+            # identified UA -- so fetch robots.txt ourselves with the same
+            # UA we use for every other request, and feed it to the parser.
+            req = urllib.request.Request(base + "/robots.txt", headers={"User-Agent": ua})
+            with urllib.request.urlopen(req, timeout=15) as r:
+                text = r.read().decode("utf-8", errors="replace")
+            rp.parse(text.splitlines())
         except Exception:
-            rp = None  # no robots.txt, or unreadable -> treat as allow-all
+            rp = None  # no robots.txt, or unreadable even with our own UA -> treat as allow-all
         _robots_cache[base] = rp
     if rp is None:
         return True
@@ -113,7 +124,12 @@ def fetch(
     except urllib.error.HTTPError as e:
         _last_request_at[host] = time.time()
         raise FetchError(f"HTTP {e.code} fetching {url}") from e
-    except urllib.error.URLError as e:
+    except (urllib.error.URLError, TimeoutError, OSError) as e:
+        # A bare TimeoutError/OSError (a slow or flaky host closing the
+        # connection mid-read) isn't always wrapped as URLError by urlopen --
+        # catch it here too, so one flaky request can't crash an otherwise
+        # resumable, hours-long fetcher run. See weebly_lookouts.py's eastern
+        # run, 2026-10-04.
         _last_request_at[host] = time.time()
         raise FetchError(f"error fetching {url}: {e}") from e
     _last_request_at[host] = time.time()

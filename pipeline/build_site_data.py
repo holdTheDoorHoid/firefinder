@@ -140,6 +140,42 @@ KNOWN_SOURCES: dict[str, dict[str, str]] = {
         "license": "Reuse allowed with credit",
         "credit": "fire-lookouts.org",
     },
+    "eastern_us_lookouts": {
+        "title": "FOREST LOOKOUTS -- eastern US",
+        "url": "https://easternuslookouts.weebly.com/",
+        "license": "No licence stated; facts only",
+        "credit": "easternuslookouts.weebly.com",
+    },
+    "central_us_lookouts": {
+        "title": "FOREST LOOKOUTS -- central US",
+        "url": "https://centraluslookouts.weebly.com/",
+        "license": "No licence stated; facts only",
+        "credit": "centraluslookouts.weebly.com",
+    },
+    "wikipedia_lookout_lists": {
+        "title": "Wikipedia: per-state fire lookout tower lists",
+        "url": "https://en.wikipedia.org/wiki/List_of_fire_lookout_towers_in_Louisiana",
+        "license": "CC BY-SA 4.0; facts only, article prose not reproduced",
+        "credit": "Wikipedia",
+    },
+    "nj_forest_fire_towers": {
+        "title": "Wikipedia: List of New Jersey Forest Fire Service fire towers",
+        "url": "https://en.wikipedia.org/wiki/List_of_New_Jersey_Forest_Fire_Service_fire_towers",
+        "license": "CC BY-SA 4.0; facts only, article prose not reproduced",
+        "credit": "Wikipedia (NJFFS fire tower list)",
+    },
+    "michigan_fire_tower": {
+        "title": "Michigan Fire Towers",
+        "url": "https://michiganfiretower.com/",
+        "license": "No licence stated; facts only",
+        "credit": "michiganfiretower.com",
+    },
+    "tnlandforms": {
+        "title": "tnlandforms.us fire lookout towers (Tom Dunigan)",
+        "url": "https://tnlandforms.us/towers/",
+        "license": "No licence stated; facts only",
+        "credit": "tnlandforms.us (Tom Dunigan)",
+    },
 }
 
 

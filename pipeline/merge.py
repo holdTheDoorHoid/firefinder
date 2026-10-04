@@ -80,41 +80,74 @@ SKIP_FILES = {"designs_reference.json", "ridb_excluded.json"}
 # master-list sources first, so they seed the towers the others attach to. Sources not named
 # here (a future extract) are processed last, alphabetically, at the lowest precedence.
 SOURCE_ORDER = [
-    "nhlr", "fflos", "ffla", "ridb", "fire_lookouts_org", "firelookout_com", "idaho_fl",
-    "pa_storymap", "andyarthur_ny", "cskt", "wikidata", "osm",
+    "nhlr", "fflos", "ffla", "ridb", "fire_lookouts_org", "tnlandforms",
+    "nj_forest_fire_towers", "firelookout_com", "idaho_fl", "michigan_fire_tower",
+    "pa_storymap", "andyarthur_ny", "wikipedia_lookout_lists", "cskt", "eastern_us_lookouts",
+    "central_us_lookouts", "wikidata", "osm",
 ]
 
 # Field precedence: the first source in the list that has a value wins. Mirrored in DESIGN.md
 # 3.5; change both together.
+#
+# 2026-10-04 (gapstates): six sources added for the FFLA gap states -- tnlandforms.us (Tom
+# Dunigan's GA/NC/TN tower pages: no licence stated but unusually well-structured and verified
+# -- its TN GPX's NGS PIDs and GA page's GFC numbers both cross-checked against other
+# registers -- ranked with fire-lookouts.org), nj_forest_fire_towers (Wikipedia's NJFFS tower
+# table: structured, cited, its US#/NJ# register numbers verified byte-identical to nhlr.json's
+# NJ entries, so ranked just under that tier), wikipedia_lookout_lists (the Louisiana wikitable:
+# licensed, cited, ranked with the other licensed regional extracts), michigan_fire_tower (a
+# small young single-author site, ranked with idahofirelookouts.com), and eastern_us_lookouts /
+# central_us_lookouts (the two weebly "FOREST LOOKOUTS" hobby sites: no licence stated, heavy
+# free text, most entries have no coordinates -- ranked lowest among named sources, just above
+# OSM/Wikidata). Each is only added to a field's precedence list when the fetcher actually
+# populates that field; see pipeline/regional/weebly_lookouts.py, nj_forest_fire_towers.py,
+# wikipedia_lists.py, michigan_fire_tower.py, tnlandforms.py for what each one supplies.
 PRECEDENCE: dict[str, list[str]] = {
     "name": ["nhlr", "fflos", "ridb", "ffla", "firelookout_com", "fire_lookouts_org",
-             "andyarthur_ny", "pa_storymap", "cskt", "wikidata", "idaho_fl", "osm"],
-    "location": ["nhlr", "fflos", "ffla", "fire_lookouts_org", "firelookout_com", "osm",
-                 "wikidata", "ridb", "andyarthur_ny", "pa_storymap", "idaho_fl", "cskt"],
-    "status": ["ffla", "nhlr", "fflos", "ridb", "fire_lookouts_org", "andyarthur_ny",
-               "pa_storymap", "cskt", "firelookout_com", "idaho_fl", "osm", "wikidata"],
+             "tnlandforms", "nj_forest_fire_towers", "andyarthur_ny", "wikipedia_lookout_lists",
+             "pa_storymap", "cskt", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
+             "idaho_fl", "michigan_fire_tower", "osm"],
+    "location": ["nhlr", "fflos", "ffla", "fire_lookouts_org", "tnlandforms",
+                 "nj_forest_fire_towers", "firelookout_com", "osm", "eastern_us_lookouts",
+                 "central_us_lookouts", "wikidata", "ridb", "andyarthur_ny",
+                 "wikipedia_lookout_lists", "pa_storymap", "idaho_fl", "michigan_fire_tower",
+                 "cskt"],
+    "status": ["ffla", "nhlr", "fflos", "ridb", "fire_lookouts_org", "tnlandforms",
+               "nj_forest_fire_towers", "andyarthur_ny", "wikipedia_lookout_lists", "pa_storymap",
+               "cskt", "firelookout_com", "idaho_fl", "michigan_fire_tower", "osm",
+               "eastern_us_lookouts", "central_us_lookouts", "wikidata"],
     "kind": ["ffla", "nhlr", "fflos", "ridb", "firelookout_com", "fire_lookouts_org",
-             "pa_storymap", "andyarthur_ny", "cskt", "osm", "wikidata", "idaho_fl"],
+             "tnlandforms", "nj_forest_fire_towers", "pa_storymap", "andyarthur_ny",
+             "wikipedia_lookout_lists", "cskt", "osm", "eastern_us_lookouts",
+             "central_us_lookouts", "wikidata", "idaho_fl", "michigan_fire_tower"],
     "county": ["nhlr", "fflos", "ffla", "firelookout_com", "pa_storymap", "cskt",
-               "andyarthur_ny", "fire_lookouts_org", "wikidata"],
-    "elevation_m": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "ridb",
-                    "wikidata", "cskt", "osm"],
+               "andyarthur_ny", "wikipedia_lookout_lists", "fire_lookouts_org", "tnlandforms",
+               "nj_forest_fire_towers", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
+               "michigan_fire_tower"],
+    "elevation_m": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "tnlandforms",
+                    "nj_forest_fire_towers", "ridb", "wikidata", "cskt", "osm"],
     "built": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "pa_storymap", "ridb",
               "wikidata", "cskt", "idaho_fl", "osm", "andyarthur_ny", "ffla"],
-    "design": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "pa_storymap", "cskt"],
-    "height_m": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "pa_storymap",
-                 "cskt", "wikidata", "osm"],
-    "agency": ["nhlr", "fflos", "ridb", "firelookout_com", "fire_lookouts_org", "pa_storymap",
-               "andyarthur_ny", "cskt", "osm"],
+    "design": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "pa_storymap", "cskt",
+               "eastern_us_lookouts", "central_us_lookouts"],
+    "height_m": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "nj_forest_fire_towers",
+                 "pa_storymap", "cskt", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
+                 "osm"],
+    "agency": ["nhlr", "fflos", "ridb", "firelookout_com", "fire_lookouts_org", "tnlandforms",
+               "nj_forest_fire_towers", "pa_storymap", "andyarthur_ny", "cskt",
+               "eastern_us_lookouts", "central_us_lookouts", "osm", "michigan_fire_tower"],
     "ownership": ["cskt", "ridb", "nhlr", "fflos", "andyarthur_ny", "pa_storymap",
-                  "fire_lookouts_org", "firelookout_com", "ffla", "osm"],
+                  "fire_lookouts_org", "nj_forest_fire_towers", "firelookout_com", "ffla",
+                  "eastern_us_lookouts", "central_us_lookouts", "osm", "michigan_fire_tower"],
     "access": ["cskt", "osm"],
     "staffing": ["firelookout_com", "fire_lookouts_org", "cskt", "idaho_fl"],
     "rental": ["ridb"],
     "events": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "pa_storymap", "ridb",
-               "wikidata", "cskt", "idaho_fl", "ffla", "osm", "andyarthur_ny"],
-    "photos": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "pa_storymap",
-               "wikidata", "andyarthur_ny", "idaho_fl", "cskt", "ridb", "osm", "ffla"],
+               "wikidata", "cskt", "idaho_fl", "michigan_fire_tower", "ffla", "osm",
+               "andyarthur_ny"],
+    "photos": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "nj_forest_fire_towers",
+               "pa_storymap", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
+               "andyarthur_ny", "idaho_fl", "cskt", "ridb", "osm", "ffla"],
 }
 
 # Sources whose positions share a lineage. For verification ("facts" needs two independent
@@ -168,6 +201,12 @@ SOURCE_SITE = {
     "andyarthur_ny": "andyarthur.org",
     "fire_lookouts_org": "fire-lookouts.org (Rich Camp)",
     "cskt": "Confederated Salish and Kootenai Tribes",
+    "eastern_us_lookouts": "easternuslookouts.weebly.com",
+    "central_us_lookouts": "centraluslookouts.weebly.com",
+    "wikipedia_lookout_lists": "Wikipedia",
+    "nj_forest_fire_towers": "Wikipedia (List of New Jersey Forest Fire Service fire towers)",
+    "michigan_fire_tower": "michiganfiretower.com",
+    "tnlandforms": "tnlandforms.us (Tom Dunigan)",
 }
 
 # Default photo licence per source, where the source states one (None = not stated).
@@ -177,6 +216,8 @@ PHOTO_LICENSE = {
     "andyarthur_ny": "CC BY 3.0",
     "fire_lookouts_org": "Reuse allowed with credit",
     "ridb": "Public domain (US government)",
+    "wikipedia_lookout_lists": "CC BY-SA 4.0",
+    "nj_forest_fire_towers": "See Wikimedia Commons file page (varies per photo)",
 }
 
 STATE_NAMES = {
