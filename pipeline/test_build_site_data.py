@@ -200,11 +200,23 @@ class CommandLine(unittest.TestCase):
 
 
 class Markdown(unittest.TestCase):
+    def test_research_story_conventions(self):
+        md = ("# Hager Mountain Lookout\n\nWatched since 1915.[^1][^2]\n\n"
+              "[^1]: Hager Mountain Lookout, NHLR, http://nhlr.org/lookouts/us/or/hager-mountain-lookout/ (accessed 2026-10-04).\n"
+              "[^2]: Hager Mtn., firelookout.com, https://www.firelookout.com/or/hagermtn.html (accessed 2026-10-04).\n")
+        out = bsd.markdown_to_html(md, title="Hager Mountain Lookout")
+        self.assertNotIn("Hager Mountain Lookout</h2>", out)  # the title heading is the page's h1
+        self.assertIn("Hager Mountain Lookout</h2>", bsd.markdown_to_html(md, title="Another Lookout"))
+        self.assertIn('<sup class="fnsep">,</sup>', out)      # 1,2 not 12
+        self.assertIn('<a href="http://nhlr.org/lookouts/us/or/hager-mountain-lookout/" rel="noopener noreferrer">', out)
+        self.assertIn("</a> (accessed 2026-10-04).", out)
+        self.assertIn('class="fn-back"', out)
+
     def test_escapes_html_and_unsafe_links(self) -> None:
         out = bsd.markdown_to_html('<script>alert(1)</script> [a](javascript:alert(2)) [b](https://ok.org/?x=1&y=2)\n')
         self.assertNotIn("<script", out)
         self.assertNotIn("javascript:", out)
-        self.assertIn('<a href="https://ok.org/?x=1&amp;y=2">b</a>', out)
+        self.assertIn('<a href="https://ok.org/?x=1&amp;y=2" rel="noopener noreferrer">b</a>', out)
 
     def test_structure(self) -> None:
         out = bsd.markdown_to_html("---\ntitle: x\n---\n# Head\n\n> Quoted\n\n- one\n- two\n\nText[^1].\n\n[^1]: Note.\n")

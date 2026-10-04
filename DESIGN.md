@@ -64,6 +64,7 @@ data/
   sources/<source>.json     normalized extract from one source (list of source records, §3.2); committed
   towers/<region>/<id>.json one canonical record per lookout site (§3.3); the source of truth
   stories/<id>.md           researched narrative with footnotes (stage 2)
+  research/<id>.json        that research's facts, events, sources and fact-check (research/STORY_GUIDE.md)
   photos/<id>/<n>.jpg       mirrored photos, ≤1600 px long side (stage 1b)
   raw/                      crawl cache, git-ignored
   vocab.json                controlled vocabularies (§3.4)
@@ -276,7 +277,34 @@ re-run from scratch gives the same ids and a new record never takes an existing 
 **Links** carry a credit-ready `label` and a `kind`: `relocated_from` / `relocated_to` (another
 tower page, by `id`), `register`, `rental`, `association` (FFLA
 state list), `wikipedia`, `site` (hobbyist and regional pages), `agency`, `website`, `commons`,
-`wikidata`, `osm`. **`sources[]`** lists, per record, the fields it supplied.
+`wikidata`, `osm`, `reference` (a page research cites). **`sources[]`** lists, per record, the
+fields it supplied.
+
+**Research overlay.** After the source merge, every run lays `data/research/<id>.json` over its
+tower (`--research` to point elsewhere), so a re-merge never loses research:
+
+- `facts` (`design`, `height_m`, `status`, `status_note`, `kind`, `staffing`, `access`,
+  `visit`, `agency`) replace the merged values, except fields in `locked` (human edits win).
+  Values outside the vocabulary are skipped and reported; null `visit` keys are left alone.
+  If research changes `status` or `kind` against what the sources say, a conflict keeps the
+  research value first and the sources' values, with a note.
+- `events` join the sources' events tagged `"from": "research"` with `source_url` (the first
+  cited page, `source_urls` when several); the same year + event appears once, research's.
+  Event names outside `vocab.event` are left out and reported; a few plain synonyms are mapped
+  (unstaffed → staffed_last, decommissioned → abandoned, renovated / restoration_completed →
+  restored).
+- `summary` becomes the tower's `summary` (map panel and page header); `research` records
+  `{researched, checked, verdict, confidence}` for the page's "Researched …, fact-checked" line.
+- `verification` becomes `verified` when the fact-check verdict is `pass` or `fixed`, otherwise
+  `researched`.
+- `photos` are appended (credit and licence kept, de-duplicated by URL); `sources` become links
+  of kind `reference` (de-duplicated by URL); `sources[]` gains `{"source": "research",
+  "key": "research:<id>", "fields": [...]}`.
+- `corrections` are **never applied**: all of them, with `notes_for_editor` and any problems,
+  go to `data/merge_report.json` (`research_corrections`, `research`) for a human.
+
+`pipeline/validate.py` checks the research files (shape, vocabulary, citations) and that every
+`[^n]` in a story has a definition and a research source `n`.
 
 ### 3.6 What the site loads
 

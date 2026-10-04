@@ -88,7 +88,7 @@ const STORY_TAGS: Record<string, readonly string[]> = {
   li: ['id'],
   hr: [],
   br: [],
-  a: ['href', 'id', 'class', 'aria-label'],
+  a: ['href', 'id', 'class', 'aria-label', 'rel'],
   sup: ['id', 'class'],
   section: ['class', 'aria-label'],
 };
@@ -112,6 +112,7 @@ export function isSafeStoryHtml(markup: string): boolean {
     for (const a of attrs.matchAll(ATTR_RE)) {
       const name = a[1]!.toLowerCase();
       if (!allowed.includes(name)) return false;
+      if (name === 'rel' && a[2] !== 'noopener noreferrer') return false;
       if (name === 'href') {
         // The converter only writes these few entities (Python's html.escape). Any other
         // entity could hide a scheme ("&#106;avascript:"), so it is rejected outright.

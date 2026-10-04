@@ -45,6 +45,7 @@ class Workspace:
         self.tmp = tempfile.TemporaryDirectory()
         root = Path(self.tmp.name)
         self.sources, self.towers, self.report = root / "sources", root / "towers", root / "report.json"
+        self.research = root / "research"
 
     def run(self, by_source: dict[str, list[dict]] | None = None) -> dict:
         if by_source is not None:
@@ -52,7 +53,12 @@ class Workspace:
                 f.unlink()
             write_sources(self.sources, by_source)
         with contextlib.redirect_stdout(io.StringIO()):
-            return M.run(self.sources, self.towers, self.report, TODAY, log=lambda *a, **k: None)
+            return M.run(self.sources, self.towers, self.report, TODAY, log=lambda *a, **k: None,
+                         research_dir=self.research)
+
+    def write_research(self, data: dict) -> None:
+        self.research.mkdir(parents=True, exist_ok=True)
+        (self.research / f"{data['id']}.json").write_text(json.dumps(data), encoding="utf-8")
 
     def towers_by_id(self) -> dict[str, dict]:
         return {p.stem: json.loads(p.read_text()) for p in self.towers.rglob("*.json")}
@@ -446,6 +452,140 @@ class StatusNotes(unittest.TestCase):
             self.assertEqual(t["us-md-orchard-point"]["name"], "Orchard Point")
         finally:
             ws.close()
+
+
+def research_file(rid: str, **kw) -> dict:
+    data = {
+        "id": rid, "researched": "2026-10-04",
+        "summary": "A cab on a summit watched for smoke since 1915.",
+        "facts": {"design": "R-6 flat top", "status": "standing", "agency": "Fremont National Forest",
+                  "staffing": {"status": "staffed", "as_of": "2026"},
+                  "access": {"level": "public", "note": "Foot access in winter."},
+                  "visit": {"climbable": None, "drive_up": False}},
+        "events": [{"year": 1967, "event": "built", "note": "Current R-6 cab", "cite": [1]},
+                   {"year": 1936, "event": "replaced", "note": "L-4 cab", "cite": [2]},
+                   {"year": 1992, "event": "modified", "note": "Hip roof", "cite": [1]},
+                   {"year": 1980, "event": "unstaffed", "note": "Staffing ended", "cite": [2]}],
+        "corrections": [{"field": "location", "current": "45.0, -116.0", "proposed": "45.1, -116.1",
+                         "evidence": "Register page", "cite": [1]}],
+        "sources": [{"n": 1, "title": "Gold Hill Lookout", "publisher": "NHLR", "url": "http://nhlr.org/lookouts/us/id/gold-hill/", "accessed": "2026-10-04"},
+                    {"n": 2, "title": "Gold Hill", "publisher": "firelookout.com", "url": "https://example.org/firelookout_com/a", "accessed": "2026-10-04"}],
+        "photos": [{"url": "https://example.org/p.jpg", "source_url": "https://example.org/p", "credit": "USFS", "license": "Public domain", "caption": "1938", "year": 1938}],
+        "confidence": "medium",
+        "notes_for_editor": "Check the 1936 date.",
+    }
+    data.update(kw)
+    return data
+
+
+class ResearchOverlay(unittest.TestCase):
+    SOURCES = {"ffla": [rec("ffla", "a", "Gold Hill", 45.0, -116.0, status="gone", built=1967)],
+               "firelookout_com": [rec("firelookout_com", "a", "Gold Hill", 45.0, -116.0, status="gone", built=1967)]}
+
+    def setUp(self):
+        self.ws = Workspace()
+        self.ws.run(self.SOURCES)
+        self.tid = self.ws.tower_with_key("ffla:a")["id"]
+
+    def tearDown(self):
+        self.ws.close()
+
+    def tower(self) -> dict:
+        return self.ws.towers_by_id()[self.tid]
+
+    def test_facts_events_photos_links_and_provenance(self):
+        self.ws.write_research(research_file(self.tid))
+        rep = self.ws.run()
+        t = self.tower()
+        self.assertEqual((t["design"], t["status"], t["agency"]), ("R-6 flat top", "standing", "Fremont National Forest"))
+        self.assertEqual(t["summary"], "A cab on a summit watched for smoke since 1915.")
+        self.assertEqual(t["staffing"], {"status": "staffed", "as_of": "2026"})
+        self.assertIs(t["visit"]["drive_up"], False)
+        self.assertIsNone(t["visit"]["climbable"])
+        # research changed the status against the sources: the disagreement stays visible
+        c = next(c for c in t["conflicts"] if c["field"] == "status")
+        self.assertEqual(c["values"][0], {"source": "research", "value": "standing"})
+        self.assertIn({"source": "ffla", "value": "gone"}, c["values"])
+        # events: same year+event once (research's, with its citation); unknown names left out; aliases mapped
+        built = [e for e in t["events"] if e["event"] == "built"]
+        self.assertEqual(len(built), 1)
+        self.assertEqual((built[0]["from"], built[0]["source_url"]), ("research", "http://nhlr.org/lookouts/us/id/gold-hill/"))
+        self.assertFalse(any(e["event"] == "modified" for e in t["events"]))
+        self.assertTrue(any(e["event"] == "staffed_last" and e["year"] == 1980 for e in t["events"]))
+        self.assertEqual(t["photos"][-1]["url"], "https://example.org/p.jpg")
+        self.assertEqual(t["photos"][-1]["license"], "Public domain")
+        refs = [l for l in t["links"] if l["kind"] == "reference"]
+        self.assertEqual([l["url"] for l in refs], ["http://nhlr.org/lookouts/us/id/gold-hill/"])  # firelookout.com page already linked
+        src = next(s_ for s_ in t["sources"] if s_["source"] == "research")
+        self.assertEqual(src["key"], f"research:{self.tid}")
+        self.assertIn("status", src["fields"])
+        self.assertEqual(t["research"]["researched"], "2026-10-04")
+        # corrections are reported, never applied
+        self.assertEqual(t["location"]["lat"], 45.0)
+        self.assertEqual(rep["research_corrections"][0]["proposed"], "45.1, -116.1")
+        self.assertEqual(rep["research"]["notes_for_editor"][0]["note"], "Check the 1936 date.")
+        self.assertTrue(any("modified" in p_["problem"] for p_ in rep["research"]["problems"]))
+
+    def test_status_note_only_qualifies_a_status(self):
+        facts = {"status": "standing", "status_note": "Hip roof replaced the original flat roof in 1992."}
+        self.ws.write_research(research_file(self.tid, facts=facts))
+        self.ws.run()
+        self.assertIsNone(self.tower()["status_note"])
+        facts = {"status": "ruins", "status_note": "Only the footings remain."}
+        self.ws.write_research(research_file(self.tid, facts=facts))
+        self.ws.run()
+        self.assertEqual(self.tower()["status_note"], "Only the footings remain.")
+
+    def test_verification_mapping(self):
+        for verdict, expected in (("pass", "verified"), ("fixed", "verified"), ("fail", "researched"), (None, "researched")):
+            extra = {"verification": {"checked": "2026-10-05", "claims_checked": 12, "unsupported_removed": 0,
+                                      "errors_fixed": 0, "verdict": verdict}} if verdict else {}
+            self.ws.write_research(research_file(self.tid, **extra))
+            self.ws.run()
+            self.assertEqual(self.tower()["verification"], expected, verdict)
+
+    def test_locked_fields_win(self):
+        path = next(p for p in self.ws.towers.rglob(f"{self.tid}.json"))
+        t = json.loads(path.read_text())
+        t["design"] = "Hand-checked design"
+        t["locked"] = ["design", "status"]
+        path.write_text(json.dumps(t))
+        self.ws.write_research(research_file(self.tid))
+        self.ws.run()
+        t = self.tower()
+        self.assertEqual(t["design"], "Hand-checked design")
+        self.assertEqual(t["status"], "gone")
+        self.assertFalse(any(c["field"] == "status" and c["values"][0]["source"] == "research" for c in t["conflicts"]))
+        self.assertEqual(t["agency"], "Fremont National Forest")  # not locked: research applies
+
+    def test_rerun_is_idempotent(self):
+        self.ws.write_research(research_file(self.tid))
+        self.ws.run()
+        first = self.tower()
+        rep = self.ws.run()
+        self.assertEqual(rep["files"]["written"], 0)
+        self.assertEqual(self.tower(), first)
+        self.assertEqual(sum(1 for s_ in first["sources"] if s_["source"] == "research"), 1)
+
+    def test_research_for_an_unknown_tower_is_reported(self):
+        self.ws.write_research(research_file("us-id-nowhere"))
+        rep = self.ws.run()
+        self.assertTrue(any("no tower" in p_["problem"] for p_ in rep["research"]["problems"]))
+
+    def test_validator(self):
+        vocab = json.loads((M.DATA / "vocab.json").read_text())
+        data = research_file(self.tid)
+        path = Path(f"{self.tid}.json")
+        errs, warns = V.check_research(data, path, vocab, {self.tid})
+        self.assertEqual(errs, [])
+        self.assertTrue(any("modified" in w for w in warns))
+        bad = research_file(self.tid, events=[{"year": 1967, "event": "built", "cite": [9]}])
+        self.assertTrue(any("not in sources" in e for e in V.check_research(bad, path, vocab, {self.tid})[0]))
+        story = "Built in 1967.[^1] Rebuilt.[^3]\n\n[^1]: NHLR, http://nhlr.org/x (accessed 2026-10-04).\n"
+        errs, _ = V.check_story(story, data)
+        self.assertTrue(any("[^3] has no definition" in e for e in errs))
+        self.assertTrue(any("[^3] has no matching source" in e for e in errs))
+        self.assertEqual(V.check_story("Built.[^1]\n\n[^1]: NHLR.\n", data)[0], [])
 
 
 class PackedDMS(unittest.TestCase):
