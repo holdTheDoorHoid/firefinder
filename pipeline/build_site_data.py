@@ -15,6 +15,7 @@ towers.geojson properties (absent optional keys mean null / false; see meta.json
   i  id            n  name           r  region (state code)
   k  kind          s  status         v  verification       a  access level
   b  built year    rt rentable (1)   rg on a register (1)   o  other names, "|"-joined
+  c  county
 
 Coordinates are [lon, lat] rounded to 5 decimal places.
 
@@ -61,6 +62,7 @@ GEOJSON_FORMAT = {
     "rt": "1 = rentable (absent = not rentable)",
     "rg": "1 = listed on a register such as NHLR or FFLOS (absent = not listed)",
     "o": "other names joined with | (absent = none)",
+    "c": "county, to tell same-named lookouts apart (absent = unknown)",
 }
 
 # Credit lines and licence notes for sources we know about. Titles, URLs and retrieved dates
@@ -439,6 +441,8 @@ def feature(rec: dict) -> dict:
     others = [n for n in rec.get("other_names") or [] if isinstance(n, str) and n.strip()]
     if others:
         props["o"] = "|".join(n.replace("|", "/") for n in others)
+    if isinstance(rec.get("county"), str) and rec["county"].strip():
+        props["c"] = rec["county"].strip()
     return {
         "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [round(loc["lon"], 5), round(loc["lat"], 5)]},

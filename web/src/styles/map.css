@@ -96,6 +96,8 @@ body.page-map { height: 100dvh; display: flex; flex-direction: column; overflow:
   font: 650 0.9rem/1.2 var(--font-sans); font-variant-numeric: tabular-nums; color: var(--ink);
 }
 .count-chip.is-empty { background: var(--caution-bg); border-color: var(--caution-line); color: var(--caution-ink); }
+.btn-chip { min-height: 34px; padding: 5px 13px; border-radius: 999px; font-size: 0.88rem; box-shadow: var(--shadow-sm); }
+.btn-chip[hidden] { display: none; }
 .btn-filters { display: none; box-shadow: var(--shadow-sm); }
 .filter-count { font-variant-numeric: tabular-nums; }
 .map-message {
@@ -114,7 +116,8 @@ body.page-map { height: 100dvh; display: flex; flex-direction: column; overflow:
 .panel[hidden] { display: none; }
 .panel-close { position: absolute; right: 10px; top: 10px; z-index: 1; background: var(--surface); }
 .panel-body { padding: 18px 20px 24px; }
-.panel-body h2 { font-size: 1.65rem; margin: 6px 48px 4px 0; }
+.panel-body .eyebrow { margin-right: 44px; }
+.panel-body h2 { font-size: 1.65rem; margin: 6px 44px 4px 0; }
 .panel-body h2:focus { outline: none; }
 .panel-body h2:focus-visible { outline: 3px solid var(--focus); }
 .panel-body .notice { margin: 10px 0; font-size: 0.9rem; }

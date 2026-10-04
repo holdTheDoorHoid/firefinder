@@ -44,7 +44,8 @@ export class Panel {
     if (this.#d.el.hidden) return { right: 0, bottom: 0 };
     const r = this.#d.el.getBoundingClientRect();
     const sheet = matchMedia('(max-width: 899px)').matches;
-    return sheet ? { right: 0, bottom: r.height } : { right: r.width + 16, bottom: 0 };
+    // The sheet grows when the full record replaces the loading stub; plan for its full height.
+    return sheet ? { right: 0, bottom: Math.max(r.height, window.innerHeight * 0.62) } : { right: r.width + 16, bottom: 0 };
   }
 
   async open(id: string, props: TowerProps | null, opts: { focus?: boolean } = {}): Promise<void> {
@@ -98,10 +99,12 @@ export class Panel {
 
   #show(rec: TowerRecord, focus: boolean): void {
     const d = this.#d;
+    // Replacing the markup would drop focus to <body>; keep it in the panel if it was there.
+    const hadFocus = d.body.contains(document.activeElement);
     d.body.innerHTML = renderPanel(rec, d.ctx, { hiddenByFilters: d.isHiddenByFilters(rec.id) }).value;
-    d.body.scrollTop = 0;
+    d.el.scrollTop = 0;
     d.onRender(d.body);
-    if (focus) this.#focusTitle();
+    if (focus || hadFocus) this.#focusTitle();
   }
 
   #focusTitle(): void {

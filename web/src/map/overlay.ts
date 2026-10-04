@@ -19,23 +19,28 @@ const L_TOPO = 'ff-usgs-topo';
 
 const ICON_PX = 24;
 
-const USGS_ATTRIBUTION =
-  '<a href="https://www.usgs.gov/programs/national-geospatial-program/national-map" target="_blank" rel="noopener">USGS The National Map</a>: National Boundaries Dataset, 3DEP Elevation Program, Geographic Names Information System, National Hydrography Dataset, National Land Cover Database, National Structures Dataset, and National Transportation Dataset; USGS Global Ecosystems; U.S. Census Bureau TIGER/Line data; USFS Road data; Natural Earth Data; U.S. Department of State HIU; NOAA National Centers for Environmental Information';
+/** Short on the map (it must not cover the controls on phones); the full USGS credit list is on the About page. */
+function usgsAttribution(base: string): string {
+  return `<a href="https://www.usgs.gov/programs/national-geospatial-program/national-map" target="_blank" rel="noopener">USGS The National Map</a> (<a href="${base}about/#sources">full credits</a>)`;
+}
 
-function addIcons(map: MlMap): void {
+/** Draw the 24 marker images for this theme (dark mode flips what "hollow" looks like). */
+function addIcons(map: MlMap, theme: Theme): void {
   const ratio = 2;
   const px = ICON_PX * ratio;
+  const canvas = document.createElement('canvas');
+  canvas.width = px;
+  canvas.height = px;
+  const ctx = canvas.getContext('2d', { willReadFrequently: true })!;
   for (const shape of SHAPES) {
     for (const fill of FILLS) {
       for (const rent of [false, true]) {
         const name = iconName(shape, fill, rent);
-        if (map.hasImage(name)) continue;
-        const canvas = document.createElement('canvas');
-        canvas.width = px;
-        canvas.height = px;
-        const ctx = canvas.getContext('2d')!;
-        drawMarker(ctx, shape, fill, rent, px);
-        map.addImage(name, ctx.getImageData(0, 0, px, px), { pixelRatio: ratio });
+        ctx.clearRect(0, 0, px, px);
+        drawMarker(ctx, shape, fill, rent, px, theme);
+        const image = ctx.getImageData(0, 0, px, px);
+        if (map.hasImage(name)) map.updateImage(name, image);
+        else map.addImage(name, image, { pixelRatio: ratio });
       }
     }
   }
@@ -66,7 +71,7 @@ export interface OverlayOptions {
 }
 
 export function installOverlay(map: MlMap, o: OverlayOptions): void {
-  addIcons(map);
+  addIcons(map, o.theme);
   const dark = o.theme === 'dark';
   const ink = dark ? '#dfe7da' : '#24342b';
   const paper = dark ? '#121915' : '#fbf8f1';
@@ -155,7 +160,7 @@ export function installOverlay(map: MlMap, o: OverlayOptions): void {
       },
     });
   }
-  setTopo(map, o.topo);
+  setTopo(map, o.topo, o.theme, o.base);
 }
 
 function selectionData(coords: [number, number] | null) {
@@ -174,7 +179,7 @@ export function setTowerData(map: MlMap, data: TowerCollection): void {
 }
 
 /** USGS topo raster on or off. When on, the vector base layers are hidden underneath it. */
-export function setTopo(map: MlMap, on: boolean): void {
+export function setTopo(map: MlMap, on: boolean, theme: Theme, base: string): void {
   const style = map.getStyle();
   if (!style) return;
   if (on && !map.getSource(TOPO_SRC)) {
@@ -183,11 +188,13 @@ export function setTopo(map: MlMap, on: boolean): void {
       tiles: ['https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}'],
       tileSize: 256,
       maxzoom: 16,
-      attribution: USGS_ATTRIBUTION,
+      attribution: usgsAttribution(base),
     });
   }
   if (on && !map.getLayer(L_TOPO)) {
-    map.addLayer({ id: L_TOPO, type: 'raster', source: TOPO_SRC, paint: { 'raster-fade-duration': 150 } }, L_CLUSTERS);
+    // Dimmed in dark mode, so the dark-mode markers (bright = standing) still read correctly.
+    const paint = theme === 'dark' ? { 'raster-fade-duration': 150, 'raster-brightness-max': 0.58, 'raster-saturation': -0.2 } : { 'raster-fade-duration': 150 };
+    map.addLayer({ id: L_TOPO, type: 'raster', source: TOPO_SRC, paint }, L_CLUSTERS);
   }
   if (!on && map.getLayer(L_TOPO)) map.removeLayer(L_TOPO);
   if (!on && map.getSource(TOPO_SRC)) map.removeSource(TOPO_SRC);

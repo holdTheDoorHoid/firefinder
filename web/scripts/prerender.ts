@@ -71,14 +71,16 @@ for (const file of files) {
     unsafeStories++;
     console.warn(`prerender: ${rec.id}: story HTML contains markup outside the allowed set; the page shows a notice instead`);
   }
-  const page =
-    beforeHead + renderTowerHead(rec, ctx).value + headToBanner + banner + bannerToMain + renderTowerMain(rec, ctx).value + afterMain;
+  const page = (
+    beforeHead + renderTowerHead(rec, ctx).value + headToBanner + banner + bannerToMain + renderTowerMain(rec, ctx).value + afterMain
+  ).replace(/\n\s+/g, '\n'); // drop template indentation (about a third of each page); no <pre> here
   mkdirSync(join(outDir, rec.id));
   writeFileSync(join(outDir, rec.id, 'index.html'), page);
   pages++;
   if (!rec.fixture) sitemap.push(`<url><loc>${ctx.siteUrl}t/${rec.id}/</loc>${rec.updated ? `<lastmod>${rec.updated}</lastmod>` : ''}</url>`);
 }
 rmSync(join(dist, 'tower.html'));
+rmSync(join(dataDir, '.firefinder-site-data'), { force: true }); // the pipeline's own bookkeeping file
 
 /* ---------- About page ---------- */
 const aboutPath = join(dist, 'about', 'index.html');

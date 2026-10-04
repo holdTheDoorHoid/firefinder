@@ -115,7 +115,7 @@ export function initChecklistDialog(list: Checklist): void {
         total === 0
           ? 'Everything in that file was already on your checklist.'
           : `Added ${r.added.visited} visited, ${r.added.stayed} stayed overnight and ${r.added.want} want to go.` +
-            (r.ignored ? ` ${r.ignored} entries were not lookout ids and were skipped.` : '');
+            (r.ignored ? ` ${r.ignored} ${r.ignored === 1 ? 'entry was not a lookout id and was' : 'entries were not lookout ids and were'} skipped.` : '');
     }
     refresh();
   });

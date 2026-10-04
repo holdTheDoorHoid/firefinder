@@ -589,7 +589,7 @@ export function renderPanel(r: TowerRecord, ctx: RenderContext, opts: { hiddenBy
 export function renderPanelStub(p: TowerProps, ctx: RenderContext, message: string): SafeHtml {
   const st = statusWording(p.s);
   return html`
-    <p class="eyebrow">Fire lookout · ${regionName(p.r)}</p>
+    <p class="eyebrow">Fire lookout · ${placeLine({ county: p.c ?? null, region: p.r })}</p>
     <h2 id="panel-title" tabindex="-1">${p.n}</h2>
     <ul class="badges"><li class="badge badge-status status-${p.s}">${icon(p.k, p.s, false)}<span>${st.label}</span></li>
     ${p.rt ? html`<li class="badge badge-rent">${raw(rentBadgeSvg(14))}<span>Rentable</span></li>` : ''}</ul>

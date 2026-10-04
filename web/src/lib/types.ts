@@ -15,6 +15,7 @@
  *   rt  rentable              1                         (absent = not rentable)
  *   rg  on a register         1  (NHLR, FFLOS, ...)     (absent = not listed)
  *   o   other names           "Old name|Another"        (absent = none)
+ *   c   county                "Lane"                    (absent = unknown)
  *
  * Coordinates are [lon, lat] rounded to 5 decimal places (about 1 m).
  */
@@ -31,6 +32,7 @@ export interface TowerProps {
   rt?: 1;
   rg?: 1;
   o?: string;
+  c?: string;
 }
 
 export interface TowerFeature {

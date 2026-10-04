@@ -1,5 +1,6 @@
 /** Shared start-up for every page: fonts, base styles, theme toggle. */
 import '@fontsource-variable/public-sans/wght.css';
+import '@fontsource-variable/public-sans/wght-italic.css'; // only downloaded where italics appear
 import '@fontsource-variable/besley/wght.css';
 import '../styles/base.css';
 import { initTheme } from './theme.ts';

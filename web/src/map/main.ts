@@ -140,16 +140,19 @@ async function main(): Promise<void> {
     state.selected = id;
     void panel.open(id, f?.properties ?? null, { focus: opts.focus });
     if (map && f) {
-      setSelection(map, f.geometry.coordinates);
+      const coords = f.geometry.coordinates;
+      setSelection(map, coords);
+      const cover = panel.coverage();
+      const padding = { top: PHONE.matches ? 80 : 40, left: 40, right: 40 + cover.right, bottom: 40 + cover.bottom };
       if (opts.fly) {
-        const cover = panel.coverage();
         viewTouched = true;
-        map.flyTo({
-          center: f.geometry.coordinates,
-          zoom: Math.max(map.getZoom(), 11),
-          padding: { top: 40, left: 40, right: 40 + cover.right, bottom: 40 + cover.bottom },
-          essential: true,
-        });
+        map.flyTo({ center: coords, zoom: Math.max(map.getZoom(), 11), padding, essential: true });
+      } else {
+        // Don't leave the lookout you just picked hidden under the panel or the search box.
+        const p = map.project(coords);
+        const box = map.getContainer();
+        const hidden = p.x < padding.left - 20 || p.y < padding.top - 20 || p.x > box.clientWidth - padding.right + 20 || p.y > box.clientHeight - padding.bottom + 20;
+        if (hidden) map.easeTo({ center: coords, padding, duration: 500 });
       }
     }
     writeUrl();
@@ -169,6 +172,7 @@ async function main(): Promise<void> {
     countEl.classList.toggle('is-empty', n === 0 && total > 0);
     const active = activeFilterCount(state.filters);
     filterCountEl.textContent = active ? ` (${active})` : '';
+    $('reset-map').hidden = active === 0;
     showResultsBtn.textContent = n === 0 ? 'No lookouts match: close' : `Show ${formatCount(n)} lookout${n === 1 ? '' : 's'}`;
     syncFilters();
     panel.refresh();
@@ -269,7 +273,7 @@ async function main(): Promise<void> {
     (b) => {
       state.basemap = b;
       basemapCtl.sync();
-      if (map) setTopo(map, b === 'topo');
+      if (map) setTopo(map, b === 'topo', theme, BASE);
       writeUrl();
     },
   );

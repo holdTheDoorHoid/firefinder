@@ -6,7 +6,8 @@
 import { html, raw } from '../lib/html.ts';
 import { fillFor, markerSvg, shapeFor } from '../lib/icons.ts';
 import { search, type SearchEntry } from '../lib/search.ts';
-import { regionName, statusWording } from '../lib/vocab.ts';
+import { statusWording } from '../lib/vocab.ts';
+import { placeLine } from '../render/tower.ts';
 
 export interface SearchDeps {
   input: HTMLInputElement;
@@ -57,7 +58,7 @@ export function initSearch(d: SearchDeps): void {
         const p = r.props;
         return html`<li role="option" id="q-opt-${i}" aria-selected="false" data-i="${i}">
           <span class="res-icon">${raw(markerSvg(shapeFor(p.k), fillFor(p.s), { size: 18, rentable: !!p.rt }))}</span>
-          <span class="res-text"><span class="res-name">${p.n}</span><span class="res-meta">${regionName(p.r)} · ${statusWording(p.s).label}${p.rt ? ' · Rentable' : ''}</span></span>
+          <span class="res-text"><span class="res-name">${p.n}</span><span class="res-meta">${placeLine({ county: p.c ?? null, region: p.r })} · ${statusWording(p.s).label}${p.rt ? ' · Rentable' : ''}</span></span>
         </li>`;
       })}`.value;
       status.textContent = `${results.length === 30 ? 'At least 30' : results.length} matching lookout${results.length === 1 ? '' : 's'}. Use the arrow keys to choose.`;

@@ -29,6 +29,16 @@
   --info-ink: light-dark(#283a32, #c7d7cf);
   --info-line: light-dark(#b8c8bf, #3b4f46);
   --focus: light-dark(#a9441b, #ffa577);
+  /* Marker palette: keep in step with MARKER_PALETTE in src/lib/icons.ts. */
+  --mk-halo: light-dark(#fbf8f1, #0e1411);
+  --mk-standing: light-dark(#2f6b4a, #7ccb9c);
+  --mk-standing-edge: light-dark(#143523, #0e2619);
+  --mk-hollow: light-dark(#fbf8f1, #18211c);
+  --mk-gone: light-dark(#7b5a43, #dcae8c);
+  --mk-other: light-dark(#4f6787, #9fb7da);
+  --mk-other-edge: light-dark(#2b3c55, #9fb7da);
+  --mk-rent: light-dark(#e2a325, #f2b63e);
+  --mk-rent-edge: light-dark(#5a3b00, #2a1b00);
   --shadow-sm: 0 1px 2px rgb(20 30 25 / 0.08);
   --shadow: 0 1px 2px rgb(20 30 25 / 0.08), 0 6px 20px rgb(20 30 25 / 0.12);
   --radius: 10px;
@@ -40,6 +50,7 @@
 :root[data-theme='dark'] { color-scheme: dark; }
 
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
   margin: 0;
@@ -52,6 +63,18 @@ body {
   overflow-wrap: break-word;
 }
 img, svg { vertical-align: middle; }
+
+/* Inline marker icons (src/lib/icons.ts) follow the theme. */
+.mk .mk-halo, .mk .mk-rent-halo { stroke: var(--mk-halo); }
+.mk .mk-rent-halo { fill: var(--mk-halo); stroke: none; }
+.mk-solid .mk-body { fill: var(--mk-standing); }
+.mk-solid .mk-edge { stroke: var(--mk-standing-edge); }
+.mk-hollow .mk-body, .mk-ruin .mk-body, .mk-half .mk-body { fill: var(--mk-hollow); }
+.mk-hollow .mk-edge, .mk-ruin .mk-edge { stroke: var(--mk-gone); }
+.mk-ruin .mk-dot { fill: var(--mk-gone); }
+.mk-half .mk-half { fill: var(--mk-other); }
+.mk-half .mk-edge { stroke: var(--mk-other-edge); }
+.mk .mk-rent { fill: var(--mk-rent); stroke: var(--mk-rent-edge); }
 img { max-width: 100%; height: auto; }
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
