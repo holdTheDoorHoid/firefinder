@@ -1,6 +1,7 @@
 {
   "id": "us-or-acorn-woman-peak",
   "name": "Acorn Woman Peak Lookout",
+  "summary": "Restored 1943 L-4 groundhouse in the Rogue River National Forest, formerly Squaw Peak Lookout, now a seasonal recreation rental.",
   "other_names": [
     "Squaw Peak"
   ],
@@ -33,20 +34,20 @@
       "url": "https://npgallery.nps.gov/AssetDetail/NRIS/00000512"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Rogue River National Forest / Rogue River-Siskiyou National Forest)",
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Gated combination-lock access road, steep and winding; combination provided with reservation."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "Access road may not suit passenger vehicles or large trucks; firepit on site, no firewood provided."
   },
   "rental": {
     "available": true,
@@ -66,14 +67,48 @@
     {
       "year": 1943,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR and firelookout.com date construction to 1943; Recreation.gov instead gives 1942.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/acorn-woman-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/acorn-woman-peak-lookout/",
+        "https://www.firelookout.com/or/squawpeakr.html",
+        "https://www.recreation.gov/camping/campgrounds/251546"
+      ]
+    },
+    {
+      "year": 1966,
+      "event": "staffed_last",
+      "note": "Last year staffed full-time; afterward used for emergencies and early-season coverage of Dutchman Peak.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/squawpeakr.html"
+    },
+    {
+      "year": 2000,
+      "event": "nrhp_listed",
+      "note": "Listed as Squaw Peak Lookout under the US Forest Service Historic Structures on the Rogue River National Forest multiple listing; the NPGallery asset record gives a Date Published of 12/29/2000 (no separate listing date field rendered), so the year is corrected from the earlier placeholder of 2003.",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/AssetDetail/NRIS/00000512"
     },
     {
       "year": 2003,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: March 31, 2003",
       "from": "nhlr"
+    },
+    {
+      "year": 2021,
+      "event": "other",
+      "note": "Renamed from Squaw Peak Lookout to Acorn Woman Peak Lookout approximately five years before a September 2026 NHLR site update.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/acorn-woman-peak-lookout/"
+    },
+    {
+      "year": 2026,
+      "event": "restored",
+      "note": "NHLR description states the lookout has been restored and is open to visitors.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/acorn-woman-peak-lookout/"
     }
   ],
   "photos": [
@@ -155,6 +190,11 @@
       "kind": "rental"
     },
     {
+      "label": "Squaw Peak Lookout (National Register Information System (NPGallery))",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/00000512",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -223,10 +263,31 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-acorn-woman-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

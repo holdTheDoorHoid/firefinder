@@ -1,6 +1,7 @@
 {
   "id": "us-sd-summit-ridge",
   "name": "Summit Ridge Lookout",
+  "summary": "A CCC-era steel tower in the Black Hills National Forest with conflicting build dates (1935-1942), last staffed in 1972 and now rented as a cabin.",
   "other_names": [
     "Summit Ridge Lookout Cabin"
   ],
@@ -15,8 +16,8 @@
   },
   "elevation_m": 1853.8,
   "kind": "tower",
-  "design": null,
-  "height_m": 12.2,
+  "design": "67.5-foot steel tower, 7x7 cab, with separate log cabin living quarters",
+  "height_m": 20.6,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -27,20 +28,20 @@
       "url": "http://nhlr.org/lookouts/us/sd/summit-ridge-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service - Black Hills National Forest, Elk Mountain Ranger District",
   "ownership": "federal",
   "access": {
-    "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "level": "restricted",
+    "note": "log cabin open for rental via Recreation.gov; steel firetower itself is closed for public use"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "roads to the cabin not plowed, generally inaccessible December-March"
   },
   "rental": {
     "available": true,
@@ -60,14 +61,51 @@
     {
       "year": 1935,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "firelookout.com describes a 40-foot wooden tower built in 1935, later moved to a meadow southeast of Moon Campground and destroyed in the early 1960s; this may be a separate, earlier structure rather than the current tower",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/sd/summitridge.html"
+    },
+    {
+      "year": 1939,
+      "event": "built",
+      "note": "Rapid City Journal (July 22, 1939) describes a newly built 67.5-foot steel tower at Summit Ridge, built shortly after Elk Mountain's tower, as a temporary high-danger station",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/summit-ridge.html"
+    },
+    {
+      "year": 1942,
+      "event": "built",
+      "note": "NHLR dates the current structure to 1942, built by the CCC as a sister tower to Elk Mountain",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sd/summit-ridge-lookout/"
+    },
+    {
+      "year": 1947,
+      "event": "staffed",
+      "note": "Jessie Scott served as lookout 1941-1947",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/sd/summitridge.html"
+    },
+    {
+      "year": 1966,
+      "event": "staffed",
+      "note": "Frank Lanouette staffed in 1952; Ralph Marshall staffed 1963-1966",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/sd/summitridge.html"
+    },
+    {
+      "year": 1972,
+      "event": "staffed_last",
+      "note": "last staffed in 1972; now used for emergency detection only",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sd/summit-ridge-lookout/"
     },
     {
       "year": 1991,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 15, 1991",
-      "from": "nhlr"
+      "note": "registered November 15, 1991 as US 31, nominated by District Ranger Burns L. Davison",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sd/summit-ridge-lookout/"
     }
   ],
   "photos": [
@@ -168,10 +206,32 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-sd-summit-ridge",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

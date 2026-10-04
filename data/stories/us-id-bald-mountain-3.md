@@ -1,0 +1,11 @@
+The first fire-watching post on Bald Mountain, in the hills above the Palouse in Latah County, Idaho, was a simple cabin built in 1913.[^1] It was replaced in 1938 by an L-4 cab set on a 50-foot pole tower, and that structure in turn gave way in 1960 to the building that stands today: an R-6 flat-roofed cab with a catwalk, set on a shorter 41-foot timber tower.[^1] (Recreation.gov's listing for the site gives a construction date of 1956, a few years off from the 1960 date on the National Historic Lookout Register's record — the register's entry, which also accounts for the two earlier structures on the site, looks like the more careful account.)[^2][^1]
+
+The tower was built and run by the U.S. Forest Service on what is now the Clearwater National Forest.[^1] Idaho Fire Lookouts' research turned up at least one name connected to the post, relief lookout Bill Berrigan, recorded there in 1967, though the full staffing history has not been pieced together.[^3] Recreation.gov's listing states the lookout was staffed into 1984, after which it dropped to emergency, as-needed status.[^2][^3]
+
+Bald Mountain was never abandoned outright. It was refurbished in 1998, added to the National Historic Lookout Register in April 2009 as US 777, and has been kept on the Forest Service's cabin rental program ever since.[^1][^3]
+
+Today the lookout sits on land open to the public and can be rented through Recreation.gov, generally bookable from the start of July into early October.[^2] High-clearance vehicles can make it most of the way up, though a trailer isn't a good idea on the rougher patches of road, and renters need a lock combination — included with the booking confirmation — to get inside.[^2] A couple who stayed there in 2022 described the exterior, catwalk, and stairs as being in good shape, with a pump sink, a range top, and an opened-up ceiling that makes the small cab feel roomier than most.[^3]
+
+[^1]: Bald Mountain Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/id/bald-mountain-lookout/ (accessed 2026-10-04).
+[^2]: Bald Mountain Lookout, Recreation.gov, https://www.recreation.gov/camping/campgrounds/234507 (accessed 2026-10-04).
+[^3]: Bald Mountain Lookout (Big Baldy), Idaho Fire Lookouts, https://www.idahofirelookouts.com/st-joe-clearwater-region/bald-mountain-lookout-big-baldy/ (accessed 2026-10-04).

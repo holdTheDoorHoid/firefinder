@@ -1,0 +1,12 @@
+The first lookout on Scurvy Mountain was a simple platform, raised in 1917 on the Clearwater National Forest.[^1] A cabin followed, though sources differ on when: the National Historic Lookout Register says 1935, while Idaho Fire Lookouts gives 1923 for the cabin and 1935 for a separate L-4 cab.[^1][^2] Either way, the structure that stands today came later: a two-story, concrete-block L-4 cab (without outriggers) built in 1952, set on an 8-foot cinderblock base.[^1][^3][^4]
+
+The mountain's name has nothing to do with the lookout itself. According to local history recorded by Idaho Fire Lookouts, it comes from two fur trappers, George Gorman and Clayton Shoecraft, who holed up here through the winter of 1907 while on the run from a possible murder charge in Montana. Without fresh fruit or vegetables, they came down with scurvy; their graves are said to lie near the airstrip at Cayuse Creek.[^2]
+
+The lookout was staffed into 1978, when it was shifted to emergency status rather than fully decommissioned.[^1] From there it fell into disrepair, and local volunteers spent roughly a decade restoring it.[^1][^4] That work paid off in 2004, when Scurvy Mountain Lookout was added to the National Historic Lookout Register.[^1]
+
+Today the cabin sits at the end of Trail #524, above Scurvy Lake with views over the Moose Buttes, Cayuse, and Kelly Creek drainages.[^4] It's available through the Forest Service's Recreation Rental program on a first-come, first-served basis.[^2][^4] Getting there isn't casual: the trailhead itself needs a higher-clearance vehicle, and the approach is four-plus miles of moderately difficult, multi-use trail with steep sections; the route can also be reached by OHVs under 50 inches wide, though it may be blocked by debris or snow early in the season.[^4] The 12x12-foot wooden cab, surrounded by a catwalk, sleeps on a single bed with a small wood stove, a table, and a pit toilet outside; the nearest water is an untreated spring about half a mile down the trail.[^4]
+
+[^1]: Scurvy Mountain Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/id/scurvy-mountain-lookout/ (accessed 2026-10-04).
+[^2]: Scurvy Mountain Lookout, Idaho Fire Lookouts, https://www.idahofirelookouts.com/st-joe-clearwater-region/scurvy-mountain-lookout/ (accessed 2026-10-04).
+[^3]: Scurvy Mountain Lookout Tower, firelookout.com, https://www.firelookout.com/id/scurvymtn.html (accessed 2026-10-04).
+[^4]: Scurvy Mountain Lookout, Recreation.gov, https://www.recreation.gov/camping/campgrounds/10322605 (accessed 2026-10-04).

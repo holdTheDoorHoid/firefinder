@@ -1,6 +1,7 @@
 {
   "id": "us-or-gold-butte",
   "name": "Gold Butte Lookout",
+  "summary": "CCC-built 1934 L-4 lookout and WWII Aircraft Warning Service station in the Willamette National Forest, restored and now a seasonal rental.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -25,20 +26,20 @@
       "url": "http://nhlr.org/lookouts/us/or/gold-butte-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Willamette National Forest)",
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "High-clearance vehicle recommended; last half mile on foot over steep terrain."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "Last 2 miles of road are rough gravel/dirt at ~10% grade; last half mile is a walk-in."
   },
   "rental": {
     "available": true,
@@ -60,14 +61,48 @@
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "L-4, 14x14 ft house with catwalk, built by the Civilian Conservation Corps.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/gold-butte-lookout/"
+    },
+    {
+      "year": 1942,
+      "event": "modified",
+      "note": "A separate cabin was built north of the lookout and staffed year-round as an Aircraft Warning Service station through WWII.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/gold-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/gold-butte-lookout/",
+        "https://www.recreation.gov/camping/campgrounds/234621"
+      ]
+    },
+    {
+      "year": 1968,
+      "event": "staffed_last",
+      "note": "NHLR says last staffed in the late 1960s; firelookout.com instead says the 1970s, so the exact end year is disputed.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/gold-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/gold-butte-lookout/",
+        "https://www.firelookout.com/or/goldbutte.html"
+      ]
     },
     {
       "year": 1995,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: November 24, 1995",
       "from": "nhlr"
+    },
+    {
+      "year": 2026,
+      "event": "restored",
+      "note": "Lookout rebuilt from ground level up due to rot and insect damage; restoration credited to the Pacific Crest Trust Fund per NHLR or the Sand Mountain Society per firelookout.com.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/gold-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/gold-butte-lookout/",
+        "https://www.firelookout.com/or/goldbutte.html"
+      ]
     }
   ],
   "photos": [
@@ -191,10 +226,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-gold-butte",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "pass",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

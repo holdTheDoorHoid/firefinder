@@ -1,0 +1,11 @@
+Arid Peak Lookout was built in 1934 to watch for a very specific hazard: fires sparked by Milwaukee Road trains on the grade that descends from the Montana state line, by way of Loop Creek, to the North Fork of the St. Joe River near Avery.[^2][^3] (The National Historic Lookout Register gives the build year as 1931 instead; most other sources agree on 1934, which this story follows.[^1]) The result was a 20-foot L-4 hip-roof cab on a timber tower with a catwalk, set in a roadless stretch of what's now the Idaho Panhandle National Forest.[^1][^3]
+
+The tower's legs were replaced in 1969, but that turned out to be its last working year — the lookout went unstaffed after that, and by 1970 its stairs had collapsed.[^1][^3] It sat idle for roughly 25 years.[^1]
+
+In 1996 and 1997, the Idaho Chapter of the Forest Fire Lookout Association teamed up with the St. Joe Ranger District and more than 30 volunteers to bring it back. They replaced the beams under the cab and atop the legs and rebuilt the stairs, finishing the restoration in 1997.[^2][^3] The lookout was added to the National Historic Lookout Register, and it was known to have been staffed at least as late as 1967 by Thomas Langseth, per local newspaper records.[^1][^3]
+
+Today Arid Peak is part of the Forest Service's recreation rental program. Getting there takes a roughly three-mile hike up a fairly steep grade, and the cabin sleeps up to four guests with cots, a wood stove, a propane camp stove and lantern, and an outhouse outside — guests pack in their own water and pack out everything else.[^2] From the catwalk the views run 360 degrees across the Bitterroot Mountains, and the lookout overlooks the Route of the Hiawatha rail-trail, built along the old Milwaukee line it once watched over.[^2][^3]
+
+[^1]: Arid Peak Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/id/arid-peak-lookout/ (accessed 2026-10-04).
+[^2]: Arid Peak Lookout, Idaho Panhandle National Forests, Recreation.gov, https://www.recreation.gov/camping/campgrounds/234447 (accessed 2026-10-04).
+[^3]: Arid Peak Lookout, Idaho Fire Lookouts, https://www.idahofirelookouts.com/st-joe-clearwater-region/arid-peak-lookout-2/ (accessed 2026-10-04).

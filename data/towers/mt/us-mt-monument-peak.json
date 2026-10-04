@@ -1,6 +1,7 @@
 {
   "id": "us-mt-monument-peak",
   "name": "Monument Peak Lookout",
+  "summary": "CCC-built 1936 L-4 lookout in Lewis & Clark National Forest, lowered off its pole in 1999 and rebuilt on a ground foundation as a seasonal rental.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 2229.6,
   "kind": "ground",
-  "design": "L-4",
+  "design": "L-4 cab, 14x14 ft, originally on a 50-foot pole tower with catwalk; now on a short ground foundation",
   "height_m": 15.2,
   "status": "standing",
   "status_note": null,
@@ -25,20 +26,20 @@
       "url": "http://nhlr.org/lookouts/us/mt/monument-peak-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service - Lewis & Clark National Forest",
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "seasonal rental via recreation.gov, June 1 - November 30; high-clearance vehicle recommended for final 2 miles"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "2 miles of rough, rocky road; muddy/slippery when wet"
   },
   "rental": {
     "available": true,
@@ -58,14 +59,38 @@
     {
       "year": 1936,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "built by the Civilian Conservation Corps as an L-4 cab on a 50-foot pole tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/monument-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/monument-peak-lookout/",
+        "https://www.recreation.gov/camping/campgrounds/234428"
+      ]
+    },
+    {
+      "year": 1999,
+      "event": "relocated",
+      "note": "cab removed from the pole tower after becoming unstable and placed on the ground for restoration",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/monument-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/monument-peak-lookout/",
+        "https://www.recreation.gov/camping/campgrounds/234428"
+      ]
     },
     {
       "year": 2005,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 31, 2005",
-      "from": "nhlr"
+      "note": "registered on the National Historic Lookout Register, July 31, 2005",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/monument-peak-lookout/"
+    },
+    {
+      "year": 2005,
+      "event": "restored",
+      "note": "rededicated in July 2005 and placed in the recreation rental program as a ground facility",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/monument-peak-lookout/"
     }
   ],
   "photos": [
@@ -197,10 +222,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-monument-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "pass",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

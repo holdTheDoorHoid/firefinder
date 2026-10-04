@@ -1,0 +1,9 @@
+Clear Lake Butte has carried a fire lookout since 1932, when the U.S. Forest Service put up a roughly 100-to-110-foot wooden tower on the southern slope of Mt. Hood, near the edge of the Warm Springs Indian Reservation.[^1][^2] That original tower didn't last as the permanent structure: sources disagree on whether it was replaced in 1962 or 1964, but either way it was swapped for the squat, 40-to-41-foot treated-timber tower with an R-6 flat-top cab that still stands on the site today.[^1][^2][^3]
+
+The lookout is one of three Forest Service fire towers on Mt. Hood, and it has stayed in active use for its original purpose: it's staffed by a fire lookout every summer.[^2][^3] It was added to the National Historic Lookout Register on August 1, 1993.[^1]
+
+Outside of fire season, the Forest Service rents the cabin out to overnight guests through its recreation rental program.[^2][^3] Getting there depends heavily on the season. In summer, visitors can drive up Forest Service roads off Highway 26. But from December 1 through April 30 — and whenever winter conditions set in early or linger late — the access road closes, and the only way in is a 3.5-mile trek from the Skyline Sno-Park on skis, snowshoes, or a snowmobile, a trip that takes three to four hours each way and requires an Oregon Sno-Park permit.[^3] There's no drinking water at the tower, so guests need to pack in their own.[^3] From the catwalk, renters and summer lookouts alike look out over Clear Lake and Timothy Lake and the surrounding Cascade peaks.[^3]
+
+[^1]: Clear Lake Butte Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/or/clear-lake-butte-lookout/ (accessed 2026-10-04).
+[^2]: Clear Lake Butte Fire Lookout Tower, Fire Lookout, https://www.firelookout.com/or/clearlake.html (accessed 2026-10-04).
+[^3]: Clear Lake Cabin Lookout, Recreation.gov, https://www.recreation.gov/camping/campgrounds/234247 (accessed 2026-10-04).

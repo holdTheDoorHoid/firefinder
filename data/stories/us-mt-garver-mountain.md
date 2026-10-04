@@ -1,0 +1,11 @@
+## Garver Mountain Lookout
+
+Garver Mountain Lookout rises above the Yaak area of the Kootenai National Forest in Lincoln County, Montana, at an elevation of about 5,874 feet.[^2] The site's fire-watch history starts in 1929, when the Forest Service put up a one-story log ground house that still stands there today.[^1][^2] Three years later, in 1932, a 48-foot pole tower with a 6-by-6-foot wood cab and catwalk was added above it.[^1] That tower served until the present 30-foot timber tower with a 14-by-14-foot flattop cab and catwalk went up alongside a new helispot; the National Historic Lookout Register dates this to 1964, while Recreation.gov and firelookout.com both give 1963.[^1][^2][^3]
+
+The lookout was used for fire detection until 1979, when it was taken out of service.[^1] For years afterward both structures sat idle before the Forest Service and volunteers restored the cabin and tower, with the Kootenai National Forest adding the site to its recreation rental system in 2002.[^1] It was later added to the National Historic Lookout Register on May 12, 2000.[^1]
+
+Today Garver Mountain Lookout still stands and is open to the public as a rental. It sits along the Pacific Northwest National Scenic Trail, so through-hikers occasionally pass by or stop in.[^2] The current 1964 tower is 144 square feet with two twin beds, four mattresses, a wood stove, a table and chairs, though the Forest Service warns that due to past vandalism these furnishings aren't guaranteed to be there.[^2] There's no electricity and only limited water, with a pit toilet outside; renters reach the lookout by a short but steep hike from the end of a rough access road, and must call the Three Rivers Ranger District ahead of time for the door's combination lock code.[^2] The older 1929 log cabin remains nearby in relatively good condition, a visible record of the site's longer history.[^1]
+
+[^1]: Garver Mountain Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/mt/garver-mountain-lookout/ (accessed 2026-10-04).
+[^2]: Garver Mtn. Lookout Rental, Kootenai National Forest, Recreation.gov, https://www.recreation.gov/camping/campgrounds/234426 (accessed 2026-10-04).
+[^3]: Garver Mtn. Fire Lookout Tower, firelookout.com (Rex Kamstra), https://www.firelookout.com/mt/garvermtn.html (accessed 2026-10-04).

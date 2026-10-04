@@ -1,6 +1,7 @@
 {
   "id": "us-mt-hornet-peak",
   "name": "Hornet Peak Lookout",
+  "summary": "A 1922-23 D-1 log cupola cabin on Hornet Mountain in Flathead National Forest, staffed 1923-1946, later abandoned and then restored as a rental cabin.",
   "other_names": [
     "Hornet Lookout",
     "Hornet Lookout Cabin"
@@ -16,7 +17,7 @@
   },
   "elevation_m": 2053.4,
   "kind": "ground",
-  "design": null,
+  "design": "D-1 style log cupola cabin, 14x14 ft single-room log cabin, saddle-notched logs",
   "height_m": 4.6,
   "status": "standing",
   "status_note": null,
@@ -38,16 +39,16 @@
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Open as a paid Recreation.gov rental; narrow access road (FS Road 9805)"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "Reached by road (Hornet Road 9805), described as narrow with few pullouts"
   },
   "rental": {
     "available": true,
@@ -67,14 +68,44 @@
     {
       "year": 1922,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Construction began 1922, completed 1923, in response to the 1910 fires",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Hornet_Lookout"
+    },
+    {
+      "year": 1923,
+      "event": "staffed_first",
+      "note": "Staffed each summer starting 1923",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Hornet_Lookout"
+    },
+    {
+      "year": 1946,
+      "event": "staffed_last",
+      "note": "Staffed each summer until approximately 1946",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Hornet_Lookout"
+    },
+    {
+      "year": 1983,
+      "event": "other",
+      "note": "Added to the National Register of Historic Places, August 19, 1983",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Hornet_Lookout"
+    },
+    {
+      "year": 2003,
+      "event": "fire",
+      "note": "A wildfire burned the surrounding area in 2003; the lookout itself survived",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/234341"
     },
     {
       "year": 2016,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 27, 2016",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, November 27, 2016",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/hornet-peak-lookout/"
     }
   ],
   "photos": [
@@ -313,10 +344,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-hornet-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "pass",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

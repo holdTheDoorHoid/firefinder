@@ -1,0 +1,11 @@
+McCart Lookout stands on McCart Peak in the Bitterroot National Forest, east of Sula, Montana, on the edge of the Anaconda-Pintler Wilderness.[^2][^3] The Forest Service built it in 1939 to an L-4 design: a 14-by-14-foot live-in cab with a catwalk, set on a low wooden tower about 10 feet tall.[^1][^3] It was engineered by Clyde Fickes and named for Bill McCart, a longtime Forest Service employee in what was then the East Fork District, now the Sula Ranger District.[^2]
+
+The lookout served its intended purpose — fire detection — until 1984, when it was taken out of service and replaced by TeePee Lookout to the north.[^1] After sitting unused for several years, the Sula Ranger District gave it a complete restoration in 1991-92, refitting it to reflect how a lookout would have looked in the 1940s, down to the stove, furniture, and dishes.[^1][^3] In 1993 it was placed into the Forest Service's cabin rental program, and it has reportedly become a popular overnight destination for hikers ever since.[^1]
+
+McCart Lookout was listed on the National Register of Historic Places on June 19, 1996.[^2] It sits at roughly 7,100 feet elevation.[^2]
+
+Today the lookout is reached only by trail — a moderate 1.5-mile hike from the parking area — and is not accessible by vehicle, snowmobile, or other off-road vehicle, though horses and other livestock are permitted on the path.[^3] Inside, it sleeps up to two people on a bed platform (with room for up to four total), has a wood stove for heat, a two-burner propane camp stove, and basic cooking utensils, but no running water; guests bring their own water, propane, and bedding and pack out all trash.[^3] The narrow stairs and catwalk sit about 10 feet off the ground, which the rental listing flags as a hazard for children and pets.[^3] It remains a working rental cabin managed through Recreation.gov.[^3]
+
+[^1]: McCart Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/mt/mccart-lookout/ (accessed 2026-10-04).
+[^2]: McCart Fire Lookout, Wikipedia, https://en.wikipedia.org/wiki/McCart_Fire_Lookout (accessed 2026-10-04).
+[^3]: McCart Lookout, Recreation.gov, https://www.recreation.gov/camping/campgrounds/234292 (accessed 2026-10-04).

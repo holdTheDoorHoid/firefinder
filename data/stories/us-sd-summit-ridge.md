@@ -1,0 +1,12 @@
+Summit Ridge Lookout stands near the Wyoming border in the Black Hills National Forest, nine miles north of its sister tower at Elk Mountain.[^1] Sources disagree on exactly when it went up. One lookout history says a 40-foot wooden tower was built in 1935 and later moved to a meadow southeast of Moon Campground, where it was destroyed in the early 1960s.[^3] A 1939 Rapid City Journal item instead describes a 67.5-foot steel tower at Summit Ridge as newly built that year, "shortly after the completion of the one at Elk Mountain," meant as a temporary station to be staffed only during high fire danger.[^2] The National Historic Lookout Register gives yet another year, 1942, for the structure it now lists, and firelookout.com describes the present tower as built in 1939-1940.[^1][^3] It's possible more than one tower stood on the site over those years; what's clear is that the current steel tower dates to the late 1930s or early 1940s, not 1935.
+
+That tower is 67.5 feet of steel topped by a 7-by-7-foot cab, with a separate log cabin for living quarters — a design built, like Elk Mountain, by the Civilian Conservation Corps.[^1] The roof style installed doesn't match what the original construction plans called for, a small deviation someone made along the way.[^1]
+
+Known lookout staff included Jessie Scott from 1941 to 1947, Frank Lanouette in 1952, and Ralph Marshall from 1963 to 1966.[^3] The tower was last staffed in 1972, after which the Forest Service's Elk Mountain Ranger District kept it for emergency detection only.[^1] At some point the district restored the facility.[^1]
+
+Summit Ridge was added to the National Historic Lookout Register on November 15, 1991, as US 31, nominated by District Ranger Burns L. Davison.[^1] Today the adjacent log cabin is available to rent through Recreation.gov — comfortable for four but reservable by groups of up to ten, with two additional RV sites available alongside it — though the tower itself is closed to public climbing.[^4]
+
+[^1]: Summit Ridge Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/sd/summit-ridge-lookout/ (accessed 2026-10-04).
+[^2]: Forest Lookouts in the Black Hills, West Lookouts, https://westlookouts.weebly.com/summit-ridge.html (accessed 2026-10-04).
+[^3]: Summit Ridge Fire Lookout Tower, firelookout.com, https://www.firelookout.com/sd/summitridge.html (accessed 2026-10-04).
+[^4]: Summit Ridge Lookout Cabin, Recreation.gov, https://www.recreation.gov/camping/campgrounds/234273 (accessed 2026-10-04).

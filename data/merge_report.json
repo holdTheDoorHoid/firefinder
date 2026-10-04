@@ -93,8 +93,8 @@
   }
  },
  "files": {
-  "written": 34,
-  "unchanged": 8063
+  "written": 30,
+  "unchanged": 8067
  },
  "counts": {
   "towers": 8097,
@@ -175,17 +175,17 @@
    "WY": 76
   },
   "visible_by_verification": {
-   "unverified": 6358,
-   "facts": 1100,
-   "verified": 70
+   "unverified": 6355,
+   "facts": 1073,
+   "verified": 100
   },
   "multi_source_towers": 5411,
   "towers_by_number_of_sources": {
    "1": 2679,
    "2": 2323,
    "3": 2518,
-   "4": 396,
-   "5+": 181
+   "4": 393,
+   "5+": 184
   },
   "rentable": 76,
   "registered": 3962
@@ -13199,11 +13199,11 @@
   }
  ],
  "research": {
-  "files": 70,
-  "applied": 70,
+  "files": 100,
+  "applied": 100,
   "by_verdict": {
-   "fixed": 65,
-   "pass": 5
+   "fixed": 81,
+   "pass": 19
   },
   "problems": [
    {
@@ -13223,16 +13223,88 @@
     "problem": "facts.staffing {'status': 'seasonal', 'note': 'Per NHLR, staffed daily during fire season by the Forest Service'} is not valid; not applied"
    },
    {
+    "file": "us-id-little-guard.json",
+    "problem": "facts.staffing {'status': 'emergency/occasional (not continuously staffed)', 'as_of': '1977-1990s'} is not valid; not applied"
+   },
+   {
+    "file": "us-id-lunch-peak.json",
+    "problem": "facts.staffing {'status': 'retired (not staffed for fire detection)', 'as_of': '1985'} is not valid; not applied"
+   },
+   {
+    "file": "us-id-scurvy-mountain.json",
+    "problem": "facts.staffing {'status': 'retired, emergency status from 1978', 'as_of': '1978'} is not valid; not applied"
+   },
+   {
+    "file": "us-id-spyglass.json",
+    "problem": "facts.status 'partially_removed' is not valid; not applied"
+   },
+   {
+    "file": "us-id-spyglass.json",
+    "problem": "facts.staffing {'status': 'retired (last staffed 1978, emergency status)', 'as_of': '1978'} is not valid; not applied"
+   },
+   {
+    "file": "us-id-walde-mountain.json",
+    "problem": "facts.staffing {'status': 'active, staffed every summer and fall season', 'as_of': '2026'} is not valid; not applied"
+   },
+   {
+    "file": "us-mt-cougar-peak.json",
+    "problem": "facts.staffing {'status': 'retired, last regularly staffed mid-1980s', 'as_of': '1980s'} is not valid; not applied"
+   },
+   {
     "file": "us-mt-gem-peak.json",
     "problem": "facts.staffing {'status': 'retired', 'as_of': '1970s'} is not valid; not applied"
+   },
+   {
+    "file": "us-mt-hornet-peak.json",
+    "problem": "facts.staffing {'status': 'staffed_historically', 'as_of': '1946'} is not valid; not applied"
+   },
+   {
+    "file": "us-mt-mccart.json",
+    "problem": "facts.staffing {'status': 'retired', 'as_of': '1984'} is not valid; not applied"
+   },
+   {
+    "file": "us-mt-minton-peak.json",
+    "problem": "facts.staffing {'status': 'none (recreation rental)', 'as_of': '2026-10-04'} is not valid; not applied"
+   },
+   {
+    "file": "us-mt-mission.json",
+    "problem": "facts.staffing {'status': 'unstaffed, kept for emergency use', 'as_of': '2026-10-04'} is not valid; not applied"
+   },
+   {
+    "file": "us-mt-monument-peak.json",
+    "problem": "facts.staffing {'status': 'unstaffed since the late 20th century; exact end date disputed between sources', 'as_of': '2026-10-04'} is not valid; not applied"
+   },
+   {
+    "file": "us-mt-up-up.json",
+    "problem": "facts.staffing {'status': 'unstaffed; last known staffing continuous through at least 1968, restaffed briefly starting 1995', 'as_of': '2026-10-04'} is not valid; not applied"
    },
    {
     "file": "us-nm-monjeau.json",
     "problem": "event 'state_register_listed' (1988) is not in vocab.event; left out of the timeline"
    },
    {
+    "file": "us-or-acorn-woman-peak.json",
+    "problem": "facts.staffing {'status': 'none (recreation rental)', 'as_of': '2026-10-04'} is not valid; not applied"
+   },
+   {
+    "file": "us-or-bald-knob.json",
+    "problem": "facts.staffing {'status': 'historic, intermittent to at least 1972', 'as_of': '1972'} is not valid; not applied"
+   },
+   {
     "file": "us-or-fall-mountain.json",
     "problem": "event 'visit_report' (2007) is not in vocab.event; left out of the timeline"
+   },
+   {
+    "file": "us-or-gold-butte.json",
+    "problem": "facts.staffing {'status': 'none (recreation rental; used occasionally in high fire danger)', 'as_of': '2026-10-04'} is not valid; not applied"
+   },
+   {
+    "file": "us-or-green-ridge.json",
+    "problem": "facts.staffing {'status': 'staffed in summer by Forest Service volunteers', 'as_of': '2026'} is not valid; not applied"
+   },
+   {
+    "file": "us-or-onion-mountain.json",
+    "problem": "facts.staffing {'status': 'not_staffed', 'as_of': '2026-10-04'} is not valid; not applied"
    },
    {
     "file": "us-or-warner-mountain.json",
@@ -13245,6 +13317,10 @@
    {
     "file": "us-ri-escoheag-hill.json",
     "problem": "event 'burglarized_note' (1952) is not in vocab.event; left out of the timeline"
+   },
+   {
+    "file": "us-sd-summit-ridge.json",
+    "problem": "facts.staffing {'status': 'last staffed 1972, now emergency detection only', 'as_of': '1972'} is not valid; not applied"
    },
    {
     "file": "us-wa-evergreen-mountain.json",
@@ -13261,6 +13337,10 @@
    {
     "file": "us-wa-stranger-mountain.json",
     "problem": "facts.staffing {'status': 'retired', 'as_of': '1994'} is not valid; not applied"
+   },
+   {
+    "file": "us-wa-tyee-mountain.json",
+    "problem": "facts.staffing {'status': 'retired_staffed_by_volunteers', 'as_of': '2013'} is not valid; not applied"
    },
    {
     "file": "us-wi-friendship-skyline.json",
@@ -13325,6 +13405,14 @@
     "note": "Exact height_m and precise CCC construction dates beyond 1940 were not found; RIDB only says 'built in the 1940s' while NHLR gives 1940 specifically, so I used 1940. No conflicting built-year sources requiring a resolved_conflicts entry. Status/climbability for independent day hikers beyond the paid overnight rental is not documented in the sources read; left visit.climbable unset rather than guess."
    },
    {
+    "id": "us-id-arid-peak",
+    "note": "Build year conflict: NHLR says 1931, two other sources say 1934; went with the majority. Last staffed year given as 1969 by two sources, consistent. 'Known staff' date of 1967 (Thomas Langseth) predates the stated last-staffed year of 1969, which is plausible but not reconciled further. Spot check against idahofirelookouts.com found the story's original 'steam locomotives' detail was not supported by the source (which only says 'Milwaukee Railroad', and the line through this stretch was historically electrified, not steam) and the Loop Creek sentence copied the source's phrasing too closely; both were fixed in the story."
+   },
+   {
+    "id": "us-id-bald-mountain-3",
+    "note": "Build-year conflict between NHLR (1960, with full structure history) and Recreation.gov (1956) is unresolved; NHLR's account is more detailed so it was treated as primary. Full staffing history beyond the single 1967 relief lookout was not found within the search budget."
+   },
+   {
     "id": "us-id-bishop-mountain",
     "note": "Build year (1937 vs 1938) and tower height (72 ft vs 84 ft) conflict between NHLR and the other two sources; noted in the story rather than resolved. NHLR's own record page says the tower is 'available for rental,' which conflicts a little with the record's access.level of 'unknown' -- worth a look, but I left access as unknown in facts since no source confirms public climbing access, only rental/standby status."
    },
@@ -13337,12 +13425,40 @@
     "note": "The tower record's 'conflicts' entry lists firelookout_com as giving a built year of 1928, but that page's actual text matches nhlr exactly (1916/1928/1950 sequence) — likely a mis-extraction when the record was built. Recommend the conflict be cleared rather than left open; no new correction filed since the record's 'built: 1950' field is already right. Fact-check 2026-10-04: removed a sentence claiming secondary listings 'collapse' the three build dates and citing recreation.gov for the full 1916/1928/1950 sequence — no evidence quote supported that framing (recreation.gov's page does independently state the same three dates, confirmed by spot-check, but the sentence as written made an unsupported claim about other listings). Also rewrote the 1950-cab sentence, which copied the nhlr.org description almost verbatim."
    },
    {
+    "id": "us-id-deadwood",
+    "note": "Build-year conflict (1934 vs 1936) left unresolved per two-against-one source split. No structure height (as opposed to elevation) was found in sources, so height_m was omitted."
+   },
+   {
+    "id": "us-id-deer-ridge",
+    "note": "Idaho Fire Lookouts lists many more named seasonal staff (Odell, Black, Walters, Baker, Voll, etc.) between 1946 and 1972; only a sample is named in the story to keep it readable, with full list available in the source. Cabin footprint (15x15 vs 14x14) differs slightly between NHLR and Recreation.gov; both are given rather than resolved."
+   },
+   {
+    "id": "us-id-little-guard",
+    "note": "Minor year conflict (1956 vs 1957) for the current cabin's construction, noted in the story and resolved_conflicts. Staff list on idahofirelookouts.com is extensive; only representative names used in the narrative to keep prose readable. Fact-check pass (2026-10-04): the 'nine miles north of Shoshone Camp' and '1 mile northwest' distance details were cited only to single sources in the draft though confirmed on additional sources (idahofirelookouts and recreation.gov both give the 9-mile figure; firelookout.com gives the 1-mile figure); the 1956/1957 build-year sentence was missing its NHLR (cite 1) footnote even though NHLR is the source of the 1956 date and dimensions. All three citation gaps fixed in the story."
+   },
+   {
+    "id": "us-id-lunch-peak",
+    "note": "Minor conflict on pole-tower height of the 1937 structure (45 vs 50 ft); both figures are now attributed to their sources in the narrative rather than stated as a single number. Elevation conflicts slightly between brief (1907.4m) and rec.gov (6,414 ft = 1955m) but not asserted as a specific figure in the story. Fact-check pass (2026-10-04): draft had stated the pole height as a flat '45-foot' figure sourced to both NHLR and firelookout.com, but NHLR actually gives 50 feet, contradicting its own citation -- fixed to attribute each figure correctly. Draft also said staffer Diane Young served 'around 1970'; idahofirelookouts.com's staff list actually dates her 1975-1978 -- fixed."
+   },
+   {
     "id": "us-id-sawyer-ridge-at-eyeful-dreher",
     "note": "NHLR gives elevation 7,273 ft at the Dreher property; idahofirelookouts.com gives 7,303 ft for the original Sawyer Ridge site — left unreconciled since they describe two slightly different points and neither source is clearly authoritative for the other's site. No source gives who built the original tower (a crew, not a named builder) or the exact reason the Forest Service decided it was surplus beyond space/staffing needs implied by the 1987 date. No current rental status or public visiting hours beyond 'by pre-arrangement' were found."
    },
    {
+    "id": "us-id-scurvy-mountain",
+    "note": "Build/cabin sequence between 1917 and 1952 is not fully consistent across sources; treated as an open conflict rather than resolved. No new photos found during this pass."
+   },
+   {
     "id": "us-id-shorty-peak",
     "note": "Good staffing list (names 1932-1980) came from firelookout.com's own page text, which also resolves the build-year 'conflict' already flagged on the tower record -- see the correction proposed above. Fact-check pass (2026-10-04) found the story had wrongly attributed that staffing list to the National Historic Lookout Register; NHLR's own page carries no staffing names at all, only firelookout.com does. Fixed in the story. Also removed an invented height_m value (2.4 m) that matched no source -- it appears to have been derived from the 8-foot concrete base rather than any stated structure height -- and dropped footnote [^6] (the climbing-guide page) from the recreation.gov rental sentence, since that page never mentions recreation.gov and states the rental runs first-come-first-served. Separately: recreation.gov's own page gives the cabin as 15'x15' on a 5-foot foundation, which doesn't match NHLR/firelookout.com's 14'x14' on an 8-foot base; the story's dimension sentence cites only NHLR/firelookout.com and is internally consistent, but a human may want to reconcile the two descriptions. No information found on staffing after 1980 or on when year-round staffing ended; left as unknown. The idahomagazine.com article 'Back to Shorty Peak' returned HTTP 403 and could not be read; it may be worth a human revisit if full text is reachable another way. idahofirelookouts.com's detail page for this lookout was not cached locally and was not fetched live (only its listing thumbnail is cached), so it is not cited here."
+   },
+   {
+    "id": "us-id-spyglass",
+    "note": "Brief lists kind=tower/status=standing, but the historic 53-ft L-4 tower cab collapsed and was removed in 2014 (see correction). What's rentable today is the separate restored ground house. Design field left as L-4 since both the (removed) tower cab and the (standing) ground house were L-4 type; editor may want a status field update to reflect the tower/groundhouse distinction. Fact-check pass (2026-10-04): draft named 'Robert and Wayne McCormick's families' as 1951 staff, but neither firelookout.com nor idahofirelookouts.com lists a Robert McCormick -- only Wayne McCormick (1951) is documented -- fixed to remove the fabricated name. Also rewrote the 1950-tower sentence, which closely echoed NHLR's own wording ('53' CT-2 treated timber tower with standard 1936-model L-4 cab'), into the story's own phrasing."
+   },
+   {
+    "id": "us-id-walde-mountain",
+    "note": "Brief's location conflict (NHLR vs RIDB coordinates, a few hundred meters apart) not addressed here since it concerns map data, not the narrative. No new photos found."
    },
    {
     "id": "us-la-fields",
@@ -13381,8 +13497,52 @@
     "note": "No newspaper or NRHP nomination form located; the 1984 date is NRHP-eligibility, not a formal National Register listing, and the story is careful to say so. Two official-ish sources (Recreation.gov listing vs. the Forest Service's own Lolo NF page) disagree slightly on the lookout's water source: non-potable spring 3/4 mile downhill vs. a filterable spring 0.5 mile away. Wikipedia's 'Big Hole Lookout' article was used only to find the underlying USFS citation (fs.usda.gov/r01/lolo/recreation/big-hole-lookout), not cited directly, per the guide. Record's existing 'design' field was null; proposed a correction above. One WebSearch call used, plus WebFetch on two known URLs. Fact-check pass (2026-10-04): firelookout.com actually lists the elevation as 6919 ft, not 6,922 ft, so that figure is now cited to NHLR alone; the 'Cabinet National Forest' detail and the precise staffed-to-1972 date are not on firelookout.com or NHLR's visible text respectively and were re-cited to the sources that actually state them (Recreation.gov and the USFS Lolo NF page); a missing footnote on the cabin's furnishings/vault-toilet sentence was added."
    },
    {
+    "id": "us-mt-cougar-peak",
+    "note": "NPGallery asset page metadata was readable but the full nomination narrative PDF text did not come through in the grep; architect name (Clyde Fickes) and significance period are confirmed from the metadata fields themselves. No new photos found."
+   },
+   {
+    "id": "us-mt-double-arrow",
+    "note": "Brief's existing record (built 1933, L-4, 6.1m height) is consistent with Recreation.gov/firelookout.com; only NHLR's page gives 1932 instead, so the story reports the one-year discrepancy rather than silently picking a side. NRHP reference number 100002041 taken from the brief's register field, which matches NHLR's own cross-reference. No newspaper coverage or NRHP nomination PDF was consulted; confidence is high because three independent, consistent descriptive sources exist even though they disagree on the exact year."
+   },
+   {
+    "id": "us-mt-garver-mountain",
+    "note": "Brief's 'height_m: 1.8' field looks like an error or placeholder (1.8m is under 6 feet, implausible for any lookout tower; rec.gov says the current tower is 40 feet tall). Flagging as a possible data issue for the editor rather than a sourced correction, since no source gives a tower height in meters directly. Built-year conflict (1963 vs 1964 for the current tower) handled as the brief's note anticipated."
+   },
+   {
     "id": "us-mt-gem-peak",
     "note": "Two independent, detailed sources agree closely on the build history (1921 rag outfit -> 1939 L-4 on 20-ft pole tower -> 1964 R-6 flattop on 30-ft timber tower) and on staffing into the 1970s. Flagged a likely height_m error in the tower record (20 ft vs. the current 30-ft tower). Minor elevation discrepancy not flagged: NHLR gives 6,029 ft (1,838 m, matches record); firelookout.com gives 6,092 ft -- not material enough for a correction. Did not need to use the web-search budget; both cached pages were sufficient. Fact-check 2026-10-04: removed an uncited 'Clark Fork River country' detail from the opening sentence (not in either source) and rewrote two sentences that too closely copied source wording ('rag outfit' tent description; 'without permanent living quarters' line). Spot-checked the NHLR registry-number/date quote and both firelookout.com quotes (location and named personnel) directly against fetch_text.py output; all three matched the source exactly."
+   },
+   {
+    "id": "us-mt-granite-butte",
+    "note": "Elevation differs notably between NHLR (6,887 ft / 2,099 m, matching the brief's elevation_m field) and Recreation.gov (7,587 ft) -- flagged in the story rather than silently picking one, since neither page explains the gap and it's larger than a rounding difference. Build-year conflict between firelookout.com (1934/1954) and NHLR+Recreation.gov (1932/1962) also flagged; went with the two-source majority for the main narrative. No staffing-end date is corroborated outside firelookout.com, so that claim is attributed to it alone. No NRHP nomination PDF or newspaper source found in two web searches; confidence is medium given the unresolved elevation and date conflicts."
+   },
+   {
+    "id": "us-mt-hornet-peak",
+    "note": "Good agreement across NHLR, Wikipedia (citing the NRHP nomination), and Recreation.gov. No source gives an exact date for when staffing ended besides 'approximately 1946' or exactly when restoration occurred, only that it was 'abandoned for a number of years' before restoration."
+   },
+   {
+    "id": "us-mt-mccart",
+    "note": "The brief flags a register-number conflict ('They share a register number'), presumably with another lookout in the dataset; none of the three sources read here gave any indication McCart's NHLR number (US 85) is wrong, so this could not be resolved from these pages and should be checked against whichever other record shares the number."
+   },
+   {
+    "id": "us-mt-medicine-point",
+    "note": "Build year is genuinely unresolved between NHLR (1930/1933) and firelookout.com (1940); the NRHP nomination's 'significant years' field (1939) was only partially legible in the crawl cache and did not include a clear text statement to resolve it, so I did not treat it as deciding the question. Firelookout.com's staffing list also includes a 1958 Mr. and Mrs. Dale Dye entry that had been omitted from the story; added it for completeness."
+   },
+   {
+    "id": "us-mt-minton-peak",
+    "note": "Middle-tower date conflict (1950s vs 1968) not resolvable from available sources; flagged in story and resolved_conflicts. No NRHP nomination found for this tower. Fact-check 2026-10-04: the 'named for Col. David Minton' and 'first tower, 1932' sentences were mis-cited to source 1 (NHLR); that page does not contain either sentence verbatim (it instead says the original pole tower 'was replaced by an L-4 cab in 1932'). Both sentences are verbatim on source 2 (firelookout.com), and the Minton-name sentence is also verbatim on source 3 (Recreation.gov); citations corrected and the unsupported 'by the early 2000s the old tower was gone' claim was removed from the story."
+   },
+   {
+    "id": "us-mt-mission",
+    "note": "Brief's conflict note about differing build years is explained by NHLR's own description distinguishing the 1921 platform from the 1959 cab; no discrepancy found between the three sources checked."
+   },
+   {
+    "id": "us-mt-monument-peak",
+    "note": "Conflict between NHLR (active until 1999) and recreation.gov/firelookout.com (unused since the 1970s) noted in the story and in resolved_conflicts; genuinely unresolved from the sources checked here."
+   },
+   {
+    "id": "us-mt-up-up",
+    "note": "Flagged the 1930s vs 1966 build-year discrepancy between recreation.gov and NHLR/firelookout.com in both the story and resolved_conflicts; did not find a source that explicitly reconciles it."
    },
    {
     "id": "us-mt-west-fork-butte",
@@ -13449,16 +13609,48 @@
     "note": "Two independent, consistent sources cover the build/rebuild history well (1926 original, 1937 rebuild, 1974 storm loss and Aermotor replacement with the footings-error deck), but neither says anything about staffing history, specific fires spotted, or current public access — those fields stay unknown. Flagged a height correction: the record's 30.5 m (100 ft) reflects the tower's planned height, not the 75 ft (22.9 m) it was actually built to after the footings error; worth a human call on which figure the map should show. Did not refetch nhlr.org or firetower.org per the guide; no additional web search was needed given the two cached sources agreed.\n\nFact-check pass (2026-10-04): the draft had the tower 'watching over the surrounding Ouachita National Forest' and being in active service 'as of' its 1997 register listing, both attributed to NHLR. Neither is in the NHLR text — the page only says the tower 'is still in active service' as of its last update (Nov 2016), with no statement about what it watches over or forest-boundary claims. Softened both in the story and removed the unsupported forest-duty claim. Also split the 1974 storm-destruction citation to NHLR only, since the Forestry Service page never mentions a storm. Rewrote the Aermotor-rebuild paragraph, which had tracked the NHLR sentence structure too closely (same clause order and several repeated phrases like 'measuring error at the footings')."
    },
    {
+    "id": "us-or-acorn-woman-peak",
+    "note": "Built-year conflict (1942 vs 1943) unresolved; story notes both. Fact-check 2026-10-04: re-fetched the NPGallery asset record directly; it has no explicit 'listing date' field, but gives Date Published 12/29/2000, so the nrhp_listed event year was corrected from a placeholder 2003 to 2000. The story itself states no year for the NRHP listing, so no story edit was needed there. All four footnoted citations and their quoted evidence were spot-checked against the live sources and confirmed verbatim."
+   },
+   {
+    "id": "us-or-bald-knob",
+    "note": "Brief's location conflict (NHLR vs RIDB coordinates) was not resolved here since it doesn't affect the narrative; recreation.gov currently lists amenities as unavailable due to vandalism/storm damage, worth double-checking closer to the 2026 rental season for accuracy."
+   },
+   {
     "id": "us-or-bolan-mountain",
     "note": "NHLR's 'legs later removed... low stone base' and 'recently restored... catwalk' changes carry no specific dates. The Slater Fire's exact burn date isn't pinned down beyond 'September 2020'."
+   },
+   {
+    "id": "us-or-clear-lake-butte",
+    "note": "Minor source disagreement on the exact replacement year (1962 vs 1964) and original tower height (100 vs 110 ft); kept both figures in the story/events rather than resolving arbitrarily."
    },
    {
     "id": "us-or-fall-mountain",
     "note": "The tower record's build-year conflict (1930 vs 1933) resolves fairly well once the NHLR page is read in full: it describes an emergency post dating to around 1930/1933 with the cab original but the tower rebuilt in 1953 — a detail not yet in the tower JSON's events. No newspaper or Forest Service administrative-history source was found in the cache or a quick web check; everything here comes from the three register/rental pages already linked on the record. Did not propose a correction since the conflict is explainable rather than contradictory, but an editor may want to add the 1953 tower-rebuild event to the main tower record."
    },
    {
+    "id": "us-or-fivemile-butte",
+    "note": "No current staffing status found in sources, so staffing left as unknown rather than guessed; the brief's 1957 built-year is confirmed by all three sources."
+   },
+   {
+    "id": "us-or-gold-butte",
+    "note": "Elevation conflict: brief/NHLR give 4,477 ft (1,365 m), Recreation.gov gives 4,618 ft. Left out of story text since it's a minor figure; see corrections entry. Fact-check 2026-10-04: all three citations re-fetched and verified verbatim against the live sources, including the Recreation.gov Directions section ('last 2 miles of road access are rough gravel and dirt at a 10 percent uphill grade'), which backs the story's 'rough gravel roads' detail though it falls outside the short evidence quote on file. No unsupported claims or citation errors found; no edits needed to the story text."
+   },
+   {
+    "id": "us-or-green-ridge",
+    "note": "A 2014 Country Roads magazine PDF is linked from the NHLR page (not fetched here, within budget) and could add staffing-era detail if a future pass wants more depth."
+   },
+   {
     "id": "us-or-hager-mountain",
     "note": "The tower record's 'conflicts' block (built: 1967 per NHLR vs 1912 per firelookout_com) is resolved by reading the prose on both cached pages rather than just their structured fields: both agree on a sequence (1912 octagonal cab -> 1936 L-4 -> 1967 R-6, the structure standing today), they just populate a single 'built' field with different points in that sequence. Recommend the record's events array capture the full sequence rather than one disputed year. NHLR's '1915' for first fire detection is one source only (not independently corroborated) and sits oddly close to, but not matching, the 1912 build year on firelookout.com -- plausibly detection started a few years before any structure went up, but this is not stated outright anywhere, so I left it as a direct citation rather than resolving it further. No additional cached source pages or useful web leads were found beyond NHLR, firelookout.com, and the Recreation.gov listing already in the tower record; did not use any of the 3 allotted web searches since the two cached register pages already agreed with each other almost completely once read past their structured fields. Fact-check correction: the draft's claim that NHLR's prose 'notes the discrepancy itself' between a 1915 fire-detection date and 'the register's own account of the first cab' was wrong -- NHLR's description never mentions a first cab or any 1912/1936 structure at all (only '...fire detection site since 1915. The current structure was constructed in 1967... roof was modified... in 1992.'); the 1912/1936 sequence comes solely from firelookout.com. That sentence was removed from the story. Also fixed: the story's 'flat-topped summit' was an invented/confused descriptor (likely conflated with the R-6 'flat top' cabin design) with no support in either cached source, so it was dropped; the elevation figure (7,188 ft) was misattributed to the Recreation.gov footnote when it is actually NHLR's number -- Recreation.gov's own page gives 7,195 ft, confirmed live. Both numbers are now attributed to their correct sources. All other checked claims (1912/1936/1967/1992 sequence, 2022 NHLR registration and Brad Eells nomination, rental season Nov 15-May 15, cabin dimensions/beds/stoves/capacity/no water, foot-snowshoe-ski-only access, Mount Hood/Shasta views) were confirmed against the cited sources and a live fetch of the Recreation.gov page."
+   },
+   {
+    "id": "us-or-lake-of-the-woods",
+    "note": "Mountain name spelled 'Barkalow' by NHLR and 'Barklow' by Recreation.gov; treated as the same place, not flagged as a conflict. Tower height (10 ft vs 12 ft) differs between the two sources and is called out in the story and resolved_conflicts. Did not independently verify the exact trailhead/drive-up access; Recreation.gov implies a hike in with no on-site water."
+   },
+   {
+    "id": "us-or-onion-mountain",
+    "note": "Current rental is closed to reservations (confirmed live on Recreation.gov as of 2026-10-04), consistent with Firelookout.com's note that the site is presently abandoned; treated access as 'restricted' rather than fully 'public' to flag that. Minor year discrepancy on the first platform tower (1915 vs 1916)."
    },
    {
     "id": "us-or-warner-mountain",
@@ -13479,6 +13671,10 @@
    {
     "id": "us-ri-escoheag-hill",
     "note": "Two loose ends worth a human look: (1) sources disagree on the tower's originating town before its 1937 move -- NHLR says Burrillville, the Valley Breeze CCC piece says Glocester -- and the Valley Breeze piece also states the tower was moved to 'Escoheag Hill in Exeter,' which would make Exeter the destination town rather than West Greenwich; that conflicts with NHLR's own location field of 'Kent County' (Exeter is in Washington County, West Greenwich in Kent County), so the destination town is unresolved and may itself be a second cross-source conflict, not just the origin town. The two sources may also disagree on build year: Valley Breeze gives 1935 as when the GW camp's three towers went up generally, versus NHLR's 1934, though Valley Breeze never ties that year to this specific tower by name. (2) The Former Fire Lookout Sites register carries a distinct, separate-looking listing, 'Escoheag Tower Site' (US 1585, RI 12), with coordinates about 0.4 miles from this tower's NHLR coordinates, but matching elevation, build year and agency -- almost certainly the same physical structure catalogued in both sister registers rather than a second nearby tower, but worth confirming. The 1952 burglary detail rests on a hobbyist site's paraphrase of an unnamed contemporary newspaper (identified there as the Newport Mercury, March 21 1952), not the original clipping, so it's included but flagged as the weakest-sourced fact here. Fact-check pass 2026-10-04 also found and removed an unsupported claim in the story draft that placed the tower 'in the Arcadia Management Area' -- the cited NHLR page never says this; see corrections."
+   },
+   {
+    "id": "us-sd-summit-ridge",
+    "note": "Build-date conflict across four sources (1935/1939/1939-40/1942) could not be fully resolved within the research budget; flagged in both story and corrections. Worth a closer look at NRHP/npgallery nomination documents if available, which might clarify construction vs completion dates."
    },
    {
     "id": "us-tn-avondale",
@@ -13531,6 +13727,10 @@
    {
     "id": "us-wa-stranger-mountain",
     "note": "The tower record also carries an FFLA-sourced relocation event claiming Stranger Mountain was moved to 'Crystal Ridge' (linked to id us-id-stranger-mountain-at-crystal-ridge, in Idaho). Neither NHLR nor FFLOS mention Crystal Ridge; both describe only the single 2008 move to the Colville fairgrounds. This looks like an FFLA data error (possibly a different lookout sharing the 'Stranger Mountain' name) and is worth a human look before publishing the Crystal Ridge link on this page."
+   },
+   {
+    "id": "us-wa-tyee-mountain",
+    "note": "Cabin dimensions conflict slightly: NHLR says 14x14 ft, Recreation.gov's current listing says 16x16 ft -- could reflect a later rebuild/remodel or simple inconsistency; reported both without resolving. Height_m omitted: no source gave a tower/cab height figure (it's a low groundhouse, brief gave no height_m either). Access level recorded as 'public' via paid rental, but note the 2013 report on lightning-protection non-compliance and the active 2026 wildfire closure -- actual availability fluctuates and should be checked against current Recreation.gov status before publishing anything time-sensitive. Fact-check 2026-10-04: elevation also conflicts across sources -- NHLR itself states 6,511 ft, while firelookout.com and Recreation.gov both state 6,654 ft. The story's opening sentence cited NHLR for the 6,654 figure it does not support; citation corrected to firelookout.com + Recreation.gov (the two sources that actually give that number)."
    },
    {
     "id": "us-wi-friendship-skyline",
@@ -13649,6 +13849,18 @@
    "evidence": "data/raw/firelookout_com/id/shortypeak.html: \"First used in 1927 with a cupola cabin, the present 8' concrete base topped with an R-6 flat cab replaced it in 1964 (construction started in 1963).\"",
    "sources": [
     "https://www.firelookout.com/id/shortypeak.html"
+   ],
+   "researched": "2026-10-04"
+  },
+  {
+   "id": "us-id-spyglass",
+   "name": "Spyglass Lookout",
+   "field": "status",
+   "current": "standing",
+   "proposed": "partially_removed / tower is a ruin, ground house is the standing rental",
+   "evidence": null,
+   "sources": [
+    "https://www.recreation.gov/camping/campgrounds/10007160"
    ],
    "researched": "2026-10-04"
   },
@@ -13896,6 +14108,18 @@
    "researched": "2026-10-04"
   },
   {
+   "id": "us-or-gold-butte",
+   "name": "Gold Butte Lookout",
+   "field": "elevation_m",
+   "current": "1364.6",
+   "proposed": "Recreation.gov gives 4,618 ft (~1,408 m), vs. NHLR's 4,477 ft (1,365 m) used in the current record",
+   "evidence": null,
+   "sources": [
+    "https://www.recreation.gov/camping/campgrounds/234621"
+   ],
+   "researched": "2026-10-04"
+  },
+  {
    "id": "us-or-hager-mountain",
    "name": "Hager Mountain Lookout",
    "field": "events",
@@ -13954,6 +14178,18 @@
    "evidence": "NHLR cached page text has no mention of Arcadia Management Area anywhere; the claim was unsupported by its cited footnote",
    "sources": [
     "http://nhlr.org/lookouts/us/ri/escoheag-hill-fire-tower/"
+   ],
+   "researched": "2026-10-04"
+  },
+  {
+   "id": "us-sd-summit-ridge",
+   "name": "Summit Ridge Lookout",
+   "field": "events[built]",
+   "current": "1935 built",
+   "proposed": "primary build likely 1939 (steel tower, contemporaneous newspaper) with NHLR giving 1942; 1935 appears to describe an earlier wooden tower moved elsewhere and destroyed, per firelookout.com",
+   "evidence": null,
+   "sources": [
+    "https://westlookouts.weebly.com/summit-ridge.html"
    ],
    "researched": "2026-10-04"
   },

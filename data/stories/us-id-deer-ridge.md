@@ -1,0 +1,11 @@
+Deer Ridge has carried a fire lookout in one form or another since the 1920s, when the first structure here was a simple cupola cabin.[^3] That was replaced in 1935 by an L-4 cab on a 20-foot pole tower, and again in 1949 by an L-4 on a taller, 40-foot timber tower.[^1][^3] The building standing today, a 41-foot R-6 flattop cab with a wraparound catwalk, went up in 1965 — sources differ slightly on the cab's footprint, with the National Historic Lookout Register giving 15 by 15 feet and Recreation.gov giving 14 by 14 feet.[^1][^2]
+
+The lookout, on what was then the Kaniksu National Forest and is now part of the Idaho Panhandle National Forest, was staffed for decades. Named lookouts on record run from William Kuntz in 1933 through a long string of seasonal staff into the 1970s, including Bill Odell, Tom Black, and husband-and-wife teams like the Walterses, the Bakers and the Volls.[^3] The last staffing on record is from 1975, when Paula Stueve and Kim Norwood held the post for a late season.[^3]
+
+The tower has stayed standing and in Forest Service hands, and it's now part of the agency's cabin rental program, perched above the Lower Kootenai River country about 24 miles northeast of Bonners Ferry.[^1][^2]
+
+Getting there today is easier than at most lookouts: a well-maintained gravel road reaches the site by car.[^2] The cabin sleeps two, with twin beds, a table and a dresser, but no running water, and a pit toilet sits fifty yards off. A trap door and steep interior staircase lead up to the catwalk, so the Forest Service discourages young children from staying, and guests get the entry combination only after calling the ranger district ahead of their trip.[^2] From the catwalk the view takes in the Purcell Mountains reaching into Canada and Montana, and the Moyie River valley below.[^2]
+
+[^1]: Deer Ridge Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/id/deer-ridge-lookout/ (accessed 2026-10-04).
+[^2]: Deer Ridge Lookout, Idaho Panhandle National Forests, Recreation.gov, https://www.recreation.gov/camping/campgrounds/234429 (accessed 2026-10-04).
+[^3]: Deer Ridge Lookout, Idaho Fire Lookouts, https://www.idahofirelookouts.com/northern-idaho/deer-ridge-lookout/ (accessed 2026-10-04).

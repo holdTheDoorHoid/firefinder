@@ -1,6 +1,7 @@
 {
   "id": "us-id-deadwood",
   "name": "Deadwood Lookout",
+  "summary": "Deadwood Lookout, a CCC-built L-4 cab on Idaho's Boise National Forest staffed into the early 1970s, was restored over ten years and is now a popular Forest Service rental.",
   "other_names": [
     "Deadwood Lookout Cabin"
   ],
@@ -15,7 +16,7 @@
   },
   "elevation_m": 2308.9,
   "kind": "ground",
-  "design": "L-4",
+  "design": "L-4 cab, ground-mounted",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -30,17 +31,17 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=permissive."
+    "level": "public",
+    "note": "Forest Service rental via Recreation.gov; narrow, steep, winding access road."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1972"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "High-clearance vehicle recommended for the dirt access road."
   },
   "rental": {
     "available": true,
@@ -58,16 +59,64 @@
   },
   "events": [
     {
+      "year": 1916,
+      "event": "built",
+      "note": "Earliest known structure: a log crib platform.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/southern-idaho/deadwood-lookout/"
+    },
+    {
+      "year": 1924,
+      "event": "replaced",
+      "note": "12x12-foot frame cabin with cupola replaced the log crib platform.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/deadwood.html"
+    },
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "Current ground-mounted L-4 cab built by the CCC, per Recreation.gov and Firelookout.com.",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/233881",
+      "source_urls": [
+        "https://www.recreation.gov/camping/campgrounds/233881",
+        "https://www.firelookout.com/id/deadwood.html"
+      ]
+    },
+    {
       "year": 1936,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "National Historic Lookout Register instead gives 1936 for the current structure, replacing the 1924 cupola cabin.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/deadwood-lookout/"
+    },
+    {
+      "year": 1953,
+      "event": "staffed",
+      "note": "Lookout Jay Broadie recorded staffing the tower.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/southern-idaho/deadwood-lookout/"
+    },
+    {
+      "year": 1972,
+      "event": "staffed_last",
+      "note": "Recreation.gov: actively used as a fire lookout until 1972.",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/233881"
+    },
+    {
+      "year": 1973,
+      "event": "other",
+      "note": "Idaho Fire Lookouts instead gives 1973 as when the tower went to emergency status.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/southern-idaho/deadwood-lookout/"
     },
     {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 12, 2003",
-      "from": "nhlr"
+      "note": "Added to the National Historic Lookout Register, May 12, 2003, after a ten-year restoration.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/deadwood-lookout/"
     }
   ],
   "photos": [
@@ -271,6 +320,22 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-deadwood",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -315,7 +380,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,0 +1,12 @@
+Lunch Peak Lookout stands in the Cabinet Mountains about 35 miles northeast of Sandpoint, Idaho, overlooking Lake Pend Oreille and the Selkirk Mountains.[^1] Fire detection began here in 1937, when the Forest Service put up a pole tower topped with an L-4 cab; the National Historic Lookout Register gives the pole's height as 50 feet, while firelookout.com gives 45 feet.[^2][^3] That structure was replaced in 1971 with the building that stands today: a 15-by-15-foot flat-roofed cab with a catwalk, set on a 10-foot concrete block base.[^3][^2] Sources differ on the exact design label for the current cab, with the National Historic Lookout Register calling it a flattop cab and firelookout.com describing it as an R-6 flat cab, but they agree on the 1971 construction date.[^3][^2]
+
+The lookout was staffed through the mid-twentieth century; researchers have documented personnel including Harold Harding in 1967 and Diane Young from 1975 to 1978.[^4][^3] Full-time staffing ended in 1985, after which Lunch Peak became the last of the Sandpoint Ranger District's lookouts still standing from that era.[^2][^3]
+
+The tower's most dramatic recent moment came during the 2021 fire season, when the Trestle Creek Complex fire burned nearby and a Forest Service crew wrapped the structure in protective fire-resistant material out of concern from local residents that the historic cabin could be lost.[^4] The lookout survived.
+
+Today Lunch Peak is no longer used for fire detection but is maintained and offered through the Forest Service's recreation rental program.[^1][^2] The cabin was remodeled in 2002 and remains rustic, with a sleeping platform, table, and cabinet but no water, heat, or cooking facilities.[^1] It sits atop a 15-foot cinder block foundation, reached by the last four miles of a rough, high-clearance access road, with the Pend Oreille Divide Trail starting just below.[^1] Access is public via recreation.gov booking.
+
+[^1]: Lunch Peak Lookout, Recreation.gov, https://www.recreation.gov/camping/campgrounds/234430 (accessed 2026-10-04).
+[^2]: Lunch Peak Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/id/lunch-peak-lookout/ (accessed 2026-10-04).
+[^3]: Lunch Peak Fire Lookout Tower, Fire Lookout (firelookout.com), https://www.firelookout.com/id/lunchpk.html (accessed 2026-10-04).
+[^4]: Lunch Peak Lookout, Idaho Fire Lookouts, https://www.idahofirelookouts.com/northern-idaho/lunch-peak-lookout/ (accessed 2026-10-04).

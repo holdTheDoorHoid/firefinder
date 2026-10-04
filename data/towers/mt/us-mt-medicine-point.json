@@ -1,6 +1,7 @@
 {
   "id": "us-mt-medicine-point",
   "name": "Medicine Point Lookout",
+  "summary": "Medicine Point Lookout, a CCC-era L-4 cab in Montana's Bitterroot Mountains staffed into 1976, was restored in 1999 and is now a hike-in Forest Service rental.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 2534.7,
   "kind": "tower",
-  "design": "L-4",
+  "design": "L-4 cab, pyramid roof, on an 8-10 foot wood/pole tower",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -35,16 +36,16 @@
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Forest Service rental via Recreation.gov; hike-in only, no vehicle access."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1976"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": false,
+    "trail_note": "3.5-mile hike with about 2,000 feet of elevation gain; no ATVs/OHVs; horses allowed."
   },
   "rental": {
     "available": true,
@@ -62,16 +63,52 @@
   },
   "events": [
     {
+      "year": 1930,
+      "event": "built",
+      "note": "NHLR: tower constructed by the CCC in 1930.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/medicine-point-lookout/"
+    },
+    {
+      "year": 1933,
+      "event": "modified",
+      "note": "NHLR: pyramid roof L-4 cab added atop the tower.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/medicine-point-lookout/"
+    },
+    {
       "year": 1940,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Firelookout.com gives 1940 as the build year for the L-4 cab on a 10-foot pole tower (conflicts with NHLR's 1930/1933 dates).",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/medicinept.html"
+    },
+    {
+      "year": 1946,
+      "event": "staffed",
+      "note": "Earliest recorded lookout staff: Mr. and Mrs. Raymond Barnett.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/medicinept.html"
+    },
+    {
+      "year": 1976,
+      "event": "staffed_last",
+      "note": "Last recorded staffing year, lookout Rene Eustace.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/medicinept.html"
     },
     {
       "year": 1999,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: October 8, 1999",
       "from": "nhlr"
+    },
+    {
+      "year": 1999,
+      "event": "restored",
+      "note": "Tower restored; NHLR registration dated October 8, 1999.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/medicine-point-lookout/"
     }
   ],
   "photos": [
@@ -146,6 +183,11 @@
       "label": "Recreation.gov listing",
       "url": "https://www.recreation.gov/camping/campgrounds/234296",
       "kind": "rental"
+    },
+    {
+      "label": "National Register of Historic Places nomination (Asset 100002298) (National Park Service NPGallery)",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/100002298",
+      "kind": "reference"
     },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
@@ -234,10 +276,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-medicine-point",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

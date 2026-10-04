@@ -1,0 +1,11 @@
+Up Up Lookout stands on a rock pinnacle in the Bitterroot Mountains of western Montana, in the Lolo National Forest, at 5,900 feet.[^1] It wasn't the first lookout on that spot: a 20-foot pole tower with an L-4 cab went up there in 1934 and was used as a fire lookout until at least 1965.[^1] The current structure, a 41-foot treated timber tower with an R-6 flat cab, replaced it in 1966.[^1][^2]
+
+A roster of known lookout staff survives from the years before the tower was rebuilt and after: Robert Minor in 1955, Joe McBride in 1956, Paul Eve in 1959, Robert Ferguson in 1961, William Hollenberg in 1962, Kenneth Asleson in 1965, and Mike Erickson from 1966 to 1968.[^2] After that stretch, staffing on the mountain lapsed for a number of years before the lookout was staffed again in 1995, the first time in "several years" according to the National Historic Lookout Register.[^1]
+
+The lookout was added to the Register — US 947 — on August 28, 2012, and has since been placed in the Forest Service's recreation rental program.[^1][^2] A recreation.gov description of the site gives a different age for the wooden tower, calling it a structure "built in the 1930s," which doesn't match the Register's 1966 date for the current tower; it's possible that page is describing the earlier 1934 pole tower rather than the one standing today.[^3]
+
+The lookout now functions purely as a rental cabin rather than an active fire-detection post, in keeping with the broader shift toward spotting fires by aircraft.[^3] It sleeps up to four people, with one twin bed and mattress pad (additional cots are recommended), propane lights and a heater, but no cooking facilities, running water, or refrigeration. A fire ring, picnic table, and outhouse sit at the base of the tower. Stays are capped at three nights per reservation, and the entry gate and cabin are kept locked, with the access code sent in the booking confirmation.[^3]
+
+[^1]: Up Up Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/mt/up-up-lookout/ (accessed 2026-10-04).
+[^2]: Up Up Fire Lookout Tower, firelookout.com, https://www.firelookout.com/mt/upup.html (accessed 2026-10-04).
+[^3]: Up Up Lookout, Recreation.gov, https://www.recreation.gov/camping/campgrounds/234390 (accessed 2026-10-04).
