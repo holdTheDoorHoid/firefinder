@@ -1994,6 +1994,13 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
 
     if "access" not in locked:
         acc, acc_src = pick("access", members, record_access)
+        # "unknown" (e.g. OSM's access=* tag, which describes the structure, not the land -- see
+        # record_access()) is not a real determination: don't let it block a better one below,
+        # but keep its note as a last resort if nothing better turns up.
+        weak_note, weak_src = (None, None)
+        if isinstance(acc, dict) and acc.get("level") == "unknown":
+            weak_note, weak_src = acc.get("note"), acc_src
+            acc, acc_src = None, None
         if acc is None and rec.get("ownership") == "tribal":
             acc = {"level": "permission", "note": "On tribal land. Ask the tribe before visiting."}
             acc_src = s
@@ -2007,6 +2014,8 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
                 else:
                     note = "Listed as a visitor site on recreation.gov. Check the listing for seasonal closures."
                 acc, acc_src = {"level": "public", "note": note}, ridb
+        if acc is None and weak_note:
+            acc, acc_src = {"level": "unknown", "note": weak_note}, weak_src
         if acc is not None:
             rec["access"] = acc
             if acc_src is not None:

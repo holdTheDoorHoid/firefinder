@@ -552,6 +552,42 @@ class SmallRules(unittest.TestCase):
         finally:
             ws.close()
 
+    def test_osm_unknown_access_does_not_block_the_ridb_fallback(self):
+        # us-mt-mccart: OSM's access=permit tag describes the structure, not the land, so
+        # record_access() gives it level "unknown" -- that must not out-rank the public access a
+        # recreation.gov rental itself implies, just because it is the only source with any
+        # access value at all.
+        ws = Workspace()
+        try:
+            ws.run({
+                "nhlr": [rec("nhlr", "1", "McCart Lookout", 45.6, -113.8, "MT")],
+                "ridb": [rec("ridb", "1", "McCart Lookout", 45.6001, -113.8, "MT",
+                             rental={"available": True, "provider": "recreation.gov",
+                                     "url": "https://www.recreation.gov/x"})],
+                "osm": [rec("osm", "n1", "McCart Lookout", 45.6002, -113.8, "MT",
+                            extra={"access": "permit"})],
+            })
+            access = ws.tower_with_key("nhlr:1")["access"]
+            self.assertEqual(access["level"], "public")
+            self.assertIn("recreation.gov", access["note"])
+        finally:
+            ws.close()
+
+    def test_osm_unknown_access_is_kept_as_a_last_resort(self):
+        # No tribal ownership and no RIDB rental to fall back to: OSM's structure-only note is
+        # still better than nothing.
+        ws = Workspace()
+        try:
+            ws.run({
+                "nhlr": [rec("nhlr", "1", "Solo Lookout", 45.6, -113.8, "MT")],
+                "osm": [rec("osm", "n1", "Solo Lookout", 45.6001, -113.8, "MT",
+                            extra={"access": "permit"})],
+            })
+            access = ws.tower_with_key("nhlr:1")["access"]
+            self.assertEqual(access, {"level": "unknown", "note": "OpenStreetMap tags the structure access=permit."})
+        finally:
+            ws.close()
+
 
 class StatusNotes(unittest.TestCase):
     def test_parse(self):
