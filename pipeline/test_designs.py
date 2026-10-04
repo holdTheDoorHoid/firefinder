@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+import json
 import unittest
+from pathlib import Path
 
 import designs
 
@@ -17,6 +19,11 @@ class MatchDesigns(unittest.TestCase):
         self.check("L-5", ["l5"])
         self.check("L-6 cab with catwalk", ["l6"])
         self.check("D-6", ["d6"])
+        self.check("D-6 cupola", ["d6"])
+        self.check("Log cabin with a cupola", ["cupola"])
+        self.check("Cupola house", ["cupola"])
+        self.check("Bus/cupola", [])
+        self.check("California Region 5 Plan BC-301 cab on a 10-foot enclosed timber tower", ["r5_lookouts"])
 
     def test_descriptions_that_name_a_design(self) -> None:
         self.check("L-4 ground cab", ["l4"])
@@ -29,16 +36,16 @@ class MatchDesigns(unittest.TestCase):
         self.check("Aermotor MC-39 steel tower", ["aermotor"])
         self.check("LS-40", ["aermotor"])
         self.check("48-49 ft Aermotor LX-24 steel tower", ["aermotor"])
-        self.check("McClintic-Marshall tower", ["mcclintic_marshall"])
-        self.check("McKlintock-Marshall 86-ft steel tower", ["mcclintic_marshall"])
-        self.check("McClintock Marshall", ["mcclintic_marshall"])
-        self.check("Blaw-Knox", ["blaw_knox"])
+        self.check("McClintic-Marshall tower", ["other_steel"])
+        self.check("McKlintock-Marshall 86-ft steel tower", ["other_steel"])
+        self.check("McClintock Marshall", ["other_steel"])
+        self.check("Blaw-Knox", ["other_steel"])
         self.check("International Derrick & Equipment Co.", ["ideco"])
         self.check("IDECO tower", ["ideco"])
         self.assertEqual(designs.aermotor_models("Aermotor mc39 on an LS-40 base"), ["MC-39", "LS-40"])
 
     def test_nothing_is_guessed(self) -> None:
-        for text in ("Tower", "Ground", "Steel tower with 10x10 ft cab", "flat top cab", "CL-4", "L-45", "BC-301", "", None):
+        for text in ("Tower", "Ground", "Steel tower with 10x10 ft cab", "flat top cab", "CL-4", "L-45", "CL-style cab", "BC-3011", "", None):
             self.check(text, [])  # type: ignore[arg-type]
 
     def test_a_design_named_only_to_rule_it_out_does_not_count(self) -> None:
@@ -50,11 +57,19 @@ class MatchDesigns(unittest.TestCase):
         # An earlier cab and today's: the guide lists the lookout under both, with this wording.
         self.check("10 ft steel tower (1964); earlier L-4 cab (early 1930s)", ["l4"])
         self.check("R-6 cab that replaced an L-4", ["l4", "r6"])
+        self.check("Aermotor tower with an L-6 cab", ["l6", "aermotor"])
         self.assertEqual(designs.tower_designs(["L-4", "Tower", "Aermotor", "L4"]), ["l4", "aermotor"])
 
-    def test_every_pattern_has_a_display_name(self) -> None:
+    def test_every_pattern_has_a_display_name_and_guide_entry(self) -> None:
+        guide = json.loads((Path(__file__).resolve().parent.parent / "data" / "designs.json").read_text(encoding="utf-8"))
+        ids = {d["id"] for d in guide["designs"]}
         for did, _ in designs.PATTERNS:
             self.assertIn(did, designs.DESIGN_NAMES)
+            self.assertIn(did, ids, f"data/designs.json has no entry for {did}")
+        for d in guide["designs"]:
+            self.assertTrue(d.get("sources"), f"{d['id']} has no sources")
+            for src in d["sources"]:
+                self.assertTrue(src.get("url", "").startswith(("https://", "http://")), src)
 
 
 if __name__ == "__main__":
