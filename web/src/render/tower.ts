@@ -7,6 +7,7 @@ import { feetAndMetres, formatCoords, formatDate, formatDistance, distanceMetres
 import { html, raw, safeUrl, isSafeStoryHtml, type SafeHtml } from '../lib/html.ts';
 import { fillFor, markerSvg, rentBadgeSvg, shapeFor } from '../lib/icons.ts';
 import { MARKS, MARK_LABELS } from '../lib/checklist.ts';
+import { renderTimeline } from './timeline.ts';
 import { builtYear, isRentable, type Conflict, type SourceInfo, type TowerEvent, type TowerProps, type TowerRecord } from '../lib/types.ts';
 import { eyeHeight, megabytes, reconstructionNote } from '../view3d/describe.ts';
 import { estimateBytes, panoramaLevels, planTiles } from '../view3d/tiles.ts';
@@ -16,7 +17,7 @@ import {
   REGISTER_NAMES,
   STAFFING,
   TRIBAL_ACCESS,
-  eventLabel,
+  designName,
   kindWording,
   regionName,
   statusWording,
@@ -40,6 +41,8 @@ export interface RenderContext {
    * the interim link-card/hotlink behaviour in photosSection, even one that has been mirrored.
    */
   photosBase?: string | null;
+  /** "Today" on timelines; defaults to the current year (tests pin it). */
+  thisYear?: number;
 }
 
 const SHORT_SOURCE: Record<string, string> = {
@@ -294,14 +297,21 @@ function hasConflict(r: TowerRecord, field: string): boolean {
   return (r.conflicts ?? []).some((c) => c.field === field);
 }
 
-export function factRows(r: TowerRecord, opts: { short?: boolean } = {}): [string, unknown][] {
+/** "About the design: L-4" links to the designs guide, one per recognised design. */
+function designLinks(r: TowerRecord, base: string | undefined): SafeHtml | string {
+  const ids = (r.design_ids ?? []).filter((d) => /^[a-z0-9_]+$/.test(d));
+  if (!ids.length || base === undefined) return '';
+  return html`<span class="sub">The ${ids.length > 1 ? 'designs' : 'design'}: ${ids.map((d, i) => html`${i ? ', ' : ''}<a href="${base}designs/#${d}">${designName(d)}</a>`)}</span>`;
+}
+
+export function factRows(r: TowerRecord, opts: { short?: boolean; base?: string } = {}): [string, unknown][] {
   const st = statusWording(r.status);
   const kind = kindWording(r.kind);
   const built = builtYear(r);
   const disagree = (field: string) => (hasConflict(r, field) ? html` <a class="disagree" href="#conflicts">sources disagree</a>` : '');
   const rows: [string, unknown][] = [
     ['Status', html`<span class="with-icon">${icon(r.kind, r.status, false, 16)}${st.label}</span>${disagree('status')}`],
-    ['Type', r.design ? html`${kind.label}<span class="sub">${r.design}</span>` : kind.label],
+    ['Type', r.design || r.design_ids?.length ? html`${kind.label}${r.design ? html`<span class="sub">${r.design}</span>` : ''}${designLinks(r, opts.base)}` : kind.label],
     ['Built', built !== null ? html`${built}${disagree('built')}` : 'Unknown'],
   ];
   const height = feetAndMetres(r.height_m, 1);
@@ -322,9 +332,9 @@ export function factRows(r: TowerRecord, opts: { short?: boolean } = {}): [strin
   return rows;
 }
 
-export function factsCard(r: TowerRecord): SafeHtml {
+export function factsCard(r: TowerRecord, ctx?: Pick<RenderContext, 'base'>): SafeHtml {
   const ver = verificationWording(r.verification);
-  return html`<dl class="kv kv-facts">${factRows(r).map(([k, v]) => html`<div><dt>${k}</dt><dd>${v}</dd></div>`)}
+  return html`<dl class="kv kv-facts">${factRows(r, { base: ctx?.base }).map(([k, v]) => html`<div><dt>${k}</dt><dd>${v}</dd></div>`)}
     <div><dt>This entry</dt><dd>${ver.label}<span class="sub">${ver.meaning}${r.updated ? ` Updated ${formatDate(r.updated)}.` : ''}</span></dd></div>
     <div><dt>Firefinder id</dt><dd><code>${r.id}</code></dd></div>
   </dl>`;
@@ -332,30 +342,53 @@ export function factsCard(r: TowerRecord): SafeHtml {
 
 /* ---------- History ---------- */
 
-export function timeline(r: TowerRecord, ctx: RenderContext): SafeHtml {
-  const events = [...(r.events ?? [])].sort((a, b) => (a.year ?? 1e9) - (b.year ?? 1e9));
-  if (!events.length) return html`<p class="muted">No dated events recorded yet.</p>`;
-  return html`<ol class="timeline">${events.map(
-    (e) => html`<li>
-      <span class="tl-year">${e.year ?? 'Date unknown'}</span>
-      <span class="tl-body"><span class="tl-what">${eventLabel(e.event)}</span>${e.note ? html`<span class="tl-note">${e.note}</span>` : ''}${eventSource(e, ctx)}</span>
-    </li>`,
-  )}</ol>`;
+/** The year "today" means on the timeline and the year view: the build year of the page. */
+export function thisYear(ctx: Pick<RenderContext, 'thisYear'>): number {
+  return ctx.thisYear ?? new Date().getFullYear();
 }
 
-/** "Source: nhlr.org" linked to the cited page, or the source's short name. */
-function eventSource(e: TowerEvent, ctx: RenderContext): SafeHtml | string {
-  const url = safeUrl(e.source_url);
-  if (url && /^https?:/i.test(url)) {
-    let host = url;
-    try {
-      host = new URL(url).hostname.replace(/^www\./, '');
-    } catch {
-      /* keep the URL */
-    }
-    return html`<span class="tl-src">Source: <a href="${url}" rel="noopener noreferrer">${host}</a></span>`;
+export function timeline(r: TowerRecord, ctx: RenderContext): SafeHtml {
+  return renderTimeline(r.events, r.status, { source: (e) => eventSource(e, r, ctx), thisYear: thisYear(ctx) });
+}
+
+function hostOf(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
   }
-  return e.from ? html`<span class="tl-src">Source: ${sourceShortName(e.from, ctx)}</span>` : '';
+}
+
+/**
+ * "Source: nhlr.org" linked to the cited page(s); for an event a source gave without a page,
+ * its register entry when it has one, otherwise the source in this page's source list.
+ */
+export function eventSource(e: TowerEvent, r: Pick<TowerRecord, 'registers' | 'sources'>, ctx: RenderContext): SafeHtml | string {
+  const urls = [...new Set([e.source_url, ...(e.source_urls ?? [])].map((u) => safeUrl(u)).filter((u): u is string => !!u && /^https?:/i.test(u)))];
+  if (urls.length) {
+    return html`<span class="tl-src">Source${urls.length > 1 ? 's' : ''}: ${urls.slice(0, 3).map((u, i) => html`${i ? ', ' : ''}<a href="${u}" rel="noopener noreferrer">${hostOf(u)}</a>`)}</span>`;
+  }
+  if (!e.from) return '';
+  const register = (r.registers ?? []).find((g) => g.register.toLowerCase() === e.from && safeUrl(g.url));
+  if (register) {
+    return html`<span class="tl-src">Source: <a href="${safeUrl(register.url)!}" rel="noopener noreferrer">${sourceShortName(e.from, ctx)} register entry</a></span>`;
+  }
+  const listed = (r.sources ?? []).some((s) => s.source === e.from);
+  return html`<span class="tl-src">Source: ${listed ? html`<a href="#src-${e.from}">${sourceShortName(e.from, ctx)}</a>` : sourceShortName(e.from, ctx)}</span>`;
+}
+
+/* ---------- Old maps ---------- */
+
+/** USGS TopoView centred on a place: every scanned historical topo sheet that covers it. */
+export function topoViewUrl(lat: number, lon: number, zoom = 13): string {
+  return `https://ngmdb.usgs.gov/topoview/viewer/#${zoom}/${lat.toFixed(4)}/${lon.toFixed(4)}`;
+}
+
+export function oldMapsBlock(r: TowerRecord, ctx: RenderContext): SafeHtml {
+  if ((r.country ?? 'US') !== 'US') return html``;
+  const { lat, lon } = r.location;
+  return html`<h3 class="h-small" id="old-maps">Old maps of this spot</h3>
+    <p>USGS topographic maps from the years a lookout stood may show it, often as a small symbol labelled “Lookout”. <a href="${mapLink(r, ctx, 13)}&amp;base=old">See the old topo maps around it</a> on the Firefinder map, or find every scanned sheet of this spot on ${externalLink(topoViewUrl(lat, lon), 'USGS TopoView')} (click the spot there to list them, with dates and downloads).</p>`;
 }
 
 /** "Researched 4 October 2026, fact-checked." above a researched story. */
@@ -543,7 +576,7 @@ export function sourcesSection(r: TowerRecord, ctx: RenderContext): SafeHtml {
           const info = ctx.sources.get(s.source);
           const title = info?.title ?? s.source;
           const fields = (s.fields ?? []).map((f) => FIELD_NAMES[f] ?? f.replace(/_/g, ' '));
-          return html`<li>
+          return html`<li id="src-${s.source}">
             <span class="src-title">${info?.url ? externalLink(info.url, title) : title}</span>
             ${fields.length ? html`<span class="src-fields">Gave us: ${fields.join(', ')}</span>` : ''}
             <span class="credit-line">${info?.credit ?? title}${info?.license ? html` · ${info.license}` : ''}${info?.retrieved ? html` · retrieved ${formatDate(info.retrieved)}` : ''}</span>
@@ -696,9 +729,9 @@ export function renderTowerMain(r: TowerRecord, ctx: RenderContext): SafeHtml {
   <div class="t-grid">
     <div class="t-main">
       ${section('visit', 'Visit & stay', visitSection(r))}
-      ${section('facts', 'Facts', factsCard(r))}
+      ${section('facts', 'Facts', factsCard(r, ctx))}
       ${section('view', 'View from the cab', viewSection(r, ctx))}
-      ${section('history', 'History', html`<h3 class="h-small">Timeline</h3>${timeline(r, ctx)}<h3 class="h-small">Story</h3>${storyBlock(r, ctx)}`)}
+      ${section('history', 'History', html`<h3 class="h-small">Then and now</h3>${timeline(r, ctx)}${oldMapsBlock(r, ctx)}<h3 class="h-small">Story</h3>${storyBlock(r, ctx)}`)}
       ${section('photos', 'Photos', photos)}
       ${section('conflicts', 'Where sources disagree', conflicts)}
       ${section('sources', 'Sources', sourcesSection(r, ctx))}
@@ -751,7 +784,7 @@ export function renderTowerHead(r: TowerRecord, ctx: RenderContext): SafeHtml {
 
 /* ---------- Map side panel ---------- */
 
-export function renderPanel(r: TowerRecord, ctx: RenderContext, opts: { hiddenByFilters?: boolean } = {}): SafeHtml {
+export function renderPanel(r: TowerRecord, ctx: RenderContext, opts: { hiddenByFilters?: boolean; yearView?: boolean } = {}): SafeHtml {
   const rent = isRentable(r);
   const warned = !!r.rental?.warning;
   const book = rent || warned ? safeUrl(r.rental?.url) : null;
@@ -774,13 +807,13 @@ export function renderPanel(r: TowerRecord, ctx: RenderContext, opts: { hiddenBy
     <h2 id="panel-title" tabindex="-1">${r.name}</h2>
     ${badges(r)}
     ${r.summary ? html`<p class="panel-summary">${r.summary}</p>` : ''}
-    ${opts.hiddenByFilters ? html`<p class="notice tone-unknown" role="note">${INFO}<span>Your filters hide this lookout on the map. <button type="button" class="linklike" data-action="reset-filters">Reset filters</button></span></p>` : ''}
+    ${opts.hiddenByFilters ? html`<p class="notice tone-unknown" role="note">${INFO}<span>Your filters${opts.yearView ? ' or the year you picked' : ''} hide this lookout on the map. <button type="button" class="linklike" data-action="reset-filters">Reset filters</button></span></p>` : ''}
     ${accessNotice(r, { compact: true })}
     ${movedNotice(r, ctx)}
     ${r.status_note ? html`<p class="fine status-note">${r.status_note}</p>` : ''}
     ${r.verification === 'unverified' ? html`<p class="fine warn-text">Unverified: from a single source, not yet checked.</p>` : ''}
     ${stay}
-    <dl class="kv kv-panel">${factRows(r, { short: true }).map(([k, v]) => html`<div><dt>${k}</dt><dd>${v}</dd></div>`)}</dl>
+    <dl class="kv kv-panel">${factRows(r, { short: true, base: ctx.base }).map(([k, v]) => html`<div><dt>${k}</dt><dd>${v}</dd></div>`)}</dl>
     ${checklistButtons(r.id)}
     <div class="panel-3d" role="group" aria-label="Views from ${r.name}">
       <button type="button" class="btn" data-action="view-cab" data-id="${r.id}">${PANO_ICON}View from the cab</button>
