@@ -30,6 +30,14 @@ export interface RenderContext {
   repo: string;
   sources: Map<string, SourceInfo>;
   takedownEmail?: string | null;
+  /**
+   * Where mirrored photos are published, e.g. "https://example.github.io/firefinder-photos/"
+   * or "/firefinder/photos/". A photo's `file`/`thumb` (filled in by pipeline/merge.py from
+   * data/photos_manifest.json) resolve against this. Null/unset ("photosBase" in
+   * site.config.json) means photos are not hosted anywhere yet, so every photo falls back to
+   * the interim link-card/hotlink behaviour in photosSection, even one that has been mirrored.
+   */
+  photosBase?: string | null;
 }
 
 const SHORT_SOURCE: Record<string, string> = {
@@ -368,19 +376,32 @@ const PHOTO_PLACEHOLDER = raw(
 );
 
 /**
- * Interim handling (see pipeline/mirror_photos.py / data/photos_manifest.json for the real
- * fix): until a photo is mirrored, `url` is the remote original. Two of our busiest sources
+ * Resolves a mirrored file/thumb path against ctx.photosBase. Null when photosBase is not
+ * set ("photos are not hosted yet; use the interim link cards" -- site.config.json) or the
+ * path looks unsafe; in both cases the caller falls back to the interim handling below.
+ */
+function photoBaseUrl(path: string | null | undefined, ctx: RenderContext): string | null {
+  if (!path || path.includes('..') || !ctx.photosBase) return null;
+  const base = ctx.photosBase.endsWith('/') ? ctx.photosBase : `${ctx.photosBase}/`;
+  const safeBase = safeUrl(base);
+  return safeBase ? `${safeBase}${path.replace(/^\/+/, '')}` : null;
+}
+
+/**
+ * Interim handling for a photo with no usable mirrored copy -- either it has not been
+ * mirrored yet (pipeline/mirror_photos.py / data/photos_manifest.json), or it has but
+ * site.config.json's "photosBase" is not set because the owner has not decided where
+ * mirrored photos are hosted. `url` is the remote original. Two of our busiest sources
  * (nhlr.org, firetower.org) reset the TLS handshake, so their photos only load over plain
  * http; an https page cannot embed that without the browser blocking or breaking the image.
- * Rather than emit a broken <img>, those photos get a plain link card that still carries the
- * credit line.
+ * Rather than emit a broken <img>, those get a plain link card that still carries the credit
+ * line; an https original still hotlinks directly.
  */
 export function photosSection(r: TowerRecord, ctx: RenderContext): SafeHtml | null {
   const photos = (r.photos ?? []).filter((p) => p.file || p.url);
   if (!photos.length) return null;
-  const dataUrl = (path: string | null | undefined) => (path && !path.includes('..') ? `${ctx.base}data/${path.replace(/^\/+/, '')}` : null);
   return html`<div class="photos">${photos.map((p) => {
-    const mirrored = dataUrl(p.file);
+    const mirrored = photoBaseUrl(p.file, ctx);
     const source = safeUrl(p.source_url);
     const credit = html`<span class="credit-line">Photo: ${p.credit ?? 'credit unknown'}${p.license ? html` · ${p.license}` : ''}${source ? html` · <a href="${source}" rel="noopener">source</a>` : ''}</span>`;
     const caption = p.caption || p.year
@@ -388,7 +409,7 @@ export function photosSection(r: TowerRecord, ctx: RenderContext): SafeHtml | nu
       : '';
 
     if (!mirrored && !isHttpsUrl(p.url)) {
-      // No mirrored copy yet, and the remote original is not https: link out instead of
+      // No usable mirrored copy, and the remote original is not https: link out instead of
       // embedding it.
       const remote = safeUrl(p.url) ?? source;
       const host = photoHost(p.url) ?? photoHost(p.source_url) ?? 'the source site';
@@ -401,11 +422,12 @@ export function photosSection(r: TowerRecord, ctx: RenderContext): SafeHtml | nu
     }
 
     const full = mirrored ?? safeUrl(p.url);
-    const shown = dataUrl(p.thumb) ?? full;
+    const shown = (mirrored && photoBaseUrl(p.thumb, ctx)) ?? full;
     if (!full || !shown) return '';
     const alt = p.caption ? p.caption : `Photo of ${r.name}${p.year ? `, ${p.year}` : ''}`;
+    const dims = p.w && p.h ? html` width="${p.w}" height="${p.h}"` : '';
     return html`<figure class="photo">
-      <a href="${full}"><img src="${shown}" alt="${alt}" loading="lazy" decoding="async"></a>
+      <a href="${full}"><img src="${shown}" alt="${alt}" loading="lazy" decoding="async"${dims}></a>
       <figcaption>${caption}${credit}</figcaption>
     </figure>`;
   })}</div>

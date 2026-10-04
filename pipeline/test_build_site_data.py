@@ -170,11 +170,15 @@ class RecordHandling(unittest.TestCase):
             self.build()
         self.assertTrue((self.out / "important.txt").exists())
 
-    def test_missing_photo_file_falls_back_to_url(self) -> None:
-        self.write("a.json", tower("us-or-a", photos=[{"file": "photos/us-or-a/1.jpg", "url": "https://example.org/1.jpg", "credit": "X"}]))
+    def test_photo_file_and_thumb_pass_through_unchanged(self) -> None:
+        # pipeline/merge.py is what fills in file/thumb from data/photos_manifest.json; this
+        # script neither copies photo files nor validates them -- the site resolves file/thumb
+        # against site.config.json's photosBase at render time (web/src/render/tower.ts).
+        self.write("a.json", tower("us-or-a", photos=[{"file": "bd/bdc82644.webp", "thumb": "bd/bdc82644.t.webp", "url": "https://example.org/1.jpg", "credit": "X"}]))
         self.build()
         rec = json.loads((self.out / "t" / "us-or-a.json").read_text())
-        self.assertIsNone(rec["photos"][0]["file"])
+        self.assertEqual(rec["photos"][0]["file"], "bd/bdc82644.webp")
+        self.assertEqual(rec["photos"][0]["thumb"], "bd/bdc82644.t.webp")
         self.assertEqual(rec["photos"][0]["url"], "https://example.org/1.jpg")
 
 

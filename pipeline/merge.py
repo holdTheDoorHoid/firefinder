@@ -1296,6 +1296,47 @@ def record_county(rec: Rec) -> str | None:
     return c or None
 
 
+# ---------------------------------------------------------------------------------------
+# Mirrored photos (pipeline/mirror_photos.py, DESIGN.md "Photos")
+# ---------------------------------------------------------------------------------------
+
+
+def load_photo_manifest(path: Path) -> dict:
+    """data/photos_manifest.json: source url -> {file, thumb, w, h, bytes, status, reason},
+    written by pipeline/mirror_photos.py. Missing or unreadable is treated as empty, so merge
+    still works before any photo has been mirrored."""
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+def apply_photo_manifest(photos: list[dict], manifest: dict) -> list[dict]:
+    """Fill file/thumb/w/h from the mirror manifest. A photo the mirror step could not use
+    (download failed, or too small once decoded to be a real photo) is dropped rather than
+    kept as a dead link: the interim "View photo at <site>" card (web/src/render/tower.ts) is
+    for a photo not yet attempted, not one already known not to work."""
+    if not manifest:
+        return photos
+    out = []
+    for p in photos:
+        entry = manifest.get(p.get("url"))
+        if entry:
+            status = entry.get("status")
+            if status in ("failed", "skipped"):
+                continue
+            if status == "ok":
+                p = dict(p)
+                p["file"] = entry.get("file")
+                p["thumb"] = entry.get("thumb")
+                if entry.get("w") is not None:
+                    p["w"] = entry.get("w")
+                if entry.get("h") is not None:
+                    p["h"] = entry.get("h")
+        out.append(p)
+    return out
+
+
 def photo_entry(rec: Rec, p: dict) -> dict | None:
     if not isinstance(p, dict):
         return None
@@ -1649,7 +1690,7 @@ def loose_key(name: str) -> str:
     return " ".join(toks)
 
 
-def resolve(tower: Tower, today: str, headers: dict) -> dict:
+def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | None = None) -> dict:
     """Compute the canonical record for a tower from its member source records."""
     ex = tower.existing or {}
     rec: dict = copy.deepcopy(ex) if ex else {}
@@ -1889,13 +1930,17 @@ def resolve(tower: Tower, today: str, headers: dict) -> dict:
                     photos.append(pe)
                     contributed[m.key].add("photos")
         old = [p for p in rec.get("photos") or [] if isinstance(p, dict) and (p.get("file") or p.get("url")) and p.get("url") not in seen_urls]
-        # keep mirrored copies made by the photo step: carry file/thumb over by URL
+        # keep mirrored copies made by the photo step, for a url the manifest does not (yet)
+        # cover: carry file/thumb over from the previous merge by URL.
+        manifest = photos_manifest or {}
         old_by_url = {p.get("url"): p for p in rec.get("photos") or [] if isinstance(p, dict)}
         for p in photos:
             prev = old_by_url.get(p["url"])
-            if prev:
+            if prev and not manifest.get(p["url"]):
                 p["file"], p["thumb"] = prev.get("file"), prev.get("thumb")
-        rec["photos"] = photos + old
+        # data/photos_manifest.json is authoritative when present: fill file/thumb/w/h, and
+        # drop a photo it could not use rather than show a dead link.
+        rec["photos"] = apply_photo_manifest(photos, manifest) + apply_photo_manifest(old, manifest)
 
     # Links: every source page, then the links each source gives.
     if "links" not in locked:
@@ -2222,7 +2267,12 @@ def near_misses(towers: list[tuple[Tower, dict]]) -> list[dict]:
 
 
 def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: str,
-        dry_run: bool = False, log=print) -> dict:
+        dry_run: bool = False, log=print, photos_manifest: dict | None = None,
+        photos_manifest_path: Path | None = None) -> dict:
+    # `photos_manifest` (an already-loaded dict) wins when given -- tests pass {} for
+    # isolation; otherwise load from `photos_manifest_path` (default data/photos_manifest.json).
+    if photos_manifest is None:
+        photos_manifest = load_photo_manifest(photos_manifest_path or DATA / "photos_manifest.json")
     headers, records = load_sources(sources_dir, log)
     existing = load_towers(towers_dir, log)
     m = Matcher(log)
@@ -2247,7 +2297,7 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
         if not t.members:
             resolved.append((t, copy.deepcopy(t.existing)))
             continue
-        resolved.append((t, resolve(t, today, headers)))
+        resolved.append((t, resolve(t, today, headers, photos_manifest)))
     assign_ids(resolved, taken)
     relocations = link_relocations(resolved)
 

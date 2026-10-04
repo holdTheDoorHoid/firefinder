@@ -46,13 +46,16 @@ class Workspace:
         root = Path(self.tmp.name)
         self.sources, self.towers, self.report = root / "sources", root / "towers", root / "report.json"
 
-    def run(self, by_source: dict[str, list[dict]] | None = None) -> dict:
+    def run(self, by_source: dict[str, list[dict]] | None = None, photos_manifest: dict | None = None) -> dict:
         if by_source is not None:
             for f in self.sources.glob("*.json"):
                 f.unlink()
             write_sources(self.sources, by_source)
         with contextlib.redirect_stdout(io.StringIO()):
-            return M.run(self.sources, self.towers, self.report, TODAY, log=lambda *a, **k: None)
+            # photos_manifest defaults to {} (not the real data/photos_manifest.json) so tests
+            # are hermetic; pass an explicit dict to test the manifest wiring itself.
+            return M.run(self.sources, self.towers, self.report, TODAY, log=lambda *a, **k: None,
+                         photos_manifest=photos_manifest if photos_manifest is not None else {})
 
     def towers_by_id(self) -> dict[str, dict]:
         return {p.stem: json.loads(p.read_text()) for p in self.towers.rglob("*.json")}
@@ -255,6 +258,56 @@ class Matching(unittest.TestCase):
         t = self.ws.tower_with_key("ffla:a")
         self.assertEqual(set(t["photos"][0]), {"file", "thumb", "url", "source_url", "credit", "license", "caption", "year"})
         self.assertTrue(t["photos"][0]["url"].startswith("https://commons.wikimedia.org/wiki/Special:FilePath/"))
+
+
+class PhotoManifest(unittest.TestCase):
+    """data/photos_manifest.json (pipeline/mirror_photos.py) fills in file/thumb/w/h, and a
+    photo the mirror step could not use is dropped rather than kept as a dead link."""
+
+    def setUp(self) -> None:
+        self.ws = Workspace()
+
+    def tearDown(self) -> None:
+        self.ws.close()
+
+    def sources(self) -> dict[str, list[dict]]:
+        return {"ffla": [rec("ffla", "a", "Gold Hill", 45.0, -116.0, photos=[
+            {"url": "http://nhlr.org/photos/ok.jpg", "credit": "A"},
+            {"url": "http://nhlr.org/photos/bad.jpg", "credit": "B"},
+            {"url": "http://nhlr.org/photos/icon.jpg", "credit": "C"},
+            {"url": "http://nhlr.org/photos/unmirrored.jpg", "credit": "D"},
+        ])]}
+
+    def test_no_manifest_leaves_file_and_thumb_null(self) -> None:
+        self.ws.run(self.sources())
+        t = self.ws.tower_with_key("ffla:a")
+        self.assertEqual(len(t["photos"]), 4)
+        self.assertTrue(all(p["file"] is None and p["thumb"] is None for p in t["photos"]))
+
+    def test_manifest_fills_in_ok_and_drops_failed_and_skipped(self) -> None:
+        manifest = {
+            "http://nhlr.org/photos/ok.jpg": {"file": "ab/ab12.webp", "thumb": "ab/ab12.t.webp",
+                                               "w": 800, "h": 600, "bytes": 1234, "status": "ok", "reason": None},
+            "http://nhlr.org/photos/bad.jpg": {"file": None, "thumb": None, "w": None, "h": None,
+                                                "bytes": None, "status": "failed", "reason": "http_404"},
+            "http://nhlr.org/photos/icon.jpg": {"file": None, "thumb": None, "w": 40, "h": 40,
+                                                 "bytes": None, "status": "skipped", "reason": "too small (40x40px)"},
+        }
+        self.ws.run(self.sources(), photos_manifest=manifest)
+        t = self.ws.tower_with_key("ffla:a")
+        by_url = {p["url"]: p for p in t["photos"]}
+        self.assertEqual(set(by_url), {"http://nhlr.org/photos/ok.jpg", "http://nhlr.org/photos/unmirrored.jpg"})
+        ok = by_url["http://nhlr.org/photos/ok.jpg"]
+        self.assertEqual((ok["file"], ok["thumb"], ok["w"], ok["h"]), ("ab/ab12.webp", "ab/ab12.t.webp", 800, 600))
+        self.assertIsNone(by_url["http://nhlr.org/photos/unmirrored.jpg"]["file"])
+
+    def test_re_merge_with_unchanged_manifest_is_a_no_op(self) -> None:
+        manifest = {"http://nhlr.org/photos/ok.jpg": {"file": "ab/ab12.webp", "thumb": "ab/ab12.t.webp",
+                                                        "w": 800, "h": 600, "bytes": 1234, "status": "ok", "reason": None}}
+        rep1 = self.ws.run(self.sources(), photos_manifest=manifest)
+        rep2 = self.ws.run(photos_manifest=manifest)  # re-run, same sources already on disk
+        self.assertEqual(rep2["files"]["written"], 0)
+        self.assertEqual(rep2["files"]["unchanged"], rep1["files"]["written"])
 
 
 class IdStability(unittest.TestCase):
