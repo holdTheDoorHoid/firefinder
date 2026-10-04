@@ -588,6 +588,47 @@ class SmallRules(unittest.TestCase):
         finally:
             ws.close()
 
+    def test_rental_vanished_from_ridb_gets_a_warning_not_removal(self):
+        ws = Workspace()
+        try:
+            ffla = rec("ffla", "f", "Flag Point", 45.3179, -121.4666, "OR")
+            ridb = rec("ridb", "1", "Flag Point Lookout", 45.318, -121.467, "OR",
+                       rental={"available": True, "provider": "recreation.gov",
+                               "url": "https://www.recreation.gov/x", "checked": "2026-09-01"})
+            ws.run({"ffla": [ffla], "ridb": [ridb]})
+            before = ws.tower_with_key("ffla:f")["rental"]
+            self.assertIs(before["available"], True)
+            self.assertEqual(before["checked"], "2026-09-01")
+
+            # The next weekly refresh reads RIDB's export successfully, but it no longer has
+            # this facility (removed or renumbered) -- a real absence, not a skipped fetch.
+            ws.run({"ffla": [ffla], "ridb": []})
+            after = ws.tower_with_key("ffla:f")["rental"]
+            self.assertEqual(after["url"], "https://www.recreation.gov/x")  # kept, not removed
+            self.assertEqual(after["checked"], "2026-09-01")  # left as is, not bumped to today
+            self.assertIs(after["available"], False)
+            self.assertIn("no longer finds", after["warning"])
+            self.assertIn("2026-09-01", after["warning"])
+        finally:
+            ws.close()
+
+    def test_skipped_ridb_fetch_does_not_warn(self):
+        ws = Workspace()
+        try:
+            ffla = rec("ffla", "f", "Flag Point", 45.3179, -121.4666, "OR")
+            ridb = rec("ridb", "1", "Flag Point Lookout", 45.318, -121.467, "OR",
+                       rental={"available": True, "provider": "recreation.gov",
+                               "url": "https://www.recreation.gov/x", "checked": "2026-09-01"})
+            ws.run({"ffla": [ffla], "ridb": [ridb]})
+            # A local run that never re-fetched RIDB at all (no data/sources/ridb.json this
+            # time) must not be mistaken for every rental having vanished.
+            ws.run({"ffla": [ffla]})
+            rental = ws.tower_with_key("ffla:f")["rental"]
+            self.assertIs(rental["available"], True)
+            self.assertNotIn("warning", rental)
+        finally:
+            ws.close()
+
 
 class StatusNotes(unittest.TestCase):
     def test_parse(self):

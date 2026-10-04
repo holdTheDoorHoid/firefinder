@@ -2038,12 +2038,29 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
         ridb = [m for m in members if m.source == "ridb"]
         rentals = [m for m in ridb if isinstance(m.raw.get("rental"), dict)]
         rentals.sort(key=lambda m: (m.raw["rental"].get("available") is not True, m.key))
+        old_rental = rec.get("rental")
+        was_ridb = isinstance(old_rental, dict) and old_rental.get("provider") == "recreation.gov"
         if rentals:
             rec["rental"] = copy.deepcopy(rentals[0].raw["rental"])
             rec["rental"].setdefault("checked", headers.get("ridb", {}).get("retrieved"))
             contributed[rentals[0].key].add("rental")
-        elif ridb and isinstance(rec.get("rental"), dict) and rec["rental"].get("provider") == "recreation.gov":
+        elif ridb and was_ridb:
             rec["rental"]["available"] = False
+            rec["rental"].pop("warning", None)
+        elif not ridb and was_ridb and "ridb" in headers:
+            # Never delete a rental: RIDB's own weekly export simply no longer has this
+            # facility (removed, renumbered, or missed by matching this run, not something a
+            # merge can tell apart) -- "ridb" in headers means the export WAS read this run,
+            # so this is a real absence, not a skipped fetch. Leave "available" and "checked"
+            # exactly as they were and say so visibly instead (the page already shows
+            # rental.warning above the booking link, same as the "burned lookout" case below).
+            rec["rental"]["available"] = False
+            rec["rental"]["warning"] = (
+                f"Last confirmed on recreation.gov {old_rental.get('checked') or 'at an earlier refresh'}. "
+                f"The {headers.get('ridb', {}).get('retrieved') or today} refresh no longer finds this "
+                f"facility in RIDB's export -- it may have been delisted or renumbered. Check "
+                f"recreation.gov directly before relying on this listing."
+            )
         else:
             rec.setdefault("rental", None)
 

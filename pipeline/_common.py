@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import html
 import json
+import os
 import re
 import time
 import urllib.error
@@ -24,9 +25,11 @@ from datetime import date, timezone, datetime
 
 USER_AGENT = "FirefinderBot/0.1 (+https://github.com/holdTheDoorHoid/firefinder)"
 
-# Shared raw-cache root. Lives outside the worktree (per task instructions)
-# so every agent's pipeline hits the same cache instead of re-downloading.
-RAW_ROOT = Path("/home/hoid/Desktop/firefinder/data/raw")
+# Shared raw-cache root. Lives outside the worktree (per task instructions) so every agent's
+# pipeline hits the same cache instead of re-downloading. That path only exists on the shared
+# lab machine, so a CI runner (which has no /home/hoid and may not be able to create it) sets
+# FIREFINDER_RAW_ROOT instead -- see .github/workflows/refresh-rentals.yml.
+RAW_ROOT = Path(os.environ.get("FIREFINDER_RAW_ROOT") or "/home/hoid/Desktop/firefinder/data/raw")
 
 
 def today() -> str:
