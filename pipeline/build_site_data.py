@@ -6,8 +6,11 @@ vocabularies (data/vocab.json) and source extract headers (data/sources/*.json),
 web/public/data/:
 
   towers.geojson   every visible lookout as a point, with short property names (below)
-  t/<id>.json      the full canonical record, plus "story_html" when a story exists
+  t/<id>.json      the full canonical record, plus "story_html" when a story exists and
+                   "design_ids" when a standard design is recognised
   meta.json        counts, the source list with credit lines and retrieved dates, build date
+  designs.json     the tower-designs guide: data/designs.json's facts plus the lookouts of
+                   each design and how many lookouts have a recognisable design
 
 A tower's "photos" pass through unchanged: pipeline/merge.py is what fills in file/thumb
 (from data/photos_manifest.json, written by pipeline/mirror_photos.py), and the site resolves
@@ -19,9 +22,17 @@ towers.geojson properties (absent optional keys mean null / false; see meta.json
   i  id            n  name           r  region (state code)
   k  kind          s  status         v  verification       a  access level
   b  built year    rt rentable (1)   rg on a register (1)   o  other names, "|"-joined
-  c  county
+  c  county        y0 first year it stood   y1 year it came down   d  design ids, "|"-joined
 
 Coordinates are [lon, lat] rounded to 5 decimal places.
+
+y0 / y1 drive the map's "Lookouts standing in year ..." view (year_range below). They are left
+out when no event records them; a tower that still stands has no y1. meta.json "history" counts
+how many towers have which dates, so the site can say how many it cannot place in time.
+
+d lists the standard designs (L-4, R-6, Aermotor...) recognised in the tower's design field and
+its sources' type and design fields (pipeline/designs.py). designs.json pairs the guide's facts
+(data/designs.json) with every lookout of each design.
 
 Hidden records (hidden: true) are skipped. Records that fail basic checks are skipped with a
 warning, so one bad file never takes the site down; pass --strict to fail instead.
@@ -35,6 +46,7 @@ Python 3.12, standard library only.
 
 from __future__ import annotations
 
+import auto_summary  # noqa: E402  (pipeline/ is on sys.path when run as a script)
 import argparse
 import datetime as dt
 import html
@@ -45,6 +57,9 @@ import shutil
 import sys
 from collections import Counter
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import designs as design_names  # noqa: E402  (pipeline/designs.py)
 
 REPO = Path(__file__).resolve().parent.parent
 DATA = REPO / "data"
@@ -67,7 +82,74 @@ GEOJSON_FORMAT = {
     "rg": "1 = listed on a register such as NHLR or FFLOS (absent = not listed)",
     "o": "other names joined with | (absent = none)",
     "c": "county, to tell same-named lookouts apart (absent = unknown)",
+    "y0": "first year a lookout is recorded standing here: built, rebuilt, replaced or first staffed (absent = unknown)",
+    "y1": "year it came down: destroyed, burned, removed or abandoned (absent = still standing, or not recorded)",
+    "d": "standard designs recognised (designs.json ids) joined with | (absent = none recognised)",
 }
+
+# Events that show a lookout stood at the site in that year, and events that end it. The
+# owner's rule (DESIGN.md §1, extras): a tower counts as standing in a year if it was built on
+# or before that year and not yet gone.
+START_EVENTS = ("built", "rebuilt", "replaced", "staffed_first")
+END_EVENTS = ("destroyed", "burned", "removed", "abandoned")
+# Statuses that mean the structure stands today, so nothing has ended it yet.
+STANDING_NOW = ("standing", "replica")
+FIRST_PLAUSIBLE_YEAR = 1850
+
+
+def _event_years(rec: dict, names: tuple[str, ...], this_year: int) -> list[int]:
+    return [
+        e["year"]
+        for e in rec.get("events") or []
+        if isinstance(e, dict)
+        and e.get("event") in names
+        and isinstance(e.get("year"), int)
+        and not isinstance(e.get("year"), bool)
+        and FIRST_PLAUSIBLE_YEAR <= e["year"] <= this_year
+    ]
+
+
+def year_range(rec: dict, this_year: int) -> tuple[int | None, int | None]:
+    """(first year it stood, year it came down) from a tower's events and status.
+
+    Start: the earliest built / rebuilt / replaced / first-staffed year. End: for a lookout
+    that does not stand today, the first destroyed / burned / removed / abandoned year after
+    its last (re)build (a "relocated" year ends a site whose structure was moved away). A
+    lookout standing today has no end, whatever happened before a rebuild; an "abandoned"
+    lookout that still stands has not come down. Either value is None when no event records
+    it: unknown, never guessed. Years outside 1850..this year are ignored as typos.
+    """
+    starts = _event_years(rec, START_EVENTS, this_year)
+    start = min(starts) if starts else None
+    if rec.get("status") in STANDING_NOW:
+        return start, None
+    last_start = max(starts) if starts else None
+    ends = [y for y in _event_years(rec, END_EVENTS, this_year) if last_start is None or y >= last_start]
+    if not ends and rec.get("status") == "relocated":
+        ends = [y for y in _event_years(rec, ("relocated",), this_year) if last_start is None or y >= last_start]
+    return start, (min(ends) if ends else None)
+
+
+def history_counts(ranges: list[tuple[int | None, int | None, str]], this_year: int) -> dict:
+    """How many towers can be placed in time. `ranges` holds (start, end, status) per tower."""
+    standing = [r for r in ranges if r[2] in STANDING_NOW]
+    starts = [r[0] for r in ranges if r[0] is not None]
+    return {
+        "this_year": this_year,
+        "total": len(ranges),
+        "with_start": len(starts),
+        "with_end": sum(1 for r in ranges if r[1] is not None),
+        "standing_now": len(standing),
+        # Placed in every year: a start, and either an end or still standing.
+        "complete": sum(1 for r in ranges if r[0] is not None and (r[1] is not None or r[2] in STANDING_NOW)),
+        "start_no_end": sum(1 for r in ranges if r[0] is not None and r[1] is None and r[2] not in STANDING_NOW),
+        "end_no_start": sum(1 for r in ranges if r[0] is None and r[1] is not None),
+        "standing_no_start": sum(1 for r in standing if r[0] is None),
+        # Neither a start nor an end year (standing ones are still placed today, by status).
+        "no_dates": sum(1 for r in ranges if r[0] is None and r[1] is None),
+        "no_dates_not_standing": sum(1 for r in ranges if r[0] is None and r[1] is None and r[2] not in STANDING_NOW),
+        "first_year": min(starts) if starts else None,
+    }
 
 # Credit lines and licence notes for sources we know about. Titles, URLs and retrieved dates
 # from data/sources/<id>.json headers take precedence where present.
@@ -494,7 +576,7 @@ def is_rentable(rec: dict) -> bool:
     return isinstance(r, dict) and r.get("available") is not False
 
 
-def feature(rec: dict) -> dict:
+def feature(rec: dict, this_year: int | None = None, design_ids: list[str] | None = None) -> dict:
     loc = rec["location"]
     props: dict[str, object] = {
         "i": rec["id"],
@@ -517,6 +599,13 @@ def feature(rec: dict) -> dict:
         props["o"] = "|".join(n.replace("|", "/") for n in others)
     if isinstance(rec.get("county"), str) and rec["county"].strip():
         props["c"] = rec["county"].strip()
+    y0, y1 = year_range(rec, this_year or dt.date.today().year)
+    if y0 is not None:
+        props["y0"] = y0
+    if y1 is not None:
+        props["y1"] = y1
+    if design_ids:
+        props["d"] = "|".join(design_ids)
     return {
         "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [round(loc["lon"], 5), round(loc["lat"], 5)]},
@@ -541,7 +630,10 @@ def _prepare_out(out: Path, log: Log) -> None:
     (out / "t").mkdir()
 
 
-def load_source_headers(sources_dir: Path, log: Log) -> dict[str, dict]:
+def load_source_headers(sources_dir: Path, log: Log, design_strings: dict[str, list[tuple[str, str]]] | None = None) -> dict[str, dict]:
+    """Title, URL, licence and retrieved date of every source extract. With `design_strings`,
+    also collects each source record's type and design wording by record key (for
+    designs.tower_designs), e.g. {"ffla:or:...": [("type", "Tower")], "firelookout_com:...": [("design", "L-4")]}."""
     headers: dict[str, dict] = {}
     if not sources_dir.is_dir():
         return headers
@@ -556,6 +648,14 @@ def load_source_headers(sources_dir: Path, log: Log) -> dict[str, dict]:
         if data.get("kind") == "reference":
             continue  # not a list of lookouts (e.g. peaks_gnis.json, credited on the About page)
         sid = data.get("source") or path.stem
+        if design_strings is not None and isinstance(data.get("records"), list):
+            for r in data["records"]:
+                if not isinstance(r, dict) or not isinstance(r.get("key"), str):
+                    continue
+                extra = r.get("extra") if isinstance(r.get("extra"), dict) else {}
+                words = [(f, w.strip()) for f, w in (("type", r.get("type_raw")), ("design", extra.get("design"))) if isinstance(w, str) and w.strip()]
+                if words:
+                    design_strings[r["key"]] = words
         headers[sid] = {
             "title": data.get("title"),
             "url": data.get("url"),
@@ -564,6 +664,81 @@ def load_source_headers(sources_dir: Path, log: Log) -> dict[str, dict]:
             "records": len(data["records"]) if isinstance(data.get("records"), list) else None,
         }
     return headers
+
+
+def tower_design_texts(rec: dict, design_strings: dict[str, list[tuple[str, str]]]) -> tuple[list[str], bool]:
+    """The tower's own design field first, then its sources' type and design wording; and
+    whether any of it is a design field (a type such as FFLA's "Tower" or "Ground" alone says
+    nothing about the plan, so it does not count as a recorded design)."""
+    texts: list[str] = []
+    has_design = False
+    if isinstance(rec.get("design"), str) and rec["design"].strip():
+        texts.append(rec["design"].strip())
+        has_design = True
+    for s in rec.get("sources") or []:
+        if isinstance(s, dict) and isinstance(s.get("key"), str):
+            for field, w in design_strings.get(s["key"], []):
+                has_design = has_design or field == "design"
+                if w not in texts:
+                    texts.append(w)
+    return texts, has_design
+
+
+def design_entry(rec: dict, did: str, texts: list[str]) -> dict:
+    """One lookout in the designs guide: id, name, state, status, kind, and the source's own
+    wording when it says more than the bare design name ("L-4 cab on a 32-foot timber tower")."""
+    entry: dict[str, object] = {"i": rec["id"], "n": rec["name"], "r": rec["region"], "s": rec["status"], "k": rec["kind"]}
+    wording = next((t for t in texts if did in design_names.match_designs(t)), None)
+    bare = design_names.DESIGN_NAMES.get(did, did).lower()
+    if wording and wording.lower().strip(" .") not in (bare, bare.replace("-", ""), did):
+        entry["w"] = wording[:240]
+    if did == "aermotor":
+        models = [m for t in texts for m in design_names.aermotor_models(t)]
+        if models:
+            entry["m"] = sorted(set(models))
+    return entry
+
+
+def write_designs(out: Path, facts_path: Path, towers: dict[str, list[dict]], with_text: int, total: int, log: Log) -> dict:
+    """designs.json for the guide page: the curated facts (data/designs.json) in their order,
+    each with its lookouts, plus coverage counts. Returns the coverage summary for meta.json."""
+    facts: dict = {}
+    if facts_path.is_file():
+        try:
+            facts = json.loads(facts_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as e:
+            log.warn(f"could not read design facts: {e}", facts_path)
+    entries = [d for d in facts.get("designs", []) if isinstance(d, dict) and isinstance(d.get("id"), str)]
+    known = {d["id"] for d in entries}
+    for did in towers:
+        if did not in known:
+            log.warn(f"design {did!r} matched {len(towers[did])} lookouts but has no entry in {facts_path.name}")
+            entries.append({"id": did, "name": design_names.DESIGN_NAMES.get(did, did)})
+    recognised = len({t["i"] for ts in towers.values() for t in ts})
+    designs = []
+    for d in entries:
+        ts = sorted(towers.get(d["id"], []), key=lambda t: (str(t["r"]), str(t["n"]).lower(), str(t["i"])))
+        status = Counter(str(t["s"]) for t in ts)
+        designs.append({**d, "towers": ts, "count": len(ts), "by_status": dict(sorted(status.items()))})
+    coverage = {
+        "total": total,
+        # A design field from the tower or one of its sources, recognised or not.
+        "with_design_text": with_text,
+        "recognised": recognised,
+        "by_design": {d["id"]: d["count"] for d in designs},
+    }
+    _write_json(
+        out / "designs.json",
+        {
+            "title": facts.get("title"),
+            "note": facts.get("note"),
+            "updated": facts.get("updated"),
+            "sources": facts.get("sources", []),
+            "coverage": coverage,
+            "designs": designs,
+        },
+    )
+    return coverage
 
 
 def build(
@@ -577,10 +752,18 @@ def build(
     fixtures: bool = False,
     strict: bool = False,
     log: Log | None = None,
+    designs_path: Path | None = None,
+    this_year: int | None = None,
 ) -> dict:
     log = log or Log()
     files = sorted(towers_dir.rglob("*.json")) if towers_dir.is_dir() else []
     vocab = json.loads(vocab_path.read_text(encoding="utf-8")) if vocab_path.is_file() else {}
+    this_year = this_year or dt.date.today().year
+    design_strings: dict[str, list[tuple[str, str]]] = {}
+    headers = load_source_headers(sources_dir, log, design_strings)
+    design_towers: dict[str, list[dict]] = {}
+    with_design_text = 0
+    ranges: list[tuple[int | None, int | None, str]] = []
 
     _prepare_out(out, log)
     features: list[dict] = []
@@ -622,8 +805,20 @@ def build(
         if story.is_file():
             rec["story_html"] = markdown_to_html(story.read_text(encoding="utf-8"), title=rec.get("name"))
             stories += 1
+        else:
+            # A plain summary written from the record alone, labelled as such on the page.
+            rec["auto_summary"] = auto_summary.summarize(rec)
+        texts, has_design = tower_design_texts(rec, design_strings)
+        with_design_text += has_design
+        dids = design_names.tower_designs(texts)
+        if dids:
+            rec["design_ids"] = dids
+            for did in dids:
+                design_towers.setdefault(did, []).append(design_entry(rec, did, texts))
         _write_json(out / "t" / f"{rid}.json", rec)
-        features.append(feature(rec))
+        feat = feature(rec, this_year, dids)
+        features.append(feat)
+        ranges.append((feat["properties"].get("y0"), feat["properties"].get("y1"), rec["status"]))
         counts["status"][rec["status"]] += 1
         counts["kind"][rec["kind"]] += 1
         counts["region"][rec["region"]] += 1
@@ -640,7 +835,7 @@ def build(
     features.sort(key=lambda f: f["properties"]["i"])
     _write_json(out / "towers.geojson", {"type": "FeatureCollection", "features": features})
 
-    headers = load_source_headers(sources_dir, log)
+    designs_meta = write_designs(out, designs_path if designs_path is not None else DATA / "designs.json", design_towers, with_design_text, len(features), log)
     source_ids = list(KNOWN_SOURCES) + sorted((set(headers) | set(cited)) - set(KNOWN_SOURCES))
     sources = []
     for sid in source_ids:
@@ -675,14 +870,23 @@ def build(
             "by_region": dict(sorted(counts["region"].items())),
             "by_verification": dict(sorted(counts["verification"].items())),
         },
+        "history": history_counts(ranges, this_year),
+        "designs": designs_meta,
         "sources": sources,
         "format": {"towers.geojson": GEOJSON_FORMAT},
     }
     _write_json(out / "meta.json", meta)
     size = (out / "towers.geojson").stat().st_size
+    hist = meta["history"]
     log.info(
         f"Wrote {len(features)} lookouts ({hidden} hidden, {skipped} skipped, {stories} stories) "
         f"to {out}; towers.geojson is {size / 1024:.0f} KiB"
+    )
+    log.info(
+        f"Dates: {hist['with_start']} with a start year, {hist['with_end']} with an end year, "
+        f"{hist['no_dates']} with neither ({hist['standing_no_start']} of the standing ones have no start year). "
+        f"Designs: {designs_meta['recognised']} lookouts with a recognisable design, "
+        f"{designs_meta['with_design_text'] - designs_meta['recognised']} more with design wording we could not match."
     )
     return meta
 

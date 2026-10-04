@@ -788,7 +788,7 @@ class ResearchOverlay(unittest.TestCase):
         errs, _ = V.check_story(story, data)
         self.assertTrue(any("[^3] has no definition" in e for e in errs))
         self.assertTrue(any("[^3] has no matching source" in e for e in errs))
-        self.assertEqual(V.check_story("Built.[^1]\n\n[^1]: NHLR.\n", data)[0], [])
+        self.assertEqual(V.check_story("Built.[^1]\n\n[^1]: NHLR, http://nhlr.org/x/.\n", data)[0], [])
 
 
 class PackedDMS(unittest.TestCase):

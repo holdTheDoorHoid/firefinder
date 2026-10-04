@@ -154,6 +154,29 @@ export function eventLabel(code: string): string {
   return EVENT[code] ?? code.replace(/_/g, ' ');
 }
 
+/**
+ * Standard lookout designs recognised by the pipeline (pipeline/designs.py DESIGN_NAMES; the
+ * guide's own names and facts come from designs.json). test/vocab-and-search checks the two
+ * lists match.
+ */
+export const DESIGN_NAMES: Record<string, string> = {
+  l4: 'L-4',
+  l5: 'L-5',
+  l6: 'L-6',
+  r6: 'R-6',
+  d6: 'D-6',
+  d1: 'D-1',
+  cupola: 'Cupola house',
+  r5_lookouts: 'California (Region 5) plan',
+  aermotor: 'Aermotor',
+  ideco: 'IDECO',
+  other_steel: 'Other steel maker',
+};
+
+export function designName(id: string): string {
+  return DESIGN_NAMES[id] ?? id;
+}
+
 /** Values offered as map filters, in display order. */
 export const STATUS_ORDER = ['standing', 'gone', 'ruins', 'relocated', 'replica', 'unknown'];
 export const KIND_ORDER = ['tower', 'enclosed_tower', 'platform', 'ground', 'two_story', 'three_story', 'unknown'];

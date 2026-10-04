@@ -325,6 +325,9 @@ def check_story(md: str, research: dict | None) -> tuple[list[str], list[str]]:
         for label in sorted(set(refs) | set(defs), key=str):
             if label not in numbers:
                 errs.append(f"footnote [^{label}] has no matching source {label} in the research file")
+    for label, body in re.findall(r"^\[\^([^\]\s]+)\]:\s*(.*)$", md, re.M):
+        if not re.search(r"https?://", body):
+            errs.append(f"footnote [^{label}] has no http(s) link")
     if not refs:
         warns.append("story has no footnotes")
     return errs, warns

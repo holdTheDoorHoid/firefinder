@@ -1,6 +1,7 @@
 {
   "id": "us-mt-double-arrow",
   "name": "Double Arrow Lookout",
+  "summary": "A 1930s L-4 lookout near Seeley Lake, staffed into the 1980s, now an NRHP-listed Recreation.gov rental overlooking the Swan Mountains.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 1489.9,
   "kind": "tower",
-  "design": "L-4",
+  "design": "L-4 cab with catwalk atop a 20-foot slanting pole tower; 14x14 ft cabin",
   "height_m": 6.1,
   "status": "standing",
   "status_note": null,
@@ -31,20 +32,20 @@
       "url": "https://npgallery.nps.gov/AssetDetail/NRIS/100002041"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Lolo National Forest",
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Open to the public as a Recreation.gov rental; access road is steep dirt/gravel, high-clearance vehicle recommended"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2026"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "Reached by vehicle via a steep dirt and gravel access road; no hiking trail noted"
   },
   "rental": {
     "available": true,
@@ -62,16 +63,43 @@
   },
   "events": [
     {
+      "year": 1932,
+      "event": "built",
+      "note": "National Historic Lookout Register gives 1932 as the build year",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/double-arrow-lookout/"
+    },
+    {
       "year": 1933,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Recreation.gov and firelookout.com both give 1933 instead; sources disagree by one year",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/233240",
+      "source_urls": [
+        "https://www.recreation.gov/camping/campgrounds/233240",
+        "https://www.firelookout.com/mt/doublearrow.html"
+      ]
+    },
+    {
+      "year": 1985,
+      "event": "staffed_last",
+      "note": "Recreation.gov says staffed by Forest Service employees until the mid-1980s, when it opened for recreation",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/233240"
+    },
+    {
+      "year": 1989,
+      "event": "staffed_last",
+      "note": "NHLR instead says the tower has been used only on an emergency basis since 1989",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/double-arrow-lookout/"
     },
     {
       "year": 1996,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: February 26, 1996",
-      "from": "nhlr"
+      "note": "Added to the National Historic Lookout Register February 26, 1996",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/double-arrow-lookout/"
     }
   ],
   "photos": [
@@ -217,10 +245,32 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-double-arrow",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

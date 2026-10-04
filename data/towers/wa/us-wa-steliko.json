@@ -1,6 +1,7 @@
 {
   "id": "us-wa-steliko",
   "name": "Steliko Lookout",
+  "summary": "An L-4 cab built in 1947 on a Wenatchee National Forest lookout camp first used in 1925, now rented overnight through Recreation.gov.",
   "other_names": [
     "Steliko Point"
   ],
@@ -15,7 +16,7 @@
   },
   "elevation_m": 786.7,
   "kind": "tower",
-  "design": "L-4",
+  "design": "L-4 ground cab, 10 ft square",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -27,20 +28,20 @@
       "url": "http://nhlr.org/lookouts/us/wa/steliko-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Okanogan-Wenatchee National Forest)",
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Overnight rental via Recreation.gov; reached by Forest Road 5310, 1.5 miles."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "1.5 mi on FS Road 5310, snow-free roughly mid-April to mid-November; otherwise foot, ski or snowshoe."
   },
   "rental": {
     "available": true,
@@ -58,16 +59,39 @@
   },
   "events": [
     {
+      "year": 1925,
+      "event": "staffed_first",
+      "note": "Site used as a Forest Service lookout camp before the current cab was built",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wa/steliko.html"
+    },
+    {
       "year": 1947,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Current 10-foot L-4 cab",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wa/steliko.html"
+    },
+    {
+      "year": 1990,
+      "event": "staffed_last",
+      "note": "Rental listing says the Forest Service used it until the 1990s",
+      "from": "research",
+      "source_url": "https://www.recreation.gov/camping/campgrounds/10132083"
+    },
+    {
+      "year": 2011,
+      "event": "other",
+      "note": "NHLR volunteer visit found it apparently abandoned: broken shutters, power line removed, no sign of recent use",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/steliko-lookout/"
     },
     {
       "year": 2015,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 3, 2015",
-      "from": "nhlr"
+      "note": "Registered January 3, 2015, nominated by Bob and Susan Adler",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/steliko-lookout/"
     }
   ],
   "photos": [
@@ -198,10 +222,30 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-steliko",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

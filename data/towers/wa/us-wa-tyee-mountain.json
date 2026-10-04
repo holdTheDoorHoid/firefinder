@@ -1,6 +1,7 @@
 {
   "id": "us-wa-tyee-mountain",
   "name": "Tyee Mountain Lookout",
+  "summary": "An L-4 groundhouse built in the 1950s (replacing a 1931 cab) in Washington's Okanogan-Wenatchee National Forest, famous for reporting the 1994 Tyee Fire; now a rough-access volunteer-maintained rental, closed for 2026 due to nearby wildfires.",
   "other_names": [
     "Tyee Lookout"
   ],
@@ -15,7 +16,7 @@
   },
   "elevation_m": 1984.6,
   "kind": "ground",
-  "design": "L-4",
+  "design": "Hip-roof L-4, 14x14 ft (NHLR) / listed as 16x16 ft cabin (Recreation.gov) groundhouse with catwalk",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -37,16 +38,16 @@
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Forest Service rental via Recreation.gov, but requires 4WD high-clearance vehicle or ~4-mile hike; closed for 2026 season due to wildfires"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "Final 3.6 miles of access road (FS 5713) are narrow, steep, sandy, with two rock ledges; alternative is a roughly 4-mile walk"
   },
   "rental": {
     "available": true,
@@ -64,16 +65,45 @@
   },
   "events": [
     {
+      "year": 1931,
+      "event": "built",
+      "note": "An earlier L-4 cab on the same site, per firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wa/tyee.html"
+    },
+    {
       "year": 1950,
       "event": "built",
       "note": null,
       "from": "firelookout_com"
     },
     {
+      "year": 1952,
+      "event": "replaced",
+      "note": "NHLR dates the current hip-roof L-4 groundhouse to 1952",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/tyee-mountain-lookout/"
+    },
+    {
+      "year": 1994,
+      "event": "fire",
+      "note": "Tyee Fire started as a lightning strike reported by the lookout; burned ~180,000 acres over weeks, destroyed 22 homes and the lookout's outhouse",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/tyee-mountain-lookout/"
+    },
+    {
       "year": 1995,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 1, 1995",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, July 1, 1995",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/tyee-mountain-lookout/"
+    },
+    {
+      "year": 2013,
+      "event": "closed",
+      "note": "Entiat RD Fire Management Officer reported lightning protection system out of code; no budget to upgrade, no plans to use Tyee for fire detection (per Feb 8, 2013 report by Ken Jones)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/tyee-mountain-lookout/"
     }
   ],
   "photos": [
@@ -265,6 +295,21 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-tyee-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -284,7 +329,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

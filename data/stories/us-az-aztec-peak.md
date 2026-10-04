@@ -1,0 +1,11 @@
+Aztec Peak is the highest point in the Sierra Ancha,[^2] and a steel tower there has watched for smoke since 1956, replacing an earlier wooden lookout, a D-6 cupola groundhouse built around 1925 on the same summit.[^1] The current structure is a steel tower topped with a flat-roofed, 14-by-14-foot CL-100 cab, roughly 41 feet off the ground.[^1][^2] It stands on the Tonto National Forest, in rough, cut-up terrain south of the Mogollon Rim, at 7,728 feet.[^1][^2]
+
+The tower's most famous occupant never ran a fire crew or built a trail. Edward Abbey, the writer who later made his name with *Desert Solitaire* and *The Monkey Wrench Gang*, worked two seasons as the lookout at Aztec Peak and wrote about the place afterward.[^3] The Forest Service still marks the connection: the trail leading toward the tower is named Abbey's Way.[^3]
+
+Aztec Peak Lookout was formally added to the National Historic Lookout Register on November 27, 1996, nominated by the district ranger, as US 192 (Arizona's second entry).[^1] As of the most recent register visit report, in 2013, the tower was staffed and in good condition — stairs sound, glass intact.[^1] The lookout's register entry still describes it as in active service.[^1]
+
+Getting close to it today means a backcountry drive: Forest Road 487 runs toward the lookout but is gated roughly half a mile short of the trailhead, and even where it's open, the upper stretch often calls for a high-clearance vehicle.[^3][^2] The surrounding Sierra Ancha Wilderness, which reaches up to the mountain's high slopes, is closed to motorized travel, so the lookout sits right at that boundary between road access and protected backcountry.[^2] Afternoon monsoon thunderstorms are a real hazard on this exposed summit, and there is no suggestion the tower is open for public overnight rental — it remains a working fire lookout on federal land, not a visitor cabin.
+
+[^1]: Aztec Peak Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/az/aztec-peak-lookout/ (accessed 2026-10-04).
+[^2]: Aztec Peak, Mountain Field Guide, https://mountainfieldguide.com/aztec-peak/ (accessed 2026-10-04).
+[^3]: Abbey's Way 151, Tonto National Forest, U.S. Forest Service, https://www.fs.usda.gov/r03/tonto/recreation/abbeys-way-151 (accessed 2026-10-04).

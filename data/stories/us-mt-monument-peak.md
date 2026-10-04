@@ -1,0 +1,11 @@
+Monument Peak Lookout went up in 1936, built by the Civilian Conservation Corps on the summit of Monument Peak in what is now the Lewis & Clark National Forest.[^1][^2] It was a 14-by-14-foot L-4 cab — one of the Forest Service's standard lookout cabin designs — set on a 50-foot pole tower, with a catwalk running around the outside.[^1] Firelookout.com describes it as the only example of that particular pole-tower type left standing in Montana.[^3]
+
+The lookout served its fire-spotting purpose for decades. Sources differ slightly on when staffing ended: the National Historic Lookout Register says the lookout remained active until 1999, when it became structurally unstable, while the Forest Service's own recreation.gov listing says it had already sat unused since the 1970s.[^1][^2] Either way, by 1999 the cab had been taken down off its tall pole and placed on the ground for restoration.[^1][^2][^3]
+
+Rather than restoring the tower to its original height, the Forest Service rebuilt the cab on a short, solid foundation, keeping the structure at ground level. The restored lookout was rededicated in July 2005 and entered into the Forest Service's recreation rental program as a ground facility.[^1] It was added to the National Historic Lookout Register that same year.
+
+Today Monument Peak Lookout is rented out seasonally, from June 1 through November 30, through recreation.gov.[^2] Getting there takes a high-clearance vehicle, since the final two miles of road are rough and rocky and can turn muddy and slick in wet weather.[^2] Inside, the rustic cabin has two beds, a propane stove and lanterns, and a table and chairs; there's no running water, electricity, or plumbing, and a vault toilet sits about 100 feet away.[^2] The cabin sleeps two, though up to two tents are permitted at the site for additional guests, for a six-person limit overall.[^2]
+
+[^1]: Monument Peak Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/mt/monument-peak-lookout/ (accessed 2026-10-04).
+[^2]: Monument Peak Lookout, Recreation.gov, https://www.recreation.gov/camping/campgrounds/234428 (accessed 2026-10-04).
+[^3]: Monument Peak Fire Lookout Tower, firelookout.com, https://www.firelookout.com/mt/monumentpk.html (accessed 2026-10-04).

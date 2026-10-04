@@ -1,0 +1,8 @@
+Tennessee's network of fire lookout towers grew out of the same alarm that reshaped firefighting nationwide: the Great Fire of 1910, a three-million-acre burn in the northwest, pushed states to start watching their forests from above.[^1] The Civilian Conservation Corps took up the work in Tennessee starting in 1933, and by 1941 the CCC had put up 98 lookout towers across the state, part of a national total that reached roughly 8,000 by 1940.[^1] Tennessee's own first fire tower went up at Cagle.[^1]
+
+Where the White House tower fits into that build-out isn't recorded in the sources available here. What is recorded is its place in the state system: a 1976 list of Tennessee Division of Forestry towers numbered each site by district and position within that district, and White House carries the number "6-2" in that scheme, putting it as the second tower listed for the sixth district.[^1][^2] The tower stands in Sumner County at an elevation of 932 feet, near 36.4372, -86.6133, and the same register that supplies that number records it as still standing.[^2]
+
+Who built the White House tower, when, and in what design; whether it was ever staffed and by whom; and what condition it's in today are all unknown from the sources checked. Nothing here indicates public access, so no one should assume it can be climbed or visited.
+
+[^1]: Tennessee lookout towers, tnlandforms.us (Tom Dunigan), https://tnlandforms.us/towers/ (accessed 2026-10-04).
+[^2]: TN lookout tower: SRT002 White House, tnlandforms.us (Tom Dunigan), https://tnlandforms.us/towers/m.php?wpt=SRT002 (accessed 2026-10-04).

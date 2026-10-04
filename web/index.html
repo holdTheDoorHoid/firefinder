@@ -43,6 +43,10 @@
     <div class="map-status">
       <p class="count-chip" id="count" role="status" aria-live="polite">Loading lookouts…</p>
       <button type="button" class="btn btn-chip" id="reset-map" data-reset-filters hidden>Reset filters</button>
+      <button type="button" class="btn btn-chip btn-years" id="open-years" aria-pressed="false" title="Lookouts standing in any year from 1900 to today">
+        <svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7.4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10 5.6V10l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Then &amp; now</span>
+      </button>
       <button type="button" class="btn btn-filters" id="open-filters" aria-controls="filters" aria-expanded="false">
         <svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 5h14M6 10h8M8.5 15h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         Filters<span class="filter-count" id="filter-count"></span>

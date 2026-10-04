@@ -8,9 +8,15 @@
  *
  *   &vs=us-id-pilot-peak,us-id-sheep-mountain&vr=40
  *
+ * History: the year view ("Lookouts standing in 1935", dimmed incomplete dates), the old topo
+ * maps (era and opacity) and the design filter:
+ *
+ *   &yr=1935&yrm=1    &base=old&era=oldest&op=60    &design=l4
+ *
  * Defaults are left out, so a plain visit has a clean URL. Unknown or malformed values are
  * dropped rather than causing an error.
  */
+import { isEra, type Era } from '../history/oldtopo/sheets.ts';
 import { MARKS, isTowerId, type Mark } from './checklist.ts';
 import { defaultFilters, type Filters } from './filters.ts';
 import { KIND_ORDER, STATUS_ORDER, VERIFICATION_ORDER } from './vocab.ts';
@@ -21,7 +27,7 @@ export interface View {
   lon: number;
 }
 
-export type Basemap = 'map' | 'topo';
+export type Basemap = 'map' | 'topo' | 'old';
 
 export interface AppState {
   filters: Filters;
@@ -32,14 +38,26 @@ export interface AppState {
   seen: string[];
   /** Viewshed radius, km (null = the default). */
   seenKm: number | null;
+  /** Old topo maps: which era's sheets go on top, and how opaque (0..1). */
+  era: Era;
+  oldOpacity: number;
+  /** Year view: the year, or null when off; and whether incomplete dates show dimmed. */
+  year: number | null;
+  yearMaybe: boolean;
 }
+
+export const DEFAULT_ERA: Era = 'lookouts';
+export const DEFAULT_OLD_OPACITY = 0.85;
+/** Years the year view accepts (its slider runs from 1900 to the current year). */
+export const YEAR_MIN = 1850;
+export const YEAR_MAX = 2100;
 
 /** Radii offered for "What it could see", km. */
 export const SEEN_RADII_KM = [20, 40, 60] as const;
 export const SEEN_MAX = 12;
 
 export function defaultState(): AppState {
-  return { filters: defaultFilters(), view: null, selected: null, basemap: 'map', seen: [], seenKm: null };
+  return { filters: defaultFilters(), view: null, selected: null, basemap: 'map', seen: [], seenKm: null, era: DEFAULT_ERA, oldOpacity: DEFAULT_OLD_OPACITY, year: null, yearMaybe: false };
 }
 
 /** "none" encodes a deliberately empty selection (every box unticked). */
@@ -95,7 +113,17 @@ export function parseState(search: string): AppState {
   state.view = parseView(q.get('at'));
   const t = q.get('t');
   state.selected = isTowerId(t) ? t : null;
-  state.basemap = q.get('base') === 'topo' ? 'topo' : 'map';
+  const base = q.get('base');
+  state.basemap = base === 'topo' || base === 'old' ? base : 'map';
+  const era = q.get('era');
+  state.era = isEra(era) ? era : DEFAULT_ERA;
+  const op = Number(q.get('op'));
+  state.oldOpacity = q.get('op') !== null && Number.isFinite(op) && op >= 10 && op <= 100 ? Math.round(op) / 100 : DEFAULT_OLD_OPACITY;
+  const yr = Number(q.get('yr'));
+  state.year = q.get('yr') && Number.isInteger(yr) && yr >= YEAR_MIN && yr <= YEAR_MAX ? yr : null;
+  state.yearMaybe = state.year !== null && q.get('yrm') === '1';
+  const design = q.get('design') ?? '';
+  f.design = /^[a-z0-9_]{1,40}$/.test(design) ? design : null;
   state.seen = [...new Set((q.get('vs') ?? '').split(',').filter((id) => isTowerId(id)))].slice(0, SEEN_MAX);
   const km = Number(q.get('vr'));
   state.seenKm = (SEEN_RADII_KM as readonly number[]).includes(km) ? km : null;
@@ -118,7 +146,12 @@ export function serializeState(state: AppState): string {
   if (f.registered) q.set('reg', '1');
   if (f.region) q.set('state', f.region);
   if (f.mine && f.mine.size) q.set('mine', MARKS.filter((m) => f.mine!.has(m)).join(','));
-  if (state.basemap === 'topo') q.set('base', 'topo');
+  if (f.design) q.set('design', f.design);
+  if (state.basemap !== 'map') q.set('base', state.basemap);
+  if (state.basemap === 'old' && state.era !== DEFAULT_ERA) q.set('era', state.era);
+  if (state.basemap === 'old' && Math.round(state.oldOpacity * 100) !== Math.round(DEFAULT_OLD_OPACITY * 100)) q.set('op', String(Math.round(state.oldOpacity * 100)));
+  if (state.year !== null) q.set('yr', String(state.year));
+  if (state.year !== null && state.yearMaybe) q.set('yrm', '1');
   if (state.seen.length) q.set('vs', state.seen.join(','));
   if (state.seen.length && state.seenKm !== null) q.set('vr', String(state.seenKm));
   const s = q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/');

@@ -1,0 +1,12 @@
+Spyglass Peak, in the Coeur d'Alene National Forest, has watched for fire since 1911, when it was first used as a patrol point.[^1] By the 1920s the Forest Service had built it up: a 20-foot platform tower, a log cabin, and a barn went up in 1922, and in 1930 those were replaced by a 50-foot pole tower with a 7-by-7-foot cab.[^2][^3] In 1943 a gable-roofed L-4 cabin was moved in from another site, McDonald Peak, to serve as living quarters on the ground; it was later used for storage and its support structure still stands today.[^3][^1] The lookout tower most people picture at Spyglass came in 1950: a 53-foot timber tower fitted with an L-4 cab built to the Forest Service's standard 1936 design.[^1]
+
+Lookouts staffed Spyglass for decades. Recorded personnel include John Fertakis in 1946, the Wayne McCormick family in 1951, George Wilson in 1959, and Bob and Kris Anderson, who staffed the site from 1972 to 1976.[^2][^3] The tower's full-time staffing ended by the late 1960s, and it was shifted to emergency-staffed status in 1978, the last year it was staffed at all.[^1][^4]
+
+The 1950 tower did not survive intact. After being left standing but unused for years, restoration work began on the separate ground cabin in 2012 while the tower itself was left as a ruin; in July 2014 the tower's cab partially collapsed and had to be removed in an emergency operation, leaving only the 53-foot support structure.[^2][^4] The ground house restoration was completed in 2019.[^4]
+
+Today Spyglass's ground house, not the tower, is what visitors can stay in. It is fully restored and offered through the Forest Service's recreation rental program, sleeping up to four guests, with a wood stove and a combination-locked gate and cabin for access.[^4] The site also still has a 1930s Civilian Conservation Corps-built outhouse.[^4] Access is public via recreation.gov booking; the old tower structure itself should not be climbed.
+
+[^1]: Spyglass Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/id/spyglass-lookout/ (accessed 2026-10-04).
+[^2]: Spyglass Peak Fire Lookout Tower, Fire Lookout (firelookout.com), https://www.firelookout.com/id/spyglasspk.html (accessed 2026-10-04).
+[^3]: Spyglass Ground House, Idaho Fire Lookouts, https://www.idahofirelookouts.com/cda-region/spyglass-ground-house/ (accessed 2026-10-04).
+[^4]: Spyglass Lookout Ground House, Recreation.gov, https://www.recreation.gov/camping/campgrounds/10007160 (accessed 2026-10-04).

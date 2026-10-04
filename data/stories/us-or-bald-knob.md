@@ -1,0 +1,13 @@
+Bald Knob sits above the South Fork Coquille River on the Siskiyou National Forest in Coos County, Oregon, and people have kept watch from it for well over a century.[^1][^3] The first structure went up in 1914, when Guard T.D. Land built a shelter, installed a map and sighting device, and cut a trail to connect with the Coquille River Trail.[^2] Materials for that first shelter ran just 25 cents, spent entirely on nails.[^2] Within weeks it was already doing its job: in August 1914 the lookout reported thirteen fires, twelve of them outside the forest boundary.[^2]
+
+Bald Knob was staffed on and off for decades after that, usually by a single guard who also strung and repaired the telephone line down the mountain. Oregon's first female forest-service lookout worked right there: a July 1917 item in a Curry County newspaper reported that Martha Price of Illahe had been "appointed fire lookout" on Bald Knob itself, and the Price family held various Siskiyou lookout posts for years.[^2] The job had its hazards and its tedium in equal measure — guards fought cougars, chased down smoke through gaps in haze, and got cabin fever waiting on the mountain.[^2]
+
+The lookout took on a second life during World War II. Beginning September 29, 1942, Bald Knob operated as Aircraft Warning Service station "George 6-3," reporting to the Roseburg Filter Center; the AWS used the existing Forest Service facilities rather than building anything new.[^1][^2] When that service ended, the Forest Service kept the site for fire detection.[^2]
+
+The original cabin didn't survive into the modern era: the Columbus Day Storm of October 1962 badly damaged the lookout house, and the following year crews replaced it with the structure that stands today — a 20-foot wood tower topped by an R-6 flat-roofed cab.[^1][^2] It was staffed into at least the early 1970s; a 1972 newspaper item placed newlyweds Everett and Sue Deniston at the Bald Knob lookout that September.[^2]
+
+Bald Knob was added to the National Historic Lookout Register on May 11, 2022, as US 1572.[^1] Today the Forest Service rents the cabin out through Recreation.gov, though the site has no water and, as of this writing, no propane heat, stove, or lights due to vandalism and winter storm damage, with repairs expected by the 2026 season.[^3]
+
+[^1]: Bald Knob Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/or/bald-knob-lookout/ (accessed 2026-10-04).
+[^2]: Bald Knob, Oregon Lookouts, https://oregonlookouts.weebly.com/bald-knob.html (accessed 2026-10-04).
+[^3]: Bald Knob Lookout, Recreation.gov, https://www.recreation.gov/camping/campgrounds/234155 (accessed 2026-10-04).

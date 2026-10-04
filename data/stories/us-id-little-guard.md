@@ -1,0 +1,12 @@
+Little Guard Lookout sits on a summit in the Coeur d'Alene National Forest, about nine miles north of Shoshone Camp in Idaho's panhandle.[^1][^2] The structure standing there today is actually the third fire-watch building on the site. The first was a simple frame cabin built on Guard Peak in 1919.[^2] A decade later, in 1929, the Forest Service replaced it with a cupola-style cabin and crow's-nest about a mile northwest, on Downey Peak.[^2][^3] The current two-story cabin, a 14-by-14-foot live-in L-4 structure on a 10-foot concrete block base, was built on the south summit; the Forest Service's own historic register gives 1956 for that construction, while other lookout researchers date it to 1957, so the exact year is uncertain.[^1][^3][^2]
+
+The tower was staffed for decades by Forest Service lookouts, and researchers have pieced together a long list of names, starting with Frank "Mac" McPherson in 1918-1919 and running through staff such as Rex Brown, several married couples who worked the post together, and Jennifer Domijan in 1975.[^2] By 1977 the lookout had been shifted to emergency-staffed status, used only as needed rather than continuously, and it continued to be maintained and occasionally staffed by the Wallace Ranger District into the 1990s.[^1][^3]
+
+Little Guard holds a particular distinction in Idaho lookout history: in October 1990 it became the first lookout in the state listed on the National Historic Lookout Register.[^3][^2]
+
+Today the lookout is no longer staffed for fire detection but survives intact and is one of the more sought-after rentals in the Forest Service's northern Idaho cabin program.[^2] It sleeps up to four people with a mix of a single bed and fold-up cots, has a propane stove, refrigerator and heater, but no running water or electricity, and sits near the Shoshone Ridge Trail at an elevation of about 6,031 feet.[^4] Access is public via recreation.gov booking.
+
+[^1]: Little Guard Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/id/little-guard-lookout/ (accessed 2026-10-04).
+[^2]: Little Guard Lookout, Idaho Fire Lookouts, https://www.idahofirelookouts.com/cda-region/little-guard-lookout/ (accessed 2026-10-04).
+[^3]: Little Guard Peak Lookout, Fire Lookout, https://www.firelookout.com/id/littleguard.html (accessed 2026-10-04).
+[^4]: Little Guard Lookout, Recreation.gov, https://www.recreation.gov/camping/campgrounds/234435 (accessed 2026-10-04).
