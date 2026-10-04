@@ -38,7 +38,7 @@ export interface OldTopoOptions {
 }
 
 function oldAttribution(base: string): string {
-  return `Old maps: <a href="https://www.usgs.gov/programs/national-geospatial-program/historical-topographic-maps-preserving-past" target="_blank" rel="noopener">USGS Historical Topographic Map Collection</a> (<a href="${base}about/#sources">credits</a>)`;
+  return `Old maps: <a href="https://www.usgs.gov/programs/national-geospatial-program/historical-topographic-maps-preserving-past" target="_blank" rel="noopener">USGS</a> (<a href="${base}about/#sources">credits</a>)`;
 }
 
 const ICON_PX = 24;

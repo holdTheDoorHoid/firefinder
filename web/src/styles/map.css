@@ -325,4 +325,9 @@ p.panel-stay { margin: 14px 0; }
   .ff-oldtopo { width: min(240px, calc(100vw - 32px)); }
   .ff-basemap button { padding: 0 7px; font-size: 0.75rem; }
   .btn-years { min-height: 42px; }
+  /* With the year view open its card says the count, so the chip makes way for the buttons. */
+  .app:has(.years-card:not([hidden])) .count-chip { display: none; }
+  .years-jumps { gap: 4px; }
+  .years-jump { padding: 3px 8px; min-height: 32px; }
+  .years-maybe { font-size: 0.82rem; }
 }

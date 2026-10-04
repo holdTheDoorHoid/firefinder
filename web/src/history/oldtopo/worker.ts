@@ -212,6 +212,7 @@ function loadTiles(sheet: Sheet, prep: Prepared, level: number, indices: number[
 
 /* ---------- Drawing one map tile ---------- */
 
+const running = new Set<number>();
 const cancelled = new Set<number>();
 
 function overviewFor(prep: Prepared, outMetres: number): number {
@@ -402,17 +403,19 @@ async function sheetsInView(bbox: [number, number, number, number], zoom: number
 self.onmessage = async (e: MessageEvent) => {
   const m = e.data;
   if (m?.type === 'abort') {
-    cancelled.add(m.id);
+    if (running.has(m.id)) cancelled.add(m.id);
     return;
   }
   const era: Era = isEra(m?.era) ? m.era : 'lookouts';
   if (m?.type === 'tile') {
+    running.add(m.id);
     try {
       const bitmap = await renderTile(m.id, m.z, m.x, m.y, era);
       self.postMessage({ type: 'tile', id: m.id, bitmap, failures: { index: indexFailures, sheets: sheetFailures } }, bitmap ? [bitmap] : []);
     } catch (err) {
       self.postMessage({ type: 'tile', id: m.id, bitmap: null, error: String((err as Error)?.message ?? err), failures: { index: indexFailures, sheets: sheetFailures } });
     } finally {
+      running.delete(m.id);
       cancelled.delete(m.id);
     }
   } else if (m?.type === 'inview') {
