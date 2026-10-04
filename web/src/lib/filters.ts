@@ -16,10 +16,17 @@ export interface Filters {
   region: string | null;
   /** Show only towers with any of these checklist marks; null = no checklist filter. */
   mine: Set<Mark> | null;
+  /** A design id from designs.json ("l4"), "any" for any recognised design, or null. */
+  design: string | null;
 }
 
 export function defaultFilters(): Filters {
-  return { status: null, kind: null, verification: null, rentable: false, registered: false, region: null, mine: null };
+  return { status: null, kind: null, verification: null, rentable: false, registered: false, region: null, mine: null, design: null };
+}
+
+/** The design ids of a map point ("l4|r6" -> ["l4", "r6"]). */
+export function designIds(p: Pick<TowerProps, 'd'>): string[] {
+  return p.d ? p.d.split('|') : [];
 }
 
 /** Minimal view of the checklist the filter needs (lets tests pass a stub). */
@@ -34,6 +41,7 @@ export function matches(p: TowerProps, f: Filters, checklist?: ChecklistLookup |
   if (f.rentable && !p.rt) return false;
   if (f.registered && !p.rg) return false;
   if (f.region && p.r !== f.region) return false;
+  if (f.design && (f.design === 'any' ? !p.d : !designIds(p).includes(f.design))) return false;
   if (f.mine && f.mine.size > 0) {
     if (!checklist || !checklist.hasAny(p.i, f.mine)) return false;
   }
@@ -57,6 +65,7 @@ export function activeFilterCount(f: Filters): number {
   if (f.rentable) n++;
   if (f.registered) n++;
   if (f.region) n++;
+  if (f.design) n++;
   if (f.mine && f.mine.size) n++;
   return n;
 }

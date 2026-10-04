@@ -4,11 +4,11 @@
  */
 import { MARKS, MARK_LABELS, type Mark } from '../lib/checklist.ts';
 import { formatCount } from '../lib/format.ts';
-import { facetCounts, isSelected, matches, toggleValue, type Facet, type Filters, type ChecklistLookup } from '../lib/filters.ts';
+import { designIds, facetCounts, isSelected, matches, toggleValue, type Facet, type Filters, type ChecklistLookup } from '../lib/filters.ts';
 import { html, raw, type SafeHtml } from '../lib/html.ts';
 import { markerSvg, rentBadgeSvg, shapeFor, fillFor } from '../lib/icons.ts';
 import type { TowerFeature } from '../lib/types.ts';
-import { KIND, KIND_ORDER, STATUS_ORDER, VERIFICATION, VERIFICATION_ORDER, regionName } from '../lib/vocab.ts';
+import { DESIGN_NAMES, KIND, KIND_ORDER, STATUS_ORDER, VERIFICATION, VERIFICATION_ORDER, designName, regionName } from '../lib/vocab.ts';
 import { mapKey } from '../render/site.ts';
 
 export interface FilterPanelDeps {
@@ -48,6 +48,8 @@ function multiFieldset(facet: Facet, legend: string, body: SafeHtml, help?: stri
 
 export function renderFilterPanel(d: FilterPanelDeps): () => void {
   const regions = [...new Set(d.features().map((f) => f.properties.r))].sort((a, b) => regionName(a).localeCompare(regionName(b)));
+  const present = new Set(d.features().flatMap((f) => designIds(f.properties)));
+  const designs = [...Object.keys(DESIGN_NAMES).filter((x) => present.has(x)), ...[...present].filter((x) => !(x in DESIGN_NAMES)).sort()];
 
   d.root.innerHTML = html`
     ${multiFieldset(
@@ -73,6 +75,15 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
         <option value="">All states</option>
         ${regions.map((r) => html`<option value="${r}">${regionName(r)}</option>`)}
       </select>
+    </div>
+    <div class="fs fs-select">
+      <label for="f-design" class="fs-label">Design</label>
+      <select id="f-design" name="design" aria-describedby="f-design-help">
+        <option value="">Any design, or none recorded</option>
+        <option value="any">Any recognised standard design</option>
+        ${designs.map((d) => html`<option value="${d}">${designName(d)}</option>`)}
+      </select>
+      <p class="fs-help" id="f-design-help"><span data-design-share></span> <a href="${import.meta.env.BASE_URL}designs/">About the designs</a></p>
     </div>
     ${multiFieldset(
       'verification',
@@ -119,6 +130,9 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
         break;
       case 'region':
         f.region = input.value || null;
+        break;
+      case 'design':
+        f.design = input.value || null;
         break;
       case 'mine': {
         const next = new Set(f.mine ?? []);
@@ -184,6 +198,28 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
       }
     }
     const countWith = (patch: Partial<Filters>) => feats.filter((x) => matches(x.properties, { ...f, ...patch }, d.checklist)).length;
+    const dsel = root.querySelector<HTMLSelectElement>('#f-design');
+    if (dsel) {
+      if (f.design && !dsel.querySelector(`option[value="${CSS.escape(f.design)}"]`)) {
+        dsel.insertAdjacentHTML('beforeend', html`<option value="${f.design}">${designName(f.design)}</option>`.value);
+      }
+      dsel.value = f.design ?? '';
+      const others = feats.filter((x) => matches(x.properties, { ...f, design: null }, d.checklist));
+      const counts = new Map<string, number>();
+      let anyDesign = 0;
+      for (const x of others) {
+        const ids = designIds(x.properties);
+        if (ids.length) anyDesign++;
+        for (const id of ids) counts.set(id, (counts.get(id) ?? 0) + 1);
+      }
+      for (const opt of dsel.options) {
+        if (!opt.value) continue;
+        const n = opt.value === 'any' ? anyDesign : counts.get(opt.value) ?? 0;
+        opt.textContent = `${opt.value === 'any' ? 'Any recognised standard design' : designName(opt.value)} (${formatCount(n)})`;
+      }
+      const share = root.querySelector('[data-design-share]');
+      if (share) share.textContent = `Only ${formatCount(anyDesign)} of ${formatCount(others.length)} lookouts have a recognisable design on record.`;
+    }
     write('rentable', countWith({ rentable: true }));
     write('registered', countWith({ registered: true }));
     for (const m of MARKS) write(`mine:${m}`, d.checklist.counts()[m]);

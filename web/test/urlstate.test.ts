@@ -23,7 +23,33 @@ describe('URL state', () => {
     s.view = { zoom: 7.25, lat: 44.1234, lon: -121.6543 };
     s.selected = 'us-or-warner-mountain';
     s.basemap = 'topo';
+    s.filters.design = 'l4';
     expect(roundTrip(s)).toEqual(s);
+  });
+
+  it('round-trips the history views', () => {
+    const s = defaultState();
+    s.basemap = 'old';
+    s.era = 'oldest';
+    s.oldOpacity = 0.6;
+    s.year = 1935;
+    s.yearMaybe = true;
+    expect(serializeState(s)).toBe('?base=old&era=oldest&op=60&yr=1935&yrm=1');
+    expect(roundTrip(s)).toEqual(s);
+  });
+
+  it('leaves history defaults out and drops nonsense', () => {
+    const s = defaultState();
+    s.basemap = 'old';
+    expect(serializeState(s)).toBe('?base=old');
+    const bad = parseState('?base=old&era=jurassic&op=500&yr=12000&yrm=1&design=L-4%3Cscript');
+    expect(bad.era).toBe('lookouts');
+    expect(bad.oldOpacity).toBe(0.85);
+    expect(bad.year).toBeNull();
+    expect(bad.yearMaybe).toBe(false);
+    expect(bad.filters.design).toBeNull();
+    // "Show dimmed" only means something in the year view.
+    expect(parseState('?yrm=1').yearMaybe).toBe(false);
   });
 
   it('writes a readable, stable query', () => {

@@ -9,6 +9,8 @@ export interface PanelDeps {
   closeBtn: HTMLButtonElement;
   ctx: RenderContext;
   isHiddenByFilters: (id: string) => boolean;
+  /** True while the year view narrows the map (the "hidden" notice says so). */
+  yearView?: () => boolean;
   /** Called after the panel content changes (to bind checklist buttons etc.). */
   onRender: (root: HTMLElement) => void;
   onClose: () => void;
@@ -101,7 +103,7 @@ export class Panel {
     const d = this.#d;
     // Replacing the markup would drop focus to <body>; keep it in the panel if it was there.
     const hadFocus = d.body.contains(document.activeElement);
-    d.body.innerHTML = renderPanel(rec, d.ctx, { hiddenByFilters: d.isHiddenByFilters(rec.id) }).value;
+    d.body.innerHTML = renderPanel(rec, d.ctx, { hiddenByFilters: d.isHiddenByFilters(rec.id), yearView: d.yearView?.() ?? false }).value;
     d.el.scrollTop = 0;
     d.onRender(d.body);
     if (focus || hadFocus) this.#focusTitle();
