@@ -250,9 +250,9 @@ export class SeenLayer {
       left: !phone && roomy ? card.width + 30 : 20,
       right: right + 20,
     };
-    // The map may already keep padding of its own (set when a lookout was selected); fitBounds adds to it.
-    const own = this.#d.map.getPadding();
-    for (const key of ['top', 'bottom', 'left', 'right'] as const) pad[key] = Math.max(0, pad[key] - (own[key] ?? 0));
+    // The map keeps padding from when a lookout was selected (for a panel that may since have
+    // closed), and fitBounds adds to it: start from none, since `pad` covers everything.
+    this.#d.map.setPadding({ top: 0, bottom: 0, left: 0, right: 0 });
     // Never pad more than the map has room for.
     const k = Math.min(1, (box.clientWidth - 80) / (pad.left + pad.right), (box.clientHeight - 80) / (pad.top + pad.bottom));
     for (const key of ['top', 'bottom', 'left', 'right'] as const) pad[key] = Math.max(10, Math.floor(pad[key] * k));

@@ -296,6 +296,8 @@ async function main(): Promise<void> {
       return;
     }
     const first = s.ids.length === 0;
+    // On phones the details sheet would cover the shading: close it (tapping a marker reopens it).
+    if (PHONE.matches && !s.has(b.dataset.id)) panel.close();
     await s.toggle(b.dataset.id);
     if (first) s.fit(panel.coverage().right);
   });
