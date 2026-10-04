@@ -1,0 +1,31 @@
+{
+  "name": "firefinder-web",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Firefinder website: map of US fire lookouts, prerendered tower pages",
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "data:fixtures": "python3 ../pipeline/build_site_data.py --towers fixtures/towers --stories fixtures/stories --photos fixtures/photos",
+    "dev": "vite",
+    "build": "vite build && node scripts/prerender.ts",
+    "prerender": "node scripts/prerender.ts",
+    "preview": "vite preview",
+    "check": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2",
+    "vitest": "^5.0.3"
+  },
+  "dependencies": {
+    "@fontsource-variable/besley": "^5.3.0",
+    "@fontsource-variable/public-sans": "^5.3.0",
+    "maplibre-gl": "^6.12.0"
+  }
+}

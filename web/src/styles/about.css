@@ -1,0 +1,31 @@
+.about .lede { font-size: 1.15rem; }
+.about section { scroll-margin-top: 12px; }
+.toc ul { display: flex; flex-wrap: wrap; gap: 6px 16px; list-style: none; padding: 14px 0; margin: 20px 0 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 0.93rem; }
+.toc a { font-weight: 600; }
+.map-key { display: grid; gap: 4px 28px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin: 16px 0; padding: 14px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+.map-key .fine { grid-column: 1 / -1; margin: 4px 0 0; }
+.map-key .key-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.map-key .key-list li { display: grid; grid-template-columns: 28px 1fr; align-items: center; gap: 8px; }
+.kv-terms > div { grid-template-columns: minmax(120px, 28%) minmax(0, 1fr); }
+.kv-terms dt { color: var(--ink); font-weight: 700; }
+.table-wrap { overflow-x: auto; margin: 16px 0; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.sources-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.sources-table th, .sources-table td { text-align: left; vertical-align: top; padding: 10px 12px; border-top: 1px solid var(--line); }
+.sources-table thead th { border-top: 0; font: 750 0.75rem/1.3 var(--font-sans); letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-2); background: var(--surface-2); }
+.sources-table tbody th { font-weight: 650; }
+.sources-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.sources-table .credit-line { display: table-cell; font-size: 0.88rem; color: var(--ink-2); }
+.credits { padding-left: 1.2em; }
+.credits li { margin: 6px 0; }
+.steps li { margin: 6px 0; }
+.takedown { padding: 4px 22px 14px; margin-top: 36px; border: 1px solid var(--line-strong); border-radius: 14px; background: var(--surface); }
+.takedown h2 { margin-top: 20px; }
+@media (max-width: 560px) {
+  .sources-table thead { display: none; }
+  .sources-table tr { display: block; padding: 10px 12px; border-top: 1px solid var(--line); }
+  .sources-table tr:first-child { border-top: 0; }
+  .sources-table th, .sources-table td { display: block; padding: 2px 0; border: 0; }
+  .sources-table .num { text-align: left; }
+  .sources-table .num::before { content: 'Lookouts: '; color: var(--muted); }
+  .sources-table .credit-line { display: block; }
+}

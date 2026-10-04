@@ -1,0 +1,75 @@
+name: "Takedown: credit differently or remove"
+description: You own a photo or text shown on Firefinder and want it credited differently or removed.
+title: "Takedown: "
+labels: ["takedown"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If you own a photo or text shown on Firefinder, we will credit it the way you want or remove it, promptly and with no questions asked.
+        Please put the lookout's name after **"Takedown:"** in the title above.
+        This issue is public, so please do not include private details such as your phone number or home address.
+  - type: input
+    id: tower_id
+    attributes:
+      label: Lookout id (if you know it)
+      placeholder: us-or-warner-mountain
+    validations:
+      required: false
+  - type: input
+    id: page_url
+    attributes:
+      label: Page where it appears
+      placeholder: https://holdthedoorhoid.github.io/firefinder/t/us-or-warner-mountain/
+    validations:
+      required: true
+  - type: dropdown
+    id: item_kind
+    attributes:
+      label: What is it?
+      options:
+        - A photo
+        - Text
+        - Both
+    validations:
+      required: true
+  - type: textarea
+    id: which
+    attributes:
+      label: Which photo or text?
+      description: For a photo, its caption or credit line is enough. For text, quote a few words.
+    validations:
+      required: true
+  - type: dropdown
+    id: request
+    attributes:
+      label: What would you like?
+      options:
+        - Remove it
+        - Change the credit line
+        - Add a link to my site
+    validations:
+      required: true
+  - type: input
+    id: credit
+    attributes:
+      label: The credit line you want (if changing it)
+      placeholder: "Photo: Jane Smith, 1998, used with permission"
+    validations:
+      required: false
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: Your connection to it
+      options:
+        - I took the photo or wrote the text
+        - I represent the person or organisation that owns it
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else? (optional)
+    validations:
+      required: false

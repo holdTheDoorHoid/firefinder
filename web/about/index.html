@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f4f1e8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <title>About, sources and credits · Firefinder</title>
+  <meta name="description" content="What Firefinder is, where its lookout data comes from, the licences, and how to ask for a photo or text to be credited differently or removed.">
+  <link rel="icon" href="{{base}}favicon.svg" type="image/svg+xml">
+  <script>try{var t=localStorage.getItem('firefinder.theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body class="page-about">
+<!--ff:header-->
+<!--ff:banner-->
+<main id="main" class="plain-page about">
+  <p class="eyebrow">About Firefinder</p>
+  <h1>Every fire lookout, on one map</h1>
+  <p class="lede">Firefinder gathers what is known about the fire lookouts of the United States, standing or long gone, and puts it on one map. Every lookout site gets its own page: practical information first (can you visit, can you stay, what are the rules), then its history, with sources.</p>
+  <p>Lookouts have been documented for decades by volunteers, registers and agencies, across many separate websites. Firefinder links back to all of them and credits them on every page. It is named for the <strong>Osborne Firefinder</strong>, the round sighting table in the middle of every lookout cab, used to take a bearing on a smoke.</p>
+
+  <nav class="toc" aria-label="On this page"><ul>
+    <li><a href="#key">Reading the map</a></li>
+    <li><a href="#trust">How sure are we?</a></li>
+    <li><a href="#checklist">Your checklist</a></li>
+    <li><a href="#sources">Sources and credits</a></li>
+    <li><a href="#licences">Licences</a></li>
+    <li><a href="#takedown">Takedown requests</a></li>
+    <li><a href="#contribute">Corrections</a></li>
+    <li><a href="#privacy">Privacy</a></li>
+  </ul></nav>
+
+  <section id="key" aria-labelledby="key-h">
+    <h2 id="key-h">Reading the map</h2>
+    <p>Each marker's <strong>shape</strong> says what kind of structure it is, and its <strong>fill</strong> says whether it still stands. Colour only repeats what the shape and fill already say, so the map reads the same in any colour vision and in print.</p>
+    <!--ff:key-->
+    <p>Access warnings (private land, tribal land, closed sites) are shown prominently on each lookout's page. Firefinder shows the exact location of every site, so please respect those warnings.</p>
+  </section>
+
+  <section id="trust" aria-labelledby="trust-h">
+    <h2 id="trust-h">How sure are we?</h2>
+    <p>Every entry carries one of four labels, shown on its page:</p>
+    <dl class="kv kv-terms">
+      <div><dt>Unverified</dt><dd>From a single source and not yet checked. Shown with a visible <strong>Unverified</strong> badge. Details may be wrong.</dd></div>
+      <div><dt>Facts agree</dt><dd>Two or more independent sources agree on where it is and whether it stands.</dd></div>
+      <div><dt>Researched</dt><dd>Its history has been researched and written up, with footnoted sources.</dd></div>
+      <div><dt>Verified</dt><dd>Researched, then checked independently.</dd></div>
+    </dl>
+    <p>When sources disagree, for example on where a lookout stood or when it was built, the page says so plainly instead of quietly picking one.</p>
+  </section>
+
+  <section id="checklist" aria-labelledby="checklist-h">
+    <h2 id="checklist-h">Your checklist</h2>
+    <p>You can mark lookouts as <strong>Visited</strong>, <strong>Stayed overnight</strong> or <strong>Want to go</strong>, on the map or on any lookout's page, and filter the map to show only those. The checklist is saved only in this browser. There are no accounts and nothing is sent anywhere.</p>
+    <p>Because it lives in one browser, clearing your browsing data deletes it. Download a copy now and then; you can import it on another device.</p>
+    <p><button type="button" class="btn" data-open-checklist-dialog>Download or import my checklist</button></p>
+  </section>
+
+  <section id="sources" aria-labelledby="sources-h">
+    <h2 id="sources-h">Sources and credits</h2>
+    <p>Firefinder takes <em>facts</em> (locations, types, dates, register numbers, agencies) from the sources below, credits them on every lookout page that uses them, and writes its own words. Their text is never copied.</p>
+    <div class="table-wrap">
+      <table class="sources-table">
+        <caption class="visually-hidden">Lookout data sources</caption>
+        <thead><tr><th scope="col">Source</th><th scope="col">Licence or terms</th><th scope="col">Credit line</th><th scope="col" class="num">Lookouts</th></tr></thead>
+        <tbody data-ff-sources><!--ff:sources--></tbody>
+      </table>
+    </div>
+    <h3>Map and site</h3>
+    <ul class="credits">
+      <li><strong>Base map:</strong> <a href="https://openfreemap.org">OpenFreeMap</a>, using <a href="https://openmaptiles.org/">OpenMapTiles</a> and data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> (ODbL).</li>
+      <li><strong>Topographic map:</strong> <a href="https://www.usgs.gov/programs/national-geospatial-program/national-map">USGS The National Map</a> (public domain): National Boundaries Dataset, 3DEP Elevation Program, Geographic Names Information System, National Hydrography Dataset, National Land Cover Database, National Structures Dataset and National Transportation Dataset; USGS Global Ecosystems; U.S. Census Bureau TIGER/Line data; USFS road data; Natural Earth Data; U.S. Department of State HIU; NOAA National Centers for Environmental Information.</li>
+      <li><strong>Shaded relief at country scale:</strong> <a href="https://www.naturalearthdata.com/">Natural Earth</a> (public domain), served by OpenFreeMap.</li>
+      <li><strong>Map software:</strong> <a href="https://maplibre.org/">MapLibre GL JS</a> (BSD-3-Clause).</li>
+      <li><strong>Typefaces:</strong> <a href="https://public-sans.digital.gov/">Public Sans</a> and <a href="https://github.com/indestructible-type/Besley">Besley</a> (SIL Open Font License), served from this site.</li>
+    </ul>
+  </section>
+
+  <section id="licences" aria-labelledby="licences-h">
+    <h2 id="licences-h">Licences</h2>
+    <dl class="kv kv-terms">
+      <div><dt>Code</dt><dd><a href="https://github.com/{{repo}}/blob/main/LICENSE">GNU GPL 3.0</a></dd></div>
+      <div><dt>Lookout database</dt><dd><a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL) 1.0</a>. You may reuse and adapt it, including commercially, if you credit Firefinder and its sources and keep adapted databases open.</dd></div>
+      <div><dt>Our written histories</dt><dd><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Quotations inside them belong to their authors.</dd></div>
+      <div><dt>Photos</dt><dd>Each photo keeps its own copyright and licence, shown in the credit line next to it. Being shown here does not relicense them.</dd></div>
+    </dl>
+  </section>
+
+  <section id="takedown" aria-labelledby="takedown-h" class="takedown">
+    <h2 id="takedown-h">Takedown requests</h2>
+    <p>Firefinder shows photos and facts gathered from many people's work, always with credit. <strong>If you own a photo or text shown here and want it credited differently, or removed, just ask.</strong> We will do it promptly, with no questions asked and nothing to prove beyond telling us which item and what you would like.</p>
+    <ol class="steps">
+      <li>Open a takedown request on GitHub. Its title starts with <strong>“Takedown:”</strong> followed by the lookout's name. On a lookout's page, the link under its photos fills this in for you.</li>
+      <li>Say which photo or text it is (a link to the page is enough) and whether you want a different credit line or removal.</li>
+    </ol>
+    <p><a class="btn btn-primary" href="https://github.com/{{repo}}/issues/new?template=takedown.yml&amp;title=Takedown%3A%20">Open a takedown request</a></p>
+    <p class="fine">GitHub issues are public, so please do not include private details such as your address or phone number.</p>
+    <!--ff:takedown-email-->
+  </section>
+
+  <section id="contribute" aria-labelledby="contribute-h">
+    <h2 id="contribute-h">Corrections and additions</h2>
+    <p>Every lookout page has a <strong>Suggest an edit</strong> button. It opens a short form on GitHub with the lookout already filled in: tell us what is wrong, what is right, and how you know (a link, a book, or your own visit with its date). If you have photos you took yourself and are happy to share, say so in the form.</p>
+  </section>
+
+  <section id="privacy" aria-labelledby="privacy-h">
+    <h2 id="privacy-h">Privacy</h2>
+    <p>No accounts, no cookies, no analytics. Your checklist and colour-theme choice stay in your browser. Like any web map, the map images are downloaded from OpenFreeMap's and the USGS's servers, which see your IP address as part of normal web traffic. “Show my location” on the map uses your device's location only in your browser, and only after you allow it.</p>
+  </section>
+</main>
+<!--ff:footer-->
+<dialog id="checklist-dialog" class="dialog" aria-labelledby="checklist-dialog-h"></dialog>
+<script type="module" src="/src/pages/about.ts"></script>
+</body>
+</html>
