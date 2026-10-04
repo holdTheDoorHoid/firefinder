@@ -16,7 +16,7 @@ import urllib.error
 import urllib.request
 import urllib.robotparser
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import quote, urlsplit, urlunsplit
 
 USER_AGENT = "FirefinderBot/0.1 (+https://github.com/holdTheDoorHoid/firefinder)"
 FALLBACK_USER_AGENT = (
@@ -93,6 +93,14 @@ class RobotsCache:
                 rp.parse([])  # unreachable robots.txt -> don't block the crawl
             self._parsers[base] = rp
         return rp.can_fetch(self._ua, url)
+
+
+def _encode_url(url: str) -> str:
+    """Percent-encode non-ASCII characters in the path (e.g. accented letters in a
+    slug) so urllib can send the request line; urlopen does not do this itself."""
+    parts = urlsplit(url)
+    path = quote(parts.path, safe="/%")
+    return urlunsplit((parts.scheme, parts.netloc, path, parts.query, parts.fragment))
 
 
 def _cache_path(source: str, url: str) -> Path:
@@ -174,7 +182,7 @@ def fetch(
     err = None
     for attempt_ua in (ua, FALLBACK_USER_AGENT):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": attempt_ua})
+            req = urllib.request.Request(_encode_url(url), headers={"User-Agent": attempt_ua})
             with urllib.request.urlopen(req, timeout=30) as resp:
                 status = resp.status
                 raw = resp.read()

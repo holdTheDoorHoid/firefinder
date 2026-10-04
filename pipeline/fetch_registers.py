@@ -195,7 +195,9 @@ def parse_photos(html: str, base: str) -> list[dict]:
             cm = re.search(r"\s*[-,]?\s*(?:photo\s+by|courtesy\s+of|credit:?)\s+(.+?)\s*$", caption, re.I)
             if cm:
                 credit = re.sub(r"^the\s+", "", cm.group(1).strip(), flags=re.I)
-                caption = caption[: cm.start()].strip(" -,") or None
+                if credit.count(")") > credit.count("("):
+                    credit = credit[:-1].rstrip()
+                caption = caption[: cm.start()].strip(" -,(") or None
                 if caption and caption.lower() in ("photo", "photo of", "picture"):
                     caption = None
         photos.append({"url": url, "credit": credit, "caption": caption, "year": year})
