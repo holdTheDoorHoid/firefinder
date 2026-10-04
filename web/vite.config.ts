@@ -17,7 +17,7 @@ function partials(): Plugin {
     transformIndexHtml: {
       order: 'pre',
       handler(html, ctx) {
-        const page = ctx.path.includes('about') ? 'about' : ctx.path.includes('tower') ? 'tower' : 'map';
+        const page = ctx.path.includes('about') ? 'about' : ctx.path.includes('404') ? 'none' : ctx.path.includes('tower') ? 'tower' : 'map';
         let header = read('header.html');
         header = header.replace(`data-nav="${page}"`, `data-nav="${page}" aria-current="page"`);
         return html

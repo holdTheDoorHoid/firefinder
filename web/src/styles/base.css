@@ -141,10 +141,14 @@ abbr[title] { text-decoration: underline dotted; text-underline-offset: 2px; }
   .site-nav a { padding: 8px 7px; font-size: 0.9rem; }
   .site-header { gap: 6px; }
 }
+@media (max-width: 420px) {
+  .nav-long { display: none; }
+}
 @media (max-width: 370px) {
   .brand-name { font-size: 1.1rem; }
   .brand .logo { width: 26px; height: 26px; }
 }
+.site-nav, .theme-toggle { flex: none; }
 
 .fixture-banner {
   margin: 0; padding: 8px var(--gutter);
