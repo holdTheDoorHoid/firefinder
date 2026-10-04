@@ -1,0 +1,2829 @@
+{
+ "merged": "2026-10-04",
+ "inputs": {
+  "andyarthur_ny": {
+   "records": 34,
+   "retrieved": "2026-10-04",
+   "file": "andyarthur_ny.json"
+  },
+  "cskt": {
+   "records": 6,
+   "retrieved": "2026-10-04",
+   "file": "cskt.json"
+  },
+  "ffla": {
+   "records": 5976,
+   "retrieved": "2026-10-04",
+   "file": "ffla.json"
+  },
+  "fire_lookouts_org": {
+   "records": 19,
+   "retrieved": "2026-10-04",
+   "file": "fire_lookouts_org.json"
+  },
+  "firelookout_com": {
+   "records": 3266,
+   "retrieved": "2026-10-04",
+   "file": "firelookout_com.json"
+  },
+  "idaho_fl": {
+   "records": 998,
+   "retrieved": "2026-10-04",
+   "file": "idaho_fl.json"
+  },
+  "osm": {
+   "records": 1028,
+   "retrieved": "2026-10-04",
+   "file": "osm.json"
+  },
+  "pa_storymap": {
+   "records": 47,
+   "retrieved": "2026-10-04",
+   "file": "pa_storymap.json"
+  },
+  "ridb": {
+   "records": 113,
+   "retrieved": "2026-10-04",
+   "file": "ridb.json"
+  },
+  "wikidata": {
+   "records": 288,
+   "retrieved": "2026-10-04",
+   "file": "wikidata.json"
+  }
+ },
+ "files": {
+  "written": 6319,
+  "unchanged": 0
+ },
+ "counts": {
+  "towers": 6319,
+  "visible": 5747,
+  "hidden": 572,
+  "hidden_by_reason": {
+   "Camp or tent site: out of scope (structures only)": 469,
+   "Tree platform: out of scope (structures only)": 64,
+   "Lookout point with no structure: out of scope (structures only)": 37,
+   "Never built (FFLA lists it as \"Never Built\")": 1,
+   "Never built (FFLA lists it as \"Planned\")": 1
+  },
+  "visible_by_status": {
+   "gone": 3696,
+   "standing": 1666,
+   "unknown": 359,
+   "ruins": 14,
+   "replica": 10,
+   "relocated": 2
+  },
+  "visible_by_kind": {
+   "tower": 3847,
+   "ground": 1037,
+   "two_story": 263,
+   "unknown": 242,
+   "platform": 219,
+   "enclosed_tower": 110,
+   "three_story": 29
+  },
+  "visible_by_region": {
+   "AL": 33,
+   "AR": 23,
+   "AZ": 126,
+   "CA": 527,
+   "CO": 54,
+   "CT": 7,
+   "DE": 5,
+   "FL": 32,
+   "GA": 13,
+   "GU": 1,
+   "IA": 1,
+   "ID": 831,
+   "IL": 32,
+   "IN": 40,
+   "KY": 12,
+   "LA": 14,
+   "MA": 18,
+   "MD": 53,
+   "ME": 147,
+   "MI": 15,
+   "MN": 223,
+   "MO": 26,
+   "MS": 43,
+   "MT": 506,
+   "NC": 34,
+   "ND": 10,
+   "NE": 8,
+   "NH": 74,
+   "NJ": 22,
+   "NM": 102,
+   "NV": 5,
+   "NY": 175,
+   "OH": 53,
+   "OK": 4,
+   "OR": 811,
+   "PA": 63,
+   "RI": 20,
+   "SC": 32,
+   "SD": 31,
+   "TN": 44,
+   "TX": 162,
+   "UT": 16,
+   "VA": 218,
+   "VT": 45,
+   "WA": 632,
+   "WI": 216,
+   "WV": 112,
+   "WY": 76
+  },
+  "visible_by_verification": {
+   "unverified": 4803,
+   "facts": 944
+  },
+  "multi_source_towers": 3819,
+  "towers_by_number_of_sources": {
+   "1": 2500,
+   "2": 2575,
+   "3": 1101,
+   "4": 121,
+   "5+": 22
+  },
+  "rentable": 76,
+  "registered": 2813
+ },
+ "matching": {
+  "note": "How each source record found its tower on this run. 'key' means it was matched on an earlier run and found again by its key; delete data/towers to see a fresh run's methods.",
+  "by_source": {
+   "andyarthur_ny": {
+    "spatial": 34
+   },
+   "cskt": {
+    "spatial": 6
+   },
+   "ffla": {
+    "name": 5,
+    "new": 5775,
+    "spatial": 59,
+    "unplaced": 137
+   },
+   "fire_lookouts_org": {
+    "new": 5,
+    "register": 12,
+    "spatial": 2
+   },
+   "firelookout_com": {
+    "new": 29,
+    "spatial": 3237
+   },
+   "idaho_fl": {
+    "new": 49,
+    "spatial": 949
+   },
+   "osm": {
+    "new": 365,
+    "register": 44,
+    "spatial": 619
+   },
+   "pa_storymap": {
+    "new": 47
+   },
+   "ridb": {
+    "spatial": 111,
+    "unplaced": 2
+   },
+   "wikidata": {
+    "new": 49,
+    "spatial": 239
+   }
+  },
+  "cross_region_matches": 17,
+  "register_clashes": 12
+ },
+ "conflicts": {
+  "by_field": {
+   "status": 135,
+   "location": 112,
+   "built": 58,
+   "kind": 5
+  },
+  "by_field_and_sources": {
+   "built": {
+    "firelookout_com+ridb": 19,
+    "firelookout_com+wikidata": 13,
+    "firelookout_com+osm": 10,
+    "firelookout_com+osm+wikidata": 9,
+    "firelookout_com+ridb+wikidata": 3,
+    "fire_lookouts_org+wikidata": 1,
+    "firelookout_com+idaho_fl": 1,
+    "firelookout_com+idaho_fl+wikidata": 1,
+    "firelookout_com+osm+ridb": 1
+   },
+   "kind": {
+    "ffla+firelookout_com": 5
+   },
+   "location": {
+    "ffla+idaho_fl": 91,
+    "ffla+ridb": 10,
+    "ffla+firelookout_com": 5,
+    "ffla+fire_lookouts_org": 4,
+    "ffla+osm": 1,
+    "ffla+wikidata": 1
+   },
+   "status": {
+    "ffla+firelookout_com": 57,
+    "ffla+firelookout_com+idaho_fl": 40,
+    "ffla+osm": 19,
+    "ffla+firelookout_com+osm": 5,
+    "ffla+firelookout_com+idaho_fl+osm": 4,
+    "ffla+ridb": 3,
+    "ffla+fire_lookouts_org": 2,
+    "ffla+firelookout_com+osm+ridb": 2,
+    "ffla+firelookout_com+idaho_fl+osm+ridb": 1,
+    "ffla+firelookout_com+ridb": 1,
+    "ffla+idaho_fl": 1
+   }
+  },
+  "location_distance": {
+   "0.5-1 km": 52,
+   "1-5 km": 57,
+   "5-25 km": 2,
+   ">25 km": 1
+  },
+  "examples": {
+   "built": [
+    {
+     "id": "us-ca-signal-peak",
+     "name": "Signal Peak Fire Lookout",
+     "values": [
+      {
+       "source": "fire_lookouts_org",
+       "value": 1900
+      },
+      {
+       "source": "wikidata",
+       "value": 1951
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-id-bald-mountain-3",
+     "name": "Bald Mountain Lookout",
+     "values": [
+      {
+       "source": "firelookout_com",
+       "value": 1913
+      },
+      {
+       "source": "ridb",
+       "value": 1956
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-id-bishop-mountain",
+     "name": "Bishop Mountain Lookout",
+     "values": [
+      {
+       "source": "firelookout_com",
+       "value": 1937
+      },
+      {
+       "source": "idaho_fl",
+       "value": 1938
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-id-carey-dome",
+     "name": "Carey Dome Fire Lookout",
+     "values": [
+      {
+       "source": "firelookout_com",
+       "value": 1934
+      },
+      {
+       "source": "wikidata",
+       "value": 1934
+      },
+      {
+       "source": "idaho_fl",
+       "value": 1932
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-id-castle-butte",
+     "name": "Castle Butte Lookout",
+     "values": [
+      {
+       "source": "firelookout_com",
+       "value": 1928
+      },
+      {
+       "source": "ridb",
+       "value": 1950
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-id-deadwood-lookout-cabin",
+     "name": "Deadwood Lookout Cabin",
+     "values": [
+      {
+       "source": "firelookout_com",
+       "value": 1916
+      },
+      {
+       "source": "ridb",
+       "value": 1934
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-id-grave-peak",
+     "name": "Grave Peak Lookout",
+     "values": [
+      {
+       "source": "firelookout_com",
+       "value": 1923
+      },
+      {
+       "source": "osm",
+       "value": 1924
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-id-indian-mica",
+     "name": "Indian (Mica)",
+     "values": [
+      {
+       "source": "firelookout_com",
+       "value": 1910
+      },
+      {
+       "source": "wikidata",
+       "value": 1933
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-id-scurvy-mountain",
+     "name": "Scurvy Mountain Lookout",
+     "values": [
+      {
+       "source": "firelookout_com",
+       "value": 1917
+      },
+      {
+       "source": "ridb",
+       "value": 1952
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-id-surveyors",
+     "name": "Surveyors Lookout",
+     "values": [
+      {
+       "source": "firelookout_com",
+       "value": 1964
+      },
+      {
+       "source": "ridb",
+       "value": 1931
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-mt-apgar-mountain",
+     "name": "Apgar Mountain",
+     "values": [
+      {
+       "source": "firelookout_com",
+       "value": 1927
+      },
+      {
+       "source": "wikidata",
+       "value": 1930
+      },
+      {
+       "source": "osm",
+       "value": 1929
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-mt-cougar-peak",
+     "name": "Cougar Peak Lookout",
+     "values": [
+      {
+       "source": "firelookout_com",
+       "value": 1930
+      },
+      {
+       "source": "ridb",
+       "value": 1952
+      },
+      {
+       "source": "wikidata",
+       "value": 1952
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-mt-garnet-mountain",
+     "name": "Garnet Mountain Fire Lookout",
+     "values": [
+      {
+       "source": "firelookout_com",
+       "value": 1930
+      },
+      {
+       "source": "ridb",
+       "value": 1962
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-mt-garver-mountain",
+     "name": "Garver Mountain Lookout",
+     "values": [
+      {
+       "source": "firelookout_com",
+       "value": 1929
+      },
+      {
+       "source": "ridb",
+       "value": 1963
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-mt-granite-butte",
+     "name": "Granite Butte Lookout",
+     "values": [
+      {
+       "source": "firelookout_com",
+       "value": 1934
+      },
+      {
+       "source": "ridb",
+       "value": 1962
+      }
+     ],
+     "distance_m": null
+    }
+   ],
+   "kind": [
+    {
+     "id": "us-id-bally-mountain",
+     "name": "Bally Mountain Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "tree"
+      },
+      {
+       "source": "firelookout_com",
+       "value": "tower"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-id-buck-butte",
+     "name": "Buck Butte",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "tree"
+      },
+      {
+       "source": "firelookout_com",
+       "value": "tower"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-id-stanley-butte",
+     "name": "Stanley Butte Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "camp"
+      },
+      {
+       "source": "firelookout_com",
+       "value": "tower"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-id-swan-peak-3",
+     "name": "Swan Peak Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "tree"
+      },
+      {
+       "source": "firelookout_com",
+       "value": "tower"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-wa-meadow-butte",
+     "name": "Meadow Butte",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "tree"
+      },
+      {
+       "source": "firelookout_com",
+       "value": "tower"
+      }
+     ],
+     "distance_m": null
+    }
+   ],
+   "location": [
+    {
+     "id": "us-ca-buck-rock",
+     "name": "Buck Rock Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 36.73727,
+        "lon": -118.86067
+       }
+      },
+      {
+       "source": "fire_lookouts_org",
+       "value": {
+        "lat": 36.73173,
+        "lon": -118.86246
+       }
+      }
+     ],
+     "distance_m": 636
+    },
+    {
+     "id": "us-ca-eddy-gulch",
+     "name": "Eddy Gulch Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 41.23955,
+        "lon": -123.10623
+       }
+      },
+      {
+       "source": "osm",
+       "value": {
+        "lat": 41.24553,
+        "lon": -123.102422
+       }
+      }
+     ],
+     "distance_m": 737
+    },
+    {
+     "id": "us-ca-hirz-mountain",
+     "name": "Hirz Mountain Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 40.89705,
+        "lon": -122.24581
+       }
+      },
+      {
+       "source": "ridb",
+       "value": {
+        "lat": 40.91361,
+        "lon": -122.2625
+       }
+      }
+     ],
+     "distance_m": 2315
+    },
+    {
+     "id": "us-ca-mount-tom",
+     "name": "Mount Tom Fire Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 37.37615,
+        "lon": -119.17895
+       }
+      },
+      {
+       "source": "fire_lookouts_org",
+       "value": {
+        "lat": 37.2235,
+        "lon": -119.1048
+       }
+      }
+     ],
+     "distance_m": 18197
+    },
+    {
+     "id": "us-ca-mule-peak",
+     "name": "Mule Peak Fire Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 36.01598,
+        "lon": -118.61525
+       }
+      },
+      {
+       "source": "fire_lookouts_org",
+       "value": {
+        "lat": 36.0057,
+        "lon": -118.3655
+       }
+      }
+     ],
+     "distance_m": 22493
+    },
+    {
+     "id": "us-ca-tobias-peak",
+     "name": "Tobias Peak Fire Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 35.85008,
+        "lon": -118.57257
+       }
+      },
+      {
+       "source": "fire_lookouts_org",
+       "value": {
+        "lat": 35.5101,
+        "lon": -118.3421
+       }
+      }
+     ],
+     "distance_m": 43156
+    },
+    {
+     "id": "us-id-agatha-creek",
+     "name": "Agatha Creek Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 47.28445,
+        "lon": -116.05416
+       }
+      },
+      {
+       "source": "idaho_fl",
+       "value": {
+        "lat": 47.29747,
+        "lon": -116.05012
+       }
+      }
+     ],
+     "distance_m": 1479
+    },
+    {
+     "id": "us-id-benning",
+     "name": "Benning",
+     "values": [
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 48.3254,
+        "lon": -116.10125
+       }
+      },
+      {
+       "source": "idaho_fl",
+       "value": {
+        "lat": 48.33799,
+        "lon": -116.08378
+       }
+      }
+     ],
+     "distance_m": 1905
+    },
+    {
+     "id": "us-id-big-sand",
+     "name": "Big Sand",
+     "values": [
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 46.29051,
+        "lon": -114.56508
+       }
+      },
+      {
+       "source": "idaho_fl",
+       "value": {
+        "lat": 46.29603,
+        "lon": -114.56899
+       }
+      }
+     ],
+     "distance_m": 683
+    },
+    {
+     "id": "us-id-black-mare",
+     "name": "Black Mare",
+     "values": [
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 44.82013,
+        "lon": -115.7892
+       }
+      },
+      {
+       "source": "idaho_fl",
+       "value": {
+        "lat": 44.80462,
+        "lon": -115.79623
+       }
+      }
+     ],
+     "distance_m": 1812
+    },
+    {
+     "id": "us-id-black-mountain-3",
+     "name": "Black Mountain",
+     "values": [
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 43.10515,
+        "lon": -111.12257
+       }
+      },
+      {
+       "source": "idaho_fl",
+       "value": {
+        "lat": 43.11825,
+        "lon": -111.12966
+       }
+      }
+     ],
+     "distance_m": 1566
+    },
+    {
+     "id": "us-id-boulder-mountain",
+     "name": "Boulder Mountain",
+     "values": [
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 48.75127,
+        "lon": -116.99501
+       }
+      },
+      {
+       "source": "idaho_fl",
+       "value": {
+        "lat": 48.75992,
+        "lon": -117.02495
+       }
+      }
+     ],
+     "distance_m": 2396
+    },
+    {
+     "id": "us-id-brown-creek-2",
+     "name": "Brown Creek #2 Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 46.32278,
+        "lon": -115.82422
+       }
+      },
+      {
+       "source": "idaho_fl",
+       "value": {
+        "lat": 46.31556,
+        "lon": -115.80472
+       }
+      }
+     ],
+     "distance_m": 1699
+    },
+    {
+     "id": "us-id-buck-mountain",
+     "name": "Buck Mountain Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 48.5622,
+        "lon": -116.14932
+       }
+      },
+      {
+       "source": "idaho_fl",
+       "value": {
+        "lat": 48.5641,
+        "lon": -116.16046
+       }
+      }
+     ],
+     "distance_m": 847
+    },
+    {
+     "id": "us-id-bugle-ridge",
+     "name": "Bugle Ridge Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": {
+        "lat": 48.83736,
+        "lon": -116.79745
+       }
+      },
+      {
+       "source": "idaho_fl",
+       "value": {
+        "lat": 48.85216,
+        "lon": -116.79134
+       }
+      }
+     ],
+     "distance_m": 1705
+    }
+   ],
+   "status": [
+    {
+     "id": "us-az-willow-mountain",
+     "name": "Willow Mountain Fire Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "standing"
+      },
+      {
+       "source": "osm",
+       "value": "ruins"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-bear-basin-lookout-and-cabin",
+     "name": "Bear Basin Lookout and Cabin",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "relocated"
+      },
+      {
+       "source": "ridb",
+       "value": "standing"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-black-rock-mountain",
+     "name": "Black Rock Mountain Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "standing"
+      },
+      {
+       "source": "osm",
+       "value": "ruins"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-blue-ridge",
+     "name": "Blue Ridge Lookout Tower",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "standing"
+      },
+      {
+       "source": "osm",
+       "value": "ruins"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-china-peak",
+     "name": "China Peak Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "gone"
+      },
+      {
+       "source": "osm",
+       "value": "standing"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-goat-mountain",
+     "name": "Goat Mountain Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "gone"
+      },
+      {
+       "source": "osm",
+       "value": "standing"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-ironside-mountain",
+     "name": "Ironside Mountain Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "gone"
+      },
+      {
+       "source": "osm",
+       "value": "standing"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-kettle-rock",
+     "name": "Kettle Rock Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "gone"
+      },
+      {
+       "source": "osm",
+       "value": "standing"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-mule-peak",
+     "name": "Mule Peak Fire Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "gone"
+      },
+      {
+       "source": "fire_lookouts_org",
+       "value": "standing"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-red-mountain-3",
+     "name": "Red Mountain Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "gone"
+      },
+      {
+       "source": "osm",
+       "value": "standing"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-red-top",
+     "name": "Red Top",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "standing"
+      },
+      {
+       "source": "fire_lookouts_org",
+       "value": "gone"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-shelton-butte",
+     "name": "Shelton Butte Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "gone"
+      },
+      {
+       "source": "osm",
+       "value": "standing"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-slate-mountain",
+     "name": "Slate Mountain Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "gone"
+      },
+      {
+       "source": "osm",
+       "value": "standing"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-ca-valley-view",
+     "name": "Valley View Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "gone"
+      },
+      {
+       "source": "osm",
+       "value": "standing"
+      }
+     ],
+     "distance_m": null
+    },
+    {
+     "id": "us-id-bally-mountain",
+     "name": "Bally Mountain Lookout",
+     "values": [
+      {
+       "source": "ffla",
+       "value": "gone"
+      },
+      {
+       "source": "firelookout_com",
+       "value": "standing"
+      },
+      {
+       "source": "idaho_fl",
+       "value": "gone"
+      }
+     ],
+     "distance_m": null
+    }
+   ]
+  }
+ },
+ "near_misses": {
+  "count": 29,
+  "by_type": {
+   "same_name_apart": 29
+  },
+  "pairs": [
+   {
+    "type": "same_name_apart",
+    "distance_m": 2050,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-az-horsethief",
+     "name": "Horsethief Lookout Tower",
+     "status": "unknown",
+     "sources": [
+      "osm"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-az-horsethief-2",
+     "name": "Horsethief",
+     "status": "standing",
+     "sources": [
+      "ffla"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 6191,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-ca-plummer-ridge",
+     "name": "Plummer Ridge",
+     "status": "gone",
+     "sources": [
+      "ffla"
+     ],
+     "hidden": true
+    },
+    "b": {
+     "id": "us-ca-plummer-ridge-2",
+     "name": "Plummer Ridge fire lookout",
+     "status": "gone",
+     "sources": [
+      "osm"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 2019,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-co-sandoval-mesa",
+     "name": "Sandoval Mesa",
+     "status": "gone",
+     "sources": [
+      "ffla"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-co-sandoval-mesa-2",
+     "name": "Sandoval Mesa Lookout",
+     "status": "standing",
+     "sources": [
+      "osm"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 3990,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-id-blue-joe",
+     "name": "Blue Joe",
+     "status": "gone",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-blue-joe-2",
+     "name": "Blue Joe",
+     "status": "gone",
+     "sources": [
+      "ffla",
+      "firelookout_com"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 3813,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-id-capitol-hill",
+     "name": "Capitol Hill",
+     "status": "gone",
+     "sources": [
+      "ffla",
+      "firelookout_com"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-capitol-hill-2",
+     "name": "Capitol Hill Lookout",
+     "status": "gone",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 8452,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-id-concord",
+     "name": "Concord",
+     "status": "gone",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-concord-2",
+     "name": "Concord",
+     "status": "gone",
+     "sources": [
+      "ffla",
+      "firelookout_com"
+     ],
+     "hidden": true
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 4531,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-id-dennis-mountain",
+     "name": "Dennis Mountain",
+     "status": "gone",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-dennis-mountain-2",
+     "name": "Dennis Mountain",
+     "status": "gone",
+     "sources": [
+      "ffla",
+      "firelookout_com"
+     ],
+     "hidden": true
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 8411,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-id-elk-ridge-2",
+     "name": "Elk Ridge",
+     "status": "gone",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-elk-ridge-3",
+     "name": "Elk Ridge",
+     "status": "gone",
+     "sources": [
+      "ffla",
+      "firelookout_com"
+     ],
+     "hidden": true
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 3047,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-id-experimental-spur",
+     "name": "Experimental Spur",
+     "status": "gone",
+     "sources": [
+      "ffla",
+      "firelookout_com"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-experimental-spur-2",
+     "name": "Experimental Spur",
+     "status": "gone",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 3003,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-id-grouse-point-2",
+     "name": "Grouse Point",
+     "status": "gone",
+     "sources": [
+      "ffla",
+      "firelookout_com"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-grouse-point-3",
+     "name": "Grouse Point Lookout",
+     "status": "gone",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 9988,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-id-jungle-point",
+     "name": "Jungle Point",
+     "status": "gone",
+     "sources": [
+      "ffla",
+      "firelookout_com"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-jungle-point-2",
+     "name": "Jungle Point Lookout",
+     "status": "gone",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 9773,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-id-meadow-creek",
+     "name": "Meadow Creek",
+     "status": "gone",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-meadow-creek-2",
+     "name": "Meadow Creek",
+     "status": "gone",
+     "sources": [
+      "ffla",
+      "firelookout_com"
+     ],
+     "hidden": true
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 4602,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-id-mission-mountain",
+     "name": "Mission Mountain",
+     "status": "gone",
+     "sources": [
+      "ffla"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-mission-mtn",
+     "name": "Mission Mtn.",
+     "status": "standing",
+     "sources": [
+      "firelookout_com",
+      "idaho_fl"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 3388,
+    "name_score": 0.85,
+    "a": {
+     "id": "us-id-napolean-hill",
+     "name": "Napolean Hill",
+     "status": "gone",
+     "sources": [
+      "ffla",
+      "firelookout_com"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-napoleon-hill",
+     "name": "Napoleon Hill Lookout",
+     "status": "gone",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 4856,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-id-parachute-ridge",
+     "name": "Parachute Ridge",
+     "status": "gone",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-parachute-ridge-2",
+     "name": "Parachute Ridge",
+     "status": "gone",
+     "sources": [
+      "ffla",
+      "firelookout_com"
+     ],
+     "hidden": true
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 3738,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-id-ramey-ridge",
+     "name": "Ramey Ridge Lookout",
+     "status": "gone",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-ramey-ridge-2",
+     "name": "Ramey Ridge",
+     "status": "gone",
+     "sources": [
+      "ffla",
+      "firelookout_com"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 5694,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-id-smith-triangle",
+     "name": "Smith Triangle Lookout",
+     "status": "gone",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-smith-triangle-2",
+     "name": "Smith Triangle",
+     "status": "gone",
+     "sources": [
+      "ffla",
+      "firelookout_com"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 4297,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-id-spruce-divide",
+     "name": "Spruce Divide",
+     "status": "gone",
+     "sources": [
+      "ffla",
+      "firelookout_com"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-spruce-divide-2",
+     "name": "Spruce Divide",
+     "status": "unknown",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 3265,
+    "name_score": 0.85,
+    "a": {
+     "id": "us-id-squaw-butte",
+     "name": "Squaw Butte",
+     "status": "standing",
+     "sources": [
+      "ffla",
+      "firelookout_com"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-squaw-butte-mountain",
+     "name": "Squaw Butte Mountain",
+     "status": "standing",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 7559,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-id-surveyors",
+     "name": "Surveyors Lookout",
+     "status": "standing",
+     "sources": [
+      "ffla",
+      "firelookout_com",
+      "ridb"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-surveyors-ridge",
+     "name": "Surveyors Ridge Lookout",
+     "status": "unknown",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 3368,
+    "name_score": 0.85,
+    "a": {
+     "id": "us-id-walker-peak",
+     "name": "Walker Peak",
+     "status": "gone",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-walkers-peak",
+     "name": "Walkers Peak",
+     "status": "gone",
+     "sources": [
+      "ffla",
+      "firelookout_com"
+     ],
+     "hidden": true
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 3716,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-id-wounded-doe",
+     "name": "Wounded Doe",
+     "status": "gone",
+     "sources": [
+      "idaho_fl"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-id-wounded-doe-2",
+     "name": "Wounded Doe",
+     "status": "gone",
+     "sources": [
+      "ffla",
+      "firelookout_com"
+     ],
+     "hidden": true
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 1528,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-mt-andesite",
+     "name": "Andesite",
+     "status": "gone",
+     "sources": [
+      "firelookout_com"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-mt-andesite-2",
+     "name": "Andesite",
+     "status": "gone",
+     "sources": [
+      "ffla"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 1966,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-mt-jackson-ranger",
+     "name": "Jackson Ranger Station",
+     "status": "gone",
+     "sources": [
+      "ffla"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-mt-jackson-ranger-2",
+     "name": "Jackson Ranger Station",
+     "status": "standing",
+     "sources": [
+      "firelookout_com"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 9339,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-or-madrona-park",
+     "name": "Madrona Park",
+     "status": "gone",
+     "sources": [
+      "ffla"
+     ],
+     "hidden": true
+    },
+    "b": {
+     "id": "us-or-madrona-park-2",
+     "name": "Madrona Park",
+     "status": "gone",
+     "sources": [
+      "firelookout_com"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 4124,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-or-spion-copp",
+     "name": "Spion Copp",
+     "status": "gone",
+     "sources": [
+      "ffla"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-or-spion-copp-2",
+     "name": "Spion Copp",
+     "status": "gone",
+     "sources": [
+      "firelookout_com"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 4449,
+    "name_score": 0.85,
+    "a": {
+     "id": "us-sd-pilger-mountain",
+     "name": "Pilger Mountain",
+     "status": "gone",
+     "sources": [
+      "ffla"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-sd-pilger-peak",
+     "name": "Pilger Peak",
+     "status": "gone",
+     "sources": [
+      "firelookout_com"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 3925,
+    "name_score": 0.95,
+    "a": {
+     "id": "us-vt-bolton",
+     "name": "Bolton Firetower",
+     "status": "standing",
+     "sources": [
+      "osm"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-vt-bolton-mountain",
+     "name": "Bolton Mountain",
+     "status": "gone",
+     "sources": [
+      "ffla"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 4328,
+    "name_score": 1.0,
+    "a": {
+     "id": "us-wa-naneum-ridge",
+     "name": "Naneum Ridge",
+     "status": "gone",
+     "sources": [
+      "ffla"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "us-wa-naneum-ridge-2",
+     "name": "Naneum Ridge",
+     "status": "gone",
+     "sources": [
+      "firelookout_com"
+     ],
+     "hidden": false
+    }
+   }
+  ]
+ },
+ "review": [
+  {
+   "type": "matched_different_names",
+   "key": "ridb:233128",
+   "distance_m": 44,
+   "score": 0.3,
+   "tower": "us-id-lookout-butte-2"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ridb:251546",
+   "distance_m": 18,
+   "score": 0.24,
+   "tower": "us-or-acorn-woman-peak"
+  },
+  {
+   "type": "register_match_far",
+   "key": "fire_lookouts_org:mt_tom:37.2235:-119.1048",
+   "distance_m": 18197,
+   "registers": [
+    "NHLR US 306"
+   ],
+   "tower": "us-ca-mount-tom"
+  },
+  {
+   "type": "register_match_far",
+   "key": "fire_lookouts_org:mule_peak:36.0057:-118.3655",
+   "distance_m": 22493,
+   "registers": [
+    "NHLR US 381"
+   ],
+   "tower": "us-ca-mule-peak"
+  },
+  {
+   "type": "register_match_far",
+   "key": "fire_lookouts_org:tobias_peak:35.5101:-118.3421",
+   "distance_m": 43156,
+   "registers": [
+    "NHLR US 313"
+   ],
+   "tower": "us-ca-tobias-peak"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "wikidata:Q107539928",
+   "distance_m": 22,
+   "score": 0.36,
+   "tower": "us-mn-kathio-state-park-relocated-from-near-isle"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "wikidata:Q86926982",
+   "distance_m": 21,
+   "score": 0.235,
+   "tower": "us-nh-kearsarge-north"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "wikidata:Q86928497",
+   "distance_m": 4,
+   "score": 0.174,
+   "tower": "us-me-greenville-visitor-center-relocated-squaw-mountain"
+  },
+  {
+   "type": "register_match_far_skipped",
+   "key": "osm:way/1100906757",
+   "distance_m": 11321,
+   "registers": [
+    "NHLR ME 3",
+    "NHLR US 67"
+   ],
+   "tower": "us-me-big-moose-mountain-squaw-mountain",
+   "nearby_tower": "us-me-greenville-visitor-center-relocated-squaw-mountain"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/353893420",
+   "distance_m": 3,
+   "score": 0.474,
+   "tower": "us-wi-dyracuse"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/6620353501",
+   "distance_m": 5,
+   "score": 0.327,
+   "tower": "us-mn-big-bog-relocated-pine-island"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/3764710820",
+   "distance_m": 2,
+   "score": 0.3,
+   "tower": "us-ny-ferncliff-forest-relocated-orangeburg-sc"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/357364298",
+   "distance_m": 24,
+   "score": 0.225,
+   "tower": "us-pa-summit"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/4733207522",
+   "distance_m": 2,
+   "score": 0.189,
+   "tower": "us-in-ouabache"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/7508769261",
+   "distance_m": 1,
+   "score": 0.164,
+   "tower": "us-me-streaked-mountain"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:way/1156962524",
+   "distance_m": 4,
+   "score": 0.164,
+   "tower": "us-vt-gile-mountain"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:way/1094656625",
+   "distance_m": 9,
+   "score": 0.144,
+   "tower": "us-tn-fall-creek-falls"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/357599527",
+   "distance_m": 1,
+   "score": 0.138,
+   "tower": "us-ny-rock-rift-mountain"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/359286418",
+   "distance_m": 15,
+   "score": 0.138,
+   "tower": "us-az-hyde-mountain"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/357364481",
+   "distance_m": 7,
+   "score": 0.12,
+   "tower": "us-pa-mount-dunlap"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/12442076088",
+   "distance_m": 6,
+   "score": 0.106,
+   "tower": "us-ny-pine-ridge"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:way/1411254054",
+   "distance_m": 3,
+   "score": 0.0,
+   "tower": "us-id-lookout-mountain-4"
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/1688032313",
+   "distance_m": 4,
+   "score": 0.0,
+   "tower": "us-in-willow-valley"
+  },
+  {
+   "type": "rental_on_gone_lookout",
+   "tower": "us-or-flag-point",
+   "note": "Recreation.gov still lists it, but Forest Fire Lookout Association records the lookout as gone (Burned 2026)."
+  }
+ ],
+ "unplaced": [
+  {
+   "key": "ffla:az:moore-creek-perley-creek:null:null",
+   "name": "Moore Creek/ Perley Creek",
+   "region": "AZ",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:az:nankoweap-n-rim-tt-9:null:null",
+   "name": "Nankoweap (N Rim TT-9)",
+   "region": "AZ",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:az:relocated-replica-lookouts:null:null",
+   "name": "Relocated / Replica Lookouts",
+   "region": "AZ",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ca:bayview:null:null",
+   "name": "Bayview",
+   "region": "CA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ca:glendora:null:null",
+   "name": "Glendora",
+   "region": "CA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ca:jasmin:null:null",
+   "name": "Jasmin",
+   "region": "CA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ca:lost-hills:null:null",
+   "name": "Lost Hills",
+   "region": "CA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ca:peavine-ridge:null:null",
+   "name": "Peavine Ridge",
+   "region": "CA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ca:san-jose:null:null",
+   "name": "San Jose",
+   "region": "CA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ca:snow-mountain:null:null",
+   "name": "Snow Mountain",
+   "region": "CA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ca:wheeler-ridge:null:null",
+   "name": "Wheeler Ridge",
+   "region": "CA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ca:zuma:null:null",
+   "name": "Zuma",
+   "region": "CA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:co:burnett-mine:null:null",
+   "name": "Burnett Mine",
+   "region": "CO",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:co:lookout-mountain-porphyry-mountain:null:null",
+   "name": "Lookout Mountain (Porphyry Mountain)",
+   "region": "CO",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:co:lookout-mountain:null:null",
+   "name": "Lookout Mountain",
+   "region": "CO",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:co:walden:null:null",
+   "name": "Walden",
+   "region": "CO",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:id:border-see-montana:null:null",
+   "name": "(Border – see Montana)",
+   "region": "ID",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:id:dominion-peak:null:null",
+   "name": "Dominion Peak",
+   "region": "ID",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:id:illinois-peak:null:null",
+   "name": "Illinois Peak",
+   "region": "ID",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:id:pauckert-replica:null:null",
+   "name": "Pauckert (Replica)",
+   "region": "ID",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:id:skookum-butte:null:null",
+   "name": "Skookum Butte",
+   "region": "ID",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:il:pere-marquette-state-park:null:null",
+   "name": "Pere Marquette State Park",
+   "region": "IL",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:il:sand-ridge-state-forest:null:null",
+   "name": "Sand Ridge State Forest",
+   "region": "IL",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:in:goose-pond-relocated-cascades-missouri:null:null",
+   "name": "Goose Pond (Relocated Cascades, Missouri)",
+   "region": "IN",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:in:ofs-cool-springs-relocated-spears:null:null",
+   "name": "OFS Cool Springs (Relocated Spears)",
+   "region": "IN",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:in:salt-creek:null:null",
+   "name": "Salt Creek",
+   "region": "IN",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:md:rising-sun-aws:null:null",
+   "name": "Rising Sun AWS",
+   "region": "MD",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:md:snaggy-mountain-pitch-pine-rock:null:null",
+   "name": "Snaggy Mountain (Pitch Pine Rock)",
+   "region": "MD",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:md:thayerville-loc-1:null:null",
+   "name": "Thayerville (Loc 1)",
+   "region": "MD",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:mn:drummond:null:null",
+   "name": "Drummond",
+   "region": "MN",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:mn:hillview:null:null",
+   "name": "Hillview",
+   "region": "MN",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:mn:schley-ranger-station:null:null",
+   "name": "Schley Ranger Station",
+   "region": "MN",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:mn:slim-lake:null:null",
+   "name": "Slim Lake",
+   "region": "MN",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:mn:toad-mountain:null:null",
+   "name": "Toad Mountain",
+   "region": "MN",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:mn:torfin:null:null",
+   "name": "Torfin",
+   "region": "MN",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:mt:bald-mountain:null:null",
+   "name": "Bald Mountain",
+   "region": "MT",
+   "reason": "no coordinates; FFLA border pointer (Border – see Idaho)"
+  },
+  {
+   "key": "ffla:mt:binocular-peak:null:null",
+   "name": "Binocular Peak",
+   "region": "MT",
+   "reason": "no coordinates; FFLA border pointer (Border – see Idaho)"
+  },
+  {
+   "key": "ffla:mt:bloom-peak:null:null",
+   "name": "Bloom Peak",
+   "region": "MT",
+   "reason": "no coordinates; FFLA border pointer (Border – see Idaho)"
+  },
+  {
+   "key": "ffla:mt:buentemeier-relocated-whitefish-mountain:null:null",
+   "name": "Buentemeier (Relocated Whitefish Mountain)",
+   "region": "MT",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:mt:craddock-peak:null:null",
+   "name": "Craddock Peak",
+   "region": "MT",
+   "reason": "no coordinates; FFLA border pointer (Border – see Idaho)"
+  },
+  {
+   "key": "ffla:mt:crittendon-peak:null:null",
+   "name": "Crittendon Peak",
+   "region": "MT",
+   "reason": "no coordinates; FFLA border pointer (Border – see Idaho)"
+  },
+  {
+   "key": "ffla:mt:eighty-peak:null:null",
+   "name": "Eighty Peak",
+   "region": "MT",
+   "reason": "no coordinates; FFLA border pointer (Border – see Idaho)"
+  },
+  {
+   "key": "ffla:mt:goose-point:null:null",
+   "name": "Goose Point",
+   "region": "MT",
+   "reason": "no coordinates; FFLA border pointer (Border – see Idaho)"
+  },
+  {
+   "key": "ffla:mt:little-joe-mountain:null:null",
+   "name": "Little Joe Mountain",
+   "region": "MT",
+   "reason": "no coordinates; FFLA border pointer (Border – see Idaho)"
+  },
+  {
+   "key": "ffla:mt:overman-replica:null:null",
+   "name": "Overman (Replica)",
+   "region": "MT",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:mt:runt-mountain:null:null",
+   "name": "Runt Mountain",
+   "region": "MT",
+   "reason": "no coordinates; FFLA border pointer (Border – see Idaho)"
+  },
+  {
+   "key": "ffla:mt:shale-mountain:null:null",
+   "name": "Shale Mountain",
+   "region": "MT",
+   "reason": "no coordinates; FFLA border pointer (Border – see Idaho)"
+  },
+  {
+   "key": "ffla:mt:stevens-peak:null:null",
+   "name": "Stevens Peak",
+   "region": "MT",
+   "reason": "no coordinates; FFLA border pointer (Border – see Idaho)"
+  },
+  {
+   "key": "ffla:mt:tarter-relocated-yager-butte:null:null",
+   "name": "Tarter (Relocated Yager Butte)",
+   "region": "MT",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:mt:ward-peak:null:null",
+   "name": "Ward Peak",
+   "region": "MT",
+   "reason": "no coordinates; FFLA border pointer (Border – see Idaho)"
+  },
+  {
+   "key": "ffla:nd:des-lacs-nwr-des-lacs-lake:null:null",
+   "name": "Des Lacs NWR – Des Lacs Lake",
+   "region": "ND",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nd:des-lacs-nwr-des-lacs-lake:null:null:1",
+   "name": "Des Lacs NWR – Des Lacs Lake",
+   "region": "ND",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nd:j-clark-salyer-nwr-3:null:null",
+   "name": "J. Clark Salyer NWR – #3",
+   "region": "ND",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nd:j-clark-salyer-nwr-3:null:null:1",
+   "name": "J. Clark Salyer NWR – #3",
+   "region": "ND",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nd:j-clark-salyer-nwr-4:null:null",
+   "name": "J. Clark Salyer NWR – #4",
+   "region": "ND",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nd:j-clark-salyer-nwr-4:null:null:1",
+   "name": "J. Clark Salyer NWR – #4",
+   "region": "ND",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ne:fort-niobrara-nwr-big-beaver-creek:null:null",
+   "name": "Fort Niobrara NWR – Big Beaver Creek",
+   "region": "NE",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ne:fort-niobrara-nwr-big-beaver-creek:null:null:1",
+   "name": "Fort Niobrara NWR – Big Beaver Creek",
+   "region": "NE",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nh:bear-island:null:null",
+   "name": "Bear Island",
+   "region": "NH",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nh:black-mountain-jackson:null:null",
+   "name": "Black Mountain (Jackson)",
+   "region": "NH",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nh:catamount:null:null",
+   "name": "Catamount",
+   "region": "NH",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nh:crystal-mountain:null:null",
+   "name": "Crystal Mountain",
+   "region": "NH",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nh:diamond-peak:null:null",
+   "name": "Diamond Peak",
+   "region": "NH",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nh:dustin-mount:null:null",
+   "name": "Mount Dustin",
+   "region": "NH",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nh:gardner-ridge:null:null",
+   "name": "Gardner Ridge",
+   "region": "NH",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nh:major-mount:null:null",
+   "name": "Mount Major",
+   "region": "NH",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nh:moose-mountain:null:null",
+   "name": "Moose Mountain",
+   "region": "NH",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nh:piermont-mountain:null:null",
+   "name": "Piermont Mountain",
+   "region": "NH",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nh:rice-mountain-sugar-hill:null:null",
+   "name": "Rice Mountain (Sugar Hill)",
+   "region": "NH",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nh:russell-mountain:null:null",
+   "name": "Russell Mountain",
+   "region": "NH",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nh:stewart-s-peak:null:null",
+   "name": "Stewart’s Peak",
+   "region": "NH",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nh:west-magalloway:null:null",
+   "name": "West Magalloway",
+   "region": "NH",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nh:wildcat:null:null",
+   "name": "Wildcat",
+   "region": "NH",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nm:armstrong:null:null",
+   "name": "Armstrong",
+   "region": "NM",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nm:gavilan-ridge:null:null",
+   "name": "Gavilan Ridge",
+   "region": "NM",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nm:maderia:null:null",
+   "name": "Maderia",
+   "region": "NM",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:nm:non-wildland-lookouts:null:null",
+   "name": "Non-Wildland Lookouts",
+   "region": "NM",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ny:alander-mtn:null:null",
+   "name": "Alander Mtn",
+   "region": "NY",
+   "reason": "no coordinates; FFLA border pointer (Border – see Massachusetts)"
+  },
+  {
+   "key": "ffla:ny:colvin-relocated-wild-creek-pa:null:null",
+   "name": "Colvin (Relocated Wild Creek, PA)",
+   "region": "NY",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ny:knightower-relocated-petersburg:null:null",
+   "name": "Knightower (Relocated Petersburg)",
+   "region": "NY",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ny:randall-relocated-swancott:null:null",
+   "name": "Randall (Relocated Swancott)",
+   "region": "NY",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:oh:berg-relocated-bloomfield:null:null",
+   "name": "Berg (Relocated Bloomfield)",
+   "region": "OH",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:or:north-fork-station:null:null",
+   "name": "North Fork Station",
+   "region": "OR",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:or:rock-creek-g-s:null:null",
+   "name": "Rock Creek G.S.",
+   "region": "OR",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:or:summit-g-s:null:null",
+   "name": "Summit G.S.",
+   "region": "OR",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ri:tower-hill:null:null",
+   "name": "Tower Hill",
+   "region": "RI",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:sd:sand-lake-nwr-2:null:null",
+   "name": "Sand Lake NWR 2",
+   "region": "SD",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:tx:onalaska-loc-2:null:null",
+   "name": "Onalaska (Loc 2)",
+   "region": "TX",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ut:bald-mountain:null:null",
+   "name": "Bald Mountain",
+   "region": "UT",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ut:if-evidence-or-documentation-is-uncovered-showing-that-any-of-these-were-actually-used-as-regular-wildland-fire-lookout-sites-they-will-be-moved-to-the-lookout-lists:null:null",
+   "name": "If evidence or documentation is uncovered showing that any of these were actually used as regular wildland fire lookout sites, they will be moved to the lookout lists.",
+   "region": "UT",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ut:ogden-ordinance-depot:null:null",
+   "name": "Ogden Ordinance Depot",
+   "region": "UT",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ut:tooele-army-depot:null:null",
+   "name": "Tooele Army Depot",
+   "region": "UT",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:ut:whipple-peak:null:null",
+   "name": "Whipple Peak",
+   "region": "UT",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:va:back-creek-mountain:null:null",
+   "name": "Back Creek Mountain",
+   "region": "VA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:va:big-stony-same-as-stony-creek:null:null",
+   "name": "Big Stony (same as Stony Creek?)",
+   "region": "VA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:va:burke-lake:null:null",
+   "name": "Burke Lake",
+   "region": "VA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:va:caldwell-same-as-osborne-ridge:null:null",
+   "name": "Caldwell (same as Osborne Ridge?)",
+   "region": "VA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:va:crest-high-point:null:null",
+   "name": "Crest High Point",
+   "region": "VA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:va:little-stone-mountain-same-as-stonega:null:null",
+   "name": "Little Stone Mountain (same as Stonega?)",
+   "region": "VA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:va:mckenney-same-as-dewitt:null:null",
+   "name": "McKenney (same as Dewitt?)",
+   "region": "VA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:va:pine-ridge:null:null",
+   "name": "Pine Ridge",
+   "region": "VA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:va:raleigh-springs-rawley-springs:null:null",
+   "name": "Raleigh Springs (Rawley Springs)",
+   "region": "VA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:va:raven-rock-same-as-sinking-creek:null:null",
+   "name": "Raven Rock (same as Sinking Creek?)",
+   "region": "VA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:va:rich-hole-same-as-white-rock:null:null",
+   "name": "Rich Hole (same as White Rock?)",
+   "region": "VA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wa:dave-kresek-relocated-long-mountain-id:null:null",
+   "name": "Dave Kresek (Relocated Long Mountain, ID)",
+   "region": "WA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wa:fosback-relocated-monumental-mountain:null:null",
+   "name": "Fosback (Relocated Monumental Mountain)",
+   "region": "WA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wa:friday-harbor-relocated-three-corner-rock:null:null",
+   "name": "Friday Harbor (Relocated Three Corner Rock)",
+   "region": "WA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wa:gold-mountain:null:null",
+   "name": "Gold Mountain",
+   "region": "WA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wa:moclips:null:null",
+   "name": "Moclips",
+   "region": "WA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wa:vesta:null:null",
+   "name": "Vesta",
+   "region": "WA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wa:windy-knoll:null:null",
+   "name": "Windy Knoll",
+   "region": "WA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wa:x-smoothing-iron-relocated-smoothing-iron-ridge:null:null",
+   "name": "X-Smoothing Iron (Relocated Smoothing Iron Ridge)",
+   "region": "WA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wi:block-relocated-wilson:null:null",
+   "name": "Block (Relocated Wilson)",
+   "region": "WI",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wi:ellis-relocated-park-falls:null:null",
+   "name": "Ellis (Relocated Park Falls)",
+   "region": "WI",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wi:long-bluff-camp-williams:null:null",
+   "name": "Long Bluff (Camp Williams)",
+   "region": "WI",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wv:cherry-pond-mountain:null:null",
+   "name": "Cherry Pond Mountain",
+   "region": "WV",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wv:crooked-creek:null:null",
+   "name": "Crooked Creek",
+   "region": "WV",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wv:elk-knob:null:null",
+   "name": "Elk Knob",
+   "region": "WV",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wv:eunice:null:null",
+   "name": "Eunice",
+   "region": "WV",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wv:godwin-relocated-parting-springs:null:null",
+   "name": "Godwin (Relocated Parting Springs)",
+   "region": "WV",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wv:mountain-view:null:null",
+   "name": "Mountain View",
+   "region": "WV",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wv:niges-cliff:null:null",
+   "name": "Niges Cliff",
+   "region": "WV",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wv:peters-mountain:null:null",
+   "name": "Peters Mountain",
+   "region": "WV",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wv:signal-knob:null:null",
+   "name": "Signal Knob",
+   "region": "WV",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wv:tip-top:null:null",
+   "name": "Tip Top",
+   "region": "WV",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wv:turkey-mountain:null:null",
+   "name": "Turkey Mountain",
+   "region": "WV",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wy:bayer-mountain:null:null",
+   "name": "Bayer Mountain",
+   "region": "WY",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wy:big-game-ridge:null:null",
+   "name": "Big Game Ridge",
+   "region": "WY",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wy:bow:null:null",
+   "name": "Bow",
+   "region": "WY",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wy:dead-indian:null:null",
+   "name": "Dead Indian",
+   "region": "WY",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wy:hawks-rest:null:null",
+   "name": "Hawks Rest",
+   "region": "WY",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wy:if-evidence-or-documentation-is-uncovered-showing-that-any-of-these-were-actually-used-as-regular-wildland-fire-lookout-sites-they-will-be-moved-to-the-lookout-lists:null:null",
+   "name": "If evidence or documentation is uncovered showing that any of these were actually used as regular wildland fire lookout sites, they will be moved to the lookout lists.",
+   "region": "WY",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wy:long-lake:null:null",
+   "name": "Long Lake",
+   "region": "WY",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wy:seven-mile:null:null",
+   "name": "Seven Mile",
+   "region": "WY",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wy:tunnel-hill:null:null",
+   "name": "Tunnel Hill",
+   "region": "WY",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wy:two-ocean-plateau:null:null",
+   "name": "Two-Ocean Plateau",
+   "region": "WY",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ffla:wy:wendy-mountain:null:null",
+   "name": "Wendy Mountain",
+   "region": "WY",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ridb:10373939",
+   "name": "Red Oak Fire Lookout",
+   "region": "WV",
+   "reason": "no coordinates; no same-name lookout in the state"
+  },
+  {
+   "key": "ridb:252738",
+   "name": "Cone Peak Lookout",
+   "region": "CA",
+   "reason": "no coordinates; no same-name lookout in the state"
+  }
+ ],
+ "coordinates_not_used": [],
+ "coordinates_outside_own_state": 2,
+ "rental_hints_without_ridb": []
+}
