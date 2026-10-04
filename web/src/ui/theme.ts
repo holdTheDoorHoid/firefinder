@@ -22,8 +22,10 @@ export function effectiveTheme(): 'light' | 'dark' {
   return media?.matches ? 'dark' : 'light';
 }
 
-export function onThemeChange(fn: (effective: 'light' | 'dark') => void): void {
+/** Returns a function that stops listening. */
+export function onThemeChange(fn: (effective: 'light' | 'dark') => void): () => void {
   listeners.add(fn);
+  return () => listeners.delete(fn);
 }
 
 function apply(choice: ThemeChoice): void {

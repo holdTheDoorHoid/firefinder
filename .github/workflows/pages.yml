@@ -1,8 +1,8 @@
 name: Build and publish the website
 
 # Builds the site data from data/towers (or the sample fixtures while that folder is empty),
-# tests it, builds the website with one prerendered page per lookout, and publishes it to
-# GitHub Pages. Runs on every push to main, and on demand from the Actions tab.
+# tests it, builds the terrain engine (Rust -> WebAssembly) for the 3D views, builds the website
+# with one prerendered page per lookout, and publishes it to GitHub Pages. Runs on every push to main, and on demand from the Actions tab.
 #
 # One-time setup: Settings -> Pages -> Build and deployment -> Source: "GitHub Actions".
 
@@ -51,9 +51,37 @@ jobs:
       - name: Build site data (falls back to fixtures if data/towers is empty)
         run: python3 pipeline/build_site_data.py --fallback-fixtures
 
+      # Named summits for the "View from the cab" labels: data/sources/peaks_gnis.json (USGS
+      # GNIS, committed) cut into 1-degree chunks under web/public/data/peaks/.
+      - name: Cut peak names into chunks
+        run: python3 pipeline/build_peaks.py
+
+      # The terrain engine behind the 3D views is Rust compiled to WebAssembly
+      # (crates/firefinder-view). Its tests run natively; wasm-pack builds the browser module
+      # into web/src/view3d/wasm/ (git-ignored), which the website imports.
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: crates/firefinder-view -> target
+
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: wasm-pack
+
+      - name: Test the terrain engine
+        working-directory: crates/firefinder-view
+        run: cargo test
+
       - name: Install website dependencies
         working-directory: web
         run: npm ci
+
+      - name: Build the terrain engine for the browser
+        working-directory: web
+        run: npm run wasm
 
       - name: Type-check and test the website
         working-directory: web

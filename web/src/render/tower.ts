@@ -8,6 +8,8 @@ import { html, raw, safeUrl, isSafeStoryHtml, type SafeHtml } from '../lib/html.
 import { fillFor, markerSvg, rentBadgeSvg, shapeFor } from '../lib/icons.ts';
 import { MARKS, MARK_LABELS } from '../lib/checklist.ts';
 import { builtYear, isRentable, type Conflict, type SourceInfo, type TowerProps, type TowerRecord } from '../lib/types.ts';
+import { eyeHeight, megabytes, reconstructionNote } from '../view3d/describe.ts';
+import { estimateBytes, panoramaLevels, planTiles } from '../view3d/tiles.ts';
 import {
   ACCESS,
   OWNERSHIP,
@@ -495,6 +497,47 @@ export function miniMap(r: TowerRecord, ctx: RenderContext): SafeHtml {
   </figure>`;
 }
 
+/* ---------- View from the cab ---------- */
+
+/** Download sizes for a lookout's panorama: full detail and the lighter phone set, bytes. */
+export function panoramaSizes(lat: number, lon: number): { full: number; light: number } {
+  const size = (detail: 'full' | 'light') => estimateBytes(planTiles([{ lat, lon }], panoramaLevels(150_000, detail)));
+  return { full: size('full'), light: size('light') };
+}
+
+/** What the view needs to know about a lookout, embedded in the page for the script. */
+export function panoramaPayload(r: TowerRecord): string {
+  return JSON.stringify({
+    id: r.id,
+    name: r.name,
+    lat: r.location.lat,
+    lon: r.location.lon,
+    kind: r.kind,
+    status: r.status,
+    height_m: r.height_m ?? null,
+    elevation_m: r.elevation_m ?? null,
+  });
+}
+
+const SEEN_ICON = raw('<svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 10 3 3.6M10 10l7.4-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M3 3.6A9.5 9.5 0 0 1 17.4 5L10 10Z" fill="currentColor" opacity=".3"/><circle cx="10" cy="10" r="1.9" fill="currentColor"/><path d="M2 17.5h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>');
+const PANO_ICON = raw('<svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M1.5 15.5 6 9l3 3.5 3.5-5.5 6 8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/><path d="M1.5 17.5h17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>');
+
+export function viewSection(r: TowerRecord, ctx: RenderContext): SafeHtml {
+  const { lat, lon } = r.location;
+  const sizes = panoramaSizes(lat, lon);
+  const eye = eyeHeight({ kind: r.kind, height_m: r.height_m, lon });
+  const recon = reconstructionNote(r.status, eye.source);
+  const gone = r.status === 'gone' || r.status === 'ruins';
+  return html`<p class="lede">${gone ? 'What the lookout saw from its cab' : 'What you see from the cab'}: every ridge out to about 93 miles, the named peaks in sight, and other fire lookouts within view, worked out from terrain data in your browser.</p>
+    ${recon ? html`<div class="notice tone-unknown" role="note">${INFO}<div><p>${recon}</p></div></div>` : ''}
+    <div class="pano-host" data-pano="${panoramaPayload(r)}">
+      <p class="pano-start"><button type="button" class="btn btn-primary btn-view" data-pano-start disabled>${PANO_ICON}<span>Show the view from the cab</span></button>
+        <span class="fine pano-size" data-pano-size data-full="${sizes.full}" data-light="${sizes.light}">Downloads about ${megabytes(sizes.full)} of terrain data the first time.</span></p>
+      <noscript><p class="fine">The view needs JavaScript.</p></noscript>
+    </div>
+    <p class="fine">Or see <a href="${mapLink(r, ctx, 10)}&amp;vs=${r.id}">what it could see on the map</a>: the ground in its line of sight.</p>`;
+}
+
 /* ---------- Checklist + edit ---------- */
 
 export function checklistButtons(id: string): SafeHtml {
@@ -519,6 +562,7 @@ export function renderTowerMain(r: TowerRecord, ctx: RenderContext): SafeHtml {
   const jump: [string, string][] = [
     ['visit', 'Visit & stay'],
     ['facts', 'Facts'],
+    ['view', 'View from the cab'],
     ['history', 'History'],
     ...(photos ? ([['photos', 'Photos']] as [string, string][]) : []),
     ...(conflicts ? ([['conflicts', 'Disagreements']] as [string, string][]) : []),
@@ -550,6 +594,7 @@ export function renderTowerMain(r: TowerRecord, ctx: RenderContext): SafeHtml {
     <div class="t-main">
       ${section('visit', 'Visit & stay', visitSection(r))}
       ${section('facts', 'Facts', factsCard(r))}
+      ${section('view', 'View from the cab', viewSection(r, ctx))}
       ${section('history', 'History', html`<h3 class="h-small">Timeline</h3>${timeline(r, ctx)}<h3 class="h-small">Story</h3>${storyBlock(r, ctx)}`)}
       ${section('photos', 'Photos', photos)}
       ${section('conflicts', 'Where sources disagree', conflicts)}
@@ -633,6 +678,10 @@ export function renderPanel(r: TowerRecord, ctx: RenderContext, opts: { hiddenBy
     ${stay}
     <dl class="kv kv-panel">${factRows(r, { short: true }).map(([k, v]) => html`<div><dt>${k}</dt><dd>${v}</dd></div>`)}</dl>
     ${checklistButtons(r.id)}
+    <div class="panel-3d" role="group" aria-label="Views from ${r.name}">
+      <button type="button" class="btn" data-action="view-cab" data-id="${r.id}">${PANO_ICON}View from the cab</button>
+      <button type="button" class="btn" data-action="viewshed" data-id="${r.id}" aria-pressed="false">${SEEN_ICON}<span data-viewshed-label>What it could see</span></button>
+    </div>
     <p class="panel-actions"><a class="btn" href="${towerPath(r.id, ctx)}">Open full page<span class="visually-hidden">: ${r.name}</span></a></p>
     <p class="fine">History, photos, sources and “Suggest an edit” are on the full page.</p>`;
 }

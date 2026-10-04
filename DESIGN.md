@@ -288,6 +288,11 @@ state list), `wikipedia`, `site` (hobbyist and regional pages), `agency`, `websi
   `b` year built, `rt` 1 if rentable, `rg` 1 if on a register, `o` other names joined by `|`.
 - `t/<id>.json`: the full canonical record plus the story HTML, when one exists.
 - `meta.json`: counts, source list with retrieved dates, and build date.
+- `peaks/` (from `pipeline/build_peaks.py`, run after `build_site_data.py`): named summits from
+  USGS GNIS (`data/sources/peaks_gnis.json`, fetched by `pipeline/fetch_peaks.py`) cut into
+  1° cells, `peaks/<floor lat>_<floor lon>.json` = `[[name, lat, lon, gnis_id], …]` (4 dp), plus
+  `peaks/index.json` listing the cells. Files in `data/sources/` with `"kind": "reference"` are
+  not lookout sources: `merge.py` and `build_site_data.py` skip them.
 
 ---
 
@@ -312,7 +317,34 @@ state list), `wikipedia`, `site` (hobbyist and regional pages), `agency`, `websi
 - Accessibility: status is never shown by colour alone (shape and label too); keyboard-usable
   filters; readable at phone width.
 - Stage 3 (3D): panorama and viewshed computed in **Rust → WASM** (DEM ray-marching over
-  terrarium tiles), drawn by the TypeScript UI.
+  terrarium tiles), drawn by the TypeScript UI. Details in §4.1.
+
+### 4.1 3D views (stage 3, built 2026-10-04)
+
+- **Engine**: `crates/firefinder-view` (Rust, `cargo test`), built by `npm run wasm`
+  (wasm-pack, `--target web`) into `web/src/view3d/wasm/` (git-ignored; CI builds it). It runs in
+  a Web Worker (`web/src/view3d/worker.ts`) that fetches the tiles; Rust decodes the PNGs and
+  keeps a small tile cache. Spherical earth (R = 6,371,008.8 m) with refraction folded into an
+  effective radius R' = R / (1 − k), **k = 0.13**; bearings are true.
+- **Terrain**: AWS Terrain Tiles (Mapzen/Tilezen Joerd, Terrarium PNG, keyless, CORS open),
+  credited on the About page. Zoom by distance: panorama 12 to 4 km, 10 to 40 km, 9 to 100 km,
+  8 to 150 km (phones skip 9); viewshed 12 to 4 km, 10 beyond. Heights below sea level read as 0.
+- **Eye height** = ground + structure + 1.6 m. Structure = `height_m` (taken as the cab floor)
+  when recorded, otherwise by kind: ground cab eye 2.5 m, two-story 6 m, three-story 9 m;
+  towers (and unknown kinds) 9.1 m (30 ft) west of 100°W, 20 m (66 ft) east of it. The page
+  says which applies and lets the visitor change it. The eye stands on the highest terrain
+  within 75 m of the recorded position (said in "How this view is made").
+- **Panorama**: 36 distance layers drawn far to near, paler with distance; only true ridgelines
+  are inked; peak labels for GNIS summits whose top clears the nearer terrain (the last 2 % of
+  the distance, 150 m–1.5 km, is ignored so a mountain is not hidden by its own slope); other
+  lookouts at typical heights, gone ones at their old sites. Where the whole skyline varies by
+  less than 1.5°, heights start drawn ×2, labelled on the view and on the pressed button.
+- **Viewshed** ("What it could see"): ground in line of sight within 20, 40 or 60 km, on a
+  Web Mercator grid, counted over up to 12 lookouts; map URL `&vs=<ids>&vr=<km>`.
+- **Lesson** `/learn/smoke/`: two standing lookouts 12–32 km apart in a cluster of at least
+  three; the smoke is placed on ground both see, 4–28 km from each, where the lines cut at
+  35–145°. Readings round to the nearest half degree. Screen readers hear how far the smoke is
+  from the sight; a hint turns the view to within a few degrees of it (and the result says so).
 
 ---
 

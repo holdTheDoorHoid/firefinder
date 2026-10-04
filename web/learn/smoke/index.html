@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f4f1e8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121714" media="(prefers-color-scheme: dark)">
+  <title>Spot the smoke: how lookouts found fires · Firefinder</title>
+  <meta name="description" content="A short interactive lesson: take a bearing on a smoke with the Osborne Firefinder from two real fire lookouts, cross the lines and find the fire. With the history of the Firefinder and cross-shots.">
+  <link rel="icon" href="{{base}}favicon.svg" type="image/svg+xml">
+  <script>try{var t=localStorage.getItem('firefinder.theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body class="page-learn">
+<!--ff:header-->
+<main id="main" class="learn">
+  <header class="learn-head">
+    <p class="eyebrow">Learn · How lookouts found fires</p>
+    <h1>Spot the smoke</h1>
+    <p class="lede">From a lookout you can see which way a smoke is, but not how far away it is. So the lookout turned the sight of the <strong>Osborne Firefinder</strong> onto it and read the bearing, a second lookout did the same, and where the two lines crossed was the fire. Try it with two real lookouts.</p>
+  </header>
+
+  <section class="game" aria-labelledby="game-h" data-game>
+    <h2 id="game-h" class="visually-hidden">The lesson</h2>
+    <ol class="game-steps" data-steps>
+      <li data-step="0" aria-current="step"><span class="game-step-n">1</span> Sight from lookout A</li>
+      <li data-step="1"><span class="game-step-n">2</span> Sight from lookout B</li>
+      <li data-step="2"><span class="game-step-n">3</span> Cross the lines</li>
+    </ol>
+    <p class="game-status" role="status" aria-live="polite" data-status>Loading the lookouts…</p>
+    <div class="game-grid">
+      <div class="game-view">
+        <h3 class="game-view-title" data-view-title>The view from the cab</h3>
+        <p class="game-hint" data-hint>Somewhere in the circle there is a smoke. Turn the view (drag it, or use the arrow keys) until the orange sighting hair sits on the base of the smoke, then take the reading.</p>
+        <div class="game-view-host" data-view-host><p class="muted">Waiting for the lookouts…</p></div>
+        <div class="game-sight">
+          <div class="game-ring" data-ring aria-hidden="true"></div>
+          <div class="game-sight-text">
+            <p class="game-reading">The sight reads <strong data-reading>–</strong></p>
+            <p class="fine">Lookouts reported to the nearest half degree, read clockwise from true north.</p>
+            <p class="game-buttons"><button type="button" class="btn btn-primary" data-take disabled>Take the reading</button>
+              <button type="button" class="btn" data-hint-btn hidden>Point me toward it</button></p>
+            <p class="fine">With a screen reader, the view says how far the smoke is from the sight as you turn. Enter takes the reading.</p>
+          </div>
+        </div>
+      </div>
+      <div class="game-side">
+        <div class="game-map" id="game-map" role="img" aria-label="Map of the two lookouts and your bearing lines" data-map></div>
+        <p class="fine game-map-key" data-map-key>Lookout A and lookout B are marked with their letters. Your line from A is solid, your line from B is dashed.</p>
+        <div class="game-result" data-result hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="history" aria-labelledby="history-h">
+    <h2 id="history-h">How it was done</h2>
+    <h3>The Osborne Firefinder</h3>
+    <p>William B. Osborne Jr., a Forest Service forester in Oregon, built the first Firefinder in the early 1910s, and the Leupold-Volpel company of Portland began making it in 1913.<sup><a href="#fn1" id="r1">1</a></sup> It became the standard sighting table in the middle of every lookout cab: a map of the surrounding country centred on the lookout, a ring around it graduated in degrees from true north, and a pair of sights that turn on the ring.<sup><a href="#fn1">1</a>, <a href="#fn2" id="r2">2</a></sup></p>
+    <p>To take a shot, the lookout turned the sights until the fine vertical hair in the far sight crossed the smoke, then read the bearing (the azimuth) off the ring. Firefinders were numbered so that the reading sat under the near sight, by the lookout's eye: the zero was put on the south side of the ring for exactly that reason.<sup><a href="#fn2">2</a></sup></p>
+    <h3>Cross-shots</h3>
+    <p>One bearing says which way the fire is, not how far. When two or more lookouts could see the same smoke, the azimuth mattered more than anything else: the dispatcher plotted each lookout's bearing on a large map, with strings pinned at the lookouts (“string maps”), and the fire was where they crossed. A reading to the nearest half degree was close enough to send a crew.<sup><a href="#fn2">2</a></sup> Where only one lookout could see a smoke, a vertical angle and a distance read off the Firefinder's map had to do.</p>
+    <p>That is why lookouts were placed so their views overlapped. In the 1930s the Forest Service photographed the view from hundreds of lookouts and drew “seen-area” maps of the detection coverage the whole lookout system gave.<sup><a href="#fn3" id="r3">3</a></sup> The map's <a href="{{base}}">What it could see</a> button does the same with terrain data.</p>
+    <h3>Reporting the fire</h3>
+    <p>The lookout's report went out by telephone or radio in a set order: the station's name, the azimuth, whether the base of the smoke was in sight, the vertical angle and nearby landmarks. Then came what was burning, the smoke's colour and drift, the distance, the size and finally the location by legal description: township, range and section on the public land survey.<sup><a href="#fn2">2</a></sup></p>
+    <section class="footnotes" aria-label="Sources">
+      <ol>
+        <li id="fn1">National Park Service, <a href="https://www.nps.gov/articles/000/50-nifty-finds-24-fire-away.htm">“50 Nifty Finds #24: Fire Away!”</a>. <a href="#r1" aria-label="Back to the text">↩</a></li>
+        <li id="fn2">U.S. Forest Service, California Region, <em>Fireman's Guide</em> (1955), chapter 3, “Lookout Duties” (H. Grace, R. Asplund, J. Ely, P. Intorf and R. F. Droege), as reprinted by Six Rivers National Forest: <a href="https://tnlandforms.us/data/osborne.pdf">“The Osborne Firefinder”</a> (PDF). <a href="#r2" aria-label="Back to the text">↩</a></li>
+        <li id="fn3">National Park Service, <a href="https://www.nps.gov/articles/history-of-the-panoramic-lookout-project.htm">“History of the Panoramic Lookout Project”</a>. <a href="#r3" aria-label="Back to the text">↩</a></li>
+      </ol>
+    </section>
+    <p class="fine">About this lesson: the two lookouts are real, picked at random from Firefinder's map among lookouts that stand 8 to 20 miles apart. The smoke is placed at random on ground that both of them can see, worked out from terrain data, and drawn on a panorama computed from the same data with typical cab heights. The views show bare ground: no trees, haze or weather.</p>
+  </section>
+</main>
+<!--ff:footer-->
+<dialog id="checklist-dialog" class="dialog" aria-labelledby="checklist-dialog-h"></dialog>
+<script type="module" src="/src/pages/smoke.ts"></script>
+</body>
+</html>

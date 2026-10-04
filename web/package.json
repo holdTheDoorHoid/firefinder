@@ -9,7 +9,9 @@
     "node": ">=24"
   },
   "scripts": {
-    "data:fixtures": "python3 ../pipeline/build_site_data.py --towers fixtures/towers --stories fixtures/stories --photos fixtures/photos",
+    "data:fixtures": "python3 ../pipeline/build_site_data.py --towers fixtures/towers --stories fixtures/stories --photos fixtures/photos && python3 ../pipeline/build_peaks.py",
+    "data:peaks": "python3 ../pipeline/build_peaks.py",
+    "wasm": "wasm-pack build ../crates/firefinder-view --target web --release --no-pack --out-dir ../../web/src/view3d/wasm",
     "dev": "vite",
     "build": "vite build && node scripts/prerender.ts",
     "prerender": "node scripts/prerender.ts",

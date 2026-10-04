@@ -4,6 +4,10 @@
  *
  *   ?at=7.5/44.1/-121.6&t=us-or-warner-mountain&status=standing&rent=1&state=OR&base=topo
  *
+ * "What it could see" adds the lookouts whose views are shaded and the radius in km:
+ *
+ *   &vs=us-id-pilot-peak,us-id-sheep-mountain&vr=40
+ *
  * Defaults are left out, so a plain visit has a clean URL. Unknown or malformed values are
  * dropped rather than causing an error.
  */
@@ -24,10 +28,18 @@ export interface AppState {
   view: View | null;
   selected: string | null;
   basemap: Basemap;
+  /** Lookouts whose viewsheds are shown ("What it could see"). */
+  seen: string[];
+  /** Viewshed radius, km (null = the default). */
+  seenKm: number | null;
 }
 
+/** Radii offered for "What it could see", km. */
+export const SEEN_RADII_KM = [20, 40, 60] as const;
+export const SEEN_MAX = 12;
+
 export function defaultState(): AppState {
-  return { filters: defaultFilters(), view: null, selected: null, basemap: 'map' };
+  return { filters: defaultFilters(), view: null, selected: null, basemap: 'map', seen: [], seenKm: null };
 }
 
 /** "none" encodes a deliberately empty selection (every box unticked). */
@@ -84,6 +96,9 @@ export function parseState(search: string): AppState {
   const t = q.get('t');
   state.selected = isTowerId(t) ? t : null;
   state.basemap = q.get('base') === 'topo' ? 'topo' : 'map';
+  state.seen = [...new Set((q.get('vs') ?? '').split(',').filter((id) => isTowerId(id)))].slice(0, SEEN_MAX);
+  const km = Number(q.get('vr'));
+  state.seenKm = (SEEN_RADII_KM as readonly number[]).includes(km) ? km : null;
   return state;
 }
 
@@ -104,6 +119,8 @@ export function serializeState(state: AppState): string {
   if (f.region) q.set('state', f.region);
   if (f.mine && f.mine.size) q.set('mine', MARKS.filter((m) => f.mine!.has(m)).join(','));
   if (state.basemap === 'topo') q.set('base', 'topo');
+  if (state.seen.length) q.set('vs', state.seen.join(','));
+  if (state.seen.length && state.seenKm !== null) q.set('vr', String(state.seenKm));
   const s = q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/');
   return s ? `?${s}` : '';
 }

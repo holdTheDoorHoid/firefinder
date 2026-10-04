@@ -70,7 +70,7 @@ def inside_us(lat: float, lon: float) -> bool:
     return any(a <= lat <= b and c <= lon <= d for a, b, c, d in [*STATE_BBOX.values(), *TERRITORY_BBOX.values()])
 
 # Files in data/sources that are not lists of lookouts.
-SKIP_FILES = {"designs_reference.json", "ridb_excluded.json"}
+SKIP_FILES = {"designs_reference.json", "ridb_excluded.json", "peaks_gnis.json"}
 
 # ---------------------------------------------------------------------------------------
 # Source configuration
