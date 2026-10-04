@@ -517,7 +517,7 @@ def research_file(rid: str, **kw) -> dict:
                   "visit": {"climbable": None, "drive_up": False}},
         "events": [{"year": 1967, "event": "built", "note": "Current R-6 cab", "cite": [1]},
                    {"year": 1936, "event": "replaced", "note": "L-4 cab", "cite": [2]},
-                   {"year": 1992, "event": "modified", "note": "Hip roof", "cite": [1]},
+                   {"year": 1992, "event": "fire_spotted", "note": "Hip roof", "cite": [1]},
                    {"year": 1980, "event": "unstaffed", "note": "Staffing ended", "cite": [2]}],
         "corrections": [{"field": "location", "current": "45.0, -116.0", "proposed": "45.1, -116.1",
                          "evidence": "Register page", "cite": [1]}],
@@ -563,7 +563,7 @@ class ResearchOverlay(unittest.TestCase):
         built = [e for e in t["events"] if e["event"] == "built"]
         self.assertEqual(len(built), 1)
         self.assertEqual((built[0]["from"], built[0]["source_url"]), ("research", "http://nhlr.org/lookouts/us/id/gold-hill/"))
-        self.assertFalse(any(e["event"] == "modified" for e in t["events"]))
+        self.assertFalse(any(e["event"] == "fire_spotted" for e in t["events"]))
         self.assertTrue(any(e["event"] == "staffed_last" and e["year"] == 1980 for e in t["events"]))
         self.assertEqual(t["photos"][-1]["url"], "https://example.org/p.jpg")
         self.assertEqual(t["photos"][-1]["license"], "Public domain")
@@ -577,7 +577,7 @@ class ResearchOverlay(unittest.TestCase):
         self.assertEqual(t["location"]["lat"], 45.0)
         self.assertEqual(rep["research_corrections"][0]["proposed"], "45.1, -116.1")
         self.assertEqual(rep["research"]["notes_for_editor"][0]["note"], "Check the 1936 date.")
-        self.assertTrue(any("modified" in p_["problem"] for p_ in rep["research"]["problems"]))
+        self.assertTrue(any("fire_spotted" in p_["problem"] for p_ in rep["research"]["problems"]))
 
     def test_status_note_only_qualifies_a_status(self):
         facts = {"status": "standing", "status_note": "Hip roof replaced the original flat roof in 1992."}
@@ -631,7 +631,7 @@ class ResearchOverlay(unittest.TestCase):
         path = Path(f"{self.tid}.json")
         errs, warns = V.check_research(data, path, vocab, {self.tid})
         self.assertEqual(errs, [])
-        self.assertTrue(any("modified" in w for w in warns))
+        self.assertTrue(any("fire_spotted" in w for w in warns))
         bad = research_file(self.tid, events=[{"year": 1967, "event": "built", "cite": [9]}])
         self.assertTrue(any("not in sources" in e for e in V.check_research(bad, path, vocab, {self.tid})[0]))
         story = "Built in 1967.[^1] Rebuilt.[^3]\n\n[^1]: NHLR, http://nhlr.org/x (accessed 2026-10-04).\n"

@@ -109,6 +109,11 @@ export const EVENT: Record<string, string> = {
   nrhp_listed: 'Listed on the National Register of Historic Places',
   nhlr_registered: 'Added to the National Historic Lookout Register',
   fflos_registered: 'Added to the Former Fire Lookout Sites Register',
+  staffed: 'Staffed',
+  modified: 'Altered',
+  fire: 'Fire',
+  closed: 'Closed',
+  other: 'Event',
 };
 
 export const REGISTER_NAMES: Record<string, string> = {
