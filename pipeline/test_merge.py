@@ -89,7 +89,6 @@ class NameNormalisation(unittest.TestCase):
         self.assertGreaterEqual(self.s("Sugarloaf", "Sugar Loaf Fire Tower"), 0.95)
         self.assertGreaterEqual(self.s("Napolean Hill", "Napoleon Hill Lookout"), M.STRONG)
         self.assertGreaterEqual(self.s("Lookout Mountain", "Lookout Mtn."), 0.95)
-        self.assertGreaterEqual(self.s("Colville Museum (Relocated Graves Mountain)", "Graves Mountain Lookout"), 0.95)
         self.assertGreaterEqual(self.s("Putnam (Liberty)", "Liberty"), 0.95)
 
     def test_different_lookouts(self):
@@ -100,6 +99,8 @@ class NameNormalisation(unittest.TestCase):
         self.assertLess(self.s("Valentine NWR 1", "Valentine NWR 2"), M.PARTIAL)
         self.assertLess(self.s("Mineral Mountain", "Mission Mountain"), M.STRONG)
         self.assertLess(self.s("Little Baldy", "Baldy"), M.STRONG)
+        # a moved structure's origin is a different place, not another name for this one
+        self.assertLess(self.s("Colville Museum (Relocated Graves Mountain)", "Graves Mountain Lookout"), M.PARTIAL)
 
     def test_generic_names_have_no_score(self):
         self.assertIsNone(self.s("Fire Tower", "Bald Mountain"))
@@ -326,6 +327,113 @@ class LockedFields(unittest.TestCase):
             self.assertEqual(t2["id"], t["id"])
         finally:
             ws.close()
+
+
+class MovedStructures(unittest.TestCase):
+    def test_parse_annotation(self):
+        site, ann = M.parse_annotation("State Fair (Relocated Padlock Hill)")
+        self.assertEqual((site, ann["kind"], ann["origin"]), ("State Fair", "relocated", "Padlock Hill"))
+        site, ann = M.parse_annotation("Crystal Ridge (Relocated Stranger Mtn, WA)")
+        self.assertEqual((ann["origin"], ann["origin_region"]), ("Stranger Mountain", "WA"))
+        _, ann = M.parse_annotation("Trout Mountain (Relocated from Alabama)")
+        self.assertEqual((ann["origin"], ann["origin_region"]), (None, "AL"))
+        _, ann = M.parse_annotation("Missoula Aerial Fire Depot (Hornet Peak Replica)")
+        self.assertEqual((ann["kind"], ann["replica_of"]), ("replica", "Hornet Peak"))
+        _, ann = M.parse_annotation("Wilson Hill WMA #1 (Parts from Whites Hill)")
+        self.assertEqual((ann["kind"], ann["origin"]), ("parts", "Whites Hill"))
+        _, ann = M.parse_annotation("Sounding Knob (Relocated on same mountain)")
+        self.assertTrue(ann["same_place"])
+        _, ann = M.parse_annotation("Rugby (Relocated Salyer NWR \u2013 HQ)")
+        self.assertEqual(ann["origin"], "Salyer NWR \u2013 HQ")
+        self.assertEqual(M.parse_annotation("Putnam (Liberty)"), ("Putnam (Liberty)", None))
+        # the note is not an alternate name to match on
+        self.assertEqual(M.name_variants("State Fair (Relocated Padlock Hill)"), ["State Fair"])
+
+    def test_moved_lookout_is_named_and_linked(self):
+        ws = Workspace()
+        try:
+            ws.run({"ffla": [
+                rec("ffla", "o", "Padlock Hill", 42.3646, -76.2699, "NY", status="gone"),
+                rec("ffla", "n", "State Fair (Relocated Padlock Hill)", 43.0705, -76.2185, "NY"),
+                rec("ffla", "r", "Missoula Aerial Fire Depot (Hornet Peak Replica)", 46.92, -114.09, "MT"),
+            ], "osm": [rec("osm", "x", "Padlock Hill Fire Tower", 43.0706, -76.2186, "NY")]})
+            towers = ws.towers_by_id()
+            new, old = towers["us-ny-padlock-hill-at-state-fair"], towers["us-ny-padlock-hill"]
+            self.assertEqual(new["name"], "Padlock Hill Fire Tower (now at the State Fair)")
+            self.assertEqual(new["status"], "standing")
+            self.assertEqual(old["status"], "relocated")
+            ev = [e for e in new["events"] if e["event"] == "relocated"][0]
+            self.assertEqual((ev["moved_from"], ev["moved_to"]), ("Padlock Hill", "State Fair"))
+            self.assertIn({"label": "Original site: Padlock Hill", "url": "../us-ny-padlock-hill/",
+                           "kind": "relocated_from", "id": "us-ny-padlock-hill"}, new["links"])
+            self.assertTrue(any(l.get("kind") == "relocated_to" and l["id"] == new["id"] for l in old["links"]))
+            self.assertEqual(towers["us-mt-hornet-peak-replica"]["status"], "replica")
+            # re-running changes nothing, and the two-way links survive
+            self.assertEqual(ws.run()["files"]["written"], 0)
+            vocab = json.loads((M.DATA / "vocab.json").read_text())
+            for path in ws.towers.rglob("*.json"):
+                self.assertEqual(V.check(json.loads(path.read_text()), path, vocab)[0], [], path)
+        finally:
+            ws.close()
+
+
+class SmallRules(unittest.TestCase):
+    def test_one_year_build_difference_is_not_a_conflict(self):
+        ws = Workspace()
+        try:
+            ws.run({"ffla": [rec("ffla", "a", "Iron Mountain", 45.5, -116.0), rec("ffla", "b", "Gold Hill", 45.0, -116.0)],
+                    "firelookout_com": [rec("firelookout_com", "a", "Iron Mountain", 45.5, -116.0, built=1930),
+                                        rec("firelookout_com", "b", "Gold Hill", 45.0, -116.0, built=1930)],
+                    "osm": [rec("osm", "a", "Iron Mountain Lookout", 45.5001, -116.0, built=1931),
+                            rec("osm", "b", "Gold Hill Lookout", 45.0001, -116.0, built=1932)]})
+            self.assertEqual(ws.tower_with_key("ffla:a")["conflicts"], [])
+            self.assertEqual([c["field"] for c in ws.tower_with_key("ffla:b")["conflicts"]], ["built"])
+        finally:
+            ws.close()
+
+    def test_hide_keys(self):
+        ws = Workspace()
+        try:
+            key = next(iter(M.HIDE_KEYS))
+            src, _, rest = key.partition(":")
+            ws.run({src: [rec(src, rest, "East Lookout Tower", 13.3865, 144.722, "GU")]})
+            t = ws.tower_with_key(key)
+            self.assertTrue(t["hidden"])
+            self.assertEqual(t["hidden_reason"], M.HIDE_KEYS[key])
+        finally:
+            ws.close()
+
+    def test_rental_on_a_burned_lookout_warns(self):
+        ws = Workspace()
+        try:
+            ffla = rec("ffla", "f", "Flag Point", 45.3179, -121.4666, "OR", status="gone")
+            ffla["events"] = [{"year": 2026, "event": "burned", "note": None, "from": "ffla"}]
+            ridb = rec("ridb", "1", "Flag Point Lookout", 45.318, -121.467, "OR", agency=None,
+                       rental={"available": True, "provider": "recreation.gov", "url": "https://www.recreation.gov/x"})
+            ridb["agency"] = "USDA Forest Service"
+            ws.run({"ffla": [ffla], "ridb": [ridb]})
+            rental = ws.tower_with_key("ffla:f")["rental"]
+            self.assertIs(rental["available"], False)
+            self.assertEqual(rental["warning"], "FFLA reports this lookout burned in 2026, but recreation.gov "
+                                                "still lists it. Check with the forest before booking.")
+            self.assertEqual(rental["url"], "https://www.recreation.gov/x")
+        finally:
+            ws.close()
+
+
+class PackedDMS(unittest.TestCase):
+    def test_fire_lookouts_org_coordinates(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("flo", Path(__file__).parent / "regional" / "fire_lookouts_org.py")
+        flo = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(flo)
+        lat, lon, fmt = flo.parse_gps("37.2235", "119.1048")  # Mt. Tom: 37 22' 35", 119 10' 48"
+        self.assertEqual(fmt, "packed_dms")
+        self.assertAlmostEqual(lat, 37 + 22 / 60 + 35 / 3600, places=6)
+        self.assertAlmostEqual(lon, -(119 + 10 / 60 + 48 / 3600), places=6)
+        self.assertEqual(flo.parse_gps("35.85278", "118.5025"), (35.85278, -118.5025, "decimal"))  # 85 > 59
+        self.assertEqual(flo.parse_gps("37.27212", "119.54944")[2], "decimal")  # 94 > 59 in the longitude
+        self.assertEqual(flo.parse_gps("36.020", "118.253")[2], "decimal")      # too few digits
 
 
 class Validation(unittest.TestCase):

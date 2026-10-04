@@ -149,6 +149,7 @@ MATCH_STRONG_M = 1500
 STRONG_RADIUS_BY_SOURCE = {"idaho_fl": 3000, "ridb": 3000, "cskt": 15000}
 NEAR_MISS_M = 10000
 REGISTER_FAR_M = 5000
+BUILT_CONFLICT_YEARS = 2
 CONFLICT_LOCATION_M = 500
 STRONG = 0.85
 PARTIAL = 0.5
@@ -196,6 +197,11 @@ STATE_NAMES = {
 HIDDEN_KIND_REASON = {
     "tree": "Tree platform: out of scope (structures only)",
     "camp": "Camp or tent site: out of scope (structures only)",
+}
+# Human decisions on single records, by source key. Each entry hides the tower holding that
+# record (reason shown), however the sources describe it.
+HIDE_KEYS = {
+    "osm:node/358671897": "Not confirmed as a fire lookout",  # "East Lookout Tower", Guam (2026-10-04)
 }
 # FFLA "Type" values that are a bare lookout point, not a structure.
 BARE_POINT_TYPES = {
@@ -285,8 +291,8 @@ def clean_name(name: str | None) -> str | None:
         lead = "Mount" if lead.lower() == "mount" else lead.rstrip(".") + ("." if lead.lower().startswith("mt") else "")
         s = re.sub(r"\s+", " ", f"{lead} {m.group('base').strip()} {m.group('rest').strip()}").strip()
     letters = [c for c in s if c.isalpha()]
-    if letters and all(c.isupper() for c in letters) and len(letters) > 3:
-        s = smart_title(s)
+    if letters and all(c.isupper() for c in letters) and len(letters) > 3 and " " in s:
+        s = smart_title(s)  # "BALD KNOB LOOKOUT"; a lone acronym ("CBFIC") stays
     return s
 
 
@@ -328,6 +334,99 @@ def name_tokens(s: str) -> list[str]:
     return [ABBREVIATIONS.get(t, t) for t in s.split()]
 
 
+_ANNOTATION_WORDS = re.compile(r"\b(relocated|replica|parts from|removed)\b", re.I)
+_ANNOTATION_RE = re.compile(r"\s*\((?P<body>[^()]*\b(?:relocated|replica|parts from|removed)\b[^()]*)\)", re.I)
+STATE_BY_NAME = {v.lower(): k for k, v in STATE_NAMES.items()}
+
+
+def _state_code(text: str) -> str | None:
+    t = text.strip().strip(".").lower()
+    if t.upper() in STATE_NAMES:
+        return t.upper()
+    return STATE_BY_NAME.get(t)
+
+
+def expand_place(text: str) -> str:
+    """"Huckleberry Mtn" -> "Huckleberry Mountain" for display."""
+    text = re.sub(r"\bMtn\b\.?", "Mountain", text)
+    text = re.sub(r"\bPk\b\.?", "Peak", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def parse_annotation(name: str | None) -> tuple[str | None, dict | None]:
+    """Split a name carrying a structure-history note into the plain name and the note.
+
+    FFLA writes moved and copied lookouts as "<where it is now> (<note>)":
+      "State Fair (Relocated Padlock Hill)"         kind relocated, origin Padlock Hill
+      "Crystal Ridge (Relocated Stranger Mtn, WA)"  origin Stranger Mountain, in WA
+      "Kathio State Park (Relocated from near Isle)", "Trout Mountain (Relocated from Alabama)"
+      "Kellogg Peak (Replica)", "Missoula Aerial Fire Depot (Hornet Peak Replica)"
+      "Mackenzie Center (Replica – from State Fair)"   a replica that was moved
+      "Wilson Hill WMA #1 (Parts from Whites Hill)"  built with another tower's parts
+    NHLR does the same in a few names ("OFS Cool Springs Fire Tower (Relocated Spears)",
+    "Sleepy Creek Fire Tower (Removed)").
+    """
+    if not name:
+        return name, None
+    m = _ANNOTATION_RE.search(name)
+    if not m:
+        return name, None
+    site = re.sub(r"\s+", " ", (name[:m.start()] + " " + name[m.end():])).strip(" -\u2013")
+    body = m.group("body").strip()
+    ann: dict = {"kind": None, "origin": None, "origin_region": None, "near": False,
+                 "same_place": False, "unknown_origin": False, "replica_of": None, "note": None, "raw": body}
+    low = body.lower()
+    rest: str | None = None
+    if re.search(r"\bremoved\b", low) and not re.search(r"relocated|replica|parts", low):
+        ann["kind"] = "removed"
+        return site or name, ann
+    if "parts from" in low:
+        ann["kind"] = "parts"
+        rest = re.split(r"parts from", body, flags=re.I)[1]
+    elif "replica" in low:
+        ann["kind"] = "replica"
+        before, after = re.split(r"\breplica\b", body, maxsplit=1, flags=re.I)
+        ann["replica_of"] = expand_place(before.strip(" -\u2013")) or None
+        after = after.strip(" -\u2013")
+        fm = re.match(r"^from\s+(.+)$", after, re.I)
+        if fm:
+            rest = fm.group(1)
+        elif after:
+            ann["note"] = after
+    else:
+        ann["kind"] = "relocated"
+        rest = re.split(r"relocated", body, maxsplit=1, flags=re.I)[1]
+    if rest is not None:
+        rest = rest.strip(" -\u2013")
+        rest = re.sub(r"^from\s+", "", rest, flags=re.I)
+        if re.match(r"^near\s+", rest, re.I):
+            ann["near"] = True
+            rest = re.sub(r"^near\s+", "", rest, flags=re.I)
+        # "Deer Town – non-fire", "Jefferson – Loc 1"; but "Salyer NWR – HQ" is one name
+        nm = re.match(r"^(.*?)\s+[\u2013-]\s+(non-fire|loc\s*\d+)$", rest, re.I)
+        if nm:
+            rest, ann["note"] = nm.group(1).strip(), nm.group(2).strip()
+        if re.fullmatch(r"(on\s+)?(the\s+)?same\s+(mountain|site|hill|peak)", rest, re.I):
+            ann["same_place"] = True
+            return site or name, ann
+        if rest.lower() in ("unknown", "an unknown site", "?"):
+            ann["unknown_origin"] = True
+            return site or name, ann
+        whole_state = _state_code(rest)
+        if whole_state:
+            ann["origin_region"] = whole_state
+        elif "," in rest:
+            place, _, st = rest.rpartition(",")
+            code = _state_code(st)
+            if code:
+                ann["origin_region"] = code
+                rest = place.strip()
+            ann["origin"] = expand_place(rest) or None
+        elif rest:
+            ann["origin"] = expand_place(rest)
+    return site or name, ann
+
+
 def name_variants(name: str | None, aliases: list[str] | None = None) -> list[str]:
     """The ways a record names its lookout: the name without any parenthetical, the
     parenthetical itself when it is an alternate name ("Putnam (Liberty)"), each side of a
@@ -343,9 +442,9 @@ def name_variants(name: str | None, aliases: list[str] | None = None) -> list[st
             out.append(main)
         for paren in re.findall(r"\(([^)]*)\)", c):
             p = paren.strip()
-            # "(Relocated Graves Mountain)": the structure's original name
-            p = re.sub(r"^relocated\s+(?:from\s+)?(?:near\s+)?", "", p, flags=re.I)
-            if p and not re.match(r"^(same as|see\b|railroad|military|unk|\?)", p, re.I):
+            # "(Relocated X)", "(Replica)", "(Parts from X)" describe the structure's history,
+            # not another name for this place: see parse_annotation()
+            if p and not re.match(r"^(same as|see\b|railroad|military|unk|\?)", p, re.I) and not _ANNOTATION_WORDS.search(p):
                 out.append(p)
         for part in re.split(r"\s*/\s*", main):
             if part and part != main:
@@ -422,15 +521,39 @@ def name_score(forms_a: list[NameForm], forms_b: list[NameForm]) -> float | None
     return max(_pair_score(a, b) for a in forms_a for b in forms_b)
 
 
+SLUG_KEEP_BEFORE_TRAILING = {"big", "little", "old", "new", "high", "low", "the", "north", "south", "east", "west"}
+
+
 def slugify(text: str) -> str:
-    toks = re.sub(r"[^a-z0-9]+", " ", ascii_fold(text).lower().replace("'", "")).split()
-    if name_forms(text):  # a generic name ("Fire Tower") keeps all its words
+    def tokens(t: str) -> list[str]:
+        t = re.sub(r"\bnon-fire\b", "nonfire", ascii_fold(t).lower())
+        return re.sub(r"[^a-z0-9]+", " ", t.replace("'", "")).split()
+
+    def trim(toks: list[str]) -> list[str]:
+        toks = list(toks)
         while len(toks) > 1 and toks[-1] in SLUG_TRAILING:
+            if len(toks) == 2 and toks[0] in SLUG_KEEP_BEFORE_TRAILING:
+                break  # "Big Tower" stays big-tower
             toks.pop()
+        return toks
+
+    base, paren, rest = text.partition("(")
+    if name_forms(text):  # a generic name ("Fire Tower") keeps all its words
+        toks = trim(trim(tokens(base)) + tokens(rest)) if paren and name_forms(base) else trim(tokens(text))
+    else:
+        toks = tokens(text)
     slug = "-".join(toks)
     if len(slug) > 80:
         slug = slug[:80].rsplit("-", 1)[0]
     return slug or "lookout"
+
+
+def id_slug(name: str) -> str:
+    """Slug for an id. Alternate names and qualifiers in parentheses stay, since they tell
+    same-named lookouts apart ("Barnum (Loc 2)", "High Knob (JNF)"); a structure-history note
+    never reaches here (see history_naming). "Lookout" before a parenthetical goes too:
+    "Pilot Peak Lookout (Payette National Forest)" -> pilot-peak-payette-national-forest."""
+    return slugify(name)
 
 
 def has_lookout_word(name: str) -> bool:
@@ -560,6 +683,7 @@ class Rec:
     match: str | None = None        # how it was matched: key/register/spatial/name/new
     match_note: str | None = None
     bad_coords: str | None = None   # why the source's coordinates were not used, if so
+    annotation: dict | None = None  # structure history from the name: see parse_annotation()
 
     @classmethod
     def build(cls, source: str, raw: dict, order: int) -> "Rec":
@@ -582,8 +706,9 @@ class Rec:
                 aliases.extend(x.strip() for x in v.split(";") if x.strip())
             elif isinstance(v, list):
                 aliases.extend(str(x) for x in v if x)
-        r.display = clean_ridb_name(raw.get("name")) if source == "ridb" else clean_name(raw.get("name"))
-        r.forms = name_forms(raw.get("name"), aliases)
+        plain, r.annotation = parse_annotation(clean_name(raw.get("name")))
+        r.display = clean_ridb_name(raw.get("name")) if source == "ridb" else plain
+        r.forms = name_forms(plain, aliases)
         regs = [normalize_register(g) for g in raw.get("registers") or []]
         r.registers = [g for g in regs if g]
         r.reg_keys = sorted({k for g in r.registers for k in register_keys(g)})
@@ -618,6 +743,10 @@ class Tower:
     old_forms: list = field(default_factory=list)
     old_point: tuple | None = None
     old_region: str | None = None
+    history: Rec | None = None          # the member whose name carries a structure-history note
+    origin: "Tower | None" = None       # the tower at the site this structure came from
+    origin_alternatives: list = field(default_factory=list)
+    slug_text: str | None = None        # what the id is made from, when not the plain name
 
     @property
     def sources(self) -> set:
@@ -649,8 +778,9 @@ class Tower:
 
 
 def is_relocated(rec: Rec) -> bool:
-    text = f"{rec.raw.get('name') or ''} {rec.extra.get('section') or ''}".lower()
-    return "relocated" in text or "replica" in text
+    if rec.annotation and rec.annotation["kind"] in ("relocated", "replica", "parts"):
+        return True
+    return "relocated" in str(rec.extra.get("section") or "").lower()
 
 
 def precedence(field_name: str, sources: list[str]) -> list[str]:
@@ -882,6 +1012,48 @@ class Matcher:
                 self.unplaced.append(r)
         self.deferred = []
 
+    def find_origins(self) -> None:
+        """For towers whose name says the structure came from elsewhere ("State Fair
+        (Relocated Padlock Hill)"), find the tower at the original site: a strong name match in
+        the origin's state, not itself a moved structure. Several candidates: prefer one whose
+        sources say the lookout is gone, then the nearest; the others go to the report."""
+        order = PRECEDENCE["name"]
+        for t in self.towers:
+            noted = [m for m in t.members if m.annotation and m.annotation["kind"] in ("relocated", "replica", "parts", "removed")]
+            if not noted:
+                continue
+            noted.sort(key=lambda m: (order.index(m.source) if m.source in order else len(order), m.key))
+            t.history = noted[0]
+            ann = t.history.annotation
+            site_forms = name_forms(t.history.display)
+            if ann.get("origin") and not ann.get("same_place"):
+                s_ = name_score(name_forms(ann["origin"]), site_forms)
+                if s_ is not None and s_ >= 0.95 and not ann.get("origin_region"):
+                    ann["same_place"] = True  # "Ascutney, Mount (Relocated Mount Ascutney)"
+            if ann.get("same_place"):
+                oforms = name_forms(ann.get("origin") or t.history.display)
+            elif not ann.get("origin") or ann.get("near") or ann["kind"] == "removed":
+                continue
+            else:
+                oforms = name_forms(ann["origin"])
+            region = ann.get("origin_region") or t.history.region
+            cands = []
+            for u in self.by_region.get(region or "", ()):
+                if u is t or not u.members:
+                    continue
+                if any(m.annotation and m.annotation["kind"] in ("relocated", "parts", "replica") for m in u.members):
+                    continue
+                score = name_score(oforms, u.forms())
+                if score is None or score < STRONG:
+                    continue
+                gone = any(record_status(m) in ("gone", "ruins", "relocated") for m in u.members)
+                d = u.min_dist(t.history.lat, t.history.lon) if t.history.has_coords else None
+                cands.append((0 if gone else 1, d if d is not None else 1e12, u.seq, u))
+            cands.sort(key=lambda c: c[:3])
+            if cands:
+                t.origin = cands[0][3]
+                t.origin_alternatives = [c[3] for c in cands[1:]]
+
     # -- per-source pass ----------------------------------------------------------------
 
     def match_source(self, source: str, recs: list[Rec]) -> None:
@@ -985,7 +1157,7 @@ class Matcher:
 def status_group(s: str | None) -> str | None:
     if not s or s == "unknown":
         return None
-    return {"ruins": "gone", "replica": "standing"}.get(s, s)
+    return {"ruins": "gone", "replica": "standing", "relocated": "gone"}.get(s, s)
 
 
 def record_status(rec: Rec) -> str | None:
@@ -997,8 +1169,11 @@ def record_status(rec: Rec) -> str | None:
         return None
     if rec.source == "osm" and st == "standing" and rec.extra.get("gnis_feature_id"):
         return None
-    if st == "standing" and re.search(r"\breplica\b", str(rec.raw.get("name") or ""), re.I):
+    kind = (rec.annotation or {}).get("kind")
+    if st == "standing" and kind == "replica":
         return "replica"  # FFLA: "Kellogg Peak (Replica)"
+    if kind == "removed":
+        return "gone"     # NHLR: "Sleepy Creek Fire Tower (Removed)"
     return st
 
 
@@ -1185,7 +1360,7 @@ def link_norm(url: str) -> str:
     return f"{host}{path}?{p.query}" if p.query else f"{host}{path}"
 
 
-LINK_KIND_ORDER = ["register", "rental", "association", "wikipedia", "site", "agency", "website",
+LINK_KIND_ORDER = ["relocated_from", "relocated_to", "register", "rental", "association", "wikipedia", "site", "agency", "website",
                    "category", "commons", "wikidata", "osm"]
 
 
@@ -1196,6 +1371,11 @@ def pick(field_name: str, members: list[Rec], getter) -> tuple[object, Rec | Non
         if v is not None:
             return v, m
     return None, None
+
+
+def loc_region_of(members: list[Rec]) -> str | None:
+    _, m = location_pick(members)
+    return m.region if m is not None else None
 
 
 def location_of(m: Rec):
@@ -1261,6 +1441,161 @@ def display_name(members: list[Rec]) -> tuple[str | None, Rec | None]:
     return v, m
 
 
+# Words that make a place read better with "the": "now at the State Fair", but "now at
+# Kathio State Park".
+ARTICLE_WORDS = {"museum", "center", "centre", "fair", "fairgrounds", "fairplex", "experience",
+                 "depot", "school", "village", "office", "building", "zoo", "campus", "institute",
+                 "display", "shop", "headquarters", "college", "university", "academy"}
+_TRAILING_LOOKOUT_RE = re.compile(r"(\s+(?:fire|lookout|lookouts|tower|firetower|station|observation))+$", re.I)
+
+
+def short_place(site: str) -> str:
+    """"OFS Cool Springs Fire Tower" -> "OFS Cool Springs" (for "now at ...")."""
+    return _TRAILING_LOOKOUT_RE.sub("", site).strip(" -\u2013") or site
+
+
+def with_article(place: str) -> str:
+    return f"the {place}" if set(name_tokens(place)) & ARTICLE_WORDS else place
+
+
+def _no_parens(text: str) -> str:
+    return re.sub(r"\s+", " ", re.sub(r"\s*\([^)]*\)", " ", text)).strip()
+
+
+def historical_name(origin: str, pool: list[Rec], origin_tower: "Tower | None" = None) -> str:
+    """The lookout's own name, spelled the way a source spells it with "Lookout"/"Fire
+    Tower" ("Makomis Fire Tower"); else the original site's fuller name plus "Lookout"
+    ("Castro" -> "Castro Peak Lookout"); else the origin plus "Lookout"."""
+    oforms = name_forms(origin)
+    for m in sorted(pool, key=lambda m: (source_rank("name", m.source), m.key)):
+        if not m.display or m.annotation or not has_lookout_word(m.display):
+            continue
+        score = name_score(oforms, m.forms)
+        if score is not None and score >= STRONG:
+            return _no_parens(m.display)
+    base = origin
+    if origin_tower is not None:
+        named = [m for m in origin_tower.members if m.display and not m.annotation and m.forms]
+        if named:
+            best = _no_parens(sorted(named, key=lambda m: (source_rank("name", m.source), m.key))[0].display)
+            if best and len(name_tokens(best)) >= len(name_tokens(origin)):
+                base = best  # the fuller of the two: "Castro" -> "Castro Peak", not "Roberts Mountain" -> "Roberts"
+    return base if has_lookout_word(base) else f"{base} Lookout"
+
+
+def history_naming(tower: Tower, members: list[Rec], region: str | None, default_name: str) -> tuple[str, str | None, dict | None]:
+    """Name, id text and timeline event for a structure whose name carries its history.
+
+    Named the way a visitor looks for it: the lookout's own name first, where it stands now
+    second ("Padlock Hill Lookout (now at the State Fair)", id ...-padlock-hill-at-state-fair)."""
+    h = tower.history
+    ann = h.annotation
+    site = h.display or default_name
+    place = short_place(site)
+    at = with_article(place)
+    state = STATE_NAMES.get(ann.get("origin_region") or "")
+    other_state = bool(ann.get("origin_region")) and ann.get("origin_region") != region
+    origin = ann.get("origin")
+    event = None
+    name, slug = default_name, _no_parens(site)
+
+    def ev(note: str, moved_from: str | None) -> dict:
+        return {"year": None, "event": "relocated", "note": note, "from": h.source,
+                "moved_from": moved_from, "moved_to": place}
+
+    pool = members + (tower.origin.members if tower.origin else [])
+    if ann["kind"] == "relocated" and ann.get("same_place"):
+        hist = historical_name(_no_parens(origin or site), pool, tower.origin)
+        name = f"{hist} (moved from its original spot)"
+        slug = f"{short_place(hist)} moved"
+        event = ev("Moved a short way, to a new spot on the same site.", origin or place)
+    elif ann["kind"] == "relocated" and ann.get("unknown_origin"):
+        name = f"{default_name} (moved from an unknown site)"
+        event = ev(f"Moved to {at} from a site not recorded.", None)
+    elif ann["kind"] == "relocated":
+        if origin and not ann.get("near"):
+            hist = historical_name(origin, pool, tower.origin)
+            name = f"{hist} (from {state}, now at {at})" if other_state else f"{hist} (now at {at})"
+            slug = f"{short_place(hist)} at {place}"
+            from_txt = f"{origin}, {state}" if other_state else origin
+        elif origin:
+            from_txt = f"near {origin}" + (f", {state}" if other_state else "")
+            name = f"{default_name} (moved from {from_txt})"
+        elif state:
+            from_txt = state
+            name = f"{default_name} (moved from {state})"
+        else:
+            from_txt = None
+        event = ev(f"Moved from {from_txt} to {at}." if from_txt else f"Moved to {at} from another site.", from_txt)
+    elif ann["kind"] == "replica":
+        if ann.get("replica_of"):
+            name = f"{historical_name(ann['replica_of'], members)} replica (at {at})"
+            slug = f"{ann['replica_of']} replica"
+        else:
+            name = f"{default_name} (replica)"
+            slug = f"{place} replica"
+        if origin:
+            event = ev(f"The replica was moved here from {with_article(origin)}.", origin)
+    elif ann["kind"] == "parts" and origin:
+        event = ev(f"Built with parts of the {origin} tower.", origin)
+    return name, slug, event
+
+
+def link_relocations(resolved: list[tuple[Tower, dict]]) -> list[dict]:
+    """Link a moved structure and its original site both ways (links of kind relocated_from
+    / relocated_to, by id), and mark the original site "relocated" when its sources say the
+    lookout is no longer there. Returns rows for the report."""
+    by_tower = {id(t): (t, r) for t, r in resolved}
+    rows = []
+    for t, r in resolved:
+        if not t.history or t.history.annotation["kind"] == "removed":
+            continue
+        ann = t.history.annotation
+        row = {"id": t.id, "name": r["name"], "kind": ann["kind"], "note": ann["raw"],
+               "origin": ann.get("origin"), "origin_id": None,
+               "origin_alternatives": [by_tower[id(u)][0].id for u in t.origin_alternatives if id(u) in by_tower]}
+        rows.append(row)
+        pair = by_tower.get(id(t.origin)) if t.origin else None
+        if not pair:
+            continue
+        o, orec = pair
+        row["origin_id"] = o.id
+        if r.get("hidden") or orec.get("hidden"):
+            row["skipped"] = "one of the two is hidden"
+            continue
+        place = short_place(t.history.display or r["name"])
+        at = with_article(place)
+        lt, lo = set(r.get("locked") or []), set(orec.get("locked") or [])
+        if "links" not in lt:
+            label = {"relocated": f"Original site: {orec['name']}", "parts": f"Parts came from {orec['name']}"}.get(
+                ann["kind"], f"Moved here from {orec['name']}")
+            _add_link(r, {"label": label, "url": f"../{o.id}/", "kind": "relocated_from", "id": o.id})
+        if "links" not in lo:
+            label = {"parts": f"Parts reused at {at}"}.get(ann["kind"], f"Now at {at}")
+            _add_link(orec, {"label": label, "url": f"../{t.id}/", "kind": "relocated_to", "id": t.id})
+        if ann["kind"] == "relocated":
+            if "status" not in lo and orec.get("status") in ("gone", "ruins", "unknown", "relocated"):
+                orec["status"] = "relocated"
+            if "events" not in lo:
+                _add_event(orec, {"year": None, "event": "relocated", "note": f"The lookout was moved to {at}.",
+                                  "from": t.history.source, "moved_from": orec["name"], "moved_to": place})
+    return rows
+
+
+def _add_link(rec: dict, link: dict) -> None:
+    links = [l for l in rec.get("links") or [] if not (isinstance(l, dict) and l.get("kind") == link["kind"] and l.get("id") == link["id"])]
+    links.append(link)
+    links.sort(key=lambda l: LINK_KIND_ORDER.index(l["kind"]) if l.get("kind") in LINK_KIND_ORDER else len(LINK_KIND_ORDER))
+    rec["links"] = links
+
+
+def _add_event(rec: dict, event: dict) -> None:
+    events = [e for e in rec.get("events") or [] if not (e.get("event") == event["event"] and e.get("note") == event["note"])]
+    events.append(event)
+    events.sort(key=lambda e: (e.get("year") if isinstance(e.get("year"), int) else 9999, e["event"]))
+    rec["events"] = events
+
+
 def loose_key(name: str) -> str:
     toks = [t for t in name_tokens(name) if t not in GENERIC_WORDS or t in ("ground", "house", "cabin")]
     return " ".join(toks)
@@ -1287,6 +1622,11 @@ def resolve(tower: Tower, today: str, headers: dict) -> dict:
     name, name_src = display_name(members)
     if name is None and "name" not in rec:
         name = "Unnamed lookout"
+    history_event = None
+    if tower.history is not None:
+        region_now = (loc_region_of(members) or tower.old_region)
+        name, tower.slug_text, history_event = history_naming(tower, members, region_now, name or rec.get("name") or "Unnamed lookout")
+        name_src = tower.history
     set_field("name", name, name_src)
     if "other_names" not in locked:
         current = rec.get("name") or ""
@@ -1462,8 +1802,12 @@ def resolve(tower: Tower, today: str, headers: dict) -> dict:
                 seen_ev.add(k)
                 events.append({"year": e.get("year"), "event": e["event"], "note": e.get("note"), "from": e.get("from") or m.source})
                 contributed[m.key].add("events")
+        if history_event is not None:
+            events.append(history_event)
+            contributed[tower.history.key].add("events")
         if events or "events" not in rec:
-            old_other = [e for e in rec.get("events") or [] if isinstance(e, dict) and (e.get("event"), e.get("year")) not in seen_ev and e.get("from") not in {m.source for m in members}]
+            old_other = [e for e in rec.get("events") or [] if isinstance(e, dict) and (e.get("event"), e.get("year")) not in seen_ev
+                         and e.get("from") not in {m.source for m in members} and "moved_to" not in e]
             events.extend(old_other)
             events.sort(key=lambda e: (e.get("year") if isinstance(e.get("year"), int) else 9999, e["event"]))
             rec["events"] = events
@@ -1499,6 +1843,8 @@ def resolve(tower: Tower, today: str, headers: dict) -> dict:
                 links.append(link)
                 contributed[m.key].add("links")
         for link in rec.get("links") or []:
+            if isinstance(link, dict) and str(link.get("kind") or "").startswith("relocated_"):
+                continue  # recomputed by link_relocations()
             if isinstance(link, dict) and isinstance(link.get("url"), str) and link_norm(link["url"]) not in seen_links:
                 seen_links.add(link_norm(link["url"]))
                 links.append(link)
@@ -1506,13 +1852,15 @@ def resolve(tower: Tower, today: str, headers: dict) -> dict:
         rec["links"] = links
 
     # A listing for a lookout another source records as gone (Flag Point, OR: "Burned 2026"):
-    # keep RIDB's details, but do not offer it as bookable.
+    # warn, don't hide. The listing and its link stay; "available" is false so it is not
+    # counted or filtered as rentable, and "warning" says why, for the page to show above the
+    # booking link.
     r_ = rec.get("rental")
-    if "rental" not in locked and isinstance(r_, dict) and r_.get("available") and rec.get("status") in ("gone", "ruins"):
-        r_["available"] = False
-        src_name = SOURCE_SITE.get(status_src.source, status_src.source).split(" (")[0] if status_src else "a source"
-        r_["status_note"] = (f"Recreation.gov still lists it, but {src_name} records the lookout as "
-                             f"{rec['status']}{' (' + status_src.raw['status_raw'] + ')' if status_src and status_src.raw.get('status_raw') else ''}.")
+    if "rental" not in locked and isinstance(r_, dict) and rec.get("status") in ("gone", "ruins"):
+        r_.pop("status_note", None)
+        if r_.get("available") or r_.get("warning"):
+            r_["available"] = False
+            r_["warning"] = rental_warning(rec, status_src)
 
     # Conflicts
     if "conflicts" not in locked:
@@ -1556,6 +1904,33 @@ def resolve(tower: Tower, today: str, headers: dict) -> dict:
                        ("verification", "unverified"), ("ownership", "unknown")):
         rec.setdefault(k, default)
     return rec
+
+
+SHORT_NAME = {"ffla": "FFLA", "nhlr": "NHLR", "fflos": "FFLOS", "firelookout_com": "firelookout.com",
+              "idaho_fl": "idahofirelookouts.com", "osm": "OpenStreetMap", "wikidata": "Wikidata",
+              "fire_lookouts_org": "fire-lookouts.org", "pa_storymap": "the PA fire towers StoryMap",
+              "andyarthur_ny": "andyarthur.org", "cskt": "CSKT", "ridb": "recreation.gov"}
+
+
+def rental_warning(rec: dict, status_src: Rec | None) -> str:
+    """"FFLA reports this lookout burned in 2026, but recreation.gov still lists it. Check
+    with the forest before booking." """
+    who = SHORT_NAME.get(status_src.source, status_src.source) if status_src else "Another source"
+    what = "is gone" if rec.get("status") == "gone" else "is in ruins"
+    if status_src is not None:
+        verbs = {"burned": "burned", "destroyed": "was destroyed", "removed": "was removed", "abandoned": "was abandoned"}
+        for e in status_src.raw.get("events") or []:
+            if isinstance(e, dict) and e.get("event") in verbs:
+                what = verbs[e["event"]] + (f" in {e['year']}" if isinstance(e.get("year"), int) else "")
+                break
+    agency = str(rec.get("agency") or "")
+    if re.search(r"forest service|national forest", agency, re.I):
+        whom = "the forest"
+    elif re.search(r"bureau of land management|\bblm\b", agency, re.I):
+        whom = "the Bureau of Land Management"
+    else:
+        whom = "the managing agency"
+    return f"{who} reports this lookout {what}, but recreation.gov still lists it. Check with {whom} before booking."
 
 
 def conflicts_for(rec: dict, members: list[Rec], loc_src: Rec | None, status_src: Rec | None,
@@ -1615,7 +1990,8 @@ def conflicts_for(rec: dict, members: list[Rec], loc_src: Rec | None, status_src
             b = record_built(m)
             if b is not None and m.source not in by_source:
                 by_source[m.source] = b
-        if len(set(by_source.values())) > 1:
+        # One year apart is usually "built" vs "completed" or a season's slip: not reported.
+        if by_source and max(by_source.values()) - min(by_source.values()) >= BUILT_CONFLICT_YEARS:
             values = [{"source": src, "value": b} for src, b in by_source.items()]
             out.append({"field": "built", "values": values, "distance_m": None, "note": None})
     # Kind, only where it decides whether the lookout is shown.
@@ -1632,6 +2008,9 @@ def conflicts_for(rec: dict, members: list[Rec], loc_src: Rec | None, status_src
 
 
 def hidden_for(rec: dict, members: list[Rec]) -> tuple[bool, str | None]:
+    for m in members:
+        if m.key in HIDE_KEYS:
+            return True, HIDE_KEYS[m.key]
     kind = rec.get("kind")
     if kind in HIDDEN_KIND_REASON:
         return True, HIDDEN_KIND_REASON[kind]
@@ -1683,14 +2062,17 @@ def assign_ids(towers: list[tuple[Tower, dict]], taken: set[str]) -> None:
     "-2", "-3"... for clashes. Existing ids are never changed or reused."""
     new = [(t, r) for t, r in towers if t.id is None]
 
+    def slug_of(t: Tower, r: dict) -> str:
+        return slugify(t.slug_text) if t.slug_text else id_slug(r["name"])
+
     def sort_key(item):
         t, r = item
         loc = r.get("location") or {}
-        return (r.get("region") or "", slugify(r["name"]), -(loc.get("lat") or 0), loc.get("lon") or 0,
+        return (r.get("region") or "", slug_of(t, r), -(loc.get("lat") or 0), loc.get("lon") or 0,
                 min((m.key for m in t.members), default=""))
 
     for t, r in sorted(new, key=sort_key):
-        base = f"us-{(r.get('region') or 'xx').lower()}-{slugify(r['name'])}"
+        base = f"us-{(r.get('region') or 'xx').lower()}-{slug_of(t, r)}"
         cand, n = base, 1
         while cand in taken:
             n += 1
@@ -1777,6 +2159,7 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
     for sid in order:
         m.match_source(sid, records[sid])
     m.place_without_coords()
+    m.find_origins()
 
     resolved: list[tuple[Tower, dict]] = []
     for t in m.towers:
@@ -1787,6 +2170,7 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
             continue
         resolved.append((t, resolve(t, today, headers)))
     assign_ids(resolved, taken)
+    relocations = link_relocations(resolved)
 
     written = unchanged = 0
     for t, r in resolved:
@@ -1802,7 +2186,7 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text(dump(ordered(r)), encoding="utf-8")
 
-    report = build_report(m, resolved, headers, today, written, unchanged)
+    report = build_report(m, resolved, headers, today, written, unchanged, relocations)
     if report_path and not dry_run:
         report_path.parent.mkdir(parents=True, exist_ok=True)
         report_path.write_text(json.dumps(report, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -1810,7 +2194,7 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
 
 
 def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, today: str,
-                 written: int, unchanged: int) -> dict:
+                 written: int, unchanged: int, relocations: list[dict] | None = None) -> dict:
     visible = [r for _, r in resolved if not r.get("hidden")]
     hidden = [r for _, r in resolved if r.get("hidden")]
     seq_to_id = {t.seq: t.id for t, _ in resolved}
@@ -1834,8 +2218,26 @@ def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, 
                 d = c.get("distance_m") or 0
                 distance_buckets["0.5-1 km" if d < 1000 else "1-5 km" if d < 5000 else "5-25 km" if d < 25000 else ">25 km"] += 1
     nm = near_misses(resolved)
+    # Checks on the final towers, so every run reports them (not only the run that matched).
     review = []
+    for t, r in resolved:
+        mems = list(t.members)
+        for mem in mems:
+            others = [f for o in mems if o is not mem for f in o.forms]
+            s_ = name_score(mem.forms, others)
+            if s_ is not None and s_ < PARTIAL:
+                review.append({"type": "matched_different_names", "key": mem.key, "name": mem.display,
+                               "tower": r["id"], "tower_name": r["name"], "score": s_})
+        for i, a in enumerate(mems):
+            for b in mems[i + 1:]:
+                shared = {k for k in a.reg_keys if " US " in k} & {k for k in b.reg_keys if " US " in k}
+                d = a.dist(b)
+                if shared and d is not None and d > REGISTER_FAR_M:
+                    review.append({"type": "register_match_far", "keys": [a.key, b.key], "registers": sorted(shared),
+                                   "tower": r["id"], "distance_m": round(d)})
     for item in m.review:
+        if item["type"] in ("matched_different_names", "register_match_far"):
+            continue
         item = dict(item)
         if "tower_seq" in item:
             item["tower"] = seq_to_id.get(item.pop("tower_seq"))
@@ -1845,8 +2247,8 @@ def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, 
             item["towers"] = [seq_to_id.get(s) for s in item.pop("tower_seqs")]
         review.append(item)
     for t, r in resolved:
-        if isinstance(r.get("rental"), dict) and r["rental"].get("status_note"):
-            review.append({"type": "rental_on_gone_lookout", "tower": r["id"], "note": r["rental"]["status_note"]})
+        if isinstance(r.get("rental"), dict) and r["rental"].get("warning"):
+            review.append({"type": "rental_on_gone_lookout", "tower": r["id"], "note": r["rental"]["warning"]})
     rental_hints = []
     for t, r in resolved:
         if r.get("rental"):
@@ -1901,13 +2303,19 @@ def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, 
             "pairs": nm,
         },
         "review": review,
-        "unplaced": [{"key": r.key, "name": r.display, "region": r.region, "reason": r.match_note} for r in m.unplaced],
+        "unplaced": [{"key": r.key, "name": r.display, "region": r.region, "county": record_county(r),
+                      "reason": r.match_note} for r in m.unplaced],
         "coordinates_not_used": [{"key": mem.key, "name": mem.display, "region": mem.region,
                                   "lat": mem.raw.get("lat"), "lon": mem.raw.get("lon")}
                                  for t, _ in resolved for mem in t.members if mem.bad_coords == "outside_us"]
                                 + [{"key": r.key, "name": r.display, "region": r.region, "lat": r.raw.get("lat"), "lon": r.raw.get("lon")}
                                    for r in m.unplaced if r.bad_coords == "outside_us"],
-        "coordinates_outside_own_state": sum(1 for t, _ in resolved for mem in t.members if mem.bad_coords == "outside_state"),
+        "coordinates_outside_own_state": [
+            {"key": mem.key, "name": mem.display, "region": mem.region, "lat": mem.lat, "lon": mem.lon,
+             "inside": [st for st, (a, b, c, d) in sorted(STATE_BBOX.items()) if a <= mem.lat <= b and c <= mem.lon <= d],
+             "tower": r["id"], "used_for_location": (r.get("location") or {}).get("from") == mem.source}
+            for t, r in resolved for mem in t.members if mem.bad_coords == "outside_state"],
+        "relocations": relocations or [],
         "rental_hints_without_ridb": rental_hints,
     }
 

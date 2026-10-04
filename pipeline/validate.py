@@ -150,7 +150,11 @@ def check(rec: object, path: Path, vocab: dict) -> tuple[list[str], list[str]]:
         "registers": lambda x: isinstance(x, dict) and isinstance(x.get("register"), str) and (x.get("number") or x.get("state_number")),
         "events": lambda x: isinstance(x, dict) and x.get("event") in events_ok and (x.get("year") is None or isinstance(x.get("year"), int)),
         "photos": lambda x: isinstance(x, dict) and (x.get("url") or x.get("file")),
-        "links": lambda x: isinstance(x, dict) and isinstance(x.get("url"), str) and x["url"].startswith(("http://", "https://")) and isinstance(x.get("label"), str) and x["label"].strip(),
+        "links": lambda x: isinstance(x, dict) and isinstance(x.get("label"), str) and x["label"].strip() and isinstance(x.get("url"), str) and (
+            x["url"].startswith(("http://", "https://"))
+            # a link to another tower page: relocated_from / relocated_to, by id
+            or (str(x.get("kind") or "").startswith("relocated_") and isinstance(x.get("id"), str)
+                and ID_RE.match(x["id"]) is not None and x["url"] == f"../{x['id']}/")),
         "sources": lambda x: isinstance(x, dict) and isinstance(x.get("source"), str) and isinstance(x.get("key"), str) and isinstance(x.get("fields", []), list),
         "conflicts": lambda x: isinstance(x, dict) and isinstance(x.get("field"), str) and isinstance(x.get("values", []), list),
         "locked": lambda x: isinstance(x, str),
@@ -185,6 +189,7 @@ def validate(towers_dir: Path, vocab_path: Path, log=print) -> int:
     seen: dict[str, Path] = {}
     n_err = n_warn = 0
     warn_kinds: Counter = Counter()
+    internal_links: list[tuple[Path, str]] = []
     for path in files:
         try:
             rec = json.loads(path.read_text(encoding="utf-8"))
@@ -193,6 +198,10 @@ def validate(towers_dir: Path, vocab_path: Path, log=print) -> int:
             n_err += 1
             continue
         errs, warns = check(rec, path, vocab)
+        if isinstance(rec, dict):
+            for link in rec.get("links") or []:
+                if isinstance(link, dict) and str(link.get("kind") or "").startswith("relocated_") and isinstance(link.get("id"), str):
+                    internal_links.append((path, link["id"]))
         rid = rec.get("id") if isinstance(rec, dict) else None
         if isinstance(rid, str):
             if rid in seen:
@@ -205,6 +214,10 @@ def validate(towers_dir: Path, vocab_path: Path, log=print) -> int:
             warn_kinds[re.sub(r"[-\d.]+, [-\d.]+", "<coords>", w.split(" (")[0])[:60]] += 1
         n_err += len(errs)
         n_warn += len(warns)
+    for path, target in internal_links:
+        if target not in seen:
+            log(f"ERROR {path.relative_to(towers_dir)}: links to tower {target}, which does not exist")
+            n_err += 1
     log(f"Checked {len(files)} tower records: {n_err} error(s), {n_warn} warning(s).")
     for kind, n in warn_kinds.most_common(8):
         log(f"  warning x{n}: {kind}")

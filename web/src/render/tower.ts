@@ -159,6 +159,26 @@ export function accessNotice(r: TowerRecord, opts: { compact?: boolean } = {}): 
   </div>`;
 }
 
+const TOWER_ID_RE = /^[a-z]{2}-[a-z0-9]{1,3}-[a-z0-9]+(?:-[a-z0-9]+)*$/;
+
+/** Links between a moved structure and its original site (links of kind relocated_*). */
+export function movedLinks(r: TowerRecord): { id: string; label: string; kind: string }[] {
+  return (r.links ?? [])
+    .filter((l) => (l.kind === 'relocated_from' || l.kind === 'relocated_to') && typeof l.id === 'string' && TOWER_ID_RE.test(l.id))
+    .map((l) => ({ id: l.id!, label: l.label, kind: l.kind! }));
+}
+
+export function movedNotice(r: TowerRecord, ctx: RenderContext): SafeHtml {
+  const moved = movedLinks(r);
+  if (!moved.length) return html``;
+  // Labels come from the pipeline and say what the link is ("Original site: Padlock Hill",
+  // "Now at the State Fair", "Parts came from Whites Hill").
+  const lead = r.status === 'relocated' && moved.some((m) => m.kind === 'relocated_to') ? 'The lookout that stood here was moved.' : '';
+  return html`<div class="notice tone-unknown moved-notice" role="note">${INFO}<div>
+    <p>${lead ? html`${lead} ` : ''}${moved.map((m, i) => html`${i ? ' · ' : ''}<a href="${towerPath(m.id, ctx)}">${m.label}</a>`)}</p>
+  </div></div>`;
+}
+
 export function unverifiedNotice(r: TowerRecord, ctx: RenderContext): SafeHtml {
   if (r.verification !== 'unverified') return html``;
   return html`<div class="notice tone-caution" role="note">${WARN}<div>
@@ -169,8 +189,23 @@ export function unverifiedNotice(r: TowerRecord, ctx: RenderContext): SafeHtml {
 
 /* ---------- Visit & stay ---------- */
 
+/**
+ * The warning for a listing on a lookout another source records as gone or burned (the
+ * pipeline sets rental.warning and available: false). Shown above the booking link: warn,
+ * don't hide.
+ */
+export function rentalWarning(r: TowerRecord): SafeHtml {
+  const w = r.rental?.warning;
+  if (!w) return html``;
+  return html`<div class="notice tone-stop rental-warning" role="note">${WARN}<div>
+    <p class="notice-title">Check before booking</p>
+    <p>${w}</p>
+  </div></div>`;
+}
+
 function rentalDetails(r: TowerRecord): SafeHtml {
   const rent = r.rental!;
+  const warned = !!rent.warning;
   const rows: [string, unknown][] = [
     ['Season', rent.season],
     ['Sleeps', typeof rent.max_occupancy === 'number' ? `Up to ${rent.max_occupancy} ${rent.max_occupancy === 1 ? 'person' : 'people'}` : null],
@@ -181,19 +216,26 @@ function rentalDetails(r: TowerRecord): SafeHtml {
   const shown = rows.filter(([, v]) => v !== null && v !== undefined && v !== '');
   const book = safeUrl(rent.url);
   const provider = rent.provider ?? 'recreation.gov';
-  return html`<div class="rental">
-    <p class="lede">You can rent this lookout for overnight stays${provider ? html` through ${provider}` : ''}.</p>
+  return html`<div class="rental${warned ? ' rental-warned' : ''}">
+    ${warned
+      ? html`<p class="lede">${provider} still lists this lookout for overnight stays.</p>`
+      : html`<p class="lede">You can rent this lookout for overnight stays${provider ? html` through ${provider}` : ''}.</p>`}
     ${shown.length ? html`<dl class="kv kv-rental">${shown.map(([k, v]) => html`<div><dt>${k}</dt><dd>${v}</dd></div>`)}</dl>` : ''}
     ${rent.rules?.length ? html`<h3 class="h-small">Rules</h3><ul class="rules">${rent.rules.map((x) => html`<li>${x}</li>`)}</ul>` : ''}
     ${rent.description ? html`<p class="rental-desc">${rent.description}</p>` : ''}
-    ${book ? html`<p class="book-row"><a class="btn btn-primary btn-book" href="${book}" rel="noopener">Book on ${provider}${EXT}<span class="visually-hidden"> (opens ${provider})</span></a></p>` : ''}
+    ${warned ? rentalWarning(r) : ''}
+    ${book
+      ? warned
+        ? html`<p class="book-row"><a class="btn btn-book" href="${book}" rel="noopener">See the listing on ${provider}${EXT}<span class="visually-hidden"> (opens ${provider})</span></a></p>`
+        : html`<p class="book-row"><a class="btn btn-primary btn-book" href="${book}" rel="noopener">Book on ${provider}${EXT}<span class="visually-hidden"> (opens ${provider})</span></a></p>`
+      : ''}
     <p class="fine">Rental details from recreation.gov${rent.checked ? html`, checked ${formatDate(rent.checked)}` : ''}. Rules, fees and seasons change, so confirm on the booking page before you go. <span class="credit-line">Data source: ridb.recreation.gov</span></p>
   </div>`;
 }
 
 export function visitSection(r: TowerRecord): SafeHtml {
   let lead: SafeHtml;
-  if (isRentable(r)) {
+  if (isRentable(r) || r.rental?.warning) {
     lead = rentalDetails(r);
   } else if (r.status === 'gone') {
     lead = html`<p class="lede"><strong>Gone: site only.</strong> The lookout no longer stands, so there is nothing to climb or rent. ${r.access?.level === 'public' ? 'You may still be able to visit the site.' : ''}</p>`;
@@ -390,7 +432,7 @@ const FIELD_NAMES: Record<string, string> = {
 
 export function sourcesSection(r: TowerRecord, ctx: RenderContext): SafeHtml {
   const refs = r.sources ?? [];
-  const links = (r.links ?? []).filter((l) => safeUrl(l.url));
+  const links = (r.links ?? []).filter((l) => safeUrl(l.url) && !String(l.kind ?? '').startsWith('relocated_'));
   return html`
     ${refs.length
       ? html`<ol class="sources">${refs.map((s) => {
@@ -496,6 +538,7 @@ export function renderTowerMain(r: TowerRecord, ctx: RenderContext): SafeHtml {
     ${badges(r)}
     <div class="notices">
       ${accessInfo(r).tone === 'stop' ? accessNotice(r) : ''}
+      ${movedNotice(r, ctx)}
       ${unverifiedNotice(r, ctx)}
       ${r.status !== 'standing' ? html`<p class="status-meaning">${icon(r.kind, r.status, false, 16)} <strong>${statusWording(r.status).label}:</strong> ${statusWording(r.status).meaning}</p>` : ''}
     </div>
@@ -560,12 +603,17 @@ export function renderTowerHead(r: TowerRecord, ctx: RenderContext): SafeHtml {
 
 export function renderPanel(r: TowerRecord, ctx: RenderContext, opts: { hiddenByFilters?: boolean } = {}): SafeHtml {
   const rent = isRentable(r);
-  const book = rent ? safeUrl(r.rental?.url) : null;
+  const warned = !!r.rental?.warning;
+  const book = rent || warned ? safeUrl(r.rental?.url) : null;
   const occupancy = r.rental?.max_occupancy;
+  const provider = r.rental?.provider ?? 'recreation.gov';
   let stay: SafeHtml;
-  if (rent) {
+  if (warned) {
+    stay = html`<div class="panel-stay">${rentalWarning(r)}
+      ${book ? html`<a class="btn" href="${book}" rel="noopener">See the listing on ${provider}${EXT}<span class="visually-hidden"> (opens another site)</span></a>` : ''}</div>`;
+  } else if (rent) {
     stay = html`<div class="panel-stay"><p><strong>Rentable.</strong> ${typeof occupancy === 'number' ? `Sleeps up to ${occupancy}. ` : ''}${r.rental?.season ?? ''}</p>
-      ${book ? html`<a class="btn btn-primary" href="${book}" rel="noopener">Book on ${r.rental?.provider ?? 'recreation.gov'}${EXT}<span class="visually-hidden"> (opens another site)</span></a>` : ''}</div>`;
+      ${book ? html`<a class="btn btn-primary" href="${book}" rel="noopener">Book on ${provider}${EXT}<span class="visually-hidden"> (opens another site)</span></a>` : ''}</div>`;
   } else if (r.status === 'gone' || r.status === 'ruins') {
     stay = html`<p class="panel-stay"><strong>${r.status === 'gone' ? 'Gone: site only.' : 'Ruins only.'}</strong> Nothing to climb or rent.</p>`;
   } else {
@@ -577,6 +625,7 @@ export function renderPanel(r: TowerRecord, ctx: RenderContext, opts: { hiddenBy
     ${badges(r)}
     ${opts.hiddenByFilters ? html`<p class="notice tone-unknown" role="note">${INFO}<span>Your filters hide this lookout on the map. <button type="button" class="linklike" data-action="reset-filters">Reset filters</button></span></p>` : ''}
     ${accessNotice(r, { compact: true })}
+    ${movedNotice(r, ctx)}
     ${r.verification === 'unverified' ? html`<p class="fine warn-text">Unverified: from a single source, not yet checked.</p>` : ''}
     ${stay}
     <dl class="kv kv-panel">${factRows(r, { short: true }).map(([k, v]) => html`<div><dt>${k}</dt><dd>${v}</dd></div>`)}</dl>

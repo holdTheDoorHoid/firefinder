@@ -187,8 +187,23 @@ Name comparison drops case, punctuation, accents and the words that only say "lo
 core with Peak / Mountain / Butte removed: "Bald Mtn. L.O." = "Bald Mountain Lookout" (1.0),
 "Abbot Butte" ≈ "Abbot" (0.95), "Bald Mountain" vs "Bald Knob" only 0.6. North/South,
 Upper/Lower, Big/Little and different numbers mark different places (0.2). A one-letter slip
-in a long name still counts as strong. "(Relocated Graves Mountain)" makes "Graves Mountain"
-an alternate name; "(North)", "(#2)" stay part of the name.
+in a long name still counts as strong. A parenthetical is an alternate name ("Putnam
+(Liberty)"), except a structure-history note (below); "(North)", "(#2)" stay part of the name.
+
+**Moved, copied and rebuilt structures.** FFLA writes them as "<where it is now> (<note>)":
+"State Fair (Relocated Padlock Hill)", "Crystal Ridge (Relocated Stranger Mtn, WA)",
+"Kellogg Peak (Replica)", "Missoula Aerial Fire Depot (Hornet Peak Replica)", "Wilson Hill WMA #1
+(Parts from Whites Hill)" (NHLR does the same in a few names). The note is never a name to match
+on: the site the structure came from is a different place. The record is named the way a
+visitor looks for it, the lookout's own name first and where it is now second, "Padlock Hill
+Lookout (now at the State Fair)", id `us-ny-padlock-hill-at-state-fair`; a replica is "Hornet
+Peak Lookout replica (at the Missoula Aerial Fire Depot)", `us-mt-hornet-peak-replica`. It gets a
+`relocated` event with `moved_from` / `moved_to`. If the original site has its own record (a
+strong name match in the origin's state; several: the one sources call gone, then the nearest,
+the rest listed in the report), the two link to each other with links of kind `relocated_from`
+/ `relocated_to` (`id` plus a relative `url`), and the original site's status becomes
+`relocated` when its sources say the lookout is gone. "Parts from" links both ways but leaves
+the original's status alone. The report's `relocations` lists every case.
 
 **Same source, one tower**: never, except for sources that list one lookout twice, and only
 when the two records agree on name and place: FFLA repeated table rows (50 m), firelookout.com
@@ -208,7 +223,7 @@ node + way (100 m; 50 m if unnamed), Wikidata (100 m), RIDB facility + campgroun
 | design, height | NHLR, FFLOS > firelookout.com > fire-lookouts.org > PA StoryMap > CSKT (> Wikidata > OSM for height) |
 | county | NHLR, FFLOS > FFLA > firelookout.com > PA StoryMap > CSKT > andyarthur.org > fire-lookouts.org > Wikidata |
 | agency | NHLR, FFLOS > RIDB > firelookout.com > fire-lookouts.org > PA StoryMap > andyarthur.org > CSKT > OSM |
-| rental | RIDB only. If the tower's status is gone/ruins (Flag Point, OR: FFLA "Burned 2026") the listing is kept with `available: false` and a `status_note` |
+| rental | RIDB only. If the tower's status is gone/ruins (Flag Point, OR: FFLA "Burned 2026"), warn, don't hide: the listing is kept with `available: false` (not counted or filtered as rentable) and a `warning` ("FFLA reports this lookout burned in 2026, but recreation.gov still lists it. Check with the forest before booking."), which the site shows above the listing link |
 | registers | union of all sources; on a tower with an NHLR/FFLOS record, that register's own number wins and a different copy goes to `conflicts` |
 | events, photos, links | union, de-duplicated (events by event + year, photos by URL, links by URL) |
 
@@ -221,8 +236,9 @@ ownership from any source → access `permission`; FFLA's status "Private" → p
 
 **Conflicts** (`{field, values:[{source, value}], distance_m, note}`, chosen value first):
 `location` when a source is > 500 m from the shown position (CSKT excluded: approximate);
-`status` when sources differ (gone and ruins count as the same); `built` when build years differ
-(often first structure vs current one); `kind` when tree/camp vs structure decides visibility;
+`status` when sources differ (gone, ruins and relocated count as the same); `built` when build
+years differ by 2 or more (one year is usually built vs completed; often it is first structure vs
+current one); `kind` when tree/camp vs structure decides visibility;
 `registers` as above.
 
 **Verification**: `facts` when two independent sources agree on location (within 500 m of the
@@ -233,16 +249,20 @@ coordinates are byte-identical to an FFLA row). `researched`/`verified` are neve
 **Out of scope** (kept, `hidden: true` with a `hidden_reason`): kind `tree` or `camp`; FFLA bare
 lookout points (types Firefinder, Map Board, Alidade, Obs Pt…) with no structure from another
 source; FFLA "Proposed/Planned/Never Built"; FFLA's "Sites determined NOT to have been used as
-wildland fire lookouts".
+wildland fire lookouts"; single records hidden by a human decision (`HIDE_KEYS` in merge.py,
+e.g. OSM's "East Lookout Tower" on Guam: "Not confirmed as a fire lookout").
 
-**Ids**: `us-<st>-<slug>` from the display name without trailing "Lookout"/"Tower" words; new
+**Ids**: `us-<st>-<slug>` from the display name without trailing "Lookout"/"Tower" words (also
+before a parenthetical: "Pilot Peak Lookout (Payette NF)" → `pilot-peak-payette-nf`); moved and
+replica structures as above; new
 towers are numbered `-2`, `-3`… in a fixed order (state, slug, north to south, first key), so a
 re-run from scratch gives the same ids and a new record never takes an existing id.
 
 **Photos** are `{file, thumb, url, source_url, credit, license, caption, year}`; until mirrored,
 `file`/`thumb` are null, `url` is the remote image (Wikimedia via `Special:FilePath`) and
 `source_url` the page it came from. Credit is the photographer "via" the site, or the site.
-**Links** carry a credit-ready `label` and a `kind`: `register`, `rental`, `association` (FFLA
+**Links** carry a credit-ready `label` and a `kind`: `relocated_from` / `relocated_to` (another
+tower page, by `id`), `register`, `rental`, `association` (FFLA
 state list), `wikipedia`, `site` (hobbyist and regional pages), `agency`, `website`, `commons`,
 `wikidata`, `osm`. **`sources[]`** lists, per record, the fields it supplied.
 
