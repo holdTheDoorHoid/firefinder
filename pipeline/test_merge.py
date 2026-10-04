@@ -257,7 +257,7 @@ class Matching(unittest.TestCase):
             self.assertEqual(errs, [], path)
         t = self.ws.tower_with_key("ffla:a")
         self.assertEqual(set(t["photos"][0]), {"file", "thumb", "url", "source_url", "credit", "license", "caption", "year"})
-        self.assertTrue(t["photos"][0]["url"].startswith("https://commons.wikimedia.org/wiki/Special:FilePath/"))
+        self.assertTrue(t["photos"][0]["url"].startswith("https://upload.wikimedia.org/wikipedia/commons/"))
 
 
 class PhotoManifest(unittest.TestCase):

@@ -44,6 +44,8 @@ import argparse
 import copy
 import datetime as dt
 import difflib
+import functools
+import hashlib
 import json
 import math
 import re
@@ -52,7 +54,7 @@ import unicodedata
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
-from urllib.parse import unquote, urlsplit
+from urllib.parse import quote, unquote, urlsplit
 
 REPO = Path(__file__).resolve().parent.parent
 DATA = REPO / "data"
@@ -1378,20 +1380,38 @@ def apply_photo_manifest(photos: list[dict], manifest: dict) -> list[dict]:
     return out
 
 
+@functools.lru_cache(maxsize=1)
+def commons_credits() -> dict:
+    """Author/licence per Commons file name, from pipeline/commons_credits.py (empty if not run)."""
+    try:
+        with open(DATA / "sources" / "commons_credits.json", encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return {}
+
+
 def photo_entry(rec: Rec, p: dict) -> dict | None:
     if not isinstance(p, dict):
         return None
     url = p.get("url")
     source_url = p.get("source_url") or rec.raw.get("url")
+    commons = None
     if rec.source == "wikidata" and isinstance(url, str) and "/wiki/File:" in url:
         source_url = url
-        fname = url.split("/wiki/File:", 1)[1]
-        url = f"https://commons.wikimedia.org/wiki/Special:FilePath/{fname}?width=1280"
+        # Commons' robots.txt disallows Special:FilePath, so point at the original on
+        # upload.wikimedia.org (path = first one and two hex digits of the name's MD5).
+        fname = unquote(url.split("/wiki/File:", 1)[1]).replace(" ", "_")
+        digest = hashlib.md5(fname.encode("utf-8")).hexdigest()
+        url = f"https://upload.wikimedia.org/wikipedia/commons/{digest[0]}/{digest[:2]}/{quote(fname)}"
+        commons = commons_credits().get(fname) or {}
     if not isinstance(url, str) or not url.startswith(("http://", "https://")):
         return None
     site = SOURCE_SITE.get(rec.source, rec.source)
     credit = p.get("credit")
     if rec.source == "wikidata":
+        author = (commons or {}).get("author")
+        if author and (not credit or credit.lower().startswith("wikimedia commons")):
+            credit = author
         credit = credit or "Wikimedia Commons contributors"
         if "commons" not in credit.lower():
             credit += ", via Wikimedia Commons"
@@ -1408,7 +1428,7 @@ def photo_entry(rec: Rec, p: dict) -> dict | None:
         "url": url,
         "source_url": source_url,
         "credit": credit,
-        "license": p.get("license") or PHOTO_LICENSE.get(rec.source),
+        "license": p.get("license") or (commons or {}).get("license") or PHOTO_LICENSE.get(rec.source),
         "caption": p.get("caption") or None,
         "year": year,
     }
