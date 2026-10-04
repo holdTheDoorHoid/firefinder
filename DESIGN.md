@@ -187,8 +187,16 @@ the easternuslookouts and centraluslookouts weebly sites, Wikidata, OSM:
    Accepted when names agree strongly (score ≥ 0.85) within 1.5 km (3 km for idahofirelookouts.com
    and RIDB, whose pins are rougher; 15 km for CSKT's dead-reckoned positions); when names agree
    partly (≥ 0.5) or one is generic ("Fire Tower", unnamed) within 400 m; or within 100 m whatever
-   the names (different names for one tower are common: Pequawket = Kearsarge North). Across a
-   state line only 400 m with a strong name, or 100 m.
+   the names (different names for one tower are common: Pequawket = Kearsarge North) — **except**
+   for idahofirelookouts.com and RIDB: if the name there is clearly different (score < 0.5) from
+   every name at the near tower, and strongly (≥ 0.85) and uniquely names another tower in the
+   state within about 75 km, it joins that tower instead (the review file's
+   `reassigned_same_spot`; more than one strong match elsewhere is `reassign_same_spot_ambiguous`
+   and left on the near tower for a human). This is for the two sources' own coordinate errors,
+   not the common-alternate-name case above, so it never fires on a tower that is itself a
+   relocated/replica/parts-from structure's current site — RIDB's "Lookout Butte Lookout"
+   facility sits 45 m from Black Butte, ID (a coordinate slip) but is genuinely Lookout Butte's
+   listing, 64 km away. Across a state line only 400 m with a strong name, or 100 m.
 4. **Name only**, for records with no coordinates, after every source: a unique same-name
    tower in the state (and county, when both give one). Otherwise the record is listed in the
    review file as unplaced; it does not make a tower, since a tower needs a position.
@@ -428,6 +436,13 @@ tower (`--research` to point elsewhere), so a re-merge never loses research:
    `web/site.config.json`'s `photosBase` is set, the site shows an interim "View photo at
    <source site>" link card (or hotlinks an https original) instead of the mirrored copy;
    hosting the mirrored files is still an open decision for the owner.
+   `pipeline/commons_credits.py` (author/licence for the ~217 Wikidata-sourced Commons photos,
+   scraped 2 s apart from ordinary `/wiki/File:` pages since Commons' robots.txt blocks the API
+   and `Special:FilePath`) is a **manual step**, run by hand after a Wikidata re-fetch, not part
+   of the weekly rental-refresh Action: nothing in that Action re-fetches `data/sources/
+   wikidata.json`, so the same ~217 pages would otherwise be re-scraped from Commons every week
+   for no new information -- impolite for zero benefit, and unrelated to what that Action
+   actually refreshes. Re-run it by hand whenever `pipeline/fetch_wikidata.py` adds photos.
 2. **Stories**: research batches (Sonnet) for rentable and standing towers first. Each writes
    `data/stories/<id>.md` and locks the fields it confirmed.
 3. **3D**: Rust/WASM panorama + viewshed + smoke-spotting demo.

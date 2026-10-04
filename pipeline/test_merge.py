@@ -265,6 +265,37 @@ class Matching(unittest.TestCase):
         self.assertEqual(set(t["photos"][0]), {"file", "thumb", "url", "source_url", "credit", "license", "caption", "year"})
         self.assertTrue(t["photos"][0]["url"].startswith("https://upload.wikimedia.org/wikipedia/commons/"))
 
+    def test_photographer_hidden_in_a_register_caption_is_credited(self):
+        # The DESIGN.md example: a register photo whose caption carries the photographer,
+        # while the structured credit field is empty (so photo_entry() falls back to just
+        # the site name) until extract_photo_credit() pulls it out of the caption.
+        self.ws.run({"nhlr": [rec("nhlr", "US1", "Model Lookout", 45.0, -116.0,
+                                  photos=[{"url": "http://nhlr.org/p.jpg", "credit": None,
+                                           "caption": "9/10/05--Cabin (Bob Eckler photo-courtesy Bill Starr)",
+                                           "year": None}])]})
+        photo = self.ws.tower_with_key("nhlr:US1")["photos"][0]
+        self.assertEqual(photo["caption"], "9/10/05--Cabin")
+        self.assertEqual(photo["credit"],
+                         "Bob Eckler (courtesy Bill Starr), via National Historic Lookout Register (nhlr.org)")
+
+    def test_a_caption_with_no_extractable_credit_is_untouched(self):
+        self.ws.run({"nhlr": [rec("nhlr", "US1", "Model Lookout", 45.0, -116.0,
+                                  photos=[{"url": "http://nhlr.org/p.jpg", "credit": None,
+                                           "caption": "Historical Photo", "year": None}])]})
+        photo = self.ws.tower_with_key("nhlr:US1")["photos"][0]
+        self.assertEqual(photo["caption"], "Historical Photo")
+        self.assertEqual(photo["credit"], "National Historic Lookout Register (nhlr.org)")
+
+    def test_an_existing_structured_credit_is_not_reparsed(self):
+        # The old (narrower) fetch_registers.py extraction already pulled this one out; the
+        # merge-time backfill only runs when the structured credit field is empty.
+        self.ws.run({"nhlr": [rec("nhlr", "US1", "Model Lookout", 45.0, -116.0,
+                                  photos=[{"url": "http://nhlr.org/p.jpg", "credit": "Jane Smith",
+                                           "caption": "1990 photo", "year": None}])]})
+        photo = self.ws.tower_with_key("nhlr:US1")["photos"][0]
+        self.assertEqual(photo["caption"], "1990 photo")
+        self.assertEqual(photo["credit"], "Jane Smith, via National Historic Lookout Register (nhlr.org)")
+
 
 class PhotoManifest(unittest.TestCase):
     """data/photos_manifest.json (pipeline/mirror_photos.py) fills in file/thumb/w/h, and a
@@ -436,6 +467,79 @@ class MovedStructures(unittest.TestCase):
             ws.close()
 
 
+class ReassignSameSpot(unittest.TestCase):
+    """DESIGN.md §3.5: within 100 m, a record with a clearly different name is reassigned to a
+    tower it strongly and uniquely names elsewhere in the region, instead of joining the near
+    one -- but only for RIDB/idahofirelookouts.com, whose pins are already known to be rougher
+    (see the Black Butte / Lookout Butte, ID story: recreation.gov's "Lookout Butte Lookout"
+    facility sits 45 m from Black Butte but is really Lookout Butte's listing, 64 km away)."""
+
+    def setUp(self):
+        self.ws = Workspace()
+
+    def tearDown(self):
+        self.ws.close()
+
+    def test_ridb_coordinate_error_is_reassigned(self):
+        rep = self.ws.run({
+            "nhlr": [rec("nhlr", "US1", "Black Butte Lookout", 45.0, -115.0, "ID"),
+                     rec("nhlr", "US2", "Lookout Butte Lookout", 45.577, -115.0, "ID")],
+            "ridb": [rec("ridb", "1", "LOOKOUT BUTTE LOOKOUT", 45.0004, -115.0, "ID",
+                         rental={"available": True, "provider": "recreation.gov",
+                                 "url": "https://www.recreation.gov/camping/campgrounds/1"})],
+        })
+        black_butte = self.ws.tower_with_key("nhlr:US1")
+        lookout_butte = self.ws.tower_with_key("nhlr:US2")
+        ridb_tower = self.ws.tower_with_key("ridb:1")
+        self.assertEqual(ridb_tower["id"], lookout_butte["id"])
+        self.assertNotEqual(ridb_tower["id"], black_butte["id"])
+        self.assertIsNone(black_butte["rental"])
+        self.assertIsNotNone(lookout_butte["rental"])
+        items = [r for r in rep["review"] if r["type"] == "reassigned_same_spot"]
+        self.assertEqual([i["key"] for i in items], ["ridb:1"])
+        self.assertEqual(items[0]["tower"], lookout_butte["id"])
+        self.assertEqual(items[0]["nearby_tower"], black_butte["id"])
+
+    def test_other_sources_keep_the_near_match(self):
+        # Same shape, but FFLA (not RIDB/idahofirelookouts.com): a same-spot, different-named
+        # record is a common real alternate name (Pequawket = Kearsarge North) far more often
+        # than a coordinate bug, so it stays with the near tower.
+        self.ws.run({
+            "nhlr": [rec("nhlr", "US1", "Black Butte Lookout", 45.0, -115.0, "ID"),
+                     rec("nhlr", "US2", "Lookout Butte Lookout", 45.577, -115.0, "ID")],
+            "ffla": [rec("ffla", "x", "Lookout Butte Lookout", 45.0004, -115.0, "ID")],
+        })
+        self.assertEqual(self.ws.tower_with_key("ffla:x")["id"], self.ws.tower_with_key("nhlr:US1")["id"])
+
+    def test_relocated_structure_site_is_not_treated_as_a_coordinate_error(self):
+        # The near tower's different name is already explained by the move: it is "<original
+        # name> (now at <Y>)"'s display site, not a RIDB pin that landed on the wrong tower.
+        rep = self.ws.run({
+            "ffla": [rec("ffla", "orig", "Sliderock", 46.9, -114.0, "MT", status="gone"),
+                     rec("ffla", "museum", "Fort Missoula Historical Museum (Relocated Sliderock)",
+                         46.87, -114.03, "MT")],
+            "ridb": [rec("ridb", "2", "Sliderock Lookout", 46.87, -114.03, "MT")],
+        })
+        museum = self.ws.tower_with_key("ffla:museum")
+        self.assertEqual(self.ws.tower_with_key("ridb:2")["id"], museum["id"])
+        self.assertFalse(any(r["type"] == "reassigned_same_spot" and r["key"] == "ridb:2" for r in rep["review"]))
+
+    def test_ambiguous_far_matches_are_left_for_a_human(self):
+        rep = self.ws.run({
+            "nhlr": [rec("nhlr", "US1", "Near Tower", 45.0, -115.0, "ID"),
+                     rec("nhlr", "US2", "Twin Peak", 45.3, -115.0, "ID"),
+                     rec("nhlr", "US3", "Twin Peak", 45.5, -115.2, "ID")],
+            "ridb": [rec("ridb", "3", "TWIN PEAK LOOKOUT", 45.0004, -115.0, "ID")],
+        })
+        near_tower = self.ws.tower_with_key("nhlr:US1")
+        self.assertEqual(self.ws.tower_with_key("ridb:3")["id"], near_tower["id"])
+        items = [r for r in rep["review"] if r["type"] == "reassign_same_spot_ambiguous"]
+        self.assertEqual([i["key"] for i in items], ["ridb:3"])
+        self.assertEqual(items[0]["nearby_tower"], near_tower["id"])
+        self.assertEqual(set(items[0]["towers"]),
+                         {self.ws.tower_with_key("nhlr:US2")["id"], self.ws.tower_with_key("nhlr:US3")["id"]})
+
+
 class SmallRules(unittest.TestCase):
     def test_one_year_build_difference_is_not_a_conflict(self):
         ws = Workspace()
@@ -476,6 +580,83 @@ class SmallRules(unittest.TestCase):
             self.assertEqual(rental["warning"], "FFLA reports this lookout burned in 2026, but recreation.gov "
                                                 "still lists it. Check with the forest before booking.")
             self.assertEqual(rental["url"], "https://www.recreation.gov/x")
+        finally:
+            ws.close()
+
+    def test_osm_unknown_access_does_not_block_the_ridb_fallback(self):
+        # us-mt-mccart: OSM's access=permit tag describes the structure, not the land, so
+        # record_access() gives it level "unknown" -- that must not out-rank the public access a
+        # recreation.gov rental itself implies, just because it is the only source with any
+        # access value at all.
+        ws = Workspace()
+        try:
+            ws.run({
+                "nhlr": [rec("nhlr", "1", "McCart Lookout", 45.6, -113.8, "MT")],
+                "ridb": [rec("ridb", "1", "McCart Lookout", 45.6001, -113.8, "MT",
+                             rental={"available": True, "provider": "recreation.gov",
+                                     "url": "https://www.recreation.gov/x"})],
+                "osm": [rec("osm", "n1", "McCart Lookout", 45.6002, -113.8, "MT",
+                            extra={"access": "permit"})],
+            })
+            access = ws.tower_with_key("nhlr:1")["access"]
+            self.assertEqual(access["level"], "public")
+            self.assertIn("recreation.gov", access["note"])
+        finally:
+            ws.close()
+
+    def test_osm_unknown_access_is_kept_as_a_last_resort(self):
+        # No tribal ownership and no RIDB rental to fall back to: OSM's structure-only note is
+        # still better than nothing.
+        ws = Workspace()
+        try:
+            ws.run({
+                "nhlr": [rec("nhlr", "1", "Solo Lookout", 45.6, -113.8, "MT")],
+                "osm": [rec("osm", "n1", "Solo Lookout", 45.6001, -113.8, "MT",
+                            extra={"access": "permit"})],
+            })
+            access = ws.tower_with_key("nhlr:1")["access"]
+            self.assertEqual(access, {"level": "unknown", "note": "OpenStreetMap tags the structure access=permit."})
+        finally:
+            ws.close()
+
+    def test_rental_vanished_from_ridb_gets_a_warning_not_removal(self):
+        ws = Workspace()
+        try:
+            ffla = rec("ffla", "f", "Flag Point", 45.3179, -121.4666, "OR")
+            ridb = rec("ridb", "1", "Flag Point Lookout", 45.318, -121.467, "OR",
+                       rental={"available": True, "provider": "recreation.gov",
+                               "url": "https://www.recreation.gov/x", "checked": "2026-09-01"})
+            ws.run({"ffla": [ffla], "ridb": [ridb]})
+            before = ws.tower_with_key("ffla:f")["rental"]
+            self.assertIs(before["available"], True)
+            self.assertEqual(before["checked"], "2026-09-01")
+
+            # The next weekly refresh reads RIDB's export successfully, but it no longer has
+            # this facility (removed or renumbered) -- a real absence, not a skipped fetch.
+            ws.run({"ffla": [ffla], "ridb": []})
+            after = ws.tower_with_key("ffla:f")["rental"]
+            self.assertEqual(after["url"], "https://www.recreation.gov/x")  # kept, not removed
+            self.assertEqual(after["checked"], "2026-09-01")  # left as is, not bumped to today
+            self.assertIs(after["available"], False)
+            self.assertIn("no longer finds", after["warning"])
+            self.assertIn("2026-09-01", after["warning"])
+        finally:
+            ws.close()
+
+    def test_skipped_ridb_fetch_does_not_warn(self):
+        ws = Workspace()
+        try:
+            ffla = rec("ffla", "f", "Flag Point", 45.3179, -121.4666, "OR")
+            ridb = rec("ridb", "1", "Flag Point Lookout", 45.318, -121.467, "OR",
+                       rental={"available": True, "provider": "recreation.gov",
+                               "url": "https://www.recreation.gov/x", "checked": "2026-09-01"})
+            ws.run({"ffla": [ffla], "ridb": [ridb]})
+            # A local run that never re-fetched RIDB at all (no data/sources/ridb.json this
+            # time) must not be mistaken for every rental having vanished.
+            ws.run({"ffla": [ffla]})
+            rental = ws.tower_with_key("ffla:f")["rental"]
+            self.assertIs(rental["available"], True)
+            self.assertNotIn("warning", rental)
         finally:
             ws.close()
 
@@ -654,6 +835,71 @@ class PackedDMS(unittest.TestCase):
         self.assertEqual(flo.parse_gps("35.85278", "118.5025"), (35.85278, -118.5025, "decimal"))  # 85 > 59
         self.assertEqual(flo.parse_gps("37.27212", "119.54944")[2], "decimal")  # 94 > 59 in the longitude
         self.assertEqual(flo.parse_gps("36.020", "118.253")[2], "decimal")      # too few digits
+
+
+class RemovedField(unittest.TestCase):
+    """NHLR/FFLOS's "Removed" table field -> an event (pipeline/fetch_registers.py)."""
+
+    @classmethod
+    def setUpClass(cls):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("fetch_registers_under_test", Path(__file__).parent / "fetch_registers.py")
+        cls.fr = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.fr)
+
+    def parse(self, text):
+        return self.fr.parse_removed_field(text, "fflos")
+
+    def test_bare_year(self):
+        ev = self.parse("1984")
+        self.assertEqual((ev["year"], ev["event"]), (1984, "removed"))
+        self.assertIn('"1984"', ev["note"])
+        self.assertNotIn("about", ev["note"])
+
+    def test_fire_mentions_are_burned(self):
+        for text, year in [("2002 - Wildfire", 2002), ("1968 Arson Fire", 1968),
+                            ("1969 (Burned)", 1969), ("1914 Volcanic Eruption", 1914)]:
+            ev = self.parse(text)
+            self.assertEqual(ev["year"], year, text)
+        self.assertEqual(self.parse("2002 - Wildfire")["event"], "burned")
+        self.assertEqual(self.parse("1968 Arson Fire")["event"], "burned")
+        self.assertEqual(self.parse("1969 (Burned)")["event"], "burned")
+        self.assertEqual(self.parse("1914 Volcanic Eruption")["event"], "destroyed")
+
+    def test_circa_keeps_the_year_and_says_about(self):
+        ev = self.parse("circa 2010")
+        self.assertEqual(ev["year"], 2010)
+        self.assertEqual(ev["event"], "removed")
+        self.assertIn("about 2010", ev["note"])
+        self.assertIn('"circa 2010"', ev["note"])
+
+    def test_bare_decade_is_also_approximate(self):
+        ev = self.parse("late 1970s")
+        self.assertEqual(ev["year"], 1970)
+        self.assertIn("about 1970", ev["note"])
+        ev2 = self.parse("1930's")
+        self.assertEqual(ev2["year"], 1930)
+        self.assertIn("about 1930", ev2["note"])
+
+    def test_range_uses_the_later_year(self):
+        self.assertEqual(self.parse("1957-1958")["year"], 1958)
+        self.assertEqual(self.parse("between 1966 and 1979")["year"], 1979)
+        self.assertEqual(self.parse("1940s or 1950s")["year"], 1950)
+
+    def test_qualifiers_keep_their_year(self):
+        self.assertEqual(self.parse("after 1943")["year"], 1943)
+        self.assertEqual(self.parse("before 1970")["year"], 1970)
+        self.assertEqual(self.parse("by 2018")["year"], 2018)
+        self.assertEqual(self.parse("Prior to 1986")["year"], 1986)
+
+    def test_no_usable_year_is_skipped(self):
+        for text in ("Standing", "Unknown", "Relocation Date Unknown",
+                     "Collapsed structure remains", "Cabin gone, tower remains"):
+            self.assertIsNone(self.parse(text), text)
+
+    def test_note_names_the_source(self):
+        self.assertIn("NHLR", self.fr.parse_removed_field("1984", "nhlr")["note"])
+        self.assertIn("FFLOS", self.fr.parse_removed_field("1984", "fflos")["note"])
 
 
 class Validation(unittest.TestCase):

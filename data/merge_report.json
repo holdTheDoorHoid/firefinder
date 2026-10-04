@@ -93,8 +93,8 @@
   }
  },
  "files": {
-  "written": 100,
-  "unchanged": 7997
+  "written": 3,
+  "unchanged": 8094
  },
  "counts": {
   "towers": 8097,
@@ -242,7 +242,8 @@
     "key": 47
    },
    "ridb": {
-    "key": 111,
+    "key": 110,
+    "spatial": 1,
     "unplaced": 2
    },
    "tnlandforms": {
@@ -261,7 +262,7 @@
  "conflicts": {
   "by_field": {
    "status": 284,
-   "location": 263,
+   "location": 264,
    "built": 215,
    "registers": 5,
    "kind": 5
@@ -269,16 +270,16 @@
   "by_field_and_sources": {
    "built": {
     "firelookout_com+nhlr": 140,
-    "firelookout_com+nhlr+ridb": 12,
+    "firelookout_com+nhlr+ridb": 13,
     "nhlr+pa_storymap": 10,
     "firelookout_com+ridb": 6,
     "fire_lookouts_org+nhlr": 5,
     "nhlr+wikidata": 5,
     "firelookout_com+wikidata": 5,
     "firelookout_com+osm": 5,
-    "nhlr+ridb": 4,
     "firelookout_com+nhlr+wikidata": 4,
     "firelookout_com+osm+wikidata": 4,
+    "nhlr+ridb": 3,
     "fflos+nhlr": 3
    },
    "kind": {
@@ -289,7 +290,7 @@
     "ffla+fflos+firelookout_com": 52,
     "ffla+nhlr": 47,
     "ffla+fflos": 31,
-    "nhlr+ridb": 10,
+    "nhlr+ridb": 11,
     "ffla+firelookout_com+nhlr": 9,
     "fflos+nhlr": 5,
     "idaho_fl+nhlr": 5,
@@ -322,7 +323,7 @@
    "0.5-1 km": 105,
    "1-5 km": 125,
    "5-25 km": 23,
-   ">25 km": 10
+   ">25 km": 11
   },
   "examples": {
    "built": [
@@ -2733,14 +2734,6 @@
   },
   {
    "type": "matched_different_names",
-   "key": "ridb:233128",
-   "name": "Lookout Butte Lookout",
-   "tower": "us-id-black-butte",
-   "tower_name": "Black Butte Lookout",
-   "score": 0.3
-  },
-  {
-   "type": "matched_different_names",
    "key": "nhlr:US 714",
    "name": "Cold Mountain Lookout",
    "tower": "us-id-cold-mountain-at-payette-lake-holm",
@@ -4030,6 +4023,16 @@
    "tower": "us-wv-gauley-mountain-tower-site-at-cass-scenic-rr",
    "tower_name": "Gauley Mountain Tower Site (now at Cass Scenic RR)",
    "score": 0.257
+  },
+  {
+   "type": "reassigned_same_spot",
+   "key": "ridb:233128",
+   "near_distance_m": 44,
+   "distance_m": 64084,
+   "score": 1.0,
+   "note": "'Lookout Butte Lookout' sits within 100 m of a differently-named tower but its name strongly matches a tower 64.1 km away; attached there instead of the near one.",
+   "tower": "us-id-lookout-butte",
+   "nearby_tower": "us-id-black-butte"
   },
   {
    "type": "rental_on_gone_lookout",
@@ -13126,11 +13129,6 @@
    "id": "us-id-butts-creek-point",
    "name": "Butts Creek Point Lookout",
    "key": "nhlr:US 1011"
-  },
-  {
-   "id": "us-id-lookout-butte",
-   "name": "Lookout Butte Lookout",
-   "key": "nhlr:US 769"
   },
   {
    "id": "us-ky-hickory-flats",

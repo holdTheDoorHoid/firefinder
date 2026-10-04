@@ -2,8 +2,8 @@
 
 Python 3.12 standard library only. See DESIGN.md section 2 for crawl etiquette:
 at most one request every 2s per host, an honest User-Agent, honour robots.txt,
-cache every raw response under the shared /home/hoid/Desktop/firefinder/data/raw/<source>/
-so a re-run never refetches.
+cache every raw response under RAW_ROOT/<source>/ (by default the shared
+/home/hoid/Desktop/firefinder/data/raw/) so a re-run never refetches.
 """
 from __future__ import annotations
 
@@ -24,7 +24,11 @@ FALLBACK_USER_AGENT = (
     "(KHTML, like Gecko) Chrome/120.0 Safari/537.36"
 )
 
-RAW_ROOT = Path("/home/hoid/Desktop/firefinder/data/raw")
+# Shared raw-cache root. Lives outside the worktree so every agent's crawl hits the same cache
+# instead of re-downloading. That path only exists on the shared lab machine, so a CI runner (which
+# has no /home/hoid and may not be able to create it) sets FIREFINDER_RAW_ROOT instead -- the same
+# override pipeline/_common.py honours (see .github/workflows/refresh-rentals.yml).
+RAW_ROOT = Path(os.environ.get("FIREFINDER_RAW_ROOT") or "/home/hoid/Desktop/firefinder/data/raw")
 
 # Hosts that are operated by the same party and must be rate-limited together
 # (DESIGN.md: "treat nhlr.org and firetower.org as ONE host").

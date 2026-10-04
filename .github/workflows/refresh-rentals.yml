@@ -1,0 +1,102 @@
+name: Weekly RIDB rental refresh
+
+# DESIGN.md's Stage 1 promises recreation.gov rental rules refresh automatically. This
+# downloads the ~572 MB RIDB bulk export, filters it to fire-lookout rentals
+# (pipeline/fetch_ridb.py), re-merges and validates, and -- only if something under data/
+# actually changed -- commits as github-actions[bot] and starts the Pages deploy.
+#
+# A push made with the default GITHUB_TOKEN does not itself trigger other workflows' `push`
+# triggers (GitHub's anti-recursion rule), so this calls pages.yml explicitly with `gh
+# workflow run` instead of editing pages.yml into a reusable workflow -- the cleaner option
+# for a one-way "and also deploy" step that otherwise has nothing to share with the build.
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"  # Monday 09:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: refresh-rentals
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      # pipeline/_common.py's raw-response cache (data/raw/<source>/, git-ignored) defaults to
+      # a path on the shared lab machine that does not exist on a runner; FIREFINDER_RAW_ROOT
+      # points it at the runner's own temp dir instead, outside the checkout, so the ~572 MB
+      # zip never touches the repo and is gone with the runner (also rm -rf'd below, since the
+      # next step needs the disk space back before merge/validate/build run).
+      FIREFINDER_RAW_ROOT: ${{ runner.temp }}/firefinder-raw
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Count rentable lookouts before the refresh (guardrail baseline)
+        id: before
+        run: echo "count=$(python3 pipeline/count_rentable.py)" >> "$GITHUB_OUTPUT"
+
+      - name: Fetch and filter the RIDB export
+        timeout-minutes: 30
+        run: python3 pipeline/fetch_ridb.py
+
+      - name: Guardrail -- refuse a refresh that lost most of its rentals
+        run: |
+          before=${{ steps.before.outputs.count }}
+          after=$(python3 pipeline/count_rentable.py)
+          echo "Rentable lookouts: $before before this fetch, $after after."
+          if [ "$before" -gt 0 ]; then
+            min=$(( before * 7 / 10 ))
+            if [ "$after" -lt "$min" ]; then
+              echo "::error::RIDB export yielded only $after rentable lookouts, down from $before (minimum $min, 70%). Refusing to merge or commit -- check the export and pipeline/fetch_ridb.py by hand."
+              exit 1
+            fi
+          fi
+
+      - name: Delete the downloaded RIDB export (disk is tight; never committed anyway)
+        if: always()
+        run: rm -rf "$FIREFINDER_RAW_ROOT"
+
+      - name: Merge, validate and test
+        run: |
+          python3 pipeline/merge.py
+          python3 pipeline/validate.py
+          python3 -m unittest discover -s pipeline
+
+      - name: Check whether anything under data/ changed
+        id: diff
+        run: |
+          if git status --porcelain -- data | grep -q .; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Summarise the changed rentals for the commit message
+        if: steps.diff.outputs.changed == 'true'
+        run: python3 pipeline/summarize_rental_changes.py --out "$RUNNER_TEMP/commit_message.txt"
+
+      - name: Commit and push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -F "$RUNNER_TEMP/commit_message.txt"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Start the Pages deploy
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref "${GITHUB_REF_NAME}"

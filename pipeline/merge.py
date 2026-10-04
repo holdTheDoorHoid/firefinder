@@ -61,6 +61,7 @@ DATA = REPO / "data"
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from state_bbox import STATE_BBOX, flag_coordinate  # noqa: E402
+from photo_credit import extract_photo_credit  # noqa: E402
 
 # Rough boxes for the territories, which state_bbox does not cover.
 TERRITORY_BBOX = {"PR": (17.8, 18.6, -67.4, -65.2), "VI": (17.6, 18.5, -65.1, -64.5),
@@ -182,6 +183,26 @@ MATCH_SAME_SPOT_M = 100
 MATCH_NEAR_M = 400
 MATCH_STRONG_M = 1500
 STRONG_RADIUS_BY_SOURCE = {"idaho_fl": 3000, "ridb": 3000, "cskt": 15000}
+# A same-spot match (<= MATCH_SAME_SPOT_M) whose name is *clearly* different (score < PARTIAL)
+# from every member of the near tower may still be a plain coordinate error in the source: the
+# record really belongs to a different tower it strongly (score >= STRONG) and uniquely names,
+# somewhere else in the region. Sized to recreation.gov's "Lookout Butte Lookout" facility,
+# whose pin sits 45 m from Black Butte, ID but whose listing is genuinely Lookout Butte's, 64 km
+# away -- "say within 60 km" undershoots that real case, so this gives headroom without reaching
+# across a whole region. See candidates() and merge_report.json's "reassigned_same_spot" review.
+#
+# Restricted to the sources DESIGN.md already singles out as having "rougher" pins (idahofl and
+# RIDB share a 3 km STRONG_RADIUS_BY_SOURCE for the same reason). Everywhere else, a same-spot
+# match with a different name is usually a real alternate name (Pequawket = Kearsarge North,
+# or GA/NC/SC towers the eastern/central weebly sites know by a different local name than
+# tnlandforms/NHLR do -- confirmed in the committed data by already-shared `other_names`), and a
+# same-named tower 10s of km away is coincidence (common names recur: "Buck Peak", "Sugarloaf",
+# "ADAMS"). Trying this against the whole dataset from scratch (no `by_key` memory) misattached
+# several such coincidences and every "<X> (now at <Y>)" relocated-structure record (the near
+# tower's different name there is explained by the move, not a coordinate bug) before this
+# restriction and the relocation check in _reassign_same_spot() were added.
+REASSIGN_SOURCES = {"ridb", "idaho_fl"}
+REASSIGN_RADIUS_M = 75_000
 NEAR_MISS_M = 10000
 REGISTER_FAR_M = 5000
 BUILT_CONFLICT_YEARS = 2
@@ -957,6 +978,7 @@ class Matcher:
         self.deferred: list[Rec] = []
         self.review: list[dict] = []
         self.stats: Counter = Counter()
+        self._reassign_logged: set[str] = set()  # dedupe: candidates() can run >1x per record
 
     # -- index maintenance --------------------------------------------------------------
 
@@ -1043,6 +1065,7 @@ class Matcher:
         strong_r = STRONG_RADIUS_BY_SOURCE.get(rec.source, MATCH_STRONG_M)
         seen: set = set()
         out = []
+        same_spot_bad_name: list[tuple[float, "Tower"]] = []
         for c in cells_around(rec.lat, rec.lon, max(strong_r, MATCH_NEAR_M)):
             for t in self.grid.get(c, ()):
                 if t in seen:
@@ -1069,7 +1092,70 @@ class Matcher:
                 penalty = 1 if (rec.raw.get("kind") not in (None, "unknown", "tree", "camp")
                                 and kinds and kinds <= {"tree", "camp"}) else 0
                 out.append((-eff, penalty, d, t, score, same_region))
+                if d <= MATCH_SAME_SPOT_M and score is not None and score < PARTIAL:
+                    same_spot_bad_name.append((d, t))
+
+        if same_spot_bad_name and rec.region and rec.source in REASSIGN_SOURCES:
+            out.extend(self._reassign_same_spot(rec, same_spot_bad_name, seen))
         return out
+
+    def _reassign_same_spot(self, rec: Rec, near: list[tuple[float, "Tower"]], seen: set) -> list[tuple]:
+        """A record sits within MATCH_SAME_SPOT_M of a tower whose name clearly does not match
+        it (a source's own coordinate error, not a relocated structure -- see parse_annotation()
+        for that case). If exactly one other tower in the region strongly and uniquely matches
+        the record's name within REASSIGN_RADIUS_M, candidates() also offers that tower; its
+        higher name score sorts it ahead of the near-but-wrong one in the caller's greedy match,
+        so it wins. Ambiguous (more than one strong match) is logged but not acted on. A near
+        tower that is itself a relocated/replica/parts-from structure's current site is left
+        alone: its different name there is explained by the move (DESIGN.md "Moved, copied and
+        rebuilt structures"), not evidence of a coordinate error."""
+        if any(mem.annotation and mem.annotation["kind"] in ("relocated", "replica", "parts")
+               for _, t in near for mem in t.members):
+            return []
+        strong = []
+        for c in cells_around(rec.lat, rec.lon, REASSIGN_RADIUS_M):
+            for t in self.grid.get(c, ()):
+                if t in seen:
+                    continue
+                seen.add(t)
+                if rec.region not in t.regions():
+                    continue
+                d = t.min_dist(rec.lat, rec.lon)
+                if d is None or d > REASSIGN_RADIUS_M:
+                    continue
+                score = name_score(rec.forms, t.forms())
+                if score is not None and score >= STRONG:
+                    strong.append((d, t, score))
+        if not strong:
+            return []
+        nearest_d, nearest_t = min(near, key=lambda x: x[0])
+        already_logged = rec.key in self._reassign_logged
+        self._reassign_logged.add(rec.key)
+        if len(strong) > 1:
+            if not already_logged:
+                self.review.append({
+                    "type": "reassign_same_spot_ambiguous", "key": rec.key,
+                    "nearby_tower_seq": nearest_t.seq,
+                    "tower_seqs": sorted(t.seq for _, t, _ in strong),
+                    "note": "Within 100 m of a differently-named tower, but more than one other "
+                            "tower in the region strongly matches its name; left attached to the "
+                            "near tower for a human to check.",
+                })
+            return []
+        d, t, score = strong[0]
+        if not already_logged:
+            self.review.append({
+                "type": "reassigned_same_spot", "key": rec.key,
+                "nearby_tower_seq": nearest_t.seq, "near_distance_m": round(nearest_d),
+                "tower_seq": t.seq, "distance_m": round(d), "score": score,
+                "note": f"{rec.display!r} sits within 100 m of a differently-named tower but its "
+                        f"name strongly matches a tower {round(d / 1000, 1)} km away; attached "
+                        f"there instead of the near one.",
+            })
+        kinds = {m.raw.get("kind") for m in t.members} - {None, "unknown"}
+        penalty = 1 if (rec.raw.get("kind") not in (None, "unknown", "tree", "camp")
+                        and kinds and kinds <= {"tree", "camp"}) else 0
+        return [(-score, penalty, d, t, score, True)]
 
     def place_without_coords(self) -> None:
         """Records with no coordinates, once every source is in: a register number, else a
@@ -1410,6 +1496,16 @@ def photo_entry(rec: Rec, p: dict) -> dict | None:
         return None
     site = SOURCE_SITE.get(rec.source, rec.source)
     credit = p.get("credit")
+    caption = p.get("caption") or None
+    if not credit and rec.source != "wikidata":
+        # A register photo's caption often carries the photographer where the structured
+        # credit field doesn't ("9/10/05--Cabin (Bob Eckler photo-courtesy Bill Starr)"), so
+        # the generic site-name fallback below never has to be the whole story. Applied here
+        # (not in the fetchers) so it also picks up every caption already committed, with no
+        # re-crawl needed.
+        caption, extracted = extract_photo_credit(caption)
+        if extracted:
+            credit = extracted
     if rec.source == "wikidata":
         author = (commons or {}).get("author")
         if author and (not credit or credit.lower().startswith("wikimedia commons")):
@@ -1431,7 +1527,7 @@ def photo_entry(rec: Rec, p: dict) -> dict | None:
         "source_url": source_url,
         "credit": credit,
         "license": p.get("license") or (commons or {}).get("license") or PHOTO_LICENSE.get(rec.source),
-        "caption": p.get("caption") or None,
+        "caption": caption,
         "year": year,
     }
 
@@ -1909,6 +2005,13 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
 
     if "access" not in locked:
         acc, acc_src = pick("access", members, record_access)
+        # "unknown" (e.g. OSM's access=* tag, which describes the structure, not the land -- see
+        # record_access()) is not a real determination: don't let it block a better one below,
+        # but keep its note as a last resort if nothing better turns up.
+        weak_note, weak_src = (None, None)
+        if isinstance(acc, dict) and acc.get("level") == "unknown":
+            weak_note, weak_src = acc.get("note"), acc_src
+            acc, acc_src = None, None
         if acc is None and rec.get("ownership") == "tribal":
             acc = {"level": "permission", "note": "On tribal land. Ask the tribe before visiting."}
             acc_src = s
@@ -1922,6 +2025,8 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
                 else:
                     note = "Listed as a visitor site on recreation.gov. Check the listing for seasonal closures."
                 acc, acc_src = {"level": "public", "note": note}, ridb
+        if acc is None and weak_note:
+            acc, acc_src = {"level": "unknown", "note": weak_note}, weak_src
         if acc is not None:
             rec["access"] = acc
             if acc_src is not None:
@@ -1944,12 +2049,29 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
         ridb = [m for m in members if m.source == "ridb"]
         rentals = [m for m in ridb if isinstance(m.raw.get("rental"), dict)]
         rentals.sort(key=lambda m: (m.raw["rental"].get("available") is not True, m.key))
+        old_rental = rec.get("rental")
+        was_ridb = isinstance(old_rental, dict) and old_rental.get("provider") == "recreation.gov"
         if rentals:
             rec["rental"] = copy.deepcopy(rentals[0].raw["rental"])
             rec["rental"].setdefault("checked", headers.get("ridb", {}).get("retrieved"))
             contributed[rentals[0].key].add("rental")
-        elif ridb and isinstance(rec.get("rental"), dict) and rec["rental"].get("provider") == "recreation.gov":
+        elif ridb and was_ridb:
             rec["rental"]["available"] = False
+            rec["rental"].pop("warning", None)
+        elif not ridb and was_ridb and "ridb" in headers:
+            # Never delete a rental: RIDB's own weekly export simply no longer has this
+            # facility (removed, renumbered, or missed by matching this run, not something a
+            # merge can tell apart) -- "ridb" in headers means the export WAS read this run,
+            # so this is a real absence, not a skipped fetch. Leave "available" and "checked"
+            # exactly as they were and say so visibly instead (the page already shows
+            # rental.warning above the booking link, same as the "burned lookout" case below).
+            rec["rental"]["available"] = False
+            rec["rental"]["warning"] = (
+                f"Last confirmed on recreation.gov {old_rental.get('checked') or 'at an earlier refresh'}. "
+                f"The {headers.get('ridb', {}).get('retrieved') or today} refresh no longer finds this "
+                f"facility in RIDB's export -- it may have been delisted or renumbered. Check "
+                f"recreation.gov directly before relying on this listing."
+            )
         else:
             rec.setdefault("rental", None)
 
