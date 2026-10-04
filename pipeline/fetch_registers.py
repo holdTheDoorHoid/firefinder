@@ -68,6 +68,14 @@ COUNTY_RE = re.compile(r"(.+?)\s+County,\s*(.+)", re.I)
 ELEV_RE = re.compile(r"([\d,]+)\s*ft\s*\(([\d,]+)\s*m\)", re.I)
 DECDEG_RE = re.compile(r"([NS])\s*(\d+\.\d+)\s*\xb0\s*([EW])\s*(\d+\.\d+)\s*\xb0")
 YEAR_RE = re.compile(r"\b(1[89]\d{2}|20\d{2})\b")
+# A bare decade ("1930's", "1970s", "late 1970s", "mid-1970s") is itself approximate, same as
+# "circa": the trailing "'?s" means YEAR_RE (which requires a word boundary right after the
+# four digits) only catches the apostrophe spelling on its own, so parse_removed_field() falls
+# back to this when YEAR_RE finds nothing.
+DECADE_RE = re.compile(r"\b(1[89]\d0|20\d0)'?s\b", re.I)
+CIRCA_RE = re.compile(r"\bcirca\b", re.I)
+FIRE_WORDS_RE = re.compile(r"\bfires?\b|\bwildfires?\b|\bburn(?:ed|t)?\b|\barson\b", re.I)
+DESTROYED_WORDS_RE = re.compile(r"\beruptions?\b|\bcollapsed\b|\bdestroyed\b|\bdemolished\b", re.I)
 
 
 def strip_tags(s: str) -> str:
@@ -218,6 +226,35 @@ def parse_links_tab(html: str, base: str) -> list[dict]:
     return out
 
 
+def parse_removed_field(text: str, source: str) -> dict | None:
+    """Parses NHLR/FFLOS's "Removed" table field into an event -- removed/burned/destroyed
+    with a year and a note carrying the original text -- or None when it has no usable year
+    ("Standing", "Unknown", "Relocation Date Unknown", "Collapsed structure remains").
+
+    "2002 - Wildfire" -> burned, 2002. "circa 2010" and a bare decade ("1970s") both read as
+    approximate (the note says "about <year>"); a range ("1957-1958", "between 1966 and
+    1979") uses the later year, the more conservative "still standing at least until" bound."""
+    text = (text or "").strip()
+    if not text:
+        return None
+    approx = bool(CIRCA_RE.search(text) or DECADE_RE.search(text))
+    years = [int(y) for y in YEAR_RE.findall(text)]
+    if not years:
+        years = [int(y) for y in DECADE_RE.findall(text)]
+    if not years:
+        return None
+    year = max(years)
+    if FIRE_WORDS_RE.search(text):
+        event = "burned"
+    elif DESTROYED_WORDS_RE.search(text):
+        event = "destroyed"
+    else:
+        event = "removed"
+    note = f"'Removed' field on {source.upper()} detail page: \"{text}\""
+    note += f" (about {year})." if approx else "."
+    return {"year": year, "event": event, "note": note, "from": source}
+
+
 def parse_detail_page(html: str, base: str, source: str, default_status: str) -> dict:
     result: dict = {
         "name": None,
@@ -329,9 +366,15 @@ def parse_detail_page(html: str, base: str, source: str, default_status: str) ->
     if "cooperators" in fields:
         result["extra"]["cooperators"] = strip_tags(fields["cooperators"])
 
+    if "removed" in fields:
+        ev = parse_removed_field(strip_tags(fields["removed"]), source)
+        if ev:
+            result["events"].append(ev)
+
     KNOWN_LABELS = {
         "registry numbers", "date registered", "nominated by", "location", "coordinates",
         "elevation", "built", "administered by", "cooperators", "available for rental",
+        "removed",
     }
     other = {lbl: strip_tags(v) for lbl, v in fields.items() if lbl not in KNOWN_LABELS}
     if other:

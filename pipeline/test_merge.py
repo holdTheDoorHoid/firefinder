@@ -806,6 +806,71 @@ class PackedDMS(unittest.TestCase):
         self.assertEqual(flo.parse_gps("36.020", "118.253")[2], "decimal")      # too few digits
 
 
+class RemovedField(unittest.TestCase):
+    """NHLR/FFLOS's "Removed" table field -> an event (pipeline/fetch_registers.py)."""
+
+    @classmethod
+    def setUpClass(cls):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("fetch_registers_under_test", Path(__file__).parent / "fetch_registers.py")
+        cls.fr = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.fr)
+
+    def parse(self, text):
+        return self.fr.parse_removed_field(text, "fflos")
+
+    def test_bare_year(self):
+        ev = self.parse("1984")
+        self.assertEqual((ev["year"], ev["event"]), (1984, "removed"))
+        self.assertIn('"1984"', ev["note"])
+        self.assertNotIn("about", ev["note"])
+
+    def test_fire_mentions_are_burned(self):
+        for text, year in [("2002 - Wildfire", 2002), ("1968 Arson Fire", 1968),
+                            ("1969 (Burned)", 1969), ("1914 Volcanic Eruption", 1914)]:
+            ev = self.parse(text)
+            self.assertEqual(ev["year"], year, text)
+        self.assertEqual(self.parse("2002 - Wildfire")["event"], "burned")
+        self.assertEqual(self.parse("1968 Arson Fire")["event"], "burned")
+        self.assertEqual(self.parse("1969 (Burned)")["event"], "burned")
+        self.assertEqual(self.parse("1914 Volcanic Eruption")["event"], "destroyed")
+
+    def test_circa_keeps_the_year_and_says_about(self):
+        ev = self.parse("circa 2010")
+        self.assertEqual(ev["year"], 2010)
+        self.assertEqual(ev["event"], "removed")
+        self.assertIn("about 2010", ev["note"])
+        self.assertIn('"circa 2010"', ev["note"])
+
+    def test_bare_decade_is_also_approximate(self):
+        ev = self.parse("late 1970s")
+        self.assertEqual(ev["year"], 1970)
+        self.assertIn("about 1970", ev["note"])
+        ev2 = self.parse("1930's")
+        self.assertEqual(ev2["year"], 1930)
+        self.assertIn("about 1930", ev2["note"])
+
+    def test_range_uses_the_later_year(self):
+        self.assertEqual(self.parse("1957-1958")["year"], 1958)
+        self.assertEqual(self.parse("between 1966 and 1979")["year"], 1979)
+        self.assertEqual(self.parse("1940s or 1950s")["year"], 1950)
+
+    def test_qualifiers_keep_their_year(self):
+        self.assertEqual(self.parse("after 1943")["year"], 1943)
+        self.assertEqual(self.parse("before 1970")["year"], 1970)
+        self.assertEqual(self.parse("by 2018")["year"], 2018)
+        self.assertEqual(self.parse("Prior to 1986")["year"], 1986)
+
+    def test_no_usable_year_is_skipped(self):
+        for text in ("Standing", "Unknown", "Relocation Date Unknown",
+                     "Collapsed structure remains", "Cabin gone, tower remains"):
+            self.assertIsNone(self.parse(text), text)
+
+    def test_note_names_the_source(self):
+        self.assertIn("NHLR", self.fr.parse_removed_field("1984", "nhlr")["note"])
+        self.assertIn("FFLOS", self.fr.parse_removed_field("1984", "fflos")["note"])
+
+
 class Validation(unittest.TestCase):
     def test_validator_catches_errors(self):
         ws = Workspace()
