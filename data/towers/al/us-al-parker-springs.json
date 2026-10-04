@@ -1,6 +1,7 @@
 {
   "id": "us-al-parker-springs",
   "name": "Parker Springs Lookout",
+  "summary": "A rare live-in, 12x12 cab on a 100-ft Aermotor tower built in 1937 in Alabama's Conecuh National Forest, one of only two of its kind left in the state.",
   "other_names": [],
   "country": "US",
   "region": "AL",
@@ -13,8 +14,8 @@
   },
   "elevation_m": 92.0,
   "kind": "unknown",
-  "design": null,
-  "height_m": null,
+  "design": "Live-in 12'x12' hip-roof wooden cab with catwalk on a 100-ft Aermotor steel tower",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -43,10 +44,18 @@
   "rental": null,
   "events": [
     {
+      "year": 1937,
+      "event": "built",
+      "note": "Per Jackson's Ramblings lookout survey",
+      "from": "research",
+      "source_url": "https://jacksonsramblings.com/forest-fire-lookouts/"
+    },
+    {
       "year": 2015,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 9, 2015",
-      "from": "nhlr"
+      "note": "Registered June 9, 2015 as US 1076, AL 60, nominated by Al Pelham",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/parker-springs-lookout/"
     }
   ],
   "photos": [
@@ -68,6 +77,11 @@
       "label": "NHLR register entry US 1076 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/al/parker-springs-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Forest Fire Lookouts (Jackson's Ramblings)",
+      "url": "https://jacksonsramblings.com/forest-fire-lookouts/",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -87,10 +101,29 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-al-parker-springs",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

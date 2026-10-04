@@ -1,6 +1,7 @@
 {
   "id": "us-or-warner-mountain",
   "name": "Warner Mountain Lookout",
+  "summary": "A 1920s-style cupola cabin, oversized, set atop a 41-ft tower moved here from Grass Mountain in 1986; staffed each summer, rented through Recreation.gov each winter.",
   "other_names": [
     "Warner Ridge"
   ],
@@ -15,8 +16,8 @@
   },
   "elevation_m": 1727.3,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "design": "Cupola-style live-in cabin (14x14 ft), replica of 1920s design, atop a 40-41 ft tower",
+  "height_m": 12.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -27,11 +28,11 @@
       "url": "http://nhlr.org/lookouts/us/or/warner-mountain-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Willamette National Forest)",
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+    "note": "Overnight stays by reservation on Recreation.gov; winter-only, road unplowed."
   },
   "staffing": {
     "status": "unknown",
@@ -39,8 +40,8 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Access road not maintained for winter travel; reached by ski, snowshoe or snowmobile, 2-10 miles"
   },
   "rental": {
     "available": true,
@@ -69,14 +70,30 @@
     {
       "year": 1969,
       "event": "removed",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "This removal is of the earlier Logger Butte cupola, 2 miles northeast, not Warner Mountain itself",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/warner.html"
+    },
+    {
+      "year": 1986,
+      "event": "relocated",
+      "note": "Tower superstructure moved here from Grass Mountain",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/warner.html"
+    },
+    {
+      "year": 1987,
+      "event": "built",
+      "note": "NHLR describes the structure as 'of recent construction (1987)'; cupola cabin built atop the relocated tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/warner-mountain-lookout/"
     },
     {
       "year": 1994,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 18, 1994",
-      "from": "nhlr"
+      "note": "Registered June 18, 1994",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/warner-mountain-lookout/"
     }
   ],
   "photos": [
@@ -195,6 +212,21 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-warner-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -220,7 +252,13 @@
       "note": "They share a register number."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-04",
+    "checked": "2026-10-04",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

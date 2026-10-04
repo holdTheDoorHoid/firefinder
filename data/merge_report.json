@@ -93,8 +93,8 @@
   }
  },
  "files": {
-  "written": 247,
-  "unchanged": 7850
+  "written": 34,
+  "unchanged": 8063
  },
  "counts": {
   "towers": 8097,
@@ -175,17 +175,17 @@
    "WY": 76
   },
   "visible_by_verification": {
-   "unverified": 6374,
-   "facts": 1114,
-   "verified": 40
+   "unverified": 6358,
+   "facts": 1100,
+   "verified": 70
   },
   "multi_source_towers": 5411,
   "towers_by_number_of_sources": {
-   "1": 2685,
+   "1": 2679,
    "2": 2323,
-   "3": 2514,
-   "4": 399,
-   "5+": 176
+   "3": 2518,
+   "4": 396,
+   "5+": 181
   },
   "rentable": 76,
   "registered": 3962
@@ -13199,11 +13199,11 @@
   }
  ],
  "research": {
-  "files": 40,
-  "applied": 40,
+  "files": 70,
+  "applied": 70,
   "by_verdict": {
-   "fixed": 39,
-   "pass": 1
+   "fixed": 65,
+   "pass": 5
   },
   "problems": [
    {
@@ -13215,24 +13215,16 @@
     "problem": "event 'fire_threat' (2017) is not in vocab.event; left out of the timeline"
    },
    {
-    "file": "us-az-lake-mountain.json",
-    "problem": "event 'modified' (1930) is not in vocab.event; left out of the timeline"
-   },
-   {
-    "file": "us-ca-baldy-mountain-happy-camp-baldy.json",
-    "problem": "event 'staffed' (1916) is not in vocab.event; left out of the timeline"
-   },
-   {
-    "file": "us-ca-baldy-mountain-happy-camp-baldy.json",
-    "problem": "event 'staffed' (1917) is not in vocab.event; left out of the timeline"
-   },
-   {
-    "file": "us-ca-baldy-mountain-happy-camp-baldy.json",
-    "problem": "event 'staffed' (1974) is not in vocab.event; left out of the timeline"
-   },
-   {
     "file": "us-ca-camp-six-lookout-at-bear-basin-butte.json",
     "problem": "event 'restoration_started' (1991) is not in vocab.event; left out of the timeline"
+   },
+   {
+    "file": "us-ca-mount-elizabeth.json",
+    "problem": "facts.staffing {'status': 'seasonal', 'note': 'Per NHLR, staffed daily during fire season by the Forest Service'} is not valid; not applied"
+   },
+   {
+    "file": "us-mt-gem-peak.json",
+    "problem": "facts.staffing {'status': 'retired', 'as_of': '1970s'} is not valid; not applied"
    },
    {
     "file": "us-nm-monjeau.json",
@@ -13243,28 +13235,16 @@
     "problem": "event 'visit_report' (2007) is not in vocab.event; left out of the timeline"
    },
    {
-    "file": "us-or-hager-mountain.json",
-    "problem": "event 'staffed' (1915) is not in vocab.event; left out of the timeline"
+    "file": "us-or-warner-mountain.json",
+    "problem": "facts.staffing {'status': 'seasonal', 'as_of': 'per firelookout.com, undated'} is not valid; not applied"
    },
    {
-    "file": "us-or-hager-mountain.json",
-    "problem": "event 'modified' (1992) is not in vocab.event; left out of the timeline"
+    "file": "us-pa-fire-tower-9.json",
+    "problem": "facts.staffing {'status': 'retired', 'as_of': '1977'} is not valid; not applied"
    },
    {
     "file": "us-ri-escoheag-hill.json",
     "problem": "event 'burglarized_note' (1952) is not in vocab.event; left out of the timeline"
-   },
-   {
-    "file": "us-wa-evergreen-mountain.json",
-    "problem": "event 'other' (1934) is not in vocab.event; left out of the timeline"
-   },
-   {
-    "file": "us-wa-evergreen-mountain.json",
-    "problem": "event 'staffed' (1940) is not in vocab.event; left out of the timeline"
-   },
-   {
-    "file": "us-wa-evergreen-mountain.json",
-    "problem": "event 'other' (1942) is not in vocab.event; left out of the timeline"
    },
    {
     "file": "us-wa-evergreen-mountain.json",
@@ -13273,9 +13253,37 @@
    {
     "file": "us-wa-evergreen-mountain.json",
     "problem": "event 'restoration_started' (1990) is not in vocab.event; left out of the timeline"
+   },
+   {
+    "file": "us-wa-steliko.json",
+    "problem": "facts.staffing {'status': 'historic', 'as_of': '1990s'} is not valid; not applied"
+   },
+   {
+    "file": "us-wa-stranger-mountain.json",
+    "problem": "facts.staffing {'status': 'retired', 'as_of': '1994'} is not valid; not applied"
+   },
+   {
+    "file": "us-wi-friendship-skyline.json",
+    "problem": "facts.staffing {'status': 'retired', 'as_of': '2015'} is not valid; not applied"
    }
   ],
   "notes_for_editor": [
+   {
+    "id": "us-al-parker-springs",
+    "note": "No source found on staffing history, decommission date, restoration, or current public access/climbability for Parker Springs specifically. The built year (1937) comes from a single hobbyist survey site (Jackson's Ramblings), not an NRHP nomination or Forest Service document; treat it as plausible but not strongly corroborated. height_m (30.5) is a conversion of the 100-ft tower height stated by NHLR, not independently confirmed."
+   },
+   {
+    "id": "us-al-wharton-east-lake",
+    "note": "No source documents staffing history, when fire-watch use ended, or whether the 2013-2016 restoration talk ever resulted in the tower being opened to climbers; current access/climbable status should be verified before publishing a stronger claim. The eastern_us_lookouts cache page (easternuslookouts.weebly.com/wharton.html) was checked but contains only the tower name, county, and preserve name with no additional prose, so it was not cited."
+   },
+   {
+    "id": "us-ar-sugarloaf",
+    "note": "The NHLR narrative text says NRHP acceptance was 'October, 1995' while the official NRHP reference number's listing date (via Wikipedia/NRIS) is September 11, 1995; I used the official date and noted the discrepancy. Access status recorded as 'unknown' in facts because sources describe a locked gate on the road but say nothing about whether climbing the tower itself is permitted; did not mark it climbable. Did not use any WebSearch calls; three cached/live page reads (NHLR, Central US Lookouts, Wikipedia) were sufficient. Fact-check (2026-10-04): the summit elevation is also given inconsistently across sources -- NHLR says 1,089 ft, Wikipedia says 1,150 ft; the story follows NHLR since that is the only source the elevation sentence cites, but a human may want to reconcile the two."
+   },
+   {
+    "id": "us-az-aztec-peak",
+    "note": "The FS trail page lists the trail under the Payson Ranger District; the NHLR page (and the record) say Pleasant Valley Ranger District. Both are districts of Tonto National Forest; this may reflect a later district reorganization rather than a factual error, but I did not resolve it and left the record's district attribution untouched. Height (~41 ft) and the 'closed to motorized travel' wilderness note come from Mountain Field Guide, a secondary aggregator that cites the Forest Service and Peakbagger; treat with slightly less confidence than the NHLR and USFS primary sources. Climbability of the tower itself (public access to the cab) is not established by any source read; left as unknown."
+   },
    {
     "id": "us-az-kendrick",
     "note": "Current operational status is genuinely disputed between sources: NHLR (page last updated 2016) describes the tower as in active service, and Wikipedia separately attributes a 'open to visitors when staffed in summer' description to the Forest Service -- but checked directly, the USFS Kendrick Mountain Trail #22 page itself says nothing about staffing or visitor access, so that claim should not be cited to the trail page. Wikipedia also says the tower looked damaged and likely abandoned as of mid-2024, with no cited source for that claim. Worth a human check (e.g. a recent trip report or current USFS fire lookout roster) before updating the tower's staffing/access fields. The tower record's 'kind' field (two_story) comes from FFLA's '2-Story Cab' classification, which doesn't obviously match NHLR's description of a flat-roof cab on a 10 ft tower -- plausibly just differing naming conventions rather than a real conflict, so no correction proposed, but flagging it."
@@ -13285,12 +13293,24 @@
     "note": "Good primary-register coverage (NHLR + NRHP nomination metadata + FFLA list), but nothing on named lookouts, specific fires, visitor access, or current staffing/climbability turned up in cache or the three web searches used. The elevation figure conflicts between NHLR (8,467 ft) and the NRHP record (8,250 ft) and should be looked at by someone who can check the actual nomination PDF or a topo map. Height is also given two ways (48 ft vs 49 ft) by the two registers. No cached page existed for this specific lookout outside nhlr/ and ffla/; fflos (abandoned-sites register) has no AZ Lake Mountain entry, consistent with it still standing and in service."
    },
    {
+    "id": "us-az-mcfadden-peak",
+    "note": "Current staffing/access status is only as current as these pages (dates on them unclear), so the tower record's staffing/access fields are left 'unknown' rather than overwritten; story says staffed 'each fire season' per source wording. No photos beyond the one already in the tower record were found within budget."
+   },
+   {
     "id": "us-ca-baldy-mountain-happy-camp-baldy",
     "note": "The 1916-1923 staffing/construction detail comes from an enthusiast compilation site (californialookouts.weebly.com) that cites period Siskiyou County newspapers and a 1952 USC&GS data sheet; I could not verify those primary sources directly, only the compiler's summary of them, so treat names/dates in events for 1916-1923 as secondhand. The NHLR-dated 1938 tower and the 1919 lookout house are almost certainly two different structures on the same peak (record's 'built: 1938' event refers only to the surviving tower) - worth a note on the tower page if the editor wants to preserve both construction dates. Several undated NHLR photos (a 'California Plan 4A Cabin' and a 'Tree Platform') suggest yet other structures/eras on this site that no source dates; not added as events since no year is given. Kathy Shoopman's start-year lookout is called 'Bald Mountain Lookout' in the Action News Now piece but multiple other outlets (ABC10, Yahoo/AP, KTVL) place her first post at 'Baldy Mountain Lookout... west of Happy Camp', matching this record; I treated it as the same site given the matching location description, but flagging the name discrepancy. No source found addresses current public access, trail, or drive-up status, so visit/access facts were left out rather than guessed."
    },
    {
+    "id": "us-ca-cahto-peak",
+    "note": "Record's 'design' and 'height_m' fields are still null; NHLR only confirms it is an enclosed tower cab (matched by FFLA's 'Encl. Tower'), not a specific design code (e.g. L-4) or structure height. Current access level for visitors (open vs restricted) isn't stated by either source beyond the gated BLM road detail, so access.level is left unknown rather than guessed. Fact-check 2026-10-04: the original draft claimed Cahto Peak's own FFLOS registry number was 'US 2049, CA 155' — on the FFLOS list that number actually belongs to the adjacent, unrelated, 'Gone' listing for Cahoon Rock; Cahto Peak's own FFLOS row instead cross-references the NHLR number (US 1125, CA 110). Story and this evidence entry were corrected to drop the misattributed FFLOS number."
+   },
+   {
     "id": "us-ca-camp-six-lookout-at-bear-basin-butte",
     "note": "Two distinct prior structures are easy to conflate: (1) a 1924 lookout on Bear Basin Butte itself, burned 1936, unrelated to the current building; (2) the Camp Six/Upper Coon Mountain cabin (built 1934 per NHLR, or first built 1923 per FFLOS with an undated later replacement cabin) that was moved to Bear Basin Butte in 1996 (recreation.gov) or 1997 (FFLOS) and is the structure standing today. The tower record's own 'built: 1934' event matches NHLR but not FFLOS; left as-is since it's directly sourced. No corrections proposed to the tower record itself -- its fields (name, location, status 'relocated', agency) all check out against these sources. The FFLA CA list entry confirms 'Relocated' status and the NHLR US 288/CA 21 numbers; an adjacent table row for a different lookout (Basalt Hill, NHLR US 880/CA 90) sits right next to this one in the cached HTML and could be misread as a conflicting register number for Bear Basin Butte -- it is not, it belongs to the preceding row."
+   },
+   {
+    "id": "us-ca-mount-elizabeth",
+    "note": "Design history (three successive structures, 1925/1931/1961) is well documented by NHLR, but no source gives named keepers, specific fires spotted, or a current staffing/access status beyond NHLR's general 'staffed daily during fire season' line, which is undated and may be stale. NHLR's descriptive paragraph also mentions 'Mi-Wok Ranger District, 4,939' elevation' separately from the page's stated lookout elevation of 4,931 ft; this reads like boilerplate district text rather than a conflicting lookout elevation, so no correction is proposed."
    },
    {
     "id": "us-co-deadman",
@@ -13301,8 +13321,20 @@
     "note": "Coordinates (38.040996, -105.012697, elev ~2252m per OSM) fall in the Wet Mountains near Greenhorn Mountain/St Charles Peak/Lake Isabel, San Isabel National Forest area, but no cached or web source ties a named lookout to that exact point. Checked every cached NHLR and FFLOS Colorado entry's coordinates (both index pages) and none are within a reasonable distance of this node. Three WebSearch queries (generic coordinate/region search, San Isabel NF fire tower history, named Wet Mountains peaks) turned up nothing specific to this structure. Possible the OSM 'Fire Tower' label is generic (e.g. a different kind of tower, or a genuinely obscure/undocumented lookout) rather than a proper name — worth a human look if better aerial/historic-map sources become available."
    },
    {
+    "id": "us-co-mestaaehehe-mountain",
+    "note": "Exact height_m and precise CCC construction dates beyond 1940 were not found; RIDB only says 'built in the 1940s' while NHLR gives 1940 specifically, so I used 1940. No conflicting built-year sources requiring a resolved_conflicts entry. Status/climbability for independent day hikers beyond the paid overnight rental is not documented in the sources read; left visit.climbable unset rather than guess."
+   },
+   {
+    "id": "us-id-bishop-mountain",
+    "note": "Build year (1937 vs 1938) and tower height (72 ft vs 84 ft) conflict between NHLR and the other two sources; noted in the story rather than resolved. NHLR's own record page says the tower is 'available for rental,' which conflicts a little with the record's access.level of 'unknown' -- worth a look, but I left access as unknown in facts since no source confirms public climbing access, only rental/standby status."
+   },
+   {
     "id": "us-id-black-butte",
     "note": "The tower record's 'rental' block and the 'Lookout Butte Lookout' alias both appear to actually describe a different, separately registered lookout (NHLR US 769) about 40 miles northeast of Black Butte on the same forest -- see the two proposed corrections. If that's confirmed, Lookout Butte Lookout likely needs (or already has) its own record with that rental data. Core build-history facts about Black Butte itself (1925 camp, 1928 cupola cabin, 1970 Region 6 Flat Top rebuild) are corroborated by two independent sources (NHLR and firelookout.com) and match in every detail, so confidence in those is good. However, current status is genuinely disputed: NHLR and FFLA (firelookout.org) list it as standing, while a separate, uncached Idaho Fire Lookouts page for this exact lookout (same coordinates/elevation/build history, in their Selway-region listing, source 6) marks it 'Abandoned' with no further detail. The original research checked only idahofirelookouts.com's West Central region page (source 5, which covers an unrelated same-named lookout) and missed this direct conflict. Confidence is capped at medium because of this unresolved status conflict and because the access/rental story still needs a human to verify and fix in the live record."
+   },
+   {
+    "id": "us-id-castle-butte",
+    "note": "The tower record's 'conflicts' entry lists firelookout_com as giving a built year of 1928, but that page's actual text matches nhlr exactly (1916/1928/1950 sequence) — likely a mis-extraction when the record was built. Recommend the conflict be cleared rather than left open; no new correction filed since the record's 'built: 1950' field is already right. Fact-check 2026-10-04: removed a sentence claiming secondary listings 'collapse' the three build dates and citing recreation.gov for the full 1916/1928/1950 sequence — no evidence quote supported that framing (recreation.gov's page does independently state the same three dates, confirmed by spot-check, but the sentence as written made an unsupported claim about other listings). Also rewrote the 1950-cab sentence, which copied the nhlr.org description almost verbatim."
    },
    {
     "id": "us-id-sawyer-ridge-at-eyeful-dreher",
@@ -13313,12 +13345,20 @@
     "note": "Good staffing list (names 1932-1980) came from firelookout.com's own page text, which also resolves the build-year 'conflict' already flagged on the tower record -- see the correction proposed above. Fact-check pass (2026-10-04) found the story had wrongly attributed that staffing list to the National Historic Lookout Register; NHLR's own page carries no staffing names at all, only firelookout.com does. Fixed in the story. Also removed an invented height_m value (2.4 m) that matched no source -- it appears to have been derived from the 8-foot concrete base rather than any stated structure height -- and dropped footnote [^6] (the climbing-guide page) from the recreation.gov rental sentence, since that page never mentions recreation.gov and states the rental runs first-come-first-served. Separately: recreation.gov's own page gives the cabin as 15'x15' on a 5-foot foundation, which doesn't match NHLR/firelookout.com's 14'x14' on an 8-foot base; the story's dimension sentence cites only NHLR/firelookout.com and is internally consistent, but a human may want to reconcile the two descriptions. No information found on staffing after 1980 or on when year-round staffing ended; left as unknown. The idahomagazine.com article 'Back to Shorty Peak' returned HTTP 403 and could not be read; it may be worth a human revisit if full text is reachable another way. idahofirelookouts.com's detail page for this lookout was not cached locally and was not fetched live (only its listing thumbnail is cached), so it is not cited here."
    },
    {
+    "id": "us-la-fields",
+    "note": "Very thin sourcing. No entry for Fields Fire Tower in the cached NHLR or FFLOS (firetower.org) Louisiana registers, and no mention in the cached centraluslookouts.com Louisiana page beyond a bare county-header photo callout with no text. Wikipedia's own citation for 'still standing' points to a USGS GNIS feature-detail page (geonames.usgs.gov, Apex app); it is JavaScript-rendered and returned only the generic USGS/Board on Geographic Names homepage when fetched, so it could not be used directly. One WebSearch and two page reads were spent (this Wikipedia page plus the dead-end GNIS fetch); stopped researching rather than spend more of the budget chasing a page that would not render. Builder, construction date, design, height, and managing agency are all unknown and should not be guessed. A human with access to LDAF's Louisiana Statewide Forest Resource Assessment and Strategy PDF (cited elsewhere in the same Wikipedia list, pp. 36-37) might find more."
+   },
+   {
     "id": "us-la-mosley-hill",
     "note": "Two independent sources (the NHLR register and a lookout-hobbyist history site) agree and complement each other, but neither confirms what happened after the 2006 disassembly: whether restoration was completed, where the tower now physically stands, or whether it's accessible. The tower record's coordinates are tagged 'exact' from NHLR but almost certainly predate the 2006 move. Worth a human follow-up with the Catahoula Ranger District or a recent visit report before treating location/access as current."
    },
    {
     "id": "us-ma-middleboro",
     "note": "NHLR and the 1915 Boston Daily Globe item disagree on when the first Barden Hill tower went up (1913 vs. apparently still 'planned' in March 1915); kept both in the story rather than picking one. No source found addresses current staffing, access, or climbability, so those stay unknown in the tower record. The easternuslookouts.weebly.com page carries a banner image but it isn't clearly captioned as depicting this specific tower, so it was not added to photos."
+   },
+   {
+    "id": "us-me-whitney-hill",
+    "note": "Only source found is the Eastern US Lookouts page, which itself just quotes a 1929 newspaper item and the 1967-68 Forest Commissioner's biennial report. No NHLR or FFLOS register page exists for this site (nhlr.org returned 404), and nothing was found on current status, access, staffing, or whether the tower still stands. The tower record's location (45.65887, -68.18754, from FFLA) was not independently corroborated against the 1929 'Macwahoc Plantation' description within this budget; worth a closer look if a human researcher has more time."
    },
    {
     "id": "us-mi-udell",
@@ -13341,6 +13381,14 @@
     "note": "No newspaper or NRHP nomination form located; the 1984 date is NRHP-eligibility, not a formal National Register listing, and the story is careful to say so. Two official-ish sources (Recreation.gov listing vs. the Forest Service's own Lolo NF page) disagree slightly on the lookout's water source: non-potable spring 3/4 mile downhill vs. a filterable spring 0.5 mile away. Wikipedia's 'Big Hole Lookout' article was used only to find the underlying USFS citation (fs.usda.gov/r01/lolo/recreation/big-hole-lookout), not cited directly, per the guide. Record's existing 'design' field was null; proposed a correction above. One WebSearch call used, plus WebFetch on two known URLs. Fact-check pass (2026-10-04): firelookout.com actually lists the elevation as 6919 ft, not 6,922 ft, so that figure is now cited to NHLR alone; the 'Cabinet National Forest' detail and the precise staffed-to-1972 date are not on firelookout.com or NHLR's visible text respectively and were re-cited to the sources that actually state them (Recreation.gov and the USFS Lolo NF page); a missing footnote on the cabin's furnishings/vault-toilet sentence was added."
    },
    {
+    "id": "us-mt-gem-peak",
+    "note": "Two independent, detailed sources agree closely on the build history (1921 rag outfit -> 1939 L-4 on 20-ft pole tower -> 1964 R-6 flattop on 30-ft timber tower) and on staffing into the 1970s. Flagged a likely height_m error in the tower record (20 ft vs. the current 30-ft tower). Minor elevation discrepancy not flagged: NHLR gives 6,029 ft (1,838 m, matches record); firelookout.com gives 6,092 ft -- not material enough for a correction. Did not need to use the web-search budget; both cached pages were sufficient. Fact-check 2026-10-04: removed an uncited 'Clark Fork River country' detail from the opening sentence (not in either source) and rewrote two sentences that too closely copied source wording ('rag outfit' tent description; 'without permanent living quarters' line). Spot-checked the NHLR registry-number/date quote and both firelookout.com quotes (location and named personnel) directly against fetch_text.py output; all three matched the source exactly."
+   },
+   {
+    "id": "us-mt-west-fork-butte",
+    "note": "Thin on named staffing history and exact renovation date; NHLR gives only 'late 1980s' for last staffing and no year for the FFLA restoration. Elevation differs slightly between sources (firelookout.com: 6,157 ft; nhlr: 6,102 ft/1,860 m, matching the tower record), not flagged as a correction since it's a minor rounding-level discrepancy already reflected in the record. Did not use the full 2-search/8-read budget; cached local pages (firelookout.com, nhlr.org) plus the record's own recreation.gov text were sufficient for an honest, modest-length story."
+   },
+   {
     "id": "us-nc-camp-creek-bald",
     "note": "NHLR is detailed and includes two dated visit reports (2008, 2020), giving good texture on condition change over time. The build year (1928 vs 1929) and tower height (21 ft vs 20 ft) conflict between NHLR and the Forest Lookouts site; left unresolved. The Earl Shaffer 1948 overnight-stay claim and the 'Viking Mountain' alternate name both come from a single blog post and are not corroborated elsewhere; flagged in the story and as a proposed correction rather than treated as settled fact. No NRHP nomination or newspaper coverage was found for this tower."
    },
@@ -13349,12 +13397,28 @@
     "note": "Beyond the NHLR register page, no newspaper or Forest Service archival material turned up for this specific tower in cached sources or three web searches; a 'Sterling Mountain' NRHP tower that surfaced in search results is a different structure in Orange County, New York, and was excluded. Wikipedia calling the tower 'abandoned' sits a little oddly next to NHLR's description of an open trap door and NPS radio-repeater use -- worth a direct check of current NPS trail/tower status pages. Current staffing and public-access level are inferred, not confirmed by an authoritative current source."
    },
    {
+    "id": "us-ne-valentine-nwr-pony-lake",
+    "note": "The NHLR page narrates refuge-wide CCC/WPA history (canals, fencing) and separately states the tower itself was CCC-built, but gives no specific construction year for the tower. No source here covers staffing history, climbability, or visitor access, so those were left unknown rather than guessed."
+   },
+   {
     "id": "us-nh-milan-hill",
     "note": "The tower's own NHLR page is rich (built year, design, WWII use, administering/cooperating agencies, nomination, and a 2019 field inspection with staffing/condition detail), but outside corroboration is thinner than the 'well-documented' label implied: Wikipedia and the state park site confirm 1932 and public access but add little else, and a promising newspaper piece (Conway Daily Sun, 'Milan Hill's fire tower is 1 of 15 still in use') returned HTTP 429 on every fetch attempt and was never read -- worth another try, it likely has more on current staffing and may confirm or refute a claim (surfaced only in AI-synthesized web-search summaries, not in any page actually read) that the 1932 tower replaced an earlier one on nearby Jodrie Hill. I left that claim out of the story entirely since I couldn't verify it against a primary source. On location: the record's existing lat/lon (from ffla) is corroborated by OpenStreetMap's independently mapped tower node, while the NHLR page's own stated coordinates sit about 1.65 km (roughly a mile) away -- this likely resolves the 'conflicts' entry already in the tower record in ffla's favor, though I'm not proposing a formal correction since the record's location field already uses the better-supported value. Fact-check pass (2026-10-04): the CCC-camp sentence was footnoted to the state park page, which does not mention the CCC at all; moved that citation to Wikipedia, which does state it. Also corrected the story's claim that the NHLR/FFLA coordinates differ by 'a mile and a half' -- the actual gap (1,653 m) is about one mile, not 1.5. Used 2 of 3 allotted WebSearch calls (research); fact-check pass used WebFetch only, no WebSearch."
    },
    {
+    "id": "us-nj-bass-river",
+    "note": "Current public access, climbability, and staffing status (volunteer vs. paid, active vs. seasonal) were not confirmed in this pass; the NJ DEP detection-program page would not render via the text fetcher (JS-only or blocked). The elevation_m (14.3) and height_m (24.0) already in the tower record match the Wikipedia fire-tower table's 47 ft elevation / 80 ft height for this tower, so no correction is needed there."
+   },
+   {
     "id": "us-nj-blue-anchor",
     "note": "Good corroboration across a historical register, a period newspaper quote (Courier-Post, 1940), the Wikipedia tower-list table, and a 2024 news feature confirming the tower is still actively staffed; all of those checked out against their cited sources. One claim did not hold up on cross-check: NHLR's Blue Anchor page says the original Aermotor tower was relocated to Stokes State Forest in 1932 to become 'the Culver tower,' but NHLR's own page for that lookout (Culvers Lookout, US44/NJ1) dates its present 47-ft Aermotor tower to 1933 and never mentions Blue Anchor — so the 'same tower, still standing at Stokes' claim in the earlier draft was an overclaim, now softened and the discrepancy disclosed in the story. Also removed an invented 'winter of 1920-21' detail not supported by the cited annual-report quote. No source found on public climbing access, so access.level was left unchanged rather than guessed."
+   },
+   {
+    "id": "us-nj-jamesburg",
+    "note": "Record's 'built 1942' matches NHLR, but that date is for the original Old Bridge tower; the structure was relocated to the current Jamesburg site in 1963, which the record's events list omits. The nomination's claim of a possible 1924 origin is explicitly unconfirmed. Current access/staffing/rental status could not be confirmed from a quotable primary source within budget; a WebSearch summary suggested climbing is allowed only when Forest Fire Service staff are present, but I could not verify that against an actual page I read, so it is left out of facts/events and the record's 'access: unknown' stands."
+   },
+   {
+    "id": "us-nm-elmorro",
+    "note": "Extremely thin sourcing: the only record found anywhere of this specific tower is one row in the FFLA's New Mexico list (name, county, coordinates, type=Tower, status=Standing, no NHLR/FFLOS link). Two WebSearch queries turned up nothing else specific to this lookout -- only material about the unrelated El Morro National Monument (the inscription rock) and general Cibola National Forest background, used here only for geographic context. No builder, construction year, design, staffing, or fate is documented anywhere I could find. The county field (Valencia) looks stale given the site's proximity to Cibola County; flagged as a correction, not applied. Confidence is low and the story is short by necessity -- a human researcher with access to Forest Service district records or an on-the-ground FFLA volunteer could likely find much more."
    },
    {
     "id": "us-nm-monjeau",
@@ -13377,8 +13441,16 @@
     "note": "Sources agree closely; one minor discrepancy: NHLR gives the elevation as 2,980 ft (908 m) while Wikipedia gives 2,990 ft (910 m) — the story uses the NHLR figure and cites it there, not andyarthur.org as originally drafted. The tower record's design, height, staffing and access fields are currently blank/unknown even though NHLR and Wikipedia both support specific values (see corrections). Tried catskillcenter.org's Red Hill fire-tower page directly but it 404'd; Wikipedia and a general web search covered the same restoration history, so it wasn't pursued further within the search budget."
    },
    {
+    "id": "us-oh-keystone",
+    "note": "Height is disputed between sources: NHLR's register entry (recorded 2014, pre-move) gives 45 feet; the Metro Parks blog (post-move, more detailed) gives 82 feet to the cab floor; Columbus Navigator says 100 feet overall. I used 82 ft (25.0 m) in facts.height_m as the most detailed account, and flagged the discrepancy in the story rather than silently picking one. The destination record us-oh-keystone-at-scioto-grove-metro-park may want the same height note and a built-1942 event added; not edited here since this task scoped only us-oh-keystone. Fact-check 2026-10-04: Columbus Navigator also attributes the donation to 'an anonymous private landowner', conflicting with the Metro Parks blog's naming of the Taylor family; the story follows the Metro Parks account only, which the evidence supports, but a human may want to reconcile this."
+   },
+   {
     "id": "us-ok-carnasaw",
     "note": "Two independent, consistent sources cover the build/rebuild history well (1926 original, 1937 rebuild, 1974 storm loss and Aermotor replacement with the footings-error deck), but neither says anything about staffing history, specific fires spotted, or current public access — those fields stay unknown. Flagged a height correction: the record's 30.5 m (100 ft) reflects the tower's planned height, not the 75 ft (22.9 m) it was actually built to after the footings error; worth a human call on which figure the map should show. Did not refetch nhlr.org or firetower.org per the guide; no additional web search was needed given the two cached sources agreed.\n\nFact-check pass (2026-10-04): the draft had the tower 'watching over the surrounding Ouachita National Forest' and being in active service 'as of' its 1997 register listing, both attributed to NHLR. Neither is in the NHLR text — the page only says the tower 'is still in active service' as of its last update (Nov 2016), with no statement about what it watches over or forest-boundary claims. Softened both in the story and removed the unsupported forest-duty claim. Also split the 1974 storm-destruction citation to NHLR only, since the Forestry Service page never mentions a storm. Rewrote the Aermotor-rebuild paragraph, which had tracked the NHLR sentence structure too closely (same clause order and several repeated phrases like 'measuring error at the footings')."
+   },
+   {
+    "id": "us-or-bolan-mountain",
+    "note": "NHLR's 'legs later removed... low stone base' and 'recently restored... catwalk' changes carry no specific dates. The Slater Fire's exact burn date isn't pinned down beyond 'September 2020'."
    },
    {
     "id": "us-or-fall-mountain",
@@ -13389,8 +13461,16 @@
     "note": "The tower record's 'conflicts' block (built: 1967 per NHLR vs 1912 per firelookout_com) is resolved by reading the prose on both cached pages rather than just their structured fields: both agree on a sequence (1912 octagonal cab -> 1936 L-4 -> 1967 R-6, the structure standing today), they just populate a single 'built' field with different points in that sequence. Recommend the record's events array capture the full sequence rather than one disputed year. NHLR's '1915' for first fire detection is one source only (not independently corroborated) and sits oddly close to, but not matching, the 1912 build year on firelookout.com -- plausibly detection started a few years before any structure went up, but this is not stated outright anywhere, so I left it as a direct citation rather than resolving it further. No additional cached source pages or useful web leads were found beyond NHLR, firelookout.com, and the Recreation.gov listing already in the tower record; did not use any of the 3 allotted web searches since the two cached register pages already agreed with each other almost completely once read past their structured fields. Fact-check correction: the draft's claim that NHLR's prose 'notes the discrepancy itself' between a 1915 fire-detection date and 'the register's own account of the first cab' was wrong -- NHLR's description never mentions a first cab or any 1912/1936 structure at all (only '...fire detection site since 1915. The current structure was constructed in 1967... roof was modified... in 1992.'); the 1912/1936 sequence comes solely from firelookout.com. That sentence was removed from the story. Also fixed: the story's 'flat-topped summit' was an invented/confused descriptor (likely conflated with the R-6 'flat top' cabin design) with no support in either cached source, so it was dropped; the elevation figure (7,188 ft) was misattributed to the Recreation.gov footnote when it is actually NHLR's number -- Recreation.gov's own page gives 7,195 ft, confirmed live. Both numbers are now attributed to their correct sources. All other checked claims (1912/1936/1967/1992 sequence, 2022 NHLR registration and Brad Eells nomination, rental season Nov 15-May 15, cabin dimensions/beds/stoves/capacity/no water, foot-snowshoe-ski-only access, Mount Hood/Shasta views) were confirmed against the cited sources and a live fetch of the Recreation.gov page."
    },
    {
+    "id": "us-or-warner-mountain",
+    "note": "The tower record's existing events list (built 1969 / removed 1969, sourced 'firelookout_com') appears to misread the firelookout.com page: that sentence describes the Logger Butte cupola's 1969 removal, not Warner Mountain's. I've flagged this as a resolved_conflict rather than a correction since it's the events array, not a record field, that needs fixing; recommend a human replace those two events with the 1986 relocation and 1987 build instead. Minor elevation discrepancy between NHLR (5,667 ft) and firelookout.com (5,723 ft) not worth a correction. Did not find a precise end date for seasonal staffing (current vs. historical); firelookout.com's staffing claim is undated. Fact-check 2026-10-04: Recreation.gov's own listing text gives a third elevation, 5,300 ft, for what it's worth (not cited in the story, which only cites the two register-style sources for elevation)."
+   },
+   {
     "id": "us-pa-dry-hill-land",
     "note": "Status conflict is real and unresolved from these two sources alone: StoryMap implies a current tower (replaced 2018), the lookout register says \"Removed\" with no date. The StoryMap's own text is internally inconsistent, calling the tower both '60 foot' and '80 feet' in the same sentence. Newspaper elevation figures also vary by 10 feet (1,921 vs 1,931 ft) between 1949 and 1948 clippings -- likely OCR/reporting noise, not a real change. A primary PA DCNR or Bureau of Forestry record, if available, would help settle current status."
+   },
+   {
+    "id": "us-pa-fire-tower-9",
+    "note": "Only the NHLR page yielded verifiable content within budget; the eastern_us_lookouts cached page for Cook Forest is a thin stub (nav index only, no body text) and the PA StoryMap/Wikidata/OSM sources already in the tower record were not independently re-verified. The 'design: Aermotor' and height_m=24.4 fields in the tower record come from pa_storymap and were not confirmed here; NHLR's stated 87.5 ft tower height conflicts with the record's 24.4 m (80 ft), flagged as a correction. Current staffing/operational status beyond 1977 is unknown from available sources."
    },
    {
     "id": "us-pa-pump",
@@ -13405,8 +13485,20 @@
     "note": "No register page exists for Avondale on nhlr.org or firetower.org (checked cached TN listings for both; it isn't there), no NRHP nomination, no newspaper hit, and no mention in a general East Tennessee fire-tower news piece that was checked. Web search surfaced an AI-synthesized claim that Avondale is 'also known as Clinch Lookout Tower,' but no primary source for that name turned up (anyplaceamerica.com, the likely origin, returned 403) so it was left out rather than guessed into the story. Builder, year built, agency, staffing and access all remain unknown; a human with access to TN Division of Forestry records or local Grainger County history might find more."
    },
    {
+    "id": "us-tn-mcglamery",
+    "note": "Facts are thin: no construction year, staffing history, or access status surfaced within budget. A linked 1955 photo citation (tnsos.org/tsla imagesearch, ImageID=15168) returned HTTP 403 and could not be read; it may be worth a human follow-up for a caption or date. No newspaper or NRHP material found for this specific tower. Fact-check 2026-10-04: removed two overclaims not supported by their cited quotes - the story had attributed the 1955 photo to the Tennessee State Library and Archives (the tnlandforms source only says \"1955 photo\", with no holding institution named) and had the November 2023 site visit \"find the tower still intact\" (the register entry is just \"Site Visit - 11/25/23\", with no stated outcome). Both fixed to state only what the sources say."
+   },
+   {
+    "id": "us-tn-white-house",
+    "note": "No source beyond tnlandforms.us mentions this specific tower by name; the register has no build year, design, agency confirmation beyond the district-tower numbering convention, staffing, or access information. Checked nhlr.org and firetower.org (FFLOS) crawl caches for Tennessee and the local raw-page caches for 'white house'/'whitehouse' — none has an entry for this tower. Two WebSearches turned up nothing tower-specific beyond tnlandforms.us. The 'agency' fact: fact-check spot-checking (2026-10-04) found the source page does directly name 'Tennessee Division of Forestry (208 tower sites c. 1976...)' alongside the district-tower numbering explanation, so this is a direct naming rather than an inference as originally noted. No corrections to the tower record are warranted — tnlandforms is already the record's source for name/location/county/elevation/status."
+   },
+   {
     "id": "us-tx-loves",
     "note": "NHLR (decommissioned 1970) and Texas Escapes (functioned into the 1980s) disagree on when the tower stopped operating; noted in the story rather than resolved. The on-site historical marker (hmdb.org #31698) returned HTTP 403 and could not be read, so its exact inscription is not cited here. Texas Escapes is a general-interest history site, not a primary source, so the Wesley Love / WPA narrative rests on that one article; a Texas Historical Commission marker file or a Jacksonville Daily Progress archive piece would strengthen it. A draft citation to 'Forest Fire Lookout Association (firelookout.org)' claiming its Texas lookouts list records this tower as standing has been removed: the cached source is actually the Former Fire Lookout Sites register (firetower.org, a sister site of NHLR, not FFLA), it catalogs decommissioned/removed lookouts, and its one Texas entry is Jefferson Lookout Site, not Love's Lookout. The source neither supports the claim nor matches the cited publisher, so both the footnote and the sentence were dropped."
+   },
+   {
+    "id": "us-tx-smith-ferry",
+    "note": "Very thin record. Smith Ferry is not registered in the cached National Historic Lookout Register or FFLOS listings for Texas, and no construction date, design, height, staffing, or fate (standing/removed/burned) beyond the FFLA list's bare 'Standing' turned up in two web searches plus the cached regional lookout lists. The Texas Escapes citation is general East Texas context (phase-out to aerial patrol), not Smith-Ferry-specific; flagged as such in the story. Worth a follow-up with Texas A&M Forest Service records or Tyler County historical sources if a human researcher has more time/budget."
    },
    {
     "id": "us-tx-spring",
@@ -13425,12 +13517,32 @@
     "note": "Good spread of sources for a rental-tier lookout: NHLR and firelookout.com agree on the 1935 build; NHLR and willhiteweb.com separately confirm WWII Aircraft Warning Service use (firelookout.com's cached page does NOT mention AWS use, despite an earlier draft citing it for that claim -- fixed during fact-check). willhiteweb.com (a hiking-guide site, used here beyond its usual access-only role because no better source turned up) supplied the Ogilvie staffing anecdote and the 1967 Evergreen Fire, which also matches the burn-scar language already in the record's own rental.description. The NRHP-date conflict is more interesting than first flagged: NPGallery's own asset page gives 1987, but BOTH Recreation.gov and willhiteweb.com independently say listing came out of the 1990s restoration -- two popular secondary accounts agreeing with each other against the primary NRHP record. Left as a flagged conflict rather than guessing; someone with the actual nomination PDF could settle it. Elevation also differs by about 100 ft between NHLR (5,483 ft) and Recreation.gov/willhiteweb/firelookout.com (5,587 ft, three sources agreeing), noted but not changed. Fact-check also caught that the story's claim about the 2026 closure reason was wrong: the live Recreation.gov listing attributes the current closure to a winter-flooding road washout (hoped fixed for the 2027 season), not a wildfire as an earlier draft stated -- corrected. Also removed an unsupported claim that the U.S. Forest Service nominated the property for the NRHP; NPGallery's page does not say who nominated it. No new photos found beyond what the record already has."
    },
    {
+    "id": "us-wa-heybrook",
+    "note": "Height is unresolved: the tower record gives height_m 13.7 (~45 ft), but both NHLR (~63 ft) and firelookout.com (67 ft) describe the current 1964 tower as much taller; 13.7 m may describe the earlier 1932 tower instead. Worth a human check against the record's height_m field, but I did not propose a correction since I could not confirm which figure the record intends to describe. The location conflict between nhlr and ridb coordinates (787 m apart) was not resolved by available sources within budget."
+   },
+   {
     "id": "us-wa-rainier",
     "note": "Fact-check pass (2026-10-04) found the original story had miscited and conflated two of its numbers. (1) The 'five miles northwest of Yelm' location sentence was footnoted to the register (firetower.org), which actually says only 'Olympia, Thurston County' and never mentions Yelm; the Yelm distance comes from firelookout.com instead, so the footnote has been corrected to cite that source. (2) The steel tower's '118 ft' figure, footnoted as the IslandWood rebuilder's figure for the *same 1968 tower* the register puts at 112 ft, is actually that source's figure for the *rebuilt* Canopy Tower as it stands today at IslandWood -- and that source gives two different figures for that rebuilt height (125 ft and 118 ft) in two different places on its own page. The rebuilder's page gives no height at all for the original Fort Lewis tower, and separately dates its construction to 1966, not 1968 (a discrepancy the original story missed entirely). The story and this record have been corrected to state these distinctions rather than conflating them. Also fixed: the rebuilding firm was called 'Sahale Snowkites & Climbing' in the original story and source list -- that name does not appear anywhere on the cited page, which identifies the firm as 'Sahale LLC' (operating as Seattle Bridge Builders LLC); corrected throughout. The decommission-year disagreement (2000 vs 1998) and the general staffing/fire-history gap were both verified as accurately described in the original story and have been left as-is, with firelookout.com's agreement with the register's 2000 date now also cited. No staffing, named lookouts (other than 2010 FFLOS nominator Irene Potter), or fire-detection history for the Rainier site turned up in any cached or web source -- this appears to be a genuine gap in the record, not a search failure. The sibling record us-wa-rainier-lookout-site-at-islandwood gives height_m as 125.0, which is almost certainly a feet-to-meters unit mixup (125 ft, not 125 m, matching the 125 ft figure found on the rebuilder's own page) rather than meters; worth a human look at that record, though it is outside the scope of this task to edit it."
    },
    {
+    "id": "us-wa-steliko",
+    "note": "Could not fetch the 2010 Wenatchee World burglary article (HTTP 429, cached twice already); it would add a concrete incident if a human can retrieve it. Record's 'built 1947' is confirmed; the 1925 'camp' predecessor is new context not in the tower record's events list."
+   },
+   {
+    "id": "us-wa-stranger-mountain",
+    "note": "The tower record also carries an FFLA-sourced relocation event claiming Stranger Mountain was moved to 'Crystal Ridge' (linked to id us-id-stranger-mountain-at-crystal-ridge, in Idaho). Neither NHLR nor FFLOS mention Crystal Ridge; both describe only the single 2008 move to the Colville fairgrounds. This looks like an FFLA data error (possibly a different lookout sharing the 'Stranger Mountain' name) and is worth a human look before publishing the Crystal Ridge link on this page."
+   },
+   {
+    "id": "us-wi-friendship-skyline",
+    "note": "Searched for a local/CCC construction story (Adams County Historical Society 'Friendship Sesquicentennial' page) but it discusses Friendship Mound's sheriff's radio tower and a lighted star, not the fire lookout, and has no bearing on this record; not cited. No source found on who built it, current public access, or whether it is climbable, so those fields are left unknown rather than guessed. Fact-check 2026-10-04: removed several story sentences that went beyond the cited source (an invented etymology for the 'Skyline' name, a claim the design was 'widely used' by the state forestry service, invented reasoning about dry grass/wind/debris burning driving spring staffing, and an invented claim that decommissioning was 'in favor of aircraft and other detection methods') — none of this appears in the NHLR page text. Also note cite 2's FFLA list spells the feature 'Friendship Mound (Skyline)', slightly differing from cite 1's 'Friendship (Skyline)'; not treated as a correction since both clearly refer to the same tower."
+   },
+   {
     "id": "us-wy-sheep-mountain",
     "note": "A travel-blog page (roadtripryan.com) and the WebSearch AI summary both offered a vivid, specific narrative - an 1922 primitive fire watch predecessor and a 1938 lightning strike that set the lookout's bed on fire - that appears nowhere in the NHLR register, the FFLA register, or the Forest Service's own Bighorn lookouts history page. I did not use any of that material; it has the hallmarks of AI-generated filler rather than sourced history, and a human may want to track down the roadtripryan.com page's own citations if any exist. Note that the CCC-construction claim itself is NOT part of that invented narrative - Recreation.gov and the Rocket-Miner newspaper piece (sources 4 and 6, both used in the story) independently and directly state the lookout was 'Constructed in 1950 by the Civilian Conservation Corps,' so that part is sourced, just flagged in the story as doubtful because the CCC was disbanded in 1942. A footnote error was also fixed: the story had attributed the 'Emergency' staffing status to 'the Forest Fire Lookout Association's own register,' but that fact actually comes from firelookout.com, an independent reference site by Rex Kamstra, not from FFLA's own site (firelookout.org, source 3) - the FFLA page for Wyoming is just a name/county/status table with no staffing field for this lookout. Text corrected; footnote [^2] was already pointing at the right source. The record's elevation_m (2911.8m / ~9554ft) runs a little low against the 9600-9610ft the registers give; likely just rounding/survey differences, not flagged as a correction. No other conflicts found worth a formal correction."
+   },
+   {
+    "id": "us-wy-snake-river",
+    "note": "No new photos found beyond those already on the tower record. The exact abandonment year is unknown (NHLR hedges with 'most probably ... mid to late 1940's'); I used 1945 as a placeholder year for the 'abandoned' event rather than inventing precision. The kind correction (tower -> shelter) is worth a human look since 'tower' vs 'shelter' is partly a classification judgment, not a hard fact."
    },
    {
     "id": "us-wy-wyoming-peak",
@@ -13633,6 +13745,19 @@
    "researched": "2026-10-04"
   },
   {
+   "id": "us-mt-gem-peak",
+   "name": "Gem Peak Lookout",
+   "field": "height_m",
+   "current": 6.1,
+   "proposed": 9.1,
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/mt/gem-peak-lookout/",
+    "https://www.firelookout.com/mt/gempeak.html"
+   ],
+   "researched": "2026-10-04"
+  },
+  {
    "id": "us-nc-camp-creek-bald",
    "name": "Camp Creek Bald Lookout",
    "field": "other_names",
@@ -13666,6 +13791,19 @@
    "evidence": "NHLR's description names the manufacturer and cab dimensions for the current tower, consistent with the record's height_m of 26.0 (86 ft)",
    "sources": [
     "http://nhlr.org/lookouts/us/nj/blue-anchor-station-fire-tower/"
+   ],
+   "researched": "2026-10-04"
+  },
+  {
+   "id": "us-nm-elmorro",
+   "name": "ElMorro",
+   "field": "county",
+   "current": "Valencia",
+   "proposed": "Cibola",
+   "evidence": null,
+   "sources": [
+    "https://en.wikipedia.org/wiki/El_Morro_National_Monument",
+    "https://firelookout.org/lookouts/us/nm/"
    ],
    "researched": "2026-10-04"
   },
@@ -13732,6 +13870,19 @@
    "researched": "2026-10-04"
   },
   {
+   "id": "us-oh-keystone",
+   "name": "Keystone",
+   "field": "events",
+   "current": "relocated event with year null",
+   "proposed": "relocated, year 2023",
+   "evidence": null,
+   "sources": [
+    "https://www.metroparks.net/blog/are-you-bold-enough-to-climb-the-fire-tower/",
+    "https://www.columbusnavigator.com/scioto-grove-metro-park-fire-tower/"
+   ],
+   "researched": "2026-10-04"
+  },
+  {
    "id": "us-ok-carnasaw",
    "name": "Carnasaw Lookout",
    "field": "height_m",
@@ -13766,6 +13917,18 @@
    "evidence": "A 1949 newspaper item puts the tower at 1,921 feet above sea level; a 1948 item puts it at 1,931 feet (both quoted on the lookout register).",
    "sources": [
     "https://easternuslookouts.weebly.com/dry-land-hill.html"
+   ],
+   "researched": "2026-10-04"
+  },
+  {
+   "id": "us-pa-fire-tower-9",
+   "name": "Fire Tower #9",
+   "field": "height_m",
+   "current": 24.4,
+   "proposed": 26.7,
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/pa/fire-tower-9/"
    ],
    "researched": "2026-10-04"
   },
@@ -13857,6 +14020,31 @@
    "sources": [
     "http://nhlr.org/lookouts/us/wa/evergreen-mountain-lookout/",
     "https://www.recreation.gov/camping/campgrounds/234178"
+   ],
+   "researched": "2026-10-04"
+  },
+  {
+   "id": "us-wa-heybrook",
+   "name": "Heybrook Lookout",
+   "field": "design",
+   "current": "R-6",
+   "proposed": "Experimental 1963 Forest Products Laboratory cab (not a true R-6)",
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/wa/heybrook-lookout/"
+   ],
+   "researched": "2026-10-04"
+  },
+  {
+   "id": "us-wy-snake-river",
+   "name": "Snake River Lookout",
+   "field": "kind",
+   "current": "tower",
+   "proposed": "shelter",
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/wy/snake-river-lookout/",
+    "https://firelookout.org/lookouts/us/wy/"
    ],
    "researched": "2026-10-04"
   },
