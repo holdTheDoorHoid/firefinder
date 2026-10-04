@@ -100,7 +100,7 @@ KNOWN_SOURCES: dict[str, dict[str, str]] = {
         "title": "Wikidata",
         "url": "https://www.wikidata.org/",
         "license": "CC0 1.0",
-        "credit": "Wikidata (CC0)",
+        "credit": "Wikidata",
     },
     "firelookout-com": {
         "title": "firelookout.com state maps",

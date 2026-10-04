@@ -37,7 +37,8 @@ export function buildIndex(features: readonly TowerFeature[]): SearchEntry[] {
 /**
  * Ranking: a name that starts with the query, then names where every typed word starts a word
  * (so "hirz mtn" does not match but "hirz mou" and "hunter ny" do), then plain substring
- * matches. Ties: shorter names first, then alphabetical.
+ * matches of 3+ characters (fewer would match half the list). Ties: shorter names first,
+ * then alphabetical.
  */
 export function search(index: readonly SearchEntry[], query: string, limit = 30): SearchEntry[] {
   const q = normalize(query);
@@ -48,7 +49,7 @@ export function search(index: readonly SearchEntry[], query: string, limit = 30)
     let score = -1;
     if (e.names.some((n) => n.startsWith(q))) score = 0;
     else if (tokens.every((t) => e.words.some((w) => w.startsWith(t)))) score = 1;
-    else if (e.names.some((n) => n.includes(q))) score = 2;
+    else if (q.length >= 3 && e.names.some((n) => n.includes(q))) score = 2;
     if (score >= 0) scored.push({ e, score });
   }
   scored.sort((a, b) => a.score - b.score || a.e.name.length - b.e.name.length || a.e.name.localeCompare(b.e.name));

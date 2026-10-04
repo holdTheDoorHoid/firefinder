@@ -106,14 +106,36 @@ export function externalLink(url: string | null | undefined, text: unknown, clas
   return html`<a href="${safe}" class="${className || null}" rel="noopener">${text}${EXT}<span class="visually-hidden"> (opens another site)</span></a>`;
 }
 
-/** Status, rentable and verification badges. Text always accompanies the icon. */
+export interface AccessInfo {
+  level: string;
+  label: string;
+  meaning: string;
+  note: string | null;
+  tone: 'ok' | 'caution' | 'stop' | 'unknown';
+}
+
+/** Plain-language access wording; tribal land gets its own, firmer wording. */
+export function accessInfo(r: TowerRecord): AccessInfo {
+  const level = r.access?.level ?? 'unknown';
+  const note = r.access?.note ?? null;
+  const tribal = r.ownership === 'tribal' && level !== 'public' && level !== 'closed' && level !== 'private';
+  if (tribal) return { level, note, label: TRIBAL_ACCESS.label, meaning: TRIBAL_ACCESS.meaning, tone: 'stop' };
+  const w = ACCESS[level] ?? { label: level, meaning: '', tone: 'unknown' as const };
+  return { level, note, label: w.label, meaning: w.meaning, tone: w.tone };
+}
+
+const CHECK = raw('<svg class="notice-icon" width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m4.5 10.5 3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+
+/** Status, rentable, access and verification badges. Text always accompanies the icon. */
 export function badges(r: TowerRecord): SafeHtml {
   const st = statusWording(r.status);
   const ver = verificationWording(r.verification);
   const rent = isRentable(r);
+  const acc = accessInfo(r);
   return html`<ul class="badges" aria-label="Status">
     <li class="badge badge-status status-${r.status}" title="${st.meaning}">${icon(r.kind, r.status)}<span>${st.label}</span></li>
     ${rent ? html`<li class="badge badge-rent">${raw(rentBadgeSvg(14))}<span>Rentable</span></li>` : ''}
+    <li class="badge badge-access tone-${acc.tone}" title="${acc.meaning}">${acc.tone === 'ok' ? CHECK : acc.tone === 'unknown' ? INFO : WARN}<span>${acc.label}</span></li>
     ${r.verification === 'unverified'
       ? html`<li class="badge badge-unverified" title="${ver.meaning}">${WARN}<span>Unverified</span></li>`
       : html`<li class="badge badge-ver ver-${r.verification}" title="${ver.meaning}"><span>${ver.label}</span></li>`}
@@ -121,22 +143,19 @@ export function badges(r: TowerRecord): SafeHtml {
   </ul>`;
 }
 
-/** Prominent access notice for anything other than plainly public access. */
+/**
+ * The access notice: label, plain meaning and the record's note. On a tower page it appears
+ * once: at the top for "stop" access (private, tribal, permission, closed), otherwise in
+ * Visit & stay. `compact` (the map panel) skips plainly public access.
+ */
 export function accessNotice(r: TowerRecord, opts: { compact?: boolean } = {}): SafeHtml {
-  const level = r.access?.level ?? 'unknown';
-  const note = r.access?.note ?? null;
-  const tribal = r.ownership === 'tribal' && (level === 'permission' || level === 'unknown' || level === 'restricted');
-  const w = ACCESS[level] ?? { label: level, meaning: '', tone: 'unknown' as const };
-  if (level === 'public' && !opts.compact) {
-    return html`<p class="access-line tone-ok"><strong>${w.label}.</strong> ${note}</p>`;
+  const a = accessInfo(r);
+  if (a.tone === 'ok') {
+    return opts.compact ? html`` : html`<p class="access-line tone-ok"><strong>${a.label}.</strong> ${a.note}</p>`;
   }
-  if (level === 'public') return html``;
-  const label = tribal ? TRIBAL_ACCESS.label : w.label;
-  const meaning = tribal ? TRIBAL_ACCESS.meaning : w.meaning;
-  const tone = tribal ? 'stop' : w.tone;
-  return html`<div class="notice tone-${tone}" role="note">
-    ${tone === 'unknown' ? INFO : WARN}
-    <div><p class="notice-title">${label}</p><p>${meaning}${note ? html` ${note}` : ''}</p></div>
+  return html`<div class="notice tone-${a.tone}" role="note">
+    ${a.tone === 'unknown' ? INFO : WARN}
+    <div><p class="notice-title">${a.label}</p><p>${a.meaning}${a.note ? html` ${a.note}` : ''}</p></div>
   </div>`;
 }
 
@@ -195,9 +214,12 @@ export function visitSection(r: TowerRecord): SafeHtml {
     const s = STAFFING[r.staffing.status] ?? r.staffing.status;
     rows.push(['Staffing', r.staffing.as_of ? `${s} (as of ${r.staffing.as_of})` : s]);
   }
+  const acc = accessInfo(r);
   return html`${lead}
     <h3 class="h-small">Access</h3>
-    ${accessNotice(r)}
+    ${acc.tone === 'stop'
+      ? html`<p class="access-line"><strong>${acc.label}.</strong> See the warning at the top of this page.</p>`
+      : accessNotice(r)}
     <dl class="kv">${rows.map(([k, val]) => html`<div><dt>${k}</dt><dd>${val}</dd></div>`)}</dl>`;
 }
 
@@ -291,7 +313,7 @@ export function photosSection(r: TowerRecord, ctx: RenderContext): SafeHtml | nu
     return html`<figure class="photo">
       <a href="${full}"><img src="${shown}" alt="${alt}" loading="lazy" decoding="async"></a>
       <figcaption>
-        ${p.caption || p.year ? html`<span class="cap">${p.caption}${p.caption && p.year ? ', ' : ''}${p.year}</span>` : ''}
+        ${p.caption || p.year ? html`<span class="cap">${[p.caption?.replace(/[\s.]+$/, ''), p.year ? `(${p.year})` : null].filter(Boolean).join(' ')}</span>` : ''}
         <span class="credit-line">Photo: ${p.credit ?? 'credit unknown'}${p.license ? html` · ${p.license}` : ''}${source ? html` · <a href="${source}" rel="noopener">source</a>` : ''}</span>
       </figcaption>
     </figure>`;
@@ -473,7 +495,7 @@ export function renderTowerMain(r: TowerRecord, ctx: RenderContext): SafeHtml {
     ${other.length ? html`<p class="aka">Also known as ${other.join(', ')}</p>` : ''}
     ${badges(r)}
     <div class="notices">
-      ${accessNotice(r, { compact: true })}
+      ${accessInfo(r).tone === 'stop' ? accessNotice(r) : ''}
       ${unverifiedNotice(r, ctx)}
       ${r.status !== 'standing' ? html`<p class="status-meaning">${icon(r.kind, r.status, false, 16)} <strong>${statusWording(r.status).label}:</strong> ${statusWording(r.status).meaning}</p>` : ''}
     </div>

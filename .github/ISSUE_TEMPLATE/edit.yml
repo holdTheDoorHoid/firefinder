@@ -1,0 +1,89 @@
+name: Suggest an edit to a lookout
+description: Correct something wrong or add something missing about one fire lookout.
+title: "Edit: "
+labels: ["edit"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping. Usually this form is opened from **Suggest an edit** on a lookout's page, which fills in the first three boxes for you.
+        Tell us what is wrong, what is right, and how you know. Short is fine.
+        This issue is public, so please do not include private details such as your phone number or home address.
+  - type: input
+    id: tower_id
+    attributes:
+      label: Lookout id
+      description: The id on the lookout's page, like us-or-warner-mountain. Leave empty if the lookout is missing from Firefinder.
+      placeholder: us-or-warner-mountain
+    validations:
+      required: false
+  - type: input
+    id: tower_name
+    attributes:
+      label: Lookout name
+      placeholder: Warner Mountain Lookout
+    validations:
+      required: true
+  - type: input
+    id: page_url
+    attributes:
+      label: Firefinder page
+      placeholder: https://holdthedoorhoid.github.io/firefinder/t/us-or-warner-mountain/
+    validations:
+      required: false
+  - type: dropdown
+    id: topic
+    attributes:
+      label: What is it about?
+      multiple: true
+      options:
+        - Location on the map
+        - Whether it still stands (standing, gone, moved, ruins)
+        - Visiting or access (roads, trails, gates, private or tribal land)
+        - Renting or staying overnight
+        - Dates, history or the story
+        - Facts (height, design, agency, register numbers)
+        - Photos
+        - This lookout is missing from Firefinder
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: whats_wrong
+    attributes:
+      label: What is wrong or missing?
+      placeholder: The page says the tower was removed in 1975, but it is still standing.
+    validations:
+      required: true
+  - type: textarea
+    id: correct_info
+    attributes:
+      label: What is the correct information?
+      placeholder: It still stands and was restored in 2012. The trail starts at the end of Forest Road 2129.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: How do you know? (source or evidence)
+      description: A link, a book or article, an agency page, or your own visit with its date. This helps us check and credit it.
+      placeholder: Visited on 14 July 2026. Forest Service page https://...
+    validations:
+      required: false
+  - type: dropdown
+    id: photo_offer
+    attributes:
+      label: Do you have photos you could share?
+      options:
+        - "No"
+        - Yes, I took them and I am happy to share them under CC BY-SA 4.0 with credit
+        - Yes, but someone else took them (we will ask them)
+    validations:
+      required: false
+  - type: input
+    id: credit_name
+    attributes:
+      label: How should we credit you? (optional)
+      description: Leave empty to stay anonymous.
+    validations:
+      required: false

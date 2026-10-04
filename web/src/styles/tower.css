@@ -1,7 +1,7 @@
 /* Tower pages. One column on phones in the order a visitor needs it; on wide screens a
    reading column plus a sticky rail with the mini-map, checklist and "Suggest an edit". */
 
-.tower-page { max-width: 1140px; margin: 0 auto; padding: 14px var(--gutter) 56px; }
+.tower-page { max-width: 1140px; margin: 0 auto; padding: 14px var(--gutter) 56px; overflow-x: clip; }
 
 .crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 6px; padding: 0; margin: 4px 0 16px; font-size: 0.9rem; color: var(--muted); }
 .crumbs li + li::before { content: '›'; margin-right: 6px; color: var(--line-strong); }
@@ -24,7 +24,9 @@
 
 .t-grid { display: grid; grid-template-columns: minmax(0, 1fr) 344px; gap: 44px; align-items: start; }
 .t-main { min-width: 0; }
-.t-rail { position: sticky; top: 16px; display: grid; gap: 16px; padding-top: 28px; }
+.t-rail { display: grid; gap: 16px; padding-top: 28px; }
+/* Only stick the rail when the whole of it fits on screen. */
+@media (min-width: 900px) and (min-height: 860px) { .t-rail { position: sticky; top: 0; } }
 .t-section { padding: 28px 0 30px; border-bottom: 1px solid var(--line); scroll-margin-top: 12px; }
 .t-section:last-child { border-bottom: 0; }
 .t-section > h2 { font-size: 1.65rem; margin: 0 0 14px; }
