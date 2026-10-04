@@ -33,7 +33,8 @@ jobs:
       # points it at the runner's own temp dir instead, outside the checkout, so the ~572 MB
       # zip never touches the repo and is gone with the runner (also rm -rf'd below, since the
       # next step needs the disk space back before merge/validate/build run).
-      FIREFINDER_RAW_ROOT: ${{ runner.temp }}/firefinder-raw
+      # (The `runner` context is not available in job-level env, so use a plain /tmp path.)
+      FIREFINDER_RAW_ROOT: /tmp/firefinder-raw
     steps:
       - uses: actions/checkout@v7
 
