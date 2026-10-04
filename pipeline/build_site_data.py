@@ -35,6 +35,7 @@ Python 3.12, standard library only.
 
 from __future__ import annotations
 
+import auto_summary  # noqa: E402  (pipeline/ is on sys.path when run as a script)
 import argparse
 import datetime as dt
 import html
@@ -622,6 +623,9 @@ def build(
         if story.is_file():
             rec["story_html"] = markdown_to_html(story.read_text(encoding="utf-8"), title=rec.get("name"))
             stories += 1
+        else:
+            # A plain summary written from the record alone, labelled as such on the page.
+            rec["auto_summary"] = auto_summary.summarize(rec)
         _write_json(out / "t" / f"{rid}.json", rec)
         features.append(feature(rec))
         counts["status"][rec["status"]] += 1

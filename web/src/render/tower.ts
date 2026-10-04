@@ -373,7 +373,11 @@ export function storyBlock(r: TowerRecord, ctx: RenderContext): SafeHtml {
     if (isSafeStoryHtml(r.story_html)) return html`${researchStamp(r)}<div class="prose story">${raw(r.story_html)}</div>`;
     return html`<p class="notice tone-caution">This lookout's story could not be shown because it contains markup we do not allow. It has been flagged for a fix.</p>`;
   }
-  return html`<p class="muted">We have not written this lookout's story yet. ${r.status === 'standing' ? 'Stories for standing and rentable lookouts come first.' : ''} Know something about its history? <a href="${editIssueUrl(r, ctx)}">Tell us</a>.</p>`;
+  const notYet = html`We have not researched this lookout's story yet. ${r.status === 'standing' ? 'Stories for standing and rentable lookouts come first.' : ''} Know something about its history? <a href="${editIssueUrl(r, ctx)}">Tell us</a>.`;
+  if (r.auto_summary) {
+    return html`<p class="research-stamp">Summary from our records, not yet researched.</p><div class="prose story"><p>${r.auto_summary}</p></div><p class="muted">${notYet}</p>`;
+  }
+  return html`<p class="muted">${notYet}</p>`;
 }
 
 /* ---------- Photos ---------- */

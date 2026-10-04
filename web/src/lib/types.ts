@@ -179,6 +179,8 @@ export interface TowerRecord {
   fixture?: boolean;
   /** Added by the pipeline from data/stories/<id>.md, already converted and escaped. */
   story_html?: string | null;
+  /** Plain summary written from the record alone (no research); only when there is no story. */
+  auto_summary?: string | null;
 }
 
 export interface SourceInfo {
