@@ -1802,6 +1802,16 @@ def resolve(tower: Tower, today: str, headers: dict) -> dict:
         if acc is None and rec.get("ownership") == "tribal":
             acc = {"level": "permission", "note": "On tribal land. Ask the tribe before visiting."}
             acc_src = s
+        if acc is None:
+            # A recreation.gov listing is itself evidence of public access.
+            ridb = next((m for m in members if m.source == "ridb"), None)
+            if ridb is not None:
+                rental = ridb.raw.get("rental") or {}
+                if rental.get("available") is not False and rental:
+                    note = "Overnight stays by reservation on recreation.gov. Check the listing for road, trail and seasonal closures."
+                else:
+                    note = "Listed as a visitor site on recreation.gov. Check the listing for seasonal closures."
+                acc, acc_src = {"level": "public", "note": note}, ridb
         if acc is not None:
             rec["access"] = acc
             if acc_src is not None:
