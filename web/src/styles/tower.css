@@ -81,6 +81,18 @@
 .photo figcaption { margin-top: 6px; font-size: 0.9rem; }
 .photo .cap { display: block; color: var(--ink-2); }
 
+/* Interim card for an unmirrored photo whose original is not https (see render/tower.ts
+   photosSection): a link out instead of a broken/blocked <img>. */
+.photo-link {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  width: 100%; box-sizing: border-box; aspect-ratio: 4 / 3; padding: 12px; text-align: center;
+  border-radius: 10px; border: 1px dashed var(--line-strong); background: var(--surface-2); color: var(--ink-2);
+}
+a.photo-link:hover { border-color: var(--accent); color: var(--accent-strong); }
+.photo-link-icon { color: var(--muted); }
+.photo-link span:not(.visually-hidden) { font-weight: 650; }
+.photo-link-unavailable { color: var(--muted); }
+
 /* Conflicts */
 .conflicts { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .conflict { padding: 12px 14px; border: 1px solid var(--caution-line); border-left-width: 5px; border-radius: 10px; background: var(--caution-bg); color: var(--caution-ink); }
