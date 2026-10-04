@@ -60,6 +60,14 @@ describe('filters', () => {
     expect(activeFilterCount(both)).toBe(2);
   });
 
+  it('filters by design: one design, or any recognised design', () => {
+    const t = [f({ i: 'us-wa-l4', d: 'l4' }), f({ i: 'us-wa-two', d: 'l4|r6' }), f({ i: 'us-wa-none' })];
+    expect(ids(applyFilters(t, { ...defaultFilters(), design: 'r6' }))).toEqual(['us-wa-two']);
+    expect(ids(applyFilters(t, { ...defaultFilters(), design: 'l4' }))).toEqual(['us-wa-l4', 'us-wa-two']);
+    expect(ids(applyFilters(t, { ...defaultFilters(), design: 'any' }))).toEqual(['us-wa-l4', 'us-wa-two']);
+    expect(activeFilterCount({ ...defaultFilters(), design: 'l4' })).toBe(1);
+  });
+
   it('filters by my checklist: any of the ticked marks', () => {
     const list = checklist({ 'us-or-b': ['visited'], 'us-wa-c': ['want'], 'us-ny-e': ['visited', 'stayed'] });
     const mine = (m: Mark[]) => ({ ...defaultFilters(), mine: new Set(m) });

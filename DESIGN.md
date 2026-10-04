@@ -325,9 +325,15 @@ tower (`--research` to point elsewhere), so a re-merge never loses research:
 - `towers.geojson`: every visible tower as a point, coordinates rounded to 5 dp. Short
   property names (missing key = null/false; the legend is repeated in `meta.json` → `format`):
   `i` id, `n` name, `r` state, `c` county, `k` kind, `s` status, `v` verification, `a` access,
-  `b` year built, `rt` 1 if rentable, `rg` 1 if on a register, `o` other names joined by `|`.
+  `b` year built, `rt` 1 if rentable, `rg` 1 if on a register, `o` other names joined by `|`,
+  `y0` / `y1` first year it stood / year it came down (only when an event records it; §4.2),
+  `d` recognised design ids joined by `|`.
 - `t/<id>.json`: the full canonical record plus the story HTML, when one exists.
-- `meta.json`: counts, source list with retrieved dates, and build date.
+- `meta.json`: counts, source list with retrieved dates, and build date; `history` (how many
+  towers have a start year, an end year, neither) and `designs` (design coverage).
+- `designs.json`: the designs guide, `data/designs.json`'s curated facts with every lookout of
+  each design (`pipeline/designs.py` recognises "L-4", "L4", "Aermotor MC-39"… in the tower's
+  `design` and its sources' `type_raw` / `extra.design`; it never guesses).
 - `peaks/` (from `pipeline/build_peaks.py`, run after `build_site_data.py`): named summits from
   USGS GNIS (`data/sources/peaks_gnis.json`, fetched by `pipeline/fetch_peaks.py`) cut into
   1° cells, `peaks/<floor lat>_<floor lon>.json` = `[[name, lat, lon, gnis_id], …]` (4 dp), plus
@@ -385,6 +391,29 @@ tower (`--research` to point elsewhere), so a re-merge never loses research:
   three; the smoke is placed on ground both see, 4–28 km from each, where the lines cut at
   35–145°. Readings round to the nearest half degree. Screen readers hear how far the smoke is
   from the sight; a hint turns the view to within a few degrees of it (and the result says so).
+
+### 4.2 History extras (stage 4, built 2026-10-04)
+
+- **Old topo maps**: a third base map, "Old topo", draws the USGS Historical Topographic Map
+  Collection (public domain, 1880s–2006) under the lookouts. Sheet list: USGS TopoView's
+  overlay service (`energy.usgs.gov/arcgis/rest/services/topoview/ustOverlay/MapServer/0`,
+  CORS open, one query per 1° cell). Scans: each sheet's cloud-optimised GeoTIFF on The
+  National Map's storage (`prd-tnm.s3.amazonaws.com/StagedProducts/Maps/HistoricalTopo/GeoTIFF/`),
+  read with range requests in a worker, reprojected (sheet polyconic / transverse Mercator /
+  UTM; NAD27 → WGS84 by Molodensky) and clipped to each sheet's neatline. No keys. Esri's
+  historical topo image service was rejected: its terms require an ArcGIS account. Eras:
+  Oldest, 1930s–50s (default), Newest; the sheets closest in date go on top, broad scales
+  zoomed out, detailed ones from zoom 12. Colours are softened a little (said on the card).
+- **Year view** ("Then & now", `&yr=`): a lookout stands in a year if built on or before it
+  and not yet gone. Start = earliest built / rebuilt / replaced / first-staffed year; end =
+  first destroyed / burned / removed / abandoned year after the last (re)build, none for a
+  lookout standing today. Today uses current status. Lookouts with incomplete dates are counted
+  as "may have stood" with the reason, and shown faded on request (`&yrm=1`), never dropped.
+- **Tower timeline**: a drawn line (decorative, `aria-hidden`) above the ordered list; gaps of
+  15+ years are named ("No record between …"); a Today entry ends the list.
+- **Designs guide** `/designs/`: facts in `data/designs.json` (our words, every fact sourced),
+  schematics drawn by us and labelled as such, every lookout of each design, a Design filter
+  on the map (`&design=l4`).
 
 ---
 

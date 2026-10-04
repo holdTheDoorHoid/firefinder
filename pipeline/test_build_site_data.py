@@ -109,6 +109,72 @@ class BuildFromFixtures(unittest.TestCase):
         self.assertEqual(self.meta["counts"]["rentable"], sum(1 for f in self.geo["features"] if f["properties"].get("rt")))
 
 
+def ev(year: int | None, event: str) -> dict:
+    return {"year": year, "event": event, "note": None, "from": "nhlr"}
+
+
+class YearRanges(unittest.TestCase):
+    """The owner's rule: a tower counts as standing in a year if it was built on or before
+    that year and not yet gone. Unknown stays unknown."""
+
+    def yr(self, status: str, *events: dict) -> tuple:
+        return bsd.year_range(tower("us-or-x", status=status, events=list(events)), 2026)
+
+    def test_standing_tower_has_a_start_and_no_end(self) -> None:
+        self.assertEqual(self.yr("standing", ev(1933, "built"), ev(1995, "nhlr_registered")), (1933, None))
+
+    def test_earliest_build_year_wins(self) -> None:
+        self.assertEqual(self.yr("standing", ev(1935, "built"), ev(1931, "built")), (1931, None))
+        self.assertEqual(self.yr("standing", ev(1950, "replaced"), ev(1928, "staffed_first")), (1928, None))
+
+    def test_gone_tower_ends_at_its_first_end_event(self) -> None:
+        self.assertEqual(self.yr("gone", ev(1934, "built"), ev(1975, "removed")), (1934, 1975))
+        self.assertEqual(self.yr("gone", ev(1934, "built"), ev(1962, "abandoned"), ev(1971, "destroyed")), (1934, 1962))
+        self.assertEqual(self.yr("ruins", ev(1920, "built"), ev(1967, "burned")), (1920, 1967))
+
+    def test_an_end_before_a_rebuild_does_not_end_it(self) -> None:
+        events = (ev(1922, "built"), ev(1940, "burned"), ev(1942, "rebuilt"), ev(1981, "removed"))
+        self.assertEqual(self.yr("gone", *events), (1922, 1981))
+        # Burned and rebuilt, still standing: no end at all.
+        self.assertEqual(self.yr("standing", ev(1922, "built"), ev(1940, "burned"), ev(1942, "rebuilt")), (1922, None))
+
+    def test_abandoned_but_still_standing_has_not_come_down(self) -> None:
+        self.assertEqual(self.yr("standing", ev(1933, "built"), ev(1970, "abandoned")), (1933, None))
+
+    def test_unknown_values_stay_unknown(self) -> None:
+        self.assertEqual(self.yr("gone"), (None, None))
+        self.assertEqual(self.yr("gone", ev(1934, "built")), (1934, None))
+        self.assertEqual(self.yr("gone", ev(1966, "destroyed")), (None, 1966))
+        self.assertEqual(self.yr("unknown", ev(1934, "built")), (1934, None))
+        self.assertEqual(self.yr("standing", ev(None, "built"), ev(1999, "nhlr_registered")), (None, None))
+
+    def test_moved_structure_ends_the_original_site(self) -> None:
+        self.assertEqual(self.yr("relocated", ev(1931, "built"), ev(1984, "relocated")), (1931, 1984))
+        # At its new site it stands: the move is not an end.
+        self.assertEqual(self.yr("standing", ev(1931, "built"), ev(1984, "relocated")), (1931, None))
+
+    def test_implausible_years_are_ignored(self) -> None:
+        self.assertEqual(self.yr("gone", ev(193, "built"), ev(2091, "removed")), (None, None))
+        self.assertEqual(self.yr("gone", {"year": True, "event": "built"}), (None, None))
+
+    def test_registration_years_are_not_build_or_end_dates(self) -> None:
+        self.assertEqual(self.yr("gone", ev(1998, "fflos_registered")), (None, None))
+
+    def test_counts_say_how_many_cannot_be_placed(self) -> None:
+        h = bsd.history_counts([(1933, None, "standing"), (None, None, "standing"), (1934, 1975, "gone"), (1934, None, "gone"), (None, 1960, "gone"), (None, None, "gone"), (None, None, "unknown")], 2026)
+        self.assertEqual(h["total"], 7)
+        self.assertEqual(h["with_start"], 3)
+        self.assertEqual(h["with_end"], 2)
+        self.assertEqual(h["standing_now"], 2)
+        self.assertEqual(h["complete"], 2)
+        self.assertEqual(h["start_no_end"], 1)
+        self.assertEqual(h["end_no_start"], 1)
+        self.assertEqual(h["standing_no_start"], 1)
+        self.assertEqual(h["no_dates"], 3)
+        self.assertEqual(h["no_dates_not_standing"], 2)
+        self.assertEqual(h["first_year"], 1933)
+
+
 class RecordHandling(unittest.TestCase):
     def setUp(self) -> None:
         self.tmp = tempfile.TemporaryDirectory()
@@ -140,7 +206,7 @@ class RecordHandling(unittest.TestCase):
         self.assertEqual(meta["counts"]["skipped"], 4)
         self.assertEqual(meta["counts"]["hidden"], 1)
         props = json.loads((self.out / "towers.geojson").read_text())["features"][0]["properties"]
-        self.assertEqual(props, {"i": "us-or-good", "n": "Good Lookout", "r": "OR", "k": "tower", "s": "standing", "v": "unverified", "a": "public", "b": 1931, "rt": 1, "rg": 1, "o": "Old / Name"})
+        self.assertEqual(props, {"i": "us-or-good", "n": "Good Lookout", "r": "OR", "k": "tower", "s": "standing", "v": "unverified", "a": "public", "b": 1931, "rt": 1, "rg": 1, "o": "Old / Name", "y0": 1931})
         self.assertEqual(sorted(p.name for p in (self.out / "t").iterdir()), ["us-or-good.json"])
 
     def test_strict_mode_fails_on_bad_records(self) -> None:
@@ -235,6 +301,45 @@ class Markdown(unittest.TestCase):
             self.assertIsNone(bsd.safe_href(bad), bad)
         for good in ("https://a.org", "http://a.org", "mailto:a@b.org", "#fn-1", "/firefinder/"):
             self.assertEqual(bsd.safe_href(good), good)
+
+
+class SiteHistoryAndDesigns(unittest.TestCase):
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        (self.root / "towers" / "wa").mkdir(parents=True)
+        (self.root / "sources").mkdir()
+        self.out = self.root / "out"
+
+    def tearDown(self) -> None:
+        self.tmp.cleanup()
+
+    def test_geojson_carries_years_and_designs_and_meta_counts_them(self) -> None:
+        recs = [
+            tower("us-wa-a", region="WA", design="L-4 ground cab", events=[ev(1935, "built")], sources=[{"source": "ffla", "key": "ffla:wa:a"}]),
+            tower("us-wa-b", region="WA", status="gone", events=[ev(1932, "built"), ev(1968, "removed")], sources=[{"source": "fl", "key": "fl:b"}]),
+            tower("us-wa-c", region="WA", status="gone", design="Steel tower with 10x10 ft cab"),
+        ]
+        for r in recs:
+            (self.root / "towers" / "wa" / f"{r['id']}.json").write_text(json.dumps(r))
+        (self.root / "sources" / "fl.json").write_text(json.dumps({"source": "fl", "records": [{"key": "fl:b", "type_raw": "Tower", "extra": {"design": "Aermotor MC-39"}}]}))
+        facts = self.root / "designs.json"
+        facts.write_text(json.dumps({"designs": [{"id": "l4", "name": "L-4"}, {"id": "aermotor", "name": "Aermotor"}, {"id": "r6", "name": "R-6"}]}))
+        meta = bsd.build(self.root / "towers", self.root / "stories", self.root / "p", self.root / "sources", bsd.DATA / "vocab.json", self.out, log=quiet(), designs_path=facts, this_year=2026)
+        props = {f["properties"]["i"]: f["properties"] for f in json.loads((self.out / "towers.geojson").read_text())["features"]}
+        self.assertEqual((props["us-wa-a"]["y0"], props["us-wa-a"].get("y1"), props["us-wa-a"]["d"]), (1935, None, "l4"))
+        self.assertEqual((props["us-wa-b"]["y0"], props["us-wa-b"]["y1"], props["us-wa-b"]["d"]), (1932, 1968, "aermotor"))
+        self.assertNotIn("y0", props["us-wa-c"])
+        self.assertNotIn("d", props["us-wa-c"])
+        self.assertEqual(meta["history"]["no_dates"], 1)
+        self.assertEqual(meta["designs"], {"total": 3, "with_design_text": 3, "recognised": 2, "by_design": {"l4": 1, "aermotor": 1, "r6": 0}})
+        guide = json.loads((self.out / "designs.json").read_text())
+        self.assertEqual([d["id"] for d in guide["designs"]], ["l4", "aermotor", "r6"])
+        aer = guide["designs"][1]["towers"][0]
+        self.assertEqual((aer["i"], aer["w"], aer["m"]), ("us-wa-b", "Aermotor MC-39", ["MC-39"]))
+        self.assertEqual(guide["designs"][0]["towers"][0]["w"], "L-4 ground cab")
+        rec = json.loads((self.out / "t" / "us-wa-b.json").read_text())
+        self.assertEqual(rec["design_ids"], ["aermotor"])
 
 
 if __name__ == "__main__":

@@ -16,23 +16,26 @@ import {
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 
 import { activeFilterCount, applyFilters, defaultFilters, type Filters } from '../lib/filters.ts';
+import { isMaybe, yearState } from '../lib/history.ts';
 import { formatCount } from '../lib/format.ts';
 import { html } from '../lib/html.ts';
 import { buildIndex, type SearchEntry } from '../lib/search.ts';
 import type { Meta, SourceInfo, TowerCollection, TowerFeature, TowerProps } from '../lib/types.ts';
-import { parseState, serializeState, type AppState } from '../lib/urlstate.ts';
+import { parseState, serializeState, type AppState, type Basemap } from '../lib/urlstate.ts';
 import { towerPath, type RenderContext } from '../render/tower.ts';
 import { bindChecklistButtons, getChecklist, initChecklistDialog } from '../ui/checklist-ui.ts';
 import { initCommon } from '../ui/common.ts';
 import { effectiveTheme, onThemeChange } from '../ui/theme.ts';
 import siteConfig from '../../site.config.json';
 import { renderFilterPanel } from './filters-ui.ts';
-import { L_CLUSTERS, L_POINTS, SRC, installOverlay, setSelection, setTopo, setTowerData } from './overlay.ts';
+import { L_CLUSTERS, L_MAYBE_CLUSTERS, L_MAYBE_POINTS, L_POINTS, MAYBE_SRC, SRC, installOverlay, setBase, setSelection, setTowerData } from './overlay.ts';
+import { OldTopoControl } from './oldtopo-ui.ts';
+import { YearPanel } from './years-ui.ts';
 import { Panel } from './panel.ts';
 import { initSearch } from './search-ui.ts';
 import { loadBaseStyle } from './style.ts';
 import type { SeenLayer } from '../view3d/viewshed-layer.ts';
-import type { TowerRecord } from '../lib/types.ts';
+import type { HistoryCounts, TowerRecord } from '../lib/types.ts';
 
 const BASE = import.meta.env.BASE_URL;
 const US_BOUNDS: [[number, number], [number, number]] = [
@@ -49,11 +52,17 @@ async function getJson<T>(path: string): Promise<T> {
   return (await res.json()) as T;
 }
 
+const BASES: { id: Basemap; label: string; title: string }[] = [
+  { id: 'map', label: 'Map', title: 'Street and terrain map (OpenFreeMap)' },
+  { id: 'topo', label: 'Topo', title: 'Today\'s USGS topographic map, with contours' },
+  { id: 'old', label: 'Old topo', title: 'Historical USGS topo maps, 1880s to 2006: the map from when the lookouts stood' },
+];
+
 class BasemapControl implements IControl {
   #el: HTMLDivElement | null = null;
-  #get: () => 'map' | 'topo';
-  #set: (b: 'map' | 'topo') => void;
-  constructor(get: () => 'map' | 'topo', set: (b: 'map' | 'topo') => void) {
+  #get: () => Basemap;
+  #set: (b: Basemap) => void;
+  constructor(get: () => Basemap, set: (b: Basemap) => void) {
     this.#get = get;
     this.#set = set;
   }
@@ -62,10 +71,10 @@ class BasemapControl implements IControl {
     el.className = 'maplibregl-ctrl maplibregl-ctrl-group ff-basemap';
     el.setAttribute('role', 'group');
     el.setAttribute('aria-label', 'Base map');
-    el.innerHTML = html`<button type="button" data-base="map" title="Street and terrain map (OpenFreeMap)">Map</button><button type="button" data-base="topo" title="USGS topographic map, with contours">USGS topo</button>`.value;
+    el.innerHTML = html`${BASES.map((b) => html`<button type="button" data-base="${b.id}" title="${b.title}">${b.label}</button>`)}`.value;
     el.addEventListener('click', (e) => {
       const b = (e.target as Element).closest<HTMLElement>('[data-base]');
-      if (b) this.#set(b.dataset.base === 'topo' ? 'topo' : 'map');
+      if (b) this.#set(BASES.find((x) => x.id === b.dataset.base)?.id ?? 'map');
     });
     this.#el = el;
     this.sync();
@@ -100,10 +109,14 @@ async function main(): Promise<void> {
   const searchEl = document.querySelector<HTMLElement>('.search')!;
 
   let features: TowerFeature[] = [];
+  let filteredNoYear: TowerFeature[] = [];
+  let historyCounts: HistoryCounts | null = null;
+  const thisYear = new Date().getFullYear();
   let byId = new Map<string, TowerFeature>();
   let shownIds = new Set<string>();
   let index: SearchEntry[] = [];
   let collection: TowerCollection = { type: 'FeatureCollection', features: [] };
+  let maybeCollection: TowerCollection = { type: 'FeatureCollection', features: [] };
   let map: MlMap | null = null;
   let viewTouched = !!state.view;
 
@@ -129,6 +142,7 @@ async function main(): Promise<void> {
     closeBtn: $<HTMLButtonElement>('panel-close'),
     ctx,
     isHiddenByFilters: (id) => features.length > 0 && !shownIds.has(id),
+    yearView: () => state.year !== null,
     onRender: (root) => {
       bindChecklistButtons(root, checklist);
       syncSeenButtons(root);
@@ -167,19 +181,40 @@ async function main(): Promise<void> {
   let syncFilters = () => {};
   const update = () => {
     const filtered = applyFilters(features, state.filters, checklist);
-    shownIds = new Set(filtered.map((f) => f.properties.i));
-    collection = { type: 'FeatureCollection', features: filtered };
-    if (map?.getSource(SRC)) setTowerData(map, collection);
-    const n = filtered.length;
+    filteredNoYear = filtered;
+    // The year view narrows the map to lookouts standing that year; with "show faded" on, the
+    // ones whose dates are incomplete go to a second, faded layer.
+    let shown = filtered;
+    let maybe: TowerFeature[] = [];
+    if (state.year !== null) {
+      shown = [];
+      for (const f of filtered) {
+        const st = yearState(f.properties, state.year, thisYear);
+        if (st === 'stood') shown.push(f);
+        else if (state.yearMaybe && isMaybe(st)) maybe.push(f);
+      }
+    }
+    shownIds = new Set([...shown, ...maybe].map((f) => f.properties.i));
+    collection = { type: 'FeatureCollection', features: shown };
+    maybeCollection = { type: 'FeatureCollection', features: maybe };
+    if (map?.getSource(SRC)) setTowerData(map, collection, maybeCollection);
+    const n = shown.length;
     const total = features.length;
-    countEl.textContent =
-      total === 0 ? 'No lookouts loaded' : n === 0 ? 'No lookouts match your filters' : n === total ? `All ${formatCount(total)} lookouts shown` : `${formatCount(n)} of ${formatCount(total)} lookouts shown`;
-    countEl.classList.toggle('is-empty', n === 0 && total > 0);
+    if (state.year !== null) {
+      const when = state.year >= thisYear ? 'today' : `in ${state.year}`;
+      countEl.textContent =
+        `${formatCount(n)} standing ${when}` + (maybe.length ? `, ${formatCount(maybe.length)} faded` : '') + (filtered.length !== total ? ' (filtered)' : '');
+    } else {
+      countEl.textContent =
+        total === 0 ? 'No lookouts loaded' : n === 0 ? 'No lookouts match your filters' : n === total ? `All ${formatCount(total)} lookouts shown` : `${formatCount(n)} of ${formatCount(total)} lookouts shown`;
+    }
+    countEl.classList.toggle('is-empty', n + maybe.length === 0 && total > 0);
     const active = activeFilterCount(state.filters);
     filterCountEl.textContent = active ? ` (${active})` : '';
     $('reset-map').hidden = active === 0;
     showResultsBtn.textContent = n === 0 ? 'No lookouts match: close' : `Show ${formatCount(n)} lookout${n === 1 ? '' : 's'}`;
     syncFilters();
+    years.refresh();
     panel.refresh();
     writeUrl();
   };
@@ -191,6 +226,29 @@ async function main(): Promise<void> {
   document.addEventListener('click', (e) => {
     const t = e.target as Element;
     if (t.closest('[data-reset-filters], [data-action="reset-filters"]')) setFilters(defaultFilters());
+  });
+
+  /* ---------- Then and now: lookouts standing in a year ---------- */
+  const yearsBtn = $<HTMLButtonElement>('open-years');
+  const years = new YearPanel({
+    host: mapbox,
+    thisYear,
+    history: () => historyCounts,
+    all: () => features,
+    filtered: () => filteredNoYear,
+    filtersActive: () => activeFilterCount(state.filters) > 0,
+    onChange: (year, maybe) => {
+      const was = state.year;
+      state.year = year;
+      state.yearMaybe = year !== null && maybe;
+      yearsBtn.setAttribute('aria-pressed', String(year !== null));
+      if (year === null && was !== null) yearsBtn.focus();
+      update();
+    },
+  });
+  yearsBtn.addEventListener('click', () => {
+    if (years.isOpen) years.close();
+    else years.open(state.year ?? 1935, state.yearMaybe, true);
   });
 
   /* ---------- Phone filter sheet ---------- */
@@ -345,6 +403,7 @@ async function main(): Promise<void> {
     byId = new Map(features.map((f) => [f.properties.i, f]));
     index = buildIndex(features);
     if (meta) {
+      historyCounts = meta.history ?? null;
       ctx.sources = new Map<string, SourceInfo>(meta.sources.map((s) => [s.id, s]));
       if (meta.fixtures) $('fixture-banner').hidden = false;
     }
@@ -356,22 +415,41 @@ async function main(): Promise<void> {
       checklist,
       onChange: setFilters,
     });
-    update();
+    if (state.year !== null) years.open(state.year, state.yearMaybe);
+    else update();
     return true;
   })();
 
   /* ---------- Map ---------- */
   let theme = effectiveTheme();
   const { style, ok: styleOk } = await loadBaseStyle(theme);
+  const oldOpts = () => ({ era: state.era, opacity: state.oldOpacity });
+  const applyBase = () => {
+    basemapCtl.sync();
+    oldTopoCtl.sync(state.basemap === 'old');
+    if (map) setBase(map, state.basemap, theme, BASE, oldOpts());
+    writeUrl();
+  };
   const basemapCtl = new BasemapControl(
     () => state.basemap,
     (b) => {
       state.basemap = b;
-      basemapCtl.sync();
-      if (map) setTopo(map, b === 'topo', theme, BASE);
-      writeUrl();
+      applyBase();
     },
   );
+  const oldTopoCtl = new OldTopoControl({
+    era: () => state.era,
+    opacity: () => state.oldOpacity,
+    onEra: (era) => {
+      state.era = era;
+      applyBase();
+    },
+    onOpacity: (op) => {
+      state.oldOpacity = op;
+      if (map) setBase(map, state.basemap, theme, BASE, oldOpts());
+      writeUrl();
+    },
+  });
   try {
     map = new MlMap({
       container: 'map',
@@ -400,6 +478,8 @@ async function main(): Promise<void> {
     m.keyboard.disableRotation();
     m.addControl(new AttributionControl({ compact: true }), 'bottom-right');
     m.addControl(basemapCtl, 'top-right');
+    m.addControl(oldTopoCtl, 'top-right');
+    oldTopoCtl.sync(state.basemap === 'old');
     m.addControl(new NavigationControl({ showCompass: false }), 'top-right');
     m.addControl(new GeolocateControl({ positionOptions: { enableHighAccuracy: false }, trackUserLocation: false }), 'top-right');
     m.addControl(new ScaleControl({ unit: 'imperial', maxWidth: 110 }), 'bottom-left');
@@ -410,7 +490,7 @@ async function main(): Promise<void> {
 
     m.on('style.load', () => {
       const sel = state.selected ? byId.get(state.selected)?.geometry.coordinates ?? null : null;
-      installOverlay(m, { data: collection, theme, base: BASE, topo: state.basemap === 'topo', selected: sel });
+      installOverlay(m, { data: collection, maybe: maybeCollection, theme, base: BASE, basemap: state.basemap, old: oldOpts(), selected: sel });
       seen?.reinstall();
     });
     onThemeChange(async (eff) => {
@@ -425,30 +505,37 @@ async function main(): Promise<void> {
     });
     m.on('moveend', writeUrl);
 
-    m.on('click', L_POINTS, (e: MapLayerMouseEvent) => {
-      const f = e.features?.[0];
-      if (f) select(String(f.properties.i), { fly: false, focus: false });
-    });
-    m.on('click', L_CLUSTERS, async (e: MapLayerMouseEvent) => {
-      const f = e.features?.[0];
-      if (!f) return;
-      const src = m.getSource(SRC) as GeoJSONSource;
-      const zoom = await src.getClusterExpansionZoom(Number(f.properties.cluster_id));
-      m.easeTo({ center: (f.geometry as unknown as { coordinates: [number, number] }).coordinates, zoom: Math.min(zoom + 0.5, 14) });
-    });
-    for (const layer of [L_POINTS, L_CLUSTERS]) {
+    for (const layer of [L_POINTS, L_MAYBE_POINTS]) {
+      m.on('click', layer, (e: MapLayerMouseEvent) => {
+        const f = e.features?.[0];
+        if (f) select(String(f.properties.i), { fly: false, focus: false });
+      });
+    }
+    for (const [layer, source] of [[L_CLUSTERS, SRC], [L_MAYBE_CLUSTERS, MAYBE_SRC]] as const) {
+      m.on('click', layer, async (e: MapLayerMouseEvent) => {
+        const f = e.features?.[0];
+        if (!f) return;
+        const src = m.getSource(source) as GeoJSONSource;
+        const zoom = await src.getClusterExpansionZoom(Number(f.properties.cluster_id));
+        m.easeTo({ center: (f.geometry as unknown as { coordinates: [number, number] }).coordinates, zoom: Math.min(zoom + 0.5, 14) });
+      });
+    }
+    for (const layer of [L_POINTS, L_CLUSTERS, L_MAYBE_POINTS, L_MAYBE_CLUSTERS]) {
       m.on('mouseenter', layer, () => (m.getCanvas().style.cursor = 'pointer'));
       m.on('mouseleave', layer, () => (m.getCanvas().style.cursor = ''));
     }
     if (matchMedia('(hover: hover)').matches) {
       const tip = new Popup({ closeButton: false, closeOnClick: false, offset: 14, className: 'ff-tip', maxWidth: '260px' });
-      m.on('mousemove', L_POINTS, (e: MapLayerMouseEvent) => {
-        const f = e.features?.[0];
-        if (!f) return;
-        const p = f.properties as TowerProps;
-        tip.setLngLat((f.geometry as unknown as { coordinates: [number, number] }).coordinates).setText(p.n).addTo(m);
-      });
-      m.on('mouseleave', L_POINTS, () => tip.remove());
+      for (const layer of [L_POINTS, L_MAYBE_POINTS]) {
+        m.on('mousemove', layer, (e: MapLayerMouseEvent) => {
+          const f = e.features?.[0];
+          if (!f) return;
+          const p = f.properties as TowerProps;
+          const faded = layer === L_MAYBE_POINTS ? ' (dates incomplete)' : '';
+          tip.setLngLat((f.geometry as unknown as { coordinates: [number, number] }).coordinates).setText(p.n + faded).addTo(m);
+        });
+        m.on('mouseleave', layer, () => tip.remove());
+      }
     }
   }
 

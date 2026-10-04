@@ -64,6 +64,47 @@
 .tl-what { font-weight: 650; }
 .tl-note { color: var(--ink-2); }
 .tl-src { font-size: 0.8rem; color: var(--muted); }
+/* Honest gaps: no dot, a dashed run of the line, and the words. */
+.timeline li.tl-gap { padding-bottom: 12px; }
+.timeline li.tl-gap::before { visibility: hidden; }
+.timeline li.tl-gap .tl-body { font-style: italic; color: var(--muted); font-size: 0.92rem; padding-top: 1px; }
+.timeline li.tl-gap::after, .timeline li:has(+ .tl-gap)::after { background: none; width: 0; border-left: 2px dashed var(--line-strong); }
+.timeline li.tl-today::before { border-radius: 2px; background: var(--ink-2); border-color: var(--ink-2); }
+.timeline li.tl-today .tl-year { font-size: 0.95rem; }
+
+/* The drawn line above the list (decoration: the list says it all in words). */
+.tl-figure { margin: 2px 0 20px; padding: 12px 14px 10px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.tl-track { position: relative; height: calc(var(--rows, 1) * 17px + 30px); margin: 0 8px; }
+.tl-seg { position: absolute; bottom: 9px; height: 0; }
+.tl-seg-stood { border-top: 5px solid var(--accent); bottom: 7px; border-radius: 3px; }
+.tl-seg-unknown { border-top: 3px dashed var(--line-strong); bottom: 8px; }
+.tl-seg-gone { border-top: 2px dotted var(--mk-gone); bottom: 8.5px; }
+.tl-mark { position: absolute; bottom: 2px; width: 0; display: flex; justify-content: center; color: var(--ink-2); }
+.tl-mark .tl-shape { flex: none; background: var(--surface); border-radius: 3px; }
+.tl-mark .tl-shape + .tl-shape { margin-left: -3px; }
+.tl-mark-year {
+  position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%);
+  font: 700 0.78rem/1 var(--font-sans); font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap;
+}
+.tl-mark::before { content: ''; position: absolute; left: 0; bottom: 16px; height: 0; border-left: 1px solid var(--line-strong); }
+.tl-row-1 .tl-mark-year { bottom: 35px; }
+.tl-row-1::before { height: 17px; }
+.tl-row-2 .tl-mark-year { bottom: 52px; }
+.tl-row-2::before { height: 34px; }
+.tl-mark.at-start .tl-mark-year { left: -7px; transform: none; }
+.tl-mark.at-end .tl-mark-year { left: auto; right: -7px; transform: none; }
+.tl-mark-today { color: var(--ink); }
+.tl-mark.tl-has-start { color: var(--accent); }
+.tl-mark.tl-has-end { color: var(--ember); }
+.tl-axis { display: flex; justify-content: space-between; gap: 12px; margin-top: 4px; font-size: 0.8rem; color: var(--muted); }
+.tl-legend { display: flex; flex-wrap: wrap; gap: 4px 16px; list-style: none; padding: 8px 0 0; margin: 8px 0 0; border-top: 1px solid var(--line); font-size: 0.8rem; color: var(--muted); }
+.tl-legend li { display: inline-flex; align-items: center; gap: 6px; }
+.tl-legend .tl-shape { color: var(--ink-2); }
+.tl-key { display: inline-block; width: 22px; height: 0; }
+.tl-key-stood { border-top: 5px solid var(--accent); border-radius: 3px; }
+.tl-key-unknown { border-top: 3px dashed var(--line-strong); }
+.tl-key-gone { border-top: 2px dotted var(--mk-gone); }
+#old-maps { scroll-margin-top: 12px; }
 
 .prose { max-width: 68ch; font-size: 1.05rem; line-height: 1.7; }
 .prose p { margin: 0 0 1em; }

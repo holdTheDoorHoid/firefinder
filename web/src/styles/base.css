@@ -151,6 +151,15 @@ abbr[title] { text-decoration: underline dotted; text-underline-offset: 2px; }
 @media (max-width: 340px) {
   .brand .logo { display: none; }
 }
+/* Four links (Map, Learn, Designs, About) leave no room for the logo on phones: the name stays. */
+@media (max-width: 430px) {
+  .brand .logo { display: none; }
+  .site-nav a { padding: 8px 4px; }
+}
+@media (max-width: 370px) {
+  .site-nav a { padding: 8px 3px; font-size: 0.82rem; }
+  .theme-toggle { padding: 6px 7px; }
+}
 @media (max-width: 370px) {
   .brand-name { font-size: 1.1rem; }
   .brand .logo { width: 26px; height: 26px; }

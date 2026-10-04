@@ -16,6 +16,10 @@
  *   rg  on a register         1  (NHLR, FFLOS, ...)     (absent = not listed)
  *   o   other names           "Old name|Another"        (absent = none)
  *   c   county                "Lane"                    (absent = unknown)
+ *   y0  first year it stood   1933 (built, rebuilt, replaced, first staffed)  (absent = unknown)
+ *   y1  year it came down     1975 (destroyed, burned, removed, abandoned)
+ *                             (absent = still standing, or not recorded: see lib/history.ts)
+ *   d   design ids            "l4" or "l4|r6" (designs.json ids)            (absent = none recognised)
  *
  * Coordinates are [lon, lat] rounded to 5 decimal places (about 1 m).
  */
@@ -33,6 +37,9 @@ export interface TowerProps {
   rg?: 1;
   o?: string;
   c?: string;
+  y0?: number;
+  y1?: number;
+  d?: string;
 }
 
 export interface TowerFeature {
@@ -181,6 +188,8 @@ export interface TowerRecord {
   story_html?: string | null;
   /** Plain summary written from the record alone (no research); only when there is no story. */
   auto_summary?: string | null;
+  /** Standard designs recognised by the pipeline (designs.json ids, e.g. ["l4"]). */
+  design_ids?: string[] | null;
 }
 
 export interface SourceInfo {
@@ -209,6 +218,82 @@ export interface Meta {
     by_verification?: Record<string, number>;
   };
   sources: SourceInfo[];
+  /** How many lookouts can be placed in time (pipeline build_site_data.history_counts). */
+  history?: HistoryCounts;
+  /** How many lookouts have a recognisable design (pipeline build_site_data.write_designs). */
+  designs?: DesignCoverage;
+}
+
+export interface HistoryCounts {
+  this_year: number;
+  total: number;
+  with_start: number;
+  with_end: number;
+  standing_now: number;
+  complete: number;
+  start_no_end: number;
+  end_no_start: number;
+  standing_no_start: number;
+  no_dates: number;
+  no_dates_not_standing: number;
+  first_year: number | null;
+}
+
+export interface DesignCoverage {
+  total: number;
+  with_design_text: number;
+  recognised: number;
+  by_design: Record<string, number>;
+}
+
+/** One lookout in designs.json: id, name, state, status, kind, source wording, Aermotor models. */
+export interface DesignTower {
+  i: string;
+  n: string;
+  r: string;
+  s: string;
+  k: string;
+  w?: string;
+  m?: string[];
+}
+
+export interface DesignSource {
+  title: string;
+  publisher?: string | null;
+  url?: string | null;
+  licence?: string | null;
+  supports?: string[] | null;
+}
+
+export interface Design {
+  id: string;
+  name: string;
+  aka?: string[] | null;
+  kind?: string | null;
+  schematic?: string | null;
+  summary?: string | null;
+  years_in_use?: { from?: number | null; to?: number | null; text?: string | null } | null;
+  cab_size?: string | null;
+  tower_heights?: string | null;
+  materials?: string | null;
+  makers?: string[] | null;
+  models?: string[] | null;
+  regions?: string | null;
+  features?: string[] | null;
+  uncertain?: string | null;
+  sources?: DesignSource[] | null;
+  towers: DesignTower[];
+  count: number;
+  by_status: Record<string, number>;
+}
+
+export interface DesignsFile {
+  title?: string | null;
+  note?: string | null;
+  updated?: string | null;
+  sources?: DesignSource[];
+  coverage: DesignCoverage;
+  designs: Design[];
 }
 
 export function isRentable(r: Pick<TowerRecord, 'rental'>): boolean {

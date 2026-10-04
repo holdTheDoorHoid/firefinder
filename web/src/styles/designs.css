@@ -1,0 +1,60 @@
+/* Tower designs guide (/designs/). Reading column like About, with a schematic beside each
+   design's introduction on wide screens. */
+.designs.plain-page { max-width: 860px; }
+.design-coverage { margin: 18px 0 6px; }
+.design-toc ul { gap: 6px 18px; }
+.design-toc .muted { font-size: 0.82rem; font-variant-numeric: tabular-nums; }
+.design { padding: 30px 0 26px; border-bottom: 1px solid var(--line); scroll-margin-top: 12px; }
+.design:last-of-type { border-bottom: 0; }
+.design-top { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 22px; align-items: start; }
+.design-fig { margin: 0; padding: 10px 6px 6px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); text-align: center; }
+.design-fig figcaption { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+.design-intro h2 { margin: 2px 0 6px; font-size: 1.8rem; }
+.design-intro h2::before { content: ''; display: block; width: 28px; height: 3px; margin-bottom: 10px; border-radius: 2px; background: var(--ember); }
+.design-aka { margin: 0 0 6px; color: var(--muted); font-size: 0.92rem; }
+.design-summary { margin: 0 0 8px; font-size: 1.05rem; line-height: 1.6; }
+.design-count { margin: 0; font-size: 0.95rem; color: var(--ink-2); }
+.design-count strong { font-size: 1.1rem; color: var(--ink); }
+.kv-design { margin-top: 18px; }
+.kv-design > div { grid-template-columns: minmax(110px, 24%) minmax(0, 1fr); }
+.design-features { margin: 0; padding-left: 1.2em; }
+.design-features li { margin: 3px 0; }
+.design-uncertain { margin: 14px 0 0; padding: 10px 14px; border: 1px solid var(--caution-line); border-left-width: 5px; border-radius: 10px; background: var(--caution-bg); color: var(--caution-ink); }
+.design-uncertain summary { cursor: pointer; font-weight: 750; }
+.design-uncertain p { margin: 8px 0 0; font-size: 0.94rem; line-height: 1.55; }
+.dt-count { margin: 0 0 8px; }
+.btn-small { min-height: 34px; padding: 4px 12px; font-size: 0.88rem; margin-left: 6px; }
+.dt-all > summary { cursor: pointer; font-weight: 650; color: var(--accent); margin: 4px 0; }
+.dt-state { margin: 14px 0 4px; font: 750 0.78rem/1.3 var(--font-sans); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); }
+.dt-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 2px 18px; }
+.dt-list li { padding: 3px 0; font-size: 0.94rem; }
+.dt-list a { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
+.dt-list .marker-icon { flex: none; }
+.dt-status, .dt-model { font-size: 0.8rem; color: var(--muted); }
+.dt-words { display: block; font-size: 0.8rem; color: var(--muted); margin-left: 22px; line-height: 1.4; }
+.design-sources { margin: 0; padding-left: 1.2em; font-size: 0.92rem; }
+.design-sources li { margin: 6px 0; }
+.ds-pub, .ds-lic { display: block; font-size: 0.8rem; color: var(--muted); }
+.ds-plans { font-weight: 700; }
+.design-general { padding-top: 26px; }
+.design-general h2 { font-size: 1.4rem; }
+
+/* Schematic drawings (render/schematics.ts): lines in ink, glass faintly tinted. */
+.schematic { display: block; margin: 0 auto; max-width: 100%; height: auto; color: var(--ink-2); }
+.schematic .sk-fill { fill: var(--surface-2); }
+.schematic .sk-edge, .schematic .sk-roof { stroke: currentColor; stroke-width: 1.4; stroke-linejoin: round; }
+.schematic .sk-edge { fill: none; }
+.schematic .sk-glass { fill: color-mix(in srgb, var(--accent) 16%, var(--surface)); }
+.schematic .sk-thin { fill: none; stroke: currentColor; stroke-width: 0.7; opacity: 0.8; }
+.schematic .sk-line { fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linecap: round; }
+.schematic .sk-timber { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
+.schematic .sk-steel { fill: none; stroke: currentColor; stroke-width: 1; }
+.schematic .sk-stair { fill: none; stroke: var(--ember); stroke-width: 1; opacity: 0.8; }
+.schematic .sk-ground { stroke: currentColor; stroke-width: 1.4; }
+.schematic .sk-hatch { stroke: currentColor; stroke-width: 0.7; opacity: 0.6; }
+
+@media (max-width: 600px) {
+  .design-top { grid-template-columns: 1fr; gap: 12px; }
+  .design-fig { max-width: 200px; }
+  .design-intro h2 { font-size: 1.55rem; }
+}
