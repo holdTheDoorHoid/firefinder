@@ -106,3 +106,37 @@ describe('a status note from a source name', () => {
     expect(s).toContain('details are uncertain');
   });
 });
+
+describe('a researched lookout', () => {
+  const r: TowerRecord = {
+    ...base,
+    id: 'us-or-hager-mountain',
+    name: 'Hager Mountain Lookout',
+    status: 'standing',
+    summary: 'An R-6 flat-top cab built in 1967, staffed in fire season and rentable in winter.',
+    research: { researched: '2026-10-04', checked: '2026-10-05', verdict: 'pass', confidence: 'medium' },
+    story_html: '<p>Watched for smoke since 1915.<sup id="fnref-1" class="fnref"><a href="#fn-1" aria-label="Note 1">1</a></sup></p>\n<section class="footnotes" aria-label="Notes and sources"><ol><li id="fn-1">NHLR, <a href="http://nhlr.org/lookouts/us/or/hager-mountain-lookout/" rel="noopener noreferrer">http://nhlr.org/lookouts/us/or/hager-mountain-lookout/</a> <a href="#fnref-1" class="fn-back" aria-label="Back to the text">↩</a></li></ol></section>',
+    events: [{ year: 1967, event: 'built', note: 'Current R-6 cab', from: 'research', source_url: 'http://nhlr.org/lookouts/us/or/hager-mountain-lookout/' }],
+  };
+  const main = renderTowerMain(r, ctx).value;
+
+  it('shows the summary in the header and the map panel', () => {
+    expect(main).toContain('class="t-summary"');
+    expect(renderPanel(r, ctx).value).toContain(r.summary!);
+  });
+
+  it('stamps the story with its research and fact-check', () => {
+    expect(main).toContain('Researched 4 Oct 2026, fact-checked.');
+    expect(renderTowerMain({ ...r, research: { researched: '2026-10-04', verdict: null } }, ctx).value).toContain('Not yet fact-checked.');
+  });
+
+  it('renders the story with footnotes and safe external links', () => {
+    expect(main).toContain('<section class="footnotes"');
+    expect(main).toContain('rel="noopener noreferrer">http://nhlr.org/');
+    expect(main).not.toContain('could not be shown');
+  });
+
+  it('links a research event to the page it cites', () => {
+    expect(main).toContain('Source: <a href="http://nhlr.org/lookouts/us/or/hager-mountain-lookout/" rel="noopener noreferrer">nhlr.org</a>');
+  });
+});

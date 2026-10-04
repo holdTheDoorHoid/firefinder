@@ -81,6 +81,9 @@ export interface TowerEvent {
   note?: string | null;
   /** Source id the event comes from. */
   from?: string | null;
+  /** The page that supports the event (research events cite one). */
+  source_url?: string | null;
+  source_urls?: string[] | null;
   /** For "relocated": the place the structure was moved from, and to. */
   moved_from?: string | null;
   moved_to?: string | null;
@@ -132,9 +135,20 @@ export interface Conflict {
   note?: string | null;
 }
 
+export interface ResearchStamp {
+  researched?: string | null;
+  checked?: string | null;
+  verdict?: 'pass' | 'fixed' | 'fail' | null;
+  confidence?: string | null;
+}
+
 export interface TowerRecord {
   id: string;
   name: string;
+  /** One-sentence teaser from research, shown on the map panel and page header. */
+  summary?: string | null;
+  /** When the story was researched and fact-checked (pipeline research overlay). */
+  research?: ResearchStamp | null;
   other_names?: string[] | null;
   country?: string | null;
   region: string;

@@ -174,6 +174,12 @@ KNOWN_SOURCES: dict[str, dict[str, str]] = {
         "license": "No licence stated; facts only",
         "credit": "michiganfiretower.com",
     },
+    "research": {
+        "title": "Firefinder research",
+        "url": None,
+        "license": "Our own research notes; each fact cites its source in the lookout's story",
+        "credit": "Firefinder research (sources cited in the story footnotes)",
+    },
     "tnlandforms": {
         "title": "tnlandforms.us fire lookout towers (Tom Dunigan)",
         "url": "https://tnlandforms.us/towers/",
@@ -251,7 +257,17 @@ _INLINE_RE = re.compile(
     r"|\[\^(?P<fn>[^\]\s]+)\]"
     r"|\[(?P<text>[^\]]+)\]\((?P<url>[^)\s]+)(?:\s+\"[^\"]*\")?\)"
     r"|<(?P<auto>https?://[^>\s]+)>"
+    # a bare URL, as research footnotes write them; trailing punctuation stays outside
+    r"|(?P<bare>https?://[^\s<>\"]*[^\s<>\".,;:!?)\]'])"
 )
+
+# External links in stories open in the same tab but pass no referrer or window handle.
+EXTERNAL_REL = "noopener noreferrer"
+
+
+def _link(href: str, label: str) -> str:
+    rel = f' rel="{EXTERNAL_REL}"' if href.lower().startswith(("http://", "https://")) else ""
+    return f'<a href="{_esc(href)}"{rel}>{label}</a>'
 
 
 class _Notes:
@@ -278,20 +294,24 @@ class _Notes:
 def _inline(text: str, notes: _Notes | None, allow_links: bool = True) -> str:
     out: list[str] = []
     pos = 0
+    last_fn_end = -1
     for m in _INLINE_RE.finditer(text):
         out.append(_emphasis(_esc(text[pos : m.start()])))
         pos = m.end()
         if m.group("code") is not None:
             out.append(f"<code>{_esc(m.group('code'))}</code>")
         elif m.group("fn") is not None:
+            if notes and last_fn_end == m.start() and m.group("fn") in notes.definitions:
+                out.append('<sup class="fnsep">,</sup>')  # "[^3][^1]" reads 3,1 and not 31
             out.append(notes.ref(m.group("fn")) if notes else _esc(m.group(0)))
+            last_fn_end = m.end()
         elif m.group("text") is not None:
             label = _inline(m.group("text"), None, allow_links=False)
             href = safe_href(m.group("url")) if allow_links else None
-            out.append(f'<a href="{_esc(href)}">{label}</a>' if href else label)
+            out.append(_link(href, label) if href else label)
         else:
-            href = m.group("auto")
-            out.append(f'<a href="{_esc(href)}">{_esc(href)}</a>' if allow_links else _esc(href))
+            href = m.group("auto") or m.group("bare")
+            out.append(_link(href, _esc(href)) if allow_links else _esc(href))
     out.append(_emphasis(_esc(text[pos:])))
     return "".join(out)
 
@@ -304,7 +324,11 @@ _UL_RE = re.compile(r"^[-*+]\s+(.*)$")
 _OL_RE = re.compile(r"^\d{1,3}[.)]\s+(.*)$")
 
 
-def markdown_to_html(md: str) -> str:
+def _plain(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", text.lower()).strip()
+
+
+def markdown_to_html(md: str, title: str | None = None) -> str:
     """Convert story Markdown to HTML.
 
     Supports paragraphs, # headings (shifted down one level: the page title is the h1),
@@ -315,6 +339,10 @@ def markdown_to_html(md: str) -> str:
     """
     text = md.replace("\r\n", "\n").replace("\r", "\n")
     text = _FRONT_MATTER_RE.sub("", text, count=1)
+    # A first line "# <the lookout's name>" repeats the page's own h1: drop it.
+    first = re.match(r"\A\s*#(?!#)\s*([^\n]*)\n", text)
+    if first and title and _plain(first.group(1)) and _plain(first.group(1)) in _plain(title):
+        text = text[first.end():]
     lines = text.split("\n")
 
     # 1. Pull out footnote definitions (with indented continuation lines).
@@ -592,7 +620,7 @@ def build(
 
         story = stories_dir / f"{rid}.md"
         if story.is_file():
-            rec["story_html"] = markdown_to_html(story.read_text(encoding="utf-8"))
+            rec["story_html"] = markdown_to_html(story.read_text(encoding="utf-8"), title=rec.get("name"))
             stories += 1
         _write_json(out / "t" / f"{rid}.json", rec)
         features.append(feature(rec))

@@ -90,15 +90,23 @@ describe('story Markdown converter (pipeline/build_site_data.py)', () => {
   it('drops dangerous link targets but keeps the link text', () => {
     const out = pythonStory('[click](javascript:alert(1)) [ok](https://nhlr.org/x?a=1&b=2) [data](data:text/html;base64,xx)\n');
     expect(out).not.toMatch(/javascript:|data:/i);
-    expect(out).toContain('<a href="https://nhlr.org/x?a=1&amp;b=2">ok</a>');
+    expect(out).toContain('<a href="https://nhlr.org/x?a=1&amp;b=2" rel="noopener noreferrer">ok</a>');
     expect(out).toContain('click');
     expect(isSafeStoryHtml(out)).toBe(true);
+  });
+
+  it('links bare URLs in footnotes, keeping trailing punctuation outside', () => {
+    const out = pythonStory('Text.[^1]\n\n[^1]: Hager Mountain, NHLR, http://nhlr.org/lookouts/us/or/hager-mountain-lookout/ (accessed 2026-10-04).');
+    expect(out).toContain('<a href="http://nhlr.org/lookouts/us/or/hager-mountain-lookout/" rel="noopener noreferrer">');
+    expect(out).toContain('</a> (accessed 2026-10-04).');
+    expect(isSafeStoryHtml(out)).toBe(true);
+    expect(isSafeStoryHtml('<a href="https://x.org/" rel="opener">x</a>')).toBe(false);
   });
 
   it('cannot break out of an attribute with quotes', () => {
     const out = pythonStory('[x](https://a.org/"onmouseover="alert(1))\n');
     // The quotes stay inside the href value as &quot;, so the tag has exactly one attribute.
-    expect(out).toMatch(/<a href="[^"]*&quot;onmouseover=&quot;[^"]*">x<\/a>/);
+    expect(out).toMatch(/<a href="[^"]*&quot;onmouseover=&quot;[^"]*" rel="noopener noreferrer">x<\/a>/);
     expect(out).not.toMatch(/<a [^>]*"\s+onmouseover/);
     expect(isSafeStoryHtml(out)).toBe(true);
   });

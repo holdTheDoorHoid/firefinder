@@ -7,7 +7,7 @@ import { feetAndMetres, formatCoords, formatDate, formatDistance, distanceMetres
 import { html, raw, safeUrl, isSafeStoryHtml, type SafeHtml } from '../lib/html.ts';
 import { fillFor, markerSvg, rentBadgeSvg, shapeFor } from '../lib/icons.ts';
 import { MARKS, MARK_LABELS } from '../lib/checklist.ts';
-import { builtYear, isRentable, type Conflict, type SourceInfo, type TowerProps, type TowerRecord } from '../lib/types.ts';
+import { builtYear, isRentable, type Conflict, type SourceInfo, type TowerEvent, type TowerProps, type TowerRecord } from '../lib/types.ts';
 import { eyeHeight, megabytes, reconstructionNote } from '../view3d/describe.ts';
 import { estimateBytes, panoramaLevels, planTiles } from '../view3d/tiles.ts';
 import {
@@ -49,6 +49,7 @@ const SHORT_SOURCE: Record<string, string> = {
   ridb: 'recreation.gov',
   osm: 'OpenStreetMap',
   wikidata: 'Wikidata',
+  research: 'Firefinder research',
 };
 
 export function sourceShortName(id: string | null | undefined, ctx: RenderContext): string {
@@ -337,14 +338,39 @@ export function timeline(r: TowerRecord, ctx: RenderContext): SafeHtml {
   return html`<ol class="timeline">${events.map(
     (e) => html`<li>
       <span class="tl-year">${e.year ?? 'Date unknown'}</span>
-      <span class="tl-body"><span class="tl-what">${eventLabel(e.event)}</span>${e.note ? html`<span class="tl-note">${e.note}</span>` : ''}${e.from ? html`<span class="tl-src">Source: ${sourceShortName(e.from, ctx)}</span>` : ''}</span>
+      <span class="tl-body"><span class="tl-what">${eventLabel(e.event)}</span>${e.note ? html`<span class="tl-note">${e.note}</span>` : ''}${eventSource(e, ctx)}</span>
     </li>`,
   )}</ol>`;
 }
 
+/** "Source: nhlr.org" linked to the cited page, or the source's short name. */
+function eventSource(e: TowerEvent, ctx: RenderContext): SafeHtml | string {
+  const url = safeUrl(e.source_url);
+  if (url && /^https?:/i.test(url)) {
+    let host = url;
+    try {
+      host = new URL(url).hostname.replace(/^www\./, '');
+    } catch {
+      /* keep the URL */
+    }
+    return html`<span class="tl-src">Source: <a href="${url}" rel="noopener noreferrer">${host}</a></span>`;
+  }
+  return e.from ? html`<span class="tl-src">Source: ${sourceShortName(e.from, ctx)}</span>` : '';
+}
+
+/** "Researched 4 October 2026, fact-checked." above a researched story. */
+export function researchStamp(r: TowerRecord): SafeHtml | string {
+  const s = r.research;
+  if (!s?.researched) return '';
+  const when = formatDate(s.researched) ?? s.researched;
+  if (s.verdict === 'pass' || s.verdict === 'fixed') return html`<p class="research-stamp">Researched ${when}, fact-checked.</p>`;
+  if (s.verdict === 'fail') return html`<p class="research-stamp">Researched ${when}. The fact-check found problems; a revised version is on its way.</p>`;
+  return html`<p class="research-stamp">Researched ${when}. Not yet fact-checked.</p>`;
+}
+
 export function storyBlock(r: TowerRecord, ctx: RenderContext): SafeHtml {
   if (r.story_html) {
-    if (isSafeStoryHtml(r.story_html)) return html`<div class="prose story">${raw(r.story_html)}</div>`;
+    if (isSafeStoryHtml(r.story_html)) return html`${researchStamp(r)}<div class="prose story">${raw(r.story_html)}</div>`;
     return html`<p class="notice tone-caution">This lookout's story could not be shown because it contains markup we do not allow. It has been flagged for a fix.</p>`;
   }
   return html`<p class="muted">We have not written this lookout's story yet. ${r.status === 'standing' ? 'Stories for standing and rentable lookouts come first.' : ''} Know something about its history? <a href="${editIssueUrl(r, ctx)}">Tell us</a>.</p>`;
@@ -501,6 +527,11 @@ const FIELD_NAMES: Record<string, string> = {
   name: 'name',
   design: 'design',
   links: 'links',
+  summary: 'summary',
+  visit: 'visiting details',
+  staffing: 'staffing',
+  access: 'access',
+  verification: 'fact-check',
 };
 
 export function sourcesSection(r: TowerRecord, ctx: RenderContext): SafeHtml {
@@ -650,6 +681,7 @@ export function renderTowerMain(r: TowerRecord, ctx: RenderContext): SafeHtml {
     <p class="eyebrow">Fire lookout · ${placeLine(r)}</p>
     <h1>${r.name}</h1>
     ${other.length ? html`<p class="aka">Also known as ${other.join(', ')}</p>` : ''}
+    ${r.summary ? html`<p class="t-summary">${r.summary}</p>` : ''}
     ${badges(r)}
     <div class="notices">
       ${accessInfo(r).tone === 'stop' ? accessNotice(r) : ''}
@@ -741,6 +773,7 @@ export function renderPanel(r: TowerRecord, ctx: RenderContext, opts: { hiddenBy
     <p class="eyebrow">Fire lookout · ${placeLine(r)}</p>
     <h2 id="panel-title" tabindex="-1">${r.name}</h2>
     ${badges(r)}
+    ${r.summary ? html`<p class="panel-summary">${r.summary}</p>` : ''}
     ${opts.hiddenByFilters ? html`<p class="notice tone-unknown" role="note">${INFO}<span>Your filters hide this lookout on the map. <button type="button" class="linklike" data-action="reset-filters">Reset filters</button></span></p>` : ''}
     ${accessNotice(r, { compact: true })}
     ${movedNotice(r, ctx)}

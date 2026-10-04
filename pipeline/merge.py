@@ -255,10 +255,10 @@ NEVER_BUILT_STATUS = {"proposed", "planned", "never built"}
 NOT_A_LOOKOUT_SECTION = "sites determined not to have been used as wildland fire lookouts"
 
 TOWER_KEYS = [
-    "id", "name", "other_names", "country", "region", "county", "location", "elevation_m",
+    "id", "name", "summary", "other_names", "country", "region", "county", "location", "elevation_m",
     "kind", "design", "height_m", "status", "status_note", "registers", "agency", "ownership", "access",
     "staffing", "visit", "rental", "events", "photos", "links", "sources", "conflicts",
-    "verification", "locked", "hidden", "hidden_reason", "updated",
+    "research", "verification", "locked", "hidden", "hidden_reason", "updated",
 ]
 FIELD_ORDER = [
     "name", "location", "county", "elevation_m", "kind", "design", "height_m", "status",
@@ -835,6 +835,8 @@ class Tower:
     origin: "Tower | None" = None       # the tower at the site this structure came from
     origin_alternatives: list = field(default_factory=list)
     slug_text: str | None = None        # what the id is made from, when not the plain name
+    source_status: tuple = (None, None)  # (status, source) as the sources gave it, before research
+    source_kind: tuple = (None, None)
 
     @property
     def sources(self) -> set:
@@ -1510,7 +1512,7 @@ def link_norm(url: str) -> str:
     return f"{host}{path}?{p.query}" if p.query else f"{host}{path}"
 
 
-LINK_KIND_ORDER = ["relocated_from", "relocated_to", "register", "rental", "association", "wikipedia", "site", "agency", "website",
+LINK_KIND_ORDER = ["relocated_from", "relocated_to", "register", "rental", "reference", "association", "wikipedia", "site", "agency", "website",
                    "category", "commons", "wikidata", "osm"]
 
 
@@ -1733,7 +1735,11 @@ def link_relocations(resolved: list[tuple[Tower, dict]]) -> list[dict]:
 
 
 def _add_link(rec: dict, link: dict) -> None:
-    links = [l for l in rec.get("links") or [] if not (isinstance(l, dict) and l.get("kind") == link["kind"] and l.get("id") == link["id"])]
+    if link.get("id"):
+        drop = lambda l: l.get("kind") == link["kind"] and l.get("id") == link["id"]
+    else:
+        drop = lambda l: isinstance(l.get("url"), str) and link_norm(l["url"]) == link_norm(link["url"])
+    links = [l for l in rec.get("links") or [] if not (isinstance(l, dict) and drop(l))]
     links.append(link)
     links.sort(key=lambda l: LINK_KIND_ORDER.index(l["kind"]) if l.get("kind") in LINK_KIND_ORDER else len(LINK_KIND_ORDER))
     rec["links"] = links
@@ -1826,6 +1832,7 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
     v, s = pick("elevation_m", members, lambda m: round(float(m.raw["elevation_m"]), 1) if _num(m.raw.get("elevation_m")) else None)
     set_field("elevation_m", v, s)
     v, s = pick("kind", members, lambda m: m.raw.get("kind") if m.raw.get("kind") not in (None, "unknown") else None)
+    tower.source_kind = (v, s.source if s else None)
     if v is None and "kind" not in rec:
         v = "unknown"
     set_field("kind", v, s)
@@ -1837,6 +1844,7 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
     if status is None and "status" not in rec:
         status = "unknown"
     set_field("status", status, status_src)
+    tower.source_status = (status, status_src.source if status_src else None)
     # A note on the status from a name ("(likely gone)", "(unknown)"), shown with the status.
     if "status" not in locked:
         note, note_src = pick("status", members, lambda m: (m.status_info or {}).get("note") if not (m.status_info or {}).get("access") else None)
@@ -1975,7 +1983,8 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
             contributed[tower.history.key].add("events")
         if events or "events" not in rec:
             old_other = [e for e in rec.get("events") or [] if isinstance(e, dict) and (e.get("event"), e.get("year")) not in seen_ev
-                         and e.get("from") not in {m.source for m in members} and "moved_to" not in e]
+                         and e.get("from") not in {m.source for m in members} and "moved_to" not in e
+                         and e.get("from") != "research"]
             events.extend(old_other)
             events.sort(key=lambda e: (e.get("year") if isinstance(e.get("year"), int) else 9999, e["event"]))
             rec["events"] = events
@@ -2062,7 +2071,8 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
             refs.append({"source": m.source, "key": m.key, "fields": fields})
         member_keys = {m.key for m in members}
         for s_ in ex.get("sources") or []:
-            if isinstance(s_, dict) and s_.get("key") not in member_keys and s_.get("source") not in present:
+            if isinstance(s_, dict) and s_.get("key") not in member_keys and s_.get("source") not in present \
+                    and s_.get("source") != "research":
                 stale = dict(s_)
                 stale["fields"] = []
                 stale.setdefault("missing_since", today)
@@ -2238,6 +2248,248 @@ def verification_for(rec: dict, members: list[Rec]) -> str:
 
 
 # ---------------------------------------------------------------------------------------
+# Research overlay: data/research/<id>.json on top of the source merge (DESIGN.md 3.5)
+# ---------------------------------------------------------------------------------------
+
+# Research facts that replace the source-merged value (unless the field is locked).
+RESEARCH_FACTS = ("design", "height_m", "status", "status_note", "kind", "staffing", "access", "visit", "agency")
+VERIFIED_VERDICTS = {"pass", "fixed"}
+# Research event names that are plainly a vocabulary event under another word. Anything else
+# outside data/vocab.json is left out of the timeline and listed in the report.
+RESEARCH_EVENT_ALIASES = {"unstaffed": "staffed_last", "decommissioned": "abandoned",
+                          "renovated": "restored", "restoration_completed": "restored"}
+RESEARCH_FIELD_ORDER = ["summary", "kind", "design", "height_m", "status", "agency", "access", "staffing",
+                        "visit", "events", "photos", "links", "verification"]
+
+
+def _vocab() -> dict:
+    try:
+        return json.loads((DATA / "vocab.json").read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+def load_research(research_dir: Path | None) -> tuple[dict[str, dict], list[dict]]:
+    """Research files by tower id, and problems that stop a file from being used."""
+    found: dict[str, dict] = {}
+    problems: list[dict] = []
+    if research_dir is None or not research_dir.is_dir():
+        return found, problems
+    for path in sorted(research_dir.glob("*.json")):
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as e:
+            problems.append({"file": path.name, "problem": f"not valid JSON: {e}"})
+            continue
+        if not isinstance(data, dict):
+            problems.append({"file": path.name, "problem": "not a JSON object"})
+            continue
+        rid = data.get("id")
+        if rid != path.stem:
+            problems.append({"file": path.name, "problem": f"id {rid!r} does not match the file name"})
+            continue
+        found[rid] = data
+    return found, problems
+
+
+def _cite_urls(res: dict, cites) -> list[str]:
+    by_n = {s.get("n"): s.get("url") for s in res.get("sources") or [] if isinstance(s, dict)}
+    out = []
+    for n in cites if isinstance(cites, list) else [cites] if cites is not None else []:
+        url = by_n.get(n)
+        if isinstance(url, str) and url.startswith(("http://", "https://")) and url not in out:
+            out.append(url)
+    return out
+
+
+def research_status_note(facts: dict, status: str | None) -> str | None:
+    """The research status note, shown beside the status. Only for a status that needs a
+    caveat (gone, ruins, moved, replica, unknown): pilot files used it on standing lookouts for
+    design history ("Hip roof replaced the original flat roof in 1992") and editor remarks,
+    which belong in the story or notes_for_editor."""
+    note = facts.get("status_note")
+    if not (isinstance(note, str) and note.strip()) or status == "standing":
+        return None
+    return note.strip()
+
+
+def apply_research(t: Tower, rec: dict, res: dict, vocab: dict) -> dict:
+    """Lay one research file over a merged tower. Returns what the report needs:
+    {"corrections": [...], "problems": [...], "fields": [...]}. Locked fields win; corrections
+    are never applied."""
+    locked = set(rec.get("locked") or [])
+    rid = rec["id"]
+    when = res.get("researched") if isinstance(res.get("researched"), str) else None
+    problems: list[str] = []
+    fields: set[str] = set()
+    statuses = set(vocab.get("status") or [])
+    kinds = set(vocab.get("kind") or [])
+    access_levels = set(vocab.get("access") or [])
+    staffing_values = set(vocab.get("staffing") or [])
+    event_names = set(vocab.get("event") or [])
+
+    # Summary
+    summary = res.get("summary")
+    if isinstance(summary, str) and summary.strip() and "summary" not in locked:
+        rec["summary"] = summary.strip()
+        fields.add("summary")
+
+    # Facts
+    facts = res.get("facts") if isinstance(res.get("facts"), dict) else {}
+    conflicts = [c for c in rec.get("conflicts") or []
+                 if not any(isinstance(v, dict) and v.get("source") == "research" for v in c.get("values") or [])]
+
+    def research_conflict(field: str, new, source_value: tuple) -> None:
+        old, old_src = source_value
+        if old in (None, "unknown") or new == old:
+            return
+        if field == "status" and status_group(old) == status_group(new):
+            return
+        values = [{"source": "research", "value": new}]
+        existing = next((c for c in conflicts if c.get("field") == field), None)
+        if existing is not None:
+            conflicts.remove(existing)
+            values += [v for v in existing.get("values") or [] if v.get("source") != "research"]
+        else:
+            values.append({"source": old_src or "sources", "value": old})
+        what = {"status": "status", "kind": "kind of structure"}[field]
+        conflicts.insert(0, {"field": field, "values": values, "distance_m": None,
+                             "note": f"Research{' (' + when + ')' if when else ''} gives {new} where the source records give "
+                                     f"{old}. The page shows the researched {what}; please tell us if it is wrong."})
+
+    for key in RESEARCH_FACTS:
+        if key not in facts:
+            continue
+        value = facts[key]
+        target = "status" if key == "status_note" else key
+        if target in locked:
+            continue
+        if key == "status_note":
+            continue  # applied with "status" below, or on its own when status is absent
+        if value is None:
+            continue
+        ok = True
+        if key == "status":
+            ok = value in statuses
+        elif key == "kind":
+            ok = value in kinds
+        elif key == "height_m":
+            ok = _num(value)
+        elif key in ("design", "agency"):
+            ok = isinstance(value, str) and bool(value.strip())
+        elif key == "access":
+            ok = isinstance(value, dict) and value.get("level") in access_levels
+        elif key == "staffing":
+            ok = isinstance(value, dict) and value.get("status") in staffing_values
+        elif key == "visit":
+            ok = isinstance(value, dict)
+        if not ok:
+            problems.append(f"facts.{key} {value!r} is not valid; not applied")
+            continue
+        if key == "status":
+            research_conflict("status", value, t.source_status)
+            rec["status"] = value
+            rec["status_note"] = research_status_note(facts, value)
+        elif key == "kind":
+            research_conflict("kind", value, t.source_kind)
+            rec["kind"] = value
+        elif key == "visit":
+            visit = dict(rec.get("visit") or {})
+            visit.update({k: v for k, v in value.items() if k in ("climbable", "drive_up", "trail_note") and v is not None})
+            rec["visit"] = visit
+        elif key in ("access", "staffing"):
+            rec[key] = {k: value.get(k) for k in (("level", "note") if key == "access" else ("status", "as_of"))}
+        else:
+            rec[key] = value.strip() if isinstance(value, str) else round(float(value), 1)
+        fields.add(key)
+    if "status" not in facts and "status" not in locked and research_status_note(facts, rec.get("status")):
+        rec["status_note"] = research_status_note(facts, rec.get("status"))
+        fields.add("status")
+    if "conflicts" not in locked:
+        rec["conflicts"] = conflicts
+
+    # Events: union with the sources' events, same year + event once (research's, with its citation)
+    if "events" not in locked:
+        events = [e for e in rec.get("events") or [] if isinstance(e, dict)]
+        for ev in res.get("events") or []:
+            if isinstance(ev, dict) and ev.get("event") in RESEARCH_EVENT_ALIASES:
+                ev = {**ev, "event": RESEARCH_EVENT_ALIASES[ev["event"]]}
+            if not isinstance(ev, dict) or ev.get("event") not in event_names:
+                name = ev.get("event") if isinstance(ev, dict) else ev
+                problems.append(f"event {name!r} ({ev.get('year') if isinstance(ev, dict) else '?'}) is not in vocab.event; left out of the timeline")
+                continue
+            year = ev.get("year") if isinstance(ev.get("year"), int) else None
+            urls = _cite_urls(res, ev.get("cite"))
+            prev = [e for e in events if e.get("event") == ev["event"] and e.get("year") == year]
+            note = ev.get("note") or next((e.get("note") for e in prev if e.get("note")), None)
+            events = [e for e in events if e not in prev]
+            new = {"year": year, "event": ev["event"], "note": note, "from": "research",
+                   "source_url": urls[0] if urls else None}
+            if len(urls) > 1:
+                new["source_urls"] = urls
+            events.append(new)
+            fields.add("events")
+        events.sort(key=lambda e: (e.get("year") if isinstance(e.get("year"), int) else 9999, e["event"]))
+        rec["events"] = events
+
+    # Photos: appended, credit and licence kept, de-duplicated by URL
+    if "photos" not in locked:
+        photos = list(rec.get("photos") or [])
+        seen = {p.get("url") for p in photos if isinstance(p, dict)}
+        for ph in res.get("photos") or []:
+            if not isinstance(ph, dict) or not isinstance(ph.get("url"), str) or not ph["url"].startswith(("http://", "https://")):
+                problems.append(f"photo {ph!r} has no usable url; not applied")
+                continue
+            fields.add("photos")  # supplied, whether added now or on an earlier run
+            if ph["url"] in seen:
+                continue
+            seen.add(ph["url"])
+            photos.append({"file": None, "thumb": None, "url": ph["url"], "source_url": ph.get("source_url"),
+                           "credit": ph.get("credit"), "license": ph.get("license"), "caption": ph.get("caption"),
+                           "year": ph.get("year") if isinstance(ph.get("year"), int) else None})
+            fields.add("photos")
+        rec["photos"] = photos
+
+    # Cited sources become reference links
+    if "links" not in locked:
+        for src in res.get("sources") or []:
+            if not isinstance(src, dict) or not isinstance(src.get("url"), str) or not src["url"].startswith(("http://", "https://")):
+                continue
+            norm = link_norm(src["url"])
+            fields.add("links")  # supplied, whether added now or on an earlier run
+            if any(link_norm(l["url"]) == norm for l in rec.get("links") or [] if isinstance(l, dict) and isinstance(l.get("url"), str)):
+                continue
+            title = str(src.get("title") or "").strip() or urlsplit(src["url"]).netloc
+            publisher = str(src.get("publisher") or "").strip()
+            label = f"{title} ({publisher})" if publisher and publisher.lower() not in title.lower() else title
+            _add_link(rec, {"label": label, "url": src["url"], "kind": "reference"})
+            fields.add("links")
+
+    # Verification and the research stamp the page shows
+    check = res.get("verification") if isinstance(res.get("verification"), dict) else {}
+    verdict = check.get("verdict")
+    if "verification" not in locked:
+        rec["verification"] = "verified" if verdict in VERIFIED_VERDICTS else "researched"
+        fields.add("verification")
+    rec["research"] = {"researched": when, "checked": check.get("checked"), "verdict": verdict,
+                       "confidence": res.get("confidence")}
+
+    # Provenance
+    if "sources" not in locked:
+        refs = [s_ for s_ in rec.get("sources") or [] if not (isinstance(s_, dict) and s_.get("source") == "research")]
+        refs.append({"source": "research", "key": f"research:{rid}", "fields": [f for f in RESEARCH_FIELD_ORDER if f in fields]})
+        rec["sources"] = refs
+
+    corrections = []
+    for c in res.get("corrections") or []:
+        if isinstance(c, dict):
+            corrections.append({"id": rid, "name": rec.get("name"), "field": c.get("field"), "current": c.get("current"),
+                                "proposed": c.get("proposed"), "evidence": c.get("evidence"),
+                                "sources": _cite_urls(res, c.get("cite")), "researched": when})
+    return {"corrections": corrections, "problems": problems, "fields": sorted(fields)}
+
+
+# ---------------------------------------------------------------------------------------
 # Ids and output
 # ---------------------------------------------------------------------------------------
 
@@ -2329,12 +2581,13 @@ def near_misses(towers: list[tuple[Tower, dict]]) -> list[dict]:
 
 def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: str,
         dry_run: bool = False, log=print, photos_manifest: dict | None = None,
-        photos_manifest_path: Path | None = None) -> dict:
+        photos_manifest_path: Path | None = None, research_dir: Path | None = None) -> dict:
     # `photos_manifest` (an already-loaded dict) wins when given -- tests pass {} for
     # isolation; otherwise load from `photos_manifest_path` (default data/photos_manifest.json).
     if photos_manifest is None:
         photos_manifest = load_photo_manifest(photos_manifest_path or DATA / "photos_manifest.json")
     headers, records = load_sources(sources_dir, log)
+    research, research_problems = load_research(research_dir)
     existing = load_towers(towers_dir, log)
     m = Matcher(log)
     paths: dict[int, Path] = {}
@@ -2362,6 +2615,20 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
     assign_ids(resolved, taken)
     relocations = link_relocations(resolved)
 
+    # Research on top of the sources, every run (so a re-merge never loses it).
+    vocab = _vocab()
+    by_id = {t.id: (t, r) for t, r in resolved}
+    research_rows: dict[str, dict] = {}
+    for rid, res in sorted(research.items()):
+        if rid not in by_id:
+            research_problems.append({"file": f"{rid}.json", "problem": "no tower has this id"})
+            continue
+        t, r = by_id[rid]
+        r["id"] = rid
+        research_rows[rid] = apply_research(t, r, res, vocab)
+        for prob in research_rows[rid]["problems"]:
+            research_problems.append({"file": f"{rid}.json", "problem": prob})
+
     written = unchanged = 0
     for t, r in resolved:
         r["id"] = t.id
@@ -2377,6 +2644,16 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
                 path.write_text(dump(ordered(r)), encoding="utf-8")
 
     report = build_report(m, resolved, headers, today, written, unchanged, relocations)
+    report["research"] = {
+        "files": len(research) + sum(1 for p in research_problems if "JSON" in p["problem"] or "file name" in p["problem"]),
+        "applied": len(research_rows),
+        "by_verdict": dict(sorted(Counter(str((res.get("verification") or {}).get("verdict") if isinstance(res.get("verification"), dict) else None)
+                                          for rid, res in research.items() if rid in research_rows).items())),
+        "problems": research_problems,
+        "notes_for_editor": [{"id": rid, "note": res["notes_for_editor"]} for rid, res in sorted(research.items())
+                             if rid in research_rows and isinstance(res.get("notes_for_editor"), str) and res["notes_for_editor"].strip()],
+    }
+    report["research_corrections"] = [c for rid in sorted(research_rows) for c in research_rows[rid]["corrections"]]
     if report_path and not dry_run:
         report_path.parent.mkdir(parents=True, exist_ok=True)
         report_path.write_text(json.dumps(report, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -2515,12 +2792,14 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--sources", type=Path, default=DATA / "sources")
     ap.add_argument("--towers", type=Path, default=DATA / "towers")
     ap.add_argument("--report", type=Path, default=DATA / "merge_report.json")
+    ap.add_argument("--research", type=Path, default=DATA / "research",
+                    help="research files laid over the merge (default: data/research)")
     ap.add_argument("--today", default=dt.date.today().isoformat(), help="date stamped on changed records (YYYY-MM-DD)")
     ap.add_argument("--dry-run", action="store_true", help="match and report, but write nothing")
     ap.add_argument("--quiet", action="store_true")
     args = ap.parse_args(argv)
     log = (lambda *a, **k: None) if args.quiet else print
-    rep = run(args.sources, args.towers, args.report, args.today, args.dry_run, log)
+    rep = run(args.sources, args.towers, args.report, args.today, args.dry_run, log, research_dir=args.research)
     c = rep["counts"]
     log(f"{c['towers']} towers ({c['visible']} visible, {c['hidden']} hidden); "
         f"{c['multi_source_towers']} from 2+ sources; {rep['files']['written']} written, "
