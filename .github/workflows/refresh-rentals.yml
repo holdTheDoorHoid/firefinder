@@ -76,7 +76,8 @@ jobs:
       - name: Check whether anything under data/ changed
         id: diff
         run: |
-          if git status --porcelain -- data | grep -q .; then
+          # merge_report.json alone (dates, counts) is not a reason to commit or redeploy.
+          if git status --porcelain -- data ':!data/merge_report.json' | grep -q .; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
           else
             echo "changed=false" >> "$GITHUB_OUTPUT"
