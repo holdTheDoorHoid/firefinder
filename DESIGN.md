@@ -50,6 +50,7 @@ Cache raw responses under `data/raw/` (git-ignored) so nothing is fetched twice.
 | **Wikidata** | Q748998 "fire lookout tower" (~319 with coords): Wikipedia links, NRHP ids (P649), Commons images (P18), inception | SPARQL | CC0 |
 | **Regional** | firelookout.com state maps (MT: 134 `GV_Draw_Marker` points, plus WA/OR/ID/WY/SD); PA StoryMap (48 towers, `…/items/ed47c97ebe7246868ce8ef3e7139a0b4/data?f=json`); andyarthur.org NY towers (CC BY 3.0); CSKT Flathead Reservation (6); fire-lookouts.org Sierra NF (~18, reuse allowed with credit); idahofirelookouts.com (not yet surveyed) | Mixed | Per source |
 | **Gap-state regional** (2026-10-04) | easternuslookouts.weebly.com / centraluslookouts.weebly.com, the same hobby-site template split by region (one page per tower; AL/CT/FL/GA/KY/MA/MI/MS/NJ/NC/PA/SC/TN and AR/LA/MO/OK); Wikipedia *List of fire lookout towers in Louisiana* and *List of New Jersey Forest Fire Service fire towers* (coordinate-bearing wikitables, CC BY-SA, facts only); michiganfiretower.com (a small young single-author site, 8 towers); tnlandforms.us (Tom Dunigan's independently surveyed GA/NC/TN tower lists, 929 towers, every one with coordinates) | Mixed | Per source; no licence stated on the two weebly sites or tnlandforms.us |
+| **Links-page sites** (2026-10-08) | The sites FFLA's links page (`firelookout.org/resources/links/`) points to, surveyed in `docs/sources/links_survey.md`. Ron Kemnow's *western* weebly sites (westlookouts, californialookouts, idaholookouts, montanalookouts, oregonlookouts, washingtonlookouts; ~3,700 pages, ~60% with a map-widget position), and the eastern / central sites now read for **every** state they cover (they had been limited to the gap states, and a mislabelled nav header had hidden 178 Michigan, 27 Missouri and 30 Indiana towers); TrailChick's Washington guide (93 visited lookouts with coordinates); *Every Lookout in Oregon* (155 standing lookouts, no coordinates, matched by register number or name); the per-lookout pages of FFLA chapters and Friends groups (`ffla_groups`: links, and the California-South chapter's table of register numbers and conditions); WillhiteWeb.com's Washington lookout pages (names and links) | HTML | None stated on any; facts and links only |
 | **FFLA resources** | `firelookout.org/resources/…`: *Lookout Rentals* (rentals outside recreation.gov: state parks and private), *Lookout Types and Historic Plans* (for the designs guide), *Historical Reference Documents*, *Staffing / Volunteer Opportunities* | HTML | Facts + links |
 | Later | USGS historical topos (public domain, `ngmdb.usgs.gov/arcgis/rest/services/topoview/ustOverlay(Auto)/MapServer`), NRHP NPS dataset, Library of Congress HABS/HAER (measured drawings, public domain), Forest History Society, state forestry lists, newspapers | — | — |
 
@@ -175,7 +176,9 @@ picked up with no code change (unknown sources rank last in every field).
 **Matching**, per source in the order NHLR, FFLOS, FFLA, RIDB, fire-lookouts.org, tnlandforms.us,
 the NJ Forest Fire Service Wikipedia table, firelookout.com, idahofirelookouts.com,
 michiganfiretower.com, PA StoryMap, andyarthur.org, the Wikipedia per-state lookout lists, CSKT,
-the easternuslookouts and centraluslookouts weebly sites, Wikidata, OSM:
+the easternuslookouts and centraluslookouts weebly sites, Wikidata, OSM, and then (2026-10-08) Ron
+Kemnow's western weebly sites, TrailChick (WA), Every Lookout in Oregon, the FFLA chapter and Friends
+pages, and WillhiteWeb (WA):
 
 1. **Key**: the record's key is already in a tower's `sources[].key`.
 2. **Register number**. NHLR and FFLOS number their entries separately ("NHLR US 674" is
@@ -184,8 +187,9 @@ the easternuslookouts and centraluslookouts weebly sites, Wikidata, OSM:
    match more than 5 km away is not taken when the record is a relocated or replica entry, or
    when there is a matching tower on the spot (the review file lists both cases).
 3. **Place and name**: towers nearby in the same state, best name first, then nearest.
-   Accepted when names agree strongly (score ≥ 0.85) within 1.5 km (3 km for idahofirelookouts.com
-   and RIDB, whose pins are rougher; 15 km for CSKT's dead-reckoned positions); when names agree
+   Accepted when names agree strongly (score ≥ 0.85) within 1.5 km (3 km for idahofirelookouts.com,
+   RIDB and Ron Kemnow's western weebly sites, whose pins are rougher: 95% of the western sites' pins
+   fall within 1.5 km of the tower they name, 97.5% within 3 km; 15 km for CSKT's dead-reckoned positions); when names agree
    partly (≥ 0.5) or one is generic ("Fire Tower", unnamed) within 400 m; or within 100 m whatever
    the names (different names for one tower are common: Pequawket = Kearsarge North) — **except**
    for idahofirelookouts.com and RIDB: if the name there is clearly different (score < 0.5) from
@@ -255,6 +259,16 @@ node + way (100 m; 50 m if unnamed), Wikidata (100 m), RIDB facility + campgroun
 | rental | RIDB only. If the tower's status is gone/ruins (Flag Point, OR: FFLA "Burned 2026"), warn, don't hide: the listing is kept with `available: false` (not counted or filtered as rentable) and a `warning` ("FFLA reports this lookout burned in 2026, but recreation.gov still lists it. Check with the forest before booking."), which the site shows above the listing link |
 | registers | union of all sources; on a tower with an NHLR/FFLOS record, that register's own number wins and a different copy goes to `conflicts` |
 | events, photos, links | union, de-duplicated (events by event + year, photos by URL, links by URL) |
+
+The links-page sources (2026-10-08) rank **last** in every field they supply, behind OSM and
+Wikidata: Ron Kemnow's western weebly sites (name, location, status, county, design, height, agency,
+ownership: the same fields as the eastern and central sites), TrailChick (location, county,
+elevation, built year and its event, design, height, agency, ownership, status), Every Lookout in
+Oregon (elevation, built year and event, design, height, agency, status), the FFLA chapter and
+Friends pages (agency and status from the California-South table, plus the destroyed event, and the
+links) and WillhiteWeb (a link, and a "standing" status for its 57 Cascades standing lookouts). The
+California-South chapter's "Destroyed in 2024 Line Fire" for Keller Peak therefore shows as a status
+conflict, not an overrule, until the owner or the FFLA refresh agrees.
 
 **Ownership and access** only where a source says so: CSKT → tribal, access `permission`;
 RIDB (USFS/BLM) → federal; NY DEC and PA state forests → state (via those extracts); an agency
