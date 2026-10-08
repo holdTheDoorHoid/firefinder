@@ -98,6 +98,7 @@ import pathlib
 import re
 import sys
 from collections import Counter
+from html import unescape as html_unescape
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from _common import FetchError, fetch_text, ft_to_m, slugify, write_source_json  # noqa: E402
@@ -128,7 +129,8 @@ SITES = {
         "nav_path": "/",
         "nav_cache": "index.html",
         "title": 'FOREST LOOKOUTS -- eastern US (easternuslookouts.weebly.com)',
-        "states": ["AL", "CT", "FL", "GA", "KY", "MA", "MI", "MS", "NJ", "NC", "PA", "SC", "TN"],
+        "states": ["AL", "CT", "DE", "FL", "GA", "IN", "KY", "MA", "MD", "ME", "MI", "MS", "NC",
+                   "NH", "NJ", "NY", "OH", "PA", "RI", "SC", "TN", "VA", "VT", "WV"],
     },
     "central": {
         "source": "central_us_lookouts",
@@ -136,7 +138,7 @@ SITES = {
         "nav_path": "/",
         "nav_cache": "index.html",
         "title": 'FOREST LOOKOUTS -- central US (centraluslookouts.weebly.com)',
-        "states": ["AR", "LA", "MO", "OK"],
+        "states": ["AR", "IA", "IL", "KS", "LA", "MN", "MO", "OK", "TX", "WI"],
     },
 }
 
@@ -158,6 +160,25 @@ DECORATIVE_IMAGE_RE = re.compile(
     r"lighthouse-blue-line|go-button|aws-logo|nophoto|ccc-logo|headstone|\d{8}wings", re.I
 )
 BORING_ALTS = {"picture", "image", "photo", ""}
+
+# The sites' sidebar nav is hand-edited and has three kinds of slip, all found by comparing each
+# header's towers with the towers' own pages (2026-10-08, links-survey):
+#   - a "continuation" header carries the wrong state name: easternuslookouts.weebly.com's
+#     /georgia1.html ("Georgia") lists 30 more *Indiana* towers (Borden ... Winamac) and
+#     /delaware1.html ("Delaware") lists 178 more *Michigan* towers (Demond Hill ... Yates), and
+#     centraluslookouts.weebly.com's /texas1.html ("Texas") lists 27 more *Missouri* towers
+#     (Thomasville ... Wolf Mountain). Taken at face value the first put Indiana towers in Georgia
+#     and the others dropped every one of those Michigan and Missouri towers.
+#   - a state marker that is not a link to a state page at all: "WEST VIRGINIA >" and "MICHIGAN. >"
+#     sit inside the Virginia and Michigan runs, with trailing arrow/period text.
+#   - a state with no marker (nothing in this nav).
+# HEADER_SLUG_STATE overrides a header by its link target; marker text is normalised before the
+# lookup; and parse_detail() reads the state the page itself declares ("West Virginia - Cabell
+# County - ...") and prefers it to the run a page was listed in.
+HEADER_SLUG_STATE = {"/georgia1.html": "IN", "/delaware1.html": "MI", "/texas1.html": "MO"}
+# Virginia's list resumes after the West Virginia run with no marker at all; its first tower page
+# there is "Brushy Mountain." (/brushy-mountain2.html), so a run starts at that page.
+RUN_START_STATE = {"/brushy-mountain2.html": "VA"}
 
 NAV_LINK_RE = re.compile(r'<a\s+[^>]*href="([^"]+)"[^>]*>(.*?)</a>', re.S | re.I)
 TAG_RE = re.compile(r"<[^>]+>")
@@ -248,6 +269,35 @@ def clean(s: str | None) -> str | None:
     return s or None
 
 
+def header_text_key(text: str) -> str:
+    """The state name in a nav header's text, upper-cased: drops a "(A-F)" suffix, the arrow
+    ("WEST VIRGINIA &gt;") and full stop ("MICHIGAN.") some markers carry, and runs of space."""
+    t = html_unescape(text)
+    t = re.sub(r"\s*\([^)]*\)\s*$", "", t)
+    t = re.sub(r"[>\s.]+$", "", t.strip())
+    return re.sub(r"\s+", " ", t).strip().upper()
+
+
+_KEEP_UPPER = {"CCC", "USFS", "BLM", "NPS", "AFC", "WMA", "FAA", "USGS", "NGS", "NWR", "AWS", "ELO", "GFC",
+               "USMC", "WPA", "TVA", "NF", "FS", "ROTC", "HQ"}
+
+
+def unshout(name: str) -> str:
+    """The sites print most names in capitals ("MCNAB", "ALBERT RUSSELL", "WILDERNESS (Lampe)"):
+    title-case every all-capital word of three letters or more (Mc- names keep their second capital),
+    leave abbreviations and roman numerals, and leave mixed-case names alone."""
+    def fix(m: re.Match) -> str:
+        w = m.group(0)
+        if w in _KEEP_UPPER or re.fullmatch(r"[IVX]+", w):
+            return w
+        t = w[:1] + w[1:].lower()
+        t = re.sub(r"^(Mc)([a-z])", lambda x: x.group(1) + x.group(2).upper(), t)
+        return re.sub(r"^([OD]['\u2019])([a-z])", lambda x: x.group(1) + x.group(2).upper(), t)
+
+    name = re.sub(r"\b(MT|ST|FT|NO|MTN|PK)\.", lambda m: m.group(1)[0] + m.group(1)[1:].lower() + ".", name)
+    return re.sub(r"\b[A-Z][A-Z'\u2019]{2,}\b", fix, name)
+
+
 def nav_segments(html: str, target_states: set[str]) -> dict[str, list[tuple[str, str]]]:
     """state code -> ordered [(relative_url, raw_link_text), ...], restricted
     to target_states. Segmentation uses the FULL state list (STATE_FULL) so a
@@ -260,10 +310,14 @@ def nav_segments(html: str, target_states: set[str]) -> dict[str, list[tuple[str
     out: dict[str, list[tuple[str, str]]] = {s: [] for s in target_states}
     for rel_url, raw_text in NAV_LINK_RE.findall(body):
         text = TAG_RE.sub("", raw_text).strip()
-        header_key = re.sub(r"\s*\([^)]*\)\s*$", "", text).strip().upper()
+        if rel_url in HEADER_SLUG_STATE:
+            cur = HEADER_SLUG_STATE[rel_url]
+            continue
+        header_key = header_text_key(text)
         if header_key in STATE_FULL:
             cur = STATE_FULL[header_key]
             continue
+        cur = RUN_START_STATE.get(rel_url, cur)
         if cur is None or cur not in out:
             continue
         if NOTES_PAGE_RE.search(text):
@@ -340,6 +394,19 @@ def parse_location(nodes: list[str]) -> dict:
     return out
 
 
+_DECLARED_STATE_RE = re.compile(r"^([A-Za-z]+(?: [A-Za-z]+)?)\s*[-\u2013]\s")
+
+
+def declared_state(nodes: list[str]) -> str | None:
+    """The state a page names for itself in its location line ("West Virginia - Cabell County -
+    ..."), as a two-letter code, or None (most pages open with just the county)."""
+    for node in nodes[1:5]:
+        m = _DECLARED_STATE_RE.match(node or "")
+        if m and m.group(1).upper() in STATE_FULL:
+            return STATE_FULL[m.group(1).upper()]
+    return None
+
+
 def parse_status(nodes: list[str], full_text: str) -> tuple[str, str | None]:
     for node in nodes:
         key = node.strip().lower()
@@ -367,9 +434,9 @@ def parse_detail(html: str) -> dict:
     nodes = own_content_text_nodes(html)
     if not nodes:
         return {"name": None}
-    name = nodes[0]
+    name = unshout(nodes[0])
     loc = parse_location(nodes)
-    full_name = name if not loc["qualifier"] else f"{name} ({loc['qualifier']})"
+    full_name = name if not loc["qualifier"] else unshout(f"{name} ({loc['qualifier']})")
 
     tail = html[H2_RE.search(html).start() :]
     tail_no_script = re.sub(r"<script.*?</script>", "", tail, flags=re.S)
@@ -404,6 +471,7 @@ def parse_detail(html: str) -> dict:
 
     return {
         "name": full_name,
+        "declared_state": declared_state(nodes),
         "see_also": loc["see_also"],
         "nearest_town": loc["nearest_town"],
         "county": loc["county"],
@@ -481,7 +549,9 @@ def build_site(site_key: str, states_filter: set[str] | None, max_per_state: int
             if d.get("see_also"):
                 print(f"  - {region} {raw_text!r} ({url}): cross-reference stub (\"See:\"), skipping", file=sys.stderr)
                 continue
-            d["region"] = region
+            d["region"] = d.get("declared_state") or region
+            if d["region"] != region:
+                print(f"  ~ {region} {raw_text!r}: the page says {d['region']}, using that", file=sys.stderr)
             d["url"] = url
             d["url_slug"] = slugify(pathlib.Path(rel_url).stem)
             if d["lat"] is None:
