@@ -86,7 +86,7 @@ def load_docs(source: str, docs: P.DocSet, specs: list[dict], *, quiet: bool = F
 def build_records(source: str, association: dict, region: str, lookouts: list[dict], docs: P.DocSet,
                   specs: list[dict]) -> list[dict]:
     """One record per curated lookout. Each lookout dict: slug, name, tower (the tower id it should
-    join), pos (register key to copy the position from), find (names to look for in the reports),
+    join), region (when not the module's own), pos (register key to copy the position from), find (names to look for in the reports),
     events (``E(...)``), optional agency, ownership, design, height_ft, staffing, status, aliases,
     unit, county, page (the lookout's own page, when the group has one), position_note, extra."""
     index = P.source_index()
@@ -106,7 +106,7 @@ def build_records(source: str, association: dict, region: str, lookouts: list[di
                 extra[k] = lk[k]
         extra.update(lk.get("extra") or {})
         records.append(P.lookout_record(
-            source=source, association=association, slug=lk["slug"], name=lk["name"], region=region,
+            source=source, association=association, slug=lk["slug"], name=lk["name"], region=lk.get("region") or region,
             url=lk.get("page") or page_of[latest], position_key=lk["pos"], index=index,
             county=lk.get("county"), forest=lk.get("unit"), agency=lk.get("agency"), ownership=lk.get("ownership"),
             design=lk.get("design"), height_ft=lk.get("height_ft"), staffing=lk.get("staffing"),
@@ -125,7 +125,7 @@ def run(*, source: str, association: dict, credit: str, license_: str, region: s
     docs = P.DocSet(source)
     load_docs(source, docs, specs, crawl_delay=crawl_delay)
     records = build_records(source, association, region, lookouts, docs, specs)
-    problems = P.check_citations(records, {f"{source}:{region.lower()}:{lk['slug']}": lk["find"] for lk in lookouts}, docs)
+    problems = P.check_citations(records, {f"{source}:{(lk.get('region') or region).lower()}:{lk['slug']}": lk["find"] for lk in lookouts}, docs)
     hard = [p for p in problems if not p.startswith("(not checked")]
     for p in problems:
         print("  ! " + p, file=sys.stderr)
