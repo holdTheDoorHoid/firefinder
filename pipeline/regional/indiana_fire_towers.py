@@ -75,20 +75,26 @@ def info_block(page_html: str) -> dict[str, str]:
     return out
 
 
-def status_of(condition: str | None, page_text_hint: str = "") -> str | None:
-    """Standing / gone / ruins from the first words of the Condition line, else None."""
-    c = (condition or "").lower()
+BASE_REMAINS_RE = re.compile(r"\b(?:base(?:s)?(?: corners?)?|footers?|footings?)\b[^.;]{0,30}\b(?:still )?(?:exist|visible)", re.I)
+
+
+def status_of(condition: str | None) -> str | None:
+    """Standing / ruins / gone from the first words of the Condition line, else None. "ruins" only
+    where the line says the footings or base corners are still there."""
+    c = (condition or "").strip().lower()
     if not c:
         return None
-    if c.startswith("not standing") or c.startswith("gone") or c.startswith("removed") or c.startswith("no longer"):
-        return "ruins" if re.search(r"\b(base|footing|foundation|corner)s?\b.*\bexist|\bexist.*\b(base|footing|corner)", c) else "gone"
-    if c.startswith("standing") or c.startswith("still standing"):
-        return "standing"
-    if "base" in c and "exist" in c:
-        return "ruins"
-    if "standing" in c and "not standing" not in c:
+    if c.startswith(("not standing", "tower not standing", "gone", "removed", "no longer")):
+        return "ruins" if BASE_REMAINS_RE.search(c) else "gone"
+    if c.startswith(("standing", "still standing", "climbable")):
         return "standing"
     return None
+
+
+def county_of(value: str | None) -> str | None:
+    """"Crawford County; some online sources say Perry..." -> "Crawford"; "Monroe (there are 3...)" -> "Monroe"."""
+    m = re.match(r"([A-Z][A-Za-z.'\u2019 -]+?)(?:\s+County)?\s*(?:[;,(]|$)", (value or "").strip())
+    return m.group(1).strip() if m else None
 
 
 def main() -> None:
@@ -114,8 +120,7 @@ def main() -> None:
         except (KeyError, ValueError):
             lat = lon = None
         status = status_of(info.get("Condition"))
-        county = re.sub(r"\s*\(.*$", "", info.get("County", "")).strip() or None
-        county = re.sub(r"\s+County$", "", county or "") or None
+        county = county_of(info.get("County"))
         aliases = [a.strip() for a in re.split(r"[;,]|\baka\b", info.get("Names", "")) if a.strip() and a.strip() != name]
         extra = {k: v for k, v in {
             "aliases": aliases or None,

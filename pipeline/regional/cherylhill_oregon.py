@@ -46,16 +46,23 @@ REPO_ROOT = HERE.parent.parent
 # County written in by hand where a row's name alone matches several Oregon lookouts (Bald Mountain,
 # Table Rock...). Each was chosen from the row's own elevation, agency and status against Firefinder's
 # towers of that name; the county is a fact about the lookout, whichever site names it. Rows whose
-# lookout could not be told apart (Silver Butte, torn down in 2012: two Oregon sites of that name) are
-# left out.
+# lookout could not be told apart (Silver Butte, torn down in 2012: two Oregon sites of that name; Bly)
+# are left out.
 COUNTY_HINTS = {
     "big-rock-green-mountain": "Linn", "gold-butte": "Marion", "huckleberry-mountain": "Lane",
     "indian-ridge": "Lane", "round-mountain": "Deschutes", "red-butte": "Douglas",
     "round-top": "Jackson", "table-mountain": "Jackson", "mt-scott": "Klamath",
     "bald-mountain": "Klamath", "green-mountain": "Lake", "tower-point": "Crook",
     "sugarloaf-mountain": "Harney", "table-rock": "Baker", "elk-mountain": "Union",
-    "bald-butte": None,  # two rows (Fremont-Winema, Ochoco): told apart by register number or not at all
+    # two rows each of Bald Butte (Ochoco / Fremont-Winema) and Black Butte (Deschutes / Malheur): keyed
+    # by the post's slug, which carries the "-2"
+    "bald-butte": "Harney", "bald-butte-2": "Lake", "black-butte": "Jefferson", "black-butte-2": "Grant",
+    "eagle-butte": "Wasco", "grizzly-mountain": "Curry", "lookout-mountain": "Union",
+    "long-ridge-moved-here-from-tiptop-in-2016": "Wallowa",
 }
+# Rows whose post links the register page of a different lookout of the same name (the Malheur Black
+# Butte's post links the Deschutes Black Butte's NHLR page): the register is not used.
+IGNORE_REGISTER = {"black-butte-2"}
 # The name Firefinder's other sources spell differently.
 ALIASES = {"callimus-butte": ["Calimus Butte"]}
 
@@ -173,7 +180,7 @@ def main() -> None:
         url = row["post"] or TABLE_URL
         built = int(row["built_raw"]) if re.fullmatch(r"(1[89]|20)\d\d", row["built_raw"] or "") else None
         elev = elevation_ft(row["elevation_raw"])
-        county = COUNTY_HINTS.get(slug_row)
+        county = COUNTY_HINTS.get(slug) or COUNTY_HINTS.get(slug_row)
         extra = {"area": row["area"], "public_access": row["public"], "elevation_ft": elev,
                  "status_text": row["status_raw"] or None, "type_text": facts["type_raw"]}
         words = structure_words(facts["type_raw"])
@@ -196,7 +203,7 @@ def main() -> None:
             "elevation_m": ft_to_m(elev) if elev else None,
             "type_raw": None, "kind": "unknown",
             "status_raw": None, "status": "standing",
-            "registers": [facts["nhlr"]] if facts["nhlr"] else [],
+            "registers": [facts["nhlr"]] if facts["nhlr"] and slug not in IGNORE_REGISTER else [],
             "built": built, "agency": row["agency"] or None,
             "events": [{"year": built, "event": "built", "note": None, "from": SOURCE}] if built else [],
             "photos": [], "links": links, "rental": None, "extra": extra,

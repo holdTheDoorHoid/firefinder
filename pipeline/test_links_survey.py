@@ -293,6 +293,41 @@ class WillhiteWeb(unittest.TestCase):
         self.assertEqual([n for n, _u in got], ["Mount Steel", "Twin Lakes", "Purcell Mountain/Trails End"])
 
 
+class IndianaFireTowers(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.ind = load_regional("indiana_fire_towers")
+
+    def test_status_of(self):
+        f = self.ind.status_of
+        self.assertEqual(f("Standing, and climbable up into cab. As of my last visit in 2025"), "standing")
+        self.assertEqual(f("Climbable up into cab. Gate around tower is locked"), "standing")
+        self.assertEqual(f("Not standing. The footers still exist as of June 2024."), "ruins")
+        self.assertEqual(f("Tower not standing; all four concrete bases still exist in 2024"), "ruins")
+        self.assertEqual(f("Not standing (drove close to it but did not look for tower base)"), "gone")
+        self.assertEqual(f("Not standing; no evidence remains"), "gone")
+        self.assertIsNone(f(""))
+
+    def test_county_of(self):
+        f = self.ind.county_of
+        self.assertEqual(f("Monroe (there are 3 tower sites in Monroe County: Hickory Ridge)"), "Monroe")
+        self.assertEqual(f("Crawford County; some online sources say Perry County"), "Crawford")
+        self.assertEqual(f("Pike"), "Pike")
+        self.assertIsNone(f(None))
+
+    def test_pages(self):
+        html = ('<a href="https://www.indianafiretowers.com/ferdinand/">Ferdinand</a>'
+                '<a href="https://www.indianafiretowers.com/history/">History</a>'
+                '<a href="https://www.indianafiretowers.com/ferdinand/">again</a>'
+                '<a href="https://www.indianafiretowers.com/list-of-indiana-fire-towers#mystery">x</a>'
+                '<a href="https://example.org/skyline/">elsewhere</a>')
+        self.assertEqual(self.ind.tower_links(html), [("ferdinand", "Ferdinand")])
+        page = ("<p>Names: Hickory Ridge</p><p>County: Monroe (there are 3 tower sites)</p>"
+                "<p>Condition: Standing, and climbable</p><h3>Data</h3><p>Latitude: 39.03461</p><p>Longitude: -86.321321</p>")
+        info = self.ind.info_block(page)
+        self.assertEqual((info["Latitude"], info["Longitude"], info["Names"]), ("39.03461", "-86.321321", "Hickory Ridge"))
+
+
 class RegisterHelpers(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
