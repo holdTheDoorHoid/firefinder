@@ -52,6 +52,7 @@ Cache raw responses under `data/raw/` (git-ignored) so nothing is fetched twice.
 | **Gap-state regional** (2026-10-04) | easternuslookouts.weebly.com / centraluslookouts.weebly.com, the same hobby-site template split by region (one page per tower; AL/CT/FL/GA/KY/MA/MI/MS/NJ/NC/PA/SC/TN and AR/LA/MO/OK); Wikipedia *List of fire lookout towers in Louisiana* and *List of New Jersey Forest Fire Service fire towers* (coordinate-bearing wikitables, CC BY-SA, facts only); michiganfiretower.com (a small young single-author site, 8 towers); tnlandforms.us (Tom Dunigan's independently surveyed GA/NC/TN tower lists, 929 towers, every one with coordinates) | Mixed | Per source; no licence stated on the two weebly sites or tnlandforms.us |
 | **FFLA resources** | `firelookout.org/resources/…`: *Lookout Rentals* (88 rentals by state, each with its booking link and any closure or manager note: the recreation.gov ones and the state-park and private ones; source `ffla_rentals`, `pipeline/regional/ffla_rentals.py`), *Lookout Types and Historic Plans* (for the designs guide), *Historical Reference Documents*, *Staffing / Volunteer Opportunities* | HTML | Facts + links |
 | **Association project reports** (2026-10-08) | Year-by-year reports of the work lookout associations do on particular lookouts, one source per association, one shared record shape (3.7). First: the Northwest Montana Lookout Association, nwmt-ffla.org: project posts 2025-26, "Completed Projects" PDFs 2014-24 (print-outs of its old website) and the yearly newsletters, 37 lookouts in Glacier NP, the Flathead and Kootenai NFs and Montana DNRC, about 180 dated restoration, repair and assessment events | WordPress posts, PDFs (pdftotext) | No licence stated; facts only, notes in our words, every event linked to its report |
+| **Western association project reports** (2026-10-08) | Fifteen more sources in the same family (3.7) for the West and the Rockies: the FFLA chapter and restoration-grant reports 2003-2025 (212 PDFs from the AZ, CA, CO-UT, ID, NM, OR, WA and WY chapters; `ffla_west_reports`, 248 lookouts, 491 events), the Sand Mountain Society (OR), Mountaineers Everett (WA), Snoqualmie Fire Lookouts, Methow Valley FFLA, Buck Rock Foundation, Angeles NF FLA, Southern California Mountains Foundation, FFLA San Diego-Riverside, Monterey and California South, Hi Mountain Lookout Project, Siskiyou Mountain Club, HistoriCorps and the Green Mountain Lookout story (Washington Trust, WTA). 308 lookouts, 680 dated events in all; survey in `docs/sources/associations_west.md` | WordPress/Squarespace/Wix pages, PDFs (pdftotext) | No licence stated; facts only, notes in our words, every event linked to its page or PDF |
 | Later | USGS historical topos (public domain, `ngmdb.usgs.gov/arcgis/rest/services/topoview/ustOverlay(Auto)/MapServer`), NRHP NPS dataset, Library of Congress HABS/HAER (measured drawings, public domain), Forest History Society, state forestry lists, newspapers | — | — |
 
 ---
@@ -230,7 +231,7 @@ picked up with no code change (unknown sources rank last in every field).
 **Matching**, per source in the order NHLR, FFLOS, FFLA, RIDB, fire-lookouts.org, tnlandforms.us,
 the NJ Forest Fire Service Wikipedia table, firelookout.com, idahofirelookouts.com,
 michiganfiretower.com, PA StoryMap, andyarthur.org, the Wikipedia per-state lookout lists, CSKT,
-the easternuslookouts and centraluslookouts weebly sites, the association project sources (3.7: the Northwest Montana Lookout Association), Wikidata, OSM:
+the easternuslookouts and centraluslookouts weebly sites, the association project sources (3.7: the Northwest Montana Lookout Association and the western associations), Wikidata, OSM:
 
 1. **Key**: the record's key is already in a tower's `sources[].key`.
 2. **Register number**. NHLR and FFLOS number their entries separately ("NHLR US 674" is
@@ -512,6 +513,30 @@ a register already dates the present structure are `other`; NMLA's own disagreem
 build years for Mount Brown, McGuire, Star Peak...) are kept in `extra.discrepancies` and the note
 names the other year. Not read: oral histories, event pages, and NMLA's Google My Map of lookouts
 (robots.txt disallows `google.com/maps/`).
+
+**Western sources** (agent chapters-west, 2026-10-08; the survey with every group, its robots.txt and what it
+holds is `docs/sources/associations_west.md`). Fifteen sources, one module each in `pipeline/regional/`, built
+on a small shared driver, `_assoc_site.py` (`E(...)` for an event, `doc(...)` for a cited page or PDF, `run(...)`
+fetches and caches the documents, builds the records, checks every cited fact against the document's text and
+writes the extract). Fourteen are single-site sources whose few pages were read by hand (`sand_mountain`,
+`mountaineers_everett`, `snoqualmie_lookouts`, `buck_rock`, `anffla`, `scmf_lookouts`, `ffla_sdrc`,
+`ffla_monterey`, `ffla_ca_south`, `hi_mountain`, `mvffla`, `historicorps_west`, `siskiyou_mountain_club`,
+`green_mountain_wa`; 60 lookouts, 189 events). The fifteenth, `ffla_west_reports`, is the large one: the FFLA's
+yearly chapter reports and restoration-grant reports for the 14 western states, read by agents batch by batch
+into records (lookout, forest, year, event, a note in our words, a short verbatim run of the report as
+evidence), which a script checked against the PDF text (name, year, evidence), filtered, and matched to towers
+by state, name and forest, ambiguous ones by hand; the result is `ffla_west_reports_data.py` (248 lookouts, 491
+events, 146 reports cited). What the filter drops, by rule: plans and hopes, funding amounts, site visits,
+nominations to the register (the register's own dates are the authority, so no `nhlr_registered` from the
+reports), "wrapped as a precaution" notes, continuing-staffing notes, uncertain years on status events (a
+wrong date there would move a lookout on the national slider), and the Northwest Montana Lookout Association's
+own projects. Grants awarded are kept as `other` ("FFLA restoration grant of $500 ... for ..."); in the New
+Mexico compendium (2020) only the earliest `built` per lookout stays `built`, later structures and additions
+are `replaced` or `modified`. PDF text from these files loses the letters of the "ti", "tt", "ft" and "fi"
+ligatures, so names are compared in a folded form (`_assoc_site.fold`). Image-only scans (California
+Sierra-Nevada 2017-2019, Arizona-New Mexico 2004, Oregon 2004) were read from page images and are not
+text-checked; the California Sierra-Nevada 2016 scan holds no project facts. HistoriCorps pages are
+announcements of planned work, so those events say "scheduled".
 
 ---
 

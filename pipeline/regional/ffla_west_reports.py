@@ -7,7 +7,7 @@ Every active FFLA chapter files a yearly report: members and money, then the "pr
 activities" that matter here: which lookouts were repaired, repainted, reroofed, assessed, lost to
 fire, put back in service. The national Restoration Grants report adds each grant awarded, to which
 lookout and for what. For the 14 western states (AK, AZ, CA, CO, HI, ID, MT, NV, NM, OR, UT, WA, WY and
-the Black Hills of SD) the archive holds about 210 readable PDFs from 2003 to 2025, from the Arizona,
+the Black Hills of SD) the archive holds 212 PDFs from 2003 to 2025 (six of them image-only scans), from the Arizona,
 California (North, Pacific, Central/Nevada, Sierra/Nevada, South and its local groups), Colorado-Utah,
 Idaho, New Mexico, Oregon, Washington and Wyoming chapters, plus the Western Deputy and Northwestern
 Region reports and the Restoration Grants reports. (The Northwest Montana Lookout Association has its
@@ -24,9 +24,9 @@ nomination or a funding amount, and matched each lookout to one of our towers by
 data in ffla_west_reports_data.py, which this script re-checks against the cached PDFs on every run.
 
 What is read (2026-10-08; robots.txt disallows only /wp-admin/ and shop paths): the PDFs listed in
-ffla_west_reports_data.REPORTS. Not readable: image-only scans (California Sierra-Nevada 2016 to 2019, Arizona-New
-Mexico 2004, Oregon 2004) are not text-checked; their few facts are marked in the data. The FFLA Facebook groups and
-the east's reports are out of scope.
+ffla_west_reports_data.REPORTS. Six image-only scans (California Sierra-Nevada 2016 to 2019, Arizona-New Mexico 2004,
+Oregon 2004) have no text layer: their facts were read from the page images and are not text-checked. The FFLA Facebook
+groups and the eastern chapters' reports are out of scope.
 
 PDF text from these files loses the letters of "ti", "tt", "ft" and "fi" ("Kelly Bu e"), so names are compared in a
 folded form (_assoc_site.fold).

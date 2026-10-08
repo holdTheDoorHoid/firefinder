@@ -19,7 +19,7 @@ import merge as M  # noqa: E402
 
 MODULES = ["sand_mountain", "mountaineers_everett", "snoqualmie_lookouts", "buck_rock", "anffla", "scmf_lookouts",
            "ffla_sdrc", "ffla_monterey", "hi_mountain", "mvffla", "historicorps_west", "siskiyou_mountain_club",
-           "green_mountain_wa", "ffla_ca_south"]
+           "green_mountain_wa", "ffla_ca_south", "ffla_west_reports"]
 
 
 def load(name):
@@ -65,6 +65,34 @@ class Driver(unittest.TestCase):
         self.assertEqual(P.check_citations(recs, {recs[0]["key"]: ["Numa Ridge"]}, docs), [])
         docs.texts["p"] = P.norm("Something else entirely.")
         self.assertEqual(len(P.check_citations(recs, {recs[0]["key"]: ["Numa Ridge"]}, docs)), 2)
+
+
+class PdfText(unittest.TestCase):
+    def test_fold_survives_dropped_ligature_letters(self):
+        # pdftotext drops "tt", "ti", "ft" and "fi" ligatures: "Kelly Butte" comes out "Kelly Bu e"
+        self.assertEqual(A.fold("Kelly Butte"), A.fold("Kelly Bu e"))
+        self.assertEqual(A.fold("Restoration"), A.fold("Restora on"))
+        self.assertIn(A.fold("Squaw Mt."), A.fold("a workday for Squaw Mt. Fire Looko"))
+        self.assertNotEqual(A.fold("Goat Peak"), A.fold("Goat Butte"))
+
+    def test_folded_citation_check(self):
+        docs = P.DocSet("t_assoc")
+        docs.add("p", "https://e.example/p.pdf", "P", 2011)
+        docs.texts["p"] = A.fold("Kelly Bu e Lookout got a new roof in 2011.")
+        index = {"nhlr:US 910": {"lat": 47.1, "lon": -121.5}}
+        lk = [dict(slug="kelly-butte", name="Kelly Butte Lookout", region="WA", pos="nhlr:US 910", find=["Kelly Butte"],
+                   events=[A.E(2011, "restored", "New roof.", "p")])]
+        recs = A.build_records("t_assoc", {"name": "T", "url": "https://e.example/"}, [A.doc("p", "https://e.example/p.pdf", "P", 2011)], lk, docs, index=index)
+        self.assertEqual(P.check_citations(recs, {recs[0]["key"]: [A.fold("Kelly Butte")]}, docs), [])
+
+    def test_a_position_given_outright(self):
+        docs = P.DocSet("t_assoc")
+        docs.add("p", "https://e.example/p.pdf", "P", 2011)
+        lk = [dict(slug="x", name="X Lookout", region="ID", pos=None, lat=44.78575, lon=-114.82287,
+                   position_note="copied from tower us-id-x", find=["X"], events=[A.E(2011, "restored", "Roof.", "p")])]
+        recs = A.build_records("t_assoc", {"name": "T", "url": "https://e.example/"}, [A.doc("p", "https://e.example/p.pdf", "P", 2011)], lk, docs, index={})
+        self.assertEqual((recs[0]["lat"], recs[0]["lon"]), (44.78575, -114.82287))
+        self.assertEqual(P.validate_records(recs, source="t_assoc"), [])
 
 
 class CuratedModules(unittest.TestCase):

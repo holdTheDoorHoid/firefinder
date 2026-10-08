@@ -13,9 +13,7 @@ BASE = 'https://firelookout.org/wp-content/uploads'
 # (id, URL, label, report year)
 REPORTS = [
     ('cc-im-2003', 'https://firelookout.org/wp-content/uploads/2024/11/cc-im-2003.pdf', 'FFLA Idaho – North / Montana Chapter report 2003', 2003),
-    ('cr-az-2004', 'https://firelookout.org/wp-content/uploads/2024/11/cr-az-2004.pdf', 'FFLA Arizona / New Mexico Chapter report 2004', 2004),
     ('cr-cc-2004', 'https://firelookout.org/wp-content/uploads/2024/11/cr-cc-2004.pdf', 'FFLA California – Central / Nevada Chapter report 2004', 2004),
-    ('cr-im-2004', 'https://firelookout.org/wp-content/uploads/2024/11/cr-im-2004.pdf', 'FFLA Idaho – North / Montana Chapter report 2004', 2004),
     ('cr-or-2004', 'https://firelookout.org/wp-content/uploads/2024/11/cr-or-2004.pdf', 'FFLA Oregon Chapter report 2004', 2004),
     ('cr-wd-2004', 'https://firelookout.org/wp-content/uploads/2024/11/cr-wd-2004.pdf', 'FFLA Western Deputy Report report 2004', 2004),
     ('cr-we-2004', 'https://firelookout.org/wp-content/uploads/2024/11/cr-we-2004.pdf', 'FFLA Washington – East Chapter report 2004', 2004),
@@ -114,7 +112,6 @@ REPORTS = [
     ('cr-ca-sierra-2018', 'https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sierra-2018.pdf', 'FFLA California – Sierra / Nevada Chapter report 2018', 2018),
     ('cr-ca-south-2018', 'https://firelookout.org/wp-content/uploads/2024/11/cr-ca-south-2018.pdf', 'FFLA California – South Chapter report 2018', 2018),
     ('cr-ewa-2018', 'https://firelookout.org/wp-content/uploads/2024/11/cr-ewa-2018.pdf', 'FFLA Washington – East Chapter report 2018', 2018),
-    ('cr-id-n-mt-2018', 'https://firelookout.org/wp-content/uploads/2024/11/cr-id-n-mt-2018.pdf', 'FFLA Idaho – North / Montana Chapter report 2018', 2018),
     ('cr-restoration-2018', 'https://firelookout.org/wp-content/uploads/2024/11/cr-restoration-2018.pdf', 'FFLA Restoration Grants Report report 2018', 2018),
     ('cr-ca-monterey-2019', 'https://firelookout.org/wp-content/uploads/2024/11/cr-ca-monterey-2019.pdf', 'FFLA Monterey Chapter report 2019', 2019),
     ('cr-ca-north-2019', 'https://firelookout.org/wp-content/uploads/2024/11/cr-ca-north-2019.pdf', 'FFLA California – North Chapter report 2019', 2019),
@@ -133,7 +130,6 @@ REPORTS = [
     ('cr-rest-2020', 'https://firelookout.org/wp-content/uploads/2024/11/cr-rest-2020.pdf', 'FFLA Restoration Grants Report report 2020', 2020),
     ('cr-ca-pacific-2021', 'https://firelookout.org/wp-content/uploads/2024/11/cr-ca-pacific-2021.pdf', 'FFLA California – Pacific Chapter report 2021', 2021),
     ('cr-cal-north-2021', 'https://firelookout.org/wp-content/uploads/2024/11/cr-cal-north-2021.pdf', 'FFLA California – North Chapter report 2021', 2021),
-    ('cr-id-north-mt-2021', 'https://firelookout.org/wp-content/uploads/2024/11/cr-id-north-mt-2021.pdf', 'FFLA Idaho – North / Montana Chapter report 2021', 2021),
     ('cr-id-south-2021', 'https://firelookout.org/wp-content/uploads/2024/11/cr-id-south-2021.pdf', 'FFLA Idaho – South Chapter report 2021', 2021),
     ('cr-rest-2021', 'https://firelookout.org/wp-content/uploads/2024/11/cr-rest-2021.pdf', 'FFLA Restoration Grants Report report 2021', 2021),
     ('cr-south-ca-2021', 'https://firelookout.org/wp-content/uploads/2024/11/cr-south-ca-2021.pdf', 'FFLA California – South Division report 2021', 2021),
@@ -165,53 +161,45 @@ REPORTS = [
 ]
 
 LOOKOUTS = [
-    dict(slug='skinner-ridge', name='Skinner Ridge', region='AZ', tower='us-az-skinner-ridge', pos='ffla:az:skinner-ridge:35.9099:-112.0099', find=['Skinner Ridge'], forest='Kaibab NF', design='Aermotor MC-39 tower with 7x7 steel cab', aliases=[],
+    dict(slug='skinner-ridge', name='Skinner Ridge', region='AZ', tower='us-az-skinner-ridge', pos='ffla:az:skinner-ridge:35.9099:-112.0099', find=['Skinner', 'Skinner Ridge'], forest='Kaibab NF', design='Aermotor MC-39 tower with 7x7 steel cab', aliases=[],
          events=[
              E(1929, 'built', 'Steel tower originally erected at Skinner Ridge; still standing there in 1941, then moved to Encino, New Mexico, in 1950.', 'cr-nm-2020'),
          ]),
-    dict(slug='sugarloaf-mountain', name='Sugarloaf Mountain Lookout', region='AZ', tower='us-az-sugarloaf-mountain', pos='nhlr:US 575', find=['Sugarloaf Mountain'], forest='Chiricahua National Monument', design=None, aliases=[],
-         events=[
-             E(2004, 'nhlr_registered', 'Lookout on Chiricahua National Monument was added to the National Historic Lookout Register in 2004.', 'cr-az-2004'),
-         ]),
-    dict(slug='alder-ridge', name='Alder Ridge Lookout', region='CA', tower='us-ca-alder-ridge', pos='nhlr:US 592', find=['Alder Ridge'], forest='Eldorado NF', design=None, aliases=[],
+    dict(slug='alder-ridge', name='Alder Ridge Lookout', region='CA', tower='us-ca-alder-ridge', pos='nhlr:US 592', find=['Alder', 'Alder Ridge'], forest='Eldorado NF', design=None, aliases=[],
          events=[
              E(2004, 'restored', 'Cabin restored in a 2004 PIT volunteer project so it could be used as a recreation rental.', 'cr-cc-2004'),
          ]),
-    dict(slug='american-camp', name='American Camp Lookout', region='CA', tower='us-ca-american-camp', pos='nhlr:US 1180', find=['American Camp'], forest='Stanislaus NF', design=None, aliases=[],
-         events=[
-             E(2017, 'nhlr_registered', 'Nominated and recognized on the National Historic Lookout Register; official recognition received back by the chapter director.', 'cr-ca-sierra-nevada-2017'),
-         ]),
-    dict(slug='angora-ridge', name='Angora Ridge Lookout', region='CA', tower='us-ca-angora-ridge', pos='nhlr:US 518', find=['Angora Ridge'], forest='Lake Tahoe Basin Management Unit', design=None, aliases=[],
+    dict(slug='angora-ridge', name='Angora Ridge Lookout', region='CA', tower='us-ca-angora-ridge', pos='nhlr:US 518', find=['Angora', 'Angora Ridge'], forest='Lake Tahoe Basin Management Unit', design=None, aliases=[],
          events=[
              E(2007, 'fire', 'The 3,100-acre Angora Fire started near the unstaffed lookout, which nearly burned in the blaze. Lookout was unstaffed during the Angora Fire; the report does not say whether the structure was damaged.', 'cr-ca-cent-2007', 'cr-ca-cent-2009', 'cr-az-2009'),
          ]),
-    dict(slug='antelope-mountain', name='Antelope Mountain Lookout', region='CA', tower='us-ca-antelope-mountain', pos='nhlr:US 182', find=['Antelope Mountain'], forest='Lassen NF', design=None, aliases=[],
+    dict(slug='antelope-mountain', name='Antelope Mountain Lookout', region='CA', tower='us-ca-antelope-mountain', pos='nhlr:US 182', find=['Antelope', 'Antelope Mountain'], forest='Lassen NF', design=None, aliases=[],
          events=[
              E(2020, 'other', 'FFLA restoration grant of $500 for materials to replace all the old shutters.', 'cr-rest-2020'),
              E(2020, 'restored', 'New shutters installed by Forest Service staff, using an FFLA small grant. All the old, heavy shutters replaced with new ones designed, built and installed by a Forest Service employee.', 'cr-ca-north-2020', 'cr-rest-2020'),
          ]),
-    dict(slug='argentine-rock', name='Argentine Rock Lookout', region='CA', tower='us-ca-argentine-rock', pos='nhlr:US 601', find=['Argentine Rock'], forest='Plumas NF', design=None, aliases=[],
+    dict(slug='argentine-rock', name='Argentine Rock Lookout', region='CA', tower='us-ca-argentine-rock', pos='nhlr:US 601', find=['Argentine', 'Argentine Rock'], forest='Plumas NF', design=None, aliases=[],
          events=[
              E(2021, 'other', 'A cooperative agreement (MOU/MOA) with the Plumas NF was signed to let a volunteer group rehabilitate and rebuild the lookout.', 'cr-cal-north-2021', 'cr-ca-pacific-2021'),
              E(2022, 'other', 'The volunteer restoration group, formed after the agreement was signed, won a large Resource Advisory Committee grant from the Forest Service (amount not stated).', 'cr-cal-north-2022'),
              E(2025, 'restored', 'Volunteer group built new steel access stairs and new stairs up to the cab, and worked on reconstructing the lookout, hauling all materials up a narrow path by hand.', 'cr-cal-north-2025'),
          ]),
-    dict(slug='bald-mountain-inyo-nf', name='Bald Mountain Lookout (Inyo NF)', region='CA', tower='us-ca-bald-mountain-inyo-nf', pos='nhlr:US 279', find=['Bald Mountain'], forest='Inyo NF', design=None, aliases=[],
+    dict(slug='bald-mountain-inyo-nf', name='Bald Mountain Lookout (Inyo NF)', region='CA', tower='us-ca-bald-mountain-inyo-nf', pos='nhlr:US 279', find=['Bald', 'Bald Mountain'], forest='Inyo NF', design=None, aliases=[],
          events=[
              E(2024, 'assessed', 'Chapter director travelled to evaluate the lookout on 24 May ahead of the volunteer staffing pilot.', 'cr-cal-south-2024'),
              E(2024, 'staffed', 'Visiting-volunteer pilot with Inyo NF: 16 veteran volunteers worked 42 shifts from mid-August, and the facility was closed for winter on 28 October.', 'cr-cal-south-2024', 'cr-cal-s-mont-2024', 'cr-cal-s-sdr-2024', 'cr-cal-s-bm-2025'),
              E(2025, 'staffed', 'First full season of volunteer staffing: 46 visiting volunteers covered 17 June to 12 October (113 days) with only two short gaps.', 'cr-cal-s-bm-2025', 'cr-cal-south-2025', 'cr-cal-s-m-2025', 'cr-cal-s-sdr-2025'),
          ]),
-    dict(slug='bald-mountain-sequoia-nf', name='Bald Mountain Lookout (Sequoia NF)', region='CA', tower='us-ca-bald-mountain-sequoia-nf', pos='nhlr:US 383', find=['Bald Mountain', 'Bald Mt'], forest='Sequoia NF', design=None, aliases=['Bald Mt'],
+    dict(slug='bald-mountain-sequoia-nf', name='Bald Mountain Lookout (Sequoia NF)', region='CA', tower='us-ca-bald-mountain-sequoia-nf', pos='nhlr:US 383', find=['Bald', 'Bald Mountain', 'Bald Mt'], forest='Sequoia NF', design=None, aliases=['Bald Mt'],
          events=[
              E(2004, 'restored', 'Propane lighting updated, lightning protection repair completed, new potable water system installed, and benches added along the rehabilitated trail.', 'cr-cc-2004'),
-             E(2009, 'assessed', 'Lightning protection system inspected and found operationally sound. Lightning protection inspection found the system operationally sound.', 'cr-ca-cent-2009', 'cr-az-2009'),
+             E(2009, 'assessed', 'Lightning protection system inspected and found operationally sound.', 'cr-ca-cent-2009', 'cr-az-2009'),
          ]),
-    dict(slug='bald-mountain-sierra-nf', name='Bald Mountain Lookout (Sierra NF)', region='CA', tower='us-ca-bald-mountain-sierra-nf', pos='nhlr:US 823', find=['Bald Mountain'], forest='Sierra NF', design=None, aliases=[],
+    dict(slug='bald-mountain-sierra-nf', name='Bald Mountain Lookout (Sierra NF)', region='CA', tower='us-ca-bald-mountain-sierra-nf', pos='nhlr:US 823', find=['Bald', 'Bald Mountain'], forest='Sierra NF', design=None, aliases=[],
          events=[
              E(2009, 'assessed', 'Engineering assessment judged the lookout not worth the liability or repair; the Forest planned to remove the cab. Engineering assessment led the forest to judge the lookout too costly and risky to repair;', 'cr-ca-cent-2009', 'cr-az-2009'),
          ]),
-    dict(slug='bear-mountain-fresno-county', name='Bear Mountain Lookout (Fresno County)', region='CA', tower='us-ca-bear-mountain-fresno-county', pos='nhlr:US 1386', find=['Bear Mountain'], forest='CAL-Fire (Fresno County)', design=None, aliases=[],
+    dict(slug='bear-mountain-fresno-county', name='Bear Mountain Lookout (Fresno County)', region='CA', tower='us-ca-bear-mountain-fresno-county', pos='nhlr:US 1386', find=['Bear', 'Bear Mountain'], forest='CAL-Fire (Fresno County)', design=None, aliases=[],
          events=[
              E(2007, 'other', 'After a rumored dismantling, the private landowner let the state keep the lookout on his land, but the historic garage at the site was removed and destroyed.', 'cr-ca-cent-2007'),
          ]),
@@ -223,29 +211,25 @@ LOOKOUTS = [
          events=[
              E(2018, 'burned', 'Lookout destroyed during the Camp Fire.', 'cr-ca-north-2018'),
          ]),
-    dict(slug='black-mountain-plumas-nf', name='Black Mountain Lookout (Plumas NF)', region='CA', tower='us-ca-black-mountain-plumas-nf', pos='nhlr:US 692', find=['Black Mountain'], forest='Plumas NF', design=None, aliases=[],
+    dict(slug='black-mountain-plumas-nf', name='Black Mountain Lookout (Plumas NF)', region='CA', tower='us-ca-black-mountain-plumas-nf', pos='nhlr:US 692', find=['Black', 'Black Mountain'], forest='Plumas NF', design=None, aliases=[],
          events=[
              E(2010, 'rental_opened', 'Newly opened as a visitor rental by the Forest Service.', 'cr-nca-2010'),
              E(2011, 'restored', 'Recently restored, with a grand opening in 2011.', 'cr-ca-sn-nevada-2012'),
          ]),
-    dict(slug='black-mountain-san-bernadino-nf', name='Black Mountain Lookout (San Bernadino NF)', region='CA', tower='us-ca-black-mountain-san-bernadino-nf', pos='nhlr:US 289', find=['Black Mtn.'], forest='San Bernardino NF', design=None, aliases=['Black Mtn.'],
+    dict(slug='black-mountain-san-bernadino-nf', name='Black Mountain Lookout (San Bernadino NF)', region='CA', tower='us-ca-black-mountain-san-bernadino-nf', pos='nhlr:US 289', find=['Black', 'Black Mtn.'], forest='San Bernardino NF', design=None, aliases=['Black Mtn.'],
          events=[
              E(2017, 'restored', 'Several items repaired after a winter break-in.', 'cr-ca-s-sbnf-2017'),
          ]),
-    dict(slug='blue-mountain', name='Blue Mountain Fire Lookout', region='CA', tower='us-ca-blue-mountain', pos='nhlr:US 1185', find=['Blue Mountain'], forest='Stanislaus NF', design=None, aliases=[],
-         events=[
-             E(2017, 'nhlr_registered', 'One of seven Stanislaus towers nominated for the National Historic Lookout Register; official recognition came back but needed one correction before presentation to the forest.', 'cr-ca-sierra-nevada-2017'),
-         ]),
-    dict(slug='blue-ridge-lookout-site-at-tulare-county-fairgrounds', name='Blue Ridge Lookout Site (now at the Tulare County Fairgrounds)', region='CA', tower='us-ca-blue-ridge-lookout-site-at-tulare-county-fairgrounds', pos='ffla:ca:tulare-county-fairgrounds-relocated-blue-ridge:36.2008:-119.3422', find=['Blue Ridge'], forest='CAL-Fire (Tulare County)', design=None, aliases=[],
+    dict(slug='blue-ridge-lookout-site-at-tulare-county-fairgrounds', name='Blue Ridge Lookout Site (now at the Tulare County Fairgrounds)', region='CA', tower='us-ca-blue-ridge-lookout-site-at-tulare-county-fairgrounds', pos='ffla:ca:tulare-county-fairgrounds-relocated-blue-ridge:36.2008:-119.3422', find=['Blue', 'Blue Ridge'], forest='CAL-Fire (Tulare County)', design=None, aliases=[],
          events=[
              E(2011, 'restored', 'Full restoration completed and the tower opened to visitors at the Tulare County Fair in October; interpretive signs to follow.', 'cr-ca-sn-nevada-2011'),
          ]),
-    dict(slug='blue-ridge-tulare-county', name='Blue Ridge Lookout Site (Tulare County)', region='CA', tower='us-ca-blue-ridge-tulare-county', pos='fflos:US 1998', find=['Blue Ridge'], forest='CAL-Fire (Tulare County)', design=None, aliases=[],
+    dict(slug='blue-ridge-tulare-county', name='Blue Ridge Lookout Site (Tulare County)', region='CA', tower='us-ca-blue-ridge-tulare-county', pos='fflos:US 1998', find=['Blue', 'Blue Ridge'], forest='CAL-Fire (Tulare County)', design=None, aliases=[],
          events=[
              E(2010, 'relocated', 'Lifted off its mountain site in May after a four-year effort and taken to CAL-Fire headquarters in Visalia for full restoration before going to the county fairgrounds.', 'cr-ca-sn-nevada-2010'),
              E(2011, 'relocated', 'Restored tower placed at the Tulare County Fairgrounds as a public display.', 'cr-ca-sn-nevada-2011'),
          ]),
-    dict(slug='boucher-hill', name='Boucher Hill Lookout', region='CA', tower='us-ca-boucher-hill', pos='nhlr:US 394', find=['Boucher Hill'], forest='California State Parks', design=None, aliases=[],
+    dict(slug='boucher-hill', name='Boucher Hill Lookout', region='CA', tower='us-ca-boucher-hill', pos='nhlr:US 394', find=['Boucher', 'Boucher Hill'], forest='California State Parks', design=None, aliases=[],
          events=[
              E(2010, 'other', 'Agreement reached with California State Parks, which now holds the former Cal Fire lookout, to restore and operate it.', 'cr-ca-pc-2010', 'cr-ca-src-2010'),
              E(2017, 'restored', 'Historic weather mast refurbished and put back on the tower; contractors engaged to stop rain leaks in the cab and to seal windows and paint cab and catwalk.', 'cr-ca-s-sandiego-river-2017'),
@@ -256,41 +240,35 @@ LOOKOUTS = [
     dict(slug='breckenridge', name='Breckenridge Lookout', region='CA', tower='us-ca-breckenridge', pos='nhlr:US 378', find=['Breckenridge'], forest='Sequoia NF', design=None, aliases=[],
          events=[
              E(2004, 'restored', 'Electrical system updated, trap door repaired, rotten catwalk partly replaced, and work begun on an updated potable water system.', 'cr-cc-2004'),
-             E(2009, 'assessed', 'Lightning protection system inspected and found not sound; Forest then contracted a grounding inspection and upgrades for all remaining lookouts. Lightning protection inspection found the system not sound;', 'cr-ca-cent-2009', 'cr-az-2009'),
-             E(2009, 'restored', 'Volunteer repaired components of the outrigger shutter system. A volunteer repaired components of the outrigger shutter system.', 'cr-ca-cent-2009', 'cr-az-2009'),
+             E(2009, 'assessed', 'Lightning protection system inspected and found not sound; Forest then contracted a grounding inspection and upgrades for all remaining lookouts.', 'cr-ca-cent-2009', 'cr-az-2009'),
+             E(2009, 'restored', 'Volunteer repaired components of the outrigger shutter system.', 'cr-ca-cent-2009', 'cr-az-2009'),
          ]),
-    dict(slug='brush-mountain', name='Brush Mountain Lookout', region='CA', tower='us-ca-brush-mountain', pos='nhlr:US 1206', find=['Brush Mt.'], forest='Six Rivers NF', design=None, aliases=['Brush Mt.'],
+    dict(slug='brush-mountain', name='Brush Mountain Lookout', region='CA', tower='us-ca-brush-mountain', pos='nhlr:US 1206', find=['Brush', 'Brush Mt.'], forest='Six Rivers NF', design=None, aliases=['Brush Mt.'],
          events=[
              E(2008, 'built', 'Brand new lookout completed and opened.', 'cr-wdep-2008'),
          ]),
-    dict(slug='buck-rock', name='Buck Rock Lookout', region='CA', tower='us-ca-buck-rock', pos='nhlr:US 284', find=['Buck Rock'], forest='Sequoia NF', design=None, aliases=[],
+    dict(slug='buck-rock', name='Buck Rock Lookout', region='CA', tower='us-ca-buck-rock', pos='nhlr:US 284', find=['Buck', 'Buck Rock'], forest='Sequoia NF', design=None, aliases=[],
          events=[
-             E(2004, 'restored', 'Lightning protection system updated and asbestos floor removed (new floor planned for 2005); restoration continued with volunteer lookouts helping with staffing.', 'cr-cc-2004'),
              E(2007, 'restored', 'Winter-damaged catwalk gates repaired, shed roof replaced, stairway linseed oiled, picnic table refurbished and door frame replaced.', 'cr-ca-cent-2007'),
              E(2009, 'restored', 'Volunteers rehabilitated parts of the road and trail in and scraped and painted two storage outbuildings at the base.', 'cr-ca-cent-2009', 'cr-az-2009'),
              E(2011, 'other', 'Kern and Tulare Counties RAC grant of about $29,000 for interior makeover and stairway and catwalk work, to start summer 2012.', 'cr-ca-sn-nevada-2011', 'cr-ca-sn-nevada-2012'),
              E(2012, 'restored', 'Volunteer and contractor rehab restored original interior and exterior siding, rehabbed windows, upgraded electrical system and replaced a stairway section; funded by a Kern and Tulare RAC grant.', 'cr-ca-sn-nevada-2012'),
          ]),
-    dict(slug='bunker-hill', name='Bunker Hill Lookout', region='CA', tower='us-ca-bunker-hill', pos='nhlr:US 593', find=['Bunker Hill'], forest='Eldorado NF', design=None, aliases=[],
+    dict(slug='bunker-hill', name='Bunker Hill Lookout', region='CA', tower='us-ca-bunker-hill', pos='nhlr:US 593', find=['Bunker', 'Bunker Hill'], forest='Eldorado NF', design=None, aliases=[],
          events=[
              E(2016, 'other', 'FFLA restoration grant awarded in 2016 (purpose and amount not stated); an unused 9 dollars 38 cents was returned in 2018.', 'cr-restoration-2018'),
              E(2017, 'other', 'National FFLA approved a 500 dollar restoration grant to help return the lookout to service as a fire lookout and interpretive center.', 'cr-ca-sierra-nevada-2017'),
          ]),
-    dict(slug='castro-peak-at-henninger-flats', name='Castro Peak Lookout (now at Henninger Flats)', region='CA', tower='us-ca-castro-peak-at-henninger-flats', pos='nhlr:US 1289', find=['Castro Peak'], forest=None, design=None, aliases=[],
-         events=[
-             E(2018, 'nhlr_registered', 'Nominated for the National Historic Lookout Register on 22 August and posted on the Register on 8 December.', 'cr-ca-south-2018'),
-         ]),
-    dict(slug='chews-ridge', name='Chews Ridge Lookout', region='CA', tower='us-ca-chews-ridge', pos='nhlr:US 751', find=['Chews Ridge'], forest='Los Padres NF', design=None, aliases=[],
+    dict(slug='chews-ridge', name='Chews Ridge Lookout', region='CA', tower='us-ca-chews-ridge', pos='nhlr:US 751', find=['Chews', 'Chews Ridge'], forest='Los Padres NF', design=None, aliases=[],
          events=[
              E(2019, 'staffed', 'Los Padres NF approved volunteer restoration and staffing on 23 May; first operational shift was 25 Aug and the tower was staffed about 64 days before closing for winter on 25 Nov.', 'cr-ca-south-2019', 'cr-ca-monterey-2019'),
-             E(2025, 'other', 'FFLA gave a $500 sustainment grant toward the roof replacement fundraising after storm damage. FFLA emergency stabilization grant of $500 to the Monterey Chapter toward a roof replacement fundraising goal of $15,000.', 'cr-cal-s-m-2025', 'cr-rest-2025'),
+             E(2025, 'other', 'FFLA gave a $500 sustainment grant toward the roof replacement fundraising after storm damage.', 'cr-cal-s-m-2025', 'cr-rest-2025'),
          ]),
-    dict(slug='cone-peak', name='Cone Peak Lookout', region='CA', tower='us-ca-cone-peak', pos='nhlr:US 1288', find=['Cone Peak'], forest='Los Padres NF', design='all-metal tower', aliases=[],
+    dict(slug='cone-peak', name='Cone Peak Lookout', region='CA', tower='us-ca-cone-peak', pos='nhlr:US 1288', find=['Cone', 'Cone Peak'], forest='Los Padres NF', design='all-metal tower', aliases=[],
          events=[
-             E(2018, 'nhlr_registered', 'Nominated for the National Historic Lookout Register on 2 August and posted on the Register on 8 December.', 'cr-ca-south-2018'),
              E(2020, 'fire', 'Dolan Fire burned over the peak and the all-metal tower survived undamaged.', 'cr-ca-south-2020'),
          ]),
-    dict(slug='copernicus-peak', name='Copernicus Peak Lookout', region='CA', tower='us-ca-copernicus-peak', pos='nhlr:US 1342', find=['Copernicus Peak'], forest='Cal Fire', design=None, aliases=[],
+    dict(slug='copernicus-peak', name='Copernicus Peak Lookout', region='CA', tower='us-ca-copernicus-peak', pos='nhlr:US 1342', find=['Copernicus', 'Copernicus Peak'], forest='Cal Fire', design=None, aliases=[],
          events=[
              E(2016, 'restored', 'New roof completed on the Cal Fire tower near Morgan Hill in autumn 2016.', 'cr-ca-pac-2016', 'cr-ca-pacific-2017'),
              E(2017, 'staffed', 'After an agreement signed in January, FFLA trained volunteers and the tower opened for the 2017 season, staffed on weekends until closing on November 15.', 'cr-ca-pacific-2017'),
@@ -298,39 +276,33 @@ LOOKOUTS = [
          ]),
     dict(slug='delilah', name='Delilah Lookout', region='CA', tower='us-ca-delilah', pos='nhlr:US 379', find=['Delilah'], forest='Sequoia NF', design=None, aliases=[],
          events=[
-             E(2009, 'restored', 'Buck Rock Foundation volunteers carried out a complete restoration of the outhouse. Foundation volunteers led a complete restoration of the outhouse.', 'cr-ca-cent-2009', 'cr-az-2009'),
+             E(2009, 'restored', 'Buck Rock Foundation volunteers carried out a complete restoration of the outhouse.', 'cr-ca-cent-2009', 'cr-az-2009'),
              E(2010, 'restored', 'Complete interior rehabilitation by Buck Rock Foundation volunteers over summer work weekends, funded by a Fresno County RAC grant.', 'cr-ca-sn-nevada-2010'),
              E(2011, 'modified', 'New storage shed, security gate, cameras, solar panels with battery system and UV blinds installed.', 'cr-ca-sn-nevada-2011'),
              E(2011, 'other', 'Second-round Fresno County RAC grant of about $18,000 (shared with Mt. Tom) to continue rehabilitation.', 'cr-ca-sn-nevada-2011'),
-             E(2018, 'other', 'Staffed through the 2018 season by Buck Rock Foundation volunteers, from Memorial Day for 149 days.', 'cr-ca-sierra-2018'),
          ]),
-    dict(slug='duckwall-mountain', name='Duckwall Mountain Lookout', region='CA', tower='us-ca-duckwall-mountain', pos='nhlr:US 1190', find=['Duckwall Mountain'], forest='Stanislaus NF', design=None, aliases=[],
-         events=[
-             E(2017, 'nhlr_registered', 'Nominated and recognized on the National Historic Lookout Register; official recognition received back by the chapter director.', 'cr-ca-sierra-nevada-2017'),
-         ]),
-    dict(slug='eagle-rock', name='Eagle Rock', region='CA', tower='us-ca-eagle-rock', pos='ffla:ca:eagle-rock:37.1476:-122.1952', find=['Eagle Rock'], forest='Cal Fire', design=None, aliases=[],
+    dict(slug='eagle-rock', name='Eagle Rock', region='CA', tower='us-ca-eagle-rock', pos='ffla:ca:eagle-rock:37.1476:-122.1952', find=['Eagle', 'Eagle Rock'], forest='Cal Fire', design=None, aliases=[],
          events=[
              E(1934, 'built', 'Built by the Civilian Conservation Corps; later fell into bad repair with heavy vandalism.', 'cr-ca-pacific-2018'),
              E(2018, 'burned', 'Old decommissioned lookout in the Santa Cruz Mountains burned to the ground on August 4; the vegetation fire it started was named the Eagle Fire.', 'cr-ca-pacific-2018'),
          ]),
-    dict(slug='eddy-gulch', name='Eddy Gulch Lookout', region='CA', tower='us-ca-eddy-gulch', pos='nhlr:US 104', find=['Eddy Gulch'], forest='Klamath NF', design=None, aliases=[],
+    dict(slug='eddy-gulch', name='Eddy Gulch Lookout', region='CA', tower='us-ca-eddy-gulch', pos='nhlr:US 104', find=['Eddy', 'Eddy Gulch'], forest='Klamath NF', design=None, aliases=[],
          events=[
              E(2010, 'modified', 'Camera fire-detection equipment installed at the lookout, which stays staffed during fire season.', 'cr-nca-2010'),
          ]),
-    dict(slug='fence-meadow', name='Fence Meadow Lookout', region='CA', tower='us-ca-fence-meadow', pos='nhlr:US 302', find=['Fence Meadow'], forest='Sierra NF', design=None, aliases=[],
+    dict(slug='fence-meadow', name='Fence Meadow Lookout', region='CA', tower='us-ca-fence-meadow', pos='nhlr:US 302', find=['Fence', 'Fence Meadow'], forest='Sierra NF', design=None, aliases=[],
          events=[
              E(2007, 'other', 'FFLA restoration grant of $500 to the Buck Rock Foundation for materials to replace rotting siding, windowsills, doorframe and shutters and to reglaze windows, aiming at staffing in 2008.', 'cr-restoration-2007'),
              E(2007, 'restored', 'Rehab begun at end of season: cab and shed gutted, interior repainted and carpeted, new bed and appliances installed.', 'cr-ca-cent-2007'),
              E(2008, 'restored', 'Rehab of windows, window frames, rotting siding and shutters begun with a matched $500 grant; volunteers and Forest Service worked on it in fall, completion expected 2009.', 'cr-ca-cent-2008'),
-             E(2009, 'restored', 'Restoration continued; exterior and interior painting of the cab completed.', 'cr-az-2009'),
              E(2010, 'restored', 'New shutter system installed plus plumbing and electrical work, continuing the ongoing restoration.', 'cr-ca-sn-nevada-2010'),
          ]),
-    dict(slug='figueroa-mountain', name='Figueroa Mountain Lookout', region='CA', tower='us-ca-figueroa-mountain', pos='nhlr:US 881', find=['Figueroa Mountain'], forest='Los Padres NF', design=None, aliases=[],
+    dict(slug='figueroa-mountain', name='Figueroa Mountain Lookout', region='CA', tower='us-ca-figueroa-mountain', pos='nhlr:US 881', find=['Figueroa', 'Figueroa Mountain'], forest='Los Padres NF', design=None, aliases=[],
          events=[
              E(2022, 'assessed', 'Inspection and discussion of refurbishing the tower held on site on 9 November with the acting district ranger; no decisions made.', 'cr-ca-south-2022'),
              E(2025, 'assessed', 'On 21 January an on-site meeting with the district ranger and archaeologists covered refurbishing the stripped-out cab; the project was then suspended.', 'cr-cal-south-2025'),
          ]),
-    dict(slug='grouse-ridge', name='Grouse Ridge Lookout', region='CA', tower='us-ca-grouse-ridge', pos='nhlr:US 283', find=['Grouse Ridge'], forest='Tahoe NF', design='4AR', aliases=[],
+    dict(slug='grouse-ridge', name='Grouse Ridge Lookout', region='CA', tower='us-ca-grouse-ridge', pos='nhlr:US 283', find=['Grouse', 'Grouse Ridge'], forest='Tahoe NF', design='4AR', aliases=[],
          events=[
              E(1923, 'built', 'Built in 1923 as a 4AR-design lookout; described as the second-oldest lookout on the Tahoe NF.', 'cr-restoration-2010'),
              E(2010, 'other', 'Resource Advisory Committee grant of $10,000 written and obtained for the restoration; another $4,000 still needed for supplies.', 'cr-ca-sn-nevada-2010', 'cr-restoration-2010'),
@@ -338,37 +310,33 @@ LOOKOUTS = [
              E(2022, 'restored', 'District recreation staff did most of the remaining work to convert the lookout to a rental, which was still not approved for rental use.', 'cr-cal-north-2022'),
              E(2023, 'restored', 'District recreation staff did most of the remaining rental-conversion work during the 2023 field season.', 'cr-cal-north-2023'),
          ]),
-    dict(slug='harvey-mountain', name='Harvey Mountain Lookout', region='CA', tower='us-ca-harvey-mountain', pos='nhlr:US 517', find=['Harvey Mountain'], forest='Lassen NF', design=None, aliases=[],
+    dict(slug='harvey-mountain', name='Harvey Mountain Lookout', region='CA', tower='us-ca-harvey-mountain', pos='nhlr:US 517', find=['Harvey', 'Harvey Mountain'], forest='Lassen NF', design=None, aliases=[],
          events=[
              E(2020, 'other', 'FFLA restoration grant of $500 for materials to replace catwalk deck boards and top handrails and refurbish shutters; work postponed to 2021 by fire season and COVID.', 'cr-rest-2020'),
          ]),
-    dict(slug='henness-ridge', name='Henness Ridge Lookout', region='CA', tower='us-ca-henness-ridge', pos='nhlr:US 281', find=['Henness Ridge'], forest='Yosemite NP', design=None, aliases=[],
+    dict(slug='henness-ridge', name='Henness Ridge Lookout', region='CA', tower='us-ca-henness-ridge', pos='nhlr:US 281', find=['Henness', 'Henness Ridge'], forest='Yosemite NP', design=None, aliases=[],
          events=[
              E(2012, 'assessed', 'The chapter gave the park service a renovation report listing needed repairs to stairs, catwalk railing and decking, and storm shutters, with stairs and railing flagged as safety hazards.', 'cr-ca-yosemite-2012', 'cr-ca-sn-nevada-2012'),
          ]),
-    dict(slug='high-point', name='High Point Lookout', region='CA', tower='us-ca-high-point', pos='nhlr:US 735', find=['High Point'], forest='Cleveland NF', design=None, aliases=[],
+    dict(slug='high-point', name='High Point Lookout', region='CA', tower='us-ca-high-point', pos='nhlr:US 735', find=['High', 'High Point'], forest='Cleveland NF', design=None, aliases=[],
          events=[
              E(2009, 'restored', 'Cab of the lookout restored by the chapter to its 1964 standard.', 'cr-ca-src-2009'),
              E(2009, 'staffed', 'Lookout reopened for fire detection on 13 June with volunteers and was staffed 81 of 171 possible days.', 'cr-ca-src-2009'),
              E(2017, 'restored', 'Problematic solar and propane-powered incinerating outhouse repaired.', 'cr-ca-s-sandiego-river-2017'),
          ]),
-    dict(slug='hot-springs-mountain', name='Hot Springs Mountain Lookout', region='CA', tower='us-ca-hot-springs-mountain', pos='nhlr:US 753', find=['Hot Springs Mountain'], forest=None, design=None, aliases=[],
-         events=[
-             E(2009, 'assessed', 'Chapter inspected the lookout site; no findings given.', 'cr-ca-src-2009'),
-         ]),
-    dict(slug='ironside-mountain', name='Ironside Mountain Lookout', region='CA', tower='us-ca-ironside-mountain', pos='nhlr:US 1057', find=['Ironside Mountain'], forest='Shasta-Trinity NF', design=None, aliases=[],
+    dict(slug='ironside-mountain', name='Ironside Mountain Lookout', region='CA', tower='us-ca-ironside-mountain', pos='nhlr:US 1057', find=['Ironside', 'Ironside Mountain'], forest='Shasta-Trinity NF', design=None, aliases=[],
          events=[
              E(2021, 'burned', 'Burned down in the Monument Fire on August 13; local backers asked for a rebuild but the forest had not answered.', 'cr-cal-north-2021'),
          ]),
-    dict(slug='jordan-peak', name='Jordan Peak Lookout', region='CA', tower='us-ca-jordan-peak', pos='nhlr:US 380', find=['Jordan Peak'], forest='Sequoia NF', design=None, aliases=[],
+    dict(slug='jordan-peak', name='Jordan Peak Lookout', region='CA', tower='us-ca-jordan-peak', pos='nhlr:US 380', find=['Jordan', 'Jordan Peak'], forest='Sequoia NF', design=None, aliases=[],
          events=[
-             E(2009, 'restored', 'New roof finally installed after a three-year delay tied to archaeological clearance rules. New roof installed after a three-year delay caused by the archaeological review process.', 'cr-ca-cent-2009', 'cr-az-2009'),
+             E(2009, 'restored', 'New roof finally installed after a three-year delay tied to archaeological clearance rules.', 'cr-ca-cent-2009', 'cr-az-2009'),
          ]),
-    dict(slug='keller-peak', name='Keller Peak Lookout', region='CA', tower='us-ca-keller-peak', pos='nhlr:US 28', find=['Keller Peak'], forest='San Bernardino NF', design=None, aliases=[],
+    dict(slug='keller-peak', name='Keller Peak Lookout', region='CA', tower='us-ca-keller-peak', pos='nhlr:US 28', find=['Keller', 'Keller Peak'], forest='San Bernardino NF', design=None, aliases=[],
          events=[
              E(2017, 'restored', '1970s paneling removed to bring back original tongue-and-groove walls; three cracked windows, rotten wood, mattress and flooring replaced.', 'cr-ca-s-sbnf-2017'),
          ]),
-    dict(slug='kettenpom-peak', name='Kettenpom Peak Lookout', region='CA', tower='us-ca-kettenpom-peak', pos='nhlr:US 1367', find=['Kettenpom Peak'], forest='Six Rivers NF', design=None, aliases=[],
+    dict(slug='kettenpom-peak', name='Kettenpom Peak Lookout', region='CA', tower='us-ca-kettenpom-peak', pos='nhlr:US 1367', find=['Kettenpom', 'Kettenpom Peak'], forest='Six Rivers NF', design=None, aliases=[],
          events=[
              E(2020, 'burned', 'Tower destroyed during the August Complex fires.', 'cr-ca-north-2020'),
          ]),
@@ -380,39 +348,33 @@ LOOKOUTS = [
          events=[
              E(2008, 'burned', 'Lost to wildfire.', 'cr-wdep-2008'),
          ]),
-    dict(slug='lyons-peak', name='Lyons Peak Lookout', region='CA', tower='us-ca-lyons-peak', pos='nhlr:US 754', find=['Lyons Peak'], forest='Cleveland NF', design=None, aliases=[],
+    dict(slug='lyons-peak', name='Lyons Peak Lookout', region='CA', tower='us-ca-lyons-peak', pos='nhlr:US 754', find=['Lyons', 'Lyons Peak'], forest='Cleveland NF', design=None, aliases=[],
          events=[
-             E(2009, 'assessed', 'Chapter inspected the lookout site; no findings given.', 'cr-ca-src-2009'),
              E(2018, 'other', 'FFLA stabilization grant of $300 to the San Diego Riverside Chapter, plus chapter funds, for plywood, paint and bolts to weatherproof the lookout; access limited by right-of-way litigation.', 'cr-restoration-2018'),
              E(2018, 'restored', 'Emergency stabilization funds bought wood, bolts and paint to cover the windows; materials hauled up on 9 May and decomposing ceiling plywood removed.', 'cr-ca-south-2018'),
              E(2021, 'restored', 'On 22 December volunteers, flown in by sheriff helicopter, fixed plywood shutters over the windows to protect the cab.', 'cr-south-ca-2021'),
          ]),
     dict(slug='miami-mountain', name='Miami Mountain Lookout', region='CA', tower='us-ca-miami-mountain', pos='nhlr:US 305', find=['Miami', 'Miami Mountain'], forest='Sierra NF', design=None, aliases=[],
          events=[
-             E(2009, 'other', 'Tower dedicated as a memorial to a former lookout, with a monument placed at its base. Tower dedicated as a named memorial tower and a monument placed at its base.', 'cr-ca-cent-2009', 'cr-az-2009'),
-             E(2009, 'restored', 'Weather station taken apart and refurbished. Weather station was torn apart and refurbished.', 'cr-ca-cent-2009', 'cr-az-2009'),
-             E(2010, 'restored', 'Part of subchapter funds designated for firefinder repair, with the work done by a tool company.', 'cr-ca-sn-nevada-2010'),
+             E(2009, 'other', 'Tower dedicated as a memorial to a former lookout, with a monument placed at its base.', 'cr-ca-cent-2009', 'cr-az-2009'),
+             E(2009, 'restored', 'Weather station taken apart and refurbished.', 'cr-ca-cent-2009', 'cr-az-2009'),
              E(2011, 'restored', 'Interior and exterior renovation continued with Forest Service archaeologist approval; the Fire Finder base and rail were refurbished with repainted brackets and stainless steel rods.', 'cr-ca-yosemite-2011'),
              E(2012, 'modified', 'Weather station installed; a privately funded microwave internet link to Signal Lookout was also put into operation.', 'cr-ca-yosemite-2012'),
              E(2012, 'restored', 'Interior of the cab and the windows were painted; flooring, cabinet and stair-strip replacements were still awaiting archaeologist approval.', 'cr-ca-yosemite-2012'),
              E(2016, 'restored', 'Chapter funds paid for new cabinet corner counters, end cabinet cases and top material, and hardware, tools and supplies for the cab.', 'cr-ca-yhs-2016'),
              E(2017, 'closed', 'Lookout was not opened for the 2017 season because of early-rain road washouts, dead trees and fires, with no equipment available to repair roads.', 'cr-ca-sierra-nevada-2017'),
          ]),
-    dict(slug='milk-ranch-peak', name='Milk Ranch Peak Lookout', region='CA', tower='us-ca-milk-ranch-peak', pos='nhlr:US 1517', find=['Milk Ranch'], forest='Sequoia NP', design=None, aliases=[],
+    dict(slug='milk-ranch-peak', name='Milk Ranch Peak Lookout', region='CA', tower='us-ca-milk-ranch-peak', pos='nhlr:US 1517', find=['Milk', 'Milk Ranch'], forest='Sequoia NP', design=None, aliases=[],
          events=[
-             E(1996, 'abandoned', 'Dropped from fire detection in 1996; afterward used for communications links. Abandoned for fire detection; afterwards used for communications links.', 'cr-ca-cent-2007', 'cr-ca-cent-2009', 'cr-ca-sn-nevada-2012', 'cr-az-2009'),
+             E(1996, 'abandoned', 'Dropped from fire detection in 1996; afterward used for communications links.', 'cr-ca-cent-2007', 'cr-ca-cent-2009', 'cr-ca-sn-nevada-2012', 'cr-az-2009'),
          ]),
-    dict(slug='morton-peak', name='Morton Peak Lookout', region='CA', tower='us-ca-morton-peak', pos='nhlr:US 673', find=['Morton Peak'], forest='San Bernardino NF', design=None, aliases=[],
+    dict(slug='morton-peak', name='Morton Peak Lookout', region='CA', tower='us-ca-morton-peak', pos='nhlr:US 673', find=['Morton', 'Morton Peak'], forest='San Bernardino NF', design=None, aliases=[],
          events=[
              E(2014, 'staffed', 'Lookout was kept open all year round because of high fire danger.', 'cr-sanban-2014'),
          ]),
-    dict(slug='mount-danaher', name='Mount Danaher Lookout', region='CA', tower='us-ca-mount-danaher', pos='nhlr:US 399', find=['Mount Danaher'], forest='CAL FIRE Amador-Eldorado Unit', design='100-ft tower', aliases=[],
+    dict(slug='mount-danaher', name='Mount Danaher Lookout', region='CA', tower='us-ca-mount-danaher', pos='nhlr:US 399', find=['Danaher', 'Mount Danaher'], forest='CAL FIRE Amador-Eldorado Unit', design='100-ft tower', aliases=[],
          events=[
              E(2006, 'other', 'FFLA restoration grant of $500 awarded for new shutters and new stair treads on the 100-foot tower.', 'cr-rest-2006'),
-         ]),
-    dict(slug='mount-elizabeth', name='Mount Elizabeth Lookout', region='CA', tower='us-ca-mount-elizabeth', pos='nhlr:US 1186', find=['Elizabeth Mountain'], forest='Stanislaus NF', design=None, aliases=['Elizabeth Mountain'],
-         events=[
-             E(2017, 'nhlr_registered', 'Nominated and recognized on the National Historic Lookout Register; official recognition received back by the chapter director.', 'cr-ca-sierra-nevada-2017'),
          ]),
     dict(slug='mount-harkness', name='Mount Harkness Lookout', region='CA', tower='us-ca-mount-harkness', pos='nhlr:US 516', find=['Harkness'], forest='Lava Beds Nat. Mon.', design=None, aliases=[],
          events=[
@@ -443,44 +405,38 @@ LOOKOUTS = [
              E(2011, 'burned', 'Tower and cab completely destroyed by a structure fire on July 28; the Forest wants to rebuild it. Lookout burned down in 2011;', 'cr-ca-sn-nevada-2011', 'cr-ca-sn-nevada-2012', 'cr-ca-sierra-nevada-2017'),
              E(2012, 'other', 'Rebuild planning funded with about $13,000; hazardous material from the fire removed and most of the environmental review (NEPA) completed.', 'cr-ca-sn-nevada-2012'),
          ]),
-    dict(slug='north-mountain', name='North Mountain Lookout', region='CA', tower='us-ca-north-mountain', pos='nhlr:US 1189', find=['North Mountain'], forest='Stanislaus NF', design=None, aliases=[],
+    dict(slug='oak-flat', name='Oak Flat Lookout', region='CA', tower='us-ca-oak-flat', pos='nhlr:US 307', find=['Flat', 'Oak Flat'], forest='Sequoia NF', design=None, aliases=[],
          events=[
-             E(2017, 'nhlr_registered', 'Nominated and recognized on the National Historic Lookout Register; official recognition received back by the chapter director.', 'cr-ca-sierra-nevada-2017'),
-         ]),
-    dict(slug='oak-flat', name='Oak Flat Lookout', region='CA', tower='us-ca-oak-flat', pos='nhlr:US 307', find=['Oak Flat'], forest='Sequoia NF', design=None, aliases=[],
-         events=[
-             E(2009, 'rental_opened', 'Returned to the Recreation Rental system after storm damage. Returned to the Recreation Rental system after storm damage in 2007.', 'cr-ca-cent-2009', 'cr-az-2009'),
+             E(2009, 'rental_opened', 'Returned to the Recreation Rental system after storm damage.', 'cr-ca-cent-2009', 'cr-az-2009'),
              E(2010, 'restored', 'Summer work weekend gave the cab a fresh coat of paint, caulked the windows and cleaned the grounds.', 'cr-ca-sn-nevada-2010'),
          ]),
-    dict(slug='orleans-mountain', name='Orleans Mountain Lookout', region='CA', tower='us-ca-orleans-mountain', pos='nhlr:US 458', find=['Orleans Mountain'], forest='Six Rivers NF', design=None, aliases=[],
+    dict(slug='orleans-mountain', name='Orleans Mountain Lookout', region='CA', tower='us-ca-orleans-mountain', pos='nhlr:US 458', find=['Orleans', 'Orleans Mountain'], forest='Six Rivers NF', design=None, aliases=[],
          events=[
              E(2025, 'fire', 'Wrapped in fire-resistant material for the second year running and survived another close call with wildfire.', 'cr-cal-north-2025'),
          ]),
-    dict(slug='park-ridge', name='Park Ridge Lookout', region='CA', tower='us-ca-park-ridge', pos='nhlr:US 892', find=['Park Ridge'], forest='Kings Canyon NP', design=None, aliases=[],
+    dict(slug='park-ridge', name='Park Ridge Lookout', region='CA', tower='us-ca-park-ridge', pos='nhlr:US 892', find=['Park', 'Park Ridge'], forest='Kings Canyon NP', design=None, aliases=[],
          events=[
              E(2004, 'restored', 'Lightning protection system updated and electrical system replaced; further updates to continue in 2005.', 'cr-cc-2004'),
              E(2004, 'staffed', 'Lookout reopened and staffed by Buck Rock Foundation volunteers after nine years of closure.', 'cr-cc-2004'),
              E(2007, 'restored', 'Ceiling repaired in fall 2007 to stop roof leakage; floor replacement planned for 2008.', 'cr-ca-cent-2007'),
-             E(2011, 'nhlr_registered', 'Nominated and accepted to the National Historic Lookout Register.', 'cr-ca-sn-nevada-2011'),
-             E(2018, 'other', 'Staffed through the 2018 season by Buck Rock Foundation volunteers, from Memorial Day for 149 days.', 'cr-ca-sierra-2018'),
          ]),
-    dict(slug='penon-blanco-peak', name='Penon Blanco Peak Lookout', region='CA', tower='us-ca-penon-blanco-peak', pos='nhlr:US 1327', find=['Penon Blanco'], forest='CAL FIRE (Mariposa County)', design=None, aliases=[],
+    dict(slug='penon-blanco-peak', name='Penon Blanco Peak Lookout', region='CA', tower='us-ca-penon-blanco-peak', pos='nhlr:US 1327', find=['Penon', 'Penon Blanco'], forest='CAL FIRE (Mariposa County)', design=None, aliases=[],
          events=[
              E(2019, 'assessed', 'Assessment team surveyed the Cal Fire lookout on 9 December 2019 with Buck Rock Foundation support; an engineering report was being written.', 'cr-ca-sierranv-2019'),
          ]),
-    dict(slug='pickett-peak', name='Pickett Peak Lookout', region='CA', tower='us-ca-pickett-peak', pos='nhlr:US 1369', find=['Pickett Peak'], forest='Shasta-Trinity NF', design=None, aliases=[],
+    dict(slug='pickett-peak', name='Pickett Peak Lookout', region='CA', tower='us-ca-pickett-peak', pos='nhlr:US 1369', find=['Pickett', 'Pickett Peak'], forest='Shasta-Trinity NF', design=None, aliases=[],
          events=[
              E(2013, 'staffed', 'Reopened with paid Forest Service staffing after about 20 years shuttered; lightning fires were spotted and reported from it in August.', 'cr-nca-2013'),
          ]),
-    dict(slug='pilot-peak', name='Pilot Peak Lookout', region='CA', tower='us-ca-pilot-peak', pos='nhlr:US 600', find=['Pilot Peak'], forest='Plumas NF', design=None, aliases=[],
+    dict(slug='pilot-peak', name='Pilot Peak Lookout', region='CA', tower='us-ca-pilot-peak', pos='nhlr:US 600', find=['Pilot', 'Pilot Peak'], forest='Plumas NF', design=None, aliases=[],
          events=[
              E(2025, 'restored', 'Volunteers repaired the roof and boarded up the windows to keep weather out and preserve the lookout for a later restoration.', 'cr-cal-north-2025'),
          ]),
-    dict(slug='pilot-peak-stanislaus-national-forest', name='Pilot Peak Lookout (Stanislaus National Forest)', region='CA', tower='us-ca-pilot-peak-stanislaus-national-forest', pos='nhlr:US 1394', find=['Pilot Peak'], forest='Stanislaus NF', design=None, aliases=[],
+    dict(slug='pilot-peak-stanislaus-national-forest', name='Pilot Peak Lookout (Stanislaus National Forest)', region='CA', tower='us-ca-pilot-peak-stanislaus-national-forest', pos='nhlr:US 1394', find=['Pilot', 'Pilot Peak'], forest='Stanislaus NF', design=None, aliases=[],
          events=[
              E(2012, 'modified', 'Electrical system being upgraded with solar panels and batteries; 1,200-gallon water tank system with shower installed; fuels reduced around the site.', 'cr-ca-sn-nevada-2012'),
          ]),
-    dict(slug='pole-mountain', name='Pole Mountain Fire Lookout', region='CA', tower='us-ca-pole-mountain', pos='nhlr:US 273', find=['Pole Mountain'], forest='Sonoma Land Trust', design=None, aliases=[],
+    dict(slug='pole-mountain', name='Pole Mountain Fire Lookout', region='CA', tower='us-ca-pole-mountain', pos='nhlr:US 273', find=['Pole', 'Pole Mountain'], forest='Sonoma Land Trust', design=None, aliases=[],
          events=[
              E(2018, 'other', 'A drawing for a replacement tower was approved and fund drives raised the building money; removal of the old tower had not yet begun.', 'cr-ca-pacific-2018'),
          ]),
@@ -488,7 +444,7 @@ LOOKOUTS = [
          events=[
              E(2022, 'burned', 'Destroyed by the Fairview Fire on 8 September.', 'cr-ca-south-2022'),
          ]),
-    dict(slug='robbs-peak', name='Robbs Peak Lookout', region='CA', tower='us-ca-robbs-peak', pos='nhlr:US 599', find=['Robbs Peak'], forest='Eldorado NF', design=None, aliases=[],
+    dict(slug='robbs-peak', name='Robbs Peak Lookout', region='CA', tower='us-ca-robbs-peak', pos='nhlr:US 599', find=['Robbs', 'Robbs Peak'], forest='Eldorado NF', design=None, aliases=[],
          events=[
              E(2017, 'other', 'National FFLA approved a 500 dollar restoration grant to help return the lookout to service as a fire lookout and interpretive center.', 'cr-ca-sierra-nevada-2017'),
          ]),
@@ -497,7 +453,7 @@ LOOKOUTS = [
              E(2009, 'restored', 'In August a 4-wheeler club and other volunteers supplied materials and labor to ready the tower for year-round visitor use ahead of its entry into the rental program.', 'cr-nca-2009', 'cr-az-2009'),
              E(2010, 'rental_opened', 'Newly opened as a visitor rental by the Forest Service.', 'cr-nca-2010'),
          ]),
-    dict(slug='scott-bar-mountain', name='Scott Bar Mountain Lookout', region='CA', tower='us-ca-scott-bar-mountain', pos='nhlr:US 1382', find=['Scott Bar'], forest='Klamath NF', design=None, aliases=[],
+    dict(slug='scott-bar-mountain', name='Scott Bar Mountain Lookout', region='CA', tower='us-ca-scott-bar-mountain', pos='nhlr:US 1382', find=['Scott', 'Scott Bar'], forest='Klamath NF', design=None, aliases=[],
          events=[
              E(2017, 'other', 'Klamath NF asked to remove the lookout; FFLA began coordinating with the forest and state historic preservation review that continued through 2025.', 'cr-ca-north-2017', 'cr-cal-north-2023', 'cr-cal-north-2025'),
          ]),
@@ -507,7 +463,7 @@ LOOKOUTS = [
              E(2018, 'assessed', 'Buck Rock Foundation volunteers carried out an on-site inspection of the lookout after meeting with CAL FIRE officials about its future.', 'cr-ca-sierra-2018'),
              E(2018, 'restored', 'Buck Rock Foundation volunteers repaired the roof of the CAL FIRE lookout.', 'cr-ca-sierra-2018'),
          ]),
-    dict(slug='ship-mountain-four-brothers', name='Ship Mountain (Four Brothers) Lookout', region='CA', tower='us-ca-ship-mountain-four-brothers', pos='nhlr:US 1313', find=['Ship Mountain', 'Ship Mt.'], forest='Six Rivers NF', design=None, aliases=['Ship Mt.'],
+    dict(slug='ship-mountain-four-brothers', name='Ship Mountain (Four Brothers) Lookout', region='CA', tower='us-ca-ship-mountain-four-brothers', pos='nhlr:US 1313', find=['Ship', 'Ship Mountain', 'Ship Mt.'], forest='Six Rivers NF', design=None, aliases=['Ship Mt.'],
          events=[
              E(2007, 'assessed', 'Surveyed to see whether it could be moved from California to Oregon for restoration; waiting on transfer of ownership.', 'cr-or-2007'),
              E(2008, 'replaced', 'New permanent lookout finally built, replacing a portable trailer lookout used on the site since 1973.', 'cr-wdep-2008'),
@@ -524,20 +480,19 @@ LOOKOUTS = [
              E(2012, 'modified', 'A privately funded microwave internet bridge between Signal and Miami Lookouts was installed and made operational, giving Signal internet service.', 'cr-ca-yosemite-2012'),
              E(2012, 'restored', 'Renovations completed by the Forest Service, including a new catwalk and railings.', 'cr-ca-yosemite-2012'),
          ]),
-    dict(slug='slate-mountain-2', name='Slate Mountain Lookout Site', region='CA', tower='us-ca-slate-mountain-2', pos='fflos:US 1893', find=['Slate Mountain'], forest='Eldorado NF', design=None, aliases=[],
+    dict(slug='slate-mountain-2', name='Slate Mountain Lookout Site', region='CA', tower='us-ca-slate-mountain-2', pos='fflos:US 1893', find=['Slate', 'Slate Mountain'], forest='Eldorado NF', design=None, aliases=[],
          events=[
              E(2003, 'removed', 'Lookout was taken down in 2003; the chapter learned of it afterward and believes FFLA was not informed. Lookout removed (Georgetown Ranger District).', 'cr-cc-2004', 'cr-ca-cent-2007', 'cr-ca-cent-2009', 'cr-ca-sn-nevada-2012', 'cr-az-2009'),
          ]),
-    dict(slug='slide-mountain', name='Slide Mountain Lookout', region='CA', tower='us-ca-slide-mountain', pos='nhlr:US 1045', find=['Slide Mtn.'], forest='Angeles NF', design=None, aliases=['Slide Mtn.'],
+    dict(slug='slide-mountain', name='Slide Mountain Lookout', region='CA', tower='us-ca-slide-mountain', pos='nhlr:US 1045', find=['Slide', 'Slide Mtn.'], forest='Angeles NF', design=None, aliases=['Slide Mtn.'],
          events=[
              E(2014, 'staffed', 'Lookout was staffed by volunteers all year round in 2014.', 'cr-angeles-2014'),
          ]),
-    dict(slug='smith-peak', name='Smith Peak Lookout', region='CA', tower='us-ca-smith-peak', pos='nhlr:US 1188', find=['Smith Peak'], forest='Stanislaus NF', design=None, aliases=[],
+    dict(slug='smith-peak', name='Smith Peak Lookout', region='CA', tower='us-ca-smith-peak', pos='nhlr:US 1188', find=['Smith', 'Smith Peak'], forest='Stanislaus NF', design=None, aliases=[],
          events=[
              E(2012, 'restored', 'Catwalk updated and a new roof installed; rusting tower girders to be mitigated.', 'cr-ca-sn-nevada-2012'),
-             E(2017, 'nhlr_registered', 'Nominated and recognized on the National Historic Lookout Register; official recognition received back by the chapter director.', 'cr-ca-sierra-nevada-2017'),
          ]),
-    dict(slug='smith-peak-plumas-national-forest', name='Smith Peak Lookout (Plumas National Forest)', region='CA', tower='us-ca-smith-peak-plumas-national-forest', pos='nhlr:US 1420', find=['Smith Peak'], forest='Plumas NF', design=None, aliases=[],
+    dict(slug='smith-peak-plumas-national-forest', name='Smith Peak Lookout (Plumas National Forest)', region='CA', tower='us-ca-smith-peak-plumas-national-forest', pos='nhlr:US 1420', find=['Smith', 'Smith Peak'], forest='Plumas NF', design=None, aliases=[],
          events=[
              E(2024, 'other', 'FFLA restoration grant of $500 for materials to restore the original 1930s tongue-and-groove Douglas fir floor, which was buried under paint and linoleum.', 'cr-rest-2024'),
              E(2024, 'restored', 'Original wood floor uncovered and restored, finished in September 2024 with a donated sander and generator from a local hardware store.', 'cr-rest-2024'),
@@ -546,7 +501,7 @@ LOOKOUTS = [
          events=[
              E(2014, 'staffed', 'Lookout was kept open all year round because of high fire danger.', 'cr-sanban-2014'),
          ]),
-    dict(slug='tahquitz-peak', name='Tahquitz Peak Lookout', region='CA', tower='us-ca-tahquitz-peak', pos='nhlr:US 291', find=['Tahquitz Peak'], forest='San Bernardino NF', design=None, aliases=[],
+    dict(slug='tahquitz-peak', name='Tahquitz Peak Lookout', region='CA', tower='us-ca-tahquitz-peak', pos='nhlr:US 291', find=['Tahquitz', 'Tahquitz Peak'], forest='San Bernardino NF', design=None, aliases=[],
          events=[
              E(2017, 'restored', 'Rotten wood replaced, with youth crews hiking lumber up to the lookout.', 'cr-ca-s-sbnf-2017'),
          ]),
@@ -554,52 +509,45 @@ LOOKOUTS = [
          events=[
              E(2015, 'staffed_last', 'Reported in 2017 as unstaffed for 2 years and falling apart, which puts the last staffed season around 2015; Forest Service reportedly no longer intends to staff it.', 'cr-ca-sierra-nevada-2017'),
          ]),
-    dict(slug='trumbull-peak', name='Trumbull Peak Lookout', region='CA', tower='us-ca-trumbull-peak', pos='nhlr:US 285', find=['Trumbull Peak'], forest='Stanislaus NF', design=None, aliases=[],
+    dict(slug='trumbull-peak', name='Trumbull Peak Lookout', region='CA', tower='us-ca-trumbull-peak', pos='nhlr:US 285', find=['Trumbull', 'Trumbull Peak'], forest='Stanislaus NF', design=None, aliases=[],
          events=[
              E(2011, 'fire', 'Abandoned lookout was threatened by the Motor Fire but protected and saved.', 'cr-ca-sn-nevada-2012'),
          ]),
-    dict(slug='vetter-mountain', name='Vetter Mountain Lookout', region='CA', tower='us-ca-vetter-mountain', pos='nhlr:US 294', find=['Vetter Mountain'], forest='Angeles NF', design=None, aliases=[],
+    dict(slug='vetter-mountain', name='Vetter Mountain Lookout', region='CA', tower='us-ca-vetter-mountain', pos='nhlr:US 294', find=['Vetter', 'Vetter Mountain'], forest='Angeles NF', design=None, aliases=[],
          events=[
              E(2010, 'staffed', 'Volunteers staffed the Vetter Mountain peak site in 2010; staffing is also reported for 2011 and 2012.', 'cr-ca-south-angeles-2010', 'cr-ca-south-angeles-2011'),
              E(2014, 'rebuilt', 'Rebuilding of the lookout was begun; the work was waiting on Forest Service engineers to approve the plans to finish the foundation.', 'cr-angeles-2014'),
          ]),
-    dict(slug='woods-ridge', name='Woods Ridge Lookout', region='CA', tower='us-ca-woods-ridge', pos='nhlr:US 1187', find=['Woods Ridge'], forest='Stanislaus NF', design=None, aliases=[],
-         events=[
-             E(2017, 'nhlr_registered', 'Nominated and recognized on the National Historic Lookout Register; official recognition received back by the chapter director.', 'cr-ca-sierra-nevada-2017'),
-         ]),
     dict(slug='benchmark', name='Benchmark Lookout', region='CO', tower='us-co-benchmark', pos='nhlr:US 762', find=['Benchmark'], forest='San Juan NF', design=None, aliases=[],
          events=[
-             E(2009, 'nhlr_registered', 'Added to the National Historic Lookout Register; dedication ceremony held in June.', 'cr-cout-2009', 'cr-az-2009'),
              E(2018, 'modified', 'Cab vandalized before the 2018 fire season; district added a locked gate below the tower plus chain-link fencing and a gate at the foot of the stairs.', 'cr-cout-2019'),
              E(2018, 'restored', 'Catwalk railing and bracing replaced and painted, most of east catwalk deck replaced, window frames and trim scraped, caulked and painted, two original signs restored.', 'cr-cout-2019'),
              E(2019, 'modified', 'Solar batteries being replaced with sealed gel batteries for the 2019 season.', 'cr-cout-2019'),
              E(2021, 'modified', 'Three new 190W solar panels on the roof, plus a remote-use camera for district fire staff, in place by 2021.', 'cr-co-ut-2022'),
              E(2022, 'restored', 'New cab door installed to replace the one vandalized in 2018, trimmed and painted; 55 stair treads replaced with fir treads, painted and given traction tape.', 'cr-co-ut-2022'),
          ]),
-    dict(slug='devils-head', name="Devil's Head Lookout", region='CO', tower='us-co-devils-head', pos='nhlr:US 8', find=['Devils Head'], forest='Pike NF', design=None, aliases=['Devils Head'],
+    dict(slug='devils-head', name="Devil's Head Lookout", region='CO', tower='us-co-devils-head', pos='nhlr:US 8', find=['Devils', 'Devils Head'], forest='Pike NF', design=None, aliases=['Devils Head'],
          events=[
              E(2013, 'restored', 'HistoriCorps carried out a frame-off restoration to bring the staffed lookout up to code.', 'cr-cout-2013', 'cr-cout-2015', 'cr-co-ut-wy-2016', 'cr-ut-wy-co-2017'),
              E(2015, 'restored', 'The rangers cabin received a new roof.', 'cr-cout-2015', 'cr-co-ut-wy-2016', 'cr-ut-wy-co-2017'),
              E(2022, 'restored', 'With federal funding and HistoriCorps volunteers, the staircase over the rocks to the cab was improved and aging treads replaced.', 'cr-co-ut-2022'),
          ]),
-    dict(slug='fairview-peak', name='Fairview Peak Lookout', region='CO', tower='us-co-fairview-peak', pos='nhlr:US 711', find=['Fairview Peak'], forest='Gunnison NF', design=None, aliases=[],
+    dict(slug='fairview-peak', name='Fairview Peak Lookout', region='CO', tower='us-co-fairview-peak', pos='nhlr:US 711', find=['Fairview', 'Fairview Peak'], forest='Gunnison NF', design=None, aliases=[],
          events=[
              E(2008, 'other', 'FFLA restoration grant of $500 for supplies for the 2008 summer work to restore the stone cabin to its original design with cupola, alongside a Forest Service stonemason contract.', 'cr-restoration-2008'),
              E(2008, 'restored', 'Major renovation led by the Forest Service archaeologist; volunteers packed in and spent a week on restoration tasks at the highest lookout in America.', 'cr-cout-2008'),
-             E(2009, 'nhlr_registered', 'Added to the National Historic Lookout Register; dedication ceremony held in June.', 'cr-cout-2009', 'cr-az-2009'),
              E(2009, 'restored', 'Passport In Time and local volunteers spent a week; stonework completed to stabilize walls up to the roof, new door and temporary windows added, permanent windows ready to install.', 'cr-cout-2009', 'cr-az-2009'),
              E(2015, 'restored', 'Spring concrete work using melted snow for water; cupola rebuilt; removed from the high-risk list thanks to Forest Service work.', 'cr-cout-2015', 'cr-co-ut-wy-2016', 'cr-ut-wy-co-2017'),
              E(2018, 'restored', 'Roof rebuilt, replica of the original cupola added and windows replaced, following extensive stonework in recent years.', 'cr-cout-2019'),
          ]),
-    dict(slug='hahns-peak', name='Hahns Peak Lookout', region='CO', tower='us-co-hahns-peak', pos='nhlr:US 228', find=['Hahns Peak'], forest=None, design=None, aliases=[],
+    dict(slug='hahns-peak', name='Hahns Peak Lookout', region='CO', tower='us-co-hahns-peak', pos='nhlr:US 228', find=['Hahns', 'Hahns Peak'], forest=None, design=None, aliases=[],
          events=[
              E(2016, 'modified', 'DC solar power setup installed and completed; about five work days remained, including plaster on concrete.', 'cr-co-ut-wy-2016'),
              E(2017, 'restored', 'Completion of the $73,427 renovation grant work by HistoriCorps for Historic Routt County; tower to serve as an interpretive day-hike site.', 'cr-ut-wy-co-2017'),
              E(2025, 'restored', 'Routt County partnered with Rocky Mountain Youth Corps on a project repairing and maintaining the lookout, late in the 2025 fire season.', 'cr-co-2025'),
          ]),
-    dict(slug='mestaaehehe-mountain', name="Mestaa'Ehehe Mountain Fire Lookout", region='CO', tower='us-co-mestaaehehe-mountain', pos='nhlr:US 500', find=['Squaw Mountain'], forest='Arapaho NF', design=None, aliases=['Squaw Mountain'],
+    dict(slug='mestaaehehe-mountain', name="Mestaa'Ehehe Mountain Fire Lookout", region='CO', tower='us-co-mestaaehehe-mountain', pos='nhlr:US 500', find=['Squaw', 'Squaw Mountain'], forest='Arapaho NF', design=None, aliases=['Squaw Mountain'],
          events=[
-             E(2003, 'nhlr_registered', 'Placed on the national historic registry after its restoration.', 'cr-cout-2007'),
              E(2003, 'restored', 'Restoration by the Colorado Forestry Association and Forest Service finished after a ten-year effort (begun 1993).', 'cr-cout-2007'),
              E(2007, 'assessed', 'End-of-August inspection by chapter and Forest Service found shutters blown off, broken windows and trap door, and the structure needing paint or stain.', 'cr-cout-2007'),
              E(2007, 'restored', 'September 22 workday by 14 volunteers repaired the trap door and shutters and gave the whole lookout a fresh coat of paint.', 'cr-cout-2007'),
@@ -607,53 +555,52 @@ LOOKOUTS = [
              E(2009, 'restored', 'Two volunteer workdays: new floor in the lower-level apartment, new door to the cab, and vandal damage repaired; a shutter grant request was turned down.', 'cr-cout-2009', 'cr-az-2009'),
              E(2013, 'rental_opened', 'Added to the rental system on recreation.gov early in summer and rented very well.', 'cr-cout-2013'),
          ]),
-    dict(slug='park-point', name='Park Point Lookout', region='CO', tower='us-co-park-point', pos='nhlr:US 806', find=['Park Point'], forest='Mesa Verde National Park', design=None, aliases=[],
+    dict(slug='park-point', name='Park Point Lookout', region='CO', tower='us-co-park-point', pos='nhlr:US 806', find=['Park', 'Park Point'], forest='Mesa Verde National Park', design=None, aliases=[],
          events=[
-             E(2009, 'nhlr_registered', 'Added to the National Historic Lookout Register; dedication ceremony held in June.', 'cr-cout-2009', 'cr-az-2009'),
              E(2025, 'staffed', 'Intermittently staffed again after several unstaffed years, reporting some smoke.', 'cr-co-2025'),
          ]),
-    dict(slug='west-white-pine-mountain-tower-site-at-running-deer-natural-area', name='West White Pine Mountain Tower Site (now at Running Deer Natural Area)', region='CO', tower='us-co-west-white-pine-mountain-tower-site-at-running-deer-natural-area', pos='ffla:co:running-deer-natural-area-relocated-white-pine:40.5587:-105.0122', find=['West White Pine'], forest=None, design=None, aliases=[],
+    dict(slug='west-white-pine-mountain-tower-site-at-running-deer-natural-area', name='West White Pine Mountain Tower Site (now at Running Deer Natural Area)', region='CO', tower='us-co-west-white-pine-mountain-tower-site-at-running-deer-natural-area', pos='ffla:co:running-deer-natural-area-relocated-white-pine:40.5587:-105.0122', find=['West', 'West White Pine'], forest=None, design=None, aliases=[],
          events=[
              E(2012, 'fire', "High Park Fire burned over the lookout's original foundation on West White Pine Mountain; the lookout itself had already been moved.", 'cr-cout-2012'),
              E(2012, 'restored', 'City-led work days with FFLA members carefully reworked, sanded and stained most of the old structure at its new site.', 'cr-cout-2012'),
          ]),
-    dict(slug='arctic-point', name='Arctic Point Lookout', region='ID', tower='us-id-arctic-point', pos='nhlr:US 264', find=['Arctic Point'], forest=None, design=None, aliases=[],
+    dict(slug='arctic-point', name='Arctic Point Lookout', region='ID', tower='us-id-arctic-point', pos='nhlr:US 264', find=['Arctic', 'Arctic Point'], forest=None, design=None, aliases=[],
          events=[
              E(2020, 'restored', 'Restoration of the ground-quarter cabin started at what the report calls the most remote lookout in the lower 48.', 'cr-id-south-2020'),
              E(2021, 'restored', 'Ground cabin restoration by the Forest Service is listed as a project.', 'cr-id-south-2021'),
          ]),
-    dict(slug='arid-peak', name='Arid Peak Lookout', region='ID', tower='us-id-arid-peak', pos='nhlr:US 153', find=['Arid Peak'], forest='St. Joe NF', design=None, aliases=[],
+    dict(slug='arid-peak', name='Arid Peak Lookout', region='ID', tower='us-id-arid-peak', pos='nhlr:US 153', find=['Arid', 'Arid Peak'], forest='St. Joe NF', design=None, aliases=[],
          events=[
              E(2008, 'assessed', 'Winter damage to the lookout was assessed.', 'cr-nidmt-2008'),
              E(2008, 'restored', 'Chapter stabilized the lookout and cleaned up the winter damage.', 'cr-nidmt-2008'),
          ]),
-    dict(slug='balancing-rock', name='Balancing Rock Lookout', region='ID', tower='us-id-balancing-rock', pos='nhlr:US 1469', find=['Balancing Rock'], forest='Clearwater NF', design='L-6', aliases=[],
+    dict(slug='balancing-rock', name='Balancing Rock Lookout', region='ID', tower='us-id-balancing-rock', pos='nhlr:US 1469', find=['Balancing', 'Balancing Rock'], forest='Clearwater NF', design='L-6', aliases=[],
          events=[
              E(2014, 'restored', 'Patrol lookout restored by volunteers; reported as the only known L-6 in Idaho.', 'cr-idnmt-2014'),
          ]),
-    dict(slug='bald-mountain-4', name='Bald Mountain', region='ID', tower='us-id-bald-mountain-4', pos='ffla:id:bald-mountain:46.5754:-115.8994', find=['Bald Mountain'], forest='Clearwater NF', design=None, aliases=[],
+    dict(slug='bald-mountain-4', name='Bald Mountain', region='ID', tower='us-id-bald-mountain-4', pos='ffla:id:bald-mountain:46.5754:-115.8994', find=['Bald', 'Bald Mountain'], forest='Clearwater NF', design=None, aliases=[],
          events=[
              E(2005, 'restored', 'Tower retrofitted to meet safety and engineering concerns after being closed about three years earlier; intended to return to the rental program.', 'cr-im-2005'),
          ]),
-    dict(slug='basin-butte', name='Basin Butte Lookout', region='ID', tower='us-id-basin-butte', pos='nhlr:US 747', find=['Basin Butte'], forest='Challis NF', design='Plan 80 (L-4) ground house', aliases=[],
+    dict(slug='basin-butte', name='Basin Butte Lookout', region='ID', tower='us-id-basin-butte', pos='nhlr:US 747', find=['Basin', 'Basin Butte'], forest='Challis NF', design='Plan 80 (L-4) ground house', aliases=[],
          events=[
              E(2008, 'other', 'FFLA restoration grant of $500 toward a new lightning protection system on an estimated $8,000 project, with added funds from the Southern Idaho Chapter.', 'cr-restoration-2008'),
              E(2008, 'restored', 'Door, shutters and catwalk replaced during a Passport in Time volunteer project in summer 2008.', 'cr-restoration-2008'),
          ]),
-    dict(slug='bear-mountain', name='Bear Mountain Lookout', region='ID', tower='us-id-bear-mountain', pos='nhlr:US 779', find=['Bear Mountain'], forest='Clearwater NF', design='53-ft L-4', aliases=[],
+    dict(slug='bear-mountain', name='Bear Mountain Lookout', region='ID', tower='us-id-bear-mountain', pos='nhlr:US 779', find=['Bear', 'Bear Mountain'], forest='Clearwater NF', design='53-ft L-4', aliases=[],
          events=[
              E(2005, 'restored', 'Tower retrofitted to meet safety and engineering concerns after being closed about three years earlier; expected back in detection service.', 'cr-im-2005'),
              E(2019, 'restored', 'Re-roofing project on the lookout, with the chapter supplying original hip-roof flashing.', 'cr-id-n-mt-2019'),
          ]),
-    dict(slug='black-mountain-at-black-mountain-ridge', name='Black Mountain Lookout (now at Black Mountain Ridge)', region='ID', tower='us-id-black-mountain-at-black-mountain-ridge', pos='ffla:id:black-mountain-ridge-relocated-black-mountain:48.6135:-116.2477', find=['Black Mountain'], forest='Kaniksu NF', design=None, aliases=[],
+    dict(slug='black-mountain-at-black-mountain-ridge', name='Black Mountain Lookout (now at Black Mountain Ridge)', region='ID', tower='us-id-black-mountain-at-black-mountain-ridge', pos='ffla:id:black-mountain-ridge-relocated-black-mountain:48.6135:-116.2477', find=['Black', 'Black Mountain'], forest='Kaniksu NF', design=None, aliases=[],
          events=[
              E(2019, 'restored', 'Chapter supplied materials for refurbishing the lookout after its relocation.', 'cr-id-n-mt-2019'),
          ]),
-    dict(slug='burton-peak', name='Burton Peak Lookout', region='ID', tower='us-id-burton-peak', pos='nhlr:US 764', find=['Burton Peak'], forest=None, design='log L-5', aliases=[],
+    dict(slug='burton-peak', name='Burton Peak Lookout', region='ID', tower='us-id-burton-peak', pos='nhlr:US 764', find=['Burton', 'Burton Peak'], forest=None, design='log L-5', aliases=[],
          events=[
              E(2005, 'assessed', 'Initial assessment of the feasibility of restoring the log L-5 lookout was completed.', 'cr-im-2005'),
          ]),
-    dict(slug='butts-creek-point', name='Butts Creek Point Lookout', region='ID', tower='us-id-butts-creek-point', pos='nhlr:US 1011', find=['Butts Creek Point'], forest=None, design=None, aliases=[],
+    dict(slug='butts-creek-point', name='Butts Creek Point Lookout', region='ID', tower='us-id-butts-creek-point', pos='nhlr:US 1011', find=['Butts', 'Butts Creek Point'], forest=None, design=None, aliases=[],
          events=[
              E(2021, 'restored', 'Log base was improved after bear damage.', 'cr-id-south-2021'),
          ]),
@@ -661,12 +608,12 @@ LOOKOUTS = [
          events=[
              E(2014, 'assessed', 'Condition assessment carried out by a volunteer over two days.', 'cr-soid-2014'),
          ]),
-    dict(slug='deer-ridge', name='Deer Ridge Lookout', region='ID', tower='us-id-deer-ridge', pos='nhlr:US 766', find=['Deer Ridge'], forest='Kaniksu NF', design=None, aliases=[],
+    dict(slug='deer-ridge', name='Deer Ridge Lookout', region='ID', tower='us-id-deer-ridge', pos='nhlr:US 766', find=['Deer', 'Deer Ridge'], forest='Kaniksu NF', design=None, aliases=[],
          events=[
              E(2005, 'rental_opened', 'Rental lookout on the Bonners Ferry district was re-opened after tower work.', 'cr-im-2005'),
              E(2005, 'restored', 'Lightning protection was re-installed after other tower work was finished, as part of re-opening this rental lookout.', 'cr-im-2005'),
          ]),
-    dict(slug='delyle-ridge', name='Delyle Ridge Lookout', region='ID', tower='us-id-delyle-ridge', pos='ffla:id:delyle-ridge:48.0630:-116.1308', find=['Delyle Ridge'], forest='Kaniksu NF', design='L-4 cabin', aliases=[],
+    dict(slug='delyle-ridge', name='Delyle Ridge Lookout', region='ID', tower='us-id-delyle-ridge', pos='ffla:id:delyle-ridge:48.0630:-116.1308', find=['Delyle', 'Delyle Ridge'], forest='Kaniksu NF', design='L-4 cabin', aliases=[],
          events=[
              E(2008, 'destroyed', 'The L-4 cabin collapsed after more than 50 years of abandonment.', 'cr-wdep-2008'),
          ]),
@@ -674,7 +621,7 @@ LOOKOUTS = [
          events=[
              E(2012, 'staffed', 'A successful volunteer staffing program was started.', 'cr-nidmt-2012'),
          ]),
-    dict(slug='east-mountain', name='East Mountain Lookout', region='ID', tower='us-id-east-mountain', pos='nhlr:US 231', find=['East Mountain'], forest=None, design=None, aliases=[],
+    dict(slug='east-mountain', name='East Mountain Lookout', region='ID', tower='us-id-east-mountain', pos='nhlr:US 231', find=['East', 'East Mountain'], forest=None, design=None, aliases=[],
          events=[
              E(2001, 'burned', 'Burned down; it had been counted among the lookouts eligible for the National Register of Historic Places.', 'cr-is-2006'),
          ]),
@@ -682,7 +629,7 @@ LOOKOUTS = [
          events=[
              E(2014, 'assessed', 'A condition assessment was completed.', 'cr-soid-2014'),
          ]),
-    dict(slug='grave-peak', name='Grave Peak Lookout', region='ID', tower='us-id-grave-peak', pos='nhlr:US 136', find=['Grave Peak'], forest='Nez Perce-Clearwater NF', design='D-6 cupola', aliases=[],
+    dict(slug='grave-peak', name='Grave Peak Lookout', region='ID', tower='us-id-grave-peak', pos='nhlr:US 136', find=['Grave', 'Grave Peak'], forest='Nez Perce-Clearwater NF', design='D-6 cupola', aliases=[],
          events=[
              E(1924, 'built', 'Built in 1924 as a D-6 cupola lookout; the last standing D-6 in Idaho.', 'cr-restoration-2019'),
              E(1998, 'restored', 'New window shutters built and installed by a volunteer member in 1998.', 'cr-restoration-2019'),
@@ -691,19 +638,19 @@ LOOKOUTS = [
              E(2020, 'restored', 'Second phase of restoration; the chapter paid for materials and supplied the original cupola window frames it had held for over 20 years.', 'cr-id-north-mt-2020'),
              E(2024, 'restored', 'Chapter paid for restoration materials when the forest could not.', 'cr-id-n-mt-2024'),
          ]),
-    dict(slug='green-mountain-2', name='Green Mountain Lookout', region='ID', tower='us-id-green-mountain-2', pos='nhlr:US 235', find=['Green Mountain'], forest='Nez Perce NF', design=None, aliases=[],
+    dict(slug='green-mountain-2', name='Green Mountain Lookout', region='ID', tower='us-id-green-mountain-2', pos='nhlr:US 235', find=['Green', 'Green Mountain'], forest='Nez Perce NF', design=None, aliases=[],
          events=[
              E(2006, 'restored', 'Safety upgrade work was started.', 'cr-id-2006'),
          ]),
-    dict(slug='hemlock-butte-2', name='Hemlock Butte Lookout', region='ID', tower='us-id-hemlock-butte-2', pos='nhlr:US 767', find=['Hemlock Butte'], forest='Clearwater NF', design=None, aliases=[],
+    dict(slug='hemlock-butte-2', name='Hemlock Butte Lookout', region='ID', tower='us-id-hemlock-butte-2', pos='nhlr:US 767', find=['Hemlock', 'Hemlock Butte'], forest='Clearwater NF', design=None, aliases=[],
          events=[
              E(2005, 'restored', 'Tower retrofitted to meet safety and engineering concerns after being closed about three years earlier; expected back in detection service.', 'cr-im-2005'),
          ]),
-    dict(slug='hidden-peak', name='Hidden Peak Lookout', region='ID', tower='us-id-hidden-peak', pos='nhlr:US 946', find=['Hidden Peak'], forest='Clearwater NF', design=None, aliases=[],
+    dict(slug='hidden-peak', name='Hidden Peak Lookout', region='ID', tower='us-id-hidden-peak', pos='nhlr:US 946', find=['Hidden', 'Hidden Peak'], forest='Clearwater NF', design=None, aliases=[],
          events=[
              E(2007, 'fire', 'Lookout survived a fire that burned around and over it, despite a decision to make no effort to protect it; it had been identified for disposal.', 'cr-nidmt-2007'),
          ]),
-    dict(slug='horton-peak', name='Horton Peak Lookout', region='ID', tower='us-id-horton-peak', pos='nhlr:US 1062', find=['Horton Peak'], forest='Sawtooth NF', design=None, aliases=[],
+    dict(slug='horton-peak', name='Horton Peak Lookout', region='ID', tower='us-id-horton-peak', pos='nhlr:US 1062', find=['Horton', 'Horton Peak'], forest='Sawtooth NF', design=None, aliases=[],
          events=[
              E(2006, 'assessed', 'Forest heritage program was preparing a preservation plan, to include a National Historic Lookout Register nomination.', 'cr-is-2006'),
          ]),
@@ -712,11 +659,10 @@ LOOKOUTS = [
              E(2013, 'other', 'Sold through a GSA auction, to be removed the following summer; the 1970s lookout on state land had suffered heavy vandalism.', 'cr-nidmt-2013', 'cr-idnmt-2014'),
              E(2014, 'removed', 'Removed late in the year after its 2013 auction sale; the new owners plan to re-erect it in north-central Idaho.', 'cr-idnmt-2014'),
          ]),
-    dict(slug='hughes-ridge', name='Hughes Ridge Lookout', region='ID', tower='us-id-hughes-ridge', pos='nhlr:US 129', find=['Hughes Ridge'], forest='Kaniksu NF', design=None, aliases=[],
+    dict(slug='hughes-ridge', name='Hughes Ridge Lookout', region='ID', tower='us-id-hughes-ridge', pos='nhlr:US 129', find=['Hughes', 'Hughes Ridge'], forest='Kaniksu NF', design=None, aliases=[],
          events=[
              E(2007, 'restored', 'Safety upgrade work was started.', 'cr-nidmt-2007'),
              E(2009, 'restored', 'Upgrades were under way, with the lookout expected to be ready for 2010 staffing.', 'cr-nidmt-2009'),
-             E(2017, 'fire', 'Wrapped as a precaution against wildfire; not lost.', 'cr-id-n-mt-2017'),
          ]),
     dict(slug='jay-point', name='Jay Point Lookout', region='ID', tower='us-id-jay-point', pos='ffla:id:jay-point:46.4983:-114.7467', find=['Jay Point'], forest='Clearwater NF', design=None, aliases=[],
          events=[
@@ -726,11 +672,11 @@ LOOKOUTS = [
          events=[
              E(2006, 'assessed', 'Forest heritage program was preparing a preservation plan, to include a National Historic Lookout Register nomination.', 'cr-is-2006'),
          ]),
-    dict(slug='loon-creek-point', name='Loon Creek Point', region='ID', tower='us-id-loon-creek-point', pos=None, find=['Loon Creek Point'], forest='Salmon-Challis NF', design=None, aliases=[],
+    dict(slug='loon-creek-point', name='Loon Creek Point', region='ID', tower='us-id-loon-creek-point', pos=None, find=['Loon', 'Loon Creek Point'], forest='Salmon-Challis NF', design=None, aliases=[], lat=44.78575, lon=-114.82287, position_note='copied from the position of tower us-id-loon-creek-point (from idaho_fl); no register record holds this lookout',
          events=[
              E(2007, 'burned', 'Lost to wildfire; the only confirmed lookout loss to fire that year.', 'cr-wdep-2007'),
          ]),
-    dict(slug='mallard-peak', name='Mallard Peak Lookout', region='ID', tower='us-id-mallard-peak', pos='nhlr:US 166', find=['Mallard Peak'], forest='St. Joe NF', design=None, aliases=[],
+    dict(slug='mallard-peak', name='Mallard Peak Lookout', region='ID', tower='us-id-mallard-peak', pos='nhlr:US 166', find=['Mallard', 'Mallard Peak'], forest='St. Joe NF', design=None, aliases=[],
          events=[
              E(2008, 'restored', 'Restoration started with a Labor Day weekend work project after the chapter bought paint and supplies when Forest Service funds were cut.', 'cr-nidmt-2008'),
              E(2009, 'restored', 'Chapter supported continued restoration work.', 'cr-nidmt-2009'),
@@ -740,7 +686,7 @@ LOOKOUTS = [
          events=[
              E(2013, 'burned', 'All three structures at the site (log cabin, observatory and outhouse) were lost to wildfire.', 'cr-nidmt-2013'),
          ]),
-    dict(slug='middle-sister-peak', name='Middle Sister Peak Lookout', region='ID', tower='us-id-middle-sister-peak', pos='nhlr:US 151', find=['Middle Sister'], forest='Idaho Panhandle NFs', design=None, aliases=[],
+    dict(slug='middle-sister-peak', name='Middle Sister Peak Lookout', region='ID', tower='us-id-middle-sister-peak', pos='nhlr:US 151', find=['Middle', 'Middle Sister'], forest='Idaho Panhandle NFs', design=None, aliases=[],
          events=[
              E(2009, 'restored', 'Upgrades were under way, with the lookout expected to be ready for 2010 staffing.', 'cr-nidmt-2009'),
          ]),
@@ -748,19 +694,19 @@ LOOKOUTS = [
          events=[
              E(2014, 'restored', 'Stabilization work by a back-country horsemen group and the forest, supported by Southwest Idaho RAC and Idaho Heritage Trust grants.', 'cr-soid-2014'),
          ]),
-    dict(slug='peck-mountain', name='Peck Mountain Lookout', region='ID', tower='us-id-peck-mountain', pos='nhlr:US 309', find=['Peck Mountain'], forest='Payette NF', design=None, aliases=[],
+    dict(slug='peck-mountain', name='Peck Mountain Lookout', region='ID', tower='us-id-peck-mountain', pos='nhlr:US 309', find=['Peck', 'Peck Mountain'], forest='Payette NF', design=None, aliases=[],
          events=[
              E(2006, 'other', 'Lightning-protection components were salvaged from the ground cabin for reuse at Square Mountain lookout.', 'cr-id-2006'),
          ]),
-    dict(slug='shorty-peak', name='Shorty Peak Lookout', region='ID', tower='us-id-shorty-peak', pos='nhlr:US 574', find=['Shorty Peak'], forest='Kaniksu NF', design=None, aliases=[],
+    dict(slug='shorty-peak', name='Shorty Peak Lookout', region='ID', tower='us-id-shorty-peak', pos='nhlr:US 574', find=['Shorty', 'Shorty Peak'], forest='Kaniksu NF', design=None, aliases=[],
          events=[
              E(2005, 'assessed', 'Assessment and check of the lightning-protection grounding system was completed at this rental lookout.', 'cr-im-2005'),
          ]),
-    dict(slug='sleeping-deer-mountain', name='Sleeping Deer Mountain Lookout', region='ID', tower='us-id-sleeping-deer-mountain', pos='nhlr:US 547', find=['Sleeping Deer'], forest='Salmon-Challis NF', design=None, aliases=[],
+    dict(slug='sleeping-deer-mountain', name='Sleeping Deer Mountain Lookout', region='ID', tower='us-id-sleeping-deer-mountain', pos='nhlr:US 547', find=['Sleeping', 'Sleeping Deer'], forest='Salmon-Challis NF', design=None, aliases=[],
          events=[
              E(2014, 'restored', 'Light repair: a temporary patch was applied to the weathered door.', 'cr-soid-2014'),
          ]),
-    dict(slug='smith-knob', name='Smith Knob Lookout', region='ID', tower='us-id-smith-knob', pos='ffla:id:smith-knob:45.2878:-115.5149', find=['Smith Knob'], forest='Payette NF', design='2-story ground cabin', aliases=[],
+    dict(slug='smith-knob', name='Smith Knob Lookout', region='ID', tower='us-id-smith-knob', pos='ffla:id:smith-knob:45.2878:-115.5149', find=['Smith', 'Smith Knob'], forest='Payette NF', design='2-story ground cabin', aliases=[],
          events=[
              E(2008, 'removed', 'Unused two-story ground cabin demolished by the forest.', 'cr-wdep-2008'),
          ]),
@@ -774,7 +720,7 @@ LOOKOUTS = [
              E(2014, 'other', 'Planned removal was postponed late in the year, to be acted on in spring 2015.', 'cr-idnmt-2014'),
              E(2015, 'removed', 'Removed in July under a demolition contract, with no prior notice to the FFLA and no salvage of materials.', 'cr-nidmt-2015'),
          ]),
-    dict(slug='split-creek-point-at-cent-id-hist-museum-cab', name='Split Creek Point Lookout (now at the Cent. ID Hist. Museum – Cab)', region='ID', tower='us-id-split-creek-point-at-cent-id-hist-museum-cab', pos='nhlr:US 1455', find=['Split Creek Point'], forest='Payette NF', design='steel tower', aliases=[],
+    dict(slug='split-creek-point-at-cent-id-hist-museum-cab', name='Split Creek Point Lookout (now at the Cent. ID Hist. Museum – Cab)', region='ID', tower='us-id-split-creek-point-at-cent-id-hist-museum-cab', pos='nhlr:US 1455', find=['Split', 'Split Creek Point'], forest='Payette NF', design='steel tower', aliases=[],
          events=[
              E(2008, 'removed', 'Unused steel tower dismantled by the forest; the cabin was also intentionally damaged by Forest Service personnel.', 'cr-wdep-2008'),
          ]),
@@ -784,7 +730,6 @@ LOOKOUTS = [
              E(2012, 'assessed', 'Initial assessment made of the 53-foot tower.', 'cr-restoration-2012'),
              E(2012, 'other', 'FFLA restoration grant of $500 for the restoration project, a partnership of the North Idaho-Montana Chapter, Lutherhaven Ministries and the Idaho Panhandle NFs.', 'cr-restoration-2012'),
              E(2012, 'restored', 'Restoration work began, mostly by Lutherhaven Ministries volunteers, with FFLA volunteers joining in a September session. Restoration work began on the 1930s-era ground house in 2012.', 'cr-nidmt-2012', 'cr-restoration-2012'),
-             E(2013, 'restored', 'Restoration work continued, with volunteer help from Lutherhaven Ministries and FFLA volunteers throughout the summer.', 'cr-nidmt-2013'),
              E(2014, 'restored', 'Work on the ground house continued but was suspended for safety until the cab was lifted off the nearby tower; project closed for the season.', 'cr-idnmt-2014'),
              E(2015, 'fire', 'Ground house was wrapped as protection from nearby fires.', 'cr-nidmt-2015'),
              E(2016, 'other', 'Forest Service declined to rebuild the removed cab; salvage of parts began in November but the cab proved far worse than expected, with little usable.', 'cr-id-n-mt-2016'),
@@ -792,15 +737,14 @@ LOOKOUTS = [
              E(2019, 'rental_opened', 'Restored ground house lookout entered the Forest Service cabin rental program.', 'cr-id-n-mt-2019'),
              E(2019, 'restored', 'Ground house restoration was completed after about eight years of work (begun 2012).', 'cr-id-n-mt-2019'),
          ]),
-    dict(slug='square-mountain', name='Square Mountain Lookout', region='ID', tower='us-id-square-mountain', pos='nhlr:US 542', find=['Square Mountain'], forest='Nez Perce NF', design=None, aliases=[],
+    dict(slug='square-mountain', name='Square Mountain Lookout', region='ID', tower='us-id-square-mountain', pos='nhlr:US 542', find=['Square', 'Square Mountain'], forest='Nez Perce NF', design=None, aliases=[],
          events=[
              E(2003, 'restored', 'Restoration project was nearly completed during the year, with the chapter as a project partner.', 'cc-im-2003'),
-             E(2004, 'restored', 'Restoration continued with chapter involvement but slowed by engineering and safety concerns that had to be settled first.', 'cr-im-2004'),
              E(2006, 'other', 'Components needed to finish restoring the period lightning-protection system were finally obtained, salvaged from the Peck Mountain ground cabin.', 'cr-id-2006'),
-             E(2009, 'restored', 'Project to replace the period lightning protection system was completed. Project to replace the period lightning-protection system was completed.', 'cr-az-2009', 'cr-nidmt-2009'),
+             E(2009, 'restored', 'Project to replace the period lightning protection system was completed.', 'cr-az-2009', 'cr-nidmt-2009'),
              E(2017, 'restored', 'Repainted by a volunteer.', 'cr-id-n-mt-2017'),
          ]),
-    dict(slug='stormy-peak', name='Stormy Peak Lookout', region='ID', tower='us-id-stormy-peak', pos='nhlr:US 923', find=['Stormy Peak'], forest='Salmon/Challis NF', design='L-4', aliases=[],
+    dict(slug='stormy-peak', name='Stormy Peak Lookout', region='ID', tower='us-id-stormy-peak', pos='nhlr:US 923', find=['Stormy', 'Stormy Peak'], forest='Salmon/Challis NF', design='L-4', aliases=[],
          events=[
              E(2022, 'burned', 'Intact L-4 with firefinder lost to the fast-moving Moose Fire in late July; logbook and firefinder were removed the day before, and it was not wrapped.', 'cr-id-south-2022'),
          ]),
@@ -809,7 +753,7 @@ LOOKOUTS = [
              E(2008, 'restored', 'A chapter member led a restoration program at this Idaho Department of Lands lookout.', 'cr-nidmt-2008'),
              E(2008, 'staffed', 'A volunteer staffing program was run at the lookout alongside the restoration work.', 'cr-nidmt-2008'),
          ]),
-    dict(slug='weitas-butte', name='Weitas Butte Lookout', region='ID', tower='us-id-weitas-butte', pos='nhlr:US 772', find=['Weitas Butte'], forest='Clearwater NF', design=None, aliases=[],
+    dict(slug='weitas-butte', name='Weitas Butte Lookout', region='ID', tower='us-id-weitas-butte', pos='nhlr:US 772', find=['Weitas', 'Weitas Butte'], forest='Clearwater NF', design=None, aliases=[],
          events=[
              E(2006, 'restored', 'Safety upgrade work was started.', 'cr-id-2006'),
          ]),
@@ -819,11 +763,7 @@ LOOKOUTS = [
              E(2012, 'restored', 'Brought back into shape by volunteers.', 'cr-nidmt-2012'),
              E(2012, 'staffed', 'A volunteer staffing program was started.', 'cr-nidmt-2012'),
          ]),
-    dict(slug='barren-peak', name='Barren Peak Lookout', region='MT', tower='us-mt-barren-peak', pos='nhlr:US 905', find=['Barren Peak'], forest='Kootenai NF', design=None, aliases=[],
-         events=[
-             E(2005, 'restored', 'Restoration work took place on the lookout.', 'cr-im-2005'),
-         ]),
-    dict(slug='big-hole', name='Big Hole Lookout', region='MT', tower='us-mt-big-hole', pos='nhlr:US 781', find=['Big Hole Peak'], forest='Lolo NF', design=None, aliases=['Big Hole Peak'],
+    dict(slug='big-hole', name='Big Hole Lookout', region='MT', tower='us-mt-big-hole', pos='nhlr:US 781', find=['Big Hole Peak', 'Hole'], forest='Lolo NF', design=None, aliases=['Big Hole Peak'],
          events=[
              E(2013, 'restored', 'A Passport in Time volunteer restoration project was held.', 'cr-nidmt-2013'),
              E(2014, 'restored', 'Another Passport in Time volunteer restoration project was held.', 'cr-idnmt-2014'),
@@ -831,68 +771,42 @@ LOOKOUTS = [
              E(2016, 'restored', 'Fourth-year Passport in Time restoration project was held but interrupted by a fast-moving fire.', 'cr-id-n-mt-2016'),
              E(2017, 'restored', 'Fifth and final Passport in Time restoration project completed in late June.', 'cr-id-n-mt-2017'),
          ]),
-    dict(slug='boulder-lake', name='Boulder Lake', region='MT', tower='us-mt-boulder-lake', pos='ffla:mt:boulder-lake:47.0689:-113.8355', find=['Boulder Lake'], forest=None, design=None, aliases=[],
+    dict(slug='boulder-lake', name='Boulder Lake', region='MT', tower='us-mt-boulder-lake', pos='ffla:mt:boulder-lake:47.0689:-113.8355', find=['Boulder', 'Boulder Lake'], forest=None, design=None, aliases=[],
          events=[
              E(2003, 'burned', 'Lost to fire during the 2003 season.', 'cc-im-2003'),
          ]),
-    dict(slug='boulder-point', name='Boulder Point Lookout', region='MT', tower='us-mt-boulder-point', pos='nhlr:US 543', find=['Boulder Point'], forest='Bitterroot NF', design=None, aliases=[],
+    dict(slug='boulder-point', name='Boulder Point Lookout', region='MT', tower='us-mt-boulder-point', pos='nhlr:US 543', find=['Boulder', 'Boulder Point'], forest='Bitterroot NF', design=None, aliases=[],
          events=[
              E(2003, 'restored', 'July volunteer work party led by the West Fork Ski Club did restoration and stabilization work, backed by a National Forest Foundation grant with chapter matching funds.', 'cc-im-2003'),
-             E(2005, 'restored', 'Restoration work continued during the year.', 'cr-im-2005'),
          ]),
-    dict(slug='coal-ridge-moran-lookout-cabin', name='Coal Ridge (Moran) Lookout Cabin', region='MT', tower='us-mt-coal-ridge-moran-lookout-cabin', pos='nhlr:US 1498', find=['Coal Ridge'], forest=None, design=None, aliases=[],
-         events=[
-             E(2013, 'restored', 'Restoration work was done on the cabin.', 'cr-nidmt-2013'),
-         ]),
-    dict(slug='cougar-peak', name='Cougar Peak Lookout', region='MT', tower='us-mt-cougar-peak', pos='nhlr:US 784', find=['Cougar Peak'], forest='Lolo NF', design=None, aliases=[],
-         events=[
-             E(2017, 'fire', 'Wrapped as a precaution against wildfire; not lost.', 'cr-id-n-mt-2017'),
-         ]),
-    dict(slug='cyclone-peak', name='Cyclone Peak Lookout', region='MT', tower='us-mt-cyclone-peak', pos='nhlr:US 1499', find=['Cyclone'], forest='Flathead NF', design=None, aliases=[],
-         events=[
-             E(2018, 'restored', 'Northwest Montana sub-chapter members took part in a restoration or maintenance project here.', 'cr-id-n-mt-2018'),
-         ]),
-    dict(slug='double-arrow', name='Double Arrow Lookout', region='MT', tower='us-mt-double-arrow', pos='nhlr:US 165', find=['Double Arrow'], forest='Lolo NF', design=None, aliases=[],
+    dict(slug='double-arrow', name='Double Arrow Lookout', region='MT', tower='us-mt-double-arrow', pos='nhlr:US 165', find=['Double', 'Double Arrow'], forest='Lolo NF', design=None, aliases=[],
          events=[
              E(2006, 'restored', 'Restoration work began.', 'cr-id-2006'),
              E(2007, 'fire', 'Saved from destruction by a wildfire a couple of months after the September conference visit. Lookout survived a fire that burned all around the site.', 'cr-wdep-2007', 'cr-nidmt-2007'),
-             E(2007, 'restored', 'Ongoing restoration project; the lookout was visited by conference attendees in September. Restoration continued with indirect chapter support.', 'cr-wdep-2007', 'cr-nidmt-2007'),
+             E(2007, 'restored', 'Ongoing restoration project; the lookout was visited by conference attendees in September.', 'cr-wdep-2007'),
          ]),
     dict(slug='firefighter', name='Firefighter Lookout', region='MT', tower='us-mt-firefighter', pos='nhlr:US 926', find=['Firefighter'], forest='Flathead NF', design=None, aliases=[],
          events=[
              E(2012, 'restored', 'Brought back into shape by volunteers.', 'cr-nidmt-2012'),
              E(2012, 'staffed', 'A volunteer staffing program was started.', 'cr-nidmt-2012'),
-             E(2018, 'restored', 'Northwest Montana sub-chapter members took part in a restoration or maintenance project here.', 'cr-id-n-mt-2018'),
          ]),
-    dict(slug='granite-butte', name='Granite Butte Lookout', region='MT', tower='us-mt-granite-butte', pos='nhlr:US 744', find=['Granite Butte'], forest='Helena NF', design='20-ft R-6 flat top', aliases=[],
+    dict(slug='granite-butte', name='Granite Butte Lookout', region='MT', tower='us-mt-granite-butte', pos='nhlr:US 744', find=['Granite', 'Granite Butte'], forest='Helena NF', design='20-ft R-6 flat top', aliases=[],
          events=[
              E(2008, 'assessed', 'Lookout was assessed; the small flat-top cab had been written off for disposal but new interest made saving it look promising.', 'cr-nidmt-2008'),
-             E(2009, 'modified', 'Firefinder table loaned to the lookout and preparations made to ready the flat-top cab for staffing. A firefinder table was arranged on loan, and the flat-top cab was being readied for staffing.', 'cr-az-2009', 'cr-nidmt-2009'),
+             E(2009, 'modified', 'Firefinder table loaned to the lookout and preparations made to ready the flat-top cab for staffing.', 'cr-az-2009', 'cr-nidmt-2009'),
              E(2012, 'other', 'FFLA restoration grant of $500 for restoration to prepare the lookout for possible addition to the rental program.', 'cr-restoration-2012'),
              E(2012, 'restored', 'Restoration work began with Montana Wilderness Association and National Smokejumper Association volunteers.', 'cr-nidmt-2012', 'cr-restoration-2012'),
              E(2013, 'restored', 'Phase two of restoration neared completion; custom-made furniture was installed, funded mainly by FFLA grants.', 'cr-nidmt-2013'),
          ]),
-    dict(slug='holland-ridge', name='Holland Ridge Lookout', region='MT', tower='us-mt-holland-ridge', pos='nhlr:US 1494', find=['Holland Ridge'], forest=None, design=None, aliases=[],
-         events=[
-             E(2013, 'restored', 'Restoration work was done on the cabin.', 'cr-nidmt-2013'),
-         ]),
-    dict(slug='horse-butte', name='Horse Butte Lookout', region='MT', tower='us-mt-horse-butte', pos='nhlr:US 737', find=['Horse Butte'], forest='Gallatin NF', design=None, aliases=[],
+    dict(slug='horse-butte', name='Horse Butte Lookout', region='MT', tower='us-mt-horse-butte', pos='nhlr:US 737', find=['Horse', 'Horse Butte'], forest='Gallatin NF', design=None, aliases=[],
          events=[
              E(2012, 'restored', 'Refurbishing was supported with the Forest Service for possible future staffing.', 'cr-nidmt-2012'),
          ]),
-    dict(slug='huckleberry', name='Huckleberry Lookout', region='MT', tower='us-mt-huckleberry', pos='nhlr:US 35', find=['Huckleberry'], forest='Glacier NP', design=None, aliases=[],
-         events=[
-             E(2018, 'restored', 'Northwest Montana sub-chapter members took part in a restoration or maintenance project here.', 'cr-id-n-mt-2018'),
-         ]),
-    dict(slug='liscom-butte', name='Liscom Butte', region='MT', tower='us-mt-liscom-butte', pos='ffla:mt:liscom-butte:45.7430:-105.9745', find=['Liscom Butte'], forest='Custer NF', design=None, aliases=[],
+    dict(slug='liscom-butte', name='Liscom Butte', region='MT', tower='us-mt-liscom-butte', pos='ffla:mt:liscom-butte:45.7430:-105.9745', find=['Liscom', 'Liscom Butte'], forest='Custer NF', design=None, aliases=[],
          events=[
              E(2009, 'removed', 'Lookout removed under a demolition contract; one of only two lookouts lost in the chapter area in 2009. Removed under a demolition contract.', 'cr-az-2009', 'cr-nidmt-2009'),
          ]),
-    dict(slug='meadow-peak', name='Meadow Peak Lookout', region='MT', tower='us-mt-meadow-peak', pos='nhlr:US 344', find=['Meadow Peak'], forest='Kootenai NF', design=None, aliases=[],
-         events=[
-             E(2018, 'restored', 'Northwest Montana sub-chapter members took part in a restoration or maintenance project here.', 'cr-id-n-mt-2018'),
-         ]),
-    dict(slug='mineral-peak', name='Mineral Peak Lookout', region='MT', tower='us-mt-mineral-peak', pos='nhlr:US 209', find=['Mineral Peak'], forest='Lolo NF', design='L-4 cab on 53-ft tower', aliases=[],
+    dict(slug='mineral-peak', name='Mineral Peak Lookout', region='MT', tower='us-mt-mineral-peak', pos='nhlr:US 209', find=['Mineral', 'Mineral Peak'], forest='Lolo NF', design='L-4 cab on 53-ft tower', aliases=[],
          events=[
              E(2005, 'other', 'Chapter grant application to move the cab to a shorter tower was unsuccessful; the tower is considered unsafe and the structure was identified for disposal.', 'cr-im-2005'),
              E(2006, 'assessed', 'Chapter helped assess the feasibility of restoring the 53-ft L-4 tower; a decision was then made to proceed.', 'cr-id-2006'),
@@ -903,123 +817,77 @@ LOOKOUTS = [
              E(2009, 'restored', 'Week-long project: certified climbers re-tightened all tower bolts and applied preservative; refurbished door installed. Paid by chapter funds and an FFLA grant.', 'cr-az-2009', 'cr-nidmt-2009', 'cr-restoration-2009'),
              E(2012, 'restored', 'Re-roofing was completed in August, paid for by earmarked donations plus a significant chapter contribution.', 'cr-nidmt-2012'),
          ]),
-    dict(slug='minton-peak', name='Minton Peak Lookout', region='MT', tower='us-mt-minton-peak', pos='nhlr:US 1043', find=['Minton Peak'], forest='Kootenai NF', design=None, aliases=[],
+    dict(slug='minton-peak', name='Minton Peak Lookout', region='MT', tower='us-mt-minton-peak', pos='nhlr:US 1043', find=['Minton', 'Minton Peak'], forest='Kootenai NF', design=None, aliases=[],
          events=[
              E(2011, 'replaced', 'All-new replacement lookout built with ARRA stimulus funding, planned to be ready for the rental program by mid-summer.', 'cr-nidmt-2011'),
          ]),
-    dict(slug='monument-peak', name='Monument Peak Lookout', region='MT', tower='us-mt-monument-peak', pos='nhlr:US 642', find=['Monument Peak'], forest='Lewis & Clark NF', design='L-4 cab', aliases=[],
+    dict(slug='monument-peak', name='Monument Peak Lookout', region='MT', tower='us-mt-monument-peak', pos='nhlr:US 642', find=['Monument', 'Monument Peak'], forest='Lewis & Clark NF', design='L-4 cab', aliases=[],
          events=[
              E(2003, 'restored', 'Another Passport in Time volunteer project continued restoration work at the lookout.', 'cc-im-2003'),
              E(2005, 'restored', 'Restoration of the L-4 cab was completed with chapter-supplied materials; the cab is not yet back on a tower.', 'cr-im-2005'),
          ]),
-    dict(slug='morrell', name='Morrell Lookout', region='MT', tower='us-mt-morrell', pos='nhlr:US 164', find=['Morrell'], forest=None, design=None, aliases=[],
-         events=[
-             E(2017, 'fire', 'Wrapped as a precaution against wildfire; not lost.', 'cr-id-n-mt-2017'),
-         ]),
-    dict(slug='mount-brown', name='Mount Brown Lookout', region='MT', tower='us-mt-mount-brown', pos='nhlr:US 37', find=['Mt. Brown'], forest=None, design=None, aliases=['Mt. Brown'],
-         events=[
-             E(2017, 'fire', 'Wrapped as a precaution against wildfire; not lost.', 'cr-id-n-mt-2017'),
-         ]),
-    dict(slug='mount-henry', name='Mount Henry Lookout', region='MT', tower='us-mt-mount-henry', pos='nhlr:US 346', find=['Mount Henry'], forest='Kootenai NF', design=None, aliases=[],
+    dict(slug='mount-henry', name='Mount Henry Lookout', region='MT', tower='us-mt-mount-henry', pos='nhlr:US 346', find=['Henry', 'Mount Henry'], forest='Kootenai NF', design=None, aliases=[],
          events=[
              E(2006, 'restored', 'Restoration work began.', 'cr-id-2006'),
-             E(2007, 'restored', 'Restoration continued with indirect chapter support.', 'cr-nidmt-2007'),
          ]),
-    dict(slug='mud-lake', name='Mud Lake Lookout', region='MT', tower='us-mt-mud-lake', pos='nhlr:US 1496', find=['Mud Lake'], forest='Flathead NF', design=None, aliases=[],
-         events=[
-             E(2018, 'restored', 'Northwest Montana sub-chapter members took part in a restoration or maintenance project here.', 'cr-id-n-mt-2018'),
-         ]),
-    dict(slug='northwest-peak', name='Northwest Peak Lookout', region='MT', tower='us-mt-northwest-peak', pos='nhlr:US 347', find=['Northwest Peak'], forest='Kootenai NF', design=None, aliases=[],
-         events=[
-             E(2018, 'fire', 'Wrapped as a precaution against wildfire; not lost.', 'cr-id-n-mt-2018'),
-             E(2018, 'restored', 'Northwest Montana sub-chapter members took part in a restoration or maintenance project here.', 'cr-id-n-mt-2018'),
-         ]),
-    dict(slug='scalplock-mountain', name='Scalplock Mountain Lookout', region='MT', tower='us-mt-scalplock-mountain', pos='nhlr:US 39', find=['Scalplock'], forest='Glacier NP', design=None, aliases=[],
-         events=[
-             E(2018, 'restored', 'Northwest Montana sub-chapter members took part in a restoration or maintenance project here.', 'cr-id-n-mt-2018'),
-         ]),
-    dict(slug='scenery-mountain', name='Scenery Mountain Lookout Site', region='MT', tower='us-mt-scenery-mountain', pos='fflos:US 1141', find=['Scenery Mountain'], forest='Kootenai NF', design=None, aliases=[],
+    dict(slug='scenery-mountain', name='Scenery Mountain Lookout Site', region='MT', tower='us-mt-scenery-mountain', pos='fflos:US 1141', find=['Scenery', 'Scenery Mountain'], forest='Kootenai NF', design=None, aliases=[],
          events=[
              E(2009, 'removed', 'Forest Service crews removed the cab from its concrete block foundation and flew the materials off by forest helicopter; the chapter had declined the removal job.', 'cr-az-2009', 'cr-nidmt-2009'),
          ]),
-    dict(slug='silver-king-mountain', name='Silver King Mountain', region='MT', tower='us-mt-silver-king-mountain', pos='ffla:mt:silver-king-mountain:47.1146:-112.5281', find=['Silver King'], forest=None, design=None, aliases=[],
+    dict(slug='silver-king-mountain', name='Silver King Mountain', region='MT', tower='us-mt-silver-king-mountain', pos='ffla:mt:silver-king-mountain:47.1146:-112.5281', find=['Silver', 'Silver King'], forest=None, design=None, aliases=[],
          events=[
              E(2003, 'burned', 'Lost to fire during the 2003 season.', 'cc-im-2003'),
          ]),
-    dict(slug='skookum-butte', name='Skookum Butte Lookout', region='MT', tower='us-mt-skookum-butte', pos='nhlr:US 172', find=['Skookum Butte'], forest='Lolo NF', design='log/frame lookout', aliases=[],
+    dict(slug='skookum-butte', name='Skookum Butte Lookout', region='MT', tower='us-mt-skookum-butte', pos='nhlr:US 172', find=['Skookum', 'Skookum Butte'], forest='Lolo NF', design='log/frame lookout', aliases=[],
          events=[
              E(1928, 'built', 'Built in 1928; a rare log/frame lookout, one of only three of that design known to remain.', 'cr-restoration-2019'),
-             E(2017, 'fire', 'Wrapped as a precaution against wildfire; not lost.', 'cr-id-n-mt-2017'),
              E(2019, 'other', 'FFLA restoration grant of $500 for supplies: shiplap for shutters, subfloor and roof sheathing, window glass and maple flooring.', 'cr-restoration-2019'),
-             E(2019, 'restored', 'Multi-year Passport in Time restoration project continued with chapter support. Phase I of a multi-year rehabilitation done July 9-18, 2019 with a Passport in Time volunteer project.', 'cr-id-n-mt-2019', 'cr-restoration-2019'),
-             E(2020, 'restored', 'Multi-year restoration project continued with chapter support.', 'cr-id-north-mt-2020'),
-             E(2021, 'restored', 'Multi-year restoration project continued with chapter support.', 'cr-id-north-mt-2021'),
+             E(2019, 'restored', 'Phase I of a multi-year rehabilitation done July 9-18, 2019 with a Passport in Time volunteer project.', 'cr-restoration-2019'),
              E(2022, 'restored', 'Multi-year restoration project was completed, with chapter support.', 'cr-id-north-mt-2022'),
-         ]),
-    dict(slug='spotted-bear-mountain', name='Spotted Bear Mountain Lookout', region='MT', tower='us-mt-spotted-bear-mountain', pos='nhlr:US 1495', find=['Spotted Bear'], forest=None, design=None, aliases=[],
-         events=[
-             E(2014, 'restored', 'Northwest Montana sub-chapter volunteers took part in maintenance work.', 'cr-idnmt-2014'),
          ]),
     dict(slug='stonewall-mountain', name='Stonewall Mountain', region='MT', tower='us-mt-stonewall-mountain', pos='ffla:mt:stonewall-mountain:47.0439:-112.7032', find=['Stonewall'], forest='Helena NF', design=None, aliases=[],
          events=[
-             E(2009, 'restored', 'Lookout was receiving repairs for winter damage during the 2009 season. Repairs were made for winter damage.', 'cr-az-2009', 'cr-nidmt-2009'),
+             E(2009, 'restored', 'Lookout was receiving repairs for winter damage during the 2009 season.', 'cr-az-2009', 'cr-nidmt-2009'),
          ]),
     dict(slug='thoma', name='Thoma Lookout', region='MT', tower='us-mt-thoma', pos='nhlr:US 891', find=['Thoma'], forest='Flathead NF', design=None, aliases=[],
          events=[
              E(2009, 'restored', 'Work was done to ready the lookout for staffing in 2010 after it had been vacant for over 30 years.', 'cr-nidmt-2009'),
-             E(2010, 'restored', 'Restoration work was done while the lookout was being staffed.', 'cr-nidmt-2010'),
              E(2010, 'staffed', 'Staffed by a volunteer again after the lookout had been vacant for over 30 years.', 'cr-nidmt-2010'),
-             E(2011, 'restored', 'Restoration continued while the lookout was staffed by a volunteer.', 'cr-nidmt-2011'),
-             E(2012, 'restored', 'Restoration continued while the lookout was staffed by a volunteer.', 'cr-nidmt-2012'),
-             E(2013, 'restored', 'Restoration continued while the lookout was staffed by a volunteer.', 'cr-nidmt-2013'),
          ]),
-    dict(slug='wam-mountain', name='Wam Mountain Lookout', region='MT', tower='us-mt-wam-mountain', pos='nhlr:US 350', find=['Wam'], forest='Kootenai NF', design=None, aliases=[],
-         events=[
-             E(2018, 'restored', 'Northwest Montana sub-chapter members took part in a restoration or maintenance project here.', 'cr-id-n-mt-2018'),
-         ]),
-    dict(slug='warland-peak', name='Warland Peak Lookout', region='MT', tower='us-mt-warland-peak', pos='nhlr:US 1506', find=['Warland Peak'], forest='Kootenai NF', design='10-ft L-4', aliases=[],
+    dict(slug='warland-peak', name='Warland Peak Lookout', region='MT', tower='us-mt-warland-peak', pos='nhlr:US 1506', find=['Warland', 'Warland Peak'], forest='Kootenai NF', design='10-ft L-4', aliases=[],
          events=[
              E(2013, 'destroyed', 'The small L-4 was found collapsed, presumably during the previous winter.', 'cr-nidmt-2013'),
-         ]),
-    dict(slug='west-fork-butte', name='West Fork Butte Lookout', region='MT', tower='us-mt-west-fork-butte', pos='nhlr:US 173', find=['West Fork Butte'], forest=None, design=None, aliases=[],
-         events=[
-             E(2017, 'fire', 'Wrapped as a precaution against wildfire; not lost.', 'cr-id-n-mt-2017'),
-         ]),
-    dict(slug='white-mountain', name='White Mountain Lookout', region='MT', tower='us-mt-white-mountain', pos='nhlr:US 928', find=['White Mountain'], forest='Lolo NF', design=None, aliases=[],
-         events=[
-             E(2004, 'restored', 'Restoration activities continued during the year.', 'cr-im-2004'),
          ]),
     dict(slug='barillas', name='Barillas Lookout', region='NM', tower='us-nm-barillas', pos='nhlr:US 708', find=['Barillas'], forest='Santa Fe NF', design='54-ft Aermotor tower with 14x14 CL-100 to CL-106 series cab', aliases=[],
          events=[
              E(1959, 'built', 'Lookout erected in 1959 with a live-in cab and catwalk.', 'cr-nm-2020'),
          ]),
-    dict(slug='bearwallow-mountain', name='Bearwallow Mountain Lookout', region='NM', tower='us-nm-bearwallow-mountain', pos='nhlr:US 1585', find=['Bearwallow Mountain'], forest='Gila NF', design='35-ft Aermotor LX-24 tower with 7x7 wooden cab', aliases=[],
+    dict(slug='bearwallow-mountain', name='Bearwallow Mountain Lookout', region='NM', tower='us-nm-bearwallow-mountain', pos='nhlr:US 1585', find=['Bearwallow', 'Bearwallow Mountain'], forest='Gila NF', design='35-ft Aermotor LX-24 tower with 7x7 wooden cab', aliases=[],
          events=[
              E(1923, 'built', 'Steel tower with wooden cab erected; upper log observer cabin also built in 1923.', 'cr-nm-2020'),
-             E(1940, 'built', 'Lower cabin, formerly a barn, built.', 'cr-nm-2020'),
              E(1984, 'modified', 'Extensively remodeled with replacement windows, new stairs and steel covering on walls and roof, which cost it National Register eligibility.', 'cr-nm-2020'),
              E(1988, 'nrhp_listed', 'Upper and lower observer cabins listed on the National Register of Historic Places in 1988 (table date 28 January).', 'cr-nm-2020'),
+             E(1940, 'modified', 'Lower cabin, formerly a barn, built.', 'cr-nm-2020'),
          ]),
-    dict(slug='black-mountain', name='Black Mountain Lookout', region='NM', tower='us-nm-black-mountain', pos='nhlr:US 1583', find=['Black Mountain'], forest='Gila NF', design='30-ft Aermotor MC-24 tower with 12x12 wooden cab', aliases=[],
+    dict(slug='black-mountain', name='Black Mountain Lookout', region='NM', tower='us-nm-black-mountain', pos='nhlr:US 1583', find=['Black', 'Black Mountain'], forest='Gila NF', design='30-ft Aermotor MC-24 tower with 12x12 wooden cab', aliases=[],
          events=[
              E(1925, 'built', 'Observer cabin built.', 'cr-nm-2020'),
-             E(1934, 'built', 'Steel tower with wooden cab erected in 1934.', 'cr-nm-2020'),
              E(1978, 'restored', 'All original windows replaced, which cost the lookout National Register eligibility in the 1988 evaluation.', 'cr-nm-2020'),
              E(1988, 'nrhp_listed', 'Observer cabin listed on the National Register of Historic Places on 28 January 1988 (date from the chapter table).', 'cr-nm-2020'),
+             E(1934, 'replaced', 'Steel tower with wooden cab erected in 1934.', 'cr-nm-2020'),
          ]),
     dict(slug='bluewater', name='Bluewater Lookout', region='NM', tower='us-nm-bluewater', pos='nhlr:US 1106', find=['Bluewater'], forest='Lincoln NF', design='45-ft tower with 7x7 Aermotor LX-24 cab', aliases=[],
          events=[
              E(1937, 'relocated', 'Sold to the Forest Service and erected at its current site.', 'cr-nm-2020'),
              E(1988, 'nrhp_listed', 'Lookout complex listed on the National Register of Historic Places on 28 January 1988 (date from the chapter table).', 'cr-nm-2020'),
              E(2013, 'restored', 'Observer cabin and shed of the lookout complex restored.', 'cr-nm-2013', 'cr-nm-2020'),
-             E(2015, 'nhlr_registered', 'Added to the National Historic Lookout Register.', 'cr-nm-2015'),
          ]),
     dict(slug='canjilon-mountain', name='Canjilon Mountain Lookout Site', region='NM', tower='us-nm-canjilon-mountain', pos='fflos:US 2088', find=['Canjilon'], forest='Carson NF', design='wooden tower with platform', aliases=[],
          events=[
              E(1922, 'abandoned', 'Wooden platform tower abandoned after several lightning strikes, one of which killed the lookout guard; the observer cabin remains.', 'cr-nm-2020'),
              E(1988, 'nrhp_listed', 'Observer cabin listed on the National Register of Historic Places on 28 January 1988 (date from the chapter table); oldest surviving fire-detection structure in the region.', 'cr-nm-2020'),
          ]),
-    dict(slug='capilla-peak', name='Capilla Peak Lookout', region='NM', tower='us-nm-capilla-peak', pos='nhlr:US 695', find=['Capilla Peak'], forest='Cibola NF', design='12x12 CL-100 series cab on 10-ft concrete block base', aliases=[],
+    dict(slug='capilla-peak', name='Capilla Peak Lookout', region='NM', tower='us-nm-capilla-peak', pos='nhlr:US 695', find=['Capilla', 'Capilla Peak'], forest='Cibola NF', design='12x12 CL-100 series cab on 10-ft concrete block base', aliases=[],
          events=[
              E(1960, 'built', 'Lookout erected in 1960 with a catwalk, on a 10-ft concrete block base.', 'cr-nm-2020'),
          ]),
@@ -1028,27 +896,25 @@ LOOKOUTS = [
              E(1935, 'built', 'Lookout complex with 80-ft steel tower, cab, observer cabin and shed built by the Civilian Conservation Corps.', 'cr-nm-2020'),
              E(1988, 'nrhp_listed', 'Lookout complex listed on the National Register of Historic Places on 28 January 1988 (date from the chapter table); name misspelled Carissa in the nomination.', 'cr-nm-2020'),
              E(2011, 'restored', 'Lookout complex (tower with 7x7 cab, observer cabin, shed) restored, work begun 2010; later reports give 2012 as completion. First Lincoln NF rental-program restoration.', 'cr-nm-2011'),
-             E(2012, 'nhlr_registered', 'Nomination approved for the National Historic Lookout Register as US #940, NM #29 (nominated in 2011).', 'cr-nm-2012'),
          ]),
-    dict(slug='cedro-peak', name='Cedro Peak Lookout', region='NM', tower='us-nm-cedro-peak', pos='nhlr:US 684', find=['Cedro Peak'], forest='Cibola NF', design='14x14 CL-100 series metal cab on electronics building roof', aliases=[],
+    dict(slug='cedro-peak', name='Cedro Peak Lookout', region='NM', tower='us-nm-cedro-peak', pos='nhlr:US 684', find=['Cedro', 'Cedro Peak'], forest='Cibola NF', design='14x14 CL-100 series metal cab on electronics building roof', aliases=[],
          events=[
              E(1969, 'replaced', 'Present cab placed on the roof of the electronics building beside a new AT&T transmission tower, on the site of two earlier lookouts.', 'cr-nm-2020'),
          ]),
-    dict(slug='cerro-pelado', name='Cerro Pelado Lookout', region='NM', tower='us-nm-cerro-pelado', pos='nhlr:US 1582', find=['Cerro Pelado'], forest='Santa Fe NF', design='14x14 CL-100 to CL-106 series flat-top cab on 10-ft cinder block base', aliases=[],
+    dict(slug='cerro-pelado', name='Cerro Pelado Lookout', region='NM', tower='us-nm-cerro-pelado', pos='nhlr:US 1582', find=['Cerro', 'Cerro Pelado'], forest='Santa Fe NF', design='14x14 CL-100 to CL-106 series flat-top cab on 10-ft cinder block base', aliases=[],
          events=[
              E(1932, 'built', 'L-4 ground house built; replaced by the present cab in 1965.', 'cr-nm-2020'),
              E(1965, 'replaced', 'Standard Plan steel-cab lookout built, replacing an earlier L-4 ground house.', 'cr-nm-2020'),
          ]),
-    dict(slug='cerro-valdez', name='Cerro Valdez', region='NM', tower='us-nm-cerro-valdez', pos='ffla:nm:cerro-valdez:36.1003:-106.5794', find=['Cerro Valdez'], forest='Santa Fe NF', design='L-4 ground house', aliases=[],
+    dict(slug='cerro-valdez', name='Cerro Valdez', region='NM', tower='us-nm-cerro-valdez', pos='ffla:nm:cerro-valdez:36.1003:-106.5794', find=['Cerro', 'Cerro Valdez'], forest='Santa Fe NF', design='L-4 ground house', aliases=[],
          events=[
              E(1949, 'relocated', 'L-4 lookout house and its log cabin moved to the Encino site.', 'cr-nm-2020'),
          ]),
-    dict(slug='dark-canyon', name='Dark Canyon Lookout', region='NM', tower='us-nm-dark-canyon', pos='nhlr:US 1108', find=['Dark Canyon'], forest='Lincoln NF', design='48-ft Aermotor MC-99 tower with 7x7 cab', aliases=[],
+    dict(slug='dark-canyon', name='Dark Canyon Lookout', region='NM', tower='us-nm-dark-canyon', pos='nhlr:US 1108', find=['Dark', 'Dark Canyon'], forest='Lincoln NF', design='48-ft Aermotor MC-99 tower with 7x7 cab', aliases=[],
          events=[
              E(1939, 'built', 'Observer cabin, cistern and tool storage shed of the complex built by the Civilian Conservation Corps in late 1939.', 'cr-nm-2020'),
-             E(1948, 'built', 'Steel tower with International Derrick cab erected; one of only two Aermotor MC-99 towers still standing in the Southwestern Region.', 'cr-nm-2020'),
-             E(2015, 'nhlr_registered', 'Added to the National Historic Lookout Register.', 'cr-nm-2015'),
              E(2016, 'rental_opened', 'Became the first approved cabin rental on the Lincoln NF, on the Guadalupe Ranger District; expected to be available summer 2017.', 'cr-nm-2016-1'),
+             E(1948, 'replaced', 'Steel tower with International Derrick cab erected; one of only two Aermotor MC-99 towers still standing in the Southwestern Region.', 'cr-nm-2020'),
          ]),
     dict(slug='davenport', name='Davenport Lookout', region='NM', tower='us-nm-davenport', pos='nhlr:US 666', find=['Davenport'], forest='Cibola NF', design='14x14 CL-100 series cab on 10-ft concrete block base', aliases=[],
          events=[
@@ -1059,11 +925,11 @@ LOOKOUTS = [
              E(1933, 'built', 'Civilian Conservation Corps erected a steel tower with a wooden cab.', 'cr-nm-2020'),
              E(2002, 'replaced', 'Contractor built a new steel cab modeled on the earlier wooden cab; it was trucked to the site and set on the tower by crane.', 'cr-nm-2020'),
          ]),
-    dict(slug='eagle-peak', name='Eagle Peak Lookout', region='NM', tower='us-nm-eagle-peak', pos='nhlr:US 1586', find=['Eagle Peak'], forest='Gila NF', design='14x14 CL-100 to CL-106 series cab on 10-ft concrete block base', aliases=[],
+    dict(slug='eagle-peak', name='Eagle Peak Lookout', region='NM', tower='us-nm-eagle-peak', pos='nhlr:US 1586', find=['Eagle', 'Eagle Peak'], forest='Gila NF', design='14x14 CL-100 to CL-106 series cab on 10-ft concrete block base', aliases=[],
          events=[
              E(1955, 'built', 'Standard Plan steel-cab lookout on a 10-ft concrete block base, built in 1955.', 'cr-nm-2020'),
          ]),
-    dict(slug='el-caso', name='El Caso Lookout', region='NM', tower='us-nm-el-caso', pos='nhlr:US 649', find=['El Caso'], forest='Gila NF', design='31.6-ft Aermotor MC-24 tower with 12x12 R3 low-sill cab', aliases=[],
+    dict(slug='el-caso', name='El Caso Lookout', region='NM', tower='us-nm-el-caso', pos='nhlr:US 649', find=['Caso', 'El Caso'], forest='Gila NF', design='31.6-ft Aermotor MC-24 tower with 12x12 R3 low-sill cab', aliases=[],
          events=[
              E(1934, 'built', 'Lookout complex built by the Works Progress Administration, one of three New Deal-era lookouts in Catron County.', 'cr-nm-2020'),
              E(1988, 'nrhp_listed', 'Lookout and ground house listed on the National Register of Historic Places on 28 January 1988 (date from the chapter table).', 'cr-nm-2020'),
@@ -1071,17 +937,16 @@ LOOKOUTS = [
     dict(slug='encino', name='Encino Lookout', region='NM', tower='us-nm-encino', pos='nhlr:US 1111', find=['Encino'], forest='Santa Fe NF', design='59-ft Aermotor MC-39 tower with 7x7 steel cab', aliases=[],
          events=[
              E(1950, 'relocated', 'Tower obtained by the Santa Fe NF in 1948 from Skinner Ridge on the Kaibab NF and erected at the Encino site in July 1950.', 'cr-nm-2020'),
-             E(2015, 'nhlr_registered', 'Added to the National Historic Lookout Register.', 'cr-nm-2015'),
          ]),
     dict(slug='fox-mountain', name='Fox Mountain Lookout', region='NM', tower='us-nm-fox-mountain', pos='nhlr:US 650', find=['Fox Mountain'], forest='Gila NF', design='14x14 CL-100 to CL-106 series flat-top cab on 10-ft concrete block base', aliases=[],
          events=[
              E(1959, 'built', 'Standard Plan steel-cab lookout with metal catwalk and storage room built in 1959.', 'cr-nm-2020'),
          ]),
-    dict(slug='gallinas-peak', name='Gallinas Peak Lookout', region='NM', tower='us-nm-gallinas-peak', pos='nhlr:US 694', find=['Gallinas Peak'], forest='Cibola NF', design='7x7 MC-39 cab on 46-ft steel tower', aliases=[],
+    dict(slug='gallinas-peak', name='Gallinas Peak Lookout', region='NM', tower='us-nm-gallinas-peak', pos='nhlr:US 694', find=['Gallinas', 'Gallinas Peak'], forest='Cibola NF', design='7x7 MC-39 cab on 46-ft steel tower', aliases=[],
          events=[
              E(1933, 'built', 'Lookout complex erected by the Lincoln NF in 1933 and later transferred to the Cibola NF.', 'cr-nm-2020'),
          ]),
-    dict(slug='glorieta-baldy', name='Glorieta Baldy Lookout', region='NM', tower='us-nm-glorieta-baldy', pos='nhlr:US 709', find=['Glorieta Baldy'], forest='Santa Fe NF', design='Aermotor MC-24', aliases=[],
+    dict(slug='glorieta-baldy', name='Glorieta Baldy Lookout', region='NM', tower='us-nm-glorieta-baldy', pos='nhlr:US 709', find=['Glorieta', 'Glorieta Baldy'], forest='Santa Fe NF', design='Aermotor MC-24', aliases=[],
          events=[
              E(1940, 'built', 'MC-24 lookout erected, once considered one of the best remaining examples of its type in the region.', 'cr-nm-2020'),
              E(1988, 'nrhp_listed', 'Listed on the National Register of Historic Places on 27 January 1988 (date from the chapter table).', 'cr-nm-2020'),
@@ -1091,35 +956,33 @@ LOOKOUTS = [
          events=[
              E(1960, 'built', 'Lookout constructed in 1960.', 'cr-nm-2020'),
          ]),
-    dict(slug='hillsboro-peak', name='Hillsboro Peak Lookout', region='NM', tower='us-nm-hillsboro-peak', pos='nhlr:US 651', find=['Hillsboro Peak'], forest='Gila NF', design='45-ft Aermotor MC-40 tower with 7x7 metal cab', aliases=[],
+    dict(slug='hillsboro-peak', name='Hillsboro Peak Lookout', region='NM', tower='us-nm-hillsboro-peak', pos='nhlr:US 651', find=['Hillsboro', 'Hillsboro Peak'], forest='Gila NF', design='45-ft Aermotor MC-40 tower with 7x7 metal cab', aliases=[],
          events=[
              E(1925, 'built', 'Original log observer cabin on the site dates from 1925.', 'cr-nm-2020'),
-             E(1933, 'built', 'Steel lookout tower erected in 1933.', 'cr-nm-2020'),
-             E(1965, 'built', 'Modern metal quarters erected on the site.', 'cr-nm-2020'),
              E(1988, 'nrhp_listed', 'Lookout tower and log cabin both listed on the National Register of Historic Places in 1988 (table date 28 January).', 'cr-nm-2020'),
+             E(1933, 'replaced', 'Steel lookout tower erected in 1933.', 'cr-nm-2020'),
+             E(1965, 'modified', 'Modern metal quarters erected on the site.', 'cr-nm-2020'),
          ]),
-    dict(slug='james-ridge', name='James Ridge Lookout', region='NM', tower='us-nm-james-ridge', pos='nhlr:US 1110', find=['James Ridge'], forest='Lincoln NF', design='62-ft Aermotor LX-24 tower with 7x7 cab', aliases=[],
+    dict(slug='james-ridge', name='James Ridge Lookout', region='NM', tower='us-nm-james-ridge', pos='nhlr:US 1110', find=['James', 'James Ridge'], forest='Lincoln NF', design='62-ft Aermotor LX-24 tower with 7x7 cab', aliases=[],
          events=[
              E(1967, 'relocated', 'Tower, formerly the Mayhill Lookout, moved to James Ridge and remodeled with metal stair treads and a partial catwalk.', 'cr-nm-2020'),
-             E(2015, 'nhlr_registered', 'Added to the National Historic Lookout Register.', 'cr-nm-2015'),
          ]),
     dict(slug='kiowa', name='Kiowa Lookout', region='NM', tower='us-nm-kiowa', pos='nhlr:US 196', find=['Kiowa'], forest='Carson NF', design='Aermotor tower with LL-25 cab', aliases=[],
          events=[
              E(1923, 'built', 'Tower with LL-25 cab erected in 1923; one of only two of its type remaining in the Southwestern Region.', 'cr-nm-2020'),
-             E(1935, 'built', 'Observer cabin built by the Civilian Conservation Corps.', 'cr-nm-2020'),
-             E(1996, 'nhlr_registered', 'Placed on the FFLA lookout registry in 1996.', 'cr-nm-2020'),
+             E(1935, 'modified', 'Observer cabin built by the Civilian Conservation Corps.', 'cr-nm-2020'),
          ]),
     dict(slug='lookout-mountain-gila-national-forest', name='Lookout Mountain Lookout (Gila National Forest)', region='NM', tower='us-nm-lookout-mountain-gila-national-forest', pos='nhlr:US 1651', find=['Lookout Mountain'], forest='Gila NF', design='30-ft Aermotor MC-24 steel tower', aliases=[],
          events=[
              E(1933, 'built', 'Steel tower erected in 1933.', 'cr-nm-2020'),
              E(1965, 'replaced', 'Original wooden cab replaced with a steel cab of the Standard Plan CL-100 series.', 'cr-nm-2020'),
          ]),
-    dict(slug='mangas', name='Mangas Lookout', region='NM', tower='us-nm-mangas', pos='nhlr:US 652', find=['Mangas Mountain'], forest='Gila NF', design='31.6-ft Aermotor MC-24 tower with 12x12 wooden R3 low-sill cab', aliases=['Mangas Mountain'],
+    dict(slug='mangas', name='Mangas Lookout', region='NM', tower='us-nm-mangas', pos='nhlr:US 652', find=['Mangas', 'Mangas Mountain'], forest='Gila NF', design='31.6-ft Aermotor MC-24 tower with 12x12 wooden R3 low-sill cab', aliases=['Mangas Mountain'],
          events=[
              E(1934, 'built', 'Lookout and cabin constructed in 1934.', 'cr-nm-2020'),
              E(1988, 'nrhp_listed', 'Listed on the National Register of Historic Places on 28 January 1988 (date from the chapter table).', 'cr-nm-2020'),
          ]),
-    dict(slug='mogollon-baldy', name='Mogollon Baldy Lookout', region='NM', tower='us-nm-mogollon-baldy', pos='nhlr:US 1588', find=['Mogollon Baldy'], forest='Gila NF', design='30-ft Aermotor MI-25 tower with 14x14 wooden cab', aliases=[],
+    dict(slug='mogollon-baldy', name='Mogollon Baldy Lookout', region='NM', tower='us-nm-mogollon-baldy', pos='nhlr:US 1588', find=['Mogollon', 'Mogollon Baldy'], forest='Gila NF', design='30-ft Aermotor MI-25 tower with 14x14 wooden cab', aliases=[],
          events=[
              E(1923, 'built', 'Observer cabin constructed.', 'cr-nm-2020'),
              E(1948, 'replaced', 'Present steel tower with wooden cab erected, replacing earlier towers on the same spot.', 'cr-nm-2020'),
@@ -1135,11 +998,11 @@ LOOKOUTS = [
              E(2013, 'restored', 'Restoration completed after the 2012 burn-over; later described as a partial reconstruction under a small-business contract, with a National Register plaque installed afterward.', 'cr-nm-2013', 'cr-nm-2015', 'cr-nm-2020'),
              E(2015, 'restored', 'Water seepage damage in the observer cabin below the cab repaired with a new wood-look tile floor and various water sealants; repair contract let in 2015.', 'cr-nm-2015'),
          ]),
-    dict(slug='mount-withington', name='Mount Withington Lookout', region='NM', tower='us-nm-mount-withington', pos='nhlr:US 669', find=['Mount Withington'], forest='Cibola NF', design='R3 special design 14x14 cab on 10-ft concrete block base', aliases=[],
+    dict(slug='mount-withington', name='Mount Withington Lookout', region='NM', tower='us-nm-mount-withington', pos='nhlr:US 669', find=['Mount Withington', 'Withington'], forest='Cibola NF', design='R3 special design 14x14 cab on 10-ft concrete block base', aliases=[],
          events=[
              E(1952, 'built', 'Lookout erected in 1952 to a Region 3 special design with a wooden catwalk.', 'cr-nm-2020'),
          ]),
-    dict(slug='negrito-mountain', name='Negrito Mountain Lookout', region='NM', tower='us-nm-negrito-mountain', pos='nhlr:US 1584', find=['Negrito Mountain'], forest='Gila NF', design='30-ft Aermotor MC-24 tower with 12x12 wood cab', aliases=[],
+    dict(slug='negrito-mountain', name='Negrito Mountain Lookout', region='NM', tower='us-nm-negrito-mountain', pos='nhlr:US 1584', find=['Negrito', 'Negrito Mountain'], forest='Gila NF', design='30-ft Aermotor MC-24 tower with 12x12 wood cab', aliases=[],
          events=[
              E(1934, 'built', 'Steel tower with wood cab erected in 1934.', 'cr-nm-2020'),
              E(1984, 'modified', 'Extensively remodeled with new windows, steel siding and a new roof, which cost it National Register eligibility.', 'cr-nm-2020'),
@@ -1152,9 +1015,8 @@ LOOKOUTS = [
          events=[
              E(1932, 'built', 'Ground-cab lookout house built between 1928 and 1932.', 'cr-nm-2020'),
              E(1990, 'staffed_last', 'Regularly staffed through 1990; used only occasionally in times of extreme fire danger since.', 'cr-nm-2020'),
-             E(2016, 'nhlr_registered', 'Added to the lookout register on 20 March as US 1121, NM 38.', 'cr-nm-2016-1'),
          ]),
-    dict(slug='reeds-peak', name='Reeds Peak Lookout', region='NM', tower='us-nm-reeds-peak', pos='nhlr:US 654', find=['Reeds Peak'], forest='Gila NF', design='48-ft Aermotor tower with LX-24 7x7 metal cab', aliases=[],
+    dict(slug='reeds-peak', name='Reeds Peak Lookout', region='NM', tower='us-nm-reeds-peak', pos='nhlr:US 654', find=['Reeds', 'Reeds Peak'], forest='Gila NF', design='48-ft Aermotor tower with LX-24 7x7 metal cab', aliases=[],
          events=[
              E(1925, 'built', 'Observer cabin dating from 1925.', 'cr-nm-2020'),
              E(1965, 'modified', 'Metal stairs added; the original outside metal ladder remains but is no longer used.', 'cr-nm-2020'),
@@ -1171,18 +1033,17 @@ LOOKOUTS = [
              E(1967, 'burned', 'Original 1925 Aermotor LX-24 tower destroyed by fire.', 'cr-nm-2020'),
              E(1968, 'replaced', 'New steel tower with a large steel cab erected to replace the burned tower.', 'cr-nm-2020'),
              E(2010, 'staffed_last', 'Operated from 1968 until 2010, when it was designated a standby lookout.', 'cr-nm-2020'),
-             E(2015, 'nhlr_registered', 'Added to the National Historic Lookout Register.', 'cr-nm-2015'),
          ]),
-    dict(slug='saddle-mountain', name='Saddle Mountain Lookout', region='NM', tower='us-nm-saddle-mountain', pos='nhlr:US 653', find=['Saddle Mountain'], forest='Gila NF', design='Aermotor MC-24', aliases=[],
+    dict(slug='saddle-mountain', name='Saddle Mountain Lookout', region='NM', tower='us-nm-saddle-mountain', pos='nhlr:US 653', find=['Saddle', 'Saddle Mountain'], forest='Gila NF', design='Aermotor MC-24', aliases=[],
          events=[
              E(1933, 'built', 'Erected as an MC-24 tower.', 'cr-nm-2020'),
              E(1966, 'replaced', 'Original cab replaced with a Standard Plan CL-100 series steel cab.', 'cr-nm-2020'),
          ]),
-    dict(slug='san-mateo', name='San Mateo Lookout', region='NM', tower='us-nm-san-mateo', pos='nhlr:US 668', find=['San Mateo'], forest='Cibola NF', design='59-ft 3-in Aermotor LX-25 tower with 7x7 metal cab', aliases=[],
+    dict(slug='san-mateo', name='San Mateo Lookout', region='NM', tower='us-nm-san-mateo', pos='nhlr:US 668', find=['Mateo', 'San Mateo'], forest='Cibola NF', design='59-ft 3-in Aermotor LX-25 tower with 7x7 metal cab', aliases=[],
          events=[
              E(1934, 'built', 'Oldest detection facility remaining on the Magdalena Ranger District, erected in 1934.', 'cr-nm-2020'),
          ]),
-    dict(slug='st-peters-dome', name="St. Peter's Dome Lookout", region='NM', tower='us-nm-st-peters-dome', pos='nhlr:US 1581', find=["St. Peter's Dome"], forest='Santa Fe NF', design='14x14 CL-100 to CL-106 series flat-top cab on 10-ft cinder block base', aliases=[],
+    dict(slug='st-peters-dome', name="St. Peter's Dome Lookout", region='NM', tower='us-nm-st-peters-dome', pos='nhlr:US 1581', find=['Peter', "St. Peter's Dome"], forest='Santa Fe NF', design='14x14 CL-100 to CL-106 series flat-top cab on 10-ft cinder block base', aliases=[],
          events=[
              E(1932, 'built', 'L-4 ground house built; replaced by the present cab in 1965.', 'cr-nm-2020'),
              E(1965, 'replaced', 'Standard Plan steel-cab lookout built, replacing an earlier L-4 ground house.', 'cr-nm-2020'),
@@ -1195,40 +1056,38 @@ LOOKOUTS = [
              E(1966, 'restored', 'Original wooden steps replaced with metal ones.', 'cr-nm-2020'),
              E(1978, 'removed', 'Cabin and shed that stood at the lookout site were removed.', 'cr-nm-2020'),
              E(1988, 'nrhp_listed', 'Listed on the National Register of Historic Places on 28 January 1988 (date from the chapter table).', 'cr-nm-2020'),
-             E(2015, 'nhlr_registered', 'Added to the National Historic Lookout Register.', 'cr-nm-2015'),
          ]),
     dict(slug='wofford', name='Wofford Lookout', region='NM', tower='us-nm-wofford', pos='nhlr:US 1105', find=['Wofford'], forest='Lincoln NF', design='80-ft Aermotor MC-39 tower with 7x7 cab', aliases=[],
          events=[
              E(1933, 'built', 'Steel tower and 7x7 cab erected by the Civilian Conservation Corps; the complex wood-frame observer cabin dates from the same year.', 'cr-nm-2020'),
-             E(1937, 'built', 'Storage shed added to the lookout complex.', 'cr-nm-2020'),
              E(1988, 'nrhp_listed', 'Lookout complex listed on the National Register of Historic Places on 28 January 1988 (date from the chapter table).', 'cr-nm-2020'),
              E(2012, 'restored', 'Observer cabin and shed restored and made ready for the rental program (work began Feb 2012); cab and window frames still to be done.', 'cr-nm-2012', 'cr-nm-2013', 'cr-nm-2020'),
              E(2013, 'restored', 'Four window frames restored and four missing frames manufactured; report also lists cabin and shed restoration as completed; cab still under restoration.', 'cr-nm-2013'),
              E(2014, 'restored', 'Cab restoration completed after long neglect, when all windows were broken out and the floor hatch was missing.', 'cr-nm-2014'),
-             E(2015, 'nhlr_registered', 'Added to the National Historic Lookout Register.', 'cr-nm-2015'),
+             E(1937, 'modified', 'Storage shed added to the lookout complex.', 'cr-nm-2020'),
          ]),
-    dict(slug='ella-mountain', name='Ella Mountain Lookout', region='NV', tower='us-nv-ella-mountain', pos='nhlr:US 519', find=['Ella Mt', 'Ella Mt.'], forest='BLM Ely District', design='2-story', aliases=['Ella Mt.', 'Ella Mt'],
+    dict(slug='ella-mountain', name='Ella Mountain Lookout', region='NV', tower='us-nv-ella-mountain', pos='nhlr:US 519', find=['Ella', 'Ella Mt', 'Ella Mt.'], forest='BLM Ely District', design='2-story', aliases=['Ella Mt.', 'Ella Mt'],
          events=[
-             E(1964, 'built', 'Two-story BLM lookout built in 1964; still staffed. Two-story lookout built; managed by BLM Ely District and still actively staffed in 2009.', 'cr-ca-cent-2007', 'cr-ca-cent-2009', 'cr-ca-sn-nevada-2012', 'cr-az-2009'),
+             E(1964, 'built', 'Two-story BLM lookout built in 1964; still staffed.', 'cr-ca-cent-2007', 'cr-ca-cent-2009', 'cr-ca-sn-nevada-2012', 'cr-az-2009'),
          ]),
-    dict(slug='mcclellan-peak', name='McClellan Peak', region='NV', tower='us-nv-mcclellan-peak', pos='ffla:nv:mcclellan-peak:39.2578:-119.7110', find=['McClellan Peak'], forest='BLM', design=None, aliases=[],
+    dict(slug='mcclellan-peak', name='McClellan Peak', region='NV', tower='us-nv-mcclellan-peak', pos='ffla:nv:mcclellan-peak:39.2578:-119.7110', find=['McClellan', 'McClellan Peak'], forest='BLM', design=None, aliases=[],
          events=[
              E(1970, 'staffed_last', 'Last year the lookout was staffed.', 'cr-ca-cent-2007', 'cr-ca-cent-2009', 'cr-ca-sn-nevada-2012', 'cr-az-2009'),
-             E(1971, 'destroyed', 'Lookout destroyed in 1971; cause not stated. Lookout destroyed; cause not stated.', 'cr-ca-cent-2007', 'cr-ca-cent-2009', 'cr-ca-sn-nevada-2012', 'cr-az-2009'),
+             E(1971, 'destroyed', 'Lookout destroyed in 1971; cause not stated.', 'cr-ca-cent-2007', 'cr-ca-cent-2009', 'cr-ca-sn-nevada-2012', 'cr-az-2009'),
          ]),
-    dict(slug='peavine-peak', name='Peavine Peak', region='NV', tower='us-nv-peavine-peak', pos='ffla:nv:peavine-peak:39.5869:-119.9319', find=['Peavine Peak'], forest='Nevada Division of Forestry', design=None, aliases=[],
+    dict(slug='peavine-peak', name='Peavine Peak', region='NV', tower='us-nv-peavine-peak', pos='ffla:nv:peavine-peak:39.5869:-119.9319', find=['Peavine', 'Peavine Peak'], forest='Nevada Division of Forestry', design=None, aliases=[],
          events=[
-             E(1964, 'abandoned', 'Originally built by Tahoe NF and later staffed by the state; abandoned in 1964 and later gone, removal date unknown. Lookout abandoned after being built by the Tahoe NF and later staffed by the state;', 'cr-ca-cent-2007', 'cr-ca-cent-2009', 'cr-ca-sn-nevada-2012', 'cr-az-2009'),
+             E(1964, 'abandoned', 'Originally built by Tahoe NF and later staffed by the state; abandoned in 1964 and later gone, removal date unknown.', 'cr-ca-cent-2007', 'cr-ca-cent-2009', 'cr-ca-sn-nevada-2012', 'cr-az-2009'),
          ]),
-    dict(slug='yellow-peak', name='Yellow Peak Lookout', region='NV', tower='us-nv-yellow-peak', pos='nhlr:US 301', find=['Yellow Peak'], forest='BLM Susanville District', design='9x9', aliases=[],
+    dict(slug='yellow-peak', name='Yellow Peak Lookout', region='NV', tower='us-nv-yellow-peak', pos='nhlr:US 301', find=['Yellow', 'Yellow Peak'], forest='BLM Susanville District', design='9x9', aliases=[],
          events=[
-             E(1981, 'built', 'Small lookout built in 1981 in Washoe County; still staffed. Lookout built on the Sheldon Hart wildlife refuge, Washoe County; still actively staffed in 2009.', 'cr-ca-cent-2007', 'cr-ca-cent-2009', 'cr-ca-sn-nevada-2012', 'cr-az-2009'),
+             E(1981, 'built', 'Small lookout built in 1981 in Washoe County; still staffed.', 'cr-ca-cent-2007', 'cr-ca-cent-2009', 'cr-ca-sn-nevada-2012', 'cr-az-2009'),
          ]),
-    dict(slug='zephyr-point-zephyr-cove', name='Zephyr Point (Zephyr Cove) Lookout', region='NV', tower='us-nv-zephyr-point-zephyr-cove', pos='nhlr:US 278', find=['Zephyr Point'], forest='Lake Tahoe Basin Management Unit', design=None, aliases=[],
+    dict(slug='zephyr-point-zephyr-cove', name='Zephyr Point (Zephyr Cove) Lookout', region='NV', tower='us-nv-zephyr-point-zephyr-cove', pos='nhlr:US 278', find=['Zephyr', 'Zephyr Point'], forest='Lake Tahoe Basin Management Unit', design=None, aliases=[],
          events=[
-             E(1931, 'built', 'Built in 1931 by Eldorado NF; later passed to Toiyabe NF, the state and the Tahoe Basin unit, now unused for fire. Built by the Eldorado NF;', 'cr-ca-cent-2007', 'cr-ca-cent-2009', 'cr-ca-sn-nevada-2012', 'cr-az-2009'),
+             E(1931, 'built', 'Built in 1931 by Eldorado NF; later passed to Toiyabe NF, the state and the Tahoe Basin unit, now unused for fire.', 'cr-ca-cent-2007', 'cr-ca-cent-2009', 'cr-ca-sn-nevada-2012', 'cr-az-2009'),
          ]),
-    dict(slug='bald-butte-ochoco-nf', name='Bald Butte Lookout (Ochoco NF)', region='OR', tower='us-or-bald-butte-ochoco-nf', pos='nhlr:US 425', find=['Bald Butte'], forest='Burns Interagency Fire Zone', design='TT tower with R-6 flat cab', aliases=[],
+    dict(slug='bald-butte-ochoco-nf', name='Bald Butte Lookout (Ochoco NF)', region='OR', tower='us-or-bald-butte-ochoco-nf', pos='nhlr:US 425', find=['Bald', 'Bald Butte'], forest='Burns Interagency Fire Zone', design='TT tower with R-6 flat cab', aliases=[],
          events=[
              E(1959, 'built', 'Lookout in service from 1959 until lost in 2007.', 'cr-or-2007'),
          ]),
@@ -1237,65 +1096,65 @@ LOOKOUTS = [
              E(2007, 'assessed', 'Surveyed for the private owners to estimate restoration cost and to see whether FFLA wished to adopt it.', 'cr-or-2007'),
              E(2007, 'restored', 'Chapter members made a second trip to seal the lookout up for winter.', 'cr-or-2007'),
          ]),
-    dict(slug='bly-ranger', name='Bly Ranger Station Lookout', region='OR', tower='us-or-bly-ranger', pos='nhlr:US 482', find=['Bly Ranger Station'], forest='Fremont NF', design='small cab from 1950s 20-ft wooden tower', aliases=[],
+    dict(slug='bly-ranger-at-bly-city-park', name='Bly Ranger Station Lookout (now at Bly City Park)', region='OR', tower='us-or-bly-ranger-at-bly-city-park', pos='ffla:or:bly-city-park-relocated-bly-ranger-station:42.4072:-121.0493', find=['Bly Ranger Station', 'Ranger'], forest='Fremont NF', design='small cab from 1950s 20-ft wooden tower', aliases=[],
          events=[
              E(2007, 'relocated', 'Small cab from a 1950s wooden tower removed from the ranger station and moved to a city park in Bly, Oregon.', 'cr-or-2007'),
          ]),
-    dict(slug='dutchman-peak', name='Dutchman Peak Lookout', region='OR', tower='us-or-dutchman-peak', pos='nhlr:US 19', find=['Dutchman Peak'], forest='Rogue River NF', design='D-6 cupola', aliases=[],
+    dict(slug='dutchman-peak', name='Dutchman Peak Lookout', region='OR', tower='us-or-dutchman-peak', pos='nhlr:US 19', find=['Dutchman', 'Dutchman Peak'], forest='Rogue River NF', design='D-6 cupola', aliases=[],
          events=[
              E(1927, 'built', 'Cupola lookout built in 1927 and served 88 years with little change. Built in 1927 as a D-6 cupola lookout; the only D-6 still staffed for fire detection.', 'cr-or-2014', 'cr-restoration-2015'),
              E(2015, 'other', 'FFLA restoration grant awarded to start work on the shutters and living quarters; amount not stated.', 'cr-or-2015'),
          ]),
-    dict(slug='flag-point', name='Flag Point Lookout', region='OR', tower='us-or-flag-point', pos='nhlr:US 489', find=['Flag Point'], forest=None, design=None, aliases=[],
+    dict(slug='flag-point', name='Flag Point Lookout', region='OR', tower='us-or-flag-point', pos='nhlr:US 489', find=['Flag', 'Flag Point'], forest=None, design=None, aliases=[],
          events=[
              E(2004, 'restored', 'Repainted and steps repaired by the chapter.', 'cr-or-2004'),
          ]),
-    dict(slug='green-mountain-2', name='Green Mountain Lookout', region='OR', tower='us-or-green-mountain-2', pos='nhlr:US 1618', find=['Green Mt'], forest='BLM', design=None, aliases=['Green Mt'],
+    dict(slug='green-mountain-2', name='Green Mountain Lookout', region='OR', tower='us-or-green-mountain-2', pos='nhlr:US 1618', find=['Green', 'Green Mt'], forest='BLM', design=None, aliases=['Green Mt'],
          events=[
              E(2011, 'built', 'New lookout built by the Bureau of Land Management for fire detection.', 'cr-or-2011'),
          ]),
-    dict(slug='harness-mountain', name='Harness Mountain Lookout', region='OR', tower='us-or-harness-mountain', pos='nhlr:US 392', find=['Harness Mt'], forest='Oregon Dept of Forestry', design=None, aliases=['Harness Mt'],
+    dict(slug='harness-mountain', name='Harness Mountain Lookout', region='OR', tower='us-or-harness-mountain', pos='nhlr:US 392', find=['Harness', 'Harness Mt'], forest='Oregon Dept of Forestry', design=None, aliases=['Harness Mt'],
          events=[
              E(2017, 'removed', 'Removed by the state forestry department.', 'cr-or-2017'),
          ]),
-    dict(slug='hershberger', name='Hershberger Lookout', region='OR', tower='us-or-hershberger', pos='nhlr:US 21', find=['Hershberger Mt.'], forest=None, design=None, aliases=['Hershberger Mt.'],
+    dict(slug='hershberger', name='Hershberger Lookout', region='OR', tower='us-or-hershberger', pos='nhlr:US 21', find=['Hershberger', 'Hershberger Mt.'], forest=None, design=None, aliases=['Hershberger Mt.'],
          events=[
              E(2004, 'modified', 'A gate was installed at the site in an effort to stop vandalism.', 'cr-or-2004'),
          ]),
-    dict(slug='iron-mountain', name='Iron Mountain Lookout', region='OR', tower='us-or-iron-mountain', pos='nhlr:US 493', find=['Iron Mountain'], forest='Willamette NF', design='R-6 ground cab', aliases=[],
+    dict(slug='iron-mountain', name='Iron Mountain Lookout', region='OR', tower='us-or-iron-mountain', pos='nhlr:US 493', find=['Iron', 'Iron Mountain'], forest='Willamette NF', design='R-6 ground cab', aliases=[],
          events=[
              E(2007, 'removed', 'Chapter members made four trips to salvage items before the lookout was taken down; listed among the three Oregon lookouts lost this year.', 'cr-or-2007'),
          ]),
-    dict(slug='kelly-butte', name='Kelly Butte Lookout', region='OR', tower='us-or-kelly-butte', pos='nhlr:US 334', find=['Kelly Butte'], forest='Coos Forest Protective Association', design='tall wooden tower', aliases=[],
+    dict(slug='kelly-butte', name='Kelly Butte Lookout', region='OR', tower='us-or-kelly-butte', pos='nhlr:US 334', find=['Kelly', 'Kelly Butte'], forest='Coos Forest Protective Association', design='tall wooden tower', aliases=[],
          events=[
              E(2008, 'removed', 'Tall wooden tower removed by the protective association because of safety concerns.', 'cr-wdep-2008'),
          ]),
-    dict(slug='little-cowhorn', name='Little Cowhorn Lookout', region='OR', tower='us-or-little-cowhorn', pos='nhlr:US 400', find=['Little Cowhorn'], forest=None, design=None, aliases=[],
+    dict(slug='little-cowhorn', name='Little Cowhorn Lookout', region='OR', tower='us-or-little-cowhorn', pos='nhlr:US 400', find=['Little', 'Little Cowhorn'], forest=None, design=None, aliases=[],
          events=[
              E(2004, 'restored', 'Restoration under way in 2004, including lightning protection and a cable hand rail costing about 12,000 dollars; lookout is slated to go into the rental program.', 'cr-or-2004'),
          ]),
-    dict(slug='mount-stella', name='Mount Stella Lookout', region='OR', tower='us-or-mount-stella', pos='nhlr:US 496', find=['Mount Stella'], forest=None, design=None, aliases=[],
+    dict(slug='mount-stella', name='Mount Stella Lookout', region='OR', tower='us-or-mount-stella', pos='nhlr:US 496', find=['Mount Stella', 'Stella'], forest=None, design=None, aliases=[],
          events=[
              E(2007, 'assessed', 'Surveyed to see whether it could be restored and used as a rental; stabilization needed soon or it may be lost.', 'cr-or-2007'),
          ]),
-    dict(slug='old-blue', name='Old Blue Lookout Site', region='OR', tower='us-or-old-blue', pos='fflos:US 885', find=['Old Blue'], forest='Douglas FPA', design='50-ft wooden tower with flat cab', aliases=[],
+    dict(slug='old-blue', name='Old Blue Lookout Site', region='OR', tower='us-or-old-blue', pos='fflos:US 885', find=['Blue', 'Old Blue'], forest='Douglas FPA', design='50-ft wooden tower with flat cab', aliases=[],
          events=[
              E(1955, 'built', 'Lookout in service from 1955 until lost in 2007.', 'cr-or-2007'),
          ]),
-    dict(slug='onion-mountain', name='Onion Mountain Lookout', region='OR', tower='us-or-onion-mountain', pos='nhlr:US 393', find=['Onion Mt.'], forest=None, design=None, aliases=['Onion Mt.'],
+    dict(slug='onion-mountain', name='Onion Mountain Lookout', region='OR', tower='us-or-onion-mountain', pos='nhlr:US 393', find=['Onion', 'Onion Mt.'], forest=None, design=None, aliases=['Onion Mt.'],
          events=[
              E(2004, 'restored', 'Interior floor redone and some painting done.', 'cr-or-2004'),
          ]),
-    dict(slug='rebel-rock', name='Rebel Rock Lookout Site', region='OR', tower='us-or-rebel-rock', pos='fflos:US 1771', find=['Rebel Rock'], forest=None, design=None, aliases=[],
+    dict(slug='rebel-rock', name='Rebel Rock Lookout Site', region='OR', tower='us-or-rebel-rock', pos='fflos:US 1771', find=['Rebel', 'Rebel Rock'], forest=None, design=None, aliases=[],
          events=[
              E(2017, 'burned', 'Lost in the Rebel Fire.', 'cr-or-2017'),
          ]),
-    dict(slug='sexton-mountain', name='Sexton Mountain Lookout', region='OR', tower='us-or-sexton-mountain', pos='nhlr:US 741', find=['Sexton Mountain', 'Sexton Mt.'], forest=None, design='D-6 cupola cabin', aliases=['Sexton Mt.'],
+    dict(slug='sexton-mountain', name='Sexton Mountain Lookout', region='OR', tower='us-or-sexton-mountain', pos='nhlr:US 741', find=['Sexton', 'Sexton Mountain', 'Sexton Mt.'], forest=None, design='D-6 cupola cabin', aliases=['Sexton Mt.'],
          events=[
              E(1921, 'built', 'Cupola cabin lookout dating from 1921.', 'cr-or-2007'),
              E(2007, 'replaced', 'New lookout constructed to replace the previous one, which had been destroyed by vandals.', 'cr-wdep-2007'),
          ]),
-    dict(slug='snow-camp', name='Snow Camp Lookout', region='OR', tower='us-or-snow-camp', pos='nhlr:US 13', find=['Snow Camp'], forest=None, design=None, aliases=[],
+    dict(slug='snow-camp', name='Snow Camp Lookout', region='OR', tower='us-or-snow-camp', pos='nhlr:US 13', find=['Snow', 'Snow Camp'], forest=None, design=None, aliases=[],
          events=[
              E(2004, 'rental_opened', 'After restoration the lookout was going back onto the rental list.', 'cr-or-2004'),
              E(2004, 'restored', 'Restoration finished in 2004.', 'cr-or-2004'),
@@ -1304,11 +1163,11 @@ LOOKOUTS = [
          events=[
              E(2007, 'assessed', 'Surveyed to assess fire damage caused by vandals.', 'cr-or-2007'),
          ]),
-    dict(slug='wildhorse-mountain', name='Wildhorse Mountain Lookout', region='OR', tower='us-or-wildhorse-mountain', pos='nhlr:US 509', find=['Wild Horse'], forest='USFS', design=None, aliases=['Wild Horse'],
+    dict(slug='wildhorse-mountain', name='Wildhorse Mountain Lookout', region='OR', tower='us-or-wildhorse-mountain', pos='nhlr:US 509', find=['Wild', 'Wild Horse'], forest='USFS', design=None, aliases=['Wild Horse'],
          events=[
              E(2007, 'assessed', 'Surveyed at Forest Service request to decide whether it could be restored and turned into a rental.', 'cr-or-2007'),
          ]),
-    dict(slug='custer-peak', name='Custer Peak Lookout', region='SD', tower='us-sd-custer-peak', pos='nhlr:US 6', find=['Custer Peak'], forest='Black Hills NF', design=None, aliases=[],
+    dict(slug='custer-peak', name='Custer Peak Lookout', region='SD', tower='us-sd-custer-peak', pos='nhlr:US 6', find=['Custer', 'Custer Peak'], forest='Black Hills NF', design=None, aliases=[],
          events=[
              E(2025, 'restored', 'Restoration project carried out by HistoriCorps.', 'cr-nwreg-2025'),
          ]),
@@ -1316,11 +1175,11 @@ LOOKOUTS = [
          events=[
              E(2014, 'restored', 'Completely restored over the summer by HistoriCorps (begun 2013): lower and upper tower legs replaced, new roof and railings.', 'cr-cout-2014', 'cr-cout-2015', 'cr-ut-wy-co-2017'),
          ]),
-    dict(slug='addy-mountain', name='Addy Mountain Tower Site', region='WA', tower='us-wa-addy-mountain', pos='fflos:US 526', find=['Addy Mountain'], forest='Colville NF', design=None, aliases=[],
+    dict(slug='addy-mountain', name='Addy Mountain Tower Site', region='WA', tower='us-wa-addy-mountain', pos='fflos:US 526', find=['Addy', 'Addy Mountain'], forest='Colville NF', design=None, aliases=[],
          events=[
-             E(2009, 'assessed', 'Former lookout site documented; described as a CCC-era rag camp subjected to a WWII Japanese balloon bomb attack. Former lookout site documented;', 'cr-az-2009', 'cr-ewa-2009'),
+             E(2009, 'assessed', 'Former lookout site documented; described as a CCC-era rag camp subjected to a WWII Japanese balloon bomb attack.', 'cr-az-2009', 'cr-ewa-2009'),
          ]),
-    dict(slug='aeneas', name='Aeneas Lookout', region='WA', tower='us-wa-aeneas', pos='nhlr:US 118', find=['Aeneas Mountain'], forest='State of Washington', design=None, aliases=['Aeneas Mountain'],
+    dict(slug='aeneas', name='Aeneas Lookout', region='WA', tower='us-wa-aeneas', pos='nhlr:US 118', find=['Aeneas', 'Aeneas Mountain'], forest='State of Washington', design=None, aliases=['Aeneas Mountain'],
          events=[
              E(2024, 'removed', 'Toppled with a bulldozer in late 2024 by the State of Washington, which replaced it with a tower carrying cameras.', 'cr-wa-2024'),
          ]),
@@ -1337,7 +1196,7 @@ LOOKOUTS = [
              E(2014, 'restored', 'Rehabilitation work party held, with six FFLA members taking part.', 'cr-ewa-2014'),
              E(2015, 'restored', 'Another work party completed the final touches on the cab; cab and tower were to be put back up the following summer.', 'cr-ewa-2015'),
          ]),
-    dict(slug='buck-mountain', name='Buck Mountain Lookout', region='WA', tower='us-wa-buck-mountain', pos='nhlr:US 362', find=['Buck Mountain'], forest=None, design=None, aliases=[],
+    dict(slug='buck-mountain', name='Buck Mountain Lookout', region='WA', tower='us-wa-buck-mountain', pos='nhlr:US 362', find=['Buck', 'Buck Mountain'], forest=None, design=None, aliases=[],
          events=[
              E(2015, 'fire', 'Several tower members were burned in the 2015 fire season; the lookout is near Loup Loup.', 'cr-ewa-2015'),
          ]),
@@ -1345,7 +1204,7 @@ LOOKOUTS = [
          events=[
              E(2008, 'destroyed', 'Long-abandoned tower on private land in western Washington collapsed; one of only two 60-foot DNR lookouts ever built in the state.', 'cr-ewa-2008', 'cr-wdep-2008'),
          ]),
-    dict(slug='columbia-mountain', name='Columbia Mountain Lookout', region='WA', tower='us-wa-columbia-mountain', pos='nhlr:US 103', find=['Columbia Mountain'], forest='Colville NF', design=None, aliases=[],
+    dict(slug='columbia-mountain', name='Columbia Mountain Lookout', region='WA', tower='us-wa-columbia-mountain', pos='nhlr:US 103', find=['Columbia', 'Columbia Mountain'], forest='Colville NF', design=None, aliases=[],
          events=[
              E(2009, 'restored', 'Restoration begun in 2009 as a Passport In Time project hand-hewing timbers; work to finish the following summer.', 'cr-az-2009'),
              E(2010, 'restored', 'Restored through the Passport In Time program, with timbers hand hewn; work begun 2009 and due to finish in summer 2010.', 'cr-ewa-2010'),
@@ -1354,20 +1213,16 @@ LOOKOUTS = [
          events=[
              E(2024, 'restored', 'Major repairs led by FFLA volunteers.', 'cr-wa-2024'),
          ]),
-    dict(slug='first-butte', name='First Butte Lookout', region='WA', tower='us-wa-first-butte', pos='nhlr:US 358', find=['First Butte'], forest=None, design=None, aliases=[],
-         events=[
-             E(2006, 'closed', 'Active lookout closed for a time because of large wildfires.', 'cr-we-2006'),
-         ]),
     dict(slug='flagstaff', name='Flagstaff Lookout', region='WA', tower='us-wa-flagstaff', pos='nhlr:US 325', find=['Flagstaff'], forest='Washington DNR (NE Region)', design=None, aliases=[],
          events=[
              E(2011, 'abandoned', 'Abandoned to make way for additional cell towers; the town of Northport was working to move it to a town park.', 'cr-ewa-2011'),
              E(2013, 'relocated', 'Taken down to make way for additional cell towers and re-erected in a town park after being adopted by Northport.', 'cr-ewa-2013'),
          ]),
-    dict(slug='gobblers-knob', name='Gobblers Knob Lookout', region='WA', tower='us-wa-gobblers-knob', pos='nhlr:US 478', find=['Gobblers Knob'], forest=None, design=None, aliases=[],
+    dict(slug='gobblers-knob', name='Gobblers Knob Lookout', region='WA', tower='us-wa-gobblers-knob', pos='nhlr:US 478', find=['Gobblers', 'Gobblers Knob'], forest=None, design=None, aliases=[],
          events=[
              E(2007, 'restored', 'Severely damaged in the late-2006 winter storm; got a new roof and was mostly repaired.', 'cr-wdep-2007'),
          ]),
-    dict(slug='granite-mountain-2', name='Granite Mountain Lookout', region='WA', tower='us-wa-granite-mountain-2', pos='nhlr:US 1068', find=['Granite Mountain'], forest=None, design=None, aliases=[],
+    dict(slug='granite-mountain-2', name='Granite Mountain Lookout', region='WA', tower='us-wa-granite-mountain-2', pos='nhlr:US 1068', find=['Granite', 'Granite Mountain'], forest=None, design=None, aliases=[],
          events=[
              E(2024, 'restored', 'Major repairs led by FFLA volunteers.', 'cr-wa-2024'),
          ]),
@@ -1379,11 +1234,11 @@ LOOKOUTS = [
          events=[
              E(2004, 'restored', 'Restoration nearly finished: site work (gravel and topsoil) done, only a table and shutter-storage devices left before the rental program opens.', 'cr-ww-2004'),
          ]),
-    dict(slug='hidden-lake-peak', name='Hidden Lake Peak Lookout', region='WA', tower='us-wa-hidden-lake-peak', pos='nhlr:US 175', find=['Hidden Lake'], forest=None, design=None, aliases=[],
+    dict(slug='hidden-lake-peak', name='Hidden Lake Peak Lookout', region='WA', tower='us-wa-hidden-lake-peak', pos='nhlr:US 175', find=['Hidden', 'Hidden Lake'], forest=None, design=None, aliases=[],
          events=[
              E(2025, 'restored', 'Maintenance work done on the lookout.', 'cr-wa-2025'),
          ]),
-    dict(slug='high-rock-2', name='High Rock Lookout', region='WA', tower='us-wa-high-rock-2', pos='nhlr:US 387', find=['High Rock'], forest='Gifford Pinchot NF', design=None, aliases=[],
+    dict(slug='high-rock-2', name='High Rock Lookout', region='WA', tower='us-wa-high-rock-2', pos='nhlr:US 387', find=['High', 'High Rock'], forest='Gifford Pinchot NF', design=None, aliases=[],
          events=[
              E(2024, 'restored', 'Major rebuild continuing: two historical societies removed the lookout to rebuild critical parts, to return it to the summit later.', 'cr-wa-2024'),
              E(2025, 'restored', 'Rebuilt pieces were helicoptered up to the summit and reassembled; work remains and the refurbishment is due to finish in 2026.', 'cr-wa-2025'),
@@ -1393,17 +1248,17 @@ LOOKOUTS = [
              E(2010, 'restored', 'Emergency repairs by a new stewardship group: roof patched and shutters repaired before winter.', 'cr-ewa-2010'),
              E(2013, 'restored', 'Stabilization work was successful.', 'cr-ewa-2013'),
          ]),
-    dict(slug='kelly-butte', name='Kelly Butte Lookout', region='WA', tower='us-wa-kelly-butte', pos='nhlr:US 910', find=['Kelly Butte'], forest='Mount Baker-Snoqualmie NF', design=None, aliases=[],
+    dict(slug='kelly-butte', name='Kelly Butte Lookout', region='WA', tower='us-wa-kelly-butte', pos='nhlr:US 910', find=['Kelly', 'Kelly Butte'], forest='Mount Baker-Snoqualmie NF', design=None, aliases=[],
          events=[
              E(2006, 'other', 'FFLA restoration grant of $500 awarded toward restoration, alongside a Butler Fund grant; later phases to cover shutters, catwalk, windows, siding and interior for rental use.', 'cr-rest-2006'),
              E(2006, 'restored', 'New roof installed and windows prepared for removal as the first stage of the restoration.', 'cr-rest-2006'),
          ]),
-    dict(slug='knowlton-knob', name='Knowlton Knob Lookout', region='WA', tower='us-wa-knowlton-knob', pos='nhlr:US 360', find=['Knowlton Knob'], forest='Washington DNR', design=None, aliases=[],
+    dict(slug='knowlton-knob', name='Knowlton Knob Lookout', region='WA', tower='us-wa-knowlton-knob', pos='nhlr:US 360', find=['Knowlton', 'Knowlton Knob'], forest='Washington DNR', design=None, aliases=[],
          events=[
              E(2014, 'fire', 'Threatened by the Carlton Complex Fire, which burned out two legs from beneath the tower; it stayed standing.', 'cr-ewa-2014'),
              E(2014, 'restored', 'The two burned legs were quickly repaired by an unidentified benefactor.', 'cr-ewa-2014'),
          ]),
-    dict(slug='leecher-mountain', name='Leecher Mountain Lookout', region='WA', tower='us-wa-leecher-mountain', pos='nhlr:US 603', find=['Leecher Mountain'], forest='Okanogan NF', design=None, aliases=[],
+    dict(slug='leecher-mountain', name='Leecher Mountain Lookout', region='WA', tower='us-wa-leecher-mountain', pos='nhlr:US 603', find=['Leecher', 'Leecher Mountain'], forest='Okanogan NF', design=None, aliases=[],
          events=[
              E(2009, 'restored', 'Refurbished and put back into service.', 'cr-ewa-2009'),
              E(2009, 'staffed', 'Placed back into service after refurbishment.', 'cr-ewa-2009'),
@@ -1414,46 +1269,40 @@ LOOKOUTS = [
              E(2021, 'other', 'Butler Memorial Fund grant for materials and supplies for a badly needed paint job on the lookout, in the Methow Valley.', 'cr-rest-2021'),
              E(2021, 'restored', 'Painted by the Methow Valley group using Butler Memorial Fund materials.', 'cr-rest-2021'),
          ]),
-    dict(slug='mebee-pass', name='Mebee Pass Lookout', region='WA', tower='us-wa-mebee-pass', pos='nhlr:US 1551', find=['Mebee Pass'], forest='Okanogan NF', design='L-5', aliases=[],
+    dict(slug='mebee-pass', name='Mebee Pass Lookout', region='WA', tower='us-wa-mebee-pass', pos='nhlr:US 1551', find=['Mebee', 'Mebee Pass'], forest='Okanogan NF', design='L-5', aliases=[],
          events=[
              E(2013, 'other', 'Received a 200 dollar grant from the Chuck Butler Memorial Lookout Restoration Fund toward its restoration, with a 500 dollar donation from the chapter.', 'cr-ewa-2013'),
              E(2013, 'restored', 'Major volunteer restoration effort, including brushing out more than 8 miles of trail to the lookout.', 'cr-ewa-2013'),
          ]),
-    dict(slug='mount-bonaparte', name='Mount Bonaparte Lookout', region='WA', tower='us-wa-mount-bonaparte', pos='nhlr:US 160', find=['Bonaparte Mountain'], forest='Tonasket Ranger District', design=None, aliases=['Bonaparte Mountain'],
+    dict(slug='mount-bonaparte', name='Mount Bonaparte Lookout', region='WA', tower='us-wa-mount-bonaparte', pos='nhlr:US 160', find=['Bonaparte', 'Bonaparte Mountain'], forest='Tonasket Ranger District', design=None, aliases=['Bonaparte Mountain'],
          events=[
              E(2005, 'restored', 'Major renovation including a new roof; the lookout was unavailable for use while the work went on.', 'cr-we-2005'),
-             E(2013, 'closed', 'A long-time staffed lookout that sat idle (not staffed) this season.', 'cr-ewa-2013'),
              E(2025, 'restored', 'Volunteers finished repairs before reopening and made further repairs and restorations to the lookout and the historic 1914 lookout cabin during the season.', 'cr-wa-2025'),
              E(2025, 'staffed', 'Brought back into operation by volunteers, staffed from 1 August to 28 September under a volunteer service agreement after the Forest Service had been about to abandon it.', 'cr-wa-2025'),
          ]),
-    dict(slug='mount-spokane-at-quartz-mountain', name='Mount Spokane Lookout (now at Quartz Mountain)', region='WA', tower='us-wa-mount-spokane-at-quartz-mountain', pos='nhlr:US 1558', find=['Mount Spokane', 'Quartz Mountain'], forest='Mount Spokane State Park', design='L-4 attached to Vista House', aliases=[],
+    dict(slug='mount-spokane-at-quartz-mountain', name='Mount Spokane Lookout (now at Quartz Mountain)', region='WA', tower='us-wa-mount-spokane-at-quartz-mountain', pos='nhlr:US 1558', find=['Quartz', 'Quartz Mountain'], forest='Mt. Spokane State Park', design=None, aliases=[],
          events=[
              E(2004, 'built', 'New lookout finally built atop Quartz Mountain using a cab that formerly sat on the last Mt. Spokane tower; meant mainly as a state park rental, also usable for fire detection.', 'cr-we-2004'),
              E(2005, 'rental_opened', 'Opened for rental by the state park; immediately popular despite having no road access.', 'cr-we-2005'),
-             E(2016, 'restored', 'Restoration continued with the return of the stairs leading to the L-4 cab attached to the Vista House.', 'cr-e-wa-2016'),
          ]),
-    dict(slug='north-mountain', name='North Mountain Lookout', region='WA', tower='us-wa-north-mountain', pos='nhlr:US 1095', find=['North Mountain'], forest=None, design=None, aliases=[],
+    dict(slug='north-mountain', name='North Mountain Lookout', region='WA', tower='us-wa-north-mountain', pos='nhlr:US 1095', find=['North', 'North Mountain'], forest=None, design=None, aliases=[],
          events=[
              E(2025, 'restored', 'Maintenance work done on the lookout.', 'cr-wa-2025'),
          ]),
-    dict(slug='north-twentymile-peak', name='North Twentymile Peak Lookout', region='WA', tower='us-wa-north-twentymile-peak', pos='nhlr:US 161', find=['North Twentymile', 'North Twentymile Peak'], forest='Okanogan-Wenatchee NF', design='D-6 cupola', aliases=[],
+    dict(slug='north-twentymile-peak', name='North Twentymile Peak Lookout', region='WA', tower='us-wa-north-twentymile-peak', pos='nhlr:US 161', find=['North', 'North Twentymile', 'North Twentymile Peak'], forest='Okanogan-Wenatchee NF', design='D-6 cupola', aliases=[],
          events=[
              E(2006, 'fire', 'The two unused lookouts at this site were wrapped to protect them from wildfire.', 'cr-we-2006'),
              E(2015, 'other', 'FFLA restoration grant of 500 dollars toward rehabilitation, matched by 500 dollars from the Eastern Washington chapter; restoration was near completion.', 'cr-ewa-2015'),
              E(2015, 'restored', 'Much of the rehab work was done in the 2015 season, with supplies airlifted to the summit; finishing expected in 2016.', 'cr-restoration-2015'),
              E(2016, 'restored', 'Restoration completed; project begun 2014 by one volunteer and finished by his son.', 'cr-e-wa-2016'),
          ]),
-    dict(slug='oregon-butte', name='Oregon Butte Lookout', region='WA', tower='us-wa-oregon-butte', pos='nhlr:US 144', find=['Oregon Butte'], forest=None, design=None, aliases=[],
-         events=[
-             E(2006, 'closed', 'Active lookout closed for a time because of large wildfires.', 'cr-we-2006'),
-         ]),
-    dict(slug='pinnacle-peak', name='Pinnacle Peak Lookout Site', region='WA', tower='us-wa-pinnacle-peak', pos='fflos:US 1293', find=['Pinnacle Peak/Mt. Peak'], forest='DNR', design='20-ft DNR tower with 14x14 live-in cab (replica planned)', aliases=['Pinnacle Peak/Mt. Peak'],
+    dict(slug='pinnacle-peak', name='Pinnacle Peak Lookout Site', region='WA', tower='us-wa-pinnacle-peak', pos='fflos:US 1293', find=['Pinnacle', 'Pinnacle Peak/Mt. Peak'], forest='DNR', design='20-ft DNR tower with 14x14 live-in cab (replica planned)', aliases=['Pinnacle Peak/Mt. Peak'],
          events=[
              E(1950, 'built', 'Original 20-foot DNR tower with a 14x14 live-in cab built in 1950.', 'cr-restoration-2018'),
              E(1966, 'removed', 'Original lookout tower torn down in 1966.', 'cr-restoration-2018'),
              E(2018, 'other', 'FFLA restoration grant of $500 toward rebuilding a historically accurate replica of the old 20-foot DNR tower and 14x14 live-in cab; the group aims to raise $500,000.', 'cr-restoration-2018'),
          ]),
-    dict(slug='puyallup-ridge', name='Puyallup Ridge Lookout', region='WA', tower='us-wa-puyallup-ridge', pos='nhlr:US 126', find=['Puyallup Ridge'], forest=None, design=None, aliases=[],
+    dict(slug='puyallup-ridge', name='Puyallup Ridge Lookout', region='WA', tower='us-wa-puyallup-ridge', pos='nhlr:US 126', find=['Puyallup', 'Puyallup Ridge'], forest=None, design=None, aliases=[],
          events=[
              E(2017, 'other', 'Grant from the Chuck Butler Memorial Fund obtained for the restoration (amount not stated).', 'cr-e-wa-2017'),
              E(2017, 'restored', 'Restoration of this former DNR lookout in the Mount Rainier area, with chapter members helping; access gained through restricted property.', 'cr-e-wa-2017'),
@@ -1464,7 +1313,7 @@ LOOKOUTS = [
              E(2025, 'restored', 'Repairs in June: stolen copper lightning-protection wiring replaced and the system fully restored, plus some structural repairs.', 'cr-wa-2025'),
              E(2025, 'staffed', 'Staffing resumed by volunteers from 26 July to 23 September (with a few gaps) under a group volunteer service agreement.', 'cr-wa-2025'),
          ]),
-    dict(slug='salmo-mountain', name='Salmo Mountain Lookout', region='WA', tower='us-wa-salmo-mountain', pos='nhlr:US 132', find=['Salmo Mountain'], forest='Colville NF', design=None, aliases=[],
+    dict(slug='salmo-mountain', name='Salmo Mountain Lookout', region='WA', tower='us-wa-salmo-mountain', pos='nhlr:US 132', find=['Salmo', 'Salmo Mountain'], forest='Colville NF', design=None, aliases=[],
          events=[
              E(2005, 'restored', 'Substantial restoration work done, mostly by volunteers.', 'cr-we-2005'),
              E(2009, 'restored', 'New lightning protection installed and nearly all repairs done to prepare for the Cabin Rental Program; entry delayed again by staff turnover.', 'cr-az-2009', 'cr-ewa-2009'),
@@ -1477,13 +1326,13 @@ LOOKOUTS = [
          events=[
              E(2007, 'restored', 'Severely damaged in the late-2006 winter storm; got a new roof and was mostly repaired.', 'cr-wdep-2007'),
          ]),
-    dict(slug='south-baldy', name='South Baldy Lookout', region='WA', tower='us-wa-south-baldy', pos='nhlr:US 143', find=['South Baldy'], forest='Colville NF', design=None, aliases=[],
+    dict(slug='south-baldy', name='South Baldy Lookout', region='WA', tower='us-wa-south-baldy', pos='nhlr:US 143', find=['South', 'South Baldy'], forest='Colville NF', design=None, aliases=[],
          events=[
              E(2011, 'restored', 'Sections of the tower legs were replaced, but the stolen lightning protection still needed replacing.', 'cr-ewa-2011'),
              E(2015, 'assessed', 'The chapter director joined an assessment tour of the lookout; the Idaho Panhandle NFs want to staff it again.', 'cr-ewa-2015'),
              E(2015, 'fire', 'Seriously threatened by wildfire during the 2015 fire season.', 'cr-ewa-2015'),
          ]),
-    dict(slug='stranger-mountain', name='Stranger Mountain Lookout', region='WA', tower='us-wa-stranger-mountain', pos='nhlr:US 474', find=['Stranger (Stensgar) Mt.'], forest='Washington DNR', design=None, aliases=['Stranger (Stensgar) Mt.'],
+    dict(slug='stranger-mountain', name='Stranger Mountain Lookout', region='WA', tower='us-wa-stranger-mountain', pos='nhlr:US 474', find=['Stranger', 'Stranger (Stensgar) Mt.'], forest='Washington DNR', design=None, aliases=['Stranger (Stensgar) Mt.'],
          events=[
              E(2008, 'relocated', 'Cab of the former DNR lookout moved by volunteers to the Colville Fairgrounds because the summit spot was wanted for electronics equipment.', 'cr-ewa-2008'),
          ]),
@@ -1491,51 +1340,46 @@ LOOKOUTS = [
          events=[
              E(2025, 'modified', 'Modifications to make the lookout accessible to people with disabilities were completed, and it hosted its first visitors in wheelchairs.', 'cr-wa-2025', 'cr-wa-2024'),
          ]),
-    dict(slug='table-rock', name='Table Rock Lookout', region='WA', tower='us-wa-table-rock', pos='nhlr:US 1097', find=['Table Rock'], forest=None, design=None, aliases=[],
-         events=[
-             E(2006, 'closed', 'Active lookout closed for a time because of large wildfires.', 'cr-we-2006'),
-         ]),
-    dict(slug='thorp-mountain', name='Thorp Mountain Lookout', region='WA', tower='us-wa-thorp-mountain', pos='nhlr:US 389', find=['Thorp Mountain'], forest=None, design=None, aliases=[],
+    dict(slug='thorp-mountain', name='Thorp Mountain Lookout', region='WA', tower='us-wa-thorp-mountain', pos='nhlr:US 389', find=['Thorp', 'Thorp Mountain'], forest=None, design=None, aliases=[],
          events=[
              E(2007, 'restored', 'Underwent significant repair work.', 'cr-ewa-2007'),
          ]),
-    dict(slug='three-fingers', name='Three Fingers Lookout', region='WA', tower='us-wa-three-fingers', pos='nhlr:US 68', find=['Three Fingers'], forest='Mt. Baker-Snoqualmie NF', design=None, aliases=[],
+    dict(slug='three-fingers', name='Three Fingers Lookout', region='WA', tower='us-wa-three-fingers', pos='nhlr:US 68', find=['Three', 'Three Fingers'], forest='Mt. Baker-Snoqualmie NF', design=None, aliases=[],
          events=[
              E(1932, 'built', 'The existing building dates from 1932.', 'cr-fotflo-2025'),
              E(2024, 'assessed', 'Lookout inspected and a detailed inventory made of materials on hand and items needed for repairs.', 'cr-fotfl-2024'),
-             E(2024, 'modified', 'A urinal of natural materials was built behind the lookout on the summit block to divert liquid waste, with waste-bag dispensers placed at the trailheads.', 'cr-fotfl-2024'),
              E(2024, 'restored', 'Damaged siding replaced and the rest sanded and repainted to match; new door with historic hardware, lock repaired, shutters, windows and locks repaired; new stools built.', 'cr-fotfl-2024', 'cr-wa-2024'),
              E(2025, 'restored', 'Building lifted and squared; two rotting floor joists replaced; siding replaced on the lower sides and gables; doors, shutters, windows repaired and painted; new table and stools.', 'cr-fotflo-2025', 'cr-wa-2025'),
          ]),
-    dict(slug='timber-mountain', name='Timber Mountain Lookout', region='WA', tower='us-wa-timber-mountain', pos='nhlr:US 150', find=['Timber Mountain'], forest='Colville NF', design=None, aliases=[],
+    dict(slug='timber-mountain', name='Timber Mountain Lookout', region='WA', tower='us-wa-timber-mountain', pos='nhlr:US 150', find=['Timber', 'Timber Mountain'], forest='Colville NF', design=None, aliases=[],
          events=[
              E(2005, 'restored', 'Substantial restoration work done, mostly by volunteers.', 'cr-we-2005'),
              E(2009, 'restored', 'New lightning protection installed and nearly all repairs done to prepare for the Cabin Rental Program; entry delayed again by staff turnover.', 'cr-az-2009', 'cr-ewa-2009'),
              E(2017, 'restored', 'Passport In Time crew sanitized and painted the interior, replaced the plywood sub-floor, painted the exterior and repaired tower footings and catwalk railings; now on excellent standby.', 'cr-e-wa-2017'),
          ]),
-    dict(slug='togo-mountain', name='Togo Mountain Lookout Site', region='WA', tower='us-wa-togo-mountain', pos='fflos:US 1474', find=['Togo Mountain'], forest='Colville NF', design=None, aliases=[],
+    dict(slug='togo-mountain', name='Togo Mountain Lookout Site', region='WA', tower='us-wa-togo-mountain', pos='fflos:US 1474', find=['Togo', 'Togo Mountain'], forest='Colville NF', design=None, aliases=[],
          events=[
-             E(2009, 'assessed', 'Former lookout site documented; CCC 33 inscription noted in the concrete of one footing. Former lookout site documented; a CCC date mark was noted in the concrete of one footing.', 'cr-az-2009', 'cr-ewa-2009'),
+             E(2009, 'assessed', 'Former lookout site documented; CCC 33 inscription noted in the concrete of one footing.', 'cr-az-2009', 'cr-ewa-2009'),
          ]),
-    dict(slug='tunk-mountain', name='Tunk Mountain Lookout', region='WA', tower='us-wa-tunk-mountain', pos='nhlr:US 648', find=['Tunk Mountain'], forest=None, design=None, aliases=[],
+    dict(slug='tunk-mountain', name='Tunk Mountain Lookout', region='WA', tower='us-wa-tunk-mountain', pos='nhlr:US 648', find=['Tunk', 'Tunk Mountain'], forest=None, design=None, aliases=[],
          events=[
              E(2005, 'restored', 'Chapter took over local management of the lookout and carried out some maintenance.', 'cr-we-2005'),
              E(2005, 'staffed', 'Used for fire detection for the first time in many years; a paid contractor staffed it for about a month while Bonaparte was closed for renovation.', 'cr-we-2005'),
          ]),
-    dict(slug='black-mountain', name='Black Mountain Lookout', region='WY', tower='us-wy-black-mountain', pos='nhlr:US 353', find=['Black Mountain'], forest='Tongue River Ranger District', design=None, aliases=[],
+    dict(slug='black-mountain', name='Black Mountain Lookout', region='WY', tower='us-wy-black-mountain', pos='nhlr:US 353', find=['Black', 'Black Mountain'], forest='Tongue River Ranger District', design=None, aliases=[],
          events=[
              E(2014, 'restored', 'Ranger district and HistoriCorps teamed on a restoration effort; the lookout may become a rental or an interpretive center.', 'cr-wy-mb-2014'),
          ]),
-    dict(slug='blackhall', name='Blackhall Lookout', region='WY', tower='us-wy-blackhall', pos='nhlr:US 229', find=['Blackhall Mountain', 'Blackhall Mtn'], forest='Medicine Bow NF', design=None, aliases=['Blackhall Mountain', 'Blackhall Mtn'],
+    dict(slug='blackhall', name='Blackhall Lookout', region='WY', tower='us-wy-blackhall', pos='nhlr:US 229', find=['Blackhall', 'Blackhall Mountain', 'Blackhall Mtn'], forest='Medicine Bow NF', design=None, aliases=['Blackhall Mountain', 'Blackhall Mtn'],
          events=[
              E(2013, 'assessed', 'HistoriCorps performed a condition assessment of the lookout at the Forest Service request.', 'cr-wy-2013'),
              E(2017, 'restored', 'HistoriCorps again carried out considerable repair work in summer 2017, aiming to make it ready for public rental.', 'cr-ut-wy-co-2017'),
          ]),
-    dict(slug='james-t-saban-high-park', name='James T. Saban (High Park) Lookout', region='WY', tower='us-wy-james-t-saban-high-park', pos='nhlr:US 24', find=['High Park'], forest=None, design=None, aliases=[],
+    dict(slug='james-t-saban-high-park', name='James T. Saban (High Park) Lookout', region='WY', tower='us-wy-james-t-saban-high-park', pos='nhlr:US 24', find=['High', 'High Park'], forest=None, design=None, aliases=[],
          events=[
              E(2013, 'restored', 'One partial workday achieved: windows freshly caulked and the cab cleaned.', 'cr-wy-2013'),
          ]),
-    dict(slug='kennaday-peak', name='Kennaday Peak Lookout', region='WY', tower='us-wy-kennaday-peak', pos='nhlr:US 230', find=['Kennaday Peak'], forest='Medicine Bow NF', design=None, aliases=[],
+    dict(slug='kennaday-peak', name='Kennaday Peak Lookout', region='WY', tower='us-wy-kennaday-peak', pos='nhlr:US 230', find=['Kennaday', 'Kennaday Peak'], forest='Medicine Bow NF', design=None, aliases=[],
          events=[
              E(2011, 'assessed', 'Chapter and district staff visited in early summer to assess the repairs needed before it can become a rental.', 'cr-wy-2011'),
              E(2013, 'assessed', 'HistoriCorps performed a condition assessment of the lookout at the Forest Service request.', 'cr-wy-2013'),
@@ -1544,7 +1388,7 @@ LOOKOUTS = [
              E(2016, 'restored', 'HistoriCorps repair work in summer 2016 (work begun 2014); new lightning protection system installed, one more work day needed.', 'cr-co-ut-wy-2016'),
              E(2017, 'restored', 'HistoriCorps again carried out considerable repair work in summer 2017, aiming to make it ready for public rental.', 'cr-ut-wy-co-2017'),
          ]),
-    dict(slug='sheep-mountain', name='Sheep Mountain Lookout', region='WY', tower='us-wy-sheep-mountain', pos='nhlr:US 352', find=['Sheep Mountain'], forest='Powder River Ranger District', design=None, aliases=[],
+    dict(slug='sheep-mountain', name='Sheep Mountain Lookout', region='WY', tower='us-wy-sheep-mountain', pos='nhlr:US 352', find=['Sheep', 'Sheep Mountain'], forest='Powder River Ranger District', design=None, aliases=[],
          events=[
              E(2014, 'rental_opened', 'Placed on the Forest Service rental program.', 'cr-wy-mb-2014'),
          ]),

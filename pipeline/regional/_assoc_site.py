@@ -118,13 +118,18 @@ def build_records(source: str, association: dict, spec: list[dict], lookouts: li
         for k in ("discrepancies", "position_note", "unit", "moved_from", "moved_to"):
             if lk.get(k):
                 extra[k] = lk[k]
-        records.append(P.lookout_record(
+        rec = (P.lookout_record(
             source=source, association=association, slug=lk["slug"], name=lk["name"], region=lk["region"], url=url,
             position_key=lk.get("pos"), index=index, county=lk.get("county"), forest=lk.get("forest"),
             agency=lk.get("agency"), ownership=lk.get("ownership"), design=lk.get("design"),
             height_ft=lk.get("height_ft"), staffing=lk.get("staffing"), status=lk.get("status", "unknown"),
             kind=lk.get("kind", "unknown"), type_raw=lk.get("type_raw"), aliases=lk.get("aliases"),
             events=events, links=lk.get("links"), extra=extra))
+        if lk.get("lat") is not None and rec["lat"] is None:
+            # a position given outright (with ``position_note`` saying where it came from) for a lookout
+            # no register or list we hold has
+            rec["lat"], rec["lon"] = round(float(lk["lat"]), 5), round(float(lk["lon"]), 5)
+        records.append(rec)
     return records
 
 
