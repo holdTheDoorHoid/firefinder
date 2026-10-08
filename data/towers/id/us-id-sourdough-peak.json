@@ -1,6 +1,7 @@
 {
   "id": "us-id-sourdough-peak",
   "name": "Sourdough Peak Lookout",
+  "summary": "1927 Nez Perce-plan log cabin with cupola in Idaho County; last manned 1969, restored 1994-95, drive-up and still standing.",
   "other_names": [
     "Sourdough Lookout"
   ],
@@ -15,7 +16,7 @@
   },
   "elevation_m": 2058.9,
   "kind": "ground",
-  "design": null,
+  "design": "Nez Perce log lookout house plan (L-3 type), modified to 15x15 ft",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -30,37 +31,64 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=yes."
+    "level": "public",
+    "note": "Drive-up site on an unpaved forest road. A 2023 visit report describes graffiti carved inside the cabin. No closure notice found in the sources read."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1969"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "19.5 miles of unpaved NF-492 from Santiam Road; 4x4 recommended; not plowed in winter."
   },
   "rental": null,
   "events": [
     {
       "year": 1927,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Constructed using the Nez Perce log lookout house plan. The builder changed the 16x14 blueprint to 15x15 ft and added windows.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sourdough-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/sourdough-peak-lookout/",
+        "https://www.idahofirelookouts.com/selway-region/sourdough-lookout/",
+        "https://www.firelookout.com/id/sourdough.html",
+        "https://www.fs.usda.gov/media/259200"
+      ]
     },
     {
       "year": 1969,
       "event": "abandoned",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Firelookout.com and Dangerous Roads say abandoned in 1969. Sources differ on the label; see resolved_conflicts.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/sourdough.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/sourdough.html",
+        "https://www.dangerousroads.org/north-america/usa/6780-sourdough-peak.html"
+      ]
+    },
+    {
+      "year": 1969,
+      "event": "staffed_last",
+      "note": "Idaho Fire Lookouts: last year manned, then placed on emergency status.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/selway-region/sourdough-lookout/"
+    },
+    {
+      "year": 1994,
+      "event": "restored",
+      "note": "Restored 1994-95 by the Nez Perce National Forest as a Passport in Time project using volunteers and Forest Service staff.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sourdough-peak-lookout/"
     },
     {
       "year": 1996,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 25, 1996",
-      "from": "nhlr"
+      "note": "Registered with the National Historic Lookout Register on November 25, 1996.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sourdough-peak-lookout/"
     }
   ],
   "photos": [
@@ -118,6 +146,16 @@
       "label": "NHLR register entry US 167 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/id/sourdough-peak-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Nez Perce National Forest Lookout Facts (U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/media/259200",
+      "kind": "reference"
+    },
+    {
+      "label": "How to drive the unpaved road to the lookout at Sourdough Peak in Idaho (Dangerous Roads)",
+      "url": "https://www.dangerousroads.org/north-america/usa/6780-sourdough-peak.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
@@ -191,12 +229,34 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-sourdough-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

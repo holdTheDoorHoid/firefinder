@@ -1,0 +1,12 @@
+Burnt Knob sits on a granite ridge that borders the Selway Bitterroot Wilderness, inside the Nez Perce National Forest, and the cabin looks out over McArthur, Stillman and Burnt Knob lakes.[^1][^3] The site first saw use in 1922, when an alidade was set up on the summit.[^1][^2] The log cabin there was built in 1930 to an L-5 design.[^1][^2] Firelookout.com says a ranger station went up on the Shoup Trail in 1910, and the lookout point sits a quarter mile from it.[^2] The register ties the name to the area's fire history.[^1]
+
+Idaho Fire Lookouts lists Elmer Purdyman as a staffer in 1915, citing a 1915 Idaho County Free Press item.[^3] That year came before both the 1922 alidade and the 1930 cabin.[^1][^3] The register says the cabin was staffed until the 1960s.[^1] Firelookout.com says it was used until the early 1960s, while Idaho Fire Lookouts dates its move to emergency status to 1964.[^2][^3]
+
+The register lists the lookout as registered on August 25, 1997, and says the cabin is kept up for emergency use.[^1] Firelookout.com says district staff did restoration work in the late 1980s.[^2] A visit in fall 2020, described by Idaho Fire Lookouts, found the cabin in good condition, though smoke from California wildfires left only glimpses of the lakes.[^3]
+
+The Forest Service page, last updated February 18, 2026, lists the site as open seasonally due to snow, with no restrooms and no potable water.[^4] The route is Forest Road 468-C, which the agency recommends for four-wheel drive only.[^4] From the junction with Nezperce Trail Road 468, the drive runs 31.5 miles to the spur road, and Trail 539 nearby reaches the lakes.[^4] The Forest Service calls the spot the site of the historic lookout. Access is seasonal due to snow, so check current conditions before going.[^4] The register gives 8,011 feet for the site, while firelookout.com gives 8,196 feet.[^1][^2]
+
+[^1]: Burnt Knob Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/id/burnt-knob-lookout/ (accessed 2026-10-08).
+[^2]: Burnt Knob Fire Lookout Cabin, firelookout.com, https://www.firelookout.com/id/burntknob291.html (accessed 2026-10-08).
+[^3]: Burnt Knob Lookout, Idaho Fire Lookouts, https://www.idahofirelookouts.com/selway-region/burnt-knob-lookout-2/ (accessed 2026-10-08).
+[^4]: Burnt Knob Lookout, Nez Perce-Clearwater National Forests, U.S. Forest Service, https://www.fs.usda.gov/r01/nezperce-clearwater/recreation/burnt-knob-lookout (accessed 2026-10-08).

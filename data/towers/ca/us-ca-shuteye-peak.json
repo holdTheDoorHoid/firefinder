@@ -1,6 +1,7 @@
 {
   "id": "us-ca-shuteye-peak",
   "name": "Shuteye Peak Lookout",
+  "summary": "Sierra National Forest lookout with 1908/09 origins, a 1957 CL-100 steel cab, fire-season staffing and a 3.9-mile hike from Beasore Road.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 2548.7,
   "kind": "two_story",
-  "design": null,
+  "design": "CL-100",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -25,11 +26,11 @@
       "url": "http://nhlr.org/lookouts/us/ca/shuteye-peak-lookout/"
     }
   ],
-  "agency": "US Forest Service - Sierra National Forest",
+  "agency": "U.S. Forest Service, Sierra National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Staffed Forest Service lookout. The final approach is on foot; the sources describe the trail but not public entry into the cab."
   },
   "staffing": {
     "status": "volunteer",
@@ -37,22 +38,88 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "About 3.9 miles round trip, out and back, over exposed granite, starting after a long high-clearance drive up Beasore Road."
   },
   "rental": null,
   "events": [
     {
+      "year": 1907,
+      "event": "built",
+      "note": "Compass lookout built and hiked to each day, per fire-lookouts.org.",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/shuteye_peak/index.htm"
+    },
+    {
       "year": 1908,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR dates the first structure to 1908/09. Fire-lookouts.org says a compass lookout was built in 1907 and hiked to each day, then a crude lumber cabin in 1908 or 1909.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/shuteye-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/shuteye-peak-lookout/",
+        "https://www.fire-lookouts.org/cali/shuteye_peak/index.htm"
+      ]
+    },
+    {
+      "year": 1910,
+      "event": "built",
+      "note": "12-by-12-foot wood cabin similar to the 4A design, per fire-lookouts.org.",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/shuteye_peak/index.htm"
+    },
+    {
+      "year": 1915,
+      "event": "built",
+      "note": "4A-type lookout constructed and improved, per fire-lookouts.org.",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/shuteye_peak/index.htm"
+    },
+    {
+      "year": 1922,
+      "event": "replaced",
+      "note": "NHLR says the original lookout was replaced in 1922.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/shuteye-peak-lookout/"
+    },
+    {
+      "year": 1935,
+      "event": "modified",
+      "note": "Remodeled with improved windows, per fire-lookouts.org.",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/shuteye_peak/index.htm"
+    },
+    {
+      "year": 1957,
+      "event": "built",
+      "note": "Current CL-100 steel cab, 14 by 14 feet, on a 10 by 10 foot concrete block base.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/shuteye-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/shuteye-peak-lookout/",
+        "https://www.fire-lookouts.org/cali/shuteye_peak/index.htm"
+      ]
+    },
+    {
+      "year": 1980,
+      "event": "staffed",
+      "note": "Don Wisseman became a fire lookout; he spent most of his career on Shuteye.",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/shuteye_peak/index.htm"
+    },
+    {
+      "year": 2007,
+      "event": "staffed",
+      "note": "Don Wisseman retired at the end of the 2007 fire season. The page's 20-year service figure does not fit his 1980 start.",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/shuteye_peak/index.htm"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 22, 2019",
-      "from": "nhlr"
+      "note": "Registered October 22, 2019 (NHLR US 1325, CA 148).",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/shuteye-peak-lookout/"
     }
   ],
   "photos": [
@@ -148,6 +215,11 @@
       "kind": "register"
     },
     {
+      "label": "Shuteye Peak Lookout trail listing (Wilderness Portal)",
+      "url": "https://www.wildernessportal.com/trails/shuteye-lookout",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -218,12 +290,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-shuteye-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

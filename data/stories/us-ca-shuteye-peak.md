@@ -1,0 +1,11 @@
+The National Historic Lookout Register dates the first structure on Shuteye Peak, in the Sierra National Forest, to 1908 or 1909 and counts it among California's oldest lookouts.[^1] Wilderness Portal describes the site as the earliest permanent fire lookout in the Sierra Nevada.[^3] The fire-lookouts.org profile tells an earlier story: a compass lookout built in 1907 and hiked to each day, a crude lumber cabin in 1908 or 1909, a 12-by-12-foot wood cabin in 1910, and a 4A-type lookout in 1915.[^2]
+
+The register records a 1922 replacement of the original lookout and a 1957 rebuild to the CL-100 design.[^1] The fire-lookouts.org page describes that 1957 rebuild as a 14-by-14-foot steel cab with a flat roof on a 10-by-10-foot concrete block base.[^2] Both sources agree the present cab dates from 1957.[^1][^2]
+
+Don Wisseman, a Forest Service employee, became a fire lookout in 1980, spent most of his career on Shuteye, and retired when the 2007 fire season ended.[^2] The same page gives 20 years of service, which does not match a 1980 start and a 2007 retirement, so the length of his service is unclear.[^2] The profile also recalls the many firefighters he helped guide into lightning strikes.[^2]
+
+According to the register, the Sierra National Forest keeps Shuteye Peak staffed through each fire season, and the entry was registered on October 22, 2019.[^1] Wilderness Portal, last verified on June 19, 2026, describes the lookout as one of the few in California still staffed.[^3] The tower is reached on foot, a round trip of about 3.9 miles over rocky, exposed granite, after a long high-clearance drive up Beasore Road.[^3] The fire-lookouts.org profile says the tower itself requires four-wheel drive, and Wilderness Portal says the final stretch needs a high-clearance, four-wheel-drive vehicle.[^2][^3]
+
+[^1]: Shuteye Peak Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/ca/shuteye-peak-lookout/ (accessed 2026-10-08).
+[^2]: Shuteye Peak Fire Lookout, United States Forest Service Lookout, fire-lookouts.org, https://www.fire-lookouts.org/cali/shuteye_peak/index.htm (accessed 2026-10-08).
+[^3]: Shuteye Peak Lookout trail listing, Wilderness Portal, https://www.wildernessportal.com/trails/shuteye-lookout (accessed 2026-10-08).

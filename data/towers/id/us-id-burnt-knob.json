@@ -1,6 +1,7 @@
 {
   "id": "us-id-burnt-knob",
   "name": "Burnt Knob Lookout",
+  "summary": "Nez Perce L-5 log cabin built 1930 on a 1922 site; staffed into the 1960s, now emergency use, reached by a seasonal 4WD road.",
   "other_names": [
     "Burnt Knob Lookouut"
   ],
@@ -15,7 +16,7 @@
   },
   "elevation_m": 2441.8,
   "kind": "ground",
-  "design": "L-5",
+  "design": "L-5 log cabin",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -30,8 +31,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=yes."
+    "level": "public",
+    "note": "Forest Service recreation site, open seasonally due to snow. Reached by Forest Road 468-C, recommended for 4WD only. The cabin is maintained for emergency use."
   },
   "staffing": {
     "status": "unknown",
@@ -39,22 +40,81 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Road 468-C is unmaintained and rocky, 4WD recommended, seasonal. No restrooms or potable water. Trail 539 nearby reaches McArthur, Stillman and Burnt Knob lakes."
   },
   "rental": null,
   "events": [
     {
+      "year": 1910,
+      "event": "other",
+      "note": "Ranger station established on the Shoup Trail; the lookout point is one-quarter mile from it.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/burntknob291.html"
+    },
+    {
+      "year": 1915,
+      "event": "staffed",
+      "note": "Elmer Purdyman listed by Idaho Fire Lookouts from a 1915 Idaho County Free Press item. Predates both the alidade and the cabin.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/selway-region/burnt-knob-lookout-2/"
+    },
+    {
+      "year": 1922,
+      "event": "other",
+      "note": "Site first used, with an alidade placed on the summit.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/burnt-knob-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/burnt-knob-lookout/",
+        "https://www.firelookout.com/id/burntknob291.html",
+        "https://www.idahofirelookouts.com/selway-region/burnt-knob-lookout-2/"
+      ]
+    },
+    {
       "year": 1930,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "L-5 log lookout cabin built on the granite ridge.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/burnt-knob-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/burnt-knob-lookout/",
+        "https://www.firelookout.com/id/burntknob291.html",
+        "https://www.idahofirelookouts.com/selway-region/burnt-knob-lookout-2/"
+      ]
+    },
+    {
+      "year": 1964,
+      "event": "staffed_last",
+      "note": "Idaho Fire Lookouts dates emergency status to 1964. NHLR says staffed until the 1960s; firelookout.com says used until the early 1960s.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/burnt-knob-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/burnt-knob-lookout/",
+        "https://www.firelookout.com/id/burntknob291.html",
+        "https://www.idahofirelookouts.com/selway-region/burnt-knob-lookout-2/"
+      ]
+    },
+    {
+      "year": 1989,
+      "event": "other",
+      "note": "Restoration work by district employees; dated only to the late 1980s (firelookout.com says 'late 1980').",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/burntknob291.html"
     },
     {
       "year": 1997,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 25, 1997",
-      "from": "nhlr"
+      "note": "Registered August 25, 1997 (NHLR US 234, ID 20).",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/burnt-knob-lookout/"
+    },
+    {
+      "year": 2020,
+      "event": "other",
+      "note": "Fall 2020 visit, reported by Idaho Fire Lookouts, found the cabin in good condition despite smoke.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/selway-region/burnt-knob-lookout-2/"
     }
   ],
   "photos": [
@@ -124,6 +184,11 @@
       "label": "NHLR register entry US 234 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/id/burnt-knob-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Burnt Knob Lookout (Nez Perce-Clearwater National Forests, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r01/nezperce-clearwater/recreation/burnt-knob-lookout",
+      "kind": "reference"
     },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
@@ -198,6 +263,21 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-burnt-knob",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -229,9 +309,15 @@
       "note": "NHLR lists lookouts that were standing when registered. idahofirelookouts.com's status is read from a short summary."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

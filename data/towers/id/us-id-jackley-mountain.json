@@ -1,6 +1,7 @@
 {
   "id": "us-id-jackley-mountain",
   "name": "Jackley Mountain Lookout",
+  "summary": "Abandoned 1932 L-4 ground cabin in Adams County, Idaho: patrol point 1928, last staffed 1948, NHLR-registered 2020, hike-in only and reported beyond repair.",
   "other_names": [
     "Jackley"
   ],
@@ -15,7 +16,7 @@
   },
   "elevation_m": 2667.3,
   "kind": "ground",
-  "design": null,
+  "design": "L-4",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -30,31 +31,90 @@
   "agency": "US Forest Service - Payette National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "On Payette National Forest land; reached only on foot with no trail to the lookout, per the NHLR 2019 visit report and Idaho Fire Lookouts' hike-in tag. Judged public because no closure or permission requirement appears in the sources read."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1948"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "No trail to the lookout (NHLR 2019 visit report). A 1962 USGS station description places it 5 miles north of a road end at Black Lake."
   },
   "rental": null,
   "events": [
     {
+      "year": 1928,
+      "event": "other",
+      "note": "Established as a patrol point.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/jackley.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/jackley.html",
+        "https://idaholookouts.weebly.com/jackley.html"
+      ]
+    },
+    {
       "year": 1932,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "14 x 14 ground cabin with L-4 cab constructed (NHLR gives R1/L-4 ground cabin).",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/jackley-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/jackley-mountain-lookout/",
+        "https://www.firelookout.com/id/jackley.html",
+        "https://idaholookouts.weebly.com/jackley.html"
+      ]
+    },
+    {
+      "year": 1942,
+      "event": "staffed",
+      "note": "Alton Harrington listed as lookout.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/jackley-mountain/",
+      "source_urls": [
+        "https://www.idahofirelookouts.com/west-central/jackley-mountain/",
+        "https://www.firelookout.com/id/jackley.html",
+        "https://www.idahofirelookouts.com/lookout-staff/alton-harrington/"
+      ]
+    },
+    {
+      "year": 1948,
+      "event": "staffed_last",
+      "note": "Last season the lookout was staffed (Forest Lookouts); NHLR says no longer staffed after 1948.",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/jackley.html",
+      "source_urls": [
+        "https://idaholookouts.weebly.com/jackley.html",
+        "http://nhlr.org/lookouts/us/id/jackley-mountain-lookout/"
+      ]
+    },
+    {
+      "year": 1949,
+      "event": "abandoned",
+      "note": "Abandoned, per Idaho Fire Lookouts and firelookout.com.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/jackley-mountain/",
+      "source_urls": [
+        "https://www.idahofirelookouts.com/west-central/jackley-mountain/",
+        "https://www.firelookout.com/id/jackley.html"
+      ]
+    },
+    {
+      "year": 2019,
+      "event": "other",
+      "note": "NHLR visit report (June 19, 2019, Wyatt Griffis): condition poor, comments say the lookout appears to be beyond repair; no trail to the lookout.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/jackley-mountain-lookout/"
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 29, 2020",
-      "from": "nhlr"
+      "note": "Registered with the National Historic Lookout Register on September 29, 2020; nominated by Brad Eells.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/jackley-mountain-lookout/"
     }
   ],
   "photos": [
@@ -100,6 +160,16 @@
       "label": "NHLR register entry US 1435 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/id/jackley-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Jackley - Forest Lookouts (Idaho)",
+      "url": "https://idaholookouts.weebly.com/jackley.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Alton Harrington (Idaho Fire Lookouts)",
+      "url": "https://www.idahofirelookouts.com/lookout-staff/alton-harrington/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
@@ -170,6 +240,22 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-jackley-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -201,9 +287,15 @@
       "note": "NHLR lists lookouts that were standing when registered. idahofirelookouts.com's status is read from a short summary."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

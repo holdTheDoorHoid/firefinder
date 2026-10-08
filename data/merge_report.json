@@ -1,5 +1,5 @@
 {
- "merged": "2026-10-05",
+ "merged": "2026-10-08",
  "inputs": {
   "andyarthur_ny": {
    "records": 34,
@@ -93,8 +93,8 @@
   }
  },
  "files": {
-  "written": 77,
-  "unchanged": 8020
+  "written": 30,
+  "unchanged": 8067
  },
  "counts": {
   "towers": 8097,
@@ -175,17 +175,17 @@
    "WY": 76
   },
   "visible_by_verification": {
-   "unverified": 6347,
-   "facts": 981,
-   "verified": 200
+   "unverified": 6344,
+   "facts": 954,
+   "verified": 230
   },
   "multi_source_towers": 5411,
   "towers_by_number_of_sources": {
    "1": 2679,
    "2": 2323,
    "3": 2511,
-   "4": 377,
-   "5+": 207
+   "4": 376,
+   "5+": 208
   },
   "rentable": 76,
   "registered": 3962
@@ -13186,10 +13186,10 @@
   }
  ],
  "research": {
-  "files": 200,
-  "applied": 200,
+  "files": 230,
+  "applied": 230,
   "by_verdict": {
-   "fixed": 152,
+   "fixed": 182,
    "pass": 48
   },
   "problems": [
@@ -13226,8 +13226,16 @@
     "problem": "facts.staffing {'status': 'non-continuous historically, current status unknown', 'as_of': '1924'} is not valid; not applied"
    },
    {
+    "file": "us-ca-shuteye-peak.json",
+    "problem": "facts.staffing {'status': 'staffed each fire season', 'as_of': '2026-06-19'} is not valid; not applied"
+   },
+   {
     "file": "us-ga-chenocetah-mountain.json",
     "problem": "facts.staffing {'status': 'staffed seasonally by Georgia Forestry Commission', 'as_of': '1989'} is not valid; not applied"
+   },
+   {
+    "file": "us-id-anderson-butte.json",
+    "problem": "facts.staffing {'status': 'emergency basis only', 'as_of': 'undated'} is not valid; not applied"
    },
    {
     "file": "us-id-arctic-point.json",
@@ -13238,8 +13246,24 @@
     "problem": "facts.staffing {'status': 'staffed seasonally (hike-in)', 'as_of': '2026'} is not valid; not applied"
    },
    {
+    "file": "us-id-burnt-knob.json",
+    "problem": "facts.staffing {'status': 'not staffed since the 1960s; emergency use', 'as_of': '1964'} is not valid; not applied"
+   },
+   {
     "file": "us-id-butts-creek-point.json",
     "problem": "facts.staffing {'status': 'not currently staffed; opened/closed seasonally by a volunteer steward', 'as_of': '2026'} is not valid; not applied"
+   },
+   {
+    "file": "us-id-elk-summit-2.json",
+    "problem": "facts.staffing {'status': 'not currently used by the Forest Service (NHLR says used as needed by Elk City Ranger District)', 'as_of': '2025-06-04'} is not valid; not applied"
+   },
+   {
+    "file": "us-id-gisborne-mountain.json",
+    "problem": "facts.staffing {'status': 'staffed in summer (seasonal)', 'as_of': '2022-01-01'} is not valid; not applied"
+   },
+   {
+    "file": "us-id-granite-mountain-payette-national-forest.json",
+    "problem": "facts.staffing {'status': 'staffed in fire season (NHLR; firelookout.com says every summer); one FS guide calls it unmanned', 'as_of': '2025-07-18'} is not valid; not applied"
    },
    {
     "file": "us-id-grave-peak.json",
@@ -13254,12 +13278,36 @@
     "problem": "facts.staffing {'status': 'emergency/occasional (not continuously staffed)', 'as_of': '1977-1990s'} is not valid; not applied"
    },
    {
+    "file": "us-id-lookout-mountain-custer-county.json",
+    "problem": "facts.staffing {'status': 'emergency use only', 'as_of': '1970s'} is not valid; not applied"
+   },
+   {
     "file": "us-id-lunch-peak.json",
     "problem": "facts.staffing {'status': 'retired (not staffed for fire detection)', 'as_of': '1985'} is not valid; not applied"
    },
    {
+    "file": "us-id-mount-harrison.json",
+    "problem": "facts.staffing {'status': 'generally staffed in fire season; sometimes in summer', 'as_of': 'undated'} is not valid; not applied"
+   },
+   {
+    "file": "us-id-oreana.json",
+    "problem": "facts.staffing {'status': 'last used in the 1960s; no current staffing reported', 'as_of': '1960s'} is not valid; not applied"
+   },
+   {
+    "file": "us-id-oregon-butte.json",
+    "problem": "facts.staffing {'status': 'staffed; NHLR says every season, firelookout.com says summer', 'as_of': 'undated'} is not valid; not applied"
+   },
+   {
+    "file": "us-id-scott-mountain.json",
+    "problem": "facts.staffing {'status': 'seasonal', 'as_of': 'undated'} is not valid; not applied"
+   },
+   {
     "file": "us-id-scurvy-mountain.json",
     "problem": "facts.staffing {'status': 'retired, emergency status from 1978', 'as_of': '1978'} is not valid; not applied"
+   },
+   {
+    "file": "us-id-sheep-hill-2.json",
+    "problem": "facts.staffing {'status': 'seasonal', 'as_of': 'undated'} is not valid; not applied"
    },
    {
     "file": "us-id-slate-point.json",
@@ -13282,8 +13330,28 @@
     "problem": "facts.staffing {'status': 'none, under restoration', 'as_of': '1972'} is not valid; not applied"
    },
    {
+    "file": "us-id-swanholm-peak.json",
+    "problem": "facts.staffing {'status': 'not staffed', 'as_of': 'undated'} is not valid; not applied"
+   },
+   {
+    "file": "us-id-thorn-creek-butte.json",
+    "problem": "facts.staffing {'status': 'staffed as needed', 'as_of': 'undated'} is not valid; not applied"
+   },
+   {
+    "file": "us-id-twin-peaks-2.json",
+    "problem": "facts.staffing {'status': 'no longer staffed per Challis Chamber of Commerce; Idaho Fire Lookouts lists it as Drive-Up Staffed', 'as_of': 'undated'} is not valid; not applied"
+   },
+   {
     "file": "us-id-walde-mountain.json",
     "problem": "facts.staffing {'status': 'active, staffed every summer and fall season', 'as_of': '2026'} is not valid; not applied"
+   },
+   {
+    "file": "us-ma-mount-washington-fire-tower-at-mount-everett.json",
+    "problem": "facts.status 'removed' is not valid; not applied"
+   },
+   {
+    "file": "us-ma-mount-washington-fire-tower-at-mount-everett.json",
+    "problem": "facts.staffing {'status': 'unstaffed after 1972', 'as_of': '1972'} is not valid; not applied"
    },
    {
     "file": "us-mt-cougar-peak.json",
@@ -13302,12 +13370,20 @@
     "problem": "facts.staffing {'status': 'staffed_historically', 'as_of': '1946'} is not valid; not applied"
    },
    {
+    "file": "us-mt-jocko-2-2.json",
+    "problem": "facts.staffing {'status': 'staffed only during emergencies', 'as_of': 'undated (CSKT lookouts page)'} is not valid; not applied"
+   },
+   {
     "file": "us-mt-mccart.json",
     "problem": "facts.staffing {'status': 'retired', 'as_of': '1984'} is not valid; not applied"
    },
    {
     "file": "us-mt-mcguire-mountain.json",
     "problem": "facts.staffing {'status': 'retired', 'as_of': 'mid-1940s'} is not valid; not applied"
+   },
+   {
+    "file": "us-mt-mineral-peak.json",
+    "problem": "facts.staffing {'status': 'not staffed; house vacant', 'as_of': '2017 (nomination)'} is not valid; not applied"
    },
    {
     "file": "us-mt-minton-peak.json",
@@ -13320,6 +13396,10 @@
    {
     "file": "us-mt-monument-peak.json",
     "problem": "facts.staffing {'status': 'unstaffed since the late 20th century; exact end date disputed between sources', 'as_of': '2026-10-04'} is not valid; not applied"
+   },
+   {
+    "file": "us-mt-st-mary-peak.json",
+    "problem": "facts.staffing {'status': 'summer volunteers', 'as_of': 'January 2018 (nomination, form dated January 31, 2018)'} is not valid; not applied"
    },
    {
     "file": "us-mt-thompson-peak-2.json",
@@ -13336,6 +13416,10 @@
    {
     "file": "us-mt-yaak-mountain.json",
     "problem": "facts.staffing {'status': 'regular staffing ended 1988; occasional staffing recorded in 1995, 1998, 2000; now primarily a rental', 'as_of': '2026-10-04'} is not valid; not applied"
+   },
+   {
+    "file": "us-nj-catfish.json",
+    "problem": "facts.staffing {'status': 'staffed sometimes, during elevated fire danger; full-time observer post vacant', 'as_of': '2018 visit reports'} is not valid; not applied"
    },
    {
     "file": "us-nm-monjeau.json",
@@ -13592,6 +13676,10 @@
     "note": "No source found detailing what fires Sardine Peak watched for or who staffed it historically beyond the current unstaffed status. Height_m in the brief (2479.5, an elevation not structure height) was left unchanged since no source gave a differing figure (nhlr.org lists elevation as 8,135 ft / 2,480 m)."
    },
    {
+    "id": "us-ca-shuteye-peak",
+    "note": "Record kind two_story is not confirmed by these sources; they describe a 14 by 14 foot steel cab on a 10 by 10 foot concrete block base. Staffing as_of uses Wilderness Portal's 2026-06-19 verification date. Fire-lookouts.org's access and staffing details are reported alongside Wilderness Portal's rather than overriding them. No specific fire at the tower is named in the sources read. No photos added: the NHLR photo captions have no image URLs in the pages read."
+   },
+   {
     "id": "us-ca-vetter-mountain",
     "note": "Two minor date conflicts (build year 1935 vs 1937, and burn month August vs September 2009) are noted in resolved_conflicts; both resolved toward the more corroborated/specific NHLR figures. Did not verify current-day staffing schedule beyond the 2023-era Edison article, which may be slightly dated."
    },
@@ -13614,6 +13702,10 @@
    {
     "id": "us-ga-chenocetah-mountain",
     "note": "Current public access/climbing status is not documented in either source; worth a follow-up with the Chattahoochee National Forest or GFC. Build-year and NRHP-listing-year conflicts between the two sources are noted but not resolved."
+   },
+   {
+    "id": "us-id-anderson-butte",
+    "note": "Height 16.2 m is the 53-foot tower height from NHLR converted to metres (53 ft = 16.15 m); the sources give no other height. Staffing as_of is undated because the register and climbing guide pages carry no date. The 1932 caption and the early-1930s L-4 may be the same structure; unresolved. Access was 'unknown' in the record and is now restricted/hike-in based on the sources. Not read, but surfaced by search as a lead: a Nez Perce National Forest history PDF (fs.usda.gov/media/259214) that may list the 1953 towers; worth checking to confirm the 1953 date. No photos added: the climbing guide's photo credit has no image URL in the page read."
    },
    {
     "id": "us-id-arctic-point",
@@ -13642,6 +13734,10 @@
    {
     "id": "us-id-blue-nose",
     "note": "Staffing entries for 1920-1924 predate the 1934 build date given by NHLR and firelookout.com for the current structure; no source explains whether an earlier lookout post existed on the site before 1934, or whether the staffing survey's dates are approximate. Flagged in the story as an open question rather than resolved. No rental/reservation information found; access described from the volunteer survey's site-visit notes only."
+   },
+   {
+    "id": "us-id-burnt-knob",
+    "note": "Rental status is not confirmed. A reader comment on the Idaho Fire Lookouts post points to recreation.gov, but no listing was read, so the story says nothing about rental. Idaho Fire Lookouts' Drive-Up Abandoned tag is its own category and is not treated as a current status. Photos not added, though University of Idaho Selway-Bitterroot Wilderness History Project items (sbw019, sbw087; 1938 photographs) surfaced in search and could be checked for license and use. The 1930 cabin date is consistent across three sources."
    },
    {
     "id": "us-id-butts-creek-point",
@@ -13676,8 +13772,20 @@
     "note": "Idaho Fire Lookouts lists many more named seasonal staff (Odell, Black, Walters, Baker, Voll, etc.) between 1946 and 1972; only a sample is named in the story to keep it readable, with full list available in the source. Cabin footprint (15x15 vs 14x14) differs slightly between NHLR and Recreation.gov; both are given rather than resolved."
    },
    {
+    "id": "us-id-elk-summit-2",
+    "note": "Record height 2.1 m is wrong; sources give a 100-foot tower (proposed 30.5 m). Status is disputed: NHLR (undated page) says used as needed by the Elk City Ranger District, while the Forest Service page (updated June 4, 2025) says not currently used by the agency and not accessible to the public. The story reports both and does not resolve it; the NHLR wording may be older. An Idaho County Free Press feature on the lookout (idahocountyfreepress.com, 88-year-old lookout tower article) was returned by search but could not be read (HTTP 429); it may say more about current use and should be checked by a human. Elevation: see resolved_conflicts. Access is closed per the Forest Service; no climbing advice given."
+   },
+   {
     "id": "us-id-gardiner-peak",
     "note": "Brief's elevation (2010.8 m / 6597 ft) matches both NHLR and Wikipedia exactly. Brief's access field was 'unknown'; proposed 'restricted' based on hike-in, staffed, wilderness-area status. Idahofirelookouts staff list had some garbled text (e.g. 'AbaStaffed') from page formatting; used only the clean names/years. Al Koenigs is recorded in 1925 and 1927 (not 'late 1920s'); Tommy Reed is recorded only in 1956, not 'much of the 1950s' -- story corrected to match the source's actual staff-year entries."
+   },
+   {
+    "id": "us-id-gisborne-mountain",
+    "note": "Record height 12.2 m matches the 1932 40-ft pole tower; the standing 1958 tower is 41 ft (proposed 12.5 m). Build year: 1932 per NHLR, Idaho and Forest Lookouts; a Priest River Experimental Forest storymap appeared in search with 1933 and a 1951 rename, but its page returned no text and it was not used. Current staffing rests on a Jan 2022 Idaho Fire Lookouts post and an undated firelookout.com line (staffed in summer); no current Forest Service source was read, and a 2020 IPNF post about access limited to staffed lookout towers appeared in search but was not readable. Access level left unset because no source states public visiting rules; the record's access 'unknown' stands. Elevation and forest-name conflicts are in resolved_conflicts. Staff names come from newspaper items quoted by the Forest Lookouts and Idaho sites; no new photos were recorded."
+   },
+   {
+    "id": "us-id-granite-mountain-payette-national-forest",
+    "note": "Record height 3.7 m is wrong; the present tower is 20 ft (proposed 6.1 m). Name collision risk: two other Idaho lookouts are called Granite Mountain (Idaho Fire Lookouts southern-idaho page: 1923 camp, 2003 NHLR, North Fork Ranger District; north-idaho-panhandle-region page: 1932 cabin and 1934 L-4 tower, destroyed in the 1950s). Neither is this Payette tower and their facts were not merged. Current staffing is unverified for 2026: the staff list shows a 2026 entry and the 2025 visit confirmed a staffed season, but the FS guide (undated in the copy read) says unmanned. Staff names were deliberately left out of the research file; the staff list includes current seasonal staff. Access: the trail is public and non-motorized; no source describes rules for entering the tower. The NHLR page shows photos (1953 USFS, 2017 courtesy Keith Lanom) but no image URLs were retrieved, so no photos are recorded."
    },
    {
     "id": "us-id-grave-peak",
@@ -13692,16 +13800,36 @@
     "note": "Full staffing history is thin in these sources (only one named staffer, Kris Anderson 1983, found clearly). The brief's flagged build-year conflict did not materialize across the three sources checked; could not reach the dead Nez Perce NF link listed in source_pages to check further. No evidence of a rental program; it reads as an actively staffed lookout."
    },
    {
+    "id": "us-id-hells-half-acre",
+    "note": "Disputed: the L-4 date (1934 on firelookout.com and Forest Lookouts; 1940 on the register and Idaho Fire Lookouts), the base date (1959 base build vs 1960 completion), and the wilderness name (register: Frank Church neighbour; Keeping Watch: Selway-Bitterroot). Elevation: the register's 8,116 ft (2,474 m) matches the record; Idaho Fire Lookouts gives 6727′, not used. Access level omitted: drive-up is supported, but no source states public or closed status, so a visitor check is advised. The 2025 staffing rests on one source. The Keeping Watch page says 'Built: 1930', which is the first platform, not the current cab. No source read describes the lookout as burned, moved or abandoned. Record height_m 3.0 is not confirmed; sources give a 10-foot base only. No new photos recorded."
+   },
+   {
+    "id": "us-id-hidden-peak",
+    "note": "History is consistent across four sources, and the 1961 date is backed by a Forest Service statement quoted in the climbing guide. Access is upgraded to public from the register's 'Open to public use'. The record's county 'Idaho' is left alone, since it follows the convention used for the other records. Current condition and staffing are not reported after 2012; the climbing guide and firelookout.com pages are undated. Forest: the register says Lolo/Clearwater National Forests and Idaho Fire Lookouts says Lolo / Clearwater National Forest, so they agree. No wilderness designation year is stated in any source, so the story gives only the 'three years' relation. No new photos recorded."
+   },
+   {
     "id": "us-id-horse-mountain-2",
     "note": "Staffing history is thin — only two documented years (1939, 1981) across both sources checked, with a large undocumented gap in between. firelookout.com (not cited, consistent with others) also lists it as built 1935, 30-foot timber tower, staffed every summer, confirming the other two sources without adding new facts."
+   },
+   {
+    "id": "us-id-hughes-ridge",
+    "note": "Elevation conflict: the register gives 4,189 ft (1,277 m), which matches the record's elevation_m 1276.8, while Idaho Fire Lookouts gives 4248′ (about 1,295 m). Record left as is. height_m is not filled: the register gives a 41-foot wooden tower but not whether that is to the cab floor. Unreconciled: the 1932 newspaper (60-foot poles, under construction) against the about-1933 L-4 date. Staffing as_of 2021 comes from an Idaho Fire Lookouts page dated December 30, 2021; firelookout.com is undated. Access level omitted: 'Hike-In' is supported, but no source states public or closed status. The 1977 newspaper item calls the peak a granite peak, which does not fit a timber tower; the story does not repeat that. No new photos recorded."
    },
    {
     "id": "us-id-indian-hill",
     "note": "Fact-check pass 2026-10-04: the original research omitted John Crawford's 1976-2008 staffing stint, which idahofirelookouts.com's known-staff list actually gives in full (1976-2008 Crawford, 2009-2010 Zimmerman, 2011-2013 Gilley, 2014-2015 Anderson, 2022-2024 Crawford again); the story previously implied Crawford's 2022 return was his only tenure. Corrected in both files. The 1929 log-cabin build year on NHLR versus the 1928 cabin/pole-tower date on idahofirelookouts.com may refer to the same construction episode."
    },
    {
+    "id": "us-id-indian-mountain",
+    "note": "Staffing status conflicts across sources; the 2015 end date rests on the NRHP nomination alone. The nomination PDF was read by grep excerpts, not in full. Access 'restricted' is a judgement from drive-up plus an active Forest Service detection site; no visitor policy was found. Do not confuse with the Washington Indian Mountain Lookout (nhlr.org/lookouts/us/wa/indian-mountain-lookout/), a separate tower with a 1953 replacement. Idaho Fire Lookouts' known-staff list is partial and was not used beyond 1942. No photos with a verified URL and licence were found. Fact-check 2026-10-08: the West Mountains line now describes the view from the lookout, not its location; the 2021 staffing post is dated in the story; the off-limits advice was replaced with a sourced statement."
+   },
+   {
     "id": "us-id-iron-mountain-3",
     "note": "idahofirelookouts.com has no documented staffing history for this lookout; the Weebly site supplied strong newspaper-sourced staffing detail instead. No current rental or regular staffing was found; status_note reflects firelookout.com's 'available for emergencies' description, which may be dated."
+   },
+   {
+    "id": "us-id-jackley-mountain",
+    "note": "Dates (1928 patrol point, 1932 cab, 1948 last staffed, 1949 abandoned, 2020 NHLR) agree across sources. Thin points: the Forest Lookouts page is an unsigned compilation, and the 2019 condition report is one visitor's report. Access 'public' is a judgement: no closure or permission found, but the site is hike-in with no trail. No notable fires were found in the sources read. Do not confuse with a Facebook post for a 1932 L-4 cab 27 miles north of Weiser, Washington County, elevation 7589 ft, which is a different tower. firelookout.com credits photos to Shawn Ogden and Luke Channer, but no URL or licence was found, so no photos are listed. Fact-check 2026-10-08: the condition findings now have evidence quotes from the NHLR form fields; the distance and the advice not to climb are sourced or marked as our judgement."
    },
    {
     "id": "us-id-little-guard",
@@ -13716,12 +13844,28 @@
     "note": "Staffing history is undocumented across all consulted sources; story omits a staffing section rather than guessing. Minor height discrepancy (55 ft vs 53 ft) noted but not resolved — no source explains it."
    },
    {
+    "id": "us-id-lookout-mountain-custer-county",
+    "note": "The 1933 build year and the 1985-89 save-and-restore story agree across NHLR and Idaho Fire Lookouts. Elevation and forest name conflict across sources (see resolved_conflicts). Wikipedia's CCC claim is unconfirmed by the register or the other lists; check Wikipedia's refs before adding it. Do not confuse with other Lookout Mountain towers: Idaho Fire Lookouts' west-central 'Lookout Mountain Lookout' (1933 14x14 log cabin, moved 1975) and its northern-Idaho Lookout Mountain are different sites. The trail is a difficult hike and the summit is a lightning hazard; the cab itself is on emergency status. No notable fires were found in the sources read. NHLR photos (courtesy Luke Channer) have no licence shown, so none are listed. Fact-check 2026-10-08: the 1961 staffing event no longer implies this tower was staffed that year; the story no longer says the trail went 'up' the forest road."
+   },
+   {
     "id": "us-id-lunch-peak",
     "note": "Minor conflict on pole-tower height of the 1937 structure (45 vs 50 ft); both figures are now attributed to their sources in the narrative rather than stated as a single number. Elevation conflicts slightly between brief (1907.4m) and rec.gov (6,414 ft = 1955m) but not asserted as a specific figure in the story. Fact-check pass (2026-10-04): draft had stated the pole height as a flat '45-foot' figure sourced to both NHLR and firelookout.com, but NHLR actually gives 50 feet, contradicting its own citation -- fixed to attribute each figure correctly. Draft also said staffer Diane Young served 'around 1970'; idahofirelookouts.com's staff list actually dates her 1975-1978 -- fixed."
    },
    {
     "id": "us-id-mallard-peak",
     "note": "1956 vs 1957 last-staffed/abandonment discrepancy left unresolved in the story per guide instructions. NRHP nomination PDF (84001178) not pulled this pass; could firm up build details and exact staffing dates if more budget is available."
+   },
+   {
+    "id": "us-id-mount-harrison",
+    "note": "Brief's NHLR registration date (Sept 27, 2020) is now confirmed on the NHLR page itself ('Date Registered September 27, 2020'); an earlier note said it was not visible. The brief's 1977 'built' is the current cab; first lookout 1942. The 'climbable' flag was removed: no source says the cab can be climbed, only that it is open to visitors on summer weekends (recorded under access). Location conflict unresolved: NHLR 42.30895,-113.658925 vs Idaho Fire Lookouts 42.31463,-113.6589 (about 630 m apart). Forest Service road-closed status is time-sensitive; recheck before publishing. No specific fire spotted by the lookout was named in the sources read. A September 1942 Burley Herald item on the same page describes a short-wave radio at the summit but names no fire. Staffing as_of is undated across sources. Source 3 bundles several newspaper clippings reprinted on one page; the 1942 history and 1962-1999 items all come from it."
+   },
+   {
+    "id": "us-id-oreana",
+    "note": "Staffing evidence is sparse: the last documented staff is 1956 (Clary) and the 1969 item is a plan, not a confirmed abandonment. The 1939 item names 'a forest lookout near Horse Creek' without naming Oreana; the story says so. Climbability of the cab is not stated in any source read, so no climbable flag is recorded. Brief's access 'unknown' is now public (firelookout.com 'open to public use'). The 2011 NHLR registration date is now confirmed on the NHLR page (Date Registered September 24, 2011); an earlier note said it was not visible. Road description comes from a third-party driving guide (Dangerous Roads), not the Forest Service; check current FR-067 conditions before publishing. Dangerous Roads gives 8,103 ft for the ridge peak; firelookout.com and NHLR give 8,075 ft for the lookout. Idaho Fire Lookouts gives the 1934 cab's garage as log; the 1960s 'last used for emergency services' is decade-only."
+   },
+   {
+    "id": "us-id-oregon-butte",
+    "note": "Elevation conflict not resolved and worth a human look: NHLR gives 8,373 ft (2,552 m), which matches the record's elevation_m, but firelookout.com and Idaho Fire Lookouts give 8465 ft (about 2,580 m). Distance from Elk City: 24 miles (firelookout.com) vs about 25 miles (Forest Service post). Staffing sources conflict on season: NHLR says every season, firelookout.com says summer, and the undated Forest Service post says staffed to this day. The story no longer says staffing 'has been steady'. Brief's access 'unknown' is now public hike-in per sources. Climbability of the cab is not stated in any source read, so no climbable flag is recorded. No fire involving the lookout was found in the sources. Idaho Fire Lookouts lists a 1929 'Known Staff' entry without a name. height_m 2.1 is the 7-foot base described by sources, used as the cab-floor height proxy."
    },
    {
     "id": "us-id-osier-ridge",
@@ -13736,8 +13880,16 @@
     "note": "NHLR gives elevation 7,273 ft at the Dreher property; idahofirelookouts.com gives 7,303 ft for the original Sawyer Ridge site — left unreconciled since they describe two slightly different points and neither source is clearly authoritative for the other's site. No source gives who built the original tower (a crew, not a named builder) or the exact reason the Forest Service decided it was surplus beyond space/staffing needs implied by the 1987 date. No current rental status or public visiting hours beyond 'by pre-arrangement' were found."
    },
    {
+    "id": "us-id-scott-mountain",
+    "note": "Build dates agree (1920 cabin, 1934 L-4 cab), so the brief's warning about conflicting build years does not apply to this cab. Open questions: the foundation material (stone vs concrete) and current staffing, since every staffing source is undated. Brief access 'unknown' is now described as drive-up. No fire history and no rental listing appeared in the six pages read or the two searches run, so the story does not mention either. Budget used: 6 page reads, 2 searches."
+   },
+   {
     "id": "us-id-scurvy-mountain",
     "note": "Build/cabin sequence between 1917 and 1952 is not fully consistent across sources; treated as an open conflict rather than resolved. No new photos found during this pass."
+   },
+   {
+    "id": "us-id-sheep-hill-2",
+    "note": "Brief record was wrong in four places (see corrections): the 1928 build date belongs to the earlier cabin, height_m 3.0 is a base height, kind two_story is unsupported, and the sheep-hill-lookout-2 Idaho page is about a different Sheep Hill (Clearwater NF, Gone). The Idaho page used here is the Nez Perce one without the -2 suffix. Staffing dates are undated. The 1960s Babcock entries are decades, not exact years. No fire history found in the pages read. Budget used: 6 distinct page reads, 2 searches."
    },
    {
     "id": "us-id-shissler-peak",
@@ -13754,6 +13906,10 @@
    {
     "id": "us-id-smith-mountain-2",
     "note": "Build-year conflict in brief (1963 per NHLR vs. longer history) resolves cleanly: 1908 camp, 1920 cupola cabin, 1932 L-4, 1963 current structure, per FireLookout.com detail not captured by the brief's single NHLR 'Built' field."
+   },
+   {
+    "id": "us-id-sourdough-peak",
+    "note": "The only current-condition source is the Idaho Fire Lookouts post dated September 29, 2023. No 2024-2026 status found. Brief elevation (2058.9 m) matches NHLR's 6,755 ft. Brief label 'abandoned 1969' is contested, so the story reports both labels. Access is public on the sources read; no closure notice was found. No fire history and no rental listing appeared in the pages read. Budget used: 6 page reads, 2 searches."
    },
    {
     "id": "us-id-spyglass",
@@ -13776,12 +13932,28 @@
     "note": "No source gives a specific year staffing ended; firelookout.com's 'emergency status for several years' phrasing was used as-is. Sources conflict on tower height (20ft vs 30ft) -- flagged in resolved_conflicts and in the story rather than resolved. Removed an unsupported 'network'/'Upper St. Joe country' characterization and an unsupported 1930s-1960s service-span claim from the story; neither was backed by a source quote."
    },
    {
+    "id": "us-id-swanholm-peak",
+    "note": "Build year of current cab disputed (1954 vs 1958). Date staffing ended not found in sources. Brief's kind 'ground' fits the 1922 cabin; the current cab sits on a concrete base and the Forest Lookouts page calls it two-story, so consider kind two_story. No fire at this lookout was found. No rental found. The 1958 'Swan Home' clipping on the Forest Lookouts page is a different place and was not used. The FS page says 'Last updated September 21, 2026' and carries a header notice 'UPDATED Sept. 19 - Crooked Fire Area, Road, and Trail Closure'; the notice does not name this site, so the reason for the site closure is not confirmed. The Forest Lookouts page is the only source with clippings for the 1920s to 1940s staffing."
+   },
+   {
+    "id": "us-id-thorn-creek-butte",
+    "note": "Current status is not confirmed. A search result titled 'Thorn Creek Butte Lookout Tower [CLOSED]' on AllTrails could not be opened (HTTP 403), so it is not relied on; verify before any visit. No Forest Service page for this lookout was found. Not on the FFLA rentals list as far as the grep showed. The 1974-1982 staffing dates are the only dated staffing. The brief's access 'unknown' is now 'restricted' on the basis of the sources' emergency-only language, which is a judgement call. A 2026 Crooked Fire closure near Idaho City appeared in search results but was not checked against this site."
+   },
+   {
+    "id": "us-id-twin-peaks-2",
+    "note": "Three conflicts need an editor's call: the 1932 structure (L-4 vs R-1), the 1964 base (concrete vs cinder-block), and elevation (10,337 vs 10,394 ft). Current staffing is contested. Access is set to public on the Chamber's visitor listing; the cab's interior is not described, so confirm with Salmon-Challis NF before treating the cab as open. The brief's height_m of 3.0 is the base height, not total height. No rental found. The FS page names three staffed lookouts and does not name Twin Peaks, but it does not say which unstaffed lookouts remain."
+   },
+   {
     "id": "us-id-walde-mountain",
     "note": "Brief's location conflict (NHLR vs RIDB coordinates, a few hundred meters apart) not addressed here since it concerns map data, not the narrative. No new photos found."
    },
    {
     "id": "us-in-hickory-ridge",
     "note": "Current public access/climbability status is unclear from sources consulted; the brief's record also listed access as 'unknown' which matches. Wikipedia's claims are cited to a single footnote source [1] on that page which was not independently retrieved here; treated as generally reliable given specificity but flagged for anyone who wants to verify the underlying reference."
+   },
+   {
+    "id": "us-in-obannon-woods",
+    "note": "Construction sequence before 1941 is disputed between the NHLR (CCC 1937, fire, 1941 rebuild) and the sign and hobbyist survey (1932 erected). Staffing, fire year and official access status were not found in the pages read. Climbability rests on one hobbyist site and needs confirmation with the state park. Living New Deal page returned 403; Wikipedia O'Bannon Woods page had no tower text in the fetched output. Agency left out because the NHLR administered-by value did not appear in the fetched text."
    },
    {
     "id": "us-in-winamac",
@@ -13798,6 +13970,10 @@
    {
     "id": "us-ma-middleboro",
     "note": "NHLR and the 1915 Boston Daily Globe item disagree on when the first Barden Hill tower went up (1913 vs. apparently still 'planned' in March 1915); kept both in the story rather than picking one. No source found addresses current staffing, access, or climbability, so those stay unknown in the tower record. The easternuslookouts.weebly.com page carries a banner image but it isn't clearly captioned as depicting this specific tower, so it was not added to photos."
+   },
+   {
+    "id": "us-ma-mount-washington-fire-tower-at-mount-everett",
+    "note": "Removal in 2003 is well supported (register, Forest Lookouts, Willhite). Unresolved: first tower 1915 vs 1918; 1970 tower height 40 ft vs possibly 60 ft; 1970 vs 1971 completion (a Facebook search snippet from FFLA Massachusetts says 1971, not read). Staffing history is taken from the register and Willhite only; the 1947 observer is named in Willhite and in a 1947 newspaper quoted on Forest Lookouts. Leads not read: 2006 Mount Everett summit resource management plan on mass.gov (mentions a 2000 proposal to repair the tower). Access is public trail access; no tower to climb."
    },
    {
     "id": "us-me-whitney-hill",
@@ -13864,6 +14040,10 @@
     "note": "The brief's 'built: 1924' field is likely referring to the original pole-platform predecessor, not the structure now standing (built 1933); flagged as a correction. The current staffing claim comes only from firelookout.com, a hobbyist site with no visible date on that claim, so it is not strongly corroborated -- an NPS source confirming present-day staffing would strengthen this. Did not attempt to retrieve the NRHP nomination PDF itself (npgallery asset page returned only a metadata summary, not the full nomination text) or the NHLR newspaper-article PDF due to the per-tower read budget. Editorial pass 2026-10-04 fixed two footnote misattributions in the story: the 1924 pole-platform/log-cabin sentence was cited to Wikipedia ([^2]) but that detail is only in firelookout.com ([^3]); the 'chain of staffed fire lookouts' sentence was cited to NHLR ([^1]) but the quote is on Wikipedia ([^2]). The NRHP+NHLR registration sentence was missing a [^2] cite for the NRHP facts."
    },
    {
+    "id": "us-mt-jocko-2-2",
+    "note": "Two registrations share the name Jocko #2. This record (NHLR US 1543) is the standing 1969 CSKT R-6 timber tower. FFLOS US 2089 is a different 1934 Forest Service steel tower, removed, with footings only; keep them apart. Access level 'permission' in the record is not supported by any page read; it is left out of facts and should be treated as unverified. County (Missoula vs Lake) and elevation (7,636 vs 7,769 ft) conflict across sources. Staffing comes from an undated CSKT page. Leads not read: nwmt-ffla.org (Northwest Montana Lookout Association, lists historic, staffed and rental lookouts) and the CSKT preservation page. Page-read budget was used up, so no physical-state check was done."
+   },
+   {
     "id": "us-mt-loneman",
     "note": "Build date is genuinely unsettled across sources, including within Wikipedia's own article. No staffing history or fire history found beyond the disputed earlier-cabin-fire claim from firelookout.com."
    },
@@ -13882,6 +14062,10 @@
    {
     "id": "us-mt-medicine-point",
     "note": "Build year is genuinely unresolved between NHLR (1930/1933) and firelookout.com (1940); the NRHP nomination's 'significant years' field (1939) was only partially legible in the crawl cache and did not include a clear text statement to resolve it, so I did not treat it as deciding the question. Firelookout.com's staffing list also includes a 1958 Mr. and Mrs. Dale Dye entry that had been omitted from the story; added it for completeness."
+   },
+   {
+    "id": "us-mt-mineral-peak",
+    "note": "History from 1957 to 2018 is well sourced by the NRHP nomination. Present-day status and access rest on the nomination (form dated November 2, 2017), not a 2026 check; confirm with the Missoula Ranger District before publishing. Access level public is an inference from hikers visiting, not a posted status. height_m 16.2 is converted from 53 ft. firelookout.com's county and elevation are wrong or disputed. No photos added. Fact-check 2026-10-08: story reworded where it copied source wording, 'now serves' changed to the 2017 nomination's date, and evidence added for the 2006 shop move, the kit, the Missoula County claim and the vacancy."
    },
    {
     "id": "us-mt-minton-peak",
@@ -13906,6 +14090,10 @@
    {
     "id": "us-mt-sex-peak",
     "note": "Flagging a date conflict on the pre-1948 lookout (early 1920s vs. 1930-vintage) rather than picking one; worth a look if a primary FS record turns up."
+   },
+   {
+    "id": "us-mt-st-mary-peak",
+    "note": "The record's height_m 12.2 is the 1931/1934 pole tower, not the current structure; correction proposed. The record's kind two_story is not supported by the sources read, which describe a 14 x 14 ft cab on a stone base; consider revising. The record's elevation_m uses the NHLR figure, while three other sources say 9,351 ft; flagged. The NRHP asset page lists NRIS 100002299, but the listing date was not in the sources read. Staffing as_of is the nomination (form dated January 31, 2018). Access public is inferred from the trail and volunteer hosting, not a posted status. No photos added. Fact-check 2026-10-08: the story's 'still uses volunteers' is now dated to the 2018 nomination, and evidence was added for the 1934 volunteer-history date and the nomination date."
    },
    {
     "id": "us-mt-star-peak",
@@ -13968,12 +14156,20 @@
     "note": "Good corroboration across a historical register, a period newspaper quote (Courier-Post, 1940), the Wikipedia tower-list table, and a 2024 news feature confirming the tower is still actively staffed; all of those checked out against their cited sources. One claim did not hold up on cross-check: NHLR's Blue Anchor page says the original Aermotor tower was relocated to Stokes State Forest in 1932 to become 'the Culver tower,' but NHLR's own page for that lookout (Culvers Lookout, US44/NJ1) dates its present 47-ft Aermotor tower to 1933 and never mentions Blue Anchor — so the 'same tower, still standing at Stokes' claim in the earlier draft was an overclaim, now softened and the discrepancy disclosed in the story. Also removed an invented 'winter of 1920-21' detail not supported by the cited annual-report quote. No source found on public climbing access, so access.level was left unchanged rather than guessed."
    },
    {
+    "id": "us-nj-catfish",
+    "note": "History from 1922 to 1997 is well sourced (NHLR plus 1922-1924 press and state reports). Current status rests on NHLR visit reports from 2018 and a 2022 repainting comment, not a 2026 check. No notable fires were found in the sources read, so none are listed. The NJ DEP fire-towers page returned no text when fetched, and a Willhite lookout-history page (willhiteweb.com) appeared in search but was not read. The record's height 18.0 m matches Wikipedia's 60 ft (18 m). The record's access 'unknown' is replaced by public trail access. No photos added. Fact-check 2026-10-08: the story's unsupported staffing claims ('Staff came early', 'Staffing has been irregular since') were removed; the 1922-1923 staffing picture is unknown. The 'Newspapers disagreed' wording was corrected (one 1922 newspaper against the state report)."
+   },
+   {
     "id": "us-nj-jamesburg",
     "note": "Record's 'built 1942' matches NHLR, but that date is for the original Old Bridge tower; the structure was relocated to the current Jamesburg site in 1963, which the record's events list omits. The nomination's claim of a possible 1924 origin is explicitly unconfirmed. Current access/staffing/rental status could not be confirmed from a quotable primary source within budget; a WebSearch summary suggested climbing is allowed only when Forest Fire Service staff are present, but I could not verify that against an actual page I read, so it is left out of facts/events and the record's 'access: unknown' stands."
    },
    {
     "id": "us-nm-elmorro",
     "note": "Extremely thin sourcing: the only record found anywhere of this specific tower is one row in the FFLA's New Mexico list (name, county, coordinates, type=Tower, status=Standing, no NHLR/FFLOS link). Two WebSearch queries turned up nothing else specific to this lookout -- only material about the unrelated El Morro National Monument (the inscription rock) and general Cibola National Forest background, used here only for geographic context. No builder, construction year, design, staffing, or fate is documented anywhere I could find. The county field (Valencia) looks stale given the site's proximity to Cibola County; flagged as a correction, not applied. Confidence is low and the story is short by necessity -- a human researcher with access to Forest Service district records or an on-the-ground FFLA volunteer could likely find much more."
+   },
+   {
+    "id": "us-nm-glorieta-baldy",
+    "note": "Access conflict: the record says public (recreation.gov listing, not read); the undated Campflare listing says closed until further notice. Verify with the Pecos/Las Vegas Ranger District. Record height_m 20.0 has no source among pages read; a search snippet's 30-foot figure was not used. No staffing history found; a search snippet claimed staffed into the 1990s, unverified. SFNM article returned HTTP 429 and was not read. The NRHP nomination PDF OCR was unreadable and is not cited. AP text spells the archaeologist's name Bremer and then Brenner."
    },
    {
     "id": "us-nm-monjeau",
@@ -14040,6 +14236,10 @@
     "note": "Brief's conflict note ('they share a register number') appears to be a brief-generation artifact, not addressed here since no evidence was found that Drake Peak and Bald Butte actually share an NHLR number; NHLR page for Drake Peak gives its own distinct register entry. Flagging for editor to check the queue tool's register-number field if this matters."
    },
    {
+    "id": "us-or-dutchman-peak",
+    "note": "Built date and CCC garage, 1942 AWS conversion and 1999 repair come from the NRHP nomination, the strongest source. Current staffing is unverified: firelookout.com is undated and says staffed in summer; IJPR (2017) uses present tense. No 2025-26 schedule found. Summit elevation differs across sources (7,364, 7,417, 7,418 ft); the record's 2244.5 m matches the register's 7,364 ft. The record's access 'unknown' can be set to public per the sources, but whether the cabin interior is open to visitors is not confirmed. A trail-guide claim that the lookout is still used for emergency fire detection was seen only in a search snippet and not used."
+   },
+   {
     "id": "us-or-fall-mountain",
     "note": "The tower record's build-year conflict (1930 vs 1933) resolves fairly well once the NHLR page is read in full: it describes an emergency post dating to around 1930/1933 with the cab original but the tower rebuilt in 1953 — a detail not yet in the tower JSON's events. No newspaper or Forest Service administrative-history source was found in the cache or a quick web check; everything here comes from the three register/rental pages already linked on the record. Did not propose a correction since the conflict is explainable rather than contradictory, but an editor may want to add the 1953 tower-rebuild event to the main tower record."
    },
@@ -14058,6 +14258,10 @@
    {
     "id": "us-or-hager-mountain",
     "note": "The tower record's 'conflicts' block (built: 1967 per NHLR vs 1912 per firelookout_com) is resolved by reading the prose on both cached pages rather than just their structured fields: both agree on a sequence (1912 octagonal cab -> 1936 L-4 -> 1967 R-6, the structure standing today), they just populate a single 'built' field with different points in that sequence. Recommend the record's events array capture the full sequence rather than one disputed year. NHLR's '1915' for first fire detection is one source only (not independently corroborated) and sits oddly close to, but not matching, the 1912 build year on firelookout.com -- plausibly detection started a few years before any structure went up, but this is not stated outright anywhere, so I left it as a direct citation rather than resolving it further. No additional cached source pages or useful web leads were found beyond NHLR, firelookout.com, and the Recreation.gov listing already in the tower record; did not use any of the 3 allotted web searches since the two cached register pages already agreed with each other almost completely once read past their structured fields. Fact-check correction: the draft's claim that NHLR's prose 'notes the discrepancy itself' between a 1915 fire-detection date and 'the register's own account of the first cab' was wrong -- NHLR's description never mentions a first cab or any 1912/1936 structure at all (only '...fire detection site since 1915. The current structure was constructed in 1967... roof was modified... in 1992.'); the 1912/1936 sequence comes solely from firelookout.com. That sentence was removed from the story. Also fixed: the story's 'flat-topped summit' was an invented/confused descriptor (likely conflated with the R-6 'flat top' cabin design) with no support in either cached source, so it was dropped; the elevation figure (7,188 ft) was misattributed to the Recreation.gov footnote when it is actually NHLR's number -- Recreation.gov's own page gives 7,195 ft, confirmed live. Both numbers are now attributed to their correct sources. All other checked claims (1912/1936/1967/1992 sequence, 2022 NHLR registration and Brad Eells nomination, rental season Nov 15-May 15, cabin dimensions/beds/stoves/capacity/no water, foot-snowshoe-ski-only access, Mount Hood/Shasta views) were confirmed against the cited sources and a live fetch of the Recreation.gov page."
+   },
+   {
+    "id": "us-or-hat-point",
+    "note": "Current access is the main open question: the Forest Service closure of Aug 2024 is about two years old, the closure length was undetermined, and no reopening notice was found. Verify with the Wallowa Mountains front desk 541-426-5546. The Battle Creek Fire caption has no year and the name is unconfirmed; a Hells Canyon Scenic Byway post (1989 fire) returned HTTP 404 twice and was not used. Elevation differs: register 6,960 ft (record 2121.4 m matches), firelookout.com 6,982 ft. Oregon Hikers says 80 ft and climbing allowed; its page footer says last modified 27 July 2025, after the Aug 2024 closure. That is an edit date, so the guide's climbing text may still predate the closure. A WTA search snippet (not read) says climbing access ended years ago. Staffing as_of 2005 rests on one visit report and an undated firelookout.com line; the 2024 closure also stopped administrative use of the cab, so current staffing is doubtful."
    },
    {
     "id": "us-or-hershberger",
@@ -14333,6 +14537,18 @@
    "researched": "2026-10-04"
   },
   {
+   "id": "us-ca-shuteye-peak",
+   "name": "Shuteye Peak Lookout",
+   "field": "events.built",
+   "current": "1908 built",
+   "proposed": "1908/09 first structure; current CL-100 steel cab built 1957",
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/ca/shuteye-peak-lookout/"
+   ],
+   "researched": "2026-10-08"
+  },
+  {
    "id": "us-co-deadman",
    "name": "Deadman Lookout",
    "field": "design",
@@ -14369,6 +14585,19 @@
    "researched": "2026-10-04"
   },
   {
+   "id": "us-id-anderson-butte",
+   "name": "Anderson Butte Lookout",
+   "field": "events.built",
+   "current": "1914 built",
+   "proposed": "1914 first lookout was a tent camp; current tower built 1953",
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/id/anderson-butte-lookout/",
+    "https://www.idahofirelookouts.com/selway-region/anderson-butte-lookout/"
+   ],
+   "researched": "2026-10-08"
+  },
+  {
    "id": "us-id-black-butte",
    "name": "Black Butte Lookout",
    "field": "other_names",
@@ -14396,6 +14625,18 @@
    "researched": "2026-10-04"
   },
   {
+   "id": "us-id-burnt-knob",
+   "name": "Burnt Knob Lookout",
+   "field": "other_names",
+   "current": "Burnt Knob Lookouut",
+   "proposed": "remove (misspelling of Burnt Knob Lookout)",
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/id/burnt-knob-lookout/"
+   ],
+   "researched": "2026-10-08"
+  },
+  {
    "id": "us-id-carey-dome",
    "name": "Carey Dome Fire Lookout",
    "field": "elevation_m",
@@ -14406,6 +14647,19 @@
     "https://www.idahofirelookouts.com/west-central/carey-dome/"
    ],
    "researched": "2026-10-04"
+  },
+  {
+   "id": "us-id-elk-summit-2",
+   "name": "Elk Summit Lookout",
+   "field": "height_m",
+   "current": 2.1,
+   "proposed": 30.5,
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/id/elk-summit-lookout/",
+    "https://idaholookouts.weebly.com/elk-summit.html"
+   ],
+   "researched": "2026-10-08"
   },
   {
    "id": "us-id-gardiner-peak",
@@ -14421,6 +14675,49 @@
    "researched": "2026-10-04"
   },
   {
+   "id": "us-id-gisborne-mountain",
+   "name": "Gisborne Mountain Lookout",
+   "field": "height_m",
+   "current": 12.2,
+   "proposed": 12.5,
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/id/gisborne-mountain-lookout/",
+    "https://www.idahofirelookouts.com/northern-idaho/gisborne-mountain-lookout/",
+    "https://idaholookouts.weebly.com/gisborne-mountain.html"
+   ],
+   "researched": "2026-10-08"
+  },
+  {
+   "id": "us-id-granite-mountain-payette-national-forest",
+   "name": "Granite Mountain Lookout (Payette National Forest)",
+   "field": "height_m",
+   "current": 3.7,
+   "proposed": 6.1,
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/id/granite-mountain-lookout-payette-national-forest/",
+    "https://www.idahofirelookouts.com/west-central/granite-mountain/",
+    "https://www.firelookout.com/id/granitemtn308.html"
+   ],
+   "researched": "2026-10-08"
+  },
+  {
+   "id": "us-id-indian-mountain",
+   "name": "Indian Mountain Lookout",
+   "field": "elevation_m",
+   "current": 2175.1,
+   "proposed": 2211.6,
+   "evidence": null,
+   "sources": [
+    "https://www.idahofirelookouts.com/west-central/indian-mica-lookout/",
+    "https://www.firelookout.com/id/indianmica.html",
+    "https://history.idaho.gov/wp-content/uploads/Indian_Mountain_Lookout_100007977.pdf",
+    "https://www.wikidata.org/wiki/Q86927161"
+   ],
+   "researched": "2026-10-08"
+  },
+  {
    "id": "us-id-lookout-butte",
    "name": "Lookout Butte Lookout",
    "field": "height_m",
@@ -14432,6 +14729,72 @@
     "https://www.firelookout.com/id/lookoutbutte.html"
    ],
    "researched": "2026-10-04"
+  },
+  {
+   "id": "us-id-lookout-mountain-custer-county",
+   "name": "Lookout Mountain Lookout (Custer County)",
+   "field": "elevation_m",
+   "current": 3024.5,
+   "proposed": 3034.0,
+   "evidence": null,
+   "sources": [
+    "https://www.idahofirelookouts.com/southern-idaho/lookout-mountain-lookout/",
+    "https://www.firelookout.com/id/lookoutmtn319a.html",
+    "https://en.wikipedia.org/wiki/Lookout_Mountain_(Idaho)"
+   ],
+   "researched": "2026-10-08"
+  },
+  {
+   "id": "us-id-sheep-hill-2",
+   "name": "Sheep Hill Lookout",
+   "field": "events.built",
+   "current": "1928 built",
+   "proposed": "1960 built (R-6 cab); 1928 is the log cupola cabin it replaced",
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/id/sheep-hill-lookout/",
+    "https://www.firelookout.com/id/sheephill.html"
+   ],
+   "researched": "2026-10-08"
+  },
+  {
+   "id": "us-id-sheep-hill-2",
+   "name": "Sheep Hill Lookout",
+   "field": "height_m",
+   "current": "3.0",
+   "proposed": "remove (no overall height in any source)",
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/id/sheep-hill-lookout/",
+    "https://www.firelookout.com/id/sheephill.html",
+    "https://idaholookouts.weebly.com/sheep-hill.html"
+   ],
+   "researched": "2026-10-08"
+  },
+  {
+   "id": "us-id-sheep-hill-2",
+   "name": "Sheep Hill Lookout",
+   "field": "kind",
+   "current": "two_story",
+   "proposed": "single R-6 cab on a short base",
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/id/sheep-hill-lookout/",
+    "https://www.firelookout.com/id/sheephill.html"
+   ],
+   "researched": "2026-10-08"
+  },
+  {
+   "id": "us-id-sheep-hill-2",
+   "name": "Sheep Hill Lookout",
+   "field": "source_pages",
+   "current": "https://www.idahofirelookouts.com/selway-region/sheep-hill-lookout-2/",
+   "proposed": "remove",
+   "evidence": null,
+   "sources": [
+    "https://www.idahofirelookouts.com/selway-region/sheep-hill-lookout/"
+   ],
+   "researched": "2026-10-08"
   },
   {
    "id": "us-id-shissler-peak",
@@ -14470,6 +14833,44 @@
    "researched": "2026-10-04"
   },
   {
+   "id": "us-id-swanholm-peak",
+   "name": "Swanholm Peak Lookout",
+   "field": "access",
+   "current": "public",
+   "proposed": "closed",
+   "evidence": null,
+   "sources": [
+    "https://www.fs.usda.gov/r04/boise/recreation/swanholm-lookout"
+   ],
+   "researched": "2026-10-08"
+  },
+  {
+   "id": "us-id-twin-peaks-2",
+   "name": "Twin Peaks Lookout",
+   "field": "height_m",
+   "current": "3.0",
+   "proposed": "remove; sources give only a 10-foot concrete base (about 3.0 m), not a total tower height",
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/id/twin-peaks-lookout/",
+    "https://www.idahofirelookouts.com/southern-idaho/twin-peaks-lookout/",
+    "https://www.firelookout.com/id/twinpeaks.html"
+   ],
+   "researched": "2026-10-08"
+  },
+  {
+   "id": "us-in-obannon-woods",
+   "name": "O'Bannon Woods Fire Tower",
+   "field": "events",
+   "current": "1941 built",
+   "proposed": "1937 built by CCC; 1941 rebuilt after fire damage",
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/in/obannon-woods-fire-tower/"
+   ],
+   "researched": "2026-10-08"
+  },
+  {
    "id": "us-la-mosley-hill",
    "name": "Mosley Hill Lookout",
    "field": "location",
@@ -14494,6 +14895,34 @@
     "https://easternuslookouts.weebly.com/barden-hill.html"
    ],
    "researched": "2026-10-04"
+  },
+  {
+   "id": "us-ma-mount-washington-fire-tower-at-mount-everett",
+   "name": "Mount Washington Fire Tower at Mount Everett",
+   "field": "status",
+   "current": "standing",
+   "proposed": "removed (dismantled and airlifted 2003)",
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/ma/mount-washington-fire-tower-at-mount-everett/",
+    "https://easternuslookouts.weebly.com/mount-everett.html",
+    "https://willhiteweb.com/appalachian_trail/fire_lookouts/mount_everett/washington_lookout_053.htm"
+   ],
+   "researched": "2026-10-08"
+  },
+  {
+   "id": "us-ma-mount-washington-fire-tower-at-mount-everett",
+   "name": "Mount Washington Fire Tower at Mount Everett",
+   "field": "events",
+   "current": "2003 destroyed (Wikidata)",
+   "proposed": "2003 removed (dismantled and airlifted off the summit)",
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/ma/mount-washington-fire-tower-at-mount-everett/",
+    "https://easternuslookouts.weebly.com/mount-everett.html",
+    "https://willhiteweb.com/appalachian_trail/fire_lookouts/mount_everett/washington_lookout_053.htm"
+   ],
+   "researched": "2026-10-08"
   },
   {
    "id": "us-mi-udell",
@@ -14599,6 +15028,20 @@
     "https://www.recreation.gov/camping/campgrounds/234433"
    ],
    "researched": "2026-10-04"
+  },
+  {
+   "id": "us-mt-st-mary-peak",
+   "name": "St. Mary Peak Lookout",
+   "field": "height_m",
+   "current": 12.2,
+   "proposed": "remove; no source gives a total height for the current structure",
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/mt/st-mary-peak-lookout/",
+    "https://www.firelookout.com/mt/stmarypeak.html",
+    "https://npgallery.nps.gov/GetAsset/b5295dad-514a-4700-8762-6f54608a66ab"
+   ],
+   "researched": "2026-10-08"
   },
   {
    "id": "us-mt-wam-mountain",
@@ -14774,6 +15217,19 @@
     "https://www.firelookout.com/or/hagermtn.html"
    ],
    "researched": "2026-10-04"
+  },
+  {
+   "id": "us-or-hat-point",
+   "name": "Hat Point Lookout",
+   "field": "height_m",
+   "current": 2.1,
+   "proposed": 25.0,
+   "evidence": null,
+   "sources": [
+    "http://nhlr.org/lookouts/us/or/hat-point-lookout/",
+    "https://www.firelookout.com/or/hatpoint.html"
+   ],
+   "researched": "2026-10-08"
   },
   {
    "id": "us-or-huckleberry-mountain",

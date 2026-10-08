@@ -1,0 +1,13 @@
+Hell's Half Acre began in 1930 as a platform set in the top of a 40-foot tree on the Bitterroot National Forest, in the Magruder Corridor.[^1][^2] Sources disagree about what came next.[^1][^2][^3][^4] The National Historic Lookout Register and Idaho Fire Lookouts date an L-4 cab on a 10-foot tower to 1940, while firelookout.com and an Idaho lookout history site put a 40-foot pole L-4 tower up in 1934.[^1][^2][^3][^4] The current R-6 cab stands on a 10-foot concrete base, and the register, firelookout.com and Idaho Fire Lookouts all give 1960 as its build year.[^1][^2][^3] That history site adds that Dave Langley and a two-man crew built a cinder-block base with an R-6 cab in 1959, and a March 2, 1960 Ravalli Republic item reports that a new lookout house went up at the site.[^4]
+
+Idaho Fire Lookouts lists named staff from 1945 onward.[^2] The register says the lookout gets regular staffing during fire season.[^1] Mark and Rhett Moak staffed it every season from 1997 to 2016.[^2] The lookout has also been wrapped against nearby fires.[^2][^4] In 2013 it was covered in fire-retardant material and the staff moved temporarily to Salmon Mountain.[^2][^4] In 2017 it was wrapped again, and the staff were evacuated by helicopter.[^2][^4]
+
+The register recorded the lookout on April 24, 2009.[^1] Idaho Fire Lookouts says the Moaks staffed it again in 2025.[^2]
+
+Idaho Fire Lookouts lists the lookout as drive-up and staffed today.[^2] The University of Idaho's Keeping Watch project places it in the Selway-Bitterroot Wilderness, along the Idaho-Montana line.[^5] A lookout interviewed for that project says this site can be driven to.[^5] The register says the view takes in the upper Selway River and the neighboring Frank Church River of No Return Wilderness, so the two sources name different wilderness areas.[^1][^5] Because it is a working fire lookout in season, check with the Bitterroot National Forest before planning a visit.[^1][^2]
+
+[^1]: Hell's Half Acre Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/id/hells-half-acre-lookout/ (accessed 2026-10-08).
+[^2]: Hell's Half Acre Lookout, Idaho Fire Lookouts, https://www.idahofirelookouts.com/selway-region/hells-half-acre-lookout/ (accessed 2026-10-08).
+[^3]: Hells Half Acre Fire Lookout Tower, firelookout.com, https://www.firelookout.com/id/hellshalfacre.html (accessed 2026-10-08).
+[^4]: Hells Half Acre Mountain, Forest Lookouts, https://idaholookouts.weebly.com/hells-half-acre-mountain.html (accessed 2026-10-08).
+[^5]: Hell's Half Acre Lookout, Keeping Watch, Center for Digital Inquiry and Learning, University of Idaho, https://cdil.lib.uidaho.edu/keeping-watch/items/hell-s-half-acre.html (accessed 2026-10-08).

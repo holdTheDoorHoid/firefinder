@@ -1,6 +1,7 @@
 {
   "id": "us-id-oregon-butte",
   "name": "Oregon Butte Lookout",
+  "summary": "Hike-in lookout in the Gospel Hump Wilderness: a 1929 cupola cabin replaced by an R-6 cab in 1963. Sources differ on whether it is staffed every season or in summer.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 2552.1,
   "kind": "two_story",
-  "design": "R-6",
+  "design": "R-6 flat-top cab on a seven-foot base (1963)",
   "height_m": 2.1,
   "status": "standing",
   "status_note": null,
@@ -25,11 +26,11 @@
       "url": "http://nhlr.org/lookouts/us/id/oregon-butte-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Nez Perce National Forest (Red River Ranger District)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Hike-in only through the Gospel Hump Wilderness; about five miles each way"
   },
   "staffing": {
     "status": "staffed",
@@ -37,22 +38,65 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "About five miles each way; Oregon Butte Lake can be visited on the same hike (Forest Service)"
   },
   "rental": null,
   "events": [
     {
+      "year": 1920,
+      "event": "other",
+      "note": "Site began as a tent camp in the early 1920s",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/oregon-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/oregon-butte-lookout/",
+        "https://www.facebook.com/NPClwNFs/posts/oregon-butte-looking-in-looking-outthe-oregon-butte-lookout-began-like-many-fore/760847046083722/"
+      ]
+    },
+    {
       "year": 1929,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Log cupola cabin, the first permanent fire lookout (other sources say shake or gable-roofed cabin with cupola)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/oregon-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/oregon-butte-lookout/",
+        "https://www.firelookout.com/id/oregonbutte.html",
+        "https://idaholookouts.weebly.com/oregon-butte.html",
+        "https://www.facebook.com/NPClwNFs/posts/oregon-butte-looking-in-looking-outthe-oregon-butte-lookout-began-like-many-fore/760847046083722/"
+      ]
+    },
+    {
+      "year": 1946,
+      "event": "other",
+      "note": "Coast and Geodetic Survey station description: standard 12- by 14-foot Forest Service lookout house on a high pinnacled butte",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/oregon-butte.html"
+    },
+    {
+      "year": 1963,
+      "event": "replaced",
+      "note": "Earlier cabin replaced by an R-6 flat-top cab on a seven-foot base (concrete per NHLR and firelookout.com; cinder-block storage per Forest Lookouts Idaho)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/oregon-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/oregon-butte-lookout/",
+        "https://www.firelookout.com/id/oregonbutte.html",
+        "https://idaholookouts.weebly.com/oregon-butte.html",
+        "https://www.facebook.com/NPClwNFs/posts/oregon-butte-looking-in-looking-outthe-oregon-butte-lookout-began-like-many-fore/760847046083722/"
+      ]
     },
     {
       "year": 1997,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 25, 1997",
-      "from": "nhlr"
+      "note": "Date registered August 25, 1997 per NHLR; Idaho Fire Lookouts gives 1997",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/oregon-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/oregon-butte-lookout/",
+        "https://www.idahofirelookouts.com/selway-region/oregon-butte-lookout/"
+      ]
     }
   ],
   "photos": [
@@ -136,6 +180,16 @@
       "kind": "register"
     },
     {
+      "label": "Oregon Butte (includes a 1946 Coast and Geodetic Survey station description, PID QZ0735) (Forest Lookouts Idaho)",
+      "url": "https://idaholookouts.weebly.com/oregon-butte.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Oregon Butte: Looking in, Looking Out! (U.S. Forest Service, Nez Perce-Clearwater National Forests (Facebook))",
+      "url": "https://www.facebook.com/NPClwNFs/posts/oregon-butte-looking-in-looking-outthe-oregon-butte-lookout-began-like-many-fore/760847046083722/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -209,12 +263,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-oregon-butte",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

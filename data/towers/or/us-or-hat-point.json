@@ -1,6 +1,7 @@
 {
   "id": "us-or-hat-point",
   "name": "Hat Point Lookout",
+  "summary": "A 1948 82-ft L-6 timber lookout in Hells Canyon, replacing a 1916 pole tower; closed for safety since August 2024, no reopening found.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 2121.4,
   "kind": "tower",
-  "design": null,
+  "design": "82-ft treated timber tower with an L-6 7'x7' cab and catwalk, built 1948",
   "height_m": 2.1,
   "status": "standing",
   "status_note": null,
@@ -28,20 +29,31 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Closed August 2024 for safety (broken steps, railings). Public use of both observation decks closed. No reopening found in sources as of 2026-10-08."
   },
   "staffing": {
     "status": "staffed",
-    "as_of": null
+    "as_of": "2005"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "Release (Aug 20, 2024) said other public services would be maintained for the rest of the season and invited views from the picnic area and trail below the tower."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1916,
+      "event": "built",
+      "note": "60-ft pole tower with 7x7 cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/hat-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/hat-point-lookout/",
+        "https://www.firelookout.com/or/hatpoint.html"
+      ]
+    },
     {
       "year": 1948,
       "event": "built",
@@ -49,10 +61,29 @@
       "from": "nhlr"
     },
     {
+      "year": 1948,
+      "event": "replaced",
+      "note": "Present 82-ft treated timber tower with L-6 7x7 cab and catwalk replaced the pole tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/hat-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/hat-point-lookout/",
+        "https://www.firelookout.com/or/hatpoint.html"
+      ]
+    },
+    {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 30, 2004",
-      "from": "nhlr"
+      "note": "Registered December 30, 2004; nominated by Ray Kresek",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/hat-point-lookout/"
+    },
+    {
+      "year": 2024,
+      "event": "closed",
+      "note": "Closed for safety: broken steps and railings; public use of both observation decks closed",
+      "from": "research",
+      "source_url": "https://elkhornmediagroup.com/?p=185992"
     }
   ],
   "photos": [
@@ -256,6 +287,16 @@
       "kind": "register"
     },
     {
+      "label": "Temporary Closure of Hat Point Lookout in Hells Canyon (Elkhorn Media Group (Forest Service release))",
+      "url": "https://elkhornmediagroup.com/?p=185992",
+      "kind": "reference"
+    },
+    {
+      "label": "Hat Point (Oregon Hikers field guide)",
+      "url": "https://www.oregonhikers.org/field_guide/Hat_Point",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -327,6 +368,21 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-hat-point",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -346,9 +402,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }
