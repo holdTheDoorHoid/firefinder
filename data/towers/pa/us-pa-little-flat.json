@@ -1,6 +1,7 @@
 {
   "id": "us-pa-little-flat",
   "name": "Little Flat Fire Tower",
+  "summary": "A steel Blaw-Knox lookout in Rothrock State Forest, built 1922; no longer used for fire watch, its first steps removed so it cannot be climbed.",
   "other_names": [],
   "country": "US",
   "region": "PA",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 736.4,
   "kind": "tower",
-  "design": null,
-  "height_m": 18.3,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "steel Blaw-Knox tower",
+  "height_m": 16.8,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,31 +32,55 @@
   "agency": "Pennsylvania Bureau of Forestry",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=no."
+    "level": "public",
+    "note": "Forest roads and trails in Rothrock State Forest lead to the tower; the tower itself is not open to climbing."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "A dirt road climbs the ridge to parking about half a mile away (State College); a 2011 account puts parking at the top. The Spruce Gap Trail is the steep hiking route."
   },
   "rental": null,
   "events": [
     {
       "year": 1922,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Steel Blaw-Knox tower put into service in the fall of 1922; the 1972 item gives a construction cost of $989.91.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/little-flat-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/little-flat-fire-tower/",
+        "https://easternuslookouts.weebly.com/little-flat.html"
+      ]
+    },
+    {
+      "year": 1922,
+      "event": "replaced",
+      "note": "NHLR says the 1922 steel tower replaced an earlier 1915 wood tower. A lookout-history site instead records a 1917 tree observation post 25 feet up.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/little-flat-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/little-flat-fire-tower/",
+        "https://easternuslookouts.weebly.com/little-flat.html"
+      ]
+    },
+    {
+      "year": 1972,
+      "event": "staffed",
+      "note": "A November 1972 newspaper item describes someone working on the tower during the fall fire season.",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/little-flat.html"
     },
     {
       "year": 2023,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 31, 2023",
-      "from": "nhlr"
+      "note": "Registered December 31, 2023, nominated by Marc Burns.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/little-flat-fire-tower/"
     }
   ],
   "photos": [
@@ -86,6 +114,16 @@
       "label": "NHLR register entry US 1780 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/pa/little-flat-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "The Little Flat Fire Tower: A Must-See, Any Time of Year (StateCollege.com)",
+      "url": "https://www.statecollege.com/articles/community/the-little-flat-fire-tower-a-must-see-any-time-of-year/",
+      "kind": "reference"
+    },
+    {
+      "label": "Onward & Outward: Little Flat Fire Tower (Onward State)",
+      "url": "https://onwardstate.com/2011/04/11/onward-outward-little-flat-fire-tower/",
+      "kind": "reference"
     },
     {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
@@ -145,12 +183,34 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-little-flat",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

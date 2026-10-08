@@ -14,6 +14,9 @@
   },
   "elevation_m": 1307.9,
   "kind": "two_story",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "R-6 flat cab on a 10-foot concrete base",
   "height_m": 3.0,
   "status": "standing",
@@ -150,6 +153,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Diamond Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/diamondpeak.html",
       "kind": "site"
@@ -192,9 +200,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:diamond-butte-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:mt:diamond-butte:45.2492:-105.9328",
       "fields": [
+        "material",
         "design",
         "height_m",
         "photos",
@@ -229,5 +246,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

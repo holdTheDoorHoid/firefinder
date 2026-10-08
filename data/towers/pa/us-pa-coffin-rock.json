@@ -1,6 +1,7 @@
 {
   "id": "us-pa-coffin-rock",
   "name": "Coffin Rock Fire Lookout",
+  "summary": "Coffin Rock: a 60-ft Aermotor from 1921, raised to 86 ft in 1939, felled by a 1985 tornado; the 93-ft Aermotor of 1987 appears to still stand.",
   "other_names": [],
   "country": "US",
   "region": "PA",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 709.9,
   "kind": "tower",
+  "material": "steel",
+  "material_from": "design",
+  "roles": [],
   "design": "Aermotor",
-  "height_m": 30.5,
+  "height_m": 28.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -49,22 +53,84 @@
   "rental": null,
   "events": [
     {
+      "year": 1921,
+      "event": "built",
+      "note": "60-foot steel Aermotor tower, with a cabin at its base for a local forestry man",
+      "from": "research",
+      "source_url": "https://www.lockhaven.com/news/health-and-home/2024/04/coffin-rock/",
+      "source_urls": [
+        "https://www.lockhaven.com/news/health-and-home/2024/04/coffin-rock/",
+        "https://easternuslookouts.weebly.com/coffin-rock.html"
+      ]
+    },
+    {
+      "year": 1921,
+      "event": "staffed_first",
+      "note": "J.M. Hall of Renovo was selected to live at the tower and man it around the clock",
+      "from": "research",
+      "source_url": "https://www.lockhaven.com/news/health-and-home/2024/04/coffin-rock/"
+    },
+    {
+      "year": 1926,
+      "event": "other",
+      "note": "Express piece promoted the view as one of the best in the state",
+      "from": "research",
+      "source_url": "https://www.lockhaven.com/news/health-and-home/2024/04/coffin-rock/"
+    },
+    {
+      "year": 1939,
+      "event": "modified",
+      "note": "Raised from 60 feet to 86 feet",
+      "from": "research",
+      "source_url": "https://www.lockhaven.com/news/health-and-home/2024/04/coffin-rock/",
+      "source_urls": [
+        "https://www.lockhaven.com/news/health-and-home/2024/04/coffin-rock/",
+        "https://easternuslookouts.weebly.com/coffin-rock.html"
+      ]
+    },
+    {
+      "year": 1985,
+      "event": "destroyed",
+      "note": "Destroyed by a tornado",
+      "from": "research",
+      "source_url": "https://www.lockhaven.com/news/health-and-home/2024/04/coffin-rock/",
+      "source_urls": [
+        "https://www.lockhaven.com/news/health-and-home/2024/04/coffin-rock/",
+        "https://easternuslookouts.weebly.com/coffin-rock.html",
+        "http://nhlr.org/lookouts/us/pa/coffin-rock-fire-lookout/"
+      ]
+    },
+    {
       "year": 1987,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
     },
     {
+      "year": 1987,
+      "event": "replaced",
+      "note": "93-foot Aermotor steel tower with a full catwalk, constructed by the Pennsylvania Bureau of Forestry; NHLR lists the build year as 1987",
+      "from": "research",
+      "source_url": "https://www.lockhaven.com/news/health-and-home/2024/04/coffin-rock/",
+      "source_urls": [
+        "https://www.lockhaven.com/news/health-and-home/2024/04/coffin-rock/",
+        "https://easternuslookouts.weebly.com/coffin-rock.html",
+        "http://nhlr.org/lookouts/us/pa/coffin-rock-fire-lookout/"
+      ]
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 16, 2008",
-      "from": "fflos"
+      "note": "Registered on the Former Fire Lookout Sites Register as the site of the 1921 tower",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/coffin-rocks-tower-site/"
     },
     {
       "year": 2013,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 1, 2013",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/coffin-rock-fire-lookout/"
     },
     {
       "year": 2018,
@@ -114,6 +180,11 @@
       "label": "NHLR register entry (nhlr.org)",
       "url": "http://nhlr.org/nhlr.org/lookouts/us/pa/coffin-rock-fire-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Coffin rock (The Express (Lock Haven))",
+      "url": "https://www.lockhaven.com/news/health-and-home/2024/04/coffin-rock/",
+      "kind": "reference"
     },
     {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
@@ -167,8 +238,23 @@
       "source": "eastern_us_lookouts",
       "key": "eastern_us_lookouts:pa:coffin-rock",
       "fields": [
+        "material",
         "design",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-coffin-rock",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -193,9 +279,15 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

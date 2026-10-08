@@ -1,6 +1,7 @@
 {
   "id": "us-id-tripod-peak",
   "name": "Tripod Peak Lookout",
+  "summary": "Valley County lookout first used in 1921, with a 1977 R-6 flat cab; standing, with the concrete base dated 1950 or 1956 and current staffing unconfirmed.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,6 +14,9 @@
   },
   "elevation_m": 2463.4,
   "kind": "two_story",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "R-6",
   "height_m": 1.8,
   "status": "standing",
@@ -28,31 +32,72 @@
   "agency": "Southern Idaho Timber Protective Association",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Listed as hike-in by Idaho Fire Lookouts. No closure or rental notice was found in the pages read. Current staffing is unconfirmed; the association's undated page does not name Tripod."
   },
   "staffing": {
     "status": "staffed",
-    "as_of": null
+    "as_of": "undated"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Hike-in per Idaho Fire Lookouts; no route description was read."
   },
   "rental": null,
   "events": [
     {
+      "year": 1921,
+      "event": "built",
+      "note": "First lookout: a California Region 5 Plan 4A cabin on a six-foot open timber tower (NHLR). Firelookout.com describes a six-foot wooden tower topped by a live-in cab.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/tripod-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/tripod-peak-lookout/",
+        "https://www.firelookout.com/id/tripodpeak.html"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "replaced",
+      "note": "R1/L-4 cabin replaced the first cab. Idaho Fire Lookouts dates the L-4 cab to 1934; firelookout.com says the L-4 tower came in the 1930s.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/tripod-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/tripod-peak-lookout/",
+        "https://www.firelookout.com/id/tripodpeak.html",
+        "https://www.idahofirelookouts.com/west-central/tripod-peak-lookout/"
+      ]
+    },
+    {
+      "year": 1950,
+      "event": "modified",
+      "note": "Concrete base added (NHLR and Idaho Fire Lookouts). Firelookout.com dates the concrete base to 1956.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/tripod-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/tripod-peak-lookout/",
+        "https://www.idahofirelookouts.com/west-central/tripod-peak-lookout/",
+        "https://www.firelookout.com/id/tripodpeak.html"
+      ]
+    },
+    {
       "year": 1977,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Current two-story Region 6 flat cab.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/tripod-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/tripod-peak-lookout/",
+        "https://www.firelookout.com/id/tripodpeak.html"
+      ]
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 3, 2020",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, October 3, 2020.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/tripod-peak-lookout/"
     }
   ],
   "photos": [
@@ -136,6 +181,11 @@
       "kind": "register"
     },
     {
+      "label": "SITPA Employment (Southern Idaho Timber Protective Association)",
+      "url": "http://www.sitpa.org/employment.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -181,6 +231,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:tripod-peak:44.3841:-116.1283",
       "fields": [
+        "material",
         "design",
         "height_m",
         "ownership",
@@ -196,12 +247,34 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-tripod-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -14,6 +14,9 @@
   },
   "elevation_m": 1489.9,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "L-4 cab with catwalk atop a 20-foot slanting pole tower; 14x14 ft cabin",
   "height_m": 6.1,
   "status": "standing",
@@ -181,6 +184,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Double Arrow on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/doublearrow.html",
       "kind": "site"
@@ -200,6 +208,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -223,6 +232,14 @@
       "fields": [
         "ownership",
         "access",
+        "rental",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:double-arrow-lookout",
+      "fields": [
         "rental",
         "links"
       ]
@@ -274,5 +291,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

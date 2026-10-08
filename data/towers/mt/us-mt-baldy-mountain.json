@@ -1,7 +1,9 @@
 {
   "id": "us-mt-baldy-mountain",
   "name": "Baldy Mountain Lookout",
-  "other_names": [],
+  "other_names": [
+    "Mt. Baldy Lookout"
+  ],
   "country": "US",
   "region": "MT",
   "county": "Lincoln",
@@ -13,6 +15,9 @@
   },
   "elevation_m": 1990.6,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "L-4",
   "height_m": 13.7,
   "status": "standing",
@@ -40,7 +45,14 @@
     "drive_up": null,
     "trail_note": null
   },
-  "rental": null,
+  "rental": {
+    "available": true,
+    "source": "ffla",
+    "provider": "recreation.gov",
+    "url": "https://www.recreation.gov/camping/campgrounds/234432",
+    "ridb_facility_id": "234432",
+    "checked": "2026-10-08"
+  },
   "events": [
     {
       "year": 1957,
@@ -136,8 +148,18 @@
       "kind": "register"
     },
     {
+      "label": "Book or read about Mt. Baldy Lookout (recreation.gov)",
+      "url": "https://www.recreation.gov/camping/campgrounds/234432",
+      "kind": "rental"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
       "kind": "association"
     },
     {
@@ -155,6 +177,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -170,6 +193,14 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:mt-baldy-lookout",
+      "fields": [
+        "rental",
         "links"
       ]
     },
@@ -190,5 +221,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

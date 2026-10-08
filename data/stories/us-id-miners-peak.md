@@ -1,0 +1,11 @@
+Miners Peak sits at about 7,800 feet in Valley County, on the Payette National Forest.[^1][^3] The site was first set up in 1948, when a gable-roofed L-4 cabin was moved there from the Teapot Dome lookout to serve as a lookout.[^1][^2][^3] The tower that stands today is a two-story cab, and the sources disagree about when it went up.[^1][^2][^3] The National Historic Lookout Register and Firelookout.com both give 1986,[^1][^2] while Idaho Fire Lookouts gives 1983 and adds a 1974 flat cab that replaced the original L-4 in between.[^3] The register calls the new building a wood frame lookout, while Firelookout.com calls the cab log, so its material is not settled either.[^1][^2]
+
+The register says the tower is usually staffed in fire season.[^1] Firelookout.com says someone mans it in summer,[^2] and Idaho Fire Lookouts says it is manned now to detect fires.[^3] That site also keeps a short list of known staff, running from 1961 to 1962 and then through 2026 with a handful of names across the decades.[^3] It asks readers to say who staffed the tower, or when.[^3] A reader comment on the Idaho Fire Lookouts page, from a former staffer who says they were on Miners Peak in summer 1961, mentions a big fire on the South Fork that blew up.[^3] The comment does not name the fire or say whether it was seen from the tower, so I cannot say whether the tower has a notable fire.
+
+Nothing in the three sources describes the tower as removed, burned or closed. All three describe it as a working lookout that is staffed in season, which means it still stands.[^1][^2][^3] The register lists its registration date as October 2, 2020.[^1]
+
+Idaho Fire Lookouts tags Miners Peak as a hike-in lookout.[^3] None of the sources gives a public climbing rule. Because the tower is staffed in fire season, check with the Payette National Forest before you plan a visit.
+
+[^1]: Miners Peak Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/id/miners-peak-lookout/ (accessed 2026-10-08).
+[^2]: Miners Peak Fire Lookout Tower, Firelookout.com, https://www.firelookout.com/id/minerspeak.html (accessed 2026-10-08).
+[^3]: Miners Peak, Idaho Fire Lookouts, https://www.idahofirelookouts.com/west-central/miners-peak/ (accessed 2026-10-08).

@@ -1,6 +1,7 @@
 {
   "id": "us-id-wallow-mountain",
   "name": "Wallow Mountain Lookout",
+  "summary": "A 1968 R-6 flat-cab tower on a 10-ft timber base in Idaho's Clearwater County; the rental program has lapsed and it may be staffed on an emergency basis.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 1795.3,
   "kind": "tower",
-  "design": "R-6",
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
+  "design": "10-ft treated timber tower with R-6 flat cab (current tower, built 1968)",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -25,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/id/wallow-mountain-lookout/"
     }
   ],
-  "agency": "US Forest Service - Nez Perce-Clearwater National Forests",
+  "agency": "U.S. Forest Service, Nez Perce-Clearwater National Forests",
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "Rental program has lapsed. Idaho Fire Lookouts tags the site Hike-In Emergency. No current road, gate or permit information in the sources."
   },
   "staffing": {
     "status": "unknown",
@@ -38,21 +42,66 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Located 9 miles east of Canyon R.S. (Forest Fire Lookout). Idaho Fire Lookouts tags the site as hike-in."
   },
   "rental": null,
   "events": [
     {
+      "year": 1932,
+      "event": "replaced",
+      "note": "L-4 cab on a log base replaced the 1920s D-6 cupola cabin",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/wallowmtn.html"
+    },
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "10-ft L-6 patrol tower on the site, after the 1932 L-4 cab on a log base",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/wallowmtn.html"
+    },
+    {
       "year": 1968,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Current 10-ft treated timber tower with R-6 flat cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/wallow-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/wallow-mountain-lookout/",
+        "https://www.firelookout.com/id/wallowmtn.html"
+      ]
+    },
+    {
+      "year": 1974,
+      "event": "staffed",
+      "note": "Darcy Aldrich-Pederson named as known staff",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/wallow-mountain-lookout/"
+    },
+    {
+      "year": 1977,
+      "event": "staffed",
+      "note": "Diana Andrews named as known staff",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/wallow-mountain-lookout/"
+    },
+    {
+      "year": 1995,
+      "event": "rental_opened",
+      "note": "Added to the Recreation Rental program",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/wallowmtn.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/wallowmtn.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/wallow-mountain-lookout/"
+      ]
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 5, 2020",
-      "from": "nhlr"
+      "note": "Registered December 5, 2020 as US 1468, ID 160",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/wallow-mountain-lookout/"
     }
   ],
   "photos": [
@@ -112,6 +161,11 @@
       "kind": "register"
     },
     {
+      "label": "Clearwater National Forest Lookouts (USDA Forest Service)",
+      "url": "https://www.fs.usda.gov/media/259185",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -158,6 +212,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:wallow-mtn:46.8430:-115.3937",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -169,6 +224,20 @@
       "fields": [
         "photos",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-wallow-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -189,9 +258,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

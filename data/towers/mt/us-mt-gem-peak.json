@@ -14,6 +14,9 @@
   },
   "elevation_m": 1837.6,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "R-6 flattop cab with catwalk on a 30-foot treated timber tower",
   "height_m": 6.1,
   "status": "standing",
@@ -218,6 +221,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Gem Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/gempeak.html",
       "kind": "site"
@@ -237,6 +245,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -260,6 +269,14 @@
       "fields": [
         "ownership",
         "access",
+        "rental",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:gem-peak-lookout",
+      "fields": [
         "rental",
         "links"
       ]
@@ -308,5 +325,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

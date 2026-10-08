@@ -1,6 +1,7 @@
 {
   "id": "us-pa-snow-shoe",
   "name": "Snow Shoe Fire Tower",
+  "summary": "A 60-ft Aermotor erected in 1921 was replaced by a newer tower around 2018 in Centre County, Pennsylvania; current staffing and access are unconfirmed.",
   "other_names": [],
   "country": "US",
   "region": "PA",
@@ -13,6 +14,9 @@
   },
   "elevation_m": 556.9,
   "kind": "tower",
+  "material": "steel",
+  "material_from": "design",
+  "roles": [],
   "design": "Aermotor",
   "height_m": 18.3,
   "status": "standing",
@@ -33,7 +37,7 @@
   },
   "staffing": {
     "status": "unknown",
-    "as_of": null
+    "as_of": "1977"
   },
   "visit": {
     "climbable": null,
@@ -43,10 +47,36 @@
   "rental": null,
   "events": [
     {
+      "year": 1921,
+      "event": "built",
+      "note": "First tower on the site: a 60-foot Aermotor, per Eastern US Lookouts and the register",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/snow-shoe-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/snow-shoe-fire-tower/",
+        "https://easternuslookouts.weebly.com/snow-shoe.html"
+      ]
+    },
+    {
+      "year": 1977,
+      "event": "fire",
+      "note": "Debris fire burned the area around the tower; the operator had to leave the tower to avoid smoke (1977 Lock Haven Express report as quoted)",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/snow-shoe.html"
+    },
+    {
+      "year": 1977,
+      "event": "staffed",
+      "note": "Tower operator on duty in 1977; last staffing record found",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/snow-shoe.html"
+    },
+    {
       "year": 2017,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 6, 2017",
-      "from": "nhlr"
+      "note": "Registered December 6, 2017 as US 1255, PA 24",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/snow-shoe-fire-tower/"
     },
     {
       "year": 2018,
@@ -57,8 +87,13 @@
     {
       "year": 2018,
       "event": "replaced",
-      "note": null,
-      "from": "pa_storymap"
+      "note": "Register says the current tower was built circa 2018 as part of the state modernization and replaced the 1921 tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/snow-shoe-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/snow-shoe-fire-tower/",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-pa-2018.pdf"
+      ]
     }
   ],
   "photos": [
@@ -135,6 +170,11 @@
       "kind": "register"
     },
     {
+      "label": "Pennsylvania chapter report, 2018 (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-pa-2018.pdf",
+      "kind": "reference"
+    },
+    {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
       "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
       "kind": "site"
@@ -172,6 +212,7 @@
       "key": "pa_storymap:snowshoe-tower:41.0268:-77.9593",
       "fields": [
         "kind",
+        "material",
         "design",
         "events",
         "photos",
@@ -192,6 +233,19 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-snow-shoe",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -211,9 +265,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

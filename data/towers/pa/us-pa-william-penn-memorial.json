@@ -16,6 +16,9 @@
   },
   "elevation_m": 337.7,
   "kind": "tower",
+  "material": "stone",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "120-ft stone tower with round copper-domed cab, 1939",
   "height_m": 36.6,
   "status": "standing",
@@ -196,6 +199,8 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
+        "material",
         "status",
         "registers",
         "agency",
@@ -217,7 +222,6 @@
       "source": "pa_storymap",
       "key": "pa_storymap:william-penn-memorial-tower:40.3473:-75.9024",
       "fields": [
-        "kind",
         "height_m",
         "photos",
         "links"
@@ -282,6 +286,25 @@
       ],
       "distance_m": null,
       "note": "NHLR lists lookouts that were standing when registered."
+    },
+    {
+      "field": "material",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "stone"
+        },
+        {
+          "source": "fflos",
+          "value": "wood"
+        },
+        {
+          "source": "osm",
+          "value": "stone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources name different materials. Often one describes an earlier structure."
     }
   ],
   "research": {
@@ -294,5 +317,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

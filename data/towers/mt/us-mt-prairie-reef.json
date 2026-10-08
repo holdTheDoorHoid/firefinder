@@ -1,6 +1,7 @@
 {
   "id": "us-mt-prairie-reef",
   "name": "Prairie Reef Lookout",
+  "summary": "A Forest Service lookout near Augusta, first used in the 1920s, with an L-4 cab from 1931 and the present R-6 cab from 1968, staffed each summer.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2680.1,
   "kind": "ground",
-  "design": "R-6",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "Present R-6 flat cab, built 1968; earlier L-4 cab built 1931",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,8 +32,8 @@
   "agency": "US Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=private."
+    "level": "restricted",
+    "note": "Staffed Forest Service lookout. No source read describes a road or trail to the site or says whether the public may visit."
   },
   "staffing": {
     "status": "staffed",
@@ -43,16 +47,54 @@
   "rental": null,
   "events": [
     {
+      "year": 1931,
+      "event": "built",
+      "note": "L-4 cab built, per the register and firelookout.com; a 9 July 1931 newspaper item reports the station under construction",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/prairie-reef-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/prairie-reef-lookout/",
+        "https://www.firelookout.com/mt/prairiereef.html",
+        "https://montanalookouts.weebly.com/prairie-reef.html"
+      ]
+    },
+    {
+      "year": 1940,
+      "event": "staffed",
+      "note": "Newspaper item of August 1940 mentions a lookout at the station",
+      "from": "research",
+      "source_url": "https://montanalookouts.weebly.com/prairie-reef.html"
+    },
+    {
       "year": 1968,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
     },
     {
+      "year": 1968,
+      "event": "replaced",
+      "note": "Present R-6 flat cab built 1968; the register describes it as the present cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/prairie-reef-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/prairie-reef-lookout/",
+        "https://www.firelookout.com/mt/prairiereef.html"
+      ]
+    },
+    {
+      "year": 1984,
+      "event": "staffed",
+      "note": "University of Montana student served as volunteer lookout that summer (Sun Valley Sun item quoted on the Forest Lookouts page)",
+      "from": "research",
+      "source_url": "https://montanalookouts.weebly.com/prairie-reef.html"
+    },
+    {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 12, 2022",
-      "from": "nhlr"
+      "note": "Registered April 12, 2022 as US 1541",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/prairie-reef-lookout/"
     }
   ],
   "photos": [
@@ -148,6 +190,16 @@
       "kind": "register"
     },
     {
+      "label": "Prairie Reef - FOREST LOOKOUTS (Forest Lookouts (montanalookouts.weebly.com))",
+      "url": "https://montanalookouts.weebly.com/prairie-reef.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Montana fire lookouts: Alone on a peak to watch for wildfires (KTVH)",
+      "url": "https://www.ktvh.com/news/montana-fire-lookouts-alone-on-a-peak-to-watch-for-wildfires",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
       "kind": "association"
@@ -194,6 +246,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:prairie-reef:47.5943:-113.0155",
       "fields": [
+        "material",
         "design",
         "staffing",
         "photos",
@@ -206,6 +259,19 @@
       "fields": [
         "access",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-prairie-reef",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -226,9 +292,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

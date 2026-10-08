@@ -13,6 +13,9 @@
   },
   "elevation_m": 1848.0,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "R-6",
   "height_m": null,
   "status": "standing",
@@ -53,6 +56,28 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: August 20, 1996",
       "from": "nhlr"
+    },
+    {
+      "year": 2017,
+      "event": "assessed",
+      "note": "Assessment before restoration planning; the lookout had been unstaffed for years.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2017-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2017-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2017fall.pdf"
+      ]
+    },
+    {
+      "year": 2017,
+      "event": "restored",
+      "note": "The Cabinet District installed a new roof to stop water damage (a Forest Service project).",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2017-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2017-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2017fall.pdf"
+      ]
     }
   ],
   "photos": [
@@ -129,6 +154,11 @@
       "kind": "association"
     },
     {
+      "label": "Northwest Montana Lookout Association: work on Berray Mountain Lookout",
+      "url": "https://nwmt-ffla.org/2017/09/01/2017-projects/",
+      "kind": "association"
+    },
+    {
       "label": "Berray Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/berray.html",
       "kind": "site"
@@ -143,6 +173,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -170,6 +201,14 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "nwmt_projects",
+      "key": "nwmt_projects:mt:berray-mountain",
+      "fields": [
+        "events",
+        "links"
+      ]
     }
   ],
   "conflicts": [],
@@ -177,5 +216,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -14,6 +14,9 @@
   },
   "elevation_m": 2190.9,
   "kind": "ground",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "R-6 flat top",
   "height_m": null,
   "status": "standing",
@@ -198,6 +201,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Hager Mountain Lookout - Forest Lookouts Page",
       "url": "https://oregonlookouts.weebly.com/hagar-mountain.html",
       "kind": "site"
@@ -250,9 +258,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:or:hager-mountain-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:or:hager-mtn:43.0093:-121.0316",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -310,5 +327,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

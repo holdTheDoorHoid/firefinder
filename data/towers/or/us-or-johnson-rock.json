@@ -1,6 +1,7 @@
 {
   "id": "us-or-johnson-rock",
   "name": "Johnson Rock Lookout",
+  "summary": "An 82-foot timber tower with an L-4 cab in the Wallowa-Whitman National Forest, built in 1952 to replace a 1938 L-4 tower; staffed in summer.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 1738.0,
   "kind": "tower",
-  "design": "L-4",
-  "height_m": null,
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "14-by-14-foot L-4 cab on an 82-foot open timber tower",
+  "height_m": 25.0,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -43,16 +47,53 @@
   "rental": null,
   "events": [
     {
+      "year": 1938,
+      "event": "built",
+      "note": "Earlier wooden L-4 tower, replaced by the current structure. firelookout.com says 'developed about 1938'.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/johnson-rock-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/johnson-rock-lookout/",
+        "https://www.firelookout.com/or/johnsonrock.html"
+      ]
+    },
+    {
       "year": 1952,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
     },
     {
+      "year": 1952,
+      "event": "replaced",
+      "note": "Current 82-foot open timber tower with 14x14 L-4 cab built to replace the 1938 tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/johnson-rock-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/johnson-rock-lookout/",
+        "https://www.firelookout.com/or/johnsonrock.html"
+      ]
+    },
+    {
+      "year": 1954,
+      "event": "staffed",
+      "note": "Lookout personnel listed for 1954 on firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/johnsonrock.html"
+    },
+    {
+      "year": 1958,
+      "event": "staffed",
+      "note": "Lookout personnel listed for 1958 on firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/johnsonrock.html"
+    },
+    {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 4, 2022",
-      "from": "nhlr"
+      "note": "Registered July 4, 2022 as US 1628, OR 147",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/johnson-rock-lookout/"
     }
   ],
   "photos": [
@@ -136,6 +177,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -170,12 +212,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-johnson-rock",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

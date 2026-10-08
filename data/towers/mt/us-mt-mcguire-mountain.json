@@ -16,6 +16,9 @@
   },
   "elevation_m": 2115.9,
   "kind": "ground",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "D-6 cupola cab, 12x12-ft wood frame with pyramidal roof and windowed cupola",
   "height_m": null,
   "status": "standing",
@@ -121,6 +124,79 @@
       "note": "Registered on the National Historic Lookout Register, May 12, 2000, as US 345",
       "from": "research",
       "source_url": "http://nhlr.org/lookouts/us/mt/mcguire-mountain-lookout/"
+    },
+    {
+      "year": 2016,
+      "event": "assessed",
+      "note": "First on-site condition assessment, the start of the long restoration project.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2016-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2016-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2023-newsletter.pdf"
+      ]
+    },
+    {
+      "year": 2020,
+      "event": "assessed",
+      "note": "In-depth assessment to prepare the next summer's restoration.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2020-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2020-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2020fall.pdf"
+      ]
+    },
+    {
+      "year": 2021,
+      "event": "restored",
+      "note": "Windows reglazed off-site at Murphy Lake Ranger Station, building squared and levelled, siding and trim repaired, painted inside and out, new shutters.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2021-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2021-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2021winter.pdf"
+      ]
+    },
+    {
+      "year": 2022,
+      "event": "restored",
+      "note": "With the rental closed for a week, final touches on the shutters for the cabin and cupola windows; outhouse pit started.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2022-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2022-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2022-newsletter.pdf"
+      ]
+    },
+    {
+      "year": 2023,
+      "event": "restored",
+      "note": "Outhouse moved onto a new vault and the lookout and both support structures re-roofed, completing the project.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2023-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2023-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2023-newsletter.pdf"
+      ]
+    },
+    {
+      "year": 2024,
+      "event": "restored",
+      "note": "Storage shed repaired and painted and a summer shutter-storage cover built, in the lookout's 100th year.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/11/2024-newsletter.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2024-newsletter.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2024-completed-projects.pdf"
+      ]
+    },
+    {
+      "year": 2026,
+      "event": "restored",
+      "note": "Cupola shutters converted back to the original hinged system, spot painting and ventilation screens.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
     }
   ],
   "photos": [
@@ -178,6 +254,16 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
+      "label": "Northwest Montana Lookout Association: work on McGuire Mountain Lookout",
+      "url": "https://nwmt-ffla.org/2026/03/07/2026-projects/",
+      "kind": "association"
+    },
+    {
       "label": "McGuire on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/mcguire.html",
       "kind": "site"
@@ -220,12 +306,29 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:mcguire-mountain-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:mt:mcguire:48.6835:-115.2026",
       "fields": [
+        "material",
         "design",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "nwmt_projects",
+      "key": "nwmt_projects:mt:mcguire",
+      "fields": [
+        "events",
         "links"
       ]
     },
@@ -278,5 +381,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

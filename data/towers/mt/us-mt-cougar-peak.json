@@ -14,6 +14,9 @@
   },
   "elevation_m": 2040.3,
   "kind": "ground",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "L-4 (hip-roof, 1936 standard model, ground house with catwalk)",
   "height_m": 2040.3,
   "status": "standing",
@@ -228,6 +231,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Cougar Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/cougarpk.html",
       "kind": "site"
@@ -280,9 +288,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:cougar-peak-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:mt:cougar-peak:47.7447:-115.3835",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -355,5 +372,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

@@ -14,6 +14,9 @@
   },
   "elevation_m": 1631.0,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
   "design": "L-4",
   "height_m": 1.5,
   "status": "standing",
@@ -209,6 +212,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Koontenai National Forest page about Minton Peak Lookout",
       "url": "http://www.fs.usda.gov/recarea/kootenai/recreation/fishing/recarea/?recid=80558&amp;actid=101",
       "kind": "site"
@@ -261,9 +269,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:minton-peak-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:mt:minton-peak:47.8280:-115.7709",
       "fields": [
+        "material",
         "design",
         "height_m",
         "photos",
@@ -325,5 +342,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

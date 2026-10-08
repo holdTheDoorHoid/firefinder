@@ -1,7 +1,9 @@
 {
   "id": "us-wi-gordon",
   "name": "Gordon Lookout",
-  "other_names": [],
+  "other_names": [
+    "Gordon Fire Tower Cabin"
+  ],
   "country": "US",
   "region": "WI",
   "county": "Douglas",
@@ -13,6 +15,9 @@
   },
   "elevation_m": 348.1,
   "kind": "tower",
+  "material": null,
+  "material_from": null,
+  "roles": [],
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -40,7 +45,15 @@
     "drive_up": null,
     "trail_note": null
   },
-  "rental": null,
+  "rental": {
+    "available": true,
+    "source": "ffla",
+    "provider": "Airbnb",
+    "url": "https://www.airbnb.com/rooms/37930902",
+    "ridb_facility_id": null,
+    "checked": "2026-10-08",
+    "manager": "local non-profit group"
+  },
   "events": [
     {
       "year": 2017,
@@ -82,8 +95,18 @@
       "kind": "register"
     },
     {
+      "label": "Book or read about Gordon Fire Tower Cabin (Airbnb)",
+      "url": "https://www.airbnb.com/rooms/37930902",
+      "kind": "rental"
+    },
+    {
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wi/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
       "kind": "association"
     }
   ],
@@ -112,6 +135,14 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:wi:gordon-fire-tower-cabin",
+      "fields": [
+        "rental",
+        "links"
+      ]
     }
   ],
   "conflicts": [],
@@ -119,5 +150,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

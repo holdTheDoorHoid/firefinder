@@ -1,6 +1,7 @@
 {
   "id": "us-mt-white-mountain",
   "name": "White Mountain Lookout",
+  "summary": "First cab built 1934; present 41-ft timber tower with L-4 cab dates from 1953-54, unstaffed since the early 1970s, now houses communications gear.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 1988.8,
   "kind": "tower",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "L-4 cab with catwalk on a 41-ft timber tower",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,20 +32,32 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached on foot; PNWSOTA describes current access as a hike of about 2 miles along a permanently closed road"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "early 1970s"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "About 2 miles on foot through forest and along a permanently closed road"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "First cab on the site: an L-4 on a 40-ft wooden tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/white-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/white-mountain-lookout/",
+        "http://www.firelookout.com/mt/whitemtn.html",
+        "https://kuefler-lightning.com/lookouts/white-mountain-lookout/"
+      ]
+    },
     {
       "year": 1954,
       "event": "built",
@@ -49,10 +65,31 @@
       "from": "nhlr"
     },
     {
+      "year": 1954,
+      "event": "replaced",
+      "note": "Present 41-ft timber tower with L-4 cab; NHLR's narrative gives 1953",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/white-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/white-mountain-lookout/",
+        "http://www.firelookout.com/mt/whitemtn.html",
+        "https://www.pnwsota.org/taxonomy/term/728",
+        "https://kuefler-lightning.com/lookouts/white-mountain-lookout/"
+      ]
+    },
+    {
+      "year": 2005,
+      "event": "modified",
+      "note": "Lightning protection system designed and installed by KLP Inc",
+      "from": "research",
+      "source_url": "https://kuefler-lightning.com/lookouts/white-mountain-lookout/"
+    },
+    {
       "year": 2011,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 24, 2011",
-      "from": "nhlr"
+      "note": "Registered September 24, 2011 as US 928, MT 56",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/white-mountain-lookout/"
     }
   ],
   "photos": [
@@ -112,6 +149,16 @@
       "kind": "register"
     },
     {
+      "label": "Lolo National Forest (Pacific Northwest State of the Lookouts (pnwsota.org))",
+      "url": "https://www.pnwsota.org/taxonomy/term/728",
+      "kind": "reference"
+    },
+    {
+      "label": "White Mountain Lookout (Kuefler Lightning)",
+      "url": "https://kuefler-lightning.com/lookouts/white-mountain-lookout/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
       "kind": "association"
@@ -136,6 +183,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -169,6 +217,22 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-white-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -188,9 +252,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-id-saddle-mountain",
   "name": "Saddle Mountain Lookout",
+  "summary": "A 7x7 Aermotor observation cab on a 40-foot steel tower, built in 1935 in Boundary County, unstaffed since the late 1960s and now used as a communication site.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2101.0,
   "kind": "tower",
-  "design": "Aermotor",
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "7x7 Aermotor observation cab on a 40-foot X-brace steel tower, with a residence cabin",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -32,27 +36,68 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "late 1960s"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Idaho Fire Lookouts lists the site as hike-in"
   },
   "rental": null,
   "events": [
     {
+      "year": 1932,
+      "event": "staffed_first",
+      "note": "Robert Sarf (firelookout.com) or Robert Saarf (Idaho Fire Lookouts), 1932-1933; predates the 1935 build year",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/saddlemtnid.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/saddlemtnid.html",
+        "https://www.idahofirelookouts.com/northern-idaho/saddle-mountain-lookout/",
+        "https://www.idahofirelookouts.com/lookout-staff/robert-saarf/"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "staffed",
+      "note": "Dick Thompson, 1934-1936",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/saddlemtnid.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/saddlemtnid.html",
+        "https://www.idahofirelookouts.com/northern-idaho/saddle-mountain-lookout/"
+      ]
+    },
+    {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "7x7 Aermotor observation cab on a 40-foot X-brace steel tower, with a residence cabin",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/saddle-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/saddle-mountain-lookout/",
+        "https://www.firelookout.com/id/saddlemtnid.html",
+        "https://www.idahofirelookouts.com/northern-idaho/saddle-mountain-lookout/"
+      ]
+    },
+    {
+      "year": 1960,
+      "event": "abandoned",
+      "note": "Year stands for the 1960s; the register says not staffed since the late 1960s",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/saddle-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/saddle-mountain-lookout/",
+        "https://www.idahofirelookouts.com/northern-idaho/saddle-mountain-lookout/"
+      ]
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 7, 2020",
-      "from": "nhlr"
+      "note": "Registered December 7, 2020; nominated by Brad Eells",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/saddle-mountain-lookout/"
     }
   ],
   "photos": [
@@ -100,6 +145,16 @@
       "kind": "register"
     },
     {
+      "label": "Packsaddle Mountain (Idaho Fire Lookouts)",
+      "url": "https://www.idahofirelookouts.com/cda-region/packsaddle-mountain/",
+      "kind": "reference"
+    },
+    {
+      "label": "Robert Saarf (Idaho Fire Lookouts)",
+      "url": "https://www.idahofirelookouts.com/lookout-staff/robert-saarf/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -124,6 +179,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -158,12 +214,32 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-saddle-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

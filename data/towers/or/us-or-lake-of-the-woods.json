@@ -16,6 +16,9 @@
   },
   "elevation_m": 1023.8,
   "kind": "tower",
+  "material": null,
+  "material_from": null,
+  "roles": [],
   "design": "CL-160 flat-topped cab on steel I-beam tower",
   "height_m": null,
   "status": "standing",
@@ -133,6 +136,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Lake O' Woods on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/lakeowoods.html",
       "kind": "site"
@@ -180,6 +188,14 @@
       "fields": [
         "ownership",
         "access",
+        "rental",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:or:lake-of-the-woods-lookout",
+      "fields": [
         "rental",
         "links"
       ]
@@ -254,5 +270,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

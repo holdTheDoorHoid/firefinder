@@ -1,6 +1,7 @@
 {
   "id": "us-nj-lebanon",
   "name": "Lebanon Station Fire Tower",
+  "summary": "A 1950 New Jersey Forest Fire Service tower of 80 feet in Brendan Byrne State Forest, built to replace an earlier Four Mile tripod and still listed as in active service.",
   "other_names": [],
   "country": "US",
   "region": "NJ",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 41.5,
   "kind": "tower",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "80-foot Aermotor tower with a 7x7-foot metal cab, painted red and white",
   "height_m": 24.0,
   "status": "standing",
   "status_note": null,
@@ -28,8 +32,8 @@
   "agency": "New Jersey Forest Fire Service",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Owned, manned and maintained by the NJFFS as a working observation post; no source read describes public access to the cab."
   },
   "staffing": {
     "status": "unknown",
@@ -43,16 +47,25 @@
   "rental": null,
   "events": [
     {
+      "year": 1910,
+      "event": "other",
+      "note": "NJFFS erected the Four Mile Tower, a wooden tripod; Wikipedia says the Lebanon Station replaced it (no replacement year given)",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_New_Jersey_Forest_Fire_Service_fire_towers"
+    },
+    {
       "year": 1950,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built 1950 per the NHLR register page",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/lebanon-station-fire-tower/"
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 3, 2004",
-      "from": "nhlr"
+      "note": "Registered March 3, 2004",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/lebanon-station-fire-tower/"
     }
   ],
   "photos": [
@@ -74,6 +87,11 @@
       "label": "NHLR register entry US 556 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/nj/lebanon-station-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Div B Fire Towers (NJFFS Section B10)",
+      "url": "https://www.sectionb10.org/firetowers",
+      "kind": "reference"
     },
     {
       "label": "Lebanon Station (Wikipedia (List of New Jersey Forest Fire Service fire towers))",
@@ -100,6 +118,7 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
         "status",
         "registers",
         "agency",
@@ -112,7 +131,6 @@
       "source": "nj_forest_fire_towers",
       "key": "nj_forest_fire_towers:nj:lebanon-station",
       "fields": [
-        "kind",
         "height_m",
         "ownership",
         "links"
@@ -131,12 +149,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nj-lebanon",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -14,6 +14,9 @@
   },
   "elevation_m": 1859.9,
   "kind": "ground",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "L-4 ground house cab with a hip roof, built pre-1936",
   "height_m": null,
   "status": "standing",
@@ -199,6 +202,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "West Fork Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/westforkbutte.html",
       "kind": "site"
@@ -246,9 +254,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:west-fork-butte-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:mt:west-fork-butte:46.7359:-114.4159",
       "fields": [
+        "material",
         "design",
         "events",
         "photos",
@@ -311,5 +328,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-ca-timber-mountain",
   "name": "Timber Mountain Lookout",
+  "summary": "A 1966 cab on a 30-foot steel tower in the Modoc National Forest, on a summit approved for administrative use by 1912 and with fire-watch records from 1932 to 1945.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 1545.6,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "CL-100 cab on a 30-foot K-brace steel tower",
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -25,7 +29,7 @@
       "url": "http://nhlr.org/lookouts/us/ca/timber-mountain-lookout/"
     }
   ],
-  "agency": "US Forest Service - Modoc National Forest",
+  "agency": "U.S. Forest Service, Modoc National Forest",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -43,16 +47,50 @@
   "rental": null,
   "events": [
     {
+      "year": 1912,
+      "event": "other",
+      "note": "Site approved or withdrawn for administrative use; NHLR says a platform lookout may have stood here as early as 1912",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/timber-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/timber-mountain-lookout/",
+        "https://californialookouts.weebly.com/timber-mountain.html"
+      ]
+    },
+    {
+      "year": 1932,
+      "event": "staffed",
+      "note": "Otto W. Klosterman named as the lookout in an August 1932 newspaper item quoted by the history site",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/timber-mountain.html"
+    },
+    {
+      "year": 1938,
+      "event": "fire",
+      "note": "Fire spread over about 6,000 acres of grass, sage and juniper; radio contact was established between fire fighters and the lookout",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/timber-mountain.html"
+    },
+    {
+      "year": 1945,
+      "event": "fire",
+      "note": "Damon's Butte Road Fire first reported from the lookout at 6:05 a.m. on October 2, 1945",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/timber-mountain.html"
+    },
+    {
       "year": 1966,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Current CL-100 cab completed on a 30-foot K-brace steel tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/timber-mountain-lookout/"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 23, 2019",
-      "from": "nhlr"
+      "note": "Registered October 23, 2019 as US 1333, CA 156",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/timber-mountain-lookout/"
     }
   ],
   "photos": [
@@ -160,6 +198,11 @@
       "kind": "register"
     },
     {
+      "label": "Timber Mountain - Forest Lookouts (californialookouts.weebly.com)",
+      "url": "https://californialookouts.weebly.com/timber-mountain.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -184,6 +227,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -216,12 +260,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-timber-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

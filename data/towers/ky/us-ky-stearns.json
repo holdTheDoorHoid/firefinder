@@ -1,6 +1,7 @@
 {
   "id": "us-ky-stearns",
   "name": "Stearns Fire Tower",
+  "summary": "Aermotor steel lookout built by the CCC in 1934 in McCreary County, Kentucky; registers record it demolished as of 2024, with a home on the site.",
   "other_names": [
     "Stearns State Lookout Tower"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 432.8,
   "kind": "tower",
-  "design": "Aermotor",
+  "material": "steel",
+  "material_from": "design",
+  "roles": [],
+  "design": "110-foot steel Aermotor tower with a 7 x 7 ft metal cab",
   "height_m": 33.5,
   "status": "standing",
   "status_note": null,
@@ -36,43 +40,63 @@
   "agency": "Private owner",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Privately owned, per the NHLR; the registers describe no public access."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2016"
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "No tower remains. The site is private land at the end of Stearns Tower Road."
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the Civilian Conservation Corps on Sunset Rock on the Cumberland National Forest; a 110-foot Aermotor steel tower with a 7 x 7 ft metal cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ky/stearns-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ky/stearns-fire-tower/",
+        "https://easternuslookouts.weebly.com/stearns.html",
+        "https://www.mccrearyjournal.com/2016/09/29/kentuckys-trump-tower/"
+      ]
+    },
+    {
+      "year": 1988,
+      "event": "other",
+      "note": "Richard Burke sold the tower and six acres to Nolan and Sondra Johnson for $10,000",
+      "from": "research",
+      "source_url": "https://www.mccrearyjournal.com/2016/09/29/kentuckys-trump-tower/"
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 3, 2009",
-      "from": "nhlr"
+      "note": "Registered August 3, 2009 as US 822, KY 6",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ky/stearns-fire-tower/"
     },
     {
       "year": 2024,
       "event": "removed",
-      "note": "'Removed' field on NHLR detail page: \"by 2024\".",
-      "from": "nhlr"
+      "note": "Registers say demolished as of 2024; exact date not given. A home now stands on the site.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ky/stearns-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ky/stearns-fire-tower/",
+        "http://firetower.org/lookouts/us/ky/stearns-tower-site/"
+      ]
     },
     {
       "year": 2026,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 2, 2026",
-      "from": "fflos"
+      "note": "Added to the former lookout sites register January 2, 2026 as US 2115, KY 7",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ky/stearns-tower-site/"
     }
   ],
   "photos": [
@@ -113,6 +137,11 @@
       "kind": "register"
     },
     {
+      "label": "Kentucky's Trump Tower (McCreary Journal)",
+      "url": "https://www.mccrearyjournal.com/2016/09/29/kentuckys-trump-tower/",
+      "kind": "reference"
+    },
+    {
       "label": "STEARNS (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/stearns.html",
       "kind": "site"
@@ -132,6 +161,7 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
         "status",
         "registers",
         "agency",
@@ -154,6 +184,7 @@
       "source": "eastern_us_lookouts",
       "key": "eastern_us_lookouts:ky:stearns",
       "fields": [
+        "material",
         "design",
         "height_m",
         "ownership",
@@ -164,8 +195,23 @@
       "source": "osm",
       "key": "osm:node/358613908",
       "fields": [
-        "kind",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ky-stearns",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -186,9 +232,15 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

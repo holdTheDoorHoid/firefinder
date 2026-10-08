@@ -1,6 +1,7 @@
 {
   "id": "us-mt-gird-point",
   "name": "Gird Point Lookout",
+  "summary": "A 1939 L-4 cab on a short tower in the Bitterroot National Forest, abandoned for nearly two decades, restored in the early 2000s and now a reservable Forest Service rental.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2315.0,
   "kind": "tower",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
+  "design": "1931-pattern L-4 lookout cab, 14 by 14 ft, on a short log tower",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -31,34 +35,79 @@
       "url": "https://npgallery.nps.gov/AssetDetail/NRIS/100002297"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Bitterroot National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Booked on Recreation.gov, open mid-June to mid-September at $30 per night. Drive most of the way, then walk a moderate trail. No electricity or water."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": false,
+    "trail_note": "Drive to the trailhead on FS 714, then walk a moderate trail of roughly half a mile to three-quarters of a mile. Narrow steps and a catwalk lead to the cab."
   },
-  "rental": null,
+  "rental": {
+    "available": true,
+    "source": "ffla",
+    "provider": "recreation.gov",
+    "url": "https://www.recreation.gov/camping/campgrounds/234281",
+    "ridb_facility_id": "234281",
+    "checked": "2026-10-08"
+  },
   "events": [
     {
       "year": 1939,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Constructed in 1939 and added to the forest's fixed-point fire detection system that year",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/GetAsset/3190ba92-c994-4b58-9c49-47298cb954aa"
+    },
+    {
+      "year": 1967,
+      "event": "staffed",
+      "note": "One of sixteen lookouts manned on the Bitterroot National Forest in 1967",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/GetAsset/3190ba92-c994-4b58-9c49-47298cb954aa"
+    },
+    {
+      "year": 1984,
+      "event": "other",
+      "note": "Slated for removal with seven other inactive lookouts; three of that group were saved and restored",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/gird-point-lookout/"
+    },
+    {
+      "year": 1990,
+      "event": "fire",
+      "note": "1990 Gird Point wildfire killed most subalpine fir below the lookout; firelookout.com says the fire surrounded the tower",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/GetAsset/3190ba92-c994-4b58-9c49-47298cb954aa",
+      "source_urls": [
+        "https://npgallery.nps.gov/GetAsset/3190ba92-c994-4b58-9c49-47298cb954aa",
+        "https://www.firelookout.com/mt/girdpt.html"
+      ]
     },
     {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 8, 2003",
-      "from": "nhlr"
+      "note": "Registered January 8, 2003 as US 459, MT 35",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/gird-point-lookout/"
+    },
+    {
+      "year": 2003,
+      "event": "restored",
+      "note": "Restoration began in 2003 after nearly two decades abandoned; NHLR dates rehabilitation to 2002",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/GetAsset/3190ba92-c994-4b58-9c49-47298cb954aa",
+      "source_urls": [
+        "https://npgallery.nps.gov/GetAsset/3190ba92-c994-4b58-9c49-47298cb954aa",
+        "http://nhlr.org/lookouts/us/mt/gird-point-lookout/"
+      ]
     }
   ],
   "photos": [
@@ -154,8 +203,28 @@
       "kind": "register"
     },
     {
+      "label": "Book or read about Gird Point Lookout (recreation.gov)",
+      "url": "https://www.recreation.gov/camping/campgrounds/234281",
+      "kind": "rental"
+    },
+    {
+      "label": "Gird Point Lookout, National Register of Historic Places nomination (NRIS 100002297) (National Park Service, NPGallery)",
+      "url": "https://npgallery.nps.gov/GetAsset/3190ba92-c994-4b58-9c49-47298cb954aa",
+      "kind": "reference"
+    },
+    {
+      "label": "Gird Point Lookout (U.S. Forest Service, Bitterroot National Forest)",
+      "url": "https://www.fs.usda.gov/r01/bitterroot/recreation/gird-point-lookout",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
       "kind": "association"
     },
     {
@@ -197,9 +266,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:gird-point-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:mt:gird-point:46.2074:-113.9115",
       "fields": [
+        "material",
         "design",
         "height_m",
         "events",
@@ -215,12 +293,34 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-gird-point",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

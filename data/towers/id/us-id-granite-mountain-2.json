@@ -1,6 +1,7 @@
 {
   "id": "us-id-granite-mountain-2",
   "name": "Granite Mountain Lookout",
+  "summary": "L-4 cab in Salmon-Challis NF, dated 1934 after a 1923 camp; on standby from the 1960s; restored 2002; NHLR-registered 2003.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,6 +14,9 @@
   },
   "elevation_m": 1914.1,
   "kind": "ground",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "L-4",
   "height_m": null,
   "status": "standing",
@@ -43,16 +47,87 @@
   "rental": null,
   "events": [
     {
+      "year": 1923,
+      "event": "staffed_first",
+      "note": "Lookout man worked from a tent before the cab; Idaho Heritage Trust and local history page",
+      "from": "research",
+      "source_url": "https://www.idahoheritagetrust.org/projects-grants/granite-mountain-lookout/",
+      "source_urls": [
+        "https://www.idahoheritagetrust.org/projects-grants/granite-mountain-lookout/",
+        "https://idaholookouts.weebly.com/granite-mountain1.html"
+      ]
+    },
+    {
       "year": 1934,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "L-4 cab per NHLR, firelookout.com, Idaho Fire Lookouts and local history page. Idaho Heritage Trust gives 1929 (R4 Plan 80) instead",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/granite-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/granite-mountain-lookout/",
+        "https://www.firelookout.com/id/granitemtn319.html",
+        "https://www.idahofirelookouts.com/southern-idaho/granite-mountain-lookout-2/",
+        "https://idaholookouts.weebly.com/granite-mountain1.html"
+      ]
+    },
+    {
+      "year": 1935,
+      "event": "staffed",
+      "note": "Newspaper notice: a lookout stationed there, wife visiting",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/granite-mountain1.html"
+    },
+    {
+      "year": 1939,
+      "event": "staffed",
+      "note": "Mr. Allen stationed there for the summer",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/granite-mountain1.html"
+    },
+    {
+      "year": 1943,
+      "event": "staffed",
+      "note": "Chloe and Joy Bradley ran the station and its fire weather instruments",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/granite-mountain1.html"
+    },
+    {
+      "year": 1959,
+      "event": "other",
+      "note": "Forest summer fire fighting school completed at the lookout",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/granite-mountain1.html"
+    },
+    {
+      "year": 1960,
+      "event": "staffed_last",
+      "note": "Last used for emergencies per firelookout.com; NHLR and Idaho Fire Lookouts say the 1960s",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/granitemtn319.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/granitemtn319.html",
+        "http://nhlr.org/lookouts/us/id/granite-mountain-lookout/",
+        "https://www.idahofirelookouts.com/southern-idaho/granite-mountain-lookout-2/"
+      ]
+    },
+    {
+      "year": 2002,
+      "event": "restored",
+      "note": "Restoration by North Fork Ranger District with volunteers; Idaho Fire Lookouts text says 2003",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/granite-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/granite-mountain-lookout/",
+        "https://idaholookouts.weebly.com/granite-mountain1.html",
+        "https://www.idahofirelookouts.com/southern-idaho/granite-mountain-lookout-2/"
+      ]
     },
     {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 18, 2003",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, September 18, 2003",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/granite-mountain-lookout/"
     }
   ],
   "photos": [
@@ -136,6 +211,21 @@
       "kind": "register"
     },
     {
+      "label": "Granite Mountain Lookout (Idaho Heritage Trust)",
+      "url": "https://www.idahoheritagetrust.org/projects-grants/granite-mountain-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Granite Mountain - Forest Lookouts (Forest Lookouts (idaholookouts.weebly.com))",
+      "url": "https://idaholookouts.weebly.com/granite-mountain1.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Camping and Cabins (Salmon-Challis National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r04/salmon-challis/recreation/camping-cabins",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -182,6 +272,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:granite-mtn:45.5500:-113.9807",
       "fields": [
+        "material",
         "design",
         "events",
         "photos",
@@ -195,12 +286,31 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-granite-mountain-2",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-id-sunset-mountain-2",
   "name": "Sunset Mountain Lookout",
+  "summary": "Boise NF lookout: a 1930 R-5 cab on a 10-foot base, with an R-6 cab set on that base in 1958; standing and drive-up, with staffing disputed.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,6 +14,9 @@
   },
   "elevation_m": 2398.5,
   "kind": "two_story",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "R-6",
   "height_m": 3.0,
   "status": "standing",
@@ -28,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Dirt road from Highway 21 at Mores Creek Summit; no fees; 4WD in summer and early fall; snowshoe access in winter. Staffing is reported inconsistently in undated sources."
   },
   "staffing": {
     "status": "staffed",
@@ -37,11 +41,36 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Dirt road from Mores Creek Summit, about 13 miles north of Idaho City; visitors can walk up to the concrete base and around the catwalk."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1930,
+      "event": "built",
+      "note": "Region 5 cab on a 10-foot concrete base.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sunset-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/sunset-mountain-lookout/",
+        "https://www.firelookout.com/id/sunsetmtn.html"
+      ]
+    },
+    {
+      "year": 1940,
+      "event": "other",
+      "note": "Per a 1994 SITPA history, the association had stopped using a Sunset Mtn. lookout by 1940. The history gives no county, so the link to this tower is uncertain.",
+      "from": "research",
+      "source_url": "https://objects.lib.uidaho.edu/cccidaho/cccidaho1224.pdf"
+    },
+    {
+      "year": 1945,
+      "event": "fire",
+      "note": "Lightning struck a tree 200 feet from the lookout; the lookout attendant put out the burning tree with a shovel. The item is dated January 28, 1945; the strike date is not given.",
+      "from": "research",
+      "source_url": "https://www.daytripnorthwest.com/post/sunset-mountain-lookout"
+    },
     {
       "year": 1958,
       "event": "built",
@@ -49,10 +78,23 @@
       "from": "nhlr"
     },
     {
+      "year": 1958,
+      "event": "replaced",
+      "note": "R-6 cab with catwalk built on the same 10-foot base.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sunset-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/sunset-mountain-lookout/",
+        "https://www.firelookout.com/id/sunsetmtn.html",
+        "https://www.daytripnorthwest.com/post/sunset-mountain-lookout"
+      ]
+    },
+    {
       "year": 2011,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 16, 2011",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, October 16, 2011.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sunset-mountain-lookout/"
     }
   ],
   "photos": [
@@ -124,6 +166,21 @@
       "kind": "register"
     },
     {
+      "label": "Sunset Mountain Lookout (Daytrip Northwest)",
+      "url": "https://www.daytripnorthwest.com/post/sunset-mountain-lookout",
+      "kind": "reference"
+    },
+    {
+      "label": "Sunset Mountain Lookout (Trails Off Road)",
+      "url": "https://www.trailsoffroad.com/US/idaho/trails/4630-sunset-mountain-lookout",
+      "kind": "reference"
+    },
+    {
+      "label": "A Brief History of the Southern Idaho Timber Protective Association 1904-1994 (University of Idaho Library)",
+      "url": "https://objects.lib.uidaho.edu/cccidaho/cccidaho1224.pdf",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -170,6 +227,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:sunset-mtn:43.8986:-115.6469",
       "fields": [
+        "material",
         "design",
         "height_m",
         "staffing",
@@ -184,12 +242,33 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-sunset-mountain-2",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

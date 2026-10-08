@@ -2,7 +2,9 @@
   "id": "us-id-bishop-mountain",
   "name": "Bishop Mountain Lookout",
   "summary": "A 1937 steel Aermotor tower on the Targhee National Forest that saw heavy use in the 1988 Yellowstone fires and is now on standby, listed on the NHLR.",
-  "other_names": [],
+  "other_names": [
+    "Bishop Mountain Lookout Cabin"
+  ],
   "country": "US",
   "region": "ID",
   "county": "Fremont",
@@ -14,6 +16,9 @@
   },
   "elevation_m": 2372.6,
   "kind": "tower",
+  "material": "steel",
+  "material_from": "firelookout_com",
+  "roles": [],
   "design": "84-ft (per firelookout.com/idahofirelookouts.com; NHLR gives 72-ft) steel Aermotor tower with 7x7-ft cab",
   "height_m": 25.6,
   "status": "standing",
@@ -47,7 +52,16 @@
     "drive_up": null,
     "trail_note": null
   },
-  "rental": null,
+  "rental": {
+    "available": true,
+    "source": "ffla",
+    "provider": "recreation.gov",
+    "url": "https://www.recreation.gov/camping/campgrounds/234304",
+    "ridb_facility_id": "234304",
+    "checked": "2026-10-08",
+    "status_note": "Administrative Closure 2026",
+    "status_note_from": "ffla"
+  },
   "events": [
     {
       "year": 1937,
@@ -191,8 +205,18 @@
       "kind": "register"
     },
     {
+      "label": "Book or read about Bishop Mountain Lookout Cabin (recreation.gov)",
+      "url": "https://www.recreation.gov/camping/campgrounds/234304",
+      "kind": "rental"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
       "kind": "association"
     },
     {
@@ -244,9 +268,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:id:bishop-mountain-lookout-cabin",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:id:bishop-mtn:44.3334:-111.5534",
       "fields": [
+        "material",
         "height_m",
         "events",
         "photos",
@@ -296,5 +329,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -14,6 +14,9 @@
   },
   "elevation_m": 1449.3,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
   "design": "R-6 flattop cab with wraparound catwalk on 41-foot timber tower",
   "height_m": 12.2,
   "status": "standing",
@@ -172,6 +175,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Deer Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/id/deerridge.html",
       "kind": "site"
@@ -219,9 +227,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:id:deer-ridge-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:id:deer-ridge:48.8453:-116.1035",
       "fields": [
+        "material",
         "design",
         "height_m",
         "photos",
@@ -265,5 +282,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

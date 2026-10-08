@@ -13,7 +13,10 @@
   },
   "elevation_m": 2219.2,
   "kind": "ground",
-  "design": null,
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "D-6 cupola-style cabin",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -53,6 +56,35 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: January 9, 2021",
       "from": "nhlr"
+    },
+    {
+      "year": 2023,
+      "event": "assessed",
+      "note": "Assessment: in disrepair, needing paint and basic carpentry; a common shelter for Continental Divide hikers.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2023-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2023-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2023-newsletter.pdf"
+      ]
+    },
+    {
+      "year": 2024,
+      "event": "restored",
+      "note": "Five-day project: cab and cupola cleaned, exterior scraped and painted twice, two repaired cupola windows reinstalled, shutters repaired, rodent-proofing.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/11/2024-newsletter.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2024-newsletter.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2024-completed-projects.pdf"
+      ]
+    },
+    {
+      "year": 2026,
+      "event": "assessed",
+      "note": "Pre-project assessment for planned window, shutter and south-wall restoration.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
     }
   ],
   "photos": [
@@ -153,6 +185,11 @@
       "kind": "association"
     },
     {
+      "label": "Northwest Montana Lookout Association: work on Stahl Peak Lookout",
+      "url": "https://nwmt-ffla.org/2026/03/07/2026-projects/",
+      "kind": "association"
+    },
+    {
       "label": "Stahl Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/stahlpeak.html",
       "kind": "site"
@@ -193,6 +230,16 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "nwmt_projects",
+      "key": "nwmt_projects:mt:stahl-peak",
+      "fields": [
+        "material",
+        "design",
+        "events",
+        "links"
+      ]
     }
   ],
   "conflicts": [],
@@ -200,5 +247,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-or-rancheria-rock",
   "name": "Rancheria Rock Lookout",
+  "summary": "Wheeler County ODF lookout 7 mi SSE of Fossil: 1930s cab, 14x14 cab by 1946 or 1950s, no longer in service; land listed as BLM in NHLR, private in firelookout.com.",
   "other_names": [
     "Rancheria Lookout"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 1465.8,
   "kind": "ground",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "Oregon Department of Forestry 14 x 14 cab (current, per NHLR); earlier 1930s L-4 cab later modified (per firelookout.com)",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -30,8 +34,8 @@
   "agency": "Oregon Department of Forestry",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "firelookout.com says private property with no public access; NHLR says it is on BLM land. The sources disagree."
   },
   "staffing": {
     "status": "unknown",
@@ -40,21 +44,72 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "firelookout.com says the site has no public access"
   },
   "rental": null,
   "events": [
     {
+      "year": 1933,
+      "event": "other",
+      "note": "July 1933 field report did not expect the lookout to be put in place much before August",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/rancheria-rock.html"
+    },
+    {
+      "year": 1936,
+      "event": "staffed",
+      "note": "July 1936 newspaper: the state had maintained the lookout through fire season for the past eight years",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/rancheria-rock.html"
+    },
+    {
+      "year": 1946,
+      "event": "other",
+      "note": "District annual report lists a 14 x 14 standard ground-type lookout",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/rancheria-rock.html"
+    },
+    {
       "year": 1950,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR Built field gives 1950; NHLR text says the ODF 14 x 14 cab was built in the 1950s",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/rancheria-rock-lookout/"
+    },
+    {
+      "year": 1963,
+      "event": "fire",
+      "note": "District report: three fires reported for the season",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/rancheria-rock.html"
+    },
+    {
+      "year": 1963,
+      "event": "other",
+      "note": "District report: the lookout should be replaced",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/rancheria-rock.html"
+    },
+    {
+      "year": 1964,
+      "event": "fire",
+      "note": "Five fires discovered from this station",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/rancheria-rock.html"
+    },
+    {
+      "year": 1966,
+      "event": "modified",
+      "note": "New foundation, catwalk, railings and shutters; lookout painted",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/rancheria-rock.html"
     },
     {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 1, 2003",
-      "from": "nhlr"
+      "note": "National Historic Lookout Register registration date March 1, 2003",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/rancheria-rock-lookout/"
     }
   ],
   "photos": [
@@ -114,6 +169,11 @@
       "kind": "register"
     },
     {
+      "label": "Rancheria Rock (Forest Lookouts)",
+      "url": "https://oregonlookouts.weebly.com/rancheria-rock.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -159,6 +219,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:rancheria-rock:44.8983:-120.1376",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -169,6 +230,21 @@
       "key": "osm:node/9689049371",
       "fields": [
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-rancheria-rock",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -189,9 +265,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

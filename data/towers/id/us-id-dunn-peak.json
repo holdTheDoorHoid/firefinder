@@ -1,6 +1,7 @@
 {
   "id": "us-id-dunn-peak",
   "name": "Dunn Peak Lookout",
+  "summary": "A 1958 R-6 flat cab on a 20-foot timber tower in Idaho's St. Joe National Forest, last staffed full time in 1972; now holds radio and solar gear.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 1709.0,
   "kind": "tower",
-  "design": "R-6",
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
+  "design": "20-ft treated timber tower with R-6 flat cab",
   "height_m": 6.1,
   "status": "standing",
   "status_note": null,
@@ -28,31 +32,66 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "No public access rule found. An OHV route listing allows vehicles and foot traffic, a 2024 visitor found the gate open, and the bottom stairs have been removed."
   },
   "staffing": {
-    "status": "staffed",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2024"
   },
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "OuterSpatial lists the route as open to motor vehicles, bicycles, horses and pedestrians. A 2024 visitor had been told the gate was always locked but found it open; the bottom set of stairs has been removed."
   },
   "rental": null,
   "events": [
     {
+      "year": 1932,
+      "event": "built",
+      "note": "First lookout on the site: a 20-foot pole tower of the L-4 type",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/dunnpk.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/dunnpk.html",
+        "https://idaholookouts.weebly.com/dunn-peak.html"
+      ]
+    },
+    {
       "year": 1958,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Current R-6 flat cab on a 20-foot treated timber tower; the register's built year",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/dunn-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/dunn-peak-lookout/",
+        "https://www.firelookout.com/id/dunnpk.html"
+      ]
+    },
+    {
+      "year": 1972,
+      "event": "staffed_last",
+      "note": "Last year staffed full time, per Forest Lookouts. Dunn Peak was Don Hammond's first post, and the Hammonds' seasons were 1972 and 1973",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/dunn-peak.html",
+      "source_urls": [
+        "https://idaholookouts.weebly.com/dunn-peak.html",
+        "https://wsupress.wsu.edu/product/last-lookout-on-dunn-peak/"
+      ]
+    },
+    {
+      "year": 1973,
+      "event": "closed",
+      "note": "The Forest Service decided to close the lookout; the closing date is not given. The couple spent the summer of 1973 at the Middle Sister Peak tower",
+      "from": "research",
+      "source_url": "https://wsupress.wsu.edu/product/last-lookout-on-dunn-peak/"
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 24, 2020",
-      "from": "nhlr"
+      "note": "Registered March 24, 2020 as US 1405, ID 112",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/dunn-peak-lookout/"
     }
   ],
   "photos": [
@@ -148,6 +187,21 @@
       "kind": "register"
     },
     {
+      "label": "The Last Lookout on Dunn Peak (Washington State University Press)",
+      "url": "https://wsupress.wsu.edu/product/last-lookout-on-dunn-peak/",
+      "kind": "reference"
+    },
+    {
+      "label": "Dunn Peak (Forest Lookouts (idaholookouts.weebly.com))",
+      "url": "https://idaholookouts.weebly.com/dunn-peak.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Dunn Peak Lookout OHV (OuterSpatial)",
+      "url": "https://www.outerspatial.com/trails/uid-0104-dunn-peak-lookout-ohv",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -194,6 +248,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:dunn-peak:47.2946:-115.8996",
       "fields": [
+        "material",
         "design",
         "height_m",
         "photos",
@@ -207,6 +262,22 @@
         "staffing",
         "photos",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-dunn-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -227,9 +298,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

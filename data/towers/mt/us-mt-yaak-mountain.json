@@ -14,6 +14,9 @@
   },
   "elevation_m": 1511.5,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
   "design": "R-6 flat cab on 41-foot treated timber tower",
   "height_m": 12.5,
   "status": "standing",
@@ -160,6 +163,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Yaak Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/yaakmtn.html",
       "kind": "site"
@@ -202,9 +210,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:yaak-mountain-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:mt:yaak-mtn:48.5603:-115.9215",
       "fields": [
+        "material",
         "design",
         "height_m",
         "events",
@@ -240,5 +257,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-nj-mckeetown",
   "name": "McKeetown Fire Tower",
+  "summary": "Built by Atlantic City in 1917 near McKee City and reported as South Jersey's first permanent fire lookout; the register says it reached 100 feet after a 1946 addition.",
   "other_names": [],
   "country": "US",
   "region": "NJ",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 22.9,
   "kind": "tower",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "Aermotor tower with a 7x7-foot metal cab, raised to 100 feet by a 20-foot addition in 1946 (per NHLR)",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -43,10 +47,57 @@
   "rental": null,
   "events": [
     {
+      "year": 1916,
+      "event": "other",
+      "note": "State Fire Warden selected a site on the Mays Landing road near McKee City; the city was to pay for the tower",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/mckeetown.html"
+    },
+    {
+      "year": 1917,
+      "event": "built",
+      "note": "Atlantic City watch tower near its watershed; 1917 newspapers give 60 to 65 feet; the register calls it wooden and iron-braced, built by the coast resort water department",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/mckeetown-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nj/mckeetown-fire-tower/",
+        "https://easternuslookouts.weebly.com/mckeetown.html"
+      ]
+    },
+    {
+      "year": 1917,
+      "event": "staffed_first",
+      "note": "State report calls it the first permanent Forest Fire Lookout in South Jersey",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/mckeetown.html"
+    },
+    {
+      "year": 1918,
+      "event": "staffed",
+      "note": "Manned throughout the 1917-18 season, per a later state annual report",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/mckeetown.html"
+    },
+    {
+      "year": 1924,
+      "event": "rebuilt",
+      "note": "Register says the state built an 80-foot Aermotor tower; no second source found",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/mckeetown-fire-tower/"
+    },
+    {
+      "year": 1946,
+      "event": "modified",
+      "note": "A 20-foot addition raised the tower to 100 feet, per the register",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/mckeetown-fire-tower/"
+    },
+    {
       "year": 1997,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 15, 1997",
-      "from": "nhlr"
+      "note": "Registered December 15, 1997",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/mckeetown-fire-tower/"
     }
   ],
   "photos": [
@@ -104,6 +155,7 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
         "status",
         "registers",
         "agency",
@@ -116,7 +168,6 @@
       "source": "nj_forest_fire_towers",
       "key": "nj_forest_fire_towers:nj:mckeetown-station",
       "fields": [
-        "kind",
         "height_m",
         "ownership",
         "photos",
@@ -136,12 +187,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nj-mckeetown",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

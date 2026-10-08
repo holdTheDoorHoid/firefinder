@@ -1,6 +1,7 @@
 {
   "id": "us-id-stein-mountain",
   "name": "Stein Mountain Lookout",
+  "summary": "Lemhi County R-6 cab built in 1958 to replace a 1917 log cabin; the register lists it, and sources report summer staffing.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,6 +14,9 @@
   },
   "elevation_m": 2607.6,
   "kind": "two_story",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "R-6",
   "height_m": 3.0,
   "status": "standing",
@@ -29,7 +33,7 @@
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "Summer-staffed lookout on Salmon-Challis National Forest. Sources do not say whether visitors may enter the cab."
   },
   "staffing": {
     "status": "staffed",
@@ -38,21 +42,57 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Idaho Fire Lookouts tags it Drive-Up. The Forest Service describes a 2.6-mile Stein Mountain trail from Trail #6134 to the lookout. The sources describe the approach differently."
   },
   "rental": null,
   "events": [
     {
+      "year": 1917,
+      "event": "built",
+      "note": "Log cabin lookout on the site, per the register and firelookout.com.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/stein-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/stein-mountain-lookout/",
+        "https://www.firelookout.com/id/steinmtn.html"
+      ]
+    },
+    {
+      "year": 1930,
+      "event": "replaced",
+      "note": "L-4 cab on a log crib replaced the cabin, per firelookout.com and Idaho Fire Lookouts. The sources give only the decade (1930s), so 1930 marks its start.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/steinmtn.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/steinmtn.html",
+        "https://www.idahofirelookouts.com/southern-idaho/stein-mountain-lookout/"
+      ]
+    },
+    {
       "year": 1958,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Current R-6 cab and carport. The register says it replaced the 1917 cabin and does not mention the 1930s cab.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/stein-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/stein-mountain-lookout/",
+        "https://www.firelookout.com/id/steinmtn.html",
+        "https://www.idahofirelookouts.com/southern-idaho/stein-mountain-lookout/"
+      ]
+    },
+    {
+      "year": 2001,
+      "event": "staffed",
+      "note": "Mr. and Mrs. Gene Mullikin listed as known staff for 2001-2002.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/southern-idaho/stein-mountain-lookout/"
     },
     {
       "year": 2011,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 25, 2011",
-      "from": "nhlr"
+      "note": "Registered September 25, 2011 (US 932, ID 91).",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/stein-mountain-lookout/"
     }
   ],
   "photos": [
@@ -172,6 +212,16 @@
       "kind": "register"
     },
     {
+      "label": "Stein Mountain Trail (Salmon-Challis National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r04/salmon-challis/recreation/trails/stein-mountain-trail",
+      "kind": "reference"
+    },
+    {
+      "label": "Rentals (National Historic Lookout Register)",
+      "url": "http://nhlr.org/rentals/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -218,6 +268,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:stein-mtn:45.4591:-113.8806",
       "fields": [
+        "material",
         "design",
         "height_m",
         "photos",
@@ -231,6 +282,21 @@
         "staffing",
         "photos",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-stein-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -251,9 +317,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

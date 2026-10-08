@@ -1,6 +1,7 @@
 {
   "id": "us-id-sedgewick-peak",
   "name": "Sedgewick Peak Lookout",
+  "summary": "A two-story concrete base with a frame cab, built for the Idaho Department of Lands in 1973-77 in Bannock County; now houses radio equipment.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2795.0,
   "kind": "two_story",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "Concrete base with a frame cab; two stories per Idaho Fire Lookouts and Forest Lookouts - Idaho (firelookout.com gives no story count)",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -37,22 +41,48 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Idaho Fire Lookouts lists it as a drive-up radio tower"
   },
   "rental": null,
   "events": [
     {
       "year": 1973,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Construction began in 1973 per firelookout.com and Idaho Fire Lookouts; the register gives 1973-77",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sedgewick-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/sedgewick-peak-lookout/",
+        "https://www.firelookout.com/id/sedgewick.html",
+        "https://www.idahofirelookouts.com/southern-idaho/sedgewick-peak-lookout/"
+      ]
+    },
+    {
+      "year": 1977,
+      "event": "other",
+      "note": "Construction completed; Idaho Fire Lookouts gives 1977 as the build year",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/sedgewick.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/sedgewick.html",
+        "https://www.idahofirelookouts.com/southern-idaho/sedgewick-peak-lookout/",
+        "https://idaholookouts.weebly.com/sedgewick-peak.html"
+      ]
+    },
+    {
+      "year": 1981,
+      "event": "other",
+      "note": "Idaho Fire Lookouts timeline reads 'Emergency Status'; no explanation given",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/southern-idaho/sedgewick-peak-lookout/"
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 27, 2020",
-      "from": "nhlr"
+      "note": "Registered September 27, 2020; nominated by Brad Eells",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sedgewick-peak-lookout/"
     }
   ],
   "photos": [
@@ -112,6 +142,11 @@
       "kind": "register"
     },
     {
+      "label": "Sedgewick Peak (Forest Lookouts - Idaho)",
+      "url": "https://idaholookouts.weebly.com/sedgewick-peak.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -168,12 +203,31 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-sedgewick-peak",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

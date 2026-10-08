@@ -1,6 +1,7 @@
 {
   "id": "us-id-bear-valley",
   "name": "Bear Valley Lookout",
+  "summary": "A 1936 46 ft steel tower with a 7x7 ft metal cab, inside the River of No Return Wilderness; sources disagree on tower size and when use ended, and current access is not established.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2527.1,
   "kind": "tower",
-  "design": null,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "7x7 ft metal cab on a 46 ft steel tower (Aermotor MC-40 per Forest Lookouts); a 1959 Coast and Geodetic Survey description gives about 70 ft (disputed)",
   "height_m": 14.0,
   "status": "standing",
   "status_note": null,
@@ -25,19 +29,19 @@
       "url": "http://nhlr.org/lookouts/us/id/bear-valley-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Boise National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "NHLR says it is maintained for emergency use. Idaho Fire Lookouts labels it 'Drive-Up Emergency Use' while NHLR places it in the wilderness; no source says it is open to visitors or for rent."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "undated"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
@@ -45,14 +49,47 @@
     {
       "year": 1936,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "46 ft steel tower (Aermotor MC-40 per Forest Lookouts) with a 7x7 ft metal cab erected",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/bear-valley-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/bear-valley-lookout/",
+        "https://www.firelookout.com/id/bearvalley.html",
+        "https://www.idahofirelookouts.com/west-central/bear-valley-lookout/",
+        "https://idaholookouts.weebly.com/bear-valley-mountain.html"
+      ]
+    },
+    {
+      "year": 1959,
+      "event": "other",
+      "note": "Coast and Geodetic Survey station description gives the tower as about 70 ft with an 8 ft square, 10 ft high cabin; conflicts with 46 ft",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/bear-valley-mountain.html"
+    },
+    {
+      "year": 1974,
+      "event": "staffed_first",
+      "note": "Earliest year on the Idaho Fire Lookouts known-staff list: relief lookout Linda Bellmer Bass",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/bear-valley-lookout/"
+    },
+    {
+      "year": 1982,
+      "event": "staffed_last",
+      "note": "Last year on the Idaho Fire Lookouts known-staff list (1974-1982). firelookout.com says the tower has not been used since the 1970s",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/bear-valley-lookout/",
+      "source_urls": [
+        "https://www.idahofirelookouts.com/west-central/bear-valley-lookout/",
+        "https://www.firelookout.com/id/bearvalley.html"
+      ]
     },
     {
       "year": 2011,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 25, 2011",
-      "from": "nhlr"
+      "note": "Registered September 25, 2011 as NHLR US 929 (ID 89), nominated by Luke Channer",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/bear-valley-lookout/"
     }
   ],
   "photos": [
@@ -148,6 +185,11 @@
       "kind": "register"
     },
     {
+      "label": "Bear Valley Mountain (Forest Lookouts)",
+      "url": "https://idaholookouts.weebly.com/bear-valley-mountain.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -172,6 +214,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -206,12 +249,35 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-bear-valley",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

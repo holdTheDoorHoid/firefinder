@@ -1,6 +1,7 @@
 {
   "id": "us-or-green-mountain-2",
   "name": "Green Mountain Lookout",
+  "summary": "BLM lookout in Lake County: first built 1963, replaced under a 2010 federal recovery contract by a 50-foot block tower completed in January 2011; staffed in summers.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 1581.3,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "material": "masonry",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "unique BLM design: a 50-foot block tower with an enclosed observation cab; replaced a 1963 tower with a 10-foot concrete base and wooden live-in cab",
+  "height_m": 15.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,8 +32,8 @@
   "agency": "Bureau of Land Management",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "active staffed BLM lookout on public land; in a May 2022 visit the primitive campground at its base was locked behind a gate and closed for the season"
   },
   "staffing": {
     "status": "staffed",
@@ -38,21 +42,66 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "campground at the base is a few hundred feet from the lookout; the road is rough but should be passable to most vehicles with caution (Roaming Civic, May 2022)"
   },
   "rental": null,
   "events": [
     {
+      "year": 1963,
+      "event": "built",
+      "note": "original BLM lookout: two-story house, 15 1/2 feet square, concrete block lower story and frame upper story; BLM bids called October 1963; Klamath Falls contractor; a 1964 newspaper says it was built the summer before, which does not fit the October bid date",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/green-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/green-mountain-lookout/",
+        "https://oregonlookouts.weebly.com/green-mountain2.html",
+        "https://www.firelookout.com/or/greenmtnor.html",
+        "https://theroamingcivic.com/2022/05/14/green-mountain-lookout/"
+      ]
+    },
+    {
+      "year": 1963,
+      "event": "staffed_first",
+      "note": "a temporary lookout with Mrs. Hazel Ward as lookout was in place before the new building",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/green-mountain2.html"
+    },
+    {
+      "year": 2006,
+      "event": "staffed",
+      "note": "Bill Friday was the primary lookout until an injury at the end of August; Wendy Parker held the post for the rest of the season",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/green-mountain2.html"
+    },
+    {
+      "year": 2010,
+      "event": "replaced",
+      "note": "February 18, 2010 federal solicitation (ARRA-funded) to demolish the existing tower and outhouse and build a new road, residence and tower; firelookout.com and Roaming Civic date the new tower to 2010",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/green-mountain2.html",
+      "source_urls": [
+        "https://oregonlookouts.weebly.com/green-mountain2.html",
+        "https://www.firelookout.com/or/greenmtnor.html",
+        "https://theroamingcivic.com/2022/05/14/green-mountain-lookout/"
+      ]
+    },
+    {
       "year": 2011,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "new 50-foot enclosed cinder block tower and observation cab; NHLR gives 2011 as the construction year; the Oregon Lookouts history page says completed January 2011",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/green-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/green-mountain-lookout/",
+        "https://oregonlookouts.weebly.com/green-mountain2.html"
+      ]
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 23, 2022",
-      "from": "nhlr"
+      "note": "National Historic Lookout Register registration date June 23, 2022",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/green-mountain-lookout/"
     }
   ],
   "photos": [
@@ -124,6 +173,11 @@
       "kind": "register"
     },
     {
+      "label": "Green Mountain Lookout (The Roaming Civic)",
+      "url": "https://theroamingcivic.com/2022/05/14/green-mountain-lookout/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -153,6 +207,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -186,6 +241,22 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-green-mountain-2",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -205,9 +276,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

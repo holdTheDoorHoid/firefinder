@@ -1,6 +1,7 @@
 {
   "id": "us-az-webb-peak",
   "name": "Webb Peak Lookout",
+  "summary": "A 1933 Aermotor fire tower in the Pinaleno Mountains, inactive since the 2017 Frye Fire; sources disagree on whether the tower survived.",
   "other_names": [],
   "country": "US",
   "region": "AZ",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 3043.1,
   "kind": "tower",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "46-foot Aermotor tower with a 7x7-foot metal cab (register: MC-40; hiking club: CL 100-106)",
   "height_m": 13.7,
   "status": "standing",
   "status_note": null,
@@ -38,27 +42,58 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2020"
   },
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Trail head sign at Columbine Campground; the trail is hard to follow in places because of fallen timber and erosion"
   },
   "rental": null,
   "events": [
     {
       "year": 1933,
       "event": "built",
-      "note": null,
-      "from": "wikidata"
+      "note": "Register gives 1933; NRHP record lists the CCC as architect",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/webb-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/webb-peak-lookout/",
+        "https://www.gvrhc.org/Library/WebbPeakFireLookout.pdf",
+        "https://npgallery.nps.gov/AssetDetail/NRIS/87002464"
+      ]
+    },
+    {
+      "year": 1988,
+      "event": "nrhp_listed",
+      "note": "Listed January 28, 1988 (NPGallery date published); also described on the Weebly site",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002464",
+      "source_urls": [
+        "https://npgallery.nps.gov/AssetDetail/NRIS/87002464",
+        "https://westlookouts.weebly.com/webb-peak.html"
+      ]
     },
     {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 31, 2003",
-      "from": "nhlr"
+      "note": "Registered January 31, 2003; nominated by Dave Lorenz",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/webb-peak-lookout/"
+    },
+    {
+      "year": 2017,
+      "event": "fire",
+      "note": "Frye Fire, begun by lightning on June 7, 2017; support structures destroyed. Sources disagree on whether the tower was destroyed.",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Frye_Fire",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Frye_Fire",
+        "https://www.gvrhc.org/Library/WebbPeakFireLookout.pdf",
+        "https://westlookouts.weebly.com/webb-peak.html",
+        "http://nhlr.org/lookouts/us/az/webb-peak-lookout/"
+      ]
     }
   ],
   "photos": [
@@ -92,6 +127,26 @@
       "label": "NHLR register entry US 451 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/az/webb-peak-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Webb Peak Fire Lookout (PDF) (GVRHC (gvrhc.org))",
+      "url": "https://www.gvrhc.org/Library/WebbPeakFireLookout.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Webb Peak Lookout Tower, NRIS 87002464 (National Register Information System, National Park Service (NPGallery))",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002464",
+      "kind": "reference"
+    },
+    {
+      "label": "Webb Peak (FOREST LOOKOUTS (westlookouts.weebly.com))",
+      "url": "https://westlookouts.weebly.com/webb-peak.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Frye Fire (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Frye_Fire",
+      "kind": "reference"
     },
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
@@ -152,12 +207,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-webb-peak",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

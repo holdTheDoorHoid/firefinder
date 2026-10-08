@@ -1,6 +1,7 @@
 {
   "id": "us-sd-rankin-ridge",
   "name": "Rankin Ridge Lookout",
+  "summary": "Wind Cave National Park's 1956 steel lookout on Rankin Ridge: a 1952 crow's-nest stopgap, regular fire use until 1998, still standing but closed to climbing.",
   "other_names": [],
   "country": "US",
   "region": "SD",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 1528.0,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "material": "steel",
+  "material_from": "firelookout_com",
+  "roles": [],
+  "design": "International Derrick CL100 steel tower with 14x14 live-in cab and catwalk",
+  "height_m": 16.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,31 +32,76 @@
   "agency": "National Park Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Climbing the tower is not permitted. The trail to the high point is open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "One-mile (1.6 km) trail through ponderosa pine to the high point, with parking at the trailhead. No pets. Climbing the historic tower is not permitted."
   },
   "rental": null,
   "events": [
     {
+      "year": 1939,
+      "event": "other",
+      "note": "Planning for a lookout on the ridge began, but Emergency Conservation Work and CCC activity and then World War II stopped it.",
+      "from": "research",
+      "source_url": "https://npshistory.com/publications/wica/rankin-ridge-lookout-tower.pdf"
+    },
+    {
+      "year": 1952,
+      "event": "relocated",
+      "note": "A 40-foot cedar pole crow's nest from Elk Mountain was moved to Rankin Ridge in July as a temporary lookout.",
+      "from": "research",
+      "source_url": "https://npshistory.com/publications/wica/rankin-ridge-lookout-tower.pdf",
+      "source_urls": [
+        "https://npshistory.com/publications/wica/rankin-ridge-lookout-tower.pdf",
+        "https://westlookouts.weebly.com/rankin-ridge.html"
+      ]
+    },
+    {
+      "year": 1954,
+      "event": "fire",
+      "note": "A newspaper reported a lightning fire near Pringle spotted by the ridge lookout; three surveyors controlled it.",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/rankin-ridge.html"
+    },
+    {
       "year": 1956,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Permanent steel tower and cab erected by park staff, finished around September 1 at a total cost of $14,880.89.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sd/rankin-ridge-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/sd/rankin-ridge-lookout/",
+        "https://npshistory.com/publications/wica/rankin-ridge-lookout-tower.pdf"
+      ]
+    },
+    {
+      "year": 1998,
+      "event": "closed",
+      "note": "Public access to the catwalk and the inside of the tower became limited.",
+      "from": "research",
+      "source_url": "https://npshistory.com/publications/wica/rankin-ridge-lookout-tower.pdf"
+    },
+    {
+      "year": 1998,
+      "event": "staffed_last",
+      "note": "Regular use during fire seasons ended.",
+      "from": "research",
+      "source_url": "https://npshistory.com/publications/wica/rankin-ridge-lookout-tower.pdf"
     },
     {
       "year": 2014,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 3, 2014",
-      "from": "nhlr"
+      "note": "Registered September 3, 2014 on the National Historic Lookout Register as US 1040.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sd/rankin-ridge-lookout/"
     }
   ],
   "photos": [
@@ -124,6 +173,16 @@
       "kind": "register"
     },
     {
+      "label": "Rankin Ridge Lookout Tower, Wind Cave National Park: Assessment of Qualification for Listing on the National Register of Historic Places (National Park Service (npshistory.com))",
+      "url": "https://npshistory.com/publications/wica/rankin-ridge-lookout-tower.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Rankin Ridge Nature Trail (U.S. National Park Service)",
+      "url": "https://www.nps.gov/places/rankin-ridge-nature-trail.htm",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA South Dakota lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/sd/",
       "kind": "association"
@@ -175,6 +234,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:sd:rankin-ridge:43.6256:-103.4823",
       "fields": [
+        "material",
         "photos",
         "links"
       ]
@@ -186,12 +246,34 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-sd-rankin-ridge",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

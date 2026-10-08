@@ -1,7 +1,10 @@
 {
   "id": "us-or-red-mountain",
-  "name": "Red Mountain Lookout",
-  "other_names": [],
+  "name": "Red Mountain Lookout (now at Tiller Ranger)",
+  "other_names": [
+    "Red Mountain Lookout",
+    "Tiller Ranger Station"
+  ],
   "country": "US",
   "region": "OR",
   "county": "Douglas",
@@ -12,7 +15,10 @@
     "from": "nhlr"
   },
   "elevation_m": 1462.1,
-  "kind": "tower",
+  "kind": "ground",
+  "material": null,
+  "material_from": null,
+  "roles": [],
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -53,6 +59,14 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: August 16, 2011",
       "from": "nhlr"
+    },
+    {
+      "year": null,
+      "event": "relocated",
+      "note": "Moved from Red Mountain to Tiller Ranger.",
+      "from": "ffla",
+      "moved_from": "Red Mountain",
+      "moved_to": "Tiller Ranger"
     }
   ],
   "photos": [
@@ -107,9 +121,20 @@
   ],
   "links": [
     {
+      "label": "Original site: Red Mountain Lookout Site",
+      "url": "../us-or-red-mountain-2/",
+      "kind": "relocated_from",
+      "id": "us-or-red-mountain-2"
+    },
+    {
       "label": "NHLR register entry US 911 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/or/red-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "FFLA Oregon lookout list (firelookout.org)",
+      "url": "https://firelookout.org/lookouts/us/or/",
+      "kind": "association"
     },
     {
       "label": "Wikidata item Q86928689",
@@ -122,11 +147,9 @@
       "source": "nhlr",
       "key": "nhlr:US 911",
       "fields": [
-        "name",
         "location",
         "county",
         "elevation_m",
-        "status",
         "registers",
         "agency",
         "ownership",
@@ -136,10 +159,21 @@
       ]
     },
     {
+      "source": "ffla",
+      "key": "ffla:or:tiller-ranger-station-relocated-red-mountain:42.9261:-122.9495",
+      "fields": [
+        "name",
+        "kind",
+        "status",
+        "registers",
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q86928689",
       "fields": [
-        "kind",
         "photos",
         "links"
       ]
@@ -150,5 +184,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

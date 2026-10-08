@@ -1,6 +1,7 @@
 {
   "id": "us-tn-pinnacle",
   "name": "Pinnacle Fire Tower",
+  "summary": "Cherokee National Forest tower atop Buffalo Mountain near Unicoi, Tennessee: 1930 per the register, cab replaced by a covered platform in 2011, open to hikers year-round.",
   "other_names": [
     "Pinnacle Mountain",
     "PINNACLE MOUNTAIN (Buffalo Mountain)"
@@ -16,7 +17,10 @@
   },
   "elevation_m": 1051.0,
   "kind": "tower",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "14x14 live-in wooden cab on a 40-ft steel tower with catwalk; cab replaced by a covered platform in 2011",
   "height_m": 12.2,
   "status": "standing",
   "status_note": null,
@@ -34,34 +38,76 @@
       "url": null
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Cherokee National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The trail and the observation platform are open to visitors. The Forest Service lists the lookout as open year-round."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": true,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Hike or bike trail from the trailhead at Interstate 26 Exit 32 to the tower. No fees or permits. Horse and motorbike riding not allowed. The forest road FSR 188 is high-clearance, closed mid-January to mid-March, and ends at a gate about half a mile below the tower."
   },
   "rental": null,
   "events": [
     {
       "year": 1930,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register gives 1930 as the build year. The trail wiki says the Civil Conservation Corps built it but gives no date.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/pinnacle-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/tn/pinnacle-fire-tower/",
+        "http://tehcc.org/wiki/Pinnacle_Mountain_Fire_Tower"
+      ]
+    },
+    {
+      "year": 1989,
+      "event": "staffed_last",
+      "note": "Wiki says in service until 1989. Register says last staffed in the 1980s.",
+      "from": "research",
+      "source_url": "http://tehcc.org/wiki/Pinnacle_Mountain_Fire_Tower",
+      "source_urls": [
+        "http://tehcc.org/wiki/Pinnacle_Mountain_Fire_Tower",
+        "http://nhlr.org/lookouts/us/tn/pinnacle-fire-tower/"
+      ]
     },
     {
       "year": 2005,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 10, 2005",
-      "from": "nhlr"
+      "note": "Registered May 10, 2005 on the National Historic Lookout Register as US 637, nominated by Nathan Coggins.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/pinnacle-fire-tower/"
+    },
+    {
+      "year": 2008,
+      "event": "other",
+      "note": "Register visit report: needs paint, first flight of stairs taken down, roof with at least one big hole, most glass out, steel in good shape, gate open.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/pinnacle-fire-tower/"
+    },
+    {
+      "year": 2010,
+      "event": "other",
+      "note": "Trail built by a contractor; the wiki says the 40-foot observation platform was restored as a joint partnership for $100,000.",
+      "from": "research",
+      "source_url": "http://tehcc.org/wiki/Pinnacle_Mountain_Fire_Tower"
+    },
+    {
+      "year": 2011,
+      "event": "restored",
+      "note": "Forest Service says the wood and metal structure was adapted to an all-metal covered viewing platform the same size as the old cab and catwalk. Register credits the Friends of Pinnacle Tower with the restoration, aided by an FFLA grant.",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r08/cherokee/recreation/pinnacle-tower-hike",
+      "source_urls": [
+        "https://www.fs.usda.gov/r08/cherokee/recreation/pinnacle-tower-hike",
+        "http://nhlr.org/lookouts/us/tn/pinnacle-fire-tower/"
+      ]
     }
   ],
   "photos": [
@@ -83,6 +129,16 @@
       "label": "NHLR register entry US 637 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/tn/pinnacle-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Pinnacle Tower Hike (Cherokee National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r08/cherokee/recreation/pinnacle-tower-hike",
+      "kind": "reference"
+    },
+    {
+      "label": "Pinnacle Mountain Lookout (Cherokee National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r08/cherokee/recreation/pinnacle-mountain-lookout",
+      "kind": "reference"
     },
     {
       "label": "View photos and additional info about this restored tower",
@@ -114,6 +170,7 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
         "status",
         "registers",
         "agency",
@@ -127,7 +184,6 @@
       "source": "tnlandforms",
       "key": "tnlandforms:tn:uct001",
       "fields": [
-        "kind",
         "registers",
         "links"
       ]
@@ -146,12 +202,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tn-pinnacle",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

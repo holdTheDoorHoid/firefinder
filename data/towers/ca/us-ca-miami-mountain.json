@@ -1,6 +1,7 @@
 {
   "id": "us-ca-miami-mountain",
   "name": "Miami Mountain Lookout",
+  "summary": "A 1934 Civilian Conservation Corps lookout on a 20-foot steel tower in the Sierra National Forest, staffed by volunteers since paid staffing ended in 1995.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 1306.1,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "14 x 14 ft C-3 cab with catwalk on a 20 ft H-braced steel tower",
+  "height_m": 6.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Active volunteer lookout on Forest Service land. Do not park by the locked gate on the access road; the approach on foot is about two and a half miles. Neither source says whether the cab is open to visitors."
   },
   "staffing": {
     "status": "volunteer",
@@ -37,22 +41,60 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "About two and a half miles of hiking to the tower from the access road off California Highway 49. Do not park by the locked gate."
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the CCC; both sources give 1934",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/miami-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/miami-mountain-lookout/",
+        "https://www.fire-lookouts.org/cali/miami_mtn/index.htm"
+      ]
+    },
+    {
+      "year": 1995,
+      "event": "other",
+      "note": "Paid staffing discontinued because of budget cutbacks; volunteers have staffed the tower since",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/miami_mtn/index.htm"
     },
     {
       "year": 1999,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 21, 1999",
-      "from": "nhlr"
+      "note": "Registered April 21, 1999 as NHLR US 305",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/miami-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/miami-mountain-lookout/",
+        "https://www.fire-lookouts.org/cali/miami_mtn/index.htm"
+      ]
+    },
+    {
+      "year": 2006,
+      "event": "other",
+      "note": "Volunteer Joe Knowles Jr. died on the evening of October 26 while on duty at the tower",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/miami_mtn/index.htm"
+    },
+    {
+      "year": 2009,
+      "event": "other",
+      "note": "Tower dedicated by the Sierra National Forest in Knowles's memory",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/miami_mtn/index.htm"
+    },
+    {
+      "year": 2012,
+      "event": "modified",
+      "note": "Weather station installed during fiscal 2012; interior and exterior renovation reported in the 2011 and 2012 reports",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/miami_mtn/index.htm"
     }
   ],
   "photos": [
@@ -136,6 +178,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -170,12 +213,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-miami-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

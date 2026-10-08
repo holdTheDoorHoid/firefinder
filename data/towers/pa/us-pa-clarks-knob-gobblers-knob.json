@@ -1,6 +1,7 @@
 {
   "id": "us-pa-clarks-knob-gobblers-knob",
   "name": "Clarks Knob (Gobblers Knob) Fire Tower",
+  "summary": "A 1943 state steel fire tower moved from Pine Mountain was replaced by an AT&T tower in 1945, which the register lists as built 1945; a 2024 blog says it still stands in some form.",
   "other_names": [
     "Clarks Knob Tower Site"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 708.7,
   "kind": "tower",
-  "design": null,
+  "material": "steel",
+  "material_from": "fflos",
+  "roles": [],
+  "design": "Steel tower; top cab now holds AT&T communication equipment; old fire cab moved to a lower level",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -51,22 +55,57 @@
   "rental": null,
   "events": [
     {
+      "year": 1943,
+      "event": "built",
+      "note": "State steel fire tower built in 1943 and moved here from Pine Mountain. The move date is not given.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/clarks-knob-tower-site/"
+    },
+    {
       "year": 1945,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
     },
     {
+      "year": 1945,
+      "event": "removed",
+      "note": "The state fire tower was removed in 1945",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/clarks-knob-tower-site/"
+    },
+    {
+      "year": 1945,
+      "event": "replaced",
+      "note": "AT&T built a replacement tower on the same location for its communication equipment. The register lists 1945 as the build year.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/clarks-knob-gobblers-knob-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/clarks-knob-gobblers-knob-fire-tower/",
+        "http://firetower.org/lookouts/us/pa/clarks-knob-tower-site/",
+        "https://abandonedonline.net/ascending-to-pennsylvanias-clarks-knob-fire-tower/"
+      ]
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 16, 2008",
-      "from": "fflos"
+      "note": "Registered on the Former Fire Lookout Sites register, September 16, 2008",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/clarks-knob-tower-site/"
     },
     {
       "year": 2014,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 3, 2014",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, September 3, 2014",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/clarks-knob-gobblers-knob-fire-tower/"
+    },
+    {
+      "year": 2024,
+      "event": "other",
+      "note": "A 2024 blog post describes a visit and says the tower still exists in some form",
+      "from": "research",
+      "source_url": "https://abandonedonline.net/ascending-to-pennsylvanias-clarks-knob-fire-tower/"
     }
   ],
   "photos": [
@@ -112,6 +151,11 @@
       "kind": "register"
     },
     {
+      "label": "Ascending to Pennsylvania's Clarks Knob Fire Tower (Abandoned Explorations)",
+      "url": "https://abandonedonline.net/ascending-to-pennsylvanias-clarks-knob-fire-tower/",
+      "kind": "reference"
+    },
+    {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
       "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
       "kind": "site"
@@ -143,6 +187,8 @@
       "source": "fflos",
       "key": "fflos:US 244",
       "fields": [
+        "kind",
+        "material",
         "registers",
         "events",
         "links"
@@ -152,7 +198,6 @@
       "source": "pa_storymap",
       "key": "pa_storymap:clarks-knob:40.0502:-77.7474",
       "fields": [
-        "kind",
         "photos",
         "links"
       ]
@@ -162,6 +207,19 @@
       "key": "eastern_us_lookouts:pa:clarks-knob",
       "fields": [
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-clarks-knob-gobblers-knob",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -186,9 +244,15 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

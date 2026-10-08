@@ -1,6 +1,7 @@
 {
   "id": "us-pa-cole-hill",
   "name": "Cole Hill Lookout",
+  "summary": "Cole Hill: a 60-ft Aermotor from 1925, moved and raised to 80 ft in 1932 after a land dispute; privately owned, last reported standing in 2008.",
   "other_names": [],
   "country": "US",
   "region": "PA",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 580.9,
   "kind": "tower",
-  "design": "Aermotor",
+  "material": "steel",
+  "material_from": "fflos",
+  "roles": [],
+  "design": "Aermotor LS-40 with a 7x7 foot cab",
   "height_m": 24.4,
   "status": "standing",
   "status_note": null,
@@ -31,11 +35,11 @@
       "url": "http://firetower.org/lookouts/us/pa/cole-hill-tower-site/"
     }
   ],
-  "agency": "Private Owner",
+  "agency": "Private owner",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "The NHLR says the tower is administered by a private owner and its lower steps have been removed. No public visit information was found."
   },
   "staffing": {
     "status": "unknown",
@@ -49,22 +53,95 @@
   "rental": null,
   "events": [
     {
+      "year": 1924,
+      "event": "other",
+      "note": "Kane Republican report announced a steel lookout to be built on Cole Hill, with a watchman to be stationed there",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/cole-hill.html"
+    },
+    {
+      "year": 1925,
+      "event": "built",
+      "note": "Original 60-foot Aermotor tower built by the Pennsylvania Bureau of Forestry, about half a mile from the present site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/cole-hill-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/cole-hill-lookout/",
+        "http://firetower.org/lookouts/us/pa/cole-hill-tower-site/"
+      ]
+    },
+    {
+      "year": 1926,
+      "event": "staffed_first",
+      "note": "Tower watchman reporting fires in the dry season",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/cole-hill.html"
+    },
+    {
+      "year": 1928,
+      "event": "fire",
+      "note": "Nine fires reported burning at once; one of the most serious blazes was along the Allegheny River near Tidioute",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/cole-hill.html"
+    },
+    {
+      "year": 1928,
+      "event": "staffed",
+      "note": "E.L. (Ernest) Martin named as fire tower watchman; cabin fitted to house three men in dry weather",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/cole-hill.html"
+    },
+    {
+      "year": 1930,
+      "event": "other",
+      "note": "Roof painted gray with the number X2 in yellow to help airplanes passing over the hill",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/cole-hill.html"
+    },
+    {
       "year": 1932,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
     },
     {
+      "year": 1932,
+      "event": "relocated",
+      "note": "Moved to present location and raised to 80 feet after a dispute with the landowners of the original site; 20 feet taller than the old tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/cole-hill-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/cole-hill-lookout/",
+        "https://easternuslookouts.weebly.com/cole-hill.html"
+      ]
+    },
+    {
+      "year": 1941,
+      "event": "staffed",
+      "note": "E.L. Martin went on duty again in the 1941 season",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/cole-hill.html"
+    },
+    {
+      "year": 1949,
+      "event": "staffed",
+      "note": "Women had been stationed on the tower as watchers for seven years; L.L. Dey of Torpedo named watchman",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/cole-hill.html"
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 16, 2008",
-      "from": "fflos"
+      "note": "Registered on the Former Fire Lookout Sites Register",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/cole-hill-tower-site/"
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 17, 2009",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/cole-hill-lookout/"
     }
   ],
   "photos": [
@@ -177,6 +254,8 @@
       "source": "fflos",
       "key": "fflos:US 249",
       "fields": [
+        "kind",
+        "material",
         "registers",
         "events",
         "photos",
@@ -187,7 +266,6 @@
       "source": "pa_storymap",
       "key": "pa_storymap:cole-hill:41.7741:-79.4352",
       "fields": [
-        "kind",
         "design",
         "height_m",
         "photos",
@@ -200,6 +278,21 @@
       "fields": [
         "ownership",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-cole-hill",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -239,9 +332,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

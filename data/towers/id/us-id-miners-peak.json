@@ -1,6 +1,7 @@
 {
   "id": "us-id-miners-peak",
   "name": "Miners Peak Lookout",
+  "summary": "A 1948 L-4 cab moved from Teapot Dome; the two-story cab that stands today is dated 1983 or 1986, staffed in fire season, hike-in.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2379.0,
   "kind": "two_story",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "Two-story cab on the 1948 L-4 site. NHLR says wood frame; Firelookout.com says log hip-roofed; Idaho Fire Lookouts says R-4 log cab",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -37,22 +41,54 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Listed as hike-in on Idaho Fire Lookouts. No public climbing rule found in the sources."
   },
   "rental": null,
   "events": [
     {
+      "year": 1948,
+      "event": "relocated",
+      "note": "L-4 gable-roofed cab moved from Teapot Dome lookout to establish the Miners Peak site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/miners-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/miners-peak-lookout/",
+        "https://www.firelookout.com/id/minerspeak.html",
+        "https://www.idahofirelookouts.com/west-central/miners-peak/"
+      ]
+    },
+    {
+      "year": 1974,
+      "event": "replaced",
+      "note": "R-6 flat cab replaced the L-4 (Idaho Fire Lookouts only)",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/miners-peak/"
+    },
+    {
+      "year": 1983,
+      "event": "replaced",
+      "note": "Idaho Fire Lookouts dates the R-4 two-story log cab to 1983; NHLR and Firelookout.com give 1986",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/miners-peak/"
+    },
+    {
       "year": 1986,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Two-story cab built, per NHLR and Firelookout.com",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/miners-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/miners-peak-lookout/",
+        "https://www.firelookout.com/id/minerspeak.html"
+      ]
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 2, 2020",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, October 2, 2020",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/miners-peak-lookout/"
     }
   ],
   "photos": [
@@ -112,6 +148,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -145,12 +182,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-miners-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

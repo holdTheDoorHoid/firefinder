@@ -1,6 +1,7 @@
 {
   "id": "us-or-devils-peak",
   "name": "Devils Peak Lookout",
+  "summary": "Devils Peak's L-4 cab on a 10-ft timber tower is dated 1952 by the NHLR (1933 per firelookout.com); it is no longer staffed, open to the public, and its access trail is listed as closed.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 1509.7,
   "kind": "tower",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "L-4 cab with catwalk on a 10-ft treated timber tower (NHLR: 1952); firelookout.com describes an 8-ft wooden L-4 cab from 1933",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Mountaineers and firelookout.com (undated) say it is open for public use; overnight stays are first-come, first-served. The access trail is listed as temporarily closed on the Forest Service trail page (undated copy), and the Sept 16, 2026 fire closure boundary text does not name the trail. Current access is unverified."
   },
   "staffing": {
     "status": "unknown",
@@ -37,22 +41,53 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Cool Creek Trail No. 794 from Cool Creek Trailhead on Still Creek Road (FR 2612); about 8 miles round trip with 3,200 ft of gain. Trail page (undated copy): temporarily closed to public access for landslide and December storm damage."
   },
   "rental": null,
   "events": [
     {
+      "year": 1924,
+      "event": "built",
+      "note": "12x12 ft log cabin with cupola, the first structure at the site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/devils-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/devils-peak-lookout/",
+        "https://www.firelookout.com/or/devilspeak.html"
+      ]
+    },
+    {
+      "year": 1933,
+      "event": "replaced",
+      "note": "L-4 ground cab replaced the cupola cabin (NHLR); firelookout.com says the present 8-ft wooden L-4 cab was installed in 1933",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/devils-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/devils-peak-lookout/",
+        "https://www.firelookout.com/or/devilspeak.html"
+      ]
+    },
+    {
       "year": 1952,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR says the current L-4 cab with catwalk on a 10-ft treated timber tower was constructed in 1952. Firelookout.com calls the 1933 cab the present one.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/devils-peak-lookout/"
     },
     {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 13, 2003",
-      "from": "nhlr"
+      "note": "Registered with the National Historic Lookout Register on August 13, 2003",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/devils-peak-lookout/"
+    },
+    {
+      "year": 2014,
+      "event": "other",
+      "note": "NHLR visit report (Aug 18, 2014): needs paint; some lower exterior boards need replacing; catwalk railing a bit loose; not staffed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/devils-peak-lookout/"
     }
   ],
   "photos": [
@@ -124,6 +159,21 @@
       "kind": "register"
     },
     {
+      "label": "Devil's Peak Lookout (The Mountaineers)",
+      "url": "https://www.mountaineers.org/activities/routes-places/devils-peak-lookout",
+      "kind": "reference"
+    },
+    {
+      "label": "Cool Creek Trail 794 (U.S. Forest Service, Mt. Hood National Forest)",
+      "url": "https://www.fs.usda.gov/r06/mthood/recreation/trails/cool-creek-trail-794",
+      "kind": "reference"
+    },
+    {
+      "label": "Clackamas River RD Fires (U.S. Forest Service, Mt. Hood National Forest)",
+      "url": "https://www.fs.usda.gov/r06/mthood/alerts/clackamas-river-rd-fires",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -148,6 +198,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -181,6 +232,21 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-devils-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -200,9 +266,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }
