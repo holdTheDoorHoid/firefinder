@@ -205,7 +205,7 @@ LOOKOUTS: list[dict] = [
     dict(slug="berry-hill", name="Berry Hill Tower", tower="us-ny-berry-hill", pos="nhlr:US 54",
          find=["Berry", "Berry Hill"],
          events=[
-             E(1934, "other", "CCC crews began building the 60-foot International Derrick tower in 1934; the observer's cabin, road and phone line followed that year.", "n202507"),
+             E(1934, "built", "CCC crews began building the 60-foot International Derrick tower; the observer's cabin, road and phone line followed that year.", "n202507"),
              E(2020, "closed", "The Berry Hill tower was closed to the public from Oct 19, 2020 while restoration work began on site.", "n202010", "n202011", "n202012"),
              E(2021, "restored", "Antennas were taken off the tower and it was restored for reopening under a DEC-funded project (mostly done by 2 July); graffiti in the cab was cleaned up by September.", "n202107", "n202010", "n202109"),
              E(2026, "restored", "FFLA volunteers stained the observer's cabin in two work days using NYSDEC-supplied stain (reported June 2026).", "n202606"),
@@ -261,8 +261,7 @@ LOOKOUTS: list[dict] = [
     dict(slug="cornell-hill-at-wilton-camp-saratoga", name="Cornell Hill Fire Tower", tower="us-ny-cornell-hill-at-wilton-camp-saratoga", pos="nhlr:US 734",
          find=["Cornell", "Cornell Hill"],
          events=[
-             E(1923, "built", "The Saratoga County tower was completed in the fall of 1923 and first staffed in 1924 (Jan. 2024 issue lists 1924 as its erection year).", "n202410", "n202401"),
-             E(1923, "other", "Saratoga County approved $1,000 in 1923 to erect Cornell Hill tower, observer's cabin and phone line; completed late 1923, first in service 1924.", "n202301"),
+             E(1923, "built", "Saratoga County approved $1,000 for the tower, observer's cabin and phone line; the tower was finished late in the year and first staffed in 1924 (one issue gives 1924 as its erection year).", "n202301", "n202410", "n202401"),
              E(2008, "relocated", "The tower was taken down in summer and moved to Camp Saratoga in Wilton, where it was restored under Larry Gordon.", "n202301", "n202410"),
          ]),
     dict(slug="crane-mountain", name="Crane Mountain", tower="us-ny-crane-mountain", pos="ffla:ny:crane-mountain:43.5449:-73.9624",
@@ -565,7 +564,7 @@ LOOKOUTS: list[dict] = [
     dict(slug="roosa-gap", name="Roosa Gap Firetower", tower="us-ny-roosa-gap", pos="ffla:ny:roosa-gap:41.6176:-74.4267",
          find=["Roosa Gap"],
          events=[
-             E(1948, "other", "The 35-foot Aermotor tower and an observer's cabin were erected on private land; the tower began operating in 1948.", "n202604"),
+             E(1948, "built", "The 35-foot Aermotor tower and an observer's cabin were erected on private land; the tower began operating that year.", "n202604"),
          ]),
     dict(slug="salamanca", name="Salamanca", tower="us-ny-salamanca", pos="ffla:ny:salamanca:42.1996:-78.7127",
          find=["Salamanca"],
