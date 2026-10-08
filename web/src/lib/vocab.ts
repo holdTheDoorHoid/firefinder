@@ -23,16 +23,51 @@ export const STATUS: Record<string, Wording> = {
   unknown: { label: 'Status unknown', meaning: 'We do not know yet whether it still stands.' },
 };
 
+/**
+ * Kinds of structure. Labels match data/structure_kinds.json (the "Structure types" guide's
+ * own file, with a paragraph per kind); test/vocab-and-search checks they agree.
+ */
 export const KIND: Record<string, Wording> = {
   tower: { label: 'Cab on a tower', meaning: 'A lookout cab (or platform) raised on a tower.' },
   enclosed_tower: { label: 'Enclosed tower', meaning: 'A tower enclosed from the ground up.' },
-  platform: { label: 'Open platform tower', meaning: 'An open tower with a platform and no cab.' },
+  platform: { label: 'Open platform tower', meaning: 'An open tower or raised platform with no cab, including crow\'s nests.' },
   ground: { label: 'Ground-level cab', meaning: 'A lookout cab or house built at ground level.' },
   two_story: { label: 'Two-story building', meaning: 'A two-story lookout building.' },
   three_story: { label: 'Three-story building', meaning: 'A three-story lookout building.' },
-  tree: { label: 'Tree platform', meaning: 'A platform in a tree.' },
-  camp: { label: 'Camp', meaning: 'A camp or tent site.' },
+  rooftop: { label: 'Cab on a rooftop', meaning: 'A lookout cab on the roof of another building, such as a ranger station or hotel.' },
+  mobile: { label: 'Trailer or portable cab', meaning: 'A trailer, converted bus or portable cab used as a lookout.' },
   unknown: { label: 'Type unknown', meaning: 'We do not know what kind of structure it was.' },
+  camp: { label: 'Summit camp', meaning: 'No structure: the observer watched from a summit and lived in a tent.' },
+  tree: { label: 'Lookout tree', meaning: 'No structure: a tall tree with a ladder and a platform near the top.' },
+  point: { label: 'Bare lookout point', meaning: 'No structure: a summit with only a firefinder or map board to take bearings.' },
+};
+
+/** Sites where nothing was built to stand in. The map leaves them off until switched on. */
+export const NO_STRUCTURE_KINDS: readonly string[] = ['camp', 'tree', 'point'];
+export const NO_STRUCTURE_LABEL = 'Sites with no structure';
+export const NO_STRUCTURE_MEANING = 'Summit camps, lookout trees and bare lookout points: places a lookout kept watch without a tower or building.';
+
+export function isNoStructure(kind: string): boolean {
+  return NO_STRUCTURE_KINDS.includes(kind);
+}
+
+/** What the main structure is built of (the tower for a tower, the walls for a building). */
+export const MATERIAL: Record<string, Wording> = {
+  steel: { label: 'Steel', meaning: 'A steel or iron frame, usually galvanized.' },
+  wood: { label: 'Wood', meaning: 'Timber, poles or a wood frame.' },
+  log: { label: 'Logs', meaning: 'Logs, as in a log cabin or a log crib under the cab.' },
+  stone: { label: 'Stone', meaning: 'Stone or rock walls.' },
+  concrete: { label: 'Concrete', meaning: 'Poured concrete.' },
+  masonry: { label: 'Brick or block', meaning: 'Brick, cinder block or concrete block.' },
+  mixed: { label: 'Mixed', meaning: 'A source names two main materials, such as stone and logs.' },
+};
+
+/** Jobs a site did that are not a kind of building. */
+export const ROLE: Record<string, Wording> = {
+  aws: {
+    label: 'Aircraft Warning Service post',
+    meaning: 'During the Second World War it was staffed to spot and report aircraft.',
+  },
 };
 
 export const ACCESS: Record<string, Wording & { tone: 'ok' | 'caution' | 'stop' | 'unknown' }> = {
@@ -147,6 +182,12 @@ export function statusWording(code: string): Wording {
 export function kindWording(code: string): Wording {
   return KIND[code] ?? { label: code, meaning: '' };
 }
+export function materialWording(code: string): Wording {
+  return MATERIAL[code] ?? { label: code, meaning: '' };
+}
+export function roleWording(code: string): Wording {
+  return ROLE[code] ?? { label: code.replace(/_/g, ' '), meaning: '' };
+}
 export function verificationWording(code: string): Wording {
   return VERIFICATION[code] ?? { label: code, meaning: '' };
 }
@@ -179,5 +220,7 @@ export function designName(id: string): string {
 
 /** Values offered as map filters, in display order. */
 export const STATUS_ORDER = ['standing', 'gone', 'ruins', 'relocated', 'replica', 'unknown'];
-export const KIND_ORDER = ['tower', 'enclosed_tower', 'platform', 'ground', 'two_story', 'three_story', 'unknown'];
+/** Structure kinds offered in the "Type of structure" filter; sites with no structure have their own switch. */
+export const KIND_ORDER = ['tower', 'enclosed_tower', 'platform', 'ground', 'two_story', 'three_story', 'rooftop', 'mobile', 'unknown'];
+export const MATERIAL_ORDER = ['steel', 'wood', 'log', 'stone', 'concrete', 'masonry', 'mixed'];
 export const VERIFICATION_ORDER = ['unverified', 'facts', 'researched', 'verified'];

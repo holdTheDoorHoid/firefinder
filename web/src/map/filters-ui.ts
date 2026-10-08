@@ -8,7 +8,22 @@ import { designIds, facetCounts, isSelected, matches, toggleValue, type Facet, t
 import { html, raw, type SafeHtml } from '../lib/html.ts';
 import { markerSvg, rentBadgeSvg, shapeFor, fillFor } from '../lib/icons.ts';
 import type { TowerFeature } from '../lib/types.ts';
-import { DESIGN_NAMES, KIND, KIND_ORDER, STATUS_ORDER, VERIFICATION, VERIFICATION_ORDER, designName, regionName } from '../lib/vocab.ts';
+import {
+  DESIGN_NAMES,
+  KIND,
+  KIND_ORDER,
+  MATERIAL,
+  MATERIAL_ORDER,
+  NO_STRUCTURE_KINDS,
+  NO_STRUCTURE_LABEL,
+  NO_STRUCTURE_MEANING,
+  STATUS_ORDER,
+  VERIFICATION,
+  VERIFICATION_ORDER,
+  designName,
+  isNoStructure,
+  regionName,
+} from '../lib/vocab.ts';
 import { mapKey } from '../render/site.ts';
 
 export interface FilterPanelDeps {
@@ -64,6 +79,11 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
       html`${KIND_ORDER.map((k) => option('kind', k, KIND[k]?.label ?? k, markerSvg(shapeFor(k), 'solid', { size: 20 })))}`,
       'The marker shape shows this.',
     )}
+    <fieldset class="fs fs-nostructure">
+      <legend>${NO_STRUCTURE_LABEL}</legend>
+      <p class="fs-help">${NO_STRUCTURE_MEANING} Off unless you switch them on, so the map shows towers and buildings. <a href="${import.meta.env.BASE_URL}designs/#structure-types">About structure types</a></p>
+      <label class="opt"><input type="checkbox" name="nostructure" value="1"><span class="opt-icon">${raw(markerSvg('diamond', 'solid', { size: 20 }))}</span><span class="opt-label">Show sites with no structure<span class="opt-hint">${NO_STRUCTURE_KINDS.map((k) => KIND[k]?.label ?? k).join(', ')}</span></span><span class="opt-count" data-count="nostructure"></span></label>
+    </fieldset>
     <fieldset class="fs">
       <legend>Staying and history</legend>
       <label class="opt"><input type="checkbox" name="rentable" value="1"><span class="opt-icon">${raw(rentBadgeSvg(16))}</span><span class="opt-label">Only lookouts you can rent<span class="opt-hint">Bookable on recreation.gov</span></span><span class="opt-count" data-count="rentable"></span></label>
@@ -84,6 +104,14 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
         ${designs.map((d) => html`<option value="${d}">${designName(d)}</option>`)}
       </select>
       <p class="fs-help" id="f-design-help"><span data-design-share></span> <a href="${import.meta.env.BASE_URL}designs/">About the designs</a></p>
+    </div>
+    <div class="fs fs-select">
+      <label for="f-material" class="fs-label">Built of</label>
+      <select id="f-material" name="material" aria-describedby="f-material-help">
+        <option value="">Any material, or none recorded</option>
+        ${MATERIAL_ORDER.map((m) => html`<option value="${m}">${MATERIAL[m]?.label ?? m}</option>`)}
+      </select>
+      <p class="fs-help" id="f-material-help" data-material-share></p>
     </div>
     ${multiFieldset(
       'verification',
@@ -134,6 +162,12 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
       case 'design':
         f.design = input.value || null;
         break;
+      case 'material':
+        f.material = input.value || null;
+        break;
+      case 'nostructure':
+        f.noStructure = (input as HTMLInputElement).checked;
+        break;
       case 'mine': {
         const next = new Set(f.mine ?? []);
         if ((input as HTMLInputElement).checked) next.add(input.value as Mark);
@@ -167,6 +201,7 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
     for (const v of VERIFICATION_ORDER) set('verification', v, isSelected(f.verification, v));
     set('rentable', '1', f.rentable);
     set('registered', '1', f.registered);
+    set('nostructure', '1', f.noStructure);
     for (const m of MARKS) set('mine', m, !!f.mine?.has(m));
     const sel = root.querySelector<HTMLSelectElement>('#f-state');
     if (sel) {
@@ -220,6 +255,23 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
       const share = root.querySelector('[data-design-share]');
       if (share) share.textContent = `Only ${formatCount(anyDesign)} of ${formatCount(others.length)} lookouts have a recognisable design on record.`;
     }
+    const msel = root.querySelector<HTMLSelectElement>('#f-material');
+    if (msel) {
+      msel.value = f.material ?? '';
+      const others = feats.filter((x) => matches(x.properties, { ...f, material: null }, d.checklist));
+      const counts = new Map<string, number>();
+      for (const x of others) if (x.properties.m) counts.set(x.properties.m, (counts.get(x.properties.m) ?? 0) + 1);
+      let recorded = 0;
+      for (const opt of msel.options) {
+        if (!opt.value) continue;
+        const n = counts.get(opt.value) ?? 0;
+        recorded += n;
+        opt.textContent = `${MATERIAL[opt.value]?.label ?? opt.value} (${formatCount(n)})`;
+      }
+      const share = root.querySelector('[data-material-share]');
+      if (share) share.textContent = `Recorded for ${formatCount(recorded)} of ${formatCount(others.length)} lookouts, from the sources' own words or the lookout's design.`;
+    }
+    write('nostructure', feats.filter((x) => isNoStructure(x.properties.k) && matches(x.properties, { ...f, noStructure: true }, d.checklist)).length);
     write('rentable', countWith({ rentable: true }));
     write('registered', countWith({ registered: true }));
     for (const m of MARKS) write(`mine:${m}`, d.checklist.counts()[m]);

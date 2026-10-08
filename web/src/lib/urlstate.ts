@@ -13,13 +13,18 @@
  *
  *   &yr=1935&yrm=1    &base=old&era=oldest&op=60    &design=l4
  *
+ * Structure: what it is built of, and sites with no structure (camps, lookout trees, bare
+ * points), which the map leaves off by default:
+ *
+ *   &mat=steel    &ns=1
+ *
  * Defaults are left out, so a plain visit has a clean URL. Unknown or malformed values are
  * dropped rather than causing an error.
  */
 import { isEra, type Era } from '../history/oldtopo/sheets.ts';
 import { MARKS, isTowerId, type Mark } from './checklist.ts';
 import { defaultFilters, type Filters } from './filters.ts';
-import { KIND_ORDER, STATUS_ORDER, VERIFICATION_ORDER } from './vocab.ts';
+import { KIND_ORDER, MATERIAL_ORDER, STATUS_ORDER, VERIFICATION_ORDER } from './vocab.ts';
 
 export interface View {
   zoom: number;
@@ -124,6 +129,9 @@ export function parseState(search: string): AppState {
   state.yearMaybe = state.year !== null && q.get('yrm') === '1';
   const design = q.get('design') ?? '';
   f.design = /^[a-z0-9_]{1,40}$/.test(design) ? design : null;
+  const mat = q.get('mat') ?? '';
+  f.material = MATERIAL_ORDER.includes(mat) ? mat : null;
+  f.noStructure = q.get('ns') === '1';
   state.seen = [...new Set((q.get('vs') ?? '').split(',').filter((id) => isTowerId(id)))].slice(0, SEEN_MAX);
   const km = Number(q.get('vr'));
   state.seenKm = (SEEN_RADII_KM as readonly number[]).includes(km) ? km : null;
@@ -147,6 +155,8 @@ export function serializeState(state: AppState): string {
   if (f.region) q.set('state', f.region);
   if (f.mine && f.mine.size) q.set('mine', MARKS.filter((m) => f.mine!.has(m)).join(','));
   if (f.design) q.set('design', f.design);
+  if (f.material) q.set('mat', f.material);
+  if (f.noStructure) q.set('ns', '1');
   if (state.basemap !== 'map') q.set('base', state.basemap);
   if (state.basemap === 'old' && state.era !== DEFAULT_ERA) q.set('era', state.era);
   if (state.basemap === 'old' && Math.round(state.oldOpacity * 100) !== Math.round(DEFAULT_OLD_OPACITY * 100)) q.set('op', String(Math.round(state.oldOpacity * 100)));
