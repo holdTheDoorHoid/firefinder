@@ -19,6 +19,8 @@ import { renderTowerHead, renderTowerMain, type RenderContext } from '../src/ren
 import { fixtureBanner, mapKey, sourcesRows, takedownEmail } from '../src/render/site.ts';
 import { designsMain } from '../src/render/designs.ts';
 import type { DesignsFile } from '../src/lib/types.ts';
+import { structuresSection } from '../src/render/structures.ts';
+import type { StructureKindsFile } from '../src/lib/types.ts';
 
 const t0 = performance.now();
 const root = resolve(import.meta.dirname, '..');
@@ -103,6 +105,10 @@ if (existsSync(designsPath)) {
   const body = file ? designsMain(file, { base: config.base, repo: config.repo }).value : '<p class="notice tone-caution">The designs guide could not be built: designs.json is missing.</p>';
   if (!file) console.warn('prerender: dist/data/designs.json is missing; the designs page says so');
   writeFileSync(designsPath, readFileSync(designsPath, 'utf8').replace('<!--ff:designs-->', body).replace('<!--ff:banner-->', banner).replace(/\n\s+/g, '\n'));
+  // "Structure types" (render/structures.ts), its own section on the same page.
+  const kinds = existsSync(join(dataDir, 'structure_kinds.json')) ? (JSON.parse(readFileSync(join(dataDir, 'structure_kinds.json'), 'utf8')) as StructureKindsFile) : null;
+  if (!kinds) console.warn('prerender: dist/data/structure_kinds.json is missing; the designs page leaves out structure types');
+  writeFileSync(designsPath, readFileSync(designsPath, 'utf8').replace('<!--ff:structures-->', kinds ? structuresSection(kinds, { base: config.base }).value.replace(/\n\s+/g, '\n') : ''));
 }
 
 /* ---------- Sitemap ---------- */

@@ -1,6 +1,7 @@
 {
   "id": "us-az-west-peak",
   "name": "West Peak Lookout",
+  "summary": "A 1933 CCC-built, 46-foot Aermotor fire tower near Bonita, Arizona, listed on the National Register in 1988; its current condition is not documented in the sources read.",
   "other_names": [],
   "country": "US",
   "region": "AZ",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2629.8,
   "kind": "tower",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "46-foot Aermotor LX-25 tower with a 7x7-foot cab",
   "height_m": 13.7,
   "status": "standing",
   "status_note": null,
@@ -51,14 +55,27 @@
     {
       "year": 1933,
       "event": "built",
-      "note": null,
-      "from": "wikidata"
+      "note": "Built by the CCC, per the register",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/west-peak-lookout/"
+    },
+    {
+      "year": 1988,
+      "event": "nrhp_listed",
+      "note": "Listed on the National Register of Historic Places as part of a multiple-property listing of Southwestern fire lookouts",
+      "from": "research",
+      "source_url": "https://treealive.com/nr/87002466",
+      "source_urls": [
+        "https://treealive.com/nr/87002466",
+        "https://npgallery.nps.gov/AssetDetail/NRIS/87002466"
+      ]
     },
     {
       "year": 1997,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 15, 1997",
-      "from": "nhlr"
+      "note": "Registered May 15, 1997; nominated by Dave Lorenz",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/west-peak-lookout/"
     }
   ],
   "photos": [
@@ -80,6 +97,21 @@
       "label": "NHLR register entry US 220 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/az/west-peak-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "West Peak Lookout Tower, Bonita vicinity, Graham County, Arizona (TreeAlive (National Register record))",
+      "url": "https://treealive.com/nr/87002466",
+      "kind": "reference"
+    },
+    {
+      "label": "West Peak Lookout Tower, NRIS 87002466 (National Register Information System, National Park Service (NPGallery))",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002466",
+      "kind": "reference"
+    },
+    {
+      "label": "West Peak Lookout Tower, Graham County Arizona (nevadahiking.org)",
+      "url": "https://nevadahiking.org/loc/west-peak-lookout-tower/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
@@ -140,12 +172,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-west-peak",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

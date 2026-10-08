@@ -1,6 +1,7 @@
 {
   "id": "us-ca-copernicus-peak",
   "name": "Copernicus Peak Lookout",
+  "summary": "A 1931 lookout on a water tank and a 1938 K-brace tower that straddles it, on University of California land near Lick Observatory; not legally open to the public.",
   "other_names": [
     "Copernicus Peak (Hamilton)"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 1336.5,
   "kind": "tower",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "Special K-brace tower (Plan L-901), 13 ft high, with a standard live-in cab (Plan BC-301), built to straddle a 10,000-gallon concrete water tank",
   "height_m": 4.0,
   "status": "standing",
   "status_note": null,
@@ -30,8 +34,8 @@
   "agency": "California Department of Forestry and Fire Protection - Santa Clara Unit (Cal Fire SCU)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "permission",
+    "note": "Not legally open to the public. SummitPost advises asking the patrol officer at Lick Observatory for permission."
   },
   "staffing": {
     "status": "unknown",
@@ -40,21 +44,30 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Hiking is the only way to the summit; permission is needed to go up"
   },
   "rental": null,
   "events": [
     {
       "year": 1931,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "The original lookout was erected on top of a water tank",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/copernicus-peak-lookout/"
+    },
+    {
+      "year": 1938,
+      "event": "other",
+      "note": "Present K-brace tower (Plan L-901) and live-in cab (Plan BC-301) constructed, built to straddle the water tank",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/copernicus-peak-lookout/"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 26, 2019",
-      "from": "nhlr"
+      "note": "Registered October 26, 2019",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/copernicus-peak-lookout/"
     }
   ],
   "photos": [
@@ -114,6 +127,16 @@
       "kind": "register"
     },
     {
+      "label": "Copernicus Peak (SummitPost)",
+      "url": "https://www.summitpost.org/copernicus-peak/154558",
+      "kind": "reference"
+    },
+    {
+      "label": "Lick Observatory (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Lick_Observatory",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -170,6 +193,21 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-copernicus-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -189,9 +227,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

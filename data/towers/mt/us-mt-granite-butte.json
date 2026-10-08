@@ -14,6 +14,9 @@
   },
   "elevation_m": 2099.2,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "15x15 ft R-6 flat cab on a treated wood tower (original 1932 structure was an L-4 cab on a 20-foot tower)",
   "height_m": null,
   "status": "standing",
@@ -218,6 +221,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Granite Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/granitebutte.html",
       "kind": "site"
@@ -237,6 +245,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -260,6 +269,14 @@
       "fields": [
         "ownership",
         "access",
+        "rental",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:granite-butte-lookout",
+      "fields": [
         "rental",
         "links"
       ]
@@ -328,5 +345,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

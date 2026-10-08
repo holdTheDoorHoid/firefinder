@@ -1,6 +1,7 @@
 {
   "id": "us-id-dry-diggins",
   "name": "Dry Diggins Lookout",
+  "summary": "Nez Perce National Forest lookout: the 1932 L-4 cab blew away in 1967, the 1968 R-6 cab has lost its roof, and it is hike-in and emergency-only.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2386.0,
   "kind": "two_story",
-  "design": "R-6",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "R-6 cab on a 10-foot concrete base",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -28,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Listed as hike-in with emergency status; no public visiting described in the sources."
   },
   "staffing": {
     "status": "unknown",
@@ -37,11 +41,44 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Hike-in per the Idaho lookout list; no trail distance given in these sources."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1932,
+      "event": "built",
+      "note": "L-4 gable-roof cab about a mile southeast of the current site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/dry-diggins-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/dry-diggins-lookout/",
+        "https://www.firelookout.com/id/drydiggins.html",
+        "https://www.idahofirelookouts.com/west-central/dry-diggins-lookout/",
+        "https://idaholookouts.weebly.com/dry-diggins.html"
+      ]
+    },
+    {
+      "year": 1932,
+      "event": "staffed",
+      "note": "Earliest known-staff entry on the Idaho list covers 1932–1933; the list runs to 1978–1980 with gaps",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/dry-diggins-lookout/"
+    },
+    {
+      "year": 1967,
+      "event": "destroyed",
+      "note": "Original L-4 cab blew away (register) or blew over (Forest Lookouts)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/dry-diggins-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/dry-diggins-lookout/",
+        "https://www.firelookout.com/id/drydiggins.html",
+        "https://www.idahofirelookouts.com/west-central/dry-diggins-lookout/",
+        "https://idaholookouts.weebly.com/dry-diggins.html"
+      ]
+    },
     {
       "year": 1968,
       "event": "built",
@@ -49,10 +86,34 @@
       "from": "nhlr"
     },
     {
+      "year": 1968,
+      "event": "replaced",
+      "note": "R-6 cab on a 10-foot base; the Idaho list gives 1968 and 1969 for the work",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/dry-diggins-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/dry-diggins-lookout/",
+        "https://www.firelookout.com/id/drydiggins.html",
+        "https://www.idahofirelookouts.com/west-central/dry-diggins-lookout/"
+      ]
+    },
+    {
       "year": 2013,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: February 23, 2013",
-      "from": "nhlr"
+      "note": "Registered February 23, 2013 as US 964, ID 102",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/dry-diggins-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/dry-diggins-lookout/",
+        "https://www.idahofirelookouts.com/west-central/dry-diggins-lookout/"
+      ]
+    },
+    {
+      "year": 2020,
+      "event": "other",
+      "note": "Roof blew off over the winter of 2020/2021",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/drydiggins.html"
     }
   ],
   "photos": [
@@ -160,6 +221,11 @@
       "kind": "register"
     },
     {
+      "label": "Dry Diggins - FOREST LOOKOUTS (Forest Lookouts (idaholookouts.weebly.com))",
+      "url": "https://idaholookouts.weebly.com/dry-diggins.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -206,6 +272,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:dry-diggins:45.3719:-116.5890",
       "fields": [
+        "material",
         "design",
         "height_m",
         "photos",
@@ -219,12 +286,32 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-dry-diggins",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

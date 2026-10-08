@@ -1,6 +1,7 @@
 {
   "id": "us-id-pinyon-peak",
   "name": "Pinyon Peak Lookout",
+  "summary": "A 1930 ground cab on Pinyon Peak in the Challis National Forest, drive-up and listed as staffed through 2023; sources disagree on the cab type.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 3003.8,
   "kind": "ground",
-  "design": null,
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
+  "design": "Ground cab with hip roof; register says L-4 groundhouse, other sites say R-4 frame cab",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,31 +32,74 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Drive-up per Idaho Fire Lookouts, on Forest Service land. No closure notice, visitor information or road report was found in the sources read."
   },
   "staffing": {
     "status": "staffed",
-    "as_of": null
+    "as_of": "2023"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "A 1935 newspaper item quoted by the Forest Lookouts site describes a road still being completed toward the station, with the last stretch cut into rock. No current road report was found; check with the Forest Service before driving up."
   },
   "rental": null,
   "events": [
     {
       "year": 1930,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built 1930 per the register and the other lookout sites. The Forest Lookouts site calls it a Region 5 model 4A ground house.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/pinyon-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/pinyon-peak-lookout/",
+        "https://www.firelookout.com/id/pinyonpeak.html",
+        "https://www.idahofirelookouts.com/southern-idaho/pinyon-peak-lookout/",
+        "https://idaholookouts.weebly.com/pinyon-peak.html"
+      ]
+    },
+    {
+      "year": 1935,
+      "event": "other",
+      "note": "Road toward the station was being completed; about half a mile was still to be built, per a 1935 newspaper item quoted by the Forest Lookouts site",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/pinyon-peak.html"
+    },
+    {
+      "year": 1985,
+      "event": "staffed_first",
+      "note": "First named lookout on the Idaho Fire Lookouts staff list",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/southern-idaho/pinyon-peak-lookout/"
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: February 12, 2004",
-      "from": "nhlr"
+      "note": "Date registered February 12, 2004",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/pinyon-peak-lookout/"
+    },
+    {
+      "year": 2006,
+      "event": "other",
+      "note": "Notice asked volunteers to help paint and clean up the historic lookout",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/pinyon-peak.html"
+    },
+    {
+      "year": 2012,
+      "event": "fire",
+      "note": "Lookout evacuated as the Halstead fire advanced; dated August 4, 2012 on the Forest Lookouts site",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/pinyon-peak.html"
+    },
+    {
+      "year": 2023,
+      "event": "staffed",
+      "note": "Most recent named lookout on the Idaho Fire Lookouts staff list",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/southern-idaho/pinyon-peak-lookout/"
     }
   ],
   "photos": [
@@ -98,6 +145,16 @@
       "label": "NHLR register entry US 544 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/id/pinyon-peak-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Pinyon Peak (Forest Lookouts)",
+      "url": "https://idaholookouts.weebly.com/pinyon-peak.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Idaho Lookouts (by Region) (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/id/id-rg/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
@@ -146,6 +203,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:pinyon-peak:44.5697:-114.9166",
       "fields": [
+        "material",
         "photos",
         "links"
       ]
@@ -158,12 +216,34 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-pinyon-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

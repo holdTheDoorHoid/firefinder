@@ -1,6 +1,7 @@
 {
   "id": "us-mt-stark-mountain",
   "name": "Stark Mountain Lookout",
+  "summary": "First lookout 1934 (L-4 pole); present R-6 cab on a 20-ft timber tower from 1964, staffed in summer on the Lolo National Forest.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2168.0,
   "kind": "tower",
-  "design": "R-6",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "R-6 flat cab on a 20-ft treated timber tower",
   "height_m": 9.1,
   "status": "standing",
   "status_note": null,
@@ -28,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached from the Stark Mountain Trailhead by Trail #58; the lookout is staffed in summer"
   },
   "staffing": {
     "status": "unknown",
@@ -37,11 +41,22 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "About 4 miles on Stark Mountain Trail #58 from the trailhead"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "First lookout: an L-4 cab on a 30-ft pole tower",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/starkmtn.html",
+      "source_urls": [
+        "https://www.firelookout.com/mt/starkmtn.html",
+        "https://montanalookouts.weebly.com/stark-mountain.html"
+      ]
+    },
     {
       "year": 1964,
       "event": "built",
@@ -49,10 +64,37 @@
       "from": "firelookout_com"
     },
     {
+      "year": 1964,
+      "event": "replaced",
+      "note": "Present R-6 flat cab on a 20-ft treated timber tower replaced the pole tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/stark-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/stark-mountain-lookout/",
+        "https://www.firelookout.com/mt/starkmtn.html",
+        "https://montanalookouts.weebly.com/stark-mountain.html"
+      ]
+    },
+    {
+      "year": 2000,
+      "event": "fire",
+      "note": "32 fires ignited on the Ninemile Ranger District on August 4, 2000",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/stark-mountain-lookout/"
+    },
+    {
       "year": 2000,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 14, 2000",
-      "from": "nhlr"
+      "note": "Registered July 14, 2000 as US 367, MT 34",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/stark-mountain-lookout/"
+    },
+    {
+      "year": 2000,
+      "event": "staffed",
+      "note": "Virginia Vincent had staffed the lookout for 30 years as of the register entry",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/stark-mountain-lookout/"
     }
   ],
   "photos": [
@@ -172,6 +214,16 @@
       "kind": "register"
     },
     {
+      "label": "Stark Mountain Trailhead (USDA Forest Service, Lolo National Forest)",
+      "url": "https://www.fs.usda.gov/r01/lolo/recreation/stark-mountain-trailhead",
+      "kind": "reference"
+    },
+    {
+      "label": "Stark Mountain (Forest Lookouts, Montana) (montanalookouts.weebly.com)",
+      "url": "https://montanalookouts.weebly.com/stark-mountain.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
       "kind": "association"
@@ -196,6 +248,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -231,12 +284,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-stark-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

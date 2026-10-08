@@ -1,6 +1,7 @@
 {
   "id": "us-or-flagtail-mountain",
   "name": "Flagtail Mountain Lookout",
+  "summary": "A Malheur National Forest lookout in Grant County, Oregon, with a 1920s crow's nest origin and a present R-6 cab dated 1960 or 1966; staffed each summer.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2002.2,
   "kind": "tower",
-  "design": "R-6",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "R-6 14-by-14-foot flat-top cab with catwalk",
   "height_m": 2.4,
   "status": "standing",
   "status_note": null,
@@ -28,12 +32,12 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Public parking; visitors welcome during daylight hours. Staffed in summer; the forest asks visitors to respect staff after hours and during high fire activity."
   },
   "staffing": {
     "status": "staffed",
-    "as_of": null
+    "as_of": "2025"
   },
   "visit": {
     "climbable": null,
@@ -43,16 +47,64 @@
   "rental": null,
   "events": [
     {
+      "year": 1922,
+      "event": "other",
+      "note": "First lookout was a tree crow's nest. Register says early 1920s; firelookout.com says used as the first lookout in 1922.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/flagtail-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/flagtail-mountain-lookout/",
+        "https://www.firelookout.com/or/flagtail.html"
+      ]
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "20-foot pole tower with L-4 cab (register and firelookout.com). firelookout.com also lists a 30-foot tower with 8x8 cab one mile east.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/flagtail-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/flagtail-mountain-lookout/",
+        "https://www.firelookout.com/or/flagtail.html",
+        "https://en.wikipedia.org/wiki/Flagtail_Mountain"
+      ]
+    },
+    {
       "year": 1960,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Present R-6 cab: register and Wikipedia give 1960; firelookout.com gives 1966.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/flagtail-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/flagtail-mountain-lookout/",
+        "https://www.firelookout.com/or/flagtail.html",
+        "https://en.wikipedia.org/wiki/Flagtail_Mountain"
+      ]
     },
     {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 8, 2003",
-      "from": "nhlr"
+      "note": "Registered January 8, 2003.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/flagtail-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/flagtail-mountain-lookout/",
+        "https://en.wikipedia.org/wiki/Flagtail_Mountain"
+      ]
+    },
+    {
+      "year": 2023,
+      "event": "staffed",
+      "note": "Listed among staffed lookouts on the Blue Mountain Ranger District, staffed throughout the summer.",
+      "from": "research",
+      "source_url": "https://elkhornmediagroup.com/?p=166912"
+    },
+    {
+      "year": 2025,
+      "event": "staffed",
+      "note": "Staffed by veteran observer David Sheffel as of 2025, per the register.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/flagtail-mountain-lookout/"
     }
   ],
   "photos": [
@@ -160,6 +212,16 @@
       "kind": "register"
     },
     {
+      "label": "Flagtail Mountain (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Flagtail_Mountain",
+      "kind": "reference"
+    },
+    {
+      "label": "Malheur National Forest staffs fire lookouts (Elkhorn Media Group)",
+      "url": "https://elkhornmediagroup.com/?p=166912",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -184,6 +246,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -219,6 +282,20 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-flagtail-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -238,9 +315,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

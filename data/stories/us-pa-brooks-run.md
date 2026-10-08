@@ -1,0 +1,12 @@
+The tower first stood on Grove Mountain in Cameron County. The Former Fire Lookout Sites register says its steel Aermotor tower was built there in 1921 and moved in 1940.[^1] A June 1940 report said the tower would move that summer to a site 280 feet higher, toward the upper end of Brooks Run.[^2] The register for the current site gives a different year. It says the 80-foot Aermotor tower was relocated to Brooks Run in 1941, and its details list 1941 under "Built."[^3] So the 1941 date marks the move, not the first build, and the sources disagree on whether the move came in 1940 or 1941.
+
+The 1940 report expected the new tower to be twenty feet taller than the 60-foot tower on Grove Mountain.[^2] It also said the local forestry office had maintained a temporary wooden tower on Brook Mountain during the recent fire season, with a watcher on duty at all times.[^2] The same report said the tower might be manned all year rather than only in fire season.[^2] I found no record that year-round staffing happened, and no current staffing status.
+
+The register lists the tower as registered on December 6, 2017, and says the Pennsylvania Bureau of Forestry administers it.[^3] A trail listing says the tower is still in operation at the top of Brooks Run, beside the Bucktail Path in Elk State Forest.[^4] A gated service road climbs from Brooks Run Road to the top of Brook Mountain.[^4] Hikers park at the intersection of Brooks Run Road and Ridge Road, then walk the road on a 1.9-mile out-and-back that the listing rates as easy.[^4] The listing warns hikers not to park in front of the gate.[^4] It also says the Forest Service uses the road, which differs from the register's agency name.[^4]
+
+I did not find a rule on climbing the tower itself. Check with the Bureau of Forestry before you go, and stay off the tower if the site is posted closed.
+
+[^1]: Grove Mountain Tower Site, Former Fire Lookout Sites Register, http://www.firetower.org/lookouts/us/pa/grove-mountain-tower-site/ (accessed 2026-10-08).
+[^2]: Brooks, Forest Lookouts (Pennsylvania section), Eastern US Lookouts, https://easternuslookouts.weebly.com/brooks.html (accessed 2026-10-08).
+[^3]: Brooks Run Fire Tower, National Historic Lookout Register, http://nhlr.org/lookouts/us/pa/brooks-run-fire-tower/ (accessed 2026-10-08).
+[^4]: Brooks Run Fire Tower Trail, MyHikes, https://myhikes.org/trails/brooks-run-fire-tower-trail (accessed 2026-10-08).

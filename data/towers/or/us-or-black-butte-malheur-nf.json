@@ -1,6 +1,7 @@
 {
   "id": "us-or-black-butte-malheur-nf",
   "name": "Black Butte Lookout (Malheur NF)",
+  "summary": "Black Butte's 20-ft pole L-4 tower (1936 per NHLR, 1933 per firelookout.com) still stands; it is not on the 2023 staffed list and is called unsafe to occupy.",
   "other_names": [
     "Black Butte"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 1900.4,
   "kind": "tower",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "20-ft pole tower with L-4 cab; original pole legs replaced with treated timber in 1964",
   "height_m": 6.1,
   "status": "standing",
   "status_note": null,
@@ -30,8 +34,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "firelookout.com (undated) says the tower is presently deemed unsafe to occupy. No source says the public may enter or climb it. Access level is provisional."
   },
   "staffing": {
     "status": "unknown",
@@ -45,16 +49,47 @@
   "rental": null,
   "events": [
     {
+      "year": 1933,
+      "event": "built",
+      "note": "Firelookout.com says the site was developed in 1933 with a 20-ft pole L-4 tower and a patrol point half a mile east. Conflicts with the NHLR's 1936 date.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/blackbuttem.html"
+    },
+    {
       "year": 1936,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR says the first structure, built in 1936, was a 20-ft pole L-4 tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/black-butte-lookout-malheur-nf/"
+    },
+    {
+      "year": 1964,
+      "event": "modified",
+      "note": "Original pole legs replaced with treated timber legs in 1964 (NHLR); firelookout.com says 'later on'",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/black-butte-lookout-malheur-nf/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/black-butte-lookout-malheur-nf/",
+        "https://www.firelookout.com/or/blackbuttem.html"
+      ]
+    },
+    {
+      "year": 1994,
+      "event": "modified",
+      "note": "Concrete piers redone in 1994",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/black-butte-lookout-malheur-nf/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/black-butte-lookout-malheur-nf/",
+        "https://www.firelookout.com/or/blackbuttem.html"
+      ]
     },
     {
       "year": 2013,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 3, 2013",
-      "from": "nhlr"
+      "note": "Registered with the National Historic Lookout Register on January 3, 2013; nominated by Howard Verschoor",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/black-butte-lookout-malheur-nf/"
     }
   ],
   "photos": [
@@ -102,6 +137,11 @@
       "kind": "register"
     },
     {
+      "label": "Malheur National Forest staffs fire lookouts (Elkhorn Media Group)",
+      "url": "https://elkhornmediagroup.com/?p=166912",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -126,6 +166,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -160,6 +201,21 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-black-butte-malheur-nf",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -179,9 +235,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

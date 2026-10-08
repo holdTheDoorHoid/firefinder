@@ -16,6 +16,9 @@
   },
   "elevation_m": 2052.8,
   "kind": "enclosed_tower",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "14'x14' C3 live-in cab with catwalk, Forest Service R-5 (California region) design, on an 11' enclosed timber tower",
   "height_m": 3.4,
   "status": "standing",
@@ -189,6 +192,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "OpenStreetMap way 1020946930",
       "url": "https://www.openstreetmap.org/way/1020946930",
       "kind": "osm"
@@ -203,6 +211,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -226,6 +235,14 @@
       "fields": [
         "ownership",
         "access",
+        "rental",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:ca:black-mountain-lookout",
+      "fields": [
         "rental",
         "links"
       ]
@@ -265,5 +282,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

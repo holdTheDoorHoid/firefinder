@@ -1,6 +1,7 @@
 {
   "id": "us-wa-thorp-mountain",
   "name": "Thorp Mountain Lookout",
+  "summary": "Kittitas County hike-in L-4 ground house built 1930 for the Forest Service; NHLR-listed 2001, renovated 2007-08, staffing disputed, 2026 volunteer repair project.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 1701.4,
   "kind": "ground",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "osm",
+  "roles": [],
+  "design": "14 by 14 foot gable-roofed L-4 ground house built in 1930",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -25,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/wa/thorp-mountain-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Okanogan-Wenatchee National Forest)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=private."
+    "level": "public",
+    "note": "Reached on foot. The WTA route from Thorp Creek is 7.4 miles round trip; a WTA note dated 8.24.26 says that trail was closed for the Three Queens Fire."
   },
   "staffing": {
     "status": "unknown",
@@ -37,22 +41,73 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "TrailChick lists it as a hike in and gives driving directions to the trailheads. The Thorp Creek route is 7.4 miles round trip with 2,484 feet of gain, per WTA."
   },
   "rental": null,
   "events": [
     {
       "year": 1930,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Built by the Forest Service as a 14-by-14-foot L-4 gable-roofed ground house.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/thorp-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/thorp-mountain-lookout/",
+        "https://www.firelookout.com/wa/thorp.html",
+        "https://historicorps.org/hardcorps-thorp-mountain-lookout-wa-2026/",
+        "https://www.trailchick.com/wa-state-fire-lookouts/thorp-mountain-lookout/"
+      ]
     },
     {
       "year": 2001,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 1, 2001",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register on September 1, 2001.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/thorp-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/thorp-mountain-lookout/",
+        "https://historicorps.org/hardcorps-thorp-mountain-lookout-wa-2026/"
+      ]
+    },
+    {
+      "year": 2007,
+      "event": "restored",
+      "note": "The register says it was completely refurbished in the summer of 2007.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/thorp-mountain-lookout/"
+    },
+    {
+      "year": 2008,
+      "event": "modified",
+      "note": "firelookout.com dates extensive maintenance to about 2008; TrailChick says the 2008 renovations did not necessarily follow the original design.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wa/thorp.html",
+      "source_urls": [
+        "https://www.firelookout.com/wa/thorp.html",
+        "https://www.trailchick.com/wa-state-fire-lookouts/thorp-mountain-lookout/"
+      ]
+    },
+    {
+      "year": 2024,
+      "event": "other",
+      "note": "TrailChick, updated March 2024, says it is no longer volunteer staffed because of carbon monoxide from the stove.",
+      "from": "research",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/thorp-mountain-lookout/"
+    },
+    {
+      "year": 2026,
+      "event": "closed",
+      "note": "WTA note dated 8.24.26 says the Thorp Creek trail is closed because of the Three Queens Fire.",
+      "from": "research",
+      "source_url": "https://www.wta.org/go-hiking/hikes/thorp-mountain-lookout-via-thorp-creek"
+    },
+    {
+      "year": 2026,
+      "event": "other",
+      "note": "HistoriCorps volunteer repair sessions were set for two sessions, September 7-13 and September 16-22, 2026.",
+      "from": "research",
+      "source_url": "https://historicorps.org/hardcorps-thorp-mountain-lookout-wa-2026/"
     }
   ],
   "photos": [
@@ -110,6 +165,21 @@
       "label": "NHLR register entry US 389 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wa/thorp-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "HardCorps: Thorp Mountain Lookout, WA 2026 (HistoriCorps)",
+      "url": "https://historicorps.org/hardcorps-thorp-mountain-lookout-wa-2026/",
+      "kind": "reference"
+    },
+    {
+      "label": "Thorp Mountain Lookout via Thorp Creek (Washington Trails Association)",
+      "url": "https://www.wta.org/go-hiking/hikes/thorp-mountain-lookout-via-thorp-creek",
+      "kind": "reference"
+    },
+    {
+      "label": "Thorp Mountain (TrailChick)",
+      "url": "https://www.trailchick.com/wa-state-fire-lookouts/thorp-mountain-lookout/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -173,16 +243,38 @@
       "source": "osm",
       "key": "osm:way/1558990792",
       "fields": [
+        "material",
         "registers",
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-thorp-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

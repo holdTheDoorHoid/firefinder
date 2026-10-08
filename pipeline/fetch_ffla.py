@@ -3,14 +3,25 @@
 
 Writes data/sources/ffla.json (see DESIGN.md section 3.2 for the record shape).
 Resumable: every page fetched is cached under
-/home/hoid/Desktop/firefinder/data/raw/ffla/ and a re-run reads from that cache
-instead of refetching.
+/home/hoid/Desktop/firefinder/data/raw/ffla/ (or $FIREFINDER_RAW_ROOT/ffla/) and a re-run
+reads from that cache instead of refetching.
+
+FFLA publishes several list views of one state: the alphabetical list at /lookouts/us/<st>/
+(the "primary" view, which names the record keys) and "Other sort" pages linked from it:
+<st>-co (by county), <st>-st (standing only), <st>-rg (by region), plus the odd extra such as
+ca-un (undocumented sites). Every view is crawled, and a row seen in more than one view is
+ONE record (same key), enriched from the later views (the county, mainly); a row only a
+secondary view lists becomes a record of its own, with extra.views saying where it was seen.
 
 Usage:
-    python3 pipeline/fetch_ffla.py
+    python3 pipeline/fetch_ffla.py             # read the cache, fetch only what is missing
+    python3 pipeline/fetch_ffla.py --refresh   # refetch everything (2 s apart): the index,
+                                               # sitemap, every state page and view, every -add page
 """
 from __future__ import annotations
 
+import argparse
+import difflib
 import html as html_mod
 import json
 import re
@@ -124,6 +135,10 @@ HEADER_SYNONYMS = {
     "register": "register",
     "elevation": "elevation",
     "elev": "elevation",
+    # the undocumented-sites list (ca-un) also has these
+    "notes": "notes",
+    "sec/twp/rng": "sec_twp_rng",
+    "agency": "agency",
 }
 
 REGISTER_CELL_RE = re.compile(
@@ -289,27 +304,44 @@ def parse_header(row_html: str) -> dict | None:
 
 
 def parse_state_table(
-    html: str, abbr: str, url: str, kind_stats: Counter, status_stats: Counter, coord_stats: Counter
+    html: str, abbr: str, url: str, kind_stats: Counter, status_stats: Counter, coord_stats: Counter,
+    groups: bool = False,
 ) -> list[dict]:
+    """The rows of a list view as source records. With `groups` (the by-region view), a heading
+    that is followed straight away by another heading names the region: extra.group."""
     records = []
     seen_keys: dict[str, int] = {}
     tables = re.findall(r"<table[^>]*>.*?</table>", html, re.S)
     for table in tables:
         rows = re.findall(r"<tr>(.*?)</tr>", table, re.S)
         section = None
+        group = None  # the by-region view puts a region heading above the section heading
+        prev_was_heading = False
         header = None
         for row in rows:
             cells_raw = re.findall(r"<td[^>]*>(.*?)</td>", row, re.S)
-            if len(cells_raw) == 1:
-                txt = strip_tags(cells_raw[0])
+            # A heading is a row of one cell, or a bold first cell with every other cell blank
+            # (NH's standing list pads its "Non-Wildland Lookouts" heading out to the full width).
+            texts = [strip_tags(c) for c in cells_raw]
+            lone = len(cells_raw) == 1 or (cells_raw and texts[0] and "<strong>" in cells_raw[0]
+                                           and not any(texts[1:]))
+            if lone:
+                txt = texts[0]
                 if "<strong>" in cells_raw[0] or txt:
                     if txt and txt.lower() not in ("name", ""):
+                        if groups and prev_was_heading:
+                            group = section  # two headings in a row: the first one names a group
                         section = txt
-                        header = None
+                        # The column header is NOT reset: a section may follow its heading with
+                        # rows straight away (the "Relocated / Replica Lookouts" at the foot of
+                        # OR's, WV's ... list has no header row of its own) and then uses the
+                        # layout of the table above.
+                        prev_was_heading = True
                         continue
             maybe_header = parse_header(row)
             if maybe_header is not None:
                 header = maybe_header
+                prev_was_heading = False
                 continue
             if header is None:
                 continue  # data row before any header seen; skip defensively
@@ -326,6 +358,9 @@ def parse_state_table(
             name = strip_tags(cell("name"))
             if not name:
                 continue
+            if len(texts) > 1 and not any(texts[i] for i in range(len(texts)) if i != mapping["name"]) \
+                    and (len(name.split()) >= 8 or name.endswith(".")):
+                continue   # a sentence of the page's own text in a row (UT's and WY's list notes)
             county = strip_tags(cell("county")) or None
             lat_raw = strip_tags(cell("lat"))
             lon_raw = strip_tags(cell("lon"))
@@ -383,6 +418,12 @@ def parse_state_table(
                     "FFLA legend (firelookout.org/lookouts/): 'Standing*' = retains tower "
                     "structure/support even though the cab is no longer in place."
                 )
+            if group:
+                extra["group"] = group
+            for field_, key_ in (("notes", "notes"), ("sec_twp_rng", "sec_twp_rng"), ("agency", "agency_raw")):
+                val = strip_tags(cell(field_))
+                if val and val.lower() not in ("xx-xx-xx",):
+                    extra[key_] = val
             if coord_problem:
                 extra["coordinate_problem"] = coord_problem
             if header["unmapped"]:
@@ -444,20 +485,258 @@ def parse_add_page(html: str, state_name: str) -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Other list views of a state (by county, standing only, by region, ...)
+# ---------------------------------------------------------------------------
+
+def norm_url(url: str) -> str:
+    """https, no fragment, one trailing slash on a page path (the site is WordPress)."""
+    url = url.strip().split("#", 1)[0]
+    if url.startswith("http://"):
+        url = "https://" + url[len("http://"):]
+    if url.startswith("/"):
+        url = BASE + url
+    if "?" not in url:
+        head, sep, tail = url.partition("://")
+        url = head + sep + re.sub(r"/{2,}", "/", tail)
+        if not url.endswith("/") and "." not in url.rsplit("/", 1)[-1]:
+            url += "/"
+    return url
+
+
+def entry_content(html: str) -> str:
+    """The page body (the article text), without the header, menus and footer."""
+    idx = html.find('class="entry-content"')
+    if idx == -1:
+        return ""
+    start = html.find(">", idx) + 1
+    end = html.find("<!-- .entry-content -->", start)
+    return html[start:end if end != -1 else len(html)]
+
+
+def view_url_re(abbr: str) -> re.Pattern:
+    a = abbr.lower()
+    return re.compile(rf"^https://firelookout\.org/lookouts/us/{a}/{a}-([a-z]+)/$")
+
+
+def discover_views(html: str, abbr: str) -> dict[str, dict]:
+    """Links to the state's other list views ("Other sort: by County", "Standing", ...) in the
+    page body: {code: {"url": ..., "label": ...}}. The -add page (additional information) is
+    not a list and is left to the index. Document order."""
+    rx = view_url_re(abbr)
+    out: dict[str, dict] = {}
+    for m in A_HREF_RE.finditer(entry_content(html)):
+        url = norm_url(m.group(1))
+        mm = rx.match(url)
+        if not mm or mm.group(1) == "add":
+            continue
+        out.setdefault(mm.group(1), {"url": url, "label": strip_tags(m.group(2)) or None})
+    return out
+
+
+def sitemap_views(xml: str, abbrs: list[str]) -> dict[str, dict[str, str]]:
+    """Every /lookouts/us/<st>/<st>-<code>/ page the site's page sitemap lists, by state, in
+    case a state page forgets to link one of its own views. {abbr: {code: url}}."""
+    out: dict[str, dict[str, str]] = defaultdict(dict)
+    rxs = {a: view_url_re(a) for a in abbrs}
+    for loc in re.findall(r"<loc>(.*?)</loc>", xml):
+        url = norm_url(html_mod.unescape(loc))
+        for a, rx in rxs.items():
+            mm = rx.match(url)
+            if mm and mm.group(1) != "add":
+                out[a][mm.group(1)] = url
+    return out
+
+
+def key_base(key: str) -> str:
+    """A record key without its ':<n>' repeat suffix, and with the name's punctuation gone
+    ("Roberts (Shorty's)" is "Shorty-s" in one list and "Shortys" in another): the same
+    state, the same letters and digits of the name, the same position. The slug has no colons."""
+    parts = key.split(":")
+    if len(parts) >= 5:
+        parts[2] = parts[2].replace("-", "")
+    return ":".join(parts[:5])
+
+
+# Views that are a different list, not another sort of the state's list: ca-un holds the
+# "Unknown/Undocumented" sites from Mark Thornton's survey (emergency lookouts, never-built and
+# planned ones), which FFLA keeps out of its lookout lists. Its rows are kept as records of
+# their own and never paired with a row of the lookout lists by name or position.
+SEPARATE_VIEWS = {"un"}
+
+
+def combine_views(per_view: list[tuple[str, list[dict]]]) -> list[dict]:
+    """One record per lookout from several list views of one state.
+
+    per_view[0] is the primary (alphabetical) view and fixes the record keys, so the keys
+    (and the towers and sources hung on them) do not change when a view is added. A row a
+    later view repeats is the same record, found in this order:
+
+      * the same key (state, name, position): the usual case;
+      * the same letters and digits of the name at the same position, under a further repeat
+        number: a lookout the by-county view lists under two counties (its county goes to
+        extra.counties);
+      * the same position, no key match, and exactly one record there that this view has not
+        matched already: FFLA's views do not always spell a name alike ("Remer #1" and "Remer
+        - first", "Gallinas Peak" and "Galilnas Peak"), the other spelling goes to
+        extra.also_named;
+      * no position in this view (FFLA leaves it out of some lists), and exactly one unmatched
+        record of the same name and county;
+      * a position FFLA's own bounding-box check flags as outside the state (a typo in this view),
+        and exactly one unmatched record of the same name and county;
+      * a position this view gives to a record the alphabetical list has none for (same name
+        and county, exactly one such record): the record takes the position, and
+        extra.position_from_view says which view it came from (its key keeps the "null").
+
+    Views in SEPARATE_VIEWS are other lists, not other sorts: they only ever match by key.
+
+    The record keeps the primary view's fields; extra.views names every view it was in and the
+    county fills in if the primary lacks it. A row nothing matches becomes a record of its own
+    (a lookout only that view lists)."""
+    out: dict[str, dict] = {}
+    by_base: dict[str, str] = {}
+    by_pos: dict[tuple, list[str]] = defaultdict(list)
+    by_name: dict[str, list[str]] = defaultdict(list)
+
+    def squash(name: str) -> str:
+        return re.sub(r"[^a-z0-9]+", "", name.lower())
+
+    def pos(r: dict):
+        return (round(r["lat"], 4), round(r["lon"], 4)) if r.get("lat") is not None and r.get("lon") is not None else None
+
+    def add(r: dict, view: str) -> None:
+        r.setdefault("extra", {})["views"] = [view]
+        out[r["key"]] = r
+        by_base.setdefault(key_base(r["key"]), r["key"])
+        if pos(r):
+            by_pos[pos(r)].append(r["key"])
+        by_name[squash(r["name"])].append(r["key"])
+
+    def county_ok(cur: dict, r: dict) -> bool:
+        a, b = (cur.get("county") or "").strip().lower(), (r.get("county") or "").strip().lower()
+        return not a or not b or a == b or a in b or b in a
+
+    def join(cur: dict, r: dict, view: str) -> None:
+        if view not in cur["extra"]["views"]:
+            cur["extra"]["views"].append(view)
+        # Only the county is taken from another view. The views are separate hand-edited
+        # tables and a register cell in one can sit on the wrong row (the by-county list gives
+        # OR's West Eagle the register entry of Woods Point), so registers and links come from
+        # the alphabetical list alone.
+        if not cur.get("county") and r.get("county"):
+            cur["county"] = r["county"]
+        _note_county(cur, r)
+
+    for r in per_view[0][1] if per_view else []:
+        add(r, per_view[0][0])
+    for view, recs in per_view[1:]:
+        claimed: set[str] = set()
+        leftover = []
+        for r in recs:
+            key = r["key"]
+            target = key if key in out and key not in claimed else by_base.get(key_base(key))
+            if target is not None and (target == key or key not in out):
+                join(out[target], r, view)
+                claimed.add(target)
+            else:
+                leftover.append(r)
+        for r in leftover:
+            p = pos(r)
+            fills_position = False
+            if view in SEPARATE_VIEWS:
+                cands = []
+            elif p is not None:
+                cands = [k for k in by_pos.get(p, []) if k not in claimed]
+                if len(cands) > 1:
+                    best = sorted(cands, key=lambda k: -difflib.SequenceMatcher(None, squash(out[k]["name"]), squash(r["name"])).ratio())
+                    if difflib.SequenceMatcher(None, squash(out[best[0]]["name"]), squash(r["name"])).ratio() >= 0.5:
+                        cands = best[:1]
+                if not cands and r["extra"].get("coordinate_problem"):
+                    # a position FFLA's own bounding-box check flags (a latitude of 48.08 for a
+                    # Wisconsin lookout at 44.08): a typo in this view of a lookout the primary
+                    # view has, so the one unmatched record of that name and county
+                    cands = [k for k in by_name.get(squash(r["name"]), [])
+                             if k not in claimed and county_ok(out[k], r) and out[k].get("lat") is not None
+                             and not out[k]["extra"].get("coordinate_problem")]
+                if not cands:
+                    # the alphabetical list may give the lookout no position at all while
+                    # another view does: the one unmatched record of that name and county
+                    cands = [k for k in by_name.get(squash(r["name"]), [])
+                             if k not in claimed and out[k].get("lat") is None and county_ok(out[k], r)]
+                    fills_position = len(cands) == 1
+            else:
+                cands = [k for k in by_name.get(squash(r["name"]), [])
+                         if k not in claimed and county_ok(out[k], r)]
+            if len(cands) == 1:
+                cur = out[cands[0]]
+                join(cur, r, view)
+                claimed.add(cands[0])
+                if fills_position:
+                    for f in ("lat", "lon"):
+                        cur[f] = r[f]
+                    for f in ("coordinate_problem",):
+                        if r["extra"].get(f):
+                            cur["extra"][f] = r["extra"][f]
+                    cur["extra"]["position_from_view"] = view
+                    by_pos[pos(cur)].append(cands[0])
+                if squash(cur["name"]) != squash(r["name"]):
+                    also = cur["extra"].setdefault("also_named", [])
+                    if r["name"] not in also:
+                        also.append(r["name"])
+            else:
+                add(r, view)
+                claimed.add(r["key"])
+    return list(out.values())
+
+
+def _note_county(cur: dict, other: dict) -> None:
+    c = other.get("county")
+    if c and c != cur.get("county"):
+        seen = cur["extra"].setdefault("counties", [x for x in [cur.get("county")] if x])
+        if c not in seen:
+            seen.append(c)
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
-def main():
+def main(argv: list[str] | None = None):
+    ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
+    ap.add_argument("--refresh", action="store_true",
+                    help="refetch every page (index, sitemap, state lists and views, -add pages) "
+                         "instead of reading the cache; still 2 s between requests")
+    args = ap.parse_args(argv)
+
     rl = RateLimiter()
     robots = RobotsCache(rl)
+    fetched_now: set[str] = set()
 
-    log("=== fetch_ffla.py starting ===")
-    status, body, cached = fetch(SOURCE, INDEX_URL, rl, robots, log=log)
+    def get(url: str):
+        force = args.refresh and url not in fetched_now
+        fetched_now.add(url)
+        return fetch(SOURCE, url, rl, robots, force=force, log=log)
+
+    log(f"=== fetch_ffla.py starting ({'refresh' if args.refresh else 'cache-first'}) ===")
+    status, body, cached = get(INDEX_URL)
     if status != 200:
         log(f"FATAL: index page fetch failed with status {status}")
         sys.exit(1)
     states = parse_index(body)
     log(f"Index parsed: {len(states)} states listed")
+
+    sm_views: dict[str, dict[str, str]] = {}
+    status, sm_xml, _ = get(f"{BASE}/page-sitemap.xml")
+    if status == 200:
+        sm_views = sitemap_views(sm_xml, [st["abbr"] for st in states])
+    else:
+        log(f"WARN: page sitemap not available (status {status}); relying on the links in each state page")
+
+    previous = {}
+    if OUT_PATH.exists():
+        try:
+            previous = {r["key"]: r for r in json.loads(OUT_PATH.read_text(encoding="utf-8"))["records"]}
+        except (OSError, ValueError, KeyError):
+            previous = {}
 
     all_records = []
     additional_info = {}
@@ -465,31 +744,62 @@ def main():
     status_stats = Counter()
     coord_stats = Counter()
     per_state_counts = {}
+    per_state_views: dict[str, dict] = {}
     states_with_table = 0
     states_without_table = []
+    view_labels: dict[str, str] = {}
+    sitemap_only_views = []
+    unreachable_states = []
 
     for st in states:
         abbr = st["abbr"]
-        if st["table_url"]:
-            states_with_table += 1
-            status, body, cached = fetch(SOURCE, st["table_url"], rl, robots, log=log)
-            if status == 200:
-                recs = parse_state_table(
-                    body, abbr, st["table_url"], kind_stats, status_stats, coord_stats
-                )
-                all_records.extend(recs)
-                per_state_counts[abbr] = len(recs)
-                log(f"{abbr}: {len(recs)} rows parsed ({'cache' if cached else 'fetched'})")
-            else:
-                log(f"{abbr}: table fetch failed status={status}")
-                per_state_counts[abbr] = 0
-        else:
+        primary_url = st["table_url"] or f"{BASE}/lookouts/us/{abbr.lower()}/"
+        status, body, cached = get(primary_url)
+        if status != 200:
+            unreachable_states.append(abbr)
+            log(f"{abbr}: state page {primary_url} status={status}")
+            per_state_counts[abbr] = 0
             states_without_table.append(abbr)
+            body = ""
+        per_view = []
+        if body:
+            recs = parse_state_table(body, abbr, primary_url, kind_stats, status_stats, coord_stats)
+            per_view.append(("alpha", recs))
+            found = discover_views(body, abbr)
+            for code, url in sm_views.get(abbr, {}).items():
+                if code not in found:
+                    found[code] = {"url": url, "label": None}
+                    sitemap_only_views.append(f"{abbr}/{code}")
+            for code, v in found.items():
+                if v["label"]:
+                    view_labels.setdefault(code, v["label"])
+                vstatus, vbody, vcached = get(v["url"])
+                if vstatus != 200:
+                    log(f"{abbr}: view {code} {v['url']} status={vstatus}")
+                    continue
+                vrecs = parse_state_table(vbody, abbr, v["url"], kind_stats, status_stats, coord_stats,
+                                          groups=(code == "rg"))
+                per_view.append((code, vrecs))
+        merged = combine_views(per_view)
+        if merged:
+            states_with_table += 1
+            if abbr in states_without_table:
+                states_without_table.remove(abbr)
+        elif abbr not in states_without_table:
+            states_without_table.append(abbr)
+        all_records.extend(merged)
+        per_state_counts[abbr] = len(merged)
+        per_state_views[abbr] = {
+            "rows_by_view": {v: len(r) for v, r in per_view},
+            "records": len(merged),
+            "only_in_secondary_views": sum(1 for r in merged if "alpha" not in r["extra"]["views"]),
+        }
+        log(f"{abbr}: {len(merged)} records from " + (", ".join(f"{v}={len(r)}" for v, r in per_view) or "no table"))
 
         if st["add_url"]:
-            status, body, cached = fetch(SOURCE, st["add_url"], rl, robots, log=log)
-            if status == 200:
-                info = parse_add_page(body, st["state"])
+            astatus, abody, _ = get(st["add_url"])
+            if astatus == 200:
+                info = parse_add_page(abody, st["state"])
                 additional_info[abbr] = {"url": st["add_url"], **info}
 
     out = {
@@ -506,10 +816,24 @@ def main():
     OUT_PATH.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
     log(f"Wrote {len(all_records)} records to {OUT_PATH}")
 
+    new_keys = {r["key"] for r in all_records}
+    only_secondary = [r for r in all_records if "alpha" not in r["extra"]["views"]]
     report = {
+        "mode": "refresh" if args.refresh else "cache-first",
         "states_with_table": states_with_table,
         "states_without_table": states_without_table,
+        "unreachable_states": unreachable_states,
         "per_state_counts": per_state_counts,
+        "per_state_views": per_state_views,
+        "view_labels": view_labels,
+        "views_found_only_in_sitemap": sitemap_only_views,
+        "rows_only_in_secondary_views": [
+            {"key": r["key"], "name": r["name"], "region": r["region"], "views": r["extra"]["views"],
+             "type": r["type_raw"], "status": r["status_raw"], "lat": r["lat"], "lon": r["lon"]}
+            for r in only_secondary
+        ],
+        "keys_added_since_previous": sorted(new_keys - set(previous)) if previous else None,
+        "keys_missing_since_previous": sorted(set(previous) - new_keys) if previous else None,
         "kind_raw_counts": dict(kind_stats),
         "status_raw_counts": dict(status_stats),
         "coord_stats": dict(coord_stats),

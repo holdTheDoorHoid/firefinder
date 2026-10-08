@@ -1,7 +1,10 @@
 {
   "id": "us-mt-cyclone-peak",
   "name": "Cyclone Peak Lookout",
-  "other_names": [],
+  "summary": "A 41-ft timber tower with an R-6 cab, built in 1967 in the Whitefish Range to replace a 1935 pole lookout; staffed in summer, with cab access that varies.",
+  "other_names": [
+    "Cyclone Lookout"
+  ],
   "country": "US",
   "region": "MT",
   "county": "Flathead",
@@ -13,8 +16,11 @@
   },
   "elevation_m": 1837.3,
   "kind": "tower",
-  "design": "L-4",
-  "height_m": 12.2,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "R-6 cab on a 41-ft treated timber tower (1967); replaced a 40-ft pole tower with an L-4 cab (1935)",
+  "height_m": 12.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -25,11 +31,11 @@
       "url": "http://nhlr.org/lookouts/us/mt/cyclone-peak-lookout/"
     }
   ],
-  "agency": "US Forest Service",
+  "agency": "U.S. Forest Service, Flathead National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Public trail from a gated dirt road. Entry to the cab depends on whether the lookout is staffed; one visitor found the building locked."
   },
   "staffing": {
     "status": "unknown",
@@ -37,22 +43,67 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Trail starts at a gated dirt road. Sources give 2.5 miles one way (Flathead Beacon) or 4.2 miles out-and-back (Trekking Wild)."
   },
   "rental": null,
   "events": [
     {
+      "year": 1935,
+      "event": "built",
+      "note": "40-ft pole tower with L-4 cab, later replaced",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/cyclone-peak-lookout/"
+    },
+    {
+      "year": 1957,
+      "event": "staffed",
+      "note": "Earliest lookout staff entries on firelookout.com (1957 and 1958)",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/cyclone.html"
+    },
+    {
       "year": 1967,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "41-ft treated timber tower with R-6 cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/cyclone-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/cyclone-peak-lookout/",
+        "https://www.firelookout.com/mt/cyclone.html"
+      ]
+    },
+    {
+      "year": 1967,
+      "event": "replaced",
+      "note": "Replaced the 40-ft pole L-4 tower from 1935",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/cyclone-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/cyclone-peak-lookout/",
+        "https://www.firelookout.com/mt/cyclone.html"
+      ]
+    },
+    {
+      "year": 2012,
+      "event": "staffed",
+      "note": "One of the first three lookouts in the Flathead's volunteer lookout program, with Baptiste and Firefighter.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/11/2023-newsletter.pdf"
+    },
+    {
+      "year": 2018,
+      "event": "restored",
+      "note": "Multi-day project scraping and painting the cab exterior, catwalk and stair railings.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2018-completed-projects.pdf"
     },
     {
       "year": 2021,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 9, 2021",
-      "from": "nhlr"
+      "note": "Registered January 9, 2021 as US 1499, MT 77",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/cyclone-peak-lookout/"
     }
   ],
   "photos": [
@@ -88,8 +139,23 @@
       "kind": "register"
     },
     {
+      "label": "Cyclone Lookout (Flathead Beacon)",
+      "url": "https://flatheadbeacon.com/2014/06/17/explore-cyclone-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Hiking Cyclone Lookout Trail in Flathead National Forest (Trekking Wild)",
+      "url": "https://www.trekkingwild.com/destination-item/hiking-cyclone-lookout-trail-in-flathead-national-forest/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
+      "kind": "association"
+    },
+    {
+      "label": "Northwest Montana Lookout Association: work on Cyclone Lookout",
+      "url": "https://nwmt-ffla.org/2023/11/12/2023-newsletter/",
       "kind": "association"
     },
     {
@@ -142,17 +208,47 @@
       ]
     },
     {
+      "source": "nwmt_projects",
+      "key": "nwmt_projects:mt:cyclone",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/1210305653",
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-cyclone-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

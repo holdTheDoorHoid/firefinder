@@ -1,6 +1,7 @@
 {
   "id": "us-nj-millville",
   "name": "Millville Station Fire Tower",
+  "summary": "Built 1922 as a 60-ft steel lookout on the Bridgeton Pike near Millville, Cumberland County, NJ; later raised to 100 ft; a watchman staffed it until 1942.",
   "other_names": [],
   "country": "US",
   "region": "NJ",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 25.3,
   "kind": "tower",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "Steel Aermotor tower, 60 ft originally with a 7'x7' metal cab; later raised to 100 ft",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -45,14 +49,41 @@
     {
       "year": 1922,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register gives 1922; the 1922-23 state annual report says it opened for service April 1",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/millville-station-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nj/millville-station-fire-tower/",
+        "https://easternuslookouts.weebly.com/millville.html"
+      ]
+    },
+    {
+      "year": 1922,
+      "event": "replaced",
+      "note": "Replaced an earlier structure of local design",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/millville-station-fire-tower/"
+    },
+    {
+      "year": 1922,
+      "event": "staffed_first",
+      "note": "Watchman Josiah Hankins served from the time the tower was built",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/millville.html"
+    },
+    {
+      "year": 1942,
+      "event": "staffed_last",
+      "note": "Hankins retired a few weeks before an April 20, 1942 newspaper item",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/millville.html"
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 15, 2004",
-      "from": "nhlr"
+      "note": "Registered March 15, 2004 as US 569, NJ 22",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/millville-station-fire-tower/"
     }
   ],
   "photos": [
@@ -100,6 +131,7 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
         "status",
         "registers",
         "agency",
@@ -112,7 +144,6 @@
       "source": "nj_forest_fire_towers",
       "key": "nj_forest_fire_towers:nj:millville-station",
       "fields": [
-        "kind",
         "height_m",
         "ownership",
         "links"
@@ -131,12 +162,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nj-millville",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

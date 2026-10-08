@@ -13,6 +13,9 @@
   },
   "elevation_m": 815.9,
   "kind": "tower",
+  "material": null,
+  "material_from": null,
+  "roles": [],
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -120,10 +123,26 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "kind",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "tower"
+        },
+        {
+          "source": "nhlr",
+          "value": "tree"
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources disagree on whether a tower or building stood here, or only a camp or lookout tree."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

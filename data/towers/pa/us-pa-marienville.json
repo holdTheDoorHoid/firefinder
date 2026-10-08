@@ -1,6 +1,7 @@
 {
   "id": "us-pa-marienville",
   "name": "Marienville Fire Tower",
+  "summary": "A steel lookout built near Marienville in 1921; in 1952 it was reportedly dismantled and moved to Chestnut Ridge, Fayette County, and its current state is unconfirmed.",
   "other_names": [],
   "country": "US",
   "region": "PA",
@@ -13,10 +14,13 @@
   },
   "elevation_m": 568.1,
   "kind": "tower",
-  "design": "Aermotor",
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "steel (maker not named in the sources read)",
   "height_m": 18.3,
-  "status": "standing",
-  "status_note": null,
+  "status": "relocated",
+  "status_note": "Dismantled in 1952 and moved to Chestnut Ridge, Fayette County. No source read confirms whether it still stands there, and none places a tower at Marienville after 1952.",
   "registers": [
     {
       "register": "NHLR",
@@ -45,14 +49,42 @@
     {
       "year": 1921,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "First fire tower in that section, steel, 60 feet, near Marienville, per an October 1921 newspaper item.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/marienville-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/marienville-fire-tower/",
+        "https://easternuslookouts.weebly.com/marienville.html"
+      ]
+    },
+    {
+      "year": 1924,
+      "event": "staffed",
+      "note": "The Marienville towerman is named in a 1924 item describing the towerman watching two bears near the tower.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/marienville-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/marienville-fire-tower/",
+        "https://easternuslookouts.weebly.com/marienville.html"
+      ]
+    },
+    {
+      "year": 1952,
+      "event": "relocated",
+      "note": "Dismantled and re-erected at Chestnut Ridge, Fayette County, per 1952 sources. The 1952 item describes an 80-foot tower there, replacing Banning Knob.",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/marienville.html",
+      "source_urls": [
+        "https://easternuslookouts.weebly.com/marienville.html",
+        "https://easternuslookouts.weebly.com/pennsylvania-a-f.html"
+      ]
     },
     {
       "year": 2026,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 2, 2026",
-      "from": "nhlr"
+      "note": "Registered January 2, 2026 as US 1814, PA 74, nominated by Coltin Carr.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/marienville-fire-tower/"
     }
   ],
   "photos": [
@@ -98,6 +130,11 @@
       "kind": "register"
     },
     {
+      "label": "Pennsylvania (A-f) - Forest Lookouts (Forest Lookouts (easternuslookouts.weebly.com))",
+      "url": "https://easternuslookouts.weebly.com/pennsylvania-a-f.html",
+      "kind": "reference"
+    },
+    {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
       "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
       "kind": "site"
@@ -122,6 +159,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "status",
         "registers",
         "agency",
@@ -155,12 +193,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-marienville",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "relocated"
+        },
         {
           "source": "nhlr",
           "value": "standing"
@@ -175,7 +231,7 @@
         }
       ],
       "distance_m": null,
-      "note": "NHLR lists lookouts that were standing when registered."
+      "note": "Research (2026-10-08) gives relocated where the source records give standing. The page shows the researched status; please tell us if it is wrong."
     },
     {
       "field": "built",
@@ -193,9 +249,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

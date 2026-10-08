@@ -16,6 +16,9 @@
   },
   "elevation_m": 1382.9,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "15'x15' R-6 flattop cab with catwalk on a treated-timber tower",
   "height_m": 6.1,
   "status": "standing",
@@ -173,6 +176,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Surveyors Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/id/surveyorsridge.html",
       "kind": "site"
@@ -187,6 +195,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -210,6 +219,14 @@
       "fields": [
         "ownership",
         "access",
+        "rental",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:id:surveyors-ridge-lookout",
+      "fields": [
         "rental",
         "links"
       ]
@@ -271,5 +288,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

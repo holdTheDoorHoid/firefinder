@@ -16,6 +16,9 @@
   },
   "elevation_m": 1349.3,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
   "design": "R-6",
   "height_m": 12.5,
   "status": "standing",
@@ -191,6 +194,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Clear Lake Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/clearlake.html",
       "kind": "site"
@@ -238,9 +246,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:or:clear-lake-butte-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:or:clear-lake-butte:45.1565:-121.7186",
       "fields": [
+        "material",
         "design",
         "staffing",
         "events",
@@ -284,5 +301,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-sd-bear-mountain",
   "name": "Bear Mountain Lookout",
+  "summary": "Bear Mountain's lookout dates to 1910; its wooden tower gave way in 1939 to a 30-foot steel tower with an L-4 cab that is still staffed each summer.",
   "other_names": [],
   "country": "US",
   "region": "SD",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 2184.2,
   "kind": "tower",
-  "design": "L-4",
-  "height_m": null,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "All-steel tower with L-4 cab (1939 replacement)",
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Gravel road to the summit per the register. Forest Service page (undated) describes a winter warming station for recreationists and a planned public toilet."
   },
   "staffing": {
     "status": "unknown",
@@ -37,11 +41,39 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Gravel road leads to the summit; staffed late spring through early fall. The sources do not describe climbing the cab."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1910,
+      "event": "built",
+      "note": "First tower, per Forest Service. The brief's 1926 date is not a construction date.",
+      "from": "research",
+      "source_url": "https://fs.usda.gov/r02/blackhills/recreation/bear-mountain-fire-lookout"
+    },
+    {
+      "year": 1914,
+      "event": "modified",
+      "note": "Enclosed cab added",
+      "from": "research",
+      "source_url": "https://fs.usda.gov/r02/blackhills/recreation/bear-mountain-fire-lookout"
+    },
+    {
+      "year": 1915,
+      "event": "staffed",
+      "note": "Forest guard in constant attendance during fire season (Lead Daily Call item, as quoted)",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/bear-mountain.html"
+    },
+    {
+      "year": 1924,
+      "event": "modified",
+      "note": "Cab enlarged",
+      "from": "research",
+      "source_url": "https://fs.usda.gov/r02/blackhills/recreation/bear-mountain-fire-lookout"
+    },
     {
       "year": 1926,
       "event": "built",
@@ -49,10 +81,38 @@
       "from": "firelookout_com"
     },
     {
+      "year": 1939,
+      "event": "replaced",
+      "note": "Wooden tower dismantled; 30-foot all-steel tower with L-4 cab raised; tower and garage built by the Custer CCC",
+      "from": "research",
+      "source_url": "https://fs.usda.gov/r02/blackhills/recreation/bear-mountain-fire-lookout",
+      "source_urls": [
+        "https://fs.usda.gov/r02/blackhills/recreation/bear-mountain-fire-lookout",
+        "http://nhlr.org/lookouts/us/sd/bear-mountain-lookout/",
+        "https://westlookouts.weebly.com/bear-mountain.html",
+        "https://www.firelookout.com/sd/bearmtn.html"
+      ]
+    },
+    {
+      "year": 1967,
+      "event": "modified",
+      "note": "Cab modernized",
+      "from": "research",
+      "source_url": "https://fs.usda.gov/r02/blackhills/recreation/bear-mountain-fire-lookout"
+    },
+    {
+      "year": 2010,
+      "event": "modified",
+      "note": "Prefabricated building replaced older radio building",
+      "from": "research",
+      "source_url": "https://fs.usda.gov/r02/blackhills/recreation/bear-mountain-fire-lookout"
+    },
+    {
       "year": 2017,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 9, 2017",
-      "from": "nhlr"
+      "note": "Registered June 9, 2017 as US 1203, SD 6",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sd/bear-mountain-lookout/"
     }
   ],
   "photos": [
@@ -136,6 +196,11 @@
       "kind": "register"
     },
     {
+      "label": "Bear Mountain Fire Lookout (U.S. Forest Service, Black Hills National Forest)",
+      "url": "https://fs.usda.gov/r02/blackhills/recreation/bear-mountain-fire-lookout",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA South Dakota lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/sd/",
       "kind": "association"
@@ -165,6 +230,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -199,12 +265,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-sd-bear-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

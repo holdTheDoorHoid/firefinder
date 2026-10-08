@@ -1,6 +1,7 @@
 {
   "id": "us-id-junction-mountain",
   "name": "Junction Mountain Lookout",
+  "summary": "A 1955 L-4 cab on a 53-ft treated-lumber tower replaced a c.1931 log-crib lookout in Clearwater National Forest; abandoned since the 1970s and listed as a hike-in.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 1968.1,
   "kind": "tower",
-  "design": "L-4",
-  "height_m": null,
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
+  "design": "L-4 cab on a 53-ft treated-lumber tower",
+  "height_m": 16.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -37,16 +41,33 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Idaho Fire Lookouts lists the site as a hike-in. No trail length or visitor access rules were found in the sources read."
   },
   "rental": null,
   "events": [
     {
+      "year": 1931,
+      "event": "built",
+      "note": "Earlier lookout on the site: log crib foundation topped with an L-4 cab. Idaho Fire Lookouts prints the date as 19341.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/junction-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/junction-mountain-lookout/",
+        "https://www.firelookout.com/id/junctionmtn.html"
+      ]
+    },
+    {
       "year": 1955,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Present 53-ft treated-lumber tower with L-4 cab; replaced the 1931 lookout on the site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/junction-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/junction-mountain-lookout/",
+        "https://www.firelookout.com/id/junctionmtn.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/junction-mountain-lookout/"
+      ]
     },
     {
       "year": 1970,
@@ -57,8 +78,9 @@
     {
       "year": 2014,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 2, 2014",
-      "from": "nhlr"
+      "note": "Registered September 2, 2014 as US 1013, ID 136; nominated by Luke Channer",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/junction-mountain-lookout/"
     }
   ],
   "photos": [
@@ -212,6 +234,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:junction-mtn:46.6944:-115.2780",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -224,6 +247,21 @@
         "events",
         "photos",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-junction-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -267,9 +305,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

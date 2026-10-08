@@ -1,6 +1,7 @@
 {
   "id": "us-id-thunderbolt-mountain",
   "name": "Thunderbolt Mountain Lookout",
+  "summary": "Boise NF hike-in lookout with a 1917 camp, a cupola dated 1922 or 1933, and a flat cab dated 1962 or 1965; standing, staffed in season.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2638.3,
   "kind": "two_story",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "R-6",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -25,34 +29,78 @@
       "url": "http://nhlr.org/lookouts/us/id/thunderbolt-mountain-lookout/"
     }
   ],
-  "agency": "US Forest Service - Boise National Forest",
+  "agency": "U.S. Forest Service, Boise National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Hike-in site. The Trout Creek / Thunderbolt Trailhead is signed and gated; the Forest Service advises checking the Motor Vehicle Use Map. Current season not confirmed."
   },
   "staffing": {
     "status": "staffed",
-    "as_of": null
+    "as_of": "undated"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Hike-in; the Forest Service Trout Creek / Thunderbolt Trailhead area serves the lookout, and a campground sits near that trailhead."
   },
   "rental": null,
   "events": [
     {
+      "year": 1917,
+      "event": "other",
+      "note": "Camp at the summit, the first use of the site for a lookout.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/thunderbolt-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/thunderbolt-mountain-lookout/",
+        "https://www.firelookout.com/id/thunderbolt.html",
+        "https://idaholookouts.weebly.com/thunderbolt-mountain.html"
+      ]
+    },
+    {
+      "year": 1922,
+      "event": "built",
+      "note": "Log cabin with cupola, per Forest Lookouts. Other sources date the cupola house to 1933.",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/thunderbolt-mountain.html"
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "D-6 cupola structure (NHLR); log cabin with cupola (firelookout.com).",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/thunderbolt-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/thunderbolt-mountain-lookout/",
+        "https://www.firelookout.com/id/thunderbolt.html"
+      ]
+    },
+    {
       "year": 1962,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Current two-story R-6 flat cab. The NHLR description allows 1965 instead.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/thunderbolt-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/thunderbolt-mountain-lookout/",
+        "https://www.firelookout.com/id/thunderbolt.html",
+        "https://www.idahofirelookouts.com/west-central/thunderbolt-mountain-lookout/"
+      ]
+    },
+    {
+      "year": 1965,
+      "event": "replaced",
+      "note": "Per Forest Lookouts, an R-6 flat-roof cab on a 10-foot base replaced the old cupola house.",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/thunderbolt-mountain.html"
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 3, 2020",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, October 3, 2020.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/thunderbolt-mountain-lookout/"
     }
   ],
   "photos": [
@@ -160,6 +208,16 @@
       "kind": "register"
     },
     {
+      "label": "Thunderbolt Mountain - FOREST LOOKOUTS (Forest Lookouts (Idaho))",
+      "url": "https://idaholookouts.weebly.com/thunderbolt-mountain.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Trout Creek / Thunderbolt Trailhead (U.S. Forest Service, Boise National Forest)",
+      "url": "https://www.fs.usda.gov/r04/boise/recreation/trout-creek-thunderbolt-trailhead",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -218,12 +276,34 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-thunderbolt-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

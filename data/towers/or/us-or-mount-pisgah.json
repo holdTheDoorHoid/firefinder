@@ -1,6 +1,7 @@
 {
   "id": "us-or-mount-pisgah",
   "name": "Mount Pisgah Lookout",
+  "summary": "A timber R-6 lookout on the Ochoco National Forest built in 1964 beside a site used since 1918 or 1919; the register and firelookout.com date the first platform differently.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2072.6,
   "kind": "tower",
-  "design": "R-6",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "20-ft timber tower with a 14 x 14 ft flat-topped live-in R-6 cab and catwalk",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Active staffed lookout. The sources read do not say whether visitors may go up into the cab. A 2011 visitor drove up by road."
   },
   "staffing": {
     "status": "staffed",
@@ -37,22 +41,83 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Road 2630 is the access road. A 2011 visitor described it as rough and took 30 minutes to drive 6.2 miles."
   },
   "rental": null,
   "events": [
     {
+      "year": 1918,
+      "event": "built",
+      "note": "First 10-ft platform on the summit. Firelookout.com and the 2011 blog give 1918; the register gives 1919",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/pisgah.html",
+      "source_urls": [
+        "https://www.firelookout.com/or/pisgah.html",
+        "https://cherylhill.net/firelookouts/2011/07/20/mt-pisgah/"
+      ]
+    },
+    {
+      "year": 1923,
+      "event": "replaced",
+      "note": "35-ft platform with a cabin (open platform with ground cabin per the register)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/mount-pisgah-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/mount-pisgah-lookout/",
+        "https://www.firelookout.com/or/pisgah.html",
+        "https://cherylhill.net/firelookouts/2011/07/20/mt-pisgah/"
+      ]
+    },
+    {
+      "year": 1929,
+      "event": "modified",
+      "note": "Cab built on the platform",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/mount-pisgah-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/mount-pisgah-lookout/",
+        "https://www.firelookout.com/or/pisgah.html",
+        "https://cherylhill.net/firelookouts/2011/07/20/mt-pisgah/"
+      ]
+    },
+    {
+      "year": 1933,
+      "event": "replaced",
+      "note": "20-ft L-4 tower or cab; served 31 years until the present lookout was built",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/mount-pisgah-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/mount-pisgah-lookout/",
+        "https://www.firelookout.com/or/pisgah.html",
+        "https://cherylhill.net/firelookouts/2011/07/20/mt-pisgah/"
+      ]
+    },
+    {
       "year": 1964,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Present 20-ft R-6 timber tower built right beside the old tower, which was then removed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/mount-pisgah-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/mount-pisgah-lookout/",
+        "https://www.firelookout.com/or/pisgah.html",
+        "https://cherylhill.net/firelookouts/2011/07/20/mt-pisgah/"
+      ]
     },
     {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 8, 2003",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/mount-pisgah-lookout/"
+    },
+    {
+      "year": 2008,
+      "event": "burned",
+      "note": "Patrol point one mile north of the lookout burned in a 2008 forest fire; the lookout itself is not described as burned",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/pisgah.html"
     }
   ],
   "photos": [
@@ -100,6 +165,11 @@
       "kind": "register"
     },
     {
+      "label": "Mt. Pisgah, Every Lookout in Oregon (Cheryl Hill blog)",
+      "url": "https://cherylhill.net/firelookouts/2011/07/20/mt-pisgah/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -124,6 +194,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -158,6 +229,20 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-mount-pisgah",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -177,9 +262,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

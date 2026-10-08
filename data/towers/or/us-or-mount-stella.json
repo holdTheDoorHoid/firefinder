@@ -1,6 +1,7 @@
 {
   "id": "us-or-mount-stella",
   "name": "Mount Stella Lookout",
+  "summary": "Rogue River NF lookout: first L-4 tower c.1932, replaced by a 30-ft tower in 1946 or 1947, last used in the 1980s, NRHP 2000, NHLR 2003.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 1421.9,
   "kind": "tower",
-  "design": "L-4",
-  "height_m": null,
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "L-4 cab; original 20-foot timber tower (c.1932), replaced by a 30-foot treated timber L-4 tower",
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -49,16 +53,83 @@
   "rental": null,
   "events": [
     {
+      "year": 1931,
+      "event": "other",
+      "note": "Site selected and work started, per a Rogue River National Forest history quoted by Forest Lookouts",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/mount-stella.html"
+    },
+    {
+      "year": 1932,
+      "event": "built",
+      "note": "First lookout: 20-foot timber tower with L-4 cab; NHLR says it went into service in 1932; Forest Lookouts says c.1932",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/mount-stella-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/mount-stella-lookout/",
+        "https://www.firelookout.com/or/mtstella.html",
+        "https://oregonlookouts.weebly.com/mount-stella.html"
+      ]
+    },
+    {
+      "year": 1942,
+      "event": "other",
+      "note": "Aircraft Warning Service station activated August 11, 1942",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/mount-stella.html"
+    },
+    {
+      "year": 1943,
+      "event": "other",
+      "note": "Aircraft Warning Service station deactivated June 14, 1943",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/mount-stella.html"
+    },
+    {
+      "year": 1946,
+      "event": "replaced",
+      "note": "30-foot treated timber L-4 tower; firelookout.com dates it to 1946, NHLR says 1947",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/mount-stella-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/mount-stella-lookout/",
+        "https://www.firelookout.com/or/mtstella.html"
+      ]
+    },
+    {
       "year": 1947,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
     },
     {
+      "year": 1985,
+      "event": "staffed_last",
+      "note": "Approximate year: NHLR says standby since the mid 1980s; firelookout.com says last used in the 1980s",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/mount-stella-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/mount-stella-lookout/",
+        "https://www.firelookout.com/or/mtstella.html"
+      ]
+    },
+    {
+      "year": 2000,
+      "event": "nrhp_listed",
+      "note": "Listed on the National Register of Historic Places; NPGallery record dated 12/29/2000",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/AssetDetail/NRIS/00000511",
+      "source_urls": [
+        "https://npgallery.nps.gov/AssetDetail/NRIS/00000511",
+        "https://www.wikidata.org/wiki/Q86927085"
+      ]
+    },
+    {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 31, 2003",
-      "from": "nhlr"
+      "note": "National Historic Lookout Register registration date March 31, 2003",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/mount-stella-lookout/"
     }
   ],
   "photos": [
@@ -142,6 +213,16 @@
       "kind": "register"
     },
     {
+      "label": "Mount Stella (Forest Lookouts)",
+      "url": "https://oregonlookouts.weebly.com/mount-stella.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Mt. Stella Lookout (National Register of Historic Places, NPGallery)",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/00000511",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -166,6 +247,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -200,6 +282,20 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-mount-stella",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -223,9 +319,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

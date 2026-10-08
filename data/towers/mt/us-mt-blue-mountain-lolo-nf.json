@@ -1,6 +1,7 @@
 {
   "id": "us-mt-blue-mountain-lolo-nf",
   "name": "Blue Mountain Lookout (Lolo NF)",
+  "summary": "Standing R-6 tower six miles from Missoula; site developed 1934, present tower built 1957 at Davis Point and moved here in 1966.",
   "other_names": [
     "Blue Mountain"
   ],
@@ -15,8 +16,11 @@
   },
   "elevation_m": 1940.4,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
   "design": "R-6",
-  "height_m": 12.2,
+  "height_m": 12.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -39,7 +43,7 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
@@ -47,14 +51,63 @@
     {
       "year": 1934,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Site developed with a 40-ft pole tower and L-4 cab",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/bluemtnl.html"
+    },
+    {
+      "year": 1952,
+      "event": "other",
+      "note": "Red Skies of Montana filmed on location; the register ties the tower to the film, which conflicts with the 1957 build date",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/blue-mountain-lookout-lolo-nf/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/blue-mountain-lookout-lolo-nf/",
+        "https://930kmpt.com/firefighters-protect-historic-blue-mountain-fire-lookout-audio/"
+      ]
+    },
+    {
+      "year": 1957,
+      "event": "built",
+      "note": "Present 41-ft tower built at Davis Point",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/bluemtnl.html",
+      "source_urls": [
+        "https://www.firelookout.com/mt/bluemtnl.html",
+        "https://930kmpt.com/firefighters-protect-historic-blue-mountain-fire-lookout-audio/"
+      ]
+    },
+    {
+      "year": 1966,
+      "event": "relocated",
+      "note": "Moved from Davis Point to Blue Mountain to replace an older timber tower",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/bluemtnl.html",
+      "source_urls": [
+        "https://www.firelookout.com/mt/bluemtnl.html",
+        "https://930kmpt.com/firefighters-protect-historic-blue-mountain-fire-lookout-audio/"
+      ]
     },
     {
       "year": 1996,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 5, 1996",
-      "from": "nhlr"
+      "note": "Registered June 5, 1996",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/blue-mountain-lookout-lolo-nf/"
+    },
+    {
+      "year": 2013,
+      "event": "closed",
+      "note": "Closed for the summer for repairs",
+      "from": "research",
+      "source_url": "https://930kmpt.com/firefighters-protect-historic-blue-mountain-fire-lookout-audio/"
+    },
+    {
+      "year": 2013,
+      "event": "fire",
+      "note": "Lolo Creek Complex fire, still several miles from the tower's northern edge; tower being fire-wrapped and sprinklers put in as a precaution",
+      "from": "research",
+      "source_url": "https://930kmpt.com/firefighters-protect-historic-blue-mountain-fire-lookout-audio/"
     }
   ],
   "photos": [
@@ -100,6 +153,11 @@
       "label": "NHLR register entry US 171 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/mt/blue-mountain-lookout-lolo-nf/",
       "kind": "register"
+    },
+    {
+      "label": "Update – Firefighters Protect Historic Blue Mountain Fire Lookout (KGVO)",
+      "url": "https://930kmpt.com/firefighters-protect-historic-blue-mountain-fire-lookout-audio/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
@@ -148,6 +206,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:blue-mtn:46.8155:-114.1869",
       "fields": [
+        "material",
         "design",
         "height_m",
         "events",
@@ -161,12 +220,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-blue-mountain-lolo-nf",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

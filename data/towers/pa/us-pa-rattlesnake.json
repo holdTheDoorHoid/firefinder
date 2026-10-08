@@ -1,6 +1,7 @@
 {
   "id": "us-pa-rattlesnake",
   "name": "Rattlesnake Fire Tower",
+  "summary": "The original 80-ft tower on Rattlesnake Pike in Moshannon State Forest dates to 1933 and was later replaced by a new 80-ft steel structure.",
   "other_names": [
     "Rattlesnake Pike"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 741.3,
   "kind": "tower",
-  "design": "Aermotor",
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "80-ft steel tower with 7 x 7 ft metal cab (original, 1933); replacement is an 80-ft steel structure",
   "height_m": 24.4,
   "status": "standing",
   "status_note": null,
@@ -51,16 +55,47 @@
       "from": "pa_storymap"
     },
     {
+      "year": 1933,
+      "event": "built",
+      "note": "Original 80-ft steel tower built on a rocky ridge in Moshannon State Forest; the state ordered three new 80-ft towers in July 1933",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/rattlesnake-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/rattlesnake-fire-tower/",
+        "https://easternuslookouts.weebly.com/rattlesnake-pike.html"
+      ]
+    },
+    {
       "year": 1995,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 15, 1995",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register as US 155, PA 6",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/rattlesnake-fire-tower/"
+    },
+    {
+      "year": 2017,
+      "event": "staffed",
+      "note": "February 2017 visit report: tower still staffed, at least at times",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/rattlesnake-fire-tower/"
+    },
+    {
+      "year": 2018,
+      "event": "removed",
+      "note": "Original tower removed; its stone observer's cabin remains on site. Year is inferred with the replacement; the register gives none.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/rattlesnake-fire-tower/"
     },
     {
       "year": 2018,
       "event": "replaced",
-      "note": null,
-      "from": "pa_storymap"
+      "note": "New 80-ft steel structure replaces the original under the late-2010s upgrades. The register gives no exact year; 2018 is inferred from the WHYY report (article dated May 2019 in page metadata) that 16 towers were built statewide the year before its spring fire season. The report does not name this site. Not confirmed for this site.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/rattlesnake-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/rattlesnake-fire-tower/",
+        "https://whyy.org/articles/with-new-lookout-towers-pennsylvania-goes-old-school-to-detect-wildfires/"
+      ]
     }
   ],
   "photos": [
@@ -108,6 +143,11 @@
       "kind": "register"
     },
     {
+      "label": "With New Lookout Towers, Pennsylvania Goes Old-School to Detect Wildfires (WHYY)",
+      "url": "https://whyy.org/articles/with-new-lookout-towers-pennsylvania-goes-old-school-to-detect-wildfires/",
+      "kind": "reference"
+    },
+    {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
       "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
       "kind": "site"
@@ -132,6 +172,8 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
+        "material",
         "status",
         "registers",
         "agency",
@@ -144,7 +186,6 @@
       "source": "pa_storymap",
       "key": "pa_storymap:rattlesnake-tower:40.9149:-78.0102",
       "fields": [
-        "kind",
         "design",
         "height_m",
         "ownership",
@@ -166,12 +207,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-rattlesnake",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

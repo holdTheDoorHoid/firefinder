@@ -1,6 +1,7 @@
 {
   "id": "us-id-elk-butte",
   "name": "Elk Butte Lookout",
+  "summary": "An 80-foot steel tower erected 1948 with a 1933 live-in cab at 30 feet, run by the Clearwater-Potlatch Timber Protective Association and on emergency status.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 1745.0,
   "kind": "tower",
-  "design": null,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "80-ft WWII surplus steel tower with metal 7x7 ft cab; 1933 wooden live-in cab kept at 30 ft",
   "height_m": 24.4,
   "status": "standing",
   "status_note": null,
@@ -32,7 +36,7 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
+    "status": "emergency",
     "as_of": null
   },
   "visit": {
@@ -43,16 +47,63 @@
   "rental": null,
   "events": [
     {
+      "year": 1912,
+      "event": "other",
+      "note": "First used as a camp lookout",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/elkbutteid.html"
+    },
+    {
+      "year": 1918,
+      "event": "built",
+      "note": "Platform tower and log cabin",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/elkbutteid.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/elkbutteid.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/elk-butte-lookout/"
+      ]
+    },
+    {
+      "year": 1926,
+      "event": "rebuilt",
+      "note": "Replacement cabin; the earlier cabin had been burned by hunters",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/elkbutteid.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/elkbutteid.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/elk-butte-lookout/"
+      ]
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "30-foot wooden tower with live-in cab",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/elkbutteid.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/elkbutteid.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/elk-butte-lookout/"
+      ]
+    },
+    {
       "year": 1948,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "80-foot army-surplus steel tower erected; the 1933 live-in cab was kept at 30 ft. A 1949 annual report entry gives a different year",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/elk-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/elk-butte-lookout/",
+        "https://www.firelookout.com/id/elkbutteid.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/elk-butte-lookout/"
+      ]
     },
     {
       "year": 1997,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 1, 1997",
-      "from": "nhlr"
+      "note": "Registered June 1, 1997 as US 216, ID 16",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/elk-butte-lookout/"
     }
   ],
   "photos": [
@@ -148,6 +199,16 @@
       "kind": "register"
     },
     {
+      "label": "Elk Butte (Forest Lookouts (idaholookouts.weebly.com))",
+      "url": "https://idaholookouts.weebly.com/elk-butte1.html",
+      "kind": "reference"
+    },
+    {
+      "label": "About Us (Clearwater-Potlatch Timber Protective Association)",
+      "url": "https://www.cptpa.com/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -172,6 +233,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -205,6 +267,20 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-elk-butte",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -222,11 +298,32 @@
       ],
       "distance_m": null,
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    },
+    {
+      "field": "material",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "steel"
+        },
+        {
+          "source": "firelookout_com",
+          "value": "wood"
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources name different materials. Often one describes an earlier structure."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

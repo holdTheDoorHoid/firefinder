@@ -1,6 +1,7 @@
 {
   "id": "us-id-clarke-mountain",
   "name": "Clarke Mountain Lookout",
+  "summary": "A 1952 L-4 cab on a 10-foot concrete base on Clarke Mountain, Clearwater National Forest. Abandoned, hike-in, and last recorded in poor shape in 2003.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 1587.4,
   "kind": "two_story",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "L-4 cab on a 10-foot concrete base; a D-6 cupola cabin from the 1920s stood first",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -28,17 +32,17 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Hike-in on National Forest land. No closure notice found in the sources. Structure described as unsafe at last report."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2003"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "Hike-in only. A 2003 visitor walked an old trail from the Bungalow Ranger Station site, which is open to motorcycles. Another route from Elk Mountain is an ATV trail."
   },
   "rental": null,
   "events": [
@@ -51,14 +55,28 @@
     {
       "year": 1952,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "L-4 cab built atop a 10-foot concrete base",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/clarke-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/clarke-mountain-lookout/",
+        "https://www.firelookout.com/id/clarke.html",
+        "https://www.fs.usda.gov/media/259185"
+      ]
+    },
+    {
+      "year": 2003,
+      "event": "other",
+      "note": "Register visit report dated July 12, 2003: base collapsing, catwalk unsound on two sides, sign asks for restoration help, not staffed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/clarke-mountain-lookout/"
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 1, 2004",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, June 1, 2004",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/clarke-mountain-lookout/"
     }
   ],
   "photos": [
@@ -142,6 +160,11 @@
       "kind": "register"
     },
     {
+      "label": "Clearwater National Forest Lookouts (USDA Forest Service, Clearwater National Forest)",
+      "url": "https://www.fs.usda.gov/media/259185",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -188,6 +211,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:clarke-mtn:46.6303:-115.5450",
       "fields": [
+        "material",
         "design",
         "height_m",
         "photos",
@@ -201,6 +225,22 @@
         "events",
         "photos",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-clarke-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -229,9 +269,15 @@
       "note": "NHLR lists lookouts that were standing when registered. idahofirelookouts.com's status is read from a short summary."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

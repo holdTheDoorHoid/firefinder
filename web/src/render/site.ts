@@ -18,8 +18,9 @@ export function sourcesRows(meta: Pick<Meta, 'sources'>): SafeHtml {
 
 const SHAPE_ROWS: [Shape, string][] = [
   ['tri', 'Triangle: a cab or open platform on a tower'],
-  ['house', 'House: a ground-level cab or a two- or three-story lookout building'],
+  ['house', 'House: a lookout building: a ground-level cab, two or three stories, a cab on a rooftop, or a trailer'],
   ['circle', 'Circle: type not known'],
+  ['diamond', 'Diamond: no structure (a summit camp, lookout tree or bare lookout point). Off until you switch them on in Filters'],
 ];
 const FILL_ROWS: [Fill, string][] = [
   ['solid', 'Solid: still standing'],

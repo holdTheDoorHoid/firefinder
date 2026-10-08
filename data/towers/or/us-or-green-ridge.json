@@ -14,6 +14,9 @@
   },
   "elevation_m": 1420.1,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "R-6 flattop cab with catwalk on 21-foot treated timber tower",
   "height_m": null,
   "status": "standing",
@@ -140,6 +143,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Green Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/greenridge.html",
       "kind": "site"
@@ -154,6 +162,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -177,6 +186,14 @@
       "fields": [
         "ownership",
         "access",
+        "rental",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:or:green-ridge-lookout",
+      "fields": [
         "rental",
         "links"
       ]
@@ -217,5 +234,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

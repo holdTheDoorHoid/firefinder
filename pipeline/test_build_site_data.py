@@ -341,6 +341,33 @@ class SiteHistoryAndDesigns(unittest.TestCase):
         rec = json.loads((self.out / "t" / "us-wa-b.json").read_text())
         self.assertEqual(rec["design_ids"], ["aermotor"])
 
+    def test_sites_with_no_structure_are_shown_but_counted_apart(self) -> None:
+        recs = [
+            tower("us-wa-a", region="WA", material="steel", material_from="nhlr", events=[ev(1935, "built")]),
+            tower("us-wa-b", region="WA", kind="camp", status="gone", events=[ev(1920, "built")]),
+            tower("us-wa-c", region="WA", kind="point", status="gone"),
+        ]
+        for r in recs:
+            (self.root / "towers" / "wa" / f"{r['id']}.json").write_text(json.dumps(r))
+        (self.root / "sources" / "ffla.json").write_text(json.dumps({"source": "ffla", "records": [
+            {"key": "ffla:1", "type_raw": "Firefinder"}, {"key": "ffla:2", "type_raw": "Map Board"}, {"key": "ffla:3", "type_raw": "Map Board"}]}))
+        meta = bsd.build(self.root / "towers", self.root / "stories", self.root / "p", self.root / "sources", bsd.DATA / "vocab.json", self.out, log=quiet(), this_year=2026)
+        props = {f["properties"]["i"]: f["properties"] for f in json.loads((self.out / "towers.geojson").read_text())["features"]}
+        self.assertEqual(set(props), {"us-wa-a", "us-wa-b", "us-wa-c"})
+        self.assertEqual(props["us-wa-a"]["m"], "steel")
+        self.assertNotIn("m", props["us-wa-b"])
+        counts = meta["counts"]
+        self.assertEqual((counts["total"], counts["structures"], counts["no_structure"]), (3, 1, 2))
+        self.assertEqual(counts["by_material"], {"steel": 1})
+        # "Lookouts standing in a year" counts structures only.
+        self.assertEqual(meta["history"]["total"], 1)
+        guide = json.loads((self.out / "structure_kinds.json").read_text())
+        kinds = {k["id"]: k for k in guide["kinds"]}
+        self.assertEqual((kinds["camp"]["count"], kinds["point"]["count"], kinds["tower"]["count"]), (1, 1, 1))
+        self.assertEqual(kinds["point"]["source_words"], ["Map Board", "Firefinder"])
+        self.assertEqual({g["id"]: g["count"] for g in guide["groups"]}, {"structure": 1, "no_structure": 2})
+        self.assertEqual(guide["counts"], {"structures": 1, "no_structure": 2, "with_material": 1})
+
 
 if __name__ == "__main__":
     unittest.main()

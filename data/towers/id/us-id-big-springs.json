@@ -1,6 +1,7 @@
 {
   "id": "us-id-big-springs",
   "name": "Big Springs Lookout",
+  "summary": "A 1936 steel tower near Big Springs Ranger Station on the Targhee NF; its cabin was removed in 1989, and the abandoned tower was registered in 2015.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 2089.7,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "Steel tower with a small 7 by 7 foot cab, built by the Aermotor Company of Chicago",
+  "height_m": 21.9,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,37 +32,84 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Listed as a hike-in on Idaho Fire Lookouts. The register records no signed directions. No closure or permit requirement appears in the pages read, but no source says whether the tower may be climbed."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1981"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Hike-in per Idaho Fire Lookouts. A 1949 account describes walking a mile from the bus at the foot of the hill; current directions are not signed per the register."
   },
   "rental": null,
   "events": [
     {
       "year": 1936,
       "event": "built",
-      "note": null,
-      "from": "idaho_fl"
+      "note": "Steel tower reportedly built by the Civilian Conservation Corps; the site also had a one-room log cabin, a single-car garage and a latrine. Sources differ on height: 72 feet (Island Park Historical Society) or 100 feet (Idaho Fire Lookouts, firelookout.com).",
+      "from": "research",
+      "source_url": "https://iphs.us/node/102",
+      "source_urls": [
+        "https://iphs.us/node/102",
+        "https://www.idahofirelookouts.com/southern-idaho/big-springs/",
+        "https://www.firelookout.com/id/bigsprings.html"
+      ]
+    },
+    {
+      "year": 1949,
+      "event": "other",
+      "note": "Group of female Forest Service employees visited; some climbed the 70-foot tower to look for smoke",
+      "from": "research",
+      "source_url": "https://iphs.us/node/102"
+    },
+    {
+      "year": 1963,
+      "event": "other",
+      "note": "One of only three lookout towers on the Targhee National Forest",
+      "from": "research",
+      "source_url": "https://iphs.us/node/102"
+    },
+    {
+      "year": 1981,
+      "event": "other",
+      "note": "No longer used; replaced by aircraft patrols",
+      "from": "research",
+      "source_url": "https://iphs.us/node/102"
     },
     {
       "year": 1985,
       "event": "abandoned",
-      "note": null,
-      "from": "idaho_fl"
+      "note": "Idaho Fire Lookouts gives 1985. The Island Park Historical Society says the lookout was no longer used by 1981.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/southern-idaho/big-springs/"
+    },
+    {
+      "year": 1989,
+      "event": "removed",
+      "note": "The Forest removed the cabin, garage and latrine; only the tower remains",
+      "from": "research",
+      "source_url": "https://iphs.us/node/102"
+    },
+    {
+      "year": 2006,
+      "event": "other",
+      "note": "Register visit report by Byron Nelson (July 11, 2006) answered Yes to Good condition? and Yes to Needs paint?",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/big-springs-lookout/"
     },
     {
       "year": 2015,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 3, 2015",
-      "from": "nhlr"
+      "note": "Registered January 3, 2015 as US 1061 (ID 105)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/big-springs-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/big-springs-lookout/",
+        "https://www.idahofirelookouts.com/southern-idaho/big-springs/"
+      ]
     }
   ],
   "photos": [
@@ -116,6 +167,11 @@
       "label": "NHLR register entry US 1061 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/id/big-springs-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Big Springs Lookout Tower (Island Park Historical Society)",
+      "url": "https://iphs.us/node/102",
+      "kind": "reference"
     },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
@@ -176,6 +232,23 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-big-springs",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -203,9 +276,15 @@
       "note": "NHLR lists lookouts that were standing when registered. idahofirelookouts.com's status is read from a short summary."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

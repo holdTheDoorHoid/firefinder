@@ -3,7 +3,8 @@
   "name": "Lorena Butte Lookout (now at Lefever)",
   "other_names": [
     "Lorena Butte Lookout",
-    "Lefever"
+    "Lefever",
+    "Lorena Butte Relocated Lookout"
   ],
   "country": "US",
   "region": "WA",
@@ -16,6 +17,9 @@
   },
   "elevation_m": 664.5,
   "kind": "ground",
+  "material": null,
+  "material_from": null,
+  "roles": [],
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -29,10 +33,10 @@
     }
   ],
   "agency": "Washington Department of Natural Resources",
-  "ownership": "unknown",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "permission",
+    "note": "Private property. The way in is to book a stay through the listing."
   },
   "staffing": {
     "status": "unknown",
@@ -43,7 +47,15 @@
     "drive_up": null,
     "trail_note": null
   },
-  "rental": null,
+  "rental": {
+    "available": true,
+    "source": "ffla",
+    "provider": "Airbnb",
+    "url": "https://www.airbnb.com/rooms/916179032054360029",
+    "ridb_facility_id": null,
+    "checked": "2026-10-08",
+    "manager": "private owner"
+  },
   "events": [
     {
       "year": 1974,
@@ -105,8 +117,18 @@
       "kind": "register"
     },
     {
+      "label": "Book or read about Lorena Butte Relocated Lookout (Airbnb)",
+      "url": "https://www.airbnb.com/rooms/916179032054360029",
+      "kind": "rental"
+    },
+    {
       "label": "FFLA Washington lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wa/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
       "kind": "association"
     },
     {
@@ -146,6 +168,16 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:wa:lorena-butte-relocated-lookout",
+      "fields": [
+        "ownership",
+        "access",
+        "rental",
+        "links"
+      ]
     }
   ],
   "conflicts": [],
@@ -153,5 +185,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

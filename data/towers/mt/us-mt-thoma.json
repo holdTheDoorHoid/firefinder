@@ -1,6 +1,7 @@
 {
   "id": "us-mt-thoma",
   "name": "Thoma Lookout",
+  "summary": "Built 1930 as an L-4 gable-roof groundhouse in the Flathead National Forest; little used until restored and restaffed from 2010.",
   "other_names": [
     "Toma Fire Lookout"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 2165.3,
   "kind": "ground",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "osm",
+  "roles": [],
+  "design": "Gable-roof L-4 groundhouse cab",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -47,14 +51,61 @@
     {
       "year": 1930,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "L-4 gable-roof groundhouse cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/thoma-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/thoma-lookout/",
+        "https://flatheadbeacon.com/2026/03/27/a-century-of-sentries/",
+        "https://flatheadbeacon.com/2014/03/18/on-the-lookout/",
+        "http://www.firelookout.com/mt/thoma.html"
+      ]
+    },
+    {
+      "year": 1963,
+      "event": "staffed",
+      "note": "Chuck Manning served as the lookout in the summer of 1963",
+      "from": "research",
+      "source_url": "https://flatheadbeacon.com/2026/03/27/a-century-of-sentries/"
+    },
+    {
+      "year": 1973,
+      "event": "staffed_last",
+      "note": "The 2014 article says 2010 was the first summer staffed since 1973",
+      "from": "research",
+      "source_url": "https://flatheadbeacon.com/2014/03/18/on-the-lookout/"
+    },
+    {
+      "year": 2009,
+      "event": "other",
+      "note": "Forest Service decided to begin staffing the lookout again",
+      "from": "research",
+      "source_url": "https://flatheadbeacon.com/2014/03/18/on-the-lookout/"
     },
     {
       "year": 2010,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 28, 2010",
-      "from": "nhlr"
+      "note": "Registered September 28, 2010 as US 891, MT 52",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/thoma-lookout/"
+    },
+    {
+      "year": 2010,
+      "event": "restored",
+      "note": "NHLR says just restored at registration; firelookout.com says a restoration effort began in 2010",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/thoma-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/thoma-lookout/",
+        "http://www.firelookout.com/mt/thoma.html"
+      ]
+    },
+    {
+      "year": 2010,
+      "event": "staffed",
+      "note": "Leif Haugen transferred to Thoma; first summer staffed since 1973",
+      "from": "research",
+      "source_url": "https://flatheadbeacon.com/2014/03/18/on-the-lookout/"
     }
   ],
   "photos": [
@@ -138,6 +189,16 @@
       "kind": "register"
     },
     {
+      "label": "A Century of Sentries (Flathead Beacon)",
+      "url": "https://flatheadbeacon.com/2026/03/27/a-century-of-sentries/",
+      "kind": "reference"
+    },
+    {
+      "label": "On the Lookout (Flathead Beacon)",
+      "url": "https://flatheadbeacon.com/2014/03/18/on-the-lookout/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
       "kind": "association"
@@ -193,14 +254,34 @@
       "source": "osm",
       "key": "osm:way/767708037",
       "fields": [
+        "material",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-thoma",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-az-spruce-mountain",
   "name": "Spruce Mountain Lookout",
+  "summary": "A 1936 Aermotor lookout in the Bradshaw Mountains above Prescott, staffed by a volunteer in fire season and reached by trail; sources disagree on height and elevation.",
   "other_names": [],
   "country": "US",
   "region": "AZ",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 2326.5,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "Modified L-4 cab on a 30 ft Aermotor MC-24 tower (register)",
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,25 +32,79 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "A rough road reaches the summit, but most people hike the Groom Creek Trail. A Forest Service page says the Spruce Mountain picnic site sits behind a gate that is locked when the tower is not staffed."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "Groom Creek Trail to a fire road (about two hours by the blog's account), then about a quarter mile to the summit. Visitors are encouraged to climb while the volunteer is on duty (blog, undated)."
   },
   "rental": null,
   "events": [
     {
+      "year": 1911,
+      "event": "staffed_first",
+      "note": "First used as a daily patrol lookout",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/spruce-mountain1.html"
+    },
+    {
+      "year": 1921,
+      "event": "built",
+      "note": "Timbers cut for a new tower in June 1921; new lookout station under construction in July 1921",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/spruce-mountain1.html"
+    },
+    {
+      "year": 1921,
+      "event": "fire",
+      "note": "Small fire believed to be the year's first lightning fire, first reported from the lookout station in July 1921; lookout F.M. Mulkins on duty",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/spruce-mountain1.html"
+    },
+    {
+      "year": 1932,
+      "event": "fire",
+      "note": "Lookout Dwight Morris cut down a lightning-struck pine to smother the fire",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/spruce-mountain1.html"
+    },
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "Register gives construction in 1936; a blog says the CCC built it. Sources do not say whether this replaced the 1921 tower.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/spruce-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/spruce-mountain-lookout/",
+        "https://themtsarecalling.com/spruce/"
+      ]
+    },
+    {
+      "year": 1938,
+      "event": "staffed",
+      "note": "Ranger Turney placed a new lookout; A. Starker Leopold, a University of California forestry student, was the lookout",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/spruce-mountain1.html"
+    },
+    {
+      "year": 1949,
+      "event": "staffed",
+      "note": "Forest Service reported the fire lookout had been put back on Spruce Mountain",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/spruce-mountain1.html"
+    },
+    {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 5, 2003",
-      "from": "nhlr"
+      "note": "Registered August 5, 2003 as US 531, AZ 53; nominated by Dave Lorenz",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/spruce-mountain-lookout/"
     }
   ],
   "photos": [
@@ -80,6 +138,21 @@
       "label": "NHLR register entry US 531 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/az/spruce-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Spruce Mountain (Forest Lookouts (westlookouts.weebly.com))",
+      "url": "https://westlookouts.weebly.com/spruce-mountain1.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Spruce Mountain (The Mountains Are Calling (blog))",
+      "url": "https://themtsarecalling.com/spruce/",
+      "kind": "reference"
+    },
+    {
+      "label": "Bradshaw Ranger District (Prescott National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r03/prescott/recreation/bradshaw-ranger-district-0",
+      "kind": "reference"
     },
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
@@ -138,12 +211,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-spruce-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

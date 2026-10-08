@@ -1,6 +1,7 @@
 {
   "id": "us-id-hershey-point",
   "name": "Hershey Point Lookout",
+  "summary": "Hike-in site in Payette NF: 1932 L-4 ground cabin replaced in 1966 by an R-6 flat-top cab on a 10-foot base; staffed in summer; NHLR-registered 2020.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2509.1,
   "kind": "two_story",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "R-6 flat top",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -37,11 +41,30 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Hike-in per Idaho Fire Lookouts; a 2024 McCall Life feature describes a hike that climbs 1,600 feet"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1932,
+      "event": "built",
+      "note": "L-4 ground cabin, circa 1932",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/hershey-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/hershey-point-lookout/",
+        "https://www.firelookout.com/id/hersheypoint.html",
+        "https://www.idahofirelookouts.com/west-central/hershey-point-lookout/"
+      ]
+    },
+    {
+      "year": 1956,
+      "event": "staffed_first",
+      "note": "Earliest entry on Idaho Fire Lookouts known staff list",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/hershey-point-lookout/"
+    },
     {
       "year": 1966,
       "event": "built",
@@ -49,10 +72,27 @@
       "from": "nhlr"
     },
     {
+      "year": 1966,
+      "event": "replaced",
+      "note": "Replaced by a Region 6 flat-top (R-6) cab on a 10-foot block base",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/hershey-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/hershey-point-lookout/",
+        "https://www.firelookout.com/id/hersheypoint.html",
+        "https://www.idahofirelookouts.com/west-central/hershey-point-lookout/"
+      ]
+    },
+    {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 29, 2020",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, November 29, 2020",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/hershey-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/hershey-point-lookout/",
+        "https://www.idahofirelookouts.com/west-central/hershey-point-lookout/"
+      ]
     }
   ],
   "photos": [
@@ -136,6 +176,16 @@
       "kind": "register"
     },
     {
+      "label": "Keeping Watch (McCall Life Magazine)",
+      "url": "https://www.mccalllife.com/keeping-watch/",
+      "kind": "reference"
+    },
+    {
+      "label": "Hershey Point - Forest Lookouts (Forest Lookouts (idaholookouts.weebly.com))",
+      "url": "https://idaholookouts.weebly.com/hershey-point.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -182,6 +232,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:hershey-point:45.3125:-116.1235",
       "fields": [
+        "material",
         "design",
         "height_m",
         "photos",
@@ -196,12 +247,33 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-hershey-point",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

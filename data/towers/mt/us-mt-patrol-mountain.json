@@ -1,6 +1,7 @@
 {
   "id": "us-mt-patrol-mountain",
   "name": "Patrol Mountain Lookout",
+  "summary": "R-6 flat cab built in 1962 on a Lewis and Clark forest peak after a 1923 camp; staffed in summer, reached by a 6-mile trail, registered 2022.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2417.1,
   "kind": "ground",
-  "design": "R-6",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "R-6 flat cab",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -25,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/mt/patrol-mountain-lookout/"
     }
   ],
-  "agency": "US Forest Service",
+  "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "Staffed in summer and reached by a 6-mile trail. No source says whether visitors may go inside the cab."
   },
   "staffing": {
     "status": "unknown",
@@ -38,21 +42,63 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Winding 6-mile trail from the valley, per a 2022 magazine account"
   },
   "rental": null,
   "events": [
     {
+      "year": 1923,
+      "event": "other",
+      "note": "Camp established at the lookout site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/patrol-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/patrol-mountain-lookout/",
+        "https://www.firelookout.com/mt/patrolmtn.html"
+      ]
+    },
+    {
+      "year": 1924,
+      "event": "other",
+      "note": "Newspaper reports new trails built to the Patrol Mountain lookout",
+      "from": "research",
+      "source_url": "https://montanalookouts.weebly.com/patrol-mountain.html"
+    },
+    {
+      "year": 1925,
+      "event": "other",
+      "note": "Log cabin built at the lookout site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/patrol-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/patrol-mountain-lookout/",
+        "https://www.firelookout.com/mt/patrolmtn.html"
+      ]
+    },
+    {
+      "year": 1928,
+      "event": "staffed",
+      "note": "Newspaper notice names a summer lookout on Patrol Mountain",
+      "from": "research",
+      "source_url": "https://montanalookouts.weebly.com/patrol-mountain.html"
+    },
+    {
       "year": 1962,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Present R-6 flat cab built; the 2022 magazine calls it a U.S. Forest Service building",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/patrol-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/patrol-mountain-lookout/",
+        "https://www.csmonitor.com/USA/2022/0811/On-a-Montana-mountaintop-this-lookout-watches-for-fire-and-hope"
+      ]
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 12, 2022",
-      "from": "nhlr"
+      "note": "Registered April 12, 2022 as US 1540, MT 103",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/patrol-mountain-lookout/"
     }
   ],
   "photos": [
@@ -98,6 +144,16 @@
       "label": "NHLR register entry US 1540 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/mt/patrol-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "On a Montana mountaintop, this lookout watches for fire – and hope (Christian Science Monitor)",
+      "url": "https://www.csmonitor.com/USA/2022/0811/On-a-Montana-mountaintop-this-lookout-watches-for-fire-and-hope",
+      "kind": "reference"
+    },
+    {
+      "label": "Patrol Mountain - Forest Lookouts (Montana Lookouts (montanalookouts.weebly.com), quoting 1920s Montana newspapers)",
+      "url": "https://montanalookouts.weebly.com/patrol-mountain.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
@@ -146,6 +202,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:patrol-mtn:47.4502:-112.8929",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -157,12 +214,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-patrol-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-or-aldrich-butte",
   "name": "Aldrich Butte Lookout",
+  "summary": "Aldrich Butte's standing three-story cab dates to 1960, replacing a 1959 cab that vandals burned; sources name three different staffing agencies.",
   "other_names": [
     "Aldrich Mountain"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 2106.8,
   "kind": "three_story",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "three-story ODF flat-roof live-in cab, 14x14 ft with catwalk (1960 replacement); the 1934 site had an L-4 cab",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -30,8 +34,8 @@
   "agency": "Oregon Department of Forestry",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The Aug 2023 Malheur NF notice says public parking is available at the lookouts and visitors are welcome in daylight hours, and asks visitors to respect staff after hours. No source says whether the cab can be entered."
   },
   "staffing": {
     "status": "staffed",
@@ -45,16 +49,68 @@
   "rental": null,
   "events": [
     {
+      "year": 1934,
+      "event": "built",
+      "note": "Site first used as a lookout in 1934; firelookout.com says it was developed with an L-4 cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/aldrich-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/aldrich-butte-lookout/",
+        "https://www.firelookout.com/or/aldrichmtn.html"
+      ]
+    },
+    {
+      "year": 1959,
+      "event": "built",
+      "note": "Three-story frame live-in ODF cab built in 1959",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/aldrich-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/aldrich-butte-lookout/",
+        "https://www.firelookout.com/or/aldrichmtn.html"
+      ]
+    },
+    {
+      "year": 1959,
+      "event": "burned",
+      "note": "1959 cab burned by vandals the same year",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/aldrich-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/aldrich-butte-lookout/",
+        "https://www.firelookout.com/or/aldrichmtn.html"
+      ]
+    },
+    {
       "year": 1960,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
     },
     {
+      "year": 1960,
+      "event": "replaced",
+      "note": "Present lookout built in 1960 as an identical replacement to the same standard; NHLR calls it a three-story ODF flat-roof design with 14x14 ft cab and catwalk",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/aldrich-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/aldrich-butte-lookout/",
+        "https://www.firelookout.com/or/aldrichmtn.html"
+      ]
+    },
+    {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 8, 2003",
-      "from": "nhlr"
+      "note": "Registered with the National Historic Lookout Register on January 8, 2003",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/aldrich-butte-lookout/"
+    },
+    {
+      "year": 2023,
+      "event": "staffed",
+      "note": "Aug 15, 2023 Malheur NF notice lists Aldrich Lookout as an ODF lookout manned by the Bureau of Land Management",
+      "from": "research",
+      "source_url": "https://elkhornmediagroup.com/?p=166912"
     }
   ],
   "photos": [
@@ -150,6 +206,11 @@
       "kind": "register"
     },
     {
+      "label": "Malheur National Forest staffs fire lookouts (Elkhorn Media Group)",
+      "url": "https://elkhornmediagroup.com/?p=166912",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -195,6 +256,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:aldrich-mtn:44.3775:-119.4514",
       "fields": [
+        "material",
         "design",
         "ownership",
         "staffing",
@@ -207,6 +269,20 @@
       "key": "osm:way/826073231",
       "fields": [
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-aldrich-butte",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -227,9 +303,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

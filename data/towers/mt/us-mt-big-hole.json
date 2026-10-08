@@ -16,6 +16,9 @@
   },
   "elevation_m": 2109.8,
   "kind": "ground",
+  "material": "mixed",
+  "material_from": "firelookout_com",
+  "roles": [],
   "design": "Grange Hall type ground cab: 14x14 ft, four courses of large logs on a short talus/stone foundation; predates the standard L-4 design",
   "height_m": null,
   "status": "standing",
@@ -379,6 +382,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Big Hole Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/bigholepeak.html",
       "kind": "site"
@@ -426,9 +434,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:big-hole-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:mt:big-hole-peak:47.6042:-115.0704",
       "fields": [
+        "material",
         "photos",
         "links"
       ]
@@ -468,5 +485,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

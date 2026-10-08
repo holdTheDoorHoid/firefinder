@@ -1,6 +1,7 @@
 {
   "id": "us-id-basin-butte",
   "name": "Basin Butte Lookout",
+  "summary": "A 14x14 ft L-4 cab near Stanley, Idaho, out of active staffing since 1989 and reported restored in 2008; build year (1933/1934) and restoration status are disputed.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2698.7,
   "kind": "ground",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "14x14 ft L-4 cab with catwalk (catwalk added 1937); Idaho Heritage Trust calls it an R4-80 standard plan lookout",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -25,34 +29,88 @@
       "url": "http://nhlr.org/lookouts/us/id/basin-butte-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Salmon-Challis National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Idaho Fire Lookouts labels it 'Drive-Up Emergency' and the sources describe emergency status since 1989; no source says whether visitors or renters are allowed today."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2021"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
   "events": [
     {
+      "year": 1929,
+      "event": "other",
+      "note": "Camp recorded on the site (Idaho Fire Lookouts timeline)",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/southern-idaho/basin-butte-lookout/"
+    },
+    {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "14x14 ft L-4 cab. Three sources say 1934; firelookout.com and Idaho Fire Lookouts say 1933; Keeping Watch says 1933 or 1934",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/basin-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/basin-butte-lookout/",
+        "https://www.idahoheritagetrust.org/projects-grants/basin-butte-lookout/",
+        "https://idaholookouts.weebly.com/basin-butte.html",
+        "https://www.idahofirelookouts.com/southern-idaho/basin-butte-lookout/",
+        "https://www.firelookout.com/id/basinbutte.html",
+        "https://cdil.lib.uidaho.edu/keeping-watch/items/basin-butte.html"
+      ]
+    },
+    {
+      "year": 1937,
+      "event": "modified",
+      "note": "Catwalk with native pole handrails added",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/basin-butte.html"
+    },
+    {
+      "year": 1989,
+      "event": "other",
+      "note": "Removed from the active staffing list and set to emergency status; the sources give no last staffing season",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/basin-butte.html",
+      "source_urls": [
+        "https://idaholookouts.weebly.com/basin-butte.html",
+        "https://www.idahofirelookouts.com/southern-idaho/basin-butte-lookout/"
+      ]
     },
     {
       "year": 2008,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 20, 2008",
-      "from": "nhlr"
+      "note": "Registered November 20, 2008 as NHLR US 747",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/basin-butte-lookout/"
+    },
+    {
+      "year": 2008,
+      "event": "restored",
+      "note": "Volunteer Passport in Time restoration by the Forest Service. NHLR and Idaho Fire Lookouts say completed; Forest Lookouts says begun, with rental use planned after completion",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/basin-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/basin-butte-lookout/",
+        "https://www.idahofirelookouts.com/southern-idaho/basin-butte-lookout/",
+        "https://idaholookouts.weebly.com/basin-butte.html"
+      ]
+    },
+    {
+      "year": 2012,
+      "event": "fire",
+      "note": "Fire crew wrapped the structure as the Halstead fire advanced (August 13, 2012)",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/basin-butte.html"
     }
   ],
   "photos": [
@@ -124,6 +182,21 @@
       "kind": "register"
     },
     {
+      "label": "Basin Butte Lookout (Idaho Heritage Trust, Inc.)",
+      "url": "https://www.idahoheritagetrust.org/projects-grants/basin-butte-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Basin Butte Lookout (Keeping Watch, Center for Digital Inquiry and Learning)",
+      "url": "https://cdil.lib.uidaho.edu/keeping-watch/items/basin-butte.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Basin Butte (Forest Lookouts)",
+      "url": "https://idaholookouts.weebly.com/basin-butte.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -170,6 +243,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:basin-butte:44.3385:-114.9777",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -182,12 +256,34 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-basin-butte",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-id-mahoney-creek-point",
   "name": "Mahoney Creek Point Lookout",
+  "summary": "A 1937 L-4 ground cab in Valley County, Idaho, abandoned around 2000 and registered in 2011; no staffing history is documented.",
   "other_names": [
     "Mahoney Creek"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 2396.3,
   "kind": "ground",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "L-4 ground cab",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -31,7 +35,7 @@
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "Listed as an abandoned hike-in site; no source says whether the public may visit or climb it"
   },
   "staffing": {
     "status": "unknown",
@@ -39,22 +43,40 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Listed as hike-in; the sources give no route details"
   },
   "rental": null,
   "events": [
     {
       "year": 1937,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "L-4 ground cab; firelookout.com says it is the only lookout structure ever on the site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/mahoney-creek-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/mahoney-creek-point-lookout/",
+        "https://www.firelookout.com/id/mahoney.html"
+      ]
+    },
+    {
+      "year": 2000,
+      "event": "abandoned",
+      "note": "Idaho Fire Lookouts dates abandonment to 2000; firelookout.com says abandoned for several years",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/mahoney-creek-point-lookout/",
+      "source_urls": [
+        "https://www.idahofirelookouts.com/west-central/mahoney-creek-point-lookout/",
+        "https://www.firelookout.com/id/mahoney.html",
+        "http://nhlr.org/lookouts/us/id/mahoney-creek-point-lookout/"
+      ]
     },
     {
       "year": 2011,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 8, 2011",
-      "from": "nhlr"
+      "note": "Registered October 8, 2011 as US 935, ID 94",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/mahoney-creek-point-lookout/"
     }
   ],
   "photos": [
@@ -184,6 +206,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:mahoney-creek:44.7601:-114.9591",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -195,6 +218,21 @@
       "fields": [
         "photos",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-mahoney-creek-point",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -223,9 +261,15 @@
       "note": "NHLR lists lookouts that were standing when registered. idahofirelookouts.com's status is read from a short summary."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

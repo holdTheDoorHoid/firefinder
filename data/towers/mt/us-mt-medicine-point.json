@@ -14,6 +14,9 @@
   },
   "elevation_m": 2534.7,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "L-4 cab, pyramid roof, on an 8-10 foot wood/pole tower",
   "height_m": 3.0,
   "status": "standing",
@@ -195,6 +198,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Medicine Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/medicinept.html",
       "kind": "site"
@@ -224,6 +232,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -247,6 +256,14 @@
       "fields": [
         "ownership",
         "access",
+        "rental",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:medicine-point-lookout",
+      "fields": [
         "rental",
         "links"
       ]
@@ -306,5 +323,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

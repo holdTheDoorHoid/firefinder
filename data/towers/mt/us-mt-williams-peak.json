@@ -1,6 +1,7 @@
 {
   "id": "us-mt-williams-peak",
   "name": "Williams Peak Lookout",
+  "summary": "R-6 cab tower moved from Little Joe in 1977 now stands closed and unstaffed in Fish Creek State Park; the record's 9.1 m height matches the 1934 tower.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 1659.6,
   "kind": "tower",
-  "design": "R-6",
-  "height_m": 9.1,
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
+  "design": "R-6 flat cab on a 53-foot timber tower",
+  "height_m": 16.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,20 +32,59 @@
   "agency": "Montana Department of Fish, Wildlife & Parks",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Tower is closed to the public and fenced off; hikers can still reach the summit of Williams Peak."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2026-09-05"
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "About 3.4 miles round trip with over 1,200 feet of climbing; one writer rated it an easy hike."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "Site developed with a 30-foot pole tower and L-4 cab.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/williamspk.html"
+    },
+    {
+      "year": 1953,
+      "event": "staffed_first",
+      "note": "Earliest year in the known-personnel list on firelookout.com.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/williamspk.html"
+    },
+    {
+      "year": 1959,
+      "event": "staffed_last",
+      "note": "Latest year in the known-personnel list; the page does not date the end of staffing.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/williamspk.html"
+    },
+    {
+      "year": 1967,
+      "event": "other",
+      "note": "Cab exhibited at the World Scout Jamboree at Farragut State Park, Idaho.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/williams-peak-lookout/"
+    },
+    {
+      "year": 1969,
+      "event": "built",
+      "note": "Tower erected at Little Joe, near St. Regis.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/williams-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/williams-peak-lookout/",
+        "https://www.firelookout.com/mt/williamspk.html"
+      ]
+    },
     {
       "year": 1977,
       "event": "built",
@@ -49,10 +92,22 @@
       "from": "nhlr"
     },
     {
+      "year": 1977,
+      "event": "relocated",
+      "note": "Moved to Williams Peak, replacing the 1934 tower.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/williams-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/williams-peak-lookout/",
+        "https://www.firelookout.com/mt/williamspk.html"
+      ]
+    },
+    {
       "year": 2016,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 20, 2016",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/williams-peak-lookout/"
     }
   ],
   "photos": [
@@ -124,6 +179,16 @@
       "kind": "register"
     },
     {
+      "label": "Fish Creek State Park (Montana Fish, Wildlife & Parks)",
+      "url": "https://fwp.mt.gov/stateparks/fish-creek",
+      "kind": "reference"
+    },
+    {
+      "label": "Mount Williams Lookout in Fish Creek State Park (Out There with Tom (blog))",
+      "url": "https://outtherewithtom.blogspot.com/2026/09/mount-williams-lookout-in-fish-creek.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
       "kind": "association"
@@ -169,6 +234,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:williams-peak:46.9570:-114.6994",
       "fields": [
+        "material",
         "design",
         "height_m",
         "ownership",
@@ -181,6 +247,23 @@
       "key": "osm:way/1317796479",
       "fields": [
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-williams-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -201,9 +284,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

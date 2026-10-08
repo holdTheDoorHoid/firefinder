@@ -3,7 +3,8 @@
   "name": "Acorn Woman Peak Lookout",
   "summary": "Restored 1943 L-4 groundhouse in the Rogue River National Forest, formerly Squaw Peak Lookout, now a seasonal recreation rental.",
   "other_names": [
-    "Squaw Peak"
+    "Squaw Peak",
+    "Acorn Woman (Squaw) Peak Lookout"
   ],
   "country": "US",
   "region": "OR",
@@ -16,6 +17,9 @@
   },
   "elevation_m": 1497.8,
   "kind": "ground",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "L-4",
   "height_m": null,
   "status": "standing",
@@ -200,6 +204,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Squaw Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/squawpeakr.html",
       "kind": "site"
@@ -247,9 +256,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:or:acorn-woman-squaw-peak-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:or:squaw-peak:42.0697:-123.0121",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -291,5 +309,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

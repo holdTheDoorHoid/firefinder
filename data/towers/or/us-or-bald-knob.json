@@ -14,6 +14,11 @@
   },
   "elevation_m": 1050.6,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [
+    "aws"
+  ],
   "design": "R-6 flattop cab on 20-foot wood tower",
   "height_m": 6.1,
   "status": "standing",
@@ -168,6 +173,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Bald Knob Lookout - Forest Lookouts Page",
       "url": "https://oregonlookouts.weebly.com/bald-knob.html",
       "kind": "site"
@@ -187,6 +197,8 @@
         "location",
         "county",
         "elevation_m",
+        "material",
+        "roles",
         "registers",
         "agency",
         "events",
@@ -210,6 +222,14 @@
       "fields": [
         "ownership",
         "access",
+        "rental",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:or:bald-knob-lookout",
+      "fields": [
         "rental",
         "links"
       ]
@@ -288,5 +308,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

@@ -1,0 +1,24 @@
+/* "Structure types" on the designs page (render/structures.ts). Its own file so the designs
+   guide's styles can change without it. */
+.structure-types { padding: 30px 0 8px; border-top: 1px solid var(--line); margin-top: 26px; scroll-margin-top: 12px; }
+.structure-types h2 { margin: 2px 0 6px; font-size: 1.8rem; }
+.st-lede { font-size: 1.05rem; line-height: 1.6; margin: 0 0 10px; }
+.st-group { margin: 22px 0 0; }
+.st-group-h { margin: 0 0 6px; font-size: 1.25rem; }
+.st-group-h .muted { font: 600 0.9rem/1 var(--font-sans); font-variant-numeric: tabular-nums; margin-left: 4px; }
+.st-group-no_structure { padding: 4px 16px 10px; border: 1px dashed var(--line-strong); border-radius: 12px; background: var(--surface); }
+.st-list { list-style: none; padding: 0; margin: 12px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 14px 22px; }
+.st-kind { padding: 12px 0 0; border-top: 1px solid var(--line); scroll-margin-top: 12px; }
+.st-kind p { margin: 6px 0 0; line-height: 1.55; }
+.st-name { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 1.05rem; }
+.st-name .marker-icon { flex: none; }
+.st-words { font-size: 0.85rem; color: var(--muted); }
+.st-count { font-size: 0.9rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.st-mats { list-style: none; padding: 0; margin: 10px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 8px 22px; }
+.st-mats li { padding: 6px 0; border-top: 1px solid var(--line); }
+.st-mats .muted { font-variant-numeric: tabular-nums; margin-left: 4px; }
+.st-mat-about { display: block; font-size: 0.85rem; color: var(--muted); }
+@media (max-width: 600px) {
+  .structure-types h2 { font-size: 1.55rem; }
+  .st-group-no_structure { padding: 2px 12px 8px; }
+}

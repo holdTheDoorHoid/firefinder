@@ -1,6 +1,7 @@
 {
   "id": "us-sd-elk-mountain",
   "name": "Elk Mountain Lookout",
+  "summary": "Elk Mountain's 67-ft steel tower dates to 1939, lost its log cabin in a 2001 fire, and is still staffed each summer near the Wyoming line.",
   "other_names": [],
   "country": "US",
   "region": "SD",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 1716.3,
   "kind": "tower",
-  "design": "Aermotor",
-  "height_m": null,
+  "material": "steel",
+  "material_from": "firelookout_com",
+  "roles": [],
+  "design": "All-steel tower with 7-by-7-foot cab; Aermotor per firelookout.com",
+  "height_m": 20.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,31 +32,75 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Forest Service describes visitors climbing 90 steps to the cab during the staffed season. Check current guidance before visiting."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": true,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "90 steps in seven flights to the cab, per Forest Service; staffed late spring to early fall."
   },
   "rental": null,
   "events": [
     {
       "year": 1939,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Steel tower placed on the mountain in summer 1939; Forest Service dates the lookout to 1939-1941",
+      "from": "research",
+      "source_url": "https://fs.usda.gov/r02/blackhills/recreation/elk-mountain-fire-lookout",
+      "source_urls": [
+        "https://fs.usda.gov/r02/blackhills/recreation/elk-mountain-fire-lookout",
+        "https://westlookouts.weebly.com/elk-mountain.html",
+        "https://www.firelookout.com/sd/elkmtn.html"
+      ]
+    },
+    {
+      "year": 1939,
+      "event": "staffed_first",
+      "note": "Tower manned for the first time that season, per July 1939 newspaper",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/elk-mountain.html"
+    },
+    {
+      "year": 1945,
+      "event": "staffed",
+      "note": "Lookout on duty, per 1945 newspaper item",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/elk-mountain.html"
     },
     {
       "year": 1991,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 15, 1991",
-      "from": "nhlr"
+      "note": "Registered November 15, 1991; nominated through the Elk Mountain Ranger District",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sd/elk-mountain-lookout/"
+    },
+    {
+      "year": 2001,
+      "event": "burned",
+      "note": "Elk Mountain Fire destroyed the log cabin and outhouse; steel tower survived",
+      "from": "research",
+      "source_url": "https://fs.usda.gov/r02/blackhills/recreation/elk-mountain-fire-lookout",
+      "source_urls": [
+        "https://fs.usda.gov/r02/blackhills/recreation/elk-mountain-fire-lookout",
+        "https://westlookouts.weebly.com/elk-mountain.html",
+        "https://www.firelookout.com/sd/elkmtn.html"
+      ]
+    },
+    {
+      "year": 2011,
+      "event": "fire",
+      "note": "WhoopUp Fire burned across the mountain; tower saved by retardant drops",
+      "from": "research",
+      "source_url": "https://fs.usda.gov/r02/blackhills/recreation/elk-mountain-fire-lookout",
+      "source_urls": [
+        "https://fs.usda.gov/r02/blackhills/recreation/elk-mountain-fire-lookout",
+        "https://westlookouts.weebly.com/elk-mountain.html"
+      ]
     }
   ],
   "photos": [
@@ -112,6 +160,11 @@
       "kind": "register"
     },
     {
+      "label": "Elk Mountain Fire Lookout (U.S. Forest Service, Black Hills National Forest)",
+      "url": "https://fs.usda.gov/r02/blackhills/recreation/elk-mountain-fire-lookout",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA South Dakota lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/sd/",
       "kind": "association"
@@ -163,6 +216,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:sd:elk-mtn:43.7243:-104.0412",
       "fields": [
+        "material",
         "design",
         "events",
         "photos",
@@ -176,12 +230,34 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-sd-elk-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

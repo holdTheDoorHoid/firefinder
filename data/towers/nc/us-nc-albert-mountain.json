@@ -1,6 +1,7 @@
 {
   "id": "us-nc-albert-mountain",
   "name": "Albert Mountain Lookout",
+  "summary": "Forest Service steel tower built 1951 on Albert Mountain; the register says 40 ft and the Forest Service 55 ft, and the top cab is normally locked while the stairs give views.",
   "other_names": [],
   "country": "US",
   "region": "NC",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 1559.1,
   "kind": "tower",
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 16.8,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -34,31 +38,51 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached by a moderate hike of about half a mile one way from a small gravel parking area on Forest Service Road 67. Vehicle access closes for a seasonal period from December 31 to April 1."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2010-06-17"
   },
   "visit": {
-    "climbable": null,
+    "climbable": true,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Stairs give views; the top cab is normally locked. A June 2010 visit report marked the stairs as not in good order."
   },
   "rental": null,
   "events": [
     {
+      "year": 1942,
+      "event": "other",
+      "note": "Log lookout cabin on Albert Mountain, as early as 1942.",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r08/northcarolina/recreation/albert-mountain-fire-tower"
+    },
+    {
       "year": 1951,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Steel tower built by the U.S. Forest Service on the summit, to replace abandoned towers and provide fire detection for the Coweeta Hydrologic Laboratory.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nc/albert-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nc/albert-mountain-lookout/",
+        "https://www.fs.usda.gov/r08/northcarolina/recreation/albert-mountain-fire-tower"
+      ]
     },
     {
       "year": 1993,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 30, 1993",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nc/albert-mountain-lookout/"
+    },
+    {
+      "year": 2010,
+      "event": "other",
+      "note": "Visit report: tower appears to have been abandoned for some time; nearly all equipment gone.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nc/albert-mountain-lookout/"
     }
   ],
   "photos": [
@@ -80,6 +104,16 @@
       "label": "NHLR register entry US 70 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/nc/albert-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Albert Mountain Fire Tower (National Forests in North Carolina (USDA Forest Service))",
+      "url": "https://www.fs.usda.gov/r08/northcarolina/recreation/albert-mountain-fire-tower",
+      "kind": "reference"
+    },
+    {
+      "label": "Albert Mountain Fire Tower and Pinnacle Mountain (WillhiteWeb)",
+      "url": "https://willhiteweb.com/fire_lookouts/appalachian_trail/albert_mountain/tower_013.htm",
+      "kind": "reference"
     },
     {
       "label": "Albert Mountain (tnlandforms.us (Tom Dunigan))",
@@ -106,6 +140,8 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
+        "material",
         "status",
         "registers",
         "agency",
@@ -119,7 +155,6 @@
       "source": "tnlandforms",
       "key": "tnlandforms:nc:nct002",
       "fields": [
-        "kind",
         "registers",
         "links"
       ]
@@ -137,12 +172,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nc-albert-mountain",
+      "fields": [
+        "summary",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

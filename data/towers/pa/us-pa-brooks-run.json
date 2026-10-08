@@ -1,6 +1,7 @@
 {
   "id": "us-pa-brooks-run",
   "name": "Brooks Run Fire Tower",
+  "summary": "An 80-foot steel Aermotor tower built in 1921 at Grove Mountain and moved to Brook Mountain in 1940 or 1941; registered 2017 and still standing.",
   "other_names": [
     "Brooks Firetower"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 721.5,
   "kind": "tower",
-  "design": "Aermotor",
+  "material": "steel",
+  "material_from": "design",
+  "roles": [],
+  "design": "80-foot steel Aermotor tower",
   "height_m": 24.4,
   "status": "standing",
   "status_note": null,
@@ -30,8 +34,8 @@
   "agency": "Pennsylvania Bureau of Forestry",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "A gate on the service road stops vehicles. Hikers walk the gated road from Brooks Run Road. No source found on climbing the tower itself."
   },
   "staffing": {
     "status": "unknown",
@@ -39,11 +43,29 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Park at the intersection of Brooks Run Road and Ridge Road, not in front of the gate. Walk the gated service road, an easy 1.9-mile out-and-back per the trail listing."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1921,
+      "event": "built",
+      "note": "Built as a steel Aermotor tower at Grove Mountain in Cameron County",
+      "from": "research",
+      "source_url": "http://www.firetower.org/lookouts/us/pa/grove-mountain-tower-site/"
+    },
+    {
+      "year": 1940,
+      "event": "relocated",
+      "note": "Move announced for summer 1940. The Former Fire Lookout Sites register says it moved in 1940.",
+      "from": "research",
+      "source_url": "http://www.firetower.org/lookouts/us/pa/grove-mountain-tower-site/",
+      "source_urls": [
+        "http://www.firetower.org/lookouts/us/pa/grove-mountain-tower-site/",
+        "https://easternuslookouts.weebly.com/brooks.html"
+      ]
+    },
     {
       "year": 1941,
       "event": "built",
@@ -51,10 +73,18 @@
       "from": "nhlr"
     },
     {
+      "year": 1941,
+      "event": "relocated",
+      "note": "The National Historic Lookout Register says the tower was relocated to the Brooks Run site in 1941 and lists 1941 under Built.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/brooks-run-fire-tower/"
+    },
+    {
       "year": 2017,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 6, 2017",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, December 6, 2017",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/brooks-run-fire-tower/"
     }
   ],
   "photos": [
@@ -95,6 +125,16 @@
       "kind": "register"
     },
     {
+      "label": "Grove Mountain Tower Site (Former Fire Lookout Sites Register)",
+      "url": "http://www.firetower.org/lookouts/us/pa/grove-mountain-tower-site/",
+      "kind": "reference"
+    },
+    {
+      "label": "Brooks Run Fire Tower Trail (MyHikes)",
+      "url": "https://myhikes.org/trails/brooks-run-fire-tower-trail",
+      "kind": "reference"
+    },
+    {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
       "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
       "kind": "site"
@@ -119,6 +159,7 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
         "status",
         "registers",
         "agency",
@@ -131,7 +172,7 @@
       "source": "pa_storymap",
       "key": "pa_storymap:brooks-run:41.4290:-78.1085",
       "fields": [
-        "kind",
+        "material",
         "design",
         "height_m",
         "ownership",
@@ -152,6 +193,22 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-brooks-run",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -171,9 +228,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -14,6 +14,9 @@
   },
   "elevation_m": 493.2,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "Experimental 1963 Forest Products Laboratory cab (visually similar to, but not, an R-6 flattop); current structure built 1964",
   "height_m": 13.7,
   "status": "standing",
@@ -164,6 +167,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Heybrook on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/heybrook.html",
       "kind": "site"
@@ -188,6 +196,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "events",
         "photos",
@@ -211,6 +220,14 @@
         "agency",
         "ownership",
         "access",
+        "rental",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:wa:heybrook-lookout",
+      "fields": [
         "rental",
         "links"
       ]
@@ -303,5 +320,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

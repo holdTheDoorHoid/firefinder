@@ -14,6 +14,9 @@
   },
   "elevation_m": 1626.7,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
   "design": "R-6",
   "height_m": null,
   "status": "standing",
@@ -229,6 +232,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Indian Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/indianridge78.html",
       "kind": "site"
@@ -271,9 +279,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:or:indian-ridge-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:or:indian-ridge:44.0056:-122.2548",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -326,5 +343,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

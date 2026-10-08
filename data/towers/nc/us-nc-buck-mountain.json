@@ -1,6 +1,7 @@
 {
   "id": "us-nc-buck-mountain",
   "name": "Buck Mountain Fire Tower",
+  "summary": "Uwharrie National Forest tower dated 1936, likely CCC-built; standing behind a fence and locked gate; a 2012 article reports staffing only in extreme conditions; public climbing access unclear.",
   "other_names": [],
   "country": "US",
   "region": "NC",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 253.6,
   "kind": "tower",
-  "design": null,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "metal tower dated 1936 and likely built by the Civilian Conservation Corps; 7x7-foot cab whose base is 94 feet above the ground",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -34,31 +38,37 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "base fenced with chain-link and a locked gate; top floor padlocked (2024 post); a 2012 article's author climbed with a ranger's permission; whether the public may climb is not stated"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "emergency",
+    "as_of": "2012"
   },
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "road up the mountain runs past a locked gate on the national forest; the sources do not say whether the public may climb the stairs"
   },
   "rental": null,
   "events": [
     {
       "year": 1936,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "tower dated to 1936 and likely built by the Civilian Conservation Corps",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nc/buck-mountain-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nc/buck-mountain-fire-tower/",
+        "https://ui.charlotte.edu/story/fire-towers-history-view"
+      ]
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 24, 2020",
-      "from": "nhlr"
+      "note": "National Historic Lookout Register registration date March 24, 2020",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nc/buck-mountain-fire-tower/"
     }
   ],
   "photos": [
@@ -118,6 +128,16 @@
       "kind": "register"
     },
     {
+      "label": "Fire towers: History with a view (Charlotte Urban Institute)",
+      "url": "https://ui.charlotte.edu/story/fire-towers-history-view",
+      "kind": "reference"
+    },
+    {
+      "label": "A Surprise for the POTA Babe (QRPer)",
+      "url": "https://qrper.com/2024/10/a-surprise-for-the-pota-babe/",
+      "kind": "reference"
+    },
+    {
       "label": "Buck Mountain (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/nctowers.html",
       "kind": "site"
@@ -142,6 +162,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "status",
         "registers",
         "agency",
@@ -173,12 +194,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nc-buck-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }
