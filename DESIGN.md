@@ -51,6 +51,7 @@ Cache raw responses under `data/raw/` (git-ignored) so nothing is fetched twice.
 | **Regional** | firelookout.com state maps (MT: 134 `GV_Draw_Marker` points, plus WA/OR/ID/WY/SD); PA StoryMap (48 towers, `…/items/ed47c97ebe7246868ce8ef3e7139a0b4/data?f=json`); andyarthur.org NY towers (CC BY 3.0); CSKT Flathead Reservation (6); fire-lookouts.org Sierra NF (~18, reuse allowed with credit); idahofirelookouts.com (not yet surveyed) | Mixed | Per source |
 | **Gap-state regional** (2026-10-04) | easternuslookouts.weebly.com / centraluslookouts.weebly.com, the same hobby-site template split by region (one page per tower; AL/CT/FL/GA/KY/MA/MI/MS/NJ/NC/PA/SC/TN and AR/LA/MO/OK); Wikipedia *List of fire lookout towers in Louisiana* and *List of New Jersey Forest Fire Service fire towers* (coordinate-bearing wikitables, CC BY-SA, facts only); michiganfiretower.com (a small young single-author site, 8 towers); tnlandforms.us (Tom Dunigan's independently surveyed GA/NC/TN tower lists, 929 towers, every one with coordinates) | Mixed | Per source; no licence stated on the two weebly sites or tnlandforms.us |
 | **FFLA resources** | `firelookout.org/resources/…`: *Lookout Rentals* (rentals outside recreation.gov: state parks and private), *Lookout Types and Historic Plans* (for the designs guide), *Historical Reference Documents*, *Staffing / Volunteer Opportunities* | HTML | Facts + links |
+| **Association project reports** (2026-10-08) | Year-by-year reports of the work lookout associations do on particular lookouts, one source per association, one shared record shape (3.7). First: the Northwest Montana Lookout Association, nwmt-ffla.org: project posts 2025-26, "Completed Projects" PDFs 2014-24 (print-outs of its old website) and the yearly newsletters, 37 lookouts in Glacier NP, the Flathead and Kootenai NFs and Montana DNRC, about 180 dated restoration, repair and assessment events | WordPress posts, PDFs (pdftotext) | No licence stated; facts only, notes in our words, every event linked to its report |
 | Later | USGS historical topos (public domain, `ngmdb.usgs.gov/arcgis/rest/services/topoview/ustOverlay(Auto)/MapServer`), NRHP NPS dataset, Library of Congress HABS/HAER (measured drawings, public domain), Forest History Society, state forestry lists, newspapers | — | — |
 
 ---
@@ -175,7 +176,7 @@ picked up with no code change (unknown sources rank last in every field).
 **Matching**, per source in the order NHLR, FFLOS, FFLA, RIDB, fire-lookouts.org, tnlandforms.us,
 the NJ Forest Fire Service Wikipedia table, firelookout.com, idahofirelookouts.com,
 michiganfiretower.com, PA StoryMap, andyarthur.org, the Wikipedia per-state lookout lists, CSKT,
-the easternuslookouts and centraluslookouts weebly sites, Wikidata, OSM:
+the easternuslookouts and centraluslookouts weebly sites, the association project sources (3.7: the Northwest Montana Lookout Association), Wikidata, OSM:
 
 1. **Key**: the record's key is already in a tower's `sources[].key`.
 2. **Register number**. NHLR and FFLOS number their entries separately ("NHLR US 674" is
@@ -256,6 +257,11 @@ node + way (100 m; 50 m if unnamed), Wikidata (100 m), RIDB facility + campgroun
 | registers | union of all sources; on a tower with an NHLR/FFLOS record, that register's own number wins and a different copy goes to `conflicts` |
 | events, photos, links | union, de-duplicated (events by event + year, photos by URL, links by URL); an event keeps the `source_url`/`source_urls` its source gave |
 
+The association project sources (3.7) sit at the foot of the name, location, status, kind, county,
+elevation, built, design, height, agency, ownership, staffing and events lists above (they fill
+gaps and add history; the registers and lists outrank them), and count as part of the registers'
+location lineage because their positions are copied from them.
+
 **Ownership and access** only where a source says so: CSKT → tribal, access `permission`;
 RIDB (USFS/BLM) → federal; NY DEC and PA state forests → state (via those extracts); an agency
 naming a National Forest/Park, BLM or Fish & Wildlife on a register page → federal; tribal
@@ -296,7 +302,7 @@ mirror step could not use (download failed, or too small once decoded to be a re
 dropped rather than kept on the tower record as a dead link.
 **Links** carry a credit-ready `label` and a `kind`: `relocated_from` / `relocated_to` (another
 tower page, by `id`), `register`, `rental`, `association` (FFLA
-state list), `wikipedia`, `site` (hobbyist and regional pages), `agency`, `website`, `commons`,
+state list; an association's own reports on the lookout), `wikipedia`, `site` (hobbyist and regional pages), `agency`, `website`, `commons`,
 `wikidata`, `osm`, `reference` (a page research cites). **`sources[]`** lists, per record, the
 fields it supplied.
 
@@ -399,6 +405,18 @@ register is reported as a `built` conflict. It supplies no registers, photos, ac
 5. Run `python3 pipeline/merge.py && python3 pipeline/validate.py && python3 pipeline/build_site_data.py --strict`
    and `python3 -m unittest discover -s pipeline`; commit the module, its test and
    `data/sources/<source>.json`, not the regenerated towers.
+
+**First source: `nwmt_projects`** (Northwest Montana Lookout Association, `pipeline/regional/nwmt_projects.py`
+with the curated facts in `nwmt_projects_data.py`). 37 lookouts, all matched to towers we already had
+(Glacier NP 9, Flathead NF 9, Kootenai NF 16, Montana DNRC 2, one relocated lookout in Eureka),
+181 events. NMLA's reports are prose, so the facts were read once and written down in our words,
+each citing its report; the script checks every citation against the report's text (the lookout is
+named, the year appears) and lists new project posts nobody has curated. Conventions: `built` is the
+first structure NMLA names or the only one, `replaced` every later one, earlier-structure notes where
+a register already dates the present structure are `other`; NMLA's own disagreements (it gives two
+build years for Mount Brown, McGuire, Star Peak...) are kept in `extra.discrepancies` and the note
+names the other year. Not read: oral histories, event pages, and NMLA's Google My Map of lookouts
+(robots.txt disallows `google.com/maps/`).
 
 ---
 
