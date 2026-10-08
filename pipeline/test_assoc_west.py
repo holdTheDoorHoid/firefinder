@@ -18,7 +18,8 @@ import _projects as P  # noqa: E402
 import merge as M  # noqa: E402
 
 MODULES = ["sand_mountain", "mountaineers_everett", "snoqualmie_lookouts", "buck_rock", "anffla", "scmf_lookouts",
-           "ffla_sdrc", "ffla_monterey", "hi_mountain", "mvffla", "historicorps_west", "siskiyou_mountain_club"]
+           "ffla_sdrc", "ffla_monterey", "hi_mountain", "mvffla", "historicorps_west", "siskiyou_mountain_club",
+           "green_mountain_wa", "ffla_ca_south"]
 
 
 def load(name):

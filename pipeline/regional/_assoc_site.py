@@ -62,6 +62,13 @@ def page_text(page: str) -> str:
     return _html.unescape(_re.sub(r"<[^>]+>", " ", page))
 
 
+def fold(text: str) -> str:
+    """A comparison form that survives pdftotext's habit of dropping the letters of the "ti",
+    "tt", "ft" and "fi" ligatures ("Kelly Bu e", "restora on"): lower case, only letters and
+    digits, and the letters t, f and i removed. Names and years are compared in this form."""
+    return _re.sub(r"[^a-z0-9]|[tfi]", "", text.lower())
+
+
 def _cache_name(d: dict) -> str:
     if d.get("cache"):
         return d["cache"]
@@ -69,7 +76,7 @@ def _cache_name(d: dict) -> str:
     return tail[:120] + (".pdf" if d["kind"] == "pdf" else ".html")
 
 
-def load_docs(source: str, spec: list[dict], docs: P.DocSet, *, quiet: bool = False) -> list[str]:
+def load_docs(source: str, spec: list[dict], docs: P.DocSet, *, quiet: bool = False, folded: bool = False) -> list[str]:
     """Register every document in ``docs`` and read the text of those that can be fetched into
     ``docs.texts`` (normalised, for the citation check). Returns the ids that could not be read."""
     unread: list[str] = []
@@ -85,12 +92,14 @@ def load_docs(source: str, spec: list[dict], docs: P.DocSet, *, quiet: bool = Fa
             print(f"  ! {d['id']}: {e}", file=sys.stderr)
             unread.append(d["id"])
             continue
+        if text is not None and not text.strip():
+            text = None  # an image-only scan: nothing to check against
         if text is None:
             if not quiet:
                 print(f"  ! {d['id']}: could not read the text; citations to it are not checked", file=sys.stderr)
             unread.append(d["id"])
             continue
-        docs.texts[d["id"]] = P.norm(text)
+        docs.texts[d["id"]] = fold(text) if folded else P.norm(text)
     return unread
 
 
@@ -131,16 +140,17 @@ def drop_inferred(problems: list[str], source: str, lookouts: list[dict]) -> lis
 
 
 def run(doc_text: str, source: str, association: dict, spec: list[dict], lookouts: list[dict], *,
-        credit: str, license_: str, title: str | None = None, argv: list[str] | None = None) -> None:
+        credit: str, license_: str, title: str | None = None, argv: list[str] | None = None, folded: bool = False) -> None:
     ap = argparse.ArgumentParser(description=(doc_text or "").strip().split("\n")[0])
     ap.add_argument("--no-check", action="store_true", help="skip the citation check against the report text")
     args = ap.parse_args(argv)
 
     docs = P.DocSet(source)
-    load_docs(source, spec, docs)
+    load_docs(source, spec, docs, folded=folded)
     records = build_records(source, association, spec, lookouts, docs)
 
-    problems = P.check_citations(records, {f"{source}:{lk['region'].lower()}:{lk['slug']}": lk["find"] for lk in lookouts}, docs)
+    keys = {f"{source}:{lk['region'].lower()}:{lk['slug']}": [fold(k) for k in lk["find"]] if folded else lk["find"] for lk in lookouts}
+    problems = P.check_citations(records, keys, docs)
     problems = drop_inferred(problems, source, lookouts)
     hard = [p for p in problems if not p.startswith("(not checked")]
     for p in problems:

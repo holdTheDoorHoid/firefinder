@@ -77,7 +77,7 @@ LOOKOUTS = [
              E(1916, "built", "Established as an open-air lookout with a lean-to and tent platform.", "park"),
              E(1940, "other", "The Park Service took sole charge from the Forest Service, which had shared it.", "park"),
              E(1964, "replaced", "Replaced by the present 20-ft steel tower, moved a quarter mile southwest of the old site.", "park"),
-             E(1974, "other", "Longtime lookout Mattie Simms retired after 18 seasons; staffing became sporadic.", "park"),
+             E(1974, "other", "Longtime lookout Mattie Simms, on duty since 1956, retired in October; staffing was sporadic afterwards.", "park"),
              E(1996, "staffed_last", "Closed permanently until the Foundation's agreement.", "park"),
              E(2004, "staffed", "Reopened under a cooperative agreement with the Park Service; staffed by Buck Rock Foundation volunteers since.", "park"),
              E(2025, "modified", "New stove, a custom outhouse step and a friendlier catwalk gate; trees around it were cleared to widen the view.", "park25"),
