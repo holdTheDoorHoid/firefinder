@@ -447,8 +447,9 @@ tower (`--research` to point elsewhere), so a re-merge never loses research:
 - `structure_kinds.json`: `data/structure_kinds.json` with each kind's count and the sources'
   own words for it ("Rooftop", "Grain Elevator"), for the Structure types guide.
 - `designs.json`: the designs guide, `data/designs.json`'s curated facts with every lookout of
-  each design (`pipeline/designs.py` recognises "L-4", "L4", "Aermotor MC-39"… in the tower's
-  `design` and its sources' `type_raw` / `extra.design`; it never guesses).
+  each design (`pipeline/designs.py` recognises "L-4", "L4", "Aermotor MC-39", "CT-2"… in the
+  tower's `design`, its sources' `type_raw` / `extra.design` / OSM design tags, the design names
+  in its sources' prose, and `data/design_mentions.json`; it never guesses). §4.2 has the model.
 - `peaks/` (from `pipeline/build_peaks.py`, run after `build_site_data.py`): named summits from
   USGS GNIS (`data/sources/peaks_gnis.json`, fetched by `pipeline/fetch_peaks.py`) cut into
   1° cells, `peaks/<floor lat>_<floor lon>.json` = `[[name, lat, lon, gnis_id], …]` (4 dp), plus
@@ -641,11 +642,67 @@ Friends of Sterling Forest's domain has been hijacked for spam; New Hampshire's 
 - **Tower timeline**: a drawn line (decorative, `aria-hidden`) above the ordered list; gaps of
   15+ years are named ("No record between …"); a Today entry ends the list.
 - **Designs guide** `/designs/`: facts in `data/designs.json` (our words, every fact sourced),
-  schematics drawn by us and labelled as such, every lookout of each design, a Design filter
-  on the map (`&design=l4`). Its own section **Structure types** (`#structure-types`,
-  `web/src/render/structures.ts`, rendered from `structure_kinds.json`): one paragraph per kind
-  with its count, the sources' words for it and a map link, the no-structure group explained,
-  what lookouts are built of, and the Aircraft Warning Service role.
+  schematics drawn by us and labelled as such, every lookout of each design (standing ones
+  first), a Design filter on the map (`&design=l4`). Built 2026-10-08 to cover **every plan on
+  FFLA's *Lookout Types and Historic Plans* page** plus the design names at least five lookouts'
+  records use (Aermotor MC-24, LX-24/25, BC-301, C-3, Wisconsin standard, CDF 809R…):
+  - **One entry per design** (`id`, `name`, `family`, `part`, `material`, `region_codes`,
+    `years_in_use`, `makers`, `summary` and facts in our words, read from the plan drawings
+    themselves, `sources`, `schematic`). `part` is `cab`, `house` (a ground house), `tower` (the
+    supporting structure) or `whole` (a lookout drawn as one building). `material` (steel, wood,
+    log, stone, concrete, mixed) is required: the tower records' material can be derived from it.
+    `region_codes` are Forest Service regions (`R1`…`R9`) or `national`, first one for grouping.
+    Plan revisions or types of one design are `variants` (L-4 of 1928/1930/1932/1936 and Region 4's
+    Plan 80; R-6 Flat of 1959/1964/1971 and Region 4's Plans 80-A, 80-B; Region 6's CT-1 to CT-6,
+    RT-1, TT-1; Region 1's T-10 to T-50), each with its `plans`: links to FFLA's scans (credited,
+    never mirrored). The 1938 plan book, the 1924 specifications, the cab-styles notes and the
+    firefinder and lightning documents are `equipment` (reference items), not designs. A one-off plan no source names (Chimney Rock) lists
+    the lookouts built to it in `examples` (tower id + note).
+  - **Families**: an entry's `family` is its family head's id (heads point at themselves). Aermotor
+    heads its models (MC-39, LS-40, LL-25, LX-24/25, MC-24), "Other steel makers" heads Blaw-Knox,
+    McClintic-Marshall and Pacific Coast Steel, "Cupola houses" the D-1, D-6 and District 1 L-2,
+    "California (Region 5) plans" the 4-A, D-5, C-3, BC-301 and BC-201, "Architect-designed stone
+    lookouts" the Chimney Rock plan. A lookout matched to a member is also counted for
+    its head, so the map filter `&design=aermotor` finds every Aermotor; the head's own list on the
+    guide shows only the lookouts whose model is not recorded.
+  - **Cab on tower**: a real lookout is often a cab design on a tower design (an L-4 cab on a CT-2
+    tower; an Aermotor MC-24 carrying a Region 3 cab), or a ground house beside a tower (a BC-201
+    house and an Aermotor). `designs.pair` gives the tower record a `design_pair` — `{"cab": …}` or
+    `{"house": …}`, plus `"tower"` when a tower design is named too, or `{"whole": …}` — when its
+    records name at most one cab or house and at most one tower (a family head beside its member
+    counts once). Two cabs (an L-4 that replaced a D-6), two towers, or a whole lookout beside
+    anything else describe several structures over time, and get no pair: we do not guess which is
+    today's. Nor does a cab and a tower named in prose that tells of a replacement ("a CL-100 cab…
+    it replaced an Aermotor tower"; `designs.describes_several`, `several_structures` in
+    `data/design_mentions.json`). The tower page says "Cab: L-4; tower: Region 6 timber towers".
+  - **Design names in prose**: NHLR, FFLOS, firelookout.com and the weebly sites describe each
+    lookout in a paragraph the fetchers do not keep (facts, not prose). `pipeline/extract_design_mentions.py`
+    reads those cached paragraphs and writes only the design names found ("Aermotor", "MC-39",
+    "CT-2") per source record key to `data/design_mentions.json` (committed; re-run it after
+    changing `designs.PATTERNS` or re-crawling, it needs the crawl cache). Prose fields already in
+    the extracts (RIDB and fire-lookouts.org descriptions, tnlandforms notes, PA StoryMap builders,
+    OSM `description`/`note`) are scanned the same way at build time. A design named only to rule
+    it out ("predates the L-4", "similar to an LS-40", "as compared to the more common Aermotor")
+    does not count; townships ("T-30-N") and other plan numbers ("CDF Plan 1817-4A") are not
+    designs.
+  - **Page**: designs grouped by material (wood, log, steel, stone, mixed), then by region, each
+    with its plan versions and links, facts, how to recognise it, where sources disagree, and its
+    lookouts (standing first, then gone). Then the separate **Structure types** section (below),
+    and last **Equipment and reference** (firefinders, lightning protection, the 1938 plan book
+    and other reference documents FFLA lists beside the plans), which are not designs. The page
+    has three placeholders filled at prerender: `<!--ff:designs-->` (`designsMain`),
+    `<!--ff:structures-->` (`structuresSection`) and `<!--ff:equipment-->` (`designsEnd`).
+  - **Tower material**: each design's `material` is what the merge's tower `material` falls back
+    to (`structure.design_material`: a tower design gives a tower's material, a cab or house only a
+    building's), with the design names found in prose included (`data/design_mentions.json`,
+    leaving out records that tell of several structures). A design whose material depends on the
+    state gives `material_by_state`: the L-5 is `wood` (most lookouts our sources call L-5 are
+    small frame cabs in Oregon and Washington) but `log` in Montana and Idaho, where Region 1's
+    L-5 was a log lookout (the FFLA plan).
+- **Structure types** (`#structure-types`, `web/src/render/structures.ts`, rendered from
+  `structure_kinds.json`), its own section on the designs page after the designs: one paragraph
+  per kind with its count, the sources' words for it and a map link, the no-structure group
+  explained, what lookouts are built of, and the Aircraft Warning Service role.
 - The **year view** counts towers and buildings only unless the visitor switches on sites with
   no structure, and says which; the smoke-spotting lesson always uses towers and buildings.
 

@@ -324,22 +324,68 @@ class SiteHistoryAndDesigns(unittest.TestCase):
             (self.root / "towers" / "wa" / f"{r['id']}.json").write_text(json.dumps(r))
         (self.root / "sources" / "fl.json").write_text(json.dumps({"source": "fl", "records": [{"key": "fl:b", "type_raw": "Tower", "extra": {"design": "Aermotor MC-39"}}]}))
         facts = self.root / "designs.json"
-        facts.write_text(json.dumps({"designs": [{"id": "l4", "name": "L-4"}, {"id": "aermotor", "name": "Aermotor"}, {"id": "r6", "name": "R-6"}]}))
-        meta = bsd.build(self.root / "towers", self.root / "stories", self.root / "p", self.root / "sources", bsd.DATA / "vocab.json", self.out, log=quiet(), designs_path=facts, this_year=2026)
+        facts.write_text(json.dumps({"designs": [{"id": "l4", "name": "L-4"}, {"id": "aermotor", "name": "Aermotor", "family": "aermotor"}, {"id": "r6", "name": "R-6"},
+                                                 {"id": "aermotor_mc39", "name": "Aermotor MC-39", "family": "aermotor"}]}))
+        meta = bsd.build(self.root / "towers", self.root / "stories", self.root / "p", self.root / "sources", bsd.DATA / "vocab.json", self.out, log=quiet(), designs_path=facts, mentions_path=self.root / "none.json", this_year=2026)
         props = {f["properties"]["i"]: f["properties"] for f in json.loads((self.out / "towers.geojson").read_text())["features"]}
         self.assertEqual((props["us-wa-a"]["y0"], props["us-wa-a"].get("y1"), props["us-wa-a"]["d"]), (1935, None, "l4"))
-        self.assertEqual((props["us-wa-b"]["y0"], props["us-wa-b"]["y1"], props["us-wa-b"]["d"]), (1932, 1968, "aermotor"))
+        self.assertEqual((props["us-wa-b"]["y0"], props["us-wa-b"]["y1"], props["us-wa-b"]["d"]), (1932, 1968, "aermotor_mc39|aermotor"))
         self.assertNotIn("y0", props["us-wa-c"])
         self.assertNotIn("d", props["us-wa-c"])
         self.assertEqual(meta["history"]["no_dates"], 1)
-        self.assertEqual(meta["designs"], {"total": 3, "with_design_text": 3, "recognised": 2, "by_design": {"l4": 1, "aermotor": 1, "r6": 0}})
+        self.assertEqual(meta["designs"], {"total": 3, "with_design_text": 3, "recognised": 2, "by_design": {"l4": 1, "aermotor": 1, "r6": 0, "aermotor_mc39": 1}, "unmatched_text": 1})
         guide = json.loads((self.out / "designs.json").read_text())
-        self.assertEqual([d["id"] for d in guide["designs"]], ["l4", "aermotor", "r6"])
-        aer = guide["designs"][1]["towers"][0]
-        self.assertEqual((aer["i"], aer["w"], aer["m"]), ("us-wa-b", "Aermotor MC-39", ["MC-39"]))
+        self.assertEqual([d["id"] for d in guide["designs"]], ["l4", "aermotor", "r6", "aermotor_mc39"])
+        mc39 = guide["designs"][3]["towers"][0]
+        # The source's wording is the design's own name, so it is not repeated.
+        self.assertEqual((mc39["i"], mc39.get("w")), ("us-wa-b", None))
         self.assertEqual(guide["designs"][0]["towers"][0]["w"], "L-4 ground cab")
         rec = json.loads((self.out / "t" / "us-wa-b.json").read_text())
-        self.assertEqual(rec["design_ids"], ["aermotor"])
+        # The page names the model only; the map filter (d above) also carries the family.
+        self.assertEqual(rec["design_ids"], ["aermotor_mc39"])
+
+    def test_families_pairs_mentions_and_examples(self) -> None:
+        recs = [
+            tower("us-or-a", region="OR", sources=[{"source": "nhlr", "key": "nhlr:US 1"}]),
+            tower("us-or-b", region="OR", design="Aermotor MC-39 steel tower"),
+            tower("us-or-c", region="OR", design="R-6 cab that replaced an L-4"),
+            tower("us-or-d", region="OR", status="gone", sources=[{"source": "ridb", "key": "ridb:1"}]),
+            tower("us-or-e", region="OR"),
+            tower("us-or-f", region="OR", sources=[{"source": "nhlr", "key": "nhlr:US 2"}]),
+        ]
+        for r in recs:
+            (self.root / "towers" / "wa" / f"{r['id']}.json").write_text(json.dumps(r))
+        # A prose field in an extract: only the design names count, never the text.
+        (self.root / "sources" / "ridb.json").write_text(json.dumps({"source": "ridb", "records": [{"key": "ridb:1", "extra": {"description": "Built in 1933, this Aermotor tower with a 7x7 cab..."}}]}))
+        mentions = self.root / "mentions.json"
+        mentions.write_text(json.dumps({"mentions": {"nhlr:US 1": ["CT-2", "L-4"], "nhlr:US 2": ["R-6", "Aermotor"]}, "several_structures": ["nhlr:US 2"]}))
+        facts = self.root / "designs.json"
+        facts.write_text(json.dumps({"designs": [
+            {"id": "l4", "name": "L-4", "family": "l4", "part": "cab"},
+            {"id": "r6", "name": "R-6", "family": "r6", "part": "cab"},
+            {"id": "r6_timber_towers", "name": "Region 6 timber towers", "family": "r6_timber_towers", "part": "tower"},
+            {"id": "aermotor", "name": "Aermotor", "family": "aermotor", "part": "tower"},
+            {"id": "aermotor_mc39", "name": "Aermotor MC-39", "family": "aermotor", "part": "tower"},
+            {"id": "chimney_rock", "name": "Chimney Rock", "family": "chimney_rock", "part": "whole", "examples": [{"id": "us-or-e", "note": "Built to this plan"}]},
+        ]}))
+        bsd.build(self.root / "towers", self.root / "stories", self.root / "p", self.root / "sources", bsd.DATA / "vocab.json", self.out, log=quiet(), designs_path=facts, mentions_path=mentions, this_year=2026)
+        rec = lambda i: json.loads((self.out / "t" / f"{i}.json").read_text())  # noqa: E731
+        self.assertEqual((rec("us-or-a")["design_ids"], rec("us-or-a")["design_pair"]), (["r6_timber_towers", "l4"], {"cab": "l4", "tower": "r6_timber_towers"}))
+        self.assertEqual(rec("us-or-b")["design_pair"], {"tower": "aermotor_mc39"})
+        self.assertNotIn("design_pair", rec("us-or-c"))  # two cabs: an earlier one and today's
+        # "An R-6 cab replaced the Aermotor": both named, but not as one lookout.
+        self.assertEqual(rec("us-or-f")["design_ids"], ["r6", "aermotor"])
+        self.assertNotIn("design_pair", rec("us-or-f"))
+        self.assertEqual(rec("us-or-d")["design_ids"], ["aermotor"])
+        self.assertEqual((rec("us-or-e")["design_ids"], rec("us-or-e")["design_pair"]), (["chimney_rock"], {"whole": "chimney_rock"}))
+        guide = {d["id"]: d for d in json.loads((self.out / "designs.json").read_text())["designs"]}
+        # The family head counts both Aermotors but lists only the one with no model recorded.
+        aer = guide["aermotor"]
+        self.assertEqual((aer["count"], aer["count_unspecified"], [t["i"] for t in aer["towers"]]), (3, 2, ["us-or-d", "us-or-f"]))
+        self.assertEqual(aer["members"], [{"id": "aermotor_mc39", "name": "Aermotor MC-39", "count": 1}])
+        self.assertEqual(aer["towers"][0].get("w"), None)  # the bare word "Aermotor" says no more than the name
+        self.assertEqual(guide["chimney_rock"]["towers"][0]["w"], "Built to this plan")
+        self.assertEqual(guide["r6_timber_towers"]["towers"][0]["m"], ["CT-2"])
 
     def test_sites_with_no_structure_are_shown_but_counted_apart(self) -> None:
         recs = [

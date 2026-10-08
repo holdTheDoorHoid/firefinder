@@ -9,6 +9,8 @@ import { html, raw, type SafeHtml } from '../lib/html.ts';
 import { markerSvg, rentBadgeSvg, shapeFor, fillFor } from '../lib/icons.ts';
 import type { TowerFeature } from '../lib/types.ts';
 import {
+  DESIGN_MATERIAL,
+  DESIGN_MATERIAL_LABEL,
   DESIGN_NAMES,
   KIND,
   KIND_ORDER,
@@ -61,6 +63,19 @@ function multiFieldset(facet: Facet, legend: string, body: SafeHtml, help?: stri
   </fieldset>`;
 }
 
+/** The design filter's options grouped by what the design is built of (wood, steel...). */
+function designGroups(ids: string[]): [string, string[]][] {
+  const groups = new Map<string, string[]>();
+  for (const id of ids) {
+    const m = DESIGN_MATERIAL[id] ?? 'other';
+    groups.set(m, [...(groups.get(m) ?? []), id]);
+  }
+  const order = [...Object.keys(DESIGN_MATERIAL_LABEL), 'other'];
+  return [...groups.entries()]
+    .sort((a, b) => order.indexOf(a[0]) - order.indexOf(b[0]))
+    .map(([m, list]) => [DESIGN_MATERIAL_LABEL[m] ?? 'Other', list]);
+}
+
 export function renderFilterPanel(d: FilterPanelDeps): () => void {
   const regions = [...new Set(d.features().map((f) => f.properties.r))].sort((a, b) => regionName(a).localeCompare(regionName(b)));
   const present = new Set(d.features().flatMap((f) => designIds(f.properties)));
@@ -101,7 +116,7 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
       <select id="f-design" name="design" aria-describedby="f-design-help">
         <option value="">Any design, or none recorded</option>
         <option value="any">Any recognised standard design</option>
-        ${designs.map((d) => html`<option value="${d}">${designName(d)}</option>`)}
+        ${designGroups(designs).map(([label, ids]) => html`<optgroup label="${label}">${ids.map((d) => html`<option value="${d}">${designName(d)}</option>`)}</optgroup>`)}
       </select>
       <p class="fs-help" id="f-design-help"><span data-design-share></span> <a href="${import.meta.env.BASE_URL}designs/">About the designs</a></p>
     </div>
