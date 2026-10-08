@@ -37,6 +37,14 @@ class DiffRental(unittest.TestCase):
         new = {"available": True, "checked": "2026-10-04", "description": "Overview\n\nNew text."}
         self.assertIsNone(S.diff_rental(old, new, "X"))
 
+    def test_an_ffla_closure_note_appearing_or_lifting_is_reported(self):
+        # the Action re-reads FFLA's rentals page, whose closure notes live in rental.status_note
+        old = {"available": True, "status_note": None}
+        new = {"available": True, "status_note": "Maintenance Closure 2026"}
+        self.assertEqual(S.diff_rental(old, new, "Arid Peak"), "Arid Peak: status_note changed")
+        self.assertEqual(S.diff_rental(new, old, "Arid Peak"), "Arid Peak: status_note changed")
+        self.assertEqual(S.diff_rental({"manager": "MT DNRC"}, {"manager": "MT DNRC"}, "Werner Peak"), None)
+
 
 class BuildMessage(unittest.TestCase):
     def test_no_changes(self):

@@ -2,8 +2,10 @@ name: Weekly RIDB rental refresh
 
 # DESIGN.md's Stage 1 promises recreation.gov rental rules refresh automatically. This
 # downloads the ~572 MB RIDB bulk export, filters it to fire-lookout rentals
-# (pipeline/fetch_ridb.py), re-merges and validates, and -- only if something under data/
-# actually changed -- commits as github-actions[bot] and starts the Pages deploy.
+# (pipeline/fetch_ridb.py), re-reads the FFLA's rentals page for its closure notes
+# (pipeline/regional/ffla_rentals.py; fails soft), re-merges and validates, and -- only if
+# something under data/ actually changed -- commits as github-actions[bot] and starts the
+# Pages deploy.
 #
 # A push made with the default GITHUB_TOKEN does not itself trigger other workflows' `push`
 # triggers (GitHub's anti-recursion rule), so this calls pages.yml explicitly with `gh
@@ -28,7 +30,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
-      # pipeline/_common.py's raw-response cache (data/raw/<source>/, git-ignored) defaults to
+      # The raw-response cache (data/raw/<source>/, git-ignored; pipeline/_common.py,
+      # pipeline/common.py and pipeline/regional/_common.py all read it) defaults to
       # a path on the shared lab machine that does not exist on a runner; FIREFINDER_RAW_ROOT
       # points it at the runner's own temp dir instead, outside the checkout, so the ~572 MB
       # zip never touches the repo and is gone with the runner (also rm -rf'd below, since the
@@ -66,6 +69,21 @@ jobs:
       - name: Delete the downloaded RIDB export (disk is tight; never committed anyway)
         if: always()
         run: rm -rf "$FIREFINDER_RAW_ROOT"
+
+      - name: Re-read FFLA's rentals page (fails soft)
+        # FFLA's list is where closure notes ("Maintenance Closure 2026", "Currently Unavailable")
+        # live; without this they go stale between hand runs. Any failure here -- the site is down,
+        # robots.txt refuses, the page loads but is not the list (regional/ffla_rentals.py refuses
+        # to replace the extract with under 70% of what it holds) -- must not cost the week's RIDB
+        # refresh: warn, put the committed data/sources/ffla_rentals.json back and carry on.
+        # (--refresh skips any cached copy; the runner's cache is empty anyway.)
+        run: |
+          if timeout 180 python3 pipeline/regional/ffla_rentals.py --refresh; then
+            echo "FFLA rentals page re-read."
+          else
+            echo "::warning::Could not re-read https://firelookout.org/resources/rentals/ -- keeping the committed data/sources/ffla_rentals.json, so closure notes may be a week stale."
+            git checkout -- data/sources/ffla_rentals.json
+          fi
 
       - name: Merge, validate and test
         run: |

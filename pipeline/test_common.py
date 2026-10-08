@@ -1,9 +1,10 @@
-"""Tests for _common.py and common.py. Run: python3 -m unittest discover -s pipeline"""
+"""Tests for _common.py, common.py and regional/_common.py. Run: python3 -m unittest discover -s pipeline"""
 
 from __future__ import annotations
 
 import importlib.util
 import os
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -31,6 +32,17 @@ def load_registers_common():
     nothing) or cache one built with the test's override for every later importer."""
     spec = importlib.util.spec_from_file_location(
         "firefinder_registers_common_under_test", Path(__file__).parent / "common.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def load_regional_common():
+    """Loads pipeline/regional/_common.py (the regional fetchers' helpers) the same isolated way:
+    it shares the bare name `_common` with pipeline/_common.py, which is why it is never imported
+    by that name here."""
+    spec = importlib.util.spec_from_file_location(
+        "firefinder_regional_common_under_test", Path(__file__).parent / "regional" / "_common.py")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
@@ -70,6 +82,29 @@ class RegistersRawRoot(RawRoot):
     def test_env_var_overrides_it(self):
         os.environ["FIREFINDER_RAW_ROOT"] = "/tmp/firefinder-raw-test"
         self.assertEqual(str(load_registers_common().RAW_ROOT), "/tmp/firefinder-raw-test")
+
+
+class RegionalRawRoot(RawRoot):
+    """pipeline/regional/_common.py honours the override too, so the weekly rentals refresh can
+    re-read FFLA's rentals page (regional/ffla_rentals.py) on a runner with no /home/hoid."""
+
+    def test_defaults_to_the_lab_path(self):
+        os.environ.pop("FIREFINDER_RAW_ROOT", None)
+        self.assertEqual(str(load_regional_common().RAW_ROOT), "/home/hoid/Desktop/firefinder/data/raw")
+
+    def test_env_var_overrides_it(self):
+        os.environ["FIREFINDER_RAW_ROOT"] = "/tmp/firefinder-raw-test"
+        self.assertEqual(str(load_regional_common().RAW_ROOT), "/tmp/firefinder-raw-test")
+
+    def test_an_empty_value_falls_back_to_the_lab_path(self):
+        os.environ["FIREFINDER_RAW_ROOT"] = ""
+        self.assertEqual(str(load_regional_common().RAW_ROOT), "/home/hoid/Desktop/firefinder/data/raw")
+
+    def test_cache_path_follows_it(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            os.environ["FIREFINDER_RAW_ROOT"] = tmp
+            got = load_regional_common().cache_path("ffla_rentals", "firelookout.org", "index.html")
+            self.assertEqual(str(got), f"{tmp}/ffla_rentals/firelookout.org/index.html")
 
 
 if __name__ == "__main__":

@@ -49,12 +49,13 @@ In practice (a) alone is extremely noisy: activity 30 is reused across RIDB
 for every rentable administrative cabin/guard station, so most of its ~219
 facility/campground hits are ranger stations, generic campgrounds and area
 index pages with no fire-lookout connection at all. So selection here is
-really name-match-first; the activity tag only pulls in one additional
-record that the name regex misses (Spyglass Ground House, caught via its
-Keywords field: "Spyglass Lookout Ground House"), after checking its
-description confirms a real lookout site. Every activity-tagged candidate
-that *isn't* a name/keyword match is logged to ridb_excluded.json with a
-reason -- see build_exclusions().
+really name-match-first. The records the name regex misses are added by hand
+in EXTRA_INCLUDE (an explicit id list, a reason per id, checked against the
+facility's own recreation.gov page): Spyglass Ground House (caught via its
+Keywords field) and the lookout rentals the FFLA lists whose RIDB names carry
+no "lookout". Every activity-tagged candidate that is neither a name match nor
+in EXTRA_INCLUDE is logged to ridb_excluded.json with a reason -- see
+ACTIVITY_ONLY_REJECTS and the loop at the end of main().
 """
 from __future__ import annotations
 
@@ -128,6 +129,53 @@ NAME_MATCH_REJECTS = {
               "lookout tower' -- this facility IS the viewpoint, not the tower; using its "
               "coordinates would misplace the actual structure.",
 }
+
+# Facilities included BY HAND, whatever their name or activity tags say. Keyed by FacilityID, each
+# with the reason, checked against the facility's own recreation.gov page. Two kinds of entry:
+#   - a real lookout whose RIDB name has no "lookout"/"fire tower"/"L-4" in it, so NAME_RE misses
+#     it (Spyglass, Post Creek, Mt. Baldy-Buckhorn Ridge, ...);
+#   - a rental on a lookout's site that RIDB names as a cabin or guard station (Bishop Mountain,
+#     Strawberry, Tamarack, Timber Butte) but that the Forest Fire Lookout Association lists as a
+#     lookout rental (data/sources/ffla_rentals.json, 2026-10-08). RIDB gives the rental's own
+#     coordinates, so the record joins the lookout already on the map; it does not start a tower.
+# An id here must not also be in NAME_MATCH_REJECTS (select_include_ids would drop it silently) or
+# ACTIVITY_ONLY_REJECTS (a contradiction); test_fetch_ridb checks both.
+EXTRA_INCLUDE = {
+    "10007160": "Spyglass Ground House (ID): a real lookout, caught via its Keywords field "
+                "('Spyglass Lookout Ground House'); verified by hand.",
+    "234404": "Post Creek Guard Station (Shasta-Trinity NF, CA): built 1934 by the CCC for use as "
+              "a wildfire lookout; its own notices call it 'Post Creek Lookout', and the FFLA "
+              "lists it as 'Post Creek Lookout'. A ground-level cabin, not a tower. Was rejected "
+              "as activity-only because the name has no 'lookout'.",
+    "234432": "Mt. Baldy-Buckhorn Ridge (Kootenai NF, MT): a 26-foot tower with a 144 sq ft cab, "
+              "built 1957 on a site watched since 1910; the FFLA lists it as 'Mt. Baldy "
+              "Lookout'. Was rejected as activity-only because the name has no 'lookout'.",
+    "234304": "Bishop Mountain Cabin (Caribou-Targhee NF, ID): a 1938 CCC cabin that housed "
+              "lookout workers until the early 1980s, with a historic lookout tower nearby "
+              "(not rentable); the FFLA lists it as 'Bishop Mountain Lookout Cabin'.",
+    "234281": "Gird Point (Bitterroot NF, MT): an L-4 cab on an 8-foot tower at 7,702 ft, "
+              "restored from 2001; the FFLA lists it as 'Gird Point Lookout'. The name has no "
+              "'lookout', so NAME_RE misses it.",
+    "272173": "Strawberry Cabin (Helena-Lewis and Clark NF, MT): a 1941 log cabin on the top of "
+              "Strawberry Butte, beside a 1940s metal lookout tower that is closed to the public; "
+              "the FFLA lists it as 'Strawberry Lookout Cabin'.",
+    "234138": "Tamarack Cabin (Umatilla NF, OR): a converted shed beside the 96-foot Aermotor "
+              "tower (1933, replacing a 1925 tree platform) that is still standing; the FFLA "
+              "lists it as 'Tamarack Lookout Cabin'.",
+    "233133": "Timber Butte Cabin (Willamette NF, OR): the Timber Butte Lookout, a 2005 volunteer-"
+              "built replica of an L-4 cab with a catwalk; the FFLA lists it as 'Timber Butte "
+              "Replica Lookout'. The name has no 'lookout', so NAME_RE misses it.",
+}
+
+
+def select_include_ids(name_matched_ids, extra_include=None, name_match_rejects=None) -> set[str]:
+    """The facilities that become lookout records: those whose name matches, plus the by-hand
+    EXTRA_INCLUDE ones, minus the confirmed false positives in NAME_MATCH_REJECTS. (An
+    ACTIVITY_ONLY_REJECTS id is never name-matched, so it only matters if it is also listed in
+    EXTRA_INCLUDE, which the tests forbid.)"""
+    extra = EXTRA_INCLUDE if extra_include is None else extra_include
+    rejects = NAME_MATCH_REJECTS if name_match_rejects is None else name_match_rejects
+    return (set(name_matched_ids) | set(extra)) - set(rejects)
 
 
 def load_members(zf: zipfile.ZipFile, names: list[str]) -> dict:
@@ -459,20 +507,20 @@ def main() -> None:
 
     name_matched_ids = {fid for fid, fac in facilities_by_id.items() if name_matches(fac)}
 
-    # The one activity-tagged, non-name-matched facility we verified by hand
-    # (Spyglass Ground House -- real lookout, caught via its Keywords field).
-    extra_include_ids = {"10007160"}
-
-    include_ids = name_matched_ids | extra_include_ids
-    include_ids -= set(NAME_MATCH_REJECTS)  # drop confirmed false positives
+    extra_include_ids = set(EXTRA_INCLUDE)
+    include_ids = select_include_ids(name_matched_ids)
 
     only_activity_ids = activity_tagged_ids - name_matched_ids - extra_include_ids
 
     print(f"Candidates: {len(name_matched_ids)} name-matched, "
-          f"{len(extra_include_ids)} added via activity+keyword check, "
+          f"{len(extra_include_ids)} added by hand (EXTRA_INCLUDE), "
           f"{len(NAME_MATCH_REJECTS)} name-matched false positives excluded, "
           f"{len(only_activity_ids)} activity-only (not included; see ridb_excluded.json).",
           file=sys.stderr)
+    for fid in sorted(extra_include_ids - set(facilities_by_id)):
+        print(f"WARNING: EXTRA_INCLUDE facility {fid} is not in this export -- RIDB may have "
+              f"renumbered or dropped it (see EXTRA_INCLUDE in pipeline/fetch_ridb.py).",
+              file=sys.stderr)
 
     STATE_LOOKUP = c.get_state_lookup()
 
