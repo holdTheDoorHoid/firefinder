@@ -52,9 +52,9 @@ def _year(y: int) -> dict:
 DOCS = [_year(y) for y in range(2026, 2014, -1)]
 
 LOOKOUTS: list[dict] = [
-    dict(slug="st-regis-mountain", name="St. Regis Mountain Fire Tower", tower="us-ny-st-regis-mountain",
+    dict(region="NY", slug="st-regis-mountain", name="St. Regis Mountain Fire Tower", tower="us-ny-st-regis-mountain",
          pos="nhlr:US 117", find=["St. Regis", "St Regis"], status="standing", agency="NYS DEC", ownership="state", staffing="volunteer",
-         page=LOG,
+         url=LOG,
          events=[
              E(2014, "other", "The state's final unit management plan for the fire tower area was issued on 7 November, which allowed the tower to be restored.", "r2015"),
              E(2015, "restored", "Restoration began: DEC flew in lumber and steel, then a Student Conservation Association crew and Friends volunteers rebuilt the stairs, rails, landings and cab floor in late September.", "r2015", "r2016"),
@@ -74,8 +74,7 @@ LOOKOUTS: list[dict] = [
 
 
 def main() -> None:
-    run(source=SOURCE, association=ASSOCIATION, credit=CREDIT, license_=LICENSE, region="NY", specs=DOCS,
-        lookouts=LOOKOUTS, description=__doc__.split("\n")[0])
+    run(__doc__, SOURCE, ASSOCIATION, DOCS, LOOKOUTS, credit=CREDIT, license_=LICENSE, folded=True)
 
 
 if __name__ == "__main__":

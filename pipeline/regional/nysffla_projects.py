@@ -34,6 +34,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from _assoc_east import run  # noqa: E402
 import nysffla_projects_data as D  # noqa: E402
 
+
 SOURCE = "nysffla_projects"
 ASSOCIATION = {"name": "Forest Fire Lookout Association, New York State Chapter", "url": f"{D.BASE}/"}
 CREDIT = "Forest Fire Lookout Association, New York State Chapter (nysffla.org)"
@@ -45,8 +46,7 @@ LICENSE = (
 
 
 def main() -> None:
-    run(source=SOURCE, association=ASSOCIATION, credit=CREDIT, license_=LICENSE, region="NY", specs=D.DOCS,
-        lookouts=D.LOOKOUTS, description=__doc__.split("\n")[0])
+    run(__doc__, SOURCE, ASSOCIATION, D.DOCS, D.LOOKOUTS, credit=CREDIT, license_=LICENSE, folded=True)
 
 
 if __name__ == "__main__":

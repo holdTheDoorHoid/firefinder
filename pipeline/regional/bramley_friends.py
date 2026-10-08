@@ -49,9 +49,9 @@ DOCS = [
 ]
 
 LOOKOUTS: list[dict] = [
-    dict(slug="bramley-mountain", name="Bramley Mountain Fire Tower", tower="us-ny-bramley-mountain", pos="nhlr:US 1808",
+    dict(region="NY", slug="bramley-mountain", name="Bramley Mountain Fire Tower", tower="us-ny-bramley-mountain", pos="nhlr:US 1808",
          find=["Bramley"], status="standing", agency="NYC Department of Environmental Protection", ownership="local", staffing="volunteer",
-         page=f"{BASE}/bramleys-towers-history/",
+         url=f"{BASE}/bramleys-towers-history/",
          events=[
              E(1950, "built", "DEC erected the 80-foot Aermotor LS40 steel tower on the summit, with a three-room observer's cabin.", "history"),
              E(1970, "closed", "DEC closed the tower as aerial surveillance replaced observers.", "history"),
@@ -64,8 +64,7 @@ LOOKOUTS: list[dict] = [
 
 
 def main() -> None:
-    run(source=SOURCE, association=ASSOCIATION, credit=CREDIT, license_=LICENSE, region="NY", specs=DOCS,
-        lookouts=LOOKOUTS, description=__doc__.split("\n")[0])
+    run(__doc__, SOURCE, ASSOCIATION, DOCS, LOOKOUTS, credit=CREDIT, license_=LICENSE, folded=True)
 
 
 if __name__ == "__main__":

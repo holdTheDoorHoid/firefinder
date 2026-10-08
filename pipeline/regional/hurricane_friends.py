@@ -45,9 +45,9 @@ DOCS = [
 ]
 
 LOOKOUTS: list[dict] = [
-    dict(slug="hurricane-mountain", name="Hurricane Mountain Fire Tower", tower="us-ny-hurricane-mountain",
+    dict(region="NY", slug="hurricane-mountain", name="Hurricane Mountain Fire Tower", tower="us-ny-hurricane-mountain",
          pos="nhlr:US 644", find=["Hurricane"], status="standing", agency="NYS DEC", ownership="state",
-         page=f"{BASE}/restoration/",
+         url=f"{BASE}/restoration/",
          events=[
              E(1919, "built", "A 35-foot steel tower with an observation cabin was put up; observers had used the bald summit without a structure from 1910.", "history"),
              E(1979, "staffed_last", "The tower was officially closed in November; the Conservation Department relied on air surveillance from then on.", "history"),
@@ -59,8 +59,7 @@ LOOKOUTS: list[dict] = [
 
 
 def main() -> None:
-    run(source=SOURCE, association=ASSOCIATION, credit=CREDIT, license_=LICENSE, region="NY", specs=DOCS,
-        lookouts=LOOKOUTS, description=__doc__.split("\n")[0])
+    run(__doc__, SOURCE, ASSOCIATION, DOCS, LOOKOUTS, credit=CREDIT, license_=LICENSE, folded=True)
 
 
 if __name__ == "__main__":

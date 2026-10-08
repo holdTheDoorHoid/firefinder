@@ -45,9 +45,9 @@ DOCS = [
 ]
 
 LOOKOUTS: list[dict] = [
-    dict(slug="mount-nimham", name="Mount Nimham Fire Tower", tower="us-ny-mount-nimham", pos="nhlr:US 314",
+    dict(region="NY", slug="mount-nimham", name="Mount Nimham Fire Tower", tower="us-ny-mount-nimham", pos="nhlr:US 314",
          find=["Nimham"], status="standing", agency="NYS DEC", ownership="state",
-         page=f"{BASE}/index.php/2017/06/27/a-big-project/",
+         url=f"{BASE}/index.php/2017/06/27/a-big-project/",
          events=[
              E(2015, "restored", "The spongy 1940 plank cab floor and the railing round the trap door were replaced in two days in early May, with the tower closed briefly, at a cost under $800.", "bigproject"),
              E(2017, "restored", "A volunteer crew replaced stair landing 3, the one 20 feet above the treetops, on 10 July and repainted the inside of the cab; the other landings were to follow one at a time.", "landing"),
@@ -56,8 +56,7 @@ LOOKOUTS: list[dict] = [
 
 
 def main() -> None:
-    run(source=SOURCE, association=ASSOCIATION, credit=CREDIT, license_=LICENSE, region="NY", specs=DOCS,
-        lookouts=LOOKOUTS, description=__doc__.split("\n")[0])
+    run(__doc__, SOURCE, ASSOCIATION, DOCS, LOOKOUTS, credit=CREDIT, license_=LICENSE, folded=True)
 
 
 if __name__ == "__main__":

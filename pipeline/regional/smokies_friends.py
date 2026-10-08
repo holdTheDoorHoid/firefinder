@@ -29,6 +29,7 @@ import pathlib
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
+import _common  # noqa: E402
 from _assoc_east import E, doc, run  # noqa: E402
 
 CRAWL_DELAY = 3.0   # robots.txt: Crawl-delay: 3
@@ -52,9 +53,9 @@ DOCS = [
 ]
 
 LOOKOUTS: list[dict] = [
-    dict(slug="mount-cammerer", name="Mount Cammerer Fire Tower", tower="us-tn-mount-cammerer", pos="nhlr:US 82",
+    dict(region="TN", slug="mount-cammerer", name="Mount Cammerer Fire Tower", tower="us-tn-mount-cammerer", pos="nhlr:US 82",
          find=["Cammerer"], status="standing", agency="National Park Service (Great Smoky Mountains National Park)",
-         ownership="federal", page=f"{BASE}/blog/mt-cammerer-classic-hike-sept2016/",
+         ownership="federal", url=f"{BASE}/blog/mt-cammerer-classic-hike-sept2016/",
          events=[
              E(1995, "restored", "Restoration of the tower began, the first project of the new Friends of the Smokies; the work finished a few years later.", "classic", "smn2023"),
              E(2023, "restored", "A Forever Places crew spent a week in September repairing steps and railings, replacing blown-out windows and rotted rafter tails, and repainting the door.", "smn2023"),
@@ -63,8 +64,8 @@ LOOKOUTS: list[dict] = [
 
 
 def main() -> None:
-    run(source=SOURCE, association=ASSOCIATION, credit=CREDIT, license_=LICENSE, region="TN", specs=DOCS,
-        lookouts=LOOKOUTS, description=__doc__.split("\n")[0], crawl_delay=CRAWL_DELAY)
+    _common.MIN_INTERVAL_S = CRAWL_DELAY   # robots.txt asks for it
+    run(__doc__, SOURCE, ASSOCIATION, DOCS, LOOKOUTS, credit=CREDIT, license_=LICENSE, folded=True)
 
 
 if __name__ == "__main__":

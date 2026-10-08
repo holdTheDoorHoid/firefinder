@@ -29,6 +29,7 @@ import pathlib
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
+import _common  # noqa: E402
 from _assoc_east import E, doc, run  # noqa: E402
 
 CRAWL_DELAY = 10.0   # robots.txt: Crawl-delay: 10
@@ -49,9 +50,9 @@ DOCS = [doc(f"n{y}", f"{BASE}/FOMAnewsletter{y}.pdf", f"FOMA newsletter {y}", y,
 DOCS.append(doc("history", f"{BASE}/FOMA-5-history.htm", "FOMA: History of Mount Arab", None, cache="history.html"))
 
 LOOKOUTS: list[dict] = [
-    dict(slug="mount-arab", name="Mount Arab Fire Tower", tower="us-ny-mount-arab", pos="nhlr:US 108",
+    dict(region="NY", slug="mount-arab", name="Mount Arab Fire Tower", tower="us-ny-mount-arab", pos="nhlr:US 108",
          find=["Arab"], status="standing", agency="NYS DEC", ownership="state", staffing="volunteer",
-         page=f"{BASE}/FOMA-4-newsletters.htm",
+         url=f"{BASE}/FOMA-4-newsletters.htm",
          events=[
              E(1918, "built", "The steel tower went up on the summit and the first observer's cabin was built the same year; before that observers lived in tents.", "n2018", "history"),
              E(1997, "other", "On Earth Day citizens and DEC officials met on the summit and resolved to restore the tower and cabin; FOMA was then incorporated as DEC's partner.", "n2011"),
@@ -75,8 +76,8 @@ LOOKOUTS: list[dict] = [
 
 
 def main() -> None:
-    run(source=SOURCE, association=ASSOCIATION, credit=CREDIT, license_=LICENSE, region="NY", specs=DOCS,
-        lookouts=LOOKOUTS, description=__doc__.split("\n")[0], crawl_delay=CRAWL_DELAY)
+    _common.MIN_INTERVAL_S = CRAWL_DELAY   # robots.txt asks for it
+    run(__doc__, SOURCE, ASSOCIATION, DOCS, LOOKOUTS, credit=CREDIT, license_=LICENSE, folded=True)
 
 
 if __name__ == "__main__":

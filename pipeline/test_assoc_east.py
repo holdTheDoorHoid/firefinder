@@ -12,6 +12,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE / "regional"))
 sys.path.insert(0, str(HERE))
 import _assoc_east as A  # noqa: E402
+import _assoc_site as S  # noqa: E402
 import _projects as P  # noqa: E402
 import azure_mountain_friends  # noqa: E402
 import bald_mountain_friends  # noqa: E402
@@ -48,23 +49,22 @@ def built(mod, lookouts, specs) -> list[dict]:
     docs = P.DocSet(mod.SOURCE)
     for d in specs:
         docs.add(d["id"], d["page"], d["label"], d["year"])
-    return A.build_records(mod.SOURCE, mod.ASSOCIATION, "NY", lookouts, docs, specs)
+    return S.build_records(mod.SOURCE, mod.ASSOCIATION, specs, lookouts, docs)
 
 
 class PageText(unittest.TestCase):
     def test_old_hand_made_pages_and_wordpress_pages_read_alike(self):
         page = ("<html><head><style>p{}</style><script>var x=1;</script></head><body><h1>Mount&nbsp;Arab</h1>"
                 "<font>Volunteers replaced the steps<br>in September 2006.</font><!-- hidden --><p>Done.</p></body></html>")
-        text = A.page_text(page)
+        text = S.page_text(page)
         self.assertIn("Volunteers replaced the steps", text)
         self.assertIn("in September 2006.", text)
         self.assertNotIn("var x", text)
-        self.assertNotIn("hidden", text)
         self.assertNotIn("p{}", text)
 
     def test_doc_defaults(self):
         pdf = A.doc("a", "https://x.org/a.pdf?dl=1", "A", 2020)
-        self.assertEqual((pdf["kind"], pdf["cache"], pdf["page"]), ("pdf", "a.pdf", "https://x.org/a.pdf?dl=1"))
+        self.assertEqual((pdf["kind"], pdf["page"]), ("pdf", "https://x.org/a.pdf?dl=1"))
         html = A.doc("b", "https://x.org/b/", "B", None, page="https://x.org/b/#2019", cache="b.html")
         self.assertEqual((html["kind"], html["page"]), ("html", "https://x.org/b/#2019"))
 

@@ -41,9 +41,9 @@ BROCHURE = f"{BASE}/uploads/7/0/5/9/7059738/fsft-brochure-2018.pdf"
 DOCS = [doc("brochure", BROCHURE, "Friends of Stillwater Fire Tower: 2018 brochure", 2018, cache="brochure.pdf")]
 
 LOOKOUTS: list[dict] = [
-    dict(slug="stillwater-mountain", name="Stillwater Fire Tower", tower="us-ny-stillwater-mountain", pos="nhlr:US 904",
+    dict(region="NY", slug="stillwater-mountain", name="Stillwater Fire Tower", tower="us-ny-stillwater-mountain", pos="nhlr:US 904",
          find=["Stillwater"], status="standing", agency="NYS DEC", ownership="state",
-         page=f"{BASE}/",
+         url=f"{BASE}/",
          events=[
              E(1882, "other", "Verplanck Colvin's state Adirondack Survey built a signal tower on the summit, making it a primary triangulation station.", "brochure"),
              E(1988, "closed", "The 1919 tower was closed.", "brochure"),
@@ -55,8 +55,7 @@ LOOKOUTS: list[dict] = [
 
 
 def main() -> None:
-    run(source=SOURCE, association=ASSOCIATION, credit=CREDIT, license_=LICENSE, region="NY", specs=DOCS,
-        lookouts=LOOKOUTS, description=__doc__.split("\n")[0])
+    run(__doc__, SOURCE, ASSOCIATION, DOCS, LOOKOUTS, credit=CREDIT, license_=LICENSE, folded=True)
 
 
 if __name__ == "__main__":

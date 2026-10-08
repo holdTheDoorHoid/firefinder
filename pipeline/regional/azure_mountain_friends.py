@@ -52,9 +52,9 @@ DOCS = [
 ]
 
 LOOKOUTS: list[dict] = [
-    dict(slug="azure-mountain", name="Azure Mountain Fire Tower", tower="us-ny-azure-mountain", pos="nhlr:US 520",
+    dict(region="NY", slug="azure-mountain", name="Azure Mountain Fire Tower", tower="us-ny-azure-mountain", pos="nhlr:US 520",
          find=["Azure"], status="standing", agency="NYS DEC", ownership="state", staffing="volunteer",
-         page=f"{BASE}/history",
+         url=f"{BASE}/history",
          events=[
              E(1914, "built", "A wooden fire observation station was built on the summit, the first lookout structure on the mountain.", "history"),
              E(1918, "built", "The present 35-foot galvanized steel Aermotor tower was put up in summer 1918.", "history", "n2003"),
@@ -71,8 +71,7 @@ LOOKOUTS: list[dict] = [
 
 
 def main() -> None:
-    run(source=SOURCE, association=ASSOCIATION, credit=CREDIT, license_=LICENSE, region="NY", specs=DOCS,
-        lookouts=LOOKOUTS, description=__doc__.split("\n")[0])
+    run(__doc__, SOURCE, ASSOCIATION, DOCS, LOOKOUTS, credit=CREDIT, license_=LICENSE, folded=True)
 
 
 if __name__ == "__main__":

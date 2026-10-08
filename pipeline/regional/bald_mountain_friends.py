@@ -56,9 +56,9 @@ DOCS = [
 ]
 
 LOOKOUTS: list[dict] = [
-    dict(slug="rondaxe-bald-mountain", name="Bald (Rondaxe) Mountain Fire Tower", tower="us-ny-rondaxe-bald-mountain",
+    dict(region="NY", slug="rondaxe-bald-mountain", name="Bald (Rondaxe) Mountain Fire Tower", tower="us-ny-rondaxe-bald-mountain",
          pos="nhlr:US 112", find=["Bald"], status="standing", agency="NYS DEC", ownership="state", staffing="volunteer",
-         page=f"{BASE}/bald.htm",
+         url=f"{BASE}/bald.htm",
          events=[
              E(1990, "closed", "DEC officially closed the tower and padlocked the cab; it deteriorated for about 13 years.", "index", "r2004reopen"),
              E(2003, "restored", "Volunteers scraped rust, removed worn fencing and the lower steps, painted the tower in July and August, and on 20 September began fitting new treated steps.", "r2003"),
@@ -75,8 +75,7 @@ LOOKOUTS: list[dict] = [
 
 
 def main() -> None:
-    run(source=SOURCE, association=ASSOCIATION, credit=CREDIT, license_=LICENSE, region="NY", specs=DOCS,
-        lookouts=LOOKOUTS, description=__doc__.split("\n")[0])
+    run(__doc__, SOURCE, ASSOCIATION, DOCS, LOOKOUTS, credit=CREDIT, license_=LICENSE, folded=True)
 
 
 if __name__ == "__main__":
