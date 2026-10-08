@@ -1,0 +1,133 @@
+{
+  "title": "Structure types",
+  "note": "Firefinder sorts every lookout site into one of these kinds from what its sources say (FFLA's Type column, the register descriptions, OpenStreetMap tags and the other sources; pipeline/structure.py maps every wording deliberately). 'hidden' is the owner's scope switch: set a kind's hidden to true and the merge hides every site of that kind, with its hidden_reason shown in the review file. Owner decision 2026-10-08: sites with no structure are shown, in their own group that the map leaves off by default.",
+  "updated": "2026-10-08",
+  "groups": [
+    {
+      "id": "structure",
+      "label": "Lookout structures",
+      "shown_by_default": true,
+      "about": "Towers and buildings that a lookout observer worked in: everything from a 100-foot steel tower to a one-room cabin on a summit."
+    },
+    {
+      "id": "no_structure",
+      "label": "Sites with no structure",
+      "shown_by_default": false,
+      "about": "Places where fire lookouts kept watch without a tower or building: summit camps, lookout trees and bare lookout points. They are part of the history of fire detection, so Firefinder lists them, but the map leaves them off until you switch them on."
+    }
+  ],
+  "kinds": [
+    {
+      "id": "tower",
+      "label": "Cab on a tower",
+      "group": "structure",
+      "hidden": false,
+      "hidden_reason": null,
+      "about": "The classic fire lookout: a small room with windows on every side, the cab, raised on a tower so the observer can see over the trees. The tower may be a short timber frame or a 100-foot steel one. Many eastern states put a 7-by-7-foot cab on a tall steel tower; in the West a 14-by-14-foot cab the observer lived in often sat on a shorter tower, or on none at all."
+    },
+    {
+      "id": "enclosed_tower",
+      "label": "Enclosed tower",
+      "group": "structure",
+      "hidden": false,
+      "hidden_reason": null,
+      "about": "A tower closed in from the ground up, so it looks like a tall, narrow building with the cab on top instead of an open frame. The stairs run up inside."
+    },
+    {
+      "id": "platform",
+      "label": "Open platform tower",
+      "group": "structure",
+      "hidden": false,
+      "hidden_reason": null,
+      "about": "An open tower or raised platform with no cab: the observer stood out in the open, sometimes under a small roof. This includes open observation towers and the crow's nests of the early years, small platforms high on a pole or a tall tree, reached by ladder. A crow's nest is counted here when a source calls it a crow's nest, and with lookout trees when it calls it a tree."
+    },
+    {
+      "id": "ground",
+      "label": "Ground-level cab",
+      "group": "structure",
+      "hidden": false,
+      "hidden_reason": null,
+      "about": "A lookout house or cab built on the ground, usually on a summit with a clear view all round, so it needs no tower. Most are one-room cabins with windows on every side, where the observer both lived and worked through the fire season. Stone huts and shelters on summits are counted here too."
+    },
+    {
+      "id": "two_story",
+      "label": "Two-story building",
+      "group": "structure",
+      "hidden": false,
+      "hidden_reason": null,
+      "about": "A two-story lookout building: the observer worked in the glassed-in upper room and often lived on the floor below. Many early Forest Service cupola houses, such as the D-6, are of this kind."
+    },
+    {
+      "id": "three_story",
+      "label": "Three-story building",
+      "group": "structure",
+      "hidden": false,
+      "hidden_reason": null,
+      "about": "A three-story lookout building with the observation room on top, usually of stone or heavy timber. These are rare. Some, like the stone lookouts in the Black Hills of South Dakota, were built by the Civilian Conservation Corps in the 1930s."
+    },
+    {
+      "id": "rooftop",
+      "label": "Cab on a rooftop",
+      "group": "structure",
+      "hidden": false,
+      "hidden_reason": null,
+      "about": "A lookout cab or platform on the roof of another building: a ranger station, a hotel, an office block, a grain elevator, even a clock tower. Towns and ranger stations sometimes used the tallest roof around instead of building a tower."
+    },
+    {
+      "id": "mobile",
+      "label": "Trailer or portable cab",
+      "group": "structure",
+      "hidden": false,
+      "hidden_reason": null,
+      "about": "A lookout that could be moved: a trailer or a converted bus parked on a high point, or a portable cab hauled up for the fire season. They were cheap stand-ins where a permanent lookout was not worth building."
+    },
+    {
+      "id": "unknown",
+      "label": "Type unknown",
+      "group": "structure",
+      "hidden": false,
+      "hidden_reason": null,
+      "about": "No source we use says what kind of structure stood here. It is still a lookout site; we just do not know yet whether it was a tower, a cabin or something else. If you know, use “Suggest an edit” on its page."
+    },
+    {
+      "id": "camp",
+      "label": "Summit camp",
+      "group": "no_structure",
+      "hidden": false,
+      "hidden_reason": "Camp or tent site: out of scope (structures only)",
+      "about": "A summit camp: the observer kept watch from a high point and lived in a tent nearby, with no lookout building. Many lookout sites started this way before a cab was built."
+    },
+    {
+      "id": "tree",
+      "label": "Lookout tree",
+      "group": "no_structure",
+      "hidden": false,
+      "hidden_reason": "Tree platform: out of scope (structures only)",
+      "about": "A lookout tree: a tall tree with a ladder or spikes up the trunk and a small seat or platform near the top. Trees were used in the early years, before towers were built."
+    },
+    {
+      "id": "point",
+      "label": "Bare lookout point",
+      "group": "no_structure",
+      "hidden": false,
+      "hidden_reason": "Lookout point with no structure: out of scope (structures only)",
+      "about": "A bare lookout point: the observer stood on the summit itself, often with only a firefinder, a map board or a sighting device on a post to take bearings with. Nothing was built to stand in."
+    }
+  ],
+  "materials": [
+    {"id": "steel", "label": "Steel", "about": "A steel or iron frame, usually galvanized."},
+    {"id": "wood", "label": "Wood", "about": "Timber, poles or a wood frame."},
+    {"id": "log", "label": "Logs", "about": "Logs, as in a log cabin or a log crib under the cab."},
+    {"id": "stone", "label": "Stone", "about": "Stone or rock walls."},
+    {"id": "concrete", "label": "Concrete", "about": "Poured concrete."},
+    {"id": "masonry", "label": "Brick or block", "about": "Brick, cinder block or concrete block."},
+    {"id": "mixed", "label": "Mixed", "about": "A source names two main materials, such as stone and logs."}
+  ],
+  "roles": [
+    {
+      "id": "aws",
+      "label": "Aircraft Warning Service post",
+      "about": "During the Second World War the Aircraft Warning Service staffed many lookouts, and some purpose-built posts, to spot and report aircraft. It was a job the site did, not a kind of building, so Firefinder records it separately."
+    }
+  ]
+}
