@@ -74,6 +74,21 @@ export interface Rental {
   description?: string | null;
   checked?: string | null;
   /**
+   * Where this rental record came from. Missing means recreation.gov (RIDB); "ffla" means the
+   * Forest Fire Lookout Association's rentals list (firelookout.org/resources/rentals/), which is
+   * the only source for rentals booked elsewhere (state parks, private owners on Airbnb).
+   */
+  source?: string | null;
+  /** Who runs the rental when it is not the Forest Service ("private owner", "MT DNRC"). */
+  manager?: string | null;
+  /**
+   * A closure or unavailability the FFLA's rentals list notes ("Maintenance Closure 2026",
+   * "Currently Unavailable"). The lookout stays a rental (`available` is not touched); the page
+   * shows the note beside the booking link. `status_note_from` names who said it ("ffla").
+   */
+  status_note?: string | null;
+  status_note_from?: string | null;
+  /**
    * Set when another source records the lookout as gone or burned while recreation.gov still
    * lists it ("FFLA reports this lookout burned in 2026, but recreation.gov still lists it.
    * Check with the forest before booking."). `available` is then false: the listing is shown
