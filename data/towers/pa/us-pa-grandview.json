@@ -1,6 +1,7 @@
 {
   "id": "us-pa-grandview",
   "name": "Grandview Lookout",
+  "summary": "Steel fire tower in Ricketts Glen State Park, Luzerne County; the register dates it 1942 and 100 ft, a story map 1979 and 80 ft.",
   "other_names": [],
   "country": "US",
   "region": "PA",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 746.2,
   "kind": "tower",
-  "design": "Aermotor",
+  "design": "Steel tower with an Aermotor builder plate",
   "height_m": 24.4,
   "status": "standing",
   "status_note": null,
@@ -28,8 +29,8 @@
   "agency": "Pennsylvania Bureau of Forestry",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=private."
+    "level": "restricted",
+    "note": "Not open to the public, per the register; staffed during fire season."
   },
   "staffing": {
     "status": "unknown",
@@ -38,21 +39,23 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "A 2019 visitor guide says the Grandview Trail leads out to the site, where it describes an abandoned fire tower."
   },
   "rental": null,
   "events": [
     {
       "year": 1942,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register build year for a 100-foot steel tower. The story map gives 1979.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/grandview-lookout/"
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 22, 2022",
-      "from": "nhlr"
+      "note": "Registered May 22, 2022 as NHLR US 1580",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/grandview-lookout/"
     }
   ],
   "photos": [
@@ -122,6 +125,21 @@
       "label": "NHLR register entry US 1580 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/pa/grandview-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Fire Towers of Pennsylvania (ArcGIS story map)",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/ed47c97ebe7246868ce8ef3e7139a0b4/data?f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Ricketts Glen State Park Guide: Epic Waterfall Hike, Camping, & More (Interesting Pennsylvania)",
+      "url": "https://www.interestingpennsylvania.com/2019/09/ricketts-glen-state-park-waterfalls-hiking.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Red Rock Mountain (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Red_Rock_Mountain",
+      "kind": "reference"
     },
     {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
@@ -195,6 +213,20 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-grandview",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -214,9 +246,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

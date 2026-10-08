@@ -1,6 +1,7 @@
 {
   "id": "us-ca-henness-ridge",
   "name": "Henness Ridge Lookout",
+  "summary": "CCC-built 1934 three-story NPS Rustic lookout in Yosemite National Park, used for fire detection into the 1960s-70s, NRHP-eligible, cab now reserved for emergency use.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 1932.1,
   "kind": "three_story",
-  "design": null,
+  "design": "Three-story NPS Rustic-style lookout: garage on the first floor, living quarters on the second, and a 13 x 13 ft cab with a catwalk on top",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -25,11 +26,11 @@
       "url": "http://nhlr.org/lookouts/us/ca/henness-ridge-lookout/"
     }
   ],
-  "agency": "National Park Service",
+  "agency": "National Park Service (Yosemite National Park)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Register says the cab is now reserved for emergency use; a hiking route of about 0.7 miles from Yosemite West reaches the tower."
   },
   "staffing": {
     "status": "unknown",
@@ -37,22 +38,39 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Unmarked trailhead at the end of Azalea Lane in Yosemite West; asphalt access road past water towers, then about 0.7 miles on foot to the lookout."
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the Civilian Conservation Corps as a three-story NPS Rustic lookout.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/henness-ridge-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/henness-ridge-lookout/",
+        "https://en.wikipedia.org/wiki/Henness_Ridge_Fire_Lookout"
+      ]
+    },
+    {
+      "year": 1960,
+      "event": "staffed",
+      "note": "Used by the National Park Service for fire detection in the 1960s and 1970s; sources differ on when the watch ended.",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Henness_Ridge_Fire_Lookout",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Henness_Ridge_Fire_Lookout",
+        "https://qualla.com/henness-ridge-fire-lookout/"
+      ]
     },
     {
       "year": 1998,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 4, 1998",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register on June 4, 1998.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/henness-ridge-lookout/"
     }
   ],
   "photos": [
@@ -86,6 +104,16 @@
       "label": "NHLR register entry US 281 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ca/henness-ridge-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "National Register in Yosemite (National Park Service)",
+      "url": "https://www.nps.gov/yose/learn/historyculture/nr-yose.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Henness Ridge Fire Lookout (Qualla)",
+      "url": "https://qualla.com/henness-ridge-fire-lookout/",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -149,6 +177,21 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-henness-ridge",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -172,9 +215,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

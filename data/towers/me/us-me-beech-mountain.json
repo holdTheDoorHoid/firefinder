@@ -1,6 +1,7 @@
 {
   "id": "us-me-beech-mountain",
   "name": "Beech Mountain Lookout",
+  "summary": "A 1960s prefab steel tower in Acadia National Park replaced a 1941 wooden lookout; it is open only when park staff are present, and sources disagree on staffing.",
   "other_names": [],
   "country": "US",
   "region": "ME",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 246.0,
   "kind": "tower",
-  "design": null,
+  "design": "Prefabricated steel tower flown in by helicopter in 1960 under Operation Beech, built 1960-62, replacing a CCC-built wooden lookout",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -25,34 +26,80 @@
       "url": "http://nhlr.org/lookouts/us/me/beech-mountain-lookout/"
     }
   ],
-  "agency": "National Park Service",
+  "agency": "National Park Service, Acadia National Park",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=private."
+    "level": "restricted",
+    "note": "Platform and inside room open to the public when park staff are present, often in summer. Leashed dogs may join hikers on the trails but cannot climb the tower."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": true,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Hike from the Beech Mountain Parking Lot on park trails. The tower is open only when park staff are present."
   },
   "rental": null,
   "events": [
     {
+      "year": 1941,
+      "event": "staffed_first",
+      "note": "Original wooden CCC-built lookout in use from 1941 to the mid-1950s (NPS). NHLR dates the lookout site from 1943.",
+      "from": "research",
+      "source_url": "https://www.nps.gov/acad/learn/historyculture/fire-towers.htm",
+      "source_urls": [
+        "https://www.nps.gov/acad/learn/historyculture/fire-towers.htm",
+        "https://www.nps.gov/acad/learn/news/firetower09.htm"
+      ]
+    },
+    {
+      "year": 1947,
+      "event": "fire",
+      "note": "Wooden lookout was critical to fire warning communications during the Fire of 1947",
+      "from": "research",
+      "source_url": "https://www.nps.gov/acad/learn/historyculture/fire-towers.htm"
+    },
+    {
+      "year": 1960,
+      "event": "replaced",
+      "note": "Steel tower flown in by helicopter as part of Operation Beech, replacing the deteriorating wooden lookout",
+      "from": "research",
+      "source_url": "https://www.nps.gov/acad/learn/historyculture/fire-towers.htm"
+    },
+    {
       "year": 1962,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR lists 1962 as the build year, described as 1960-62. NPS says the lookout was operational again in 1962.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/me/beech-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/me/beech-mountain-lookout/",
+        "https://www.nps.gov/acad/learn/historyculture/fire-towers.htm"
+      ]
+    },
+    {
+      "year": 1976,
+      "event": "staffed_last",
+      "note": "Last time a park ranger manned the tower (NPS). NPS says it has not been manned since.",
+      "from": "research",
+      "source_url": "https://www.nps.gov/acad/learn/historyculture/fire-towers.htm",
+      "source_urls": [
+        "https://www.nps.gov/acad/learn/historyculture/fire-towers.htm",
+        "https://www.nps.gov/acad/learn/news/firetower09.htm"
+      ]
     },
     {
       "year": 1993,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 16, 1993",
-      "from": "nhlr"
+      "note": "Added to the National Historic Lookout Register, September 16, 1993",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/me/beech-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/me/beech-mountain-lookout/",
+        "https://www.nps.gov/acad/learn/historyculture/fire-towers.htm"
+      ]
     }
   ],
   "photos": [
@@ -103,6 +150,16 @@
       "label": "NHLR register entry (nhlr.org)",
       "url": "http://nhlr.org/nhlr.org/lookouts/us/me/beech-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Fire Towers (Acadia National Park, National Park Service)",
+      "url": "https://www.nps.gov/acad/learn/historyculture/fire-towers.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Beech Mountain Fire Tower to Open (Acadia National Park, National Park Service)",
+      "url": "https://www.nps.gov/acad/learn/news/firetower09.htm",
+      "kind": "reference"
     },
     {
       "label": "FFLA Maine lookout list (firelookout.org)",
@@ -162,12 +219,33 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-me-beech-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

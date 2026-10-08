@@ -1,6 +1,7 @@
 {
   "id": "us-ca-deadwood-peak",
   "name": "Deadwood Peak Lookout",
+  "summary": "Madera County lookout on Potter Ridge: a 1905 wood cabin, a CCC-era tower dated 1934 or 1932 by sources, retired after 1994 and not open to the public today.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -13,8 +14,8 @@
   },
   "elevation_m": 1385.9,
   "kind": "tower",
-  "design": "L-4",
-  "height_m": null,
+  "design": "20-foot H-beam steel tower with a C-3(L) cab installed in 1952; the 1932 tower carried an L-4 or 4AR cab",
+  "height_m": 6.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -25,11 +26,11 @@
       "url": "http://nhlr.org/lookouts/us/ca/deadwood-peak-lookout/"
     }
   ],
-  "agency": "California Department of Forestry and Fire Protection",
+  "agency": "California Department of Forestry and Fire Protection (now CAL FIRE); the register ties the lookout to the Sierra National Forest",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "About 4.5 miles from the paved road, behind locked gates; the register says it is not readily accessible to the public. Microwave dishes and radio vaults and towers are at the site."
   },
   "staffing": {
     "status": "volunteer",
@@ -37,22 +38,90 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Behind locked gates about 4.5 miles from the paved road; not open to visitors."
   },
   "rental": null,
   "events": [
     {
+      "year": 1905,
+      "event": "built",
+      "note": "Original lookout on the site, a wood cabin design.",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/deadwood_peak/index.htm"
+    },
+    {
+      "year": 1909,
+      "event": "staffed_first",
+      "note": "Staffed through the 1909 season; described as the first continually staffed lookout in the Sierra National Forest.",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/deadwood_peak/index.htm"
+    },
+    {
+      "year": 1932,
+      "event": "replaced",
+      "note": "Replaced with a 20-foot H-beam steel tower carrying an L-4 or 4AR cab. Conflicts with the register's 1934 build date.",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/deadwood_peak/index.htm"
+    },
+    {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register says the Civilian Conservation Corps constructed the tower and cab for the Sierra National Forest.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/deadwood-peak-lookout/"
+    },
+    {
+      "year": 1950,
+      "event": "other",
+      "note": "CDF took over the site.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/deadwood-peak-lookout/"
+    },
+    {
+      "year": 1952,
+      "event": "modified",
+      "note": "Utility room (Cook's Quarters) added below the cab by CDF; cab replaced with the current C-3(L) cab.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/deadwood-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/deadwood-peak-lookout/",
+        "https://www.fire-lookouts.org/cali/deadwood_peak/index.htm"
+      ]
+    },
+    {
+      "year": 1968,
+      "event": "other",
+      "note": "June 1968 break-in reported in the Madera Tribune; walkie-talkie, binoculars, blankets and gasoline taken.",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/deadwood-peak.html"
+    },
+    {
+      "year": 1994,
+      "event": "staffed_last",
+      "note": "Retired from active service after the end of the 1994 fire season.",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/deadwood_peak/index.htm"
+    },
+    {
+      "year": 2008,
+      "event": "other",
+      "note": "Last photo seen by the fire-lookouts.org author, showing the tower in extreme disrepair.",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/deadwood_peak/index.htm"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: December 23, 2019",
       "from": "nhlr"
+    },
+    {
+      "year": 2025,
+      "event": "other",
+      "note": "CAL FIRE budget request (fiscal year 2025-26) for $587,000 of preliminary plans for the joint Penon Blanco and Deadwood Peak repair project; total estimated project cost $11,434,000.",
+      "from": "research",
+      "source_url": "https://bcp.dof.ca.gov/2526/FY2526_ORG3540_BCP8434.pdf"
     }
   ],
   "photos": [
@@ -124,6 +193,11 @@
       "kind": "register"
     },
     {
+      "label": "Penon Blanco & Deadwood Peak Lookout: Repair Facilities (California Department of Finance (budget change proposal))",
+      "url": "https://bcp.dof.ca.gov/2526/FY2526_ORG3540_BCP8434.pdf",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -186,6 +260,22 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-deadwood-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -205,9 +295,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

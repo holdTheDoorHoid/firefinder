@@ -1,6 +1,7 @@
 {
   "id": "us-id-jackson-peak",
   "name": "Jackson Peak Lookout",
+  "summary": "Boise National Forest lookout first built in 1927; the current flat cab on a concrete base dates to 1979 or 1981 and is staffed in fire season.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 2474.7,
   "kind": "two_story",
-  "design": null,
+  "design": "R-6 flat cab on a 10-foot concrete base",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -25,11 +26,11 @@
       "url": "http://nhlr.org/lookouts/us/id/jackson-peak-lookout/"
     }
   ],
-  "agency": "US Forest Service - Boise National Forest",
+  "agency": "U.S. Forest Service, Boise National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Staffed drive-up lookout on the Boise National Forest. The sources do not describe public visits."
   },
   "staffing": {
     "status": "staffed",
@@ -37,22 +38,77 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Idaho Fire Lookouts lists it as drive-up. The 1927 account describes a trail as the only road up or down, so ask the Boise National Forest about current access."
   },
   "rental": null,
   "events": [
     {
+      "year": 1927,
+      "event": "built",
+      "note": "First lookout, a two-story log structure. The register says it was similar to a California Plan 4A.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/jackson-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/jackson-peak-lookout/",
+        "https://www.firelookout.com/id/jacksonpeak.html",
+        "https://www.idahofirelookouts.com/southern-idaho/jackson-peak-lookout/",
+        "https://idaholookouts.weebly.com/jackson-peak.html"
+      ]
+    },
+    {
+      "year": 1937,
+      "event": "modified",
+      "note": "Photo evidence suggests it was raised onto a 10-foot log base, per firelookout.com.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/jacksonpeak.html"
+    },
+    {
+      "year": 1962,
+      "event": "staffed_first",
+      "note": "Earliest known staff listed by Idaho Fire Lookouts (1962-1963).",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/southern-idaho/jackson-peak-lookout/"
+    },
+    {
       "year": 1979,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "The register gives 1979 for the current two-story structure.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/jackson-peak-lookout/"
+    },
+    {
+      "year": 1981,
+      "event": "replaced",
+      "note": "Flat cab on a 10-foot concrete base, per firelookout.com and Idaho Fire Lookouts. The Forest Lookouts history page gives 1981 for a two-story flat roof house.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/jacksonpeak.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/jacksonpeak.html",
+        "https://www.idahofirelookouts.com/southern-idaho/jackson-peak-lookout/",
+        "https://idaholookouts.weebly.com/jackson-peak.html"
+      ]
+    },
+    {
+      "year": 1988,
+      "event": "fire",
+      "note": "Lookout threatened by the Willis Gulch fire along with a nearby private subdivision.",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/jackson-peak.html"
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 28, 2020",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, September 28, 2020.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/jackson-peak-lookout/"
+    },
+    {
+      "year": 2025,
+      "event": "staffed",
+      "note": "Roger Lockwood listed as known staff.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/southern-idaho/jackson-peak-lookout/"
     }
   ],
   "photos": [
@@ -284,6 +340,21 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-jackson-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -303,9 +374,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-wa-dodger-point",
   "name": "Dodger Point Lookout",
+  "summary": "A 1933 Forest Service L-4 summit cabin in Olympic National Park, used for aircraft warning in WWII and rebuilt on its foundation in 2017 after years of decline.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 1745.9,
   "kind": "ground",
-  "design": null,
+  "design": "Single-story frame cab, 14x14 ft L-4 type, on a summit (no tower)",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -34,8 +35,8 @@
   "agency": "National Park Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Hike-in only. A 2017 article says it is accessed only by the Long Ridge trail. An undated page says use is only for emergency purposes. No current park notice was found."
   },
   "staffing": {
     "status": "unknown",
@@ -43,22 +44,62 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Long Ridge trail, given as 10 miles (Willhite Web) or 13 miles (NWHikers)"
   },
   "rental": null,
   "events": [
     {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the U.S. Forest Service with an L-4 cab; materials packed in by horse",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/dodger-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/dodger-point-lookout/",
+        "https://willhiteweb.com/washington_fire_lookouts/dodger_point/trail_210.htm"
+      ]
+    },
+    {
+      "year": 1942,
+      "event": "other",
+      "note": "Aircraft Warning Service station in WWII. A 1944 report gives Oct 5, 1942 as the last day of service; a passage names lookouts Leith and Mary Johnson in 1943",
+      "from": "research",
+      "source_url": "https://willhiteweb.com/washington_fire_lookouts/dodger_point/trail_210.htm",
+      "source_urls": [
+        "https://willhiteweb.com/washington_fire_lookouts/dodger_point/trail_210.htm",
+        "https://en.wikipedia.org/wiki/Dodger_Point_Fire_Lookout"
+      ]
+    },
+    {
+      "year": 2007,
+      "event": "nrhp_listed",
+      "note": "Placed on the National Register of Historic Places July 13, 2007",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/dodger-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/dodger-point-lookout/",
+        "https://en.wikipedia.org/wiki/Dodger_Point_Fire_Lookout"
+      ]
     },
     {
       "year": 2015,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: August 30, 2015",
       "from": "nhlr"
+    },
+    {
+      "year": 2017,
+      "event": "restored",
+      "note": "Foundation rebuilt, siding and roof replaced, windows re-glazed; volunteers plus grants from Washington's National Park Fund and the REI Foundation",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/dodger-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/dodger-point-lookout/",
+        "https://willhiteweb.com/washington_fire_lookouts/dodger_point/trail_210.htm",
+        "http://nhlr.org/media/3325/2017-repairs.pdf",
+        "http://nhlr.org/media/3326/wnpf-dodger-point-lookout-completed.pdf"
+      ]
     }
   ],
   "photos": [
@@ -114,6 +155,21 @@
       "label": "NHLR register entry US 1112 (nhlr.org)",
       "url": "http://nhlr.org/nhlr.org/media/3325/2017-repairs.pdf",
       "kind": "register"
+    },
+    {
+      "label": "Dodger Point Lookout, Olympic National Park (Willhite Web)",
+      "url": "https://willhiteweb.com/washington_fire_lookouts/dodger_point/trail_210.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Dodger Point Lookout (Olympic NP) saved from collapse (NWHikers.net)",
+      "url": "http://nhlr.org/media/3325/2017-repairs.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Dodger Point Lookout – COMPLETED! (Washington's National Park Fund)",
+      "url": "http://nhlr.org/media/3326/wnpf-dodger-point-lookout-completed.pdf",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -179,12 +235,33 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-dodger-point",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

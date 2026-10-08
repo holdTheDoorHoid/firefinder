@@ -1,6 +1,7 @@
 {
   "id": "us-wa-park-butte",
   "name": "Park Butte Lookout",
+  "summary": "A 1932 Forest Service L-4 cabin above timberline on Mount Baker, unstaffed since 1961 and maintained by the Skagit Alpine Club, reached by a 3.5-mile trail from Park Butte Trailhead.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 1636.5,
   "kind": "ground",
-  "design": "L-4",
+  "design": "L-4 live-in cabin, 14 x 14 ft, with catwalk",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -31,23 +32,35 @@
       "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87001189"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Mount Baker-Snoqualmie National Forest (Mt. Baker Ranger District)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=permissive."
+    "level": "public",
+    "note": "Forest Service lists the site open 24 hours a day, first come first served; a recreation pass is required at the trailhead May 1 to Oct 31; no fee for the site. Inside Mount Baker Wilderness, with wilderness rules."
   },
   "staffing": {
-    "status": "volunteer",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "undated (Forest Service and firelookout.com)"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Trail 603 from the Park Butte Trailhead; the nomination describes a 3.5-mile Forest Service trail to the lookout."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1932,
+      "event": "built",
+      "note": "Built in the fall of 1932 by a small Forest Service crew (C.A. Larsen, William Thompson, a hired carpenter); packer Roy Evans brought in the materials. Firelookout.com gives 1933 (see corrections).",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/87001189.pdf",
+      "source_urls": [
+        "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/87001189.pdf",
+        "http://nhlr.org/lookouts/us/wa/park-butte-lookout/",
+        "https://www.fs.usda.gov/r06/mbs/recreation/park-butte-lookout"
+      ]
+    },
     {
       "year": 1933,
       "event": "built",
@@ -55,10 +68,41 @@
       "from": "firelookout_com"
     },
     {
+      "year": 1961,
+      "event": "staffed_last",
+      "note": "Last regular fire-detection use; firelookout.com says last manned in the 1960s",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/87001189.pdf",
+      "source_urls": [
+        "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/87001189.pdf",
+        "http://nhlr.org/lookouts/us/wa/park-butte-lookout/",
+        "https://www.firelookout.com/wa/parkbutte.html"
+      ]
+    },
+    {
+      "year": 1962,
+      "event": "other",
+      "note": "Skagit Alpine Club took over the lookout under a special use permit with the Forest Service and has maintained it for recreation since",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/87001189.pdf"
+    },
+    {
+      "year": 1970,
+      "event": "other",
+      "note": "In the 1970s, when Mount Baker threatened to erupt, the restored lookout served as an observatory for volcano monitors (NHLR; the Skagit Alpine Club says a University of California camera was installed in the mid-1970s)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/park-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/park-butte-lookout/",
+        "https://www.skagitalpineclub.com/lookout"
+      ]
+    },
+    {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 1, 2003",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register on December 1, 2003",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/park-butte-lookout/"
     }
   ],
   "photos": [
@@ -116,6 +160,21 @@
       "label": "NHLR register entry US 533 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wa/park-butte-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Park Butte Lookout, National Register of Historic Places nomination form (National Park Service)",
+      "url": "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/87001189.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Park Butte Lookout (Skagit Alpine Club)",
+      "url": "https://www.skagitalpineclub.com/lookout",
+      "kind": "reference"
+    },
+    {
+      "label": "Park Butte Lookout (Mount Baker-Snoqualmie National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r06/mbs/recreation/park-butte-lookout",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -193,12 +252,34 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-park-butte",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

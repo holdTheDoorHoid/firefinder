@@ -1,6 +1,7 @@
 {
   "id": "us-pa-tamarack",
   "name": "Tamarack Fire Lookout",
+  "summary": "Steel lookout in Sproul State Forest, Clinton County, in service from 1919 or 1920 by different accounts and rebuilt around 2018 to 2020; staffed in fire season.",
   "other_names": [],
   "country": "US",
   "region": "PA",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 680.9,
   "kind": "tower",
-  "design": "Aermotor",
+  "design": "Aermotor tower (65 ft, 7 by 7 ft cab) later replaced by a modern galvanized steel structure",
   "height_m": 24.4,
   "status": "standing",
   "status_note": null,
@@ -51,26 +52,42 @@
     {
       "year": 1919,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register gives 1919 for service start. A 1926 account and the story map say 1920.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/tamarack-fire-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/tamarack-fire-lookout/",
+        "https://www.arcgis.com/sharing/rest/content/items/ed47c97ebe7246868ce8ef3e7139a0b4/data?f=json",
+        "https://easternuslookouts.weebly.com/tamarack.html"
+      ]
     },
     {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 16, 2008",
-      "from": "fflos"
+      "note": "Listed on the Former Fire Lookout Sites register as the Tamarack Tower Site, a separate entry describing a bald tower used around 1917 that is no longer standing",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/tamarack-tower-site/"
     },
     {
       "year": 2013,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 1, 2013",
-      "from": "nhlr"
+      "note": "Registered September 1, 2013 as NHLR US 971",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/tamarack-fire-lookout/"
     },
     {
       "year": 2018,
       "event": "replaced",
-      "note": null,
-      "from": "pa_storymap"
+      "note": "Story map date for the replacement. The register says circa 2020.",
+      "from": "research",
+      "source_url": "https://www.arcgis.com/sharing/rest/content/items/ed47c97ebe7246868ce8ef3e7139a0b4/data?f=json"
+    },
+    {
+      "year": 2020,
+      "event": "replaced",
+      "note": "Register says circa 2020, with a modern steel structure replacing the original tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/tamarack-fire-lookout/"
     }
   ],
   "photos": [
@@ -121,6 +138,11 @@
       "label": "FFLOS register entry US 503 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/pa/tamarack-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Fire Towers of Pennsylvania (ArcGIS story map)",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/ed47c97ebe7246868ce8ef3e7139a0b4/data?f=json",
+      "kind": "reference"
     },
     {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
@@ -190,6 +212,20 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-tamarack",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -213,9 +249,15 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

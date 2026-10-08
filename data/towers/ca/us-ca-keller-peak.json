@@ -1,6 +1,7 @@
 {
   "id": "us-ca-keller-peak",
   "name": "Keller Peak Lookout",
+  "summary": "San Bernardino NF lookout built 1926, destroyed in the September 2024 Line Fire; reports say only the steel framework remains.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 2391.2,
   "kind": "tower",
-  "design": null,
+  "design": "likely a Region 5 4AR cabin on a 20-foot open steel tower (1926); cab replaced with a Region 5 BC-301 in 1954",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -34,31 +35,80 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "no lookout cab to enter; the summit is reached by Keller Peak Road, where a gate can add several miles when closed"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "drive-up on Keller Peak Road per Hundred Peaks; the lookout itself was destroyed in 2024"
   },
   "rental": null,
   "events": [
     {
       "year": 1926,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "station constructed; register describes the original as likely a Region 5 4AR cabin on a 20-foot open steel tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/keller-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/keller-peak-lookout/",
+        "http://firetower.org/lookouts/us/ca/keller-peak-lookout-site/"
+      ]
+    },
+    {
+      "year": 1926,
+      "event": "other",
+      "note": "November 1926 newspaper: station expected to be completed before winter snows; trail used to pack in materials",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/keller-peak.html"
+    },
+    {
+      "year": 1929,
+      "event": "fire",
+      "note": "July 18, 1929 report: flames crept up the west slope; lookout K.F. Smith forced to abandon his post; the building was burned around but not destroyed",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/keller-peak.html"
+    },
+    {
+      "year": 1954,
+      "event": "replaced",
+      "note": "register says the cab was replaced with a Region 5 BC-301; a June 16, 1954 newspaper says the tower was torn down and a new one set up",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/keller-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/keller-peak-lookout-site/",
+        "https://californialookouts.weebly.com/keller-peak.html"
+      ]
+    },
+    {
+      "year": 1985,
+      "event": "staffed",
+      "note": "Forest Service discontinued the lookout; volunteers took over staffing",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/keller-peak.html"
     },
     {
       "year": 1991,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 15, 1991",
-      "from": "nhlr"
+      "note": "National Historic Lookout Register registration date November 15, 1991",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/keller-peak-lookout/"
+    },
+    {
+      "year": 2024,
+      "event": "destroyed",
+      "note": "destroyed in the September 2024 Line Fire; only the steel framework reported left",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/keller-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/keller-peak-lookout/",
+        "https://hundredpeaks.org/peaks/keller-peak-lookout/"
+      ]
     },
     {
       "year": 2024,
@@ -69,8 +119,9 @@
     {
       "year": 2026,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 2, 2026",
-      "from": "fflos"
+      "note": "Former Fire Lookout Sites Register date January 2, 2026",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/keller-peak-lookout-site/"
     }
   ],
   "photos": [
@@ -195,6 +246,11 @@
       "kind": "register"
     },
     {
+      "label": "Keller Peak (Lookout) (Hundred Peaks)",
+      "url": "https://hundredpeaks.org/peaks/keller-peak-lookout/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -268,6 +324,20 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-keller-peak",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -291,9 +361,15 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

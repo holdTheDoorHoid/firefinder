@@ -1,6 +1,7 @@
 {
   "id": "us-wa-lookout-mountain-mt-baker-snoqualmie-nf",
   "name": "Lookout Mountain Lookout (Mt. Baker-Snoqualmie NF)",
+  "summary": "Skagit County lookout in the Mount Baker-Snoqualmie NF: a 1928 cupola, a current R-6 cab dated 1961 to 1967, open to the public with first-come overnight stays.",
   "other_names": [
     "Lookout Mountain"
   ],
@@ -15,8 +16,8 @@
   },
   "elevation_m": 1716.3,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "design": "Live-in 15x15-ft R-6 flat-roof cab on a 30-ft treated timber tower",
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -30,8 +31,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=permissive."
+    "level": "public",
+    "note": "Open to the public year round; access limited by road and trail conditions; first-come overnight stays; recreation pass required per vehicle; catwalk limited to two people per side."
   },
   "staffing": {
     "status": "unknown",
@@ -39,22 +40,68 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Lookout Mountain-Monogram Lake Trail 743: 3.5 miles through timber, then 1.2 miles of meadows (Forest Service). TrailChick gives just over 4.5 miles one way and calls the upper slope a major avalanche hazard, with winter attempts possible only with extreme caution."
   },
   "rental": null,
   "events": [
     {
+      "year": 1928,
+      "event": "built",
+      "note": "First lookout, a cathedral-style cupola, per the register and TrailChick. The Forest Service dates the structure it replaced to 1929.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/lookout-mountain-lookout-mt-baker-snoqualmie-nf/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/lookout-mountain-lookout-mt-baker-snoqualmie-nf/",
+        "https://trailchick.com/wa-state-fire-lookouts/lookout-mountain/"
+      ]
+    },
+    {
+      "year": 1929,
+      "event": "built",
+      "note": "Earlier structure per the Forest Service; firelookout.com says the site was established in 1929",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r06/mbs/recreation/lookout-mountain-lookout",
+      "source_urls": [
+        "https://www.fs.usda.gov/r06/mbs/recreation/lookout-mountain-lookout",
+        "https://www.firelookout.com/wa/lookoutmtn129b.html"
+      ]
+    },
+    {
+      "year": 1961,
+      "event": "built",
+      "note": "Present 30-ft R-6 tower per firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wa/lookoutmtn129b.html"
+    },
+    {
       "year": 1962,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Present tower replacing the 1929 structure, per the register's Built field and the Forest Service",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r06/mbs/recreation/lookout-mountain-lookout",
+      "source_urls": [
+        "https://www.fs.usda.gov/r06/mbs/recreation/lookout-mountain-lookout",
+        "http://nhlr.org/lookouts/us/wa/lookout-mountain-lookout-mt-baker-snoqualmie-nf/"
+      ]
+    },
+    {
+      "year": 1967,
+      "event": "replaced",
+      "note": "Cab or structure dated 1967 per the register's cab description and TrailChick",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/lookout-mountain-lookout-mt-baker-snoqualmie-nf/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/lookout-mountain-lookout-mt-baker-snoqualmie-nf/",
+        "https://trailchick.com/wa-state-fire-lookouts/lookout-mountain/"
+      ]
     },
     {
       "year": 2008,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 2, 2008",
-      "from": "nhlr"
+      "note": "Registered April 2, 2008",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/lookout-mountain-lookout-mt-baker-snoqualmie-nf/"
     }
   ],
   "photos": [
@@ -131,6 +178,16 @@
       "kind": "register"
     },
     {
+      "label": "Lookout Mountain Lookout (U.S. Forest Service, Mount Baker-Snoqualmie National Forest)",
+      "url": "https://www.fs.usda.gov/r06/mbs/recreation/lookout-mountain-lookout",
+      "kind": "reference"
+    },
+    {
+      "label": "Lookout Mountain (TrailChick)",
+      "url": "https://trailchick.com/wa-state-fire-lookouts/lookout-mountain/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Washington lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wa/",
       "kind": "association"
@@ -199,6 +256,22 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-lookout-mountain-mt-baker-snoqualmie-nf",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -218,9 +291,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

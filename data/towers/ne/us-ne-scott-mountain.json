@@ -1,6 +1,7 @@
 {
   "id": "us-ne-scott-mountain",
   "name": "Scott Mountain Lookout Tower",
+  "summary": "Nebraska National Forest lookout: first tower 1916, present third tower 1944; 2022 Bovee Fire destroyed or damaged the cab; viewable, not enterable.",
   "other_names": [
     "Scott"
   ],
@@ -16,7 +17,7 @@
   "elevation_m": 886.1,
   "kind": "tower",
   "design": null,
-  "height_m": null,
+  "height_m": 15.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -30,25 +31,60 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Grounds open year round, 24/7. The tower can be visited and viewed but not entered."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "From Thedford, take Highway 2 about 17 miles east, then turn south onto State Spur 86B and follow it about 3 miles to a loop around the tower. Parking is to the right of the tower."
   },
   "rental": null,
   "events": [
     {
+      "year": 1916,
+      "event": "built",
+      "note": "First tower on the site, per NHLR.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ne/scott-mountain-lookout-tower/"
+    },
+    {
+      "year": 1944,
+      "event": "built",
+      "note": "Present tower, described by NHLR as the third on the site.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ne/scott-mountain-lookout-tower/"
+    },
+    {
       "year": 1991,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 15, 1991",
-      "from": "nhlr"
+      "note": "Registered June 15, 1991.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ne/scott-mountain-lookout-tower/"
+    },
+    {
+      "year": 2022,
+      "event": "fire",
+      "note": "Bovee Fire, October 2022. NHLR says the cab was destroyed; a news report says the fire destroyed the tower; Wildfire Today and the Forest Service say it was damaged and the steel framework still stood.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ne/scott-mountain-lookout-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ne/scott-mountain-lookout-tower/",
+        "https://www.fs.usda.gov/r02/nebraska/recreation/scott-lookout-tower",
+        "https://nebraskapublicmedia.org/en/news/news-articles/after-bovee-fire-nebraska-national-forest-confronts-its-hand-planted-history/",
+        "https://wildfiretoday.com/lookout-damaged-in-bovee-fire-to-be-assessed-by-engineer/"
+      ]
+    },
+    {
+      "year": 2025,
+      "event": "other",
+      "note": "Forest Service page, last updated March 28, 2025, says the site is undergoing renovations.",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r02/nebraska/recreation/scott-lookout-tower"
     }
   ],
   "photos": [
@@ -99,6 +135,21 @@
       "label": "NHLR register entry US 14 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ne/scott-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Scott Lookout Tower (Nebraska National Forests and Grasslands, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r02/nebraska/recreation/scott-lookout-tower",
+      "kind": "reference"
+    },
+    {
+      "label": "After Bovee Fire, Nebraska National Forest confronts its hand-planted history (Nebraska Public Media)",
+      "url": "https://nebraskapublicmedia.org/en/news/news-articles/after-bovee-fire-nebraska-national-forest-confronts-its-hand-planted-history/",
+      "kind": "reference"
+    },
+    {
+      "label": "Lookout damaged in Bovee Fire to be assessed by engineer (Wildfire Today)",
+      "url": "https://wildfiretoday.com/lookout-damaged-in-bovee-fire-to-be-assessed-by-engineer/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Nebraska lookout list (firelookout.org)",
@@ -158,12 +209,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ne-scott-mountain",
+      "fields": [
+        "summary",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

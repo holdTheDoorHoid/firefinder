@@ -1,6 +1,7 @@
 {
   "id": "us-co-park-point",
   "name": "Park Point Lookout",
+  "summary": "Built by the CCC in 1939 as a rustic sandstone lookout in Mesa Verde; restored in 2009, it is still used in fire season, with no current staffing schedule found.",
   "other_names": [],
   "country": "US",
   "region": "CO",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 2612.4,
   "kind": "ground",
-  "design": null,
+  "design": "Native sandstone, 17 ft octagonal floor plan, rustic National Park Service design quarried and worked on Chapin Mesa (1939, Civilian Conservation Corps)",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -25,11 +26,11 @@
       "url": "http://nhlr.org/lookouts/us/co/park-point-lookout/"
     }
   ],
-  "agency": "National Park Service",
+  "agency": "National Park Service, Mesa Verde National Park",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Overlook parking and trailhead are open; the road is not plowed in winter, so access is limited then; the lookout was open to the public during staffed summer months per the 2009 account"
   },
   "staffing": {
     "status": "unknown",
@@ -37,22 +38,50 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Parking, a trailhead, a seasonal restroom and a vault toilet at the overlook; the road up is not plowed in winter"
   },
   "rental": null,
   "events": [
     {
       "year": 1939,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the Civilian Conservation Corps with a rustic design; completion in August 1939 per the December 1939 Mesa Verde Notes",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/co/park-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/co/park-point-lookout/",
+        "https://www.forestsandrangelands.gov/success/stories/2009/nfp_2009_co_nps_meve_rehab.shtml",
+        "https://npshistory.com/nature_notes/meve/vol9-1c.htm"
+      ]
+    },
+    {
+      "year": 1939,
+      "event": "staffed_first",
+      "note": "Lookout observer posted from completion; sleeping and cooking facilities were provided inside so the observer was always on hand",
+      "from": "research",
+      "source_url": "https://npshistory.com/nature_notes/meve/vol9-1c.htm"
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 1, 2009",
-      "from": "nhlr"
+      "note": "Registered May 1, 2009 as NHLR US 806, CO 10",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/co/park-point-lookout/"
+    },
+    {
+      "year": 2009,
+      "event": "restored",
+      "note": "Restoration using park funds; dedication held June 10, 2009, the same occasion that recognized the NHLR listing",
+      "from": "research",
+      "source_url": "https://www.forestsandrangelands.gov/success/stories/2009/nfp_2009_co_nps_meve_rehab.shtml"
+    },
+    {
+      "year": 2019,
+      "event": "other",
+      "note": "NHLR condition note: cab in good condition; walkway around the lookout could use painting and repair; interior floors and electronics could use work",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/co/park-point-lookout/"
     }
   ],
   "photos": [
@@ -91,6 +120,21 @@
       "label": "NHLR register entry US 806 (nhlr.org)",
       "url": "http://nhlr.org/../images/Lookout_Photos/US806_Park_Point_testimonial.jpeg",
       "kind": "register"
+    },
+    {
+      "label": "Restoration of Park Point Lookout (National Fire Plan success story, Mesa Verde National Park, Forests and Rangelands)",
+      "url": "https://www.forestsandrangelands.gov/success/stories/2009/nfp_2009_co_nps_meve_rehab.shtml",
+      "kind": "reference"
+    },
+    {
+      "label": "Mesa Verde Notes, Volume IX No. 1 (December 1939), Fire! Fire! Fire! (npshistory.com)",
+      "url": "https://npshistory.com/nature_notes/meve/vol9-1c.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Park Point (U.S. National Park Service)",
+      "url": "https://www.nps.gov/places/parkpoint_overlook.htm",
+      "kind": "reference"
     },
     {
       "label": "FFLA Colorado lookout list (firelookout.org)",
@@ -154,12 +198,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-co-park-point",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

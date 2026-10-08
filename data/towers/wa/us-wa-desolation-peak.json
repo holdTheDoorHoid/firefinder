@@ -1,6 +1,7 @@
 {
   "id": "us-wa-desolation-peak",
   "name": "Desolation Peak Lookout",
+  "summary": "A 1932 Forest Service L-4 cabin on Desolation Peak, now an active North Cascades National Park lookout with a seasonal watchman; Kerouac spent summer 1956 there.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 1823.3,
   "kind": "ground",
-  "design": "L-4",
+  "design": "L-4 ground cabin, 14 x 14 ft, no catwalk",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -31,34 +32,59 @@
       "url": "https://npgallery.nps.gov/AssetDetail/NRIS/88003451"
     }
   ],
-  "agency": "U.S. Dept. of the Interior",
+  "agency": "National Park Service (North Cascades National Park); built by the U.S. Forest Service, Mount Baker National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=private."
+    "level": "restricted",
+    "note": "Active NPS lookout with a resident watchman; sources describe the hike but none says visitors may enter the cabin"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "undated (Seattle Times profile)"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "No road to the summit. NHLR: 23 mi from nearest road, or 13 mi up Ross Lake plus 7 mi of trail. Seattle Times: 4.7-mile trail from Ross Lake. Wikipedia: 15 mi from nearest road."
   },
   "rental": null,
   "events": [
     {
       "year": 1932,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Built by the Forest Service; NPS inventory form credits USFS employee Oscar Banner. Seattle Times and firelookout.com also give 1932. NHLR gives 1933 (see resolved_conflicts)",
+      "from": "research",
+      "source_url": "https://www.npshistory.com/publications/noca/pi-desolation-peak-lookout.pdf",
+      "source_urls": [
+        "https://www.npshistory.com/publications/noca/pi-desolation-peak-lookout.pdf",
+        "https://www.seattletimes.com/life/outdoors/93-fire-lookout-towers-remain-in-wa-heres-what-its-like-working-and-living-in-one/",
+        "https://www.firelookout.com/wa/desolation.html"
+      ]
+    },
+    {
+      "year": 1956,
+      "event": "staffed",
+      "note": "Jack Kerouac spent 63 days as the lookout during the summer",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Desolation_Peak_%28Washington%29",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Desolation_Peak_%28Washington%29",
+        "https://www.seattletimes.com/life/outdoors/93-fire-lookout-towers-remain-in-wa-heres-what-its-like-working-and-living-in-one/"
+      ]
+    },
+    {
+      "year": 1980,
+      "event": "modified",
+      "note": "New roof installed by the NPS",
+      "from": "research",
+      "source_url": "https://www.npshistory.com/publications/noca/pi-desolation-peak-lookout.pdf"
     },
     {
       "year": 1998,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 20, 1998",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register on May 20, 1998",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/desolation-peak-lookout/"
     }
   ],
   "photos": [
@@ -166,6 +192,21 @@
       "kind": "register"
     },
     {
+      "label": "93 fire lookout towers remain in WA. Here's what it's like working and living in one (The Seattle Times)",
+      "url": "https://www.seattletimes.com/life/outdoors/93-fire-lookout-towers-remain-in-wa-heres-what-its-like-working-and-living-in-one/",
+      "kind": "reference"
+    },
+    {
+      "label": "Desolation Peak Lookout, historic inventory form (National Park Service (npshistory.com))",
+      "url": "https://www.npshistory.com/publications/noca/pi-desolation-peak-lookout.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Desolation Peak (Washington) (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Desolation_Peak_%28Washington%29",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Washington lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wa/",
       "kind": "association"
@@ -240,12 +281,34 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-desolation-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

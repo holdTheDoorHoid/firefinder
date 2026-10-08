@@ -1,0 +1,11 @@
+The Big Springs tower went up in 1934, built for the Forest Service by contractors from Kanab, Utah.[^2] It is a steel structure about 100 feet tall, with a square cab about seven feet on each side.[^2][^3] At its base sits a wood-frame cabin.[^2] The register says a wooden groundhouse was added in 1959, while Wikipedia says the 1959 cabin replaced an older log one. The two accounts agree on the year but not on what the 1959 work was.[^1][^2]
+
+The tower was listed on the National Register of Historic Places in 1988, and the register recorded it on December 30, 1996.[^2][^1] The forest says it has about eight active lookouts and staffs each one during fire season.[^3] I did not find a dated record of who has staffed Big Springs, or of any notable fire it spotted, so that part of the history is thin. The register describes the lookout as still in active use, but gives no date for that statement.[^1]
+
+Today the tower is reached on foot by Trail #51, a steep 1.3-mile route from the cabins up to the lookout.[^4] The upper trailhead is on Forest Road 454, where parking is limited.[^4] Seven historic cabins at the Big Springs site can be rented one at a time through recreation.gov, and reservations are typically available from May through October.[^5] Nothing I read says the public may climb the tower itself. It is still an active lookout, so plan around the trail and the cabins, and check with the North Kaibab Ranger District before a visit.[^5]
+
+[^1]: Big Springs Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/az/big-springs-lookout/ (accessed 2026-10-08).
+[^2]: Big Springs Lookout Tower, Wikipedia, https://en.wikipedia.org/wiki/Big_Springs_Lookout_Tower (accessed 2026-10-08).
+[^3]: Big Springs Fire Lookout, Kaibab National Forest, Flickr, https://www.flickr.com/photos/kaibabnationalforest/albums/72157711445646023 (accessed 2026-10-08).
+[^4]: Big Springs Trail #51, Kaibab National Forest, U.S. Forest Service, https://www.fs.usda.gov/r03/kaibab/recreation/trails/big-springs-trail-51 (accessed 2026-10-08).
+[^5]: Big Springs Cabins, Kaibab National Forest, U.S. Forest Service, https://www.fs.usda.gov/r03/kaibab/recreation/big-springs-cabins (accessed 2026-10-08).

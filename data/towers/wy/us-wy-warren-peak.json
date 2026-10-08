@@ -1,6 +1,7 @@
 {
   "id": "us-wy-warren-peak",
   "name": "Warren Peak Lookout",
+  "summary": "Black Hills lookout: CCC tower of 1938 replaced by a 54-ft steel tower in 1960 after Sundance AFS construction; staffed in fire season, drive-up, NHLR-registered 2026.",
   "other_names": [],
   "country": "US",
   "region": "WY",
@@ -13,8 +14,8 @@
   },
   "elevation_m": 2028.7,
   "kind": "tower",
-  "design": "L-4",
-  "height_m": null,
+  "design": "54-ft steel tower and cab (1960); original 1938 cab was L-4",
+  "height_m": 16.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -29,19 +30,38 @@
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Listed as a visitor site on recreation.gov. Check the listing for seasonal closures."
+    "note": "Reached by a short dirt road signed for the lookout, off Warren Peak Road. Stairs can be climbed almost to the top; the top floor is locked."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "Short dirt road from Warren Peak Road, free parking at the base. Stairs reach almost to the top; the top floor is locked (Hiking Project)."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1938,
+      "event": "built",
+      "note": "Original ten-foot tower with a live-in cab, built by the Civilian Conservation Corps. firelookout.com calls the cab an enclosed L-4 cab, dated 1938-1939.",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r02/blackhills/recreation/warren-peak-fire-lookout",
+      "source_urls": [
+        "https://www.fs.usda.gov/r02/blackhills/recreation/warren-peak-fire-lookout",
+        "https://en.wikipedia.org/wiki/Warren_Peak_(Wyoming)",
+        "https://www.firelookout.com/wy/warrenpeak.html"
+      ]
+    },
+    {
+      "year": 1959,
+      "event": "removed",
+      "note": "Original tower demolished during construction of the Sundance Air Force Station.",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r02/blackhills/recreation/warren-peak-fire-lookout"
+    },
     {
       "year": 1960,
       "event": "built",
@@ -49,10 +69,24 @@
       "from": "nhlr"
     },
     {
+      "year": 1960,
+      "event": "replaced",
+      "note": "Steel tower and cab placed a short distance east of the original. 54 ft per Forest Service and Wikipedia; 53 ft per firelookout.com. NHLR gives 1960 as the build year.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wy/warren-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wy/warren-peak-lookout/",
+        "https://www.fs.usda.gov/r02/blackhills/recreation/warren-peak-fire-lookout",
+        "https://en.wikipedia.org/wiki/Warren_Peak_(Wyoming)",
+        "https://www.firelookout.com/wy/warrenpeak.html"
+      ]
+    },
+    {
       "year": 2026,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 2, 2026",
-      "from": "nhlr"
+      "note": "Registered January 2, 2026.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wy/warren-peak-lookout/"
     }
   ],
   "photos": [
@@ -86,6 +120,21 @@
       "label": "NHLR register entry US 1809 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wy/warren-peak-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Warren Peak Fire Lookout (Black Hills National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r02/blackhills/recreation/warren-peak-fire-lookout",
+      "kind": "reference"
+    },
+    {
+      "label": "Warren Peak (Wyoming) (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Warren_Peak_(Wyoming)",
+      "kind": "reference"
+    },
+    {
+      "label": "Warren Peak Fire Lookout (Hiking Project)",
+      "url": "https://www.hikingproject.com/gem/1027/warren-peak-fire-lookout",
+      "kind": "reference"
     },
     {
       "label": "FFLA Wyoming lookout list (firelookout.org)",
@@ -152,6 +201,22 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wy-warren-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -171,9 +236,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

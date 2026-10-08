@@ -1,0 +1,17 @@
+Shafer Butte Lookout sits on a peak just north of Boise, Idaho, in the southwest corner of the Boise Mountains.[^4] The register gives the summit as 7,502 feet, while two other sources give 7,582.[^1][^4][^5] The first lookout was a two-story cabin that the Southern Idaho Timber Protective Association set up in 1926.[^1] Firelookout.com gives 1927 as the year it was first used.[^5] An August 1926 newspaper item already quotes a fire report from the lookout station, so the station was in use that summer.[^2]
+
+In 1958 the Boise National Forest replaced the cabin with a 14-by-14-foot R-6 flattop cab on a 10-foot concrete block base.[^1] The sources disagree about the floors. The register says the ground floor was living quarters many years ago and later a radio and storage room, that the second floor then became living quarters, and that the third floor was used for the alidade and observation.[^1] The Forest Lookouts site lists a two-story cab in 1958 and says a three-story structure replaced it in 1980.[^2] The Idaho fire lookouts site says a second R-6 cab went on top in 1980, and firelookout.com describes that second cab without a date.[^3][^5]
+
+Mrs. Lucy Schlosman was on lookout duty in January 1945. She looked after a set of weather instruments and called in readings four times a day.[^2] In July 1948 the Standleys used the lower portion of the lookout as a kitchen and a general living and dining room.[^2] An observer, Mrs. Ronald Ashley, was at the station in early July 1959.[^2] Stan Boyd appears on a staff list for 1971.[^3]
+
+Senator William E. Borah and the chief forester of the United States attended the official opening of the lookout station in 1928.[^2] In 1936 the Boise forest tried a borrowed navy periscope there for real fire detection for the first time, and the results were reported as highly satisfactory.[^2] In 1929 the forest office said the road to the lookout was now passable by automobile, and that lookouts would stay on the butte for emergencies once the fire season ended.[^2]
+
+The Forest Service no longer uses the lookout, and the summit now has a cluster of communications towers.[^4] The Bogus Basin ski patrol began occupying the second floor in the late 1980s or 1990s, and the ski resort uses the tower in winter.[^1][^4] In 2018 the original viewing platform was removed and a new communications tower was added.[^4] The register records the lookout's registration on December 1, 2000, as US 366, ID 32.[^1]
+
+The register describes the lookout's current role as emergency use.[^1] The climbing guide notes that the roads and cat tracks up to the summit are closed to motorcycles and ATVs, except for government and Bogus Basin vehicles, and it recommends the area for summer hiking and biking.[^4] Please do not climb the tower.
+
+[^1]: Shafer Butte Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/id/shafer-butte-lookout/ (accessed 2026-10-08).
+[^2]: Shaffer Butte, Forest Lookouts (idaholookouts.weebly.com), https://idaholookouts.weebly.com/shaffer-butte.html (accessed 2026-10-08).
+[^3]: Shafer Butte Lookout, Idaho Fire Lookouts (idahofirelookouts.com), https://www.idahofirelookouts.com/southern-idaho/shafer-butte-lookout/ (accessed 2026-10-08).
+[^4]: Shafer Butte, IDAHO: A Climbing Guide (idahoaclimbingguide.com), https://www.idahoaclimbingguide.com/bookupdates/shafer-butte/ (accessed 2026-10-08).
+[^5]: Shafer Butte Fire Lookout Tower, firelookout.com, https://www.firelookout.com/id/shaferbutte.html (accessed 2026-10-08).

@@ -1,0 +1,12 @@
+Skyline Drive Lookout stands in the Jackson-Washington State Forest in Jackson County, Indiana, south of Brownstown.[^1][^2] The first plan was for a wooden tower.[^2] In 1932 the state forestry department switched to steel, after bids showed that wood would cost nearly twice as much, which meant twice as many towers for the same money.[^2] The steel arrived in Brownstown in September 1932 and was hauled to a site that federal surveyors had used earlier.[^2] Its steel frame stands on four legs, with a small cabin on top.[^2]
+
+The sources do not agree on the builder or the height. The register credits the Civilian Conservation Corps with building an 80-foot steel tower with a 7-by-7-foot cab, between 1931 and 1935.[^1] A hobbyist site quotes a survey page that describes a forty-foot wooden tower first, with the Civilian Conservation Corps later erecting a much higher steel one.[^3] Newspapers from 1932 give 90 feet for the earlier wooden plan and 80 feet for the steel tower.[^2] A 1946 federal survey description puts the top at about 108 feet.[^2]
+
+In August 1932 a newspaper reported that, once the tower was finished, a man would be posted in it fifteen hours a day to observe the timber lands.[^2] The register says the tower has not been used for fire detection since the 1970s.[^1] The lookout history also lists a restoration completed in 2010.[^2]
+
+Today the register says the Indiana Department of Natural Resources maintains it as a site where visitors can look out over the countryside.[^1] The state says Skyline Drive closes after the first snow accumulation until April 1, and the forest office at 812-358-2160 gives status updates.[^4] A hobbyist survey says the drive up to the tower is paved but not very wide, and that the cab is climbable.[^3] This story does not encourage anyone to climb it.
+
+[^1]: Skyline Drive Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/in/skyline-drive-lookout/ (accessed 2026-10-08).
+[^2]: Skyline - Forest Lookouts, Forest Lookouts (eastern US), https://easternuslookouts.weebly.com/skyline.html (accessed 2026-10-08).
+[^3]: Skyline - Indiana Fire Towers (by Mark A), Indiana Fire Towers, https://www.indianafiretowers.com/skyline/ (accessed 2026-10-08).
+[^4]: Forestry: Jackson-Washington State Forest, Indiana Department of Natural Resources, https://www.in.gov/dnr/forestry/properties/jackson-washington-state-forest/ (accessed 2026-10-08).

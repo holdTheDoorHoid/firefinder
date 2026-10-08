@@ -1,6 +1,7 @@
 {
   "id": "us-mt-heavens-peak",
   "name": "Heavens Peak Lookout",
+  "summary": "Glacier's stone-and-frame lookout, contracted in 1940, built 1945 by conscientious objectors, staffed to 1953, NRHP-listed in 1986.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -13,7 +14,7 @@
   },
   "elevation_m": 2075.7,
   "kind": "ground",
-  "design": null,
+  "design": "Flat-roofed stone-and-frame cab, 12 by 12 feet, on a stone foundation with a stone-wall catwalk",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -34,8 +35,8 @@
   "agency": "National Park Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Backcountry of Glacier National Park; as of 2012 the trail built to the site had long been abandoned"
   },
   "staffing": {
     "status": "unknown",
@@ -44,21 +45,71 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "The 2012 news story says the trail built to the site has long been abandoned"
   },
   "rental": null,
   "events": [
     {
+      "year": 1940,
+      "event": "other",
+      "note": "Park Service contract with Ole Norden in June 1940; construction not begun by April 1942; released in late 1943",
+      "from": "research",
+      "source_url": "https://npshistory.com/publications/glac/nr-heavens-pk-fl.pdf"
+    },
+    {
       "year": 1945,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Construction began July 23, 1945; built in 1945",
+      "from": "research",
+      "source_url": "https://npshistory.com/publications/glac/nr-heavens-pk-fl.pdf",
+      "source_urls": [
+        "https://npshistory.com/publications/glac/nr-heavens-pk-fl.pdf",
+        "http://nhlr.org/lookouts/us/mt/heavens-peak-lookout/",
+        "https://en.wikipedia.org/wiki/Heaven%27s_Peak_Fire_Lookout"
+      ]
+    },
+    {
+      "year": 1945,
+      "event": "staffed_first",
+      "note": "In operation from its construction in 1945",
+      "from": "research",
+      "source_url": "https://parkplanning.nps.gov/showFile.cfm?sfid=100883&projectID=32453"
+    },
+    {
+      "year": 1953,
+      "event": "staffed_last",
+      "note": "Last fire season; abandoned in favor of aerial detection",
+      "from": "research",
+      "source_url": "https://parkplanning.nps.gov/showFile.cfm?sfid=100883&projectID=32453",
+      "source_urls": [
+        "https://parkplanning.nps.gov/showFile.cfm?sfid=100883&projectID=32453",
+        "https://www.firelookout.com/mt/heavenspeak.html"
+      ]
+    },
+    {
+      "year": 1986,
+      "event": "nrhp_listed",
+      "note": "Added to NRHP December 19, 1986",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Heaven%27s_Peak_Fire_Lookout"
     },
     {
       "year": 1991,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 15, 1991",
-      "from": "nhlr"
+      "note": "Registered September 15, 1991 as US 34, MT 2",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/heavens-peak-lookout/"
+    },
+    {
+      "year": 2012,
+      "event": "restored",
+      "note": "Roof and floor repairs funded by a $32,000 grant; firelookout.com calls it restored, the news story calls it stabilization",
+      "from": "research",
+      "source_url": "https://whitefishpilot.com/news/2012/sep/12/man-questions-heavens-peak-lookout-9/",
+      "source_urls": [
+        "https://whitefishpilot.com/news/2012/sep/12/man-questions-heavens-peak-lookout-9/",
+        "https://www.firelookout.com/mt/heavenspeak.html"
+      ]
     }
   ],
   "photos": [
@@ -142,6 +193,21 @@
       "kind": "register"
     },
     {
+      "label": "Heaven's Peak Fire Lookout, National Register of Historic Places nomination (Glacier National Park MRA) (National Park Service via npshistory.com)",
+      "url": "https://npshistory.com/publications/glac/nr-heavens-pk-fl.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Heavens Peak Fire Lookout Stabilization Project (National Park Service planning file)",
+      "url": "https://parkplanning.nps.gov/showFile.cfm?sfid=100883&projectID=32453",
+      "kind": "reference"
+    },
+    {
+      "label": "Man questions Heavens Peak Lookout construction date (Whitefish Pilot (Hungry Horse News))",
+      "url": "https://whitefishpilot.com/news/2012/sep/12/man-questions-heavens-peak-lookout-9/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
       "kind": "association"
@@ -206,12 +272,33 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-heavens-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }
