@@ -23,6 +23,7 @@ import nysffla_projects  # noqa: E402
 import nysffla_projects_data  # noqa: E402
 import smokies_friends  # noqa: E402
 import st_regis_friends  # noqa: E402
+import ffla_east_reports  # noqa: E402
 import kent_conservation_foundation  # noqa: E402
 import stillwater_friends  # noqa: E402
 
@@ -42,6 +43,7 @@ MODULES = [
     (kent_conservation_foundation, kent_conservation_foundation.LOOKOUTS, kent_conservation_foundation.DOCS),
     (stillwater_friends, stillwater_friends.LOOKOUTS, stillwater_friends.DOCS),
     (smokies_friends, smokies_friends.LOOKOUTS, smokies_friends.DOCS),
+    (ffla_east_reports, ffla_east_reports.LOOKOUTS, ffla_east_reports.DOCS),
 ]
 
 
@@ -86,7 +88,7 @@ class CuratedData(unittest.TestCase):
             with self.subTest(source=mod.SOURCE):
                 ids = [d["id"] for d in specs]
                 self.assertEqual(len(ids), len(set(ids)))
-                slugs = [lk["slug"] for lk in lookouts]
+                slugs = [(lk["region"], lk["slug"]) for lk in lookouts]   # the key carries the state
                 self.assertEqual(len(slugs), len(set(slugs)))
                 towers = [lk["tower"] for lk in lookouts]
                 self.assertEqual(len(towers), len(set(towers)))
@@ -151,6 +153,21 @@ class Records(unittest.TestCase):
     def test_mt_arab_waits_the_crawl_delay_robots_txt_asks_for(self):
         self.assertGreaterEqual(mt_arab_friends.CRAWL_DELAY, 10.0)
         self.assertGreaterEqual(smokies_friends.CRAWL_DELAY, 3.0)
+
+    def test_ffla_east_reports_keep_registers_out_and_are_all_pdfs_on_firelookout_org(self):
+        for lk in ffla_east_reports.LOOKOUTS:
+            for e in lk["events"]:
+                self.assertNotEqual(e["event"], "nhlr_registered", (lk["slug"], e))
+                self.assertNotRegex(e["note"], r"Historic Lookout Register|NHLR", (lk["slug"], e))
+        for d in ffla_east_reports.DOCS:
+            self.assertEqual(d["kind"], "pdf")
+            self.assertTrue(d["url"].startswith("https://firelookout.org/wp-content/uploads/"), d["url"])
+            self.assertEqual(d["cache"], f"pdf/{d['id']}.pdf")
+        # a grant is filed as "other" and says so
+        for lk in ffla_east_reports.LOOKOUTS:
+            for e in lk["events"]:
+                if e["note"].startswith("FFLA restoration grant"):
+                    self.assertEqual(e["event"], "other", (lk["slug"], e))
 
     def test_nysffla_issue_ids_match_their_urls(self):
         for d in nysffla_projects_data.DOCS:

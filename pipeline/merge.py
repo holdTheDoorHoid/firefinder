@@ -193,6 +193,7 @@ ASSOCIATION_SOURCES: list[str] = [
     "kent_conservation_foundation",
     "stillwater_friends",
     "smokies_friends",
+    "ffla_east_reports",
 ]
 # Fields an association supplies (the rest -- registers, rental, photos, access -- it does not).
 ASSOCIATION_FIELDS = ("name", "location", "status", "kind", "county", "elevation_m", "built", "design",
