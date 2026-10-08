@@ -171,7 +171,9 @@ LOCATION_LINEAGE = {"nhlr": "registers", "fflos": "registers", "ffla": "register
 # gives its page a labelled "association" link on the tower. Its events join the tower's timeline
 # with the report that gives them as their source.
 ASSOCIATION_FAMILY = "association_projects"
-ASSOCIATION_SOURCES: list[str] = ["nwmt_projects"]
+ASSOCIATION_SOURCES: list[str] = ["nwmt_projects", "nysffla_projects", "st_regis_friends", "hurricane_friends", "mt_arab_friends",
+                                    "azure_mountain_friends", "bald_mountain_friends", "bramley_friends", "kent_conservation_foundation",
+                                    "stillwater_friends", "smokies_friends"]
 # Fields an association supplies (the rest -- registers, rental, photos, access -- it does not).
 ASSOCIATION_FIELDS = ("name", "location", "status", "kind", "county", "elevation_m", "built", "design",
                       "height_m", "agency", "ownership", "staffing", "events")
