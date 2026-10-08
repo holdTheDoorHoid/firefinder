@@ -51,6 +51,7 @@ Cache raw responses under `data/raw/` (git-ignored) so nothing is fetched twice.
 | **Regional** | firelookout.com state maps (MT: 134 `GV_Draw_Marker` points, plus WA/OR/ID/WY/SD); PA StoryMap (48 towers, `…/items/ed47c97ebe7246868ce8ef3e7139a0b4/data?f=json`); andyarthur.org NY towers (CC BY 3.0); CSKT Flathead Reservation (6); fire-lookouts.org Sierra NF (~18, reuse allowed with credit); idahofirelookouts.com (not yet surveyed) | Mixed | Per source |
 | **Gap-state regional** (2026-10-04) | easternuslookouts.weebly.com / centraluslookouts.weebly.com, the same hobby-site template split by region (one page per tower; AL/CT/FL/GA/KY/MA/MI/MS/NJ/NC/PA/SC/TN and AR/LA/MO/OK); Wikipedia *List of fire lookout towers in Louisiana* and *List of New Jersey Forest Fire Service fire towers* (coordinate-bearing wikitables, CC BY-SA, facts only); michiganfiretower.com (a small young single-author site, 8 towers); tnlandforms.us (Tom Dunigan's independently surveyed GA/NC/TN tower lists, 929 towers, every one with coordinates) | Mixed | Per source; no licence stated on the two weebly sites or tnlandforms.us |
 | **FFLA resources** | `firelookout.org/resources/…`: *Lookout Rentals* (rentals outside recreation.gov: state parks and private), *Lookout Types and Historic Plans* (for the designs guide), *Historical Reference Documents*, *Staffing / Volunteer Opportunities* | HTML | Facts + links |
+| **Association project reports** (2026-10-08) | Year-by-year reports of the work lookout associations do on particular lookouts, one source per association, one shared record shape (3.7). First: the Northwest Montana Lookout Association, nwmt-ffla.org: project posts 2025-26, "Completed Projects" PDFs 2014-24 (print-outs of its old website) and the yearly newsletters, 37 lookouts in Glacier NP, the Flathead and Kootenai NFs and Montana DNRC, about 180 dated restoration, repair and assessment events | WordPress posts, PDFs (pdftotext) | No licence stated; facts only, notes in our words, every event linked to its report |
 | Later | USGS historical topos (public domain, `ngmdb.usgs.gov/arcgis/rest/services/topoview/ustOverlay(Auto)/MapServer`), NRHP NPS dataset, Library of Congress HABS/HAER (measured drawings, public domain), Forest History Society, state forestry lists, newspapers | — | — |
 
 ---
@@ -160,7 +161,7 @@ use the vocabularies in §3.4. Keep the original strings in `type_raw` / `status
 - `access.level`: `public`, `restricted` (seasonal/gated/permit), `permission` (tribal or landowner permission needed), `private` (no public access), `closed`, `unknown`.
 - `staffing.status`: `staffed`, `emergency`, `volunteer`, `unstaffed`, `unknown`.
 - `verification`: `unverified` (single source, untouched), `facts` (≥2 sources agree), `researched` (story written), `verified` (researched + independent check).
-- `events[].event`: `built`, `rebuilt`, `replaced`, `staffed_first`, `staffed_last`, `abandoned`, `destroyed`, `burned`, `removed`, `relocated`, `restored`, `rental_opened`, `nrhp_listed`, `nhlr_registered`, `fflos_registered`.
+- `events[].event`: `built`, `rebuilt`, `replaced`, `staffed_first`, `staffed_last`, `staffed`, `abandoned`, `destroyed`, `burned`, `removed`, `relocated`, `restored` (repair, rehabilitation, re-roofing, repainting), `modified` (something added or changed), `assessed` (a volunteer or agency condition assessment, 2026-10-08), `fire` (the lookout was threatened or wrapped, not lost), `closed`, `rental_opened`, `nrhp_listed`, `nhlr_registered`, `fflos_registered`, `other` (needs a note). An event may carry `source_url` (and `source_urls` when several pages report it): the page that supports it, shown as "Source: <host>" on the timeline.
 
 ### 3.5 Merge (`pipeline/merge.py`)
 
@@ -175,7 +176,7 @@ picked up with no code change (unknown sources rank last in every field).
 **Matching**, per source in the order NHLR, FFLOS, FFLA, RIDB, fire-lookouts.org, tnlandforms.us,
 the NJ Forest Fire Service Wikipedia table, firelookout.com, idahofirelookouts.com,
 michiganfiretower.com, PA StoryMap, andyarthur.org, the Wikipedia per-state lookout lists, CSKT,
-the easternuslookouts and centraluslookouts weebly sites, Wikidata, OSM:
+the easternuslookouts and centraluslookouts weebly sites, the association project sources (3.7: the Northwest Montana Lookout Association), Wikidata, OSM:
 
 1. **Key**: the record's key is already in a tower's `sources[].key`.
 2. **Register number**. NHLR and FFLOS number their entries separately ("NHLR US 674" is
@@ -254,7 +255,12 @@ node + way (100 m; 50 m if unnamed), Wikidata (100 m), RIDB facility + campgroun
 | agency | NHLR, FFLOS > RIDB > firelookout.com > fire-lookouts.org > tnlandforms.us > NJFFS table > PA StoryMap > andyarthur.org > CSKT > the weebly sites > OSM > michiganfiretower.com |
 | rental | RIDB only. If the tower's status is gone/ruins (Flag Point, OR: FFLA "Burned 2026"), warn, don't hide: the listing is kept with `available: false` (not counted or filtered as rentable) and a `warning` ("FFLA reports this lookout burned in 2026, but recreation.gov still lists it. Check with the forest before booking."), which the site shows above the listing link |
 | registers | union of all sources; on a tower with an NHLR/FFLOS record, that register's own number wins and a different copy goes to `conflicts` |
-| events, photos, links | union, de-duplicated (events by event + year, photos by URL, links by URL) |
+| events, photos, links | union, de-duplicated (events by event + year, photos by URL, links by URL); an event keeps the `source_url`/`source_urls` its source gave |
+
+The association project sources (3.7) sit at the foot of the name, location, status, kind, county,
+elevation, built, design, height, agency, ownership, staffing and events lists above (they fill
+gaps and add history; the registers and lists outrank them), and count as part of the registers'
+location lineage because their positions are copied from them.
 
 **Ownership and access** only where a source says so: CSKT → tribal, access `permission`;
 RIDB (USFS/BLM) → federal; NY DEC and PA state forests → state (via those extracts); an agency
@@ -296,7 +302,7 @@ mirror step could not use (download failed, or too small once decoded to be a re
 dropped rather than kept on the tower record as a dead link.
 **Links** carry a credit-ready `label` and a `kind`: `relocated_from` / `relocated_to` (another
 tower page, by `id`), `register`, `rental`, `association` (FFLA
-state list), `wikipedia`, `site` (hobbyist and regional pages), `agency`, `website`, `commons`,
+state list; an association's own reports on the lookout), `wikipedia`, `site` (hobbyist and regional pages), `agency`, `website`, `commons`,
 `wikidata`, `osm`, `reference` (a page research cites). **`sources[]`** lists, per record, the
 fields it supplied.
 
@@ -347,6 +353,70 @@ tower (`--research` to point elsewhere), so a re-merge never loses research:
   1° cells, `peaks/<floor lat>_<floor lon>.json` = `[[name, lat, lon, gnis_id], …]` (4 dp), plus
   `peaks/index.json` listing the cells. Files in `data/sources/` with `"kind": "reference"` are
   not lookout sources: `merge.py` and `build_site_data.py` skip them.
+
+### 3.7 Association project sources
+
+Lookout associations (FFLA chapters, "Friends of" groups, the Catskill Fire Tower Project, ...)
+publish year-by-year reports of the work they did on particular lookouts: restorations, repairs,
+condition assessments, rebuilds. Firefinder reads each association's reports into **one source
+per association**, all in the same record shape, so they join the tower timelines as dated,
+sourced events and add a few low-ranking facts. Nothing in merge changes when one is added.
+
+**Shape.** A normal source record (3.2) with these conventions. The code is
+`pipeline/regional/_projects.py` (helpers and validator, with a docstring that is the full shape);
+the first user is `pipeline/regional/nwmt_projects.py`.
+
+| Part | Rule |
+|---|---|
+| file | `data/sources/<source>.json`, header has `"family": "association_projects"`, `"association": {"name", "url"}` and `"credit"` (the credit line for the About page) |
+| `key` | `<source>:<state>:<slug>`, one per lookout (not per report) |
+| `url` | the association's best page for that lookout (its latest report); merge shows it as a link of kind `association`, "<association>: work on <lookout>" |
+| `name`, `region`, `county` | the association's own name for the lookout; the unit it files it under goes in `extra.forest`; other names in `extra.aliases` |
+| position | `lat`/`lon` **copied from a register or list we already hold** (`position_key="nhlr:US 38"` in `_projects.lookout_record`, recorded in `extra.position_from`), because associations rarely publish coordinates. A lookout in no list needs a position from elsewhere, said in `extra.position_note`. No position: matched by unique name in the state only |
+| facts | `status` (what the reports show), `agency`, `extra.design` (design and dimensions as the association gives them), `extra.height_ft` (tower height), `extra.staffing_hint` (`staffed`/`emergency`/`volunteer`/`unstaffed`, only for what a recent report says), `extra.ownership` |
+| `events` | `{year, event, note, from, source_url[, source_urls]}`. `event` is in `data/vocab.json` (3.4); `note` is our own short sentence (at most 220 characters, never the association's prose); `source_url` is the report that gives the fact (a post, or the PDF itself). One record may not repeat an event name and year: join them in one note. Use `assessed` for condition assessments, `restored` for repair and repainting, `modified` for additions |
+
+**Merge.** The source id is listed once in `ASSOCIATION_SOURCES` (`pipeline/merge.py`). That
+puts it in the match order after the other regional sources (before Wikidata and OSM), at the
+foot of the `name`, `location`, `status`, `kind`, `county`, `elevation`, `built`, `design`,
+`height`, `agency`, `ownership`, `staffing` and `events` precedence lists (the registers and
+lists outrank it, an association fills gaps and adds history), and in the registers' location
+lineage (its positions are copied from them, so it never makes a tower "facts"-verified by
+itself). Its events are unioned into the timeline like any source's, de-duplicated by event +
+year, each keeping its `source_url`. Because `built` comes from one source only, an
+association's `built` year shows only on towers no register dates; a different year from a
+register is reported as a `built` conflict. It supplies no registers, photos, access or rental.
+
+**Adding an association.**
+
+1. Read the association's robots.txt and be polite (2 s per host, honest user agent, cache under
+   `$FIREFINDER_RAW_ROOT/<source>/`, as in 2). Never get around a login or a block; note it.
+2. Write `pipeline/regional/<source>.py`, modelled on `nwmt_projects.py`: a `DocSet` of the
+   reports (post and PDF URLs); the lookouts and their events as curated data (the reports are
+   prose, so a person or agent reads them and writes each fact once, in our words, citing the
+   report by id); `lookout_record(...)` for each lookout; `check_citations` to verify the
+   curated facts against the report text; `write_association_source(...)`.
+3. Match lookouts to our towers by copying their position from the register entry
+   (`position_key`); confirm in a local merge run that every record joined the tower you meant.
+   Create a new tower only for a lookout no list has, with a position from a source you name.
+4. Add the source id to `ASSOCIATION_SOURCES` in `pipeline/merge.py` (nothing else there), add
+   a row to the sources table in 2 and a short note to the matching order in 3.5, and unit-test
+   the parsing.
+5. Run `python3 pipeline/merge.py && python3 pipeline/validate.py && python3 pipeline/build_site_data.py --strict`
+   and `python3 -m unittest discover -s pipeline`; commit the module, its test and
+   `data/sources/<source>.json`, not the regenerated towers.
+
+**First source: `nwmt_projects`** (Northwest Montana Lookout Association, `pipeline/regional/nwmt_projects.py`
+with the curated facts in `nwmt_projects_data.py`). 37 lookouts, all matched to towers we already had
+(Glacier NP 9, Flathead NF 9, Kootenai NF 16, Montana DNRC 2, one relocated lookout in Eureka),
+181 events. NMLA's reports are prose, so the facts were read once and written down in our words,
+each citing its report; the script checks every citation against the report's text (the lookout is
+named, the year appears) and lists new project posts nobody has curated. Conventions: `built` is the
+first structure NMLA names or the only one, `replaced` every later one, earlier-structure notes where
+a register already dates the present structure are `other`; NMLA's own disagreements (it gives two
+build years for Mount Brown, McGuire, Star Peak...) are kept in `extra.discrepancies` and the note
+names the other year. Not read: oral histories, event pages, and NMLA's Google My Map of lookouts
+(robots.txt disallows `google.com/maps/`).
 
 ---
 

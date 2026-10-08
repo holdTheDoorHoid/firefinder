@@ -924,5 +924,103 @@ class Validation(unittest.TestCase):
             ws.close()
 
 
+class AssociationProjects(unittest.TestCase):
+    """The association-project source family (merge.py ASSOCIATION_SOURCES, DESIGN.md 3.7)."""
+
+    SRC = "test_assoc"
+
+    def setUp(self):
+        import copy
+        self.saved = (list(M.SOURCE_ORDER), copy.deepcopy(M.PRECEDENCE), dict(M.LOCATION_LINEAGE), list(M.ASSOCIATION_SOURCES))
+        M.ASSOCIATION_SOURCES.append(self.SRC)
+        M.register_associations(M.ASSOCIATION_SOURCES)
+        self.ws = Workspace()
+
+    def tearDown(self):
+        self.ws.close()
+        order, prec, lineage, assoc = self.saved
+        M.SOURCE_ORDER[:] = order
+        M.PRECEDENCE.clear(); M.PRECEDENCE.update(prec)
+        M.LOCATION_LINEAGE.clear(); M.LOCATION_LINEAGE.update(lineage)
+        M.ASSOCIATION_SOURCES[:] = assoc
+
+    def assoc_rec(self, key: str, name: str, lat, lon, **kw) -> dict:
+        r = rec(self.SRC, key, name, lat, lon, region="MT", kind="unknown", status=kw.pop("status", "standing"),
+                extra={"association": {"name": "Test Lookout Association", "url": "https://assoc.example/"},
+                       "position_from": "nhlr:US 1", **kw.pop("extra", {})}, **kw)
+        r["url"] = "https://assoc.example/2025-projects/"
+        return r
+
+    def ev(self, year, event, note, urls=("https://assoc.example/2025-projects/",)):
+        e = {"year": year, "event": event, "note": note, "from": self.SRC, "source_url": urls[0]}
+        if len(urls) > 1:
+            e["source_urls"] = list(urls)
+        return e
+
+    def test_registration_puts_the_family_after_the_registers(self):
+        self.assertIn(self.SRC, M.SOURCE_ORDER)
+        self.assertLess(M.SOURCE_ORDER.index("michigan_fire_tower"), M.SOURCE_ORDER.index(self.SRC))
+        self.assertLess(M.SOURCE_ORDER.index(self.SRC), M.SOURCE_ORDER.index("wikidata"))
+        for f in ("design", "height_m", "agency", "staffing", "events", "status", "name"):
+            self.assertEqual(M.PRECEDENCE[f][-1], self.SRC, f)
+        self.assertEqual(M.LOCATION_LINEAGE[self.SRC], "registers")
+        M.register_associations(M.ASSOCIATION_SOURCES)  # idempotent
+        self.assertEqual(M.PRECEDENCE["design"].count(self.SRC), 1)
+        self.assertEqual(M.SOURCE_ORDER.count(self.SRC), 1)
+
+    def test_events_links_and_facts_join_the_register_tower(self):
+        nhlr = rec("nhlr", "US 1", "Numa Ridge Lookout", 48.884, -114.179, "MT", built=1934,
+                   registers=[{"register": "NHLR", "number": "US 1"}])
+        nhlr["agency"] = "National Park Service"
+        a = self.assoc_rec("numa", "Numa Ridge", 48.884, -114.179, extra={
+            "design": "14x14-ft house on a 10-ft tower", "height_ft": 10, "staffing_hint": "staffed", "ownership": "federal"})
+        a["agency"] = "Glacier National Park"
+        a["events"] = [self.ev(1934, "built", "Built; the report gives the year."),
+                       self.ev(2019, "assessed", "Condition assessment by volunteers.", ("https://assoc.example/2019.pdf", "https://assoc.example/news.pdf")),
+                       self.ev(2025, "restored", "Repainted the exterior.")]
+        self.ws.run({"nhlr": [nhlr], self.SRC: [a]})
+        t = self.ws.tower_with_key(f"{self.SRC}:numa")
+        self.assertEqual({s["source"] for s in t["sources"]}, {"nhlr", self.SRC})
+        self.assertEqual(t["agency"], "National Park Service")          # the register outranks the association
+        self.assertEqual(t["design"], "14x14-ft house on a 10-ft tower")  # the association fills a gap
+        self.assertEqual(t["height_m"], 3.0)
+        self.assertEqual(t["staffing"]["status"], "staffed")
+        self.assertEqual(t["ownership"], "federal")
+        ev = {(e["year"], e["event"]): e for e in t["events"]}
+        self.assertEqual(ev[(2025, "restored")]["source_url"], "https://assoc.example/2025-projects/")
+        self.assertEqual(ev[(2025, "restored")]["from"], self.SRC)
+        self.assertEqual(ev[(2019, "assessed")]["source_urls"], ["https://assoc.example/2019.pdf", "https://assoc.example/news.pdf"])
+        self.assertNotIn(1934, [e["year"] for e in t["events"] if e["from"] == self.SRC])  # the register's build year wins
+        link = next(l for l in t["links"] if l["url"] == "https://assoc.example/2025-projects/")
+        self.assertEqual(link["kind"], "association")
+        self.assertIn("Test Lookout Association", link["label"])
+        self.assertEqual(t["location"]["from"], "nhlr")
+        # same position, same lineage: the association does not make it "facts"-verified
+        self.assertEqual(t["verification"], "unverified")
+
+    def test_the_family_never_overrides_a_register_and_a_report_only_tower_is_made(self):
+        a = self.assoc_rec("solo", "Solo Peak Lookout", 47.0, -113.0)
+        a["extra"].pop("position_from")
+        a["extra"]["position_note"] = "given by the association"
+        a["events"] = [self.ev(2020, "restored", "Reroofed.")]
+        self.ws.run({self.SRC: [a]})
+        t = self.ws.tower_with_key(f"{self.SRC}:solo")
+        self.assertEqual(t["name"], "Solo Peak Lookout")
+        self.assertEqual(t["status"], "standing")
+        self.assertEqual(t["events"][0]["source_url"], "https://assoc.example/2025-projects/")
+
+    def test_family_marker_and_the_list_must_agree(self):
+        msgs: list[str] = []
+        write_sources(self.ws.sources, {self.SRC: [self.assoc_rec("a", "A Peak", 47.0, -113.0)],
+                                        "other_assoc": [rec("other_assoc", "b", "B Peak", 47.5, -113.0)]})
+        p = self.ws.sources / f"{self.SRC}.json"
+        d = json.loads(p.read_text()); p.write_text(json.dumps(d))                      # no family marker
+        q = self.ws.sources / "other_assoc.json"
+        d = json.loads(q.read_text()); d["family"] = M.ASSOCIATION_FAMILY; q.write_text(json.dumps(d))  # not in the list
+        M.load_sources(self.ws.sources, log=msgs.append)
+        self.assertTrue(any(self.SRC in m and "no \"family\"" in m for m in msgs), msgs)
+        self.assertTrue(any("other_assoc" in m and "ASSOCIATION_SOURCES" in m for m in msgs), msgs)
+
+
 if __name__ == "__main__":
     unittest.main()

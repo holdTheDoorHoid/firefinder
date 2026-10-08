@@ -160,6 +160,38 @@ PRECEDENCE: dict[str, list[str]] = {
 LOCATION_LINEAGE = {"nhlr": "registers", "fflos": "registers", "ffla": "registers",
                     "firelookout_com": "registers"}
 
+# Association project sources (DESIGN.md 3.7): lookout associations' own year-by-year reports of
+# the work they did on particular lookouts (FFLA chapters, "Friends of" groups, the Catskill Fire
+# Tower Project...), one module in pipeline/regional/ each, all in the one record shape of
+# pipeline/regional/_projects.py. Adding an association is one entry here: the source id
+# (the "source" of its data/sources/<id>.json, which must carry "family": "association_projects").
+# register_associations() then puts it in the match order, at the foot of the facts precedence
+# lists below (the registers and lists outrank it), in the registers' location lineage (its
+# positions are copied from those lists, so they never count as independent confirmation), and
+# gives its page a labelled "association" link on the tower. Its events join the tower's timeline
+# with the report that gives them as their source.
+ASSOCIATION_FAMILY = "association_projects"
+ASSOCIATION_SOURCES: list[str] = ["nwmt_projects"]
+# Fields an association supplies (the rest -- registers, rental, photos, access -- it does not).
+ASSOCIATION_FIELDS = ("name", "location", "status", "kind", "county", "elevation_m", "built", "design",
+                      "height_m", "agency", "ownership", "staffing", "events")
+
+
+def register_associations(sources: list[str]) -> None:
+    """Put association project sources into SOURCE_ORDER (before Wikidata and OSM), the end of
+    each ASSOCIATION_FIELDS precedence list, and the registers' location lineage. Idempotent."""
+    for sid in sources:
+        if sid not in SOURCE_ORDER:
+            at = SOURCE_ORDER.index("wikidata") if "wikidata" in SOURCE_ORDER else len(SOURCE_ORDER)
+            SOURCE_ORDER.insert(at, sid)
+        for f in ASSOCIATION_FIELDS:
+            if f in PRECEDENCE and sid not in PRECEDENCE[f]:
+                PRECEDENCE[f].append(sid)
+        LOCATION_LINEAGE[sid] = "registers"
+
+
+register_associations(ASSOCIATION_SOURCES)
+
 # Sources that list one lookout twice (a node and a way in OSM; a Facility and a Campground
 # in RIDB; border lookouts on two state maps at firelookout.com; repeated table rows in FFLA;
 # repeat posts at idahofirelookouts.com). Two records from one of these may share a tower if
@@ -929,6 +961,10 @@ def load_sources(sources_dir: Path, log=print) -> tuple[dict[str, dict], dict[st
             continue
         sid = str(data.get("source") or path.stem)
         headers[sid] = {k: data.get(k) for k in ("title", "url", "retrieved", "license")}
+        if (data.get("family") == ASSOCIATION_FAMILY) != (sid in ASSOCIATION_SOURCES):
+            log(f"WARNING: {path.name}: " + (f"carries family {ASSOCIATION_FAMILY!r} but {sid!r} is not in ASSOCIATION_SOURCES (merge.py): add it"
+                                             if data.get("family") == ASSOCIATION_FAMILY else
+                                             f"{sid!r} is in ASSOCIATION_SOURCES but the extract has no \"family\": \"{ASSOCIATION_FAMILY}\""))
         headers[sid]["file"] = path.name
         headers[sid]["records"] = len(data["records"])
         recs, seen = [], set()
@@ -1570,6 +1606,9 @@ def record_links(rec: Rec) -> list[dict]:
             out.append({"label": f"{name} on andyarthur.org (Andy Arthur)", "url": url, "kind": "site"})
         elif src == "cskt":
             out.append({"label": "CSKT Fire on the Land: fire lookouts", "url": url, "kind": "agency"})
+        elif src in ASSOCIATION_SOURCES:
+            assoc = (rec.extra.get("association") or {}).get("name") or SOURCE_SITE.get(src, src)
+            out.append({"label": f"{assoc}: work on {name}", "url": url, "kind": "association"})
         else:
             out.append({"label": f"{name} ({SOURCE_SITE.get(src, src)})", "url": url, "kind": "site"})
     for link in raw.get("links") or []:
@@ -1848,6 +1887,15 @@ def _add_event(rec: dict, event: dict) -> None:
     rec["events"] = events
 
 
+def _event_refs(out: dict, src_event: dict) -> dict:
+    """Carry the page that supports an event (source_url, and source_urls when several) from a
+    source's event to the tower's, as research events already do."""
+    for k in ("source_url", "source_urls"):
+        if src_event.get(k):
+            out[k] = src_event[k]
+    return out
+
+
 def loose_key(name: str) -> str:
     toks = [t for t in name_tokens(name) if t not in GENERIC_WORDS or t in ("ground", "house", "cabin")]
     return " ".join(toks)
@@ -2088,7 +2136,7 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
                 k = ("built", e["year"])
                 if k not in seen_ev:
                     seen_ev.add(k)
-                    events.append({"year": e["year"], "event": "built", "note": e.get("note"), "from": e.get("from") or built_src.source})
+                    events.append(_event_refs({"year": e["year"], "event": "built", "note": e.get("note"), "from": e.get("from") or built_src.source}, e))
             contributed[built_src.key].add("events")
         for m in sorted(members, key=lambda m: (source_rank("events", m.source), m.key)):
             for e in m.raw.get("events") or []:
@@ -2098,7 +2146,7 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
                 if k in seen_ev:
                     continue
                 seen_ev.add(k)
-                events.append({"year": e.get("year"), "event": e["event"], "note": e.get("note"), "from": e.get("from") or m.source})
+                events.append(_event_refs({"year": e.get("year"), "event": e["event"], "note": e.get("note"), "from": e.get("from") or m.source}, e))
                 contributed[m.key].add("events")
         if history_event is not None:
             events.append(history_event)
