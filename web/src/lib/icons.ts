@@ -142,6 +142,71 @@ export function markerSvg(shape: Shape, fill: Fill, opts: { rentable?: boolean; 
   return `<svg class="${cls}" width="${size}" height="${size}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${body}</svg>`;
 }
 
+/** The marker palette as CSS custom properties (the --mk-* tokens in base.css, which follow the theme). */
+const PALETTE_VARS: MarkerPalette = {
+  halo: 'var(--mk-halo)',
+  standing: 'var(--mk-standing)',
+  standingEdge: 'var(--mk-standing-edge)',
+  hollow: 'var(--mk-hollow)',
+  gone: 'var(--mk-gone)',
+  other: 'var(--mk-other)',
+  otherEdge: 'var(--mk-other-edge)',
+  rent: 'var(--mk-rent)',
+  rentEdge: 'var(--mk-rent-edge)',
+};
+
+/** Id of a marker's `<symbol>` in the sprite from `markerSprite`. */
+export function markerSymbolId(shape: Shape, fill: Fill): string {
+  return `mkr-${shape}-${fill}`;
+}
+
+/**
+ * One `<symbol>` per shape and fill. Same geometry as `markerSvg`, but each part is painted by an
+ * inline `style` using the --mk-* tokens, so a marker drawn with `markerUse` follows the theme
+ * without any selector having to reach into the `<use>` shadow tree (engines differ on that). The
+ * light palette stays in the attributes as the fallback.
+ */
+function markerSymbol(shape: Shape, fill: Fill): string {
+  const c = MARKER_PALETTE.light;
+  const p = paintFor(fill, c);
+  const v = paintFor(fill, PALETTE_VARS);
+  const d = OUTLINE[shape];
+  let body = `<path d="${d}" fill="none" stroke="${c.halo}" stroke-width="4.2" stroke-linejoin="round" style="stroke:${PALETTE_VARS.halo}"/>`;
+  body += `<path d="${d}" fill="${p.fill}" style="fill:${v.fill}"/>`;
+  if (p.half) body += `<path d="${LOWER_HALF[shape]}" fill="${p.half}" style="fill:${v.half}"/>`;
+  if (p.dot) body += `<circle cx="${DOT[shape][0]}" cy="${DOT[shape][1]}" r="2.5" fill="${p.dot}" style="fill:${v.dot}"/>`;
+  body += `<path d="${d}" fill="none" stroke="${p.stroke}" stroke-width="${p.width}" stroke-linejoin="round" style="stroke:${v.stroke}"/>`;
+  return `<symbol id="${markerSymbolId(shape, fill)}" viewBox="0 0 24 24">${body}</symbol>`;
+}
+
+/**
+ * A hidden sprite holding the markers a long page uses, drawn once. Put it anywhere in the page
+ * (it takes no room and is hidden from assistive technology) and draw each marker with
+ * `markerUse`; `extraSymbols` adds the page's own `<symbol>`s to the same sprite. A page with thousands of markers, such as the designs guide, is about half as
+ * large this way as with `markerSvg` on every entry.
+ */
+export function markerSprite(pairs: Iterable<readonly [Shape, Fill]>, extraSymbols = ''): string {
+  const seen = new Set<string>();
+  const symbols: string[] = [];
+  for (const [shape, fill] of pairs) {
+    const id = markerSymbolId(shape, fill);
+    if (seen.has(id)) continue;
+    seen.add(id);
+    symbols.push(markerSymbol(shape, fill));
+  }
+  if (!symbols.length && !extraSymbols) return '';
+  // Zero size rather than display:none, which some browsers treat as "do not draw what this holds".
+  return `<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">${symbols.join('')}${extraSymbols}</svg>`;
+}
+
+/**
+ * A marker that points at the sprite. Decorative like `markerSvg`: always pair it with a text label.
+ * It has no size of its own, so the page's CSS must give the `className` a width and height.
+ */
+export function markerUse(shape: Shape, fill: Fill, className = ''): string {
+  return `<svg${className ? ` class="${className}"` : ''} aria-hidden="true"><use href="#${markerSymbolId(shape, fill)}"/></svg>`;
+}
+
 /** Just the rentable badge, for legends. */
 export function rentBadgeSvg(size = 14): string {
   const c = MARKER_PALETTE.light;
