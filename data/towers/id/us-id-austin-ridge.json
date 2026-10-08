@@ -1,6 +1,7 @@
 {
   "id": "us-id-austin-ridge",
   "name": "Austin Ridge Lookout",
+  "summary": "A 1960 R-6 cab on a 53-foot timber tower in the Clearwater National Forest, replacing a 1932 pole lookout; standing, with sources disagreeing on current use.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 1442.0,
   "kind": "tower",
-  "design": "R-6",
-  "height_m": 9.1,
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "15-by-15-foot R-6 cab with catwalk on a 53-foot treated timber tower",
+  "height_m": 16.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -25,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/id/austin-ridge-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Clearwater National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "First-come, first-served per a July 2023 visit report; the register lists it as inactive."
   },
   "staffing": {
     "status": "unknown",
@@ -37,11 +41,31 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
   "events": [
+    {
+      "year": 1932,
+      "event": "built",
+      "note": "First lookout: a 30-foot pole tower with an L-4 cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/austin-ridge-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/austin-ridge-lookout/",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/austin-ridge-lookout/",
+        "https://www.firelookout.com/id/austinridge.html",
+        "https://www.fs.usda.gov/media/259185"
+      ]
+    },
+    {
+      "year": 1951,
+      "event": "destroyed",
+      "note": "Original lookout destroyed in a windstorm, per the Forest Service list",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/media/259185"
+    },
     {
       "year": 1960,
       "event": "built",
@@ -49,10 +73,52 @@
       "from": "nhlr"
     },
     {
+      "year": 1960,
+      "event": "replaced",
+      "note": "Current 15-by-15-foot R-6 cab on a 53-foot timber tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/austin-ridge-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/austin-ridge-lookout/",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/austin-ridge-lookout/",
+        "https://www.firelookout.com/id/austinridge.html",
+        "https://www.fs.usda.gov/media/259185"
+      ]
+    },
+    {
+      "year": 1977,
+      "event": "staffed",
+      "note": "Nancy Beseman listed as staff for 1977-1978",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/austin-ridge-lookout/"
+    },
+    {
+      "year": 1981,
+      "event": "staffed",
+      "note": "Carol Petty listed as staff for 1981-1982",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/austin-ridge-lookout/"
+    },
+    {
+      "year": 1990,
+      "event": "rental_opened",
+      "note": "Put on emergency staffing, then added to the rental program, in the 1990s; 1990 is a placeholder for that decade",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/austin-ridge-lookout/"
+    },
+    {
+      "year": 1990,
+      "event": "staffed_last",
+      "note": "Staffed until the early 1990s per the register; 1990 is a placeholder for that period",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/austin-ridge-lookout/"
+    },
+    {
       "year": 2011,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 18, 2011",
-      "from": "nhlr"
+      "note": "Registered October 18, 2011 as US 938, ID 97",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/austin-ridge-lookout/"
     }
   ],
   "photos": [
@@ -112,6 +178,11 @@
       "kind": "register"
     },
     {
+      "label": "Clearwater National Forest Lookouts (USDA Forest Service)",
+      "url": "https://www.fs.usda.gov/media/259185",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -136,6 +207,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -171,6 +243,22 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-austin-ridge",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -190,9 +278,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

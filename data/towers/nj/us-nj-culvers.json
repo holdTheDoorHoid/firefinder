@@ -1,6 +1,7 @@
 {
   "id": "us-nj-culvers",
   "name": "Culvers Lookout",
+  "summary": "Normanook-named state fire tower in Stokes State Forest, first used in 1908; present Aermotor tower dated 1933 or 1934 (sources differ); staffed in fall and spring per a 2021 account.",
   "other_names": [
     "Normanook Fire Tower",
     "Culver Fire Tower",
@@ -17,7 +18,10 @@
   },
   "elevation_m": 459.9,
   "kind": "tower",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "Aermotor tower, 47 feet with a 7x7 foot cab per NHLR (Willhite says 45 feet)",
   "height_m": 14.0,
   "status": "standing",
   "status_note": null,
@@ -32,8 +36,8 @@
   "agency": "NJ Forest Fire Service",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "On foot via the Appalachian Trail corridor; a locked gate keeps motor vehicles off the fire road except for authorized people"
   },
   "staffing": {
     "status": "unknown",
@@ -41,16 +45,74 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Reached on foot from the Appalachian Trail corridor in Stokes State Forest"
   },
   "rental": null,
   "events": [
     {
+      "year": 1908,
+      "event": "other",
+      "note": "First used as the Normanook Fire Tower (Wikipedia); NHLR says the site was established in 1908",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/culvers-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nj/culvers-lookout/",
+        "https://en.wikipedia.org/wiki/List_of_New_Jersey_Forest_Fire_Service_fire_towers"
+      ]
+    },
+    {
+      "year": 1918,
+      "event": "built",
+      "note": "Steel tower built by the state with $250 in Weeks Law funds (Willhite); NHLR says a steel tower was constructed and staffed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/culvers-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nj/culvers-lookout/",
+        "https://willhiteweb.com/appalachian_trail/fire_lookouts/culver_tower/normanook_lookout_048.htm"
+      ]
+    },
+    {
+      "year": 1919,
+      "event": "staffed_first",
+      "note": "Willhite says the new station started up in April 1919",
+      "from": "research",
+      "source_url": "https://willhiteweb.com/appalachian_trail/fire_lookouts/culver_tower/normanook_lookout_048.htm"
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "Present Aermotor 47-foot tower with 7x7 cab per NHLR",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/culvers-lookout/"
+    },
+    {
+      "year": 1934,
+      "event": "replaced",
+      "note": "Willhite says a new tower was built by the CCC; conflicts with NHLR 1933",
+      "from": "research",
+      "source_url": "https://willhiteweb.com/appalachian_trail/fire_lookouts/culver_tower/normanook_lookout_048.htm"
+    },
+    {
+      "year": 1954,
+      "event": "other",
+      "note": "Observer Robert Jennings inside when five windows were shot out (Willhite)",
+      "from": "research",
+      "source_url": "https://willhiteweb.com/appalachian_trail/fire_lookouts/culver_tower/normanook_lookout_048.htm"
+    },
+    {
       "year": 1992,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 1, 1992",
-      "from": "nhlr"
+      "note": "Date registered August 1, 1992 per NHLR",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/culvers-lookout/"
+    },
+    {
+      "year": 2021,
+      "event": "staffed",
+      "note": "Observer Nick Valerio on eight-hour shifts; manned during fall and spring (Willhite)",
+      "from": "research",
+      "source_url": "https://willhiteweb.com/appalachian_trail/fire_lookouts/culver_tower/normanook_lookout_048.htm"
     }
   ],
   "photos": [
@@ -96,6 +158,11 @@
       "kind": "register"
     },
     {
+      "label": "Culver Fire Tower (Willhite Web)",
+      "url": "https://willhiteweb.com/appalachian_trail/fire_lookouts/culver_tower/normanook_lookout_048.htm",
+      "kind": "reference"
+    },
+    {
       "label": "Culvers Station (Wikipedia (List of New Jersey Forest Fire Service fire towers))",
       "url": "https://en.wikipedia.org/wiki/List_of_New_Jersey_Forest_Fire_Service_fire_towers",
       "kind": "site"
@@ -120,6 +187,7 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
         "status",
         "registers",
         "agency",
@@ -132,7 +200,6 @@
       "source": "nj_forest_fire_towers",
       "key": "nj_forest_fire_towers:nj:culvers-station",
       "fields": [
-        "kind",
         "height_m",
         "ownership",
         "photos",
@@ -153,12 +220,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nj-culvers",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-id-eagle-point",
   "name": "Eagle Point Lookout",
+  "summary": "A 1973 R-6 flat cab on a 41-foot timber tower in Clearwater County, Idaho; staffed only for emergencies since the 1980s.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 1691.0,
   "kind": "tower",
-  "design": "R-6",
-  "height_m": null,
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "41-ft treated timber tower with R-6 flat cab",
+  "height_m": 12.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -32,7 +36,7 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
+    "status": "emergency",
     "as_of": null
   },
   "visit": {
@@ -43,16 +47,44 @@
   "rental": null,
   "events": [
     {
+      "year": 1935,
+      "event": "built",
+      "note": "First structure on the site: a two-story log cabin",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/eagle-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/eagle-point-lookout/",
+        "https://www.firelookout.com/id/eaglepoint.html"
+      ]
+    },
+    {
+      "year": 1955,
+      "event": "replaced",
+      "note": "41-foot treated timber tower with L-4 cab",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/eaglepoint.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/eaglepoint.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/eagle-point-lookout/"
+      ]
+    },
+    {
       "year": 1973,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Current 41-foot treated timber tower with R-6 flat cab; the register's built year",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/eagle-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/eagle-point-lookout/",
+        "https://www.firelookout.com/id/eaglepoint.html"
+      ]
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 5, 2020",
-      "from": "nhlr"
+      "note": "Registered December 5, 2020 as US 1467, ID 159",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/eagle-point-lookout/"
     }
   ],
   "photos": [
@@ -112,6 +144,11 @@
       "kind": "register"
     },
     {
+      "label": "Eagle Point (Forest Lookouts (idaholookouts.weebly.com))",
+      "url": "https://idaholookouts.weebly.com/eagle-point.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -136,6 +173,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -170,12 +208,32 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-eagle-point",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

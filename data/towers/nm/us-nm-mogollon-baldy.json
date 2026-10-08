@@ -1,6 +1,7 @@
 {
   "id": "us-nm-mogollon-baldy",
   "name": "Mogollon Baldy Lookout",
+  "summary": "Fire-detection site since at least 1913; the 1948 Aermotor MI-25 tower stands in the Gila Wilderness, with a 1923 log cabin nearby that is on the National Register.",
   "other_names": [],
   "country": "US",
   "region": "NM",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 3282.7,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "Aermotor MI-25 steel K-brace tower with a 14'x14' cab (NHLR says the cab is wooden); Observer's Log Cabin (1923) adjacent",
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -32,27 +36,72 @@
     "note": "OpenStreetMap tags the structure access=permissive."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2024-04-10"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Reached on foot by a 12-mile hike to the 10,774-foot peak, per a New Mexico Magazine profile of the lookout's seasonal staffer"
   },
   "rental": null,
   "events": [
     {
+      "year": 1913,
+      "event": "other",
+      "note": "Site used for fire detection since at least 1913, when fires were located with a protractor on top of a stump",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/mogollon-baldy-lookout/"
+    },
+    {
+      "year": 1921,
+      "event": "built",
+      "note": "Lumber and materials packed in on burros to build a small cab on a tower after fire season",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/mogollon-baldy.html"
+    },
+    {
+      "year": 1923,
+      "event": "built",
+      "note": "Adjacent log cabin (NHLR: Observer's Log Cabin; Wikipedia: Mogollon Baldy Lookout Cabin), built 1923",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/mogollon-baldy-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nm/mogollon-baldy-lookout/",
+        "https://en.wikipedia.org/wiki/Mogollon_Baldy_Lookout_Cabin"
+      ]
+    },
+    {
+      "year": 1924,
+      "event": "built",
+      "note": "A new lookout tower constructed with a cab on top",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/mogollon-baldy.html"
+    },
+    {
       "year": 1948,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Current tower constructed on the same location; Aermotor MI-25 (surplus military type) about 30 feet high with a 14x14 cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/mogollon-baldy-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nm/mogollon-baldy-lookout/",
+        "https://westlookouts.weebly.com/mogollon-baldy.html"
+      ]
+    },
+    {
+      "year": 1988,
+      "event": "nrhp_listed",
+      "note": "Mogollon Baldy Lookout Cabin listed on the National Register of Historic Places; the listing does not include the tower",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Mogollon_Baldy_Lookout_Cabin"
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 22, 2022",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register as US 1588, NM 46 on May 22, 2022",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/mogollon-baldy-lookout/"
     }
   ],
   "photos": [
@@ -88,6 +137,21 @@
       "kind": "register"
     },
     {
+      "label": "Mogollon Baldy (Forest Lookouts)",
+      "url": "https://westlookouts.weebly.com/mogollon-baldy.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Mogollon Baldy Lookout Cabin (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Mogollon_Baldy_Lookout_Cabin",
+      "kind": "reference"
+    },
+    {
+      "label": "Sara Irving profile (New Mexico Magazine)",
+      "url": "https://www.newmexicomagazine.org/blog/post/gila-wilderness-lookout-sara-irving/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
       "kind": "association"
@@ -112,6 +176,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -145,12 +210,34 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nm-mogollon-baldy",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

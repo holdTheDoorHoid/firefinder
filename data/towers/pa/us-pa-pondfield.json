@@ -1,6 +1,7 @@
 {
   "id": "us-pa-pondfield",
   "name": "Pondfield Fire Tower",
+  "summary": "An 80-ft tower on Chestnut Ridge in Forbes State Forest, built 1935, closed to the public and in need of major repairs.",
   "other_names": [
     "Pondfield 2 Lookout Tower"
   ],
@@ -14,8 +15,11 @@
     "from": "nhlr"
   },
   "elevation_m": 826.9,
-  "kind": "tower",
-  "design": "Aermotor",
+  "kind": "ground",
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "Constructed by the Marshal McClintock Company; erected by Civilian Conservation Corps crews (register)",
   "height_m": 24.4,
   "status": "standing",
   "status_note": null,
@@ -30,15 +34,15 @@
   "agency": "Pennsylvania Bureau of Forestry",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Closed to the general public for several years as of 2016 (Herald-Standard). TribLIVE also says it is closed to the public and locked when not in use. The register says the stairs would need replacing before any public reopening."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
@@ -47,14 +51,47 @@
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Constructed by the Marshal McClintock Company and erected by CCC crews. TribLIVE gives 1937 as the erection year.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/pondfield-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/pondfield-fire-tower/",
+        "https://www.heraldstandard.com/news/2016/oct/24/pondfield-firetower-offers-glimpse-into-the-past/",
+        "https://archive.triblive.com/news/fire-tower-stands-guard-over-forbes-state-forest/"
+      ]
+    },
+    {
+      "year": 1960,
+      "event": "staffed_last",
+      "note": "Sources disagree on the last staffed year. TribLIVE quotes an inspector: someone was there until the 1960s. The register says staffed until the 1970s. The Herald-Standard says unmanned since the 1960s.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/pondfield-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/pondfield-fire-tower/",
+        "https://www.heraldstandard.com/news/2016/oct/24/pondfield-firetower-offers-glimpse-into-the-past/",
+        "https://archive.triblive.com/news/fire-tower-stands-guard-over-forbes-state-forest/"
+      ]
+    },
+    {
+      "year": 2016,
+      "event": "closed",
+      "note": "Closed to the general public for several years as of the 2016 Herald-Standard report",
+      "from": "research",
+      "source_url": "https://www.heraldstandard.com/news/2016/oct/24/pondfield-firetower-offers-glimpse-into-the-past/"
     },
     {
       "year": 2023,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 5, 2023",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register as US 1765, PA 72",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/pondfield-fire-tower/"
+    },
+    {
+      "year": 2024,
+      "event": "other",
+      "note": "Register visit report (Dec 27, 2024): stairs rough but usable, cab ceiling caving slightly, tower and cabin need major repairs",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/pondfield-fire-tower/"
     }
   ],
   "photos": [
@@ -102,6 +139,16 @@
       "kind": "register"
     },
     {
+      "label": "Pondfield firetower offers glimpse into the past (Herald-Standard)",
+      "url": "https://www.heraldstandard.com/news/2016/oct/24/pondfield-firetower-offers-glimpse-into-the-past/",
+      "kind": "reference"
+    },
+    {
+      "label": "Fire tower stands guard over Forbes State Forest (TribLIVE)",
+      "url": "https://archive.triblive.com/news/fire-tower-stands-guard-over-forbes-state-forest/",
+      "kind": "reference"
+    },
+    {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
       "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
       "kind": "site"
@@ -126,6 +173,7 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
         "status",
         "registers",
         "agency",
@@ -138,7 +186,6 @@
       "source": "pa_storymap",
       "key": "pa_storymap:pondfield-tower:39.7826:-79.7015",
       "fields": [
-        "kind",
         "design",
         "height_m",
         "ownership",
@@ -159,12 +206,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-pondfield",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

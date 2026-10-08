@@ -16,6 +16,9 @@
   },
   "elevation_m": 1578.9,
   "kind": "tower",
+  "material": null,
+  "material_from": null,
+  "roles": [],
   "design": "10 ft tower carrying a 14x14 ft wood-frame live-in cab with wrap-around windows and deck; the cab was built in 1979 on a 40 ft tower on Mount Spokane",
   "height_m": 3.0,
   "status": "standing",
@@ -43,7 +46,15 @@
     "drive_up": false,
     "trail_note": "Hike-in or bike-in only; the trail is 2.7 miles from parking at Selkirk Lodge"
   },
-  "rental": null,
+  "rental": {
+    "available": true,
+    "source": "ffla",
+    "provider": "Washington State Parks",
+    "url": "https://parks.wa.gov/find-parks/state-parks/mount-spokane-state-park/mount-spokane-quartz-mountain-fire-lookout",
+    "ridb_facility_id": null,
+    "checked": "2026-10-08",
+    "manager": "WA State Parks"
+  },
   "events": [
     {
       "year": 1933,
@@ -208,9 +219,9 @@
       "kind": "register"
     },
     {
-      "label": "Mount Spokane Quartz Mountain Fire Lookout (Washington State Parks)",
+      "label": "Book or read about Quartz Mountain Lookout (Washington State Parks)",
       "url": "https://parks.wa.gov/find-parks/state-parks/mount-spokane-state-park/mount-spokane-quartz-mountain-fire-lookout",
-      "kind": "reference"
+      "kind": "rental"
     },
     {
       "label": "Mount Spokane State Park History (Washington State Parks)",
@@ -220,6 +231,11 @@
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wa/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
       "kind": "association"
     },
     {
@@ -268,6 +284,14 @@
         "status",
         "registers",
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:wa:quartz-mountain-lookout",
+      "fields": [
+        "rental",
         "links"
       ]
     },

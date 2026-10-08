@@ -1,6 +1,7 @@
 {
   "id": "us-id-big-baldy",
   "name": "Big Baldy Lookout",
+  "summary": "A 1924 log cabin with cupola was replaced by an R-6 flat-top cab on a tower in 1959; on emergency status, reached by a 1.2-mile wilderness trail; sources disagree on the forest and the 1924/1925 date.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2959.6,
   "kind": "tower",
-  "design": "R-6",
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
+  "design": "R-6 (Region 6 plan) flat-top cab on an enclosed tower, built 1959, replacing a log cabin with cupola (completed 1924; firelookout.com says 1925)",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -25,23 +29,35 @@
       "url": "http://nhlr.org/lookouts/us/id/big-baldy-lookout/"
     }
   ],
-  "agency": "US Forest Service - Boise National Forest",
+  "agency": "U.S. Forest Service, Boise National Forest per NHLR and Idaho Fire Lookouts; the trail page lists the Salmon-Challis National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Idaho Fire Lookouts calls it 'Hike-In Emergency Use' and firelookout.com says it is on emergency status; no source says the cab is open to visitors or for rent. The trail to it is open to hiking, backpacking and horseback riding in the wilderness."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "undated"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Big Baldy Lookout Trail #4218, 1.2 miles from the junction with Big Baldy Ridge Trail #4227; part of the trail crosses a recent burn area, expect downfall"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1924,
+      "event": "built",
+      "note": "Log cabin with cupola completed (NHLR and Idaho Fire Lookouts). firelookout.com says the first structure was built in 1925",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/big-baldy-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/big-baldy-lookout/",
+        "https://www.idahofirelookouts.com/west-central/big-baldy-lookout/",
+        "https://www.firelookout.com/id/bigbaldy.html"
+      ]
+    },
     {
       "year": 1959,
       "event": "built",
@@ -49,10 +65,37 @@
       "from": "nhlr"
     },
     {
+      "year": 1959,
+      "event": "replaced",
+      "note": "Region 6 plan flat-top cab on an enclosed tower replaced the original building",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/big-baldy-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/big-baldy-lookout/",
+        "https://www.idahofirelookouts.com/west-central/big-baldy-lookout/",
+        "https://www.firelookout.com/id/bigbaldy.html"
+      ]
+    },
+    {
+      "year": 1981,
+      "event": "staffed_first",
+      "note": "Earliest known staff on the Idaho Fire Lookouts list: Susan Hunt-Thompson (1981-1982)",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/big-baldy-lookout/"
+    },
+    {
+      "year": 1983,
+      "event": "staffed_last",
+      "note": "Last known staff on the Idaho Fire Lookouts list: Scott Bebb (1983), citing the Kellogg Evening News",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/big-baldy-lookout/"
+    },
+    {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 2, 2020",
-      "from": "nhlr"
+      "note": "Registered October 2, 2020 as NHLR US 1446 (ID 139), nominated by Brad Eells",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/big-baldy-lookout/"
     }
   ],
   "photos": [
@@ -172,6 +215,11 @@
       "kind": "register"
     },
     {
+      "label": "Big Baldy Lookout Trail #4218 (Salmon-Challis National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r04/salmon-challis/recreation/trails/big-baldy-lookout-trail-4218",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -218,6 +266,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:big-baldy:44.7824:-115.2189",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -230,12 +279,34 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-big-baldy",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-id-west-fork",
   "name": "West Fork Lookout",
+  "summary": "A 1934 35-ft Aermotor steel tower on West Fork Mountain in Idaho's Panhandle; the cabin is gone, the tower still stands, and climbing is not safe.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 1931.5,
   "kind": "tower",
-  "design": "Aermotor",
-  "height_m": null,
+  "material": "steel",
+  "material_from": "design",
+  "roles": [],
+  "design": "35-ft Aermotor steel X-brace tower with 7x7 cab; the 1934 frame residence cabin is gone",
+  "height_m": 10.7,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -25,34 +29,59 @@
       "url": "http://nhlr.org/lookouts/us/id/west-fork-lookout/"
     }
   ],
-  "agency": "US Forest Service - Idaho Panhandle National Forests",
+  "agency": "U.S. Forest Service, Idaho Panhandle National Forests (Kaniksu National Forest cooperator)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached on foot by Forest Service Trail #347. The tower itself is not safe for climbing."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1950s"
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "About 3.4 miles on Trail #347 from the junction with Smith Creek-Red Top Trail #21; open mid-June through November, weather permitting."
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "35-ft Aermotor steel tower with 7x7 cab and frame residence cabin",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/west-fork-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/west-fork-lookout/",
+        "https://www.firelookout.com/id/westfork.html",
+        "https://www.idahofirelookouts.com/northern-idaho/west-fork-lookout/"
+      ]
+    },
+    {
+      "year": 1935,
+      "event": "staffed",
+      "note": "L.L. Hydron named in a 1935 Bonners Ferry Herald item, the earliest named lookout in the sources",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/northern-idaho/west-fork-lookout/"
+    },
+    {
+      "year": 1936,
+      "event": "staffed",
+      "note": "Burt Callahan named as lookout",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/westfork.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/westfork.html",
+        "https://www.idahofirelookouts.com/northern-idaho/west-fork-lookout/"
+      ]
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 2, 2020",
-      "from": "nhlr"
+      "note": "Registered December 2, 2020 as US 1465, ID 157",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/west-fork-lookout/"
     }
   ],
   "photos": [
@@ -124,6 +153,11 @@
       "kind": "register"
     },
     {
+      "label": "West Fork Mountain Trail #347 (USDA Forest Service, Idaho Panhandle National Forests)",
+      "url": "https://www.fs.usda.gov/r01/idahopanhandle/recreation/west-fork-mountain-trail-347",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -170,6 +204,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:west-fork:48.8324:-116.7513",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -182,12 +217,34 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-west-fork",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

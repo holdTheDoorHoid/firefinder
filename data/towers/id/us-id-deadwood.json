@@ -16,6 +16,9 @@
   },
   "elevation_m": 2308.9,
   "kind": "ground",
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
   "design": "L-4 cab, ground-mounted",
   "height_m": null,
   "status": "standing",
@@ -246,6 +249,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Deadwood on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/id/deadwood.html",
       "kind": "site"
@@ -298,9 +306,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:id:deadwood-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:id:deadwood:44.1254:-115.7041",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -390,5 +407,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

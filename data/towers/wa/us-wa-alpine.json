@@ -1,6 +1,7 @@
 {
   "id": "us-wa-alpine",
   "name": "Alpine Lookout",
+  "summary": "Forest Service lookout on Nason Ridge, Chelan County. A 1936 L-4 cab was replaced by an R-6 cab in 1975; a 2019 plan says the 1936 building still stands.",
   "other_names": [
     "Alpine (Nason Ridge)"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 1876.3,
   "kind": "ground",
-  "design": "R-6",
+  "material": "wood",
+  "material_from": "osm",
+  "roles": [],
+  "design": "R-6 flat-top cab (1975), replacing a 1936 L-4 cab",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -30,8 +34,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=private."
+    "level": "public",
+    "note": "Reached on foot by trail. The register says the cab remains in active service; the sources read do not say whether visitors may enter it."
   },
   "staffing": {
     "status": "unknown",
@@ -39,22 +43,58 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "About 10 miles round trip with about 2,600 ft of gain, from a trailhead reached by FR 6910 off US 2. NW Forest Pass or interagency pass required (2025 hiking guide)."
   },
   "rental": null,
   "events": [
     {
+      "year": 1920,
+      "event": "other",
+      "note": "Site first used for fire detection: camp with an outdoor alidade, phone and tent",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/alpine-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/alpine-lookout/",
+        "https://www.firelookout.com/wa/alpine.html"
+      ]
+    },
+    {
+      "year": 1928,
+      "event": "staffed",
+      "note": "Known lookout personnel: George and Polly Dennis",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wa/alpine.html"
+    },
+    {
       "year": 1936,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "L-4 cab with an oversize stone base. A 2019 plan says this building still stands; the register and firelookout.com say it was replaced in 1975",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/alpine-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/alpine-lookout/",
+        "https://www.firelookout.com/wa/alpine.html",
+        "https://app.leg.wa.gov/ReportsToTheLegislature/Home/GetPDF?fileName=Nason+Ridge+Community+Forest+Management+Plan+Final+11.27.19_44f1a365-1f4d-4782-a665-c1582f3630f3.pdf"
+      ]
+    },
+    {
+      "year": 1975,
+      "event": "replaced",
+      "note": "R-6 flat-top cab replaced the L-4 cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/alpine-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/alpine-lookout/",
+        "https://www.firelookout.com/wa/alpine.html"
+      ]
     },
     {
       "year": 1995,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 1, 1995",
-      "from": "nhlr"
+      "note": "Date Registered July 1, 1995",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/alpine-lookout/"
     }
   ],
   "photos": [
@@ -126,6 +166,16 @@
       "kind": "register"
     },
     {
+      "label": "Nason Ridge Community Forest Management Plan (2019) (Washington State Legislature report)",
+      "url": "https://app.leg.wa.gov/ReportsToTheLegislature/Home/GetPDF?fileName=Nason+Ridge+Community+Forest+Management+Plan+Final+11.27.19_44f1a365-1f4d-4782-a665-c1582f3630f3.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Alpine Lookout (Hike of the Week)",
+      "url": "https://www.hikeoftheweek.com/2025/06/12/alpine-lookout/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Washington lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wa/",
       "kind": "association"
@@ -187,9 +237,24 @@
       "source": "osm",
       "key": "osm:way/235689615",
       "fields": [
+        "material",
         "registers",
         "access",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-alpine",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -210,9 +275,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

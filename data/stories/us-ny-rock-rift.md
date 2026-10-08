@@ -1,0 +1,13 @@
+Rock Rift Fire Tower stands on the summit of Tower Mountain in the Town of Tompkins, Delaware County, and rises above the Cannonsville Reservoir.[^2] The Civilian Conservation Corps built it in 1934.[^2] The National Historic Lookout Register describes a 72-foot, 9-inch steel tower of the International Derrick E-4898 type, and says the US Forest Service provided it to New York State.[^1] Wikipedia describes it as a 1933 model.[^2]
+
+The first lookout watch began in 1935, and the last season ended in 1988.[^2][^3] I found no account of a particular fire the tower spotted.
+
+The state officially closed the tower in early 1989.[^3] In 2017 the tower passed from the state to the Town of Tompkins, while New York City owns the ground beneath it, inside its West of Hudson watershed.[^2] The sources do not agree on how long the public was kept away. A 2017 visit report says the tower had been off-limits to visitors for many years and reopened only a few years earlier, which does not fit the 1989 closure.[^1] Another 2017 visit report says the bottom set of stairs had been removed for safety.[^1] The tower was added to the National Register of Historic Places on July 12, 2018.[^2]
+
+As of late 2025, a trail guide said the tower was closed for climbing during renovations, with volunteers replacing stair treads and landings.[^4] Wikipedia calls the tower unsafe to climb and says the Town of Tompkins plans to restore it.[^3] The tower's own Wikipedia article, however, says that when the steps are clear of snow and conditions allow, visitors may climb nearly to the cab, and that rehabilitation was planned to continue in summer 2026.[^2] A New York chapter list of projects shows a summer 2025 job on the tower with the town and NYCDEP.[^5] The sources conflict on whether it can be climbed now, so please do not climb it until that work is finished. The hike starts at a parking lot where Routes 10 and 268 meet, and some stretches cross private land and New York City reservoir property, so stay on marked public routes.[^4]
+
+[^1]: Rock Rift Fire Tower, National Historic Lookout Register, http://nhlr.org/lookouts/us/ny/rock-rift-fire-tower/ (accessed 2026-10-08).
+[^2]: Rock Rift Fire Observation Tower, Wikipedia, https://en.wikipedia.org/wiki/Rock_Rift_Fire_Observation_Tower (accessed 2026-10-08).
+[^3]: Tower Mountain (New York), Wikipedia, https://en.wikipedia.org/wiki/Tower_Mountain_(New_York) (accessed 2026-10-08).
+[^4]: Rock Rift Fire Tower Trail, Komoot, https://www.komoot.com/smarttour/e2813462046/rock-rift-fire-tower-trail (accessed 2026-10-08).
+[^5]: NY FFLA Projects, New York State chapter of the Forest Fire Lookout Association, http://www.nysffla.org/projects.html (accessed 2026-10-08).

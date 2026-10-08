@@ -1,6 +1,7 @@
 {
   "id": "us-mt-bare-cone",
   "name": "Bare Cone Lookout",
+  "summary": "Bitterroot National Forest lookout near Darby, Montana: a 1922 log cabin, a 1934 L-4 tower, and the present R-6 cab built in 1962; still in active service.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2384.1,
   "kind": "two_story",
-  "design": "R-6",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "R-6 cab on a 10-foot concrete base",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -29,7 +33,7 @@
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "Still in active service on the Bitterroot National Forest; the sources give no public visiting rules."
   },
   "staffing": {
     "status": "staffed",
@@ -38,21 +42,56 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Located 23 miles southwest of Darby on the Bitterroot National Forest, with the West Fork Ranger District as cooperator."
   },
   "rental": null,
   "events": [
     {
+      "year": 1922,
+      "event": "built",
+      "note": "First structure on the site: a two-story log cabin",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/bare-cone-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/bare-cone-lookout/",
+        "https://www.firelookout.com/mt/barecone.html"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "replaced",
+      "note": "A 10-foot pole L-4 tower replaced the cabin, per firelookout.com; the NHLR says the L-4 was built in the 1930s",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/bare-cone-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/bare-cone-lookout/",
+        "https://www.firelookout.com/mt/barecone.html"
+      ]
+    },
+    {
+      "year": 1956,
+      "event": "staffed",
+      "note": "Firelookout.com names lookouts from 1956 to 1971, starting with J.W. Keener",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/barecone.html"
+    },
+    {
       "year": 1962,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Present R-6 cab on a 10-foot concrete base",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/bare-cone-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/bare-cone-lookout/",
+        "https://www.firelookout.com/mt/barecone.html"
+      ]
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 24, 2009",
-      "from": "nhlr"
+      "note": "Registered April 24, 2009 as US 778, MT 44; nominated by Gary Weber",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/bare-cone-lookout/"
     }
   ],
   "photos": [
@@ -148,6 +187,11 @@
       "kind": "register"
     },
     {
+      "label": "Montana Lookouts (Standing) (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/mt/mt-st/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
       "kind": "association"
@@ -194,6 +238,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:bare-cone:45.7193:-114.4124",
       "fields": [
+        "material",
         "design",
         "height_m",
         "staffing",
@@ -206,6 +251,21 @@
       "key": "osm:way/727494020",
       "fields": [
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-bare-cone",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -226,9 +286,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

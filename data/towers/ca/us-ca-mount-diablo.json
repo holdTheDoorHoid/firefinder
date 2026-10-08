@@ -13,6 +13,9 @@
   },
   "elevation_m": 1173.2,
   "kind": "unknown",
+  "material": "stone",
+  "material_from": "ffla",
+  "roles": [],
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -154,16 +157,33 @@
       "source": "ffla",
       "key": "ffla:ca:diablo-mount:37.8818:-121.9143",
       "fields": [
+        "material",
         "status",
         "registers",
         "links"
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "material",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "stone"
+        },
+        {
+          "source": "nhlr",
+          "value": "wood"
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources name different materials. Often one describes an earlier structure."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

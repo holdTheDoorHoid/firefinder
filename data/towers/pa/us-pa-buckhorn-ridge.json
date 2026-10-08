@@ -1,6 +1,7 @@
 {
   "id": "us-pa-buckhorn-ridge",
   "name": "Buckhorn Ridge Lookout",
+  "summary": "A 60-foot Blaw-Knox tower in Delaware State Forest, registered 1998; the register says in active service, but a 2017 visit saw it unstaffed and advised against climbing.",
   "other_names": [],
   "country": "US",
   "region": "PA",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 449.3,
   "kind": "tower",
-  "design": null,
-  "height_m": 20.7,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "Blaw-Knox steel tower with a 7 x 7 ft metal cab",
+  "height_m": 18.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -34,20 +38,27 @@
   "agency": "Pennsylvania Bureau of Forestry",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Visit reports say do not climb: the 2017 visit found rotted steps and a boarded cab door. No posted closure found."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Directions to the tower are signed from Fire Tower Road in Milford. The 2017 visit report says not to climb it."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1917,
+      "event": "other",
+      "note": "Earlier bald tower at the site, used circa 1917 and no longer standing",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/buckhorn-ridge-tower-site/"
+    },
     {
       "year": 1935,
       "event": "built",
@@ -57,14 +68,30 @@
     {
       "year": 1998,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 15, 1998",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, December 15, 1998",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/buckhorn-ridge-lookout/"
     },
     {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 16, 2008",
-      "from": "fflos"
+      "note": "Registered on the Former Fire Lookout Sites register under the site record, September 16, 2008",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/buckhorn-ridge-tower-site/"
+    },
+    {
+      "year": 2017,
+      "event": "other",
+      "note": "Visit found the tower in terrible condition, cab door boarded, and advised against climbing",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/buckhorn-ridge-lookout/"
+    },
+    {
+      "year": 2021,
+      "event": "other",
+      "note": "Visit found the tower in rough shape but still standing",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/buckhorn-ridge-lookout/"
     }
   ],
   "photos": [
@@ -225,6 +252,7 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
         "status",
         "registers",
         "agency",
@@ -247,7 +275,6 @@
       "source": "pa_storymap",
       "key": "pa_storymap:buckhorn-ridge:41.3928:-74.8328",
       "fields": [
-        "kind",
         "height_m",
         "ownership",
         "events",
@@ -260,6 +287,22 @@
       "key": "eastern_us_lookouts:pa:buckhorn-ridge",
       "fields": [
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-buckhorn-ridge",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -284,9 +327,15 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

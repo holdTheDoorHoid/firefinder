@@ -4,7 +4,8 @@
   "summary": "A 1922-23 D-1 log cupola cabin on Hornet Mountain in Flathead National Forest, staffed 1923-1946, later abandoned and then restored as a rental cabin.",
   "other_names": [
     "Hornet Lookout",
-    "Hornet Lookout Cabin"
+    "Hornet Lookout Cabin",
+    "Hornet Mountain Lookout"
   ],
   "country": "US",
   "region": "MT",
@@ -17,6 +18,9 @@
   },
   "elevation_m": 2053.4,
   "kind": "ground",
+  "material": "log",
+  "material_from": "design",
+  "roles": [],
   "design": "D-1 style log cupola cabin, 14x14 ft single-room log cabin, saddle-notched logs",
   "height_m": 4.6,
   "status": "standing",
@@ -106,6 +110,17 @@
       "note": "Registered on the National Historic Lookout Register, November 27, 2016",
       "from": "research",
       "source_url": "http://nhlr.org/lookouts/us/mt/hornet-peak-lookout/"
+    },
+    {
+      "year": 2022,
+      "event": "other",
+      "note": "Centennial celebration on September 10, hosted by the Forest Service with NMLA board members helping; more preservation work planned.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/11/2022-newsletter.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2022-newsletter.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2023-newsletter.pdf"
+      ]
     }
   ],
   "photos": [
@@ -259,6 +274,16 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
+      "label": "Northwest Montana Lookout Association: work on Hornet Mountain Lookout",
+      "url": "https://nwmt-ffla.org/2023/11/12/2023-newsletter/",
+      "kind": "association"
+    },
+    {
       "label": "Wikipedia: Hornet Lookout",
       "url": "https://en.wikipedia.org/wiki/Hornet_Lookout",
       "kind": "wikipedia"
@@ -321,11 +346,29 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:hornet-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:mt:hornet-peak:48.8797:-114.5128",
       "fields": [
         "height_m",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "nwmt_projects",
+      "key": "nwmt_projects:mt:hornet-mountain",
+      "fields": [
+        "material",
+        "design",
+        "events",
         "links"
       ]
     },
@@ -373,5 +416,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

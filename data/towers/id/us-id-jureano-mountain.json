@@ -1,6 +1,7 @@
 {
   "id": "us-id-jureano-mountain",
   "name": "Jureano Mountain Lookout",
+  "summary": "A 1935 7x7 observation cabin on a 60-ft steel tower in Lemhi County, Idaho; newspaper items show fire-season staffing into 1964, and it is drive-up today.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2547.8,
   "kind": "tower",
-  "design": null,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "7x7 observation cabin on a 60-ft open steel tower",
   "height_m": 18.3,
   "status": "standing",
   "status_note": null,
@@ -25,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/id/jureano-mountain-lookout/"
     }
   ],
-  "agency": "US Forest Service - Salmon-Challis National Forest",
+  "agency": "U.S. Forest Service, Salmon-Challis National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Drive-up on Forest Service roads, per Idaho Fire Lookouts and a climbing guide. No closure notice was found in the sources read."
   },
   "staffing": {
     "status": "unknown",
@@ -37,22 +41,64 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "A ridge road leads to the summit, per the climbing guide (updated November 2023), which advises checking Forest Service road conditions first and warns of caution if climbing the tower."
   },
   "rental": null,
   "events": [
     {
+      "year": 1932,
+      "event": "staffed_first",
+      "note": "Earliest documented staffing in sources read: a woman joining her husband on the lookout (Recorder Herald, June 8, 1932)",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/jureano-mountain.html"
+    },
+    {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "60-ft steel tower with 7x7 observation cabin; replaced an older wooden tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/jureano-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/jureano-mountain-lookout/",
+        "https://idaholookouts.weebly.com/jureano-mountain.html",
+        "https://www.idahoaclimbingguide.com/bookupdates/jureano-mountain/"
+      ]
+    },
+    {
+      "year": 1951,
+      "event": "staffed",
+      "note": "A couple manning the post at Jureano (Recorder-Herald, July 12, 1951)",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/jureano-mountain.html"
+    },
+    {
+      "year": 1956,
+      "event": "fire",
+      "note": "300-acre Owl Creek fire detected from the lookout (Post-Register, July 25, 1956)",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/jureano-mountain.html"
+    },
+    {
+      "year": 1962,
+      "event": "staffed",
+      "note": "A summer lookout stationed on Jureano during fire season (Recorder Herald, June 14, 1962)",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/jureano-mountain.html"
+    },
+    {
+      "year": 1964,
+      "event": "staffed_last",
+      "note": "Last documented staffing: a family left in September 1964 when the summer lookout returned to college (Recorder Herald)",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/jureano-mountain.html"
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 30, 2020",
-      "from": "nhlr"
+      "note": "Registered September 30, 2020 as US 1441, ID 133; nominated by Brad Eells",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/jureano-mountain-lookout/"
     }
   ],
   "photos": [
@@ -88,6 +134,16 @@
       "kind": "register"
     },
     {
+      "label": "Jureano Mountain - FOREST LOOKOUTS (Forest Lookouts (idaholookouts.weebly.com))",
+      "url": "https://idaholookouts.weebly.com/jureano-mountain.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Jureano Mountain by Livingston Douglas and Bing Young (IDAHO: A Climbing Guide)",
+      "url": "https://www.idahoaclimbingguide.com/bookupdates/jureano-mountain/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -112,6 +168,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -145,12 +202,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-jureano-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

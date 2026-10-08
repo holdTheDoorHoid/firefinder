@@ -1,6 +1,7 @@
 {
   "id": "us-id-balancing-rock",
   "name": "Balancing Rock Lookout",
+  "summary": "A 1933 L-6 observation cabin on a log crib in the Clearwater National Forest, abandoned in the 1940s and restored by volunteers in 2013-2014; a hike-in site.",
   "other_names": [
     "Balancing Rock Patrol Point"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 1254.6,
   "kind": "ground",
-  "design": "L-6",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "L-6 observation cabin, 8x8 wood frame, on a log crib",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -27,7 +31,7 @@
       "url": "http://nhlr.org/lookouts/us/id/balancing-rock-lookout/"
     }
   ],
-  "agency": "US Forest Service - Nez Perce - Clearwater National Forests",
+  "agency": "U.S. Forest Service, Nez Perce-Clearwater National Forests",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -39,22 +43,55 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Hike-in, per the Idaho Fire Lookouts listing"
   },
   "rental": null,
   "events": [
     {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "L-6 cabin on a log crib",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/balancing-rock-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/balancing-rock-lookout/",
+        "https://www.firelookout.com/id/balancingrock.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/balancing-rock-patrol-point/",
+        "https://www.fs.usda.gov/media/259185"
+      ]
+    },
+    {
+      "year": 1940,
+      "event": "abandoned",
+      "note": "Sources say only 'the 1940s'; 1940 is a placeholder for that decade",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/balancingrock.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/balancingrock.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/balancing-rock-patrol-point/",
+        "https://www.fs.usda.gov/media/259185"
+      ]
+    },
+    {
+      "year": 2014,
+      "event": "restored",
+      "note": "Restoration work during 2013 and 2014, carried out by volunteers led by Jerry Branning",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/balancing-rock-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/balancing-rock-lookout/",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/balancing-rock-patrol-point/",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-idnmt-2014.pdf",
+        "https://www.fs.usda.gov/media/259185"
+      ]
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 7, 2020",
-      "from": "nhlr"
+      "note": "Registered December 7, 2020 as US 1469, ID 161",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/balancing-rock-lookout/"
     }
   ],
   "photos": [
@@ -126,6 +163,16 @@
       "kind": "register"
     },
     {
+      "label": "Forest Fire Lookout Association 2014 report (PDF)",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-idnmt-2014.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Clearwater National Forest Lookouts (USDA Forest Service)",
+      "url": "https://www.fs.usda.gov/media/259185",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -172,6 +219,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:balancing-rock:46.7117:-115.5872",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -184,12 +232,32 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-balancing-rock",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

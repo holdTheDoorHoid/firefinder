@@ -1,7 +1,9 @@
 {
   "id": "us-or-tamarack-mountain",
   "name": "Tamarack Mountain Lookout",
-  "other_names": [],
+  "other_names": [
+    "Tamarack Lookout Cabin"
+  ],
   "country": "US",
   "region": "OR",
   "county": "Grant",
@@ -13,6 +15,9 @@
   },
   "elevation_m": 1517.6,
   "kind": "tower",
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "Aermotor",
   "height_m": null,
   "status": "standing",
@@ -40,7 +45,14 @@
     "drive_up": null,
     "trail_note": null
   },
-  "rental": null,
+  "rental": {
+    "available": true,
+    "source": "ffla",
+    "provider": "recreation.gov",
+    "url": "https://www.recreation.gov/camping/campgrounds/234138",
+    "ridb_facility_id": "234138",
+    "checked": "2026-10-08"
+  },
   "events": [
     {
       "year": 1933,
@@ -118,8 +130,18 @@
       "kind": "register"
     },
     {
+      "label": "Book or read about Tamarack Lookout Cabin (recreation.gov)",
+      "url": "https://www.recreation.gov/camping/campgrounds/234138",
+      "kind": "rental"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
       "kind": "association"
     },
     {
@@ -147,6 +169,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -162,6 +185,14 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:or:tamarack-lookout-cabin",
+      "fields": [
+        "rental",
         "links"
       ]
     },
@@ -197,5 +228,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

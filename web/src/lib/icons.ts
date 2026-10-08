@@ -3,9 +3,11 @@
  *
  *   shape = what kind of structure      fill = whether it still stands
  *   ▲ triangle  cab/platform on a tower  solid      standing
- *   ⌂ house     ground-level building    hollow     gone
- *   ● circle    type unknown             hollow+dot ruins (footings/remains)
- *                                        half       moved, replica, or unknown
+ *   ⌂ house     a building: ground cab,  hollow     gone
+ *               2-3 stories, rooftop     hollow+dot ruins (footings/remains)
+ *               cab, trailer             half       moved, replica, or unknown
+ *   ● circle    type unknown
+ *   ◆ diamond   no structure: camp, lookout tree, bare point
  *   amber dot at the top right = rentable
  *
  * "Hollow" means the inside matches the background, so the palette flips with the theme: in
@@ -17,16 +19,22 @@
  * classes that base.css recolours (--mk-* tokens) for dark mode; keep the two palettes equal.
  */
 
-export type Shape = 'tri' | 'house' | 'circle';
+export type Shape = 'tri' | 'house' | 'circle' | 'diamond';
 export type Fill = 'solid' | 'hollow' | 'ruin' | 'half';
 export type MarkerTheme = 'light' | 'dark';
 
-export const SHAPES: readonly Shape[] = ['tri', 'house', 'circle'];
+export const SHAPES: readonly Shape[] = ['tri', 'house', 'circle', 'diamond'];
 export const FILLS: readonly Fill[] = ['solid', 'hollow', 'ruin', 'half'];
 
+/** Kinds drawn with each shape; any other kind (unknown, or one added later) is a circle. */
+export const SHAPE_KINDS: Record<Exclude<Shape, 'circle'>, readonly string[]> = {
+  tri: ['tower', 'enclosed_tower', 'platform'],
+  house: ['ground', 'two_story', 'three_story', 'rooftop', 'mobile'],
+  diamond: ['camp', 'tree', 'point'],
+};
+
 export function shapeFor(kind: string): Shape {
-  if (kind === 'tower' || kind === 'enclosed_tower' || kind === 'platform') return 'tri';
-  if (kind === 'ground' || kind === 'two_story' || kind === 'three_story') return 'house';
+  for (const shape of ['tri', 'house', 'diamond'] as const) if (SHAPE_KINDS[shape].includes(kind)) return shape;
   return 'circle';
 }
 
@@ -46,13 +54,15 @@ const OUTLINE: Record<Shape, string> = {
   tri: 'M12 2.6L21.6 20.4H2.4Z',
   house: 'M3.2 10.4L12 3L20.8 10.4V20.6H3.2Z',
   circle: 'M3.6 12A8.4 8.4 0 1 0 20.4 12A8.4 8.4 0 1 0 3.6 12Z',
+  diamond: 'M12 2.4L21.6 12L12 21.6L2.4 12Z',
 };
 const LOWER_HALF: Record<Shape, string> = {
   tri: 'M7.04 11.8H16.96L21.6 20.4H2.4Z',
   house: 'M3.2 13.2H20.8V20.6H3.2Z',
   circle: 'M3.6 12A8.4 8.4 0 0 0 20.4 12Z',
+  diamond: 'M2.4 12H21.6L12 21.6Z',
 };
-const DOT: Record<Shape, [number, number]> = { tri: [12, 14.6], house: [12, 14.6], circle: [12, 12] };
+const DOT: Record<Shape, [number, number]> = { tri: [12, 14.6], house: [12, 14.6], circle: [12, 12], diamond: [12, 12] };
 const BADGE: [number, number, number] = [18.9, 5.0, 3.6];
 
 export interface MarkerPalette {

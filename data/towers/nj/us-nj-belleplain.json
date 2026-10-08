@@ -1,6 +1,7 @@
 {
   "id": "us-nj-belleplain",
   "name": "Belleplain Fire Tower",
+  "summary": "Cape May County state forest tower first built in 1921 or 1922 as a 60-ft steel lookout, raised by 40 ft in the 1930s, still in active service.",
   "other_names": [],
   "country": "US",
   "region": "NJ",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 17.1,
   "kind": "tower",
-  "design": null,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "100-ft Aermotor steel tower with 7'x7' metal cab; original 60-ft tower with a 40-ft section added in the 1930s",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -28,8 +32,8 @@
   "agency": "New Jersey Forest Fire Service",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Active fire-service tower on state forest land. No public visiting rule found in the sources checked."
   },
   "staffing": {
     "status": "unknown",
@@ -43,10 +47,39 @@
   "rental": null,
   "events": [
     {
+      "year": 1921,
+      "event": "built",
+      "note": "Register date; the 1922-23 annual report gives 1922 instead (see resolved_conflicts)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/belleplain-fire-tower/"
+    },
+    {
+      "year": 1922,
+      "event": "staffed_first",
+      "note": "Station opened for service April 1 per the 1922-23 annual report",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/belleplain.html"
+    },
+    {
+      "year": 1926,
+      "event": "staffed",
+      "note": "Seasonal operation; closed up for the winter months (press note dated December 20, 1926)",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/belleplain.html"
+    },
+    {
+      "year": 1966,
+      "event": "relocated",
+      "note": "State bid notice to remove and relocate the tower and erect a 40-ft extension; completion not confirmed",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/belleplain.html"
+    },
+    {
       "year": 1997,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 15, 1997",
-      "from": "nhlr"
+      "note": "Registered December 15, 1997 as US 245, NJ 7",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/belleplain-fire-tower/"
     }
   ],
   "photos": [
@@ -94,6 +127,8 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
+        "material",
         "status",
         "registers",
         "agency",
@@ -106,7 +141,6 @@
       "source": "nj_forest_fire_towers",
       "key": "nj_forest_fire_towers:nj:belleplain-station",
       "fields": [
-        "kind",
         "height_m",
         "ownership",
         "links"
@@ -125,12 +159,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nj-belleplain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

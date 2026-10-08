@@ -1,6 +1,7 @@
 {
   "id": "us-oh-shawnee",
   "name": "Shawnee Lookout Tower",
+  "summary": "Wayne National Forest steel lookout built by the CCC (sources give 1936, 1937 or 1939); closed to all public access by a Forest Service order issued May 15, 2023, per a Forest Service page last updated June 10, 2025.",
   "other_names": [
     "Shawnee (Lost Run)"
   ],
@@ -15,8 +16,11 @@
   },
   "elevation_m": 321.9,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "steel tower with a 7-by-7-foot cab, built by the Civilian Conservation Corps",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -30,25 +34,76 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Forest Service order 09-14-23-01 (May 15, 2023) closes the tower to all public access; fenced, red-tagged, entry prohibited"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
   "rental": null,
   "events": [
     {
+      "year": 1939,
+      "event": "built",
+      "note": "built by the CCC. Sources disagree: the register says 1936, Historic Structures says 1937, and three other sources say 1939",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/oh/shawnee-lookout-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/oh/shawnee-lookout-tower/",
+        "https://www.ohioexploration.com/structures/shawneetower/",
+        "https://thehockinghills.org/Tinkers_Cave.htm",
+        "https://abandonedonline.net/guardians-of-the-forest-shawnee-lookout-tower/",
+        "https://www.historic-structures.com/oh/new_straitsville/shawnee_watch_tower.php"
+      ]
+    },
+    {
       "year": 1990,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 30, 1990",
-      "from": "nhlr"
+      "note": "National Historic Lookout Register registration date October 30, 1990; first Ohio tower listed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/oh/shawnee-lookout-tower/"
+    },
+    {
+      "year": 1994,
+      "event": "restored",
+      "note": "Abandoned Online gives 1994; the Ohio Exploration Society says it was restored after falling into disrepair by 1989 but gives no year",
+      "from": "research",
+      "source_url": "https://abandonedonline.net/guardians-of-the-forest-shawnee-lookout-tower/",
+      "source_urls": [
+        "https://abandonedonline.net/guardians-of-the-forest-shawnee-lookout-tower/",
+        "https://www.ohioexploration.com/structures/shawneetower/"
+      ]
+    },
+    {
+      "year": 2004,
+      "event": "closed",
+      "note": "wind damage in 2004 led to closure; not reopened as of 2015 per the Ohio Exploration Society",
+      "from": "research",
+      "source_url": "https://www.ohioexploration.com/structures/shawneetower/",
+      "source_urls": [
+        "https://www.ohioexploration.com/structures/shawneetower/",
+        "https://abandonedonline.net/guardians-of-the-forest-shawnee-lookout-tower/"
+      ]
+    },
+    {
+      "year": 2023,
+      "event": "closed",
+      "note": "Forest Service order 09-14-23-01 closed the tower to all public access on May 15, 2023",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r09/wayne/alerts/shawnee-lookout-tower-closed"
+    },
+    {
+      "year": 2023,
+      "event": "removed",
+      "note": "Abandoned Online says the staircase was removed in May 2023 because of foundation deterioration",
+      "from": "research",
+      "source_url": "https://abandonedonline.net/guardians-of-the-forest-shawnee-lookout-tower/"
     }
   ],
   "photos": [
@@ -96,6 +151,31 @@
       "kind": "register"
     },
     {
+      "label": "Shawnee Lookout Tower (Ohio Exploration Society)",
+      "url": "https://www.ohioexploration.com/structures/shawneetower/",
+      "kind": "reference"
+    },
+    {
+      "label": "Tinkers Cave and the Fire Tower in Wayne National Forest (Hocking Hills)",
+      "url": "https://thehockinghills.org/Tinkers_Cave.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Guardians of the Forest: Shawnee Lookout Tower (Abandoned Online)",
+      "url": "https://abandonedonline.net/guardians-of-the-forest-shawnee-lookout-tower/",
+      "kind": "reference"
+    },
+    {
+      "label": "Shawnee Fire Watch Tower, New Straitsville Ohio (Historic Structures)",
+      "url": "https://www.historic-structures.com/oh/new_straitsville/shawnee_watch_tower.php",
+      "kind": "reference"
+    },
+    {
+      "label": "Shawnee Lookout Tower Closed (Wayne National Forest, USDA Forest Service)",
+      "url": "https://www.fs.usda.gov/r09/wayne/alerts/shawnee-lookout-tower-closed",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Ohio lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/oh/",
       "kind": "association"
@@ -120,6 +200,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -152,12 +233,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-oh-shawnee",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

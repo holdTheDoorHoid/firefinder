@@ -1,6 +1,7 @@
 {
   "id": "us-az-kanabownitz",
   "name": "Kanabownitz Lookout",
+  "summary": "A 1940 CCC-built steel tower on Grand Canyon's North Rim, no longer used for fire detection, listed on the register in 2009.",
   "other_names": [
     "Kanabownits"
   ],
@@ -15,8 +16,11 @@
   },
   "elevation_m": 2511.9,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "International Derrick (IDEOC) 7x7 steel tower and cab, about 82 ft 6 in high",
+  "height_m": 25.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,11 +35,11 @@
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "Remote part of the North Rim inside Grand Canyon National Park. The sources describe no public trail, road to the base, or visitor rule."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2009"
   },
   "visit": {
     "climbable": null,
@@ -47,14 +51,27 @@
     {
       "year": 1940,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Constructed by the CCC in one of the last major projects the corps completed in the park (NPS). NHLR gives 'Built 1940'.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/kanabownitz-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/kanabownitz-lookout/",
+        "https://www.nps.gov/grca/learn/nature/cynsk-v13.htm"
+      ]
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 25, 2009",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, April 25, 2009",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/kanabownitz-lookout/"
+    },
+    {
+      "year": 2009,
+      "event": "other",
+      "note": "The four Grand Canyon lookout towers were recognized at a ceremony with the opening of the North Rim Wildland Fire and Emergency Services Facility, July 4, 2009",
+      "from": "research",
+      "source_url": "https://www.nps.gov/grca/learn/nature/cynsk-v13.htm"
     }
   ],
   "photos": [
@@ -76,6 +93,16 @@
       "label": "NHLR register entry US 803 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/az/kanabownitz-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Four Grand Canyon National Park Lookout Towers have been listed on the National Historic Lookout Register (National Park Service)",
+      "url": "https://www.nps.gov/grca/learn/nature/cynsk-v13.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Kanabownitz Lookout, Arizona (Peakbagging)",
+      "url": "http://www.peakbagging.com/AZPhotos/Kanabownitz.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
@@ -102,6 +129,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -133,12 +161,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-kanabownitz",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -14,6 +14,9 @@
   },
   "elevation_m": 1751.7,
   "kind": "ground",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "L-4",
   "height_m": null,
   "status": "standing",
@@ -109,6 +112,17 @@
       "note": "Listed on the National Historic Lookout Register as US 179 on August 20, 1996.",
       "from": "research",
       "source_url": "http://nhlr.org/lookouts/us/mt/sex-peak-lookout/"
+    },
+    {
+      "year": 2015,
+      "event": "restored",
+      "note": "NMLA's first renovation on the Kootenai NF: two walls repaired, cab ceiling cleaned, 76 window panes reglazed and painted, door and vent windows repaired.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2015-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2015-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2015-newsletter.pdf"
+      ]
     }
   ],
   "photos": [
@@ -166,6 +180,16 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
+      "label": "Northwest Montana Lookout Association: work on Sex Peak Lookout",
+      "url": "https://nwmt-ffla.org/2015/09/01/2015-projects/",
+      "kind": "association"
+    },
+    {
       "label": "Sex Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/sexpeak.html",
       "kind": "site"
@@ -208,12 +232,29 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:sex-peak-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:mt:sex-peak:47.7230:-115.6445",
       "fields": [
+        "material",
         "design",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "nwmt_projects",
+      "key": "nwmt_projects:mt:sex-peak",
+      "fields": [
+        "events",
         "links"
       ]
     },
@@ -245,5 +286,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

@@ -14,6 +14,9 @@
   },
   "elevation_m": 1788.9,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "R-6",
   "height_m": 16.8,
   "status": "standing",
@@ -53,7 +56,9 @@
     "rules": [],
     "access_note": null,
     "description": "Overview\n\nLookout Butte has a history that spans nearly 80 years and has been home to three lookout towers. The first, built in 1923, was 45 feet tall with just a platform on which to stand. A cabin was put on the tower a couple years later. In 1935, a 50-foot tower was constructed. A new tower was built beside the old one in 1962, and this is currently available for rent.\n\nThe current 60-foot wooden tower offers panoramic views and the perfect setting for enjoying the area's tranquility and natural beauty. Guests can enjoy the scenery from the exterior catwalk or from inside the single-room cabin.\nRecreation\n\nSeveral primitive roads in the area are open to mountain biking and off-road vehicles. Other activities in the area include hiking through second-growth forest and birding.\nFacilities\n\nThe lookout has room for up to four people and comes with two twin beds with foam mattresses and two cots. Other amenities include a propane stove and oven, a table and chairs, a broom, a bucket and a mop.\n\nA pit toilet sits downhill to the south of the lookout, and there's a campfire ring near the base. Guests should be prepared to haul supplies up five flights of stairs.\nGuests are required to bring their own drinking water. Other recommended supplies include food, sleeping bags or bedding, coolers, cookware and utensils, dishes, warm clothing and rain gear, flashlights, extra batteries, first aid kit, matches, toilet paper, garbage bags and the combination for the lookout and gate. Click here for more information about this lookout.\nNatural Features\n\nThe lookout sits at 5,869 feet in elevation with breathtaking views of the Selway Crags in the Selway-Bitterroot Wilderness area, the Seven Devils Mountain Range, Coolwater Ridge, Pilot Knob Lookout and the Lochsa and Selway River drainages.\n\nNearby Attractions\n\nGuests can take a sightseeing drive from Lowell to Selway Falls and back. This 42-mile drive offers opportunities to appreciate the pristine beauty of the Selway River, a Wild and Scenic River, as well as picturesque Selway Falls.",
-    "checked": "2026-10-05"
+    "checked": "2026-10-05",
+    "status_note": "Maintenance Closure 2026",
+    "status_note_from": "ffla"
   },
   "events": [
     {
@@ -236,6 +241,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Photos of staffed lookouts on Nez Perce/Clearwater National Forests",
       "url": "http://www.fs.fed.us/r1/nezperce/gvc/lookouts.htm",
       "kind": "site"
@@ -265,6 +275,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -288,6 +299,14 @@
       "fields": [
         "ownership",
         "access",
+        "rental",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:id:lookout-butte-lookout",
+      "fields": [
         "rental",
         "links"
       ]
@@ -385,5 +404,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

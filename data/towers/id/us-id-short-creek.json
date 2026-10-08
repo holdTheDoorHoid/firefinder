@@ -1,6 +1,7 @@
 {
   "id": "us-id-short-creek",
   "name": "Short Creek Lookout",
+  "summary": "Frank Church wilderness lookout: 1930 log cabin, 1934 L-4 cab, abandoned in the 1950s; the 1930-1934 dates and a 1963 staffing item conflict.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,6 +14,9 @@
   },
   "elevation_m": 2396.0,
   "kind": "ground",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "L-4",
   "height_m": null,
   "status": "standing",
@@ -25,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/id/short-creek-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Salmon-Challis National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Abandoned site inside the Frank Church wilderness, reached on foot. No source describes public entry into the cabin."
   },
   "staffing": {
     "status": "unknown",
@@ -37,22 +41,75 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Spur trail #6062 is 1.0 mile long, from the Bernard Trail and Paradise Creek Trail. Cellphone service is usually unavailable."
   },
   "rental": null,
   "events": [
     {
+      "year": 1930,
+      "event": "built",
+      "note": "First structure was a log cabin, per firelookout.com, Idaho Fire Lookouts and Forest Lookouts. NHLR does not mention it.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/shortcreek.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/shortcreek.html",
+        "https://www.idahofirelookouts.com/west-central/short-creek-lookout/",
+        "https://idaholookouts.weebly.com/short-creek.html"
+      ]
+    },
+    {
+      "year": 1932,
+      "event": "other",
+      "note": "Newspaper item quoted by Forest Lookouts says a man was leaving to build a lookout house at Short Creek in August 1932. The item does not say the house was finished.",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/short-creek.html"
+    },
+    {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "L-4 cab, per NHLR, firelookout.com, Idaho Fire Lookouts and Forest Lookouts.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/short-creek-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/short-creek-lookout/",
+        "https://www.firelookout.com/id/shortcreek.html",
+        "https://www.idahofirelookouts.com/west-central/short-creek-lookout/",
+        "https://idaholookouts.weebly.com/short-creek.html"
+      ]
+    },
+    {
+      "year": 1950,
+      "event": "abandoned",
+      "note": "Abandoned in the 1950s; 1950 marks the decade start only.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/short-creek-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/short-creek-lookout/",
+        "https://www.firelookout.com/id/shortcreek.html",
+        "https://www.idahofirelookouts.com/west-central/short-creek-lookout/"
+      ]
+    },
+    {
+      "year": 1951,
+      "event": "staffed",
+      "note": "Frank Hutchison of Salmon manned the lookout, per a July 1951 item quoted by Forest Lookouts.",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/short-creek.html"
+    },
+    {
+      "year": 1963,
+      "event": "staffed",
+      "note": "Planned staffing: Gregory Mayne of Los Angeles would be the Short Creek lookout, per a June 1963 item quoted by Forest Lookouts.",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/short-creek.html"
     },
     {
       "year": 2011,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 26, 2011",
-      "from": "nhlr"
+      "note": "Registered September 26, 2011 as US 933, ID 92.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/short-creek-lookout/"
     }
   ],
   "photos": [
@@ -148,6 +205,16 @@
       "kind": "register"
     },
     {
+      "label": "Short Creek - FOREST LOOKOUTS",
+      "url": "https://idaholookouts.weebly.com/short-creek.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Short Cr. Lookout Spur Trail #6062 (U.S. Forest Service, Salmon-Challis National Forest)",
+      "url": "https://www.fs.usda.gov/r04/salmon-challis/recreation/trails/short-cr-lookout-spur-trail-6062",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -194,6 +261,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:short-creek:45.0106:-114.7781",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -205,6 +273,21 @@
       "fields": [
         "photos",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-short-creek",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -248,9 +331,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

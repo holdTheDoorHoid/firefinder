@@ -1,6 +1,7 @@
 {
   "id": "us-or-illahee-rock",
   "name": "Illahee Rock Lookout",
+  "summary": "A 1922 fire camp and 1925 cupola on Illahee Rock, with a live-in tower from the 1950s; sources disagree on tower dates, height and staffing.",
   "other_names": [
     "Illahee Lookout"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 1610.6,
   "kind": "tower",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
+  "design": "Live-in L-4 cab with catwalk on a 20-foot treated timber tower, beside a 1925 D-6 cupola",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -40,21 +44,45 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "About 0.9 miles and 550 feet of climbing; the trail begins on a steep, rocky road that is too rough to drive"
   },
   "rental": null,
   "events": [
     {
+      "year": 1922,
+      "event": "other",
+      "note": "Fire camp established with the site, per firelookout.com. The register dates the older cupola to 1922 instead.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/illaheerock.html",
+      "source_urls": [
+        "https://www.firelookout.com/or/illaheerock.html",
+        "http://nhlr.org/lookouts/us/or/illahee-rock-lookout/"
+      ]
+    },
+    {
+      "year": 1925,
+      "event": "built",
+      "note": "D-6 cupola cabin, the first structure on the site per firelookout.com; Eugene Weekly also dates the cupola to 1925",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/illaheerock.html",
+      "source_urls": [
+        "https://www.firelookout.com/or/illaheerock.html",
+        "https://eugeneweekly.com/2024/06/06/historic-medicine/"
+      ]
+    },
+    {
       "year": 1955,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "20-foot tower with live-in cab and catwalk, per the register. firelookout.com gives 1956 and Eugene Weekly gives 1958 for the tower.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/illahee-rock-lookout/"
     },
     {
       "year": 1994,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 30, 1994",
-      "from": "nhlr"
+      "note": "Registered December 30, 1994 as US 98, OR 13",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/illahee-rock-lookout/"
     }
   ],
   "photos": [
@@ -100,6 +128,11 @@
       "label": "NHLR register entry US 98 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/or/illahee-rock-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Historic medicine (Eugene Weekly)",
+      "url": "https://eugeneweekly.com/2024/06/06/historic-medicine/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
@@ -148,6 +181,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:illahee-rock:43.3491:-122.5628",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -159,12 +193,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-illahee-rock",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

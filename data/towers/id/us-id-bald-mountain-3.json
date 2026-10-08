@@ -16,6 +16,9 @@
   },
   "elevation_m": 1625.8,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "R-6 flat cab with catwalk on a 41-foot timber tower",
   "height_m": 15.2,
   "status": "standing",
@@ -201,6 +204,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Photos of staffed lookouts on Nez Perce/Clearwater National Forests",
       "url": "http://www.fs.fed.us/r1/nezperce/gvc/lookouts.htm",
       "kind": "site"
@@ -230,6 +238,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -253,6 +262,14 @@
       "fields": [
         "ownership",
         "access",
+        "rental",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:id:bald-mountain-lookout",
+      "fields": [
         "rental",
         "links"
       ]
@@ -330,5 +347,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

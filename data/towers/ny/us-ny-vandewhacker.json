@@ -1,6 +1,7 @@
 {
   "id": "us-ny-vandewhacker",
   "name": "Vandewhacker Fire Tower",
+  "summary": "A 35-ft steel Aermotor lookout placed in 1918 on Vanderwhacker Mountain in Essex County; fire watch ended in 1971 or 1988, and a 2005 article describes it as restored.",
   "other_names": [
     "Vanderwacker Mountain"
   ],
@@ -15,8 +16,11 @@
   },
   "elevation_m": 1013.5,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "35-ft steel Aermotor LS40 tower",
+  "height_m": 11.0,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -30,8 +34,8 @@
   "agency": "New York State Department of Environmental Conservation",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=yes."
+    "level": "public",
+    "note": "Vanderwhacker Mountain Wild Forest is open for recreation year-round and the Tower Trail reaches the summit. No current source confirms the cab is open to visitors, and Wikipedia reports an official closure in 1989."
   },
   "staffing": {
     "status": "unknown",
@@ -39,11 +43,18 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "2.5-mile Tower Trail, about 1,650 ft of climbing from the Tower Trailhead; the road to the trailhead is often rough for low-clearance vehicles, and the NHLR suggests an extra 2.6-mile walk along it"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1911,
+      "event": "built",
+      "note": "Conservation Commission built a wooden fire observation tower on the mountain in May 1911 (Wikipedia)",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Vanderwhacker_Mountain"
+    },
     {
       "year": 1918,
       "event": "built",
@@ -51,10 +62,51 @@
       "from": "nhlr"
     },
     {
+      "year": 1918,
+      "event": "replaced",
+      "note": "Replaced by a 35-foot steel Aermotor LS40 tower; a new observer's cabin was built the same year",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ny/vandewhacker-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ny/vandewhacker-fire-tower/",
+        "https://en.wikipedia.org/wiki/Vanderwhacker_Mountain",
+        "https://easternuslookouts.weebly.com/vanderwacker-mountain.html"
+      ]
+    },
+    {
+      "year": 1971,
+      "event": "staffed_last",
+      "note": "NHLR says the tower was staffed for fire spotting through 1971; this conflicts with the Wikipedia 1988 date",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ny/vandewhacker-fire-tower/"
+    },
+    {
+      "year": 1988,
+      "event": "staffed_last",
+      "note": "Wikipedia says fire watching stopped at the end of the 1988 season",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Vanderwhacker_Mountain"
+    },
+    {
+      "year": 1989,
+      "event": "closed",
+      "note": "Wikipedia says the NYS DEC officially closed the tower in early 1989",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Vanderwhacker_Mountain"
+    },
+    {
+      "year": 2005,
+      "event": "restored",
+      "note": "A September 2005 Lake Placid News article describes the tower as restored with a state Environmental Protection Fund grant; the year the work was done is not stated",
+      "from": "research",
+      "source_url": "https://www.aarch.org/wp-content/uploads/2014/08/050916VLPVanderwhackertower1.pdf"
+    },
+    {
       "year": 2018,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 12, 2018",
-      "from": "nhlr"
+      "note": "Registered June 12, 2018 per the NHLR record",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ny/vandewhacker-fire-tower/"
     }
   ],
   "photos": [
@@ -76,6 +128,31 @@
       "label": "NHLR register entry US 1281 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ny/vandewhacker-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Vanderwhacker Mountain (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Vanderwhacker_Mountain",
+      "kind": "reference"
+    },
+    {
+      "label": "Vanderwhacker Mountain Wild Forest (New York State Department of Environmental Conservation)",
+      "url": "https://dec.ny.gov/places/vanderwhacker-mountain-wild-forest",
+      "kind": "reference"
+    },
+    {
+      "label": "Vanderwacker Mountain (Forest Lookouts (easternuslookouts.weebly.com))",
+      "url": "https://easternuslookouts.weebly.com/vanderwacker-mountain.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Vanderwhacker: Great trail climbs to glorious view from restored Adirondack fire tower (Lake Placid News (via Adirondack Architectural Heritage))",
+      "url": "https://www.aarch.org/wp-content/uploads/2014/08/050916VLPVanderwhackertower1.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Vanderwhacker Mountain (CNY Hiking)",
+      "url": "https://www.cnyhiking.com/VanderwhackerMountain.htm",
+      "kind": "reference"
     },
     {
       "label": "FFLA New York lookout list (firelookout.org)",
@@ -139,12 +216,34 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ny-vandewhacker",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-pa-rockton",
   "name": "Rockton Fire Tower",
+  "summary": "A 1975 95-ft Aermotor tower on Rockton Mountain in Clearfield County, replaced by an 80-ft steel tower around 2018 under a state tower replacement program.",
   "other_names": [],
   "country": "US",
   "region": "PA",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 728.5,
   "kind": "tower",
-  "design": null,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "80-ft steel replacement tower (c. 2018); original was a 95-ft Aermotor (1975, now demolished)",
   "height_m": 24.4,
   "status": "standing",
   "status_note": null,
@@ -43,10 +47,29 @@
   "rental": null,
   "events": [
     {
+      "year": 1975,
+      "event": "built",
+      "note": "95-ft Aermotor tower built on Rockton Mountain to replace the Old Town and Boone Mountain towers; contractor Carns Brothers of Clearfield; final cost $35,285",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/rockton-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/rockton-fire-tower/",
+        "https://easternuslookouts.weebly.com/rockton.html"
+      ]
+    },
+    {
       "year": 2017,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 6, 2017",
-      "from": "nhlr"
+      "note": "Registered December 6, 2017 as US 1254, PA 23",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/rockton-fire-tower/"
+    },
+    {
+      "year": 2017,
+      "event": "other",
+      "note": "DCNR began a $4.6 million project in September 2017 to replace 16 state forest fire towers; Rockton was on the list",
+      "from": "research",
+      "source_url": "https://paenvironmentdaily.blogspot.com/2018/02/dcnr-initiative-to-replace-renovate.html"
     },
     {
       "year": 2018,
@@ -57,8 +80,14 @@
     {
       "year": 2018,
       "event": "replaced",
-      "note": null,
-      "from": "pa_storymap"
+      "note": "Original 1975 tower replaced with an 80-ft steel structure; register dates the new tower to about 2018; the 1975 tower is now demolished",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/rockton-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/rockton-fire-tower/",
+        "https://paenvironmentdaily.blogspot.com/2018/02/dcnr-initiative-to-replace-renovate.html",
+        "https://wildfiretoday.com/pennsylvania-builds-16-new-fire-lookout-towers/"
+      ]
     }
   ],
   "photos": [
@@ -118,6 +147,16 @@
       "kind": "register"
     },
     {
+      "label": "DCNR Initiative To Replace, Renovate Fire Towers Across The State (PA Environment Digest Blog)",
+      "url": "https://paenvironmentdaily.blogspot.com/2018/02/dcnr-initiative-to-replace-renovate.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Pennsylvania builds 16 new fire lookout towers (Wildfire Today)",
+      "url": "https://wildfiretoday.com/pennsylvania-builds-16-new-fire-lookout-towers/",
+      "kind": "reference"
+    },
+    {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
       "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
       "kind": "site"
@@ -142,6 +181,8 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
+        "material",
         "status",
         "registers",
         "agency",
@@ -154,7 +195,6 @@
       "source": "pa_storymap",
       "key": "pa_storymap:rockton-tower:41.0755:-78.5514",
       "fields": [
-        "kind",
         "height_m",
         "events",
         "photos",
@@ -175,12 +215,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-rockton",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

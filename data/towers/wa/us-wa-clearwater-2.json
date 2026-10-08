@@ -16,6 +16,9 @@
   },
   "elevation_m": 1727.6,
   "kind": "tower",
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "Aermotor MC-39 steel tower",
   "height_m": null,
   "status": "standing",
@@ -174,6 +177,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Clearwater Lookout - Trailchick.com",
       "url": "https://www.trailchick.com/wa-state-fire-lookouts/clearwater-lookout/",
       "kind": "site"
@@ -198,6 +206,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -221,6 +230,14 @@
       "fields": [
         "ownership",
         "access",
+        "rental",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:wa:clearwater-lookout-cabin",
+      "fields": [
         "rental",
         "links"
       ]
@@ -289,5 +306,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

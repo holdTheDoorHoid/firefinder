@@ -41,6 +41,7 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from _common import (  # noqa: E402
+    RAW_ROOT,
     FetchError,
     cache_path,
     fetch_text,
@@ -48,6 +49,9 @@ from _common import (  # noqa: E402
     slugify,
     write_source_json,
 )
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
+from structure import structure_words  # noqa: E402
 
 SOURCE = "firelookout_com"
 BASE = "https://www.firelookout.com"
@@ -165,6 +169,25 @@ def fetch_cached(rel_path: str) -> str:
     return fetch_text(f"{BASE}/{rel_path}", SOURCE, rel_path)
 
 
+def detail_prose(html: str) -> str:
+    """The description paragraph of a tower page, as plain text (used in memory only)."""
+    prose_m = PROSE_RE.search(html)
+    prose = re.sub(r"<[^>]+>", " ", prose_m.group(1)).strip() if prose_m else ""
+    return re.sub(r"\s+", " ", prose)
+
+
+def cached_prose(raw: dict) -> str | None:
+    """The cached description of a record whose tower page was read at crawl time, or None
+    (for pipeline/structure.py --backfill; never fetches)."""
+    url = raw.get("url") or ""
+    if (raw.get("extra") or {}).get("detail_fetch_skipped") or not _is_real_tower_url(url):
+        return None
+    path = RAW_ROOT / SOURCE / re.sub(r"^https?://[^/]+/", "", url)
+    if not path.is_file():
+        return None
+    return detail_prose(path.read_bytes().decode("latin-1", errors="replace"))
+
+
 def parse_detail_page(html: str) -> dict:
     title_m = TITLE_RE.search(html)
     title = title_m.group(1).strip() if title_m else ""
@@ -181,9 +204,7 @@ def parse_detail_page(html: str) -> dict:
     rip_start = int(rip_m.group(1)) if rip_m else None
     rip_end = int(rip_m.group(2)) if rip_m and rip_m.group(2) != "?" else None
 
-    prose_m = PROSE_RE.search(html)
-    prose = re.sub(r"<[^>]+>", " ", prose_m.group(1)).strip() if prose_m else ""
-    prose = re.sub(r"\s+", " ", prose)
+    prose = detail_prose(html)
 
     designs = DESIGN_RE.findall(prose)
     design = designs[-1] if designs else None
@@ -265,6 +286,8 @@ def parse_detail_page(html: str) -> dict:
     return {
         "display_name": display_name,
         "kind_word": kind_word,
+        # short structure facts ("treated timber tower" -> "wood tower"): pipeline/structure.py
+        "structure_words": structure_words(prose),
         "agency_raw": agency_raw,
         "county": county,
         "elevation_ft": elevation_ft,
@@ -446,6 +469,7 @@ def build_state_records(region: str, all_page: str, standing_page: str, base_pag
                 **({"height_ft": detail["height_ft"]} if detail and detail.get("height_ft") else {}),
                 **({"ownership": agency_to_ownership(agency_raw)} if agency_raw else {}),
                 **({"staffing_hint": detail["staffing"]} if detail and detail.get("staffing") else {}),
+                **({"structure_words": detail["structure_words"]} if detail and detail.get("structure_words") else {}),
             },
         }
         records.append(rec)

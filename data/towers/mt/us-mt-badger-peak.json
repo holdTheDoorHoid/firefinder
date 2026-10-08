@@ -1,6 +1,7 @@
 {
   "id": "us-mt-badger-peak",
   "name": "Badger Peak Lookout",
+  "summary": "Steel lookout on the Northern Cheyenne Reservation near Lame Deer, Montana, dated 1930 and last reported standing in 2016; registered with the NHLR in 2022.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 1342.3,
   "kind": "tower",
-  "design": null,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "Steel tower",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -29,7 +33,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "On the Northern Cheyenne Reservation and reached through a wire gate; the sources give no public visiting rules."
   },
   "staffing": {
     "status": "unknown",
@@ -38,21 +42,38 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "From Lame Deer, drive east on State Highway 8 about 4.7 miles to a forest road, then follow a bulldozed grade past a wire gate to the tower."
   },
   "rental": null,
   "events": [
     {
       "year": 1930,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR gives 1930; firelookout.com dates the steel tower to the 1930s",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/badger-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/badger-peak-lookout/",
+        "https://www.firelookout.com/mt/badgerpeak.html"
+      ]
+    },
+    {
+      "year": 2016,
+      "event": "other",
+      "note": "Last reported standing: the NHLR says still standing as of 2016, and firelookout.com says Still there 2016",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/badger-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/badger-peak-lookout/",
+        "https://www.firelookout.com/mt/badgerpeak.html"
+      ]
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 12, 2022",
-      "from": "nhlr"
+      "note": "Registered April 12, 2022 as US 1530, MT 93",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/badger-peak-lookout/"
     }
   ],
   "photos": [
@@ -74,6 +95,16 @@
       "label": "NHLR register entry US 1530 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/mt/badger-peak-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Badger Peak - Forest Lookouts (Montana Forest Lookouts)",
+      "url": "https://montanalookouts.weebly.com/badger-peak.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Montana Lookouts (Standing) (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/mt/mt-st/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
@@ -100,6 +131,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -130,6 +162,21 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-badger-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -153,9 +200,15 @@
       "note": "NHLR lists lookouts that were standing when registered. firelookout.com lists it, but not on its map of standing lookouts."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

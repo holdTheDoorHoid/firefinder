@@ -1,0 +1,11 @@
+Cole Hill sits in Warren County, overlooking the Allegheny River.[^1][^2] A 1924 report in The Kane Republican said a steel lookout would be built on the hill, with a watchman stationed there to keep an eye out for fire.[^2] The Pennsylvania Bureau of Forestry built the first tower in 1925 as a 60-foot Aermotor, on land about half a mile from where it stands today.[^1][^3]
+
+A watchman worked the tower through the dry seasons, and E.L. Martin was on duty in many years from 1928 to 1941.[^2] In 1928 the cabin near the tower was fitted with a stove so that three men could stay there in dry weather.[^2] That May, nine fires were burning at once in scattered places, and among the worst was a blaze on the Allegheny River near Tidioute.[^2] In 1930 the roof was painted gray with the number X2 in yellow, to help airplanes passing over the hill.[^2]
+
+The tower was moved in 1932 and raised to 80 feet, a change that followed a land dispute with the first site's owners.[^1] The Warren Times Mirror reported that the new tower was twenty feet higher than the old one.[^2] The sources do not agree on the first build year. The NHLR gives 1932 as the build year, while its own description and the FFLOS entry date the first tower to 1925.[^1][^3] A 1949 item says the tower material was hauled in August 1926, so the exact date is uncertain.[^2]
+
+By 1949 women had been stationed on the tower for seven years, and that season L.L. Dey of Torpedo was named watchman.[^2] The FFLOS entry, registered in 2008, reports that the tower survives, privately owned and in poor condition.[^3] The NHLR, registered in 2009, says it is now privately owned and its lower steps have been removed.[^1] I did not find a newer condition report, so its present state is unverified. Because it is privately owned, a visit would need the owner's permission, and I found no public visit information.
+
+[^1]: Cole Hill Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/pa/cole-hill-lookout/ (accessed 2026-10-08).
+[^2]: Cole Hill - FOREST LOOKOUTS, Eastern US Lookouts (Weebly), https://easternuslookouts.weebly.com/cole-hill.html (accessed 2026-10-08).
+[^3]: Cole Hill Tower Site, Former Fire Lookout Sites Register, http://firetower.org/lookouts/us/pa/cole-hill-tower-site/ (accessed 2026-10-08).

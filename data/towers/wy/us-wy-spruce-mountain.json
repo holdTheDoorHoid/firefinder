@@ -14,6 +14,9 @@
   },
   "elevation_m": 3047.1,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
   "design": "R-6 tower (41-foot treated-timber, per firelookout.com; Recreation.gov instead says 55 feet)",
   "height_m": 9.1,
   "status": "standing",
@@ -161,6 +164,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Spruce Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wy/sprucemtn.html",
       "kind": "site"
@@ -204,9 +212,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:wy:spruce-mountain-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:wy:spruce-mtn:41.2032:-106.2168",
       "fields": [
+        "material",
         "design",
         "height_m",
         "events",
@@ -258,5 +275,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

@@ -15,6 +15,9 @@
   },
   "elevation_m": 1251.5,
   "kind": "ground",
+  "material": null,
+  "material_from": null,
+  "roles": [],
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -42,7 +45,14 @@
     "drive_up": null,
     "trail_note": null
   },
-  "rental": null,
+  "rental": {
+    "available": true,
+    "source": "ffla",
+    "provider": "recreation.gov",
+    "url": "https://www.recreation.gov/camping/campgrounds/234404",
+    "ridb_facility_id": "234404",
+    "checked": "2026-10-08"
+  },
   "events": [
     {
       "year": 1934,
@@ -102,8 +112,18 @@
       "kind": "register"
     },
     {
+      "label": "Book or read about Post Creek Lookout (recreation.gov)",
+      "url": "https://www.recreation.gov/camping/campgrounds/234404",
+      "kind": "rental"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
       "kind": "association"
     }
   ],
@@ -133,6 +153,14 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:ca:post-creek-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
     }
   ],
   "conflicts": [],
@@ -140,5 +168,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

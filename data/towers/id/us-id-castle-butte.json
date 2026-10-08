@@ -14,6 +14,9 @@
   },
   "elevation_m": 2021.4,
   "kind": "two_story",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "L-4 cab on a 10-foot stone base, 14x14 ft with catwalk",
   "height_m": null,
   "status": "standing",
@@ -219,6 +222,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Castle Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/id/castlebutte.html",
       "kind": "site"
@@ -266,9 +274,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:id:castle-butte-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:id:castle-butte:46.4340:-115.2198",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -329,5 +346,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

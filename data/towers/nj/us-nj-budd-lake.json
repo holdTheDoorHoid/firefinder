@@ -1,6 +1,7 @@
 {
   "id": "us-nj-budd-lake",
   "name": "Budd Lake Fire Tower",
+  "summary": "Morris County tower built 1924 near Budd Lake, the state's only lookout with an Osborne fire finder; still active, seasonally staffed, top cab locked.",
   "other_names": [
     "Budd Lake (95 Mile Tree)",
     "95 Mile Lookout Tower",
@@ -17,7 +18,10 @@
   },
   "elevation_m": 360.3,
   "kind": "tower",
-  "design": null,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "60-ft steel Aermotor tower with 7'x7' metal cab; carries an Osborne fire finder",
   "height_m": 18.0,
   "status": "standing",
   "status_note": null,
@@ -32,8 +36,8 @@
   "agency": "New Jersey Forest Fire Service",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Top cabin locked and a No Trespassing sign posted at the base, per a 2025 hiking guide. The guide says the sign is not enforced and that visitors can climb most of the way up. Active state fire tower."
   },
   "staffing": {
     "status": "unknown",
@@ -41,22 +45,42 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Park at the end of the road and walk a short fire road to the base, per the 2023 NHLR visit report. The 2025 guide says visitors can climb most of the way up; the top cabin is locked."
   },
   "rental": null,
   "events": [
     {
+      "year": 1905,
+      "event": "other",
+      "note": "Site known as the 95 Mile Tree Lookout, for its place on the old state turnpike; the register does not say a tower stood there then",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/budd-lake-fire-tower/"
+    },
+    {
       "year": 1924,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Current 60-ft steel Aermotor tower; a May 1924 notice announced a sixty-foot steel tower on Turkey Hill near Waterloo",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/budd-lake-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nj/budd-lake-fire-tower/",
+        "https://easternuslookouts.weebly.com/budd-lake.html"
+      ]
     },
     {
       "year": 1997,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 15, 1997",
-      "from": "nhlr"
+      "note": "Registered December 15, 1997 as US 246, NJ 8",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/budd-lake-fire-tower/"
+    },
+    {
+      "year": 2023,
+      "event": "restored",
+      "note": "Steel work and a new paint job; repainted April 2023 per the visit report",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/budd-lake-fire-tower/"
     }
   ],
   "photos": [
@@ -90,6 +114,11 @@
       "kind": "register"
     },
     {
+      "label": "95-Mile Views at the Budd Lake Fire Tower (Explore North Jersey)",
+      "url": "https://explorenorthjersey.com/95-mile-views-at-the-budd-lake-fire-tower/",
+      "kind": "reference"
+    },
+    {
       "label": "Budd Lake Station (Wikipedia (List of New Jersey Forest Fire Service fire towers))",
       "url": "https://en.wikipedia.org/wiki/List_of_New_Jersey_Forest_Fire_Service_fire_towers",
       "kind": "site"
@@ -114,6 +143,8 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
+        "material",
         "status",
         "registers",
         "agency",
@@ -126,7 +157,6 @@
       "source": "nj_forest_fire_towers",
       "key": "nj_forest_fire_towers:nj:budd-lake-station",
       "fields": [
-        "kind",
         "height_m",
         "ownership",
         "photos",
@@ -146,12 +176,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nj-budd-lake",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

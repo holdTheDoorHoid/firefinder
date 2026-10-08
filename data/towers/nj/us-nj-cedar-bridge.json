@@ -1,6 +1,7 @@
 {
   "id": "us-nj-cedar-bridge",
   "name": "Cedar Bridge Fire Tower",
+  "summary": "Ocean County tower erected in 1924 was gone from its first site by 1938 (records differ on torn down vs moved); moved to its present Route 539 site around 1983; still active.",
   "other_names": [],
   "country": "US",
   "region": "NJ",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 53.9,
   "kind": "tower",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "100-ft International Derrick steel tower with 7'x7' metal cab",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -28,8 +32,8 @@
   "agency": "New Jersey Forest Fire Service",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Fenced in with a locked gate at the 2004 visit. Active fire-service tower beside County Route 539."
   },
   "staffing": {
     "status": "unknown",
@@ -38,15 +42,59 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "No visiting directions confirmed. The register's access checklist asks whether directions are signed without recording an answer. The 2004 visit found the tower fenced with a locked gate."
   },
   "rental": null,
   "events": [
     {
+      "year": 1924,
+      "event": "built",
+      "note": "Original 60-ft Aermotor lookout; the register says it stood seven miles south of the present site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/cedar-bridge-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nj/cedar-bridge-fire-tower/",
+        "https://www.njpinebarrens.com/the-history-of-the-cedar-bridge-fire-tower/"
+      ]
+    },
+    {
+      "year": 1938,
+      "event": "abandoned",
+      "note": "Newspaper item of July 8, 1938 calls the tower abandoned",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/cedar-bridge.html"
+    },
+    {
+      "year": 1938,
+      "event": "relocated",
+      "note": "Moved across the county line into Burlington County, per a 1951 visit; a 1950 survey note quoting state records says it was torn down",
+      "from": "research",
+      "source_url": "https://www.njpinebarrens.com/the-history-of-the-cedar-bridge-fire-tower/"
+    },
+    {
+      "year": 1942,
+      "event": "relocated",
+      "note": "Believed taken down about 1942 and possibly re-erected at Old Bridge, per an unpublished manuscript as quoted; not confirmed",
+      "from": "research",
+      "source_url": "https://www.njpinebarrens.com/the-history-of-the-cedar-bridge-fire-tower/"
+    },
+    {
+      "year": 1983,
+      "event": "relocated",
+      "note": "Helicopter move about one mile to the present site on County Route 539",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/cedar-bridge-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nj/cedar-bridge-fire-tower/",
+        "https://www.njpinebarrens.com/the-history-of-the-cedar-bridge-fire-tower/"
+      ]
+    },
+    {
       "year": 1997,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 15, 1997",
-      "from": "nhlr"
+      "note": "Registered December 15, 1997 as US 248, NJ 10",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/cedar-bridge-fire-tower/"
     }
   ],
   "photos": [
@@ -68,6 +116,11 @@
       "label": "NHLR register entry US 248 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/nj/cedar-bridge-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "The History of the Cedar Bridge Fire Tower (NJPineBarrens.com)",
+      "url": "https://www.njpinebarrens.com/the-history-of-the-cedar-bridge-fire-tower/",
+      "kind": "reference"
     },
     {
       "label": "Cedar Bridge Station (Wikipedia (List of New Jersey Forest Fire Service fire towers))",
@@ -94,6 +147,7 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
         "status",
         "registers",
         "agency",
@@ -106,7 +160,6 @@
       "source": "nj_forest_fire_towers",
       "key": "nj_forest_fire_towers:nj:cedar-bridge-station",
       "fields": [
-        "kind",
         "height_m",
         "ownership",
         "links"
@@ -125,12 +178,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nj-cedar-bridge",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-mt-highland-red",
   "name": "Highland (Red) Lookout",
+  "summary": "Highland (Red) Lookout on Red Mountain south of Butte: a site developed about 1933, a present L-4 cab built in 1954, now listed as available for emergencies.",
   "other_names": [
     "Highland (Red Mountain)",
     "Highland Lookout"
@@ -16,6 +17,9 @@
   },
   "elevation_m": 2956.9,
   "kind": "two_story",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "L-4",
   "height_m": null,
   "status": "standing",
@@ -31,8 +35,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Listed as available for emergencies; no public rental or visitor program found. Reached by an unpaved, seasonal summit road."
   },
   "staffing": {
     "status": "unknown",
@@ -40,11 +44,29 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Fish Creek Road is unpaved, needs a high-clearance 4x4, and is usually impassable October to June. With no snow and enough clearance, a four-wheel-drive trail runs to a gate just over 9,000 ft."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1922,
+      "event": "other",
+      "note": "Lightning strike on August 22, 1922, on a group of Butte Boy Scouts during a hike. One scout died and others were injured.",
+      "from": "research",
+      "source_url": "https://www.dangerousroads.org/north-america/usa/8203-red-mountain-montana.html"
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "First L-4 structure on the site. firelookout.com says an L-4 cab on the summit; NHLR calls it an L-4 groundhouse.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/highland-red-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/highland-red-lookout/",
+        "https://www.firelookout.com/mt/highland.html"
+      ]
+    },
     {
       "year": 1954,
       "event": "built",
@@ -52,10 +74,30 @@
       "from": "nhlr"
     },
     {
+      "year": 1954,
+      "event": "replaced",
+      "note": "Present L-4 cab on a concrete base replaced the 1933 structure. firelookout.com places it about 1/4 mile north of Red Mtn.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/highland-red-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/highland-red-lookout/",
+        "https://www.firelookout.com/mt/highland.html",
+        "https://www.dangerousroads.org/north-america/usa/8203-red-mountain-montana.html"
+      ]
+    },
+    {
       "year": 2011,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 24, 2011",
-      "from": "nhlr"
+      "note": "Registered as NHLR US 927 (MT 55) on September 24, 2011.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/highland-red-lookout/"
+    },
+    {
+      "year": 2022,
+      "event": "other",
+      "note": "Memorial monument installed beside the tower to the 1922 lightning strike.",
+      "from": "research",
+      "source_url": "https://www.dangerousroads.org/north-america/usa/8203-red-mountain-montana.html"
     }
   ],
   "photos": [
@@ -127,6 +169,16 @@
       "kind": "register"
     },
     {
+      "label": "How to drive the unpaved road to Red Mountain in Montana? (DangerousRoads.org)",
+      "url": "https://www.dangerousroads.org/north-america/usa/8203-red-mountain-montana.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Red Mountain (SummitPost)",
+      "url": "https://www.summitpost.org/red-mountain/153185",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
       "kind": "association"
@@ -173,6 +225,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:highland-red-mtn:45.7686:-112.4851",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -184,12 +237,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-highland-red",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

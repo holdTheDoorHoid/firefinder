@@ -1,0 +1,13 @@
+Webb Peak Lookout sits on Webb Peak in the Pinaleno Mountains of Graham County, Arizona, inside the Coronado National Forest.[^1][^2] The National Register record lists the Civilian Conservation Corps as its architect and gives 1933 as the significant year.[^3] The tower is a 46-foot Aermotor with a 7-by-7-foot metal cab.[^1][^2] The register notes that the original platform ladder was converted, so only the last section is now a ladder climb.[^1] The two sources name different Aermotor models, the register's MC-40 and the hiking club's CL 100-106, and they also disagree on elevation: 9,984 feet in the register and 10,029 feet in the hiking club's report.[^1][^2]
+
+The lookout was listed on the National Register of Historic Places in 1988, and it entered the National Historic Lookout Register on January 31, 2003.[^3][^1] The register now calls it inactive.[^1] Its visit report from May 2020 records the lookout as not staffed, finds the steel frame in good condition, and leaves the cab at the top uncertain.[^1]
+
+A lightning strike on Mount Graham started the Frye Fire in June 2017, and the fire burned 48,443 acres in Graham County.[^5] The register's 2020 visit found that the fire had cooked the lookout and left it surrounded by charred timber.[^1] The hiking club reports that the fire destroyed the support structures, while the metal tower and cab were still standing afterward.[^2] A Weebly lookout site says instead that the tower was caught in the blaze and destroyed.[^4] The sources disagree on the tower's fate. I give the most weight to the 2020 register visit and the hiking club's report, since both describe the steel frame still standing.[^1][^2]
+
+Getting to it means a hike. The register notes a trailhead sign at Columbine Campground, but the trail to the tower is hard to follow in places because of fallen timber and erosion.[^1] I found no mention of overnight rental or a visitor program in these sources. With the cab's condition uncertain, it is best admired from the ground.[^1][^2]
+
+[^1]: Webb Peak Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/az/webb-peak-lookout/ (accessed 2026-10-08).
+[^2]: Webb Peak Fire Lookout, GVRHC, https://www.gvrhc.org/Library/WebbPeakFireLookout.pdf (accessed 2026-10-08).
+[^3]: Webb Peak Lookout Tower, National Register Information System, National Park Service, https://npgallery.nps.gov/AssetDetail/NRIS/87002464 (accessed 2026-10-08).
+[^4]: Webb Peak, FOREST LOOKOUTS, https://westlookouts.weebly.com/webb-peak.html (accessed 2026-10-08).
+[^5]: Frye Fire, Wikipedia, https://en.wikipedia.org/wiki/Frye_Fire (accessed 2026-10-08).

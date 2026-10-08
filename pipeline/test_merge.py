@@ -225,13 +225,63 @@ class Matching(unittest.TestCase):
         self.assertEqual({s["source"] for s in self.ws.tower_with_key("ffla:a")["sources"]}, {"ffla", "ridb"})
         self.assertEqual([u["key"] for u in rep["unplaced"]], ["ffla:b"])
 
-    def test_out_of_scope_hidden(self):
+    def test_sites_with_no_structure_are_shown(self):
+        # Owner decision 2026-10-08: camps, lookout trees and bare points are shown (the map
+        # leaves them off by default); data/structure_kinds.json can hide a kind again.
         self.ws.run({"ffla": [rec("ffla", "t", "Grandview", 35.94, -111.98, "AZ", kind="tree"),
-                              rec("ffla", "c", "Bear Point", 45.5, -115.5, kind="camp")]})
+                              rec("ffla", "c", "Bear Point", 45.5, -115.5, kind="camp"),
+                              rec("ffla", "p", "Burgard", 44.5, -116.5, type_raw="Firefinder", kind="unknown",
+                                  status_raw="Abandoned", status="gone")]})
+        tree = self.ws.tower_with_key("ffla:t")
+        self.assertFalse(tree["hidden"])
+        self.assertEqual(tree["kind"], "tree")
+        self.assertFalse(self.ws.tower_with_key("ffla:c")["hidden"])
+        point = self.ws.tower_with_key("ffla:p")
+        self.assertEqual((point["kind"], point["hidden"], point["material"]), ("point", False, None))
+
+    def test_a_hidden_kind_is_hidden(self):
+        saved = dict(M.HIDDEN_KIND_REASON)
+        M.HIDDEN_KIND_REASON["tree"] = "Tree platform: out of scope (structures only)"
+        try:
+            self.ws.run({"ffla": [rec("ffla", "t", "Grandview", 35.94, -111.98, "AZ", kind="tree")]})
+        finally:
+            M.HIDDEN_KIND_REASON.clear()
+            M.HIDDEN_KIND_REASON.update(saved)
         tree = self.ws.tower_with_key("ffla:t")
         self.assertTrue(tree["hidden"])
         self.assertIn("Tree", tree["hidden_reason"])
-        self.assertTrue(self.ws.tower_with_key("ffla:c")["hidden"])
+
+    def test_a_structure_from_another_source_beats_a_bare_point(self):
+        self.ws.run({"ffla": [rec("ffla", "p", "Prairie City", 44.46, -118.7, "OR", type_raw="Firefinder", kind="unknown")],
+                     "osm": [rec("osm", "n1", "Prairie City Lookout", 44.4601, -118.7, "OR", kind="ground")]})
+        self.assertEqual(self.ws.tower_with_key("ffla:p")["kind"], "ground")
+
+    def test_kind_material_and_roles(self):
+        self.ws.run({
+            "ffla": [rec("ffla", "a", "Shadow Mtn.", 40.2, -105.8, "CO", type_raw="Stone Tower", kind="tower"),
+                     rec("ffla", "b", "Rising Sun AWS", 39.7, -76.06, "MD", type_raw="AWS Tower", kind="tower"),
+                     rec("ffla", "c", "Sawtooth Valley", 43.9, -114.9, "ID", type_raw="Rooftop", kind="unknown"),
+                     rec("ffla", "d", "Big Butte", 46.1, -117.2, "WA", status_raw="Standing*")],
+            "nhlr": [rec("nhlr", "US 9", "Bald Knob", 45.0, -116.0, kind="unknown",
+                         extra={"structure_words": ["kind tower", "steel tower"]})],
+            "firelookout_com": [rec("firelookout_com", "x", "Bald Knob", 45.0, -116.0, kind="tower", type_raw="Tower",
+                                    extra={"design": "L-4"}),
+                                rec("firelookout_com", "y", "Hat Point", 45.4, -116.66, "OR", kind="ground", type_raw="Cabin",
+                                    extra={"design": "L-4"})],
+        })
+        shadow = self.ws.tower_with_key("ffla:a")
+        self.assertEqual((shadow["kind"], shadow["material"], shadow["material_from"]), ("tower", "stone", "ffla"))
+        self.assertEqual(self.ws.tower_with_key("ffla:b")["roles"], ["aws"])
+        self.assertEqual(self.ws.tower_with_key("ffla:c")["kind"], "rooftop")
+        big = self.ws.tower_with_key("ffla:d")
+        self.assertEqual(big["status"], "standing")
+        self.assertIn("cab is gone", big["status_note"])
+        knob = self.ws.tower_with_key("nhlr:US 9")
+        self.assertEqual((knob["kind"], knob["material"], knob["material_from"]), ("tower", "steel", "nhlr"))
+        self.assertIn("material", next(s for s in knob["sources"] if s["source"] == "nhlr")["fields"])
+        # An L-4 ground cab is wood by its design; an L-4 on a tower says nothing about the tower.
+        hat = self.ws.tower_with_key("firelookout_com:y")
+        self.assertEqual((hat["material"], hat["material_from"]), ("wood", "design"))
 
     def test_conflicts_and_verification(self):
         self.ws.run({

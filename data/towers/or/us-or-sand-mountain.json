@@ -1,6 +1,7 @@
 {
   "id": "us-or-sand-mountain",
   "name": "Sand Mountain Lookout",
+  "summary": "Willamette NF lookout: first cab c.1930-33, burned 1968, cab moved from Whisky Peak and rebuilt 1989, NHLR 1990; staffed in summer, gated spur road.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 1635.6,
   "kind": "tower",
-  "design": "L-4",
-  "height_m": null,
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
+  "design": "Grange-hall-style gable-roofed L-4 cab (14 x 14 gable-roof house c.1931 per Forest Lookouts); the current cab came from Whisky Peak and was set on a 10-foot treated timber tower in 1989",
+  "height_m": 3.0,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Spur road gated 1.25 miles from the lookout; Old Santiam Wagon Road (FS #810) in poor condition, high clearance recommended. NHLR lists the lookout as available for rental."
   },
   "staffing": {
     "status": "staffed",
@@ -37,28 +41,83 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Spur road to the lookout is gated 1.25 miles from it; season runs late June to mid October"
   },
   "rental": null,
   "events": [
     {
+      "year": 1926,
+      "event": "staffed",
+      "note": "July 1926 newspaper: an additional lookout would be stationed on Sand Mountain if the fire hazard stayed high",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/sand-mountain.html"
+    },
+    {
       "year": 1932,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "firelookout.com: established 1932 with a gable-roofed L-4 cab. Forest Lookouts says c.1931; the Society gives 1930 as the style date and 1933 for the Grange-hall-style L-4",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/sandmtn.html",
+      "source_urls": [
+        "https://www.firelookout.com/or/sandmtn.html",
+        "https://oregonlookouts.weebly.com/sand-mountain.html",
+        "https://sandmountain.org/projects/sand-mountain-lookout/"
+      ]
+    },
+    {
+      "year": 1967,
+      "event": "fire",
+      "note": "Big Lake fire, August 1967, swept over the summit; the station survived it",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/sand-mountain.html",
+      "source_urls": [
+        "https://oregonlookouts.weebly.com/sand-mountain.html",
+        "http://nhlr.org/lookouts/us/or/sand-mountain-lookout/"
+      ]
     },
     {
       "year": 1968,
       "event": "burned",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Burned to the ground per a Eugene Register-Guard report dated July 1, 1968; Forest Service said the cause was unknown; firelookout.com says it accidentally burned",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/sand-mountain.html",
+      "source_urls": [
+        "https://oregonlookouts.weebly.com/sand-mountain.html",
+        "https://www.firelookout.com/or/sandmtn.html"
+      ]
+    },
+    {
+      "year": 1968,
+      "event": "other",
+      "note": "Pop-up cupola trailer used as a temporary lookout from 1968",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/sandmtn.html"
+    },
+    {
+      "year": 1989,
+      "event": "relocated",
+      "note": "Cab moved from Whisky Peak and rebuilt; a 10-foot treated timber tower was erected for it",
+      "from": "research",
+      "source_url": "https://sandmountain.org/projects/sand-mountain-lookout/",
+      "source_urls": [
+        "https://sandmountain.org/projects/sand-mountain-lookout/",
+        "https://www.firelookout.com/or/sandmtn.html"
+      ]
     },
     {
       "year": 1990,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 18, 1990",
-      "from": "nhlr"
+      "note": "National Historic Lookout Register registration date August 18, 1990",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/sand-mountain-lookout/"
+    },
+    {
+      "year": 1990,
+      "event": "restored",
+      "note": "Dedication ceremony for the new lookout in 1990",
+      "from": "research",
+      "source_url": "https://sandmountain.org/projects/sand-mountain-lookout/"
     }
   ],
   "photos": [
@@ -130,6 +189,16 @@
       "kind": "register"
     },
     {
+      "label": "Sand Mountain (Forest Lookouts)",
+      "url": "https://oregonlookouts.weebly.com/sand-mountain.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Sand Mountain Lookout (Sand Mountain Society)",
+      "url": "https://sandmountain.org/projects/sand-mountain-lookout/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -176,6 +245,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:sand-mtn:44.3848:-121.9280",
       "fields": [
+        "material",
         "design",
         "staffing",
         "events",
@@ -189,12 +259,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-sand-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

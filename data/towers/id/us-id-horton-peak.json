@@ -1,6 +1,7 @@
 {
   "id": "us-id-horton-peak",
   "name": "Horton Peak Lookout",
+  "summary": "A 1938 L-4 cab built for Sawtooth National Forest fire watch, used in emergencies into the 1970s, now locked and abandoned at the end of a hike-in trail.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2980.0,
   "kind": "ground",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "L-4 cab",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,31 +32,73 @@
   "agency": "Sawtooth National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Reached on foot by a hike-in trail. The cabin is locked and visitors cannot enter the building."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "Hike-in from the Horton Trailhead. Discover Sawtooth gives a 7.2-mile round trip with 2,600 ft of gain; a 2004 visit report describes a three-mile hike."
   },
   "rental": null,
   "events": [
     {
       "year": 1938,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "L-4 cab; a local history site credits Civilian Conservation Corps crews",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/hortonpeak.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/hortonpeak.html",
+        "https://www.idahofirelookouts.com/southern-idaho/horton-peak-lookout/",
+        "https://idaholookouts.weebly.com/horton-peak.html"
+      ]
+    },
+    {
+      "year": 1939,
+      "event": "other",
+      "note": "Idaho Evening Times (August 8, 1939) names the new lookout Horton Peak, for William Horton, a ranger who retired in 1929",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/horton-peak.html"
+    },
+    {
+      "year": 1942,
+      "event": "other",
+      "note": "4.79-acre lookout site withdrawn from the public domain (December 30, 1942)",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/horton-peak.html"
+    },
+    {
+      "year": 1959,
+      "event": "staffed",
+      "note": "Times-News: a man placed on the station, which had not been manned for several years",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/horton-peak.html"
+    },
+    {
+      "year": 1960,
+      "event": "staffed",
+      "note": "One of two emergency lookouts manned during the fire season",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/horton-peak.html"
+    },
+    {
+      "year": 2004,
+      "event": "other",
+      "note": "Visit report (September 1, 2004): closed and locked, sits on the ground, shutters battened for security",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/horton-peak-lookout/"
     },
     {
       "year": 2015,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 3, 2015",
-      "from": "nhlr"
+      "note": "Registered January 3, 2015 as US 1062, ID 106",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/horton-peak-lookout/"
     }
   ],
   "photos": [
@@ -112,6 +158,16 @@
       "kind": "register"
     },
     {
+      "label": "Horton Peak - FOREST LOOKOUTS (Forest Lookouts (idaholookouts.weebly.com))",
+      "url": "https://idaholookouts.weebly.com/horton-peak.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Horton Peak (Discover Sawtooth)",
+      "url": "https://discoversawtooth.org/horton-peak",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -156,6 +212,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:horton-peak:43.9657:-114.7485",
       "fields": [
+        "material",
         "design",
         "agency",
         "ownership",
@@ -170,6 +227,21 @@
       "fields": [
         "photos",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-horton-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -198,9 +270,15 @@
       "note": "NHLR lists lookouts that were standing when registered. idahofirelookouts.com's status is read from a short summary."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

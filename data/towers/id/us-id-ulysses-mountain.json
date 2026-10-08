@@ -1,6 +1,7 @@
 {
   "id": "us-id-ulysses-mountain",
   "name": "Ulysses Mountain Lookout",
+  "summary": "A 60-ft steel tower built in 1928 in Idaho's Salmon-Challis National Forest; the log cabin burned in 2012 and the tower stands with broken rungs.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2331.4,
   "kind": "tower",
-  "design": null,
+  "material": "steel",
+  "material_from": "firelookout_com",
+  "roles": [],
+  "design": "60-ft Aeromotor steel tower with 7x7-ft cab, plus a log cabin for living quarters",
   "height_m": 18.3,
   "status": "standing",
   "status_note": null,
@@ -25,20 +29,20 @@
       "url": "http://nhlr.org/lookouts/us/id/ulysses-mountain-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Salmon-Challis National Forest (North Fork Ranger District cooperator)",
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "No current road, gate or rental information in the sources. The site is on Salmon-Challis National Forest land."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1968"
   },
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "No visitor route is described. The tower has broken ladder rungs and missing platforms, and the writer did not climb it."
   },
   "rental": null,
   "events": [
@@ -49,10 +53,48 @@
       "from": "nhlr"
     },
     {
+      "year": 1928,
+      "event": "built",
+      "note": "60-ft steel tower with 7x7 cab, plus log cabin living quarters",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/ulysses-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/ulysses-mountain-lookout/",
+        "https://www.firelookout.com/id/ulysses.html",
+        "https://www.idahofirelookouts.com/southern-idaho/ulysses-mountain-lookout/"
+      ]
+    },
+    {
+      "year": 1965,
+      "event": "staffed_last",
+      "note": "Last regularly staffed season per Idaho Fire Lookouts; Robert Smith named as known staff",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/southern-idaho/ulysses-mountain-lookout/"
+    },
+    {
+      "year": 1968,
+      "event": "abandoned",
+      "note": "Abandoned per the Idaho Fire Lookouts timeline; Forest Fire Lookout says not used since the 1970s",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/southern-idaho/ulysses-mountain-lookout/",
+      "source_urls": [
+        "https://www.idahofirelookouts.com/southern-idaho/ulysses-mountain-lookout/",
+        "https://www.firelookout.com/id/ulysses.html"
+      ]
+    },
+    {
       "year": 2011,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 24, 2011",
-      "from": "nhlr"
+      "note": "Registered September 24, 2011 as US 924, ID 87",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/ulysses-mountain-lookout/"
+    },
+    {
+      "year": 2012,
+      "event": "burned",
+      "note": "Log cabin living quarters burned in a 2012 forest fire",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/ulysses.html"
     }
   ],
   "photos": [
@@ -194,6 +236,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:ulysses-mtn:45.4295:-114.1103",
       "fields": [
+        "material",
         "height_m",
         "photos",
         "links"
@@ -205,6 +248,22 @@
       "fields": [
         "photos",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-ulysses-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -248,9 +307,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

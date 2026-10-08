@@ -2,7 +2,9 @@
   "id": "us-mt-scalplock-mountain",
   "name": "Scalplock Mountain Lookout",
   "summary": "A 1931 two-story Glacier National Park lookout above Essex, NRHP-listed in 1986; staffed in summer and reached by trail.",
-  "other_names": [],
+  "other_names": [
+    "Scalplock Lookout"
+  ],
   "country": "US",
   "region": "MT",
   "county": "Flathead",
@@ -14,6 +16,9 @@
   },
   "elevation_m": 2063.8,
   "kind": "two_story",
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
   "design": "Two-story frame cab, about 14 by 14 feet, on a 10-foot tower with catwalk; plan derived from Forest Service designs",
   "height_m": null,
   "status": "standing",
@@ -39,7 +44,7 @@
     "note": "Reached by trail; the cab is a staffed park fire lookout, and no source reviewed says visitors may enter it. Check with Glacier National Park before planning a visit."
   },
   "staffing": {
-    "status": "unknown",
+    "status": "staffed",
     "as_of": null
   },
   "visit": {
@@ -82,6 +87,35 @@
       "note": "Rehabilitated in 1999 per firelookout.com",
       "from": "research",
       "source_url": "https://www.firelookout.com/mt/scalplock.html"
+    },
+    {
+      "year": 2018,
+      "event": "restored",
+      "note": "Under Park supervision, a volunteer helped scrape and paint siding, replace skirt boards and decking, and paint stringers and stairs.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2018-completed-projects.pdf"
+    },
+    {
+      "year": 2021,
+      "event": "assessed",
+      "note": "Assessment: good condition and minor maintenance only; the lookout is staffed through fire season.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2021-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2021-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2021winter.pdf"
+      ]
+    },
+    {
+      "year": 2024,
+      "event": "assessed",
+      "note": "September assessment found several concerns to fix before winter; assessed every three years under a cooperative agreement.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/11/2024-newsletter.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2024-newsletter.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2024-completed-projects.pdf"
+      ]
     }
   ],
   "photos": [
@@ -168,6 +202,11 @@
       "kind": "association"
     },
     {
+      "label": "Northwest Montana Lookout Association: work on Scalplock Mountain Lookout",
+      "url": "https://nwmt-ffla.org/2024/09/01/2024-projects/",
+      "kind": "association"
+    },
+    {
       "label": "Wikipedia: Scalplock Mountain Fire Lookout",
       "url": "https://en.wikipedia.org/wiki/Scalplock_Mountain_Fire_Lookout",
       "kind": "wikipedia"
@@ -214,8 +253,18 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:scalplock-mtn:48.3001:-113.5746",
       "fields": [
+        "material",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "nwmt_projects",
+      "key": "nwmt_projects:mt:scalplock",
+      "fields": [
+        "staffing",
+        "events",
         "links"
       ]
     },
