@@ -339,11 +339,20 @@ function hasConflict(r: TowerRecord, field: string): boolean {
   return (r.conflicts ?? []).some((c) => c.field === field);
 }
 
-/** "About the design: L-4" links to the designs guide, one per recognised design. */
+/** "The design: L-4" links to the designs guide, one per recognised design; "Cab: L-4; tower:
+ * Region 6 timber tower" when the records describe one cab on one tower. */
 function designLinks(r: TowerRecord, base: string | undefined): SafeHtml | string {
-  const ids = (r.design_ids ?? []).filter((d) => /^[a-z0-9_]+$/.test(d));
+  const ok = (d: unknown): d is string => typeof d === 'string' && /^[a-z0-9_]+$/.test(d);
+  const ids = (r.design_ids ?? []).filter(ok);
   if (!ids.length || base === undefined) return '';
-  return html`<span class="sub">The ${ids.length > 1 ? 'designs' : 'design'}: ${ids.map((d, i) => html`${i ? ', ' : ''}<a href="${base}designs/#${d}">${designName(d)}</a>`)}</span>`;
+  const link = (d: string) => html`<a href="${base}designs/#${d}">${designName(d)}</a>`;
+  const p = r.design_pair;
+  if (p && ok(p.tower) && (ok(p.cab) || ok(p.house))) {
+    return ok(p.cab)
+      ? html`<span class="sub">Cab: ${link(p.cab)}; tower: ${link(p.tower)}</span>`
+      : html`<span class="sub">House: ${link(p.house!)}; tower: ${link(p.tower)}</span>`;
+  }
+  return html`<span class="sub">The ${ids.length > 1 ? 'designs' : 'design'}: ${ids.map((d, i) => html`${i ? ', ' : ''}${link(d)}`)}</span>`;
 }
 
 export function factRows(r: TowerRecord, opts: { short?: boolean; base?: string } = {}): [string, unknown][] {

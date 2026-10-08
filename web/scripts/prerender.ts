@@ -17,7 +17,7 @@ import { isSafeStoryHtml } from '../src/lib/html.ts';
 import type { Meta, SourceInfo, TowerRecord } from '../src/lib/types.ts';
 import { renderTowerHead, renderTowerMain, type RenderContext } from '../src/render/tower.ts';
 import { fixtureBanner, mapKey, sourcesRows, takedownEmail } from '../src/render/site.ts';
-import { designsMain } from '../src/render/designs.ts';
+import { designsEnd, designsMain } from '../src/render/designs.ts';
 import type { DesignsFile } from '../src/lib/types.ts';
 import { structuresSection } from '../src/render/structures.ts';
 import type { StructureKindsFile } from '../src/lib/types.ts';
@@ -102,13 +102,20 @@ if (existsSync(aboutPath)) {
 const designsPath = join(dist, 'designs', 'index.html');
 if (existsSync(designsPath)) {
   const file = existsSync(join(dataDir, 'designs.json')) ? (JSON.parse(readFileSync(join(dataDir, 'designs.json'), 'utf8')) as DesignsFile) : null;
-  const body = file ? designsMain(file, { base: config.base, repo: config.repo }).value : '<p class="notice tone-caution">The designs guide could not be built: designs.json is missing.</p>';
+  // "Structure types" (render/structures.ts), its own section on the same page, between the
+  // designs and Equipment and reference (designsEnd).
+  const kinds = existsSync(join(dataDir, 'structure_kinds.json')) ? (JSON.parse(readFileSync(join(dataDir, 'structure_kinds.json'), 'utf8')) as StructureKindsFile) : null;
+  const toc: [string, string][] = kinds ? [['structure-types', 'Structure types']] : [];
+  const body = file ? designsMain(file, { base: config.base, repo: config.repo }, { toc }).value : '<p class="notice tone-caution">The designs guide could not be built: designs.json is missing.</p>';
   if (!file) console.warn('prerender: dist/data/designs.json is missing; the designs page says so');
   writeFileSync(designsPath, readFileSync(designsPath, 'utf8').replace('<!--ff:designs-->', body).replace('<!--ff:banner-->', banner).replace(/\n\s+/g, '\n'));
-  // "Structure types" (render/structures.ts), its own section on the same page.
-  const kinds = existsSync(join(dataDir, 'structure_kinds.json')) ? (JSON.parse(readFileSync(join(dataDir, 'structure_kinds.json'), 'utf8')) as StructureKindsFile) : null;
   if (!kinds) console.warn('prerender: dist/data/structure_kinds.json is missing; the designs page leaves out structure types');
-  writeFileSync(designsPath, readFileSync(designsPath, 'utf8').replace('<!--ff:structures-->', kinds ? structuresSection(kinds, { base: config.base }).value.replace(/\n\s+/g, '\n') : ''));
+  writeFileSync(
+    designsPath,
+    readFileSync(designsPath, 'utf8')
+      .replace('<!--ff:structures-->', kinds ? structuresSection(kinds, { base: config.base }).value.replace(/\n\s+/g, '\n') : '')
+      .replace('<!--ff:design-end-->', file ? designsEnd(file).value.replace(/\n\s+/g, '\n') : ''),
+  );
 }
 
 /* ---------- Sitemap ---------- */

@@ -1,7 +1,7 @@
 {
   "title": "Fire lookout designs",
-  "updated": "2026-10-04",
-  "note": "Facts gathered from the sources listed under each design and written in Firefinder's own words. Where sources disagree, each design says so under 'Where sources disagree'. Plan drawings linked here are scans of Forest Service and manufacturer plans hosted by the Forest Fire Lookout Association.",
+  "updated": "2026-10-08",
+  "note": "Facts gathered from the sources listed under each design and written in Firefinder's own words; where sources disagree, each design says so under 'Where sources disagree'. Plan drawings linked here are scans of Forest Service, state and manufacturer plans hosted by the Forest Fire Lookout Association (firelookout.org/resources/plans/); Firefinder links to them and does not copy them. Which lookouts are listed under a design comes from the plan names their sources use (pipeline/designs.py).",
   "sources": [
     {
       "title": "Lookout Types and Historic Plans",
@@ -23,6 +23,78 @@
       ]
     }
   ],
+  "groups": {
+    "materials": [
+      {
+        "id": "wood",
+        "label": "Wooden cabs, houses and towers",
+        "intro": "Most lookouts were wooden: a cab or house built from a standard plan, often shipped as a pre-cut kit, set on the ground, on a short base, or on a wooden tower drawn to go with it."
+      },
+      {
+        "id": "log",
+        "label": "Log lookouts",
+        "intro": "Log lookouts were built where timber stood at hand: the Northern Rockies' early cupola cabins and log houses, and a few later plans drawn for log."
+      },
+      {
+        "id": "steel",
+        "label": "Steel towers and cabs",
+        "intro": "Steel towers came from windmill and derrick makers (Aermotor above all) and later from Forest Service plans that any steel company could bid on. Most carry a small 7 x 7 ft steel cab; some a 14 x 14 ft live-in cab."
+      },
+      {
+        "id": "stone",
+        "label": "Stone lookouts",
+        "intro": "A handful of lookouts at well-visited summits were designed by architects in stone, as much monuments as fire lookouts."
+      },
+      {
+        "id": "concrete",
+        "label": "Concrete lookouts",
+        "intro": null
+      },
+      {
+        "id": "mixed",
+        "label": "Mixed construction",
+        "intro": "Plans that put a wooden lookout room on a stone, block or steel lower story, or that sources describe by style rather than one material."
+      }
+    ],
+    "regions": [
+      {
+        "id": "national",
+        "label": "Nationwide"
+      },
+      {
+        "id": "R1",
+        "label": "Northern Rockies (Forest Service Region 1)"
+      },
+      {
+        "id": "R2",
+        "label": "Rocky Mountains (Region 2)"
+      },
+      {
+        "id": "R3",
+        "label": "Southwest (Region 3)"
+      },
+      {
+        "id": "R4",
+        "label": "Intermountain (Region 4)"
+      },
+      {
+        "id": "R5",
+        "label": "California (Region 5)"
+      },
+      {
+        "id": "R6",
+        "label": "Pacific Northwest (Region 6)"
+      },
+      {
+        "id": "R8",
+        "label": "South (Region 8)"
+      },
+      {
+        "id": "R9",
+        "label": "East and Lake States (Regions 7 and 9)"
+      }
+    ]
+  },
   "designs": [
     {
       "id": "l4",
@@ -32,7 +104,14 @@
         "Lookout House Plan 4",
         "Grange Hall type (early gable-roof version)"
       ],
-      "kind": "cab",
+      "family": "l4",
+      "part": "cab",
+      "material": "wood",
+      "region_codes": [
+        "R1",
+        "R6",
+        "national"
+      ],
       "summary": "A small, square, one-room cabin built to live and watch from at the same time, with windows wrapping all four walls so the lookout could see in every direction. It is the design most people picture when they think of a fire lookout; sources count well over a thousand built.",
       "years_in_use": {
         "from": 1929,
@@ -46,10 +125,10 @@
         "USDA Forest Service (standard agency design, not a commercial manufacturer)"
       ],
       "models": [
-        "Plan L-4 (1929/1930 gable-roof version)",
-        "Plan L-4 (1931/1932 pyramidal hip-roof revision)",
-        "Plan L-4 (1936 revision)",
-        "Plan L-2 (earlier 1928 precursor, few built)"
+        "Plan L-4 (gable roof, 1928-1930)",
+        "Plan L-4, 1931 and 1932 revisions (Region 1; hip roof from 1932)",
+        "Standard 1936 14 x 14 Lookout House, B-4201 to B-4205 (Region 6)",
+        "Region 4 Plan 80 (1933)"
       ],
       "regions": "Built nationwide but most numerous in USFS Region 1 (Montana/Idaho) and Region 6 (Washington/Oregon); well over a thousand were erected.",
       "features": [
@@ -59,6 +138,74 @@
         "often sits atop a wood tower with a narrow catwalk porch",
         "sometimes called 'Aladdin' because pre-cut kits for Region 6 were fabricated at a mill in Vancouver, Washington",
         "the plain gable-roofed earliest version is sometimes nicknamed a 'grange hall' style cab"
+      ],
+      "variants": [
+        {
+          "name": "Early L-4 (FFLA: 1928)",
+          "years": "1928-30",
+          "description": "A gable roof at 1/3 pitch over a continuous band of nineteen six-light barn sash; shutters in two sections a side, hinged at the top and propped out on posts like awnings; built on the ground on dry rubble rock; painted Forest Drab and Ivory White. The bill of material in the scan is dated March 1930.",
+          "plans": [
+            {
+              "title": "L-4 (1928)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/1928-L-4-Plans-1930.pdf",
+              "year": 1928
+            }
+          ]
+        },
+        {
+          "name": "1931 revision",
+          "years": "Dec. 1930",
+          "description": "Region 1's redrawing by C. P. Fickes: still a gable roof at 1/3 pitch, with the window band above a 2-ft framed knee wall and holes at the corners for guy cables.",
+          "plans": [
+            {
+              "title": "L-4 (1930)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/1930-L-4.pdf",
+              "year": 1930
+            }
+          ]
+        },
+        {
+          "name": "1932 revision (hip roof)",
+          "years": "Dec. 1931; bill of material 1935",
+          "description": "The roof changes to a 1/3-pitch hip (pyramid) with an octagonal block and a metal finial; nine-light sash; shutters on T-hinges held open by rods. Sold ready-cut, to go on Region 1's 10 to 50 ft log towers (T-10 to T-50) or on the ground; white outside, dark green stain inside.",
+          "plans": [
+            {
+              "title": "L-4 (1932)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/1932-L-4-Plans.pdf",
+              "year": 1932
+            }
+          ]
+        },
+        {
+          "name": "Standard 1936 (Region 6, B-4200)",
+          "years": "1936-48",
+          "description": "Region 6's 14 x 14 ft lookout house, made the national standard in the 1938 plan book: the hip roof kept, four-light fixed and hinged sash, full-width shutters on heavy steel T-hinges, an optional 3-ft catwalk, built-in furniture and a cooler. Four types: on a tower or on the ground, for truck haul or horse pack. Revised in 1948 for the TT-1 tower.",
+          "plans": [
+            {
+              "title": "L-4 (1936)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/1936-L-4-B-4200.pdf",
+              "year": 1936
+            },
+            {
+              "title": "1938 plan book, Section III (B-4201 to B-4205)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-III-IV-V.pdf",
+              "year": 1936
+            }
+          ]
+        },
+        {
+          "name": "Region 4 Plan 80 (R-1 L-4)",
+          "years": "1933",
+          "description": "The Intermountain Region's April 1933 tracing of Region 1's L-4, called the 'R.1 Type': hip roof at 1/3 pitch, three rows of panes, tie-down bolts at each corner post.",
+          "plans": [
+            {
+              "title": "Plan 80 (R-1 L-4)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/Plan-80-R-1-L-4.pdf",
+              "year": 1933,
+              "note": "sheets 1 and 2 of 10"
+            }
+          ]
+        }
       ],
       "uncertain": "Sources disagree about where the L-4 originated. A Montana/Idaho National Register form credits Clyde Fickes of Region 1 with the first 14x14 prototype around 1929-1930, approved in 1931, later copied and revised by Region 6 in 1936. A Washington State National Register form instead describes the plan as adopted by Region 6 in 1929-30 and evolving out of Region 6's own earlier lookout plans going back to about 1915, with Region 1 treated as an adopter rather than the inventor. A compiler citing veteran lookout historian Ray Kresek says both regions produced similar 1929 plans independently and it is hard to say who was first. The two main National Register sources also give slightly different years for the roof-shape change (1931 vs. 1932) and for the shutter-hardware change (1936 is consistent, but described slightly differently). Treat the exact priority and exact revision years as unsettled.",
       "sources": [
@@ -132,165 +279,27 @@
           "supports": [
             "plans"
           ]
+        },
+        {
+          "title": "L-4 plans of 1928/1930, 1930, 1932 and 1936, and Region 4 Plan 80",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1932-L-4-Plans.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "Standard Lookout Structure Plans (USDA Forest Service, 1938, revised 1941), Section III",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-III-IV-V.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
         }
       ],
       "schematic": "l4"
-    },
-    {
-      "id": "l5",
-      "name": "L-5",
-      "aka": [],
-      "kind": "cab",
-      "summary": "A smaller relative of the L-4, used at lesser lookout points where a full-size cabin was not needed. The name was applied to more than one actual building, so what an 'L-5' looks like varies by forest.",
-      "years_in_use": {
-        "from": 1930,
-        "to": null,
-        "text": "Mainly built during the 1930s; sources do not give a clear end date."
-      },
-      "cab_size": "Nationally described as 10 x 10 ft, a scaled-down L-4. In USFS Region 1 (Montana/Idaho), however, period Forest Service records instead describe 'L-5' as a 14 x 14 ft gable-roofed log cabin, not a 10x10 frame building.",
-      "tower_heights": "Normally built on the ground, as a low-priority secondary lookout point.",
-      "materials": "Wood frame construction for the 10x10 version; peeled-log construction with a gable roof for the Region 1 variant.",
-      "makers": [
-        "USDA Forest Service (standard agency design)"
-      ],
-      "models": [
-        "Plan L-5"
-      ],
-      "regions": "Used at secondary lookout points nationwide; the 14x14 log-cabin variant is specifically documented in Idaho and Montana.",
-      "features": [
-        "small, plain, single-room cabin",
-        "gable roof (both the 10x10 frame version and the Region 1 log version)",
-        "noticeably smaller than an L-4 if it is the 10x10 version"
-      ],
-      "uncertain": "There is a real contradiction in the sources about size: most general design-type pages describe the L-5 as a 10x10 ft frame cabin, but a 1938 Forest Service inventory reproduced in the Montana/Idaho National Register form lists 'L-5' as a 14x14 ft gable-roofed log cabin built in 1930, which is the same footprint as an L-4 but in log rather than frame construction and with a gable instead of hip roof. A National Historic Lookout Register glossary entry gives only '10-by-10 cab' with no further detail. It is possible the name was reused for two different local building types; this page cannot resolve which is 'the' L-5.",
-      "sources": [
-        {
-          "title": "Fire Lookout Tower Design Types (lktpix.html)",
-          "publisher": "firelookout.com",
-          "url": "https://www.firelookout.com/lktpix.html",
-          "licence": "no licence stated, facts only",
-          "supports": [
-            "cab_size",
-            "years_in_use"
-          ]
-        },
-        {
-          "title": "Lookout Styles, Nez Perce National Forest",
-          "publisher": "USDA Forest Service (by Cindy Schacher), May 2010",
-          "url": "https://fs.usda.gov/media/259212",
-          "licence": "public domain (US government work)",
-          "supports": [
-            "cab_size",
-            "years_in_use",
-            "features",
-            "uncertain"
-          ]
-        },
-        {
-          "title": "L-4 Fire Lookouts in the USFS Northern Region (Region 1), 1932-1967 (NRHP MPDF)",
-          "publisher": "USDA Forest Service Region 1 / Montana & Idaho SHPO",
-          "url": "https://mhs.mt.gov/Shpo/docs/MPDs/MT_ID_FireLookoutsMPD.pdf",
-          "licence": "public domain (US government work / NRHP nomination)",
-          "supports": [
-            "cab_size",
-            "uncertain"
-          ]
-        },
-        {
-          "title": "Definitions (lookout design-type glossary)",
-          "publisher": "National Historic Lookout Register",
-          "url": "http://nhlr.org/definitions/",
-          "licence": "no licence stated, facts only",
-          "supports": [
-            "cab_size"
-          ]
-        },
-        {
-          "title": "L-5 Log Lookout plan drawing",
-          "publisher": "USDA Forest Service, hosted by Forest Fire Lookout Association",
-          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-5_Log_Lookout_Plans.pdf",
-          "licence": "public domain (US government work)",
-          "supports": [
-            "plans"
-          ]
-        }
-      ],
-      "schematic": "l5"
-    },
-    {
-      "id": "l6",
-      "name": "L-6",
-      "aka": [
-        "Patrol Shelter",
-        "Tower Cupola (early version)"
-      ],
-      "kind": "cab",
-      "summary": "The smallest of the standard Forest Service cabins, built for a single observer to stand watch in rather than to live in day-to-day. It was usually perched high on a wooden tower, with the lookout's actual living quarters in a separate building on the ground below.",
-      "years_in_use": {
-        "from": 1932,
-        "to": null,
-        "text": "Documented as built from the early 1930s onward (a 1938 inventory lists examples dated 1932); sources do not give a clear end date."
-      },
-      "cab_size": "8 x 8 ft (one glossary source gives 8 ft 9 in square for an earlier, similarly named patrol shelter)",
-      "tower_heights": "Built on tall wooden towers, with the observer's separate living cabin at ground level; one documented example stood on a 50-ft pole tower.",
-      "materials": "Wood frame construction, hip roof on the standard version.",
-      "makers": [
-        "USDA Forest Service (standard agency design)"
-      ],
-      "models": [
-        "Plan L-6 (Patrol Shelter / Tower Cupola)"
-      ],
-      "regions": "Documented in USFS Region 1 (Idaho/Montana); likely used more broadly as part of the same family of standard plans as the L-4 and L-5.",
-      "features": [
-        "very small single-room cab, built for watching rather than living",
-        "hip roof",
-        "sits high on a tall wood tower, separate from the lookout's living quarters on the ground"
-      ],
-      "uncertain": "One source describes the original 1935 handbook version as an '8 3/4 ft-square' shelter also called a 'Patrol Shelter or Tower Cupola,' while design-type summaries give a plain 8x8 ft figure; these may be the same building rounded differently, or an early vs. later version, but the sources do not say which.",
-      "sources": [
-        {
-          "title": "Fire Lookout Tower Design Types (lktpix.html)",
-          "publisher": "firelookout.com",
-          "url": "https://www.firelookout.com/lktpix.html",
-          "licence": "no licence stated, facts only",
-          "supports": [
-            "cab_size"
-          ]
-        },
-        {
-          "title": "Lookout Styles, Nez Perce National Forest",
-          "publisher": "USDA Forest Service (by Cindy Schacher), May 2010",
-          "url": "https://fs.usda.gov/media/259212",
-          "licence": "public domain (US government work)",
-          "supports": [
-            "cab_size",
-            "tower_heights",
-            "features"
-          ]
-        },
-        {
-          "title": "L-4 Fire Lookouts in the USFS Northern Region (Region 1), 1932-1967 (NRHP MPDF)",
-          "publisher": "USDA Forest Service Region 1 / Montana & Idaho SHPO",
-          "url": "https://mhs.mt.gov/Shpo/docs/MPDs/MT_ID_FireLookoutsMPD.pdf",
-          "licence": "public domain (US government work / NRHP nomination)",
-          "supports": [
-            "years_in_use",
-            "cab_size",
-            "aka",
-            "uncertain"
-          ]
-        },
-        {
-          "title": "L-6 Patrol House (Cupola) plan drawing",
-          "publisher": "USDA Forest Service, hosted by Forest Fire Lookout Association",
-          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-6-Patrol-Shelter-or-Tower-Cupalo.pdf",
-          "licence": "public domain (US government work)",
-          "supports": [
-            "plans"
-          ]
-        }
-      ],
-      "schematic": "l6"
     },
     {
       "id": "r6",
@@ -299,27 +308,99 @@
         "R-6 Flattop",
         "R-6 Flat"
       ],
-      "kind": "flat_top",
+      "family": "r6",
+      "part": "cab",
+      "material": "wood",
+      "region_codes": [
+        "R6",
+        "R1",
+        "R4"
+      ],
       "summary": "The design that replaced the L-4 from the 1950s onward. Instead of a peaked roof, it has a flat roof that overhangs the walls on all sides to shade the windows, giving lookouts of this type their distinctive squared-off silhouette.",
       "years_in_use": {
         "from": 1953,
         "to": null,
         "text": "Became the standard replacement design starting in 1953; individual examples were still being built into the 1970s."
       },
-      "cab_size": "Most general sources give 15 x 15 ft as the standard size, but numerous individually documented R-6 cabs are 14 x 14 ft instead.",
-      "tower_heights": "Often built on a base of concrete block, or on a concrete-pad foundation, rather than on a wood tower; at least one documented example sits on a 41-ft wood tower.",
+      "cab_size": "15 ft 4 in square in the 1959 to 1971 plans (sources round it to 15 x 15 ft), with a 3-ft catwalk all round (21 ft 4 in overall); some register pages describe 14 x 14 ft R-6-style cabs.",
+      "tower_heights": "On the ground on concrete footings with a catwalk, on concrete-block or storage bases (Region 4's Plans 80-A and 80-B), or on Region 6 timber towers (CT-3, CT-6, TT-1).",
       "materials": "Plywood construction with a tar-paper roof covering in at least one description; later examples used concrete block for the base or tower as heavier materials became easier to transport.",
       "makers": [
         "USDA Forest Service (standard agency design, Region 6)"
       ],
       "models": [
-        "Plan B-4300 / R-6 Flat (1959, 1964 and 1971 drawing revisions are documented)"
+        "B-4301 to B-4304 (1959; parts drawn from 1954)",
+        "redrawn 1962-64, with B-4303A ground house (1963)",
+        "'A' revision (1971)",
+        "Region 4 Plans 80-A (1958) and 80-B (1961)"
       ],
       "regions": "Originated in and named for USFS Region 6 (Washington and Oregon); used there and adopted elsewhere as the L-4 was phased out, including Region 1 (Montana/Idaho).",
       "features": [
         "flat roof that overhangs the cab walls by a few feet on all sides",
         "square floor plan, usually 14x14 or 15x15 ft",
         "often sits on a concrete-block base rather than a wood tower"
+      ],
+      "variants": [
+        {
+          "name": "1959 plan (B-4300 series)",
+          "years": "1954-59",
+          "description": "Drawn by Region 6 architect A. P. DiBenedetto: a flat felt roof overhanging 3 ft on every side, tall sash of four horizontal panes filling each wall with one opening sash on three sides, plywood shutters, and a catwalk; on the ground or on a CT-3 or TT-1 tower.",
+          "plans": [
+            {
+              "title": "R-6 Flat (1959)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/R-6-Flat-1959-B-4300.pdf",
+              "year": 1959
+            }
+          ]
+        },
+        {
+          "name": "1962-64 redrawing",
+          "years": "1962-64",
+          "description": "Windows grouped in factory-made twin and triple frame units, plywood shutters on shutter bars, safety gates and a counterweighted trap door on the catwalk, steel gussets in the roof; a new sheet for a ground house on six footings with a short stair.",
+          "plans": [
+            {
+              "title": "R-6 Flat (1964)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/B-4300-Lookout-House-1964.pdf",
+              "year": 1964
+            }
+          ]
+        },
+        {
+          "name": "1971 'A' revision",
+          "years": "1971",
+          "description": "The divided sash give way to big fixed plate-glass panes, three to a wall, with small aluminum vent windows above; an aluminum-grating door in the catwalk.",
+          "plans": [
+            {
+              "title": "R-6 Flat (1971)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/B-4300-Lookout-House-1971.pdf",
+              "year": 1971
+            }
+          ]
+        },
+        {
+          "name": "Region 4 Plan 80-A",
+          "years": "1958",
+          "description": "The Intermountain Region's version, 15 ft 4 in square, alone on concrete piers or (sheet 80A-1) on a one-story cinder-block storage building with an outside stair and a wood-railed catwalk.",
+          "plans": [
+            {
+              "title": "Plan 80-A (R-6 Flat)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/Plan-80-A-R-6-Flattop.pdf",
+              "year": 1958
+            }
+          ]
+        },
+        {
+          "name": "Region 4 Plan 80-B",
+          "years": "1961-63",
+          "description": "Region 4's 1961 house combining the R-6 flat top with its own Smith Knob plans: the same cab on an 8-ft pumice-block storage basement, plywood siding, tall single-pane windows and a pipe-and-wire-mesh catwalk rail.",
+          "plans": [
+            {
+              "title": "Plan 80-B (R-6 Flat)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/Plan-80-B-R-6-Flattop.pdf",
+              "year": 1961
+            }
+          ]
+        }
       ],
       "uncertain": "Sources disagree on the standard cab size: general reference pages say 15x15 ft, but several individually documented R-6-style lookouts (for example on the Mt. Hood National Forest) are 14x14 ft, and one source describes a 12x12 ft cab being replaced in 1981 by a 14x14 ft 'R-6 wood flat top' cab. It is unclear whether 14x14 and 15x15 were both official variants, whether the standard changed over time, or whether 'R-6 style' was applied loosely to any flat-roofed replacement cab regardless of exact size.",
       "sources": [
@@ -382,9 +463,601 @@
           "supports": [
             "plans"
           ]
+        },
+        {
+          "title": "Lookout House B-4301 to B-4304 (Region 6, 1959, 1964, 1971) and Region 4 Plans 80-A and 80-B",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/R-6-Flat-1959-B-4300.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
         }
       ],
       "schematic": "r6"
+    },
+    {
+      "id": "l5",
+      "name": "L-5",
+      "aka": [],
+      "family": "l5",
+      "part": "cab",
+      "material": "wood",
+      "material_by_state": {
+        "MT": "log",
+        "ID": "log"
+      },
+      "region_codes": [
+        "R6",
+        "R1"
+      ],
+      "summary": "A smaller relative of the L-4, used at lesser lookout points where a full-size cabin was not needed. The name was applied to more than one actual building, so what an 'L-5' looks like varies by forest.",
+      "years_in_use": {
+        "from": 1930,
+        "to": null,
+        "text": "Mainly built during the 1930s; sources do not give a clear end date."
+      },
+      "cab_size": "Nationally described as 10 x 10 ft, a scaled-down L-4. In USFS Region 1 (Montana/Idaho), however, period Forest Service records instead describe 'L-5' as a 14 x 14 ft gable-roofed log cabin, not a 10x10 frame building.",
+      "tower_heights": "Normally built on the ground, as a low-priority secondary lookout point.",
+      "materials": "In Region 1 (the FFLA plan) notched logs with a band of windows above a 3 ft log wall and a shake or shingle gable roof; elsewhere, sources describe a small wood-frame cab.",
+      "makers": [
+        "USDA Forest Service (standard agency design)"
+      ],
+      "models": [
+        "Plan L-5"
+      ],
+      "regions": "Used at secondary lookout points nationwide; the 14x14 log-cabin variant is specifically documented in Idaho and Montana.",
+      "features": [
+        "small, plain, single-room cabin",
+        "gable roof (both the 10x10 frame version and the Region 1 log version)",
+        "noticeably smaller than an L-4 if it is the 10x10 version",
+        "Region 1 plan: about 14 ft 8 in square outside, 19 six-light sashes in a continuous band, hinged wooden shutters, gable roof at 1/3 pitch"
+      ],
+      "plans": [
+        {
+          "title": "L-5 Log Lookout (Nezperce National Forest, revised 1930)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-5_Log_Lookout_Plans.pdf",
+          "year": 1930
+        }
+      ],
+      "uncertain": "There is a real contradiction in the sources about size: most general design-type pages describe the L-5 as a 10x10 ft frame cabin, but a 1938 Forest Service inventory reproduced in the Montana/Idaho National Register form lists 'L-5' as a 14x14 ft gable-roofed log cabin built in 1930, which is the same footprint as an L-4 but in log rather than frame construction and with a gable instead of hip roof. A National Historic Lookout Register glossary entry gives only '10-by-10 cab' with no further detail. It is possible the name was reused for two different local building types; this page cannot resolve which is 'the' L-5.",
+      "sources": [
+        {
+          "title": "Fire Lookout Tower Design Types (lktpix.html)",
+          "publisher": "firelookout.com",
+          "url": "https://www.firelookout.com/lktpix.html",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "cab_size",
+            "years_in_use"
+          ]
+        },
+        {
+          "title": "Lookout Styles, Nez Perce National Forest",
+          "publisher": "USDA Forest Service (by Cindy Schacher), May 2010",
+          "url": "https://fs.usda.gov/media/259212",
+          "licence": "public domain (US government work)",
+          "supports": [
+            "cab_size",
+            "years_in_use",
+            "features",
+            "uncertain"
+          ]
+        },
+        {
+          "title": "L-4 Fire Lookouts in the USFS Northern Region (Region 1), 1932-1967 (NRHP MPDF)",
+          "publisher": "USDA Forest Service Region 1 / Montana & Idaho SHPO",
+          "url": "https://mhs.mt.gov/Shpo/docs/MPDs/MT_ID_FireLookoutsMPD.pdf",
+          "licence": "public domain (US government work / NRHP nomination)",
+          "supports": [
+            "cab_size",
+            "uncertain"
+          ]
+        },
+        {
+          "title": "Definitions (lookout design-type glossary)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/definitions/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "cab_size"
+          ]
+        },
+        {
+          "title": "L-5 Log Lookout plan drawing",
+          "publisher": "USDA Forest Service, hosted by Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-5_Log_Lookout_Plans.pdf",
+          "licence": "public domain (US government work)",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "Log Lookout House, Plan L-5 revised (Nezperce National Forest, 1930)",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-5_Log_Lookout_Plans.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        }
+      ],
+      "schematic": "l5"
+    },
+    {
+      "id": "l6",
+      "name": "L-6",
+      "aka": [
+        "Patrol Shelter",
+        "Tower Cupola (early version)"
+      ],
+      "family": "l6",
+      "part": "cab",
+      "material": "wood",
+      "region_codes": [
+        "R1"
+      ],
+      "summary": "The smallest of the standard Forest Service cabins, built for a single observer to stand watch in rather than to live in day-to-day. It was usually perched high on a wooden tower, with the lookout's actual living quarters in a separate building on the ground below.",
+      "years_in_use": {
+        "from": 1932,
+        "to": null,
+        "text": "Documented as built from the early 1930s onward (a 1938 inventory lists examples dated 1932); sources do not give a clear end date."
+      },
+      "cab_size": "8 ft 9 in square (the 1932 plan).",
+      "tower_heights": "On the ground as a patrol shelter, or on top of Region 1's 50 to 98 ft log towers with cupola (T-1, T-2), with the lookout's living cabin on the ground.",
+      "materials": "Wood frame construction, hip roof on the standard version.",
+      "makers": [
+        "USDA Forest Service (standard agency design)"
+      ],
+      "models": [
+        "Plan L-6 (Patrol Shelter / Tower Cupola)"
+      ],
+      "regions": "Documented in USFS Region 1 (Idaho/Montana); likely used more broadly as part of the same family of standard plans as the L-4 and L-5.",
+      "features": [
+        "very small single-room cab, built for watching rather than living",
+        "hip roof",
+        "sits high on a tall wood tower, separate from the lookout's living quarters on the ground",
+        "1932 plan: shingled hip roof at 1/3 pitch with a finial, shutters propped on rods (hinged to the platform rail on a tower), folding bunk and a central firefinder"
+      ],
+      "plans": [
+        {
+          "title": "L-6 Patrol House (Cupola)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-6-Patrol-Shelter-or-Tower-Cupalo.pdf",
+          "year": 1932
+        }
+      ],
+      "uncertain": "One source describes the original 1935 handbook version as an '8 3/4 ft-square' shelter also called a 'Patrol Shelter or Tower Cupola,' while design-type summaries give a plain 8x8 ft figure; these may be the same building rounded differently, or an early vs. later version, but the sources do not say which.",
+      "sources": [
+        {
+          "title": "Fire Lookout Tower Design Types (lktpix.html)",
+          "publisher": "firelookout.com",
+          "url": "https://www.firelookout.com/lktpix.html",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "cab_size"
+          ]
+        },
+        {
+          "title": "Lookout Styles, Nez Perce National Forest",
+          "publisher": "USDA Forest Service (by Cindy Schacher), May 2010",
+          "url": "https://fs.usda.gov/media/259212",
+          "licence": "public domain (US government work)",
+          "supports": [
+            "cab_size",
+            "tower_heights",
+            "features"
+          ]
+        },
+        {
+          "title": "L-4 Fire Lookouts in the USFS Northern Region (Region 1), 1932-1967 (NRHP MPDF)",
+          "publisher": "USDA Forest Service Region 1 / Montana & Idaho SHPO",
+          "url": "https://mhs.mt.gov/Shpo/docs/MPDs/MT_ID_FireLookoutsMPD.pdf",
+          "licence": "public domain (US government work / NRHP nomination)",
+          "supports": [
+            "years_in_use",
+            "cab_size",
+            "aka",
+            "uncertain"
+          ]
+        },
+        {
+          "title": "L-6 Patrol House (Cupola) plan drawing",
+          "publisher": "USDA Forest Service, hosted by Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-6-Patrol-Shelter-or-Tower-Cupalo.pdf",
+          "licence": "public domain (US government work)",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "Patrol Shelter or Tower Cupalo, Plan L-6 (1932)",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-6-Patrol-Shelter-or-Tower-Cupalo.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        }
+      ],
+      "schematic": "l6"
+    },
+    {
+      "id": "l2",
+      "name": "L-2 frame lookout house (District 1)",
+      "aka": [
+        "Old L-2",
+        "L-2 cupola cabin"
+      ],
+      "family": "cupola",
+      "part": "house",
+      "material": "wood",
+      "region_codes": [
+        "R1"
+      ],
+      "summary": "An early Northern Rockies standard from about 1919: a small wood-frame house on the ground, 14 x 12 ft, with a glazed cupola about 8 ft square on the roof ridge where the lookout watched. Shingled walls and roof, shutters, a ladder up into the cupola, and a lightning-protection diagram. Built until about 1929.",
+      "years_in_use": {
+        "from": 1919,
+        "to": 1930,
+        "text": "The sheet carries a faint date of April 1919 (?); the register examples were built in 1929."
+      },
+      "cab_size": "14 x 12 ft house with a cupola about 8 x 8 ft.",
+      "tower_heights": "On the ground, on rock piers.",
+      "materials": "Wood frame with shingled walls and roof over shiplap; ponderosa pine or cedar.",
+      "makers": [
+        "USDA Forest Service, District 1 (Missoula)"
+      ],
+      "models": [
+        "Plan L-2 (District 1, before 1930)"
+      ],
+      "regions": "Montana and northern Idaho.",
+      "features": [
+        "glazed cupola on the roof ridge",
+        "gable roofs, shingled walls",
+        "materials cost no more than $160 west of the Divide (sheet 3)",
+        "staged building suggested: piers first, walls later"
+      ],
+      "plans": [
+        {
+          "title": "L-2 Frame Lookout House",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-2-Frame-Lookout-House-Plan.pdf",
+          "year": 1919
+        }
+      ],
+      "uncertain": "Region 1 reused the number L-2 in 1939 for a log tower with a cupola (the old T-2); register pages that say 'L-2 cupola cabin' mean this house.",
+      "sources": [
+        {
+          "title": "Frame Lookout House, Plan L-2 (District 1)",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-2-Frame-Lookout-House-Plan.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "Priscilla Peak Lookout (MT)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/mt/priscilla-peak-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use",
+            "aka"
+          ]
+        },
+        {
+          "title": "Lookout Mountain (ID)",
+          "publisher": "firelookout.com",
+          "url": "https://www.firelookout.com/id/lookoutmtnp.html",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use"
+          ]
+        }
+      ],
+      "schematic": "cupola"
+    },
+    {
+      "id": "l20",
+      "name": "L-20 lookout cab (1946)",
+      "aka": [
+        "Plan L-20"
+      ],
+      "family": "l20",
+      "part": "cab",
+      "material": "mixed",
+      "region_codes": [
+        "R1"
+      ],
+      "summary": "Region 1's postwar cab of 1946, built from prefabricated panels to sit on a tower: a 14 x 14 ft live-in room with walls of outward-sloping plate glass in metal store-front sash over insulated transite panels, under a nearly flat built-up roof with wide eaves. Inside are a bed, stove, cabinets and the firefinder.",
+      "years_in_use": {
+        "from": 1946,
+        "to": null,
+        "text": "Drawn in September 1946."
+      },
+      "cab_size": "14 x 14 ft (roof 21 x 21 ft).",
+      "tower_heights": "Bolted to a tower's legs and girder; the tower is not specified.",
+      "materials": "Plate glass in metal sash, transite panels with blanket insulation, built-up roof.",
+      "makers": [
+        "USDA Forest Service, Region 1"
+      ],
+      "models": [
+        "L-20"
+      ],
+      "regions": "Northern Rockies.",
+      "features": [
+        "windows slope outward, like an airport control tower",
+        "nearly flat roof with wide overhangs",
+        "prefabricated panels"
+      ],
+      "plans": [
+        {
+          "title": "L-20 Lookout Cab",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-20-Lookout-Cab.pdf",
+          "year": 1946
+        }
+      ],
+      "uncertain": null,
+      "sources": [
+        {
+          "title": "Lookout Cab, Plan No. L-20 (1946)",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-20-Lookout-Cab.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        }
+      ],
+      "schematic": "steel_cab"
+    },
+    {
+      "id": "r1_towers",
+      "name": "Region 1 log towers with living quarters (T-10 to T-50)",
+      "aka": [
+        "T-10",
+        "T-20",
+        "T-30",
+        "T-40",
+        "T-50",
+        "L-7 to L-11 (from 1939)"
+      ],
+      "family": "r1_towers",
+      "part": "tower",
+      "material": "log",
+      "region_codes": [
+        "R1"
+      ],
+      "summary": "Region 1's 1932 series of peeled-log towers, 10 to 50 ft high, each built to carry the standard L-4 house as living quarters on a railed platform. The number is the height: a T-30 stands 30 ft to the platform. Taller ones have more braced bays, switchback stairs and guy cables. In 1939 the region renumbered them L-7 to L-11.",
+      "years_in_use": {
+        "from": 1932,
+        "to": null,
+        "text": "Drawn in February 1932 (designed by C. P. Fickes and J. B. Halm); renumbered in August 1939."
+      },
+      "cab_size": "A railed platform for the standard L-4 house (the 50-ft sheet says L-4 or L-5).",
+      "tower_heights": "10, 20, 30, 40 and 50 ft, one braced bay per 10 to 12 ft.",
+      "materials": "Four peeled log legs with sawn 8 x 8 caps and sills, on concrete piers; guy cables on the 30 ft and taller.",
+      "makers": [
+        "USDA Forest Service, Region 1 (Missoula)"
+      ],
+      "models": [
+        "T-10 (L-7)",
+        "T-20 (L-8)",
+        "T-30 (L-9)",
+        "T-40 (L-10)",
+        "T-50 (L-11)"
+      ],
+      "regions": "Montana and northern Idaho.",
+      "features": [
+        "log legs, not sawn timber",
+        "shutter rods of the house hinge to the platform rail",
+        "the taller ones were assembled one side at a time on the ground and raised with gin poles"
+      ],
+      "variants": [
+        {
+          "name": "T-10 (L-7)",
+          "years": "1932",
+          "description": "One braced bay, a single stair flight, about 16 x 18 ft footprint.",
+          "plans": [
+            {
+              "title": "T-10 Lookout Tower",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/L-7-Lookout-Tower-T-10.pdf",
+              "year": 1932
+            }
+          ]
+        },
+        {
+          "name": "T-20 (L-8)",
+          "years": "1932",
+          "description": "One tall braced bay and one long outside stair.",
+          "plans": [
+            {
+              "title": "T-20 Lookout Tower",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/L-8-Lookout-Tower-T-20.pdf",
+              "year": 1932
+            }
+          ]
+        },
+        {
+          "name": "T-30 (L-9)",
+          "years": "1932",
+          "description": "Two braced bays, a mid-height landing, guy cables.",
+          "plans": [
+            {
+              "title": "T-30 Lookout Tower",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/L-9-Lookout-Tower-T-30.pdf",
+              "year": 1932
+            }
+          ]
+        },
+        {
+          "name": "T-40 (L-10)",
+          "years": "1932",
+          "description": "Three braced bays, switchback stairs, guyed to anchors about 60 ft apart.",
+          "plans": [
+            {
+              "title": "T-40 Lookout Tower",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/L-10-Lookout-Tower-T-40.pdf",
+              "year": 1932
+            }
+          ]
+        },
+        {
+          "name": "T-50 (L-11)",
+          "years": "1932",
+          "description": "Four braced bays of about 12 ft, tension cables across the bays, three stair landings.",
+          "plans": [
+            {
+              "title": "T-50 Lookout Tower",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/L-11-Lookout-Tower-T-50.pdf",
+              "year": 1932
+            }
+          ]
+        }
+      ],
+      "uncertain": "Register pages usually say '30-ft pole L-4 tower' rather than naming the plan, so few lookouts on Firefinder are recorded under it.",
+      "sources": [
+        {
+          "title": "Lookout Tower with Living Quarters, for use with Plan L-4 (T-10 to T-50, 1932)",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-9-Lookout-Tower-T-30.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        }
+      ],
+      "schematic": "timber_tower"
+    },
+    {
+      "id": "r1_cupola_towers",
+      "name": "Region 1 log towers with cupola (T-1, T-2)",
+      "aka": [
+        "T-1",
+        "T-2",
+        "L-1 and L-2 (from 1939)"
+      ],
+      "family": "r1_cupola_towers",
+      "part": "tower",
+      "material": "log",
+      "region_codes": [
+        "R1"
+      ],
+      "summary": "Tall Region 1 log towers of 1932 built to carry only the small L-6 cupola, with the lookout living in a cabin on the ground: a 50-ft tower whose stairs climb to a 14 ft 5 in platform, extended by a supplementary sheet to 62, 74, 86 and 98 ft with spliced legs and cable bracing. Renumbered L-1 and L-2 in 1939.",
+      "years_in_use": {
+        "from": 1932,
+        "to": 1944,
+        "text": "Drawn in February and March 1932; one sheet revised in 1944."
+      },
+      "cab_size": "The L-6 cupola, 8 ft 9 in square, on a 14 ft 5 in platform with a trap door.",
+      "tower_heights": "50 ft; the T-2 also 62, 74, 86 and 98 ft.",
+      "materials": "Four peeled log legs, guyed, with taut cross cables on the T-2; concrete piers.",
+      "makers": [
+        "USDA Forest Service, Region 1"
+      ],
+      "models": [
+        "T-1 (L-1)",
+        "T-2 (L-2)"
+      ],
+      "regions": "Montana and northern Idaho.",
+      "features": [
+        "stairs with landings",
+        "guy cables with turnbuckles",
+        "leg splices on the taller towers"
+      ],
+      "variants": [
+        {
+          "name": "T-1 (L-1)",
+          "years": "1932",
+          "description": "The 50-ft tower for the L-6 cupola.",
+          "plans": [
+            {
+              "title": "T-1 Tower with Cupola",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/L-1-Lookout-Tower-with-Cupalo.pdf",
+              "year": 1932
+            }
+          ]
+        },
+        {
+          "name": "T-2 (L-2)",
+          "years": "1932",
+          "description": "12-ft bays with cable X-bracing, 50 ft, with a supplementary sheet for 62 to 98 ft.",
+          "plans": [
+            {
+              "title": "T-2 Tower with Cupola",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/L-2-Lookout-Tower-with-Cupalo.pdf",
+              "year": 1932
+            }
+          ]
+        }
+      ],
+      "uncertain": null,
+      "sources": [
+        {
+          "title": "Lookout Tower with Cupalo, for use with Plan L-6 (T-1 and T-2, 1932)",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-2-Lookout-Tower-with-Cupalo.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        }
+      ],
+      "schematic": "cupola_tower"
+    },
+    {
+      "id": "r1_patrol_tower",
+      "name": "Region 1 patrol tower (T-3)",
+      "aka": [
+        "T-3",
+        "L-3 patrol tower (from 1939)"
+      ],
+      "family": "r1_patrol_tower",
+      "part": "tower",
+      "material": "log",
+      "region_codes": [
+        "R1"
+      ],
+      "summary": "A light pole tower for patrolmen, drawn in 1933 in heights of 12 to 48 ft: no house, just a small railed platform reached by a ladder of notched rungs. It was put together flat on the ground and pulled upright in one piece with a gin pole and hoist.",
+      "years_in_use": {
+        "from": 1933,
+        "to": null,
+        "text": "Drawn in February 1933; renumbered L-3 in 1939."
+      },
+      "cab_size": "No cab: an open platform about 8 x 8 ft 6 in.",
+      "tower_heights": "12, 24, 36 and 48 ft (bases 10 to 16 ft wide).",
+      "materials": "Poles with X-bracing in 12-ft bays; light guy cables.",
+      "makers": [
+        "USDA Forest Service, Region 1"
+      ],
+      "models": [
+        "T-3 (L-3)"
+      ],
+      "regions": "Montana and northern Idaho.",
+      "features": [
+        "ladder instead of stairs",
+        "open railed platform",
+        "raised in one piece"
+      ],
+      "plans": [
+        {
+          "title": "T-3 Patrol Tower",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-3-Patrol-Tower.pdf",
+          "year": 1933
+        }
+      ],
+      "uncertain": null,
+      "sources": [
+        {
+          "title": "Patrol Tower L-3 (old T-3, 1933)",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-3-Patrol-Tower.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        }
+      ],
+      "schematic": "mast"
     },
     {
       "id": "d6",
@@ -393,7 +1066,12 @@
         "D-6 Cupola",
         "District 6 Cupola House"
       ],
-      "kind": "cupola",
+      "family": "cupola",
+      "part": "house",
+      "material": "wood",
+      "region_codes": [
+        "R6"
+      ],
       "summary": "An early standard design that looks like a small two-story house: a plain lower story topped by a smaller, mostly-glassed second story the observer stood in. It predates the L-4 and is one of the oldest standardized Forest Service lookout shapes.",
       "years_in_use": {
         "from": 1915,
@@ -414,9 +1092,18 @@
         "looks like a small two-story building rather than a single-room cab",
         "glassed-in upper story (the 'cupola') sits on top of a larger plain lower story",
         "hipped roof",
-        "usually built on the ground, not raised on a wood tower"
+        "usually built on the ground, not raised on a wood tower",
+        "the District 6 'ready-cut' plan of December 1921: a 12 ft square living room under a hip roof, a small glassed cupola with a pointed roof reached by a ladder, a lightning rod, and corner guy cables with turnbuckles; the kit came to about 3,310 board feet, 7,000 lb, cut and numbered for packing in"
       ],
-      "uncertain": "The exact end date of D-6 construction is not clearly stated anywhere in the sources reviewed; it appears to have continued in occasional use into the 1920s even after the L-4 was introduced around 1929-1930, since Forest Service staff are recorded replacing D-6 cabins with newer L-4s only gradually, forest by forest.",
+      "plans": [
+        {
+          "title": "D-6 Cupola",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/D-6-Cupola-Lookout-House.pdf",
+          "year": 1921,
+          "note": "District 6 'Ready Cut Lookout House'"
+        }
+      ],
+      "uncertain": "The exact end date of D-6 construction is not clearly stated anywhere in the sources reviewed; it appears to have continued in occasional use into the 1920s even after the L-4 was introduced around 1929-1930. The FFLA scan is titled 'Ready Cut Lookout House' and does not itself use the name D-6.",
       "sources": [
         {
           "title": "Fire Lookout Tower Design Types (lktpix.html)",
@@ -482,6 +1169,15 @@
           "supports": [
             "plans"
           ]
+        },
+        {
+          "title": "Specifications and Plans for Ready-Cut Lookout House (District 6, 1921-22)",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/D-6-Cupola-Lookout-House.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
         }
       ],
       "schematic": "d6"
@@ -490,7 +1186,12 @@
       "id": "d1",
       "name": "D-1",
       "aka": [],
-      "kind": "cupola",
+      "family": "cupola",
+      "part": "house",
+      "material": "log",
+      "region_codes": [
+        "R1"
+      ],
       "summary": "A log-built cousin of the D-6 cupola house, built of logs instead of milled frame construction but following the same two-story idea of plain quarters below and a glassed observation room above.",
       "years_in_use": {
         "from": 1922,
@@ -550,7 +1251,12 @@
         "Nez Perce Model",
         "R-3 log cabin with cupola"
       ],
-      "kind": "cupola",
+      "family": "cupola",
+      "part": "house",
+      "material": "wood",
+      "region_codes": [
+        "R1"
+      ],
       "summary": "Before the L-4 became the nationwide standard around 1930, individual forests and regions built their own small two-part lookout houses: a plain room below and a glassed-in observation room or small tower above it, often called a cupola. These were usually log or frame cabins and varied a good deal from forest to forest.",
       "years_in_use": {
         "from": 1911,
@@ -628,6 +1334,284 @@
       "schematic": "cupola"
     },
     {
+      "id": "r6_7x7_cab",
+      "name": "Region 6 7 x 7 tower cab (1936)",
+      "aka": [
+        "Standard 1936 7'x7' Lookout House",
+        "B-4100"
+      ],
+      "family": "r6_7x7_cab",
+      "part": "cab",
+      "material": "wood",
+      "region_codes": [
+        "R6"
+      ],
+      "summary": "A small wooden observation cab for the top of a tall timber tower, made the national standard in 1936 together with the 14 x 14 ft lookout house. The lookout watched from it and lived in a cabin on the ground. It was drawn with a catwalk and shutters, or without a catwalk and entered through a trap door in the floor.",
+      "years_in_use": {
+        "from": 1936,
+        "to": null,
+        "text": "Standard from 1936; sheets revised to 1940."
+      },
+      "cab_size": "7 x 7 ft, with a 12 ft 6 in square catwalk when it has one.",
+      "tower_heights": "Drawn for the CT-1 (52 to 119 ft) and CT-5 (31 and 41 ft) timber towers.",
+      "materials": "Wood frame with rustic siding below the windows and a canvas roof over boards.",
+      "makers": [
+        "USDA Forest Service, Region 6 (Portland)"
+      ],
+      "models": [
+        "B-4101, B-4102 (with catwalk)",
+        "B-4103 (without catwalk)"
+      ],
+      "regions": "Pacific Northwest, issued as a national standard.",
+      "features": [
+        "tiny cab with windows all round and a firefinder stand",
+        "shutters hinged at the top and propped on braces",
+        "without a catwalk: no door or shutters, a trap door in the floor instead"
+      ],
+      "plans": [
+        {
+          "title": "1938 plan book, Section III (sheets B-4101 to B-4103)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-III-IV-V.pdf",
+          "year": 1936
+        }
+      ],
+      "uncertain": null,
+      "sources": [
+        {
+          "title": "Standard Lookout Structure Plans (USDA Forest Service, 1938, revised 1941), Sections III and VI",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-III-IV-V.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        }
+      ],
+      "schematic": "cupola_tower"
+    },
+    {
+      "id": "r6_timber_towers",
+      "name": "Region 6 standard timber towers (CT, RT and TT types)",
+      "aka": [
+        "CT-1",
+        "CT-2",
+        "CT-3",
+        "CT-4",
+        "CT-5",
+        "CT-6",
+        "RT-1",
+        "TT-1",
+        "creosoted timber tower"
+      ],
+      "family": "r6_timber_towers",
+      "part": "tower",
+      "material": "wood",
+      "region_codes": [
+        "R6",
+        "national"
+      ],
+      "summary": "The Pacific Northwest region's stock wooden towers of 1937 to 1948, made the national standard for timber towers in the 1938 plan book. Each type was offered in a few fixed heights, from a 10-ft stand to 119 ft, and topped with either the small 7 x 7 ft cab or the 14 x 14 ft live-in house. Most are creosote-treated timbers bolted with split-ring connectors and steadied by four guy cables.",
+      "years_in_use": {
+        "from": 1937,
+        "to": 1964,
+        "text": "The CT types were drawn in 1937-38, the CT-6 in 1941-42 and the TT-1 in 1948; the TT-1 sheets were still being revised in the early 1960s."
+      },
+      "cab_size": "7 x 7 ft cab on the CT-1 and CT-5; 14 x 14 ft house (later the 15 ft 4 in R-6 flat house, B-4301) on the CT-2, CT-3, CT-4, CT-6, RT-1 and TT-1.",
+      "tower_heights": "CT-1: 52, 66, 82, 99, 119 ft. CT-2: 28 (29), 41, 53 ft. CT-3: 20, 30, 40 ft. CT-4: 65, 83, 100, 117 ft. CT-5: 31, 41 ft. CT-6: 10 ft. RT-1: 10, 24, 40 ft. TT-1: 41, 67, 82 ft (20, 30, 53 ft added later).",
+      "materials": "Creosote-treated timber (Douglas fir or Southern yellow pine), 6 x 6 or 8 x 8 legs, bolted with split rings; RT-1 untreated peeled poles on log cribs; concrete footings and guy anchors.",
+      "makers": [
+        "USDA Forest Service, Region 6 (Portland); sometimes made up by contractors (one CT-2 in Arizona was supplied by Timber Engineering Co. in 1943)"
+      ],
+      "models": [
+        "CT-1",
+        "CT-2",
+        "CT-3",
+        "CT-4",
+        "CT-5",
+        "CT-6",
+        "RT-1",
+        "TT-1"
+      ],
+      "regions": "Oregon and Washington mainly; a few stand in Idaho, Arizona and Virginia.",
+      "features": [
+        "four legs X-braced in tiers, stairs switching back inside the frame",
+        "four guy cables at 45 degrees to buried anchors (except the short CT-6 and RT-1)",
+        "CT-1 and CT-4 taper toward the top; CT-2 and CT-3 have straight sides",
+        "CT-3 legs are built up from nailed planks so every piece can be packed in by mule"
+      ],
+      "variants": [
+        {
+          "name": "Type selection sheet (1940)",
+          "years": "1940",
+          "description": "Region 6's one-sheet chart of every type and height, with its drawing numbers, for choosing a tower by cab size and how materials could be hauled; the TT-1 and CT-6 were added to it by hand later.",
+          "plans": [
+            {
+              "title": "R-6 Standard Towers 1940",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/USFS-R-6-Standard-Towers-1940.pdf",
+              "year": 1940
+            }
+          ]
+        },
+        {
+          "name": "CT-1",
+          "years": "1937-40",
+          "description": "The tall creosoted tower for the small 7 x 7 ft cab: tapered 8 x 8 legs in eleven X-braced tiers at its full 119 ft, nine stair landings, a 12 ft 6 in square catwalk.",
+          "plans": [
+            {
+              "title": "CT-1 Lookout Tower (119 ft)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/L-1050-CT-1-119-Lookout-Tower.pdf",
+              "year": 1937
+            }
+          ]
+        },
+        {
+          "name": "CT-2",
+          "years": "1938-52",
+          "description": "A straight-sided tower about 12 ft 10 in square for the 14 x 14 ft house, in four X-braced stages at 53 ft, with a 20 ft square catwalk frame on top.",
+          "plans": [
+            {
+              "title": "CT-2 Lookout Tower (53 ft)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/L-1150-CT-2-53-Lookout-Tower.pdf",
+              "year": 1938
+            }
+          ]
+        },
+        {
+          "name": "CT-3",
+          "years": "1938-54",
+          "description": "The pack-in substitute for the CT-2: each leg is a bundle of 2-in planks nailed around a steel angle, so no piece is too heavy for a mule.",
+          "plans": [
+            {
+              "title": "CT-3 Lookout Tower (40 ft)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/L-1120-CT-3-40-Lookout-Tower.pdf",
+              "year": 1938
+            }
+          ]
+        },
+        {
+          "name": "CT-4",
+          "years": "1937-44",
+          "description": "The tall tapered tower for the 14 x 14 ft house, built like the CT-1 but wider at the top for a 20 ft catwalk frame; five stair landings at 83 ft.",
+          "plans": [
+            {
+              "title": "CT-4 Lookout Tower (83 ft)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/L-1070-CT-4-83-Lookout-Tower.pdf",
+              "year": 1937
+            }
+          ]
+        },
+        {
+          "name": "CT-5",
+          "years": "1938-41",
+          "description": "The lightest type, of 6 x 6 legs, for the 7 x 7 ft cab with or without a catwalk; small enough to go in by truck or pack string.",
+          "plans": [
+            {
+              "title": "CT-5 Lookout Tower (41 ft)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/L-1200-CT-5-41-Lookout-Tower.pdf",
+              "year": 1938
+            }
+          ]
+        },
+        {
+          "name": "CT-6",
+          "years": "1941-61",
+          "description": "A 10-ft stand of four sloping 8 x 8 posts with one set of braces and an outside stair, revised to carry the R-6 flat house (B-4301).",
+          "plans": [
+            {
+              "title": "CT-6 Lookout Tower (10 ft)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/L-1240-CT-6-10-Lookout-Tower.pdf",
+              "year": 1941
+            }
+          ]
+        },
+        {
+          "name": "RT-1",
+          "years": "1938",
+          "description": "A round-log tower of peeled poles on log-crib footings, guyed to log deadmen, for remote sites only pack stock could reach; 10, 24 or 40 ft with the 14 x 14 ft house. The 1938 book allows it only up to 40 ft and where no treated or steel tower could be brought in.",
+          "plans": [
+            {
+              "title": "1938 plan book, Section II (RT-1, 40 ft, sheets L-11801 and L-11802)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-II.pdf",
+              "year": 1938
+            }
+          ]
+        },
+        {
+          "name": "TT-1",
+          "years": "1948-64",
+          "description": "The postwar treated-timber tower, designed in 1948 to newer lumber-stress rules, with split rings and shear plates and steel gussets at the guys; cut either in short pieces for pack horses or long ones for trucks, and later modified for the R-6 flat house.",
+          "plans": [
+            {
+              "title": "TT-1 Lookout Tower (41 ft)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/L-2120-TT-1-41-Lookout-Tower.pdf",
+              "year": 1948
+            }
+          ]
+        }
+      ],
+      "plans": [
+        {
+          "title": "1938 plan book, Section II (timber towers)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-II.pdf",
+          "year": 1938
+        },
+        {
+          "title": "1938 plan book, Section IV (guy-cable tables for each type)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-III-IV-V.pdf",
+          "year": 1939
+        }
+      ],
+      "uncertain": "The sheets never spell out CT and RT; read as creosoted timber and round timber from the labels. The TT-1 plans call it a treated timber tower. One register page dates a CT-2 to 1939 in Virginia, outside Region 6.",
+      "sources": [
+        {
+          "title": "R-6 Standard Towers 1940 and the CT-1 to CT-6 and TT-1 plans",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/USFS-R-6-Standard-Towers-1940.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "Standard Lookout Structure Plans (USDA Forest Service, 1938, revised 1941), Sections II and IV",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-II.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "East Pocket Lookout (AZ)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/az/east-pocket-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "makers"
+          ]
+        },
+        {
+          "title": "Dry Soda Lookout (OR)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/or/dry-soda-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "features"
+          ]
+        },
+        {
+          "title": "Brushy Mountain Lookout Site (VA)",
+          "publisher": "Former Fire Lookout Sites register",
+          "url": "http://firetower.org/lookouts/us/va/brushy-mountain-lookout-site/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "regions"
+          ]
+        }
+      ],
+      "schematic": "timber_tower"
+    },
+    {
       "id": "r5_lookouts",
       "name": "California (Region 5) plans",
       "aka": [
@@ -635,7 +1619,12 @@
         "BC-301",
         "DuBois cab"
       ],
-      "kind": "other",
+      "family": "r5_lookouts",
+      "part": "cab",
+      "material": "wood",
+      "region_codes": [
+        "R5"
+      ],
       "summary": "California's own Forest Service region developed its lookout standards somewhat independently of the Region 1/Region 6 L-4 story. It settled on its own 14x14 ft live-in cab in 1917, well before the L-4 existed, and later developed its own small all-steel cab for use on steel towers. The two families, wood cab and steel cab, were used side by side on different towers around the state.",
       "years_in_use": {
         "from": 1914,
@@ -684,10 +1673,696 @@
       "schematic": "r5"
     },
     {
+      "id": "plan_4a",
+      "name": "Plan 4-A",
+      "aka": [
+        "4A",
+        "Primary Lookout Building (District 4, 1921)"
+      ],
+      "family": "r5_lookouts",
+      "part": "cab",
+      "material": "wood",
+      "region_codes": [
+        "R5",
+        "R4"
+      ],
+      "summary": "One of the first standard live-in lookouts in the West: a 14 x 14 ft wooden house with a steep pyramid roof and a band of windows all round, the lookout living and watching in one room with the firefinder on a raised platform in the middle. Register pages call it California's Plan 4A of 1917; the Intermountain district printed it in 1921 as its own standard 'Primary Lookout Building', and several were built in Idaho.",
+      "years_in_use": {
+        "from": 1917,
+        "to": 1923,
+        "text": "Built from 1917 until 1923, when the 4-AR (D-5) replaced it; the Intermountain booklet is dated July 1921."
+      },
+      "cab_size": "14 x 14 ft (14 ft 4 in overall), one room.",
+      "tower_heights": "On the ground, or on a braced timber underpinning up to 12 ft.",
+      "materials": "Wood frame with rustic siding below the windows, cedar shingle roof, redwood or cedar sills, stone or masonry footings.",
+      "makers": [
+        "USDA Forest Service, District 5 (California) and District 4 (Intermountain)"
+      ],
+      "models": [
+        "Buildings Series No. 4, Plan 4-A (District 4, 1921)"
+      ],
+      "regions": "California and Idaho.",
+      "features": [
+        "steep pyramid roof (12 in 12 pitch)",
+        "six windows a side, two panes each, with the door in place of the second window from a corner",
+        "firefinder on a raised platform with a revolving chair, in the centre of the room",
+        "1921 lightning protection: wires over the roof hips and down the corners to four buried copper cones",
+        "painted brown with white trim and a moss-green roof (1921 specification)"
+      ],
+      "plans": [
+        {
+          "title": "Plan 4-A (District 4 printing, 1921; reprinted 1998)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Plan-4-A-Lookout1921.pdf",
+          "year": 1921,
+          "note": "FFLA lists it as 'Region 5 4-A'"
+        }
+      ],
+      "uncertain": "FFLA labels this scan 'Plan 4-A (Region 5 4-A)', but the booklet itself says 'Standard for District 4' throughout and names Ogden as the supply depot; nothing in it mentions California. Register pages call the 4A a California Region 5 plan of 1917. The same series number may have been used by both districts for the same house, or one district may have copied the other's.",
+      "sources": [
+        {
+          "title": "Plan No. 4-A, Primary Lookout Building, Standard for District 4 (1921)",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Plan-4-A-Lookout1921.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "Lookout Cab Styles (Mark A. Swift, 2003, on wooden cab styles in Regions 1, 5 and 6)",
+          "publisher": "Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Lookout-Cab-Styles-Wooden.pdf",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "features",
+            "cab_size"
+          ]
+        },
+        {
+          "title": "Buck Rock Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/buck-rock-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use",
+            "cab_size"
+          ]
+        },
+        {
+          "title": "Harvey Mountain Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/harvey-mountain-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use"
+          ]
+        },
+        {
+          "title": "Tripod Peak Lookout (ID)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/id/tripod-peak-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "regions"
+          ]
+        }
+      ],
+      "schematic": "ground_cab"
+    },
+    {
+      "id": "d5",
+      "name": "D-5 (4-AR)",
+      "aka": [
+        "4AR",
+        "4-AR",
+        "Supervisor Hall Special",
+        "District 5 style"
+      ],
+      "family": "r5_lookouts",
+      "part": "cab",
+      "material": "wood",
+      "region_codes": [
+        "R5",
+        "R6"
+      ],
+      "summary": "California's standard 'primary lookout house' of 1922 and the revised California lookout that followed the 4-A: a 14 x 14 ft wooden live-in house with a steep roof, windows on every side behind board shutters, and the firefinder on a raised platform in the middle of the room. It stood on the ground or on a short braced timber tower. Oregon used it too and called it the 'Supervisor Hall Special'. About a dozen survive.",
+      "years_in_use": {
+        "from": 1922,
+        "to": 1934,
+        "text": "The District 5 booklet is dated March 1922; register examples run from about 1923 to 1934, a late use."
+      },
+      "cab_size": "14 x 14 ft (13 x 13 ft on some Oregon records).",
+      "tower_heights": "On the ground or on a braced timber tower; the 1922 booklet lists materials for 5, 10 and 16 ft towers, and register pages give 8 to 30 ft.",
+      "materials": "Wood frame.",
+      "makers": [
+        "USDA Forest Service, District 5 (California)"
+      ],
+      "models": [
+        "Primary Lookout House (District 5 pattern, 1922)",
+        "4-AR",
+        "D-5"
+      ],
+      "regions": "California, Oregon, and single examples in Nevada, Idaho, Arizona and Washington.",
+      "features": [
+        "steep roof at half pitch (12 in 12)",
+        "five windows a side, two panes each, with storm sash and screens",
+        "door in the middle of a wall, where the 4-A had it near a corner",
+        "board shutters held by steel shutter bars",
+        "firefinder table on a raised platform with a revolving chair"
+      ],
+      "plans": [
+        {
+          "title": "D-5 (4-AR) plan: Primary Lookout Houses and Towers, District 5 Pattern (1922)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/D-5-4-AR-Plan.pdf",
+          "year": 1922
+        }
+      ],
+      "uncertain": "The 1922 booklet does not itself use the names D-5 or 4-AR; Mark Swift says he took D-5 from one set of plans, and that Region 6 records later called some D-5s L-4s. The booklet's elevation reads as a gable roof to one reader, while Swift describes a hip roof. The District 4 Plan 4-A booklet of 1921 is strikingly similar.",
+      "sources": [
+        {
+          "title": "D-5 (4-AR) Plan",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/D-5-4-AR-Plan.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "Lookout Cab Styles (Mark A. Swift, 2003, on wooden cab styles in Regions 1, 5 and 6)",
+          "publisher": "Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Lookout-Cab-Styles-Wooden.pdf",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "features",
+            "cab_size"
+          ]
+        },
+        {
+          "title": "Zephyr Point Lookout (NV)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/nv/zephyr-point-zephyr-cove-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "regions"
+          ]
+        },
+        {
+          "title": "Calamity Butte Lookout (OR)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/or/calamity-butte-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "aka",
+            "cab_size"
+          ]
+        },
+        {
+          "title": "Babbit Peak Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/babbit-peak-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use",
+            "aka"
+          ]
+        },
+        {
+          "title": "Dixie Mountain Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/dixie-mountain-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "tower_heights"
+          ]
+        }
+      ],
+      "schematic": "ground_cab"
+    },
+    {
+      "id": "c3",
+      "name": "C-3",
+      "aka": [
+        "C3",
+        "R-5 cab"
+      ],
+      "family": "r5_lookouts",
+      "part": "cab",
+      "material": "wood",
+      "region_codes": [
+        "R5"
+      ],
+      "summary": "California's most common wooden live-in cab of the 1930s: 14 x 14 ft with a hip roof, like an L-4, but with the door in the middle of a wall and two-pane windows. From about 1934 most had outriggers to hold the shutters open.",
+      "years_in_use": {
+        "from": 1933,
+        "to": 1942,
+        "text": "Register examples were built between 1933 and 1942."
+      },
+      "cab_size": "14 x 14 ft.",
+      "tower_heights": "On the ground, on short enclosed timber towers, or on steel towers of 20 to 30 ft.",
+      "materials": "Wood frame.",
+      "makers": [
+        "USDA Forest Service, Region 5 (California)"
+      ],
+      "models": [
+        "C-3",
+        "C-3 with outriggers"
+      ],
+      "regions": "California, with a few in Idaho.",
+      "features": [
+        "door in the middle of a wall",
+        "two panes per window",
+        "hip roof, 8 in 12 pitch",
+        "outriggers for the shutters on most"
+      ],
+      "uncertain": "One register page dates the design to 1917 and calls it a forerunner of the L-4; Mark Swift's notes say maintenance records often confused the C-3 with the L-4.",
+      "sources": [
+        {
+          "title": "Lookout Cab Styles (Mark A. Swift, 2003, on wooden cab styles in Regions 1, 5 and 6)",
+          "publisher": "Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Lookout-Cab-Styles-Wooden.pdf",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "features",
+            "cab_size"
+          ]
+        },
+        {
+          "title": "Custer Lookout (ID)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/id/custer-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "uncertain"
+          ]
+        },
+        {
+          "title": "Argentine Rock Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/argentine-rock-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use"
+          ]
+        },
+        {
+          "title": "Estelle Mountain Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/estelle-mountain-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "cab_size",
+            "tower_heights"
+          ]
+        }
+      ],
+      "schematic": "l4"
+    },
+    {
+      "id": "bc301",
+      "name": "BC-301",
+      "aka": [
+        "BC-3",
+        "BC-302"
+      ],
+      "family": "r5_lookouts",
+      "part": "cab",
+      "material": "wood",
+      "region_codes": [
+        "R5"
+      ],
+      "summary": "California Region 5's standard wooden cab of the CCC era, an updated version of the L-4 idea: a 14 x 14 ft live-in cab, usually on a short enclosed timber tower with a storage room below. It is the design most named on California's registers.",
+      "years_in_use": {
+        "from": 1933,
+        "to": 1954,
+        "text": "Register examples were built between 1933 and 1954, most before 1943; the CL-30 steel cab began to replace it in the 1950s."
+      },
+      "cab_size": "14 x 14 ft.",
+      "tower_heights": "Usually on a 10 to 30 ft enclosed or open timber tower (Forest Service tower plans L-101, L-301, L-601, L-701), sometimes on steel.",
+      "materials": "Wood frame.",
+      "makers": [
+        "USDA Forest Service, Region 5"
+      ],
+      "models": [
+        "BC-301",
+        "BC-302"
+      ],
+      "regions": "California, with a few in Oregon; Region 1 drew its own revision.",
+      "features": [
+        "live-in cab with catwalk",
+        "often on an enclosed timber tower with a storage room"
+      ],
+      "uncertain": null,
+      "sources": [
+        {
+          "title": "Garwood Butte Lookout (OR)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/or/garwood-butte-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "summary",
+            "years_in_use"
+          ]
+        },
+        {
+          "title": "Baker Point Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/baker-point-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "cab_size",
+            "tower_heights"
+          ]
+        },
+        {
+          "title": "Latour Butte Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/latour-butte-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "tower_heights"
+          ]
+        },
+        {
+          "title": "Eagle Peak Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/eagle-peak-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use"
+          ]
+        }
+      ],
+      "schematic": "enclosed_timber"
+    },
+    {
+      "id": "bc201",
+      "name": "BC-201",
+      "aka": [
+        "Lookout-fireman house"
+      ],
+      "family": "r5_lookouts",
+      "part": "house",
+      "material": "wood",
+      "region_codes": [
+        "R5"
+      ],
+      "summary": "A Region 5 house for a fire guard who also kept watch: a frame cottage with a kitchen and bedroom and a 'lookout room' glazed on three sides, for places where a tower was not needed or the view was partly blocked anyway. Some served as the residence beside a steel tower.",
+      "years_in_use": {
+        "from": 1933,
+        "to": 1940,
+        "text": "A 1934 design; register examples were built from 1933 to 1938."
+      },
+      "cab_size": "About 19 x 30 ft house with a lookout room glazed on three sides (180 to 270 degrees of view).",
+      "tower_heights": "On the ground.",
+      "materials": "Wood frame.",
+      "makers": [
+        "USDA Forest Service, Region 5"
+      ],
+      "models": [
+        "BC-201"
+      ],
+      "regions": "California.",
+      "features": [
+        "windows on three sides of the lookout room only",
+        "a dwelling, not a tower"
+      ],
+      "uncertain": null,
+      "sources": [
+        {
+          "title": "Pine Mountain Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/pine-mountain-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "features"
+          ]
+        },
+        {
+          "title": "Sierra Peak Lookout Site (CA)",
+          "publisher": "Former Fire Lookout Sites register",
+          "url": "http://firetower.org/lookouts/us/ca/sierra-peak-lookout-site/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "cab_size",
+            "years_in_use"
+          ]
+        },
+        {
+          "title": "Blacks Ridge Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/blacks-ridge-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "summary"
+          ]
+        }
+      ],
+      "schematic": "house"
+    },
+    {
+      "id": "plan_81a",
+      "name": "Plan 81-A (10 x 10 on log crib)",
+      "aka": [
+        "R-4 Plan 81-A"
+      ],
+      "family": "plan_81a",
+      "part": "whole",
+      "material": "log",
+      "region_codes": [
+        "R4"
+      ],
+      "summary": "A small Intermountain Region lookout of 1941: a 10 ft square glazed cab with a cedar-shingle hip roof resting on a few courses of logs. Builders could add a log crib underneath as a storage room that also raised the cab, and a catwalk carried on logs that stick out from the crib.",
+      "years_in_use": {
+        "from": 1941,
+        "to": null,
+        "text": "Drawn in January 1941."
+      },
+      "cab_size": "10 x 10 ft inside (10 ft 10 in outside).",
+      "tower_heights": "On the ground on log sill courses, or on an optional log crib storage section about 7 ft 6 in to 8 ft high.",
+      "materials": "Framed, glazed cab on log courses; logs of 10 to 12 in for the crib; rock masonry or concrete foundation, whichever is cheaper.",
+      "makers": [
+        "USDA Forest Service, Region 4 (Ogden)"
+      ],
+      "models": [
+        "R-4 Plan 81-A"
+      ],
+      "regions": "Intermountain Region (Utah, Nevada, southern Idaho, western Wyoming).",
+      "features": [
+        "twelve-light sash hinged at the top",
+        "projecting log rafter ends",
+        "optional catwalk on projecting sill logs with a log railing"
+      ],
+      "plans": [
+        {
+          "title": "Plan 81-A (10 x 10 on log crib, 1941)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Plan-81-A-10-x-10-on-Log-Crib.pdf",
+          "year": 1941,
+          "note": "sheet 1 of 6"
+        }
+      ],
+      "uncertain": "Only the first of six sheets is in the scan; the crib height figures are partly illegible.",
+      "sources": [
+        {
+          "title": "Lookout House, R-4 Plan No. 81-A (1941)",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Plan-81-A-10-x-10-on-Log-Crib.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        }
+      ],
+      "schematic": "log_cab"
+    },
+    {
+      "id": "plan_86",
+      "name": "Plan 86 (two-story lookout house)",
+      "aka": [
+        "R-4 Plan 86",
+        "86-A"
+      ],
+      "family": "plan_86",
+      "part": "whole",
+      "material": "mixed",
+      "region_codes": [
+        "R4"
+      ],
+      "summary": "An Intermountain Region two-story lookout of 1940: a stone lower floor used as kitchen and storage, and a wood-framed lookout room above whose windows and shutters slide down into pockets in the walls. The house stands in the middle of a 30 ft square concrete terrace with stone piers.",
+      "years_in_use": {
+        "from": 1940,
+        "to": null,
+        "text": "Drawn in June 1940; a Forest Service note of 2006 shows a later 86-A version."
+      },
+      "cab_size": "About 16 x 16 ft on both floors.",
+      "tower_heights": "Two stories; no tower.",
+      "materials": "Stone masonry lower story with a concrete floor; wood-framed upper story with steel angle corners; shake and shingle roof.",
+      "makers": [
+        "USDA Forest Service, Region 4 (Ogden)"
+      ],
+      "models": [
+        "R-4 Plan 86"
+      ],
+      "regions": "Intermountain Region.",
+      "features": [
+        "inside stair between the floors",
+        "windows and shutters that drop into wall pockets",
+        "30 ft square terrace around the house"
+      ],
+      "plans": [
+        {
+          "title": "Plan 86 (two-story, 1940)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Plan-86-Two-Story.pdf",
+          "year": 1940,
+          "note": "sheets 1 and 3 of 7"
+        }
+      ],
+      "uncertain": "Only two of seven sheets are in the scan, so the upper floor plan is not shown.",
+      "sources": [
+        {
+          "title": "Lookout House, 2 Floor, R-4 Plan No. 86 (1940)",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Plan-86-Two-Story.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "Historic Lookout Plans and More on the FSWeb (Tech Tip 0623-2303-MTDC, 2006)",
+          "publisher": "USDA Forest Service, Missoula Technology and Development Center",
+          "url": "https://www.fs.usda.gov/t-d/pubs/htmlpubs/htm06232303/index.htm",
+          "licence": "public domain (US government work)",
+          "supports": [
+            "years_in_use"
+          ]
+        }
+      ],
+      "schematic": "stone_two_story"
+    },
+    {
+      "id": "sitpa",
+      "name": "SITPA log lookout",
+      "aka": [
+        "Southern Idaho Timber Protective Association lookout station"
+      ],
+      "family": "sitpa",
+      "part": "whole",
+      "material": "log",
+      "region_codes": [
+        "R4"
+      ],
+      "summary": "A two-story log lookout station drawn by the Southern Idaho Timber Protective Association, a private fire-protection association: about 20 ft square, with a kitchen and bedroom on the ground floor and a windowed observation room upstairs around the firefinder table. It sits inside a 10 ft concrete platform with a log railing, and a cage of copper wire on poles guards it from lightning. The set even includes a matching log privy, the 'Little Lookout'.",
+      "years_in_use": {
+        "from": null,
+        "to": null,
+        "text": "The sheets carry no date."
+      },
+      "cab_size": "About 20 x 20 ft, two stories.",
+      "tower_heights": "Two stories on a dry rock foundation; no tower.",
+      "materials": "Round logs meeting at round corner posts; pole-rafter roof of cedar shingles; concrete platform.",
+      "makers": [
+        "Southern Idaho Timber Protective Association"
+      ],
+      "models": [
+        "Sheets A to E"
+      ],
+      "regions": "Southern Idaho.",
+      "features": [
+        "steep pyramid roof",
+        "six nine-light windows on each wall upstairs",
+        "maps hung from the ceiling to swing down for use",
+        "'bird cage' lightning protection on poles around the building",
+        "guyed at the corners with wire rope"
+      ],
+      "plans": [
+        {
+          "title": "SITPA Lookout Plans",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/SITPA-Lookout-Plans.pdf",
+          "note": "sheets A to E, each scanned three times"
+        }
+      ],
+      "uncertain": "No date or plan number appears on the sheets.",
+      "sources": [
+        {
+          "title": "Lookout Station, Southern Idaho Timber Protective Association",
+          "publisher": "Southern Idaho Timber Protective Association, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/SITPA-Lookout-Plans.pdf",
+          "licence": "no licence stated; linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        }
+      ],
+      "schematic": "log_two_story"
+    },
+    {
+      "id": "r3_cab",
+      "name": "Region 3 cab",
+      "aka": [
+        "R-3 cab",
+        "low-sill cab"
+      ],
+      "family": "r3_cab",
+      "part": "cab",
+      "material": "wood",
+      "region_codes": [
+        "R3"
+      ],
+      "summary": "The Southwest's own wooden live-in cab: 12 x 12 ft (later 14 x 14 ft), with windows that come down unusually low, set on a short Aermotor MC-24 steel tower or a concrete-block base, usually without a catwalk.",
+      "years_in_use": {
+        "from": 1934,
+        "to": 1954,
+        "text": "Register examples were built from the mid-1930s to 1954."
+      },
+      "cab_size": "12 x 12 ft; 14 x 14 ft in later examples.",
+      "tower_heights": "On about 30-ft Aermotor MC-24 towers, or 10-ft concrete-block bases.",
+      "materials": "Wood frame.",
+      "makers": [
+        "USDA Forest Service, Region 3"
+      ],
+      "models": [],
+      "regions": "Arizona and New Mexico.",
+      "features": [
+        "low window sills",
+        "usually no catwalk",
+        "live-in"
+      ],
+      "uncertain": null,
+      "sources": [
+        {
+          "title": "El Caso Lookout (NM)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/nm/el-caso-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "features",
+            "cab_size"
+          ]
+        },
+        {
+          "title": "Mangas Lookout (NM)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/nm/mangas-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "cab_size",
+            "features"
+          ]
+        },
+        {
+          "title": "Davenport Lookout (NM)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/nm/davenport-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "cab_size",
+            "tower_heights",
+            "years_in_use"
+          ]
+        },
+        {
+          "title": "Glorieta Baldy Lookout (NM)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/nm/glorieta-baldy-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "cab_size"
+          ]
+        }
+      ],
+      "schematic": "r3"
+    },
+    {
       "id": "aermotor",
       "name": "Aermotor steel tower",
       "aka": [],
-      "kind": "steel_tower",
+      "family": "aermotor",
+      "part": "tower",
+      "material": "steel",
+      "region_codes": [
+        "national"
+      ],
       "summary": "A tall, open steel lattice tower topped by a small steel cab, built by a Chicago windmill maker that became the leading supplier of steel lookout towers before the Second World War. Other makers built towers to very similar specifications, so a maker's plate or local records are the surest way to tell an Aermotor from its look-alikes.",
       "years_in_use": {
         "from": 1912,
@@ -713,7 +2388,19 @@
         "small square steel cab (about 7x7 ft) at the top, enclosed with flat galvanized sheet panels below the window band",
         "stairway or ladder running up the inside or outside of the tower, depending on model",
         "frequent landing platforms with guardrails on the taller (LS-40) models",
-        "anchored to rock or concrete piers at the base with long galvanized anchor rods"
+        "anchored to rock or concrete piers at the base with long galvanized anchor rods",
+        "the sales booklet offered three models: LS-40 (inside stairway), LX-25 (inside ladder with landings) and LX-24 (outside ladder), all with the same 7 x 7 ft house"
+      ],
+      "plans": [
+        {
+          "title": "Aermotor Tower Booklet (LS-40, LX-25, LX-24, with price list and photographs)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Aermotor-Tower-Booklet-1.pdf"
+        },
+        {
+          "title": "USFS Specifications and Plans (1924): Aermotor LX-24 and LX-25 as the approved steel designs",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1924-USFS-Fire-Tower-Specs.pdf",
+          "year": 1924
+        }
       ],
       "uncertain": "Exact height ranges differ between sources (21-102 ft for 1920s models specifically, versus 34-175 ft given as an overall figure covering all eras/models), most likely because they are describing different time periods and model ranges rather than genuinely disagreeing. The precise meaning of Aermotor's model-letter codes (what 'L,' 'S,' 'X,' 'M,' 'C' stand for) is not explained in any source reviewed, so it is given here only as documented model names, not decoded abbreviations. A New York State National Register nomination states the Aermotor MC-39 model is 'essentially identical' to a 1933 International Derrick Company tower design, implying the two companies built to a shared or closely coordinated Forest Service specification rather than fully independent designs; this page treats Aermotor and IDECO as separate manufacturer entries because that is how the sources name them, while noting the overlap. One 2012 National Register form calls the 1930s maker 'the Aermotor Company of Texas'; company histories place Aermotor in Chicago in that era and its move to Texas decades later, so that wording looks like an anachronism.",
       "sources": [
@@ -824,9 +2511,456 @@
             "plans",
             "models"
           ]
+        },
+        {
+          "title": "Forest Service Towers (Aermotor sales booklet)",
+          "publisher": "Aermotor Co., Chicago, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Aermotor-Tower-Booklet-1.pdf",
+          "licence": "manufacturer's drawing; linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "Specifications and Plans for Lookout Towers (Forest Service, about 1924)",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1924-USFS-Fire-Tower-Specs.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
         }
       ],
       "schematic": "steel"
+    },
+    {
+      "id": "aermotor_ls40",
+      "name": "Aermotor LS-40",
+      "aka": [
+        "LS40"
+      ],
+      "family": "aermotor",
+      "part": "tower",
+      "material": "steel",
+      "region_codes": [
+        "national"
+      ],
+      "summary": "Aermotor's inside-stairway tower, the model its sales booklet pushed hardest because anyone could climb it: a stair 2 ft wide zigzags up inside the frame with a landing at every level, to a 7 x 7 ft steel cab with a pyramid roof. Drawn in 1917 and still drawn in 1962, it is the most common Aermotor on the registers, especially in New York and the Southeast.",
+      "years_in_use": {
+        "from": 1917,
+        "to": 1965,
+        "text": "Drawn in January 1917 and redrawn in 1962; register examples were built from 1919 to the mid-1960s."
+      },
+      "cab_size": "7 x 7 ft steel cab, about 6 ft 9 in to the eaves, roof 8 ft square.",
+      "tower_heights": "22, 35, 47, 60, 73, 80, 93 and 100 ft (to the cab floor); an extra 20-ft base section turned a 60-ft tower into an 80-ft one.",
+      "materials": "Galvanized steel (dipped after fabrication), bolted; steel sheet lower walls and roof on the cab; wood stair treads on some.",
+      "makers": [
+        "Aermotor Company, Chicago"
+      ],
+      "models": [
+        "LS-40 (1917)",
+        "LY-30 20-ft extension (1922)",
+        "LS-40 (1962 redrawing)"
+      ],
+      "regions": "Nationwide; most register examples are in New York, South Carolina, Tennessee, Mississippi and Florida.",
+      "features": [
+        "stairway inside the frame, 2 ft wide, with a landing at every girt",
+        "small 7 x 7 ft steel cab with two windows a side (the buyer supplied the glass)",
+        "galvanized pyramid roof"
+      ],
+      "variants": [
+        {
+          "name": "1917 drawing",
+          "years": "1917",
+          "description": "The original drawing, with an anchor table for all eight heights and a 1922 sheet for the 20-ft extension.",
+          "plans": [
+            {
+              "title": "Aermotor LS-40 (1917)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/Aermotor-LS-40-1917.pdf",
+              "year": 1917
+            }
+          ]
+        },
+        {
+          "name": "1962 drawing",
+          "years": "1962",
+          "description": "The same design redrawn at its full 100 ft height, with the same eight heights: still sold in the 1960s.",
+          "plans": [
+            {
+              "title": "Aermotor LS-40 (1962)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/Aermotor-LS-40-1962.pdf",
+              "year": 1962
+            }
+          ]
+        }
+      ],
+      "plans": [
+        {
+          "title": "Aermotor Tower Booklet (price list and photographs)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Aermotor-Tower-Booklet-1.pdf"
+        }
+      ],
+      "uncertain": null,
+      "sources": [
+        {
+          "title": "Observation Tower with Inside Stairway, LS-40 (1917, and 1962 redrawing)",
+          "publisher": "Aermotor Co., Chicago, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Aermotor-LS-40-1917.pdf",
+          "licence": "manufacturer's drawing; linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "Forest Service Towers (Aermotor sales booklet)",
+          "publisher": "Aermotor Co., Chicago, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Aermotor-Tower-Booklet-1.pdf",
+          "licence": "manufacturer's drawing; linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "Hurricane Mountain Fire Tower (NY)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ny/hurricane-mountain-fire-tower/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use"
+          ]
+        },
+        {
+          "title": "Atkins Fire Tower (SC)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/sc/atkins-fire-tower/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "tower_heights"
+          ]
+        }
+      ],
+      "schematic": "steel"
+    },
+    {
+      "id": "aermotor_mc39",
+      "name": "Aermotor MC-39",
+      "aka": [
+        "MC39"
+      ],
+      "family": "aermotor",
+      "part": "tower",
+      "material": "steel",
+      "region_codes": [
+        "national"
+      ],
+      "summary": "Aermotor's version of the Forest Service's 1930s standard 7 x 7 ft stairway tower: the same heights, from 33 to 120 ft, an inside zigzag stair with up to eight landings, and a steel cab whose roof was put together on the ground and hoisted up. International Derrick built the same design. The drawing was kept up to date into the 1960s, and Alabama built many.",
+      "years_in_use": {
+        "from": 1934,
+        "to": 1971,
+        "text": "Drawn in December 1934 and revised until 1964; register examples run from 1933 to 1971."
+      },
+      "cab_size": "7 x 7 ft steel cab with sash windows, one hinged at the bottom to swing out.",
+      "tower_heights": "33, 45 ft 9 in, 59 ft 3 in, 72 ft 9 in, 79 ft 6 in, 99 ft 9 in and 120 ft.",
+      "materials": "Galvanized steel; aluminium sash noted on the later revisions.",
+      "makers": [
+        "Aermotor Company, Chicago"
+      ],
+      "models": [
+        "MC-39 (assembly drawing, with foundation MD-70 and parts list KT-19)"
+      ],
+      "regions": "Nationwide; most register examples are in Alabama, then Arizona, Arkansas, Mississippi, New Mexico, Tennessee and Wisconsin.",
+      "features": [
+        "inside zigzag stairway",
+        "roof ventilator and flagpole flanges",
+        "holes for a lightning rod and a telephone ground"
+      ],
+      "plans": [
+        {
+          "title": "Aermotor MC-39 (1934)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Aermotor-MC-39-1934.pdf",
+          "year": 1934,
+          "note": "revised to 1964"
+        }
+      ],
+      "uncertain": "A New York National Register nomination (cited under IDECO) calls the MC-39 essentially the same as International Derrick's 1933 model; the plans agree, since both use the heights of the Forest Service's 1932 standard 7 x 7 tower.",
+      "sources": [
+        {
+          "title": "Assembly of 7' x 7' Lookout Towers, Stairway Type, MC-39 (1934)",
+          "publisher": "Aermotor Co., Chicago, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Aermotor-MC-39-1934.pdf",
+          "licence": "manufacturer's drawing; linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "Encino Lookout (NM)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/nm/encino-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "tower_heights"
+          ]
+        },
+        {
+          "title": "Union Hill Lookout Tower (AL)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/al/union-hill-lookout-tower/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use"
+          ]
+        },
+        {
+          "title": "Crooked Oak Lookout Tower (AL)",
+          "publisher": "Former Fire Lookout Sites register",
+          "url": "http://firetower.org/lookouts/us/al/crooked-oak-lookout-tower/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use"
+          ]
+        }
+      ],
+      "schematic": "steel"
+    },
+    {
+      "id": "aermotor_ll25",
+      "name": "Aermotor LL-25",
+      "aka": [
+        "LL25"
+      ],
+      "family": "aermotor",
+      "part": "tower",
+      "material": "steel",
+      "region_codes": [
+        "national"
+      ],
+      "summary": "An early, light Aermotor observation tower with a 7 ft square enclosed cab, climbed by a straight ladder to a landing under the cab. New York bought ten in 1916, its first steel fire towers; a 1929 sheet added an inside stairway for the shorter heights. The register knows of only two left in the Southwest.",
+      "years_in_use": {
+        "from": 1916,
+        "to": 1929,
+        "text": "Drawn in the 1910s (the year is cut off the sheet); New York's ten arrived in 1916, and the stairway sheet is dated 1929."
+      },
+      "cab_size": "7 x 7 ft enclosed cab with a hip roof, entered through a floor trap door.",
+      "tower_heights": "40, 50, 60 and 70 ft.",
+      "materials": "Galvanized angle steel with rod and angle bracing.",
+      "makers": [
+        "Aermotor Company, Chicago"
+      ],
+      "models": [
+        "LL-25",
+        "KV-84 inside stairway for the 40 and 50 ft towers (1929)"
+      ],
+      "regions": "New York; one each in Arizona and New Mexico on the register.",
+      "features": [
+        "straight vertical ladder up the middle of one face",
+        "later, in some, an inside stairway"
+      ],
+      "plans": [
+        {
+          "title": "Aermotor LL-25",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Aermotor-LL-25.pdf",
+          "note": "with the 1929 stairway sheet"
+        }
+      ],
+      "uncertain": null,
+      "sources": [
+        {
+          "title": "40'-50'-60' & 70' Observation Towers with 7' Enclosed Platform, LL-25",
+          "publisher": "Aermotor Co., Chicago, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Aermotor-LL-25.pdf",
+          "licence": "manufacturer's drawing; linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "Hadley Mountain Fire Tower (NY)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ny/hadley-mountain-fire-tower/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use",
+            "tower_heights"
+          ]
+        },
+        {
+          "title": "Kiowa Lookout (NM)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/nm/kiowa-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "regions",
+            "features"
+          ]
+        },
+        {
+          "title": "Deer Springs Lookout (AZ)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/az/deer-springs-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "regions"
+          ]
+        }
+      ],
+      "schematic": "steel"
+    },
+    {
+      "id": "aermotor_lx",
+      "name": "Aermotor LX-24 / LX-25",
+      "aka": [
+        "LX-24",
+        "LX-25"
+      ],
+      "family": "aermotor",
+      "part": "tower",
+      "material": "steel",
+      "region_codes": [
+        "R3"
+      ],
+      "summary": "Aermotor's ladder towers of the 1920s: a steel lattice tower and a 7 x 7 ft steel cab reached by a steel ladder rather than stairs (outside the frame on the LX-24, inside it on the LX-25). Many later had their ladders replaced by stairs.",
+      "years_in_use": {
+        "from": 1926,
+        "to": 1935,
+        "text": "Register examples were erected between 1926 and 1935."
+      },
+      "cab_size": "7 x 7 ft steel cab.",
+      "tower_heights": "About 45 to 70 ft for the LX-24; the LX-25 examples run from about 59 to 100 ft.",
+      "materials": "Galvanized steel.",
+      "makers": [
+        "Aermotor Company, Chicago"
+      ],
+      "models": [
+        "LX-24 (outside ladder)",
+        "LX-25 (inside ladder)"
+      ],
+      "regions": "Mostly Arizona and New Mexico; LX-25 towers also stand in Arkansas and Louisiana.",
+      "features": [
+        "steel ladder instead of a stairway (often replaced by stairs later)",
+        "7 x 7 ft steel cab"
+      ],
+      "uncertain": "Which side of the frame the ladder runs on is taken from the existing Aermotor entry's sources; one register page says Forest Service records could not tell an LX-24 from an International Derrick tower.",
+      "sources": [
+        {
+          "title": "Reeds Peak Lookout (NM)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/nm/reeds-peak-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "features",
+            "tower_heights"
+          ]
+        },
+        {
+          "title": "San Mateo Lookout (NM)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/nm/san-mateo-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "tower_heights",
+            "features"
+          ]
+        },
+        {
+          "title": "Push Mountain Fire Tower (AR)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ar/push-mountain-firetower/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use",
+            "tower_heights"
+          ]
+        },
+        {
+          "title": "Saddleblanket Mountain Lookout (OR)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/or/saddleblanket-mountain-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "tower_heights",
+            "years_in_use"
+          ]
+        }
+      ],
+      "schematic": "steel"
+    },
+    {
+      "id": "aermotor_mc24",
+      "name": "Aermotor MC-24",
+      "aka": [],
+      "family": "aermotor",
+      "part": "tower",
+      "material": "steel",
+      "region_codes": [
+        "R3"
+      ],
+      "summary": "A short Aermotor steel tower, about 30 feet high, found on the national forests of Arizona and New Mexico. Instead of Aermotor's own small steel cab, most carry a 12 x 12 ft wooden live-in cab of the Southwest's own design.",
+      "years_in_use": {
+        "from": 1932,
+        "to": 1936,
+        "text": "The examples on the register were erected between 1932 and 1936."
+      },
+      "cab_size": "Usually a 12 x 12 ft wooden live-in cab of Region 3 design (some later replaced by 14 x 14 ft steel cabs).",
+      "tower_heights": "About 30 to 31.6 ft.",
+      "materials": "Galvanized steel tower; wooden cab.",
+      "makers": [
+        "Aermotor Company, Chicago"
+      ],
+      "models": [
+        "MC-24"
+      ],
+      "regions": "Arizona and New Mexico (Forest Service Region 3).",
+      "features": [
+        "short steel tower, about 30 ft",
+        "large wooden live-in cab instead of a small steel one",
+        "usually no catwalk"
+      ],
+      "uncertain": "No Aermotor drawing of the MC-24 is among the plans FFLA hosts; these facts come from register descriptions of individual towers.",
+      "sources": [
+        {
+          "title": "Signal Peak Lookout (NM)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/nm/signal-peak-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "tower_heights",
+            "years_in_use",
+            "cab_size"
+          ]
+        },
+        {
+          "title": "Mangas Lookout (NM)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/nm/mangas-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "tower_heights",
+            "cab_size"
+          ]
+        },
+        {
+          "title": "Dead Man's Peak Lookout (NM)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/nm/dead-mans-peak-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "tower_heights",
+            "cab_size"
+          ]
+        },
+        {
+          "title": "Baker Butte Lookout (AZ)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/az/baker-butte-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "cab_size",
+            "years_in_use"
+          ]
+        }
+      ],
+      "schematic": "steel_wood_cab"
     },
     {
       "id": "ideco",
@@ -834,7 +2968,12 @@
       "aka": [
         "International Derrick Company"
       ],
-      "kind": "steel_tower",
+      "family": "ideco",
+      "part": "tower",
+      "material": "steel",
+      "region_codes": [
+        "national"
+      ],
       "summary": "A steel lattice tower built by an Ohio company that normally made oil-well derricks and diversified into fire lookout towers. IDECO towers look very similar to Aermotor's, since both were built to closely related Forest Service specifications, but IDECO was a separate company based in Columbus, Ohio.",
       "years_in_use": {
         "from": 1920,
@@ -842,7 +2981,7 @@
         "text": "The company was founded in 1920; dated fire-tower plans from 1933 and 1937 were found, and the company was acquired by Dresser Industries in 1944, after which its further involvement in fire-tower production is not covered by the sources reviewed."
       },
       "cab_size": "7 x 7 ft steel cab.",
-      "tower_heights": "A documented batch of five New York towers built in 1934 ranged from 59 to 79 ft; other sources describe individual IDECO towers at 80 and 100 ft.",
+      "tower_heights": "Its 1933 erection drawing covers 45 ft 9 in, 59 ft 3 in, 72 ft 9 in, 79 ft 6 in, 86 ft 3 in and 99 ft 9 in, the heights of the Forest Service's 1932 standard 7 x 7 tower. A documented batch of five New York towers built in 1934 ranged from 59 to 79 ft; register pages give 100 and 120 ft for others.",
       "materials": "Galvanized steel lattice tower and cab; one documented tower used structural steel produced by the Carnegie Steel Division of U.S. Steel.",
       "makers": [
         "International Derrick & Equipment Company (IDECO), Columbus, Ohio, founded 1920; primarily a steel oil-well-derrick manufacturer; acquired by Dresser Industries in 1944"
@@ -856,7 +2995,16 @@
         "steel lattice tower, visually very close to an Aermotor tower",
         "7x7 ft steel cab with eight windows, each with a nine-light steel sash",
         "one pane on each face pivots open along a horizontal midline and is held by a notched steel catch bar",
-        "stairway typically zig-zags corner to corner up the tower"
+        "stairway typically zig-zags corner to corner up the tower",
+        "inside zigzag stairway with up to eight landings; roof of four sheets bolted to a centre plate, hoisted up in one piece"
+      ],
+      "plans": [
+        {
+          "title": "International Derrick E-4898 (1933)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/E-4898-1933-International-Derrick.pdf",
+          "year": 1933,
+          "note": "inside stairway type, 45 ft 9 in to 99 ft 9 in"
+        }
       ],
       "uncertain": "A New York National Register nomination states that Forest Service specifications for these towers were developed in coordination with 'the Aermotor Company of Texas,' and that the Aermotor MC-39 model is essentially identical to the 1933 IDECO model. As noted under the Aermotor entry, Aermotor did not relocate to Texas until decades after the 1930s, so that particular phrase in the source may be describing the company by its present-day location rather than its 1930s one. The same source also names two further companies -- Pacific Coast Steel and the Baker Manufacturing Company -- as having built towers to the same specifications, but gives no further detail on them.",
       "sources": [
@@ -906,37 +3054,466 @@
             "plans",
             "models"
           ]
+        },
+        {
+          "title": "Steel Erection, Forest Observation Towers, Inside Stairway Type, E-4898 (1933)",
+          "publisher": "International Derrick and Equipment Co., scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/E-4898-1933-International-Derrick.pdf",
+          "licence": "manufacturer's drawing; linked, not copied",
+          "supports": [
+            "plans"
+          ]
         }
       ],
       "schematic": "steel"
     },
     {
+      "id": "usfs_7x7_1932",
+      "name": "USFS 7 x 7 steel tower (1932 standard)",
+      "aka": [
+        "Model 1933",
+        "7' x 7' Lookout Tower"
+      ],
+      "family": "usfs_7x7_1932",
+      "part": "tower",
+      "material": "steel",
+      "region_codes": [
+        "national"
+      ],
+      "summary": "The Forest Service's own standard steel tower of the early 1930s: a tapering four-legged galvanized frame with a 7 ft square steel cab, which steel companies built to the government's drawings. It could be ordered with an inside zigzag stairway, with ladders broken by landings, or with one straight ladder. International Derrick's 1933 model and Aermotor's MC-39 use its heights exactly.",
+      "years_in_use": {
+        "from": 1932,
+        "to": 1938,
+        "text": "Drawn in September 1932 and revised to 1935; the L-1400 series of 1937 followed it."
+      },
+      "cab_size": "7 x 7 ft steel cab (roof 8 x 8 ft), steel siding below metal sash, double wood floor, trap door.",
+      "tower_heights": "45 ft 9 in, 59 ft 3 in, 72 ft 9 in, 79 ft 6 in, 86 ft 3 in and 99 ft 9 in.",
+      "materials": "Galvanized steel; reinforced concrete piers.",
+      "makers": [
+        "USDA Forest Service design, built by steel companies (International Derrick, Aermotor)"
+      ],
+      "models": [
+        "T1001-A to T1010-A (10 sheets)"
+      ],
+      "regions": "National standard; the copy FFLA hosts is bound with Region 1 handbook pages.",
+      "features": [
+        "three ways up: inside stairs, platform ladder, or straight ladder",
+        "a complete 99 ft 9 in tower weighed 13,900 to 17,200 lb depending on the stair",
+        "steel towers were never to be guyed: designed for a 100 mph gale"
+      ],
+      "plans": [
+        {
+          "title": "USFS 7' x 7' Tower with Inside Stairs (1932)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/USFS-model-1933-fire-tower-detail-drawings.pdf",
+          "year": 1932
+        }
+      ],
+      "uncertain": "Which manufacturer built which towers to this plan is rarely recorded; the register usually names the maker (Aermotor MC-39, International Derrick) instead.",
+      "sources": [
+        {
+          "title": "7' x 7' Lookout Tower, sheets 1 to 10, with Region 1 handbook pages",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/USFS-model-1933-fire-tower-detail-drawings.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        }
+      ],
+      "schematic": "steel"
+    },
+    {
+      "id": "l1401",
+      "name": "USFS L-1400 steel tower (7 x 7 cab)",
+      "aka": [
+        "L-1401",
+        "1937 standard steel tower",
+        "Aermotor MC-99"
+      ],
+      "family": "l1401",
+      "part": "tower",
+      "material": "steel",
+      "region_codes": [
+        "national",
+        "R9"
+      ],
+      "summary": "The Eastern Region's 1937 standard steel tower, made the national standard in the 1938 plan book: seven heights from 30 to 120 ft, climbed by an inside zigzag stair, topped by a 7 x 7 ft steel cab with a copper roof. A flat-roofed cab with a railed observation deck on top was offered for tall eastern forests. FFLA's copy is labelled as built by International Derrick and as Aermotor's MC-99.",
+      "years_in_use": {
+        "from": 1937,
+        "to": null,
+        "text": "Drawn in August and September 1937; revised in 1940 for lightning connectors."
+      },
+      "cab_size": "7 x 7 ft steel cab: copper hip roof, steel sash with hinged visors, trap door; or a flat roof with a railed deck reached by a ladder through a roof hatch.",
+      "tower_heights": "30, 41 ft 3 in, 54, 67 ft 6 in, 82 ft 6 in, 99 ft 9 in and 120 ft (base 11 ft 6 in to 25 ft wide).",
+      "materials": "Galvanized steel angles; copper roof; concrete piers; copper ground wire buried round the base.",
+      "makers": [
+        "USDA Forest Service, Region 7 (Eastern), built by steel companies on contract"
+      ],
+      "models": [
+        "L-1401 to L-1407 (1937)"
+      ],
+      "regions": "A national standard from 1938.",
+      "features": [
+        "inside stair with up to nine landings (160 risers on the 120 ft tower)",
+        "optional observation deck on a flat cab roof",
+        "steel weight 5,600 lb (30 ft) to 22,900 lb (120 ft)"
+      ],
+      "variants": [
+        {
+          "name": "Region 7 sheets, 1937",
+          "years": "1937",
+          "description": "All seven sheets, including both flat-roof cab versions (steel or wood sash) that the 1938 book left out.",
+          "plans": [
+            {
+              "title": "USFS L-1401 (1937 Int Der, Aer MC-99)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/L-1401-1937-International-Derrick-Co.pdf",
+              "year": 1937,
+              "note": "FFLA's link text names International Derrick and Aermotor MC-99; the sheets name no maker"
+            }
+          ]
+        },
+        {
+          "name": "1938 plan book, Section I",
+          "years": "1938",
+          "description": "The hip-roof version as the national standard.",
+          "plans": [
+            {
+              "title": "1938 plan book, Section I (sheets L-1401 to L-1407-A)",
+              "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-I.pdf",
+              "year": 1938
+            }
+          ]
+        }
+      ],
+      "uncertain": "The sheets themselves name no manufacturer; the International Derrick and Aermotor MC-99 attribution is FFLA's.",
+      "sources": [
+        {
+          "title": "Standard Steel Lookout Towers ... Cab Seven Feet Square, L-1401 to L-1407 (1937)",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-1401-1937-International-Derrick-Co.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "Standard Lookout Structure Plans (USDA Forest Service, 1938, revised 1941), Section I",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-I.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "Dark Canyon Lookout (NM)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/nm/dark-canyon-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "aka"
+          ]
+        }
+      ],
+      "schematic": "steel"
+    },
+    {
+      "id": "l1600",
+      "name": "USFS L-1600 steel tower (14 x 14 cab)",
+      "aka": [
+        "L-1600 series",
+        "1600 series tower",
+        "K-brace steel tower"
+      ],
+      "family": "l1600",
+      "part": "tower",
+      "material": "steel",
+      "region_codes": [
+        "national"
+      ],
+      "summary": "The Forest Service's 1937 standard steel tower for a live-in cab: the same kind of tapered, galvanized steel tower as the L-1400, but with a 14 x 14 ft platform on top to carry the wooden 14 x 14 ft lookout house. Drawn by the Eastern Region and made a national standard in the 1938 plan book; register pages name it in California, some carrying later steel cabs.",
+      "years_in_use": {
+        "from": 1937,
+        "to": null,
+        "text": "Drawn in September 1937 (retraced July 1938); the CL-100 plan of the 1950s keeps its tower heights."
+      },
+      "cab_size": "A 14 x 14 ft platform with a stair opening and a wooden trap door; the cab is the 14 x 14 ft wooden house from Region 6's plans, fitted with treated sills bolted to the steel.",
+      "tower_heights": "30, 41 ft 3 in, 54, 67 ft 6 in, 83 ft 1 1/2 in, 100 ft 4 1/2 in and 120 ft.",
+      "materials": "Hot-dip galvanized steel angles; concrete pier footings; wood stair treads.",
+      "makers": [
+        "USDA Forest Service design (Region 7, Eastern), built by steel companies on contract"
+      ],
+      "models": [
+        "L-1601 to L-1604-A (1937-38)"
+      ],
+      "regions": "A national standard; register pages name it mostly in California.",
+      "features": [
+        "stair flights zigzag up inside the four legs",
+        "square 14 x 14 ft platform at the top for a wooden live-in cab",
+        "copper ground wire buried around the base for lightning"
+      ],
+      "plans": [
+        {
+          "title": "1938 plan book, Section I (sheets L-1601 to L-1604-A)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-I.pdf",
+          "year": 1937
+        }
+      ],
+      "uncertain": null,
+      "sources": [
+        {
+          "title": "Standard Lookout Structure Plans (USDA Forest Service, 1938, revised 1941), Section I",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-I.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        }
+      ],
+      "schematic": "steel_cab"
+    },
+    {
+      "id": "cl100",
+      "name": "CL-100 (steel live-in cab)",
+      "aka": [
+        "CL-100 series",
+        "CL-100 to CL-106",
+        "CL-30 (California)",
+        "CL-16"
+      ],
+      "family": "cl100",
+      "part": "cab",
+      "material": "steel",
+      "region_codes": [
+        "national",
+        "R5",
+        "R3"
+      ],
+      "summary": "The Forest Service's 1950s standard for a live-in steel lookout: a steel house about 14 ft square with a flat roof, windows all round, a chain-link-fenced catwalk and storm shutters, fitted with a gas range, refrigerator, sink and bed around the central firefinder. The standard set puts it on a steel stair tower of 30 to 83 ft; many were set instead on short steel towers or concrete-block bases, and it replaced older wooden cabs across the Southwest and California.",
+      "years_in_use": {
+        "from": 1951,
+        "to": 1983,
+        "text": "Drawn in 1951 with house sheets redrawn in 1954; register examples were built from the early 1950s to 1983."
+      },
+      "cab_size": "About 14 x 14 ft (13 ft 3 7/8 in between corner posts); California's CL-30 version is 13 x 13 ft.",
+      "tower_heights": "Standard steel towers of 30, 41 ft 3 in, 54, 67 ft 6 in and 83 ft 1 1/2 in; elsewhere on 10-ft concrete-block bases or short K-braced steel towers.",
+      "materials": "Steel frame with galvanized siding and ribbed roof, insulating wallboard, wood floor.",
+      "makers": [
+        "USDA Forest Service (designed in Region 7, national standard)"
+      ],
+      "models": [
+        "C-L-101 to C-L-109 (1951, house redrawn 1954)",
+        "BC-16-01 furnished floor plan",
+        "CL-30 / CL-104 (California)"
+      ],
+      "regions": "Nationwide; most register examples are in California, Arizona and New Mexico.",
+      "features": [
+        "flat roof",
+        "catwalk fenced with chain link, with a ring bolt for a safety belt",
+        "LP-gas range and refrigerator, sink with pump",
+        "storm shutters"
+      ],
+      "plans": [
+        {
+          "title": "USFS CL-100 Plan (1951)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/CL-100.pdf",
+          "year": 1951,
+          "note": "sheets numbered C-L-101 onward"
+        }
+      ],
+      "uncertain": "The first sheet's date reads 5-3-51 but its revision line reads January 1951, so one of the two is misread. Register pages use 'CL-100' for the cab alone, wherever it stands.",
+      "sources": [
+        {
+          "title": "Standard Steel Lookout Towers ... With Living Quarters, C-L-101 to C-L-109 (1951, 1954)",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/CL-100.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "Eagle Peak Lookout (NM)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/nm/eagle-peak-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "models",
+            "tower_heights"
+          ]
+        },
+        {
+          "title": "Apache Maid Lookout (AZ)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/az/apache-maid-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "cab_size"
+          ]
+        },
+        {
+          "title": "Eagle Peak Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/eagle-peak-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "aka",
+            "years_in_use"
+          ]
+        },
+        {
+          "title": "Mount Ord Lookout (AZ)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/az/mount-ord-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use"
+          ]
+        }
+      ],
+      "schematic": "steel_cab"
+    },
+    {
+      "id": "d3_log_tower",
+      "name": "District 3 log lookout tower (1921)",
+      "aka": [
+        "Log Lookout Tower, Dist. 3"
+      ],
+      "family": "d3_log_tower",
+      "part": "tower",
+      "material": "log",
+      "region_codes": [
+        "R3"
+      ],
+      "summary": "A Southwestern District plan of 1921, reprinted in the Forest Service's 1924 tower booklet: a guyed tower of four log poles carrying a small gable-roofed housing with two swinging windows, a protractor table and a floor trap door.",
+      "years_in_use": {
+        "from": 1921,
+        "to": null,
+        "text": "Drawn in June 1921."
+      },
+      "cab_size": "A small gable-roofed housing.",
+      "tower_heights": "30, 40, 50 and 60 ft.",
+      "materials": "Log poles, guyed.",
+      "makers": [
+        "USDA Forest Service, District 3 (Southwest)"
+      ],
+      "models": [],
+      "regions": "Arizona and New Mexico (District 3).",
+      "features": [
+        "four guyed log poles",
+        "trap door 30 in square",
+        "two opposite swinging windows"
+      ],
+      "plans": [
+        {
+          "title": "USFS Specifications and Plans (1924), page 22",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1924-USFS-Fire-Tower-Specs.pdf",
+          "year": 1921
+        }
+      ],
+      "uncertain": null,
+      "sources": [
+        {
+          "title": "Specifications and Plans for Lookout Towers (Forest Service, about 1924)",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1924-USFS-Fire-Tower-Specs.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        }
+      ],
+      "schematic": "timber_tower"
+    },
+    {
+      "id": "r9_mast",
+      "name": "Region 9 observation mast (emergency lookout)",
+      "aka": [
+        "L5-01",
+        "emergency lookout mast"
+      ],
+      "family": "r9_mast",
+      "part": "tower",
+      "material": "wood",
+      "region_codes": [
+        "R9"
+      ],
+      "summary": "The simplest lookout in the 1938 plan book: a single creosoted pole standing 40 ft above the ground, held by three guy wires, with a small railed platform on top reached by steps fixed to the pole. The book allows it only for short-term use at secondary points.",
+      "years_in_use": {
+        "from": 1937,
+        "to": null,
+        "text": "Drawn by the Eastern (Region 9) office in 1937."
+      },
+      "cab_size": "No cab: an open platform about 5 ft square (?) with a trap door and a pipe railing.",
+      "tower_heights": "40 ft above ground, about 5 ft buried, on a concrete footing.",
+      "materials": "Creosoted pole, plank floor, galvanized guy strands and pipe railing.",
+      "makers": [
+        "USDA Forest Service, Region 9"
+      ],
+      "models": [
+        "L5-01"
+      ],
+      "regions": "Issued from Region 9 (Lake States and East).",
+      "features": [
+        "one guyed pole",
+        "pole steps on alternating sides",
+        "no roof or cab"
+      ],
+      "plans": [
+        {
+          "title": "1938 plan book, Section II, last sheet (L5-01)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-II.pdf",
+          "year": 1937
+        }
+      ],
+      "uncertain": "The platform size and the pole class are small print on the scan and uncertain.",
+      "sources": [
+        {
+          "title": "Standard Lookout Structure Plans (USDA Forest Service, 1938, revised 1941), Section II",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-II.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        }
+      ],
+      "schematic": "mast"
+    },
+    {
       "id": "other_steel",
       "name": "Other steel tower makers",
       "aka": [],
-      "kind": "steel_tower",
-      "summary": "Several other steel companies besides Aermotor and IDECO also supplied Forest Service lookout towers, mostly in the 1930s. They built to broadly similar specifications -- an open steel lattice tower topped by a small square steel cab -- so individual towers from these makers are hard to tell apart from Aermotor or IDECO towers without a manufacturer's plate or local records.",
+      "family": "other_steel",
+      "part": "tower",
+      "material": "steel",
+      "region_codes": [
+        "national"
+      ],
+      "summary": "Several steel companies besides Aermotor and IDECO also supplied lookout towers, mostly in the 1920s and 1930s, to broadly similar specifications: an open steel lattice tower with a small square steel cab. Blaw-Knox, McClintic-Marshall and Pacific Coast Steel have entries of their own below; this one also covers makers with only a few towers on record, such as International-Stacey.",
       "years_in_use": {
-        "from": 1932,
-        "to": 1935,
-        "text": "Documented examples date from the early-to-mid 1930s; the full date range each company was active in lookout-tower construction is not established by the sources reviewed."
+        "from": 1922,
+        "to": 1940,
+        "text": "Register examples of these makers' towers date from 1922 to 1940."
       },
       "cab_size": "7 x 7 ft steel cab in all documented examples.",
       "tower_heights": "Documented individual towers range from about 45 to 86 ft.",
       "materials": "Galvanized or painted structural steel lattice construction, matching the general Aermotor/IDECO pattern.",
       "makers": [
-        "Blaw-Knox (Pittsburgh, Pennsylvania steel-structures and construction-equipment manufacturer)",
-        "McClintic-Marshall (structural steel company; some sources instead spell the name 'McClintock-Marshall')",
-        "Pacific Coast Steel Company (named only in passing as a builder to Forest Service tower specifications)",
+        "Blaw-Knox, Pittsburgh (own entry)",
+        "McClintic-Marshall, a Bethlehem Steel company (own entry)",
+        "Pacific Coast Steel Company (own entry)",
+        "International-Stacey (towers in Wisconsin, Georgia, Oregon and Pennsylvania)",
         "Baker Manufacturing Company (named only in passing as a builder to Forest Service tower specifications)"
       ],
       "models": [],
-      "regions": "Documented examples of Blaw-Knox towers are in Pennsylvania and West Virginia; documented examples of McClintic-Marshall towers are in Pennsylvania and New Jersey.",
+      "regions": "Blaw-Knox and McClintic-Marshall towers are mostly in the East (Pennsylvania above all); Pacific Coast Steel in Arizona and California; International-Stacey towers in Wisconsin, Georgia, Oregon and Pennsylvania.",
       "features": [
         "steel lattice tower with a small square steel cab, visually similar to Aermotor and IDECO towers",
         "often erected by Civilian Conservation Corps (CCC) crews in the 1930s"
       ],
-      "uncertain": "Sources spell the second company's name two different ways -- 'McClintic-Marshall' and 'McClintock-Marshall' -- without explaining which is correct; this looks like an orthographic error somewhere in the record rather than two different companies, but it could not be resolved from the sources reviewed. Depth of sourcing for these companies is much thinner than for Aermotor or IDECO: facts here come mainly from individual lookout-tower description pages rather than a company history, so company founding dates, headquarters details beyond the city, and total production are not available.",
+      "uncertain": "Facts here come mainly from individual register pages rather than company histories, so production totals and company dates are not available.",
       "sources": [
         {
           "title": "Buckhorn Ridge Lookout",
@@ -994,9 +3571,843 @@
             "years_in_use",
             "uncertain"
           ]
+        },
+        {
+          "title": "Iron River Lookout (WI)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/wi/iron-river-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "makers"
+          ]
+        },
+        {
+          "title": "Fargo Fire Tower (GA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ga/fargo-fire-tower/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "makers"
+          ]
+        },
+        {
+          "title": "Johnson Creek Ridge Lookout Site (OR)",
+          "publisher": "Former Fire Lookout Sites register",
+          "url": "http://firetower.org/lookouts/us/or/johnson-creek-ridge-lookout-site/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "makers"
+          ]
         }
       ],
       "schematic": "steel"
+    },
+    {
+      "id": "blaw_knox",
+      "name": "Blaw-Knox",
+      "aka": [],
+      "family": "other_steel",
+      "part": "tower",
+      "material": "steel",
+      "region_codes": [
+        "R9"
+      ],
+      "summary": "Steel towers from the Blaw-Knox Company of Pittsburgh, most of them put up in Pennsylvania in the early 1920s, with a 7 x 7 ft steel cab. Far fewer survive than Aermotors.",
+      "years_in_use": {
+        "from": 1922,
+        "to": 1935,
+        "text": "Most register examples were built between 1922 and 1925; a few in the 1930s."
+      },
+      "cab_size": "7 x 7 ft steel cab.",
+      "tower_heights": "About 45 to 100 ft.",
+      "materials": "Steel.",
+      "makers": [
+        "Blaw-Knox Company, Pittsburgh, Pennsylvania"
+      ],
+      "models": [],
+      "regions": "Mostly Pennsylvania, also West Virginia and New Jersey.",
+      "features": [
+        "at Wheeler the legs slope until the top four sections, which are vertical"
+      ],
+      "uncertain": null,
+      "sources": [
+        {
+          "title": "Wheeler Fire Tower (PA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/pa/wheeler-fire-tower/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "features",
+            "cab_size"
+          ]
+        },
+        {
+          "title": "Mann Mountain Fire Tower (WV)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/wv/mann-mountain-fire-tower/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "tower_heights",
+            "cab_size"
+          ]
+        },
+        {
+          "title": "Old Sentinel Tower (NJ)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/nj/old-sentinel-tower/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "tower_heights"
+          ]
+        },
+        {
+          "title": "Long Mountain Tower Site (PA)",
+          "publisher": "Former Fire Lookout Sites register",
+          "url": "http://firetower.org/lookouts/us/pa/long-mountain-tower-site-cumberland-county/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use"
+          ]
+        }
+      ],
+      "schematic": "steel"
+    },
+    {
+      "id": "mcclintic_marshall",
+      "name": "McClintic-Marshall",
+      "aka": [
+        "McClintock-Marshall",
+        "Marshall-McClintock"
+      ],
+      "family": "other_steel",
+      "part": "tower",
+      "material": "steel",
+      "region_codes": [
+        "R9"
+      ],
+      "summary": "Steel stairway towers from McClintic-Marshall, a Bethlehem Steel subsidiary, put up in the 1930s, often by Civilian Conservation Corps crews.",
+      "years_in_use": {
+        "from": 1933,
+        "to": 1940,
+        "text": "Register examples were built between 1933 and 1940."
+      },
+      "cab_size": "7 x 7 ft steel cab; one carries a 14 x 14 ft wooden cab.",
+      "tower_heights": "About 30 to 100 ft.",
+      "materials": "Steel.",
+      "makers": [
+        "McClintic-Marshall (Bethlehem Steel)"
+      ],
+      "models": [],
+      "regions": "Pennsylvania, New Jersey, Ohio, Wisconsin, Minnesota, North Carolina.",
+      "features": [
+        "stairway tower"
+      ],
+      "uncertain": "Sources spell the name several ways (McClintock-Marshall, Marshall McClintock).",
+      "sources": [
+        {
+          "title": "Pattison Lookout (WI)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/wi/pattison-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "makers",
+            "tower_heights"
+          ]
+        },
+        {
+          "title": "Brush Ridge Lookout (OH)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/oh/brush-ridge-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "cab_size",
+            "years_in_use"
+          ]
+        },
+        {
+          "title": "Panther Top Lookout (NC)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/nc/panther-top-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "cab_size",
+            "tower_heights"
+          ]
+        },
+        {
+          "title": "Kabetogama Lookout (MN)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/mn/kabetogama-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "features"
+          ]
+        }
+      ],
+      "schematic": "steel"
+    },
+    {
+      "id": "pacific_coast_steel",
+      "name": "Pacific Coast Steel",
+      "aka": [],
+      "family": "other_steel",
+      "part": "tower",
+      "material": "steel",
+      "region_codes": [
+        "R3"
+      ],
+      "summary": "Steel towers supplied by the Pacific Coast Steel Company in the early 1930s, mostly on the national forests of central Arizona. They look like an Aermotor LS-40 but use lighter steel; some carry the small 7 x 7 ft steel cab, others a wooden live-in cab.",
+      "years_in_use": {
+        "from": 1931,
+        "to": 1936,
+        "text": "Register examples were built between 1931 and 1936."
+      },
+      "cab_size": "7 x 7 ft steel cab, or a 12 x 12 ft or modified L-4 wooden cab.",
+      "tower_heights": "About 30 to 80 ft.",
+      "materials": "Steel.",
+      "makers": [
+        "Pacific Coast Steel Company"
+      ],
+      "models": [],
+      "regions": "Arizona and California.",
+      "features": [
+        "similar to an Aermotor LS-40, but of lighter steel"
+      ],
+      "uncertain": null,
+      "sources": [
+        {
+          "title": "Baltic Peak Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/baltic-peak-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "features",
+            "tower_heights"
+          ]
+        },
+        {
+          "title": "Horsethief Lookout (AZ)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/az/horsethief-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "cab_size",
+            "years_in_use"
+          ]
+        },
+        {
+          "title": "Mingus Mountain Lookout (AZ)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/az/mingus-mountain-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "tower_heights",
+            "cab_size"
+          ]
+        },
+        {
+          "title": "Diamond Point Lookout (AZ)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/az/diamond-point-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "cab_size"
+          ]
+        }
+      ],
+      "schematic": "steel"
+    },
+    {
+      "id": "wisconsin_standard",
+      "name": "Wisconsin standard tower",
+      "aka": [],
+      "family": "wisconsin_standard",
+      "part": "tower",
+      "material": "steel",
+      "region_codes": [
+        "R9"
+      ],
+      "summary": "The steel tower Wisconsin's state forest-protection service put up across the north of the state in the 1930s: 80 to 100 feet tall, climbed by a ladder on the outside of the frame inside a protective cage, with a small cab on top.",
+      "years_in_use": {
+        "from": 1932,
+        "to": 1951,
+        "text": "Register examples were built between 1932 and about 1951, most of them in 1939."
+      },
+      "cab_size": "An enclosed cab at the top (size not given in the sources read).",
+      "tower_heights": "About 80 to 100 ft.",
+      "materials": "Steel.",
+      "makers": [
+        "Built for the Wisconsin state forest-protection service (now the Department of Natural Resources)"
+      ],
+      "models": [],
+      "regions": "Northern Wisconsin.",
+      "features": [
+        "outside ladder in a protective cage, not stairs (Lookout Mountain is a stairway exception)",
+        "tall, 80 to 100 ft"
+      ],
+      "uncertain": "The sources read do not name the steel company that built them.",
+      "sources": [
+        {
+          "title": "Dunbar Lookout (WI)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/wi/dunbar-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "tower_heights",
+            "features",
+            "years_in_use"
+          ]
+        },
+        {
+          "title": "Glidden Lookout (WI)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/wi/glidden-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "tower_heights",
+            "years_in_use"
+          ]
+        },
+        {
+          "title": "Lookout Mountain Lookout (WI)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/wi/lookout-mountain-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "features"
+          ]
+        },
+        {
+          "title": "Necedah Lookout (WI)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/wi/necedah-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "materials"
+          ]
+        }
+      ],
+      "schematic": "steel"
+    },
+    {
+      "id": "stone_lookouts",
+      "name": "Architect-designed stone lookouts",
+      "aka": [
+        "architectural lookouts"
+      ],
+      "family": "stone_lookouts",
+      "part": "whole",
+      "material": "stone",
+      "region_codes": [
+        "national"
+      ],
+      "summary": "For summits that drew visitors, the Forest Service had architects design lookouts in stone, with room for the public as well as the lookout. The 1938 plan book's preface shows four: High Knob in Virginia, Harney Peak in South Dakota, Point Monjeau in New Mexico, and a Region 6 sketch of a stone mountain lookout with a museum and bunk room.",
+      "years_in_use": {
+        "from": 1936,
+        "to": 1940,
+        "text": "The book's three built examples date from 1936 to 1940 (Monjeau 1936-40, Harney Peak 1938, High Knob 1939), the Civilian Conservation Corps era."
+      },
+      "cab_size": "Varies; usually a small wooden or stone lookout room on a stone base.",
+      "tower_heights": "Stone towers and stone-based houses, each one designed for its site.",
+      "materials": "Native stone masonry, some with a wood-framed cab.",
+      "makers": [
+        "USDA Forest Service regional architects, often built by the Civilian Conservation Corps"
+      ],
+      "models": [
+        "Plan No. 939, Mountain Lookout (Region 6 sketch)"
+      ],
+      "regions": "Scattered: the book's examples are in Regions 2, 3, 6 and 7.",
+      "features": [
+        "stone masonry",
+        "observation room or platform for visitors",
+        "designed for one site, not a kit"
+      ],
+      "plans": [
+        {
+          "title": "1938 plan book, Section I preface (sample architectural lookouts)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-I.pdf",
+          "year": 1938
+        }
+      ],
+      "examples": [
+        {
+          "id": "us-va-high-knob-george-washington-nf",
+          "note": "Shown in the 1938 plan book: tapered stone base with a wooden cab and catwalk"
+        },
+        {
+          "id": "us-sd-black-elk-peak-harney-peak",
+          "note": "Shown in the 1938 plan book as Harney Peak Lookout"
+        },
+        {
+          "id": "us-nm-monjeau",
+          "note": "Shown in the 1938 plan book as the Point Monjeau observation tower and lookout"
+        }
+      ],
+      "uncertain": null,
+      "sources": [
+        {
+          "title": "Standard Lookout Structure Plans (USDA Forest Service, 1938, revised 1941), Section I (preface)",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-I.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        }
+      ],
+      "schematic": "stone_tower"
+    },
+    {
+      "id": "chimney_rock",
+      "name": "Chimney Rock Lookout plan (Region 2, 1940)",
+      "aka": [],
+      "family": "stone_lookouts",
+      "part": "whole",
+      "material": "stone",
+      "region_codes": [
+        "R2"
+      ],
+      "summary": "A one-off 1940 design by the Rocky Mountain Region for Chimney Rock on the San Juan National Forest in southwest Colorado: a 10-ft base of tapering native-stone walls with a storage room inside, carrying a 14 x 14 ft cab with steel-sash windows, a low shingled hip roof and a catwalk on timber beams. A wooden stair climbs the outside of the stone to a trap door in the catwalk.",
+      "years_in_use": {
+        "from": 1940,
+        "to": 1940,
+        "text": "Drawn in July 1940; the lookout is gone, the site is recorded on the Former Fire Lookout Sites register."
+      },
+      "cab_size": "14 x 14 ft, wood-framed with steel sash and steel pipe corner columns.",
+      "tower_heights": "10-ft stone base (about 18 ft 4 in square at the foundation) with a storage room.",
+      "materials": "Native rubble stone on a concrete footing; wood-framed cab with steel sash and pipe columns; wood shingles; plywood shutters.",
+      "makers": [
+        "USDA Forest Service, Region 2 (Denver)"
+      ],
+      "models": [],
+      "regions": "San Juan National Forest, Colorado.",
+      "features": [
+        "walls slope inward 1 in per 12 in",
+        "outside wooden stair to the catwalk",
+        "shutters hinged at the eave"
+      ],
+      "plans": [
+        {
+          "title": "Chimney Rock Lookout (1940)",
+          "url": "https://firelookout.org/wp-content/uploads/2026/05/Chimney-Rock-Lookout.pdf",
+          "year": 1940
+        }
+      ],
+      "examples": [
+        {
+          "id": "us-co-chimney-rock",
+          "note": "The lookout this plan was drawn for"
+        }
+      ],
+      "uncertain": null,
+      "sources": [
+        {
+          "title": "Chimney Rock Lookout, 10 ft stone tower with 14 x 14 steel cab (1940)",
+          "publisher": "USDA Forest Service, scan hosted by the Forest Fire Lookout Association",
+          "url": "https://firelookout.org/wp-content/uploads/2026/05/Chimney-Rock-Lookout.pdf",
+          "licence": "public domain (US government work); linked, not copied",
+          "supports": [
+            "plans"
+          ]
+        },
+        {
+          "title": "Chimney Rock Lookout Site (CO)",
+          "publisher": "Former Fire Lookout Sites register",
+          "url": "http://firetower.org/lookouts/us/co/chimney-rock-lookout-site/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use"
+          ]
+        }
+      ],
+      "schematic": "stone_tower"
+    },
+    {
+      "id": "nps_rustic",
+      "name": "National Park Service lookouts",
+      "aka": [
+        "NPS rustic",
+        "NPS standard lookout (drawing PG-3040)"
+      ],
+      "family": "nps_rustic",
+      "part": "whole",
+      "material": "mixed",
+      "region_codes": [
+        "national"
+      ],
+      "summary": "Lookouts the National Park Service built for its own parks in the 1920s and 1930s, in its rustic style: in Glacier National Park a two-story frame building with the lookout room upstairs, elsewhere a wooden cab on a stone base. They were often built by the Civilian Conservation Corps.",
+      "years_in_use": {
+        "from": 1929,
+        "to": 1941,
+        "text": "The register examples were built between 1929 and 1941."
+      },
+      "cab_size": null,
+      "tower_heights": "Two stories, or a cab on a stone basement.",
+      "materials": "Wood frame, often on stone.",
+      "makers": [
+        "National Park Service (often built by the Civilian Conservation Corps)"
+      ],
+      "models": [
+        "Two-story NPS frame cab (Glacier)",
+        "NPS standard drawing PG-3040 (Bandelier)"
+      ],
+      "regions": "National parks and monuments; most register examples are in Glacier National Park, Montana.",
+      "features": [
+        "rustic park architecture",
+        "lookout room over a storage or living floor"
+      ],
+      "uncertain": "This groups several Park Service plans that sources describe by style rather than by one plan number.",
+      "sources": [
+        {
+          "title": "Bandelier Lookout (NM)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/nm/bandelier-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "models",
+            "materials"
+          ]
+        },
+        {
+          "title": "Porcupine Ridge Lookout (MT)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/mt/porcupine-ridge-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use"
+          ]
+        },
+        {
+          "title": "Numa Ridge Lookout (MT)",
+          "publisher": "firelookout.com",
+          "url": "https://www.firelookout.com/mt/numaridge.html",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "models"
+          ]
+        },
+        {
+          "title": "Shadow Mountain Lookout (CO)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/co/shadow-mountain-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "features"
+          ]
+        }
+      ],
+      "schematic": "two_story"
+    },
+    {
+      "id": "cdf_809r",
+      "name": "CDF 809R",
+      "aka": [
+        "809RA"
+      ],
+      "family": "cdf_809r",
+      "part": "whole",
+      "material": "mixed",
+      "region_codes": [
+        "R5"
+      ],
+      "summary": "A lookout station designed by the California Division of Forestry (CDF, now Cal Fire) for its own towers after the Second World War: a 15 x 15 ft live-in wooden cab on a short, enclosed steel tower. A revised version has angled plate-glass windows and aluminum sheeting.",
+      "years_in_use": {
+        "from": 1950,
+        "to": 1966,
+        "text": "Register examples were built between 1950 and 1966; the revised version appeared by 1952."
+      },
+      "cab_size": "15 x 15 ft live-in cab.",
+      "tower_heights": "Enclosed steel tower of about 29 to 30 ft; one single-story variant (809RA).",
+      "materials": "Wood cab on a steel tower; the revision adds aluminum sheeting and steel window mullions.",
+      "makers": [
+        "California Division of Forestry (state design)"
+      ],
+      "models": [
+        "809R",
+        "809RA (single-story variant)",
+        "revised 809R (angled windows)"
+      ],
+      "regions": "California, on state (CDF) lookouts.",
+      "features": [
+        "enclosed steel tower",
+        "revised version: windows set on an angle"
+      ],
+      "uncertain": "The HABS report behind the California (Region 5) entry calls Plan 809R a 1947 octagonal cab; the register pages describe 15 x 15 ft cabs. Both may be right for different versions.",
+      "sources": [
+        {
+          "title": "Cold Spring Mountain Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/cold-spring-mountain-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "tower_heights"
+          ]
+        },
+        {
+          "title": "Pilot Hill Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/pilot-hill-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "features",
+            "materials"
+          ]
+        },
+        {
+          "title": "Chalone Peak Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/chalone-peak-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use",
+            "features"
+          ]
+        },
+        {
+          "title": "Mount Woodson Tower Site (CA)",
+          "publisher": "Former Fire Lookout Sites register",
+          "url": "http://firetower.org/lookouts/us/ca/mount-woodson-tower-site/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "cab_size",
+            "tower_heights"
+          ]
+        }
+      ],
+      "schematic": "enclosed_steel"
+    },
+    {
+      "id": "cdf_732_6a",
+      "name": "CDF 732-6A",
+      "aka": [
+        "Plesha cab"
+      ],
+      "family": "cdf_732_6a",
+      "part": "cab",
+      "material": "mixed",
+      "region_codes": [
+        "R5"
+      ],
+      "summary": "The standard cab of the California Division of Forestry from about 1970, drawn by CDF architect Mike Plesha. It replaced worn-out 1930s Forest Service cabs on many state lookouts and topped the new steel towers CDF built in the 1970s and 1980s, some made from surplus steel columns.",
+      "years_in_use": {
+        "from": 1969,
+        "to": 1988,
+        "text": "A reduced-size prototype was tested at Likely Mountain before the first full-size cab went up at Sawmill Peak in 1969; the newest was built in 1987-88."
+      },
+      "cab_size": "About 14 x 14 ft (196 square feet).",
+      "tower_heights": "Used on many towers: old CCC-era timber towers and new steel towers of about 29 to 41 ft.",
+      "materials": "The sources read do not give the cab's own materials; the newer towers under it are steel, some sided in corrugated aluminum.",
+      "makers": [
+        "California Division of Forestry (state design, Mike Plesha)"
+      ],
+      "models": [
+        "732-6A, built under individual remodel plan numbers"
+      ],
+      "regions": "California state (CDF / Cal Fire) lookouts.",
+      "features": [
+        "often replaces an earlier BC-301 cab on an older tower"
+      ],
+      "uncertain": "Material is recorded as mixed because the sources describe the towers under these cabs, not the cabs themselves.",
+      "sources": [
+        {
+          "title": "Likely Mountain Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/likely-mountain-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use",
+            "cab_size",
+            "makers"
+          ]
+        },
+        {
+          "title": "Sawmill Peak Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/sawmill-peak-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "years_in_use"
+          ]
+        },
+        {
+          "title": "Fowler Peak Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/fowler-peak-bear-mountain-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "tower_heights",
+            "years_in_use"
+          ]
+        },
+        {
+          "title": "Soldier Mountain Lookout (CA)",
+          "publisher": "National Historic Lookout Register",
+          "url": "http://nhlr.org/lookouts/us/ca/soldier-mountain-lookout/",
+          "licence": "no licence stated, facts only",
+          "supports": [
+            "materials"
+          ]
+        }
+      ],
+      "schematic": "steel_cab"
+    }
+  ],
+  "equipment": [
+    {
+      "id": "osborne_firefinder",
+      "name": "Osborne Firefinder",
+      "kind": "firefinder",
+      "summary": "The round sighting table at the centre of nearly every lookout cab: a map of the surrounding country under a ring marked in degrees, with sights the lookout turns toward a smoke to read its bearing. Two lookouts' bearings crossed on a map give the fire's position. Firefinder takes its name from it.",
+      "links": [
+        {
+          "title": "History of the Osborne Firefinder",
+          "url": "https://firelookout.org/resources/plans/use-osborne/"
+        },
+        {
+          "title": "Osborne Firefinder parts diagram",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/osborne-parts1.pdf"
+        },
+        {
+          "title": "Using the Osborne Firefinder (Forest Service Fireman's Handbook, 1966)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/FiremansHandbook.pdf"
+        },
+        {
+          "title": "Osborne replacement parts (supplier contact listed by FFLA)",
+          "url": "https://firelookout.org/wp-content/uploads/2025/02/Palmquist.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bosworth_firefinder",
+      "name": "Bosworth Firefinder",
+      "kind": "firefinder",
+      "summary": "A heavy, sturdy firefinder invented in northern Idaho in 1928 by Jim Bosworth. Its weight kept it from catching on outside the Northern Region (Region 1); a few are still in place.",
+      "links": [
+        {
+          "title": "Bosworth Firefinder",
+          "url": "https://firelookout.org/resources/plans/bos-ff/"
+        }
+      ]
+    },
+    {
+      "id": "firefinder_stand",
+      "name": "Firefinder stand (Region 6, 1945)",
+      "kind": "firefinder",
+      "summary": "Region 6's 1945 drawing (No. 1043) of the wooden stand the firefinder sits on: a small framed cabinet about 3 ft 6 in high and 1 ft 10 in by 1 ft 6 in, with shelves and a mount for the telephone, plus a stool on glass insulators so the lookout is safe from lightning.",
+      "links": [
+        {
+          "title": "Firefinder Stand",
+          "url": "https://firelookout.org/resources/plans/ff-stand/"
+        }
+      ]
+    },
+    {
+      "id": "lightning_handbook",
+      "name": "Forest Service Lightning Protection Handbook",
+      "kind": "lightning",
+      "summary": "The Forest Service handbook (FSH 7309.12) on grounding lookouts and other buildings against lightning; the copy FFLA hosts carries a 1969 amendment and is marked obsolete. The 1938 plan book points to its 1940 edition, which replaced a 1932 publication.",
+      "links": [
+        {
+          "title": "USFS Lightning Protection Handbook",
+          "url": "https://firelookout.org/resources/plans/lightning-handbook/"
+        }
+      ]
+    },
+    {
+      "id": "lightning_evaluation",
+      "name": "Evaluating Lightning Protection on Lookouts (2008)",
+      "kind": "lightning",
+      "summary": "A 2008 Forest Service technology report on checking the lightning protection of lookouts and communication sites, for crews who maintain them.",
+      "links": [
+        {
+          "title": "Evaluating Lightning Protection",
+          "url": "https://firelookout.org/resources/plans/eval-lightning"
+        }
+      ]
+    },
+    {
+      "id": "lightning_installer",
+      "name": "Kuefler Lightning Protection",
+      "kind": "lightning",
+      "summary": "A lightning protection company FFLA lists beside the handbooks.",
+      "links": [
+        {
+          "title": "kuefler-lightning.com",
+          "url": "https://kuefler-lightning.com/"
+        }
+      ]
+    },
+    {
+      "id": "cab_styles",
+      "name": "Lookout Cab Styles (Mark A. Swift, 2003)",
+      "kind": "reference",
+      "summary": "Notes by Mark A. Swift on telling the 14 x 14 ft wooden cabs apart (4-A, D-5 or 4-AR, L-4 gable and hip, C-3, R-6 Flat) by window count, panes per window, door position and roof pitch, and on regional variations of the L-4.",
+      "links": [
+        {
+          "title": "Lookout Cab Styles",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/Lookout-Cab-Styles-Wooden.pdf"
+        }
+      ]
+    },
+    {
+      "id": "r6_drawings",
+      "name": "Region 6 lookout tower drawings (Forest Service)",
+      "kind": "reference",
+      "summary": "The Forest Service's own online set of historic Region 6 lookout drawings (Oregon and Washington, 1936 to 1965), one PDF per tower, that FFLA links as 'More Region 6 Plans'. The site refused Firefinder's crawler, so the plans there are not covered by this guide.",
+      "links": [
+        {
+          "title": "Region 6 Lookout Tower Drawings",
+          "url": "https://www.fs.usda.gov/database/acad/lt/"
+        }
+      ]
+    },
+    {
+      "id": "plan_book_1938",
+      "name": "Standard Lookout Structure Plans (Forest Service, 1938)",
+      "kind": "reference",
+      "summary": "The Forest Service's national book of standard lookout plans, put together by its Division of Engineering from the best regional designs (revised 1941). Section I has Region 7's steel towers of 30 to 120 ft (the L-1400 series with a 7 x 7 ft steel cab and the L-1600 series for a 14 x 14 ft wooden cab); Section II Region 6's timber towers (CT-1 to CT-5 and RT-1) and a Region 9 pole tower; Section III Region 6's 1936 wooden cabs (7 x 7 and 14 x 14 ft); Section IV guy-cable tables; Section V lightning protection; Section VI model specifications for buying towers and cabs. Its preface shows architect-designed stone lookouts such as High Knob, Harney Peak and Point Monjeau.",
+      "links": [
+        {
+          "title": "Section I: steel towers",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-I.pdf"
+        },
+        {
+          "title": "Section II: timber towers",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-II.pdf"
+        },
+        {
+          "title": "Sections III to V: cabs, guy cables, lightning",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-III-IV-V.pdf"
+        },
+        {
+          "title": "Section VI: specifications",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1938_USDA-FS_StdLookoutPlans-Sec-VI.pdf"
+        }
+      ]
+    },
+    {
+      "id": "specs_1924",
+      "name": "Specifications and Plans for Lookout Towers (Forest Service, about 1924)",
+      "kind": "reference",
+      "summary": "A Forest Service booklet from the early 1920s on buying and putting up lookout towers. It takes Aermotor's LX-24 (outside ladder) and LX-25 (inside ladder) as the approved steel designs, with a sample bid specification, foundation and anchor plates, and advice on concrete, erection, snow and guying; a short last section gives two wooden pole towers from Districts 1 and 3.",
+      "links": [
+        {
+          "title": "USFS Specifications and Plans (1924)",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/1924-USFS-Fire-Tower-Specs.pdf"
+        }
+      ]
+    },
+    {
+      "id": "hoisting_tower",
+      "name": "Hoisting a Region 1 log tower (1932)",
+      "kind": "reference",
+      "summary": "Not a tower design but Region 1's erection guide for its taller log towers: lay out one side of the tower flat on crib logs, then raise it with two gin poles and a hand winch, leaving temporary braces in until the tower stands. A 48-ft tower is the worked example.",
+      "links": [
+        {
+          "title": "Hoisting Tower",
+          "url": "https://firelookout.org/wp-content/uploads/2024/04/L-Hoisting-Tower.pdf"
+        }
+      ]
     }
   ]
 }

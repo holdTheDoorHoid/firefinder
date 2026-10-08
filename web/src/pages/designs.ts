@@ -7,10 +7,12 @@ import { initChecklistOnPage } from '../ui/checklist-ui.ts';
 
 async function devFill(): Promise<void> {
   const box = document.querySelector('[data-ff-designs]');
+  const end = document.querySelector('[data-ff-design-end]');
   if (!box || box.children.length) return;
-  const { designsMain } = await import('../render/designs.ts');
+  const { designsMain, designsEnd } = await import('../render/designs.ts');
   const file = await fetch(`${import.meta.env.BASE_URL}data/designs.json`).then((r) => r.json());
-  box.innerHTML = designsMain(file, { base: import.meta.env.BASE_URL, repo: '' }).value;
+  box.innerHTML = designsMain(file, { base: import.meta.env.BASE_URL, repo: '' }, { toc: [['structure-types', 'Structure types']] }).value;
+  if (end) end.innerHTML = designsEnd(file).value;
 }
 
 /** "Structure types" (render/structures.ts), filled the same way. */

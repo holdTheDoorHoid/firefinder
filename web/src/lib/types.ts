@@ -216,6 +216,8 @@ export interface TowerRecord {
   auto_summary?: string | null;
   /** Standard designs recognised by the pipeline (designs.json ids, e.g. ["l4"]). */
   design_ids?: string[] | null;
+  /** The one lookout the records describe: a cab (or ground house) design with a tower design, or a whole lookout. */
+  design_pair?: { cab?: string; house?: string; tower?: string; whole?: string } | null;
 }
 
 export interface SourceInfo {
@@ -306,9 +308,11 @@ export interface DesignCoverage {
   with_design_text: number;
   recognised: number;
   by_design: Record<string, number>;
+  /** Lookouts with a design field that names no design we recognise. */
+  unmatched_text?: number;
 }
 
-/** One lookout in designs.json: id, name, state, status, kind, source wording, Aermotor models. */
+/** One lookout in designs.json: id, name, state, status, kind, source wording, variant codes. */
 export interface DesignTower {
   i: string;
   n: string;
@@ -316,7 +320,10 @@ export interface DesignTower {
   s: string;
   k: string;
   w?: string;
+  /** Variant codes: Aermotor models ("MC-39"), Region 6 towers ("CT-2")... */
   m?: string[];
+  /** Reached through these family members (a family head lists only lookouts without one). */
+  via?: string[];
 }
 
 export interface DesignSource {
@@ -327,11 +334,34 @@ export interface DesignSource {
   supports?: string[] | null;
 }
 
+/** A link to an original drawing (a PDF hosted by the Forest Fire Lookout Association). */
+export interface DesignPlan {
+  title: string;
+  url: string;
+  year?: number | null;
+  note?: string | null;
+}
+
+/** One revision or model within a design (the 1936 L-4, the Aermotor LS-40 of 1962). */
+export interface DesignVariant {
+  name: string;
+  years?: string | null;
+  description?: string | null;
+  plans?: DesignPlan[] | null;
+}
+
 export interface Design {
   id: string;
   name: string;
   aka?: string[] | null;
-  kind?: string | null;
+  /** Family head id (itself for a head or a design with no family). */
+  family?: string | null;
+  /** cab, house (ground house), tower (the supporting structure) or whole. */
+  part?: string | null;
+  material?: string | null;
+  /** Where the material depends on the state ({"MT": "log"}), as the merge reads it. */
+  material_by_state?: Record<string, string> | null;
+  region_codes?: string[] | null;
   schematic?: string | null;
   summary?: string | null;
   years_in_use?: { from?: number | null; to?: number | null; text?: string | null } | null;
@@ -343,10 +373,32 @@ export interface Design {
   regions?: string | null;
   features?: string[] | null;
   uncertain?: string | null;
+  plans?: DesignPlan[] | null;
+  variants?: DesignVariant[] | null;
+  /** Lookouts named as built to a one-off plan: tower id and a note. */
+  examples?: { id: string; note?: string | null }[] | null;
   sources?: DesignSource[] | null;
   towers: DesignTower[];
   count: number;
   by_status: Record<string, number>;
+  /** Family heads: each member's count, and how many lookouts name no member. */
+  members?: { id: string; name: string; count: number }[] | null;
+  count_unspecified?: number | null;
+}
+
+export interface DesignGroup {
+  id: string;
+  label: string;
+  intro?: string | null;
+}
+
+/** Firefinders, lightning protection and plan books: on the guide, not designs. */
+export interface DesignReference {
+  id: string;
+  name: string;
+  kind?: string | null;
+  summary?: string | null;
+  links?: DesignPlan[] | null;
 }
 
 export interface DesignsFile {
@@ -354,8 +406,10 @@ export interface DesignsFile {
   note?: string | null;
   updated?: string | null;
   sources?: DesignSource[];
+  groups?: { materials?: DesignGroup[]; regions?: DesignGroup[] } | null;
   coverage: DesignCoverage;
   designs: Design[];
+  equipment?: DesignReference[] | null;
 }
 
 export function isRentable(r: Pick<TowerRecord, 'rental'>): boolean {
