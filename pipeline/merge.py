@@ -88,7 +88,8 @@ SOURCE_ORDER = [
     "nhlr", "fflos", "ffla", "ridb", "ffla_rentals", "fire_lookouts_org", "tnlandforms",
     "nj_forest_fire_towers", "firelookout_com", "idaho_fl", "michigan_fire_tower",
     "pa_storymap", "andyarthur_ny", "wikipedia_lookout_lists", "cskt", "eastern_us_lookouts",
-    "central_us_lookouts", "wikidata", "osm",
+    "central_us_lookouts", "wikidata", "osm", "west_us_lookouts", "trailchick_wa", "cherylhill_oregon",
+    "ffla_groups", "willhiteweb_wa", "indiana_fire_towers",
 ]
 
 # Field precedence: the first source in the list that has a value wins. Mirrored in DESIGN.md
@@ -107,20 +108,33 @@ SOURCE_ORDER = [
 # OSM/Wikidata). Each is only added to a field's precedence list when the fetcher actually
 # populates that field; see pipeline/regional/weebly_lookouts.py, nj_forest_fire_towers.py,
 # wikipedia_lists.py, michigan_fire_tower.py, tnlandforms.py for what each one supplies.
+#
+# 2026-10-08 (links-survey): four more sources, from the sites FFLA's links page points to, all at
+# the lowest precedence of each field they supply: west_us_lookouts (Ron Kemnow's western weebly
+# sites, the eastern/central sites' siblings; pipeline/regional/weebly_west.py), trailchick_wa
+# (TrailChick's Washington guide, visited-and-measured coordinates), cherylhill_oregon ("Every
+# Lookout in Oregon": a table of standing lookouts with no coordinates, matched by register number
+# or name) and ffla_groups (the lookout pages of FFLA's chapters and Friends groups: links, plus the
+# California-South chapter's register numbers and conditions).
 PRECEDENCE: dict[str, list[str]] = {
     "name": ["nhlr", "fflos", "ridb", "ffla", "firelookout_com", "fire_lookouts_org",
              "tnlandforms", "nj_forest_fire_towers", "andyarthur_ny", "wikipedia_lookout_lists",
              "pa_storymap", "cskt", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
-             "idaho_fl", "michigan_fire_tower", "osm"],
+             "idaho_fl", "michigan_fire_tower", "osm",
+             "west_us_lookouts", "trailchick_wa", "cherylhill_oregon", "ffla_groups",
+             "willhiteweb_wa", "indiana_fire_towers"],
     "location": ["nhlr", "fflos", "ffla", "fire_lookouts_org", "tnlandforms",
                  "nj_forest_fire_towers", "firelookout_com", "osm", "eastern_us_lookouts",
                  "central_us_lookouts", "wikidata", "ridb", "andyarthur_ny",
                  "wikipedia_lookout_lists", "pa_storymap", "idaho_fl", "michigan_fire_tower",
-                 "cskt"],
+                 "cskt",
+                 "west_us_lookouts", "trailchick_wa", "indiana_fire_towers"],
     "status": ["ffla", "nhlr", "fflos", "ridb", "fire_lookouts_org", "tnlandforms",
                "nj_forest_fire_towers", "andyarthur_ny", "wikipedia_lookout_lists", "pa_storymap",
                "cskt", "firelookout_com", "idaho_fl", "michigan_fire_tower", "osm",
-               "eastern_us_lookouts", "central_us_lookouts", "wikidata"],
+               "eastern_us_lookouts", "central_us_lookouts", "wikidata",
+               "west_us_lookouts", "trailchick_wa", "cherylhill_oregon", "ffla_groups",
+             "willhiteweb_wa", "indiana_fire_towers"],
     "kind": ["ffla", "nhlr", "fflos", "ridb", "firelookout_com", "fire_lookouts_org",
              "tnlandforms", "nj_forest_fire_towers", "pa_storymap", "andyarthur_ny",
              "wikipedia_lookout_lists", "cskt", "osm", "eastern_us_lookouts",
@@ -128,34 +142,43 @@ PRECEDENCE: dict[str, list[str]] = {
     "county": ["nhlr", "fflos", "ffla", "firelookout_com", "pa_storymap", "cskt",
                "andyarthur_ny", "wikipedia_lookout_lists", "fire_lookouts_org", "tnlandforms",
                "nj_forest_fire_towers", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
-               "michigan_fire_tower"],
+               "michigan_fire_tower",
+               "west_us_lookouts", "trailchick_wa", "indiana_fire_towers"],
     "elevation_m": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "tnlandforms",
-                    "nj_forest_fire_towers", "ridb", "wikidata", "cskt", "osm"],
+                    "nj_forest_fire_towers", "ridb", "wikidata", "cskt", "osm",
+                    "trailchick_wa", "cherylhill_oregon"],
     "built": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "pa_storymap", "ridb",
-              "wikidata", "cskt", "idaho_fl", "osm", "andyarthur_ny", "ffla"],
+              "wikidata", "cskt", "idaho_fl", "osm", "andyarthur_ny", "ffla",
+              "trailchick_wa", "cherylhill_oregon"],
     "design": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "pa_storymap", "cskt",
-               "eastern_us_lookouts", "central_us_lookouts"],
+               "eastern_us_lookouts", "central_us_lookouts",
+               "west_us_lookouts", "trailchick_wa", "cherylhill_oregon"],
     # Explicit words only (a type value, a description, an OSM tag); the design comes after.
     "material": ["ffla", "nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "ridb", "osm",
                  "andyarthur_ny"],
     "height_m": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "nj_forest_fire_towers",
                  "pa_storymap", "cskt", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
-                 "osm"],
+                 "osm",
+                 "west_us_lookouts", "trailchick_wa", "cherylhill_oregon"],
     "agency": ["nhlr", "fflos", "ridb", "firelookout_com", "fire_lookouts_org", "tnlandforms",
                "nj_forest_fire_towers", "pa_storymap", "andyarthur_ny", "cskt",
-               "eastern_us_lookouts", "central_us_lookouts", "osm", "michigan_fire_tower"],
+               "eastern_us_lookouts", "central_us_lookouts", "osm", "michigan_fire_tower",
+               "west_us_lookouts", "trailchick_wa", "cherylhill_oregon", "ffla_groups"],
     "ownership": ["cskt", "ridb", "nhlr", "fflos", "andyarthur_ny", "pa_storymap",
                   "fire_lookouts_org", "nj_forest_fire_towers", "firelookout_com", "ffla",
-                  "eastern_us_lookouts", "central_us_lookouts", "osm", "michigan_fire_tower"],
+                  "eastern_us_lookouts", "central_us_lookouts", "osm", "michigan_fire_tower",
+                  "west_us_lookouts", "trailchick_wa"],
     "access": ["cskt", "osm"],
     "staffing": ["firelookout_com", "fire_lookouts_org", "cskt", "idaho_fl"],
     "rental": ["ridb", "ffla_rentals"],
     "events": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "pa_storymap", "ridb",
                "wikidata", "cskt", "idaho_fl", "michigan_fire_tower", "ffla", "osm",
-               "andyarthur_ny"],
+               "andyarthur_ny",
+               "trailchick_wa", "cherylhill_oregon", "ffla_groups"],
     "photos": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "nj_forest_fire_towers",
                "pa_storymap", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
-               "andyarthur_ny", "idaho_fl", "cskt", "ridb", "osm", "ffla"],
+               "andyarthur_ny", "idaho_fl", "cskt", "ridb", "osm", "ffla",
+               "trailchick_wa"],
 }
 
 # Sources whose positions share a lineage. For verification ("facts" needs two independent
@@ -240,7 +263,7 @@ APPROXIMATE = {"cskt"}
 MATCH_SAME_SPOT_M = 100
 MATCH_NEAR_M = 400
 MATCH_STRONG_M = 1500
-STRONG_RADIUS_BY_SOURCE = {"idaho_fl": 3000, "ridb": 3000, "cskt": 15000}
+STRONG_RADIUS_BY_SOURCE = {"idaho_fl": 3000, "ridb": 3000, "cskt": 15000, "west_us_lookouts": 3000}
 # A same-spot match (<= MATCH_SAME_SPOT_M) whose name is *clearly* different (score < PARTIAL)
 # from every member of the near tower may still be a plain coordinate error in the source: the
 # record really belongs to a different tower it strongly (score >= STRONG) and uniquely names,
@@ -335,6 +358,12 @@ SOURCE_SITE = {
     "nj_forest_fire_towers": "Wikipedia (List of New Jersey Forest Fire Service fire towers)",
     "michigan_fire_tower": "michiganfiretower.com",
     "tnlandforms": "tnlandforms.us (Tom Dunigan)",
+    "west_us_lookouts": "Forest Lookouts, western US sites (Ron Kemnow)",
+    "trailchick_wa": "TrailChick Washington lookout guide (trailchick.com)",
+    "cherylhill_oregon": "Every Lookout in Oregon (cherylhill.net)",
+    "ffla_groups": "FFLA chapters and Friends groups",
+    "willhiteweb_wa": "WillhiteWeb.com Washington Fire Lookouts",
+    "indiana_fire_towers": "Indiana Fire Towers (Mark Armantrout)",
 }
 
 # Default photo licence per source, where the source states one (None = not stated).
@@ -1853,6 +1882,16 @@ def record_links(rec: Rec) -> list[dict]:
             out.append({"label": f"{name} on andyarthur.org (Andy Arthur)", "url": url, "kind": "site"})
         elif src == "cskt":
             out.append({"label": "CSKT Fire on the Land: fire lookouts", "url": url, "kind": "agency"})
+        elif src == "west_us_lookouts":
+            out.append({"label": f"{name} on Forest Lookouts, western US (Ron Kemnow)", "url": url, "kind": "site"})
+        elif src == "trailchick_wa":
+            out.append({"label": f"{name} in the TrailChick Washington lookout guide", "url": url, "kind": "site"})
+        elif src == "cherylhill_oregon":
+            out.append({"label": f"{name} on Every Lookout in Oregon (Cheryl Hill)", "url": url, "kind": "site"})
+        elif src == "willhiteweb_wa":
+            out.append({"label": f"{name} on WillhiteWeb.com Washington Fire Lookouts", "url": url, "kind": "site"})
+        elif src == "indiana_fire_towers":
+            out.append({"label": f"{name} on Indiana Fire Towers (Mark Armantrout)", "url": url, "kind": "site"})
         elif src in ASSOCIATION_SOURCES:
             assoc = (rec.extra.get("association") or {}).get("name") or SOURCE_SITE.get(src, src)
             out.append({"label": f"{assoc}: work on {name}", "url": url, "kind": "association"})

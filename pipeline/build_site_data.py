@@ -270,6 +270,42 @@ KNOWN_SOURCES: dict[str, dict[str, str]] = {
         "license": "No licence stated; facts only",
         "credit": "michiganfiretower.com",
     },
+    "west_us_lookouts": {
+        "title": "FOREST LOOKOUTS -- western US",
+        "url": "https://ronkemnow.weebly.com/",
+        "license": "No licence stated; facts only",
+        "credit": "Ron Kemnow's Forest Lookouts sites (westlookouts, californialookouts, idaholookouts, montanalookouts, oregonlookouts and washingtonlookouts .weebly.com)",
+    },
+    "trailchick_wa": {
+        "title": "TrailChick: Washington State Fire Lookouts",
+        "url": "https://www.trailchick.com/wa-state-fire-lookouts/",
+        "license": "No licence stated; facts only",
+        "credit": "TrailChick (trailchick.com)",
+    },
+    "cherylhill_oregon": {
+        "title": "Every Lookout in Oregon",
+        "url": "https://cherylhill.net/firelookouts/",
+        "license": "No licence stated; facts only",
+        "credit": "Every Lookout in Oregon (Cheryl Hill, cherylhill.net)",
+    },
+    "ffla_groups": {
+        "title": "FFLA chapters, affiliates and Friends groups",
+        "url": "https://firelookout.org/resources/links/",
+        "license": "Links to the groups' own pages; facts only",
+        "credit": "FFLA chapters and Friends groups (each link names the group)",
+    },
+    "willhiteweb_wa": {
+        "title": "WillhiteWeb.com: Washington Fire Lookouts",
+        "url": "http://www.willhiteweb.com/washington/fire_lookouts/locations_322.htm",
+        "license": "No licence stated; names and page links only",
+        "credit": "WillhiteWeb.com",
+    },
+    "indiana_fire_towers": {
+        "title": "Indiana Fire Towers (Mark Armantrout)",
+        "url": "https://www.indianafiretowers.com/",
+        "license": "No licence stated; facts only",
+        "credit": "Indiana Fire Towers (Mark Armantrout, indianafiretowers.com)",
+    },
     "research": {
         "title": "Firefinder research",
         "url": None,

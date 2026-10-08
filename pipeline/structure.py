@@ -327,12 +327,16 @@ WEEBLY_STATUS: dict[str, StatusInfo] = {
     "torn down": S("gone"), "razed": S("gone"), "destroyed": S("gone"), "burned down": S("gone"),
     "still standing": S("standing"), "still stands": S("standing"),
     "collapsed": S("ruins"),
+    # The western sites' standalone status words (regional/weebly_west.py).
+    "burned": S("gone"), "burnt": S("gone"), "ruins": S("ruins"), "relocated": S("relocated"),
+    "replica": S("replica"), "standing": S("standing"), "active": S("standing"),
 }
 
 SIMPLE_STATUS: dict[str, dict[str, StatusInfo]] = {
     "ffla": FFLA_STATUS,
     "eastern_us_lookouts": WEEBLY_STATUS,
     "central_us_lookouts": WEEBLY_STATUS,
+    "west_us_lookouts": WEEBLY_STATUS,
     "firelookout_com": {
         "standing": S("standing"),
         # Listed on firelookout.com, but not on its map of standing lookouts.

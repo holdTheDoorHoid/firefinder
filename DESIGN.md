@@ -50,6 +50,7 @@ Cache raw responses under `data/raw/` (git-ignored) so nothing is fetched twice.
 | **Wikidata** | Q748998 "fire lookout tower" (~319 with coords): Wikipedia links, NRHP ids (P649), Commons images (P18), inception | SPARQL | CC0 |
 | **Regional** | firelookout.com state maps (MT: 134 `GV_Draw_Marker` points, plus WA/OR/ID/WY/SD); PA StoryMap (48 towers, `…/items/ed47c97ebe7246868ce8ef3e7139a0b4/data?f=json`); andyarthur.org NY towers (CC BY 3.0); CSKT Flathead Reservation (6); fire-lookouts.org Sierra NF (~18, reuse allowed with credit); idahofirelookouts.com (not yet surveyed) | Mixed | Per source |
 | **Gap-state regional** (2026-10-04) | easternuslookouts.weebly.com / centraluslookouts.weebly.com, the same hobby-site template split by region (one page per tower; AL/CT/FL/GA/KY/MA/MI/MS/NJ/NC/PA/SC/TN and AR/LA/MO/OK); Wikipedia *List of fire lookout towers in Louisiana* and *List of New Jersey Forest Fire Service fire towers* (coordinate-bearing wikitables, CC BY-SA, facts only); michiganfiretower.com (a small young single-author site, 8 towers); tnlandforms.us (Tom Dunigan's independently surveyed GA/NC/TN tower lists, 929 towers, every one with coordinates) | Mixed | Per source; no licence stated on the two weebly sites or tnlandforms.us |
+| **Links-page sites** (2026-10-08) | The sites FFLA's links page (`firelookout.org/resources/links/`) points to, surveyed in `docs/sources/links_survey.md`. Ron Kemnow's *western* weebly sites (westlookouts, californialookouts, idaholookouts, montanalookouts, oregonlookouts, washingtonlookouts; ~3,700 pages, ~60% with a map-widget position), and the eastern / central sites now read for **every** state they cover (they had been limited to the gap states, and a mislabelled nav header had hidden 178 Michigan, 27 Missouri and 30 Indiana towers); TrailChick's Washington guide (93 visited lookouts with coordinates); *Every Lookout in Oregon* (155 standing lookouts, no coordinates, matched by register number or name); the per-lookout pages of FFLA chapters and Friends groups (`ffla_groups`: links, and the California-South chapter's table of register numbers and conditions); WillhiteWeb.com's Washington lookout pages (names and links); Indiana Fire Towers (Mark Armantrout's guide to ~40 Indiana tower sites, each with coordinates) | HTML | None stated on any; facts and links only |
 | **FFLA resources** | `firelookout.org/resources/…`: *Lookout Rentals* (88 rentals by state, each with its booking link and any closure or manager note: the recreation.gov ones and the state-park and private ones; source `ffla_rentals`, `pipeline/regional/ffla_rentals.py`), *Lookout Types and Historic Plans* (for the designs guide), *Historical Reference Documents*, *Staffing / Volunteer Opportunities* | HTML | Facts + links |
 | **Association project reports** (2026-10-08) | Year-by-year reports of the work lookout associations do on particular lookouts, one source per association, one shared record shape (3.7). First: the Northwest Montana Lookout Association, nwmt-ffla.org: project posts 2025-26, "Completed Projects" PDFs 2014-24 (print-outs of its old website) and the yearly newsletters, 37 lookouts in Glacier NP, the Flathead and Kootenai NFs and Montana DNRC, about 180 dated restoration, repair and assessment events | WordPress posts, PDFs (pdftotext) | No licence stated; facts only, notes in our words, every event linked to its report |
 | **Western association project reports** (2026-10-08) | Fifteen more sources in the same family (3.7) for the West and the Rockies: the FFLA chapter and restoration-grant reports 2003-2025 (212 PDFs from the AZ, CA, CO-UT, ID, NM, OR, WA and WY chapters; `ffla_west_reports`, 248 lookouts, 491 events), the Sand Mountain Society (OR), Mountaineers Everett (WA), Snoqualmie Fire Lookouts, Methow Valley FFLA, Buck Rock Foundation, Angeles NF FLA, Southern California Mountains Foundation, FFLA San Diego-Riverside, Monterey and California South, Hi Mountain Lookout Project, Siskiyou Mountain Club, HistoriCorps and the Green Mountain Lookout story (Washington Trust, WTA). 308 lookouts, 680 dated events in all; survey in `docs/sources/associations_west.md` | WordPress/Squarespace/Wix pages, PDFs (pdftotext) | No licence stated; facts only, notes in our words, every event linked to its page or PDF |
@@ -232,7 +233,9 @@ picked up with no code change (unknown sources rank last in every field).
 **Matching**, per source in the order NHLR, FFLOS, FFLA, RIDB, fire-lookouts.org, tnlandforms.us,
 the NJ Forest Fire Service Wikipedia table, firelookout.com, idahofirelookouts.com,
 michiganfiretower.com, PA StoryMap, andyarthur.org, the Wikipedia per-state lookout lists, CSKT,
-the easternuslookouts and centraluslookouts weebly sites, the association project sources (3.7: the Northwest Montana Lookout Association, the western and the eastern associations, in the order of `ASSOCIATION_SOURCES`), Wikidata, OSM:
+the easternuslookouts and centraluslookouts weebly sites, the association project sources (3.7: the Northwest Montana Lookout Association, the western and the eastern associations, in the order of `ASSOCIATION_SOURCES`), Wikidata, OSM, and then (2026-10-08) Ron
+Kemnow's western weebly sites, TrailChick (WA), Every Lookout in Oregon, the FFLA chapter and Friends
+pages, WillhiteWeb (WA), and Indiana Fire Towers:
 
 1. **Key**: the record's key is already in a tower's `sources[].key`. A record named in
    `RECORD_JOINS` (merge.py; each entry says why) joins its pinned tower right after this, for
@@ -245,8 +248,9 @@ the easternuslookouts and centraluslookouts weebly sites, the association projec
    match more than 5 km away is not taken when the record is a relocated or replica entry, or
    when there is a matching tower on the spot (the review file lists both cases).
 3. **Place and name**: towers nearby in the same state, best name first, then nearest.
-   Accepted when names agree strongly (score ≥ 0.85) within 1.5 km (3 km for idahofirelookouts.com
-   and RIDB, whose pins are rougher; 15 km for CSKT's dead-reckoned positions); when names agree
+   Accepted when names agree strongly (score ≥ 0.85) within 1.5 km (3 km for idahofirelookouts.com,
+   RIDB and Ron Kemnow's western weebly sites, whose pins are rougher: 95% of the western sites' pins
+   fall within 1.5 km of the tower they name, 97.5% within 3 km; 15 km for CSKT's dead-reckoned positions); when names agree
    partly (≥ 0.5) or one is generic ("Fire Tower", unnamed) within 400 m; or within 100 m whatever
    the names (different names for one tower are common: Pequawket = Kearsarge North) — **except**
    for idahofirelookouts.com and RIDB: if the name there is clearly different (score < 0.5) from
@@ -346,6 +350,16 @@ The association project sources (3.7) sit at the foot of the name, location, sta
 elevation, built, design, height, agency, ownership, staffing and events lists above (they fill
 gaps and add history; the registers and lists outrank them), and count as part of the registers'
 location lineage because their positions are copied from them.
+
+The links-page sources (2026-10-08) rank **last** in every field they supply, behind OSM and
+Wikidata: Ron Kemnow's western weebly sites (name, location, status, county, design, height, agency,
+ownership: the same fields as the eastern and central sites), TrailChick (location, county,
+elevation, built year and its event, design, height, agency, ownership, status), Every Lookout in
+Oregon (elevation, built year and event, design, height, agency, status), the FFLA chapter and
+Friends pages (agency and status from the California-South table, plus the destroyed event, and the
+links) and WillhiteWeb (a link, and a "standing" status for its 57 Cascades standing lookouts). The
+California-South chapter's "Destroyed in 2024 Line Fire" for Keller Peak therefore shows as a status
+conflict, not an overrule, until the owner or the FFLA refresh agrees.
 
 **Ownership and access** only where a source says so: CSKT → tribal, access `permission`;
 RIDB (USFS/BLM) → federal; NY DEC and PA state forests → state (via those extracts); an agency
