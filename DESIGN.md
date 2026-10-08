@@ -42,7 +42,7 @@ Cache raw responses under `data/raw/` (git-ignored) so nothing is fetched twice.
 
 | Source | What it gives | Form | Rights |
 |---|---|---|---|
-| **FFLA** firelookout.org/lookouts/us/`<st>`/ | Master table per state: Name, County, Lat, Long, Type, Status, NHLR/FFLOS number. ~6,100 sites in 33 states. 16 states have no table yet. `<st>-add/` pages hold "additional information". | HTML tables | No licence stated; facts only |
+| **FFLA** firelookout.org/lookouts/us/`<st>`/ | Master table per state: Name, County, Lat, Long, Type, Status, NHLR/FFLOS number. 6,157 rows in 30 states (crawled 2026-10-08, `pipeline/fetch_ffla.py --refresh`). 20 states have no table yet: Georgia, North Carolina and New Jersey show counts on the index and "Under construction" on their pages. Each state page links other sorts of the same list: by county (`<st>-co`), standing only (`<st>-st`), by region (`<st>-rg`; MT, ID, OR, WA) and CA's "Unknown/Undocumented" list (`ca-un`: 174 emergency, planned and never-built sites from one survey, 34 with a position). A row seen in several views is one record (the alphabetical list names its key). `<st>-add/` pages hold "additional information". | HTML tables | No licence stated; facts only |
 | **NHLR** nhlr.org (standing) | Per-lookout page: register numbers, date registered, location, coordinates, elevation, year built, administering agency, cooperators, prose, photo, links | Per-state lists → `/lookouts/us/<state>/<slug>/` | "All rights reserved" (American Resources Inc.); facts only, photos mirrored with credit |
 | **FFLOS** firetower.org (former sites) | Same schema as NHLR for gone lookouts; often historical photos with credits | Same as NHLR | Same as NHLR |
 | **RIDB** (recreation.gov) | Rentable lookouts: description, rules, season, occupancy, pets, fees, reservation URL, coordinates | Daily bulk export `ridb.recreation.gov/downloads/RIDBFullExport_V1_JSON.zip` (~572 MB, no key). Activities "FIRE LOOKOUTS/CABINS OVERNIGHT", "LOOKOUT TOWER". | Public; credit "Data source: ridb.recreation.gov" |
@@ -50,7 +50,7 @@ Cache raw responses under `data/raw/` (git-ignored) so nothing is fetched twice.
 | **Wikidata** | Q748998 "fire lookout tower" (~319 with coords): Wikipedia links, NRHP ids (P649), Commons images (P18), inception | SPARQL | CC0 |
 | **Regional** | firelookout.com state maps (MT: 134 `GV_Draw_Marker` points, plus WA/OR/ID/WY/SD); PA StoryMap (48 towers, `…/items/ed47c97ebe7246868ce8ef3e7139a0b4/data?f=json`); andyarthur.org NY towers (CC BY 3.0); CSKT Flathead Reservation (6); fire-lookouts.org Sierra NF (~18, reuse allowed with credit); idahofirelookouts.com (not yet surveyed) | Mixed | Per source |
 | **Gap-state regional** (2026-10-04) | easternuslookouts.weebly.com / centraluslookouts.weebly.com, the same hobby-site template split by region (one page per tower; AL/CT/FL/GA/KY/MA/MI/MS/NJ/NC/PA/SC/TN and AR/LA/MO/OK); Wikipedia *List of fire lookout towers in Louisiana* and *List of New Jersey Forest Fire Service fire towers* (coordinate-bearing wikitables, CC BY-SA, facts only); michiganfiretower.com (a small young single-author site, 8 towers); tnlandforms.us (Tom Dunigan's independently surveyed GA/NC/TN tower lists, 929 towers, every one with coordinates) | Mixed | Per source; no licence stated on the two weebly sites or tnlandforms.us |
-| **FFLA resources** | `firelookout.org/resources/…`: *Lookout Rentals* (rentals outside recreation.gov: state parks and private), *Lookout Types and Historic Plans* (for the designs guide), *Historical Reference Documents*, *Staffing / Volunteer Opportunities* | HTML | Facts + links |
+| **FFLA resources** | `firelookout.org/resources/…`: *Lookout Rentals* (88 rentals by state, each with its booking link and any closure or manager note: the recreation.gov ones and the state-park and private ones; source `ffla_rentals`, `pipeline/regional/ffla_rentals.py`), *Lookout Types and Historic Plans* (for the designs guide), *Historical Reference Documents*, *Staffing / Volunteer Opportunities* | HTML | Facts + links |
 | **Association project reports** (2026-10-08) | Year-by-year reports of the work lookout associations do on particular lookouts, one source per association, one shared record shape (3.7). First: the Northwest Montana Lookout Association, nwmt-ffla.org: project posts 2025-26, "Completed Projects" PDFs 2014-24 (print-outs of its old website) and the yearly newsletters, 37 lookouts in Glacier NP, the Flathead and Kootenai NFs and Montana DNRC, about 180 dated restoration, repair and assessment events | WordPress posts, PDFs (pdftotext) | No licence stated; facts only, notes in our words, every event linked to its report |
 | Later | USGS historical topos (public domain, `ngmdb.usgs.gov/arcgis/rest/services/topoview/ustOverlay(Auto)/MapServer`), NRHP NPS dataset, Library of Congress HABS/HAER (measured drawings, public domain), Forest History Society, state forestry lists, newspapers | — | — |
 
@@ -153,6 +153,16 @@ use the vocabularies in §3.4. Keep the original strings in `type_raw` / `status
  "fee": "...", "rules": ["..."], "access_note": "...", "description": "...", "checked": "2026-10-03"}
 ```
 
+A rental the Forest Fire Lookout Association lists (`ffla_rentals`, §3.5) adds three optional keys:
+`manager` (who runs it when it is not the Forest Service: "private owner", "MT DNRC"),
+`status_note` (a closure or unavailability the list notes: "Maintenance Closure 2026", "Currently
+Unavailable") with `status_note_from` ("ffla"). The lookout stays a rental (`available` is
+untouched) and the page shows the note beside the booking link, as a plain notice, not the
+"check before booking" warning that a lookout recorded as gone gets. A lookout recreation.gov
+does not list gets its rental from the FFLA entry alone: `source: "ffla"`, `provider` the
+booking site ("Airbnb", "Washington State Parks"), `url` its booking page, `ridb_facility_id`
+the recreation.gov number when the link has one; the page then credits the FFLA list, not RIDB.
+
 ### 3.4 Vocabularies (`data/vocab.json`)
 
 - `kind`: `tower` (cab or platform on a tower), `ground` (ground-level cab/house), `two_story` (2-story cab building), `three_story` (3-story cab building), `enclosed_tower`, `platform` (open tower, no cab), `tree`*, `camp`*, `unknown`. *Out of scope → `hidden`.
@@ -202,6 +212,29 @@ the easternuslookouts and centraluslookouts weebly sites, the association projec
    tower in the state (and county, when both give one). Otherwise the record is listed in the
    review file as unplaced; it does not make a tower, since a tower needs a position.
 5. Anything else **starts a new tower**.
+
+**FFLA's other views and border rows.** The alphabetical list fixes a record's key; the by-county,
+standing and by-region views only enrich it (county) and are paired with it by key, by the same
+name at the same spot, by position alone (FFLA spells "Remer - first" and "Remer #1" in different
+views), or by name when a view leaves the position out or mistypes it. Registers and links come
+from the alphabetical list only. FFLA's `ca-un` list is another list, not another sort: its rows
+are records of their own, and a tower only they describe is hidden ("Not confirmed as a lookout").
+A row under "(Border - see Montana)" is a lookout on a state line listed in both states: it joins
+the other state's tower by name when it has no position, and two such rows up to 400 m apart are
+one tower (the home state's row gives the position). Rows FFLA lists without a position that no
+rule above places stay in the review file as unplaced (no position, no tower).
+
+**The rentals list** (`ffla_rentals`: a name, a state and a booking link, no position) is placed
+last, once every tower exists, by `Matcher.match_rentals()`: `FFLA_RENTAL_OVERRIDES` (a table in
+merge.py, each entry with its reason; the value is a tower id or the key of a record the tower
+holds), then the key from an earlier run, then the recreation.gov facility number in the link
+(the tower holding `ridb:<number>`), then the name among the state's towers: of those that name it
+(score >= 0.95) the ones recreation.gov rents win, then the ones not known to be gone, and only a
+single survivor is taken; a near-match (>= 0.85) is taken only when it is the one tower in the
+state recreation.gov rents (and is listed for review); anything else is listed as unplaced with
+its candidates. A rental the extract gives a position (only the two private MoonPass towers, whose
+owner publishes none: the town of Wallace, rounded to two decimals, so "approximate") matches by
+position or starts a tower of its own. One lookout can carry several rental entries.
 
 Name comparison drops case, punctuation, accents and the words that only say "lookout"
 (Lookout, L.O., Fire, Tower, Station, Cabin…), expands Mtn/Mt/Pk, and compares the remaining
@@ -253,7 +286,7 @@ node + way (100 m; 50 m if unnamed), Wikidata (100 m), RIDB facility + campgroun
 | design, height | NHLR, FFLOS > firelookout.com > fire-lookouts.org > NJFFS table (height only) > PA StoryMap > CSKT > the weebly sites (> Wikidata > OSM for height) |
 | county | NHLR, FFLOS > FFLA > firelookout.com > PA StoryMap > CSKT > andyarthur.org > Wikipedia lists > fire-lookouts.org > tnlandforms.us > NJFFS table > the weebly sites > Wikidata > michiganfiretower.com |
 | agency | NHLR, FFLOS > RIDB > firelookout.com > fire-lookouts.org > tnlandforms.us > NJFFS table > PA StoryMap > andyarthur.org > CSKT > the weebly sites > OSM > michiganfiretower.com |
-| rental | RIDB only. If the tower's status is gone/ruins (Flag Point, OR: FFLA "Burned 2026"), warn, don't hide: the listing is kept with `available: false` (not counted or filtered as rentable) and a `warning` ("FFLA reports this lookout burned in 2026, but recreation.gov still lists it. Check with the forest before booking."), which the site shows above the listing link |
+| rental | RIDB (recreation.gov) first; the FFLA rentals list adds `manager` and `status_note` to a RIDB rental and is the rental itself when RIDB has none (`source: "ffla"`). If the tower's status is gone/ruins (Flag Point, OR: FFLA "Burned 2026"), warn, don't hide: the listing is kept with `available: false` (not counted or filtered as rentable) and a `warning` ("FFLA reports this lookout burned in 2026, but recreation.gov still lists it. Check with the forest before booking."; "the FFLA rentals list" where the rental came from it), which the site shows above the listing link |
 | registers | union of all sources; on a tower with an NHLR/FFLOS record, that register's own number wins and a different copy goes to `conflicts` |
 | events, photos, links | union, de-duplicated (events by event + year, photos by URL, links by URL); an event keeps the `source_url`/`source_urls` its source gave |
 
@@ -276,6 +309,13 @@ years differ by 2 or more (one year is usually built vs completed; often it is f
 current one); `kind` when tree/camp vs structure decides visibility;
 `registers` as above.
 
+**Coverage check.** After a merge, `python3 pipeline/coverage.py` lists every source record, from
+every source, that no tower holds, with the reason, and per source how many records sit on a
+visible tower, on a hidden one only, or on none. `--strict` exits 1 if a record with a usable
+position is held by no tower (the tower files are older than the extracts). Records with no
+position (FFLA rows it publishes without coordinates, rentals no name settles) are the expected
+remainder: a tower needs a position.
+
 **Verification**: `facts` when two independent sources agree on location (within 500 m of the
 shown position) and status; otherwise `unverified`. NHLR, FFLOS, FFLA and firelookout.com count
 as one lineage for this (FFLA carries the register numbers, and 3,173 of firelookout.com's 3,266
@@ -284,7 +324,7 @@ coordinates are byte-identical to an FFLA row). `researched`/`verified` are neve
 **Out of scope** (kept, `hidden: true` with a `hidden_reason`): kind `tree` or `camp`; FFLA bare
 lookout points (types Firefinder, Map Board, Alidade, Obs Pt…) with no structure from another
 source; FFLA "Proposed/Planned/Never Built"; FFLA's "Sites determined NOT to have been used as
-wildland fire lookouts"; single records hidden by a human decision (`HIDE_KEYS` in merge.py,
+wildland fire lookouts"; sites only FFLA's "Unknown/Undocumented" list (ca-un) has; single records hidden by a human decision (`HIDE_KEYS` in merge.py,
 e.g. OSM's "East Lookout Tower" on Guam: "Not confirmed as a fire lookout").
 
 **Ids**: `us-<st>-<slug>` from the display name without trailing "Lookout"/"Tower" words (also

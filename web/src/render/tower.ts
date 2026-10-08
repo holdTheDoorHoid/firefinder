@@ -217,10 +217,41 @@ export function rentalWarning(r: TowerRecord): SafeHtml {
   </div></div>`;
 }
 
+/** Who said a rental's status note, for the sentence that shows it. */
+const NOTE_SOURCE: Record<string, string> = { ffla: 'the Forest Fire Lookout Association’s rentals list' };
+
+/**
+ * A closure or unavailability noted for a rental ("Maintenance Closure 2026"). The lookout is
+ * still a rental, so this is a plain notice beside the booking link, not the "check before
+ * booking" warning for a lookout that is gone.
+ */
+export function rentalStatusNote(r: TowerRecord): SafeHtml {
+  const note = r.rental?.status_note;
+  if (!note || r.rental?.warning) return html``;
+  const from = NOTE_SOURCE[r.rental?.status_note_from ?? ''] ?? 'the rental listing';
+  return html`<div class="notice tone-unknown rental-note" role="note">${INFO}<div>
+    <p class="notice-title">Noted: ${note}</p>
+    <p>This comes from ${from}. Check with the manager or the booking page before you plan a stay.</p>
+  </div></div>`;
+}
+
+function rentalFootnote(rent: NonNullable<TowerRecord['rental']>): SafeHtml {
+  const checked = rent.checked ? html`, checked ${formatDate(rent.checked)}` : '';
+  if (rent.source === 'ffla') {
+    return html`<p class="fine">This rental is listed by the <a href="https://firelookout.org/resources/rentals/" rel="noopener">Forest Fire Lookout Association’s rentals list</a>${checked}; the association does not run rentals. Rules, fees and seasons change, so confirm on the booking page before you go.</p>`;
+  }
+  const noted = rent.status_note
+    ? html` The closure note comes from the <a href="https://firelookout.org/resources/rentals/" rel="noopener">Forest Fire Lookout Association’s rentals list</a>.`
+    : '';
+  return html`<p class="fine">Rental details from recreation.gov${checked}.${noted} Rules, fees and seasons change, so confirm on the booking page before you go. <span class="credit-line">Data source: ridb.recreation.gov</span></p>`;
+}
+
 function rentalDetails(r: TowerRecord): SafeHtml {
   const rent = r.rental!;
   const warned = !!rent.warning;
+  const provider0 = rent.provider ?? 'recreation.gov';
   const rows: [string, unknown][] = [
+    ['Managed by', rent.manager && rent.manager.toLowerCase() !== provider0.toLowerCase() ? rent.manager : null],
     ['Season', rent.season],
     ['Sleeps', typeof rent.max_occupancy === 'number' ? `Up to ${rent.max_occupancy} ${rent.max_occupancy === 1 ? 'person' : 'people'}` : null],
     ['Pets', rent.pets],
@@ -237,13 +268,13 @@ function rentalDetails(r: TowerRecord): SafeHtml {
     ${shown.length ? html`<dl class="kv kv-rental">${shown.map(([k, v]) => html`<div><dt>${k}</dt><dd>${v}</dd></div>`)}</dl>` : ''}
     ${rent.rules?.length ? html`<h3 class="h-small">Rules</h3><ul class="rules">${rent.rules.map((x) => html`<li>${x}</li>`)}</ul>` : ''}
     ${rent.description ? html`<p class="rental-desc">${rent.description}</p>` : ''}
-    ${warned ? rentalWarning(r) : ''}
+    ${warned ? rentalWarning(r) : rentalStatusNote(r)}
     ${book
       ? warned
         ? html`<p class="book-row"><a class="btn btn-book" href="${book}" rel="noopener">See the listing on ${provider}${EXT}<span class="visually-hidden"> (opens ${provider})</span></a></p>`
         : html`<p class="book-row"><a class="btn btn-primary btn-book" href="${book}" rel="noopener">Book on ${provider}${EXT}<span class="visually-hidden"> (opens ${provider})</span></a></p>`
       : ''}
-    <p class="fine">Rental details from recreation.gov${rent.checked ? html`, checked ${formatDate(rent.checked)}` : ''}. Rules, fees and seasons change, so confirm on the booking page before you go. <span class="credit-line">Data source: ridb.recreation.gov</span></p>
+    ${rentalFootnote(rent)}
   </div>`;
 }
 
@@ -800,6 +831,7 @@ export function renderPanel(r: TowerRecord, ctx: RenderContext, opts: { hiddenBy
       ${book ? html`<a class="btn" href="${book}" rel="noopener">See the listing on ${provider}${EXT}<span class="visually-hidden"> (opens another site)</span></a>` : ''}</div>`;
   } else if (rent) {
     stay = html`<div class="panel-stay"><p><strong>Rentable.</strong> ${typeof occupancy === 'number' ? `Sleeps up to ${occupancy}. ` : ''}${r.rental?.season ?? ''}</p>
+      ${r.rental?.status_note ? html`<p class="fine rental-note-line"><strong>Noted: ${r.rental.status_note}.</strong> Check before you plan a stay.</p>` : ''}
       ${book ? html`<a class="btn btn-primary" href="${book}" rel="noopener">Book on ${provider}${EXT}<span class="visually-hidden"> (opens another site)</span></a>` : ''}</div>`;
   } else if (r.status === 'gone' || r.status === 'ruins') {
     stay = html`<p class="panel-stay"><strong>${r.status === 'gone' ? 'Gone: site only.' : 'Ruins only.'}</strong> Nothing to climb or rent.</p>`;

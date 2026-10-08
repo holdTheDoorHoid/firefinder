@@ -191,6 +191,12 @@ def check(rec: object, path: Path, vocab: dict) -> tuple[list[str], list[str]]:
     rental = rec.get("rental")
     if rental is not None and not (isinstance(rental, dict) and "available" in rental):
         errs.append("rental is neither null nor an object with 'available'")
+    if isinstance(rental, dict):
+        for k in ("provider", "url", "manager", "status_note", "status_note_from", "source"):
+            if rental.get(k) is not None and not (isinstance(rental[k], str) and rental[k].strip()):
+                errs.append(f"rental.{k} is neither null nor text")
+        if rental.get("source") not in (None, "ffla"):
+            errs.append("rental.source is not 'ffla' (a rental from recreation.gov has no source key)")
     if not (isinstance(rec.get("updated"), str) and DATE_RE.match(rec["updated"])):
         errs.append("updated is not a YYYY-MM-DD date")
     return errs, warns

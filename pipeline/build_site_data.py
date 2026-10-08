@@ -160,6 +160,12 @@ KNOWN_SOURCES: dict[str, dict[str, str]] = {
         "license": "No licence stated; facts only",
         "credit": "Forest Fire Lookout Association (firelookout.org)",
     },
+    "ffla_rentals": {
+        "title": "Forest Fire Lookout Association: lookout rentals",
+        "url": "https://firelookout.org/resources/rentals/",
+        "license": "No licence stated; facts only (the association does not run rentals)",
+        "credit": "Forest Fire Lookout Association rentals list (firelookout.org)",
+    },
     "nhlr": {
         "title": "National Historic Lookout Register",
         "url": "https://nhlr.org/",
