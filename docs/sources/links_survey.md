@@ -1,7 +1,7 @@
 # Survey: the sites FFLA's links page points to
 
 Surveyed 2026-10-08 from <https://firelookout.org/resources/links/> ("Communities and Links"). The page
-lists 14 Facebook pages and groups (skipped: login-only), 19 FFLA chapters and affiliates, and 30
+lists about 40 Facebook pages and groups (skipped: login-only), 19 FFLA chapters and affiliates, and 30
 "other lookout and lookout-related sites". Every non-Facebook site was opened, with `robots.txt` read
 first (our user agent `FirefinderBot/0.1`, one request per 2 s per host, or the host's `Crawl-delay` when
 it asks for more). Nothing was fetched from a site that blocked us, and no bot check was got round.
@@ -29,9 +29,9 @@ page anyway).
   33, Montana 27, Washington 20, California 19, Wyoming 6...), 28 from the eastern site (Michigan 22), 24
   from the central site (Missouri 16, Illinois 4), 3 from TrailChick. All are Unverified single-source
   towers except where a second source's pin agrees.
-* **What the survey could not fix:** 2,177 lookouts that sources list by name and county but with no
-  coordinates (`unplaced` in `data/merge_report.json`; 1,624 of them from the four hobby sites in this
-  survey: eastern 735, western 406, WillhiteWeb 256, central 223, and 9 Oregon rows). They are the largest
+* **What the survey could not fix:** 2,172 lookouts that sources list by name and county but with no
+  coordinates (`unplaced` in `data/merge_report.json`; 1,628 of them from the sites in this
+  survey: eastern 735, western 406, WillhiteWeb 256, central 223, and 4 each from Oregon and Indiana). They are the largest
   remaining gap in "every lookout listed". See *Left over*.
 
 ## What was added
@@ -45,7 +45,7 @@ Every record of every source below with a position is now held by a tower (`pyth
 | `eastern_us_lookouts` | easternuslookouts.weebly.com, all 24 states (was 13) | 2,135 (was 1,319) | 834 | 1,398 | 28 | 735 | nav fixes; Michigan, Indiana, Virginia/West Virginia, Maine, New York... |
 | `central_us_lookouts` | centraluslookouts.weebly.com, all 10 states (was 4) | 878 (was 460) | 528 | 655 | 24 | 223 | Missouri's second half, Texas, Wisconsin, Minnesota, Illinois |
 | `trailchick_wa` | TrailChick Washington guide | 93 | 93 | 93 | 3 | 0 | coordinates, elevation, years, design, a card photo with credit |
-| `cherylhill_oregon` | Every Lookout in Oregon | 160 | 0 | 151 | 0 | 9 | 54 joined by register number, 97 by name (hand-written county hints for 15 ambiguous names) |
+| `cherylhill_oregon` | Every Lookout in Oregon | 160 | 0 | 156 | 0 | 4 | 53 joined by register number, 103 by name (hand-written county hints for 23 ambiguous names) |
 | `ffla_groups` | FFLA chapters and Friends groups | 79 | 0 | 79 | 0 | 0 | 99 links; 34 register numbers from the California-South table |
 | `willhiteweb_wa` | WillhiteWeb.com Washington lists | 766 | 0 | 510 | 0 | 256 | links only; unplaced = names that are not unique in Washington or not ours |
 | `indiana_fire_towers` | indianafiretowers.com (lead from chapters-east) | 39 | 11 | 35 | 0 | 4 | status from each page's condition line; the other 28 positions are only on the author's Google map |
@@ -86,7 +86,7 @@ Every record of every source below with a position is now held by a tower (`pyth
 | fs.usda.gov (Lincoln NF lookouts) | USFS | allows | The old page returns the forest's home page | n/a | n/a | public | Dead link |
 | idahofirelookouts.com | (Idaho lookouts blog) | allows | Per-lookout posts with map pins | 998 | already ingested (`idaho_fl`) | none stated | Done earlier |
 | fs.usda.gov (Mt. Baker-Snoqualmie lookouts) | USFS | allows | Home page only | n/a | n/a | public | Dead link |
-| cherylhill.net/firelookouts | Cheryl Hill | allows all but /wp-admin/ | Table of Oregon's standing lookouts (agency, elevation, year, status), a post for each, and a "Destroyed Lookouts" category | 155 + 5 destroyed posts | 0 new (no coordinates); 148 now linked, 7 ambiguous names left unplaced | none stated | **Ingested** (`cherylhill_oregon`): links, elevation, year built, design, height, five destroyed lookouts |
+| cherylhill.net/firelookouts | Cheryl Hill | allows all but /wp-admin/ | Table of Oregon's standing lookouts (agency, elevation, year, status), a post for each, and a "Destroyed Lookouts" category | 155 + 5 destroyed posts | 0 new (no coordinates); 156 of 160 now linked, 4 ambiguous names left unplaced | none stated | **Ingested** (`cherylhill_oregon`): links, elevation, year built, design, height, five destroyed lookouts |
 | fs.usda.gov (Umatilla NF historic photos) | USFS | allows | Home page only | n/a | n/a | public | Dead link |
 | trailchick.com | TrailChick | none (404) | Guide to 93 Washington lookouts the author has visited, each page with coordinates, elevation, type and years | 93 | 3 new (Aeneas Mountain, Whitmore Mountain, Mount Leecher Crows Nest) | none stated | **Ingested** (`trailchick_wa`): coordinates, facts, a card photo with credit, link |
 | nps.gov/subjects/lookouts | National Park Service | allows (not /search, /ns) | A search page that fills in with JavaScript; no static list | n/a | n/a | public domain | None (park lookouts are in NHLR/FFLA) |
@@ -113,8 +113,8 @@ Every record of every source below with a position is now held by a tower (`pyth
 
 | Site | Run by | robots.txt | What it lists | Lookouts | Missing from Firefinder | Terms | Action |
 |---|---|---|---|---|---|---|---|
-| indianafiretowers.com | Mark Armantrout ("Indiana Fire Towers (by Mark A)") | `Crawl-delay: 10` (honoured: 39 pages, ~7 minutes) | A list of the 43 Indiana tower sites in four groups (13 climbable, standing but overlooked, base corners left, gone) and a page for each, with names, county, topo quad, condition, links and, on 11 pages, latitude and longitude (the rest are on his Google map, which robots.txt for google.com keeps crawlers out of) | 39 pages | 0 after the weebly fix (4 are speculative: Salt Creek, Scales Lake, State Fair replica, Bristow, no coordinates) | none stated | **Ingested** (`indiana_fire_towers`): 35 matched, 4 unplaced, 11 positions |
-| e2pm.com/pafire_tower | E2 Project Management LLC (engineer for PA DGS / DCNR) | allows | A contractor's project page for the 53 Pennsylvania fire towers it inspected, rehabilitated or replaced (2014-): marketing text, eight photos and one map screenshot with red/green/blue/orange dots for the plan per tower. **No list of tower names anywhere on the page.** | 53 towers (unnamed) | unknown: Pennsylvania already has 245+ towers from NHLR, the StoryMap and the weebly sites | none stated | **Nothing usable.** The map is a picture with no labels; a list would come from PA DCNR's Bureau of Forestry or DGS. Worth a records request if the owner wants the rebuild dates |
+| indianafiretowers.com | Mark Armantrout ("Indiana Fire Towers (by Mark A)") | `Crawl-delay: 10` (honoured: 39 pages, ~7 minutes) | A list of the 43 Indiana tower sites in four groups (13 climbable, standing but overlooked, base corners left, gone) and a page for each, with names, county, topo quad, condition, links and, on 11 pages, latitude and longitude (the rest are on his Google map, which robots.txt for google.com keeps crawlers out of) | 39 pages | 0 after the weebly fix (4 have no coordinates and no match: Indiana Dunes, Salt Creek, the State Fair replica, Crane's several towers) | none stated | **Ingested** (`indiana_fire_towers`): 35 matched, 4 unplaced, 11 positions |
+| e2pm.com/pafire_tower | E2 Project Management LLC (engineer for PA DGS / DCNR) | allows | A contractor's project page for the 53 Pennsylvania fire towers it inspected, rehabilitated or replaced (no dates given): marketing text, eight photos and one map screenshot with red/green/blue/orange dots for the plan per tower. **No list of tower names anywhere on the page.** | 53 towers (unnamed) | unknown: Pennsylvania already has 245+ towers from NHLR, the StoryMap and the weebly sites | none stated | **Nothing usable.** The map is a picture with no labels; a list would come from PA DCNR's Bureau of Forestry or DGS. Worth a records request if the owner wants the rebuild dates |
 
 ## Ron Kemnow's sites
 
@@ -156,14 +156,14 @@ DEP page carries an injected script tag. Blocking our user agent: nhdfl.dncr.nh.
 
 ## Left over
 
-* **2,177 lookouts with a name (usually a county) but no coordinates**, 1,624 of them from the hobby
-  sites above (the rest are FFLOS 299, FFLA 240 and a few others). A prototype against USGS GNIS (the
+* **2,172 lookouts with a name (usually a county) but no coordinates**, 1,628 of them from the sites
+  above (the rest are FFLOS 299, FFLA 240 and a few others). A prototype against USGS GNIS (the
   committed `DomesticNames_AllStates_Text.zip`) finds exactly one same-name natural feature (summit,
   ridge, pillar, gap) in the same county for 95 of the 958 eastern and central ones, and exactly one
   populated place of that name for 279 more (town centres, a poor proxy); the other 476 match nothing.
   Using these would mean positions labelled approximate: the owner's call, so not done.
-* Oregon: 9 table rows are still unplaced (Bly, Hopkins Demonstration Forest, Tiller Ranger Station,
-  Silver Butte and others whose names are not unique or not in our database); WillhiteWeb: 256 list
+* Oregon: 4 rows are still unplaced (Bald Butte in Fremont-Winema, Bly, Silver Butte and one more whose
+  names are not unique even within their county); WillhiteWeb: 256 list
   entries (names not unique in Washington, or sites we do not have; 36 look like genuinely missing sites,
   mostly trees, camps and ranger stations, with no coordinates).
 * Blocked by the host and not retried: New Hampshire's tower list (HTTP 403), Placer County's list (403),
