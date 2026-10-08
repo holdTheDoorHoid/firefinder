@@ -27,6 +27,7 @@ import argparse
 import datetime
 import html as html_mod
 import importlib.util
+import json
 import pathlib
 import re
 import sys
@@ -228,6 +229,27 @@ def to_record(e: dict, taken: set[str], retrieved: str) -> dict:
     }
 
 
+# The weekly refresh (.github/workflows/refresh-rentals.yml) re-reads the page unattended. A page
+# that loads but is not the list (an error or challenge page, a redesign the parser cannot read)
+# must not replace the committed extract, so a re-read that finds nothing, or under this share of
+# what the extract already holds, is refused. The same 70% floor the RIDB guardrail uses.
+MIN_KEPT_SHARE = 0.7
+
+
+def too_few(found: int, held: int) -> bool:
+    """Is a re-read of `found` rentals too small to replace an extract holding `held`?"""
+    return found == 0 or (held > 0 and found < held * MIN_KEPT_SHARE)
+
+
+def held_count(path: pathlib.Path) -> int:
+    """How many rentals the extract at `path` holds now (0 when there is none or it is unreadable)."""
+    try:
+        records = json.loads(path.read_text(encoding="utf-8")).get("records")
+    except (OSError, ValueError, AttributeError):
+        return 0
+    return len(records) if isinstance(records, list) else 0
+
+
 def build_records(html: str, retrieved: str) -> list[dict]:
     taken: set[str] = set()
     return [to_record(e, taken, retrieved) for e in parse_rentals(html)]
@@ -243,6 +265,10 @@ def main(argv: list[str] | None = None) -> None:
     retrieved = datetime.date.today().isoformat()
     records = build_records(html, retrieved)
     out_path = REPO_ROOT / "data" / "sources" / f"{SOURCE}.json"
+    held = held_count(out_path)
+    if too_few(len(records), held):
+        sys.exit(f"The FFLA page gave {len(records)} rentals; {out_path.name} holds {held} "
+                 f"(minimum {MIN_KEPT_SHARE:.0%}). Keeping the extract: check {URL} and this parser by hand.")
     write_source_json(
         out_path,
         source=SOURCE,

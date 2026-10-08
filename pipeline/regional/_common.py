@@ -4,11 +4,11 @@ Python 3.12 standard library only. Every fetcher in pipeline/regional/ imports
 this module instead of re-implementing HTTP, caching, or rate limiting.
 
 Caching contract: raw responses are cached under the shared, git-ignored
-``/home/hoid/Desktop/firefinder/data/raw/<source>/`` directory (see DESIGN.md
-Sec 2). If a cache file already exists, ``fetch()`` reads it and makes no
-network call at all -- this is what makes every fetcher resumable: re-running
-a script after a partial run, a crash, or a rate-limit backoff only fetches
-what is still missing.
+``/home/hoid/Desktop/firefinder/data/raw/<source>/`` directory (or
+``$FIREFINDER_RAW_ROOT/<source>/``; see DESIGN.md Sec 2). If a cache file
+already exists, ``fetch()`` reads it and makes no network call at all -- this
+is what makes every fetcher resumable: re-running a script after a partial
+run, a crash, or a rate-limit backoff only fetches what is still missing.
 
 Rate limiting: at most one request every 2 seconds, per host, enforced in
 this process. Fetchers that need many requests to one host (e.g. a few
@@ -18,6 +18,7 @@ them with run_in_background or nohup rather than blocking on them.
 
 from __future__ import annotations
 
+import os
 import pathlib
 import time
 import urllib.error
@@ -25,7 +26,10 @@ import urllib.parse
 import urllib.request
 import urllib.robotparser
 
-RAW_ROOT = pathlib.Path("/home/hoid/Desktop/firefinder/data/raw")
+# The shared crawl cache. FIREFINDER_RAW_ROOT overrides the lab machine's path (the same variable
+# pipeline/common.py and pipeline/_common.py read), so a CI runner -- which has no /home/hoid --
+# can re-read a regional page; see .github/workflows/refresh-rentals.yml.
+RAW_ROOT = pathlib.Path(os.environ.get("FIREFINDER_RAW_ROOT") or "/home/hoid/Desktop/firefinder/data/raw")
 
 UA_BOT = "FirefinderBot/0.1 (+https://github.com/holdTheDoorHoid/firefinder)"
 # Fallback only when a host outright refuses the bot UA (e.g. a WAF that

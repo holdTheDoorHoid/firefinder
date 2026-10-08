@@ -2,9 +2,14 @@
 
 from __future__ import annotations
 
+import io
+import json
+import contextlib
 import sys
+import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "regional"))
 import ffla_rentals as R  # noqa: E402
@@ -117,6 +122,52 @@ class Records(unittest.TestCase):
         self.assertEqual({r["status"] for r in out}, {"replica"})
         self.assertEqual([r["extra"]["listed_as"] for r in out],
                          ["Moon Pass Replica Lookout (Half Moon)", "Moon Pass Replica Lookout (Full Moon)"])
+
+
+class RefreshGuard(unittest.TestCase):
+    """The weekly Action re-reads the page unattended; a page that is not the list must not replace
+    the committed extract."""
+
+    def test_a_reread_that_found_nothing_or_under_70_percent_is_refused(self) -> None:
+        self.assertTrue(R.too_few(0, 88))
+        self.assertTrue(R.too_few(0, 0))
+        self.assertTrue(R.too_few(61, 88))        # 70% of 88 is 61.6
+        self.assertFalse(R.too_few(62, 88))
+        self.assertFalse(R.too_few(88, 88))
+        self.assertFalse(R.too_few(95, 88))        # FFLA adding rentals is the normal case
+        self.assertFalse(R.too_few(3, 0))          # no extract yet: anything real is fine
+
+    def test_held_count_reads_the_extract_and_tolerates_a_missing_or_broken_one(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            good, broken = Path(tmp) / "good.json", Path(tmp) / "broken.json"
+            good.write_text(json.dumps({"records": [{}, {}, {}]}), encoding="utf-8")
+            broken.write_text("{not json", encoding="utf-8")
+            self.assertEqual(R.held_count(good), 3)
+            self.assertEqual(R.held_count(broken), 0)
+            self.assertEqual(R.held_count(Path(tmp) / "missing.json"), 0)
+
+    def run_main(self, root: Path, page: str) -> None:
+        with mock.patch.object(R, "REPO_ROOT", root), mock.patch.object(R, "fetch_text", return_value=page), \
+                contextlib.redirect_stderr(io.StringIO()):
+            R.main([])
+
+    def test_main_writes_the_extract_from_a_good_page_and_keeps_it_when_the_page_goes_bad(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            out = root / "data" / "sources" / "ffla_rentals.json"
+            self.run_main(root, PAGE)
+            first = out.read_text(encoding="utf-8")
+            self.assertEqual(len(json.loads(first)["records"]), 13)
+            # an error or challenge page parses to no rentals at all: refused, file untouched
+            with self.assertRaises(SystemExit) as stopped:
+                self.run_main(root, "<html><body><div class='entry-content'><p>Just a moment...</p></div></body></html>")
+            self.assertIn("holds 13", str(stopped.exception))
+            self.assertEqual(out.read_text(encoding="utf-8"), first)
+            # a page that lost most of its states is refused too
+            few = PAGE.replace("Idaho", "Nowhere").replace("Montana", "Nowhere").replace("Washington", "Nowhere")
+            with self.assertRaises(SystemExit):
+                self.run_main(root, few)
+            self.assertEqual(out.read_text(encoding="utf-8"), first)
 
 
 if __name__ == "__main__":
