@@ -60,6 +60,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import designs as design_names  # noqa: E402  (pipeline/designs.py)
+import structure  # noqa: E402  (pipeline/structure.py: kinds, materials, the no-structure group)
 
 REPO = Path(__file__).resolve().parent.parent
 DATA = REPO / "data"
@@ -85,6 +86,7 @@ GEOJSON_FORMAT = {
     "y0": "first year a lookout is recorded standing here: built, rebuilt, replaced or first staffed (absent = unknown)",
     "y1": "year it came down: destroyed, burned, removed or abandoned (absent = still standing, or not recorded)",
     "d": "standard designs recognised (designs.json ids) joined with | (absent = none recognised)",
+    "m": "material of the main structure (vocab.material) (absent = not recorded)",
 }
 
 # Events that show a lookout stood at the site in that year, and events that end it. The
@@ -612,6 +614,8 @@ def feature(rec: dict, this_year: int | None = None, design_ids: list[str] | Non
         props["y1"] = y1
     if design_ids:
         props["d"] = "|".join(design_ids)
+    if isinstance(rec.get("material"), str) and rec["material"]:
+        props["m"] = rec["material"]
     return {
         "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [round(loc["lon"], 5), round(loc["lat"], 5)]},
@@ -636,7 +640,8 @@ def _prepare_out(out: Path, log: Log) -> None:
     (out / "t").mkdir()
 
 
-def load_source_headers(sources_dir: Path, log: Log, design_strings: dict[str, list[tuple[str, str]]] | None = None) -> dict[str, dict]:
+def load_source_headers(sources_dir: Path, log: Log, design_strings: dict[str, list[tuple[str, str]]] | None = None,
+                        kind_words: dict[str, Counter] | None = None) -> dict[str, dict]:
     """Title, URL, licence and retrieved date of every source extract. With `design_strings`,
     also collects each source record's type and design wording by record key (for
     designs.tower_designs), e.g. {"ffla:or:...": [("type", "Tower")], "firelookout_com:...": [("design", "L-4")]}."""
@@ -662,6 +667,13 @@ def load_source_headers(sources_dir: Path, log: Log, design_strings: dict[str, l
                 words = [(f, w.strip()) for f, w in (("type", r.get("type_raw")), ("design", extra.get("design"))) if isinstance(w, str) and w.strip()]
                 if words:
                     design_strings[r["key"]] = words
+        if kind_words is not None and sid in structure.SIMPLE_TYPES and isinstance(data.get("records"), list):
+            # The sources' own words for each kind ("Rooftop", "Hotel", "Grain Elevator"), for the guide.
+            for r in data["records"]:
+                t = r.get("type_raw") if isinstance(r, dict) else None
+                info = structure.type_info(sid, t) if isinstance(t, str) and t.strip() else None
+                if info is not None and info.kind not in (None, structure.KEEP):
+                    kind_words.setdefault(info.kind, Counter())[re.sub(r"\s+", " ", t.strip().rstrip("*"))] += 1
         headers[sid] = {
             "title": data.get("title"),
             "url": data.get("url"),
@@ -748,6 +760,43 @@ def write_designs(out: Path, facts_path: Path, towers: dict[str, list[dict]], wi
     return coverage
 
 
+def write_structure_kinds(out: Path, vocab_path: Path, by_kind: Counter, by_material: Counter,
+                          kind_words: dict[str, Counter], log: Log) -> dict:
+    """structure_kinds.json for the "Structure types" guide: data/structure_kinds.json's
+    groups, kinds, materials and roles, each kind with how many lookouts are of it and the
+    words the sources use for it. Returns the counts for meta.json."""
+    try:
+        vocab = json.loads(vocab_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as e:
+        log.warn(f"could not read the structure vocabulary: {e}", vocab_path)
+        return {}
+    group = {k["id"]: k.get("group") for k in vocab.get("kinds", [])}
+    kinds = []
+    for k in vocab.get("kinds", []):
+        # One spelling per word ("Tower" and "tower"), the commonest; unsure ones ("Tower?") left out.
+        seen: dict[str, str] = {}
+        for w, _ in (kind_words.get(k["id"]) or Counter()).most_common():
+            if "?" not in w:
+                seen.setdefault(w.lower(), w)
+        words = list(seen.values())[:12]
+        kinds.append({**{x: k.get(x) for x in ("id", "label", "group", "about")}, "count": by_kind.get(k["id"], 0), "source_words": words})
+    for kid in sorted(set(by_kind) - set(group)):
+        log.warn(f"kind {kid!r} is on {by_kind[kid]} lookouts but not in {vocab_path.name}")
+    groups = [{**{x: g.get(x) for x in ("id", "label", "shown_by_default", "about")},
+               "count": sum(n for kid, n in by_kind.items() if group.get(kid, "structure") == g["id"])}
+              for g in vocab.get("groups", [])]
+    materials = [{**m, "count": by_material.get(m["id"], 0)} for m in vocab.get("materials", [])]
+    summary = {
+        "structures": sum(n for kid, n in by_kind.items() if group.get(kid, "structure") != "no_structure"),
+        "no_structure": sum(n for kid, n in by_kind.items() if group.get(kid) == "no_structure"),
+        "with_material": sum(by_material.values()),
+    }
+    _write_json(out / "structure_kinds.json", {"title": vocab.get("title"), "updated": vocab.get("updated"),
+                                              "groups": groups, "kinds": kinds, "materials": materials,
+                                              "roles": vocab.get("roles", []), "counts": summary})
+    return summary
+
+
 def build(
     towers_dir: Path,
     stories_dir: Path,
@@ -761,13 +810,16 @@ def build(
     log: Log | None = None,
     designs_path: Path | None = None,
     this_year: int | None = None,
+    structure_kinds_path: Path | None = None,
 ) -> dict:
     log = log or Log()
     files = sorted(towers_dir.rglob("*.json")) if towers_dir.is_dir() else []
     vocab = json.loads(vocab_path.read_text(encoding="utf-8")) if vocab_path.is_file() else {}
     this_year = this_year or dt.date.today().year
     design_strings: dict[str, list[tuple[str, str]]] = {}
-    headers = load_source_headers(sources_dir, log, design_strings)
+    kind_words: dict[str, Counter] = {}
+    headers = load_source_headers(sources_dir, log, design_strings, kind_words)
+    no_structure = structure.no_structure_kinds()
     design_towers: dict[str, list[dict]] = {}
     with_design_text = 0
     ranges: list[tuple[int | None, int | None, str]] = []
@@ -775,7 +827,7 @@ def build(
     _prepare_out(out, log)
     features: list[dict] = []
     seen: dict[str, Path] = {}
-    counts: dict[str, Counter] = {k: Counter() for k in ("status", "kind", "region", "verification")}
+    counts: dict[str, Counter] = {k: Counter() for k in ("status", "kind", "region", "verification", "material")}
     hidden = rentable = registered = stories = skipped = 0
     cited: Counter[str] = Counter()
     any_fixture = fixtures
@@ -803,9 +855,9 @@ def build(
         seen[rid] = path
         any_fixture = any_fixture or bool(rec.get("fixture"))
 
-        for field in ("kind", "status", "verification"):
+        for field in ("kind", "status", "verification", "material"):
             allowed = vocab.get(field)
-            if allowed and rec[field] not in allowed:
+            if allowed and rec.get(field) is not None and rec[field] not in allowed:
                 log.warn(f"{rid}: {field} {rec[field]!r} is not in data/vocab.json", path)
 
         story = stories_dir / f"{rid}.md"
@@ -816,7 +868,8 @@ def build(
             # A plain summary written from the record alone, labelled as such on the page.
             rec["auto_summary"] = auto_summary.summarize(rec)
         texts, has_design = tower_design_texts(rec, design_strings)
-        with_design_text += has_design
+        is_structure = rec["kind"] not in no_structure
+        with_design_text += has_design and is_structure
         dids = design_names.tower_designs(texts)
         if dids:
             rec["design_ids"] = dids
@@ -825,11 +878,15 @@ def build(
         _write_json(out / "t" / f"{rid}.json", rec)
         feat = feature(rec, this_year, dids)
         features.append(feat)
-        ranges.append((feat["properties"].get("y0"), feat["properties"].get("y1"), rec["status"]))
+        if is_structure:
+            # "Lookouts standing in 1935" counts structures; sites with no structure are left out.
+            ranges.append((feat["properties"].get("y0"), feat["properties"].get("y1"), rec["status"]))
         counts["status"][rec["status"]] += 1
         counts["kind"][rec["kind"]] += 1
         counts["region"][rec["region"]] += 1
         counts["verification"][rec["verification"]] += 1
+        if rec.get("material"):
+            counts["material"][rec["material"]] += 1
         rentable += is_rentable(rec)
         registered += bool(rec.get("registers"))
         for s in rec.get("sources") or []:
@@ -842,7 +899,10 @@ def build(
     features.sort(key=lambda f: f["properties"]["i"])
     _write_json(out / "towers.geojson", {"type": "FeatureCollection", "features": features})
 
-    designs_meta = write_designs(out, designs_path if designs_path is not None else DATA / "designs.json", design_towers, with_design_text, len(features), log)
+    structures_n = sum(1 for f in features if f["properties"]["k"] not in no_structure)
+    designs_meta = write_designs(out, designs_path if designs_path is not None else DATA / "designs.json", design_towers, with_design_text, structures_n, log)
+    kinds_meta = write_structure_kinds(out, structure_kinds_path if structure_kinds_path is not None else structure.VOCAB_FILE,
+                                       counts["kind"], counts["material"], kind_words, log)
     source_ids = list(KNOWN_SOURCES) + sorted((set(headers) | set(cited)) - set(KNOWN_SOURCES))
     sources = []
     for sid in source_ids:
@@ -866,7 +926,11 @@ def build(
         "built": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "fixtures": any_fixture,
         "counts": {
+            # Every site shown on the map, and of those the structures and the sites with no
+            # structure (camps, lookout trees, bare points; the map leaves those off by default).
             "total": len(features),
+            "structures": kinds_meta.get("structures", structures_n),
+            "no_structure": kinds_meta.get("no_structure", len(features) - structures_n),
             "hidden": hidden,
             "skipped": skipped,
             "rentable": rentable,
@@ -876,6 +940,7 @@ def build(
             "by_kind": dict(sorted(counts["kind"].items())),
             "by_region": dict(sorted(counts["region"].items())),
             "by_verification": dict(sorted(counts["verification"].items())),
+            "by_material": dict(sorted(counts["material"].items())),
         },
         "history": history_counts(ranges, this_year),
         "designs": designs_meta,
@@ -886,7 +951,8 @@ def build(
     size = (out / "towers.geojson").stat().st_size
     hist = meta["history"]
     log.info(
-        f"Wrote {len(features)} lookouts ({hidden} hidden, {skipped} skipped, {stories} stories) "
+        f"Wrote {len(features)} lookouts ({structures_n} structures, {len(features) - structures_n} with no structure; "
+        f"{hidden} hidden, {skipped} skipped, {stories} stories) "
         f"to {out}; towers.geojson is {size / 1024:.0f} KiB"
     )
     log.info(

@@ -8,7 +8,7 @@
 import type { ExpressionSpecification, GeoJSONSource, Map as MlMap, RasterTileSource } from 'maplibre-gl';
 import { oldTopoTiles, registerOldTopo } from '../history/oldtopo/client.ts';
 import { MIN_ZOOM as OLD_MIN_ZOOM, type Era } from '../history/oldtopo/sheets.ts';
-import { FILLS, SHAPES, drawMarker, iconName } from '../lib/icons.ts';
+import { FILLS, SHAPES, SHAPE_KINDS, drawMarker, iconName } from '../lib/icons.ts';
 import type { TowerCollection } from '../lib/types.ts';
 import type { Basemap } from '../lib/urlstate.ts';
 import { BOLD_FONT, LABEL_FONT, type Theme } from './style.ts';
@@ -48,7 +48,7 @@ function usgsAttribution(base: string): string {
   return `<a href="https://www.usgs.gov/programs/national-geospatial-program/national-map" target="_blank" rel="noopener">USGS The National Map</a> (<a href="${base}about/#sources">full credits</a>)`;
 }
 
-/** Draw the 24 marker images for this theme (dark mode flips what "hollow" looks like). */
+/** Draw the 32 marker images for this theme (dark mode flips what "hollow" looks like). */
 function addIcons(map: MlMap, theme: Theme): void {
   const ratio = 2;
   const px = ICON_PX * ratio;
@@ -73,7 +73,7 @@ function addIcons(map: MlMap, theme: Theme): void {
 const ICON_EXPR: ExpressionSpecification = [
   'concat',
   'ff-',
-  ['match', ['get', 'k'], ['tower', 'enclosed_tower', 'platform'], 'tri', ['ground', 'two_story', 'three_story'], 'house', 'circle'],
+  ['match', ['get', 'k'], [...SHAPE_KINDS.tri], 'tri', [...SHAPE_KINDS.house], 'house', [...SHAPE_KINDS.diamond], 'diamond', 'circle'],
   '-',
   ['match', ['get', 's'], 'standing', 'solid', 'gone', 'hollow', 'ruins', 'ruin', 'half'],
   ['case', ['==', ['get', 'rt'], 1], '-rent', ''],

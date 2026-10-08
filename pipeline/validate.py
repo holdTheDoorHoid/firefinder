@@ -55,6 +55,8 @@ REQUIRED = [
     "staffing", "visit", "rental", "events", "photos", "links", "sources", "conflicts",
     "verification", "locked", "hidden", "hidden_reason", "updated",
 ]
+# Written by every merge since 2026-10-08 (pipeline/structure.py); checked when present so tower
+# files from an older merge still validate until the next one.
 
 # US states, DC and territories. The 50 states and DC come from state_bbox (padded boxes);
 # territories are added here.
@@ -135,6 +137,13 @@ def check(rec: object, path: Path, vocab: dict) -> tuple[list[str], list[str]]:
         allowed = vocab_set(vocab, vkey)
         if allowed and rec.get(key) not in allowed:
             errs.append(f"{key} {rec.get(key)!r} is not in vocab.{vkey}")
+    if rec.get("material") is not None and rec["material"] not in vocab_set(vocab, "material"):
+        errs.append(f"material {rec['material']!r} is not in vocab.material")
+    if rec.get("material") is not None and not (isinstance(rec.get("material_from"), str) and rec["material_from"]):
+        errs.append("material has no material_from")
+    roles = rec.get("roles", [])
+    if not isinstance(roles, list) or any(r not in vocab_set(vocab, "role") for r in roles):
+        errs.append(f"roles {roles!r} is not a list of vocab.role values")
     access = rec.get("access")
     if not isinstance(access, dict) or access.get("level") not in vocab_set(vocab, "access"):
         errs.append(f"access.level {access.get('level') if isinstance(access, dict) else access!r} is not in vocab.access")

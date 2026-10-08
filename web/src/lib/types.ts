@@ -20,6 +20,10 @@
  *   y1  year it came down     1975 (destroyed, burned, removed, abandoned)
  *                             (absent = still standing, or not recorded: see lib/history.ts)
  *   d   design ids            "l4" or "l4|r6" (designs.json ids)            (absent = none recognised)
+ *   m   material              vocab.material ("steel")                      (absent = not recorded)
+ *
+ * Sites with no structure (k = camp, tree or point: vocab.ts NO_STRUCTURE_KINDS) are in the
+ * file too; the map leaves them off until the visitor switches them on.
  *
  * Coordinates are [lon, lat] rounded to 5 decimal places (about 1 m).
  */
@@ -40,6 +44,7 @@ export interface TowerProps {
   y0?: number;
   y1?: number;
   d?: string;
+  m?: string;
 }
 
 export interface TowerFeature {
@@ -178,6 +183,12 @@ export interface TowerRecord {
   location: { lat: number; lon: number; precision?: string | null; from?: string | null };
   elevation_m?: number | null;
   kind: string;
+  /** What the main structure is built of (vocab.material), or null when no source says. */
+  material?: string | null;
+  /** Where the material came from: a source id, or "design" (read off a recognised design). */
+  material_from?: string | null;
+  /** Jobs the site did that are not a kind of building (vocab.role: "aws"). */
+  roles?: string[] | null;
   design?: string | null;
   height_m?: number | null;
   status: string;
@@ -222,7 +233,12 @@ export interface Meta {
   built: string;
   fixtures: boolean;
   counts: {
+    /** Every site on the map, including sites with no structure. */
     total: number;
+    /** Towers and buildings (the map's default view). */
+    structures?: number;
+    /** Camps, lookout trees and bare points. */
+    no_structure?: number;
     hidden?: number;
     rentable?: number;
     registered?: number;
@@ -231,6 +247,7 @@ export interface Meta {
     by_kind?: Record<string, number>;
     by_region?: Record<string, number>;
     by_verification?: Record<string, number>;
+    by_material?: Record<string, number>;
   };
   sources: SourceInfo[];
   /** How many lookouts can be placed in time (pipeline build_site_data.history_counts). */
@@ -239,6 +256,36 @@ export interface Meta {
   designs?: DesignCoverage;
 }
 
+/** structure_kinds.json: the "Structure types" guide (pipeline/build_site_data.write_structure_kinds). */
+export interface StructureKind {
+  id: string;
+  label: string;
+  group: string;
+  about?: string | null;
+  count: number;
+  /** The sources' own words for this kind ("Rooftop", "Grain Elevator"). */
+  source_words?: string[] | null;
+}
+
+export interface StructureGroup {
+  id: string;
+  label: string;
+  shown_by_default?: boolean | null;
+  about?: string | null;
+  count: number;
+}
+
+export interface StructureKindsFile {
+  title?: string | null;
+  updated?: string | null;
+  groups: StructureGroup[];
+  kinds: StructureKind[];
+  materials: { id: string; label: string; about?: string | null; count: number }[];
+  roles?: { id: string; label: string; about?: string | null }[] | null;
+  counts?: { structures: number; no_structure: number; with_material: number } | null;
+}
+
+/** Counts over lookout structures only: sites with no structure are left out. */
 export interface HistoryCounts {
   this_year: number;
   total: number;

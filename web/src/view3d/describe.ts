@@ -41,6 +41,15 @@ export function typicalFloor(kind: string, lon: number): Typical {
       return { floorM: 6 - EYE_ABOVE_FLOOR_M, why: 'typical for the upper floor of a two-story lookout', short: 'Typical two-story lookout' };
     case 'three_story':
       return { floorM: 9 - EYE_ABOVE_FLOOR_M, why: 'typical for the top floor of a three-story lookout', short: 'Typical three-story lookout' };
+    case 'mobile':
+      return { floorM: 2.5 - EYE_ABOVE_FLOOR_M, why: 'typical for a trailer or portable cab', short: 'Typical trailer cab' };
+    case 'rooftop':
+      return { floorM: 6 - EYE_ABOVE_FLOOR_M, why: 'about two stories up, for a cab on a building roof', short: 'Typical rooftop cab' };
+    case 'tree':
+      return { floorM: 15, why: 'a platform about 50 ft up a tree, a middling height for the lookout trees in our sources', short: 'Typical lookout tree' };
+    case 'camp':
+    case 'point':
+      return { floorM: 0, why: 'a person standing on the ground: nothing was built here', short: 'Standing on the ground' };
     default: {
       const unknown = !['tower', 'enclosed_tower', 'platform'].includes(kind);
       const lead = unknown ? "the kind of structure isn't recorded, so this assumes " : '';

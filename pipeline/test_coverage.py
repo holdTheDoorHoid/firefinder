@@ -77,7 +77,8 @@ class CoverageAudit(unittest.TestCase):
 
     def test_records_on_hidden_towers_count_as_held_but_are_shown_apart(self) -> None:
         self.ws.run({"ffla": [rec("ffla", "a", "Abbot Butte", 44.5577, -121.7088, "OR"),
-                              rec("ffla", "t", "Tree Platform", 44.9, -121.2, "OR", kind="tree")]})
+                              # Tree platforms are shown since 2026-10-08; a never-built site is still hidden.
+                              rec("ffla", "t", "Planned Peak", 44.9, -121.2, "OR", status_raw="Never Built")]})
         res = self.audit()
         self.assertEqual(res["not_held"], [])
         self.assertEqual(res["per_source"]["ffla"]["held_visible"], 1)

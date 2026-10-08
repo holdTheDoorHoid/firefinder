@@ -19,7 +19,7 @@ DECIDED came from the owner's interview on 2026-10-03. Do not change them withou
 |---|---|
 | Audience | Balanced, in layers. A clean map for anyone. Each tower page puts practical info first (visit / stay / access) and history below. |
 | Geography | US at launch. The data model carries `country` + `region` so Canada and others can be added without rework. |
-| Scope | **Structures only**: elevated towers and ground cabs/houses, standing or gone. Tree platforms, tent camps and bare "lookout points" are out of scope (kept in source extracts, `hidden: true` with a reason). |
+| Scope | **Structures first**: elevated towers and ground cabs/houses, standing or gone. Tree platforms, tent camps and bare "lookout points" were out of scope (`hidden: true` with a reason). **Owner changed 2026-10-08: no-structure sites shown, off by default**: camps, lookout trees and bare points are a "no structure" group with their own label on the map and tower pages; the map leaves them off until the visitor switches them on; their tower pages are public; structure counts leave them out, "all sites" counts include them. Non-fire towers, never-built sites and human `HIDE_KEYS` stay hidden. Hiding a kind again is one edit (`"hidden": true`) in `data/structure_kinds.json`. |
 | 3D | (a) 360° **panorama from the cab** at eye height, with labeled peaks and a Firefinder compass ring; (b) **"what it could see"** viewshed shading on the map, several towers at once, to show network coverage; (c) **smoke-spotting demo**: take a bearing from two towers and cross the lines. No free-roam 3D flyover. Gone towers use their recorded site and height. |
 | Extras | Historical USGS topo overlay (the map from when the tower stood); then-and-now timeline per tower plus a national "towers standing per year" slider; tower-designs guide (L-4, Aermotor, CCC cupola…) linking to surviving examples. Not now: live wildfire layer, offline mode. |
 | Contributing | GitHub only: a "Suggest an edit" button on each tower opens a pre-filled GitHub issue. |
@@ -70,6 +70,8 @@ data/
                             files themselves are served from holdTheDoorHoid/firefinder-photos
   raw/                      crawl cache, git-ignored
   vocab.json                controlled vocabularies (§3.4)
+  structure_kinds.json      the kinds of structure in plain words: label, group (structure /
+                            no_structure), the hide switch, one paragraph each; materials; roles
 ```
 
 The mirrored image files themselves are not under `data/`: `pipeline/mirror_photos.py` (stage
@@ -107,7 +109,16 @@ Every fetcher writes `{"source": "<id>", "title": "...", "url": "...", "retrieve
 Rules: `key` is unique and stable within the source. Unknown values are `null`, never `""` or a
 guess. Coordinates are WGS84 decimal degrees, west longitudes negative. Elevation is in metres
 (convert from feet ×0.3048 and keep the original in `extra.elevation_ft`). `kind` and `status`
-use the vocabularies in §3.4. Keep the original strings in `type_raw` / `status_raw`.
+use the vocabularies in §3.4. Keep the original strings in `type_raw` / `status_raw`: the merge
+reads them again through `pipeline/structure.py`, whose tables give **every** type and status
+value of every source a deliberate mapping (a fetcher's own `kind`/`status` only stands where
+the value says nothing, or for OSM tags and Wikidata classes the fetcher reads in full).
+`pipeline/test_structure.py` fails when a crawl brings a value nobody has mapped, so it never
+quietly becomes `unknown`; `python3 pipeline/structure.py --check` lists such values and the
+merge report has them under `unmapped_structure_values`. Sources whose description text is only
+in the crawl cache (NHLR, FFLOS, firelookout.com) store short structure facts from it in
+`extra.structure_words` (a closed vocabulary: "steel tower", "wood cab", "kind ground",
+"role aws"; never prose), refreshed from the cache with `python3 pipeline/structure.py --backfill`.
 
 ### 3.3 Canonical tower (`data/towers/<region>/<id>.json`)
 
@@ -123,6 +134,8 @@ use the vocabularies in §3.4. Keep the original strings in `type_raw` / `status
   "location": {"lat": 44.55774, "lon": -121.70876, "precision": "exact", "from": "ffla"},
   "elevation_m": null,
   "kind": "tower",
+  "material": "steel", "material_from": "nhlr",
+  "roles": [],
   "design": null,
   "height_m": null,
   "status": "gone",
@@ -165,8 +178,39 @@ the recreation.gov number when the link has one; the page then credits the FFLA 
 
 ### 3.4 Vocabularies (`data/vocab.json`)
 
-- `kind`: `tower` (cab or platform on a tower), `ground` (ground-level cab/house), `two_story` (2-story cab building), `three_story` (3-story cab building), `enclosed_tower`, `platform` (open tower, no cab), `tree`*, `camp`*, `unknown`. *Out of scope → `hidden`.
-- `status`: `standing`, `gone`, `relocated` (moved; `events` record from/to), `ruins` (footings/remains only), `replica`, `unknown`. FFLA "Standing*" is mapped once its legend is confirmed.
+- `kind` (plain words, groups and the hide switch in `data/structure_kinds.json`):
+  - structures: `tower` (cab or platform on a tower), `enclosed_tower`, `platform` (open tower or
+    raised platform, no cab; FFLA "Crowsnest" counts here), `ground` (ground-level cab/house; also
+    summit shelters and stone huts), `two_story`, `three_story`, `rooftop` (a cab on another
+    building: ranger station, hotel, office, grain elevator, clock tower), `mobile` (trailer,
+    bus, portable cab), `unknown` (no source says);
+  - no structure (shown, map switch off by default): `camp` (summit tent camp), `tree` (lookout
+    tree / tree platform), `point` (bare point: firefinder, map board, alidade, cairn).
+  FFLA types mapped deliberately include: Rooftop / Roof Top / Rooftop Cab / Rooftop Tower /
+  Hotel / Office Building / Grain Elevator / Clock Tower → `rooftop`; Trailer, Bus/cupola →
+  `mobile`; Log Crib, Log base (a cab on a log crib), Log Tower, Stone (Obs) Tower, Wooden Tower,
+  Radio / Windmill / Security Tower, Obs Tower, Tower/Ground, Tower? → `tower`; Open Tower,
+  Platform Tower, Obs Deck, Crowsnest → `platform`; Shelter, Rock Shelter, Stone Hut, Stone
+  Walls, Tram House, Map Board (cabin) → `ground`; Firefinder, Map Board(s), Map Table, Alidade,
+  Obs Pt, High Point, Open Site, Rock Cairn → `point`; AWS → no kind (a role); Unknown, Unk,
+  Unconfirmed → `unknown`; "Gone" in the Type column is read as the status.
+- `material` (what the main structure is built of: the tower for a tower kind, the walls for a
+  building; none for a site with no structure): `steel`, `wood`, `log`, `stone`, `concrete`,
+  `masonry` (brick or block), `mixed` (a source names two, "stone and wood"). `material_from`
+  is the source that said it, or `design`.
+- `role` (`roles[]`, a job, not a kind of building): `aws` (Second World War Aircraft Warning
+  Service post: FFLA types AWS / AWS Tower, or "Aircraft Warning" in a register description).
+- `status`: `standing`, `gone`, `relocated` (moved; `events` record from/to), `ruins` (footings/remains only), `replica`, `unknown`.
+  FFLA: Standing; Standing* → standing with the note "The tower still stands, but its cab is gone"
+  (FFLA's legend); Gone, Gone** (unexplained), Removed, Abandoned → gone; Ruins, Standing (Ruins),
+  Collapsed → ruins; Relocated → relocated; Unknown, Duplicate? → no claim; Undocumented, Temp*
+  (temporarily removed, e.g. High Rock, WA, away for restoration) → no claim with a note; Private →
+  no claim, ownership private; Proposed / Planned / Never Built → hidden as never built; Non-fire
+  / Non-wildfire → the non-fire rule (§3.5). A year inside a status is an event: "Burned 2026" →
+  gone + `burned` 2026, "Removed 2026" → gone + `removed`, "New 2026" → standing + `rebuilt`.
+  The other sources' wordings (weebly "dismantled"/"razed"/"still stands", tnlandforms "moved",
+  NJFFS "Not in service or no longer standing" → no claim, Wikipedia "Torn down?" → no claim with
+  "Sources suggest it is gone.", OSM lifecycle tags, Wikidata dissolved dates) are tabled too.
 - `ownership`: `federal`, `state`, `tribal`, `local`, `private`, `unknown`.
 - `access.level`: `public`, `restricted` (seasonal/gated/permit), `permission` (tribal or landowner permission needed), `private` (no public access), `closed`, `unknown`.
 - `staffing.status`: `staffed`, `emergency`, `volunteer`, `unstaffed`, `unknown`.
@@ -280,7 +324,9 @@ node + way (100 m; 50 m if unnamed), Wikidata (100 m), RIDB facility + campgroun
 | name | NHLR, FFLOS > RIDB (cleaned) > FFLA > firelookout.com > fire-lookouts.org > tnlandforms.us > NJFFS table > andyarthur.org > Wikipedia lists > PA StoryMap > CSKT > the weebly sites > Wikidata > idahofirelookouts.com > michiganfiretower.com > OSM. A bare name borrows "Lookout"/"Fire Tower" only if another source spells it that way; every other name goes to `other_names` |
 | location | NHLR, FFLOS > FFLA > fire-lookouts.org > tnlandforms.us > NJFFS table > firelookout.com > OSM > the weebly sites > Wikidata > RIDB > andyarthur.org > Wikipedia lists > PA StoryMap > idahofirelookouts.com > michiganfiretower.com > CSKT, with *corroborated precedence*: if the winner is confirmed by no other lineage and lies > 500 m from a position that is, the best confirmed position wins (NHLR's Taylor Mountain, ID sits 253 km outside its own county). Rows outside their own state are used last |
 | status | FFLA > NHLR, FFLOS > RIDB > fire-lookouts.org > tnlandforms.us > NJFFS table > andyarthur.org > Wikipedia lists > PA StoryMap > CSKT > firelookout.com > idahofirelookouts.com > michiganfiretower.com > OSM > the weebly sites > Wikidata. OSM features imported from GNIS make no status claim (FFLA calls a third of them gone); a "standing" row named "(Replica)" is `replica` |
-| kind | FFLA > NHLR, FFLOS > RIDB > firelookout.com > fire-lookouts.org > tnlandforms.us > NJFFS table > PA StoryMap > andyarthur.org > Wikipedia lists > CSKT > OSM > the weebly sites > Wikidata > idahofirelookouts.com > michiganfiretower.com |
+| kind | FFLA > NHLR, FFLOS > RIDB > firelookout.com > fire-lookouts.org > tnlandforms.us > NJFFS table > PA StoryMap > andyarthur.org > Wikipedia lists > CSKT > OSM > the weebly sites > Wikidata > idahofirelookouts.com > michiganfiretower.com. Each record's kind is its type value read through `structure.py`, else its description words (NHLR/FFLOS "100-foot steel tower", "ground cabin"; words about an earlier structure or the living quarters are skipped), else the fetcher's reading. A bare `point` counts only when no source records a structure; with no kind at all, a recognised steel-tower design (Aermotor, IDECO) makes it a `tower` |
+| material | Explicit words first: FFLA > NHLR, FFLOS > firelookout.com > fire-lookouts.org > RIDB > OSM (`tower:construction`, `building:material`) > andyarthur.org; type values ("Stone Tower", "Log Crib") and description words read for the tower's kind (a tower's material is the tower's, not the cab's). Then the design (`material_from: "design"`): `data/designs.json`'s `material` for each design when present, else a fallback (L-4, L-6, R-6, D-6 wood; D-1 log; Aermotor, IDECO, other steel makers steel; L-5, cupola houses, California plans none, since their sources describe two materials). A steel-tower design gives a tower's material; a cab design only a building's |
+| roles | union |
 | built (and its events) | NHLR, FFLOS > firelookout.com > fire-lookouts.org > PA StoryMap > RIDB > the weebly sites > Wikidata > CSKT > idahofirelookouts.com > michiganfiretower.com > OSM > andyarthur.org > Wikipedia lists > FFLA; one source's build dates are used, others' go to `conflicts` |
 | elevation | NHLR, FFLOS > firelookout.com > fire-lookouts.org > tnlandforms.us > NJFFS table > RIDB > Wikidata > CSKT > OSM |
 | design, height | NHLR, FFLOS > firelookout.com > fire-lookouts.org > NJFFS table (height only) > PA StoryMap > CSKT > the weebly sites (> Wikidata > OSM for height) |
@@ -306,7 +352,9 @@ ownership from any source → access `permission`; FFLA's status "Private" → p
 `location` when a source is > 500 m from the shown position (CSKT excluded: approximate);
 `status` when sources differ (gone, ruins and relocated count as the same); `built` when build
 years differ by 2 or more (one year is usually built vs completed; often it is first structure vs
-current one); `kind` when tree/camp vs structure decides visibility;
+current one); `kind` when sources disagree on whether a structure stood there at all (a camp or
+lookout tree vs a tower or building, which decides the map group); `material` when two sources
+name different materials in words;
 `registers` as above.
 
 **Coverage check.** After a merge, `python3 pipeline/coverage.py` lists every source record, from
@@ -321,11 +369,13 @@ shown position) and status; otherwise `unverified`. NHLR, FFLOS, FFLA and firelo
 as one lineage for this (FFLA carries the register numbers, and 3,173 of firelookout.com's 3,266
 coordinates are byte-identical to an FFLA row). `researched`/`verified` are never downgraded.
 
-**Out of scope** (kept, `hidden: true` with a `hidden_reason`): kind `tree` or `camp`; FFLA bare
-lookout points (types Firefinder, Map Board, Alidade, Obs Pt…) with no structure from another
-source; FFLA "Proposed/Planned/Never Built"; FFLA's "Sites determined NOT to have been used as
-wildland fire lookouts"; sites only FFLA's "Unknown/Undocumented" list (ca-un) has; single records hidden by a human decision (`HIDE_KEYS` in merge.py,
-e.g. OSM's "East Lookout Tower" on Guam: "Not confirmed as a fire lookout").
+**Out of scope** (kept, `hidden: true` with a `hidden_reason`): a kind whose `hidden` is true in
+`data/structure_kinds.json` (none since 2026-10-08: camps, lookout trees and bare points are
+shown as sites with no structure); FFLA "Proposed/Planned/Never Built"; FFLA's "Sites determined
+NOT to have been used as wildland fire lookouts"; non-fire towers; sites only FFLA's "Unknown/Undocumented" list (ca-un) has, with no
+register or structure from another source; single records hidden by a
+human decision (`HIDE_KEYS` in merge.py, e.g. OSM's "East Lookout Tower" on Guam: "Not
+confirmed as a fire lookout").
 
 **Ids**: `us-<st>-<slug>` from the display name without trailing "Lookout"/"Tower" words (also
 before a parenthetical: "Pilot Peak Lookout (Payette NF)" → `pilot-peak-payette-nf`); moved and
@@ -381,10 +431,15 @@ tower (`--research` to point elsewhere), so a re-merge never loses research:
   `i` id, `n` name, `r` state, `c` county, `k` kind, `s` status, `v` verification, `a` access,
   `b` year built, `rt` 1 if rentable, `rg` 1 if on a register, `o` other names joined by `|`,
   `y0` / `y1` first year it stood / year it came down (only when an event records it; §4.2),
-  `d` recognised design ids joined by `|`.
+  `d` recognised design ids joined by `|`, `m` material. Sites with no structure (`k` camp,
+  tree, point) are in the file; the map leaves them off until switched on.
 - `t/<id>.json`: the full canonical record plus the story HTML, when one exists.
 - `meta.json`: counts, source list with retrieved dates, and build date; `history` (how many
-  towers have a start year, an end year, neither) and `designs` (design coverage).
+  towers have a start year, an end year, neither) and `designs` (design coverage). `counts.total`
+  is every site shown; `counts.structures` and `counts.no_structure` split it; `history` and the
+  design coverage count structures only; `counts.by_material` too.
+- `structure_kinds.json`: `data/structure_kinds.json` with each kind's count and the sources'
+  own words for it ("Rooftop", "Grain Elevator"), for the Structure types guide.
 - `designs.json`: the designs guide, `data/designs.json`'s curated facts with every lookout of
   each design (`pipeline/designs.py` recognises "L-4", "L4", "Aermotor MC-39"… in the tower's
   `design` and its sources' `type_raw` / `extra.design`; it never guesses).
@@ -465,9 +520,14 @@ names the other year. Not read: oral histories, event pages, and NMLA's Google M
 - Static site on GitHub Pages: Vite + TypeScript + **MapLibre GL JS**. No server, no keys.
 - Basemaps: OpenFreeMap (vector, keyless) by default, a USGS Topo raster toggle, and later the
   historical USGS topo overlay. Terrain from Mapterhorn or AWS terrarium tiles (keyless).
-- **Map page**: clustered points styled by status (standing vs gone) and kind; filters (status,
-  kind, rentable, state, register, verification); search by name; a side panel with the
-  facts card and a link to the full page; deep-linkable URL state.
+- **Map page**: clustered points styled by status (standing vs gone) and kind (triangle: tower;
+  house: a building, including rooftop cabs and trailers; circle: unknown; diamond: no
+  structure); filters (status, kind of structure, a "Show sites with no structure" switch that
+  is off by default (`&ns=1`), rentable, state, design, "Built of" material (`&mat=steel`),
+  register, verification); search by name (all sites); a side panel with the facts card and a
+  link to the full page; deep-linkable URL state. The count says what it counts: "All 7,523
+  towers and buildings shown", or with the switch on "All 8,093 lookout sites shown, including
+  570 with no structure".
 - **Tower pages**: prerendered static HTML at `/t/<id>/` (shareable, findable by search
   engines). Layout from the top: name, status, access badges; *Visit & stay* (rental rules
   and the recreation.gov button, access, staffing); facts card; timeline; story with
@@ -494,8 +554,9 @@ names the other year. Not read: oral histories, event pages, and NMLA's Google M
   credited on the About page. Zoom by distance: panorama 12 to 4 km, 10 to 40 km, 9 to 100 km,
   8 to 150 km (phones skip 9); viewshed 12 to 4 km, 10 beyond. Heights below sea level read as 0.
 - **Eye height** = ground + structure + 1.6 m. Structure = `height_m` (taken as the cab floor)
-  when recorded, otherwise by kind: ground cab eye 2.5 m, two-story 6 m, three-story 9 m;
-  towers (and unknown kinds) 9.1 m (30 ft) west of 100°W, 20 m (66 ft) east of it. The page
+  when recorded, otherwise by kind: ground cab and trailer eye 2.5 m, two-story and rooftop cab
+  6 m, three-story 9 m, lookout tree floor 15 m (about 50 ft), camp and bare point 1.6 m (on the
+  ground); towers (and unknown kinds) 9.1 m (30 ft) west of 100°W, 20 m (66 ft) east of it. The page
   says which applies and lets the visitor change it. The eye stands on the highest terrain
   within 75 m of the recorded position (said in "How this view is made").
 - **Panorama**: 36 distance layers drawn far to near, paler with distance; only true ridgelines
@@ -531,7 +592,12 @@ names the other year. Not read: oral histories, event pages, and NMLA's Google M
   15+ years are named ("No record between …"); a Today entry ends the list.
 - **Designs guide** `/designs/`: facts in `data/designs.json` (our words, every fact sourced),
   schematics drawn by us and labelled as such, every lookout of each design, a Design filter
-  on the map (`&design=l4`).
+  on the map (`&design=l4`). Its own section **Structure types** (`#structure-types`,
+  `web/src/render/structures.ts`, rendered from `structure_kinds.json`): one paragraph per kind
+  with its count, the sources' words for it and a map link, the no-structure group explained,
+  what lookouts are built of, and the Aircraft Warning Service role.
+- The **year view** counts towers and buildings only unless the visitor switches on sites with
+  no structure, and says which; the smoke-spotting lesson always uses towers and buildings.
 
 ---
 

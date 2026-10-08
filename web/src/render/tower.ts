@@ -17,9 +17,14 @@ import {
   REGISTER_NAMES,
   STAFFING,
   TRIBAL_ACCESS,
+  NO_STRUCTURE_LABEL,
+  NO_STRUCTURE_MEANING,
   designName,
+  isNoStructure,
   kindWording,
+  materialWording,
   regionName,
+  roleWording,
   statusWording,
   verificationWording,
 } from '../lib/vocab.ts';
@@ -106,6 +111,11 @@ export function placeLine(r: Pick<TowerRecord, 'county' | 'region'>): string {
   return `${c}${suffix}, ${state}`;
 }
 
+/** "Fire lookout", or "Lookout site, no structure" for a camp, lookout tree or bare point. */
+export function eyebrowWhat(kind: string): string {
+  return isNoStructure(kind) ? 'Lookout site, no structure' : 'Fire lookout';
+}
+
 function icon(kind: string, status: string, rentable = false, size = 20): SafeHtml {
   return raw(markerSvg(shapeFor(kind), fillFor(status), { rentable, size, className: 'marker-icon' }));
 }
@@ -149,6 +159,7 @@ export function badges(r: TowerRecord): SafeHtml {
   return html`<ul class="badges" aria-label="Status">
     <li class="badge badge-status status-${r.status}" title="${st.meaning}">${icon(r.kind, r.status)}<span>${st.label}</span></li>
     ${rent ? html`<li class="badge badge-rent">${raw(rentBadgeSvg(14))}<span>Rentable</span></li>` : ''}
+    ${isNoStructure(r.kind) ? html`<li class="badge badge-nostructure" title="${NO_STRUCTURE_MEANING}"><span>No structure</span></li>` : ''}
     <li class="badge badge-access tone-${acc.tone}" title="${acc.meaning}">${acc.tone === 'ok' ? CHECK : acc.tone === 'unknown' ? INFO : WARN}<span>${acc.label}</span></li>
     ${r.verification === 'unverified'
       ? html`<li class="badge badge-unverified" title="${ver.meaning}">${WARN}<span>Unverified</span></li>`
@@ -340,11 +351,23 @@ export function factRows(r: TowerRecord, opts: { short?: boolean; base?: string 
   const kind = kindWording(r.kind);
   const built = builtYear(r);
   const disagree = (field: string) => (hasConflict(r, field) ? html` <a class="disagree" href="#conflicts">sources disagree</a>` : '');
+  const noStructure = isNoStructure(r.kind);
+  const typeNote = noStructure ? html`<span class="sub">${NO_STRUCTURE_LABEL}: ${kind.meaning.replace(/^No structure: /, '')}</span>` : '';
   const rows: [string, unknown][] = [
     ['Status', html`<span class="with-icon">${icon(r.kind, r.status, false, 16)}${st.label}</span>${disagree('status')}`],
-    ['Type', r.design || r.design_ids?.length ? html`${kind.label}${r.design ? html`<span class="sub">${r.design}</span>` : ''}${designLinks(r, opts.base)}` : kind.label],
-    ['Built', built !== null ? html`${built}${disagree('built')}` : 'Unknown'],
+    ['Type', html`${kind.label}${typeNote}${r.design ? html`<span class="sub">${r.design}</span>` : ''}${designLinks(r, opts.base)}${disagree('kind')}`],
   ];
+  if (r.material) {
+    const fromDesign = r.material_from === 'design';
+    rows.push(['Built of', html`${materialWording(r.material).label}${fromDesign ? html`<span class="sub">Going by its design; no source says so in words.</span>` : ''}${disagree('material')}`]);
+  } else if (!opts.short) {
+    rows.push(['Built of', noStructure ? 'Nothing was built' : 'Not recorded']);
+  }
+  for (const role of r.roles ?? []) {
+    const w = roleWording(role);
+    rows.push(['Also served as', html`${w.label}${w.meaning ? html`<span class="sub">${w.meaning}</span>` : ''}`]);
+  }
+  rows.push(['Built', built !== null ? html`${built}${disagree('built')}` : 'Unknown']);
   const height = feetAndMetres(r.height_m, 1);
   if (height || !opts.short) rows.push(['Height', height ?? 'Unknown']);
   rows.push(['Elevation', feetAndMetres(r.elevation_m) ?? 'Unknown']);
@@ -539,6 +562,7 @@ function conflictValue(field: string, value: unknown): string {
   }
   if (field === 'status' && typeof value === 'string') return statusWording(value).label;
   if (field === 'kind' && typeof value === 'string') return kindWording(value).label;
+  if (field === 'material' && typeof value === 'string') return materialWording(value).label;
   if (value === null || value === undefined) return 'no value';
   if (typeof value === 'object') return JSON.stringify(value).slice(0, 120);
   return String(value);
@@ -549,6 +573,7 @@ const FIELD_WORDS: Record<string, string> = {
   status: 'whether it still stands',
   built: 'the year it was built',
   kind: 'what kind of structure it is',
+  material: 'what it is built of',
   elevation_m: 'the elevation',
   height_m: 'the height',
   name: 'the name',
@@ -583,6 +608,8 @@ export function conflictsSection(r: TowerRecord, ctx: RenderContext): SafeHtml |
 const FIELD_NAMES: Record<string, string> = {
   location: 'location',
   kind: 'type',
+  material: 'what it is built of',
+  roles: 'wartime use',
   status: 'status',
   registers: 'register numbers',
   county: 'county',
@@ -746,7 +773,7 @@ export function renderTowerMain(r: TowerRecord, ctx: RenderContext): SafeHtml {
     <li><span aria-current="page">${r.name}</span></li>
   </ol></nav>
   <header class="t-head">
-    <p class="eyebrow">Fire lookout · ${placeLine(r)}</p>
+    <p class="eyebrow">${eyebrowWhat(r.kind)} · ${placeLine(r)}</p>
     <h1>${r.name}</h1>
     ${other.length ? html`<p class="aka">Also known as ${other.join(', ')}</p>` : ''}
     ${r.summary ? html`<p class="t-summary">${r.summary}</p>` : ''}
@@ -794,7 +821,7 @@ export function renderTowerMain(r: TowerRecord, ctx: RenderContext): SafeHtml {
 export function describeTower(r: TowerRecord): string {
   const st = statusWording(r.status).label.toLowerCase();
   const built = builtYear(r);
-  let d = `${st === 'status unknown' ? 'Fire' : st[0]!.toUpperCase() + st.slice(1) + ' fire'} lookout in ${placeLine(r)}`;
+  let d = `${st === 'status unknown' ? 'Fire' : st[0]!.toUpperCase() + st.slice(1) + ' fire'} lookout ${isNoStructure(r.kind) ? `site with no structure (${kindWording(r.kind).label.toLowerCase()})` : ''} in ${placeLine(r)}`.replace('  ', ' ');
   if (built) d += `, built ${built}`;
   d += '.';
   if (isRentable(r)) d += ' Rentable on recreation.gov.';
@@ -839,7 +866,7 @@ export function renderPanel(r: TowerRecord, ctx: RenderContext, opts: { hiddenBy
     stay = html`<p class="panel-stay"><strong>Not rentable.</strong></p>`;
   }
   return html`
-    <p class="eyebrow">Fire lookout · ${placeLine(r)}</p>
+    <p class="eyebrow">${eyebrowWhat(r.kind)} · ${placeLine(r)}</p>
     <h2 id="panel-title" tabindex="-1">${r.name}</h2>
     ${badges(r)}
     ${r.summary ? html`<p class="panel-summary">${r.summary}</p>` : ''}
@@ -863,7 +890,7 @@ export function renderPanel(r: TowerRecord, ctx: RenderContext, opts: { hiddenBy
 export function renderPanelStub(p: TowerProps, ctx: RenderContext, message: string): SafeHtml {
   const st = statusWording(p.s);
   return html`
-    <p class="eyebrow">Fire lookout · ${placeLine({ county: p.c ?? null, region: p.r })}</p>
+    <p class="eyebrow">${eyebrowWhat(p.k)} · ${placeLine({ county: p.c ?? null, region: p.r })}</p>
     <h2 id="panel-title" tabindex="-1">${p.n}</h2>
     <ul class="badges"><li class="badge badge-status status-${p.s}">${icon(p.k, p.s, false)}<span>${st.label}</span></li>
     ${p.rt ? html`<li class="badge badge-rent">${raw(rentBadgeSvg(14))}<span>Rentable</span></li>` : ''}</ul>
