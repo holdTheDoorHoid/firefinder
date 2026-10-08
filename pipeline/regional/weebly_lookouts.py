@@ -295,6 +295,7 @@ def unshout(name: str) -> str:
         return re.sub(r"^([OD]['\u2019])([a-z])", lambda x: x.group(1) + x.group(2).upper(), t)
 
     name = re.sub(r"\b(MT|ST|FT|NO|MTN|PK)\.", lambda m: m.group(1)[0] + m.group(1)[1:].lower() + ".", name)
+    name = re.sub(r"\b(MT|ST|FT)\b(?= [A-Z])", lambda m: m.group(1)[0] + m.group(1)[1:].lower(), name)
     return re.sub(r"\b[A-Z][A-Z'\u2019]{2,}\b", fix, name)
 
 

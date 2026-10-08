@@ -86,6 +86,7 @@ class WeeblyNavFixes(unittest.TestCase):
         self.assertEqual(u("PARKER II"), "Parker II")
         self.assertEqual(u("CCC CAMP"), "CCC Camp")
         self.assertEqual(u("MT. GILBOA"), "Mt. Gilboa")
+        self.assertEqual(u("MT TERRIL"), "Mt Terril")
         self.assertEqual(u("ST. JOHN'S ROCK"), "St. John's Rock")
 
     def test_declared_state(self):
