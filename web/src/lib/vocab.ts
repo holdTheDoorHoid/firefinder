@@ -113,6 +113,7 @@ export const EVENT: Record<string, string> = {
   modified: 'Altered',
   fire: 'Fire',
   closed: 'Closed',
+  assessed: 'Condition assessment',
   other: 'Event',
 };
 

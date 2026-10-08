@@ -661,6 +661,7 @@ def load_source_headers(sources_dir: Path, log: Log, design_strings: dict[str, l
             "url": data.get("url"),
             "license": data.get("license"),
             "retrieved": data.get("retrieved"),
+            "credit": data.get("credit"),
             "records": len(data["records"]) if isinstance(data.get("records"), list) else None,
         }
     return headers
@@ -848,7 +849,7 @@ def build(
                 "title": title,
                 "url": head.get("url") or known.get("url"),
                 "license": head.get("license") or known.get("license"),
-                "credit": known.get("credit") or title,
+                "credit": known.get("credit") or head.get("credit") or title,
                 "retrieved": head.get("retrieved"),
                 "records": head.get("records"),
                 "towers": cited.get(sid, 0),

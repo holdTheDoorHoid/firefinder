@@ -187,6 +187,7 @@ def write_source_json(
     retrieved: str,
     license_: str,
     records: list[dict],
+    header_extra: dict | None = None,
 ) -> None:
     import json
 
@@ -199,6 +200,12 @@ def write_source_json(
         "license": license_,
         "records": records,
     }
+    if header_extra:
+        # extra top-level keys (e.g. the association-projects family marker), after the
+        # standard ones; never overrides them
+        for k, v in header_extra.items():
+            payload.setdefault(k, v)
+        payload["records"] = payload.pop("records")  # records stay last
     with out_path.open("w") as f:
         json.dump(payload, f, indent=2, ensure_ascii=False, sort_keys=False)
         f.write("\n")
