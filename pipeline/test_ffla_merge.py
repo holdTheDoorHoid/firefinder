@@ -301,6 +301,60 @@ class RentalsReport(unittest.TestCase):
             ws.close()
 
 
+class RecordJoins(unittest.TestCase):
+    """RECORD_JOINS pins a record to a tower that position and name cannot be trusted to find: the
+    recreation.gov "Post Creek Guard Station" (234404) is NHLR's "Post Creek Fireman-Lookout House",
+    779 m from the registered position and sharing no name beyond "Post Creek"."""
+
+    def setUp(self) -> None:
+        self.ws = Workspace()
+        self.saved = dict(M.RECORD_JOINS)
+        M.RECORD_JOINS.clear()
+        self.nhlr = rec("nhlr", "US 1363", "Post Creek Fireman-Lookout House", 40.235595, -122.925628, "CA", kind="ground")
+        self.ridb = rec("ridb", "234404", "POST CREEK GUARD STATION", 40.23333, -122.91694, "CA",
+                        rental=dict(RIDB_RENTAL, ridb_facility_id="234404",
+                                    url="https://www.recreation.gov/camping/campgrounds/234404"))
+
+    def tearDown(self) -> None:
+        M.RECORD_JOINS.clear()
+        M.RECORD_JOINS.update(self.saved)
+        self.ws.close()
+
+    def test_without_a_pin_the_far_pin_with_a_different_name_starts_a_second_tower(self) -> None:
+        self.ws.run({"nhlr": [self.nhlr], "ridb": [self.ridb]})
+        self.assertNotEqual(self.ws.tower_with_key("nhlr:US 1363")["id"], self.ws.tower_with_key("ridb:234404")["id"])
+
+    def test_a_pinned_record_joins_the_tower_holding_the_named_record(self) -> None:
+        M.RECORD_JOINS["ridb:234404"] = "nhlr:US 1363"
+        rep = self.ws.run({"nhlr": [self.nhlr], "ridb": [self.ridb]})
+        t = self.ws.tower_with_key("nhlr:US 1363")
+        self.assertEqual({s["key"] for s in t["sources"]}, {"nhlr:US 1363", "ridb:234404"})
+        self.assertEqual(len(self.ws.towers_by_id()), 1)
+        self.assertEqual(t["rental"]["ridb_facility_id"], "234404")
+        self.assertEqual(rep["matching"]["by_source"]["ridb"], {"override": 1})
+
+    def test_the_pin_also_takes_a_tower_id_and_survives_a_second_run(self) -> None:
+        self.ws.run({"nhlr": [self.nhlr]})
+        tower_id = self.ws.tower_with_key("nhlr:US 1363")["id"]
+        M.RECORD_JOINS["ridb:234404"] = tower_id
+        self.ws.run({"nhlr": [self.nhlr], "ridb": [self.ridb]})
+        self.assertEqual({s["key"] for s in self.ws.towers_by_id()[tower_id]["sources"]}, {"nhlr:US 1363", "ridb:234404"})
+        rep = self.ws.run()      # the tower file now remembers the key
+        self.assertEqual(len(self.ws.towers_by_id()), 1)
+        self.assertEqual(rep["matching"]["by_source"]["ridb"], {"key": 1})
+
+    def test_a_pin_to_a_tower_that_does_not_exist_falls_back_to_matching_and_is_reported(self) -> None:
+        M.RECORD_JOINS["ridb:234404"] = "nhlr:US 9999"
+        rep = self.ws.run({"nhlr": [self.nhlr], "ridb": [self.ridb]})
+        self.assertEqual(len(self.ws.towers_by_id()), 2)
+        self.assertIn({"type": "record_join_unknown_tower", "key": "ridb:234404", "target": "nhlr:US 9999"}, rep["review"])
+
+    def test_every_pin_in_the_real_table_names_a_record_and_a_tower(self) -> None:
+        for key, target in self.saved.items():
+            self.assertRegex(key, r"^[a-z_]+:\S+")
+            self.assertTrue(target.startswith("us-") or ":" in target, (key, target))
+
+
 class VanishedListing(unittest.TestCase):
     def test_a_rental_only_the_ffla_list_had_is_kept_with_a_warning_when_the_list_drops_it(self) -> None:
         ws = Workspace()

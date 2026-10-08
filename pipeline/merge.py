@@ -273,6 +273,24 @@ FFLA_RENTAL_OVERRIDES: dict[str, str] = {
     "ffla_rentals:wa:quartz-mountain-lookout": "us-wa-mount-spokane-at-quartz-mountain",
 }
 
+# Records that spatial matching cannot be trusted to place, pinned to a tower by the record's
+# key. The value is a tower id (permanent) or the key of any source record that tower holds
+# (stable across a from-scratch run, where the tower has no id yet). Used by Matcher.match_source()
+# after the key memory and before the register and spatial steps. Each entry says why.
+RECORD_JOINS: dict[str, str] = {
+    # The recreation.gov rental "POST CREEK GUARD STATION" (234404) is the lookout NHLR registers as
+    # "Post Creek Fireman-Lookout House" (the FFLA lists it as "Post Creek Lookout"): a 1934 CCC
+    # cabin built for fire watching. The names share no words past "Post Creek" and RIDB's pin is
+    # 779 m from the registered position, outside the 400 m a partial name match may span, so
+    # without this it would start a second, permanent tower for the same building.
+    "ridb:234404": "nhlr:US 1363",
+    # "MT. BALDY-BUCKHORN RIDGE" (234432) is the Baldy Mountain Lookout in the Kootenai NF (NHLR
+    # 1512, FFLA "Mt. Baldy Lookout"). Its pin is 370 m from the registered one, inside the 400 m
+    # partial-name limit by 30 m; pinned so a small shift in RIDB's coordinates cannot start a
+    # duplicate tower.
+    "ridb:234432": "nhlr:US 1512",
+}
+
 # Hobbyist and regional sites, with the words used for credits and link labels.
 SOURCE_SITE = {
     "ffla": "Forest Fire Lookout Association (firelookout.org)",
@@ -1412,6 +1430,20 @@ class Matcher:
                 self.attach(r, t, "key")
             else:
                 pending.append(r)
+        # 1b. pinned by RECORD_JOINS
+        if any(r.key in RECORD_JOINS for r in pending):
+            by_id = {t.id: t for t in self.towers if t.id}
+            unpinned = []
+            for r in pending:
+                target = RECORD_JOINS.get(r.key)
+                t = (self.by_key.get(target) or by_id.get(target)) if target else None
+                if target and t is None:
+                    self.review.append({"type": "record_join_unknown_tower", "key": r.key, "target": target})
+                if t is not None and self.can_join(r, t):
+                    self.attach(r, t, "override", f"RECORD_JOINS -> {target}")
+                else:
+                    unpinned.append(r)
+            pending = unpinned
         # 2. register
         rest = []
         for r in pending:

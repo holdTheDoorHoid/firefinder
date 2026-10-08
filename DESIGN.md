@@ -45,7 +45,7 @@ Cache raw responses under `data/raw/` (git-ignored) so nothing is fetched twice.
 | **FFLA** firelookout.org/lookouts/us/`<st>`/ | Master table per state: Name, County, Lat, Long, Type, Status, NHLR/FFLOS number. 6,157 rows in 30 states (crawled 2026-10-08, `pipeline/fetch_ffla.py --refresh`). 20 states have no table yet: Georgia, North Carolina and New Jersey show counts on the index and "Under construction" on their pages. Each state page links other sorts of the same list: by county (`<st>-co`), standing only (`<st>-st`), by region (`<st>-rg`; MT, ID, OR, WA) and CA's "Unknown/Undocumented" list (`ca-un`: 174 emergency, planned and never-built sites from one survey, 34 with a position). A row seen in several views is one record (the alphabetical list names its key). `<st>-add/` pages hold "additional information". | HTML tables | No licence stated; facts only |
 | **NHLR** nhlr.org (standing) | Per-lookout page: register numbers, date registered, location, coordinates, elevation, year built, administering agency, cooperators, prose, photo, links | Per-state lists → `/lookouts/us/<state>/<slug>/` | "All rights reserved" (American Resources Inc.); facts only, photos mirrored with credit |
 | **FFLOS** firetower.org (former sites) | Same schema as NHLR for gone lookouts; often historical photos with credits | Same as NHLR | Same as NHLR |
-| **RIDB** (recreation.gov) | Rentable lookouts: description, rules, season, occupancy, pets, fees, reservation URL, coordinates | Daily bulk export `ridb.recreation.gov/downloads/RIDBFullExport_V1_JSON.zip` (~572 MB, no key). Activities "FIRE LOOKOUTS/CABINS OVERNIGHT", "LOOKOUT TOWER". | Public; credit "Data source: ridb.recreation.gov" |
+| **RIDB** (recreation.gov) | Rentable lookouts: description, rules, season, occupancy, pets, fees, reservation URL, coordinates | Daily bulk export `ridb.recreation.gov/downloads/RIDBFullExport_V1_JSON.zip` (~572 MB, no key). Activities "FIRE LOOKOUTS/CABINS OVERNIGHT", "LOOKOUT TOWER". Selected by name, plus the hand-checked `EXTRA_INCLUDE` list in `pipeline/fetch_ridb.py` (a reason per facility) for lookout rentals whose RIDB names carry no "lookout" (the FFLA lists them as lookout rentals: Post Creek, Mt. Baldy, Bishop Mountain, Gird Point, Strawberry, Tamarack, Timber Butte). | Public; credit "Data source: ridb.recreation.gov" |
 | **OpenStreetMap** | `emergency=fire_lookout` (~1,035) plus `man_made=tower`+`tower:type=observation` named *Lookout* | Overpass API | ODbL (compatible) |
 | **Wikidata** | Q748998 "fire lookout tower" (~319 with coords): Wikipedia links, NRHP ids (P649), Commons images (P18), inception | SPARQL | CC0 |
 | **Regional** | firelookout.com state maps (MT: 134 `GV_Draw_Marker` points, plus WA/OR/ID/WY/SD); PA StoryMap (48 towers, `…/items/ed47c97ebe7246868ce8ef3e7139a0b4/data?f=json`); andyarthur.org NY towers (CC BY 3.0); CSKT Flathead Reservation (6); fire-lookouts.org Sierra NF (~18, reuse allowed with credit); idahofirelookouts.com (not yet surveyed) | Mixed | Per source |
@@ -188,7 +188,11 @@ the NJ Forest Fire Service Wikipedia table, firelookout.com, idahofirelookouts.c
 michiganfiretower.com, PA StoryMap, andyarthur.org, the Wikipedia per-state lookout lists, CSKT,
 the easternuslookouts and centraluslookouts weebly sites, the association project sources (3.7: the Northwest Montana Lookout Association), Wikidata, OSM:
 
-1. **Key**: the record's key is already in a tower's `sources[].key`.
+1. **Key**: the record's key is already in a tower's `sources[].key`. A record named in
+   `RECORD_JOINS` (merge.py; each entry says why) joins its pinned tower right after this, for
+   the few a position and name cannot be trusted to find: recreation.gov's "Post Creek Guard
+   Station" is NHLR's "Post Creek Fireman-Lookout House", 779 m away under another name, and
+   would otherwise start a second, permanent tower.
 2. **Register number**. NHLR and FFLOS number their entries separately ("NHLR US 674" is
    Apache Maid, AZ; "FFLOS US 674" is Buzzard Butte, OR), so the register name is part of the
    key. US numbers decide; state numbers ("WI 49") only when no US number matches. A register
@@ -539,7 +543,9 @@ names the other year. Not read: oral histories, event pages, and NMLA's Google M
 
 1. **Facts map** (now): FFLA + NHLR + FFLOS + RIDB + OSM + Wikidata + regional extracts →
    merge → map + prerendered tower pages + checklist + credits; Pages deploy; weekly
-   rental-refresh Action.
+   rental-refresh Action (re-reads the RIDB export and FFLA's rentals page, so closure notes
+   stay current; the FFLA step fails soft, keeping the committed extract, and refuses a page that
+   yields under 70% of the rentals already held).
 1b. **Photos** (done): mirrored with credit by `pipeline/mirror_photos.py`, resized (≤1024 px
    full size -- dropped from the original ≤1200 px target to stay under the ~800 MB budget --
    plus a ≤360 px thumbnail), `data/photos_manifest.json`, takedown note. Until
