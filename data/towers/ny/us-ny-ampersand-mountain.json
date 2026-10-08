@@ -13,11 +13,11 @@
   },
   "elevation_m": null,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 15.2,
   "status": "gone",
   "status_note": null,
   "registers": [],
@@ -37,13 +37,45 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1921,
+      "event": "built",
+      "note": "A 22-foot Aermotor LS-40 tower was erected on Ampersand Mountain, the only NY tower built in 1921.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2021/Feb-2021-final.pdf"
+    },
+    {
+      "year": 1970,
+      "event": "closed",
+      "note": "The Ampersand tower was closed to service in 1970.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2021/Feb-2021-final.pdf"
+    },
+    {
+      "year": 1977,
+      "event": "removed",
+      "note": "The Ampersand tower was removed in 1977.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2021/Feb-2021-final.pdf"
+    }
+  ],
   "photos": [],
   "links": [
     {
       "label": "FFLA New York lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ny/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association, New York State Chapter: work on Ampersand Mountain",
+      "url": "https://www.nysffla.org/News2021/Feb-2021-final.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Ampersand Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/ampersand-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -58,10 +90,28 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:ampersand-mountain",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "nysffla_projects",
+      "key": "nysffla_projects:ny:ampersand-mountain",
+      "fields": [
+        "events",
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

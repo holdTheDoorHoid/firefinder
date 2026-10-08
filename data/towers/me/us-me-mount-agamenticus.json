@@ -17,7 +17,7 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 14.3,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -56,6 +56,64 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: August 22, 1994",
       "from": "nhlr"
+    },
+    {
+      "year": 2007,
+      "event": "restored",
+      "note": "Minor winter damage to the Mount Agamenticus tower was repaired in 2007 with help from the York fire chief and his members.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/10/cr-me-2007.pdf"
+    },
+    {
+      "year": 2015,
+      "event": "other",
+      "note": "FFLA restoration grant awarded for the Mount Agamenticus tower restoration (complete stair and landing replacement, cab and catwalk repairs, new windows); the report cites a $500 grant.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-me-2015.pdf",
+      "source_urls": [
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-me-2015.pdf",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-restoration-2015.pdf",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-me-2016.pdf"
+      ]
+    },
+    {
+      "year": 2016,
+      "event": "closed",
+      "note": "The tower stayed closed for the whole 2016 fire season because of its poor condition, pending restoration.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-me-2016.pdf"
+    },
+    {
+      "year": 2018,
+      "event": "assessed",
+      "note": "The engineering study of the tower was completed, with recommended adjustments; radio equipment had to be moved before repairs could start.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-me-2018.pdf"
+    },
+    {
+      "year": 2019,
+      "event": "closed",
+      "note": "The tower is closed because of the cab replacement effort and will not open in 2020.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-me-2019.pdf"
+    },
+    {
+      "year": 2019,
+      "event": "other",
+      "note": "The rotted cab was taken off the 1940s steel tower, which still stands without a cab.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-me-2019.pdf",
+      "source_urls": [
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-me-2019.pdf",
+        "https://firelookout.org/wp-content/uploads/2026/01/cr-me-2025.pdf"
+      ]
+    },
+    {
+      "year": 2025,
+      "event": "removed",
+      "note": "The remaining steel was taken down in December 2025 because deteriorated footings and steel made it unsafe; a steering committee is weighing what comes next.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2026/01/cr-me-2025.pdf"
     }
   ],
   "photos": [
@@ -79,9 +137,24 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/me/mount-agamenticus-fire-tower/",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Maine lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/me/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Mount Agamenticus Fire Tower",
+      "url": "https://firelookout.org/wp-content/uploads/2026/01/cr-me-2025.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Mount Agamenticus (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/mount-agamenticus.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -110,6 +183,22 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:me:mount-agamenticus",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:me:mount-agamenticus",
+      "fields": [
+        "events",
+        "links"
+      ]
     }
   ],
   "conflicts": [
@@ -123,13 +212,17 @@
         {
           "source": "nhlr",
           "value": "standing"
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": "gone"
         }
       ],
       "distance_m": null,
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

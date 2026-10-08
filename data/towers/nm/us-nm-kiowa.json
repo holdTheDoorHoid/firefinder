@@ -1,7 +1,9 @@
 {
   "id": "us-nm-kiowa",
   "name": "Kiowa Lookout",
-  "other_names": [],
+  "other_names": [
+    "Kiowa Mountain"
+  ],
   "country": "US",
   "region": "NM",
   "county": "Rio Arriba",
@@ -13,11 +15,11 @@
   },
   "elevation_m": 2954.1,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 15.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -46,6 +48,20 @@
   "rental": null,
   "events": [
     {
+      "year": 1923,
+      "event": "built",
+      "note": "Tower with LL-25 cab erected in 1923; one of only two of its type remaining in the Southwestern Region.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
+      "year": 1935,
+      "event": "modified",
+      "note": "Observer cabin built by the Civilian Conservation Corps.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
       "year": 1996,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: December 30, 1996",
@@ -73,9 +89,24 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=230",
+      "kind": "register"
+    },
+    {
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Kiowa Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Kiowa Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/kiowa-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -102,6 +133,24 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:nm:kiowa",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:nm:kiowa-mountain",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
         "links"
       ]
     }

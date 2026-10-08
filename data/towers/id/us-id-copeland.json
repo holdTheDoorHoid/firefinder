@@ -23,8 +23,8 @@
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Kaniksu National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -56,6 +56,11 @@
       "label": "Copeland Ranger Station on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/northern-idaho/copeland-ranger-station/",
       "kind": "site"
+    },
+    {
+      "label": "Copeland Ranger Station on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/copeland.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -82,6 +87,15 @@
       "source": "idaho_fl",
       "key": "idaho_fl:copeland-ranger-station:48.9034:-116.3904",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:copeland",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

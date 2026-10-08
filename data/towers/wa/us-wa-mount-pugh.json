@@ -13,11 +13,11 @@
   },
   "elevation_m": 2194.9,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "D-6",
+  "height_m": 4.3,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -93,6 +93,16 @@
       "label": "Mt. Pugh on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/mtpugh.html",
       "kind": "site"
+    },
+    {
+      "label": "Mount Pugh on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/mount-pugh.html",
+      "kind": "site"
+    },
+    {
+      "label": "Mount Pugh on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_climbing/mount_pugh/darrington_052.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -125,6 +135,23 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:mt-pugh:48.1431:-121.3745",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:mount-pugh",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-climbing-mount-pugh-darrington-052",
       "fields": [
         "links"
       ]

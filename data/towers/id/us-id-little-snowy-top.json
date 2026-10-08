@@ -13,8 +13,8 @@
   },
   "elevation_m": 2008.6,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -191,6 +191,11 @@
       "label": "Little Snowy Top on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/northern-idaho/little-snowy-top/",
       "kind": "site"
+    },
+    {
+      "label": "Little Snowy Top on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/little-snowy-top.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -202,6 +207,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -243,6 +249,13 @@
       "fields": [
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:little-snowy-top",
+      "fields": [
         "links"
       ]
     }

@@ -16,8 +16,8 @@
   },
   "elevation_m": 417.6,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": "International Derrick steel fire tower (register: Model 1933, 86 ft high; Wikipedia: E-4898, 79 ft 6 in)",
   "height_m": null,
@@ -145,6 +145,16 @@
       "h": 3648
     },
     {
+      "file": null,
+      "thumb": null,
+      "url": "https://easternuslookouts.weebly.com/uploads/1/5/9/1/1591048/lightning_orig.jpg",
+      "source_url": "https://easternuslookouts.weebly.com/stissing-mountain.html",
+      "credit": "easternuslookouts.weebly.com",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
       "file": "55/5540ce580043968875aedb790d06069152fd017c.webp",
       "thumb": "55/5540ce580043968875aedb790d06069152fd017c.t.webp",
       "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Stissing_Mountain_fire_tower%2C_Pine_Plains%2C_NY%2C_tilted.jpg",
@@ -164,6 +174,11 @@
       "kind": "register"
     },
     {
+      "label": "FFLOS register entry (firetower.org)",
+      "url": "https://stissingfiretower.org/",
+      "kind": "register"
+    },
+    {
       "label": "Stissing Mountain (Wikipedia)",
       "url": "https://en.wikipedia.org/wiki/Stissing_Mountain",
       "kind": "reference"
@@ -172,6 +187,11 @@
       "label": "FFLA New York lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ny/",
       "kind": "association"
+    },
+    {
+      "label": "Stissing Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/stissing-mountain.html",
+      "kind": "site"
     },
     {
       "label": "Wikidata item Q107462819",
@@ -193,6 +213,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -211,6 +232,14 @@
       ]
     },
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:stissing-mountain",
+      "fields": [
+        "photos",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q107462819",
       "fields": [
@@ -221,6 +250,13 @@
     {
       "source": "osm",
       "key": "osm:node/9498853681",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ny:stissing-mountain",
       "fields": [
         "links"
       ]
@@ -241,7 +277,29 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 41.964157,
+            "lon": -73.68777
+          }
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": {
+            "lat": 41.95648,
+            "lon": -73.6931
+          }
+        }
+      ],
+      "distance_m": 961,
+      "note": null
+    }
+  ],
   "research": {
     "researched": "2026-10-08",
     "checked": "2026-10-08",

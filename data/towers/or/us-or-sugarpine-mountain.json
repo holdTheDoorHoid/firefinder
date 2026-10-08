@@ -1,6 +1,7 @@
 {
   "id": "us-or-sugarpine-mountain",
   "name": "Sugarpine Mountain Lookout",
+  "summary": "Built 1958 at Fort Klamath, airlifted to Sugarpine Mountain in 1970; staffed each summer, drive-up, still standing; NHLR-registered 2022.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "20-foot open steel X-brace tower with a 13x13 CL-100 cab",
+  "height_m": 6.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,34 +29,83 @@
       "url": "http://nhlr.org/lookouts/us/or/sugarpine-mountain-lookout/"
     }
   ],
-  "agency": "US Forest Service - Winema National Forest",
+  "agency": "US Forest Service (Winema National Forest)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Drive-up summit on the Winema National Forest; the statewide standing-lookout list marks it accessible to the public."
   },
   "staffing": {
     "status": "staffed",
-    "as_of": null
+    "as_of": "2025-06-19"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "A 2025 visitor reported an easy drive to the summit."
   },
   "rental": null,
   "events": [
     {
+      "year": 1930,
+      "event": "other",
+      "note": "Summit first used as a camp lookout site, in the 1930s (no exact year given).",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/sugarpinemtn.html"
+    },
+    {
       "year": 1958,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built at Fort Klamath as a 20-foot open steel tower with a 13x13 cab. This is the date for the structure at its original site.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/sugarpine-mountain-lookout/"
+    },
+    {
+      "year": 1969,
+      "event": "other",
+      "note": "32 hours of road and lookout site construction at Sugarpine Mountain.",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/sugarpine-mountain.html"
+    },
+    {
+      "year": 1970,
+      "event": "relocated",
+      "note": "Tower and cab airlifted from Fort Klamath to the Sugarpine Mountain summit.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/sugarpine-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/sugarpine-mountain-lookout/",
+        "https://oregonlookouts.weebly.com/sugarpine-mountain.html",
+        "https://www.firelookout.com/or/sugarpinemtn.html"
+      ]
+    },
+    {
+      "year": 1973,
+      "event": "other",
+      "note": "Herald and News reported a lookout might be stationed by mid-May if dry weather continued.",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/sugarpine-mountain.html"
+    },
+    {
+      "year": 1983,
+      "event": "staffed",
+      "note": "Winema National Forest let the fire-watch job by contract for the first time; before, lookout personnel were hired.",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/sugarpine-mountain.html"
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 6, 2022",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register as US 1641 on July 6, 2022.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/sugarpine-mountain-lookout/"
+    },
+    {
+      "year": 2025,
+      "event": "staffed",
+      "note": "Staffed in summer at the June 2025 visit.",
+      "from": "research",
+      "source_url": "https://cherylhill.net/firelookouts/2025/06/19/sugarpine-mountain/"
     }
   ],
   "photos": [
@@ -103,6 +153,11 @@
       "kind": "register"
     },
     {
+      "label": "Sugarpine Mountain (Every Lookout in Oregon)",
+      "url": "https://cherylhill.net/firelookouts/2025/06/19/sugarpine-mountain/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -115,6 +170,11 @@
     {
       "label": "Sugarpine Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/sugarpinemtn.html",
+      "kind": "site"
+    },
+    {
+      "label": "Sugarpine Mountain on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/oregons-standing-lookouts/",
       "kind": "site"
     }
   ],
@@ -154,6 +214,37 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:sugarpine-mountain",
+      "fields": [
+        "height_m"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:sugarpine-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-sugarpine-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -167,13 +258,23 @@
         {
           "source": "firelookout_com",
           "value": 1930
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1970
         }
       ],
       "distance_m": null,
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

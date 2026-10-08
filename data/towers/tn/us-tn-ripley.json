@@ -1,6 +1,7 @@
 {
   "id": "us-tn-ripley",
   "name": "Ripley Lookout Tower",
+  "summary": "An 80-ft Aermotor fire lookout on Joe Crihfield Rd. near Ripley, TN, built for the TN Division of Forestry around 1970; NRHP-listed in 2020 and listed as standing.",
   "other_names": [],
   "country": "US",
   "region": "TN",
@@ -13,11 +14,11 @@
   },
   "elevation_m": 158.5,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "80-foot Aermotor tower with a parallel internal staircase",
+  "height_m": 24.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -58,10 +59,30 @@
       "from": "nhlr"
     },
     {
+      "year": 1970,
+      "event": "built",
+      "note": "Constructed 1970 per TDF files as quoted in the NRHP MPS; Wikipedia says around 1970; NHLR says made sometime after 1964",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/64501237.pdf",
+      "source_urls": [
+        "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/64501237.pdf",
+        "https://en.wikipedia.org/wiki/Ripley_Fire_Lookout_Tower",
+        "http://nhlr.org/lookouts/us/tn/ripley-lookout-tower/"
+      ]
+    },
+    {
+      "year": 2020,
+      "event": "nrhp_listed",
+      "note": "Added to the National Register of Historic Places March 9, 2020, No. 100004684",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Ripley_Fire_Lookout_Tower"
+    },
+    {
       "year": 2023,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 1, 2023",
-      "from": "nhlr"
+      "note": "Registered January 1, 2023 as US 1714, TN 47; nominated by Jason Johns",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/ripley-lookout-tower/"
     }
   ],
   "photos": [
@@ -157,6 +178,11 @@
       "kind": "register"
     },
     {
+      "label": "Tennessee Division of Forestry Fire Lookout Towers MPS (National Park Service (NPGallery))",
+      "url": "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/64501237.pdf",
+      "kind": "reference"
+    },
+    {
       "label": "Wikipedia: Ripley Fire Lookout Tower",
       "url": "https://en.wikipedia.org/wiki/Ripley_Fire_Lookout_Tower",
       "kind": "wikipedia"
@@ -182,6 +208,7 @@
         "county",
         "elevation_m",
         "kind",
+        "material",
         "status",
         "registers",
         "agency",
@@ -204,10 +231,31 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tn-ripley",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

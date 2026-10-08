@@ -14,8 +14,8 @@
   },
   "elevation_m": 170.4,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": "80-ft modified Aermotor steel tower",
   "height_m": 24.4,
@@ -133,14 +133,14 @@
       "kind": "reference"
     },
     {
-      "label": "Escoheag Hill (Forest Lookouts (easternuslookouts.weebly.com))",
-      "url": "https://easternuslookouts.weebly.com/escoheag-hill.html",
-      "kind": "reference"
-    },
-    {
       "label": "FFLA Rhode Island lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ri/",
       "kind": "association"
+    },
+    {
+      "label": "Escoheag Hill (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/escoheag-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -152,6 +152,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -166,6 +167,13 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ri:escoheag-hill",
+      "fields": [
         "links"
       ]
     },

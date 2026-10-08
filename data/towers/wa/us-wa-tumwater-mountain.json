@@ -1,7 +1,9 @@
 {
   "id": "us-wa-tumwater-mountain",
   "name": "Tumwater Mountain",
-  "other_names": [],
+  "other_names": [
+    "Tumwater"
+  ],
   "country": "US",
   "region": "WA",
   "county": "Chelan",
@@ -21,8 +23,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Wenatchee National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +51,16 @@
       "label": "Tumwater Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/tumwatermtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Tumwater Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/tumwater-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Tumwater on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/tumwater_mountain/leavenworth_013.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +82,47 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:tumwater-mountain",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-tumwater-mountain-leavenworth-013",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 47.6285,
+            "lon": -120.70813
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 47.61595,
+            "lon": -120.70148
+          }
+        }
+      ],
+      "distance_m": 1482,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -13,10 +13,10 @@
   },
   "elevation_m": 3051.7,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "14x14 CL-100 to CL-106 series flat-top cab on 10-ft cinder block base",
   "height_m": 11.0,
   "status": "standing",
   "status_note": null,
@@ -52,6 +52,13 @@
       "from": "nhlr"
     },
     {
+      "year": 1965,
+      "event": "replaced",
+      "note": "Standard Plan steel-cab lookout built, replacing an earlier L-4 ground house.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
       "year": 2022,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: May 22, 2022",
@@ -82,6 +89,16 @@
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Cerro Pelado Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Cerro Pelado on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/cerro-pelado.html",
+      "kind": "site"
     },
     {
       "label": "OpenStreetMap way 904249548",
@@ -117,15 +134,48 @@
       ]
     },
     {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:nm:cerro-pelado",
+      "fields": [
+        "material",
+        "design",
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/904249548",
       "fields": [
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:nm:cerro-pelado",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1965
+        },
+        {
+          "source": "ffla_west_reports",
+          "value": 1932
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

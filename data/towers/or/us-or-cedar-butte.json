@@ -13,11 +13,11 @@
   },
   "elevation_m": 944.9,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "L-4",
+  "height_m": 12.2,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -105,6 +105,11 @@
       "label": "Cedar Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/cedarbutte.html",
       "kind": "site"
+    },
+    {
+      "label": "Cedar Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/cedar-butte.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -137,6 +142,16 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:cedar-butte:45.5906:-123.6470",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:cedar-butte",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
         "links"
       ]
     }

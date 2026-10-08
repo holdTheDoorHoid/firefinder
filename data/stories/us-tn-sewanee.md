@@ -1,0 +1,13 @@
+The Sewanee Fire Tower stands in Franklin County, Tennessee, and it was built by the Civilian Conservation Corps.[^1][^2] The lookout register dates the build to 1933, while the National Register nomination says construction began that year and was finished in 1934.[^1][^2] Both sources give its height as 60 feet, and the nomination describes a seven-foot square cab on top.[^1][^2]
+
+The sources disagree on the design and the elevation.[^1][^2] The register calls it an International Derrick tower, but the nomination judges from its style that it is an Aermotor MC-39 type, a design it says is very similar to a 1933 International Derrick.[^1][^2] The register gives the elevation as 2,039 feet, while the nomination gives 2,044 feet.[^1][^2]
+
+The tower was part of the Tennessee Division of Forestry's statewide effort to guard forest land through fire control.[^2] On July 13, 1934, the state's forestry service signed a contract with Adolph Hunziker covering the building, use and upkeep of a lookout on the property.[^2] The nomination says the record on this particular tower is thin, and it names no specific fire it helped to spot.[^2] It also says that until the 1970s the tower was kept under continuous watch during the high-fire season.[^2] A radio tower and equipment building went up nearby around 1950.[^2]
+
+Its working life faded in the 1970s.[^2] Since the mid-1970s, forestry employees have leaned more on spotter planes and 911 calls, so the tower is no longer used for observation, though forestry staff still climb it now and then for maintenance checks.[^2] The small operator's cabin that once gave fire spotters shelter is in good shape but sits idle.[^2] A radio and cellular tower was added on the site around 2010.[^2]
+
+Today the Division of Forestry still administers the site.[^1] The nomination, which draws on 2014 information, says forestry staff barred entry to the cab interior.[^2] The tower is on the National Register of Historic Places under reference 15000116, and the lookout register recorded it on March 20, 2016.[^3][^1] I did not find a public visiting arrangement or rental listing in these sources, so treat the tower as off-limits and do not try to climb it.
+
+[^1]: Sewanee Fire Tower, National Historic Lookout Register, http://nhlr.org/lookouts/us/tn/sewanee-fire-tower/ (accessed 2026-10-08).
+[^2]: Sewanee Fire Lookout Tower, National Register of Historic Places nomination, National Park Service, https://npgallery.nps.gov/GetAsset/2007215e-cb5d-4328-b850-d52b968f853e (accessed 2026-10-08).
+[^3]: Sewanee Fire Lookout Tower, NRHP asset detail (NRIS 15000116), National Park Service, https://npgallery.nps.gov/AssetDetail/NRIS/15000116 (accessed 2026-10-08).

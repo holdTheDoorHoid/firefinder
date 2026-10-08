@@ -13,8 +13,8 @@
   },
   "elevation_m": 1469.1,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [
     "aws"
   ],
@@ -102,6 +102,11 @@
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
+    },
+    {
+      "label": "Ventana Double Cone on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/ventana-double-cone.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -113,6 +118,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "roles",
         "registers",
         "agency",
@@ -129,6 +135,13 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:ventana-double-cone",
+      "fields": [
         "links"
       ]
     }

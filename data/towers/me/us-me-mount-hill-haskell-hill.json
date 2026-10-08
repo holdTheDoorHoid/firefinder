@@ -17,11 +17,11 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 14.3,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Maine Forest Service",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,13 +37,31 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2007,
+      "event": "relocated",
+      "note": "A private buyer had Haskell Hill tower in Jefferson dismantled by Rockport Steel and barged to Lasell Island, where he is re-erecting it.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/10/cr-me-2007.pdf"
+    }
+  ],
   "photos": [],
   "links": [
     {
       "label": "FFLA Maine lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/me/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Mount Hill (Haskell Hill)",
+      "url": "https://firelookout.org/wp-content/uploads/2024/10/cr-me-2007.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Mountain Hill (Haskell Hill) (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/mountain-hill-haskell-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +74,23 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:me:mountain-hill-haskell-hill",
+      "fields": [
+        "height_m",
+        "agency",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:me:mount-hill-haskell-hill",
+      "fields": [
+        "events",
         "links"
       ]
     }

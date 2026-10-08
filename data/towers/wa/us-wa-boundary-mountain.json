@@ -68,6 +68,11 @@
       "label": "Boundary Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/boundarymtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Boundary Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/boundary-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -103,9 +108,38 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:boundary-mountain",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 48.995,
+            "lon": -117.24753
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 48.99937,
+            "lon": -117.2452
+          }
+        }
+      ],
+      "distance_m": 515,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

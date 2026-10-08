@@ -1,9 +1,11 @@
 {
   "id": "us-ca-gardner-mt-tam",
   "name": "Gardner (Mt. Tam) Lookout",
+  "summary": "A CCC-built stone, wood and steel lookout on East Peak of Mount Tamalpais (completed 1936, named for Ed Gardner), still an active Marin County fire lookout.",
   "other_names": [
     "Gardner (Mount Tamalpais)",
-    "Gardner Lookout"
+    "Gardner Lookout",
+    "Mount Tamalpais"
   ],
   "country": "US",
   "region": "CA",
@@ -19,7 +21,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "CCC-built sturdy stone, wood and steel tower on East Peak",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -34,8 +36,8 @@
   "agency": "Marin County Fire Department",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=private."
+    "level": "restricted",
+    "note": "Active county fire lookout in Mount Tamalpais State Park; sources describe a view from the parking lot at the base of the peak and do not say the cab is open to visitors"
   },
   "staffing": {
     "status": "unknown",
@@ -44,21 +46,65 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Tower visible from the parking lot at the base of East Peak"
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR gives 1934 as the built year; CCC Company 1920V worked on it between 1934 and 1936",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/gardner-mt-tam-lookout/"
+    },
+    {
+      "year": 1935,
+      "event": "other",
+      "note": "New tower under construction by the CCC; to be named in honor of the late Fire Warden Ed Gardner",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mount-tamalpais-gardner.html"
+    },
+    {
+      "year": 1936,
+      "event": "replaced",
+      "note": "CCC completed the new tower by July 30, 1936; lookout moved into it and the old wooden building was set aside",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mount-tamalpais-gardner.html"
+    },
+    {
+      "year": 1940,
+      "event": "staffed",
+      "note": "Henry A. Long died in January 1940 after six years as Mount Tamalpais lookout; Fred Petri appointed in May 1940",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mount-tamalpais-gardner.html"
+    },
+    {
+      "year": 1946,
+      "event": "fire",
+      "note": "Lookout spotted a San Anselmo fire that was hard to locate from the ground; about half an acre of grass burned",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mount-tamalpais-gardner.html"
+    },
+    {
+      "year": 2014,
+      "event": "other",
+      "note": "Four remote fire-detection cameras ($207,000 system, PG&E grant to FIRESafe Marin); two give 24-hour coverage on Mount Tamalpais and Mount Barnabe, where lookouts are daytime-only and volunteer-staffed",
+      "from": "research",
+      "source_url": "https://www.marinij.com/2014/10/25/marin-peaks-get-new-fire-detection-devices/"
     },
     {
       "year": 2015,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 21, 2015",
-      "from": "nhlr"
+      "note": "Registered September 21, 2015 as US 1115, CA 108; nominated by Don Keylon",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/gardner-mt-tam-lookout/"
+    },
+    {
+      "year": 2019,
+      "event": "other",
+      "note": "Still actively used by the Marin County Fire Department as of 2019",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/gardner-mt-tam-lookout/"
     }
   ],
   "photos": [
@@ -270,10 +316,58 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:mount-tamalpais-gardner",
+      "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-gardner-mt-tam",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 37.929079,
+            "lon": -122.577822
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 37.92354,
+            "lon": -122.59647
+          }
+        }
+      ],
+      "distance_m": 1748,
+      "note": null
+    }
+  ],
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

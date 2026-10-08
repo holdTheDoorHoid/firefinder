@@ -1,0 +1,9 @@
+Smith Peak Lookout stands on a summit on the west side of Lake Davis in Plumas County.[^1][^3] A 1955 newspaper item places it about five miles north of Portola.[^2] In July 1936 a Plumas Independent item, quoted on a lookout history site, reported a worker building a new lookout on the peak for the Forest Service.[^2] A Feather River Bulletin item from early September 1936 says the new lookout had been completed the week before and was in operation.[^2] The register gives August 1936 as the completion month and says the lookout is a BC-301 cabin from the California Region 5 plan, set on an enclosed timber tower.[^1]
+
+Summer fire watch followed. A 1944 item says Mrs. Harry Kelley worked the lookout as a fire guard through the summer, and a 1946 item says a Reno high school graduate was stationed on the peak.[^2] In 1971 Red Dolby climbed up to begin the summer on watch, and a 1975 item still had him manning the lookout.[^2]
+
+The register added the lookout on June 3, 2020, as US 1420, and says it was actively staffed that year.[^1] The Plumas National Forest administers it.[^1] A regional recreation article calls it an operational lookout, staffed during fire season, and says visitors are welcome at the lookout.[^3] It adds that when no fire operations are active, staff generally allow visitors access, and that access may be limited during lightning events.[^3] Because access depends on fire conditions, check with the Plumas National Forest before you go.
+
+[^1]: Smith Peak Lookout (Plumas National Forest), National Historic Lookout Register, http://nhlr.org/lookouts/us/ca/smith-peak-lookout-plumas-national-forest/ (accessed 2026-10-08).
+[^2]: Smith Peak - FOREST LOOKOUTS, Forest Lookouts, https://californialookouts.weebly.com/smith-peak1.html (accessed 2026-10-08).
+[^3]: Visiting Lake Davis - Plumas National Forest, Sierra REC Magazine, https://sierrarecmagazine.com/article/visiting-lake-davis-plumas-national-forest/ (accessed 2026-10-08).

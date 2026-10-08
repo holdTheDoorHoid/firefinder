@@ -21,7 +21,7 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Oregon Department of Forestry",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -49,6 +49,11 @@
       "label": "Cole Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/colemtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Cole Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/cole-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +75,39 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:cole-mountain",
+      "fields": [
+        "agency",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 45.83145,
+            "lon": -123.74021
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 45.83844,
+            "lon": -123.7319
+          }
+        }
+      ],
+      "distance_m": 1009,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -17,12 +17,12 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 15.2,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Lolo National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Iris Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/irispoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Iris Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/iris-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +73,16 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:iris-point:46.7108:-113.7394",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:iris-point",
+      "fields": [
+        "height_m",
+        "agency",
+        "ownership",
         "links"
       ]
     }

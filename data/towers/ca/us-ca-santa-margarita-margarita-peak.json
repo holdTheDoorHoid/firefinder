@@ -2,16 +2,17 @@
   "id": "us-ca-santa-margarita-margarita-peak",
   "name": "Santa Margarita (Margarita Peak) Tower Site",
   "other_names": [
-    "Santa Margarita"
+    "Santa Margarita",
+    "Santa Margarita Peak"
   ],
   "country": "US",
   "region": "CA",
   "county": "San Diego",
   "location": {
-    "lat": 33.44442,
-    "lon": -117.38333,
+    "lat": 33.45678,
+    "lon": -117.39739,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 762.6,
   "kind": "tower",
@@ -47,6 +48,34 @@
   },
   "rental": null,
   "events": [
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "Built by the Civilian Conservation Corps: a 30-ft steel K-brace tower with a 14x14-ft live-in cab.",
+      "from": "ffla_sdrc",
+      "source_url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/santa-margarita-peak/"
+    },
+    {
+      "year": 1965,
+      "event": "replaced",
+      "note": "Replaced by a Forest Service standard CL-104 lookout: a 30-ft steel tower with a 13x13-ft steel cab.",
+      "from": "ffla_sdrc",
+      "source_url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/santa-margarita-peak/"
+    },
+    {
+      "year": 1986,
+      "event": "fire",
+      "note": "The lookout was burned over in a wildfire.",
+      "from": "ffla_sdrc",
+      "source_url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/santa-margarita-peak/"
+    },
+    {
+      "year": 1988,
+      "event": "destroyed",
+      "note": "Destroyed when a Marine Corps helicopter struck it.",
+      "from": "ffla_sdrc",
+      "source_url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/santa-margarita-peak/"
+    },
     {
       "year": 2009,
       "event": "fflos_registered",
@@ -164,6 +193,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA San Diego-Riverside Chapter: work on Santa Margarita Peak Lookout",
+      "url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/santa-margarita-peak/",
+      "kind": "association"
+    },
+    {
       "label": "View from site (video by Brad Eells)",
       "url": "http://www.youtube.com/watch?v=V4536Sb1nnQ&amp;amp;feature=mfu_in_order&amp;amp;list=UL",
       "kind": "site"
@@ -185,7 +219,6 @@
       "key": "fflos:US 517",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "registers",
@@ -200,17 +233,43 @@
       "source": "ffla",
       "key": "ffla:ca:santa-margarita:33.4568:-117.3974",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "ffla_sdrc",
+      "key": "ffla_sdrc:ca:santa-margarita-peak",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:santa-margarita",
+      "fields": []
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:santa-margarita-peak",
+      "fields": []
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 33.45678,
+            "lon": -117.39739
+          }
+        },
         {
           "source": "fflos",
           "value": {
@@ -219,10 +278,10 @@
           }
         },
         {
-          "source": "ffla",
+          "source": "ffla_sdrc",
           "value": {
-            "lat": 33.45678,
-            "lon": -117.39739
+            "lat": 33.44442,
+            "lon": -117.38333
           }
         }
       ],
@@ -230,7 +289,7 @@
       "note": "They share a register number."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

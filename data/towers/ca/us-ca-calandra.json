@@ -2,7 +2,8 @@
   "id": "us-ca-calandra",
   "name": "Calandra Lookout",
   "other_names": [
-    "Calandra (Williams Hill)"
+    "Calandra (Williams Hill)",
+    "Williams Hill (Calandra)"
   ],
   "country": "US",
   "region": "CA",
@@ -117,9 +118,24 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=97",
+      "kind": "register"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
+    },
+    {
+      "label": "FFLA California-South chapter: Southern California lookouts",
+      "url": "https://www.firelookouthost.org/southern-california",
+      "kind": "association"
+    },
+    {
+      "label": "Williams Hill (Calandra) on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/williams-hill-calandra.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -144,6 +160,21 @@
       "fields": [
         "kind",
         "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:williams-hill-calandra",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:socal-calandra",
+      "fields": [
         "registers",
         "links"
       ]

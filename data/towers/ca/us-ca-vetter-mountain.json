@@ -14,8 +14,8 @@
   },
   "elevation_m": 1798.3,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": "14x14 ft ground-level ('C3') cab with steel shutters; rebuilt 2019-2020 in concrete board and steel framing",
   "height_m": null,
@@ -69,6 +69,13 @@
       ]
     },
     {
+      "year": 1998,
+      "event": "restored",
+      "note": "Reopened to the public by volunteers on 30 May.",
+      "from": "anffla",
+      "source_url": "https://www.anffla.org/towers/vetter-mountain/"
+    },
+    {
       "year": 2009,
       "event": "burned",
       "note": "Destroyed by the Station Fire, September 1, 2009",
@@ -78,6 +85,24 @@
         "http://nhlr.org/lookouts/us/ca/vetter-mountain-lookout/",
         "http://www.anffla.org/vetter/"
       ]
+    },
+    {
+      "year": 2010,
+      "event": "staffed",
+      "note": "Volunteers staffed the Vetter Mountain peak site in 2010; staffing is also reported for 2011 and 2012.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-south-angeles-2010.pdf",
+      "source_urls": [
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-south-angeles-2010.pdf",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-south-angeles-2011.pdf"
+      ]
+    },
+    {
+      "year": 2014,
+      "event": "rebuilt",
+      "note": "Rebuilding of the lookout was begun; the work was waiting on Forest Service engineers to approve the plans to finish the foundation.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-angeles-2014.pdf"
     },
     {
       "year": 2019,
@@ -100,6 +125,13 @@
         "http://nhlr.org/lookouts/us/ca/vetter-mountain-lookout/",
         "http://www.anffla.org/vetter/"
       ]
+    },
+    {
+      "year": 2020,
+      "event": "staffed",
+      "note": "Rebuild finished in April; first staffed over the July 4 weekend.",
+      "from": "anffla",
+      "source_url": "https://www.anffla.org/towers/vetter-mountain/"
     }
   ],
   "photos": [
@@ -313,6 +345,21 @@
       "kind": "association"
     },
     {
+      "label": "Angeles National Forest Fire Lookout Association: work on Vetter Mountain Lookout",
+      "url": "https://www.anffla.org/towers/vetter-mountain/",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Vetter Mountain Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-angeles-2014.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA California-South chapter: Southern California lookouts",
+      "url": "https://www.firelookouthost.org/southern-california",
+      "kind": "association"
+    },
+    {
       "label": "Angeles National Forest Fire Lookout Association: Vetter Mountain",
       "url": "http://www.anffla.org/vetter/\nhttp://www.anffla.org/vetter",
       "kind": "site"
@@ -373,6 +420,25 @@
       ]
     },
     {
+      "source": "anffla",
+      "key": "anffla:ca:vetter-mountain",
+      "fields": [
+        "material",
+        "design",
+        "staffing",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:vetter-mountain",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q86928469",
       "fields": [
@@ -384,6 +450,19 @@
       "source": "osm",
       "key": "osm:node/3940289857",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:vetter-mountain",
+      "fields": []
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:socal-vetter-mtn",
+      "fields": [
+        "registers",
         "links"
       ]
     },
@@ -404,7 +483,23 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1935
+        },
+        {
+          "source": "anffla",
+          "value": 1937
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "research": {
     "researched": "2026-10-04",
     "checked": "2026-10-04",

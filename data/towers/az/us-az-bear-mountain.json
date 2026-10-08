@@ -13,10 +13,10 @@
   },
   "elevation_m": 2602.4,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "Aermotor",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -73,9 +73,19 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/az/bear-mountain-lookout/",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Arizona lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/az/",
       "kind": "association"
+    },
+    {
+      "label": "Bear Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/bear-mountain1.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -102,6 +112,15 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:az:bear-mountain1",
+      "fields": [
+        "material",
+        "design",
         "links"
       ]
     }

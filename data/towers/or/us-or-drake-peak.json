@@ -7,10 +7,10 @@
   "region": "OR",
   "county": "Lake",
   "location": {
-    "lat": 42.30051,
-    "lon": -120.15793,
+    "lat": 42.30002,
+    "lon": -120.12333,
     "precision": "exact",
-    "from": "ffla"
+    "from": "nhlr"
   },
   "elevation_m": 2545.7,
   "kind": "ground",
@@ -172,8 +172,18 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=493",
+      "kind": "register"
+    },
+    {
       "label": "Recreation.gov listing",
       "url": "https://www.recreation.gov/camping/campgrounds/234185",
+      "kind": "rental"
+    },
+    {
+      "label": "Recreation.gov listing",
+      "url": "http://www.recreation.gov/camping/drake-peak-lookout/r/campgroundDetails.do?contractCode=NRSO&amp;parkId=75025",
       "kind": "rental"
     },
     {
@@ -190,6 +200,16 @@
       "label": "Drake Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/drakepeak.html",
       "kind": "site"
+    },
+    {
+      "label": "Drakes Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/drakes-peak.html",
+      "kind": "site"
+    },
+    {
+      "label": "Drake Peak on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/2022/07/16/drake-peak/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -198,6 +218,7 @@
       "key": "nhlr:US 487",
       "fields": [
         "name",
+        "location",
         "county",
         "elevation_m",
         "registers",
@@ -211,7 +232,6 @@
       "source": "ffla",
       "key": "ffla:or:drake-peak:42.3005:-120.1579",
       "fields": [
-        "location",
         "kind",
         "status",
         "registers",
@@ -247,6 +267,21 @@
       ]
     },
     {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:drakes-peak",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:drake-peak",
+      "fields": [
+        "registers",
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:us-or-drake-peak",
       "fields": [
@@ -267,6 +302,13 @@
       "field": "location",
       "values": [
         {
+          "source": "nhlr",
+          "value": {
+            "lat": 42.30002,
+            "lon": -120.12333
+          }
+        },
+        {
           "source": "ffla",
           "value": {
             "lat": 42.30051,
@@ -274,10 +316,17 @@
           }
         },
         {
-          "source": "nhlr",
+          "source": "firelookout_com",
           "value": {
-            "lat": 42.30002,
-            "lon": -120.12333
+            "lat": 42.30051,
+            "lon": -120.15793
+          }
+        },
+        {
+          "source": "ridb",
+          "value": {
+            "lat": 42.30056,
+            "lon": -120.15783
           }
         }
       ],
@@ -297,6 +346,10 @@
         },
         {
           "source": "ridb",
+          "value": 1948
+        },
+        {
+          "source": "cherylhill_oregon",
           "value": 1948
         }
       ],

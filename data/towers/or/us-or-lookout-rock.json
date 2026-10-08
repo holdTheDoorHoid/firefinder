@@ -17,7 +17,7 @@
   "material_from": "nhlr",
   "roles": [],
   "design": "R-6",
-  "height_m": null,
+  "height_m": 10.7,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -99,6 +99,16 @@
       "label": "Lookout Rock on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/lookoutrock.html",
       "kind": "site"
+    },
+    {
+      "label": "Lookout Rock on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/lookout-rock.html",
+      "kind": "site"
+    },
+    {
+      "label": "Lookout Rock on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/2024/07/04/lookout-rock/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -137,6 +147,21 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:lookout-rock",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:lookout-rock",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
@@ -150,6 +175,10 @@
         {
           "source": "firelookout_com",
           "value": 1920
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1962
         }
       ],
       "distance_m": null,

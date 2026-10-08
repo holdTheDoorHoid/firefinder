@@ -15,8 +15,8 @@
   },
   "elevation_m": 1150.3,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -84,6 +84,11 @@
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
+    },
+    {
+      "label": "Lakeview Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/lakeview-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -95,6 +100,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -110,6 +116,13 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:lakeview-point",
+      "fields": [
         "links"
       ]
     }

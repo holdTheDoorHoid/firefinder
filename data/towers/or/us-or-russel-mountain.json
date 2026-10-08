@@ -220,11 +220,6 @@
       "kind": "register"
     },
     {
-      "label": "Russel Mountain – Every Lookout in Oregon (Cheryl Hill)",
-      "url": "https://cherylhill.net/firelookouts/2023/08/29/russel-mountain/",
-      "kind": "reference"
-    },
-    {
       "label": "Russel Mountain (mywildadventure.com)",
       "url": "https://www.mywildadventure.com/post/russel-mountain",
       "kind": "reference"
@@ -242,6 +237,11 @@
     {
       "label": "Russel Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/russel.html",
+      "kind": "site"
+    },
+    {
+      "label": "Russel Mountain on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/2023/08/29/russel-mountain/",
       "kind": "site"
     },
     {
@@ -296,6 +296,19 @@
       ]
     },
     {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:russel-mountain",
+      "fields": []
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:russel-mountain",
+      "fields": [
+        "registers",
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:us-or-russel-mountain",
       "fields": [
@@ -312,7 +325,27 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1949
+        },
+        {
+          "source": "firelookout_com",
+          "value": 1949
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1941
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "research": {
     "researched": "2026-10-08",
     "checked": "2026-10-08",

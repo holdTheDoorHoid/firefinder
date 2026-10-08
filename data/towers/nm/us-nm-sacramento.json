@@ -1,7 +1,9 @@
 {
   "id": "us-nm-sacramento",
   "name": "Sacramento Lookout",
-  "other_names": [],
+  "other_names": [
+    "Sacramento Peak"
+  ],
   "country": "US",
   "region": "NM",
   "county": "Otero",
@@ -16,7 +18,7 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "Aermotor LX-24",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -46,10 +48,31 @@
   "rental": null,
   "events": [
     {
+      "year": 1967,
+      "event": "burned",
+      "note": "Original 1925 Aermotor LX-24 tower destroyed by fire.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
       "year": 1968,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
+    },
+    {
+      "year": 1968,
+      "event": "replaced",
+      "note": "New steel tower with a large steel cab erected to replace the burned tower.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
+      "year": 2010,
+      "event": "staffed_last",
+      "note": "Operated from 1968 until 2010, when it was designated a standby lookout.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
     },
     {
       "year": 2015,
@@ -79,13 +102,28 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=1180",
+      "kind": "register"
+    },
+    {
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Sacramento Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Additional photos",
       "url": "https://www.flickr.com/photos/lincoln_nf_lookouts/sets/72157632234182066",
+      "kind": "site"
+    },
+    {
+      "label": "Sacramento Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/sacramento-peak.html",
       "kind": "site"
     }
   ],
@@ -123,9 +161,45 @@
         "ownership",
         "access"
       ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:nm:sacramento",
+      "fields": [
+        "design",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:nm:sacramento-peak",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1968
+        },
+        {
+          "source": "ridb",
+          "value": 1968
+        },
+        {
+          "source": "ffla_west_reports",
+          "value": 1925
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

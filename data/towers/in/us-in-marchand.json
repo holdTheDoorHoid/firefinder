@@ -21,7 +21,7 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Lafayette Unit, Hoosier N. F.",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -44,6 +44,16 @@
       "label": "FFLA Indiana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/in/",
       "kind": "association"
+    },
+    {
+      "label": "Marchand (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/marchand.html",
+      "kind": "site"
+    },
+    {
+      "label": "Marchand on Indiana Fire Towers (Mark Armantrout)",
+      "url": "https://www.indianafiretowers.com/marchand/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +66,21 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:in:marchand",
+      "fields": [
+        "agency",
+        "links"
+      ]
+    },
+    {
+      "source": "indiana_fire_towers",
+      "key": "indiana_fire_towers:in:marchand",
+      "fields": [
         "links"
       ]
     }

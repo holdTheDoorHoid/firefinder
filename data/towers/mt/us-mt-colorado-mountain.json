@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Helena National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Colorado Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/coloradomtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Colorado Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/colorado-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +73,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:colorado-mtn:46.5035:-112.2081",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:colorado-mountain",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

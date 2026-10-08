@@ -1,7 +1,9 @@
 {
   "id": "us-or-huckleberrry-shasta",
   "name": "Huckleberrry (Shasta) Lookout Site",
-  "other_names": [],
+  "other_names": [
+    "Huckleberry Mountain"
+  ],
   "country": "US",
   "region": "OR",
   "county": "Jackson",
@@ -99,6 +101,11 @@
       "label": "Huckleberry (Shasta) on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/huckleberryshasta.html",
       "kind": "site"
+    },
+    {
+      "label": "Huckleberry Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/huckleberry-mountain1.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -138,9 +145,37 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:huckleberry-mountain1",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 42.85178,
+            "lon": -122.31415
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 42.8461,
+            "lon": -122.3137
+          }
+        }
+      ],
+      "distance_m": 633,
+      "note": null
+    },
     {
       "field": "status",
       "values": [

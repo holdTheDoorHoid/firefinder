@@ -16,7 +16,7 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "Two-story metal tower with a 365 sq ft cab",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -35,7 +35,7 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
+    "status": "volunteer",
     "as_of": null
   },
   "visit": {
@@ -46,10 +46,31 @@
   "rental": null,
   "events": [
     {
+      "year": 1969,
+      "event": "built",
+      "note": "Built with the construction of Pyramid Reservoir: a two-story metal tower with the cab on top.",
+      "from": "anffla",
+      "source_url": "https://www.anffla.org/towers/slide-mountain/"
+    },
+    {
+      "year": 2003,
+      "event": "restored",
+      "note": "Rededicated on 4 October (the page gives no detail of the work).",
+      "from": "anffla",
+      "source_url": "https://www.anffla.org/towers/slide-mountain/"
+    },
+    {
       "year": 2014,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: September 3, 2014",
       "from": "nhlr"
+    },
+    {
+      "year": 2014,
+      "event": "staffed",
+      "note": "Lookout was staffed by volunteers all year round in 2014.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-angeles-2014.pdf"
     }
   ],
   "photos": [
@@ -124,6 +145,26 @@
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
+    },
+    {
+      "label": "Angeles National Forest Fire Lookout Association: work on Slide Mountain Lookout",
+      "url": "https://www.anffla.org/towers/slide-mountain/",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Slide Mountain Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-angeles-2014.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA California-South chapter: Southern California lookouts",
+      "url": "https://www.firelookouthost.org/southern-california",
+      "kind": "association"
+    },
+    {
+      "label": "Slide Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/slide-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -150,6 +191,39 @@
       "fields": [
         "kind",
         "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "anffla",
+      "key": "anffla:ca:slide-mountain",
+      "fields": [
+        "design",
+        "staffing",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:slide-mountain",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:slide-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:socal-slide-mtn",
+      "fields": [
         "registers",
         "links"
       ]

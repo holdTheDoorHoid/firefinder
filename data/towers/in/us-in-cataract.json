@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Owen State Forest",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +44,16 @@
       "label": "FFLA Indiana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/in/",
       "kind": "association"
+    },
+    {
+      "label": "Cataract (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/cataract.html",
+      "kind": "site"
+    },
+    {
+      "label": "Cataract on Indiana Fire Towers (Mark Armantrout)",
+      "url": "https://www.indianafiretowers.com/cataract/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -58,10 +68,26 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:in:cataract",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "indiana_fire_towers",
+      "key": "indiana_fire_towers:in:cataract",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

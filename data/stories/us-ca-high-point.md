@@ -1,0 +1,10 @@
+The Civilian Conservation Corps built the first lookout on this Palomar Mountain high point in 1935, for the Forest Service.[^2][^1] The register says the lookout was first named Palomar Mountain, and the name changed to High Point in the early 1960s.[^1] The current 67-foot steel tower and cab replaced that first structure in 1964.[^2] The register gives the cab as 14 by 14 feet; the chapter gives 13 by 13.[^1][^2]
+
+The Cleveland National Forest's last staffing of the tower came in 1992.[^2] The interior was removed in 2005 because of vandalism, and a security gate went on the tower afterward.[^2] The register gives a registration date of June 2, 2008.[^1] A restoration finished in 2009 renewed the glass, cabinets and flooring, and volunteers from the San Diego-Riverside chapter of the Forest Fire Lookout Association began staffing the tower that year.[^2] The chapter says it first staffed the whole 2013 fire season and has kept that up in almost every year since.[^2] A 2017 chapter report says a problematic solar and propane incinerating outhouse at the site was repaired.[^3]
+
+Today the tower is staffed every day in fire season by volunteers, working with the Forest Service.[^1][^4] A hiking write-up dated April 2024, which is not an agency source, says visitors are barred from climbing the tower, citing safety.[^4] That write-up describes a walk along a dirt road to the summit, where a gate blocks vehicles for the last stretch.[^4]
+
+[^1]: High Point Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/ca/high-point-lookout/ (accessed 2026-10-08).
+[^2]: High Point Lookout, FFLA San Diego-Riverside Chapter, https://www.ffla-sandiego.org/highpoint-lookout/ (accessed 2026-10-08).
+[^3]: San Diego-Riverside chapter lookout report 2017, Forest Fire Lookout Association, https://firelookout.org/wp-content/uploads/2024/11/cr-ca-s-sandiego-river-2017.pdf (accessed 2026-10-08).
+[^4]: Hiking to the high point of Palomar Mountain, Stav Is Lost, https://stavislost.com/hikes/trail/palomar-mountain/ (accessed 2026-10-08).

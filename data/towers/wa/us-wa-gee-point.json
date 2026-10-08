@@ -13,8 +13,8 @@
   },
   "elevation_m": 1516.1,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -123,6 +123,16 @@
       "label": "Gee Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/geepoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Gee Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/gee-point.html",
+      "kind": "site"
+    },
+    {
+      "label": "Gee Point on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/gee_point/lookout_site_225.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -134,6 +144,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -155,6 +166,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:gee-point:48.4291:-121.8265",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:gee-point",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-gee-point-lookout-site-225",
       "fields": [
         "links"
       ]

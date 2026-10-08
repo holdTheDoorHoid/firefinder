@@ -13,11 +13,11 @@
   },
   "elevation_m": 981.5,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 16.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -50,6 +50,34 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: September 1, 1998",
       "from": "nhlr"
+    },
+    {
+      "year": 2007,
+      "event": "restored",
+      "note": "The concrete steps at the Burke Mountain tower were repaired in 2007, but no work was done on the cab or tower itself.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/10/cr-vt-2007.pdf"
+    },
+    {
+      "year": 2023,
+      "event": "restored",
+      "note": "Vermont state staff finished extensive renovation of the Burke Mountain tower, replacing all steps, landings and the cab floor with white oak on galvanized hardware.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-vt-2023.pdf"
+    },
+    {
+      "year": 2025,
+      "event": "modified",
+      "note": "A safety railing was added to the cab floor and metal fencing was installed along the sides, stairs and landings.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2026/01/cr-vt-2025.pdf"
+    },
+    {
+      "year": 2025,
+      "event": "restored",
+      "note": "Tower maintenance was completed, covering lightning protection, paint, interior cab railings and wire mesh on stairs and landings (work listed jointly with Okemo and Bear Hill).",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2026/01/cr-vt-2025.pdf"
     }
   ],
   "photos": [
@@ -73,9 +101,24 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=302",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Vermont lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/vt/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Burke Mountain Fire Tower",
+      "url": "https://firelookout.org/wp-content/uploads/2026/01/cr-vt-2025.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Burke Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/burke-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -103,9 +146,47 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:vt:burke-mountain",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:vt:burke-mountain",
+      "fields": [
+        "events",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "standing"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": "ruins"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

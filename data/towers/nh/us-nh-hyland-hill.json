@@ -17,7 +17,7 @@
   "material_from": "nhlr",
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 24.4,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -50,6 +50,13 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: March 12, 2002",
       "from": "nhlr"
+    },
+    {
+      "year": 2020,
+      "event": "removed",
+      "note": "A state contractor took down the Hyland Hill tower in early June 2020; it had been unused since 2005 and was decaying and vandalized, leaving one footing.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nh-2020.pdf"
     }
   ],
   "photos": [
@@ -85,9 +92,24 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/nh/hyland-hill-lookout/",
+      "kind": "register"
+    },
+    {
       "label": "FFLA New Hampshire lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nh/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Hyland Hill Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nh-2020.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "HyLAND Hill (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/hyland-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -114,6 +136,22 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:nh:hyland-hill",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:nh:hyland-hill",
+      "fields": [
+        "events",
         "links"
       ]
     }

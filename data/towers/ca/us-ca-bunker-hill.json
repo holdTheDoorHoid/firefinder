@@ -16,7 +16,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "20-ft stone live-in tower topped with a 14x14-ft wooden cab (Kepler Johnson design)",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -52,10 +52,38 @@
       "from": "nhlr"
     },
     {
+      "year": 1949,
+      "event": "modified",
+      "note": "The wooden observation cab was added on top of the stone tower.",
+      "from": "historicorps_west",
+      "source_url": "https://historicorps.org/bunker-hill-lookout-tower-ca-2024/"
+    },
+    {
       "year": 2004,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: September 21, 2004",
       "from": "nhlr"
+    },
+    {
+      "year": 2016,
+      "event": "other",
+      "note": "FFLA restoration grant awarded in 2016 (purpose and amount not stated); an unused 9 dollars 38 cents was returned in 2018.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-restoration-2018.pdf"
+    },
+    {
+      "year": 2017,
+      "event": "other",
+      "note": "National FFLA approved a 500 dollar restoration grant to help return the lookout to service as a fire lookout and interpretive center.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sierra-nevada-2017.pdf"
+    },
+    {
+      "year": 2024,
+      "event": "restored",
+      "note": "HistoriCorps scheduled volunteer sessions (July 14 to September 6) to repair the roof, take down the brick chimney and prepare for repointing and painting.",
+      "from": "historicorps_west",
+      "source_url": "https://historicorps.org/bunker-hill-lookout-tower-ca-2024/"
     }
   ],
   "photos": [
@@ -108,6 +136,21 @@
       "kind": "association"
     },
     {
+      "label": "HistoriCorps: work on Bunker Hill Lookout",
+      "url": "https://historicorps.org/bunker-hill-lookout-tower-ca-2024/",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Bunker Hill Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-restoration-2018.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Bunker Hill on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/bunker-hill.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap way 495521038",
       "url": "https://www.openstreetmap.org/way/495521038",
       "kind": "osm"
@@ -141,14 +184,58 @@
       ]
     },
     {
+      "source": "historicorps_west",
+      "key": "historicorps_west:ca:bunker-hill",
+      "fields": [
+        "design",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:bunker-hill",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/495521038",
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:bunker-hill",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1942
+        },
+        {
+          "source": "osm",
+          "value": 1942
+        },
+        {
+          "source": "historicorps_west",
+          "value": 1939
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "MI",
-  "county": null,
+  "county": "Iron",
   "location": {
     "lat": 43.53508,
     "lon": -85.721607,
@@ -13,16 +13,16 @@
   },
   "elevation_m": 305.0,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 30.5,
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Ottawa National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -41,6 +41,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Gibbs (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/gibbs.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 354000819",
       "url": "https://www.openstreetmap.org/node/354000819",
       "kind": "osm"
@@ -48,10 +53,23 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:mi:gibbs",
+      "fields": [
+        "name",
+        "county",
+        "material",
+        "design",
+        "height_m",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/354000819",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

@@ -6,10 +6,10 @@
   "region": "DE",
   "county": "Sussex",
   "location": {
-    "lat": 38.55883,
-    "lon": -75.25033,
+    "lat": 38.56472,
+    "lon": -75.25056,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 7.9,
   "kind": "tower",
@@ -17,7 +17,7 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 10.7,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -63,6 +63,11 @@
       "label": "FFLA Delaware lookout list (firelookout.org)",
       "url": "https://firelookout.org/?page_id=156",
       "kind": "association"
+    },
+    {
+      "label": "Dagsboro (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/dagsboro.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -71,7 +76,6 @@
       "key": "fflos:US 70",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "registers",
@@ -83,6 +87,7 @@
       "source": "ffla",
       "key": "ffla:de:dagsboro:38.5647:-75.2506",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -95,6 +100,14 @@
       "fields": [
         "registers"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:de:dagsboro",
+      "fields": [
+        "height_m",
+        "links"
+      ]
     }
   ],
   "conflicts": [
@@ -102,17 +115,17 @@
       "field": "location",
       "values": [
         {
-          "source": "fflos",
-          "value": {
-            "lat": 38.55883,
-            "lon": -75.25033
-          }
-        },
-        {
           "source": "ffla",
           "value": {
             "lat": 38.56472,
             "lon": -75.25056
+          }
+        },
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 38.55883,
+            "lon": -75.25033
           }
         }
       ],

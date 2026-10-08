@@ -1,8 +1,10 @@
 {
   "id": "us-or-mackay-butte-lookout-norcross",
   "name": "Mackay Butte Lookout - Norcross Station",
+  "summary": "Crook County site: camp in 1925, cabin in 1935, a 6x6 ft enclosed lookout house in 1940, abandoned in the 1950s; a standing ruin on private land with no public access.",
   "other_names": [
-    "Mackey (Norcross) Butte"
+    "Mackey (Norcross) Butte",
+    "Mackey Butte"
   ],
   "country": "US",
   "region": "OR",
@@ -18,7 +20,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "6x6 ft ground lookout house (1940) enclosing a fire-finder; residence cabin and garage (1935)",
   "height_m": 1.8,
   "status": "standing",
   "status_note": null,
@@ -30,11 +32,11 @@
       "url": "http://nhlr.org/lookouts/us/or/mackay-butte-lookout-norcross-station/"
     }
   ],
-  "agency": "Land Owner",
+  "agency": "Land Owner (private land, per NHLR); Ochoco National Forest listed as cooperator",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Private land; firelookout.com says there is no public access"
   },
   "staffing": {
     "status": "unknown",
@@ -48,16 +50,56 @@
   "rental": null,
   "events": [
     {
+      "year": 1925,
+      "event": "other",
+      "note": "Camp established (NHLR); a July 1925 report said a telephone line would be built to Mackey Butte and a fireman posted there that year",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/mackay-butte-lookout-norcross-station/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/mackay-butte-lookout-norcross-station/",
+        "https://www.firelookout.com/or/mackeynorcross.html",
+        "https://oregonlookouts.weebly.com/mackey-butte.html"
+      ]
+    },
+    {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Residence cabin, garage and exposed fire-finder stand completed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/mackay-butte-lookout-norcross-station/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/mackay-butte-lookout-norcross-station/",
+        "https://www.firelookout.com/or/mackeynorcross.html"
+      ]
+    },
+    {
+      "year": 1940,
+      "event": "built",
+      "note": "Fire-finder enclosed in a 6x6 ground lookout house",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/mackay-butte-lookout-norcross-station/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/mackay-butte-lookout-norcross-station/",
+        "https://www.firelookout.com/or/mackeynorcross.html"
+      ]
+    },
+    {
+      "year": 1950,
+      "event": "abandoned",
+      "note": "Sources say only 'the 1950s'; 1950 is a placeholder for the decade",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/mackay-butte-lookout-norcross-station/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/mackay-butte-lookout-norcross-station/",
+        "https://www.firelookout.com/or/mackeynorcross.html"
+      ]
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 4, 2022",
-      "from": "nhlr"
+      "note": "Registered July 4, 2022 as US 1631, OR 149",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/mackay-butte-lookout-norcross-station/"
     }
   ],
   "photos": [
@@ -226,6 +268,11 @@
       "label": "Mackey (Norcross) Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/mackeynorcross.html",
       "kind": "site"
+    },
+    {
+      "label": "Mackey Butte on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/oregons-standing-lookouts/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -263,9 +310,56 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:mackey-butte",
+      "fields": []
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:mackey-butte",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-mackay-butte-lookout-norcross",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 43.789588,
+            "lon": -119.817267
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 43.7833,
+            "lon": -119.8364
+          }
+        }
+      ],
+      "distance_m": 1688,
+      "note": null
+    },
     {
       "field": "built",
       "values": [
@@ -276,13 +370,23 @@
         {
           "source": "firelookout_com",
           "value": 1925
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1935
         }
       ],
       "distance_m": null,
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

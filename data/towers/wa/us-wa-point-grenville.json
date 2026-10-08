@@ -29,10 +29,10 @@
     }
   ],
   "agency": "BIA",
-  "ownership": "unknown",
+  "ownership": "tribal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "permission",
+    "note": "On tribal land. Ask the tribe before visiting."
   },
   "staffing": {
     "status": "unknown",
@@ -68,6 +68,16 @@
       "label": "Point Grenville on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/pointgrenville.html",
       "kind": "site"
+    },
+    {
+      "label": "Point Grenville on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/point-grenville.html",
+      "kind": "site"
+    },
+    {
+      "label": "Point Grenville on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/point_grenville_lookout/quinault_312.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -99,6 +109,22 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:point-grenville:47.3102:-124.2288",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:point-grenville",
+      "fields": [
+        "ownership",
+        "access",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-point-grenville-lookout-quinault-312",
       "fields": [
         "links"
       ]

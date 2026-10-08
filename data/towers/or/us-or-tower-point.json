@@ -1,6 +1,7 @@
 {
   "id": "us-or-tower-point",
   "name": "Tower Point Lookout",
+  "summary": "Tower Point, Ochoco National Forest, Oregon: a lookout site since 1919, with the present 20-ft timber L-4 tower built 1955; registered 2022, unstaffed on a 2021 visit.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,8 +17,8 @@
   "material": "wood",
   "material_from": "nhlr",
   "roles": [],
-  "design": "L-4",
-  "height_m": null,
+  "design": "20-foot open treated timber tower with an L-4 cab",
+  "height_m": 6.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/or/tower-point-lookout/"
     }
   ],
-  "agency": "US Forest Service - Ochoco National Forest",
+  "agency": "US Forest Service, Ochoco National Forest; Bureau of Land Management a cooperator",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Reached by forest roads. On a June 2021 visit the catwalk hatch was latched shut and the cab could not be reached. Check with the Ochoco National Forest before visiting."
   },
   "staffing": {
     "status": "staffed",
@@ -40,22 +41,66 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Forest roads 1750 and 1760 from Road 16 to the summit; a 2021 visitor found the road a bit rough but very doable and noted the last stretch had no gate."
   },
   "rental": null,
   "events": [
     {
+      "year": 1919,
+      "event": "built",
+      "note": "First lookout tower and telephone line to Tower Point, per a Crook County Journal item of Sept. 4, 1919 quoted by the Oregon listing; NHLR gives 1919 as the start of fire detection at the site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/tower-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/tower-point-lookout/",
+        "https://oregonlookouts.weebly.com/tower-point.html"
+      ]
+    },
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "L-4 cab dated 1936 by the Oregon listing only; NHLR and Rex's page do not give this date",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/tower-point.html"
+    },
+    {
+      "year": 1940,
+      "event": "replaced",
+      "note": "A timber tower erected at the site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/tower-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/tower-point-lookout/",
+        "https://oregonlookouts.weebly.com/tower-point.html",
+        "https://www.firelookout.com/or/towerpoint.html"
+      ]
+    },
+    {
       "year": 1955,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Present 20-foot treated timber L-4 tower built",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/tower-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/tower-point-lookout/",
+        "https://oregonlookouts.weebly.com/tower-point.html",
+        "https://www.firelookout.com/or/towerpoint.html"
+      ]
+    },
+    {
+      "year": 2021,
+      "event": "other",
+      "note": "Visited June 12, 2021: unstaffed when the visitor arrived; catwalk hatch latched shut",
+      "from": "research",
+      "source_url": "http://cherylhill.net/firelookouts/2021/06/16/tower-point/"
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 6, 2022",
-      "from": "nhlr"
+      "note": "Registered July 6, 2022 as US 1644, OR 162",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/tower-point-lookout/"
     }
   ],
   "photos": [
@@ -160,6 +205,33 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:tower-point",
+      "fields": [
+        "height_m"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:tower-point",
+      "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-tower-point",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -173,13 +245,23 @@
         {
           "source": "firelookout_com",
           "value": 1940
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1955
         }
       ],
       "distance_m": null,
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

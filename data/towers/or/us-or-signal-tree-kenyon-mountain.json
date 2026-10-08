@@ -19,7 +19,7 @@
   "material_from": "nhlr",
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 30.5,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -89,6 +89,11 @@
       "label": "Kenyon (Signal Tree) on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/kenyon.html",
       "kind": "site"
+    },
+    {
+      "label": "Signal Tree (Kenyon Mountain) on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/signal-tree.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -124,6 +129,14 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:signal-tree",
+      "fields": [
+        "height_m",
+        "links"
+      ]
     }
   ],
   "conflicts": [
@@ -145,6 +158,25 @@
       ],
       "distance_m": null,
       "note": "NHLR lists lookouts that were standing when registered. firelookout.com lists it, but not on its map of standing lookouts."
+    },
+    {
+      "field": "kind",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "tower"
+        },
+        {
+          "source": "nhlr",
+          "value": "tower"
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": "tree"
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources disagree on whether a tower or building stood here, or only a camp or lookout tree."
     }
   ],
   "verification": "unverified",

@@ -13,8 +13,8 @@
   },
   "elevation_m": 1927.3,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -81,6 +81,11 @@
       "label": "Burnt Top on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/burnttop.html",
       "kind": "site"
+    },
+    {
+      "label": "Burnt Top on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/burnt-top.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -92,6 +97,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -113,6 +119,13 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:or:burnt-top:44.0407:-121.8744",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:burnt-top",
       "fields": [
         "links"
       ]

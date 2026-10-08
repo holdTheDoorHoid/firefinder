@@ -13,8 +13,8 @@
   },
   "elevation_m": 1171.7,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -29,7 +29,7 @@
     }
   ],
   "agency": "American Tower Corporation",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -78,6 +78,11 @@
       "kind": "association"
     },
     {
+      "label": "Duncan Knob (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/duncan-knob.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 6882368163",
       "url": "https://www.openstreetmap.org/node/6882368163",
       "kind": "osm"
@@ -92,6 +97,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -106,6 +112,14 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:va:duncan-knob",
+      "fields": [
+        "ownership",
         "links"
       ]
     },

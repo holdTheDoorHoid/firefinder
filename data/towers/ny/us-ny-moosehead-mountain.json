@@ -13,11 +13,11 @@
   },
   "elevation_m": null,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 6.1,
   "status": "relocated",
   "status_note": null,
   "registers": [],
@@ -59,6 +59,11 @@
       "label": "FFLA New York lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ny/",
       "kind": "association"
+    },
+    {
+      "label": "Moosehead Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/moosehead-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -73,10 +78,20 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:moosehead-mountain",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

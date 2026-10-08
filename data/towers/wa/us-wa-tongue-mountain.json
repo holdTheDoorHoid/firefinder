@@ -13,8 +13,8 @@
   },
   "elevation_m": 1466.4,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -123,6 +123,16 @@
       "label": "Tongue Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/tonguemtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Tongue Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/tongue-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Tongue Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/tongue_mountain_lookout/lewis_county_376.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -134,6 +144,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -158,10 +169,24 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:tongue-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-tongue-mountain-lookout-lewis-county-376",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

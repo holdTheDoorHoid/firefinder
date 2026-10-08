@@ -1,6 +1,7 @@
 {
   "id": "us-mt-skookum-butte",
   "name": "Skookum Butte Lookout",
+  "summary": "A 1928 L-5 log-and-frame ground house on the Lolo NF near the Idaho line; unstaffed since before 1965 and partly restored in 2019.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,7 +17,7 @@
   "material": "mixed",
   "material_from": "firelookout_com",
   "roles": [],
-  "design": "L-5",
+  "design": "L-5 log and frame ground house with mortise-and-tenon log joints",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,34 +29,73 @@
       "url": "http://nhlr.org/lookouts/us/mt/skookum-butte-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Lolo National Forest, Missoula Ranger District)",
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "No rental or permit listed in the sources read; unclear whether the cabin interior is open to visitors"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "per NHLR and firelookout.com, both undated"
   },
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "2011 visit report: trail in good condition with new water bars; directions signed"
   },
   "rental": null,
   "events": [
     {
       "year": 1928,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Built as an L-5 log and frame ground house on the Montana-Idaho line",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/skookum-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/skookum-butte-lookout/",
+        "https://www.firelookout.com/mt/skookum.html",
+        "https://missoulacurrent.com/skookum-butte-lookout/"
+      ]
     },
     {
       "year": 1996,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 5, 1996",
-      "from": "nhlr"
+      "note": "Registered June 5, 1996 on the National Historic Lookout Register as US 172",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/skookum-butte-lookout/"
+    },
+    {
+      "year": 2011,
+      "event": "assessed",
+      "note": "Visit report: lean to the south, about half the shutters off, rot at the bottom logs of the cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/skookum-butte-lookout/"
+    },
+    {
+      "year": 2019,
+      "event": "other",
+      "note": "FFLA restoration grant of $500 for supplies: shiplap for shutters, subfloor and roof sheathing, window glass and maple flooring.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-restoration-2019.pdf"
+    },
+    {
+      "year": 2019,
+      "event": "restored",
+      "note": "First restoration phase: stones reset under the southeast corner and rotten logs replaced, by Forest Service staff and 11 Passport In Time volunteers",
+      "from": "research",
+      "source_url": "https://missoulacurrent.com/skookum-butte-lookout/",
+      "source_urls": [
+        "https://missoulacurrent.com/skookum-butte-lookout/",
+        "https://www.firelookout.com/mt/skookum.html"
+      ]
+    },
+    {
+      "year": 2022,
+      "event": "restored",
+      "note": "Multi-year restoration project was completed, with chapter support.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-id-north-mt-2022.pdf"
     }
   ],
   "photos": [
@@ -151,6 +191,11 @@
       "kind": "register"
     },
     {
+      "label": "Skookum Butte: Volunteers save historic lookout for the ages (Missoula Current (Laura Lundquist))",
+      "url": "https://missoulacurrent.com/skookum-butte-lookout/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -158,6 +203,11 @@
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Skookum Butte Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-id-north-mt-2022.pdf",
       "kind": "association"
     },
     {
@@ -215,10 +265,40 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:skookum-butte:46.6647:-114.3950",
       "fields": []
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:mt:skookum-butte",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-skookum-butte",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

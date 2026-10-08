@@ -1,7 +1,9 @@
 {
   "id": "us-ri-pine-hill",
   "name": "Pine Hill Lookout Tower",
-  "other_names": [],
+  "other_names": [
+    "Pine Hill (Exeter)"
+  ],
   "country": "US",
   "region": "RI",
   "county": "Washington",
@@ -17,7 +19,7 @@
   "material_from": "nhlr",
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 15.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -56,6 +58,13 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: September 3, 2014",
       "from": "nhlr"
+    },
+    {
+      "year": 2022,
+      "event": "restored",
+      "note": "The same volunteer restoration group reconnected electrical power to the tower in Exeter in 2022.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-sne-2022.pdf"
     }
   ],
   "photos": [
@@ -91,9 +100,24 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=1148",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Rhode Island lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ri/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Pine Hill Lookout Tower",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-sne-2022.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Pine Hill (Exeter) (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/pine-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -120,6 +144,22 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ri:pine-hill",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:ri:pine-hill",
+      "fields": [
+        "events",
         "links"
       ]
     }

@@ -1,6 +1,7 @@
 {
   "id": "us-ky-hickory-flats",
   "name": "Hickory Flats Fire Tower",
+  "summary": "A Rowan County, Kentucky tower dated to 1934 (builder disputed), abandoned, damaged by arson in 2008, restored, and now rented for overnight stays by the Route 377 fire department.",
   "other_names": [],
   "country": "US",
   "region": "KY",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "80-foot steel Aermotor tower with a 7x7 cab (register says metal cab; county says wooden)",
+  "height_m": 24.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,25 +32,69 @@
   "agency": "Route 377 Volunteer Fire Department",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Hike in on foot past a vehicle gate; overnight stays are booked online through Morehead-Rowan County Tourism"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": false,
+    "trail_note": "About 1.2 miles on foot past a vehicle gate, per The Outbound"
   },
   "rental": null,
   "events": [
     {
+      "year": 1934,
+      "event": "built",
+      "note": "Wooden tower; county credits the CCC, while the register credits the U.S. Forest Service",
+      "from": "research",
+      "source_url": "https://www.rcky.us/rowan-county-fire-towers",
+      "source_urls": [
+        "https://www.rcky.us/rowan-county-fire-towers",
+        "https://www.rcky.us/news/fire-tower-open"
+      ]
+    },
+    {
+      "year": 1935,
+      "event": "replaced",
+      "note": "Replaced with steel, per the county tower page",
+      "from": "research",
+      "source_url": "https://www.rcky.us/rowan-county-fire-towers"
+    },
+    {
+      "year": 1975,
+      "event": "abandoned",
+      "note": "Mid-1970s per the county news post (approximate year); the county tower page says the Forest Service stopped using it in the 1960s",
+      "from": "research",
+      "source_url": "https://www.rcky.us/news/fire-tower-open",
+      "source_urls": [
+        "https://www.rcky.us/news/fire-tower-open",
+        "https://www.rcky.us/rowan-county-fire-towers"
+      ]
+    },
+    {
       "year": 2002,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 12, 2002",
-      "from": "nhlr"
+      "note": "Registered November 12, 2002 as US 447, KY 4",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ky/hickory-flats-fire-tower/"
+    },
+    {
+      "year": 2008,
+      "event": "fire",
+      "note": "Damaged in arson on December 3, 2008",
+      "from": "research",
+      "source_url": "https://www.rcky.us/news/fire-tower-open"
+    },
+    {
+      "year": 2022,
+      "event": "rental_opened",
+      "note": "Visit report of October 18, 2022 says the tower is now available for rental",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ky/hickory-flats-fire-tower/"
     }
   ],
   "photos": [
@@ -114,6 +159,21 @@
       "kind": "register"
     },
     {
+      "label": "Rowan County Fire Towers (Rowan County, Kentucky (rcky.us))",
+      "url": "https://www.rcky.us/rowan-county-fire-towers",
+      "kind": "reference"
+    },
+    {
+      "label": "Hickory Flats Fire Tower Open! (Rowan County, Kentucky (rcky.us))",
+      "url": "https://www.rcky.us/news/fire-tower-open",
+      "kind": "reference"
+    },
+    {
+      "label": "Hike to Hickory Flats Firetower (The Outbound)",
+      "url": "https://www.theoutbound.com/kentucky/hiking/hike-to-hickory-flats-firetower",
+      "kind": "reference"
+    },
+    {
       "label": "Hickory Flats (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/hickory-flats.html",
       "kind": "site"
@@ -157,10 +217,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ky-hickory-flats",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

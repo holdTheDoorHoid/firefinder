@@ -8,10 +8,10 @@
   "region": "MT",
   "county": "Glacier",
   "location": {
-    "lat": 48.670851,
-    "lon": -113.400402,
+    "lat": 48.66869,
+    "lon": -113.38604,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 2339.9,
   "kind": "ground",
@@ -89,6 +89,11 @@
       "label": "Divide on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/divide356.html",
       "kind": "site"
+    },
+    {
+      "label": "Divide Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/divide-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -97,7 +102,6 @@
       "key": "fflos:US 2096",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "registers",
@@ -112,6 +116,7 @@
       "source": "ffla",
       "key": "ffla:mt:divide:48.6687:-113.3860",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -124,12 +129,26 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:divide-mountain",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 48.66869,
+            "lon": -113.38604
+          }
+        },
         {
           "source": "fflos",
           "value": {
@@ -138,14 +157,14 @@
           }
         },
         {
-          "source": "ffla",
+          "source": "firelookout_com",
           "value": {
-            "lat": 48.66869,
-            "lon": -113.38604
+            "lat": 48.67086,
+            "lon": -113.40042
           }
         }
       ],
-      "distance_m": 1082,
+      "distance_m": 1083,
       "note": "They share a register number."
     }
   ],

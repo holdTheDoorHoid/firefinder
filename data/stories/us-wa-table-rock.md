@@ -1,0 +1,13 @@
+Table Rock Lookout sits on a flat, rocky summit in the Blue Mountains of Columbia County, Washington, inside the Umatilla National Forest.[^1][^2][^4] The summit's first lookout was a D-6 cupola cabin, put into use in 1929, and it stood about thirty years.[^2][^3][^5] The present L-4 cab went up on a 10-foot concrete base in 1949, and that base still stands.[^2][^3][^4] A 1950 newspaper article described the new tower as nearly finished yet already in service, and noted that the city's water department had a hand in it.[^3] The lookout watches over the Mill Creek watershed, the main water source for Walla Walla.[^1]
+
+The Forest Service has staffed the cab in summer.[^1][^2] One name on record is Frank Hohenadel, listed as lookout personnel for a span the source gives as 194? to 1965.[^2] An October 1930 story, reprinted online, recalls that the lookout called in a fire near Lewis Peak on August 22, and that the cooperator in Walla Walla had men, tools and a truck ready to go 39 minutes after getting the call.[^3]
+
+A 1989 remodel gave the cab a knotty pine interior, added wall and ceiling insulation, thermopane windows and metal shutters.[^1][^5] A 2012 visit report found the roof, exterior walls, deck and stairs in good shape, and a 2019 report called the lookout in excellent condition.[^1] The register listed the lookout on January 3, 2015.[^1]
+
+Today the summit is a drive-up destination.[^3] From Dayton, the route climbs into the hills and then turns onto gravel Forest Road 64.[^3] The last 4.5 miles can be rough for passenger cars, and snowdrifts can linger into June.[^3] The final half mile runs on FR-475, which may be gated.[^3] A high-clearance 4WD can drive onto the summit plateau if the gate half a mile from the top is open.[^5] Visitors to the summit can use a restroom close to the tower.[^4] I found no overnight rental program for the tower in these sources, and since the cab is a working Forest Service lookout, it is best seen from the summit grounds.
+
+[^1]: Table Rock Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/wa/table-rock-lookout/ (accessed 2026-10-08).
+[^2]: Table Rock Fire Lookout Tower, firelookout.com, https://www.firelookout.com/wa/tablerock.html (accessed 2026-10-08).
+[^3]: Table Rock Lookout - Umatilla National Forest, WillhiteWeb, https://www.willhiteweb.com/washington_fire_lookouts/table_rock_lookout/umatilla_national_forest_056.htm (accessed 2026-10-08).
+[^4]: Table Rock, SummitPost, https://www.summitpost.org/table-rock/660802 (accessed 2026-10-08).
+[^5]: Table Rock, TrailChick, https://trailchick.com/wa-state-fire-lookouts/table-rock-lookout/ (accessed 2026-10-08).

@@ -13,8 +13,8 @@
   },
   "elevation_m": 1764.2,
   "kind": "three_story",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -29,7 +29,7 @@
     }
   ],
   "agency": "Oregon Department of Forestry",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -129,6 +129,16 @@
       "label": "Stephenson Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/stephenson.html",
       "kind": "site"
+    },
+    {
+      "label": "Stephenson Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/stephenson-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Stephenson Mountain on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/2026/07/20/stephenson-mountain-lookout-has-burned/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -140,6 +150,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -161,6 +172,21 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:or:stephenson-mtn:44.5899:-120.5016",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:stephenson-mountain",
+      "fields": [
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:destroyed-stephenson-mountain",
       "fields": [
         "links"
       ]
@@ -208,6 +234,10 @@
         },
         {
           "source": "firelookout_com",
+          "value": "gone"
+        },
+        {
+          "source": "cherylhill_oregon",
           "value": "gone"
         }
       ],

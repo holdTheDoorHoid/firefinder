@@ -1,20 +1,22 @@
 {
   "id": "us-mt-blizzard-hill",
   "name": "Blizzard Hill Lookout SIte",
-  "other_names": [],
+  "other_names": [
+    "Blizzard Peak"
+  ],
   "country": "US",
   "region": "MT",
   "county": "Jefferson",
   "location": {
-    "lat": 46.257822,
-    "lon": -112.584819,
+    "lat": 46.25144,
+    "lon": -112.57162,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 2328.4,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -81,6 +83,11 @@
       "label": "Blizzard Hill on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/blizzardhill.html",
       "kind": "site"
+    },
+    {
+      "label": "Blizzard Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/blizzard-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -89,9 +96,9 @@
       "key": "fflos:US 2086",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -104,6 +111,7 @@
       "source": "ffla",
       "key": "ffla:mt:blizzard-hill:46.2514:-112.5716",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -116,19 +124,19 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:blizzard-hill",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
-        {
-          "source": "fflos",
-          "value": {
-            "lat": 46.257822,
-            "lon": -112.584819
-          }
-        },
         {
           "source": "ffla",
           "value": {
@@ -137,10 +145,10 @@
           }
         },
         {
-          "source": "firelookout_com",
+          "source": "fflos",
           "value": {
-            "lat": 46.25144,
-            "lon": -112.57162
+            "lat": 46.257822,
+            "lon": -112.584819
           }
         }
       ],
@@ -148,7 +156,7 @@
       "note": "They share a register number."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

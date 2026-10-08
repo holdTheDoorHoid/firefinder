@@ -6,10 +6,10 @@
   "region": "WA",
   "county": "Kittitas",
   "location": {
-    "lat": 47.266311,
-    "lon": -121.311327,
+    "lat": 47.27832,
+    "lon": -121.31646,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 862.6,
   "kind": "tower",
@@ -111,6 +111,16 @@
       "label": "Martin on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/martin.html",
       "kind": "site"
+    },
+    {
+      "label": "Martin on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/martin.html",
+      "kind": "site"
+    },
+    {
+      "label": "Martin Lookout on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/hiking/cle_elum/martin_lookout/stampede_pass_193.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -119,7 +129,6 @@
       "key": "fflos:US 2002",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "material",
@@ -135,6 +144,7 @@
       "source": "ffla",
       "key": "ffla:wa:martin:47.2783:-121.3165",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -147,19 +157,26 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:martin",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:hiking-cle-elum-martin-lookout-stampede-pass-193",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
-        {
-          "source": "fflos",
-          "value": {
-            "lat": 47.266311,
-            "lon": -121.311327
-          }
-        },
         {
           "source": "ffla",
           "value": {
@@ -168,10 +185,10 @@
           }
         },
         {
-          "source": "firelookout_com",
+          "source": "fflos",
           "value": {
-            "lat": 47.27832,
-            "lon": -121.31646
+            "lat": 47.266311,
+            "lon": -121.311327
           }
         }
       ],
@@ -179,7 +196,7 @@
       "note": "They share a register number."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

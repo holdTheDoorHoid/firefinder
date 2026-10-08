@@ -1,0 +1,13 @@
+Magalloway Mountain has had a fire lookout since 1910, when funds from the New Hampshire Timberland Owners Association put the first one into service.[^1][^2] A hiking article gives the group a slightly different name, the New Hampshire Timberline Owners Association, so the sources spell it two ways.[^3] The tower standing today was constructed in 1935 with a standard New Hampshire wood cab.[^1] It took the place of the site's second wooden tower, and the register describes it as the last wood tower in the state.[^1] The register gives the lookout an elevation of 3,360 feet, while the hiking article gives the summit as 3,383 feet, so the two disagree.[^1][^3]
+
+A state forestry report covering 1915 and 1916 describes a new and improved watch tower, but none of these sources says whether it replaced one of the two wooden towers.[^2] A 1922 report mentions a new cabin on the mountain and a telephone extension to the tower.[^2]
+
+In October 1937 a newspaper reported that Coos County's fire lookout stations, Magalloway Mountain among them, were closed that week. The item gives no reason.[^2] In July 2009 persons unknown trashed the cabin and storage shed, tried to break into the tower cab, and caused more than $1,000 in damage.[^2] A 2010 visit report for the lookout records staffing as sometimes.[^1]
+
+The lookout is still standing, and in August 2006 a new tower cab was airlifted to it.[^2][^3] The register describes the tower as in active service.[^1]
+
+Visitors reach the tower on foot.[^3] Magalloway Road is a gravel logging road.[^3] Just over five miles in, a narrower and rougher road branches off at a sign marked "Tower" and dead-ends three miles later at the trailheads.[^3] The article says that road is passable in a passenger car if driven slowly.[^3] A common route goes up the Bobcat Trail, visits the Overlook and comes down the Coot Trail, about two miles in all.[^3] The register's 2010 visit report says the directions to the tower are signed.[^1] The register also links to rental information for the cabin, but the state page it names could not be opened for this research, so current rental terms are not confirmed.[^1] Anyone planning a trip should check with the state about the cab before going up.
+
+[^1]: Magalloway Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/nh/magalloway-lookout/ (accessed 2026-10-08).
+[^2]: Magalloway Mountain, Forest Lookouts (easternuslookouts.weebly.com), https://easternuslookouts.weebly.com/magalloway-mountain.html (accessed 2026-10-08).
+[^3]: Magalloway Mountain, The Weirs Times, https://weirs.com/magalloway-mountain/ (accessed 2026-10-08).

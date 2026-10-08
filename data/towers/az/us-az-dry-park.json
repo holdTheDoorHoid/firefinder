@@ -14,8 +14,8 @@
   },
   "elevation_m": 2654.8,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": "Aermotor tower, 120 feet tall, with a groundhouse and support buildings established in 1936",
   "height_m": null,
@@ -115,6 +115,11 @@
       "kind": "association"
     },
     {
+      "label": "Dry Park on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/dry-park.html",
+      "kind": "site"
+    },
+    {
       "label": "Wikidata item Q86925405",
       "url": "https://www.wikidata.org/wiki/Q86925405",
       "kind": "wikidata"
@@ -134,6 +139,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -163,6 +169,13 @@
     {
       "source": "osm",
       "key": "osm:node/7635563606",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:az:dry-park",
       "fields": [
         "links"
       ]

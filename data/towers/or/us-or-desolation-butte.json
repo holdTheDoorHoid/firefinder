@@ -1,6 +1,7 @@
 {
   "id": "us-or-desolation-butte",
   "name": "Desolation Butte Lookout",
+  "summary": "The present R-6 flat-top cab on a 67-foot timber tower dates from 1961, replacing a 1923 cabin on a 50-foot steel tower; it is still staffed each summer.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,8 +17,8 @@
   "material": "wood",
   "material_from": "nhlr",
   "roles": [],
-  "design": "R-6",
-  "height_m": 15.2,
+  "design": "R-6 flat-top cab on a 67-foot open timber tower",
+  "height_m": 20.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/or/desolation-butte-lookout/"
     }
   ],
-  "agency": "US Forest Service - Umatilla National Forest",
+  "agency": "U.S. Forest Service, Umatilla National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Lookout Road (Forest Road 10103) runs to the summit. Camping near the tower needs permission from the staffed lookout."
   },
   "staffing": {
     "status": "staffed",
@@ -40,11 +41,34 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Route is accessible by a high-clearance vehicle; no designated camping along the route."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1918,
+      "event": "other",
+      "note": "Site possibly first established in 1918, per firelookout.com (possibly 1918) and a trail guide (initially established 1918).",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/desolationbutte.html",
+      "source_urls": [
+        "https://www.firelookout.com/or/desolationbutte.html",
+        "https://www.trailsoffroad.com/US/oregon/scout-routes/4085-desolation-butte-lookout"
+      ]
+    },
+    {
+      "year": 1923,
+      "event": "built",
+      "note": "First lookout: a 7x7 cabin on a 50-foot open steel tower.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/desolationbutte.html",
+      "source_urls": [
+        "https://www.firelookout.com/or/desolationbutte.html",
+        "http://nhlr.org/lookouts/us/or/desolation-butte-lookout/",
+        "https://www.trailsoffroad.com/US/oregon/scout-routes/4085-desolation-butte-lookout"
+      ]
+    },
     {
       "year": 1961,
       "event": "built",
@@ -52,10 +76,23 @@
       "from": "nhlr"
     },
     {
+      "year": 1961,
+      "event": "replaced",
+      "note": "Present R-6 cab on a 67-foot open timber tower replaced the 1923 cabin.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/desolationbutte.html",
+      "source_urls": [
+        "https://www.firelookout.com/or/desolationbutte.html",
+        "http://nhlr.org/lookouts/us/or/desolation-butte-lookout/",
+        "https://www.trailsoffroad.com/US/oregon/scout-routes/4085-desolation-butte-lookout"
+      ]
+    },
+    {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 22, 2022",
-      "from": "nhlr"
+      "note": "Added to the National Historic Lookout Register, June 22, 2022.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/desolation-butte-lookout/"
     }
   ],
   "photos": [
@@ -187,6 +224,16 @@
       "kind": "register"
     },
     {
+      "label": "Desolation Butte Lookout (Trails Off Road)",
+      "url": "https://www.trailsoffroad.com/US/oregon/scout-routes/4085-desolation-butte-lookout",
+      "kind": "reference"
+    },
+    {
+      "label": "Desolation Butte L.O. (The Roaming Civic)",
+      "url": "https://theroamingcivic.com/2023/07/10/desolation-butte-lookout/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -199,6 +246,11 @@
     {
       "label": "Desolation Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/desolationbutte.html",
+      "kind": "site"
+    },
+    {
+      "label": "Desolation Butte on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/oregons-standing-lookouts/",
       "kind": "site"
     }
   ],
@@ -240,6 +292,34 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:desolation-butte",
+      "fields": []
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:desolation-butte",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-desolation-butte",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -253,13 +333,23 @@
         {
           "source": "firelookout_com",
           "value": 1923
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1961
         }
       ],
       "distance_m": null,
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

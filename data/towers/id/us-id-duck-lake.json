@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Payette National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -61,6 +61,11 @@
       "label": "Duck Lake Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/west-central/duck-lake-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Duck Lake on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/duck-lake.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -88,6 +93,15 @@
       "key": "idaho_fl:duck-lake-lookout:45.0574:-115.9237",
       "fields": [
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:duck-lake",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

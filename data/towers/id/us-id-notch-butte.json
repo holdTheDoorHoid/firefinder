@@ -1,6 +1,7 @@
 {
   "id": "us-id-notch-butte",
   "name": "Notch Butte Lookout",
+  "summary": "A 1941 Forest Service plan cab on BLM land near Shoshone, Idaho; lookout use ended in the 2000s and the cab is now an enclosed radio building.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "14-by-14-foot ground cab, USFS Region 1 plan design",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/id/notch-butte-lookout/"
     }
   ],
-  "agency": "Department of the Interior - Bureau of Land Management",
+  "agency": "Bureau of Land Management (Twin Falls District)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Reached by an unsigned gravel road off U.S. 93. The cab is an enclosed radio building; no source describes visitor entry."
   },
   "staffing": {
     "status": "unknown",
@@ -40,22 +41,68 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Unsigned gravel road off US-93 reaches the summit; a short hike or bike ride from the highway is also possible. The cab is an enclosed radio building."
   },
   "rental": null,
   "events": [
     {
+      "year": 1930,
+      "event": "other",
+      "note": "Idaho Lookouts lists a cabin on the butte in the 1930s; the register does not mention one",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/notch-butte.html"
+    },
+    {
       "year": 1941,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register and firelookout.com both date the cab to 1941",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/notch-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/notch-butte-lookout/",
+        "https://www.firelookout.com/id/notchbutte.html"
+      ]
+    },
+    {
+      "year": 1944,
+      "event": "staffed_first",
+      "note": "Julius Imgard identified as the lookout in a Times-News report reprinted August 24, 1944",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/notch-butte.html"
+    },
+    {
+      "year": 1945,
+      "event": "fire",
+      "note": "July 1945 fire of about 2,000 acres forced one man to leave the grazier's station and lookout tower",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/notch-butte.html"
+    },
+    {
+      "year": 1985,
+      "event": "staffed_last",
+      "note": "Last name on the personnel list: Paul Roberts, 1983-1985",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/notchbutte.html"
+    },
+    {
+      "year": 2000,
+      "event": "modified",
+      "note": "Used for emergencies into the 2000s, then converted to a communications building. The register says into the 2000s; the climbing guide says early 2000s. Year is approximate.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/notch-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/notch-butte-lookout/",
+        "https://www.firelookout.com/id/notchbutte.html",
+        "https://www.idahoaclimbingguide.com/bookupdates/notch-butte/"
+      ]
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 27, 2020",
-      "from": "nhlr"
+      "note": "Registered September 27, 2020 as US 1424, ID 116",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/notch-butte-lookout/"
     }
   ],
   "photos": [
@@ -101,6 +148,16 @@
       "label": "NHLR register entry US 1424 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/id/notch-butte-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Trip report on Notch Butte Lookout (The Roaming Civic)",
+      "url": "https://theroamingcivic.com/2024/07/14/notch-butte-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Notch Butte (IDAHO: A Climbing Guide)",
+      "url": "https://www.idahoaclimbingguide.com/bookupdates/notch-butte/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
@@ -152,10 +209,36 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:notch-butte",
+      "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-notch-butte",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

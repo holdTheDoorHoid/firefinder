@@ -14,11 +14,11 @@
   },
   "elevation_m": 2684.1,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": "Two-story modified L-4, about 14 x 14 ft, with a fold-up catwalk",
-  "height_m": null,
+  "height_m": 4.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -104,6 +104,13 @@
       "note": "Registered on the National Historic Lookout Register, December 1, 2002",
       "from": "research",
       "source_url": "http://nhlr.org/lookouts/us/or/mount-scott-lookout/"
+    },
+    {
+      "year": 2010,
+      "event": "assessed",
+      "note": "SMS visited with the Park historian to assess the building; no time was left for work.",
+      "from": "sand_mountain",
+      "source_url": "https://sandmountain.org/projects/the-watchman-lookout/"
     }
   ],
   "photos": [
@@ -183,8 +190,23 @@
       "kind": "association"
     },
     {
+      "label": "Sand Mountain Society: work on Mount Scott Lookout",
+      "url": "https://sandmountain.org/projects/the-watchman-lookout/",
+      "kind": "association"
+    },
+    {
       "label": "Mt. Scott on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/mtscott.html",
+      "kind": "site"
+    },
+    {
+      "label": "Mount Scott on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/mount-scott.html",
+      "kind": "site"
+    },
+    {
+      "label": "Mt. Scott on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/oregons-standing-lookouts/",
       "kind": "site"
     },
     {
@@ -202,6 +224,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -229,8 +252,31 @@
       ]
     },
     {
+      "source": "sand_mountain",
+      "key": "sand_mountain:or:mount-scott",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/741978746",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:mount-scott",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:mt-scott",
       "fields": [
         "links"
       ]

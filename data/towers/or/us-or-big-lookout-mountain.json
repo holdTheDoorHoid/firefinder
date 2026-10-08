@@ -1,6 +1,7 @@
 {
   "id": "us-or-big-lookout-mountain",
   "name": "Big Lookout Mountain",
+  "summary": "BLM lookout in Baker County: a 1957 temporary station, then a 1963 cab on a 10-ft concrete base; firelookout.com says the cab is available for emergencies.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,7 +17,7 @@
   "material": "wood",
   "material_from": "firelookout_com",
   "roles": [],
-  "design": null,
+  "design": "BLM design cabin similar to the USFS R6 Flat Top, on a 10-ft concrete base, with a wooden live-in cab (1963)",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -31,8 +32,8 @@
   "agency": "Bureau of Land Management",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Bureau of Land Management land. Firelookout.com says the cab is available for emergencies. No public visiting rules were found."
   },
   "staffing": {
     "status": "unknown",
@@ -46,16 +47,56 @@
   "rental": null,
   "events": [
     {
+      "year": 1957,
+      "event": "other",
+      "note": "Temporary lookout placed on the mountain; the NHLR says temporary lookouts stayed until the permanent structure was built.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/big-lookout-mountain/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/big-lookout-mountain/",
+        "https://oregonlookouts.weebly.com/big-lookout-mountain.html"
+      ]
+    },
+    {
+      "year": 1958,
+      "event": "staffed_first",
+      "note": "A June 1958 newspaper item says the BLM would man the new station starting July 1.",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/big-lookout-mountain.html"
+    },
+    {
+      "year": 1962,
+      "event": "other",
+      "note": "BLM was considering an access road into the area and a proposed station that would include a power line.",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/big-lookout-mountain.html"
+    },
+    {
       "year": 1963,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Present BLM design cab on a 10-ft concrete base with a wooden live-in cab.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/big-lookout-mountain/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/big-lookout-mountain/",
+        "https://oregonlookouts.weebly.com/big-lookout-mountain.html",
+        "https://www.firelookout.com/or/biglookout.html",
+        "http://peakbagging.com/ORLookoutPhotos/LookoutMtn.html"
+      ]
+    },
+    {
+      "year": 1975,
+      "event": "staffed",
+      "note": "Two members of the summer BLM fire crew took shifts manning the tower, per a 1975 newspaper item.",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/big-lookout-mountain.html"
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 22, 2022",
-      "from": "nhlr"
+      "note": "Registered June 22, 2022; nominated by Brad Eells.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/big-lookout-mountain/"
     }
   ],
   "photos": [
@@ -91,6 +132,11 @@
       "kind": "register"
     },
     {
+      "label": "Big Lookout Mountain Lookout, Oregon (peakbagging.com)",
+      "url": "http://peakbagging.com/ORLookoutPhotos/LookoutMtn.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -103,6 +149,11 @@
     {
       "label": "Big Lookout Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/biglookout.html",
+      "kind": "site"
+    },
+    {
+      "label": "Big Lookout Mountain on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/oregons-standing-lookouts/",
       "kind": "site"
     }
   ],
@@ -142,6 +193,32 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:big-lookout-mountain",
+      "fields": []
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:big-lookout-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-big-lookout-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -155,13 +232,23 @@
         {
           "source": "firelookout_com",
           "value": 1930
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1963
         }
       ],
       "distance_m": null,
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

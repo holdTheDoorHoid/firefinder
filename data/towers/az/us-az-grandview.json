@@ -1,6 +1,7 @@
 {
   "id": "us-az-grandview",
   "name": "Grandview Lookout",
+  "summary": "A 1936 Forest Service steel Aermotor fire lookout on the Kaibab near the South Rim, listed on the NRHP in 1988 and the NHLR in 2001, shown as standing; current access unconfirmed.",
   "other_names": [],
   "country": "US",
   "region": "AZ",
@@ -13,11 +14,11 @@
   },
   "elevation_m": 2294.8,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor steel tower with a 7 by 7 foot metal cab; historic lookout residence on the site",
+  "height_m": 24.7,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -41,15 +42,37 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "The Arizona Trail passes the tower"
   },
   "rental": null,
   "events": [
     {
+      "year": 1909,
+      "event": "other",
+      "note": "Site was one of the original tower sites selected when the early Grand Canyon National Monument was planned",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/grandview-lookout/"
+    },
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "Forest Service built the 81-foot Aermotor tower with a 7 by 7 foot metal cab, after an earlier platform tower stood on the site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/grandview-lookout/"
+    },
+    {
+      "year": 1988,
+      "event": "nrhp_listed",
+      "note": "Placed on the National Register of Historic Places January 28, 1988",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Grandview_Lookout_Tower_and_Cabin"
+    },
+    {
       "year": 2001,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 1, 2001",
-      "from": "nhlr"
+      "note": "Registered with the National Historic Lookout Register May 1, 2001; nominated by Dave Lorenz, director of the AZ/NM FFLA",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/grandview-lookout/"
     }
   ],
   "photos": [
@@ -71,6 +94,11 @@
       "label": "NHLR register entry US 385 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/az/grandview-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Grandview Lookout Tower and Cabin (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Grandview_Lookout_Tower_and_Cabin",
+      "kind": "reference"
     },
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
@@ -97,6 +125,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -121,10 +150,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-grandview",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

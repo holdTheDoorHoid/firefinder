@@ -49,6 +49,11 @@
       "label": "Mansfield Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/mansfieldmtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Mansfield Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/mansfield-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +75,38 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:mansfield-mountain",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 45.8121,
+            "lon": -123.12287
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 45.8195,
+            "lon": -123.117
+          }
+        }
+      ],
+      "distance_m": 940,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

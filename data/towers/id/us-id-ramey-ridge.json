@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "ID",
-  "county": null,
+  "county": "Gem",
   "location": {
     "lat": 45.24117,
     "lon": -115.25414,
@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Payette National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +44,16 @@
       "label": "Ramey Ridge Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/west-central/ramey-ridge-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Ramey Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/ramey-ridge.html",
+      "kind": "site"
+    },
+    {
+      "label": "firelookout.com page (Rex Kamstra)",
+      "url": "http://www.firelookout.com/id/ramey.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -54,6 +64,16 @@
         "name",
         "location",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:ramey-ridge",
+      "fields": [
+        "county",
+        "agency",
+        "ownership",
         "links"
       ]
     }

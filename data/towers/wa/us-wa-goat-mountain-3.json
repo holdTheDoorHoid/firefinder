@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Goat Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/goatmtn128b.html",
       "kind": "site"
+    },
+    {
+      "label": "Goat Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/goat-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +73,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:wa:goat-mtn:47.6149:-121.5485",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:goat-mountain",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

@@ -6,10 +6,10 @@
   "region": "CA",
   "county": "Riverside",
   "location": {
-    "lat": 33.899807,
-    "lon": -116.868757,
+    "lat": 33.8444,
+    "lon": -116.82543,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 1534.7,
   "kind": "tower",
@@ -88,6 +88,11 @@
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
+    },
+    {
+      "label": "Ranger Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/ranger-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -96,7 +101,6 @@
       "key": "fflos:US 687",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "material",
@@ -112,9 +116,17 @@
       "source": "ffla",
       "key": "ffla:ca:ranger-peak:33.8444:-116.8254",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:ranger-peak",
+      "fields": [
         "links"
       ]
     }
@@ -124,17 +136,17 @@
       "field": "location",
       "values": [
         {
-          "source": "fflos",
-          "value": {
-            "lat": 33.899807,
-            "lon": -116.868757
-          }
-        },
-        {
           "source": "ffla",
           "value": {
             "lat": 33.8444,
             "lon": -116.82543
+          }
+        },
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 33.899807,
+            "lon": -116.868757
           }
         }
       ],

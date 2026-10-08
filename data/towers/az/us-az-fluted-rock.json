@@ -13,8 +13,8 @@
   },
   "elevation_m": 2521.3,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -76,6 +76,11 @@
       "label": "FFLA Arizona lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/az/",
       "kind": "association"
+    },
+    {
+      "label": "Fluted Rock on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/fluted-rock.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -87,6 +92,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -103,6 +109,13 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:az:fluted-rock",
+      "fields": [
         "links"
       ]
     }

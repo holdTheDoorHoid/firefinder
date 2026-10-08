@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Wallowa-Whitman National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Marion Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/marionpoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Marion Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/marion-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -67,6 +72,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:marion-point:45.0907:-118.2183",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:marion-point",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

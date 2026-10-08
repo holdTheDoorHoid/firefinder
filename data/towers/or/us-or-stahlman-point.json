@@ -13,8 +13,8 @@
   },
   "elevation_m": 928.1,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -110,6 +110,11 @@
       "label": "Stahlman Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/stahlmanpoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Stahlman Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/stahlman-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -121,6 +126,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -142,6 +148,13 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:or:stahlman-point:44.7106:-122.1342",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:stahlman-point",
       "fields": [
         "links"
       ]

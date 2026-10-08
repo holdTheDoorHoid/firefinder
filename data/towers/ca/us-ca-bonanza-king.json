@@ -1,6 +1,7 @@
 {
   "id": "us-ca-bonanza-king",
   "name": "Bonanza King Lookout",
+  "summary": "Trinity County summit lookout built to a 1934 Region 5 Plan 4AR design, with a WWII aircraft-warning cabin, fire-season staffing in the 1950s-60s, and good condition in 2009.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -13,13 +14,13 @@
   },
   "elevation_m": 2120.2,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [
     "aws"
   ],
-  "design": null,
-  "height_m": null,
+  "design": "California Region 5 Plan 4AR wooden lookout house on a concrete and rock foundation; an Aircraft Warning Service residence cabin was added in WWII",
+  "height_m": 291.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -30,11 +31,11 @@
       "url": "http://nhlr.org/lookouts/us/ca/bonanza-king-lookout/"
     }
   ],
-  "agency": "US Forest Service - Shasta-Trinity National Forest",
+  "agency": "U.S. Forest Service, Shasta-Trinity National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Summit road about ten miles in from Highway 3; 4WD needed in the wet season and on the last half mile (2009 report). A road guide says 4WD is required and the road closes October 30 to May 1."
   },
   "staffing": {
     "status": "unknown",
@@ -42,22 +43,73 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "About ten miles in from Highway 3; 2WD for most of the road per the 2009 visit report; a road guide says 4WD is required"
   },
   "rental": null,
   "events": [
     {
+      "year": 1924,
+      "event": "other",
+      "note": "Newspaper refers to a Bonanza King lookout station; telephone lines built to it",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/bonanza-king.html"
+    },
+    {
+      "year": 1929,
+      "event": "other",
+      "note": "Lookout injured in a fall while searching for a fire on July 24; died in early August",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/bonanza-king.html"
+    },
+    {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register date for the current California Region 5 Plan 4AR lookout house",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/bonanza-king-lookout/"
+    },
+    {
+      "year": 1941,
+      "event": "fire",
+      "note": "Lookout Harry Churchman spotted a smoke plume 78 miles from his station and placed it on the Bogard District of the Lassen forest",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/bonanza-king.html"
+    },
+    {
+      "year": 1953,
+      "event": "assessed",
+      "note": "Coast and Geodetic Survey station description of the lookout house: wooden, 16 ft square, about 20 ft tall, on a concrete and rock foundation",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/bonanza-king.html"
+    },
+    {
+      "year": 1954,
+      "event": "staffed",
+      "note": "June Osborne opened the lookout May 20; Jeannie Dickson filling the post by mid-June",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/bonanza-king.html"
+    },
+    {
+      "year": 1962,
+      "event": "staffed",
+      "note": "Betty Carlson said she had been a lookout every fire season since 1962 (1987 article)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/bonanza-king.html"
+    },
+    {
+      "year": 2009,
+      "event": "assessed",
+      "note": "Visit report: lookout in good shape, fresh deck paint, support buildings need paint, encroaching electronic sites",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/bonanza-king-lookout/"
     },
     {
       "year": 2015,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 3, 2015",
-      "from": "nhlr"
+      "note": "Registered January 3, 2015 as US 1056, CA 101; nominated by Mark Basque",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/bonanza-king-lookout/"
     }
   ],
   "photos": [
@@ -141,6 +193,11 @@
       "kind": "register"
     },
     {
+      "label": "Bonanza King (Dangerous Roads)",
+      "url": "https://www.dangerousroads.org/north-america/usa/9035-bonanza-king.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -165,6 +222,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "roles",
         "registers",
         "agency",
@@ -190,10 +248,59 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:bonanza-king",
+      "fields": [
+        "height_m"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-bonanza-king",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 41.080095,
+            "lon": -122.624459
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 41.09487,
+            "lon": -122.63002
+          }
+        }
+      ],
+      "distance_m": 1708,
+      "note": null
+    }
+  ],
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

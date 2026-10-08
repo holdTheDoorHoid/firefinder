@@ -32,7 +32,7 @@
     }
   ],
   "agency": "Minnesota Forest History Center",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -93,6 +93,11 @@
       "label": "FFLA Minnesota lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mn/",
       "kind": "association"
+    },
+    {
+      "label": "Boulder Hill (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/boulder-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -122,9 +127,37 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mn:boulder-hill",
+      "fields": [
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "standing"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "central_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

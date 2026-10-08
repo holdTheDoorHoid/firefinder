@@ -13,11 +13,11 @@
   },
   "elevation_m": null,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 16.2,
   "status": "standing",
   "status_note": null,
   "registers": [],
@@ -49,6 +49,11 @@
       "label": "Woodhull Mountain Fire Tower on andyarthur.org (Andy Arthur)",
       "url": "https://andyarthur.org/p/138058",
       "kind": "site"
+    },
+    {
+      "label": "Woodhull Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/woodhull-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,6 +75,16 @@
       "fields": [
         "agency",
         "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:woodhull-mountain",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
         "links"
       ]
     }

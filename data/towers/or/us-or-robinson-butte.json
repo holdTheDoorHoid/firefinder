@@ -99,6 +99,16 @@
       "label": "Robinson Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/robinsonbutte.html",
       "kind": "site"
+    },
+    {
+      "label": "Robinson Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/robinson-butte.html",
+      "kind": "site"
+    },
+    {
+      "label": "Robinson Butte on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/oregons-standing-lookouts/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -139,9 +149,39 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:robinson-butte",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:robinson-butte",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "firelookout_com",
+          "value": 1933
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1974
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

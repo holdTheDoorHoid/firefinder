@@ -1,6 +1,7 @@
 {
   "id": "us-az-ps-knoll",
   "name": "PS Knoll Lookout",
+  "summary": "CCC-era fire tower and historic cabin in Arizona's Apache-Sitgreaves National Forest, built 1933, NRHP-listed 1988; standing, staffing and visiting status not found.",
   "other_names": [
     "P S Knoll Lookout Tower"
   ],
@@ -15,11 +16,11 @@
   },
   "elevation_m": 2452.1,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor fire tower with a 7x7 ft cab (NHLR model MC-39), with a historic cabin on a nine-acre site",
+  "height_m": 14.0,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -36,11 +37,11 @@
       "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002451"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Alpine Ranger District, Apache-Sitgreaves National Forests)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "A hiking site says forest roads provide access but notes its location is approximate and not a guarantee of access. No current visit report or closure notice was found in the sources read."
   },
   "staffing": {
     "status": "unknown",
@@ -49,21 +50,50 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Check with the Alpine Ranger District before visiting; no staffing or climbing status found."
   },
   "rental": null,
   "events": [
     {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR gives 1933 as build year and says the CCC constructed the tower in the mid-1930s; Wikipedia says the Aermotor Windmill Company constructed it in 1933",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/ps-knoll-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/ps-knoll-lookout/",
+        "https://en.wikipedia.org/wiki/PS_Knoll_Lookout_Complex",
+        "https://npgallery.nps.gov/AssetDetail/NRIS/87002451"
+      ]
+    },
+    {
+      "year": 1939,
+      "event": "other",
+      "note": "NRHP metadata lists 1939 as a significant year; the nomination PDF has not been digitized, so the reason is unknown",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002451",
+      "source_urls": [
+        "https://npgallery.nps.gov/AssetDetail/NRIS/87002451",
+        "https://npgallery.nps.gov/GetAsset/17fc0cdc-f2a4-4279-b116-fbf47c346c5e/"
+      ]
+    },
+    {
+      "year": 1988,
+      "event": "nrhp_listed",
+      "note": "Added to the National Register of Historic Places (ref. 87002451) on January 28, 1988",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/PS_Knoll_Lookout_Complex",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/PS_Knoll_Lookout_Complex",
+        "https://npgallery.nps.gov/AssetDetail/NRIS/87002451"
+      ]
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 2, 2009",
-      "from": "nhlr"
+      "note": "Registered September 2, 2009 as US 829, AZ 76; nominated by Dave Lorenz",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/ps-knoll-lookout/"
     }
   ],
   "photos": [
@@ -85,6 +115,21 @@
       "label": "NHLR register entry US 829 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/az/ps-knoll-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "PS Knoll Lookout Complex, National Register Information System asset detail (NRIS 87002451) (National Park Service (NPGallery))",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002451",
+      "kind": "reference"
+    },
+    {
+      "label": "PS Knoll Lookout Complex, National Register nomination file (National Park Service (NPGallery))",
+      "url": "https://npgallery.nps.gov/GetAsset/17fc0cdc-f2a4-4279-b116-fbf47c346c5e/",
+      "kind": "reference"
+    },
+    {
+      "label": "PS Knoll Lookout Complex (Nevada Hiking)",
+      "url": "https://nevadahiking.org/loc/ps-knoll-lookout-complex/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
@@ -116,6 +161,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -141,10 +187,32 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-ps-knoll",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Flathead National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Bunker Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/bunkerpoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Bunker Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/bunker-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +73,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:bunker-point:47.8254:-113.4987",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:bunker-point",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

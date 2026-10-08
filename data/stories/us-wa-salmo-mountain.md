@@ -1,0 +1,13 @@
+Salmo Mountain rises in the Colville National Forest, in the northeastern corner of Washington, a few miles from the Idaho and Canadian borders.[^1] The site was first developed in 1927 with a pole tower and platform on the south summit.[^2] TrailChick dates that first tower only to the late 1920s.[^3] A log cabin followed on the south summit in 1929, and a 30-foot L-4 cab went up around 1933.[^2][^3] The present R-6 cab, on a 10-foot treated timber tower, was built in 1964.[^1][^2][^3] A 2018 study gives 1965 for the same cab, so that date is not fully settled.[^4]
+
+The lookout was last staffed in 1976.[^1] In 2007 it received lightning protection, roof repairs, railing work and paint.[^3] A grant to complete repairs came in 2016, and in 2017 the Passport in Time program joined Forest Service staff and members of the FFLA on further restoration work.[^3] In 2018 the lookout suffered serious vandalism, with more than $10,000 in damage.[^3] A Forest Service project covering access road work and refurbishment of the lookout received its decision on February 17, 2022, and the project page lists it as completed.[^5]
+
+Hopes have run toward a rental. TrailChick reports that the lookout was hoped to become a rental, possibly with volunteer lookout duty.[^3] A 2018 study says the tower recently underwent rehabilitation aimed at a recreation rental.[^4] We found no source confirming that a rental has opened.
+
+Today the tower can be reached by road. TrailChick says a driver can reach the summit on a forest road.[^3] The 2018 study places the tower on the border of the Salmo-Priest Wilderness.[^4] A 2018 visit report on the register says the road suits a pickup or a car with a little extra clearance.[^1] TrailChick, writing after its own 2018 visit, says the lookout's future remains uncertain.[^3] We found no source saying whether the cab is open to visitors, so check with the Forest Service before you go.
+
+[^1]: Salmo Mountain Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/wa/salmo-mountain-lookout/ (accessed 2026-10-08).
+[^2]: Salmo Mtn. Fire Lookout Tower, Fire Lookout, https://www.firelookout.com/wa/salmo.html (accessed 2026-10-08).
+[^3]: Salmo Mountain - TrailChick, TrailChick, https://trailchick.com/wa-state-fire-lookouts/salmo-mountain-lookout/ (accessed 2026-10-08).
+[^4]: A View to Wilderness: The Salmo Lookout Tower and the Salmo-Priest Wilderness Area, tDAR (Digital Archaeological Record), https://core.tdar.org/document/444080/a-view-to-wilderness-the-salmo-lookout-tower-and-the-salmo-priest-wilderness-area (accessed 2026-10-08).
+[^5]: Salmo Lookout, project #61362, USDA Forest Service Colville National Forest, https://www.fs.usda.gov/r06/colville/projects/61362 (accessed 2026-10-08).

@@ -13,10 +13,10 @@
   },
   "elevation_m": 1932.4,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "D-6",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -29,7 +29,7 @@
     }
   ],
   "agency": "Klamath FPA",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -81,6 +81,11 @@
       "label": "Old Baldy on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/oldbaldy.html",
       "kind": "site"
+    },
+    {
+      "label": "Old Baldy on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/old-baldy.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -113,6 +118,16 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:old-baldy:42.2478:-122.2887",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:old-baldy",
+      "fields": [
+        "material",
+        "design",
+        "ownership",
         "links"
       ]
     }

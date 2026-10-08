@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "State Conservation Department",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +44,11 @@
       "label": "FFLA New York lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ny/",
       "kind": "association"
+    },
+    {
+      "label": "Boreas Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/boreas-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +61,15 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:boreas-mountain",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

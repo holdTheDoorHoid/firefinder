@@ -13,8 +13,8 @@
   },
   "elevation_m": 1980.3,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [
     "aws"
   ],
@@ -48,6 +48,17 @@
   "rental": null,
   "events": [
     {
+      "year": 1989,
+      "event": "relocated",
+      "note": "The long-abandoned grange-hall style L-4 cabin was taken apart and flown out to be rebuilt as the Sand Mountain Lookout.",
+      "from": "sand_mountain",
+      "source_url": "https://sandmountain.org/projects/sand-mountain-lookout/",
+      "source_urls": [
+        "https://sandmountain.org/projects/sand-mountain-lookout/",
+        "https://sandmountain.org/projects/pearsoll-peak/"
+      ]
+    },
+    {
       "year": 2011,
       "event": "fflos_registered",
       "note": "Date registered per FFLOS detail page: April 22, 2011",
@@ -80,8 +91,18 @@
       "kind": "association"
     },
     {
+      "label": "Sand Mountain Society: work on Whisky Peak Lookout",
+      "url": "https://sandmountain.org/projects/pearsoll-peak/",
+      "kind": "association"
+    },
+    {
       "label": "Whisky Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/whiskypeak.html",
+      "kind": "site"
+    },
+    {
+      "label": "Whiskey Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/whiskey-peak.html",
       "kind": "site"
     }
   ],
@@ -94,6 +115,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "roles",
         "registers",
         "agency",
@@ -116,6 +138,21 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:or:whisky-peak:42.0204:-123.2615",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "sand_mountain",
+      "key": "sand_mountain:or:whisky-peak",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:whiskey-peak",
       "fields": [
         "links"
       ]

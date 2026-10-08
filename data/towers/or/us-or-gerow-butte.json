@@ -1,6 +1,7 @@
 {
   "id": "us-or-gerow-butte",
   "name": "Gerow Butte Lookout",
+  "summary": "Crook County lookout first built in 1934, rebuilt in 1968 or 1969 as a 60-ft timber tower with an R6 cabin; on private land, not open to the public.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "R6 Flat Top cabin atop a 60-ft open timber tower (current structure)",
   "height_m": 18.3,
   "status": "standing",
   "status_note": null,
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/or/gerow-butte-lookout/"
     }
   ],
-  "agency": "Oregon Department of Forestry",
+  "agency": "Oregon Department of Forestry (NHLR lists Ochoco Timber Company as cooperator)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Private land; NHLR says the lookout is not accessible to the public"
   },
   "staffing": {
     "status": "staffed",
@@ -46,16 +47,62 @@
   "rental": null,
   "events": [
     {
+      "year": 1934,
+      "event": "built",
+      "note": "First wooden tower and cabin; a 1934 newspaper gives 66 ft, firelookout.com gives a 50-ft pole tower",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/gerow-butte.html",
+      "source_urls": [
+        "https://oregonlookouts.weebly.com/gerow-butte.html",
+        "https://www.firelookout.com/or/gerowbutte.html",
+        "http://nhlr.org/lookouts/us/or/gerow-butte-lookout/"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "staffed_first",
+      "note": "Gordon McNely and his wife took charge in July 1934; before this the fireman was posted at a shearing plant",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/gerow-butte.html"
+    },
+    {
+      "year": 1953,
+      "event": "staffed",
+      "note": "A teacher's wife and her 12-year-old son manned the station while her husband was at summer school",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/gerow-butte.html"
+    },
+    {
+      "year": 1964,
+      "event": "fire",
+      "note": "Seven fires reported during the season; a season count, not a single fire",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/gerow-butte.html"
+    },
+    {
       "year": 1968,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
     },
     {
+      "year": 1968,
+      "event": "rebuilt",
+      "note": "NHLR dates the replacement tower and cabin to 1968; firelookout.com and the 1969 annual report point to 1969",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/gerow-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/gerow-butte-lookout/",
+        "https://www.firelookout.com/or/gerowbutte.html",
+        "https://oregonlookouts.weebly.com/gerow-butte.html"
+      ]
+    },
+    {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 23, 2022",
-      "from": "nhlr"
+      "note": "Registered June 23, 2022 as US 1616, OR 140",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/gerow-butte-lookout/"
     }
   ],
   "photos": [
@@ -140,6 +187,11 @@
       "label": "Gerow Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/gerowbutte.html",
       "kind": "site"
+    },
+    {
+      "label": "Gerow Butte on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/oregons-standing-lookouts/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -178,10 +230,63 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:gerow-butte",
+      "fields": []
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:gerow-butte",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-gerow-butte",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1968
+        },
+        {
+          "source": "firelookout_com",
+          "value": 1969
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1934
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -13,11 +13,11 @@
   },
   "elevation_m": 1887.3,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "60-ft observation tower with a ranger cabin and garage",
+  "height_m": 24.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -56,6 +56,27 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: September 21, 2004",
       "from": "nhlr"
+    },
+    {
+      "year": 2004,
+      "event": "restored",
+      "note": "Cabin restored in a 2004 PIT volunteer project so it could be used as a recreation rental.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-cc-2004.pdf"
+    },
+    {
+      "year": 2023,
+      "event": "restored",
+      "note": "HistoriCorps volunteers worked on restoring the ranger cabin.",
+      "from": "historicorps_west",
+      "source_url": "https://historicorps.org/alder-ridge-lookout-cabin-ca-2024/"
+    },
+    {
+      "year": 2024,
+      "event": "restored",
+      "note": "HistoriCorps scheduled three volunteer sessions (June 16 to July 5) to finish the cabin's windows, interior finishes, exterior paint and floor boards.",
+      "from": "historicorps_west",
+      "source_url": "https://historicorps.org/alder-ridge-lookout-cabin-ca-2024/"
     }
   ],
   "photos": [
@@ -84,6 +105,16 @@
       "kind": "association"
     },
     {
+      "label": "HistoriCorps: work on Alder Ridge Lookout",
+      "url": "https://historicorps.org/alder-ridge-lookout-cabin-ca-2024/",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Alder Ridge Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-cc-2004.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Alder Ridge Lookout - Forest Lookouts Page",
       "url": "https://californialookouts.weebly.com/alder-ridge.html",
       "kind": "site"
@@ -98,6 +129,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -114,6 +146,30 @@
         "status",
         "registers",
         "links"
+      ]
+    },
+    {
+      "source": "historicorps_west",
+      "key": "historicorps_west:ca:alder-ridge",
+      "fields": [
+        "design",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:alder-ridge",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:alder-ridge",
+      "fields": [
+        "height_m"
       ]
     }
   ],

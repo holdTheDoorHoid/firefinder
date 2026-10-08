@@ -1,7 +1,10 @@
 {
   "id": "us-in-lilly",
   "name": "Lilly Lookout",
-  "other_names": [],
+  "summary": "A 1931 steel tower raised for J.K. Lilly near Nashville, Indiana, later given to Indiana University; sources disagree on whether it was moved and whether it can be climbed.",
+  "other_names": [
+    "J. K. Lilly Tower"
+  ],
   "country": "US",
   "region": "IN",
   "county": "Brown",
@@ -16,8 +19,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "75-foot steel tower with a 7x7 steel cab and wooden steps (register)",
+  "height_m": 22.9,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,8 +34,8 @@
   "agency": "Indiana University Research and Teaching Preserve",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "permission",
+    "note": "Register: access by permission only. Indiana Fire Towers: not publicly accessible. The Outbound says a park tower is open to climb; sources disagree."
   },
   "staffing": {
     "status": "unknown",
@@ -52,10 +55,29 @@
       "from": "nhlr"
     },
     {
+      "year": 1931,
+      "event": "built",
+      "note": "Erected for J.K. Lilly at his expense, per the 1931 newspaper and the 1932 state report; the register gives 1930",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/lilly.html",
+      "source_urls": [
+        "https://easternuslookouts.weebly.com/lilly.html",
+        "https://www.indianafiretowers.com/lilly/"
+      ]
+    },
+    {
+      "year": 1942,
+      "event": "other",
+      "note": "Land donated to Indiana University by the Lilly family",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/in/lilly-lookout/"
+    },
+    {
       "year": 2012,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 9, 2012",
-      "from": "nhlr"
+      "note": "Registered September 9, 2012",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/in/lilly-lookout/"
     }
   ],
   "photos": [
@@ -96,13 +118,23 @@
       "kind": "register"
     },
     {
+      "label": "Climb Lilly Lookout at Brown County State Park (The Outbound)",
+      "url": "https://www.theoutbound.com/indiana/fitness/climb-lilly-lookout-at-brown-county-state-park",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Indiana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/in/",
       "kind": "association"
     },
     {
-      "label": "LILLY (easternuslookouts.weebly.com)",
+      "label": "Lilly (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/lilly.html",
+      "kind": "site"
+    },
+    {
+      "label": "Lilly on Indiana Fire Towers (Mark Armantrout)",
+      "url": "https://www.indianafiretowers.com/lilly/",
       "kind": "site"
     }
   ],
@@ -134,14 +166,41 @@
     },
     {
       "source": "eastern_us_lookouts",
-      "key": "eastern_us_lookouts:ga:lilly",
+      "key": "eastern_us_lookouts:in:lilly",
       "fields": [
         "links"
+      ]
+    },
+    {
+      "source": "indiana_fire_towers",
+      "key": "indiana_fire_towers:in:lilly",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-in-lilly",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

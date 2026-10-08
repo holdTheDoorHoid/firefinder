@@ -1,0 +1,13 @@
+Encino Lookout is a 59-foot Aermotor MC-39 steel tower with a 7-by-7-foot steel cab, standing on Encino Point at about 9,867 feet in Rio Arriba County.[^1][^2][^3] The tower is older than the site it stands on. A 2020 New Mexico review, citing a document by Barbara Zinn, says it was first erected at Skinner Ridge on the Kaibab National Forest in 1929 or 1933, and that it was still standing there in 1941.[^2] The Santa Fe National Forest's own history describes that Skinner Ridge tower as abandoned when the forest moved it in 1948.[^3]
+
+The forest moved the tower to a Santa Fe warehouse in 1948.[^3] It had first been meant for Barillas Peak, but when the Regional Office gave up on Barillas in 1949, it was erected at Encino Point instead.[^3] In November 1949 the L-4 cabin and log cabin from Cerro Valdez were moved to the new site.[^2][^3] The Encino site was constructed in July 1950 as it presently exists.[^1]
+
+After her husband moved to other Forest work in the mid-1970s, Manuelita became the main lookout, staffing Encino until the mid-1980s with Norman Montoya as her relief.[^3] An appendix on life at the lookout in the same history says regular staffing ended in 1983 or 1984, when the lookout was closed, and that Montoya afterward went up by day in fire season, with little manning.[^3] The 2020 review, by contrast, calls Encino the only lookout on the Coyote Ranger District and says it is currently staffed.[^2] I did not find when staffing resumed.
+
+A 1988 thematic review found the Encino complex not eligible for the National Register, because the cabins had been moved and the lookout was younger than 50 at the site.[^2] The register added Encino on August 30, 2015, as US 1111 (NM 37).[^1] The 2020 review notes the complex is now 70 years old and should be re-evaluated.[^2]
+
+The register files Encino under the Lincoln National Forest, while the Santa Fe history and the 2020 review place it on the Santa Fe National Forest's Coyote Ranger District.[^1][^2][^3] I found no public visiting or rental information in these sources. The 2020 review calls it staffed, so treat it as a working tower and do not climb it.
+
+[^1]: Encino Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/nm/encino-lookout/ (accessed 2026-10-08).
+[^2]: New Mexico Lookouts 2020 Year-End Report, firelookout.org, https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf (accessed 2026-10-08).
+[^3]: Fire Lookout History of the Santa Fe National Forest (U.S. Forest Service, April 2017), npshistory.com, https://npshistory.com/publications/usfs/region/3/santa-fe/fire-lookout-history.pdf (accessed 2026-10-08).

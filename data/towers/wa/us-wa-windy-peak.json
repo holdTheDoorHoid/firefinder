@@ -13,8 +13,8 @@
   },
   "elevation_m": 2540.2,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -117,6 +117,16 @@
       "label": "Windy Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/windypeak.html",
       "kind": "site"
+    },
+    {
+      "label": "Windy Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/windy-peak.html",
+      "kind": "site"
+    },
+    {
+      "label": "Windy Peak on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/pasayten_wilderness/windy_peak/lookout_232.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -128,6 +138,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -149,6 +160,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:windy-peak:48.9282:-119.9706",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:windy-peak",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:pasayten-wilderness-windy-peak-lookout-232",
       "fields": [
         "links"
       ]

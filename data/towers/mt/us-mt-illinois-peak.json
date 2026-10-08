@@ -13,16 +13,16 @@
   },
   "elevation_m": null,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 3.7,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Lolo National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -54,6 +54,11 @@
       "label": "Illinois Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/illinois.html",
       "kind": "site"
+    },
+    {
+      "label": "Illinois Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/illinois-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -80,6 +85,18 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:illinois-peak:47.0264:-115.0715",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:illinois-peak",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
+        "agency",
+        "ownership",
         "links"
       ]
     }

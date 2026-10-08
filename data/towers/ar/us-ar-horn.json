@@ -1,6 +1,7 @@
 {
   "id": "us-ar-horn",
   "name": "Horn Lookout Tower",
+  "summary": "1936 110-foot steel lookout on the St. Francis National Forest; passed through three federal agencies before the Forest Service took it in 1954. Current condition unverified.",
   "other_names": [],
   "country": "US",
   "region": "AR",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "110-foot steel tower with a 7 by 7 foot metal cab",
   "height_m": 33.5,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "The register lists the tower but gives no visit report or condition note, and no source read confirms it stands today.",
   "registers": [
     {
       "register": "NHLR",
@@ -28,7 +29,7 @@
       "url": "http://nhlr.org/lookouts/us/ar/horn-lookout-tower/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, St. Francis National Forest",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -46,10 +47,47 @@
   "rental": null,
   "events": [
     {
+      "year": 1936,
+      "event": "built",
+      "note": "Built by the Resettlement Administration",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ar/horn-lookout-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ar/horn-lookout-tower/",
+        "https://centraluslookouts.weebly.com/horn.html"
+      ]
+    },
+    {
+      "year": 1937,
+      "event": "other",
+      "note": "Land transferred to the Farm Security Administration",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ar/horn-lookout-tower/"
+    },
+    {
+      "year": 1938,
+      "event": "other",
+      "note": "Land transferred to the Bureau of Agricultural Economics; the Soil Conservation Service administered the site from 1938",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ar/horn-lookout-tower/"
+    },
+    {
+      "year": 1954,
+      "event": "other",
+      "note": "Site transferred to the U.S. Forest Service",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ar/horn-lookout-tower/"
+    },
+    {
       "year": 1996,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 16, 1996",
-      "from": "nhlr"
+      "note": "Date registered July 16, 1996",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ar/horn-lookout-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ar/horn-lookout-tower/",
+        "https://encyclopediaofarkansas.net/entries/forest-fire-lookouts-7905/"
+      ]
     }
   ],
   "photos": [
@@ -78,7 +116,12 @@
       "kind": "register"
     },
     {
-      "label": "HORN (centraluslookouts.weebly.com)",
+      "label": "Forest Fire Lookouts (Encyclopedia of Arkansas)",
+      "url": "https://encyclopediaofarkansas.net/entries/forest-fire-lookouts-7905/",
+      "kind": "reference"
+    },
+    {
+      "label": "Horn (centraluslookouts.weebly.com)",
       "url": "https://centraluslookouts.weebly.com/horn.html",
       "kind": "site"
     },
@@ -122,10 +165,46 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ar-horn",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-08) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

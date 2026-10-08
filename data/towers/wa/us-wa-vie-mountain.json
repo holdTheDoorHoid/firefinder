@@ -6,15 +6,15 @@
   "region": "WA",
   "county": "Chelan",
   "location": {
-    "lat": 48.14177,
-    "lon": -120.43659,
+    "lat": 48.13997,
+    "lon": -120.42639,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 2223.5,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -81,6 +81,16 @@
       "label": "Vie Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/viemtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Vie Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/vie-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Vie Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/vie_mountain/history_071.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -89,9 +99,9 @@
       "key": "fflos:US 1429",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -104,6 +114,7 @@
       "source": "ffla",
       "key": "ffla:wa:vie-mountain:48.1400:-120.4264",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -116,19 +127,26 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:vie-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-vie-mountain-history-071",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
-        {
-          "source": "fflos",
-          "value": {
-            "lat": 48.14177,
-            "lon": -120.43659
-          }
-        },
         {
           "source": "ffla",
           "value": {
@@ -137,10 +155,10 @@
           }
         },
         {
-          "source": "firelookout_com",
+          "source": "fflos",
           "value": {
-            "lat": 48.13997,
-            "lon": -120.42639
+            "lat": 48.14177,
+            "lon": -120.43659
           }
         }
       ],

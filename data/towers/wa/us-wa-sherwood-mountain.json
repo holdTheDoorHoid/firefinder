@@ -13,8 +13,8 @@
   },
   "elevation_m": 896.7,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -81,6 +81,16 @@
       "label": "Sherwood Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/sherwood.html",
       "kind": "site"
+    },
+    {
+      "label": "Sherwood Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/sherwood-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Sherwood Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/sherwood_mountain/tower_342.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -92,6 +102,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -117,10 +128,24 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:sherwood-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-sherwood-mountain-tower-342",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

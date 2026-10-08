@@ -13,15 +13,15 @@
   },
   "elevation_m": null,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "Aermotor",
   "height_m": null,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "145N-37W-30",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -44,6 +44,11 @@
       "label": "FFLA Minnesota lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mn/",
       "kind": "association"
+    },
+    {
+      "label": "Sugarbush (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/sugarbush.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +61,16 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mn:sugarbush",
+      "fields": [
+        "material",
+        "design",
+        "agency",
         "links"
       ]
     }

@@ -115,6 +115,13 @@
     },
     {
       "year": 2012,
+      "event": "restored",
+      "note": "Brought back into shape by volunteers.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nidmt-2012.pdf"
+    },
+    {
+      "year": 2012,
       "event": "staffed",
       "note": "One of the first three lookouts in the Flathead's volunteer lookout program, with Baptiste and Cyclone.",
       "from": "nwmt_projects",
@@ -214,11 +221,6 @@
       "kind": "register"
     },
     {
-      "label": "Firefighter Mountain (Forest Lookouts (Montana), montanalookouts.weebly.com)",
-      "url": "https://montanalookouts.weebly.com/firefighter-mountain.html",
-      "kind": "reference"
-    },
-    {
       "label": "Flathead National Forest Hikes (Moss Mountain Inn)",
       "url": "https://www.mossmountaininn.com/articles/FlatheadNationalForestHikes.html",
       "kind": "reference"
@@ -234,8 +236,18 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Firefighter Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nidmt-2012.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Firefighter Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/firefightermtn.html",
+      "kind": "site"
+    },
+    {
+      "label": "Firefighter Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/firefighter-mountain.html",
       "kind": "site"
     },
     {
@@ -285,7 +297,14 @@
       "source": "nwmt_projects",
       "key": "nwmt_projects:mt:firefighter",
       "fields": [
-        "height_m",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:mt:firefighter",
+      "fields": [
         "events",
         "links"
       ]
@@ -294,6 +313,14 @@
       "source": "osm",
       "key": "osm:way/1227260192",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:firefighter-mountain",
+      "fields": [
+        "height_m",
         "links"
       ]
     },

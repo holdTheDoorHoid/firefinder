@@ -29,7 +29,7 @@
     }
   ],
   "agency": "Lincoln FPA",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -93,6 +93,11 @@
       "label": "Hilltop on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/hilltop.html",
       "kind": "site"
+    },
+    {
+      "label": "Hilltop on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/hilltop.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -128,9 +133,39 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:hilltop",
+      "fields": [
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 44.53662,
+            "lon": -123.79025
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 44.5361,
+            "lon": -123.7985
+          }
+        }
+      ],
+      "distance_m": 656,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

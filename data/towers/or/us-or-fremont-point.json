@@ -13,11 +13,11 @@
   },
   "elevation_m": 2174.4,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 21.9,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -93,6 +93,11 @@
       "label": "Fremont Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/fremontpoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Fremont Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/fremont-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -126,6 +131,16 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:fremont-point:42.8657:-120.8339",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:fremont-point",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
         "links"
       ]
     }

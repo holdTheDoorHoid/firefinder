@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "MT",
-  "county": null,
+  "county": "Glacier",
   "location": {
     "lat": 48.66771,
     "lon": -113.44546,
@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Glacier National Park",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +44,11 @@
       "label": "Curly Bear on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/curlybear.html",
       "kind": "site"
+    },
+    {
+      "label": "Curly Bear on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/curly-bear.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,9 +61,41 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:curly-bear",
+      "fields": [
+        "county",
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "firelookout_com",
+          "value": {
+            "lat": 48.66771,
+            "lon": -113.44546
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 48.6618,
+            "lon": -113.4498
+          }
+        }
+      ],
+      "distance_m": 730,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

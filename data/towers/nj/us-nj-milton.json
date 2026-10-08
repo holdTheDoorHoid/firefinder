@@ -14,8 +14,8 @@
   },
   "elevation_m": 408.7,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": "80-ft International Derrick steel tower with 7'x7' metal cab",
   "height_m": 24.0,
@@ -63,6 +63,13 @@
       "note": "Registered March 3, 2004 as US 563, NJ 16",
       "from": "research",
       "source_url": "http://nhlr.org/lookouts/us/nj/milton-station-fire-tower/"
+    },
+    {
+      "year": 2020,
+      "event": "staffed",
+      "note": "Milton tower, out of service since Sandy cut its power and phone in 2012, was returned to service and staffed again in 2020.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nj-2020.pdf"
     }
   ],
   "photos": [
@@ -115,12 +122,17 @@
       "kind": "reference"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Milton Station Fire Tower",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nj-2020.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Milton Station (Wikipedia (List of New Jersey Forest Fire Service fire towers))",
       "url": "https://en.wikipedia.org/wiki/List_of_New_Jersey_Forest_Fire_Service_fire_towers",
       "kind": "site"
     },
     {
-      "label": "MILTON (easternuslookouts.weebly.com)",
+      "label": "Milton (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/milton.html",
       "kind": "site"
     },
@@ -140,6 +152,7 @@
         "county",
         "elevation_m",
         "kind",
+        "material",
         "status",
         "registers",
         "agency",
@@ -161,6 +174,14 @@
       "source": "eastern_us_lookouts",
       "key": "eastern_us_lookouts:nj:milton",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:nj:milton",
+      "fields": [
+        "events",
         "links"
       ]
     },

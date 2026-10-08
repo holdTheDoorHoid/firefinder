@@ -17,7 +17,7 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 12.2,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -28,8 +28,8 @@
       "url": "http://firetower.org/lookouts/us/me/burnt-mountain-tower-site/"
     }
   ],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Baxter State Park",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -63,6 +63,11 @@
       "label": "FFLA Maine lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/me/",
       "kind": "association"
+    },
+    {
+      "label": "Burnt Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/burnt-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -85,6 +90,16 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:me:burnt-mountain",
+      "fields": [
+        "height_m",
+        "agency",
+        "ownership",
         "links"
       ]
     }

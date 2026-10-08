@@ -13,11 +13,11 @@
   },
   "elevation_m": 2205.2,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 15.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -78,6 +78,11 @@
       "kind": "association"
     },
     {
+      "label": "Deer Springs on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/deer-springs.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 359288118",
       "url": "https://www.openstreetmap.org/node/359288118",
       "kind": "osm"
@@ -114,6 +119,16 @@
       "source": "osm",
       "key": "osm:node/359288118",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:az:deer-springs",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
         "links"
       ]
     }

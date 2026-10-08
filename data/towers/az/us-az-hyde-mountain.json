@@ -17,8 +17,8 @@
   },
   "elevation_m": 2178.4,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": "L-5 groundhouse per NHLR; NRHP record lists the Civilian Conservation Corps as architect",
   "height_m": null,
@@ -134,11 +134,6 @@
       "kind": "reference"
     },
     {
-      "label": "Hyde Mountain (Forest Lookouts (westlookouts.weebly.com))",
-      "url": "https://westlookouts.weebly.com/hyde-mountain.html",
-      "kind": "reference"
-    },
-    {
       "label": "4. Hyde Mountain (trail guide PDF) (highlandscenter.org)",
       "url": "https://highlandscenter.org/wp-content/uploads/2026/03/04.-Hyde-Mtn.pdf",
       "kind": "reference"
@@ -147,6 +142,11 @@
       "label": "FFLA Arizona lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/az/",
       "kind": "association"
+    },
+    {
+      "label": "Hyde Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/hyde-mountain.html",
+      "kind": "site"
     },
     {
       "label": "Wikidata item Q86927159",
@@ -168,6 +168,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -198,6 +199,13 @@
     {
       "source": "osm",
       "key": "osm:node/359286418",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:az:hyde-mountain",
       "fields": [
         "links"
       ]

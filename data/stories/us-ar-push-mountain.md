@@ -1,0 +1,11 @@
+Push Mountain Firetower stands in Baxter County, Arkansas, inside the Ozark–St. Francis National Forest.[^1] It was erected in 1929 on what was then the Ozark National Forest.[^1] The 60-foot tower is an Aermotor LX-25 steel structure, and it carries a 7-by-7 metal cab.[^1][^2] Its climb is unusual. The steps between the landings are ladders rather than stairs, a design that falls between the older exterior ladders and the interior stairs that came later.[^1]
+
+For much of the 1930s and early 1940s the tower had resident keepers, and newspaper notices from The Baxter Bulletin, copied out on a forest-lookout website, name them.[^2] In January 1934 C. W. Pemberton and his family moved to the tower to serve as its keeper for the coming year.[^2] Carba Pemberton, who had worked the lookout for a long time, resigned in July 1936.[^2] From 1938 to 1943 the notices name W. C. Norman as keeper, and his family went back and forth between the tower and their house in town.[^2] The sources do not say when the tower was last staffed, and none of them names a particular fire it spotted.
+
+The tower was registered on the National Historic Lookout Register on April 25, 2003, after a nomination by Michael A. Pfeiffer and Sue Foster.[^1] The forest-lookout website reports it as standing in 2023, based on Google Earth imagery.[^2] I found no record of it being moved, rebuilt or burned.
+
+The U.S. Forest Service administers the tower, with the Sylamore Ranger District as a cooperator.[^1] Arkansas counted more than 120 fire towers at its peak, and by 2023 forty-six were still standing.[^3] None of the sources says whether Push Mountain is open to visitors or safe to climb, so check with the Sylamore Ranger District before going near it.
+
+[^1]: Push Mountain Firetower, National Historic Lookout Register, http://nhlr.org/lookouts/us/ar/push-mountain-firetower/ (accessed 2026-10-08).
+[^2]: Push Mountain - FOREST LOOKOUTS, Forest Lookouts site (centraluslookouts.weebly.com), https://centraluslookouts.weebly.com/push-mountain.html (accessed 2026-10-08).
+[^3]: Forest Fire Lookouts, Encyclopedia of Arkansas, https://encyclopediaofarkansas.net/entries/forest-fire-lookouts-7905/ (accessed 2026-10-08).

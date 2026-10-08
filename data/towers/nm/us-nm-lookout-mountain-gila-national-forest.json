@@ -1,8 +1,10 @@
 {
   "id": "us-nm-lookout-mountain-gila-national-forest",
   "name": "Lookout Mountain Lookout (Gila National Forest)",
+  "summary": "A 30-ft Aermotor MC-24 tower in the Gila National Forest, dated 1933 by Forest Service sources; its steel cab was replaced in 1965.",
   "other_names": [
-    "Lookout Mountain"
+    "Lookout Mountain",
+    "Lookout Mountain (Gila)"
   ],
   "country": "US",
   "region": "NM",
@@ -15,11 +17,11 @@
   },
   "elevation_m": 2703.6,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "30-ft Aermotor MC-24 steel tower; steel CL-100 series cab replaced the original 12x12 wooden cab in 1965",
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -30,23 +32,34 @@
       "url": "http://nhlr.org/lookouts/us/nm/lookout-mountain-lookout-gila-national-forest/"
     }
   ],
-  "agency": "US Forest Service - Gila National Forest",
+  "agency": "U.S. Forest Service, Gila National Forest (Black Range Ranger District)",
   "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2020"
   },
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Limited parking on Forest Road 226A serves the Continental Divide National Scenic Trail (Trail #74)."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "30-ft Aermotor MC-24 steel tower constructed with a 12x12 wooden cab (Forest Service account, 2020 review); the register gives 1965",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/lookout-mountain-gila.html",
+      "source_urls": [
+        "https://westlookouts.weebly.com/lookout-mountain-gila.html",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+      ]
+    },
     {
       "year": 1965,
       "event": "built",
@@ -54,10 +67,43 @@
       "from": "nhlr"
     },
     {
+      "year": 1965,
+      "event": "other",
+      "note": "Register says the lookout was constructed in 1965 on the existing Aermotor tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/lookout-mountain-lookout-gila-national-forest/"
+    },
+    {
+      "year": 1965,
+      "event": "replaced",
+      "note": "Original observation cab replaced with a steel CL-100-series cab; upper flight of stairs modified",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/lookout-mountain-gila.html",
+      "source_urls": [
+        "https://westlookouts.weebly.com/lookout-mountain-gila.html",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+      ]
+    },
+    {
+      "year": 1988,
+      "event": "assessed",
+      "note": "Found not eligible in the 1988 thematic National Register review: loss of integrity of original design",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
+      "year": 2020,
+      "event": "staffed",
+      "note": "2020 review: actively staffed",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 7, 2022",
-      "from": "nhlr"
+      "note": "US 1651, NM 50, registered July 7, 2022",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/lookout-mountain-lookout-gila-national-forest/"
     }
   ],
   "photos": [
@@ -93,8 +139,18 @@
       "kind": "register"
     },
     {
+      "label": "Lookout Mountain CDNST Trailhead (Gila National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r03/gila/recreation/lookout-mountain-cdnst-trailhead",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Lookout Mountain Lookout (Gila National Forest)",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf",
       "kind": "association"
     },
     {
@@ -136,15 +192,68 @@
       ]
     },
     {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:nm:lookout-mountain-gila-national-forest",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/3454648900",
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:nm:lookout-mountain-gila",
+      "fields": [
+        "material",
+        "design",
+        "height_m"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nm-lookout-mountain-gila-national-forest",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1965
+        },
+        {
+          "source": "ffla_west_reports",
+          "value": 1933
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

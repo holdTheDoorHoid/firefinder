@@ -1,6 +1,7 @@
 {
   "id": "us-ca-thorn-point",
   "name": "Thorn Point Lookout",
+  "summary": "A 1933 L-4 cab in the Sespe Wilderness, Los Padres NF: staffed round the clock in WWII, later a condor monitoring station, reached by a 3.5-mile trail.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "L-4 14 x 14 ft cab with catwalk on a 20 ft H-braced tower",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -41,21 +42,44 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "About 3.5 miles from Thorn Meadows Campground through the Sespe Wilderness; no motorized use"
   },
   "rental": null,
   "events": [
     {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register gives 1933 for the L-4 cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/thorn-point-lookout/"
+    },
+    {
+      "year": 1934,
+      "event": "other",
+      "note": "Trail being built up to the new lookout, per an August 1934 newspaper item",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/thorne-point.html"
+    },
+    {
+      "year": 1956,
+      "event": "other",
+      "note": "Forest Service ran a Ground Observer Corps post out of the lookout",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/thorne-point.html"
+    },
+    {
+      "year": 1957,
+      "event": "staffed",
+      "note": "Austin Mack observer May to November; a 1958 item calls it his fourth year",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/thorne-point.html"
     },
     {
       "year": 1999,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 21, 1999",
-      "from": "nhlr"
+      "note": "Registered April 21, 1999 as US 308",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/thorn-point-lookout/"
     }
   ],
   "photos": [
@@ -115,8 +139,18 @@
       "kind": "register"
     },
     {
+      "label": "Thorn Point Trail 21W07 (Los Padres National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r05/lospadres/recreation/trails/thorn-point-trail-21w07",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA California-South chapter: Southern California lookouts",
+      "url": "https://www.firelookouthost.org/southern-california",
       "kind": "association"
     },
     {
@@ -163,10 +197,37 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:socal-thorn-point",
+      "fields": [
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-thorn-point",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

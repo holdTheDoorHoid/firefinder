@@ -1,6 +1,7 @@
 {
   "id": "us-wa-strawberry-mountain",
   "name": "Strawberry Mountain Lookout",
+  "summary": "Colville tribal-land tower built 1936 with an L-4 living cab; staffed into 1938, then abandoned. The steel tower stands; the cab is gone.",
   "other_names": [
     "Strawberry Mountain (Col BIA)"
   ],
@@ -15,11 +16,11 @@
   },
   "elevation_m": 1786.4,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": "L-4",
-  "height_m": null,
+  "design": "54 ft steel International Derrick tower; its L-4 living cab was destroyed",
+  "height_m": 16.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -34,7 +35,7 @@
   "ownership": "tribal",
   "access": {
     "level": "permission",
-    "note": "On tribal land. Ask the tribe before visiting."
+    "note": "On Colville Confederated Tribal land. No trail or road leads to the tower, and non-tribal visitors must buy a recreation permit; check with the tribes before any trip."
   },
   "staffing": {
     "status": "unknown",
@@ -42,22 +43,52 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "No trail or road leads to the tower; TrailChick describes BIA roads, cross-country travel through fireweed, and a round trip of about 5.6 miles."
   },
   "rental": null,
   "events": [
     {
       "year": 1936,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "54 ft steel International Derrick tower with an L-4 cab for living quarters",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/strawberry-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/strawberry-mountain-lookout/",
+        "https://www.trailchick.com/wa-state-fire-lookouts/strawberry-mountain-lookout/",
+        "https://www.firelookout.com/wa/strawberrybia.html",
+        "https://www.willhiteweb.com/washington_fire_lookouts/strawberry_mountain_lookout/tower_226.htm"
+      ]
+    },
+    {
+      "year": 1938,
+      "event": "abandoned",
+      "note": "Abandoned after the 1938 staffing; the sources give no exact year, so 1938 is the closest recorded year",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/strawberry-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/strawberry-mountain-lookout/",
+        "https://www.firelookout.com/wa/strawberrybia.html"
+      ]
+    },
+    {
+      "year": 1938,
+      "event": "staffed_last",
+      "note": "Staffed into 1938; no exact date for the last watch is given",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/strawberry-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/strawberry-mountain-lookout/",
+        "https://www.firelookout.com/wa/strawberrybia.html"
+      ]
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 13, 2022",
-      "from": "nhlr"
+      "note": "Registered April 13, 2022 as US 1561, WA 88",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/strawberry-mountain-lookout/"
     }
   ],
   "photos": [
@@ -96,6 +127,16 @@
       "year": 2002,
       "w": 313,
       "h": 525
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://trailchick-media.s3.us-west-2.amazonaws.com/strawberry-mtn-lo-1.jpg",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/strawberry-mountain-lookout/",
+      "credit": "TrailChick Washington lookout guide (trailchick.com)",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -103,6 +144,16 @@
       "label": "NHLR register entry US 1561 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wa/strawberry-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Strawberry Mountain Lookout (willhiteweb.com)",
+      "url": "https://www.willhiteweb.com/washington_fire_lookouts/strawberry_mountain_lookout/tower_226.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Whitestone Ridge (TrailChick)",
+      "url": "https://www.trailchick.com/wa-state-fire-lookouts/whitestone-ridge-lookout/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -134,6 +185,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -162,10 +214,44 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:strawberry-mountain2",
+      "fields": []
+    },
+    {
+      "source": "trailchick_wa",
+      "key": "trailchick_wa:wa:strawberry-mountain-lookout",
+      "fields": [
+        "height_m",
+        "photos"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-strawberry-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

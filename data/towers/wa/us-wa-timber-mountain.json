@@ -16,8 +16,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "R-6",
+  "height_m": 12.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -46,10 +46,41 @@
   "rental": null,
   "events": [
     {
+      "year": 1959,
+      "event": "built",
+      "note": "Current structure",
+      "from": "trailchick_wa"
+    },
+    {
       "year": 1996,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: January 10, 1996",
       "from": "nhlr"
+    },
+    {
+      "year": 2005,
+      "event": "restored",
+      "note": "Substantial restoration work done, mostly by volunteers.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-we-2005.pdf"
+    },
+    {
+      "year": 2009,
+      "event": "restored",
+      "note": "New lightning protection installed and nearly all repairs done to prepare for the Cabin Rental Program; entry delayed again by staff turnover.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-az-2009.pdf",
+      "source_urls": [
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-az-2009.pdf",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-ewa-2009.pdf"
+      ]
+    },
+    {
+      "year": 2017,
+      "event": "restored",
+      "note": "Passport In Time crew sanitized and painted the interior, replaced the plywood sub-floor, painted the exterior and repaired tower footings and catwalk railings; now on excellent standby.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-e-wa-2017.pdf"
     }
   ],
   "photos": [
@@ -112,6 +143,16 @@
       "year": 1999,
       "w": 328,
       "h": 459
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://trailchick-media.s3.us-west-2.amazonaws.com/timber-mountain-lookout.jpg",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/timber-mountain-lookout/",
+      "credit": "TrailChick Washington lookout guide (trailchick.com)",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -121,13 +162,38 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/wa/timber-mountain-lookout/",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Washington lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wa/",
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Timber Mountain Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-e-wa-2017.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Timber Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/timber.html",
+      "kind": "site"
+    },
+    {
+      "label": "Timber Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/timber-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Timber Mountain in the TrailChick Washington lookout guide",
+      "url": "https://www.trailchick.com/wa-state-fire-lookouts/timber-mountain-lookout/",
+      "kind": "site"
+    },
+    {
+      "label": "Timber Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/timber_mountain/tower_080.htm",
       "kind": "site"
     }
   ],
@@ -165,10 +231,43 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:wa:timber-mountain",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:timber-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "trailchick_wa",
+      "key": "trailchick_wa:wa:timber-mountain-lookout",
+      "fields": [
+        "design",
+        "height_m",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-timber-mountain-tower-080",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

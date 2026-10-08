@@ -13,10 +13,10 @@
   },
   "elevation_m": 2921.2,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "D-6",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -81,6 +81,16 @@
       "label": "Anvil Rock on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/anvilrock.html",
       "kind": "site"
+    },
+    {
+      "label": "Anvil Rock on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/anvil-rock.html",
+      "kind": "site"
+    },
+    {
+      "label": "Anvil Rock on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington/fire_lookouts/anvil_rock_lookout/mount_rainier_245.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -113,6 +123,22 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:anvil-rock:46.8304:-121.7269",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:anvil-rock",
+      "fields": [
+        "material",
+        "design",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-anvil-rock-lookout-mount-rainier-245",
       "fields": [
         "links"
       ]

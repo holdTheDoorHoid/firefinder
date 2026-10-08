@@ -16,8 +16,8 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "L-4",
+  "height_m": 10.7,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -29,7 +29,7 @@
     }
   ],
   "agency": "Washington State Schools",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -110,6 +110,16 @@
       "label": "French Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/frenchpoint.html",
       "kind": "site"
+    },
+    {
+      "label": "French Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/french-point.html",
+      "kind": "site"
+    },
+    {
+      "label": "French Point on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/french_point/stillaguamish_081.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -142,6 +152,23 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:french-point:48.2622:-121.7882",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:french-point",
+      "fields": [
+        "design",
+        "height_m",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-french-point-stillaguamish-081",
       "fields": [
         "links"
       ]

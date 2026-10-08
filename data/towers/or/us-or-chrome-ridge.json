@@ -1,7 +1,9 @@
 {
   "id": "us-or-chrome-ridge",
   "name": "Chrome Ridge",
-  "other_names": [],
+  "other_names": [
+    "Chrome Ridge (Freeland Mountain)"
+  ],
   "country": "US",
   "region": "OR",
   "county": "Josephine",
@@ -21,8 +23,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Siskiyou National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +51,11 @@
       "label": "Chrome Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/chromeridge.html",
       "kind": "site"
+    },
+    {
+      "label": "Chrome Ridge (Freeland Mountain) on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/chrome-ridge.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +77,40 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:chrome-ridge",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 42.47782,
+            "lon": -123.73065
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 42.493,
+            "lon": -123.7109
+          }
+        }
+      ],
+      "distance_m": 2339,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

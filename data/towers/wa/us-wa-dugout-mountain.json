@@ -13,8 +13,8 @@
   },
   "elevation_m": 1634.9,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -129,6 +129,16 @@
       "label": "Dugout Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/dugoutmtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Dugout Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/dugout-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Dugout Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/dugout_mountain/lookout_086.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -140,6 +150,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -161,6 +172,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:dugout-mtn:48.4975:-118.9608",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:dugout-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-dugout-mountain-lookout-086",
       "fields": [
         "links"
       ]

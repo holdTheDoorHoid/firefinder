@@ -140,11 +140,6 @@
       "kind": "register"
     },
     {
-      "label": "South Mountain (Forest Lookouts Idaho)",
-      "url": "https://idaholookouts.weebly.com/south-mountain.html",
-      "kind": "reference"
-    },
-    {
       "label": "South Mountain (Idaho: A Climbing Guide)",
       "url": "https://www.idahoaclimbingguide.com/bookupdates/south-mountain/",
       "kind": "reference"
@@ -162,6 +157,11 @@
     {
       "label": "South Mountain Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/southern-idaho/south-mountain-lookout/",
+      "kind": "site"
+    },
+    {
+      "label": "South Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/south-mountain.html",
       "kind": "site"
     }
   ],
@@ -208,6 +208,13 @@
       ]
     },
     {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:south-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:us-id-south-mountain",
       "fields": [
@@ -223,7 +230,29 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 42.739968,
+            "lon": -116.913905
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 42.7521,
+            "lon": -116.92347
+          }
+        }
+      ],
+      "distance_m": 1559,
+      "note": null
+    }
+  ],
   "research": {
     "researched": "2026-10-08",
     "checked": "2026-10-08",

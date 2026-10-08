@@ -1,7 +1,9 @@
 {
   "id": "us-or-bus-point-2",
   "name": "Bus Point",
-  "other_names": [],
+  "other_names": [
+    "Bus Point Tree"
+  ],
   "country": "US",
   "region": "OR",
   "county": "Wasco",
@@ -17,7 +19,7 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 29.0,
   "status": "standing",
   "status_note": null,
   "registers": [],
@@ -64,6 +66,11 @@
       "label": "Bus Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/buspoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Bus Point Tree on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/bus-point-tree.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -83,9 +90,33 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:bus-point-tree",
+      "fields": [
+        "height_m",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "kind",
+      "values": [
+        {
+          "source": "firelookout_com",
+          "value": "tower"
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": "tree"
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources disagree on whether a tower or building stood here, or only a camp or lookout tree."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

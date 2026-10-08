@@ -13,8 +13,8 @@
   },
   "elevation_m": 1737.1,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -146,6 +146,16 @@
       "label": "Excelsior Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/excelsiorpoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Excelsior Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/excelsior-point.html",
+      "kind": "site"
+    },
+    {
+      "label": "Excelsior Point on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/excelsior_point_lookout/damfino_ridge_199.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -157,6 +167,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -178,6 +189,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:excelsior-point:48.9349:-121.7901",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:excelsior-point",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-excelsior-point-lookout-damfino-ridge-199",
       "fields": [
         "links"
       ]

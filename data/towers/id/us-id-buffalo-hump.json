@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "ID",
-  "county": null,
+  "county": "Gem",
   "location": {
     "lat": 45.62046,
     "lon": -115.70096,
@@ -21,8 +21,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Nez Perce National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +44,11 @@
       "label": "Buffalo Hump on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/selway-region/buffalo-hump/",
       "kind": "site"
+    },
+    {
+      "label": "Buffalo Hump on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/buffalo-hump.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -53,6 +58,16 @@
       "fields": [
         "name",
         "location",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:buffalo-hump",
+      "fields": [
+        "county",
+        "agency",
+        "ownership",
         "links"
       ]
     }

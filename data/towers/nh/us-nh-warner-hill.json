@@ -6,10 +6,10 @@
   "region": "NH",
   "county": "Rockingham",
   "location": {
-    "lat": 42.90211,
-    "lon": -71.28114,
+    "lat": 42.88568,
+    "lon": -71.26639,
     "precision": "exact",
-    "from": "nhlr"
+    "from": "ffla"
   },
   "elevation_m": 118.3,
   "kind": "tower",
@@ -66,6 +66,16 @@
       "year": 2017,
       "w": 2448,
       "h": 3264
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://easternuslookouts.weebly.com/uploads/1/5/9/1/1591048/5582455_orig.jpg",
+      "source_url": "https://easternuslookouts.weebly.com/warner-hill.html",
+      "credit": "easternuslookouts.weebly.com",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -75,9 +85,19 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/nh/warner-hill-lookout/",
+      "kind": "register"
+    },
+    {
       "label": "FFLA New Hampshire lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nh/",
       "kind": "association"
+    },
+    {
+      "label": "Warner Hill (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/warner-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -86,7 +106,6 @@
       "key": "nhlr:US 416",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "material",
@@ -102,9 +121,18 @@
       "source": "ffla",
       "key": "ffla:nh:warner-hill:42.8857:-71.2664",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:nh:warner-hill",
+      "fields": [
+        "photos",
         "links"
       ]
     }
@@ -114,17 +142,17 @@
       "field": "location",
       "values": [
         {
-          "source": "nhlr",
-          "value": {
-            "lat": 42.90211,
-            "lon": -71.28114
-          }
-        },
-        {
           "source": "ffla",
           "value": {
             "lat": 42.88568,
             "lon": -71.26639
+          }
+        },
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 42.90211,
+            "lon": -71.28114
           }
         }
       ],

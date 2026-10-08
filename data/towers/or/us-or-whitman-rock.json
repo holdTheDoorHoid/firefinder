@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Willamette National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Whitman Rock on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/whitmanrock.html",
       "kind": "site"
+    },
+    {
+      "label": "Whitman Rock on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/whitman-rock.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +75,40 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:whitman-rock",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 44.72781,
+            "lon": -122.22229
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 44.73623,
+            "lon": -122.23147
+          }
+        }
+      ],
+      "distance_m": 1184,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

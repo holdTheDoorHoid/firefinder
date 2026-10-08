@@ -1,6 +1,7 @@
 {
   "id": "us-sc-issaqueena",
   "name": "Issaqueena Tower",
+  "summary": "Built in 1938 by the CCC and WPA as a 100-ft Aermotor tower on the Clemson Experimental Forest; NHLR-registered in 2006, with current condition not stated.",
   "other_names": [],
   "country": "US",
   "region": "SC",
@@ -13,11 +14,11 @@
   },
   "elevation_m": 296.0,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "100-foot Aermotor tower with a 7 x 7 ft metal cab.",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/sc/issaqueena-tower/"
     }
   ],
-  "agency": "Clemson University",
+  "agency": "Clemson University (Clemson Experimental Forest)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "On the Clemson University Forest, where visitors must stay on designated roads and trails; the Issaqueena Lake Road is closed between November 1 and March 15, or as needed. Tower-specific visiting rules are not stated in the sources read."
   },
   "staffing": {
     "status": "unknown",
@@ -41,21 +42,30 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Hiking, horseback riding and biking on designated roads and trails only; the Issaqueena Lake Road is closed between November 1 and March 15, or as needed."
   },
   "rental": null,
   "events": [
     {
+      "year": 1934,
+      "event": "other",
+      "note": "WPA land reclamation on the Clemson forest lands began in 1934; fire towers and recreation facilities were among the works built.",
+      "from": "research",
+      "source_url": "https://www.clemson.edu/campus-life/cu-forest/about/history.html"
+    },
+    {
       "year": 1938,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the CCC and WPA as a 100-foot Aermotor tower with a 7 x 7 ft metal cab.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sc/issaqueena-tower/"
     },
     {
       "year": 2006,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 27, 2006",
-      "from": "nhlr"
+      "note": "Registered July 27, 2006; nominated by S. Knight Cox.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sc/issaqueena-tower/"
     }
   ],
   "photos": [
@@ -79,7 +89,22 @@
       "kind": "register"
     },
     {
-      "label": "ISSAQUEENA (easternuslookouts.weebly.com)",
+      "label": "History (Clemson University Forest, Clemson University)",
+      "url": "https://www.clemson.edu/campus-life/cu-forest/about/history.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Forest Rules (Clemson University Forest, Clemson University)",
+      "url": "https://www.clemson.edu/campus-life/cu-forest/visit/forest-rules.html",
+      "kind": "reference"
+    },
+    {
+      "label": "When Paths Converge (Clemson World Archive)",
+      "url": "https://clemson.world/archive/issaqueena/",
+      "kind": "reference"
+    },
+    {
+      "label": "Issaqueena (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/issaqueena.html",
       "kind": "site"
     },
@@ -104,6 +129,7 @@
         "county",
         "elevation_m",
         "kind",
+        "material",
         "status",
         "registers",
         "agency",
@@ -125,10 +151,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-sc-issaqueena",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -15,11 +15,11 @@
   },
   "elevation_m": 978.7,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": 24.0,
+  "design": "Aermotor",
+  "height_m": 24.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,7 +31,7 @@
     }
   ],
   "agency": "West Virginia Division of Natural Resources",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -153,9 +153,19 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/wv/big-ridge-fire-tower/",
+      "kind": "register"
+    },
+    {
       "label": "FFLA West Virginia lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wv/",
       "kind": "association"
+    },
+    {
+      "label": "Big Ridge (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/big-ridge.html",
+      "kind": "site"
     },
     {
       "label": "OpenStreetMap node 356527429",
@@ -190,10 +200,20 @@
       ]
     },
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:wv:big-ridge",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/356527429",
       "fields": [
-        "height_m",
         "links"
       ]
     }

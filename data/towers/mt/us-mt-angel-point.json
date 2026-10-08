@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Flathead National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Angel Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/angelpoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Angel Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/angel-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +75,40 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:angel-point",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 47.98049,
+            "lon": -114.17442
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 47.9875,
+            "lon": -114.1884
+          }
+        }
+      ],
+      "distance_m": 1300,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

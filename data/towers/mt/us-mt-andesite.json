@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "MT",
-  "county": null,
+  "county": "Madison",
   "location": {
     "lat": 45.27308,
     "lon": -111.3908,
@@ -21,7 +21,7 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Private",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -44,6 +44,11 @@
       "label": "Andesite on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/andesite.html",
       "kind": "site"
+    },
+    {
+      "label": "Andesite on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/andesite.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,10 +61,19 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:andesite",
+      "fields": [
+        "county",
+        "agency",
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

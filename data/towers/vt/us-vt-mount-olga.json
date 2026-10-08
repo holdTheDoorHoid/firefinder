@@ -17,7 +17,7 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 12.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -29,7 +29,7 @@
     }
   ],
   "agency": "Vermont Dept. of Forests, Parks and Recreation",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -50,6 +50,41 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: November 24, 1995",
       "from": "nhlr"
+    },
+    {
+      "year": 2013,
+      "event": "restored",
+      "note": "State Department of Forests and Parks repaired the loose step footings at the base of the tower, a repair needed for many years.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-vt-2013.pdf"
+    },
+    {
+      "year": 2014,
+      "event": "other",
+      "note": "FFLA restoration grant awarded for restoring the Mt. Olga fire tower in southern Vermont ($500), with completion hoped for the following year.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-vt-2014.pdf"
+    },
+    {
+      "year": 2018,
+      "event": "modified",
+      "note": "All the glass windows in the cab were removed to prevent further vandal damage.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-vt-2018.pdf"
+    },
+    {
+      "year": 2018,
+      "event": "restored",
+      "note": "The tower now has a new steel grated stairway, making it more stable and less prone to ice buildup.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-vt-2018.pdf"
+    },
+    {
+      "year": 2025,
+      "event": "modified",
+      "note": "Interior cab railings were installed.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2026/01/cr-vt-2025.pdf"
     }
   ],
   "photos": [
@@ -97,9 +132,24 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=186",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Vermont lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/vt/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Mount Olga Fire Tower",
+      "url": "https://firelookout.org/wp-content/uploads/2026/01/cr-vt-2025.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Mount Olga (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/mount-olga.html",
+      "kind": "site"
     },
     {
       "label": "OpenStreetMap node 356557438",
@@ -134,6 +184,23 @@
       ]
     },
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:vt:mount-olga",
+      "fields": [
+        "height_m",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:vt:mount-olga",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/356557438",
       "fields": [
@@ -141,7 +208,27 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "standing"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

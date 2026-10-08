@@ -13,10 +13,10 @@
   },
   "elevation_m": 2630.1,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "log",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-5",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -111,6 +111,11 @@
       "label": "Bear Creek Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/id/bearcreekpoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Bear Creek Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/bear-creek-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -146,6 +151,15 @@
       "fields": [
         "height_m",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:bear-creek-point",
+      "fields": [
+        "material",
+        "design",
         "links"
       ]
     }

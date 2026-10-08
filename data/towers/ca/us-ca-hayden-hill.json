@@ -21,8 +21,8 @@
   "status": "relocated",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Modoc National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -59,6 +59,11 @@
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
+    },
+    {
+      "label": "Hayden Hill on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/hayden-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -73,9 +78,40 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:hayden-hill",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 40.99793,
+            "lon": -120.87038
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 40.99441,
+            "lon": -120.88034
+          }
+        }
+      ],
+      "distance_m": 923,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

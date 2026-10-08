@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Samuel McKelvie National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +44,11 @@
       "label": "FFLA Nebraska lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ne/",
       "kind": "association"
+    },
+    {
+      "label": "Eagle Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/eagle-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -63,6 +68,15 @@
       "source": "ffla",
       "key": "ffla:ne:eagle-point:42.7231:-101.0701:1",
       "fields": []
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ne:eagle-point",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
   "conflicts": [],

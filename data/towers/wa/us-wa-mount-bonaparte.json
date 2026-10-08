@@ -2,7 +2,9 @@
   "id": "us-wa-mount-bonaparte",
   "name": "Mount Bonaparte Lookout",
   "summary": "Active Forest Service lookout on the Colville National Forest, with a 1961 flattop tower and a 1914 cabin that was the forest's first permanent lookout.",
-  "other_names": [],
+  "other_names": [
+    "Bonaparte Mountain"
+  ],
   "country": "US",
   "region": "WA",
   "county": "Okanogan",
@@ -92,11 +94,25 @@
       "source_url": "http://nhlr.org/lookouts/us/wa/mount-bonaparte-lookout/"
     },
     {
+      "year": 2005,
+      "event": "restored",
+      "note": "Major renovation including a new roof; the lookout was unavailable for use while the work went on.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-we-2005.pdf"
+    },
+    {
       "year": 2021,
       "event": "fire",
       "note": "Walker and Spur Mountain fires came close to the summit area",
       "from": "research",
       "source_url": "https://en.wikipedia.org/wiki/Mount_Bonaparte_Lookout"
+    },
+    {
+      "year": 2025,
+      "event": "restored",
+      "note": "Volunteers finished repairs before reopening and made further repairs and restorations to the lookout and the historic 1914 lookout cabin during the season.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2026/01/cr-wa-2025.pdf"
     },
     {
       "year": 2025,
@@ -310,6 +326,16 @@
       "year": 2008,
       "w": 640,
       "h": 427
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://trailchick-media.s3.us-west-2.amazonaws.com/IMG_6718.jpg",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/mount-bonaparte-lookout/",
+      "credit": "TrailChick Washington lookout guide (trailchick.com)",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -324,6 +350,11 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Mount Bonaparte Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2026/01/cr-wa-2025.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Wikipedia: Mount Bonaparte Lookout",
       "url": "https://en.wikipedia.org/wiki/Mount_Bonaparte_Lookout",
       "kind": "wikipedia"
@@ -331,6 +362,21 @@
     {
       "label": "Mt. Bonaparte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/bonaparte.html",
+      "kind": "site"
+    },
+    {
+      "label": "Mount Bonaparte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/mount-bonaparte.html",
+      "kind": "site"
+    },
+    {
+      "label": "Mount Bonaparte in the TrailChick Washington lookout guide",
+      "url": "https://www.trailchick.com/wa-state-fire-lookouts/mount-bonaparte-lookout/",
+      "kind": "site"
+    },
+    {
+      "label": "Mount Bonaparte on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/mount_bonaparte_trail/lookout_309.htm",
       "kind": "site"
     },
     {
@@ -385,6 +431,14 @@
       ]
     },
     {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:wa:mount-bonaparte",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q86927061",
       "fields": [
@@ -397,6 +451,28 @@
       "fields": [
         "registers",
         "access",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:mount-bonaparte",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "trailchick_wa",
+      "key": "trailchick_wa:wa:mount-bonaparte-lookout",
+      "fields": [
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-mount-bonaparte-trail-lookout-309",
+      "fields": [
         "links"
       ]
     },
@@ -417,7 +493,27 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "firelookout_com",
+          "value": 1961
+        },
+        {
+          "source": "osm",
+          "value": 1961
+        },
+        {
+          "source": "trailchick_wa",
+          "value": 1963
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "research": {
     "researched": "2026-10-04",
     "checked": "2026-10-04",

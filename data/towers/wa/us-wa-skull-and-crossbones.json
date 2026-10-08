@@ -13,8 +13,8 @@
   },
   "elevation_m": 1981.2,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -81,6 +81,16 @@
       "label": "Skull and Crossbones on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/skull.html",
       "kind": "site"
+    },
+    {
+      "label": "Skull And Crossbones on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/skull--crossbones.html",
+      "kind": "site"
+    },
+    {
+      "label": "Skull & Crossbones on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/fire_lookouts/skull_crossbones_lookout/loomis_forest_103.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -92,6 +102,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -113,6 +124,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:skull-and-crossbones:48.7751:-119.8452",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:skull-crossbones",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:fire-lookouts-skull-crossbones-lookout-loomis-forest-103",
       "fields": [
         "links"
       ]

@@ -16,8 +16,8 @@
   "material": "steel",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 33.5,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -93,6 +93,11 @@
       "label": "Agency Hill on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/agencyhill.html",
       "kind": "site"
+    },
+    {
+      "label": "Agency Hill on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/agency-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -128,6 +133,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:agency-hill:42.6392:-121.9356",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:agency-hill",
+      "fields": [
+        "design",
+        "height_m",
         "links"
       ]
     }

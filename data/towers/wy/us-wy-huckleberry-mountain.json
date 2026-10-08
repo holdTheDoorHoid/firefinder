@@ -182,6 +182,11 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=912",
+      "kind": "register"
+    },
+    {
       "label": "Huckleberry Lookout, National Register of Historic Places nomination form (No. 83003365) (National Park Service, NPGallery)",
       "url": "https://npgallery.nps.gov/NRHP/GetAsset/NRHP/83003365_text",
       "kind": "reference"
@@ -259,6 +264,13 @@
       ]
     },
     {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wy:huckleberry-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:us-wy-huckleberry-mountain",
       "fields": [
@@ -273,7 +285,29 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 44.082774,
+            "lon": -110.597735
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 44.08827,
+            "lon": -110.60021
+          }
+        }
+      ],
+      "distance_m": 642,
+      "note": null
+    }
+  ],
   "research": {
     "researched": "2026-10-08",
     "checked": "2026-10-08",

@@ -104,6 +104,13 @@
     },
     {
       "year": 1974,
+      "event": "other",
+      "note": "Longtime lookout Mattie Simms, on duty since 1956, retired in October; staffing was sporadic afterwards.",
+      "from": "buck_rock",
+      "source_url": "https://buckrock.org/park-ridge-lookout/"
+    },
+    {
+      "year": 1974,
       "event": "staffed_last",
       "note": "Mattie Simms retired in October 1974; staffing was sporadic afterward.",
       "from": "research",
@@ -117,11 +124,39 @@
       "source_url": "https://buckrock.org/park-ridge-lookout/"
     },
     {
+      "year": 1996,
+      "event": "staffed_last",
+      "note": "Closed permanently until the Foundation's agreement.",
+      "from": "buck_rock",
+      "source_url": "https://buckrock.org/park-ridge-lookout/"
+    },
+    {
       "year": 2004,
       "event": "other",
       "note": "Reopened under a cooperative agreement; Buck Rock Foundation volunteers staff it each fire season.",
       "from": "research",
       "source_url": "https://buckrock.org/park-ridge-lookout/"
+    },
+    {
+      "year": 2004,
+      "event": "restored",
+      "note": "Lightning protection system updated and electrical system replaced; further updates to continue in 2005.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-cc-2004.pdf"
+    },
+    {
+      "year": 2004,
+      "event": "staffed",
+      "note": "Reopened under a cooperative agreement with the Park Service; staffed by Buck Rock Foundation volunteers since.",
+      "from": "buck_rock",
+      "source_url": "https://buckrock.org/park-ridge-lookout/"
+    },
+    {
+      "year": 2007,
+      "event": "restored",
+      "note": "Ceiling repaired in fall 2007 to stop roof leakage; floor replacement planned for 2008.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/10/cr-ca-cent-2007.pdf"
     },
     {
       "year": 2010,
@@ -136,6 +171,13 @@
       "note": "Ceremony at the lookout marking the register listing, August 3, 2013.",
       "from": "research",
       "source_url": "https://www.nps.gov/articles/wildland-fire-park-ridge-lookout-national-historic-register-seki.htm"
+    },
+    {
+      "year": 2025,
+      "event": "modified",
+      "note": "New stove, a custom outhouse step and a friendlier catwalk gate; trees around it were cleared to widen the view.",
+      "from": "buck_rock",
+      "source_url": "https://buckrock.org/2025/08/19/improvements-at-park-ridge-fire-lookout-new-equipment-and-clearer-views/"
     }
   ],
   "photos": [
@@ -183,9 +225,9 @@
       "kind": "register"
     },
     {
-      "label": "Park Ridge Lookout (Buck Rock Foundation)",
-      "url": "https://buckrock.org/park-ridge-lookout/",
-      "kind": "reference"
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/ca/park-ridge-lookout/",
+      "kind": "register"
     },
     {
       "label": "Wildland Fire: Park Ridge Lookout National Historic Lookout Register (National Park Service)",
@@ -198,9 +240,29 @@
       "kind": "association"
     },
     {
+      "label": "Buck Rock Foundation: work on Park Ridge Lookout",
+      "url": "https://buckrock.org/2025/08/19/improvements-at-park-ridge-fire-lookout-new-equipment-and-clearer-views/",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Park Ridge Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/10/cr-ca-cent-2007.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Park Ridge lookout: Buck Rock Foundation",
+      "url": "https://buckrock.org/park-ridge-lookout/",
+      "kind": "association"
+    },
+    {
       "label": "Wikipedia: Park Ridge Lookout",
       "url": "https://fr.wikipedia.org/wiki/Park_Ridge_Lookout",
       "kind": "wikipedia"
+    },
+    {
+      "label": "Park Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/park-ridge.html",
+      "kind": "site"
     },
     {
       "label": "Wikidata item Q86926927",
@@ -241,6 +303,24 @@
       ]
     },
     {
+      "source": "buck_rock",
+      "key": "buck_rock:ca:park-ridge",
+      "fields": [
+        "design",
+        "staffing",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:park-ridge",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q86926927",
       "fields": [
@@ -251,6 +331,20 @@
     {
       "source": "osm",
       "key": "osm:way/193958572",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:park-ridge",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:park-ridge",
       "fields": [
         "links"
       ]
@@ -272,7 +366,27 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1964
+        },
+        {
+          "source": "wikidata",
+          "value": 1964
+        },
+        {
+          "source": "buck_rock",
+          "value": 1916
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "research": {
     "researched": "2026-10-08",
     "checked": "2026-10-08",

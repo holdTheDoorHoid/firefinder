@@ -15,8 +15,8 @@
   },
   "elevation_m": 2037.0,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -107,6 +107,11 @@
       "label": "Bald Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/baldmtn104.html",
       "kind": "site"
+    },
+    {
+      "label": "Bald Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/bald-mountain3.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -118,6 +123,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -139,6 +145,13 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:or:bald-mtn:44.5741:-117.8937",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:bald-mountain3",
       "fields": [
         "links"
       ]

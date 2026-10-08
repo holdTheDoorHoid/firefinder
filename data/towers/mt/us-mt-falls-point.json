@@ -17,12 +17,12 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 15.2,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Lolo National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Falls Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/fallspoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Falls Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/falls-peak-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +73,16 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:falls-point:47.2207:-112.9059",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:falls-peak-point",
+      "fields": [
+        "height_m",
+        "agency",
+        "ownership",
         "links"
       ]
     }

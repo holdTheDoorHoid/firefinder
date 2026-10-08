@@ -1,6 +1,7 @@
 {
   "id": "us-wa-johnny-george-mountain",
   "name": "Johnny George Mountain Lookout",
+  "summary": "CCC-built 1938 steel Aermotor tower on Colville Reservation land in Ferry County; gated, and non-tribal visitors need a permit.",
   "other_names": [
     "Johnny George"
   ],
@@ -18,8 +19,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": "Aermotor",
-  "height_m": null,
+  "design": "Steel Aermotor tower with a steel shelter on top",
+  "height_m": 36.6,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -33,8 +34,8 @@
   "agency": "US Forest Service - Colville National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "permission",
+    "note": "On Colville Reservation land and gated. Non-tribal visitors need a Colville Confederated Tribes recreation permit (trail guide: $80 a year)."
   },
   "staffing": {
     "status": "unknown",
@@ -42,22 +43,62 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Long drive on reservation back roads, then a gate that prevents access. The 2019 trail guide describes views from the base of the tower."
   },
   "rental": null,
   "events": [
     {
+      "year": 1937,
+      "event": "other",
+      "note": "Newspaper report of a planned 110-foot steel tower at George mountain that fall",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/johnny-george.html"
+    },
+    {
       "year": 1938,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the Civilian Conservation Corps; the only tower on the site. Register and two guides give 100 ft; a 1960 inspection gives 110 ft.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/johnny-george-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/johnny-george-mountain-lookout/",
+        "https://www.trailchick.com/wa-state-fire-lookouts/johnny-george-mountain-lookout/",
+        "https://washingtonlookouts.weebly.com/johnny-george.html",
+        "https://www.firelookout.com/wa/jgeorge.html"
+      ]
+    },
+    {
+      "year": 1943,
+      "event": "staffed",
+      "note": "Teachers staffed summer lookouts, including Mr. and Mrs. Walter Peterson of Malott on Johnny George",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/johnny-george-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/johnny-george-mountain-lookout/",
+        "https://washingtonlookouts.weebly.com/johnny-george.html"
+      ]
+    },
+    {
+      "year": 1960,
+      "event": "assessed",
+      "note": "Inspection: living quarters a 20 x 15 ft Quonset hut in fair to poor condition; tower and shelter generally in good condition; dwelling cabin outlived its usefulness",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/johnny-george.html"
+    },
+    {
+      "year": 2019,
+      "event": "fire",
+      "note": "Williams Flats fire (45,000 acres, started in August by lightning) threatened the lookout; the lookout was protected",
+      "from": "research",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/johnny-george-mountain-lookout/"
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 12, 2022",
-      "from": "nhlr"
+      "note": "Registered April 12, 2022 as NHLR US 1547",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/johnny-george-mountain-lookout/"
     }
   ],
   "photos": [
@@ -84,6 +125,16 @@
       "year": 1991,
       "w": 328,
       "h": 472
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://trailchick-media.s3.us-west-2.amazonaws.com/johnny-george.jpg",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/johnny-george-mountain-lookout/",
+      "credit": "TrailChick Washington lookout guide (trailchick.com)",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -110,6 +161,11 @@
     {
       "label": "Johnny George on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/jgeorge.html",
+      "kind": "site"
+    },
+    {
+      "label": "Johnny George on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/johnny_george_lookout/tower_229.htm",
       "kind": "site"
     }
   ],
@@ -149,10 +205,51 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:johnny-george",
+      "fields": [
+        "height_m"
+      ]
+    },
+    {
+      "source": "trailchick_wa",
+      "key": "trailchick_wa:wa:johnny-george-mountain-lookout",
+      "fields": [
+        "photos"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-johnny-george-lookout-tower-229",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-johnny-george-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

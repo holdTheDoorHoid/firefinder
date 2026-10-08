@@ -1,7 +1,9 @@
 {
   "id": "us-mn-indian-pines-fairland",
   "name": "Indian Pines (Fairland)",
-  "other_names": [],
+  "other_names": [
+    "Indian Pines"
+  ],
   "country": "US",
   "region": "MN",
   "county": "Koochiching",
@@ -21,11 +23,11 @@
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Red Lake Indian Reservation",
+  "ownership": "tribal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "permission",
+    "note": "On tribal land. Ask the tribe before visiting."
   },
   "staffing": {
     "status": "unknown",
@@ -44,6 +46,11 @@
       "label": "FFLA Minnesota lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mn/",
       "kind": "association"
+    },
+    {
+      "label": "Indian Pines (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/indian-pines.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +63,16 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mn:indian-pines",
+      "fields": [
+        "agency",
+        "ownership",
+        "access",
         "links"
       ]
     }

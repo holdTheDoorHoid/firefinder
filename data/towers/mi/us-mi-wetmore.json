@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "MI",
-  "county": null,
+  "county": "Alger",
   "location": {
     "lat": 46.365087,
     "lon": -86.616272,
@@ -17,7 +17,7 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 32.6,
   "status": "unknown",
   "status_note": null,
   "registers": [],
@@ -41,6 +41,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Wetmore (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/wetmore.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 354002003",
       "url": "https://www.openstreetmap.org/node/354002003",
       "kind": "osm"
@@ -48,10 +53,19 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:mi:wetmore",
+      "fields": [
+        "name",
+        "county",
+        "height_m",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/354002003",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

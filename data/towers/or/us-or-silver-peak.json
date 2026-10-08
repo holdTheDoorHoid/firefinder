@@ -13,10 +13,10 @@
   },
   "elevation_m": 1257.6,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -81,6 +81,11 @@
       "label": "Silver Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/silverpeak65.html",
       "kind": "site"
+    },
+    {
+      "label": "Silver Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/silver-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -114,6 +119,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:silver-peak:42.4792:-123.9592",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:silver-peak",
+      "fields": [
+        "material",
+        "design",
         "links"
       ]
     }

@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Wenatchee National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Junction Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/junctionridge.html",
       "kind": "site"
+    },
+    {
+      "label": "Junction Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/junction-ridge.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +75,40 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:junction-ridge",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 48.37947,
+            "lon": -120.89075
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 48.3761,
+            "lon": -120.9039
+          }
+        }
+      ],
+      "distance_m": 1041,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

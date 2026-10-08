@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Teton National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Signal Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wy/signalmtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Signal Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/signal-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +73,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:wy:signal-mtn:43.8489:-110.5672",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wy:signal-mountain",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

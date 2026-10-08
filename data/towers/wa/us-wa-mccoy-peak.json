@@ -13,8 +13,8 @@
   },
   "elevation_m": 1784.9,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -117,6 +117,16 @@
       "label": "McCoy Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/mccoypeak.html",
       "kind": "site"
+    },
+    {
+      "label": "McCOY Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/mccoy-peak.html",
+      "kind": "site"
+    },
+    {
+      "label": "McCoy Peak on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/washington_fire_lookouts/mccoy_peak_lookout/gifford_pinchot_279.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -128,6 +138,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -149,6 +160,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:mccoy-peak:46.3301:-121.8244",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:mccoy-peak",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-mccoy-peak-lookout-gifford-pinchot-279",
       "fields": [
         "links"
       ]

@@ -1,7 +1,9 @@
 {
   "id": "us-or-hunchback-mountain",
   "name": "Hunchback Mountain",
-  "other_names": [],
+  "other_names": [
+    "Hunch Back"
+  ],
   "country": "US",
   "region": "OR",
   "county": "Clackamas",
@@ -21,8 +23,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Mt Hood National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +51,11 @@
       "label": "Hunchback Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/hunchbackmtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Hunch Back on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/hunchback.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +75,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:hunchback-mtn:45.3111:-121.9252",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:hunchback",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

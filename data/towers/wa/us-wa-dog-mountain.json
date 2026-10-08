@@ -13,8 +13,8 @@
   },
   "elevation_m": 755.9,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -93,6 +93,16 @@
       "label": "Dog Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/dogmtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Dog Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/dog-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Dog Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/columbia_river_gorge/dog_mountain_trail/lookout_382.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -104,6 +114,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -125,6 +136,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:dog-mtn:45.7127:-121.6990",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:dog-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:columbia-river-gorge-dog-mountain-trail-lookout-382",
       "fields": [
         "links"
       ]

@@ -1,7 +1,9 @@
 {
   "id": "us-wa-mount-mitchell",
   "name": "Mount Mitchell Lookout Site",
-  "other_names": [],
+  "other_names": [
+    "Mitchell Peak"
+  ],
   "country": "US",
   "region": "WA",
   "county": "Skamania",
@@ -13,8 +15,8 @@
   },
   "elevation_m": 1196.9,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -29,7 +31,7 @@
     }
   ],
   "agency": "Gifford Pinchot National Forest/Washington Dept. of Natural Resources",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -93,6 +95,16 @@
       "label": "Mt. Mitchell on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/mitchell.html",
       "kind": "site"
+    },
+    {
+      "label": "Mitchell Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/mount-mitchell.html",
+      "kind": "site"
+    },
+    {
+      "label": "Mount Mitchell on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/washington_fire_lookouts/mount_mitchell_lookout/siouxon_block_264.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -104,6 +116,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -124,6 +137,21 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:mt-mitchell:46.0309:-122.1931",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:mount-mitchell",
+      "fields": [
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-mount-mitchell-lookout-siouxon-block-264",
       "fields": [
         "links"
       ]

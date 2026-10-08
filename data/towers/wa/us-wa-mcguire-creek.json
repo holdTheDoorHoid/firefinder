@@ -1,7 +1,9 @@
 {
   "id": "us-wa-mcguire-creek",
   "name": "McGuire Creek",
-  "other_names": [],
+  "other_names": [
+    "Fairfax (McGuire Creek)"
+  ],
   "country": "US",
   "region": "WA",
   "county": "Pierce",
@@ -21,8 +23,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "State Division of Forestry",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +51,16 @@
       "label": "McGuire Creek on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/mcguirecreek.html",
       "kind": "site"
+    },
+    {
+      "label": "McGUIRE Creek on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/mcguire-creek.html",
+      "kind": "site"
+    },
+    {
+      "label": "Fairfax (McGuire Creek) on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/mcguire_creek_lookout/site_305.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +82,47 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:mcguire-creek",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-mcguire-creek-lookout-site-305",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 46.99523,
+            "lon": -122.02591
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 46.9894,
+            "lon": -122.0308
+          }
+        }
+      ],
+      "distance_m": 747,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

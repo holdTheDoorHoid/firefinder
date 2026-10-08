@@ -13,8 +13,8 @@
   },
   "elevation_m": 1642.9,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -110,6 +110,16 @@
       "label": "Little Buck Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/littlebuck.html",
       "kind": "site"
+    },
+    {
+      "label": "Little Buck Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/little-buck-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Little Buck Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/fire_lookouts/little_buck_mountain/lookout_site_082.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -121,6 +131,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -145,10 +156,24 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:little-buck-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:fire-lookouts-little-buck-mountain-lookout-site-082",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

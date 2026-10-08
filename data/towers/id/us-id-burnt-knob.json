@@ -16,8 +16,8 @@
   },
   "elevation_m": 2441.8,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "log",
+  "material_from": "design",
   "roles": [],
   "design": "L-5 log cabin",
   "height_m": null,
@@ -189,6 +189,11 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/id/burnt-knob-lookout/",
+      "kind": "register"
+    },
+    {
       "label": "Burnt Knob Lookout (Nez Perce-Clearwater National Forests, U.S. Forest Service)",
       "url": "https://www.fs.usda.gov/r01/nezperce-clearwater/recreation/burnt-knob-lookout",
       "kind": "reference"
@@ -206,6 +211,11 @@
     {
       "label": "Burnt Knob Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/selway-region/burnt-knob-lookout-2/",
+      "kind": "site"
+    },
+    {
+      "label": "Burnt Knob on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/burnt-knob.html",
       "kind": "site"
     },
     {
@@ -245,6 +255,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:burnt-knob:45.7027:-114.9911",
       "fields": [
+        "material",
         "design",
         "events",
         "photos",
@@ -264,6 +275,13 @@
       "key": "osm:way/964663240",
       "fields": [
         "access",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:burnt-knob",
+      "fields": [
         "links"
       ]
     },

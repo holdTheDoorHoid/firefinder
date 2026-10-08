@@ -1,7 +1,9 @@
 {
   "id": "us-co-sugar-loaf",
   "name": "Sugar Loaf",
-  "other_names": [],
+  "other_names": [
+    "Sugarloaf Mountain"
+  ],
   "country": "US",
   "region": "CO",
   "county": "Boulder",
@@ -18,11 +20,11 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Roosevelt National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +46,11 @@
       "label": "FFLA Colorado lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/co/",
       "kind": "association"
+    },
+    {
+      "label": "Sugarloaf Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/sugarloaf.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -54,6 +61,16 @@
         "name",
         "location",
         "county",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:co:sugarloaf",
+      "fields": [
+        "status",
+        "agency",
+        "ownership",
         "links"
       ]
     }

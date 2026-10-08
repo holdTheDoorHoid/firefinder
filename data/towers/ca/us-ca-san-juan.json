@@ -16,7 +16,7 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "7-ft open wood tower with an 8x8-ft hip-roofed cab",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -82,6 +82,16 @@
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
+    },
+    {
+      "label": "FFLA San Diego-Riverside Chapter: work on San Juan Lookout",
+      "url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/san-juan/",
+      "kind": "association"
+    },
+    {
+      "label": "San Juan on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/san-juan.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -111,6 +121,26 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "ffla_sdrc",
+      "key": "ffla_sdrc:ca:san-juan",
+      "fields": [
+        "design",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:san-juan",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:san-juan",
+      "fields": []
     }
   ],
   "conflicts": [
@@ -134,6 +164,21 @@
       ],
       "distance_m": 8187,
       "note": "They share a register number."
+    },
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "fflos",
+          "value": 1922
+        },
+        {
+          "source": "ffla_sdrc",
+          "value": 1930
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
   "verification": "unverified",

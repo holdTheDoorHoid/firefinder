@@ -1,7 +1,9 @@
 {
   "id": "us-or-yellow-stone",
   "name": "Yellow Stone Lookout Site",
-  "other_names": [],
+  "other_names": [
+    "Yellowstone Mountain"
+  ],
   "country": "US",
   "region": "OR",
   "county": "Linn",
@@ -13,8 +15,8 @@
   },
   "elevation_m": 1316.4,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -81,6 +83,11 @@
       "label": "Yellowstone on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/yellowstone.html",
       "kind": "site"
+    },
+    {
+      "label": "Yellowstone Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/yellowstone-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -92,6 +99,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -112,6 +120,13 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:or:yellowstone:44.5682:-122.4829",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:yellowstone-mountain",
       "fields": [
         "links"
       ]

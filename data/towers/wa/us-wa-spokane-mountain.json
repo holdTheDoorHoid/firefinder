@@ -13,10 +13,10 @@
   },
   "elevation_m": 1179.6,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "D-6",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -29,10 +29,10 @@
     }
   ],
   "agency": "Bureau of Indian Affairs",
-  "ownership": "unknown",
+  "ownership": "tribal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "permission",
+    "note": "On tribal land. Ask the tribe before visiting."
   },
   "staffing": {
     "status": "unknown",
@@ -105,6 +105,11 @@
       "label": "Spokane Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/spokmtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Spokane Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/spokane-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -137,6 +142,17 @@
       "source": "firelookout_com",
       "key": "firelookout_com:wa:spokane-mtn:47.9564:-118.0793",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:spokane-mountain",
+      "fields": [
+        "material",
+        "design",
+        "ownership",
+        "access",
         "links"
       ]
     }

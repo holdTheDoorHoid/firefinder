@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Nicolet National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +44,11 @@
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wi/",
       "kind": "association"
+    },
+    {
+      "label": "Anvil Lake (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/anvil-lake.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +61,15 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:wi:anvil-lake",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

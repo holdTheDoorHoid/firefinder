@@ -1,6 +1,7 @@
 {
   "id": "us-mt-lost-horse",
   "name": "Lost Horse Lookout",
+  "summary": "A 1934 L-4 cab on a 10-foot pole tower in the Kootenai National Forest, unused for years, wrapped against a 1994 fire and found standing but needing repairs in 2023.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": "L-4",
+  "design": "L-4 cab on a 10-foot pole tower",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -31,8 +32,8 @@
   "agency": "US Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "No rental or official visitor status found. Reached by a flagged route after a 30-mile dirt-road drive; no road to the site."
   },
   "staffing": {
     "status": "unknown",
@@ -41,35 +42,59 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Flagged route after a 30-mile drive on dirt road (2023 NMLA report). Sources do not say the cab is open to visitors."
   },
   "rental": null,
   "events": [
     {
+      "year": 1921,
+      "event": "other",
+      "note": "First used as a camp lookout",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/lost-horse-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/lost-horse-lookout/",
+        "https://adventuretaco.com/libby-to-canada-land-of-the-lookouts-mtbdr-8/"
+      ]
+    },
+    {
       "year": 1934,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Present 10-foot pole tower with L-4 cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/lost-horse-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/lost-horse-lookout/",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-mt-nw-2023.pdf",
+        "https://adventuretaco.com/libby-to-canada-land-of-the-lookouts-mtbdr-8/"
+      ]
     },
     {
       "year": 1994,
       "event": "fire",
-      "note": "Wrapped in protective covering during the Yaak-Red Dragon Complex Fire.",
-      "from": "nwmt_projects",
-      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2023-completed-projects.pdf"
+      "note": "Yaak-Red Dragon Complex Fire threatened the tower; the cab was wrapped for protection",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/lost-horse-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/lost-horse-lookout/",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-mt-nw-2023.pdf",
+        "https://montanalookouts.weebly.com/lost-horse.html",
+        "https://adventuretaco.com/libby-to-canada-land-of-the-lookouts-mtbdr-8/"
+      ]
     },
     {
       "year": 2021,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 9, 2021",
-      "from": "nhlr"
+      "note": "Registered January 9, 2021 as US 1510, MT 88",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/lost-horse-lookout/"
     },
     {
       "year": 2023,
       "event": "assessed",
-      "note": "Assessment by a re-flagged route: catwalk, steps, railings and shutters need repair and the roof has holes; the cab interior is intact.",
-      "from": "nwmt_projects",
-      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2023-completed-projects.pdf"
+      "note": "Volunteer visit: catwalk, steps, railings and shutters need repair; roof has holes; cab interior in good shape",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-mt-nw-2023.pdf"
     }
   ],
   "photos": [
@@ -129,6 +154,16 @@
       "kind": "register"
     },
     {
+      "label": "2023 Year-End Report (Northwest Montana Lookout Association)",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-mt-nw-2023.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Libby to Canada - Land of the Lookouts (MTBDR #8) (Adventure Taco)",
+      "url": "https://adventuretaco.com/libby-to-canada-land-of-the-lookouts-mtbdr-8/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
       "kind": "association"
@@ -141,6 +176,11 @@
     {
       "label": "Lost Horse on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/losthorse.html",
+      "kind": "site"
+    },
+    {
+      "label": "Lost Horse on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/lost-horse.html",
       "kind": "site"
     }
   ],
@@ -189,10 +229,38 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:lost-horse",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-lost-horse",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

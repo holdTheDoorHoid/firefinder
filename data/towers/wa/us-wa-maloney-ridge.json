@@ -13,12 +13,12 @@
   },
   "elevation_m": 1025.3,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [
     "aws"
   ],
-  "design": null,
+  "design": "L-4",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -31,7 +31,7 @@
     }
   ],
   "agency": "Washington Division of Forestry/DNR",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -143,6 +143,16 @@
       "label": "Maloney Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/maloneyridge.html",
       "kind": "site"
+    },
+    {
+      "label": "Maloney Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/maloney-ridge.html",
+      "kind": "site"
+    },
+    {
+      "label": "Maloney Ridge on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/alpine_lakes_wilderness/maloney_ridge/lookout_195.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -175,6 +185,23 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:maloney-ridge:47.6952:-121.3380",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:maloney-ridge",
+      "fields": [
+        "material",
+        "design",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:alpine-lakes-wilderness-maloney-ridge-lookout-195",
       "fields": [
         "links"
       ]

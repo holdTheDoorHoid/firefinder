@@ -21,8 +21,8 @@
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Plumas National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +44,11 @@
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
+    },
+    {
+      "label": "Seven Lakes Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/seven-lakes-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -58,9 +63,34 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:seven-lakes-mountain",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "standing"
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

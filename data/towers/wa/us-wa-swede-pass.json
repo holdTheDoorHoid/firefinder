@@ -1,7 +1,9 @@
 {
   "id": "us-wa-swede-pass",
   "name": "Swede Pass Lookout Site",
-  "other_names": [],
+  "other_names": [
+    "Swede Pass (Ryan BM)"
+  ],
   "country": "US",
   "region": "WA",
   "county": "Stevens",
@@ -13,8 +15,8 @@
   },
   "elevation_m": 956.8,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -116,6 +118,16 @@
       "label": "Swede Pass on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/swedepass.html",
       "kind": "site"
+    },
+    {
+      "label": "Swede Pass on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/swede-pass.html",
+      "kind": "site"
+    },
+    {
+      "label": "Swede Pass (Ryan BM) on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/swede_pass/lookout_100.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -127,6 +139,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -151,9 +164,45 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:swede-pass",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-swede-pass-lookout-100",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 48.7997,
+            "lon": -117.93895
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 48.78741,
+            "lon": -117.9486
+          }
+        }
+      ],
+      "distance_m": 1539,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

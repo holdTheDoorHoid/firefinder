@@ -13,15 +13,15 @@
   },
   "elevation_m": null,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 18.3,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Private",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -44,6 +44,11 @@
       "label": "FFLA New Hampshire lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nh/",
       "kind": "association"
+    },
+    {
+      "label": "Whitcomb Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/whitcomb-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +61,17 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:nh:whitcomb-mountain",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
+        "agency",
         "links"
       ]
     }

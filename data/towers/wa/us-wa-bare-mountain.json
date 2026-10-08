@@ -13,8 +13,8 @@
   },
   "elevation_m": 1626.1,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -81,6 +81,16 @@
       "label": "Bare Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/baremtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Bare Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/bare-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Bare Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/hiking/northfork_snoqualmie/bare_mountain/trail_202.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -92,6 +102,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -113,6 +124,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:bare-mtn:47.6494:-121.5075",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:bare-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:hiking-northfork-snoqualmie-bare-mountain-trail-202",
       "fields": [
         "links"
       ]

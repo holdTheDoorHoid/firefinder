@@ -13,8 +13,8 @@
   },
   "elevation_m": 1832.2,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -117,6 +117,16 @@
       "label": "Noble Knob on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/nobleknob.html",
       "kind": "site"
+    },
+    {
+      "label": "Noble Knob on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/noble-knob.html",
+      "kind": "site"
+    },
+    {
+      "label": "Noble Knob on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/hiking/corral_pass/noble_knob/lookout_445.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -128,6 +138,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -149,6 +160,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:noble-knob:47.0460:-121.4924",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:noble-knob",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:hiking-corral-pass-noble-knob-lookout-445",
       "fields": [
         "links"
       ]

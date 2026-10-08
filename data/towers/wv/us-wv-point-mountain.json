@@ -2,7 +2,9 @@
   "id": "us-wv-point-mountain",
   "name": "Point Mountain Fire Tower",
   "other_names": [
-    "Point Mountain (Potato Knob)"
+    "Potato Hill Tower Site",
+    "Point Mountain (Potato Knob)",
+    "Point Mountain (Potato Hill)"
   ],
   "country": "US",
   "region": "WV",
@@ -15,11 +17,11 @@
   },
   "elevation_m": 1025.3,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,6 +30,12 @@
       "number": "US 275",
       "state_number": "WV 6",
       "url": "http://nhlr.org/lookouts/us/wv/point-mountain-fire-tower/"
+    },
+    {
+      "register": "FFLOS",
+      "number": "US 1692",
+      "state_number": "WV 83",
+      "url": "http://firetower.org/lookouts/us/wv/potato-hill-tower-site/"
     }
   ],
   "agency": "West Virginia Division of Forestry",
@@ -52,6 +60,12 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: September 10, 1998",
       "from": "nhlr"
+    },
+    {
+      "year": 2017,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: January 26, 2017",
+      "from": "fflos"
     }
   ],
   "photos": [
@@ -66,12 +80,32 @@
       "year": null,
       "w": 529,
       "h": 708
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "http://firetower.org/media/2151/wv_potato-hill.jpg",
+      "source_url": "http://firetower.org/lookouts/us/wv/potato-hill-tower-site/",
+      "credit": "Ron Stafford, via Former Fire Lookout Sites Register (firetower.org)",
+      "license": "All rights reserved",
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
     {
       "label": "NHLR register entry US 275 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wv/point-mountain-fire-tower/",
+      "kind": "register"
+    },
+    {
+      "label": "FFLOS register entry US 1692 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/wv/potato-hill-tower-site/",
+      "kind": "register"
+    },
+    {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/wv/point-mountain-fire-tower/",
       "kind": "register"
     },
     {
@@ -82,6 +116,11 @@
     {
       "label": "2015 video of climbing Point Mountain Fire Tower",
       "url": "https://www.youtube.com/watch?v=MxSt-2gb67g",
+      "kind": "site"
+    },
+    {
+      "label": "Point Mountain (Potato Hill) (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/point-mountain.html",
       "kind": "site"
     }
   ],
@@ -94,8 +133,19 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "fflos",
+      "key": "fflos:US 1692",
+      "fields": [
+        "registers",
         "events",
         "photos",
         "links"
@@ -110,9 +160,37 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:wv:point-mountain",
+      "fields": [
+        "height_m",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "standing"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

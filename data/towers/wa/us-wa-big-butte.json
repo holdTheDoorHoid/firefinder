@@ -56,6 +56,48 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: November 8, 2000",
       "from": "nhlr"
+    },
+    {
+      "year": 2012,
+      "event": "assessed",
+      "note": "Repair costs determined and funding sources being sought.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ewa-2012.pdf"
+    },
+    {
+      "year": 2013,
+      "event": "other",
+      "note": "FFLA restoration grant of $500 approved for materials to repair the L-4 cab inside and out (paint, flooring, shutters, catwalk, railing, windows).",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-restoration-2013.pdf"
+    },
+    {
+      "year": 2013,
+      "event": "restored",
+      "note": "Cab taken down after the tower-leg damage; repairs ongoing, with cab restoration planned for the summer.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ewa-2013.pdf"
+    },
+    {
+      "year": 2014,
+      "event": "other",
+      "note": "FFLA restoration grant of 500 dollars toward rehabilitation, matched by 500 dollars from the Eastern Washington chapter.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ewa-2014.pdf"
+    },
+    {
+      "year": 2014,
+      "event": "restored",
+      "note": "Rehabilitation work party held, with six FFLA members taking part.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ewa-2014.pdf"
+    },
+    {
+      "year": 2015,
+      "event": "restored",
+      "note": "Another work party completed the final touches on the cab; cab and tower were to be put back up the following summer.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ewa-2015.pdf"
     }
   ],
   "photos": [
@@ -142,6 +184,16 @@
       "year": 1999,
       "w": 331,
       "h": 490
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://trailchick-media.s3.us-west-2.amazonaws.com/big-butte-lookout.jpg",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/big-butte-lookout/",
+      "credit": "TrailChick Washington lookout guide (trailchick.com)",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -151,13 +203,38 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=390",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Washington lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wa/",
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Big Butte Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ewa-2015.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Big Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/bigbutte.html",
+      "kind": "site"
+    },
+    {
+      "label": "Big Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/big-butte.html",
+      "kind": "site"
+    },
+    {
+      "label": "Big Butte in the TrailChick Washington lookout guide",
+      "url": "https://www.trailchick.com/wa-state-fire-lookouts/big-butte-lookout/",
+      "kind": "site"
+    },
+    {
+      "label": "Big Butte on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/big_butte_lookout/asotin_county_049.htm",
       "kind": "site"
     }
   ],
@@ -200,10 +277,56 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:wa:big-butte",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:big-butte",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "trailchick_wa",
+      "key": "trailchick_wa:wa:big-butte-lookout",
+      "fields": [
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-big-butte-lookout-asotin-county-049",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "firelookout_com",
+          "value": 1938
+        },
+        {
+          "source": "trailchick_wa",
+          "value": 1950
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

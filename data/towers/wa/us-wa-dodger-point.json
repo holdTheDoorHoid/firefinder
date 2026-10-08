@@ -14,13 +14,13 @@
   },
   "elevation_m": 1745.9,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [
     "aws"
   ],
   "design": "Single-story frame cab, 14x14 ft L-4 type, on a summit (no tower)",
-  "height_m": null,
+  "height_m": 4.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -143,6 +143,16 @@
       "year": null,
       "w": 520,
       "h": 355
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://trailchick-media.s3.us-west-2.amazonaws.com/dodger-point-lookout.jpg",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/dodger-point-lookout/",
+      "credit": "TrailChick Washington lookout guide (trailchick.com)",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -162,9 +172,9 @@
       "kind": "register"
     },
     {
-      "label": "Dodger Point Lookout, Olympic National Park (Willhite Web)",
-      "url": "https://willhiteweb.com/washington_fire_lookouts/dodger_point/trail_210.htm",
-      "kind": "reference"
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/wa/dodger-point-lookout/",
+      "kind": "register"
     },
     {
       "label": "Dodger Point Lookout (Olympic NP) saved from collapse (NWHikers.net)",
@@ -189,6 +199,21 @@
     {
       "label": "Dodger Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/dodgerpoint.html",
+      "kind": "site"
+    },
+    {
+      "label": "Dodger Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/dodger-point.html",
+      "kind": "site"
+    },
+    {
+      "label": "Dodger Point in the TrailChick Washington lookout guide",
+      "url": "https://www.trailchick.com/wa-state-fire-lookouts/dodger-point-lookout/",
+      "kind": "site"
+    },
+    {
+      "label": "Dodger Point on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/washington_fire_lookouts/dodger_point/trail_210.htm",
       "kind": "site"
     },
     {
@@ -239,6 +264,31 @@
       "fields": [
         "registers",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:dodger-point",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "trailchick_wa",
+      "key": "trailchick_wa:wa:dodger-point-lookout",
+      "fields": [
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-dodger-point-trail-210",
+      "fields": [
         "links"
       ]
     },

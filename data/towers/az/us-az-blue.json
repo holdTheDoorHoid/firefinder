@@ -13,11 +13,11 @@
   },
   "elevation_m": 2848.7,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 9.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -79,9 +79,19 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/az/blue-lookout/",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Arizona lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/az/",
       "kind": "association"
+    },
+    {
+      "label": "Blue on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/blue.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -108,6 +118,16 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:az:blue",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
         "links"
       ]
     }

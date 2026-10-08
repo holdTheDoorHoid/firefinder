@@ -8,10 +8,10 @@
   "region": "ID",
   "county": "Boundary",
   "location": {
-    "lat": 48.67157,
-    "lon": -116.18158,
+    "lat": 48.67994,
+    "lon": -116.1788,
     "precision": "exact",
-    "from": "ffla"
+    "from": "idaho_fl"
   },
   "elevation_m": null,
   "kind": "platform",
@@ -23,8 +23,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Kaniksu National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -56,6 +56,11 @@
       "label": "Two Tail Peak on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/northern-idaho/two-tail-peak/",
       "kind": "site"
+    },
+    {
+      "label": "Two Tail on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/two-tail.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -64,7 +69,6 @@
       "key": "ffla:id:two-tail:48.6716:-116.1816",
       "fields": [
         "name",
-        "location",
         "county",
         "kind",
         "status",
@@ -82,6 +86,16 @@
       "source": "idaho_fl",
       "key": "idaho_fl:two-tail-peak:48.6799:-116.1788",
       "fields": [
+        "location",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:two-tail",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }
@@ -91,6 +105,13 @@
       "field": "location",
       "values": [
         {
+          "source": "idaho_fl",
+          "value": {
+            "lat": 48.67994,
+            "lon": -116.1788
+          }
+        },
+        {
           "source": "ffla",
           "value": {
             "lat": 48.67157,
@@ -98,10 +119,10 @@
           }
         },
         {
-          "source": "idaho_fl",
+          "source": "firelookout_com",
           "value": {
-            "lat": 48.67994,
-            "lon": -116.1788
+            "lat": 48.67157,
+            "lon": -116.18158
           }
         }
       ],

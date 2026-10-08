@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Kootenai National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -61,6 +61,11 @@
       "label": "Black Peak on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/cda-region/black-peak-2/",
       "kind": "site"
+    },
+    {
+      "label": "Black Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/black-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -88,6 +93,15 @@
       "key": "idaho_fl:black-peak-2:47.7116:-115.7421",
       "fields": [
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:black-peak",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

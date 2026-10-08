@@ -17,12 +17,12 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 27.4,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Malheur National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Myrtle Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/myrtlebutte.html",
       "kind": "site"
+    },
+    {
+      "label": "Myrtle Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/myrtle-butte.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +73,16 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:myrtle-butte:44.7191:-118.7129",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:myrtle-butte",
+      "fields": [
+        "height_m",
+        "agency",
+        "ownership",
         "links"
       ]
     }

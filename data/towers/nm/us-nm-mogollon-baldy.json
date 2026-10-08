@@ -90,6 +90,13 @@
       ]
     },
     {
+      "year": 1948,
+      "event": "replaced",
+      "note": "Present steel tower with wooden cab erected, replacing earlier towers on the same spot.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
       "year": 1988,
       "event": "nrhp_listed",
       "note": "Mogollon Baldy Lookout Cabin listed on the National Register of Historic Places; the listing does not include the tower",
@@ -137,11 +144,6 @@
       "kind": "register"
     },
     {
-      "label": "Mogollon Baldy (Forest Lookouts)",
-      "url": "https://westlookouts.weebly.com/mogollon-baldy.html",
-      "kind": "reference"
-    },
-    {
       "label": "Mogollon Baldy Lookout Cabin (Wikipedia)",
       "url": "https://en.wikipedia.org/wiki/Mogollon_Baldy_Lookout_Cabin",
       "kind": "reference"
@@ -155,6 +157,16 @@
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Mogollon Baldy Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Mogollon Baldy on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/mogollon-baldy.html",
+      "kind": "site"
     },
     {
       "label": "Wikidata item Q107308350",
@@ -196,6 +208,14 @@
       ]
     },
     {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:nm:mogollon-baldy",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q107308350",
       "fields": [
@@ -208,6 +228,15 @@
       "key": "osm:way/243504470",
       "fields": [
         "access",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:nm:mogollon-baldy",
+      "fields": [
+        "design",
+        "height_m",
         "links"
       ]
     },
@@ -228,7 +257,23 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1948
+        },
+        {
+          "source": "ffla_west_reports",
+          "value": 1923
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "research": {
     "researched": "2026-10-08",
     "checked": "2026-10-08",

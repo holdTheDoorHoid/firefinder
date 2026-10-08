@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Shawnee National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -37,13 +37,31 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "A 60-foot steel stair tower with a dwelling and garage was built in Shawnee National Forest in 1934; only the footers remain.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2026/01/cr-in-2025.pdf"
+    }
+  ],
   "photos": [],
   "links": [
     {
       "label": "FFLA Illinois lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/il/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on High Knob",
+      "url": "https://firelookout.org/wp-content/uploads/2026/01/cr-in-2025.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "High Knob (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/high-knob.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -58,10 +76,27 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:il:high-knob",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:il:high-knob",
+      "fields": [
+        "events",
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

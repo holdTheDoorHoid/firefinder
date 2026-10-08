@@ -165,6 +165,16 @@
       "kind": "site"
     },
     {
+      "label": "Horsefly Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/horsefly-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Horsefly Mountain on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/oregons-standing-lookouts/",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 11244005723",
       "url": "https://www.openstreetmap.org/node/11244005723",
       "kind": "osm"
@@ -215,6 +225,21 @@
       ]
     },
     {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:horsefly-mountain",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:horsefly-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:us-or-horse-fly-mountain",
       "fields": [
@@ -229,7 +254,27 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1960
+        },
+        {
+          "source": "firelookout_com",
+          "value": 1961
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1957
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "research": {
     "researched": "2026-10-08",
     "checked": "2026-10-08",

@@ -1,7 +1,9 @@
 {
   "id": "us-or-boulder-point",
   "name": "Boulder Point Lookout Site",
-  "other_names": [],
+  "other_names": [
+    "Boulder Point Tree"
+  ],
   "country": "US",
   "region": "OR",
   "county": "Wasco",
@@ -93,6 +95,11 @@
       "label": "Boulder Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/boulderpoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Boulder Point Tree on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/boulder-point-tree.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -128,9 +135,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:boulder-point-tree",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "kind",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "platform"
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": "tree"
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources disagree on whether a tower or building stood here, or only a camp or lookout tree."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -1,6 +1,7 @@
 {
   "id": "us-al-smith-mountain",
   "name": "Smith Mountain Fire Lookout Tower",
+  "summary": "Alabama Power's first of six planned fire towers above Lake Martin: opened 1939, closed 1980, restored by CRATA and open to the public since 2012.",
   "other_names": [
     "Jerry W. Bynum Fire Lookout Tower"
   ],
@@ -15,11 +16,11 @@
   },
   "elevation_m": 189.3,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor LS-40 prefabricated galvanized steel tower with a small cab; CCC crew built a ranger station and outbuildings at its base",
+  "height_m": 25.0,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -30,11 +31,11 @@
       "url": "http://nhlr.org/lookouts/us/al/smith-mountain-fire-lookout-tower/"
     }
   ],
-  "agency": "Alabama Power Company",
+  "agency": "CRATA (title since 2010); NHLR still lists Alabama Power Company",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=yes."
+    "level": "public",
+    "note": "Restored and opened to the public in June 2012; CRATA runs the tower and trails. The sources read do not say whether the cab is open to climbers."
   },
   "staffing": {
     "status": "unknown",
@@ -42,22 +43,78 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Site just off Youngs Ferry Road outside Dadeville; steep 0.4-mile climb from the parking lot to the tower base; Walker Bynum tower trail total length 1.0 mile."
   },
   "rental": null,
   "events": [
     {
       "year": 1939,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR gives 1939 as the build year but its description says the WPA built it in 1938; CRATA credits Alabama Power Company and gives April 10, 1939 as the official opening",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/smith-mountain-fire-lookout-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/al/smith-mountain-fire-lookout-tower/",
+        "https://crata.org/smith-mountain-fire-tower/"
+      ]
+    },
+    {
+      "year": 1939,
+      "event": "staffed_first",
+      "note": "Smith Mountain was the first of six towers in the network and the district office of the Alabama Division of Forestry",
+      "from": "research",
+      "source_url": "https://crata.org/smith-mountain-fire-tower/"
+    },
+    {
+      "year": 1980,
+      "event": "closed",
+      "note": "Alabama Forestry Service closed the tower (CRATA); Weebly dates decommissioning to 1981",
+      "from": "research",
+      "source_url": "https://crata.org/smith-mountain-fire-tower/",
+      "source_urls": [
+        "https://crata.org/smith-mountain-fire-tower/",
+        "https://easternuslookouts.weebly.com/smith-mountain.html"
+      ]
+    },
+    {
+      "year": 1980,
+      "event": "staffed_last",
+      "note": "Closure year; the sources do not give a date for the last watch",
+      "from": "research",
+      "source_url": "https://crata.org/smith-mountain-fire-tower/"
+    },
+    {
+      "year": 1981,
+      "event": "closed",
+      "note": "Decommissioning as dated by Weebly; conflicts with CRATA's 1980",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/smith-mountain.html"
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 22, 2009",
-      "from": "nhlr"
+      "note": "Registered April 22, 2009 as US 776, AL 9",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/smith-mountain-fire-lookout-tower/"
+    },
+    {
+      "year": 2010,
+      "event": "other",
+      "note": "CRATA obtained title to the site and tower",
+      "from": "research",
+      "source_url": "https://crata.org/smith-mountain-fire-tower/"
+    },
+    {
+      "year": 2012,
+      "event": "restored",
+      "note": "Restoration completed and tower opened to the public in June 2012 (Weebly); CRATA says the tower has been restored",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/smith-mountain.html",
+      "source_urls": [
+        "https://easternuslookouts.weebly.com/smith-mountain.html",
+        "https://crata.org/smith-mountain-fire-tower/"
+      ]
     }
   ],
   "photos": [
@@ -93,6 +150,16 @@
       "kind": "register"
     },
     {
+      "label": "Smith Mountain Trails and the Jerry W. Bynum Fire Lookout Tower (CRATA)",
+      "url": "https://crata.org/smith-mountain/",
+      "kind": "reference"
+    },
+    {
+      "label": "Smith Mountain Fire Tower (history by Harold Banks) (CRATA)",
+      "url": "https://crata.org/smith-mountain-fire-tower/",
+      "kind": "reference"
+    },
+    {
       "label": "View article about restoration of Smith Mountain",
       "url": "http://www.montgomeryadvertiser.com/apps/pbcs.dll/article?AID=2012306200016",
       "kind": "site"
@@ -122,6 +189,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "status",
         "registers",
         "agency",
@@ -145,10 +213,32 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-al-smith-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

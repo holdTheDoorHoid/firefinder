@@ -2,7 +2,8 @@
   "id": "us-wi-phelps-military-hill-veterans",
   "name": "Phelps Military Hill Veterans Lookout Tower",
   "other_names": [
-    "Military Hill (Phelps)"
+    "Military Hill (Phelps)",
+    "Military Hill"
   ],
   "country": "US",
   "region": "WI",
@@ -15,8 +16,8 @@
   },
   "elevation_m": 567.5,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -96,6 +97,11 @@
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wi/",
       "kind": "association"
+    },
+    {
+      "label": "Military Hill (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/military-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -107,6 +113,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -121,6 +128,13 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:wi:military-hill",
+      "fields": [
         "links"
       ]
     }

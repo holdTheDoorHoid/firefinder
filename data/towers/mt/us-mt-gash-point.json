@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Bitterroot National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Gash Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/gashpoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Gash Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/gash-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +73,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:gash-point:46.4334:-114.3206",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:gash-point",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

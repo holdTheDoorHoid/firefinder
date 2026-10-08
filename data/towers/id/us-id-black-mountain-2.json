@@ -6,10 +6,10 @@
   "region": "ID",
   "county": "Bonneville",
   "location": {
-    "lat": 43.10515,
-    "lon": -111.12257,
+    "lat": 43.11825,
+    "lon": -111.12966,
     "precision": "exact",
-    "from": "ffla"
+    "from": "idaho_fl"
   },
   "elevation_m": null,
   "kind": "camp",
@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Caribou National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -54,6 +54,11 @@
       "label": "Black Mountain on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/southern-idaho/black-mountain/",
       "kind": "site"
+    },
+    {
+      "label": "Black Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/black-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -62,7 +67,6 @@
       "key": "ffla:id:black-mountain:43.1052:-111.1226",
       "fields": [
         "name",
-        "location",
         "county",
         "kind",
         "status",
@@ -80,6 +84,16 @@
       "source": "idaho_fl",
       "key": "idaho_fl:black-mountain:43.1183:-111.1297",
       "fields": [
+        "location",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:black-mountain",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }
@@ -89,6 +103,13 @@
       "field": "location",
       "values": [
         {
+          "source": "idaho_fl",
+          "value": {
+            "lat": 43.11825,
+            "lon": -111.12966
+          }
+        },
+        {
           "source": "ffla",
           "value": {
             "lat": 43.10515,
@@ -96,10 +117,10 @@
           }
         },
         {
-          "source": "idaho_fl",
+          "source": "firelookout_com",
           "value": {
-            "lat": 43.11825,
-            "lon": -111.12966
+            "lat": 43.10515,
+            "lon": -111.12257
           }
         }
       ],

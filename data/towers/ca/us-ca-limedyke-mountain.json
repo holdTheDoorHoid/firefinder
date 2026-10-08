@@ -46,6 +46,13 @@
   "rental": null,
   "events": [
     {
+      "year": 2008,
+      "event": "burned",
+      "note": "Lost to wildfire.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-wdep-2008.pdf"
+    },
+    {
       "year": 2015,
       "event": "fflos_registered",
       "note": "Date registered per FFLOS detail page: March 16, 2015",
@@ -63,6 +70,16 @@
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Limedyke Mountain Lookout Site",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-wdep-2008.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Lymedyke Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/lymedyke-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -88,6 +105,21 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:limedyke-mountain",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:lymedyke-mountain",
+      "fields": [
         "links"
       ]
     }

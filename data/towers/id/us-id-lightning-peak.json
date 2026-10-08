@@ -13,11 +13,11 @@
   },
   "elevation_m": null,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 21.3,
   "status": "gone",
   "status_note": null,
   "registers": [],
@@ -61,6 +61,11 @@
       "label": "Lightning Peak Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/northern-idaho/lightning-peak-lookout-2/",
       "kind": "site"
+    },
+    {
+      "label": "Lightning Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/lightning-peak1.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -88,6 +93,16 @@
       "key": "idaho_fl:lightning-peak-lookout-2:48.4113:-116.3349",
       "fields": [
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:lightning-peak1",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
         "links"
       ]
     }

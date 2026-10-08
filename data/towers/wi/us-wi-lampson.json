@@ -21,7 +21,7 @@
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "The NGS Data Sheet",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -46,6 +46,11 @@
       "kind": "association"
     },
     {
+      "label": "Lampson (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/lampson.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 353894134",
       "url": "https://www.openstreetmap.org/node/353894134",
       "kind": "osm"
@@ -65,6 +70,14 @@
       ]
     },
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:wi:lampson",
+      "fields": [
+        "agency",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/353894134",
       "fields": [
@@ -73,7 +86,29 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 45.98554,
+            "lon": -91.80243
+          }
+        },
+        {
+          "source": "central_us_lookouts",
+          "value": {
+            "lat": 45.98306,
+            "lon": -91.81611
+          }
+        }
+      ],
+      "distance_m": 1092,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

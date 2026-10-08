@@ -15,11 +15,11 @@
   },
   "elevation_m": 3315.0,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 16.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -98,6 +98,11 @@
       "kind": "association"
     },
     {
+      "label": "Escudilla on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/escudilla.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap way 374774322",
       "url": "https://www.openstreetmap.org/way/374774322",
       "kind": "osm"
@@ -134,6 +139,16 @@
       "source": "osm",
       "key": "osm:way/374774322",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:az:escudilla",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
         "links"
       ]
     }

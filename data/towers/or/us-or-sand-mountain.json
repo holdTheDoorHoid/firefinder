@@ -96,6 +96,13 @@
     },
     {
       "year": 1989,
+      "event": "rebuilt",
+      "note": "SMS moved the abandoned Whisky Peak lookout here and rebuilt it, with materials from several forests; dedicated in 1990.",
+      "from": "sand_mountain",
+      "source_url": "https://sandmountain.org/projects/sand-mountain-lookout/"
+    },
+    {
+      "year": 1989,
       "event": "relocated",
       "note": "Cab moved from Whisky Peak and rebuilt; a 10-foot treated timber tower was erected for it",
       "from": "research",
@@ -189,23 +196,28 @@
       "kind": "register"
     },
     {
-      "label": "Sand Mountain (Forest Lookouts)",
-      "url": "https://oregonlookouts.weebly.com/sand-mountain.html",
-      "kind": "reference"
-    },
-    {
-      "label": "Sand Mountain Lookout (Sand Mountain Society)",
-      "url": "https://sandmountain.org/projects/sand-mountain-lookout/",
-      "kind": "reference"
-    },
-    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
     },
     {
+      "label": "Sand Mountain Society: work on Sand Mountain Lookout",
+      "url": "https://sandmountain.org/projects/sand-mountain-lookout/",
+      "kind": "association"
+    },
+    {
       "label": "Sand Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/sandmtn.html",
+      "kind": "site"
+    },
+    {
+      "label": "Sand Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/sand-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Sand Mountain on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "http://cherylhill.net/firelookouts/2023/08/14/sand-mountain/",
       "kind": "site"
     },
     {
@@ -254,11 +266,40 @@
       ]
     },
     {
+      "source": "sand_mountain",
+      "key": "sand_mountain:or:sand-mountain",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/822074818",
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:sand-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:sand-mountain",
+      "fields": [
+        "height_m",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:or:sand-mountain",
+      "fields": []
     },
     {
       "source": "research",
@@ -277,7 +318,27 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "firelookout_com",
+          "value": 1932
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1989
+        },
+        {
+          "source": "sand_mountain",
+          "value": 1933
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "research": {
     "researched": "2026-10-08",
     "checked": "2026-10-08",

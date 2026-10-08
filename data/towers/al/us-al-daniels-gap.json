@@ -1,6 +1,7 @@
 {
   "id": "us-al-daniels-gap",
   "name": "Daniel's Gap Tower",
+  "summary": "Alabama Forestry Commission's 100 ft Aermotor tower on Lookout Mountain in Cherokee County; register says 1960, a 1964 newspaper item says 1961.",
   "other_names": [],
   "country": "US",
   "region": "AL",
@@ -13,10 +14,10 @@
   },
   "elevation_m": 343.5,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "100 ft Aermotor MC-39 with a 7 ft x 7 ft cab",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -40,22 +41,42 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "A 1964 item says the site is easily accessible by car; current access is not described in the sources read."
   },
   "rental": null,
   "events": [
     {
       "year": 1960,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR: completed by the Alabama Forestry Commission in 1960. A 1964 Anniston Star item (via Forest Lookouts) says built in 1961.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/daniels-gap-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/al/daniels-gap-tower/",
+        "https://easternuslookouts.weebly.com/daniels-gap.html"
+      ]
+    },
+    {
+      "year": 1961,
+      "event": "other",
+      "note": "Tower erected in 1961 per the Anniston Star, quoted on Forest Lookouts; conflicts with the register's 1960",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/daniels-gap.html"
+    },
+    {
+      "year": 1964,
+      "event": "staffed",
+      "note": "James C. Edlers began as full-time towerman on October 1, 1964 (Anniston Star item)",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/daniels-gap.html"
     },
     {
       "year": 2011,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 3, 2011",
-      "from": "nhlr"
+      "note": "Registered January 3, 2011 as US 897, AL 55",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/daniels-gap-tower/"
     }
   ],
   "photos": [
@@ -151,6 +172,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "status",
         "registers",
         "agency",
@@ -176,10 +198,29 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-al-daniels-gap",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -13,16 +13,16 @@
   },
   "elevation_m": null,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "L-4",
+  "height_m": 3.0,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "St. Joe National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -61,6 +61,11 @@
       "label": "Lemonade Peak on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/lemonade-peak/",
       "kind": "site"
+    },
+    {
+      "label": "Lemonade Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/lemonade-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -88,6 +93,18 @@
       "key": "idaho_fl:lemonade-peak:47.3844:-116.1871",
       "fields": [
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:lemonade-peak",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
+        "agency",
+        "ownership",
         "links"
       ]
     }

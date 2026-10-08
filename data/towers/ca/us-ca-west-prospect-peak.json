@@ -1,6 +1,7 @@
 {
   "id": "us-ca-west-prospect-peak",
   "name": "West Prospect Peak Lookout",
+  "summary": "A 1935 BC-301 cab on a 10-ft timber tower in Lassen NF; the NRHP number on this record appears to belong to a different lookout inside Lassen Volcanic NP.",
   "other_names": [
     "Prospect Peak Fire Lookout"
   ],
@@ -15,10 +16,10 @@
   },
   "elevation_m": 2488.4,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "California Region 5 Plan BC-301 cab on a 10-ft enclosed timber tower",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -36,15 +37,15 @@
       "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78000295"
     }
   ],
-  "agency": "US Forest Service - Lassen National Forest",
+  "agency": "U.S. Forest Service, Lassen National Forest",
   "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2019"
   },
   "visit": {
     "climbable": null,
@@ -54,16 +55,39 @@
   "rental": null,
   "events": [
     {
+      "year": 1922,
+      "event": "other",
+      "note": "Inferred from Gus Kramer's 17th year in June 1938; the earlier use of the peak is not named in the sources read",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/west-prospect-peak.html"
+    },
+    {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register: constructed 1935 as a Region 5 BC-301 cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/west-prospect-peak-lookout/"
+    },
+    {
+      "year": 1938,
+      "event": "staffed",
+      "note": "Gus Kramer's 17th year as lookout, per a June 1938 newspaper item",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/west-prospect-peak.html"
+    },
+    {
+      "year": 1955,
+      "event": "staffed",
+      "note": "Armando DelTorto occupied the post, per a January 1955 inspection (1955 GII Inspection, Hat Creek District)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/west-prospect-peak.html"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 27, 2019",
-      "from": "nhlr"
+      "note": "Registered October 27, 2019 as US 1350, CA 173",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/west-prospect-peak-lookout/"
     }
   ],
   "photos": [
@@ -123,6 +147,16 @@
       "kind": "register"
     },
     {
+      "label": "Prospect Peak Fire Lookout, National Register nomination form (Gordon Chappell, 1977) (National Park Service, National Register of Historic Places)",
+      "url": "https://npgallery.nps.gov/GetAsset/179717a5-9a87-405c-99b0-f06882d4c5e3",
+      "kind": "reference"
+    },
+    {
+      "label": "Prospect Peak Fire Lookout, NPGallery asset detail (NRIS 78000295) (National Park Service (NPGallery))",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78000295",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -131,6 +165,11 @@
       "label": "Wikipedia: Prospect Peak Fire Lookout",
       "url": "https://en.wikipedia.org/wiki/Prospect_Peak_Fire_Lookout",
       "kind": "wikipedia"
+    },
+    {
+      "label": "West Prospect Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/west-prospect-peak.html",
+      "kind": "site"
     },
     {
       "label": "Wikidata item Q14683716",
@@ -147,6 +186,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -172,6 +212,26 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:west-prospect-peak",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-west-prospect-peak",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -191,7 +251,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

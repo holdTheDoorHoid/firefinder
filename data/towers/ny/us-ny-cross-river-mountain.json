@@ -1,7 +1,9 @@
 {
   "id": "us-ny-cross-river-mountain",
   "name": "Cross River Mountain Fire Tower",
-  "other_names": [],
+  "other_names": [
+    "Cross River"
+  ],
   "country": "US",
   "region": "NY",
   "county": "Westchester",
@@ -29,10 +31,10 @@
     }
   ],
   "agency": "Westchester County Parks, Recreation, and Conservation",
-  "ownership": "unknown",
+  "ownership": "tribal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "permission",
+    "note": "On tribal land. Ask the tribe before visiting."
   },
   "staffing": {
     "status": "unknown",
@@ -84,6 +86,16 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association, New York State Chapter: work on Cross River Mountain Fire Tower",
+      "url": "https://www.nysffla.org/News2023/2023%20May%20final.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Cross River (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/cross-river.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 12385318755",
       "url": "https://www.openstreetmap.org/node/12385318755",
       "kind": "osm"
@@ -115,6 +127,22 @@
       ]
     },
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:cross-river",
+      "fields": [
+        "ownership",
+        "access",
+        "links"
+      ]
+    },
+    {
+      "source": "nysffla_projects",
+      "key": "nysffla_projects:ny:cross-river-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/12385318755",
       "fields": [
@@ -137,13 +165,17 @@
         {
           "source": "osm",
           "value": "standing"
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": "gone"
         }
       ],
       "distance_m": null,
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

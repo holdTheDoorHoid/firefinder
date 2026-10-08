@@ -129,6 +129,16 @@
       "label": "West Fork Tilton on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/westforktilton.html",
       "kind": "site"
+    },
+    {
+      "label": "West Fork Tilton on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/west-fork-tilton.html",
+      "kind": "site"
+    },
+    {
+      "label": "West Fork Tilton on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/west_fork_tilton/location_363.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -165,9 +175,45 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:west-fork-tilton",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-west-fork-tilton-location-363",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 46.63222,
+            "lon": -122.24385
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 46.6279,
+            "lon": -122.2465
+          }
+        }
+      ],
+      "distance_m": 521,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

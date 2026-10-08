@@ -13,8 +13,8 @@
   },
   "elevation_m": 2735.0,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -79,9 +79,19 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=450",
+      "kind": "register"
+    },
+    {
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
       "kind": "association"
+    },
+    {
+      "label": "Tohnitsha on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/tohnitsha.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -93,6 +103,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -109,6 +120,13 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:nm:tohnitsha",
+      "fields": [
         "links"
       ]
     }

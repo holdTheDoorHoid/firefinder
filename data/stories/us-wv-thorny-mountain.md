@@ -1,0 +1,9 @@
+The Thorny Mountain fire tower stands in Seneca State Forest, in Pocahontas County, West Virginia.[^2] According to the state's park history, a fire tower was built on Michael Mountain in 1924, and a newer tower replaced it on Thorny Mountain in 1935.[^2] The National Historic Lookout Register tells the earlier story differently. It says the first tower was built in the 1920s on the eastern side of the forest and was reconstructed at its present site in 1935.[^1] The two accounts agree on 1935 for the present site, but they do not agree on where the earlier tower stood, so the Michael Mountain link is not confirmed.[^1][^2]
+
+The NHLR describes the present tower as a 53-foot steel tower with a 12-by-12 live-in wooden cab and catwalk, and calls it one of a kind in West Virginia.[^1] A state page calls it a 65-foot tower.[^3] The two heights differ, and the sources do not explain why.
+
+In 2015 the state renovated the tower and began allowing overnight rentals.[^1] It now has two cots, sleeps up to four guests, and can be reserved for overnight stays from May to October.[^3] Online bookings open at 12:00 AM on the first day of each month, one year ahead.[^3] The NHLR says the site is easy to reach by car, though wet or snowy spells may call for four-wheel drive.[^1] The NHLR registered the tower on June 3, 1993.[^1]
+
+[^1]: Thorny Mountain Fire Tower, National Historic Lookout Register, http://nhlr.org/lookouts/us/wv/thorny-mountain-fire-tower/ (accessed 2026-10-08).
+[^2]: Seneca State Forest: Overview and History, West Virginia State Parks, https://wvstateparks.com/parks/seneca-state-forest/park-history/ (accessed 2026-10-08).
+[^3]: Seneca State Forest Cabins, West Virginia State Parks, https://wvstateparks.com/places-to-stay/cabins/seneca-state-forest-cabins/ (accessed 2026-10-08).

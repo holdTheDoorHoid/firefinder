@@ -15,10 +15,10 @@
   },
   "elevation_m": 3077.9,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "59-ft 3-in Aermotor LX-25 tower with 7x7 metal cab",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -81,9 +81,24 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=700",
+      "kind": "register"
+    },
+    {
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on San Mateo Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "San Mateo on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/san-mateo.html",
+      "kind": "site"
     },
     {
       "label": "OpenStreetMap way 284037683",
@@ -119,8 +134,24 @@
       ]
     },
     {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:nm:san-mateo",
+      "fields": [
+        "material",
+        "design",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/284037683",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:nm:san-mateo",
       "fields": [
         "links"
       ]

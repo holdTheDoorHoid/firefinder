@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "State Department of Forestry",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,16 @@
       "label": "Platts on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/platts.html",
       "kind": "site"
+    },
+    {
+      "label": "Platts on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/platts.html",
+      "kind": "site"
+    },
+    {
+      "label": "Platts on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/platts_lookout/carnation_tolt_372.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,10 +80,26 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:platts",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-platts-lookout-carnation-tolt-372",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

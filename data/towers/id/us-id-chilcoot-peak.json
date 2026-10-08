@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Boise National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -61,6 +61,11 @@
       "label": "Chilcoot Peak Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/west-central/chilcoot-peak-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Chilcoot Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/chilcoot-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -88,6 +93,15 @@
       "key": "idaho_fl:chilcoot-peak-lookout:44.7702:-115.4223",
       "fields": [
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:chilcoot-peak",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

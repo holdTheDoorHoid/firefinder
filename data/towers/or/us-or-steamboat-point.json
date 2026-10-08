@@ -16,8 +16,8 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "L-4",
+  "height_m": 4.6,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -81,6 +81,11 @@
       "label": "Steamboat Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/steamboatpoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Steamboat Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/steamboat-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -117,9 +122,40 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:steamboat-point",
+      "fields": [
+        "design",
+        "height_m",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 43.34722,
+            "lon": -122.71282
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 43.3461,
+            "lon": -122.7244
+          }
+        }
+      ],
+      "distance_m": 945,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

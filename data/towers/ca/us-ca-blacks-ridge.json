@@ -94,6 +94,11 @@
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
+    },
+    {
+      "label": "Blacks Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/blacks-ridge.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -123,9 +128,38 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:blacks-ridge",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 40.840149,
+            "lon": -121.175983
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 40.82361,
+            "lon": -121.16222
+          }
+        }
+      ],
+      "distance_m": 2173,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

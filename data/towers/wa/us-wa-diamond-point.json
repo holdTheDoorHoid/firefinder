@@ -13,8 +13,8 @@
   },
   "elevation_m": 2412.8,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -117,6 +117,16 @@
       "label": "Diamond Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/diamondpoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Diamond Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/diamond-point.html",
+      "kind": "site"
+    },
+    {
+      "label": "Diamond Point on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/pasayten_wilderness/diamond_point_lookout/history_066.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -128,6 +138,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -149,6 +160,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:diamond-point:48.8820:-120.3037",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:diamond-point",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:pasayten-wilderness-diamond-point-lookout-history-066",
       "fields": [
         "links"
       ]

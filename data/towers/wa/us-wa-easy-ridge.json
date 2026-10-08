@@ -13,8 +13,8 @@
   },
   "elevation_m": 1719.1,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -81,6 +81,16 @@
       "label": "Easy Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/easyridge.html",
       "kind": "site"
+    },
+    {
+      "label": "Easy Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/easy-ridge.html",
+      "kind": "site"
+    },
+    {
+      "label": "Easy Ridge on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/fire_lookouts/easy_ridge_lookout/north_cascades_055.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -92,6 +102,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -113,6 +124,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:easy-ridge:48.8961:-121.4315",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:easy-ridge",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:fire-lookouts-easy-ridge-lookout-north-cascades-055",
       "fields": [
         "links"
       ]

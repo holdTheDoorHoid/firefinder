@@ -1,7 +1,9 @@
 {
   "id": "us-mo-thomasville",
   "name": "Thomasville Fire Tower",
-  "other_names": [],
+  "other_names": [
+    "Thomasville (Federal)"
+  ],
   "country": "US",
   "region": "MO",
   "county": "Shannon",
@@ -13,8 +15,8 @@
   },
   "elevation_m": 335.9,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -64,6 +66,11 @@
       "label": "NHLR register entry US 974 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/mo/thomasville-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Thomasville (Federal) (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/thomasville-f.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -76,15 +83,39 @@
         "county",
         "elevation_m",
         "kind",
+        "material",
         "status",
         "registers",
         "agency",
         "events",
         "links"
       ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mo:thomasville-f",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "central_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

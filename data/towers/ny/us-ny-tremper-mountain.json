@@ -16,8 +16,8 @@
   },
   "elevation_m": 829.1,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": "47-ft steel Aermotor LS-40 tower with 7x7-ft metal cab",
   "height_m": 14.3,
@@ -109,6 +109,32 @@
       "note": "Reopened after restoration by grassroots volunteers, the Catskill Center and NYS DEC",
       "from": "research",
       "source_url": "https://www.hmdb.org/m.asp?m=132245"
+    },
+    {
+      "year": 2016,
+      "event": "modified",
+      "note": "New panoramas were installed in the cab, arranged with Forest Ranger Marie Ellenbogen, to help visitors identify surrounding mountains (reported July 2016).",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/Newsletters/2016/2016-07.pdf"
+    },
+    {
+      "year": 2022,
+      "event": "closed",
+      "note": "The cab of Mount Tremper tower stayed closed for the 2022 season for safety, with its floor and windows needing replacement.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2022/2022%20May%20final.pdf",
+      "source_urls": [
+        "https://www.nysffla.org/News2022/2022%20May%20final.pdf",
+        "https://www.nysffla.org/News2022/2022%20Jun%20final.pdf",
+        "https://www.nysffla.org/News2022/2022%20Jul%20final.pdf"
+      ]
+    },
+    {
+      "year": 2022,
+      "event": "restored",
+      "note": "DEC Operations staff replaced worn steps and landings and broken windows at Mount Tremper tower (June 2022 Catskill bulletin); cab stayed closed.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2022/2022%20Jul%20final.pdf"
     }
   ],
   "photos": [
@@ -156,6 +182,11 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=89",
+      "kind": "register"
+    },
+    {
       "label": "Mount Tremper Fire Tower Historical Marker (Historical Marker Database)",
       "url": "https://www.hmdb.org/m.asp?m=132245",
       "kind": "reference"
@@ -163,11 +194,6 @@
     {
       "label": "Mount Tremper Fire Observation Station (Wikipedia)",
       "url": "https://en.wikipedia.org/wiki/Mount_Tremper_Fire_Observation_Station",
-      "kind": "reference"
-    },
-    {
-      "label": "Mount Tremper (Forest Lookouts (easternuslookouts.weebly.com))",
-      "url": "https://easternuslookouts.weebly.com/mount-tremper.html",
       "kind": "reference"
     },
     {
@@ -186,6 +212,11 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association, New York State Chapter: work on Tremper Mountain Fire Tower",
+      "url": "https://www.nysffla.org/News2022/2022%20May%20final.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Mount Tremper on andyarthur.org (Andy Arthur)",
       "url": "https://andyarthur.org/explore/mount-tremper",
       "kind": "site"
@@ -193,6 +224,11 @@
     {
       "label": "andyarthur.org NYS DEC Firetowers list",
       "url": "https://andyarthur.org/p/138058",
+      "kind": "site"
+    },
+    {
+      "label": "Mt. Tremper (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/mount-tremper.html",
       "kind": "site"
     },
     {
@@ -210,6 +246,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -232,6 +269,22 @@
       "key": "andyarthur_ny:mount-tremper:42.0739:-74.2782",
       "fields": [
         "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:mount-tremper",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "nysffla_projects",
+      "key": "nysffla_projects:ny:tremper-mountain",
+      "fields": [
+        "events",
         "links"
       ]
     },

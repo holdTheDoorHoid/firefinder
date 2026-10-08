@@ -13,16 +13,16 @@
   },
   "elevation_m": null,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "D-6",
   "height_m": null,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Kaniksu National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -74,6 +74,11 @@
       "label": "Scotchman Peak Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/northern-idaho/scotchman-peak-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Scotchman Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/scotchman-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -102,6 +107,17 @@
       "fields": [
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:scotchman-peak",
+      "fields": [
+        "material",
+        "design",
+        "agency",
+        "ownership",
         "links"
       ]
     }

@@ -13,8 +13,8 @@
   },
   "elevation_m": 1148.5,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -87,6 +87,11 @@
       "label": "Salmon Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/salmonmtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Salmon Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/salmon-mountain1.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -98,6 +103,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -119,6 +125,13 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:or:salmon-mtn:45.1791:-121.9807",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:salmon-mountain1",
       "fields": [
         "links"
       ]
@@ -154,7 +167,7 @@
       "note": "They share a register number."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

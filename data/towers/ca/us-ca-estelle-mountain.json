@@ -1,6 +1,6 @@
 {
   "id": "us-ca-estelle-mountain",
-  "name": "Estelle Mountain",
+  "name": "Estelle Mountain Lookout",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -13,10 +13,10 @@
   },
   "elevation_m": null,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "BC-301 14x14-ft cab on a 30-ft L-1600 steel K-brace tower",
   "height_m": null,
   "status": "relocated",
   "status_note": null,
@@ -39,11 +39,18 @@
   "rental": null,
   "events": [
     {
+      "year": 1935,
+      "event": "built",
+      "note": "Built by the Civilian Conservation Corps; later taken apart and moved to the Hemet-Ryan airbase, where it still serves as the control tower.",
+      "from": "ffla_sdrc",
+      "source_url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/estelle-mountain/"
+    },
+    {
       "year": null,
       "event": "relocated",
       "note": "The lookout was moved to Hemet-Ryan.",
       "from": "ffla",
-      "moved_from": "Estelle Mountain",
+      "moved_from": "Estelle Mountain Lookout",
       "moved_to": "Hemet-Ryan"
     }
   ],
@@ -59,6 +66,11 @@
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
+    },
+    {
+      "label": "FFLA San Diego-Riverside Chapter: work on Estelle Mountain Lookout",
+      "url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/estelle-mountain/",
+      "kind": "association"
     }
   ],
   "sources": [
@@ -71,6 +83,16 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_sdrc",
+      "key": "ffla_sdrc:ca:estelle-mountain",
+      "fields": [
+        "material",
+        "design",
+        "events",
         "links"
       ]
     }

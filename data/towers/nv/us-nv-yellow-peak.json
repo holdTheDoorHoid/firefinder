@@ -7,10 +7,10 @@
   "region": "NV",
   "county": "Washoe",
   "location": {
-    "lat": 41.850064,
-    "lon": -119.63278,
+    "lat": 41.83586,
+    "lon": -119.62492,
     "precision": "exact",
-    "from": "nhlr"
+    "from": "ffla"
   },
   "elevation_m": 1984.9,
   "kind": "ground",
@@ -85,6 +85,16 @@
       "label": "FFLA Nevada lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nv//",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Yellow Peak Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sn-nevada-2012.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Yellow Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/yellow-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -93,7 +103,6 @@
       "key": "nhlr:US 301",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "registers",
@@ -108,6 +117,7 @@
       "source": "ffla",
       "key": "ffla:nv:yellow-peak:41.8359:-119.6249",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -126,6 +136,22 @@
       "key": "ffla:nv:yellow-peak:41.8359:-119.6249:2",
       "fields": [
         "registers"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:nv:yellow-peak",
+      "fields": [
+        "design",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:nv:yellow-peak",
+      "fields": [
+        "links"
       ]
     },
     {
@@ -149,6 +175,13 @@
       "field": "location",
       "values": [
         {
+          "source": "ffla",
+          "value": {
+            "lat": 41.83586,
+            "lon": -119.62492
+          }
+        },
+        {
           "source": "nhlr",
           "value": {
             "lat": 41.850064,
@@ -156,10 +189,10 @@
           }
         },
         {
-          "source": "ffla",
+          "source": "ffla_west_reports",
           "value": {
-            "lat": 41.83586,
-            "lon": -119.62492
+            "lat": 41.85006,
+            "lon": -119.63278
           }
         }
       ],

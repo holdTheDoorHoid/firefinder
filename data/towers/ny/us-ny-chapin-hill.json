@@ -17,7 +17,7 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 18.3,
   "status": "gone",
   "status_note": null,
   "registers": [],
@@ -37,13 +37,38 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1924,
+      "event": "built",
+      "note": "The 60-foot Aermotor LS40 tower was erected in 1924 with Sullivan County funds.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2024/2024%20Jan%20final.pdf"
+    },
+    {
+      "year": 1941,
+      "event": "other",
+      "note": "A 1941 wildfire destroyed the observer's cabin and burned the first three wooden landings and stairs of the tower.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2020/2020%20Jan%20final.pdf"
+    }
+  ],
   "photos": [],
   "links": [
     {
       "label": "FFLA New York lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ny/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association, New York State Chapter: work on Chapin Hill",
+      "url": "https://www.nysffla.org/News2024/2024%20Jan%20final.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Chapin Hill (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/chapin-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +81,22 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:chapin-hill",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "nysffla_projects",
+      "key": "nysffla_projects:ny:chapin-hill",
+      "fields": [
+        "events",
         "links"
       ]
     }

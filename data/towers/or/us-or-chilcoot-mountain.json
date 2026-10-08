@@ -1,7 +1,9 @@
 {
   "id": "us-or-chilcoot-mountain",
   "name": "Chilcoot Mountain Lookout Site",
-  "other_names": [],
+  "other_names": [
+    "Chilcoot"
+  ],
   "country": "US",
   "region": "OR",
   "county": "Douglas",
@@ -13,10 +15,10 @@
   },
   "elevation_m": 1519.7,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -105,6 +107,11 @@
       "label": "Chilcoot Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/chilcoot.html",
       "kind": "site"
+    },
+    {
+      "label": "Chilcoot on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/chilcoot.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -138,6 +145,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:chilcoot-mtn:43.4342:-122.7322",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:chilcoot",
+      "fields": [
+        "material",
+        "design",
         "links"
       ]
     }

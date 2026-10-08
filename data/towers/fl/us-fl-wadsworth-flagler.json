@@ -1,8 +1,9 @@
 {
   "id": "us-fl-wadsworth-flagler",
   "name": "Wadsworth (Flagler) Fire Tower",
+  "summary": "Aeromotor LS40K tower on Route 1 in Palm Coast, Flagler County; construction date not found; Weebly listing conflicts on height and name.",
   "other_names": [
-    "FLAGLER"
+    "Flagler"
   ],
   "country": "US",
   "region": "FL",
@@ -15,11 +16,11 @@
   },
   "elevation_m": 13.4,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": 24.4,
+  "design": "100-foot Aeromotor LS40K fire tower with side entry and catwalk (register); a Weebly listing gives 80 feet",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -48,10 +49,18 @@
   "rental": null,
   "events": [
     {
+      "year": 1995,
+      "event": "other",
+      "note": "Fire spotting duties discontinued (Weebly Flagler listing)",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/flagler.html"
+    },
+    {
       "year": 2016,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 27, 2016",
-      "from": "nhlr"
+      "note": "Registered May 27, 2016; nominated by Bob Spear",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/fl/wadsworth-flagler-fire-tower/"
     }
   ],
   "photos": [
@@ -80,7 +89,17 @@
       "kind": "register"
     },
     {
-      "label": "FLAGLER (easternuslookouts.weebly.com)",
+      "label": "Florida Chapter (Forest Fire Lookout Association Inc.)",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-fl-2015.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Forestry Tower Park (JaxParks, City of Jacksonville)",
+      "url": "https://www.jacksonville.gov/departments/parks-and-recreation/jaxparks/all-parks/forestry-tower-park",
+      "kind": "reference"
+    },
+    {
+      "label": "Flagler (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/flagler.html",
       "kind": "site"
     },
@@ -100,6 +119,7 @@
         "county",
         "elevation_m",
         "kind",
+        "material",
         "status",
         "registers",
         "events",
@@ -121,10 +141,29 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-fl-wadsworth-flagler",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -13,10 +13,10 @@
   },
   "elevation_m": 2193.3,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -79,9 +79,19 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=397",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Arizona lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/az/",
       "kind": "association"
+    },
+    {
+      "label": "East Pocket on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/east-pocket.html",
+      "kind": "site"
     },
     {
       "label": "OpenStreetMap way 1488757222",
@@ -98,6 +108,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -123,6 +134,14 @@
         "registers",
         "access",
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:az:east-pocket",
+      "fields": [
+        "design",
         "links"
       ]
     }

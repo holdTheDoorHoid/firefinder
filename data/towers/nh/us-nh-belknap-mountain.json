@@ -19,7 +19,7 @@
   "material_from": "nhlr",
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 121.9,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -52,6 +52,13 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: March 12, 2002",
       "from": "nhlr"
+    },
+    {
+      "year": 2023,
+      "event": "restored",
+      "note": "Rehabilitation, painting and new cab at the state tower, costing $712,000; cab walls and roof were airlifted into place, delayed by wet weather; operation expected 2024.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/03/cr-nh-2023.pdf"
     }
   ],
   "photos": [
@@ -87,9 +94,24 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/nh/belknap-mountain-lookout/",
+      "kind": "register"
+    },
+    {
       "label": "FFLA New Hampshire lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nh/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Belknap Mountain Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/03/cr-nh-2023.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Belknap Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/belknap-mountain.html",
+      "kind": "site"
     },
     {
       "label": "OpenStreetMap node 1095059203",
@@ -121,6 +143,22 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:nh:belknap-mountain",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:nh:belknap-mountain",
+      "fields": [
+        "events",
         "links"
       ]
     },

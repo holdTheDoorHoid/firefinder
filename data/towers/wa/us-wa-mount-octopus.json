@@ -6,10 +6,10 @@
   "region": "WA",
   "county": "King",
   "location": {
-    "lat": 47.749261,
-    "lon": -121.178316,
+    "lat": 47.74933,
+    "lon": -124.17775,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 758.0,
   "kind": "tower",
@@ -129,6 +129,16 @@
       "label": "Mt. Octopus on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/octopus.html",
       "kind": "site"
+    },
+    {
+      "label": "Mount Octopus on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/mount-octopus.html",
+      "kind": "site"
+    },
+    {
+      "label": "Mount Octopus on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/mount_octopus_lookout/forks_155.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -137,7 +147,6 @@
       "key": "fflos:US 1917",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "registers",
@@ -151,6 +160,7 @@
       "source": "ffla",
       "key": "ffla:wa:octopus-mount:47.7493:-124.1778",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -163,19 +173,26 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:mount-octopus",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-mount-octopus-lookout-forks-155",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
-        {
-          "source": "fflos",
-          "value": {
-            "lat": 47.749261,
-            "lon": -121.178316
-          }
-        },
         {
           "source": "ffla",
           "value": {
@@ -184,10 +201,10 @@
           }
         },
         {
-          "source": "firelookout_com",
+          "source": "fflos",
           "value": {
-            "lat": 47.74933,
-            "lon": -124.17775
+            "lat": 47.749261,
+            "lon": -121.178316
           }
         }
       ],

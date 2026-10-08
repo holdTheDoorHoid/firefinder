@@ -1,6 +1,7 @@
 {
   "id": "us-wv-thorny-mountain",
   "name": "Thorny Mountain Fire Tower",
+  "summary": "Seneca State Forest tower: a steel tower on Thorny Mountain from 1935, renovated and rentable overnight from May to October since 2015.",
   "other_names": [],
   "country": "US",
   "region": "WV",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Steel tower with 12x12 live-in wooden cab and catwalk (NHLR says 53 feet; a state page says 65 feet)",
+  "height_m": 16.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,8 +32,8 @@
   "agency": "West Virginia Division of Natural Resources",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Overnight stays are reserved through West Virginia State Parks, May to October. Two cots, up to four guests. Online bookings open 12:00 AM on the first day of the month, one year ahead."
   },
   "staffing": {
     "status": "unknown",
@@ -40,8 +41,8 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "NHLR says the tower site is easily reached by vehicle but may need four-wheel drive in wet or snowy periods."
   },
   "rental": {
     "available": true,
@@ -54,16 +55,43 @@
   },
   "events": [
     {
+      "year": 1924,
+      "event": "other",
+      "note": "State built a fire tower on Michael Mountain, per state park history. Not this site; the replaced tower's location is in dispute.",
+      "from": "research",
+      "source_url": "https://wvstateparks.com/parks/seneca-state-forest/park-history/"
+    },
+    {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Tower erected on Thorny Mountain as a newer version of the earlier tower. NHLR says reconstructed at its present location to cover the Greenbrier River valley.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wv/thorny-mountain-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wv/thorny-mountain-fire-tower/",
+        "https://wvstateparks.com/parks/seneca-state-forest/park-history/"
+      ]
     },
     {
       "year": 1993,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 3, 1993",
-      "from": "nhlr"
+      "note": "Registered June 3, 1993 as US 63, WV 2",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wv/thorny-mountain-fire-tower/"
+    },
+    {
+      "year": 2015,
+      "event": "rental_opened",
+      "note": "Began permitting overnight rentals of the tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wv/thorny-mountain-fire-tower/"
+    },
+    {
+      "year": 2015,
+      "event": "restored",
+      "note": "Renovation of the tower completed by West Virginia Division of Natural Resources",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wv/thorny-mountain-fire-tower/"
     }
   ],
   "photos": [
@@ -147,9 +175,19 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/wv/thorny-mountain-fire-tower/",
+      "kind": "register"
+    },
+    {
       "label": "Book or read about Thorny Mountain Fire Tower (West Virginia State Parks)",
       "url": "https://wvstateparks.com/places-to-stay/cabins/seneca-state-forest-cabins/",
       "kind": "rental"
+    },
+    {
+      "label": "Seneca State Forest: Overview and History (West Virginia State Parks)",
+      "url": "https://wvstateparks.com/parks/seneca-state-forest/park-history/",
+      "kind": "reference"
     },
     {
       "label": "FFLA West Virginia lookout list (firelookout.org)",
@@ -164,6 +202,11 @@
     {
       "label": "Seneca State Forest website",
       "url": "http://www.senecastateforest.com/FireTower.html",
+      "kind": "site"
+    },
+    {
+      "label": "Thorny Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/thorny-mountain.html",
       "kind": "site"
     },
     {
@@ -208,15 +251,45 @@
       ]
     },
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:wv:thorny-mountain",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/356535887",
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wv-thorny-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

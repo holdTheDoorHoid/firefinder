@@ -13,8 +13,8 @@
   },
   "elevation_m": 1154.9,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -94,6 +94,11 @@
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
+    },
+    {
+      "label": "Hogback Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/hogback-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -105,6 +110,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -120,6 +126,13 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:hogback-mountain",
+      "fields": [
         "links"
       ]
     }

@@ -13,8 +13,8 @@
   },
   "elevation_m": 1923.3,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -81,6 +81,16 @@
       "label": "Tatoosh Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/tatoosh.html",
       "kind": "site"
+    },
+    {
+      "label": "Tatoosh Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/tatoosh-ridge.html",
+      "kind": "site"
+    },
+    {
+      "label": "Tatoosh Ridge on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/mount_rainier_national_park/tatoosh_peak/gifford_pinchot_forest_169.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -92,6 +102,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -113,6 +124,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:tatoosh-ridge:46.7062:-121.6646",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:tatoosh-ridge",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:mount-rainier-national-park-tatoosh-peak-gifford-pinchot-forest-169",
       "fields": [
         "links"
       ]

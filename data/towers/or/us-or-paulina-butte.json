@@ -13,11 +13,11 @@
   },
   "elevation_m": 1697.1,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 22.9,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -81,6 +81,11 @@
       "label": "Paulina Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/paulinabutte.html",
       "kind": "site"
+    },
+    {
+      "label": "Paulina Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/paulina-butte.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -114,6 +119,16 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:paulina-butte:44.3239:-119.9799",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:paulina-butte",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
         "links"
       ]
     }

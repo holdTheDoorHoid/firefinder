@@ -171,6 +171,11 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/mn/pequot-fire-tower/",
+      "kind": "register"
+    },
+    {
       "label": "Pequot Fire Lookout Tower, National Register of Historic Places nomination (NPGallery (National Park Service))",
       "url": "https://npgallery.nps.gov/GetAsset/300ea174-54ad-4af2-b81b-cb3b45dfc43f",
       "kind": "reference"
@@ -198,6 +203,11 @@
     {
       "label": "May 2015 video interview with Keith Simar, who was manning tower",
       "url": "http://www.pineandlakes.com/news/3739094-video-news-north-pequot-lakes-fire-tower",
+      "kind": "site"
+    },
+    {
+      "label": "Pequot (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/pequot-lakes.html",
       "kind": "site"
     },
     {
@@ -238,10 +248,17 @@
       ]
     },
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mn:pequot-lakes",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q86926984",
       "fields": [
-        "height_m",
         "registers",
         "events",
         "photos",
@@ -272,7 +289,31 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "standing"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "central_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "research": {
     "researched": "2026-10-08",
     "checked": "2026-10-08",

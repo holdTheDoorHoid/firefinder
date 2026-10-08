@@ -2,7 +2,8 @@
   "id": "us-az-promontory",
   "name": "Promontory Lookout",
   "other_names": [
-    "Promontory Butte Lookout"
+    "Promontory Butte Lookout",
+    "Promontory Point"
   ],
   "country": "US",
   "region": "AZ",
@@ -15,11 +16,11 @@
   },
   "elevation_m": 2400.0,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 35.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -93,9 +94,19 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/az/promontory-lookout/",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Arizona lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/az/",
       "kind": "association"
+    },
+    {
+      "label": "Promontory Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/promontory-butte.html",
+      "kind": "site"
     },
     {
       "label": "OpenStreetMap node 5030922708",
@@ -135,6 +146,16 @@
       "key": "osm:node/5030922708",
       "fields": [
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:az:promontory-butte",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
         "links"
       ]
     }

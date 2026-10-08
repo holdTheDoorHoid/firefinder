@@ -13,8 +13,8 @@
   },
   "elevation_m": 1046.7,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -93,6 +93,16 @@
       "label": "Point 3670 on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/point3670.html",
       "kind": "site"
+    },
+    {
+      "label": "Point 3670 on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/point-3670.html",
+      "kind": "site"
+    },
+    {
+      "label": "Point 3670 on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/fire_lookouts/point_3670_lookout/forest_service_027.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -104,6 +114,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -125,6 +136,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:point-3670:46.0405:-121.9870",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:point-3670",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:fire-lookouts-point-3670-lookout-forest-service-027",
       "fields": [
         "links"
       ]

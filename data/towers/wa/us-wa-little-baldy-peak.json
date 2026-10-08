@@ -13,8 +13,8 @@
   },
   "elevation_m": 891.2,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -93,6 +93,11 @@
       "label": "Little Baldy Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/littlebaldypeak.html",
       "kind": "site"
+    },
+    {
+      "label": "Little Baldy Peak on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/washington_fire_lookouts/little_baldy_peak_lookout/willard_239.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -104,6 +109,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -125,6 +131,13 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:little-baldy-peak:45.8029:-121.6232",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-little-baldy-peak-lookout-willard-239",
       "fields": [
         "links"
       ]

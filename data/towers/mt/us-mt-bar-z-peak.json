@@ -17,12 +17,12 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 9.1,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Flathead National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Bar Z Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/barzpeak.html",
       "kind": "site"
+    },
+    {
+      "label": "Bar Z Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/bar-z-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +73,16 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:bar-z-peak:47.9967:-114.9273",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:bar-z-peak",
+      "fields": [
+        "height_m",
+        "agency",
+        "ownership",
         "links"
       ]
     }

@@ -1,6 +1,7 @@
 {
   "id": "us-tn-worthington-knob-luminary",
   "name": "Worthington Knob (Luminary) Fire Tower",
+  "summary": "Bledsoe County tower, also called Luminary, built 1961-1962 per the register and believed Aermotor; Division of Forestry administers it; inventory lists it standing.",
   "other_names": [
     "Worthington Knob"
   ],
@@ -15,10 +16,10 @@
   },
   "elevation_m": 778.5,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "Believed to be an Aermotor tower, about 50 ft tall per the register",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -50,14 +51,23 @@
     {
       "year": 1961,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register gives the build years as 1961-1962; the record's 1961 is the first year of that range",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/worthington-knob-luminary-fire-tower/"
+    },
+    {
+      "year": 1976,
+      "event": "other",
+      "note": "Tennessee inventory gives district-tower number 3-7, taken from a 1976 list of towers; this is a list number, not a build date",
+      "from": "research",
+      "source_url": "https://tnlandforms.us/towers/"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 17, 2019",
-      "from": "nhlr"
+      "note": "Registered March 17, 2019 as US 1299, TN 34; nominated by Victoria Oliver",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/worthington-knob-luminary-fire-tower/"
     }
   ],
   "photos": [
@@ -86,6 +96,11 @@
       "kind": "register"
     },
     {
+      "label": "Bledsoe State Forest (Tennessee Division of Forestry)",
+      "url": "https://www.tn.gov/agriculture/forests/state-forests/bledsoe.html",
+      "kind": "reference"
+    },
+    {
       "label": "Worthington Knob (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/towers/",
       "kind": "site"
@@ -105,6 +120,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "status",
         "registers",
         "agency",
@@ -127,10 +143,28 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tn-worthington-knob-luminary",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

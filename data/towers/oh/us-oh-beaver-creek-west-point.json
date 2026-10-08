@@ -19,7 +19,7 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 24.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -95,6 +95,11 @@
       "label": "FFLA Ohio lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/oh/",
       "kind": "association"
+    },
+    {
+      "label": "West Point (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/west-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -131,6 +136,14 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:oh:west-point",
+      "fields": [
+        "height_m",
+        "links"
+      ]
     }
   ],
   "conflicts": [
@@ -147,6 +160,10 @@
         },
         {
           "source": "fflos",
+          "value": "gone"
+        },
+        {
+          "source": "eastern_us_lookouts",
           "value": "gone"
         }
       ],

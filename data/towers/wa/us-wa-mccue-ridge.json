@@ -13,11 +13,11 @@
   },
   "elevation_m": 1565.5,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 3.0,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -147,6 +147,16 @@
       "label": "McCue Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/mccueridge.html",
       "kind": "site"
+    },
+    {
+      "label": "McCUE Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/mccue-ridge.html",
+      "kind": "site"
+    },
+    {
+      "label": "McCue Ridge on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/mccue_ridge_lookout/scottish_lakes_374.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -158,6 +168,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -182,10 +193,25 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:mccue-ridge",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-mccue-ridge-lookout-scottish-lakes-374",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

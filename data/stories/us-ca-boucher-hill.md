@@ -1,0 +1,16 @@
+Boucher Hill, in Palomar Mountain State Park in San Diego County, has carried a fire lookout since the early 1920s.[^1][^2] The first tower on the site was replaced by an enclosed wooden tower in 1934.[^1][^4] The one standing today was built in 1948 to the CDF 809R design, a 30-foot enclosed tower with an octagonal cab.[^1][^4] In 2011 the Union-Tribune reported that only six towers of that design were built and that only two still existed.[^3]
+
+The tower stayed in service until 1983, when it was abandoned.[^3][^4] In 2007 the Poomacha fire sent an ember onto its roof. Two state park employees grabbed a hose, ran inside, climbed to the top and put the fire out, so the tower came close to burning.[^3]
+
+After 1983 the tower fell into disrepair, and a 2011 newspaper story said it had been decaying for a couple of decades.[^3] CAL FIRE and DGS completed a structural restoration in 2011 and 2012.[^1] Cal Fire put more than $300,000 into the work, and ownership of the tower passed from the forestry department to the state park system.[^3][^5] The Forest Fire Lookout Association, Palomar State Park and Cleveland National Forest worked together on the revival, and the tower reopened in September 2012.[^4] The park's friends group dates the full refurbishment to 2013, a year later.[^5]
+
+Since 2012 the San Diego-Riverside chapter of the Forest Fire Lookout Association has staffed the tower with volunteers, reaching full fire-season coverage in 2014.[^2] Those volunteers also work as park docents.[^2] In May 2023 repairs to the weather station sensor mast were facilitated, and association funds went toward structural repairs.[^6]
+
+The tower usually opens May 1, at the start of fire season, and closes in late November.[^2][^5] The sources disagree on the daily hours. The chapter says it is typically staffed seven days a week from 9 a.m. to 5 p.m., while the friends group lists 9:30 a.m. to 5 p.m. until daylight time ends and 8:30 a.m. to 4 p.m. after that, so check before you go.[^2][^5] Visitors can drive up the one-way Boucher Hill loop or walk a trail of about three-quarters of a mile, and the tower is open to the public as staff resources permit.[^5][^2]
+
+[^1]: Boucher Hill Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/ca/boucher-hill-lookout/ (accessed 2026-10-08).
+[^2]: Boucher Hill Lookout, Forest Fire Lookout Association San Diego-Riverside Chapter, https://www.ffla-sandiego.org/boucher-lookout/ (accessed 2026-10-08).
+[^3]: Palomar Mountain gets a second fire lookout, J. Harry Jones, San Diego Union-Tribune, https://www.sandiegouniontribune.com/sdut-palomar-mountain-gets-second-fire-lookout-2011jun19-htmlstory.html (accessed 2026-10-08).
+[^4]: Lookout towers once again found useful for spotting fires, Karen Brainard, Ramona Sentinel (San Diego Union-Tribune), https://www.sandiegouniontribune.com/2012/09/23/lookout-towers-once-again-found-useful-for-spotting-fires/ (accessed 2026-10-08).
+[^5]: Boucher Hill and Historic Fire Tower, Friends of Palomar Mountain State Park, https://www.friendsofpalomarsp.org/boucher-hill--historic-fire-tower.html (accessed 2026-10-08).
+[^6]: Year-End Report 2023, Forest Fire Lookout Association California-South Division, https://firelookout.org/wp-content/uploads/2024/03/cr-cal-south-2023.pdf (accessed 2026-10-08).

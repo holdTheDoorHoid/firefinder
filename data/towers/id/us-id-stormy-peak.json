@@ -13,10 +13,10 @@
   },
   "elevation_m": 2421.0,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -56,6 +56,13 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: September 24, 2011",
       "from": "nhlr"
+    },
+    {
+      "year": 2022,
+      "event": "burned",
+      "note": "Intact L-4 with firefinder lost to the fast-moving Moose Fire in late July; logbook and firefinder were removed the day before, and it was not wrapped.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-id-south-2022.pdf"
     },
     {
       "year": 2022,
@@ -145,8 +152,18 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=926",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Stormy Peak Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-id-south-2022.pdf",
       "kind": "association"
     },
     {
@@ -205,6 +222,23 @@
       "fields": [
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:id:stormy-peak",
+      "fields": [
+        "material",
+        "design",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:stormy-peak",
+      "fields": [
         "links"
       ]
     }

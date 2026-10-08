@@ -13,8 +13,8 @@
   },
   "elevation_m": 1874.8,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -68,6 +68,11 @@
       "label": "Dooley Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/dooleymtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Dooley Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/dooley-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -79,6 +84,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -99,6 +105,13 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:or:dooley-mtn:44.5824:-117.8310",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:dooley-mountain",
       "fields": [
         "links"
       ]

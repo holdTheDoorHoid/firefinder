@@ -81,6 +81,11 @@
       "label": "Buckskin Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/buckskinpoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Buckskin Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/buckskin-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -116,9 +121,38 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:buckskin-point",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 45.06662,
+            "lon": -121.71903
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 45.0621,
+            "lon": -121.7154
+          }
+        }
+      ],
+      "distance_m": 578,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

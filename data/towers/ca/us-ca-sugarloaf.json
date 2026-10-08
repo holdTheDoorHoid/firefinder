@@ -2,7 +2,8 @@
   "id": "us-ca-sugarloaf",
   "name": "Sugarloaf Lookout",
   "other_names": [
-    "Sugarloaf Lockout"
+    "Sugarloaf Lockout",
+    "Sugar Loaf Mountain"
   ],
   "country": "US",
   "region": "CA",
@@ -15,8 +16,8 @@
   },
   "elevation_m": 1202.1,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -122,6 +123,11 @@
       "kind": "association"
     },
     {
+      "label": "Sugar Loaf Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/sugarloaf.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 13429338779",
       "url": "https://www.openstreetmap.org/node/13429338779",
       "kind": "osm"
@@ -136,6 +142,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -157,6 +164,13 @@
     {
       "source": "osm",
       "key": "osm:node/13429338779",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:sugarloaf",
       "fields": [
         "links"
       ]

@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Kootenai National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Pinto Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/pintopoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Pinto Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/pinto-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +73,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:pinto-point:48.7410:-115.4505",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:pinto-point",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

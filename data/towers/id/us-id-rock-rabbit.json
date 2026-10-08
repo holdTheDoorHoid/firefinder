@@ -101,6 +101,11 @@
       "label": "Rock Rabbit Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/id/rockrabbit.html",
       "kind": "site"
+    },
+    {
+      "label": "Rock Rabbit Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/rock-rabbit-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -139,9 +144,39 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:rock-rabbit-point",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "standing"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "firelookout_com",
+          "value": "standing"
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    },
     {
       "field": "built",
       "values": [

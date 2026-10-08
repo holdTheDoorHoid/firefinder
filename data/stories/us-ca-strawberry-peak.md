@@ -1,0 +1,17 @@
+Strawberry Peak Lookout stands above Rimforest, near Lake Arrowhead, in the San Bernardino National Forest.[^1][^5] The National Historic Lookout Register dates it to 1933.[^1] Local newspapers from that year explain why a new tower went up.[^4] A wooden lookout at Grass Valley, a few miles away, had collapsed under heavy winter snow, and forest officials chose this peak because it gave a better view.[^4] The replacement was a 30-foot steel tower with a 14-foot-square cab on top, and work began in May.[^4][^1]
+
+The Southern California Mountains Foundation tells the story differently. Its history places an 80-foot tower on this peak in 1922, built from railings donated by a railroad, and says a 30-foot tower built in 1934 replaced it after lightning and heavy snow had damaged it.[^2] The 1933 newspapers put the wooden tower at Grass Valley, not here, and they date the new tower to 1933, not 1934.[^4] The sources disagree. I give more weight to the 1933 newspaper accounts, which reported the work within days of its start, though I read them only as a transcription on another site.[^4][^2]
+
+A June 1933 report said the station would not be ready for occupancy until about June 15.[^4] A September 1934 Forest Service bulletin item, reprinted on the same transcription page, described a generator driven by an eight-foot airplane propeller, with its power stored in automobile batteries at the lookout.[^4]
+
+The register gives the season as May 1 to December 1, subject to weather, and says Mountains Foundation volunteers staff the lookout.[^1] The Mountains Foundation lists it as open to the public for 2025.[^2] In 2014 the Forest Fire Lookout Association's San Bernardino report noted that Strawberry and Morton Peak were opened all year because of high fire danger, and that $600 was received for repairs at Strawberry.[^3]
+
+The register records the lookout's entry on the National Historic Lookout Register on January 6, 1999.[^1] I found no source among these that describes a move, a fire or an abandonment.
+
+Today the Forest Service describes the lookout as above Rimforest, off Bear Springs Road, and says it is closed in winter.[^5] Its listed hours run Thursday through Monday, 9 a.m. to 4 p.m.[^5] When I read that page it also showed a temporary-closure notice, so check before you go.[^5] The Mountains Foundation's directions are to take Highway 18 to Rim Forest and turn north onto Bear Springs Road. From there the lookout is two miles up the paved road.[^2]
+
+[^1]: Strawberry Peak Lookout, National Historic Lookout Register, nhlr.org, http://nhlr.org/lookouts/us/ca/strawberry-peak-lookout/ (accessed 2026-10-08).
+[^2]: Fire lookouts, Southern California Mountains Foundation, https://mountainsfoundation.org/programs/fire-lookouts/fl-seven-lookouts/ (accessed 2026-10-08).
+[^3]: San Bernardino chapter report, Forest Fire Lookout Association, https://firelookout.org/wp-content/uploads/2024/11/cr-sanban-2014.pdf (accessed 2026-10-08).
+[^4]: Strawberry Peak, Forest Lookouts (californialookouts.weebly.com), quoting The San Bernardino County Sun (1933) and a Forest Service R-5 bulletin (1934), https://californialookouts.weebly.com/strawberry-peak.html (accessed 2026-10-08).
+[^5]: Strawberry Peak Fire Lookout, USDA Forest Service, San Bernardino National Forest, https://www.fs.usda.gov/r05/sanbernardino/recreation/strawberry-peak-fire-lookout (accessed 2026-10-08).

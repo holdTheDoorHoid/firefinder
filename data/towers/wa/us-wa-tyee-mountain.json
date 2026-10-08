@@ -193,12 +193,27 @@
       "year": 1999,
       "w": 376,
       "h": 286
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://trailchick-media.s3.us-west-2.amazonaws.com/IMG_5667.jpg",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/tyee-mountain-lookout/",
+      "credit": "TrailChick Washington lookout guide (trailchick.com)",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
     {
       "label": "NHLR register entry US 125 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wa/tyee-mountain-lookout/",
+      "kind": "register"
+    },
+    {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=170",
       "kind": "register"
     },
     {
@@ -224,6 +239,21 @@
     {
       "label": "Tyee Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/tyee.html",
+      "kind": "site"
+    },
+    {
+      "label": "Tyee Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/tyee-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Tyee Mountain in the TrailChick Washington lookout guide",
+      "url": "https://www.trailchick.com/wa-state-fire-lookouts/tyee-mountain-lookout/",
+      "kind": "site"
+    },
+    {
+      "label": "Tyee Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/hiking/entiat_river/tyee_mountain/lookout_188.htm",
       "kind": "site"
     },
     {
@@ -314,6 +344,28 @@
       ]
     },
     {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:tyee-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "trailchick_wa",
+      "key": "trailchick_wa:wa:tyee-mountain-lookout",
+      "fields": [
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:hiking-entiat-river-tyee-mountain-lookout-188",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:us-wa-tyee-mountain",
       "fields": [
@@ -331,6 +383,27 @@
   ],
   "conflicts": [
     {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 47.863954,
+            "lon": -120.471109
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 47.85485,
+            "lon": -120.47092
+          }
+        }
+      ],
+      "distance_m": 1012,
+      "note": null
+    },
+    {
       "field": "built",
       "values": [
         {
@@ -339,6 +412,10 @@
         },
         {
           "source": "osm",
+          "value": 1952
+        },
+        {
+          "source": "trailchick_wa",
           "value": 1952
         }
       ],

@@ -6,10 +6,10 @@
   "region": "ID",
   "county": "Bonner",
   "location": {
-    "lat": 48.83736,
-    "lon": -116.79745,
+    "lat": 48.85216,
+    "lon": -116.79134,
     "precision": "exact",
-    "from": "ffla"
+    "from": "idaho_fl"
   },
   "elevation_m": null,
   "kind": "ground",
@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Kaniksu National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -61,6 +61,11 @@
       "label": "Bugle Ridge Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/northern-idaho/bugle-ridge-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Bugle Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/bugle-ridge.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -69,7 +74,6 @@
       "key": "ffla:id:bugle-ridge:48.8374:-116.7974",
       "fields": [
         "name",
-        "location",
         "county",
         "kind",
         "status",
@@ -87,7 +91,17 @@
       "source": "idaho_fl",
       "key": "idaho_fl:bugle-ridge-lookout:48.8522:-116.7913",
       "fields": [
+        "location",
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:bugle-ridge",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }
@@ -97,6 +111,13 @@
       "field": "location",
       "values": [
         {
+          "source": "idaho_fl",
+          "value": {
+            "lat": 48.85216,
+            "lon": -116.79134
+          }
+        },
+        {
           "source": "ffla",
           "value": {
             "lat": 48.83736,
@@ -104,10 +125,10 @@
           }
         },
         {
-          "source": "idaho_fl",
+          "source": "firelookout_com",
           "value": {
-            "lat": 48.85216,
-            "lon": -116.79134
+            "lat": 48.83736,
+            "lon": -116.79745
           }
         }
       ],
@@ -115,7 +136,7 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "us-fl-hamner",
   "name": "Hamner Tower",
+  "summary": "Hillsborough County steel fire tower built in 1937, saved in 1993 and now a county park landmark; the 1936 date and 85 ft height are secondhand.",
   "other_names": [],
   "country": "US",
   "region": "FL",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "osm",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Steel fire lookout tower; the Eastern lookout listing says a steel tower was erected in 1937",
+  "height_m": 25.9,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,34 +29,66 @@
       "url": "http://nhlr.org/lookouts/us/fl/hamner-tower/"
     }
   ],
-  "agency": "Hillsborough County",
+  "agency": "Hillsborough County (formerly the Florida Division of Forestry)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Part of Hamner Tower Park, a county park on North Boulevard with an open field and a hiking trail. The county page does not say whether the tower itself can be climbed."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "1950-11-13"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Open field and hiking trail in the county park; parking runs along North Boulevard."
   },
   "rental": null,
   "events": [
     {
       "year": 1937,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built 1937 per NHLR; the Eastern lookout listing also gives 1937. A blog quoting a Water Atlas document gives 1936.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/fl/hamner-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/fl/hamner-tower/",
+        "https://easternuslookouts.weebly.com/hamner.html",
+        "https://sorabji.com/big_pictures/2009/02/hamner-tower-tampa.html"
+      ]
+    },
+    {
+      "year": 1950,
+      "event": "staffed",
+      "note": "Ruth Foster listed as towerwoman in a November 13, 1950 list of observation towers",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/hamner.html"
+    },
+    {
+      "year": 1993,
+      "event": "other",
+      "note": "Tower saved from demolition when county commissioners voted to buy the property from the state",
+      "from": "research",
+      "source_url": "https://www.tampabay.com/archive/2004/07/09/fire-tower-still-stands-but-forests-long-gone/"
+    },
+    {
+      "year": 1995,
+      "event": "other",
+      "note": "Designated a Hillsborough County historic landmark",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/fl/hamner-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/fl/hamner-tower/",
+        "https://hcfl.gov/locations/hamner-tower-park"
+      ]
     },
     {
       "year": 2014,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 14, 2014",
-      "from": "nhlr"
+      "note": "Registered March 14, 2014 as US 996, FL 5; nominated by Sheryl Bowman",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/fl/hamner-tower/"
     }
   ],
   "photos": [
@@ -103,7 +136,17 @@
       "kind": "register"
     },
     {
-      "label": "HAMNER (easternuslookouts.weebly.com)",
+      "label": "Fire tower still stands, but forests long gone (Tampa Bay Times)",
+      "url": "https://www.tampabay.com/archive/2004/07/09/fire-tower-still-stands-but-forests-long-gone/",
+      "kind": "reference"
+    },
+    {
+      "label": "Hamner Tower, Tampa (blog post quoting a Water Atlas document) (Sorabji)",
+      "url": "https://sorabji.com/big_pictures/2009/02/hamner-tower-tampa.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Hamner (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/hamner.html",
       "kind": "site"
     },
@@ -150,10 +193,32 @@
         "material",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-fl-hamner",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

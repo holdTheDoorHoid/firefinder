@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Colville National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,16 @@
       "label": "Nelson Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/nelsonpeak.html",
       "kind": "site"
+    },
+    {
+      "label": "Nelson Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/nelson-peak.html",
+      "kind": "site"
+    },
+    {
+      "label": "Nelson Peak on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "https://willhiteweb.com/washington_fire_lookouts/nelson_peak/boyer_mountain_131.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -67,6 +77,22 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:nelson-peak:48.1967:-117.5285",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:nelson-peak",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-nelson-peak-boyer-mountain-131",
       "fields": [
         "links"
       ]

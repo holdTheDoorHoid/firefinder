@@ -81,6 +81,16 @@
       "label": "Byles on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/byles.html",
       "kind": "site"
+    },
+    {
+      "label": "Byles on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/byles.html",
+      "kind": "site"
+    },
+    {
+      "label": "Byles on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/byles_lookout/clemons_tree_farm_217.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -116,9 +126,45 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:byles",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-byles-lookout-clemons-tree-farm-217",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 46.843669,
+            "lon": -123.395497
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 46.8276,
+            "lon": -123.3796
+          }
+        }
+      ],
+      "distance_m": 2158,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

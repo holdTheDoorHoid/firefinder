@@ -13,8 +13,8 @@
   },
   "elevation_m": 529.7,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -93,6 +93,16 @@
       "label": "Jackass Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/jackassbutte.html",
       "kind": "site"
+    },
+    {
+      "label": "Jackass Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/jackass-butte.html",
+      "kind": "site"
+    },
+    {
+      "label": "Jackass Butte on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/jackass_butte/lookout_091.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -104,6 +114,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -128,10 +139,24 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:jackass-butte",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-jackass-butte-lookout-091",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,15 +1,17 @@
 {
   "id": "us-or-north-powder",
   "name": "North Powder Lookout Site",
-  "other_names": [],
+  "other_names": [
+    "North Powder R.S."
+  ],
   "country": "US",
   "region": "OR",
   "county": "Baker",
   "location": {
-    "lat": 45.0286,
-    "lon": -117.9189,
+    "lat": 44.92948,
+    "lon": -118.15984,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 2711.8,
   "kind": "platform",
@@ -111,6 +113,11 @@
       "label": "North Powder on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/northpowder.html",
       "kind": "site"
+    },
+    {
+      "label": "North Powder R.S. on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/north-powder.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -119,7 +126,6 @@
       "key": "fflos:US 1841",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "material",
@@ -135,6 +141,7 @@
       "source": "ffla",
       "key": "ffla:or:north-powder:44.9295:-118.1598",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -147,19 +154,19 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:north-powder",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
-        {
-          "source": "fflos",
-          "value": {
-            "lat": 45.0286,
-            "lon": -117.9189
-          }
-        },
         {
           "source": "ffla",
           "value": {
@@ -168,10 +175,10 @@
           }
         },
         {
-          "source": "firelookout_com",
+          "source": "fflos",
           "value": {
-            "lat": 44.92948,
-            "lon": -118.15984
+            "lat": 45.0286,
+            "lon": -117.9189
           }
         }
       ],

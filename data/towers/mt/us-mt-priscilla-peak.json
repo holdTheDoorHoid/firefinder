@@ -13,11 +13,11 @@
   },
   "elevation_m": 2135.1,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 91.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -163,6 +163,11 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=810",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
       "kind": "association"
@@ -170,6 +175,11 @@
     {
       "label": "Priscilla Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/priscillapeak.html",
+      "kind": "site"
+    },
+    {
+      "label": "Priscilla Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/priscilla-peak.html",
       "kind": "site"
     }
   ],
@@ -182,6 +192,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -205,6 +216,14 @@
       "key": "firelookout_com:mt:priscilla-peak:47.6879:-115.1599",
       "fields": [
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:priscilla-peak",
+      "fields": [
+        "height_m",
         "links"
       ]
     }

@@ -13,10 +13,10 @@
   },
   "elevation_m": 1656.3,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -122,6 +122,11 @@
       "label": "Triangulation Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/triangulationpeak.html",
       "kind": "site"
+    },
+    {
+      "label": "Triangulation Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/triangulation-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -155,6 +160,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:triangulation-peak:44.7180:-121.9246",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:triangulation-peak",
+      "fields": [
+        "material",
+        "design",
         "links"
       ]
     }

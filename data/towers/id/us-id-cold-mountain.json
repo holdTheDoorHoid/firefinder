@@ -13,16 +13,16 @@
   },
   "elevation_m": null,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 21.9,
   "status": "relocated",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Payette National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -82,6 +82,11 @@
       "label": "Cold Mountain Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/west-central/cold-mountain-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Cold Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/cold-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -109,6 +114,18 @@
       "key": "idaho_fl:cold-mountain-lookout:45.2491:-114.9490",
       "fields": [
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:cold-mountain",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
+        "agency",
+        "ownership",
         "links"
       ]
     }

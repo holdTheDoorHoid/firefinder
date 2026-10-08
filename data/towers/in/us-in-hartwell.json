@@ -1,6 +1,7 @@
 {
   "id": "us-in-hartwell",
   "name": "Hartwell Fire Tower",
+  "summary": "A steel lookout in Indiana's Pike State Forest, built around 1935 (sources differ on dates), marked closed on a 2022 state forest map.",
   "other_names": [],
   "country": "US",
   "region": "IN",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Four-leg steel tower with a cabin at the top",
   "height_m": 30.5,
   "status": "standing",
   "status_note": null,
@@ -31,8 +32,8 @@
   "agency": "Indiana Division of Forestry",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Marked closed on the June 2022 Pike State Forest map legend, per Indiana Fire Towers"
   },
   "staffing": {
     "status": "unknown",
@@ -46,10 +47,36 @@
   "rental": null,
   "events": [
     {
+      "year": 1935,
+      "event": "built",
+      "note": "Completed in 1935 per the Indiana Fire Towers history page; its Hartwell page gives a 1935 to 1952 build window",
+      "from": "research",
+      "source_url": "https://www.indianafiretowers.com/history/",
+      "source_urls": [
+        "https://www.indianafiretowers.com/history/",
+        "https://www.indianafiretowers.com/hartwell/"
+      ]
+    },
+    {
+      "year": 1946,
+      "event": "other",
+      "note": "NGS datasheet places a tower at the current site by 1946",
+      "from": "research",
+      "source_url": "https://www.indianafiretowers.com/hartwell/"
+    },
+    {
       "year": 2014,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 15, 2014",
-      "from": "nhlr"
+      "note": "Registered December 15, 2014 as US 1050, IN 9",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/in/hartwell-fire-tower/"
+    },
+    {
+      "year": 2022,
+      "event": "closed",
+      "note": "Marked closed on the June 2022 Pike State Forest map legend",
+      "from": "research",
+      "source_url": "https://www.indianafiretowers.com/hartwell/"
     }
   ],
   "photos": [
@@ -78,13 +105,28 @@
       "kind": "register"
     },
     {
+      "label": "Indiana Firetower History (Indiana Fire Towers (Mark A))",
+      "url": "https://www.indianafiretowers.com/history/",
+      "kind": "reference"
+    },
+    {
+      "label": "Indiana and its long history with fire towers, 13 left standing (Tri-State Homepage)",
+      "url": "https://www.tristatehomepage.com/news/indiana-news/indiana-and-its-long-history-with-fire-towers-13-left-standing/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Indiana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/in/",
       "kind": "association"
     },
     {
-      "label": "HARTWELL (easternuslookouts.weebly.com)",
+      "label": "Hartwell (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/hartwell.html",
+      "kind": "site"
+    },
+    {
+      "label": "Hartwell on Indiana Fire Towers (Mark Armantrout)",
+      "url": "https://www.indianafiretowers.com/hartwell/",
       "kind": "site"
     }
   ],
@@ -116,16 +158,43 @@
     },
     {
       "source": "eastern_us_lookouts",
-      "key": "eastern_us_lookouts:ga:hartwell",
+      "key": "eastern_us_lookouts:in:hartwell",
       "fields": [
         "height_m",
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "indiana_fire_towers",
+      "key": "indiana_fire_towers:in:hartwell",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-in-hartwell",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

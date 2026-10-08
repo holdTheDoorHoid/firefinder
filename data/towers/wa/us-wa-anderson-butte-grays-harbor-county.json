@@ -15,10 +15,10 @@
   },
   "elevation_m": 1023.5,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "R-6",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -83,6 +83,11 @@
       "label": "Anderson Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/andersonbutte.html",
       "kind": "site"
+    },
+    {
+      "label": "Anderson Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/anderson-butte1.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -116,6 +121,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:wa:anderson-butte:47.3861:-123.5585",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:anderson-butte1",
+      "fields": [
+        "material",
+        "design",
         "links"
       ]
     }

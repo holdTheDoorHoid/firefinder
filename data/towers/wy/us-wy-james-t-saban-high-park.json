@@ -104,6 +104,13 @@
       "source_url": "http://nhlr.org/lookouts/us/wy/james-t-saban-high-park-lookout/"
     },
     {
+      "year": 2013,
+      "event": "restored",
+      "note": "One partial workday achieved: windows freshly caulked and the cab cleaned.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-wy-2013.pdf"
+    },
+    {
       "year": 2015,
       "event": "other",
       "note": "Renamed for James T. Saban by order of the Chief of the Forest Service on April 7, 2015",
@@ -191,6 +198,11 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=24",
+      "kind": "register"
+    },
+    {
       "label": "James T. Saban Lookout, National Register of Historic Places nomination form (No. 16000781) (National Park Service, NPGallery)",
       "url": "https://npgallery.nps.gov/NRHP/GetAsset/NRHP/16000781_text",
       "kind": "reference"
@@ -203,6 +215,11 @@
     {
       "label": "FFLA Wyoming lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wy/",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on James T. Saban (High Park) Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-wy-2013.pdf",
       "kind": "association"
     },
     {
@@ -265,11 +282,26 @@
       ]
     },
     {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:wy:james-t-saban-high-park",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q30624504",
       "fields": [
         "registers",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wy:high-park",
+      "fields": [
         "links"
       ]
     },
@@ -288,6 +320,27 @@
     }
   ],
   "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 44.14916,
+            "lon": -107.202451
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 44.14163,
+            "lon": -107.19395
+          }
+        }
+      ],
+      "distance_m": 1078,
+      "note": null
+    },
     {
       "field": "built",
       "values": [

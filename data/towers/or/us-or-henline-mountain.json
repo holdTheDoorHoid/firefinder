@@ -93,6 +93,11 @@
       "label": "Henline Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/henlinemtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Henline Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/henline-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -128,9 +133,38 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:henline-mountain",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 44.85424,
+            "lon": -122.31251
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 44.86429,
+            "lon": -122.3205
+          }
+        }
+      ],
+      "distance_m": 1283,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -1,7 +1,9 @@
 {
   "id": "us-wa-frisco-mountain",
   "name": "Frisco Mountain",
-  "other_names": [],
+  "other_names": [
+    "Frisco Mountain (peak)"
+  ],
   "country": "US",
   "region": "WA",
   "county": "Stevens",
@@ -21,8 +23,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Colville National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +51,11 @@
       "label": "Frisco Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/friscomtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Frisco Mountain (peak) on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/frisco-mountain-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +77,40 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:frisco-mountain-peak",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 48.98729,
+            "lon": -117.47804
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 48.9971,
+            "lon": -117.4791
+          }
+        }
+      ],
+      "distance_m": 1094,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

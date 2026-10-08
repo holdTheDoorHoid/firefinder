@@ -21,7 +21,7 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Salt Lake City Water Department",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -44,6 +44,11 @@
       "label": "FFLA Utah lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ut/",
       "kind": "association"
+    },
+    {
+      "label": "Ensign Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/ensign-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -62,6 +67,14 @@
       "source": "ffla",
       "key": "ffla:ut:ensign-peak:40.7944:-111.8907:1",
       "fields": []
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ut:ensign-peak",
+      "fields": [
+        "agency",
+        "links"
+      ]
     }
   ],
   "conflicts": [],

@@ -16,8 +16,8 @@
   "material": "steel",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 22.3,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -88,6 +88,11 @@
       "label": "Shoestring Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/shoestringbutte.html",
       "kind": "site"
+    },
+    {
+      "label": "Shoestring Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/shoestring-butte.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -114,6 +119,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:shoestring-butte:42.3863:-120.5329",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:shoestring-butte",
+      "fields": [
+        "design",
+        "height_m",
         "links"
       ]
     }

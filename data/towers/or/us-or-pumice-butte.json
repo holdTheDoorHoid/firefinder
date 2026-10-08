@@ -13,8 +13,8 @@
   },
   "elevation_m": 1869.6,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -105,6 +105,11 @@
       "label": "Pumice Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/pumicebutte.html",
       "kind": "site"
+    },
+    {
+      "label": "Pumice Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/pumice-butte.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -116,6 +121,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -140,9 +146,38 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:pumice-butte",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 43.30271,
+            "lon": -121.49176
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 43.30791,
+            "lon": -121.49308
+          }
+        }
+      ],
+      "distance_m": 588,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

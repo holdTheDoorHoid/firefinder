@@ -13,8 +13,8 @@
   },
   "elevation_m": 1661.2,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -93,6 +93,11 @@
       "label": "Reynolds Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/reynoldsridge.html",
       "kind": "site"
+    },
+    {
+      "label": "Reynolds Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/reynolds-ridge.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -104,6 +109,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -125,6 +131,13 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:or:reynolds-ridge:43.3862:-122.5183",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:reynolds-ridge",
       "fields": [
         "links"
       ]

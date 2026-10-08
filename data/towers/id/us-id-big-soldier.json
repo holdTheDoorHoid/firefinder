@@ -13,10 +13,10 @@
   },
   "elevation_m": 2741.1,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -134,6 +134,11 @@
       "label": "Big Soldier Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/southern-idaho/big-soldier-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Big Soldier on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/big-soldier.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -176,6 +181,15 @@
       "fields": [
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:big-soldier",
+      "fields": [
+        "material",
+        "design",
         "links"
       ]
     }

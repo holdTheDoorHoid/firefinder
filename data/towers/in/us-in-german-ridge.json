@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Hoosier National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +44,16 @@
       "label": "FFLA Indiana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/in/",
       "kind": "association"
+    },
+    {
+      "label": "German Ridge (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/german-ridge.html",
+      "kind": "site"
+    },
+    {
+      "label": "German Ridge on Indiana Fire Towers (Mark Armantrout)",
+      "url": "https://www.indianafiretowers.com/german-ridge/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +66,22 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:in:german-ridge",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "indiana_fire_towers",
+      "key": "indiana_fire_towers:in:german-ridge",
+      "fields": [
         "links"
       ]
     }

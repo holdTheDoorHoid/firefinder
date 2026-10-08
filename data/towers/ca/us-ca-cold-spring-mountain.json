@@ -1,6 +1,7 @@
 {
   "id": "us-ca-cold-spring-mountain",
   "name": "Cold Spring Mountain Lookout",
+  "summary": "A 1965 CDF 809R cab on an enclosed 29 ft steel tower in Mendocino County; last staffed in 1990, now closed; a visitor's report says it is boarded up.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "CDF 809R cab on an enclosed 29 ft steel tower; post-1950 cabin design with angled windows",
+  "height_m": 8.8,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,18 +29,18 @@
       "url": "http://nhlr.org/lookouts/us/ca/cold-spring-mountain-lookout/"
     }
   ],
-  "agency": "California Dept. of Forestry",
+  "agency": "California Department of Forestry (NHLR lists it as administered by the CDF; Cal Fire nominated it)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "NHLR describes the 1965 station as closed. A visitor's trip report on Bay Area Peaks describes the old lookout as securely boarded up. No source describes a visitor arrangement."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1990"
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
@@ -48,14 +49,31 @@
     {
       "year": 1965,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Station built; NHLR and Peakbagging.com both date it to 1965",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/cold-spring-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/cold-spring-mountain-lookout/",
+        "http://www.peakbagging.com/CALookoutPhotos/ColdSpringMtn.html"
+      ]
+    },
+    {
+      "year": 1990,
+      "event": "staffed_last",
+      "note": "NHLR says it was last staffed in 1990; a Forest Lookouts note says budget cuts meant it would not be staffed that fire season",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/cold-spring-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/cold-spring-mountain-lookout/",
+        "https://californialookouts.weebly.com/cold-spring-mountain.html"
+      ]
     },
     {
       "year": 2002,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 12, 2002",
-      "from": "nhlr"
+      "note": "Registered January 12, 2002, as US 397, CA 48; nominated by Cal Fire",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/cold-spring-mountain-lookout/"
     }
   ],
   "photos": [
@@ -77,6 +95,21 @@
       "label": "NHLR register entry US 397 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ca/cold-spring-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=413",
+      "kind": "register"
+    },
+    {
+      "label": "Cold Spring Mountain Lookout, Mendocino County, California (Peakbagging.com)",
+      "url": "http://www.peakbagging.com/CALookoutPhotos/ColdSpringMtn.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Cold Spring (Bay Area Peaks)",
+      "url": "https://www.bayareapeaks.com/mendocino/cold-spring-mountain/",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -132,10 +165,40 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:cold-spring-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-cold-spring-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

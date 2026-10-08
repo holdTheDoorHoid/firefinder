@@ -15,10 +15,10 @@
   },
   "elevation_m": 2678.0,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "30-ft Aermotor MC-24 tower with 12x12 wooden cab",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -52,6 +52,13 @@
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
+    },
+    {
+      "year": 2002,
+      "event": "replaced",
+      "note": "Contractor built a new steel cab modeled on the earlier wooden cab; it was trucked to the site and set on the tower by crane.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
     },
     {
       "year": 2014,
@@ -105,9 +112,24 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=1102",
+      "kind": "register"
+    },
+    {
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Dead Man's Peak Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Deadmans Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/deadmans-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -134,6 +156,23 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:nm:dead-mans-peak",
+      "fields": [
+        "material",
+        "design",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:nm:deadmans-peak",
+      "fields": [
         "links"
       ]
     }

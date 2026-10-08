@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Colville National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Russian Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/russianridge.html",
       "kind": "site"
+    },
+    {
+      "label": "Russian Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/russian-ridge.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +73,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:wa:russian-ridge:48.9744:-117.4042",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:russian-ridge",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

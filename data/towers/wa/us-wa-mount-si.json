@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "State Division of Forestry",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,16 @@
       "label": "Mt. Si on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/si.html",
       "kind": "site"
+    },
+    {
+      "label": "Mount SI on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/mount-si.html",
+      "kind": "site"
+    },
+    {
+      "label": "Mount Si on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/snoqualmie_pass/mount_si/north_bend_233.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -67,6 +77,22 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:mt-si:47.5078:-121.7399",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:mount-si",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:snoqualmie-pass-mount-si-north-bend-233",
       "fields": [
         "links"
       ]

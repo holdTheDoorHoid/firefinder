@@ -134,6 +134,11 @@
       "kind": "association"
     },
     {
+      "label": "Happy Camp on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/happy-camp.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap way 1054819466",
       "url": "https://www.openstreetmap.org/way/1054819466",
       "kind": "osm"
@@ -172,9 +177,38 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:happy-camp",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 41.415829,
+            "lon": -121.109211
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 41.42239,
+            "lon": -121.11775
+          }
+        }
+      ],
+      "distance_m": 1019,
+      "note": null
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

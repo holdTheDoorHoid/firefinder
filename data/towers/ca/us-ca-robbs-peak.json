@@ -13,11 +13,11 @@
   },
   "elevation_m": 2037.9,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 209.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -56,6 +56,13 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: September 21, 2004",
       "from": "nhlr"
+    },
+    {
+      "year": 2017,
+      "event": "other",
+      "note": "National FFLA approved a 500 dollar restoration grant to help return the lookout to service as a fire lookout and interpretive center.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sierra-nevada-2017.pdf"
     }
   ],
   "photos": [
@@ -120,6 +127,11 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Robbs Peak Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sierra-nevada-2017.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Robbs Peak Lookout - Forest Lookouts Page",
       "url": "https://californialookouts.weebly.com/robbs-peak.html",
       "kind": "site"
@@ -134,6 +146,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -150,6 +163,21 @@
         "status",
         "registers",
         "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:robbs-peak",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:robbs-peak",
+      "fields": [
+        "height_m"
       ]
     }
   ],

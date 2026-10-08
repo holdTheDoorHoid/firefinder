@@ -15,8 +15,8 @@
   },
   "elevation_m": 1832.2,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -52,6 +52,13 @@
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
+    },
+    {
+      "year": 2012,
+      "event": "modified",
+      "note": "Electrical system being upgraded with solar panels and batteries; 1,200-gallon water tank system with shower installed; fuels reduced around the site.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sn-nevada-2012.pdf"
     },
     {
       "year": 2019,
@@ -137,6 +144,16 @@
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Pilot Peak Lookout (Stanislaus National Forest)",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sn-nevada-2012.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Pilot Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/pilot-peak2.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -148,6 +165,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -162,6 +180,21 @@
       "fields": [
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:pilot-peak-stanislaus-national-forest",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:pilot-peak2",
+      "fields": [
         "links"
       ]
     }

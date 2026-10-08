@@ -1,7 +1,9 @@
 {
   "id": "us-il-buzzville-chautauqua",
   "name": "Buzzville (Chautauqua) Lookout",
-  "other_names": [],
+  "other_names": [
+    "Buzzville"
+  ],
   "country": "US",
   "region": "IL",
   "county": "Mason",
@@ -88,6 +90,11 @@
       "label": "FFLA Illinois lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/il/",
       "kind": "association"
+    },
+    {
+      "label": "Buzzville (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/buzzville.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -114,9 +121,38 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:il:buzzville",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 40.364551,
+            "lon": -89.999971
+          }
+        },
+        {
+          "source": "central_us_lookouts",
+          "value": {
+            "lat": 40.363,
+            "lon": -89.9911
+          }
+        }
+      ],
+      "distance_m": 771,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

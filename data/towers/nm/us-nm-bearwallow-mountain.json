@@ -16,8 +16,8 @@
   },
   "elevation_m": 3038.9,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": "Aermotor LX-24 tower with a 7'x7' wooden cab; the site includes two log cabins and a log shed",
   "height_m": 10.7,
@@ -72,6 +72,13 @@
       "note": "Wikipedia lead says the cabins and shed were built in 1940 by the Works Progress Administration; its infobox gives 1923 for the same article (disputed)",
       "from": "research",
       "source_url": "https://en.wikipedia.org/wiki/Bearwallow_Mountain_Lookout_Cabins_and_Shed"
+    },
+    {
+      "year": 1940,
+      "event": "modified",
+      "note": "Lower cabin, formerly a barn, built.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
     },
     {
       "year": 1967,
@@ -142,11 +149,6 @@
       "kind": "register"
     },
     {
-      "label": "Bearwallow (Forest Lookouts)",
-      "url": "https://westlookouts.weebly.com/bearwallow.html",
-      "kind": "reference"
-    },
-    {
       "label": "Bearwallow Mountain Lookout Cabins and Shed (Wikipedia)",
       "url": "https://en.wikipedia.org/wiki/Bearwallow_Mountain_Lookout_Cabins_and_Shed",
       "kind": "reference"
@@ -155,6 +157,16 @@
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Bearwallow Mountain Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Bearwallow on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/bearwallow.html",
+      "kind": "site"
     },
     {
       "label": "Wikidata item Q107315791",
@@ -195,6 +207,14 @@
       ]
     },
     {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:nm:bearwallow-mountain",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q107315791",
       "fields": [
@@ -207,6 +227,15 @@
       "key": "osm:node/6984006939",
       "fields": [
         "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:nm:bearwallow",
+      "fields": [
+        "material",
+        "design",
         "links"
       ]
     },

@@ -6,10 +6,10 @@
   "region": "MT",
   "county": "Beaverhead",
   "location": {
-    "lat": 45.3583,
-    "lon": -113.38854,
+    "lat": 45.36826,
+    "lon": -113.40933,
     "precision": "exact",
-    "from": "nhlr"
+    "from": "ffla"
   },
   "elevation_m": 1998.9,
   "kind": "rooftop",
@@ -99,6 +99,11 @@
       "label": "Jackson Ranger Station on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/jacksonrs.html",
       "kind": "site"
+    },
+    {
+      "label": "Jackson Ranger Station on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/jackson-ranger-station.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -107,7 +112,6 @@
       "key": "nhlr:US 1566",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "registers",
@@ -121,6 +125,7 @@
       "source": "ffla",
       "key": "ffla:mt:jackson-ranger-station:45.3683:-113.4093",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -135,12 +140,26 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:jackson-ranger-station",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 45.36826,
+            "lon": -113.40933
+          }
+        },
         {
           "source": "nhlr",
           "value": {
@@ -149,10 +168,10 @@
           }
         },
         {
-          "source": "ffla",
+          "source": "firelookout_com",
           "value": {
-            "lat": 45.36826,
-            "lon": -113.40933
+            "lat": 45.35832,
+            "lon": -113.38852
           }
         }
       ],

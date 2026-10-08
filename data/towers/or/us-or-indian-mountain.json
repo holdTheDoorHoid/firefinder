@@ -13,10 +13,10 @@
   },
   "elevation_m": 1491.7,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "D-6",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -93,6 +93,11 @@
       "label": "Indian Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/indianmtn34.html",
       "kind": "site"
+    },
+    {
+      "label": "Indian Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/indian-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -126,6 +131,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:indian-mtn:45.5481:-121.8289",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:indian-mountain",
+      "fields": [
+        "material",
+        "design",
         "links"
       ]
     }

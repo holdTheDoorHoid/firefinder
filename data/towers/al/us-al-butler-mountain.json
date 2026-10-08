@@ -1,6 +1,7 @@
 {
   "id": "us-al-butler-mountain",
   "name": "Butler Mountain Tower",
+  "summary": "Choctaw County's 100-foot Aermotor MC-39 lookout, dedicated August 1948 under a new forest-protection program and still used on high fire days, per the register.",
   "other_names": [],
   "country": "US",
   "region": "AL",
@@ -13,11 +14,11 @@
   },
   "elevation_m": 130.5,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor MC-39 tower with a 7x7 ft metal cab; OpenStreetMap tags tower:construction as lattice",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -48,14 +49,31 @@
     {
       "year": 1948,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR says it was constructed in 1948; the Forest Lookouts page dates the dedication to August 5, 1948",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/butler-mountain-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/al/butler-mountain-tower/",
+        "https://easternuslookouts.weebly.com/butler-mountain.html"
+      ]
+    },
+    {
+      "year": 1948,
+      "event": "other",
+      "note": "Dedicated August 5, 1948 as the county's first symbol of an expanded forest protection program made possible by the Forest Products Severance Tax Act (Dothan Eagle, quoted by Forest Lookouts)",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/butler-mountain.html"
     },
     {
       "year": 2010,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 10, 2010",
-      "from": "nhlr"
+      "note": "Registered January 10, 2010 as US 864; NHLR gives state number AL 42, Jackson's Ramblings gives AL 43",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/butler-mountain-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/al/butler-mountain-tower/",
+        "https://jacksonsramblings.com/butler-mountain-tower/"
+      ]
     }
   ],
   "photos": [
@@ -79,6 +97,11 @@
       "kind": "register"
     },
     {
+      "label": "Butler Mountain Tower (Jackson's Ramblings)",
+      "url": "https://jacksonsramblings.com/butler-mountain-tower/",
+      "kind": "reference"
+    },
+    {
       "label": "Butler Mountain (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/butler-mountain.html",
       "kind": "site"
@@ -98,6 +121,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "status",
         "registers",
         "agency",
@@ -121,10 +145,29 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-al-butler-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

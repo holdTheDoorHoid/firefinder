@@ -23,8 +23,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Grand Teton National Park",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -51,6 +51,11 @@
       "label": "Spalding Bay on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wy/spaldingbay.html",
       "kind": "site"
+    },
+    {
+      "label": "Spalding on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/spalding.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -69,6 +74,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:wy:spalding-bay:43.8205:-110.6803",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wy:spalding",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

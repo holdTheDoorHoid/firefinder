@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "MI",
-  "county": null,
+  "county": "Crawford",
   "location": {
     "lat": 44.528073,
     "lon": -84.487242,
@@ -21,7 +21,7 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "NGS Data Sheet",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -41,6 +41,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Roscommon (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/roscommon.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 354000906",
       "url": "https://www.openstreetmap.org/node/354000906",
       "kind": "osm"
@@ -48,10 +53,19 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:mi:roscommon",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/354000906",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

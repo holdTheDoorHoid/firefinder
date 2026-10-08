@@ -6,10 +6,10 @@
   "region": "OR",
   "county": "Hood River",
   "location": {
-    "lat": 45.3259,
-    "lon": -121.6348,
+    "lat": 45.35913,
+    "lon": -121.64689,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 2021.7,
   "kind": "camp",
@@ -74,6 +74,11 @@
       "label": "Lamberson Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/lambersonbutte.html",
       "kind": "site"
+    },
+    {
+      "label": "Lamberson Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/lamberson-butte.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -82,7 +87,6 @@
       "key": "fflos:US 1824",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "registers",
@@ -96,6 +100,7 @@
       "source": "ffla",
       "key": "ffla:or:lamberson-butte:45.3591:-121.6469",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -108,19 +113,19 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:lamberson-butte",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
-        {
-          "source": "fflos",
-          "value": {
-            "lat": 45.3259,
-            "lon": -121.6348
-          }
-        },
         {
           "source": "ffla",
           "value": {
@@ -129,10 +134,10 @@
           }
         },
         {
-          "source": "firelookout_com",
+          "source": "fflos",
           "value": {
-            "lat": 45.35913,
-            "lon": -121.64689
+            "lat": 45.3259,
+            "lon": -121.6348
           }
         }
       ],

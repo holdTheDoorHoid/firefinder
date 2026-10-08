@@ -1,6 +1,7 @@
 {
   "id": "us-mt-robinson-mountain",
   "name": "Robinson Mountain Lookout",
+  "summary": "A 1929 gable-roof cupola cabin in the Kootenai National Forest, abandoned in 1948 and restored in 1983; a recent assessment found it in good condition. Current access is unclear.",
   "other_names": [
     "Robinson Lookout"
   ],
@@ -30,7 +31,7 @@
       "url": "http://nhlr.org/lookouts/us/mt/robinson-mountain-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "Kootenai National Forest, U.S. Forest Service",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -42,37 +43,58 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Nearly a 2-mile hike after remote forest roads; seasonal road conditions at high elevation (Campflare)."
   },
   "rental": null,
   "events": [
     {
+      "year": 1921,
+      "event": "other",
+      "note": "Listed as a camp at the site",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/robinsonmtn.html"
+    },
+    {
       "year": 1929,
       "event": "built",
-      "note": "One of the few remaining gable-roof cupola lookouts in the region.",
-      "from": "nwmt_projects",
-      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+      "note": "12x14 ft shake and frame gable-roof cupola cabin",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/robinson-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/robinson-mountain-lookout/",
+        "https://www.firelookout.com/mt/robinsonmtn.html",
+        "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+      ]
     },
     {
       "year": 1948,
       "event": "abandoned",
-      "note": "Abandoned.",
-      "from": "nwmt_projects",
-      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+      "note": "Abandoned",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/robinson-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/robinson-mountain-lookout/",
+        "https://www.firelookout.com/mt/robinsonmtn.html"
+      ]
     },
     {
       "year": 1983,
       "event": "restored",
-      "note": "Restored to serviceable condition by the Kootenai NF.",
-      "from": "nwmt_projects",
-      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+      "note": "Restored to serviceable condition by the Kootenai National Forest; the register says it reopened as a KNF rental",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/robinson-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/robinson-mountain-lookout/",
+        "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+      ]
     },
     {
       "year": 2000,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 12, 2000",
-      "from": "nhlr"
+      "note": "Date registered May 12, 2000",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/robinson-mountain-lookout/"
     },
     {
       "year": 2022,
@@ -88,8 +110,8 @@
     {
       "year": 2026,
       "event": "assessed",
-      "note": "Assessment: good condition; future structural work needed alongside regular maintenance.",
-      "from": "nwmt_projects",
+      "note": "Volunteer condition assessment: good overall; future work on specific structural issues plus ongoing maintenance",
+      "from": "research",
       "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
     }
   ],
@@ -136,6 +158,11 @@
       "label": "NHLR register entry US 348 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/mt/robinson-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Robinson Mountain Lookout Campground (Campflare)",
+      "url": "https://campflare.com/campground/robinson-mountain-lookout-006",
+      "kind": "reference"
     },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
@@ -197,10 +224,30 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-robinson-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

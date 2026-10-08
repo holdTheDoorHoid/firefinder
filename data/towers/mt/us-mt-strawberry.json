@@ -1,6 +1,7 @@
 {
   "id": "us-mt-strawberry",
   "name": "Strawberry Lookout",
+  "summary": "A 1941 steel Aermotor tower and log cabin on Strawberry Butte in the Elkhorns; the tower is closed to visitors while the cabin is rented year-round.",
   "other_names": [
     "Strawberry Butte",
     "Strawberry Lookout Cabin"
@@ -9,18 +10,18 @@
   "region": "MT",
   "county": "Jefferson",
   "location": {
-    "lat": 46.50865,
-    "lon": -111.9025,
+    "lat": 46.47551,
+    "lon": -111.9154,
     "precision": "exact",
-    "from": "nhlr"
+    "from": "ffla"
   },
   "elevation_m": 1520.6,
   "kind": "tower",
   "material": "steel",
   "material_from": "firelookout_com",
   "roles": [],
-  "design": "Aermotor",
-  "height_m": null,
+  "design": "65-foot steel Aermotor tower with a 7x7 metal cab, above a one-story log cabin on the ground",
+  "height_m": 19.8,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,20 +32,20 @@
       "url": "http://nhlr.org/lookouts/us/mt/strawberry-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Helena-Lewis and Clark National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "The tower is not open to the public. The cabin is rented to the public year-round, listed on Recreation.gov."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "Last mile of access is non-motorized only, 10/15 to 5/15 (Forest Service)."
   },
   "rental": {
     "available": true,
@@ -58,14 +59,21 @@
     {
       "year": 1941,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Erected in 1941 as a 65-foot steel Aermotor tower with a metal cab, with a one-story log cabin below",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/strawberry-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/strawberry-lookout/",
+        "https://www.fs.usda.gov/r01/helena-lewisclark/recreation/strawberry-lookout-cabin",
+        "https://www.firelookout.com/mt/strawberrybutte.html"
+      ]
     },
     {
       "year": 2005,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 1, 2005",
-      "from": "nhlr"
+      "note": "Registered March 1, 2005 as US 631, MT 39",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/strawberry-lookout/"
     }
   ],
   "photos": [
@@ -137,9 +145,24 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=665",
+      "kind": "register"
+    },
+    {
       "label": "Book or read about Strawberry Lookout Cabin (recreation.gov)",
       "url": "https://www.recreation.gov/camping/campgrounds/272173",
       "kind": "rental"
+    },
+    {
+      "label": "Strawberry Lookout Cabin (U.S. Forest Service, Helena-Lewis and Clark National Forest)",
+      "url": "https://www.fs.usda.gov/r01/helena-lewisclark/recreation/strawberry-lookout-cabin",
+      "kind": "reference"
+    },
+    {
+      "label": "Strawberry Butte Lookout Cabin, Montana (Flickr (Musgrove and the Pumi))",
+      "url": "https://www.flickr.com/photos/musguy/51479662217/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
@@ -155,6 +178,11 @@
       "label": "Strawberry Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/strawberrybutte.html",
       "kind": "site"
+    },
+    {
+      "label": "Strawberry Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/strawberry-butte.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -163,7 +191,6 @@
       "key": "nhlr:US 631",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "registers",
@@ -178,6 +205,7 @@
       "source": "ffla",
       "key": "ffla:mt:strawberry-butte:46.4755:-111.9154",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -201,19 +229,36 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:strawberry-butte",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-strawberry",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
-        {
-          "source": "nhlr",
-          "value": {
-            "lat": 46.50865,
-            "lon": -111.9025
-          }
-        },
         {
           "source": "ffla",
           "value": {
@@ -222,10 +267,10 @@
           }
         },
         {
-          "source": "firelookout_com",
+          "source": "nhlr",
           "value": {
-            "lat": 46.47551,
-            "lon": -111.9154
+            "lat": 46.50865,
+            "lon": -111.9025
           }
         }
       ],
@@ -233,7 +278,13 @@
       "note": "They share a register number."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

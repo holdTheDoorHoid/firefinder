@@ -2,7 +2,8 @@
   "id": "us-ca-red-mountain-san-bernadino-nf",
   "name": "Red Mountain Lookout (San Bernadino NF)",
   "other_names": [
-    "Red Mountain"
+    "Red Mountain",
+    "Red Mtn - Riverside"
   ],
   "country": "US",
   "region": "CA",
@@ -58,6 +59,26 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: January 6, 1999",
       "from": "nhlr"
+    },
+    {
+      "year": 1999,
+      "event": "staffed",
+      "note": "Reopened by the foundation's volunteers.",
+      "from": "scmf_lookouts",
+      "source_url": "https://mountainsfoundation.org/programs/fire-lookouts/fl-seven-lookouts/"
+    },
+    {
+      "year": 2022,
+      "event": "burned",
+      "note": "Destroyed by the Fairview Fire in September.",
+      "from": "scmf_lookouts",
+      "source_url": "https://mountainsfoundation.org/programs/fire-lookouts/fl-seven-lookouts/"
+    },
+    {
+      "year": 2022,
+      "event": "destroyed",
+      "note": "Destroyed by fire 2022",
+      "from": "ffla_groups"
     }
   ],
   "photos": [
@@ -127,8 +148,33 @@
       "kind": "association"
     },
     {
+      "label": "Southern California Mountains Foundation: work on Red Mountain Lookout",
+      "url": "https://mountainsfoundation.org/programs/fire-lookouts/fl-seven-lookouts/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA San Diego-Riverside Chapter: work on Red Mountain Lookout (San Bernardino NF)",
+      "url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/red-mountainriverside/",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Red Mountain Lookout (San Bernadino NF)",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-south-2022.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA California-South chapter: Southern California lookouts",
+      "url": "https://www.firelookouthost.org/southern-california",
+      "kind": "association"
+    },
+    {
       "label": "Southern California Mountains Foundation - Fire Lookout Host Program",
       "url": "https://mountainsfoundation.org/programs/fire-lookouts",
+      "kind": "site"
+    },
+    {
+      "label": "Red Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/red-mountain1.html",
       "kind": "site"
     }
   ],
@@ -158,6 +204,44 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "scmf_lookouts",
+      "key": "scmf_lookouts:ca:red-mountain",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_sdrc",
+      "key": "ffla_sdrc:ca:red-mountain-riverside",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:red-mountain-san-bernadino-nf",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:red-mountain1",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:socal-red-mtn-riverside",
+      "fields": [
+        "registers",
+        "events",
+        "links"
+      ]
     }
   ],
   "conflicts": [
@@ -171,6 +255,18 @@
         {
           "source": "nhlr",
           "value": "standing"
+        },
+        {
+          "source": "ffla_groups",
+          "value": "gone"
+        },
+        {
+          "source": "scmf_lookouts",
+          "value": "gone"
+        },
+        {
+          "source": "ffla_sdrc",
+          "value": "gone"
         }
       ],
       "distance_m": null,

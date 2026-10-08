@@ -53,6 +53,13 @@
     },
     {
       "year": 2019,
+      "event": "assessed",
+      "note": "Assessment team surveyed the Cal Fire lookout on 9 December 2019 with Buck Rock Foundation support; an engineering report was being written.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sierranv-2019.pdf"
+    },
+    {
+      "year": 2019,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: October 22, 2019",
       "from": "nhlr"
@@ -94,6 +101,16 @@
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Penon Blanco Peak Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sierranv-2019.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Penon Blanco Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/penon-blanco-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -121,9 +138,46 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:penon-blanco-peak",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:penon-blanco-peak",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 37.731953,
+            "lon": -120.26139
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 37.73215,
+            "lon": -120.2506
+          }
+        }
+      ],
+      "distance_m": 949,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

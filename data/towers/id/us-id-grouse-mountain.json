@@ -6,10 +6,10 @@
   "region": "ID",
   "county": "Bonner",
   "location": {
-    "lat": 48.49728,
-    "lon": -116.26597,
+    "lat": 48.50793,
+    "lon": -116.2555,
     "precision": "exact",
-    "from": "ffla"
+    "from": "idaho_fl"
   },
   "elevation_m": null,
   "kind": "ground",
@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Kaniksu National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -67,6 +67,11 @@
       "label": "Grouse Mountain Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/northern-idaho/grouse-mountain-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Grouse Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/grouse-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -75,7 +80,6 @@
       "key": "ffla:id:grouse-mountain:48.4973:-116.2660",
       "fields": [
         "name",
-        "location",
         "county",
         "kind",
         "status",
@@ -93,7 +97,17 @@
       "source": "idaho_fl",
       "key": "idaho_fl:grouse-mountain-lookout:48.5079:-116.2555",
       "fields": [
+        "location",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:grouse-mountain",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }
@@ -103,6 +117,13 @@
       "field": "location",
       "values": [
         {
+          "source": "idaho_fl",
+          "value": {
+            "lat": 48.50793,
+            "lon": -116.2555
+          }
+        },
+        {
           "source": "ffla",
           "value": {
             "lat": 48.49728,
@@ -110,10 +131,10 @@
           }
         },
         {
-          "source": "idaho_fl",
+          "source": "firelookout_com",
           "value": {
-            "lat": 48.50793,
-            "lon": -116.2555
+            "lat": 48.49728,
+            "lon": -116.26597
           }
         }
       ],

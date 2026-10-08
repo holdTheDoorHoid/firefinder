@@ -1,7 +1,9 @@
 {
   "id": "us-mt-bear-mountain-point",
   "name": "Bear Mountain Point",
-  "other_names": [],
+  "other_names": [
+    "Bear Mountain (Bare)"
+  ],
   "country": "US",
   "region": "MT",
   "county": "Glacier",
@@ -21,8 +23,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Glacier National Park",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +51,11 @@
       "label": "Bear Mtn. Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/bearmtnpoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Bear Mountain (Bare) on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/bear-mountain-bare.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +75,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:bear-mtn-point:48.9356:-113.7505",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:bear-mountain-bare",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

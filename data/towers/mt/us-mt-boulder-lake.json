@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Lolo National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -37,7 +37,15 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2003,
+      "event": "burned",
+      "note": "Lost to fire during the 2003 season.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cc-im-2003.pdf"
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -46,8 +54,18 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Boulder Lake",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cc-im-2003.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Boulder Lake on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/boulderlake.html",
+      "kind": "site"
+    },
+    {
+      "label": "Boulder Lake on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/boulder-lake.html",
       "kind": "site"
     }
   ],
@@ -68,6 +86,23 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:boulder-lake:47.0689:-113.8355",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:mt:boulder-lake",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:boulder-lake",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

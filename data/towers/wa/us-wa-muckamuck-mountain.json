@@ -13,8 +13,8 @@
   },
   "elevation_m": 1941.6,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -117,6 +117,16 @@
       "label": "Muckamuck Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/muckamuck.html",
       "kind": "site"
+    },
+    {
+      "label": "Muckamuck Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/muckamuck-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Muckamuck Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/fire_lookouts/muckamuck_mountain/lookout_097.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -128,6 +138,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -149,6 +160,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:muckamuck-mtn:48.6110:-119.8567",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:muckamuck-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:fire-lookouts-muckamuck-mountain-lookout-097",
       "fields": [
         "links"
       ]

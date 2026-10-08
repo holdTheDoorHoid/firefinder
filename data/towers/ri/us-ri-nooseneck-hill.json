@@ -1,7 +1,9 @@
 {
   "id": "us-ri-nooseneck-hill",
   "name": "Nooseneck Hill Fire Tower",
-  "other_names": [],
+  "other_names": [
+    "Nooseneck Hill (West Greenwich)"
+  ],
   "country": "US",
   "region": "RI",
   "county": "Kent",
@@ -13,8 +15,8 @@
   },
   "elevation_m": 161.5,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -56,6 +58,13 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: June 2, 2005",
       "from": "nhlr"
+    },
+    {
+      "year": 2005,
+      "event": "other",
+      "note": "FFLA restoration grant awarded for the Nooseneck tower (work not specified); it was presented to the West Greenwich fire department at the 2005 eastern conference.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ed-2005.pdf"
     }
   ],
   "photos": [
@@ -91,9 +100,24 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=672",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Rhode Island lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ri/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Nooseneck Hill Fire Tower",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ed-2005.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Nooseneck Hill (West Greenwich) (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/nooseneck-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -105,6 +129,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -119,6 +144,21 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ri:nooseneck-hill",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:ri:nooseneck-hill",
+      "fields": [
+        "events",
         "links"
       ]
     }

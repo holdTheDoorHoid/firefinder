@@ -6,10 +6,10 @@
   "region": "OR",
   "county": "Coos",
   "location": {
-    "lat": 43.16304,
-    "lon": -123.88535,
+    "lat": 43.2711,
+    "lon": -124.08647,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 490.7,
   "kind": "tower",
@@ -17,7 +17,7 @@
   "material_from": "fflos",
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 16.8,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -93,6 +93,11 @@
       "label": "Blue Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/blueridge.html",
       "kind": "site"
+    },
+    {
+      "label": "Blue Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/blue-ridge.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -101,7 +106,6 @@
       "key": "fflos:US 765",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "material",
@@ -116,6 +120,7 @@
       "source": "ffla",
       "key": "ffla:or:blue-ridge:43.2711:-124.0865",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -128,19 +133,20 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:blue-ridge",
+      "fields": [
+        "height_m",
+        "links"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
-        {
-          "source": "fflos",
-          "value": {
-            "lat": 43.16304,
-            "lon": -123.88535
-          }
-        },
         {
           "source": "ffla",
           "value": {
@@ -149,10 +155,10 @@
           }
         },
         {
-          "source": "firelookout_com",
+          "source": "fflos",
           "value": {
-            "lat": 43.2711,
-            "lon": -124.08647
+            "lat": 43.16304,
+            "lon": -123.88535
           }
         }
       ],

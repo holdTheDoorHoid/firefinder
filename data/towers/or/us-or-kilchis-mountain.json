@@ -6,10 +6,10 @@
   "region": "OR",
   "county": "Tillamook",
   "location": {
-    "lat": 45.572043,
-    "lon": -123.714798,
+    "lat": 45.57132,
+    "lon": -123.70029,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 807.7,
   "kind": "tower",
@@ -17,7 +17,7 @@
   "material_from": "fflos",
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 7.6,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -117,6 +117,11 @@
       "label": "Kilchis Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/kilchismtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Kilchis Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/kilchis-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -125,7 +130,6 @@
       "key": "fflos:US 1800",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "material",
@@ -140,6 +144,7 @@
       "source": "ffla",
       "key": "ffla:or:kilchis-mountain:45.5713:-123.7003",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -152,19 +157,20 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:kilchis-mountain",
+      "fields": [
+        "height_m",
+        "links"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
-        {
-          "source": "fflos",
-          "value": {
-            "lat": 45.572043,
-            "lon": -123.714798
-          }
-        },
         {
           "source": "ffla",
           "value": {
@@ -173,10 +179,10 @@
           }
         },
         {
-          "source": "firelookout_com",
+          "source": "fflos",
           "value": {
-            "lat": 45.57132,
-            "lon": -123.70029
+            "lat": 45.572043,
+            "lon": -123.714798
           }
         }
       ],
@@ -184,7 +190,7 @@
       "note": "They share a register number."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

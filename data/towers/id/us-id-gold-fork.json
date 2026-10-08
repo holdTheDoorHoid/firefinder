@@ -13,16 +13,16 @@
   },
   "elevation_m": null,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4",
   "height_m": null,
   "status": "relocated",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Boise National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -82,6 +82,11 @@
       "label": "Gold Fork Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/west-central/gold-fork-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Gold Fork on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/gold-fork.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -109,6 +114,17 @@
       "key": "idaho_fl:gold-fork-lookout:44.6584:-115.8374",
       "fields": [
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:gold-fork",
+      "fields": [
+        "material",
+        "design",
+        "agency",
+        "ownership",
         "links"
       ]
     }

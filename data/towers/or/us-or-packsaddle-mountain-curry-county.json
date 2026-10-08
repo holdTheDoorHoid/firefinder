@@ -15,10 +15,10 @@
   },
   "elevation_m": 783.0,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "D-6",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -83,6 +83,11 @@
       "label": "Packsaddle Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/packsaddle64.html",
       "kind": "site"
+    },
+    {
+      "label": "Packsaddle Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/packsaddle-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -118,9 +123,40 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:packsaddle-mountain",
+      "fields": [
+        "material",
+        "design",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 42.02758,
+            "lon": -124.02256
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 42.03067,
+            "lon": -124.00786
+          }
+        }
+      ],
+      "distance_m": 1262,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

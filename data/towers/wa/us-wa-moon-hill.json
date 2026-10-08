@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Kaniksu National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,16 @@
       "label": "Moon Hill on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/moonhill.html",
       "kind": "site"
+    },
+    {
+      "label": "Moon Hill on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/moon-hill.html",
+      "kind": "site"
+    },
+    {
+      "label": "Moon Hill on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/fire_lookouts/moon_hill/lookout_197.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -67,6 +77,22 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:moon-hill:48.3857:-117.2385",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:moon-hill",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:fire-lookouts-moon-hill-lookout-197",
       "fields": [
         "links"
       ]

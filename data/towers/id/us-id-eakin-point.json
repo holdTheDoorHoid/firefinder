@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "ID",
-  "county": null,
+  "county": "Gem",
   "location": {
     "lat": 45.85881,
     "lon": -114.87705,
@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Bitterroot National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +44,11 @@
       "label": "Eakin Point Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/selway-region/eakin-point-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Eakin Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/eakin-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -54,6 +59,16 @@
         "name",
         "location",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:eakin-point",
+      "fields": [
+        "county",
+        "agency",
+        "ownership",
         "links"
       ]
     }

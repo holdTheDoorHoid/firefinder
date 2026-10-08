@@ -17,11 +17,11 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 11.0,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Maine Forestry District",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,13 +37,38 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2013,
+      "event": "restored",
+      "note": "Two fall maintenance trips stabilized the tower and left it weather tight for the winter of 2013/2014.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-me-2013.pdf"
+    },
+    {
+      "year": 2017,
+      "event": "removed",
+      "note": "The Wadleigh Mountain lookout in T1 R12 was removed; a 12-foot ladder section was later salvaged for the Squaw Mountain tower.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-me-2017.pdf"
+    }
+  ],
   "photos": [],
   "links": [
     {
       "label": "FFLA Maine lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/me/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Wadleigh Mountain",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-me-2017.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Wadleigh Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/wadleigh-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +81,23 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:me:wadleigh-mountain",
+      "fields": [
+        "height_m",
+        "agency",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:me:wadleigh-mountain",
+      "fields": [
+        "events",
         "links"
       ]
     }

@@ -16,13 +16,13 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "L-4",
+  "height_m": 12.5,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Clearwater National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -37,7 +37,15 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2015,
+      "event": "burned",
+      "note": "Lost to the Jay Point Fire; retardant drops could not save the lookout, which had been used for decades.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nidmt-2015.pdf"
+    }
+  ],
   "photos": [
     {
       "file": "42/4284ea11ba22582bc75a05e3d2d72dcb88b1aab6.webp",
@@ -59,6 +67,11 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Jay Point Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nidmt-2015.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Jay Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/id/jaypoint.html",
       "kind": "site"
@@ -66,6 +79,11 @@
     {
       "label": "Jay Point Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/selway-region/jay-point-lookout/",
+      "kind": "site"
+    },
+    {
+      "label": "Jay Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/jay-point.html",
       "kind": "site"
     }
   ],
@@ -94,6 +112,25 @@
       "key": "idaho_fl:jay-point-lookout:46.4983:-114.7465",
       "fields": [
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:id:jay-point",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:jay-point",
+      "fields": [
+        "design",
+        "height_m",
+        "agency",
+        "ownership",
         "links"
       ]
     }

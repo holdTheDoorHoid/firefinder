@@ -9,10 +9,10 @@
   "region": "ID",
   "county": "Idaho",
   "location": {
-    "lat": 46.29611,
-    "lon": -114.6175,
+    "lat": 46.30131,
+    "lon": -114.61844,
     "precision": "exact",
-    "from": "nhlr"
+    "from": "idaho_fl"
   },
   "elevation_m": 2274.1,
   "kind": "two_story",
@@ -97,6 +97,13 @@
       "note": "Registered April 24, 2009, nominated by Gary Weber",
       "from": "research",
       "source_url": "http://nhlr.org/lookouts/us/id/diablo-lookout/"
+    },
+    {
+      "year": 2012,
+      "event": "staffed",
+      "note": "A successful volunteer staffing program was started.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nidmt-2012.pdf"
     },
     {
       "year": 2021,
@@ -211,6 +218,11 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=801",
+      "kind": "register"
+    },
+    {
       "label": "Diablo Mountain (Keeping Watch, University of Idaho Library)",
       "url": "https://cdil.lib.uidaho.edu/keeping-watch/items/diablo-mountain.html",
       "kind": "reference"
@@ -223,6 +235,11 @@
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Diablo Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nidmt-2012.pdf",
       "kind": "association"
     },
     {
@@ -239,6 +256,11 @@
       "label": "Diablo Mountain Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/selway-region/diablo-mountain-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Diablo Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/diablo-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -247,7 +269,6 @@
       "key": "nhlr:US 785",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "registers",
@@ -283,8 +304,24 @@
       "source": "idaho_fl",
       "key": "idaho_fl:diablo-mountain-lookout:46.3013:-114.6184",
       "fields": [
+        "location",
         "staffing",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:id:diablo",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:diablo-mountain",
+      "fields": [
         "links"
       ]
     },
@@ -308,6 +345,13 @@
       "field": "location",
       "values": [
         {
+          "source": "idaho_fl",
+          "value": {
+            "lat": 46.30131,
+            "lon": -114.61844
+          }
+        },
+        {
           "source": "nhlr",
           "value": {
             "lat": 46.29611,
@@ -315,10 +359,24 @@
           }
         },
         {
-          "source": "idaho_fl",
+          "source": "ffla",
           "value": {
-            "lat": 46.30131,
-            "lon": -114.61844
+            "lat": 46.29622,
+            "lon": -114.61786
+          }
+        },
+        {
+          "source": "firelookout_com",
+          "value": {
+            "lat": 46.29622,
+            "lon": -114.61786
+          }
+        },
+        {
+          "source": "ffla_west_reports",
+          "value": {
+            "lat": 46.29611,
+            "lon": -114.6175
           }
         }
       ],

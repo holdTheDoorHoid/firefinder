@@ -12,7 +12,7 @@
     "from": "ffla"
   },
   "elevation_m": null,
-  "kind": "unknown",
+  "kind": "tower",
   "material": null,
   "material_from": null,
   "roles": [],
@@ -44,6 +44,11 @@
       "label": "FFLA New Hampshire lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nh/",
       "kind": "association"
+    },
+    {
+      "label": "Currier Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/currier-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -55,6 +60,14 @@
         "location",
         "county",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:nh:currier-mountain",
+      "fields": [
+        "kind",
         "links"
       ]
     }

@@ -1,7 +1,9 @@
 {
   "id": "us-mt-baldy-mountain",
   "name": "Baldy Mountain Lookout",
+  "summary": "Kootenai NF lookout: a c.1910 pole platform, a 1927 log cabin, and the present timber tower built in 1957, now rented by reservation.",
   "other_names": [
+    "Baldy Mountain (Mount Baldy)",
     "Mt. Baldy Lookout"
   ],
   "country": "US",
@@ -18,8 +20,8 @@
   "material": "wood",
   "material_from": "nhlr",
   "roles": [],
-  "design": "L-4",
-  "height_m": 13.7,
+  "design": "Present treated-timber tower with L-4 cab (built 1957); earlier 45-foot pole platform (about 1910) and L-6 cupola log cabin (1927)",
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -30,11 +32,11 @@
       "url": "http://nhlr.org/lookouts/us/mt/baldy-mountain-lookout/"
     }
   ],
-  "agency": "US Forest Service",
+  "agency": "US Forest Service, Kootenai National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Rented through the Recreation.gov Recreation Rental program, typically late June to late September. Reached by car; access depends on weather; high-clearance vehicle recommended."
   },
   "staffing": {
     "status": "unknown",
@@ -42,8 +44,8 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Yaak Falls is a short drive off Yaak Highway 508. Hiking trails in the Yaak Area and the Northwest Peaks Scenic Area are nearby."
   },
   "rental": {
     "available": true,
@@ -55,16 +57,46 @@
   },
   "events": [
     {
+      "year": 1910,
+      "event": "built",
+      "note": "Observation point with a 45-foot pole platform tower developed on the site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/baldy-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/baldy-mountain-lookout/",
+        "https://www.recreation.gov/camping/campgrounds/234432",
+        "https://www.firelookout.com/mt/baldymt.html"
+      ]
+    },
+    {
+      "year": 1927,
+      "event": "replaced",
+      "note": "Pole platform replaced by a log cabin with L-6 cupola",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/baldy-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/baldy-mountain-lookout/",
+        "https://www.firelookout.com/mt/baldymt.html"
+      ]
+    },
+    {
       "year": 1957,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Present 30-foot treated timber tower with L-4 cab built",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/baldy-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/baldy-mountain-lookout/",
+        "https://www.recreation.gov/camping/campgrounds/234432",
+        "https://www.firelookout.com/mt/baldymt.html"
+      ]
     },
     {
       "year": 2021,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 9, 2021",
-      "from": "nhlr"
+      "note": "Registered January 9, 2021 as US 1512, MT 90",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/baldy-mountain-lookout/"
     }
   ],
   "photos": [
@@ -166,6 +198,11 @@
       "label": "Baldy Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/baldymt.html",
       "kind": "site"
+    },
+    {
+      "label": "Baldy Mountain (Mount Baldy) on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/baldy-mountain1.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -214,10 +251,39 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:baldy-mountain1",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-baldy-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

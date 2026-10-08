@@ -13,11 +13,11 @@
   },
   "elevation_m": 578.2,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 14.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -56,6 +56,42 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: January 26, 2017",
       "from": "nhlr"
+    },
+    {
+      "year": 2021,
+      "event": "restored",
+      "note": "The Swede Mountain tower and its new Warren County trail officially reopened to the public at a ribbon cutting on Aug 13, 2021.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2021/Aug-2021-final.pdf",
+      "source_urls": [
+        "https://www.nysffla.org/News2021/Aug-2021-final.pdf",
+        "https://www.nysffla.org/News2020/2020%20Mar%20final.pdf"
+      ]
+    },
+    {
+      "year": 2023,
+      "event": "other",
+      "note": "FFLA restoration grant awarded for roof repairs on the 47-foot Aermotor tower; $500 to Warren County Parks, Recreation & Railroad toward roof materials and paint.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/03/cr-restoration-2023.pdf"
+    },
+    {
+      "year": 2024,
+      "event": "modified",
+      "note": "Warren County, with its Soil and Water Conservation District, added interpretive panels in the tower that identify the visible mountain peaks.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2024/2024%20Sep%20final.pdf"
+    },
+    {
+      "year": 2024,
+      "event": "restored",
+      "note": "Warren County replaced a missing roof panel on the tower using a $500 FFLA grant; it was installed before the Aug. 31 lighting event.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2024/2024%20Sep%20final.pdf",
+      "source_urls": [
+        "https://www.nysffla.org/News2024/2024%20Sep%20final.pdf",
+        "https://www.nysffla.org/News2024/2024%20Jan%20final.pdf"
+      ]
     }
   ],
   "photos": [
@@ -79,9 +115,29 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/ny/swede-mountain-fire-tower/",
+      "kind": "register"
+    },
+    {
       "label": "FFLA New York lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ny/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association, New York State Chapter: work on Swede Mountain Fire Tower",
+      "url": "https://www.nysffla.org/News2024/2024%20Jan%20final.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Swede Mountain Fire Tower",
+      "url": "https://firelookout.org/wp-content/uploads/2024/03/cr-restoration-2023.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Swede Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/swede-mountain.html",
+      "kind": "site"
     },
     {
       "label": "OpenStreetMap node 9950067979",
@@ -98,6 +154,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "status",
         "registers",
         "agency",
@@ -113,6 +170,30 @@
         "kind",
         "registers",
         "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:swede-mountain",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "nysffla_projects",
+      "key": "nysffla_projects:ny:swede-mountain",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:ny:swede-mountain",
+      "fields": [
+        "events",
         "links"
       ]
     },

@@ -1,7 +1,9 @@
 {
   "id": "us-wa-lynx-creek",
   "name": "Lynx Creek",
-  "other_names": [],
+  "other_names": [
+    "Lynx Mountain"
+  ],
   "country": "US",
   "region": "WA",
   "county": "Ferry",
@@ -37,7 +39,14 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1926,
+      "event": "built",
+      "note": "Current structure",
+      "from": "trailchick_wa"
+    }
+  ],
   "photos": [
     {
       "file": "33/3367c49d69dddc113fe708812dc8452f0bd2a7d9.webp",
@@ -50,6 +59,16 @@
       "year": 2014,
       "w": 1000,
       "h": 667
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://trailchick-media.s3.us-west-2.amazonaws.com/lynx-lo-1.jpg",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/lynx-mountain-lookout/",
+      "credit": "TrailChick Washington lookout guide (trailchick.com)",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -61,6 +80,21 @@
     {
       "label": "Lynx Creek on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/lynxcreek.html",
+      "kind": "site"
+    },
+    {
+      "label": "Lynx Creek on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/lynx-creek.html",
+      "kind": "site"
+    },
+    {
+      "label": "Lynx Mountain in the TrailChick Washington lookout guide",
+      "url": "https://www.trailchick.com/wa-state-fire-lookouts/lynx-mountain-lookout/",
+      "kind": "site"
+    },
+    {
+      "label": "Lynx Creek on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/washington_fire_lookouts/lynx_creek_lookout/cabin_222.htm",
       "kind": "site"
     }
   ],
@@ -88,6 +122,29 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:lynx-creek",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "trailchick_wa",
+      "key": "trailchick_wa:wa:lynx-mountain-lookout",
+      "fields": [
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-lynx-creek-lookout-cabin-222",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
@@ -100,6 +157,10 @@
         },
         {
           "source": "firelookout_com",
+          "value": "standing"
+        },
+        {
+          "source": "trailchick_wa",
           "value": "standing"
         }
       ],

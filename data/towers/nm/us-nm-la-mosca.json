@@ -1,7 +1,10 @@
 {
   "id": "us-nm-la-mosca",
   "name": "La Mosca Lookout",
-  "other_names": [],
+  "summary": "A Cibola National Forest lookout on La Mosca Peak, with construction reported in 1939; the current CL-100 cab dates to the 1960s.",
+  "other_names": [
+    "LA Mosca Peak"
+  ],
   "country": "US",
   "region": "NM",
   "county": "Cibola",
@@ -16,8 +19,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "CL-100 series 14x14 ft metal cab with catwalk on a 10-ft concrete block base",
+  "height_m": 3.7,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,15 +31,15 @@
       "url": "http://nhlr.org/lookouts/us/nm/la-mosca-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Cibola National Forest (Mount Taylor Ranger District)",
   "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2017"
   },
   "visit": {
     "climbable": null,
@@ -46,16 +49,38 @@
   "rental": null,
   "events": [
     {
+      "year": 1939,
+      "event": "built",
+      "note": "Construction of a lookout structure on La Mosca Peak reported June to October 1939; a 1940 survey disk is stamped on the doorstep",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/la-mosca-peak.html"
+    },
+    {
       "year": 1960,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
     },
     {
+      "year": 1960,
+      "event": "replaced",
+      "note": "Register gives 1960 for the current CL-100 cab, which it says replaced an L-4 lookout from the early 1930s",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/la-mosca-lookout/"
+    },
+    {
       "year": 2005,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 1, 2005",
-      "from": "nhlr"
+      "note": "US 634, NM 11, registered April 1, 2005",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/la-mosca-lookout/"
+    },
+    {
+      "year": 2017,
+      "event": "assessed",
+      "note": "Register visit report, July 30, 2017: good condition, staffed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/la-mosca-lookout/"
     }
   ],
   "photos": [
@@ -91,9 +116,29 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=504",
+      "kind": "register"
+    },
+    {
+      "label": "New Mexico Lookouts 2020 Year-End Report (firelookout.org)",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "La Mosca Lookout Mt Taylor (Cibola National Forest and National Grasslands (Flickr))",
+      "url": "https://www.flickr.com/photos/cibola_nfg/52279007688",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
       "kind": "association"
+    },
+    {
+      "label": "LA Mosca Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/la-mosca-peak.html",
+      "kind": "site"
     },
     {
       "label": "Wikidata item Q86925458",
@@ -140,10 +185,37 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:nm:la-mosca-peak",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nm-la-mosca",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

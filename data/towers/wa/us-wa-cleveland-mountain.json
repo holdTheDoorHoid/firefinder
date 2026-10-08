@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Snoqualmie National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,16 @@
       "label": "Cleveland Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/clevelandmtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Cleveland Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/cleveland-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Cleveland Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/alpine_lakes_wilderness/cleveland_mountain/temple_road_200.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -67,6 +77,22 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:cleveland-mtn:47.6810:-121.4245",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:cleveland-mountain",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:alpine-lakes-wilderness-cleveland-mountain-temple-road-200",
       "fields": [
         "links"
       ]

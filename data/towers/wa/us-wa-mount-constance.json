@@ -1,7 +1,9 @@
 {
   "id": "us-wa-mount-constance",
   "name": "Mount Constance",
-  "other_names": [],
+  "other_names": [
+    "Constance"
+  ],
   "country": "US",
   "region": "WA",
   "county": "Jefferson",
@@ -21,8 +23,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Olympic National Park",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +51,16 @@
       "label": "Mt. Constance on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/constance.html",
       "kind": "site"
+    },
+    {
+      "label": "Mount Constance on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/mount-constance.html",
+      "kind": "site"
+    },
+    {
+      "label": "Constance on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/constance/lookout_site_099.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +82,47 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:mount-constance",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-constance-lookout-site-099",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 47.76462,
+            "lon": -123.15125
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 47.77259,
+            "lon": -123.12739
+          }
+        }
+      ],
+      "distance_m": 1991,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

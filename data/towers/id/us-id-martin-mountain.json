@@ -13,16 +13,16 @@
   },
   "elevation_m": null,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4",
   "height_m": null,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Challis National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -54,6 +54,11 @@
       "label": "Martin Mountain Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/southern-idaho/martin-mountain-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Martin Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/martin-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -80,6 +85,17 @@
       "source": "idaho_fl",
       "key": "idaho_fl:martin-mountain-lookout:44.8352:-114.6837",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:martin-mountain",
+      "fields": [
+        "material",
+        "design",
+        "agency",
+        "ownership",
         "links"
       ]
     }

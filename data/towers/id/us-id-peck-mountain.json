@@ -13,11 +13,11 @@
   },
   "elevation_m": 1555.4,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 13.7,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -56,6 +56,13 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: March 1, 1999",
       "from": "nhlr"
+    },
+    {
+      "year": 2006,
+      "event": "other",
+      "note": "Lightning-protection components were salvaged from the ground cabin for reuse at Square Mountain lookout.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-id-2006.pdf"
     }
   ],
   "photos": [
@@ -96,6 +103,11 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Peck Mountain Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-id-2006.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Peck Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/id/peckmtn.html",
       "kind": "site"
@@ -103,6 +115,11 @@
     {
       "label": "Peck Mountain on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/west-central/peck-mountain/",
+      "kind": "site"
+    },
+    {
+      "label": "Peck Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/peck-mountain.html",
       "kind": "site"
     }
   ],
@@ -145,6 +162,24 @@
       "key": "idaho_fl:peck-mountain:44.8621:-116.6118",
       "fields": [
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:id:peck-mountain",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:peck-mountain",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
         "links"
       ]
     }

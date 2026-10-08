@@ -6,10 +6,10 @@
   "region": "CO",
   "county": "Montezuma",
   "location": {
-    "lat": 37.07307,
-    "lon": -108.27353,
+    "lat": 37.12861,
+    "lon": -108.46667,
     "precision": "exact",
-    "from": "nhlr"
+    "from": "ffla"
   },
   "elevation_m": 2011.7,
   "kind": "platform",
@@ -79,9 +79,19 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=879",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Colorado lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/co/",
       "kind": "association"
+    },
+    {
+      "label": "Soda Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/soda-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -90,7 +100,6 @@
       "key": "nhlr:US 876",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "material",
@@ -105,9 +114,17 @@
       "source": "ffla",
       "key": "ffla:co:soda-point:37.1286:-108.4667",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:co:soda-point",
+      "fields": [
         "links"
       ]
     }
@@ -117,17 +134,17 @@
       "field": "location",
       "values": [
         {
-          "source": "nhlr",
-          "value": {
-            "lat": 37.07307,
-            "lon": -108.27353
-          }
-        },
-        {
           "source": "ffla",
           "value": {
             "lat": 37.12861,
             "lon": -108.46667
+          }
+        },
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 37.07307,
+            "lon": -108.27353
           }
         }
       ],

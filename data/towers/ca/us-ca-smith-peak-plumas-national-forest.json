@@ -1,6 +1,7 @@
 {
   "id": "us-ca-smith-peak-plumas-national-forest",
   "name": "Smith Peak Lookout (Plumas National Forest)",
+  "summary": "1936 Forest Service cabin on an enclosed tower west of Lake Davis; seasonal staffing; visitors welcome when fire operations allow.",
   "other_names": [
     "Smith Peak"
   ],
@@ -18,7 +19,7 @@
   "material": "wood",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "California Region 5 Plan BC-301 cabin on an enclosed timber tower (NHLR)",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -33,31 +34,72 @@
   "agency": "US Forest Service - Plumas National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Visitors are welcome when no fire operations are underway; staff may not allow access during lightning events."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2020"
   },
   "visit": {
-    "climbable": null,
+    "climbable": true,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "West side of Lake Davis; no source read confirms a road route to the lookout; check conditions with the Plumas National Forest first."
   },
   "rental": null,
   "events": [
     {
       "year": 1936,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Completed August 1936 per the register; reported in operation in September 1936",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/smith-peak-lookout-plumas-national-forest/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/smith-peak-lookout-plumas-national-forest/",
+        "https://californialookouts.weebly.com/smith-peak1.html"
+      ]
+    },
+    {
+      "year": 1944,
+      "event": "staffed",
+      "note": "Fire guard for the summer season",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/smith-peak1.html"
+    },
+    {
+      "year": 1946,
+      "event": "staffed",
+      "note": "Reno high school graduate stationed on the peak",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/smith-peak1.html"
+    },
+    {
+      "year": 1971,
+      "event": "staffed",
+      "note": "Red Dolby began his summer watch",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/smith-peak1.html"
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 3, 2020",
-      "from": "nhlr"
+      "note": "Registered June 3, 2020 as US 1420",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/smith-peak-lookout-plumas-national-forest/"
+    },
+    {
+      "year": 2024,
+      "event": "other",
+      "note": "FFLA restoration grant of $500 for materials to restore the original 1930s tongue-and-groove Douglas fir floor, which was buried under paint and linoleum.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2025/02/cr-rest-2024.pdf"
+    },
+    {
+      "year": 2024,
+      "event": "restored",
+      "note": "Original wood floor uncovered and restored, finished in September 2024 with a donated sander and generator from a local hardware store.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2025/02/cr-rest-2024.pdf"
     }
   ],
   "photos": [
@@ -165,13 +207,28 @@
       "kind": "register"
     },
     {
+      "label": "Visiting Lake Davis - Plumas National Forest (Sierra REC Magazine)",
+      "url": "https://sierrarecmagazine.com/article/visiting-lake-davis-plumas-national-forest/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Smith Peak Lookout (Plumas National Forest)",
+      "url": "https://firelookout.org/wp-content/uploads/2025/02/cr-rest-2024.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Smith Peak Lookout - Forest Lookouts Page",
       "url": "https://californialookouts.weebly.com/smith-peak.html",
+      "kind": "site"
+    },
+    {
+      "label": "Smith Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/smith-peak1.html",
       "kind": "site"
     },
     {
@@ -209,15 +266,51 @@
       ]
     },
     {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:smith-peak-plumas-national-forest",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/4391442221",
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:smith-peak1",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-smith-peak-plumas-national-forest",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

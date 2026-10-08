@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "MI",
-  "county": null,
+  "county": "Dickinson",
   "location": {
     "lat": 45.78713,
     "lon": -87.864527,
@@ -21,8 +21,8 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "State Department of Conservation",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -41,6 +41,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Vulcan (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/vulcan-hill.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 354001855",
       "url": "https://www.openstreetmap.org/node/354001855",
       "kind": "osm"
@@ -48,10 +53,20 @@
   ],
   "sources": [
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:mi:vulcan-hill",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/354001855",
       "fields": [
-        "name",
         "location",
         "elevation_m",
         "kind",

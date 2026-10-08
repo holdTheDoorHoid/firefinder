@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Salmon National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -54,6 +54,11 @@
       "label": "Horse Heaven on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/southern-idaho/horse-heaven/",
       "kind": "site"
+    },
+    {
+      "label": "Horse Heaven on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/horse-heaven.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -80,6 +85,15 @@
       "source": "idaho_fl",
       "key": "idaho_fl:horse-heaven:45.2627:-114.5462",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:horse-heaven",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

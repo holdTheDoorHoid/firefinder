@@ -35,7 +35,7 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
+    "status": "volunteer",
     "as_of": null
   },
   "visit": {
@@ -52,10 +52,52 @@
       "from": "nhlr"
     },
     {
+      "year": 1950,
+      "event": "replaced",
+      "note": "The present L-4 cab replaced the cupola cab.",
+      "from": "snoqualmie_lookouts",
+      "source_url": "https://www.snoqualmielookouts.org/kelly-butte-lookout"
+    },
+    {
+      "year": 2006,
+      "event": "other",
+      "note": "FFLA restoration grant of $500 awarded toward restoration, alongside a Butler Fund grant; later phases to cover shutters, catwalk, windows, siding and interior for rental use.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-rest-2006.pdf"
+    },
+    {
+      "year": 2006,
+      "event": "restored",
+      "note": "New roof installed and windows prepared for removal as the first stage of the restoration.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-rest-2006.pdf"
+    },
+    {
+      "year": 2008,
+      "event": "restored",
+      "note": "Volunteers with the FFLA and the Forest Service began a major restoration that included a new trail built with Washington Trails Association help.",
+      "from": "snoqualmie_lookouts",
+      "source_url": "https://www.snoqualmielookouts.org/kelly-butte-lookout"
+    },
+    {
       "year": 2011,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: August 15, 2011",
       "from": "nhlr"
+    },
+    {
+      "year": 2011,
+      "event": "restored",
+      "note": "The restoration was completed after a spell of 20 years abandoned.",
+      "from": "snoqualmie_lookouts",
+      "source_url": "https://www.snoqualmielookouts.org/kelly-butte-lookout"
+    },
+    {
+      "year": 2012,
+      "event": "staffed",
+      "note": "Put back in service by the national forest.",
+      "from": "snoqualmie_lookouts",
+      "source_url": "https://www.snoqualmielookouts.org/kelly-butte-lookout"
     }
   ],
   "photos": [
@@ -142,6 +184,16 @@
       "year": 2011,
       "w": 1094,
       "h": 614
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://trailchick-media.s3.us-west-2.amazonaws.com/IMG_5376.jpg",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/kelly-butte-lookout/",
+      "credit": "TrailChick Washington lookout guide (trailchick.com)",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -156,8 +208,28 @@
       "kind": "association"
     },
     {
+      "label": "Snoqualmie Fire Lookouts Association: work on Kelly Butte Lookout",
+      "url": "https://www.snoqualmielookouts.org/kelly-butte-lookout",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Kelly Butte Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-rest-2006.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Kelly Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/kellybutte.html",
+      "kind": "site"
+    },
+    {
+      "label": "Kelly Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/kelly-butte.html",
+      "kind": "site"
+    },
+    {
+      "label": "Kelly Butte in the TrailChick Washington lookout guide",
+      "url": "https://www.trailchick.com/wa-state-fire-lookouts/kelly-butte-lookout/",
       "kind": "site"
     }
   ],
@@ -197,6 +269,43 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "snoqualmie_lookouts",
+      "key": "snoqualmie_lookouts:wa:kelly-butte",
+      "fields": [
+        "staffing",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:wa:kelly-butte",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:kelly-butte",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "trailchick_wa",
+      "key": "trailchick_wa:wa:kelly-butte-lookout",
+      "fields": [
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:wa:kelly-butte-king",
+      "fields": []
     }
   ],
   "conflicts": [
@@ -210,13 +319,21 @@
         {
           "source": "firelookout_com",
           "value": 1926
+        },
+        {
+          "source": "trailchick_wa",
+          "value": 1950
+        },
+        {
+          "source": "snoqualmie_lookouts",
+          "value": 1926
         }
       ],
       "distance_m": null,
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

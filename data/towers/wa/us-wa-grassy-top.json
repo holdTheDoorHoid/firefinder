@@ -1,7 +1,9 @@
 {
   "id": "us-wa-grassy-top",
   "name": "Grassy Top Lookout Site",
-  "other_names": [],
+  "other_names": [
+    "Grassy Top Mountain"
+  ],
   "country": "US",
   "region": "WA",
   "county": "Pend Oreille",
@@ -81,6 +83,11 @@
       "label": "Grassy Top on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/grassytop.html",
       "kind": "site"
+    },
+    {
+      "label": "Grassy Top Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/grassy-top.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -117,9 +124,38 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:grassy-top",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 48.76621,
+            "lon": -117.14505
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 48.7605,
+            "lon": -117.1571
+          }
+        }
+      ],
+      "distance_m": 1088,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -114,6 +114,11 @@
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
+    },
+    {
+      "label": "FFLA California-South chapter: Southern California lookouts",
+      "url": "https://www.firelookouthost.org/southern-california",
+      "kind": "association"
     }
   ],
   "sources": [
@@ -141,9 +146,37 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:socal-castro-peak",
+      "fields": [
+        "registers",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "gone"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        },
+        {
+          "source": "ffla_groups",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

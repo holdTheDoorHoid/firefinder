@@ -16,8 +16,8 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "L-4",
+  "height_m": 6.1,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -117,6 +117,11 @@
       "label": "Elephant Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/elephantmtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Elephant Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/elephant-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -153,9 +158,40 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:elephant-mountain",
+      "fields": [
+        "design",
+        "height_m",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 43.28116,
+            "lon": -122.22768
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 43.30123,
+            "lon": -122.23643
+          }
+        }
+      ],
+      "distance_m": 2341,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -18,7 +18,7 @@
   "material_from": null,
   "roles": [],
   "design": "likely a Region 5 4AR cabin on a 20-foot open steel tower (1926); cab replaced with a Region 5 BC-301 in 1954",
-  "height_m": null,
+  "height_m": 61.0,
   "status": "standing",
   "status_note": "The tower still stands, but its cab is gone (FFLA).",
   "registers": [
@@ -101,6 +101,20 @@
       "note": "National Historic Lookout Register registration date November 15, 1991",
       "from": "research",
       "source_url": "http://nhlr.org/lookouts/us/ca/keller-peak-lookout/"
+    },
+    {
+      "year": 2017,
+      "event": "restored",
+      "note": "1970s paneling removed to bring back original tongue-and-groove walls; three cracked windows, rotten wood, mattress and flooring replaced.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-s-sbnf-2017.pdf"
+    },
+    {
+      "year": 2024,
+      "event": "burned",
+      "note": "Destroyed by the Line Fire in September.",
+      "from": "scmf_lookouts",
+      "source_url": "https://mountainsfoundation.org/programs/fire-lookouts/fl-seven-lookouts/"
     },
     {
       "year": 2024,
@@ -249,6 +263,11 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=28",
+      "kind": "register"
+    },
+    {
       "label": "Keller Peak (Lookout) (Hundred Peaks)",
       "url": "https://hundredpeaks.org/peaks/keller-peak-lookout/",
       "kind": "reference"
@@ -256,6 +275,21 @@
     {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
+      "kind": "association"
+    },
+    {
+      "label": "Southern California Mountains Foundation: work on Keller Peak Lookout",
+      "url": "https://mountainsfoundation.org/programs/fire-lookouts/fl-seven-lookouts/",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Keller Peak Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-s-sbnf-2017.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA California-South chapter: Southern California lookouts",
+      "url": "https://www.firelookouthost.org/southern-california",
       "kind": "association"
     },
     {
@@ -321,10 +355,43 @@
       ]
     },
     {
+      "source": "scmf_lookouts",
+      "key": "scmf_lookouts:ca:keller-peak",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:keller-peak",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q86928347",
       "fields": [
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:keller-peak",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:socal-keller-peak",
+      "fields": [
+        "registers",
+        "events",
         "links"
       ]
     },
@@ -357,6 +424,14 @@
         },
         {
           "source": "fflos",
+          "value": "gone"
+        },
+        {
+          "source": "ffla_groups",
+          "value": "gone"
+        },
+        {
+          "source": "scmf_lookouts",
           "value": "gone"
         }
       ],

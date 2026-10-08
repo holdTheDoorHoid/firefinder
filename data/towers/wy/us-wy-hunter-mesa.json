@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Bighorn National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Hunter Mesa on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wy/huntermesa.html",
       "kind": "site"
+    },
+    {
+      "label": "Hunter's Mesa on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/hunters-mesa.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +73,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:wy:hunter-mesa:44.3334:-106.9565",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wy:hunters-mesa",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

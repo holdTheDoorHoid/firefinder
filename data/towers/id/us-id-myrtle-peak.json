@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -61,6 +61,11 @@
       "label": "Myrtle Peak Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/northern-idaho/myrtle-peak-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Myrtle Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/myrtle-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -88,6 +93,15 @@
       "key": "idaho_fl:myrtle-peak-lookout:48.7488:-116.6422",
       "fields": [
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:myrtle-peak",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

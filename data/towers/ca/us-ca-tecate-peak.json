@@ -6,17 +6,17 @@
   "region": "CA",
   "county": "San Diego",
   "location": {
-    "lat": 32.57935,
-    "lon": -116.68333,
+    "lat": 32.57961,
+    "lon": -116.68867,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 929.3,
   "kind": "enclosed_tower",
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "20-ft enclosed battered timber tower with a 14x14-ft wood cab",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -45,6 +45,13 @@
   },
   "rental": null,
   "events": [
+    {
+      "year": 1939,
+      "event": "built",
+      "note": "Built by the Civilian Conservation Corps and used for at least 40 years before being demolished.",
+      "from": "ffla_sdrc",
+      "source_url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/tecate/"
+    },
     {
       "year": 2009,
       "event": "fflos_registered",
@@ -102,6 +109,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA San Diego-Riverside Chapter: work on Tecate Peak Lookout",
+      "url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/tecate/",
+      "kind": "association"
+    },
+    {
       "label": "Tecate Peak Lookout - Forest Lookouts Page",
       "url": "https://californialookouts.weebly.com/tecate-peak.html",
       "kind": "site"
@@ -113,7 +125,6 @@
       "key": "fflos:US 521",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "material",
@@ -128,17 +139,44 @@
       "source": "ffla",
       "key": "ffla:ca:tecate-peak:32.5796:-116.6887",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "ffla_sdrc",
+      "key": "ffla_sdrc:ca:tecate-peak",
+      "fields": [
+        "design",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:tecate-peak",
+      "fields": []
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:tecate-peak",
+      "fields": []
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 32.57961,
+            "lon": -116.68867
+          }
+        },
         {
           "source": "fflos",
           "value": {
@@ -147,10 +185,10 @@
           }
         },
         {
-          "source": "ffla",
+          "source": "ffla_sdrc",
           "value": {
-            "lat": 32.57961,
-            "lon": -116.68867
+            "lat": 32.57935,
+            "lon": -116.68333
           }
         }
       ],

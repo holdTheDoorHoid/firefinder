@@ -15,8 +15,8 @@
   },
   "elevation_m": 384.0,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -58,6 +58,59 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: April 28, 1997",
       "from": "nhlr"
+    },
+    {
+      "year": 2017,
+      "event": "closed",
+      "note": "The tower was reported closed to the public because of its condition; a restoration and repair project had been approved but had no work date yet (reported April 2017).",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/Newsletters/2017/2017-04.pdf",
+      "source_urls": [
+        "https://www.nysffla.org/Newsletters/2017/2017-04.pdf",
+        "https://www.nysffla.org/Newsletters/2017/2017-05.pdf"
+      ]
+    },
+    {
+      "year": 2018,
+      "event": "restored",
+      "note": "Team Rubicon, FFLA and park volunteers replaced rotted steps and landings with locust, painted the tower and re-floored the cab over several weekends; finished 3 June.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/Newsletters/2018-04.pdf",
+      "source_urls": [
+        "https://www.nysffla.org/Newsletters/2018-04.pdf",
+        "https://www.nysffla.org/Newsletters/2018-06.pdf",
+        "https://www.nysffla.org/News2021/Jun-2021-final.pdf",
+        "https://www.nysffla.org/projects.html"
+      ]
+    },
+    {
+      "year": 2021,
+      "event": "assessed",
+      "note": "An April 2021 inspection by the FFLA director found many cab windows missing and heavy graffiti on the Jackie Jones tower.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2021/Apr-2021-final.pdf"
+    },
+    {
+      "year": 2021,
+      "event": "restored",
+      "note": "Volunteers painted over extensive graffiti in the Jackie Jones tower on May 21, 2021; replacing broken windows was planned for the same visit.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2021/Jun-2021-final.pdf",
+      "source_urls": [
+        "https://www.nysffla.org/News2021/Jun-2021-final.pdf",
+        "https://www.nysffla.org/News2021/May-2021-final.pdf"
+      ]
+    },
+    {
+      "year": 2022,
+      "event": "closed",
+      "note": "Tower closed to the public pending an engineering inspection whose completion date was unknown; still closed in the 2023 report.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ny-2022.pdf",
+      "source_urls": [
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-ny-2022.pdf",
+        "https://firelookout.org/wp-content/uploads/2024/03/cr-ny-2023.pdf"
+      ]
     }
   ],
   "photos": [
@@ -134,6 +187,21 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association, New York State Chapter: work on Jackie Jones Lookout",
+      "url": "https://www.nysffla.org/News2021/Apr-2021-final.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Jackie Jones Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/03/cr-ny-2023.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Jackie Jones (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/jackie-jones.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 732695892",
       "url": "https://www.openstreetmap.org/node/732695892",
       "kind": "osm"
@@ -148,6 +216,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -162,6 +231,29 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:jackie-jones",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "nysffla_projects",
+      "key": "nysffla_projects:ny:jackie-jones",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:ny:jackie-jones",
+      "fields": [
+        "events",
         "links"
       ]
     },

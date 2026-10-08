@@ -1,7 +1,10 @@
 {
   "id": "us-in-spears-john-spears",
   "name": "Spears (John Spears)",
-  "other_names": [],
+  "other_names": [
+    "Spears",
+    "John Spears"
+  ],
   "country": "US",
   "region": "IN",
   "county": "Crawford",
@@ -21,8 +24,8 @@
   "status": "relocated",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Hoosier National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -59,6 +62,16 @@
       "label": "FFLA Indiana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/in/",
       "kind": "association"
+    },
+    {
+      "label": "Spears (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/spears.html",
+      "kind": "site"
+    },
+    {
+      "label": "Spears on Indiana Fire Towers (Mark Armantrout)",
+      "url": "https://www.indianafiretowers.com/spears/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -71,6 +84,22 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:in:spears",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "indiana_fire_towers",
+      "key": "indiana_fire_towers:in:spears",
+      "fields": [
         "links"
       ]
     }

@@ -6,18 +6,18 @@
   "region": "OR",
   "county": "Jefferson",
   "location": {
-    "lat": 44.684598,
-    "lon": -118.213829,
+    "lat": 44.62991,
+    "lon": -121.55381,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 1370.4,
   "kind": "tower",
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "L-4",
+  "height_m": 23.2,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -170,6 +170,11 @@
       "label": "Alder Springs on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/aldersprings.html",
       "kind": "site"
+    },
+    {
+      "label": "Alder Springs on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/alder-springs.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -178,7 +183,6 @@
       "key": "fflos:US 561",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "material",
@@ -194,6 +198,7 @@
       "source": "ffla",
       "key": "ffla:or:alder-springs:44.6299:-121.5538",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -208,19 +213,21 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:alder-springs",
+      "fields": [
+        "design",
+        "height_m",
+        "links"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
-        {
-          "source": "fflos",
-          "value": {
-            "lat": 44.684598,
-            "lon": -118.213829
-          }
-        },
         {
           "source": "ffla",
           "value": {
@@ -229,10 +236,10 @@
           }
         },
         {
-          "source": "firelookout_com",
+          "source": "fflos",
           "value": {
-            "lat": 44.62991,
-            "lon": -121.55381
+            "lat": 44.684598,
+            "lon": -118.213829
           }
         }
       ],

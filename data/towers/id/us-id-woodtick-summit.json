@@ -6,10 +6,10 @@
   "region": "ID",
   "county": "Lemhi",
   "location": {
-    "lat": 44.79973,
-    "lon": -114.68207,
+    "lat": 44.80269,
+    "lon": -114.68759,
     "precision": "exact",
-    "from": "ffla"
+    "from": "idaho_fl"
   },
   "elevation_m": null,
   "kind": "camp",
@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Challis National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -54,6 +54,11 @@
       "label": "Woodtick Summit on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/southern-idaho/woodtick-summit/",
       "kind": "site"
+    },
+    {
+      "label": "Woodtick Summit on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/woodtick-summit.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -62,7 +67,6 @@
       "key": "ffla:id:woodtick-summit:44.7997:-114.6821",
       "fields": [
         "name",
-        "location",
         "county",
         "kind",
         "status",
@@ -80,6 +84,16 @@
       "source": "idaho_fl",
       "key": "idaho_fl:woodtick-summit:44.8027:-114.6876",
       "fields": [
+        "location",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:woodtick-summit",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }
@@ -89,6 +103,13 @@
       "field": "location",
       "values": [
         {
+          "source": "idaho_fl",
+          "value": {
+            "lat": 44.80269,
+            "lon": -114.68759
+          }
+        },
+        {
           "source": "ffla",
           "value": {
             "lat": 44.79973,
@@ -96,10 +117,10 @@
           }
         },
         {
-          "source": "idaho_fl",
+          "source": "firelookout_com",
           "value": {
-            "lat": 44.80269,
-            "lon": -114.68759
+            "lat": 44.79973,
+            "lon": -114.68207
           }
         }
       ],

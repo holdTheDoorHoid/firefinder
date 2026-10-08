@@ -1,6 +1,7 @@
 {
   "id": "us-ne-crescent-lake-north",
   "name": "Crescent Lake North Lookout Tower",
+  "summary": "A 60-ft steel fire tower on Crescent Lake NWR, standing and registered in August 2026; the 1935 build date conflicts with other sources.",
   "other_names": [],
   "country": "US",
   "region": "NE",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "60-foot steel tower",
+  "height_m": 18.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -46,10 +47,22 @@
   "rental": null,
   "events": [
     {
+      "year": 1935,
+      "event": "built",
+      "note": "Register gives 1935 for a 60-foot steel tower. Not reconciled with the early-1940s CCC date the register quotes from USFWS, or with a 1937 newspaper report of a WPA 100-foot tower at the refuge",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ne/crescent-lake-north-lookout-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ne/crescent-lake-north-lookout-tower/",
+        "https://westlookouts.weebly.com/crescent-lake-north.html"
+      ]
+    },
+    {
       "year": 2026,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 9, 2026",
-      "from": "nhlr"
+      "note": "Registered August 9, 2026 as US 1844, NE 2; nominated by Admin",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ne/crescent-lake-north-lookout-tower/"
     }
   ],
   "photos": [
@@ -73,9 +86,24 @@
       "kind": "register"
     },
     {
+      "label": "Crescent Lake South Lookout Tower (National Historic Lookout Register)",
+      "url": "http://nhlr.org/lookouts/us/ne/crescent-lake-south-lookout-tower/",
+      "kind": "reference"
+    },
+    {
+      "label": "Crescent Lake National Wildlife Refuge (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Crescent_Lake_National_Wildlife_Refuge",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Nebraska lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ne/",
       "kind": "association"
+    },
+    {
+      "label": "Crescent Lake (north) on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/crescent-lake-north.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -114,10 +142,38 @@
       "source": "ffla",
       "key": "ffla:ne:crescent-lake-north:41.7560:-102.4034:2",
       "fields": []
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ne:crescent-lake-north",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ne-crescent-lake-north",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

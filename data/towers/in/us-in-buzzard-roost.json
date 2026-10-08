@@ -1,7 +1,9 @@
 {
   "id": "us-in-buzzard-roost",
   "name": "Buzzard Roost",
-  "other_names": [],
+  "other_names": [
+    "maybe also Buzzards Roost and Mount Pleasant"
+  ],
   "country": "US",
   "region": "IN",
   "county": "Perry",
@@ -21,8 +23,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Hoosier National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +46,16 @@
       "label": "FFLA Indiana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/in/",
       "kind": "association"
+    },
+    {
+      "label": "Buzzard Roost (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/buzzard-roost.html",
+      "kind": "site"
+    },
+    {
+      "label": "Buzzard Roost on Indiana Fire Towers (Mark Armantrout)",
+      "url": "https://www.indianafiretowers.com/buzzard-roost/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +68,22 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:in:buzzard-roost",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "indiana_fire_towers",
+      "key": "indiana_fire_towers:in:buzzard-roost",
+      "fields": [
         "links"
       ]
     }

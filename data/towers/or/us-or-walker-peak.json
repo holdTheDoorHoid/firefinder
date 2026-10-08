@@ -13,8 +13,8 @@
   },
   "elevation_m": 579.1,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -68,6 +68,11 @@
       "label": "Walker Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/walkerpeak.html",
       "kind": "site"
+    },
+    {
+      "label": "Walker Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/walker-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -79,6 +84,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -102,9 +108,38 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:walker-peak",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 45.4741,
+            "lon": -122.12338
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 45.4747,
+            "lon": -122.13092
+          }
+        }
+      ],
+      "distance_m": 592,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -13,8 +13,8 @@
   },
   "elevation_m": 2370.1,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -81,6 +81,16 @@
       "label": "Mt. Aix on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/aix.html",
       "kind": "site"
+    },
+    {
+      "label": "Mount Aix on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/mount-aix.html",
+      "kind": "site"
+    },
+    {
+      "label": "Mount Aix on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/hiking/bumping_lake/mount_aix_174.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -92,6 +102,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -113,6 +124,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:mt-aix:46.7950:-121.2559",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:mount-aix",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:hiking-bumping-lake-mount-aix-174",
       "fields": [
         "links"
       ]

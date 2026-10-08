@@ -13,8 +13,8 @@
   },
   "elevation_m": 465.1,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -46,10 +46,28 @@
   "rental": null,
   "events": [
     {
+      "year": 1934,
+      "event": "built",
+      "note": "The lookout was erected in 1934 at Butternut and later moved to Park Falls.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2025/02/cr-wi-2024.pdf"
+    },
+    {
       "year": 2017,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: June 28, 2017",
       "from": "nhlr"
+    },
+    {
+      "year": 2018,
+      "event": "relocated",
+      "note": "The director bought the tower from the Wisconsin DNR and moved it onto his private property less than five miles from its Park Falls location.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2025/02/cr-wi-2024.pdf",
+      "source_urls": [
+        "https://firelookout.org/wp-content/uploads/2025/02/cr-wi-2024.pdf",
+        "https://firelookout.org/wp-content/uploads/2026/01/cr-wi-2025.pdf"
+      ]
     }
   ],
   "photos": [
@@ -76,6 +94,11 @@
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wi/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Park Falls Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2026/01/cr-wi-2025.pdf",
+      "kind": "association"
     }
   ],
   "sources": [
@@ -87,6 +110,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -101,6 +125,14 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:wi:park-falls",
+      "fields": [
+        "events",
         "links"
       ]
     }

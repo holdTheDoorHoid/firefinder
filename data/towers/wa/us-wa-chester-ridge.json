@@ -93,6 +93,16 @@
       "label": "Chester Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/chesterridge.html",
       "kind": "site"
+    },
+    {
+      "label": "Chester Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/chester-ridge.html",
+      "kind": "site"
+    },
+    {
+      "label": "Chester Ridge on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/chester_ridge_lookout/humptulips_203.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -129,9 +139,45 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:chester-ridge",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-chester-ridge-lookout-humptulips-203",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 47.39593,
+            "lon": -123.78907
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 47.395,
+            "lon": -123.7966
+          }
+        }
+      ],
+      "distance_m": 576,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

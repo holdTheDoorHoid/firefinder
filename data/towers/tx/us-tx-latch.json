@@ -21,7 +21,7 @@
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Texas Forest Service",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -44,6 +44,11 @@
       "label": "FFLA Texas lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/tx/",
       "kind": "association"
+    },
+    {
+      "label": "Latch (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/latch.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -58,9 +63,39 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:tx:latch",
+      "fields": [
+        "agency",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 32.69691,
+            "lon": -95.08512
+          }
+        },
+        {
+          "source": "central_us_lookouts",
+          "value": {
+            "lat": 32.6968,
+            "lon": -95.06911
+          }
+        }
+      ],
+      "distance_m": 1498,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

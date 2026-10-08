@@ -13,10 +13,10 @@
   },
   "elevation_m": 2461.0,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "Aermotor",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -79,9 +79,19 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/az/baker-butte-lookout/",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Arizona lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/az/",
       "kind": "association"
+    },
+    {
+      "label": "Baker's Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/baker-butte.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -108,6 +118,15 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:az:baker-butte",
+      "fields": [
+        "material",
+        "design",
         "links"
       ]
     }

@@ -13,10 +13,10 @@
   },
   "elevation_m": 1677.3,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-5",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -81,6 +81,11 @@
       "label": "Burnt Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/burntmtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Burnt Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/burnt-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -116,10 +121,19 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:burnt-mountain",
+      "fields": [
+        "material",
+        "design",
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

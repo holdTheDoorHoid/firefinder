@@ -17,7 +17,7 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 4.3,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -56,6 +56,13 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: January 3, 2015",
       "from": "nhlr"
+    },
+    {
+      "year": 2021,
+      "event": "burned",
+      "note": "Burned down in the Monument Fire on August 13; local backers asked for a rebuild but the forest had not answered.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-cal-north-2021.pdf"
     },
     {
       "year": 2021,
@@ -173,6 +180,16 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Ironside Mountain Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-cal-north-2021.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Ironside Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/ironside-mountain.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap way 827162748",
       "url": "https://www.openstreetmap.org/way/827162748",
       "kind": "osm"
@@ -216,9 +233,25 @@
       ]
     },
     {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:ironside-mountain",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/827162748",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:ironside-mountain",
+      "fields": [
+        "height_m",
         "links"
       ]
     }

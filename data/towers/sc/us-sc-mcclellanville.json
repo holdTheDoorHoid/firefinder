@@ -13,8 +13,8 @@
   },
   "elevation_m": 7.6,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -50,6 +50,13 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: July 1, 1995",
       "from": "nhlr"
+    },
+    {
+      "year": 2025,
+      "event": "other",
+      "note": "FFLA restoration grant awarded for a comprehensive condition assessment of the tower, the first step toward restoration, matched with a South Carolina SHPO grant.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2026/01/cr-rest-2025.pdf"
     }
   ],
   "photos": [
@@ -73,6 +80,11 @@
       "kind": "register"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on McClellanville Lookout Tower",
+      "url": "https://firelookout.org/wp-content/uploads/2026/01/cr-rest-2025.pdf",
+      "kind": "association"
+    },
+    {
       "label": "OpenStreetMap node 357111665",
       "url": "https://www.openstreetmap.org/node/357111665",
       "kind": "osm"
@@ -88,11 +100,20 @@
         "county",
         "elevation_m",
         "kind",
+        "material",
         "status",
         "registers",
         "agency",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:sc:mcclellanville",
+      "fields": [
+        "events",
         "links"
       ]
     },

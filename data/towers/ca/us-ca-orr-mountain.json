@@ -1,6 +1,7 @@
 {
   "id": "us-ca-orr-mountain",
   "name": "Orr Mountain Lookout",
+  "summary": "Steel fire tower with a 12-by-12-foot cabin on Orr Mountain, built 1934; the register lists it as staffed some seasons and available for rental.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Four-legged structural steel tower topped by a 12-by-12-foot cabin",
+  "height_m": 3.7,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Listed as available for rental; booking route not verified."
   },
   "staffing": {
     "status": "unknown",
@@ -48,14 +49,27 @@
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Steel fire tower per the register; a photo page suggests the CCC may have built it",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/orr-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/orr-mountain-lookout/",
+        "http://peakbagging.com/CALookoutPhotos/OrrMtn.html"
+      ]
+    },
+    {
+      "year": 1937,
+      "event": "fire",
+      "note": "Lloyd Darley spotted a three-minute fire 14 miles away, per a Bakersfield newspaper item",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/orr-mountain.html"
     },
     {
       "year": 2014,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 16, 2014",
-      "from": "nhlr"
+      "note": "Registered April 16, 2014 as US 1009",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/orr-mountain-lookout/"
     }
   ],
   "photos": [
@@ -77,6 +91,11 @@
       "label": "NHLR register entry US 1009 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ca/orr-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Orr Mountain Lookout, California (Peakbagging)",
+      "url": "http://peakbagging.com/CALookoutPhotos/OrrMtn.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -133,10 +152,36 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:orr-mountain",
+      "fields": [
+        "height_m"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-orr-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

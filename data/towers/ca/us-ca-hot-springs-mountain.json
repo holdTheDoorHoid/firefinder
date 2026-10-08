@@ -1,7 +1,9 @@
 {
   "id": "us-ca-hot-springs-mountain",
   "name": "Hot Springs Mountain Lookout",
-  "other_names": [],
+  "other_names": [
+    "Hot Springs"
+  ],
   "country": "US",
   "region": "CA",
   "county": "San Diego",
@@ -16,7 +18,7 @@
   "material": "wood",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "Wood 14x14-ft C-3 cab and tower",
   "height_m": null,
   "status": "standing",
   "status_note": "The tower still stands, but its cab is gone (FFLA).",
@@ -46,10 +48,24 @@
   "rental": null,
   "events": [
     {
+      "year": 1928,
+      "event": "replaced",
+      "note": "A second structure replaced the original.",
+      "from": "ffla_sdrc",
+      "source_url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/hot-springs-mountain/"
+    },
+    {
       "year": 1942,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
+    },
+    {
+      "year": 1942,
+      "event": "replaced",
+      "note": "The present cab and tower were built; its roof has since collapsed and the structure is badly weathered.",
+      "from": "ffla_sdrc",
+      "source_url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/hot-springs-mountain/"
     },
     {
       "year": 2008,
@@ -163,8 +179,23 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=765",
+      "kind": "register"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA San Diego-Riverside Chapter: work on Hot Springs Mountain Lookout",
+      "url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/hot-springs-mountain/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA California-South chapter: Southern California lookouts",
+      "url": "https://www.firelookouthost.org/southern-california",
       "kind": "association"
     },
     {
@@ -205,9 +236,49 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "ffla_sdrc",
+      "key": "ffla_sdrc:ca:hot-springs-mountain",
+      "fields": [
+        "design",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:hot-springs-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:socal-hot-springs",
+      "fields": [
+        "registers",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1942
+        },
+        {
+          "source": "ffla_sdrc",
+          "value": 1912
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

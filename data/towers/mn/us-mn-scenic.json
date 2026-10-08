@@ -17,12 +17,12 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Scenic State Park",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +44,11 @@
       "label": "FFLA Minnesota lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mn/",
       "kind": "association"
+    },
+    {
+      "label": "Scenic (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/scenic.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +61,16 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mn:scenic",
+      "fields": [
+        "height_m",
+        "agency",
+        "ownership",
         "links"
       ]
     }

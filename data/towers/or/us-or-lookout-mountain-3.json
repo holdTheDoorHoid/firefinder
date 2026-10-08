@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Willamette National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Lookout Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/lookoutmtn78b.html",
       "kind": "site"
+    },
+    {
+      "label": "Lookout Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/lookout-mountain8.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -67,6 +72,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:lookout-mtn:44.2148:-122.1302",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:lookout-mountain8",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

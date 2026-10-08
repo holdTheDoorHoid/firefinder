@@ -17,12 +17,12 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 12.2,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Allis State Forest Park",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -37,13 +37,38 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2019,
+      "event": "restored",
+      "note": "Wooden steps and landings on the Bear Hill lookout in Allis State Park were replaced with metal grates.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-vt-2019.pdf"
+    },
+    {
+      "year": 2025,
+      "event": "restored",
+      "note": "Tower maintenance at Allis State Park was completed, covering lightning protection, paint, interior cab railings and wire mesh on stairs and landings.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2026/01/cr-vt-2025.pdf"
+    }
+  ],
   "photos": [],
   "links": [
     {
       "label": "FFLA Vermont lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/vt/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Bear Hill",
+      "url": "https://firelookout.org/wp-content/uploads/2026/01/cr-vt-2025.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Bear Hill (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/bear-mountain-hill.html",
+      "kind": "site"
     },
     {
       "label": "OpenStreetMap node 11135219521",
@@ -65,6 +90,24 @@
       ]
     },
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:vt:bear-mountain-hill",
+      "fields": [
+        "height_m",
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:vt:bear-hill",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/11135219521",
       "fields": [
@@ -72,7 +115,27 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "standing"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": null
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

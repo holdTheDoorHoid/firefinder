@@ -16,7 +16,7 @@
   "material": "wood",
   "material_from": "osm",
   "roles": [],
-  "design": null,
+  "design": "L-4",
   "height_m": 53.0,
   "status": "ruins",
   "status_note": null,
@@ -56,6 +56,13 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: November 4, 2000",
       "from": "nhlr"
+    },
+    {
+      "year": 2026,
+      "event": "destroyed",
+      "note": "Collapsed over the winter after 70 years; the association is helping document and salvage what remains.",
+      "from": "mvffla",
+      "source_url": "https://www.mvffla.org/news/collapse-of-the-slate-peak-fire-lookout"
     }
   ],
   "photos": [
@@ -94,6 +101,16 @@
       "year": null,
       "w": 3168,
       "h": 4752
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://trailchick-media.s3.us-west-2.amazonaws.com/IMG_6176.jpg",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/slate-peak-lookout/",
+      "credit": "TrailChick Washington lookout guide (trailchick.com)",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -108,8 +125,33 @@
       "kind": "association"
     },
     {
+      "label": "Methow Valley Forest Fire Lookout Association: work on Slate Peak Lookout",
+      "url": "https://www.mvffla.org/news/collapse-of-the-slate-peak-fire-lookout",
+      "kind": "association"
+    },
+    {
+      "label": "Slate Peak lookout: Methow Valley Forest Fire Lookout Association",
+      "url": "https://www.mvffla.org/slate-peak",
+      "kind": "association"
+    },
+    {
       "label": "Slate Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/slate.html",
+      "kind": "site"
+    },
+    {
+      "label": "Slate Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/slate-peak.html",
+      "kind": "site"
+    },
+    {
+      "label": "Slate Peak in the TrailChick Washington lookout guide",
+      "url": "https://www.trailchick.com/wa-state-fire-lookouts/slate-peak-lookout/",
+      "kind": "site"
+    },
+    {
+      "label": "Slate Peak on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "https://willhiteweb.com/washington/fire_lookouts/slate_peak/history_097.htm",
       "kind": "site"
     },
     {
@@ -158,6 +200,14 @@
       ]
     },
     {
+      "source": "mvffla",
+      "key": "mvffla:wa:slate-peak",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q86927104",
       "fields": [
@@ -174,6 +224,36 @@
         "registers",
         "access",
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:slate-peak",
+      "fields": [
+        "design",
+        "links"
+      ]
+    },
+    {
+      "source": "trailchick_wa",
+      "key": "trailchick_wa:wa:slate-peak-lookout",
+      "fields": [
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:wa:slate-peak",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-slate-peak-history-097",
+      "fields": [
         "links"
       ]
     }
@@ -197,13 +277,21 @@
         {
           "source": "osm",
           "value": "standing"
+        },
+        {
+          "source": "trailchick_wa",
+          "value": "gone"
+        },
+        {
+          "source": "mvffla",
+          "value": "gone"
         }
       ],
       "distance_m": null,
       "note": "NHLR lists lookouts that were standing when registered. firelookout.com lists it, but not on its map of standing lookouts."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

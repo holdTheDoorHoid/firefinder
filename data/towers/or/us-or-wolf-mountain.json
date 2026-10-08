@@ -1,6 +1,7 @@
 {
   "id": "us-or-wolf-mountain",
   "name": "Wolf Mountain Lookout",
+  "summary": "Ochoco National Forest lookout whose present L-4 tower dates from 1947; the 2011 register entry says it is staffed every summer.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,8 +17,8 @@
   "material": "wood",
   "material_from": "nhlr",
   "roles": [],
-  "design": "L-4",
-  "height_m": 15.2,
+  "design": "Treated timber L-4 tower and cab, about 107 ft",
+  "height_m": 32.6,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Forest Service lookout, staffed each summer per the 2011 register entry; no source says the cab is open to visitors."
   },
   "staffing": {
     "status": "staffed",
@@ -46,16 +47,79 @@
   "rental": null,
   "events": [
     {
+      "year": 1920,
+      "event": "staffed_first",
+      "note": "An 18-year-old from Portland took up duties as primary lookout, on a tree platform",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/wolf-mountain.html"
+    },
+    {
+      "year": 1921,
+      "event": "built",
+      "note": "Ranger C.S. Congleton constructing a lookout tower on the summit (July 14, 1921 notice)",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/wolf-mountain.html"
+    },
+    {
+      "year": 1926,
+      "event": "built",
+      "note": "50-ft wooden tower and cabin, per firelookout.com; this date conflicts with the 1921 notice",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/wolfmtn.html"
+    },
+    {
+      "year": 1927,
+      "event": "fire",
+      "note": "Lookout reported one fire for the fire season",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/wolf-mountain.html"
+    },
+    {
+      "year": 1931,
+      "event": "built",
+      "note": "Crow's nest tree platform added 1/2 mile east, per firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/wolfmtn.html"
+    },
+    {
+      "year": 1932,
+      "event": "built",
+      "note": "Crow's nest erected one mile east, per NHLR",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/wolf-mountain-lookout/"
+    },
+    {
+      "year": 1942,
+      "event": "other",
+      "note": "Materials bought for the present tower and stored at Derr Guard Station",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/wolfmtn.html"
+    },
+    {
       "year": 1947,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Present treated timber L-4 tower built (107 ft per NHLR, 108 ft per firelookout.com)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/wolf-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/wolf-mountain-lookout/",
+        "https://oregonlookouts.weebly.com/wolf-mountain.html",
+        "https://www.firelookout.com/or/wolfmtn.html"
+      ]
+    },
+    {
+      "year": 1952,
+      "event": "assessed",
+      "note": "Inspection: tower and house in excellent condition, but too much sag in the cables",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/wolf-mountain.html"
     },
     {
       "year": 2011,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: February 9, 2011",
-      "from": "nhlr"
+      "note": "Registered February 9, 2011, nominated by Howard Verschoor",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/wolf-mountain-lookout/"
     }
   ],
   "photos": [
@@ -235,6 +299,11 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=905",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -247,6 +316,11 @@
     {
       "label": "Wolf Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/wolfmtn.html",
+      "kind": "site"
+    },
+    {
+      "label": "Wolf Mountain on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/2011/07/22/wolf-mountain/",
       "kind": "site"
     }
   ],
@@ -288,6 +362,36 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:wolf-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:wolf-mountain",
+      "fields": [
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-wolf-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -301,13 +405,23 @@
         {
           "source": "firelookout_com",
           "value": 1926
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1947
         }
       ],
       "distance_m": null,
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

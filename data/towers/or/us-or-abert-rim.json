@@ -13,11 +13,11 @@
   },
   "elevation_m": 2297.3,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 18.3,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -81,6 +81,11 @@
       "label": "Abert Rim on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/abertrim.html",
       "kind": "site"
+    },
+    {
+      "label": "Abert Rim on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/abert-rim.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -114,6 +119,16 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:abert-rim:42.3884:-120.2347",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:abert-rim",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
         "links"
       ]
     }

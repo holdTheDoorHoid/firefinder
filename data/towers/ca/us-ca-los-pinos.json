@@ -1,6 +1,7 @@
 {
   "id": "us-ca-los-pinos",
   "name": "Los Pinos Lookout",
+  "summary": "A 1964 Forest Service steel tower on Los Pinos Mountain in San Diego County, replacing a 1925 wooden tower; described as staffed. A directory marks it Gone; unresolved.",
   "other_names": [
     "Los Pinos Mountain"
   ],
@@ -18,8 +19,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Live-in cab on a 30 ft steel tower. NHLR: 14 x 14 ft CL-100 cab; FFLA San Diego-Riverside chapter: 13 x 13 ft CL-30 series cab",
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -33,20 +34,31 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Described as an active Forest Service lookout. The FFLA chapter says the road to the lookout is paved; no source says visitors may climb the tower."
   },
   "staffing": {
-    "status": "unknown",
+    "status": "staffed",
     "as_of": null
   },
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "FFLA San Diego-Riverside chapter says the road to the lookout is paved and the tower has electric service, running water, a telephone and a shower in a service building at ground level."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1925,
+      "event": "built",
+      "note": "Original wooden tower, in use from 1925 (NHLR and FFLA chapter)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/los-pinos-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/los-pinos-lookout/",
+        "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/los-pinos/"
+      ]
+    },
     {
       "year": 1964,
       "event": "built",
@@ -54,10 +66,30 @@
       "from": "nhlr"
     },
     {
+      "year": 1964,
+      "event": "replaced",
+      "note": "Current steel tower opened in 1964, replacing the 1925 wooden tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/los-pinos-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/los-pinos-lookout/",
+        "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/los-pinos/",
+        "http://www.peakbagging.com/CALookoutPhotos/LosPinos.html"
+      ]
+    },
+    {
+      "year": 2003,
+      "event": "staffed",
+      "note": "Peakbagging.com says the lookout is staffed most of the year; the text is undated and the photo is from January 2003",
+      "from": "research",
+      "source_url": "http://www.peakbagging.com/CALookoutPhotos/LosPinos.html"
+    },
+    {
       "year": 2008,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 19, 2008",
-      "from": "nhlr"
+      "note": "Registered June 19, 2008 as NHLR US 742",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/los-pinos-lookout/"
     }
   ],
   "photos": [
@@ -81,13 +113,38 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=754",
+      "kind": "register"
+    },
+    {
+      "label": "Los Pinos Mountain Lookout, California (Peakbagging.com)",
+      "url": "http://www.peakbagging.com/CALookoutPhotos/LosPinos.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
     },
     {
+      "label": "FFLA San Diego-Riverside Chapter: work on Los Pinos Lookout",
+      "url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/los-pinos/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA California-South chapter: Southern California lookouts",
+      "url": "https://www.firelookouthost.org/southern-california",
+      "kind": "association"
+    },
+    {
       "label": "FFLA San Diego - Riverside Chapter",
       "url": "http://www.socalfirelookouts.org",
+      "kind": "site"
+    },
+    {
+      "label": "Los Pinos on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/los-pinos.html",
       "kind": "site"
     },
     {
@@ -125,10 +182,52 @@
       ]
     },
     {
+      "source": "ffla_sdrc",
+      "key": "ffla_sdrc:ca:los-pinos",
+      "fields": [
+        "design",
+        "height_m",
+        "staffing",
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/361101205",
       "fields": [
         "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:los-pinos",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:socal-los-pinos-mtn",
+      "fields": [
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-los-pinos",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -149,13 +248,41 @@
             "lat": 32.73333,
             "lon": -116.58333
           }
+        },
+        {
+          "source": "ffla_sdrc",
+          "value": {
+            "lat": 32.73333,
+            "lon": -116.58333
+          }
         }
       ],
       "distance_m": 544,
       "note": "They share a register number."
+    },
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1964
+        },
+        {
+          "source": "ffla_sdrc",
+          "value": 1925
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

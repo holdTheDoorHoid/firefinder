@@ -126,8 +126,18 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/or/lake-of-the-woods-lookout/",
+      "kind": "register"
+    },
+    {
       "label": "Recreation.gov listing",
       "url": "https://www.recreation.gov/camping/campgrounds/234158",
+      "kind": "rental"
+    },
+    {
+      "label": "Recreation.gov listing",
+      "url": "http://www.recreation.gov/camping/lake-of-the-woods-lookout/r/campgroundDetails.do?contractCode=NRSO&amp;parkId=74188",
       "kind": "rental"
     },
     {
@@ -143,6 +153,16 @@
     {
       "label": "Lake O' Woods on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/lakeowoods.html",
+      "kind": "site"
+    },
+    {
+      "label": "Lake OF The Woods on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/lake-of-the-woods.html",
+      "kind": "site"
+    },
+    {
+      "label": "Lake of the Woods on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/oregons-standing-lookouts/",
       "kind": "site"
     },
     {
@@ -215,6 +235,21 @@
       ]
     },
     {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:lake-of-the-woods",
+      "fields": [
+        "design",
+        "links"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:lake-of-the-woods",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:us-or-lake-of-the-woods",
       "fields": [
@@ -254,10 +289,29 @@
         {
           "source": "osm",
           "value": "standing"
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": "standing"
         }
       ],
       "distance_m": null,
       "note": "NHLR lists lookouts that were standing when registered. firelookout.com lists it, but not on its map of standing lookouts."
+    },
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1955
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1974
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
   "research": {

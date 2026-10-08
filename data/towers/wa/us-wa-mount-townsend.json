@@ -13,8 +13,8 @@
   },
   "elevation_m": 1893.4,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -141,6 +141,16 @@
       "label": "Mt. Townsend on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/townsend.html",
       "kind": "site"
+    },
+    {
+      "label": "Mount Townsend on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/mt-townsend.html",
+      "kind": "site"
+    },
+    {
+      "label": "Mount Townsend on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/olympic_mountains/mount_townsend/seattle_220.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -152,6 +162,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -173,6 +184,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:mt-townsend:47.8729:-123.0624",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:mt-townsend",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:olympic-mountains-mount-townsend-seattle-220",
       "fields": [
         "links"
       ]

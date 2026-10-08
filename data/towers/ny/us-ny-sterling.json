@@ -15,8 +15,8 @@
   },
   "elevation_m": 402.3,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -58,6 +58,83 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: January 18, 1995",
       "from": "nhlr"
+    },
+    {
+      "year": 2015,
+      "event": "restored",
+      "note": "FFLA, Friends of Sterling Forest and volunteers began restoring the tower with work days from fall 2015, holding seven work dates in all.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2022/2022%20Jan%20final.pdf",
+      "source_urls": [
+        "https://www.nysffla.org/News2022/2022%20Jan%20final.pdf",
+        "https://www.nysffla.org/News2022/2022%20Feb%20final.pdf"
+      ]
+    },
+    {
+      "year": 2017,
+      "event": "closed",
+      "note": "The tower was reported closed to the public in early 2017, and the FFLA was working to reverse the closure (reported February 2017).",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/Newsletters/2017/2017-02.pdf",
+      "source_urls": [
+        "https://www.nysffla.org/Newsletters/2017/2017-02.pdf",
+        "https://www.nysffla.org/Newsletters/2017/2017-03.pdf"
+      ]
+    },
+    {
+      "year": 2017,
+      "event": "other",
+      "note": "FFLA restoration grant awarded for work on the Sterling Forest tower: new steps and landings, cab window reglazing, railings and fencing, cab repainting and ground cabin repairs ($500).",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ny-2017.pdf",
+      "source_urls": [
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-ny-2017.pdf",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-restgrants-2017.pdf"
+      ]
+    },
+    {
+      "year": 2017,
+      "event": "restored",
+      "note": "About 34 volunteers (Team Rubicon, Friends of Sterling Forest, FFLA, park staff) worked on the tower on 8-9 July; on 12 November volunteers replaced the last landings and steps.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/Newsletters/2017/2017-06.pdf",
+      "source_urls": [
+        "https://www.nysffla.org/Newsletters/2017/2017-06.pdf",
+        "https://www.nysffla.org/Newsletters/2017/2017-02.pdf",
+        "https://www.nysffla.org/Newsletters/2017/2017-03.pdf",
+        "https://www.nysffla.org/projects.html"
+      ]
+    },
+    {
+      "year": 2019,
+      "event": "restored",
+      "note": "New cab windows were made and fitted (fixed ones first, then the operating ones), paid for by ADK North Jersey/Ramapo; a volunteer stained the observer's cabin deck.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/Newsletters/2019-10.pdf",
+      "source_urls": [
+        "https://www.nysffla.org/Newsletters/2019-10.pdf",
+        "https://www.nysffla.org/Newsletters/2019-04.pdf",
+        "https://www.nysffla.org/Newsletters/2019-09.pdf"
+      ]
+    },
+    {
+      "year": 2022,
+      "event": "assessed",
+      "note": "The engineer's inspection of the closed Sterling Forest tower was completed by August 2022, with the report still awaited.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2022/2022%20Aug%20final.pdf"
+    },
+    {
+      "year": 2022,
+      "event": "closed",
+      "note": "Sterling Forest tower closed to the public pending an engineer's structural inspection, the same situation as Jackie Jones; still closed in late 2023.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2022/2022%20May%20final.pdf",
+      "source_urls": [
+        "https://www.nysffla.org/News2022/2022%20May%20final.pdf",
+        "https://www.nysffla.org/News2022/2022%20Jun%20final.pdf",
+        "https://www.nysffla.org/News2022/2022%20Jul%20final.pdf"
+      ]
     }
   ],
   "photos": [
@@ -221,6 +298,21 @@
       "label": "FFLA New York lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ny/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association, New York State Chapter: work on Sterling Fire Tower",
+      "url": "https://www.nysffla.org/News2022/2022%20Jan%20final.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Sterling Fire Tower",
+      "url": "https://firelookout.org/wp-content/uploads/2024/03/cr-ny-2023.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Sterling Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/sterling-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -232,6 +324,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -246,6 +339,29 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:sterling-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "nysffla_projects",
+      "key": "nysffla_projects:ny:sterling",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:ny:sterling",
+      "fields": [
+        "events",
         "links"
       ]
     }

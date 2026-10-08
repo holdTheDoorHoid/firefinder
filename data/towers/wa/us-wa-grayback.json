@@ -15,8 +15,8 @@
   },
   "elevation_m": 1147.9,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -83,6 +83,16 @@
       "label": "Grayback Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/grayback.html",
       "kind": "site"
+    },
+    {
+      "label": "Grayback Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/grayback-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Grayback Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/grayback_mountain_lookout/map_300.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -94,6 +104,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -114,6 +125,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:grayback-mtn:45.9908:-121.0840",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:grayback-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-grayback-mountain-lookout-map-300",
       "fields": [
         "links"
       ]

@@ -13,16 +13,16 @@
   },
   "elevation_m": null,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 24.7,
   "status": "standing",
   "status_note": "The tower still stands, but its cab is gone (FFLA).",
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Foot Hills State Forest",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +44,11 @@
       "label": "FFLA Minnesota lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mn/",
       "kind": "association"
+    },
+    {
+      "label": "Longville (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/longville1.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +61,18 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mn:longville1",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
+        "agency",
+        "ownership",
         "links"
       ]
     }

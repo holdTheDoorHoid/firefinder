@@ -13,11 +13,11 @@
   },
   "elevation_m": 1140.3,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "13x13-ft CL-30 steel cab on a 41-ft L-1600 K-brace tower (the only such combination in California)",
+  "height_m": 12.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -56,6 +56,27 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: December 16, 2008",
       "from": "nhlr"
+    },
+    {
+      "year": 2018,
+      "event": "other",
+      "note": "FFLA stabilization grant of $300 to the San Diego Riverside Chapter, plus chapter funds, for plywood, paint and bolts to weatherproof the lookout; access limited by right-of-way litigation.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-restoration-2018.pdf"
+    },
+    {
+      "year": 2018,
+      "event": "restored",
+      "note": "Emergency stabilization funds bought wood, bolts and paint to cover the windows; materials hauled up on 9 May and decomposing ceiling plywood removed.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-south-2018.pdf"
+    },
+    {
+      "year": 2021,
+      "event": "restored",
+      "note": "On 22 December volunteers, flown in by sheriff helicopter, fixed plywood shutters over the windows to protect the cab.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-south-ca-2021.pdf"
     }
   ],
   "photos": [
@@ -103,8 +124,28 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=766",
+      "kind": "register"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA San Diego-Riverside Chapter: work on Lyons Peak Lookout",
+      "url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/lyons-peak/",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Lyons Peak Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-south-ca-2021.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA California-South chapter: Southern California lookouts",
+      "url": "https://www.firelookouthost.org/southern-california",
       "kind": "association"
     },
     {
@@ -144,9 +185,58 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "ffla_sdrc",
+      "key": "ffla_sdrc:ca:lyons-peak",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:lyons-peak",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:lyons-peak",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:socal-lyons-peak",
+      "fields": [
+        "registers",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1964
+        },
+        {
+          "source": "ffla_sdrc",
+          "value": 1913
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

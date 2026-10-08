@@ -13,8 +13,8 @@
   },
   "elevation_m": 988.8,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -129,6 +129,16 @@
       "label": "Newaukum on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/newaukum.html",
       "kind": "site"
+    },
+    {
+      "label": "Newaukum on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/newaukum.html",
+      "kind": "site"
+    },
+    {
+      "label": "Newaukum on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington/fire_lookouts/newaukum/lookout_263.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -140,6 +150,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -161,6 +172,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:newaukum:46.6569:-122.4708",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:newaukum",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-newaukum-lookout-263",
       "fields": [
         "links"
       ]
@@ -196,7 +221,7 @@
       "note": "They share a register number."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

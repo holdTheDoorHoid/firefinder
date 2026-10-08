@@ -105,6 +105,16 @@
       "label": "Juniper Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/juniperpoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Juniper Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/juniper-point.html",
+      "kind": "site"
+    },
+    {
+      "label": "Juniper Point on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/fire_lookouts/juniper_point_lookout/loomis_state_forest_110.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -140,9 +150,45 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:juniper-point",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:fire-lookouts-juniper-point-lookout-loomis-state-forest-110",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 48.86268,
+            "lon": -119.75513
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 48.8665,
+            "lon": -119.7427
+          }
+        }
+      ],
+      "distance_m": 1004,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

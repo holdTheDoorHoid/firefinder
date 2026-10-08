@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Challis National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -54,6 +54,11 @@
       "label": "Bull Trout Point on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/southern-idaho/bull-trout-point/",
       "kind": "site"
+    },
+    {
+      "label": "Bull Trout Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/bull-trout-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -80,6 +85,15 @@
       "source": "idaho_fl",
       "key": "idaho_fl:bull-trout-point:44.3300:-115.2878",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:bull-trout-point",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

@@ -13,8 +13,8 @@
   },
   "elevation_m": 1447.2,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -29,7 +29,7 @@
     }
   ],
   "agency": "Oregon Dept. of Forestry",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -93,6 +93,11 @@
       "label": "Ragsdale Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/ragsdalebutte.html",
       "kind": "site"
+    },
+    {
+      "label": "Ragsdale Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/ragsdale-butte.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -104,6 +109,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -125,6 +131,14 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:ragsdale-butte:42.7891:-122.7832",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:ragsdale-butte",
+      "fields": [
+        "ownership",
         "links"
       ]
     }

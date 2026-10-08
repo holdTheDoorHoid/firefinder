@@ -13,11 +13,11 @@
   },
   "elevation_m": 652.3,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 24.4,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -111,6 +111,11 @@
       "label": "FFLA Virginia lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/va/",
       "kind": "association"
+    },
+    {
+      "label": "Blakey Ridge (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/blakey-ridge.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -146,6 +151,16 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:va:blakey-ridge",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
         "links"
       ]
     }

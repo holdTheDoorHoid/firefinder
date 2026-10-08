@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "OR",
-  "county": null,
+  "county": "Lake",
   "location": {
     "lat": 43.77435,
     "lon": -122.40609,
@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Willamette National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +44,11 @@
       "label": "Dead Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/deadmtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Dead Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/dead-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -54,6 +59,16 @@
         "name",
         "location",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:dead-mountain",
+      "fields": [
+        "county",
+        "agency",
+        "ownership",
         "links"
       ]
     }

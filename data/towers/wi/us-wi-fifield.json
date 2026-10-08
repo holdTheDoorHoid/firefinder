@@ -16,8 +16,8 @@
   },
   "elevation_m": 483.7,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": "Galvanized steel ladder tower, about 100 ft (30.5 m), on four concrete piers, with a seven-foot square steel cab and a caged exterior ladder",
   "height_m": 30.5,
@@ -150,11 +150,6 @@
       "kind": "reference"
     },
     {
-      "label": "Fifield - Forest Lookouts",
-      "url": "https://centraluslookouts.weebly.com/fifield.html",
-      "kind": "reference"
-    },
-    {
       "label": "Fifield Fire Tower (Travel Wisconsin)",
       "url": "https://www.travelwisconsin.com/things-to-do/culture-arts/architecture/fifield-fire-tower",
       "kind": "reference"
@@ -168,6 +163,11 @@
       "label": "Wikipedia: Fifield Fire Lookout Tower",
       "url": "https://en.wikipedia.org/wiki/Fifield_Fire_Lookout_Tower",
       "kind": "wikipedia"
+    },
+    {
+      "label": "Fifield (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/fifield.html",
+      "kind": "site"
     },
     {
       "label": "Wikidata item Q16979539",
@@ -189,6 +189,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -208,10 +209,17 @@
       ]
     },
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:wi:fifield",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q16979539",
       "fields": [
-        "height_m",
         "registers",
         "photos",
         "links"

@@ -1,7 +1,9 @@
 {
   "id": "us-tx-livingston-loc-1",
   "name": "Livingston (Loc 1)",
-  "other_names": [],
+  "other_names": [
+    "Livingston"
+  ],
   "country": "US",
   "region": "TX",
   "county": "Polk",
@@ -21,7 +23,7 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Texas Forest Service",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -44,6 +46,11 @@
       "label": "FFLA Texas lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/tx/",
       "kind": "association"
+    },
+    {
+      "label": "Livingston (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/livingston1.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -58,9 +65,39 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:tx:livingston1",
+      "fields": [
+        "agency",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 30.69338,
+            "lon": -94.93038
+          }
+        },
+        {
+          "source": "central_us_lookouts",
+          "value": {
+            "lat": 30.6943,
+            "lon": -94.9376
+          }
+        }
+      ],
+      "distance_m": 698,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

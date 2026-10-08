@@ -237,6 +237,11 @@
       ]
     },
     {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:norton-ridge",
+      "fields": []
+    },
+    {
       "source": "research",
       "key": "research:us-id-norton-ridge",
       "fields": [
@@ -253,6 +258,27 @@
     }
   ],
   "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 44.860701,
+            "lon": -114.926021
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 44.85269,
+            "lon": -114.93232
+          }
+        }
+      ],
+      "distance_m": 1020,
+      "note": null
+    },
     {
       "field": "status",
       "values": [

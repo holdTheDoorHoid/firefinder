@@ -15,8 +15,8 @@
   },
   "elevation_m": 1576.7,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -148,6 +148,11 @@
       "label": "Colquhoun Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/colquhoun.html",
       "kind": "site"
+    },
+    {
+      "label": "Colquhoun Peak on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_climbing/colquhoun_peak/greenwater_trails_338.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -159,6 +164,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -180,6 +186,13 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:colquhoun-peak:47.1290:-121.4613",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-climbing-colquhoun-peak-greenwater-trails-338",
       "fields": [
         "links"
       ]

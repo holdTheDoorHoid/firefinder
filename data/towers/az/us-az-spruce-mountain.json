@@ -14,8 +14,8 @@
   },
   "elevation_m": 2326.5,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": "Modified L-4 cab on a 30 ft Aermotor MC-24 tower (register)",
   "height_m": 9.1,
@@ -140,9 +140,9 @@
       "kind": "register"
     },
     {
-      "label": "Spruce Mountain (Forest Lookouts (westlookouts.weebly.com))",
-      "url": "https://westlookouts.weebly.com/spruce-mountain1.html",
-      "kind": "reference"
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/az/spruce-mountain-lookout/",
+      "kind": "register"
     },
     {
       "label": "Spruce Mountain (The Mountains Are Calling (blog))",
@@ -158,6 +158,11 @@
       "label": "FFLA Arizona lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/az/",
       "kind": "association"
+    },
+    {
+      "label": "Spruce Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/spruce-mountain1.html",
+      "kind": "site"
     },
     {
       "label": "Wikidata item Q86927138",
@@ -179,6 +184,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -208,6 +214,13 @@
     {
       "source": "osm",
       "key": "osm:node/5646815516",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:az:spruce-mountain1",
       "fields": [
         "links"
       ]

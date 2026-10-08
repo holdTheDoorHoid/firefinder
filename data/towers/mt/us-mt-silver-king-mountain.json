@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Helena National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -37,7 +37,15 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2003,
+      "event": "burned",
+      "note": "Lost to fire during the 2003 season.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cc-im-2003.pdf"
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -46,8 +54,18 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Silver King Mountain",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cc-im-2003.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Silver King Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/silverking.html",
+      "kind": "site"
+    },
+    {
+      "label": "Silver King Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/silver-king-mountain.html",
       "kind": "site"
     }
   ],
@@ -68,6 +86,23 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:silver-king-mtn:47.1146:-112.5281",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:mt:silver-king-mountain",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:silver-king-mountain",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

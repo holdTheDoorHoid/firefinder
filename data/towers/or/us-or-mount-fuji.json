@@ -15,10 +15,10 @@
   },
   "elevation_m": 2177.5,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "R-6",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -107,6 +107,11 @@
       "label": "Fuji Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/fujimtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Fuji Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/fuji-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -140,6 +145,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:fuji-mtn:43.6592:-122.1033",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:fuji-mountain",
+      "fields": [
+        "material",
+        "design",
         "links"
       ]
     }

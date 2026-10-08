@@ -1,6 +1,7 @@
 {
   "id": "us-wa-north-point",
   "name": "North Point Lookout",
+  "summary": "Olympic National Forest L-4 cab built 1939, abandoned as a lookout in 1969, later used for radio; reached by a forest road and a walk past a closed gate.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -13,10 +14,10 @@
   },
   "elevation_m": 1020.5,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4 cab",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -31,8 +32,8 @@
   "agency": "US Forest Service - Olympic National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Reached by a forest road and then a walk past a closed gate. The building is used for radio communication, and no source describes public entry."
   },
   "staffing": {
     "status": "unknown",
@@ -41,21 +42,72 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Drive Forest Road 3041 to the Kloshe Nanich former lookout site, then walk about half a mile up the road past a closed gate. TrailChick advises high clearance."
   },
   "rental": null,
   "events": [
     {
       "year": 1939,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "L-4 cab built in 1939; the register, TrailChick and firelookout.com agree.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/north-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/north-point-lookout/",
+        "https://www.trailchick.com/wa-state-fire-lookouts/north-point-lookout/",
+        "https://www.firelookout.com/wa/northpoint.html"
+      ]
+    },
+    {
+      "year": 1954,
+      "event": "other",
+      "note": "A federal survey record names a North Point Lookout House with a 1954 designation, which suggests the building was standing by then.",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/north-point.html"
+    },
+    {
+      "year": 1956,
+      "event": "staffed",
+      "note": "Manned on an emergency basis, per a May 1956 Port Angeles newspaper item.",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/north-point.html"
+    },
+    {
+      "year": 1965,
+      "event": "staffed",
+      "note": "Bryon Loucks observed and reported fires from the lookout.",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/north-point.html"
+    },
+    {
+      "year": 1969,
+      "event": "abandoned",
+      "note": "Abandoned as a lookout.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/north-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/north-point-lookout/",
+        "https://www.trailchick.com/wa-state-fire-lookouts/north-point-lookout/",
+        "https://www.firelookout.com/wa/northpoint.html"
+      ]
+    },
+    {
+      "year": 1969,
+      "event": "other",
+      "note": "After abandonment the cab was converted to radio or communication use; the sources do not give a date for the change.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/north-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/north-point-lookout/",
+        "https://www.firelookout.com/wa/northpoint.html"
+      ]
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 13, 2022",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register on April 13, 2022.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/north-point-lookout/"
     }
   ],
   "photos": [
@@ -82,6 +134,16 @@
       "year": null,
       "w": 429,
       "h": 281
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://trailchick-media.s3.us-west-2.amazonaws.com/IMG_0824.jpg",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/north-point-lookout/",
+      "credit": "TrailChick Washington lookout guide (trailchick.com)",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -108,6 +170,11 @@
     {
       "label": "North Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/northpoint.html",
+      "kind": "site"
+    },
+    {
+      "label": "North Point on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/washington_fire_lookouts/north_point/olympic_national_forest_036.htm",
       "kind": "site"
     }
   ],
@@ -145,10 +212,51 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:north-point",
+      "fields": []
+    },
+    {
+      "source": "trailchick_wa",
+      "key": "trailchick_wa:wa:north-point-lookout",
+      "fields": [
+        "material",
+        "design",
+        "photos"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-north-point-olympic-national-forest-036",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-north-point",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

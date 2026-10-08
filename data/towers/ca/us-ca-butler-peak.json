@@ -13,8 +13,8 @@
   },
   "elevation_m": 2566.1,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -50,6 +50,13 @@
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
+    },
+    {
+      "year": 1970,
+      "event": "other",
+      "note": "Lookout staffer Eileen McMahon spotted the Bear Fire, which burned 49 homes and 53,000 acres.",
+      "from": "scmf_lookouts",
+      "source_url": "https://mountainsfoundation.org/programs/fire-lookouts/fl-seven-lookouts/"
     },
     {
       "year": 1999,
@@ -139,8 +146,23 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=320",
+      "kind": "register"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
+      "kind": "association"
+    },
+    {
+      "label": "Southern California Mountains Foundation: work on Butler Peak Lookout",
+      "url": "https://mountainsfoundation.org/programs/fire-lookouts/fl-seven-lookouts/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA California-South chapter: Southern California lookouts",
+      "url": "https://www.firelookouthost.org/southern-california",
       "kind": "association"
     },
     {
@@ -163,6 +185,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -177,6 +200,29 @@
       "fields": [
         "kind",
         "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "scmf_lookouts",
+      "key": "scmf_lookouts:ca:butler-peak",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:butler-peak",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:socal-butler-peak",
+      "fields": [
         "registers",
         "links"
       ]

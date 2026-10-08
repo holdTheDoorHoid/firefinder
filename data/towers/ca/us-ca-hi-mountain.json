@@ -1,7 +1,9 @@
 {
   "id": "us-ca-hi-mountain",
   "name": "Hi Mountain Lookout",
-  "other_names": [],
+  "other_names": [
+    "HI (High)"
+  ],
   "country": "US",
   "region": "CA",
   "county": "San Luis Obispo",
@@ -13,8 +15,8 @@
   },
   "elevation_m": 953.7,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -50,6 +52,20 @@
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
+    },
+    {
+      "year": 1961,
+      "event": "replaced",
+      "note": "The original lookout was replaced and improved.",
+      "from": "hi_mountain",
+      "source_url": "https://www.condorlookout.org/project-history"
+    },
+    {
+      "year": 1996,
+      "event": "restored",
+      "note": "Morro Coast Audubon and the Forest Service began restoring it as a biological field station and education centre, after some 15 years of neglect and vandalism.",
+      "from": "hi_mountain",
+      "source_url": "https://www.condorlookout.org/project-history"
     },
     {
       "year": 2003,
@@ -156,6 +172,16 @@
       "kind": "association"
     },
     {
+      "label": "Hi Mountain Lookout Project: work on Hi Mountain Lookout",
+      "url": "https://www.condorlookout.org/project-history",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA California-South chapter: Southern California lookouts",
+      "url": "https://www.firelookouthost.org/southern-california",
+      "kind": "association"
+    },
+    {
       "label": "Hi Mountain Condor Lookout Website",
       "url": "https://www.condorlookout.org/",
       "kind": "site"
@@ -175,6 +201,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -192,9 +219,46 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "hi_mountain",
+      "key": "hi_mountain:ca:hi-mountain",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:hi-mountain",
+      "fields": []
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:socal-hi-mountain",
+      "fields": [
+        "registers",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1961
+        },
+        {
+          "source": "hi_mountain",
+          "value": 1926
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

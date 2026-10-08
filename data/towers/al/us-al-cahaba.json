@@ -1,6 +1,7 @@
 {
   "id": "us-al-cahaba",
   "name": "Cahaba Lookout Tower",
+  "summary": "Steel Aermotor MC-39 tower on the Talladega National Forest in Perry County, Alabama; the register gives 1936 and its own text says 1935.",
   "other_names": [],
   "country": "US",
   "region": "AL",
@@ -13,10 +14,10 @@
   },
   "elevation_m": 171.6,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "100 ft Aermotor MC-39 steel tower with a 7 ft x 7 ft cab",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,7 +29,7 @@
       "url": "http://nhlr.org/lookouts/us/al/cahaba-lookout-tower/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Talladega National Forest (Oakmulgee Ranger District)",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -48,14 +49,16 @@
     {
       "year": 1936,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR build field says 1936; NHLR description says the Forest Service built it in 1935",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/cahaba-lookout-tower/"
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 23, 2009",
-      "from": "nhlr"
+      "note": "Registered June 23, 2009 as US 810, AL 11; nominated by Thomas Kaufmann",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/cahaba-lookout-tower/"
     }
   ],
   "photos": [
@@ -79,12 +82,17 @@
       "kind": "register"
     },
     {
+      "label": "Thomas Kaufmann: Keeping Alabama's historic lookout towers (1819 News)",
+      "url": "https://1819news.com/news/item/thomas-kaufmann-keeping-alabamas-historic-lookout-towers",
+      "kind": "reference"
+    },
+    {
       "label": "\"Exploring the Forgotten Fire Towers of Alabama\" article",
       "url": "https://rootsrated.com/stories/exploring-the-forgotten-fire-towers-of-alabama",
       "kind": "site"
     },
     {
-      "label": "CAHABA (easternuslookouts.weebly.com)",
+      "label": "Cahaba (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/cahaba.html",
       "kind": "site"
     },
@@ -104,6 +112,7 @@
         "county",
         "elevation_m",
         "kind",
+        "material",
         "status",
         "registers",
         "agency",
@@ -126,10 +135,28 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-al-cahaba",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

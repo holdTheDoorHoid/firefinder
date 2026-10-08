@@ -12,7 +12,7 @@
     "from": "ffla"
   },
   "elevation_m": null,
-  "kind": "unknown",
+  "kind": "tower",
   "material": "stone",
   "material_from": "ffla",
   "roles": [],
@@ -21,11 +21,11 @@
   "status": "ruins",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Blue Mountain Reservation",
+  "ownership": "tribal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "permission",
+    "note": "On tribal land. Ask the tribe before visiting."
   },
   "staffing": {
     "status": "unknown",
@@ -44,6 +44,11 @@
       "label": "FFLA New York lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ny/",
       "kind": "association"
+    },
+    {
+      "label": "Spitzenberg Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/spitzenberg-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +61,17 @@
         "county",
         "material",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:spitzenberg-mountain",
+      "fields": [
+        "kind",
+        "agency",
+        "ownership",
+        "access",
         "links"
       ]
     }

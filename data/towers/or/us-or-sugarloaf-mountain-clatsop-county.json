@@ -8,10 +8,10 @@
   "region": "OR",
   "county": "Clatsop",
   "location": {
-    "lat": 45.859174,
-    "lon": -123.85619,
+    "lat": 42.83802,
+    "lon": -124.23487,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 871.1,
   "kind": "ground",
@@ -89,6 +89,11 @@
       "label": "Sugarloaf Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/sugarloafmtn65b.html",
       "kind": "site"
+    },
+    {
+      "label": "Sugarloaf Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/sugarloaf-mountain3.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -97,7 +102,6 @@
       "key": "fflos:US 1768",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "registers",
@@ -111,6 +115,7 @@
       "source": "ffla",
       "key": "ffla:or:sugarloaf-mountain:42.8380:-124.2349",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -123,19 +128,19 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:sugarloaf-mountain3",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
-        {
-          "source": "fflos",
-          "value": {
-            "lat": 45.859174,
-            "lon": -123.85619
-          }
-        },
         {
           "source": "ffla",
           "value": {
@@ -144,10 +149,10 @@
           }
         },
         {
-          "source": "firelookout_com",
+          "source": "fflos",
           "value": {
-            "lat": 42.83802,
-            "lon": -124.23487
+            "lat": 45.859174,
+            "lon": -123.85619
           }
         }
       ],

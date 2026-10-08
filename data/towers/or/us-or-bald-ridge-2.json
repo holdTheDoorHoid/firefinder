@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Siskiyou National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Bald Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/baldridge61a.html",
       "kind": "site"
+    },
+    {
+      "label": "Bald Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/bald-ridge.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +73,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:bald-ridge:42.7173:-123.8113",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:bald-ridge",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

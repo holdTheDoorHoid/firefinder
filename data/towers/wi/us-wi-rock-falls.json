@@ -13,8 +13,8 @@
   },
   "elevation_m": 508.4,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -79,9 +79,19 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/wi/rock-falls-lookout/",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wi/",
       "kind": "association"
+    },
+    {
+      "label": "Rock Falls (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/rock-falls.html",
+      "kind": "site"
     },
     {
       "label": "OpenStreetMap node 353894298",
@@ -98,6 +108,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -112,6 +123,13 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:wi:rock-falls",
+      "fields": [
         "links"
       ]
     },

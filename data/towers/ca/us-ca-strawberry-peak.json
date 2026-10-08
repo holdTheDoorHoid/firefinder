@@ -1,6 +1,7 @@
 {
   "id": "us-ca-strawberry-peak",
   "name": "Strawberry Peak Lookout",
+  "summary": "Steel 30-ft lookout above Rimforest, built 1933 after a wooden tower at Grass Valley collapsed; a Mountains Foundation history gives conflicting 1922 and 1934 dates.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "R1/L-1 14 x 14 ft cab on a 30-ft K-brace steel tower",
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -32,30 +33,50 @@
   "ownership": "federal",
   "access": {
     "level": "public",
-    "note": "Listed as a visitor site on recreation.gov. Check the listing for seasonal closures."
+    "note": "Open to the public for the 2025 season per the Mountains Foundation. The Forest Service page showed a temporary-closure notice and a winter closure when it was read."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "volunteer",
+    "as_of": "undated (NHLR register)"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Two miles up a paved road from Bear Springs Road, off Highway 18 near Rim Forest."
   },
   "rental": null,
   "events": [
     {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Steel 30-ft tower. Newspapers date construction to May 1933 and say it replaced a wooden tower at Grass Valley that collapsed under snow.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/strawberry-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/strawberry-peak-lookout/",
+        "https://californialookouts.weebly.com/strawberry-peak.html"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "replaced",
+      "note": "The old tower, damaged by lightning and heavy snow, was replaced by the present 30-ft tower.",
+      "from": "scmf_lookouts",
+      "source_url": "https://mountainsfoundation.org/programs/fire-lookouts/fl-seven-lookouts/"
     },
     {
       "year": 1999,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 6, 1999",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register January 6, 1999",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/strawberry-peak-lookout/"
+    },
+    {
+      "year": 2014,
+      "event": "staffed",
+      "note": "Opened all year because of high fire danger",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-sanban-2014.pdf"
     }
   ],
   "photos": [
@@ -132,8 +153,33 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=321",
+      "kind": "register"
+    },
+    {
+      "label": "Strawberry Peak Fire Lookout (USDA Forest Service, San Bernardino National Forest)",
+      "url": "https://www.fs.usda.gov/r05/sanbernardino/recreation/strawberry-peak-fire-lookout",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
+      "kind": "association"
+    },
+    {
+      "label": "Southern California Mountains Foundation: work on Strawberry Peak Lookout",
+      "url": "https://mountainsfoundation.org/programs/fire-lookouts/fl-seven-lookouts/",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Strawberry Peak Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-sanban-2014.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA California-South chapter: Southern California lookouts",
+      "url": "https://www.firelookouthost.org/southern-california",
       "kind": "association"
     },
     {
@@ -180,10 +226,81 @@
         "ownership",
         "access"
       ]
+    },
+    {
+      "source": "scmf_lookouts",
+      "key": "scmf_lookouts:ca:strawberry-peak",
+      "fields": [
+        "design",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:strawberry-peak",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:strawberry-peak",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:socal-strawberry-peak",
+      "fields": [
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-strawberry-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1933
+        },
+        {
+          "source": "scmf_lookouts",
+          "value": 1922
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

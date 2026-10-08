@@ -192,6 +192,16 @@
       "year": null,
       "w": 4272,
       "h": 2848
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://trailchick-media.s3.us-west-2.amazonaws.com/pilchuck.jpg",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/mount-pilchuck-lookout/",
+      "credit": "TrailChick Washington lookout guide (trailchick.com)",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -199,11 +209,6 @@
       "label": "NHLR register entry US 62 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wa/mount-pilchuck-lookout/",
       "kind": "register"
-    },
-    {
-      "label": "Mount Pilchuck (willhiteweb.com)",
-      "url": "http://willhiteweb.com/washington_fire_lookouts/mount_pilchuck/state_park_010.htm",
-      "kind": "reference"
     },
     {
       "label": "Mount Pilchuck State Park History (Washington State Parks)",
@@ -216,8 +221,28 @@
       "kind": "association"
     },
     {
+      "label": "The Mountaineers, Everett Branch: work on Mount Pilchuck Lookout",
+      "url": "https://www.mountaineers.org/locations-lodges/everett-branch/committees/everett-lookout-trail-maintenance-committee/web-pages/the-mountaineers-and-fire-lookouts",
+      "kind": "association"
+    },
+    {
       "label": "Pilchuck Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/pilchuck.html",
+      "kind": "site"
+    },
+    {
+      "label": "Mount Pilchuck on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/mount-pilchuck.html",
+      "kind": "site"
+    },
+    {
+      "label": "Mount Pilchuck in the TrailChick Washington lookout guide",
+      "url": "https://www.trailchick.com/wa-state-fire-lookouts/mount-pilchuck-lookout/",
+      "kind": "site"
+    },
+    {
+      "label": "Mount Pilchuck on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/mount_pilchuck/state_park_010.htm",
       "kind": "site"
     },
     {
@@ -274,6 +299,14 @@
       ]
     },
     {
+      "source": "mountaineers_everett",
+      "key": "mountaineers_everett:wa:mount-pilchuck",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q86927081",
       "fields": [
@@ -287,6 +320,28 @@
       "fields": [
         "material",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:mount-pilchuck",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "trailchick_wa",
+      "key": "trailchick_wa:wa:mount-pilchuck-lookout",
+      "fields": [
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-mount-pilchuck-state-park-010",
+      "fields": [
         "links"
       ]
     },
@@ -306,7 +361,27 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "firelookout_com",
+          "value": 1938
+        },
+        {
+          "source": "osm",
+          "value": 1938
+        },
+        {
+          "source": "trailchick_wa",
+          "value": 1943
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "research": {
     "researched": "2026-10-04",
     "checked": "2026-10-04",

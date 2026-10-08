@@ -112,6 +112,39 @@
       "source_url": "http://nhlr.org/lookouts/us/ny/beebe-hill-fire-tower/"
     },
     {
+      "year": 2006,
+      "event": "other",
+      "note": "FFLA restoration grant awarded for completing restoration of the Beebe Hill tower and observer cabin (cabin interior to become a museum; bolts, railings, painting).",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-rest-2006.pdf"
+    },
+    {
+      "year": 2008,
+      "event": "modified",
+      "note": "Wire safety meshing was installed around each landing platform of the Beebe Hill tower, in addition to the raised handrails.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ny-2008.pdf"
+    },
+    {
+      "year": 2008,
+      "event": "restored",
+      "note": "Work began April 5, 2008 with Ironworkers Local 10: new bolts and nuts on the X-braces and handrails raised to 42 inches with mid-rails on all landings and stairways.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ny-2008.pdf"
+    },
+    {
+      "year": 2022,
+      "event": "closed",
+      "note": "NYSDEC closed Beebe Hill tower after a windstorm blew part of the roof off, pending repairs.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2022/2022%20Apr%20final.pdf",
+      "source_urls": [
+        "https://www.nysffla.org/News2022/2022%20Apr%20final.pdf",
+        "https://www.nysffla.org/News2022/2022%20May%20final.pdf",
+        "https://www.nysffla.org/News2022/2022%20Jun%20final.pdf"
+      ]
+    },
+    {
       "year": 2025,
       "event": "restored",
       "note": "Recently restored as of 2025; wooden stairs replaced with metal",
@@ -460,6 +493,11 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=270",
+      "kind": "register"
+    },
+    {
       "label": "Beebe Hill State Forest (Wikipedia)",
       "url": "https://en.wikipedia.org/wiki/Beebe_Hill_State_Forest",
       "kind": "reference"
@@ -475,6 +513,16 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association, New York State Chapter: work on Beebe Hill Fire Tower",
+      "url": "https://www.nysffla.org/News2026/2026%20Feb%20final.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Beebe Hill Fire Tower",
+      "url": "https://firelookout.org/wp-content/uploads/2024/03/cr-ny-2023.pdf",
+      "kind": "association"
+    },
+    {
       "label": "View further info and photos at the Beebe Hill website",
       "url": "http://www.beebehill.info",
       "kind": "site"
@@ -487,6 +535,11 @@
     {
       "label": "andyarthur.org NYS DEC Firetowers list",
       "url": "https://andyarthur.org/p/138058",
+      "kind": "site"
+    },
+    {
+      "label": "Beebe Hill (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/beebe-hill.html",
       "kind": "site"
     },
     {
@@ -530,6 +583,29 @@
       ]
     },
     {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:beebe-hill",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "nysffla_projects",
+      "key": "nysffla_projects:ny:beebe-hill",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:ny:beebe-hill",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/5852579969",
       "fields": [
@@ -552,7 +628,35 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "standing"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "andyarthur_ny",
+          "value": "standing"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "research": {
     "researched": "2026-10-08",
     "checked": "2026-10-08",

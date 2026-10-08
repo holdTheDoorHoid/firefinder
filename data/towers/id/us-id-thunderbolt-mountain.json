@@ -14,11 +14,11 @@
   },
   "elevation_m": 2638.3,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": "R-6",
-  "height_m": null,
+  "height_m": 3.0,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -208,11 +208,6 @@
       "kind": "register"
     },
     {
-      "label": "Thunderbolt Mountain - FOREST LOOKOUTS (Forest Lookouts (Idaho))",
-      "url": "https://idaholookouts.weebly.com/thunderbolt-mountain.html",
-      "kind": "reference"
-    },
-    {
       "label": "Trout Creek / Thunderbolt Trailhead (U.S. Forest Service, Boise National Forest)",
       "url": "https://www.fs.usda.gov/r04/boise/recreation/trout-creek-thunderbolt-trailhead",
       "kind": "reference"
@@ -230,6 +225,11 @@
     {
       "label": "Thunderbolt Mountain Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/west-central/thunderbolt-mountain-lookout/",
+      "kind": "site"
+    },
+    {
+      "label": "Thunderbolt Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/thunderbolt-mountain.html",
       "kind": "site"
     }
   ],
@@ -274,6 +274,16 @@
       "key": "idaho_fl:thunderbolt-mountain-lookout:44.7324:-115.6396",
       "fields": [
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:thunderbolt-mountain",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
         "links"
       ]
     },

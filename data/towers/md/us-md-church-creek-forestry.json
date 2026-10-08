@@ -15,11 +15,11 @@
   },
   "elevation_m": 1.2,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 36.6,
   "status": "relocated",
   "status_note": null,
   "registers": [
@@ -124,9 +124,19 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/md/church-creek-forestry-tower/",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Maryland lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/md/",
       "kind": "association"
+    },
+    {
+      "label": "Church Creek (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/church-creek.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -138,6 +148,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -153,6 +164,14 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:md:church-creek",
+      "fields": [
+        "height_m",
         "links"
       ]
     }

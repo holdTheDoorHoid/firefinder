@@ -16,7 +16,7 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "Aermotor",
   "height_m": 18.3,
   "status": "standing",
   "status_note": null,
@@ -127,6 +127,11 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=444",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -134,6 +139,16 @@
     {
       "label": "West Myrtle Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/westmyrtle.html",
+      "kind": "site"
+    },
+    {
+      "label": "West Myrtle Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/west-myrtle-butte.html",
+      "kind": "site"
+    },
+    {
+      "label": "West Myrtle Butte on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/oregons-standing-lookouts/",
       "kind": "site"
     }
   ],
@@ -171,6 +186,21 @@
       "fields": [
         "height_m",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:west-myrtle-butte",
+      "fields": [
+        "design",
+        "links"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:west-myrtle-butte",
+      "fields": [
         "links"
       ]
     }

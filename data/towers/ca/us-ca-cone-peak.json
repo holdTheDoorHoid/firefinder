@@ -18,7 +18,7 @@
   "roles": [
     "aws"
   ],
-  "design": null,
+  "design": "all-metal tower",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -58,6 +58,13 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: December 8, 2018",
       "from": "nhlr"
+    },
+    {
+      "year": 2020,
+      "event": "fire",
+      "note": "Dolan Fire burned over the peak and the all-metal tower survived undamaged.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-south-2020.pdf"
     }
   ],
   "photos": [
@@ -170,6 +177,21 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Cone Peak Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-south-2020.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA California-South chapter: Southern California lookouts",
+      "url": "https://www.firelookouthost.org/southern-california",
+      "kind": "association"
+    },
+    {
+      "label": "Cone Peak lookout: FFLA Monterey chapter",
+      "url": "https://ffla-monterey.org/cone-peak-lookout/",
+      "kind": "association"
+    },
+    {
       "label": "Cone Peak Lookout - Ron Kemnow Page",
       "url": "https://californialookouts.weebly.com/cone-peak.html",
       "kind": "site"
@@ -199,6 +221,28 @@
       "fields": [
         "kind",
         "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:cone-peak",
+      "fields": [
+        "design",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:cone-peak",
+      "fields": []
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:socal-cone-peak",
+      "fields": [
         "registers",
         "links"
       ]

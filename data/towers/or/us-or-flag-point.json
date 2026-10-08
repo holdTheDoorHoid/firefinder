@@ -16,8 +16,8 @@
   "material": "wood",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "R-6",
+  "height_m": 12.2,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -72,6 +72,13 @@
       "from": "nhlr"
     },
     {
+      "year": 2004,
+      "event": "restored",
+      "note": "Repainted and steps repaired by the chapter.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-or-2004.pdf"
+    },
+    {
       "year": 2026,
       "event": "burned",
       "note": "From FFLA status column value 'Burned 2026'",
@@ -99,6 +106,11 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/or/flag-point-lookout/",
+      "kind": "register"
+    },
+    {
       "label": "Recreation.gov listing",
       "url": "https://www.recreation.gov/camping/campgrounds/10289153",
       "kind": "rental"
@@ -109,8 +121,23 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Flag Point Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-or-2004.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Flag Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/flagpoint.html",
+      "kind": "site"
+    },
+    {
+      "label": "Flag Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/flag-point.html",
+      "kind": "site"
+    },
+    {
+      "label": "Flag Point on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/2026/08/01/flag-point-lookout-has-burned-in-the-grasshopper-fire/",
       "kind": "site"
     }
   ],
@@ -158,6 +185,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:or:flag-point",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:flag-point",
+      "fields": [
+        "design",
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:destroyed-flag-point",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
@@ -178,6 +229,10 @@
         },
         {
           "source": "firelookout_com",
+          "value": "gone"
+        },
+        {
+          "source": "cherylhill_oregon",
           "value": "gone"
         }
       ],

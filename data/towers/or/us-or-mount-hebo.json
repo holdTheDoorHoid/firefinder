@@ -16,8 +16,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "L-4",
+  "height_m": 9.1,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -93,6 +93,11 @@
       "label": "Mt. Hebo on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/hebo.html",
       "kind": "site"
+    },
+    {
+      "label": "Mount Hebo on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/mount-hebo.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -128,9 +133,40 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:mount-hebo",
+      "fields": [
+        "design",
+        "height_m",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 45.21987,
+            "lon": -123.72479
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 45.2145,
+            "lon": -123.755
+          }
+        }
+      ],
+      "distance_m": 2440,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

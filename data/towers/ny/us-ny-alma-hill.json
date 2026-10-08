@@ -6,17 +6,17 @@
   "region": "NY",
   "county": "Allegany",
   "location": {
-    "lat": 42.054757,
-    "lon": -78.014137,
+    "lat": 42.04976,
+    "lon": -78.01363,
     "precision": "exact",
-    "from": "nhlr"
+    "from": "ffla"
   },
   "elevation_m": 776.0,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "Aermotor",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -82,6 +82,11 @@
       "label": "FFLA New York lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ny/",
       "kind": "association"
+    },
+    {
+      "label": "Alma Hill (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/alma-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -90,7 +95,6 @@
       "key": "nhlr:US 1595",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "registers",
@@ -104,9 +108,19 @@
       "source": "ffla",
       "key": "ffla:ny:alma-hill:42.0498:-78.0136",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:alma-hill",
+      "fields": [
+        "material",
+        "design",
         "links"
       ]
     }
@@ -116,17 +130,17 @@
       "field": "location",
       "values": [
         {
-          "source": "nhlr",
-          "value": {
-            "lat": 42.054757,
-            "lon": -78.014137
-          }
-        },
-        {
           "source": "ffla",
           "value": {
             "lat": 42.04976,
             "lon": -78.01363
+          }
+        },
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 42.054757,
+            "lon": -78.014137
           }
         }
       ],

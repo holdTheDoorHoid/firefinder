@@ -18,8 +18,8 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "wooden tower with platform",
+  "height_m": 4.3,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -47,6 +47,20 @@
   },
   "rental": null,
   "events": [
+    {
+      "year": 1922,
+      "event": "abandoned",
+      "note": "Wooden platform tower abandoned after several lightning strikes, one of which killed the lookout guard; the observer cabin remains.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
+      "year": 1988,
+      "event": "nrhp_listed",
+      "note": "Observer cabin listed on the National Register of Historic Places on 28 January 1988 (date from the chapter table); oldest surviving fire-detection structure in the region.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
     {
       "year": 2022,
       "event": "fflos_registered",
@@ -78,6 +92,16 @@
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Canjilon Mountain Lookout Site",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Canjilon on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/canjilon.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -105,6 +129,23 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:nm:canjilon-mountain",
+      "fields": [
+        "design",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:nm:canjilon",
+      "fields": [
+        "height_m",
         "links"
       ]
     }

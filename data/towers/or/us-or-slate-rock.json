@@ -13,10 +13,10 @@
   },
   "elevation_m": 1378.6,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-5",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -105,6 +105,11 @@
       "label": "Slate Rock on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/slaterock.html",
       "kind": "site"
+    },
+    {
+      "label": "Slate Rock on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/slate-rock.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -138,6 +143,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:slate-rock:44.6439:-122.2551",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:slate-rock",
+      "fields": [
+        "material",
+        "design",
         "links"
       ]
     }

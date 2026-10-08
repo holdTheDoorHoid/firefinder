@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Wallowa-Whitman National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Badger Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/badgerbutte95.html",
       "kind": "site"
+    },
+    {
+      "label": "Badger Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/badger-butte.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -67,6 +72,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:badger-butte:44.9308:-118.3060",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:badger-butte",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

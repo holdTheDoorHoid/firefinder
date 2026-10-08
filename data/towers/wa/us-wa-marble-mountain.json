@@ -6,10 +6,10 @@
   "region": "WA",
   "county": "Ferry",
   "location": {
-    "lat": 48.922717,
-    "lon": -118.433433,
+    "lat": 48.90382,
+    "lon": -118.3793,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 1787.3,
   "kind": "tower",
@@ -28,8 +28,8 @@
       "url": "http://firetower.org/lookouts/us/wa/marble-mountain-lookout-site/"
     }
   ],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Colville National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -134,6 +134,16 @@
       "label": "Marble Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/marblemtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Marble Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/marble-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Marble Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/marble_mountain/lookout_093.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -142,7 +152,6 @@
       "key": "fflos:US 548",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "material",
@@ -156,6 +165,7 @@
       "source": "ffla",
       "key": "ffla:wa:marble-mountain:48.9038:-118.3793",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -168,19 +178,28 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:marble-mountain",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-marble-mountain-lookout-093",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
-        {
-          "source": "fflos",
-          "value": {
-            "lat": 48.922717,
-            "lon": -118.433433
-          }
-        },
         {
           "source": "ffla",
           "value": {
@@ -189,10 +208,10 @@
           }
         },
         {
-          "source": "firelookout_com",
+          "source": "fflos",
           "value": {
-            "lat": 48.90382,
-            "lon": -118.3793
+            "lat": 48.922717,
+            "lon": -118.433433
           }
         }
       ],

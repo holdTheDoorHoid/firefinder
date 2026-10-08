@@ -14,8 +14,8 @@
   },
   "elevation_m": 2435.7,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": "Forest Service L-4 cab; a 1932 newspaper describes the new houses as 14 feet square with glass upper walls",
   "height_m": null,
@@ -148,11 +148,6 @@
       "kind": "register"
     },
     {
-      "label": "Beartop - Forest Lookouts (Montana) (montanalookouts.weebly.com (compiled newspaper clippings))",
-      "url": "https://montanalookouts.weebly.com/beartop.html",
-      "kind": "reference"
-    },
-    {
       "label": "Camping and Cabins (USDA Forest Service Northern Region)",
       "url": "https://www.fs.usda.gov/r01/recreation/camping-cabins",
       "kind": "reference"
@@ -170,6 +165,11 @@
     {
       "label": "Beartop on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/beartop.html",
+      "kind": "site"
+    },
+    {
+      "label": "Beartop on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/beartop.html",
       "kind": "site"
     },
     {
@@ -192,6 +192,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -221,6 +222,13 @@
     {
       "source": "osm",
       "key": "osm:way/1244653332",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:beartop",
       "fields": [
         "links"
       ]

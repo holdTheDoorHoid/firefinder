@@ -17,7 +17,7 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 10.7,
   "status": "relocated",
   "status_note": null,
   "registers": [],
@@ -39,6 +39,13 @@
   "rental": null,
   "events": [
     {
+      "year": 1925,
+      "event": "other",
+      "note": "A new observer's cabin was built at Kempshall in 1925.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2025/2025%20Jan%20final.pdf"
+    },
+    {
       "year": null,
       "event": "relocated",
       "note": "The lookout was moved to the Adirondack History Museum.",
@@ -59,6 +66,16 @@
       "label": "FFLA New York lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ny/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association, New York State Chapter: work on Kempshall Mountain",
+      "url": "https://www.nysffla.org/News2025/2025%20Jan%20final.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Kempshall Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/kempshall-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -71,6 +88,22 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:kempshall-mountain",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "nysffla_projects",
+      "key": "nysffla_projects:ny:kempshall-mountain",
+      "fields": [
+        "events",
         "links"
       ]
     }

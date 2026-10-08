@@ -17,11 +17,11 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Minnesota Forest Service",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -44,6 +44,11 @@
       "label": "FFLA Minnesota lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mn/",
       "kind": "association"
+    },
+    {
+      "label": "Clear River (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/clear-river.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -58,9 +63,34 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mn:clear-river",
+      "fields": [
+        "height_m",
+        "agency",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "standing"
+        },
+        {
+          "source": "central_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

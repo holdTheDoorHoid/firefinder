@@ -2,7 +2,8 @@
   "id": "us-ca-bald-mountain-sequoia-nf",
   "name": "Bald Mountain Lookout (Sequoia NF)",
   "other_names": [
-    "Bald Mountain"
+    "Bald Mountain",
+    "Bald Mt"
   ],
   "country": "US",
   "region": "CA",
@@ -15,8 +16,8 @@
   },
   "elevation_m": 2846.5,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -64,6 +65,24 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: June 10, 2001",
       "from": "nhlr"
+    },
+    {
+      "year": 2004,
+      "event": "restored",
+      "note": "Propane lighting updated, lightning protection repair completed, new potable water system installed, and benches added along the rehabilitated trail.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-cc-2004.pdf"
+    },
+    {
+      "year": 2009,
+      "event": "assessed",
+      "note": "Lightning protection system inspected and found operationally sound.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-cent-2009.pdf",
+      "source_urls": [
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-cent-2009.pdf",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-az-2009.pdf"
+      ]
     }
   ],
   "photos": [
@@ -99,13 +118,28 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/ca/bald-mountain-lookout-sequoia-nf/",
+      "kind": "register"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Bald Mountain Lookout (Sequoia NF)",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-az-2009.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Bald Mtn Fire Lookout on fire-lookouts.org (Rich Camp)",
       "url": "https://www.fire-lookouts.org/cali/bald_mtn/index.htm",
+      "kind": "site"
+    },
+    {
+      "label": "Bald Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/bald-mountain5.html",
       "kind": "site"
     }
   ],
@@ -118,6 +152,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -144,6 +179,21 @@
         "staffing",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:bald-mountain-sequoia-nf",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:bald-mountain5",
+      "fields": [
         "links"
       ]
     }

@@ -1,6 +1,7 @@
 {
   "id": "us-wa-cornell-butte",
   "name": "Cornell Butte Lookout",
+  "summary": "A 42-foot all-steel live-in lookout built in 1958 on Okanogan National Forest land; privately owned since 1996 and damaged by a 2015 fire, but still standing.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "42-foot all-steel live-in tower",
+  "height_m": 12.8,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,34 +29,71 @@
       "url": "http://nhlr.org/lookouts/us/wa/cornell-butte-lookout/"
     }
   ],
-  "agency": "US Forest Service - Okanogan National Forest",
+  "agency": "US Forest Service - Okanogan National Forest (tower privately owned)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Privately owned tower on national forest land. The bottom stairs were removed for visitor safety. No source says the tower is open to climbing."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "Forest roads reach near the summit. WTA says a high-clearance vehicle can get within about 300 yards. TrailChick reports driving right below the tower in 2018. The lower stairs are gone."
   },
   "rental": null,
   "events": [
     {
       "year": 1958,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "42-foot all-steel live-in tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/cornell-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/cornell-butte-lookout/",
+        "https://www.firelookout.com/wa/cornell.html",
+        "https://www.trailchick.com/wa-state-fire-lookouts/cornell-butte-lookout/"
+      ]
+    },
+    {
+      "year": 1971,
+      "event": "abandoned",
+      "note": "Forest Service says it has not been used regularly since 1971 (quoted by NHLR)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/cornell-butte-lookout/"
+    },
+    {
+      "year": 1996,
+      "event": "other",
+      "note": "Purchased by a private party and slated for removal; no removal funding exists",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/cornell-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/cornell-butte-lookout/",
+        "https://www.firelookout.com/wa/cornell.html",
+        "https://www.trailchick.com/wa-state-fire-lookouts/cornell-butte-lookout/"
+      ]
+    },
+    {
+      "year": 2015,
+      "event": "fire",
+      "note": "North Star Fire burned the surrounding area in September; embers reached the cab and caught floorboards on fire. Bottom stairs later removed for visitor safety (undated)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/cornell-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/cornell-butte-lookout/",
+        "https://www.trailchick.com/wa-state-fire-lookouts/cornell-butte-lookout/"
+      ]
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 11, 2022",
-      "from": "nhlr"
+      "note": "Registered April 11, 2022 as US 1524, WA 73; nominated by Christine Estrada",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/cornell-butte-lookout/"
     }
   ],
   "photos": [
@@ -82,6 +120,16 @@
       "year": 1999,
       "w": 434,
       "h": 306
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://trailchick-media.s3.us-west-2.amazonaws.com/IMG_5348.jpg",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/cornell-butte-lookout/",
+      "credit": "TrailChick Washington lookout guide (trailchick.com)",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -108,6 +156,16 @@
     {
       "label": "Cornell Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/cornell.html",
+      "kind": "site"
+    },
+    {
+      "label": "Cornell Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/cornell-butte.html",
+      "kind": "site"
+    },
+    {
+      "label": "Cornell Butte on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/cornell_butte/lookout_164.htm",
       "kind": "site"
     }
   ],
@@ -146,10 +204,54 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:cornell-butte",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "trailchick_wa",
+      "key": "trailchick_wa:wa:cornell-butte-lookout",
+      "fields": [
+        "height_m",
+        "photos"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-cornell-butte-lookout-164",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-cornell-butte",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

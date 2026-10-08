@@ -1,6 +1,7 @@
 {
   "id": "us-ca-grasshopper-peak",
   "name": "Grasshopper Peak Lookout",
+  "summary": "A Cal Fire-design enclosed tower in Humboldt Redwoods State Park, built about 1957-58 on the site of an older one; not operational in 2014, current staffing unconfirmed.",
   "other_names": [
     "Grasshopper Mountain"
   ],
@@ -18,8 +19,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Octagonal CalFire-design cab with catwalk on a 29 ft enclosed steel tower",
+  "height_m": 8.8,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -30,11 +31,11 @@
       "url": "http://nhlr.org/lookouts/us/ca/grasshopper-peak-lookout/"
     }
   ],
-  "agency": "Department of Forestry and Fire Protection (Cal Fire)",
+  "agency": "California Department of Forestry and Fire Protection (Cal Fire)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "NHLR says it is accessible to the public via a trail. These sources do not say whether the cab may be entered or climbed."
   },
   "staffing": {
     "status": "unknown",
@@ -43,21 +44,56 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Hike or bike about 6 to 7 miles. Sources differ: a 7-mile Grasshopper Peak trail (Mattole Restoration Council) versus about 6 miles of good road from the north side (Peakbagging.com)."
   },
   "rental": null,
   "events": [
     {
+      "year": 1933,
+      "event": "built",
+      "note": "Photo caption on the NHLR page: original structure during construction; photo courtesy of the Civilian Conservation Corps. Caption only; not confirmed elsewhere.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/grasshopper-peak-lookout/"
+    },
+    {
+      "year": 1957,
+      "event": "replaced",
+      "note": "May 1957 clipping: a new tower under construction at the site of an old one declared unsafe",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/grasshopper-mountain.html"
+    },
+    {
+      "year": 1957,
+      "event": "staffed",
+      "note": "Lee Ball assigned to the station, with trailer quarters from June 3; relieved of duties a month early in October",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/grasshopper-mountain.html"
+    },
+    {
       "year": 1958,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Build year per NHLR, Mattole Restoration Council and Peakbagging.com; the 1957 clipping suggests construction began in 1957",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/grasshopper-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/grasshopper-peak-lookout/",
+        "https://mattole.org/2014/09/24/grasshopper-fire-lookout/",
+        "http://www.peakbagging.com/CALookoutPhotos/Grasshopper.html"
+      ]
     },
     {
       "year": 2010,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 4, 2010",
-      "from": "nhlr"
+      "note": "Registered September 4, 2010 as NHLR US 890",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/grasshopper-peak-lookout/"
+    },
+    {
+      "year": 2014,
+      "event": "assessed",
+      "note": "Mattole Restoration Council reported the lookout not operational and began a repair project whose goal was overnight staffing for the 2014 fire season",
+      "from": "research",
+      "source_url": "https://mattole.org/2014/09/24/grasshopper-fire-lookout/"
     }
   ],
   "photos": [
@@ -153,6 +189,16 @@
       "kind": "register"
     },
     {
+      "label": "MRC Upgrades and Staffs Grasshopper Fire Lookout (Mattole Restoration Council)",
+      "url": "https://mattole.org/2014/09/24/grasshopper-fire-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Grasshopper Lookout, Humboldt County, California (Peakbagging.com)",
+      "url": "http://www.peakbagging.com/CALookoutPhotos/Grasshopper.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -201,10 +247,37 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:grasshopper-mountain",
+      "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-grasshopper-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

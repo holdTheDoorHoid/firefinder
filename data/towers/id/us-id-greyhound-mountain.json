@@ -17,12 +17,12 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 6.1,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Challis National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -54,6 +54,11 @@
       "label": "Greyhound Mountain on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/southern-idaho/greyhound-mountain/",
       "kind": "site"
+    },
+    {
+      "label": "Greyhound Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/greyhound-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -80,6 +85,16 @@
       "source": "idaho_fl",
       "key": "idaho_fl:greyhound-mountain:44.5971:-115.1207",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:greyhound-mountain",
+      "fields": [
+        "height_m",
+        "agency",
+        "ownership",
         "links"
       ]
     }

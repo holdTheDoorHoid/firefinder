@@ -29,7 +29,7 @@
     }
   ],
   "agency": "Washington Division of Forestry/DNR",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -93,6 +93,16 @@
       "label": "Hull Creek on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/hullcreek.html",
       "kind": "site"
+    },
+    {
+      "label": "Hull Creek on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/hull-creek.html",
+      "kind": "site"
+    },
+    {
+      "label": "Hull Creek on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/hull_creek_lookout/aws_183.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -127,9 +137,46 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:hull-creek",
+      "fields": [
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-hull-creek-lookout-aws-183",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 46.43912,
+            "lon": -123.57457
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 46.45334,
+            "lon": -123.57404
+          }
+        }
+      ],
+      "distance_m": 1582,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

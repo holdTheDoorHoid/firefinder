@@ -15,11 +15,11 @@
   },
   "elevation_m": 2946.2,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -60,6 +60,13 @@
       "from": "nhlr"
     },
     {
+      "year": 1988,
+      "event": "nrhp_listed",
+      "note": "Listed on the National Register of Historic Places on 28 January 1988 (date from the chapter table).",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
       "year": 2006,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: January 2, 2006",
@@ -87,9 +94,24 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=684",
+      "kind": "register"
+    },
+    {
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Mangas Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Mangas on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/mangas.html",
+      "kind": "site"
     },
     {
       "label": "OpenStreetMap node 2480263470",
@@ -125,10 +147,28 @@
       ]
     },
     {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:nm:mangas",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/2480263470",
       "fields": [
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:nm:mangas",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
         "links"
       ]
     }

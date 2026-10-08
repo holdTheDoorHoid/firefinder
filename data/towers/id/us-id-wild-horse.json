@@ -14,8 +14,8 @@
   },
   "elevation_m": 2912.7,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": "L-4",
   "height_m": null,
@@ -233,11 +233,6 @@
       "kind": "register"
     },
     {
-      "label": "Wildhorse (Forest Lookouts)",
-      "url": "https://idaholookouts.weebly.com/wildhorse.html",
-      "kind": "reference"
-    },
-    {
       "label": "Wildhorse Lookout Topo Map (TopoZone)",
       "url": "https://www.topozone.com/idaho/custer-id/tower/wildhorse-lookout-2/",
       "kind": "reference"
@@ -256,6 +251,11 @@
       "label": "Wild Horse Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/southern-idaho/wildhorse-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Wildhorse on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/wildhorse.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -267,6 +267,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -299,6 +300,13 @@
       "fields": [
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:wildhorse",
+      "fields": [
         "links"
       ]
     },

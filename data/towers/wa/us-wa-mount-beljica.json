@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Snoqualmie National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,16 @@
       "label": "Mt. Beljica on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/beljica.html",
       "kind": "site"
+    },
+    {
+      "label": "Mount Beljica on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/mount-beljica.html",
+      "kind": "site"
+    },
+    {
+      "label": "Mount Beljica on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/puget_sound_hiking/mount_beljica/lake_christine_300.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -67,6 +77,22 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:mt-beljica:46.7842:-121.9405",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:mount-beljica",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:puget-sound-hiking-mount-beljica-lake-christine-300",
       "fields": [
         "links"
       ]

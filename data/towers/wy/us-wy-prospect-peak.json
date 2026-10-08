@@ -1,6 +1,7 @@
 {
   "id": "us-wy-prospect-peak",
   "name": "Prospect Peak Lookout",
+  "summary": "Four-panel ground cabin built in 1941 in Bridger-Teton NF's Sublette County, staffed only in high fire hazard, NHLR-registered 2022, wrapped during the 2025 Horse Fire.",
   "other_names": [],
   "country": "US",
   "region": "WY",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "smaller four-panel ground cabin (not on a tower)",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,7 +29,7 @@
       "url": "http://nhlr.org/lookouts/us/wy/prospect-peak-lookout/"
     }
   ],
-  "agency": "US Forest Service - Bridger-Teton National Forest",
+  "agency": "US Forest Service, Bridger-Teton National Forest",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -48,14 +49,38 @@
     {
       "year": 1941,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR gives 1941; July 1941 newspaper items describe the cabin finished for the Forest Service",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wy/prospect-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wy/prospect-peak-lookout/",
+        "https://westlookouts.weebly.com/prospect-peak.html"
+      ]
+    },
+    {
+      "year": 1941,
+      "event": "staffed_first",
+      "note": "1941 plan: man the lookout when the Cora weather station showed low humidity and high fire hazard; NHLR says it was apparently staffed only in high fire hazard times",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/prospect-peak.html",
+      "source_urls": [
+        "https://westlookouts.weebly.com/prospect-peak.html",
+        "http://nhlr.org/lookouts/us/wy/prospect-peak-lookout/"
+      ]
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 10, 2022",
-      "from": "nhlr"
+      "note": "Registered May 10, 2022 as US 1570, WY 22; nominated by Brad Eells",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wy/prospect-peak-lookout/"
+    },
+    {
+      "year": 2025,
+      "event": "fire",
+      "note": "Horse Fire burning nearby in July 2025; lookout reported still wrapped",
+      "from": "research",
+      "source_url": "https://www.instagram.com/p/DLxuGifprnB/"
     }
   ],
   "photos": [
@@ -101,6 +126,11 @@
       "label": "NHLR register entry US 1570 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wy/prospect-peak-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "ffla_lookout Instagram post, July 6, 2025 (Forest Fire Lookout Association)",
+      "url": "https://www.instagram.com/p/DLxuGifprnB/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Wyoming lookout list (firelookout.org)",
@@ -152,10 +182,34 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wy:prospect-peak",
+      "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-wy-prospect-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

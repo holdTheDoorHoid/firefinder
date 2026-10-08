@@ -177,6 +177,11 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/wi/mountain-lookout-tower/",
+      "kind": "register"
+    },
+    {
       "label": "Mountain Fire Lookout Tower (Chequamegon-Nicolet National Forest, USDA Forest Service)",
       "url": "https://www.fs.usda.gov/r09/chequamegon-nicolet/recreation/mountain-fire-lookout-tower",
       "kind": "reference"
@@ -205,6 +210,11 @@
       "label": "Wikipedia: Mountain Fire Lookout Tower",
       "url": "https://en.wikipedia.org/wiki/Mountain_Fire_Lookout_Tower",
       "kind": "wikipedia"
+    },
+    {
+      "label": "Mountain (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/mountain.html",
+      "kind": "site"
     },
     {
       "label": "Wikidata item Q6924944",
@@ -246,6 +256,14 @@
       ]
     },
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:wi:mountain",
+      "fields": [
+        "design",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q6924944",
       "fields": [
@@ -279,7 +297,27 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "standing"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "central_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "research": {
     "researched": "2026-10-08",
     "checked": "2026-10-08",

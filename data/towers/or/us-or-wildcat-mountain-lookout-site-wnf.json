@@ -15,10 +15,10 @@
   },
   "elevation_m": 1631.6,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -83,6 +83,11 @@
       "label": "Wildcat Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/wildcatmtn79.html",
       "kind": "site"
+    },
+    {
+      "label": "Wildcat Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/wildcat-mountain1.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -116,6 +121,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:wildcat-mtn:44.3366:-122.1072",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:wildcat-mountain1",
+      "fields": [
+        "material",
+        "design",
         "links"
       ]
     }

@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "ID",
-  "county": null,
+  "county": "Gem",
   "location": {
     "lat": 45.82788,
     "lon": -115.0239,
@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Payette National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +44,11 @@
       "label": "Meadow Creek on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/selway-region/meadow-creek/",
       "kind": "site"
+    },
+    {
+      "label": "Meadow Creek on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/meadow-creek.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -54,6 +59,16 @@
         "name",
         "location",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:meadow-creek",
+      "fields": [
+        "county",
+        "agency",
+        "ownership",
         "links"
       ]
     }

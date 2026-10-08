@@ -1,7 +1,9 @@
 {
   "id": "us-ca-high-plateau-mountain-long-ridge",
   "name": "High Plateau Mountain (Long Ridge)",
-  "other_names": [],
+  "other_names": [
+    "High Plateau Mountain"
+  ],
   "country": "US",
   "region": "CA",
   "county": "Del Norte",
@@ -21,8 +23,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Siskiyou National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +46,11 @@
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
+    },
+    {
+      "label": "High Plateau Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/high-plateau-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -58,9 +65,40 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:high-plateau-mountain",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 41.91701,
+            "lon": -123.92618
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 41.9081,
+            "lon": -123.9391
+          }
+        }
+      ],
+      "distance_m": 1458,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

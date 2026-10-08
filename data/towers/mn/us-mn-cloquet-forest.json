@@ -2,7 +2,7 @@
   "id": "us-mn-cloquet-forest",
   "name": "Cloquet Forest Station",
   "other_names": [
-    "Cloquet Lookout Tower"
+    "Cloquet"
   ],
   "country": "US",
   "region": "MN",
@@ -15,11 +15,11 @@
   },
   "elevation_m": null,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 24.4,
   "status": "standing",
   "status_note": null,
   "registers": [],
@@ -39,7 +39,22 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2018,
+      "event": "assessed",
+      "note": "The University of Minnesota hired an engineering firm to assess the safety of the tower's stairs and railings; the report was still pending.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-mn-2018.pdf"
+    },
+    {
+      "year": 2018,
+      "event": "modified",
+      "note": "In September a new 6-foot chain-link fence with a 4-foot door was installed at the base, replacing the damaged old fence.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-mn-2018.pdf"
+    }
+  ],
   "photos": [
     {
       "file": "75/7563215bd1ad441702b8020b96ab929aace234bb.webp",
@@ -61,6 +76,16 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Cloquet Forest Station",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-mn-2018.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Cloquet (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/cloquet.html",
+      "kind": "site"
+    },
+    {
       "label": "Wikidata item Q107483771",
       "url": "https://www.wikidata.org/wiki/Q107483771",
       "kind": "wikidata"
@@ -76,6 +101,24 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mn:cloquet",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:mn:cloquet-forest",
+      "fields": [
+        "events",
         "links"
       ]
     },

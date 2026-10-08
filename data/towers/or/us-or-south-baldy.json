@@ -1,6 +1,7 @@
 {
   "id": "us-or-south-baldy",
   "name": "South Baldy Lookout",
+  "summary": "Oregon Department of Forestry lookout in Wheeler County: fire watch since at least 1936, current tower built 1958-59. Listed as standing; no public access reported.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,8 +17,8 @@
   "material": "wood",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": 15.2,
+  "design": "14x14 L-4 cab on a 40-foot open timber tower",
+  "height_m": 12.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,31 +32,76 @@
   "agency": "Oregon Department of Forestry",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Firelookout.com says there is no public access. The register names the Oregon Department of Forestry as administrator; the sources read do not say whether visitors may reach the tower."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
   "rental": null,
   "events": [
     {
+      "year": 1936,
+      "event": "other",
+      "note": "Firelookout.com lists a 50-foot wooden tower in 1936; the register and the 1958 report describe a 40-foot tower",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/southbaldy.html"
+    },
+    {
+      "year": 1956,
+      "event": "assessed",
+      "note": "District report: the present house was pulled apart by the wind; a new lookout is needed",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/south-baldy.html"
+    },
+    {
       "year": 1958,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register gives construction as 1958-59 for a 14x14 L-4 cab on a 40-foot open timber tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/south-baldy-lookout/"
+    },
+    {
+      "year": 1958,
+      "event": "replaced",
+      "note": "New tower and cabin started in October 1958 to replace the wind-damaged house; work halted in November with about half done",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/south-baldy.html"
+    },
+    {
+      "year": 1959,
+      "event": "other",
+      "note": "1959 report: work resumed in April and the structure was in use by the fire season, with minor completion work over the summer; firelookout.com's 1959 entry describes a 54-foot wooden ODF tower",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/south-baldy.html",
+      "source_urls": [
+        "https://oregonlookouts.weebly.com/south-baldy.html",
+        "https://www.firelookout.com/or/southbaldy.html"
+      ]
+    },
+    {
+      "year": 1964,
+      "event": "staffed",
+      "note": "Register: staffed to at least 1964; Oregon Lookouts notes eleven first discoveries that season",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/south-baldy-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/south-baldy-lookout/",
+        "https://oregonlookouts.weebly.com/south-baldy.html"
+      ]
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 5, 2022",
-      "from": "nhlr"
+      "note": "Registered July 5, 2022 as US 1640, OR 158",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/south-baldy-lookout/"
     }
   ],
   "photos": [
@@ -128,6 +174,11 @@
       "label": "South Baldy on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/southbaldy.html",
       "kind": "site"
+    },
+    {
+      "label": "South Baldy on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/oregons-standing-lookouts/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -165,6 +216,33 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:south-baldy",
+      "fields": []
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:south-baldy",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-south-baldy",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -178,13 +256,23 @@
         {
           "source": "firelookout_com",
           "value": 1936
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1959
         }
       ],
       "distance_m": null,
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

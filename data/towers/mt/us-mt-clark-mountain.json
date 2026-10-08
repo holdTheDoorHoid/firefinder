@@ -1,7 +1,9 @@
 {
   "id": "us-mt-clark-mountain",
   "name": "Clark Mountain",
-  "other_names": [],
+  "other_names": [
+    "Clark Peak"
+  ],
   "country": "US",
   "region": "MT",
   "county": "Sanders",
@@ -16,13 +18,13 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "L-4",
   "height_m": null,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Kootenai National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +51,11 @@
       "label": "Clark Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/clarkmtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Clark Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/clark-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +75,16 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:clark-mtn:47.5423:-115.3123",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:clark-peak",
+      "fields": [
+        "design",
+        "agency",
+        "ownership",
         "links"
       ]
     }

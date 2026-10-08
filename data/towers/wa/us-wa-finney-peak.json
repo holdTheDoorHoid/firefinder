@@ -13,8 +13,8 @@
   },
   "elevation_m": 1549.6,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -111,6 +111,11 @@
       "label": "Finney Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/finneypeak.html",
       "kind": "site"
+    },
+    {
+      "label": "Finney Peak on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/fire_lookouts/finney_peak_lookout/finney_point_064.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -122,6 +127,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -143,6 +149,13 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:finney-peak:48.3807:-121.7456",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:fire-lookouts-finney-peak-lookout-finney-point-064",
       "fields": [
         "links"
       ]

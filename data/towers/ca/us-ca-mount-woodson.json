@@ -54,10 +54,24 @@
       "from": "fflos"
     },
     {
+      "year": 1950,
+      "event": "replaced",
+      "note": "A CDF 809R 15x15-ft cab on a 30-ft enclosed steel tower, with living space below; apparently lost to a fire later.",
+      "from": "ffla_sdrc",
+      "source_url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/mount-woodson/"
+    },
+    {
       "year": 1990,
       "event": "removed",
       "note": "'Removed' field on FFLOS detail page: \"1990's\" (about 1990).",
       "from": "fflos"
+    },
+    {
+      "year": 1991,
+      "event": "removed",
+      "note": "Seen standing in a 1986 survey and gone by 1991.",
+      "from": "ffla_sdrc",
+      "source_url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/mount-woodson/"
     },
     {
       "year": 2009,
@@ -152,6 +166,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA San Diego-Riverside Chapter: work on Mount Woodson Lookout",
+      "url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/mount-woodson/",
+      "kind": "association"
+    },
+    {
       "label": "Woodson Mountain Lookout - Forest Lookouts Page",
       "url": "https://californialookouts.weebly.com/woodson-mountain.html",
       "kind": "site"
@@ -183,9 +202,43 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "ffla_sdrc",
+      "key": "ffla_sdrc:ca:mount-woodson",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:woodson-mountain",
+      "fields": []
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:mount-woodson",
+      "fields": []
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "fflos",
+          "value": 1948
+        },
+        {
+          "source": "ffla_sdrc",
+          "value": 1936
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

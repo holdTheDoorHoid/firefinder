@@ -13,8 +13,8 @@
   },
   "elevation_m": 1970.8,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -81,6 +81,16 @@
       "label": "Roundtop Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/roundtop209.html",
       "kind": "site"
+    },
+    {
+      "label": "Roundtop Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/roundtop-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Roundtop Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/fire_lookouts/roundtop_mountain_lookout/ace_high_cabin_211.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -92,6 +102,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -113,6 +124,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:roundtop-mtn:48.8103:-117.1299",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:roundtop-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:fire-lookouts-roundtop-mountain-lookout-ace-high-cabin-211",
       "fields": [
         "links"
       ]

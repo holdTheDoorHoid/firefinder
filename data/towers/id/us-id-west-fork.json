@@ -171,6 +171,11 @@
       "label": "West Fork Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/northern-idaho/west-fork-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "West Fork on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/west-fork.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -219,6 +224,13 @@
       ]
     },
     {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:west-fork",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:us-id-west-fork",
       "fields": [
@@ -235,7 +247,29 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 48.83246,
+            "lon": -116.751107
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 48.8316,
+            "lon": -116.74356
+          }
+        }
+      ],
+      "distance_m": 561,
+      "note": null
+    }
+  ],
   "research": {
     "researched": "2026-10-08",
     "checked": "2026-10-08",

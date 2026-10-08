@@ -13,8 +13,8 @@
   },
   "elevation_m": 1486.5,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -81,6 +81,11 @@
       "label": "Salmon Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/salmonbutte.html",
       "kind": "site"
+    },
+    {
+      "label": "Salmon Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/salmon-butte.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -92,6 +97,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -113,6 +119,13 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:or:salmon-butte:45.2280:-121.9345",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:salmon-butte",
       "fields": [
         "links"
       ]

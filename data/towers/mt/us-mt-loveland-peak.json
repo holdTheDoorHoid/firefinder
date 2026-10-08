@@ -16,13 +16,13 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "L-4",
+  "height_m": 15.2,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Kootenai National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Loveland Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/lovelandpeak.html",
       "kind": "site"
+    },
+    {
+      "label": "Loveland Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/loveland-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +73,17 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:loveland-peak:47.9945:-115.8421",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:loveland-peak",
+      "fields": [
+        "design",
+        "height_m",
+        "agency",
+        "ownership",
         "links"
       ]
     }

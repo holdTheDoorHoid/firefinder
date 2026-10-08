@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Coronado National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +44,11 @@
       "label": "FFLA Arizona lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/az/",
       "kind": "association"
+    },
+    {
+      "label": "Soldier Camp on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/soldier-camp.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -55,6 +60,15 @@
         "location",
         "county",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:az:soldier-camp",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

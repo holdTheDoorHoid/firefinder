@@ -12,7 +12,7 @@
     "from": "ffla"
   },
   "elevation_m": null,
-  "kind": "point",
+  "kind": "tower",
   "material": null,
   "material_from": null,
   "roles": [],
@@ -44,6 +44,11 @@
       "label": "FFLA Vermont lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/vt/",
       "kind": "association"
+    },
+    {
+      "label": "Camel's Hump (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/camels-hump.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -54,8 +59,15 @@
         "name",
         "location",
         "county",
-        "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:vt:camels-hump",
+      "fields": [
+        "kind",
         "links"
       ]
     }

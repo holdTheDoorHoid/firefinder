@@ -13,8 +13,8 @@
   },
   "elevation_m": 1728.2,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -98,6 +98,11 @@
       "label": "Chateau Rock Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/chateau-rock-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Chateau Rock on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/chateau-rock.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -109,6 +114,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -137,6 +143,13 @@
     {
       "source": "idaho_fl",
       "key": "idaho_fl:chateau-rock-lookout:46.6788:-115.5024",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:chateau-rock",
       "fields": [
         "links"
       ]

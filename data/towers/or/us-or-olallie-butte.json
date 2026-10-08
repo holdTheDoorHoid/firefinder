@@ -13,8 +13,8 @@
   },
   "elevation_m": 2199.1,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -93,6 +93,11 @@
       "label": "Olallie Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/olalliebutte.html",
       "kind": "site"
+    },
+    {
+      "label": "Olallie Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/olallie-butte.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -104,6 +109,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -126,6 +132,13 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:or:olallie-butte:44.8217:-121.7638",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:olallie-butte",
       "fields": [
         "links"
       ]

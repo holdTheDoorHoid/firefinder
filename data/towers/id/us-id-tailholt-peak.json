@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Payette National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -61,6 +61,11 @@
       "label": "Tailholt Peak Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/west-central/tailholt-peak-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Tailholt Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/tailholt-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -88,6 +93,15 @@
       "key": "idaho_fl:tailholt-peak-lookout:45.0813:-115.6943",
       "fields": [
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:tailholt-peak",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

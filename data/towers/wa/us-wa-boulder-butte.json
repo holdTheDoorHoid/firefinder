@@ -13,8 +13,8 @@
   },
   "elevation_m": 2240.3,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -123,6 +123,16 @@
       "label": "Boulder Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/boulderbutte.html",
       "kind": "site"
+    },
+    {
+      "label": "Boulder Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/boulder-butte.html",
+      "kind": "site"
+    },
+    {
+      "label": "Boulder Butte on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/fire_lookouts/boulder_butte_lookout/lake_chelan_085.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -134,6 +144,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -158,10 +169,24 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:boulder-butte",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:fire-lookouts-boulder-butte-lookout-lake-chelan-085",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

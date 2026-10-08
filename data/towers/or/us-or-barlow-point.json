@@ -79,6 +79,11 @@
       "label": "Barlow Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/barlowpoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Barlow Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/barlow-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -114,9 +119,38 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:barlow-point",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 45.2595,
+            "lon": -121.6498
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 45.2671,
+            "lon": -121.6544
+          }
+        }
+      ],
+      "distance_m": 919,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

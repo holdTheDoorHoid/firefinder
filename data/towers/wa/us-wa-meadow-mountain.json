@@ -13,8 +13,8 @@
   },
   "elevation_m": 1650.2,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -141,6 +141,16 @@
       "label": "Meadow Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/meadowmtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Meadow Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/meadow-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Meadow Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/meadow_mountain/snoqualmie_pass_345.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -152,6 +162,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -176,10 +187,24 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:meadow-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-meadow-mountain-snoqualmie-pass-345",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

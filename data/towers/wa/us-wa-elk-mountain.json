@@ -17,7 +17,7 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 17.4,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -29,7 +29,7 @@
     }
   ],
   "agency": "Department of Natural Resources",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "unknown",
     "note": null
@@ -87,6 +87,16 @@
       "label": "Elk Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/elkmtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Elk Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/elk-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Elk Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/elk_mountain_lookout/cowlitz_county_252.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -118,6 +128,22 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:elk-mtn:46.1322:-122.4628",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:elk-mountain",
+      "fields": [
+        "height_m",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-elk-mountain-lookout-cowlitz-county-252",
       "fields": [
         "links"
       ]

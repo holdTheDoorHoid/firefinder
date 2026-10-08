@@ -13,8 +13,8 @@
   },
   "elevation_m": 1594.1,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -81,6 +81,16 @@
       "label": "Summit Prairie on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/summitprairie.html",
       "kind": "site"
+    },
+    {
+      "label": "Summit Prairie on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/summit-prairie.html",
+      "kind": "site"
+    },
+    {
+      "label": "Summit Prairie on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/summit_prairie_lookout/gifford_pinchot_255.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -92,6 +102,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -113,6 +124,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:summit-prairie:46.2568:-121.7273",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:summit-prairie",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-summit-prairie-lookout-gifford-pinchot-255",
       "fields": [
         "links"
       ]

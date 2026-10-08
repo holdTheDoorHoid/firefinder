@@ -1,6 +1,7 @@
 {
   "id": "us-or-garwood-butte",
   "name": "Garwood Butte Lookout",
+  "summary": "A 1942 L-4 cab on Garwood Butte, renamed in 1946, went unstaffed after 1973 and is now in poor condition at the end of a steep trail.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,8 +17,8 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": "L-4",
-  "height_m": null,
+  "design": "L-4 cab, an updated BC-301 version",
+  "height_m": 9.8,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/or/garwood-butte-lookout/"
     }
   ],
-  "agency": "US Forest Service - Umpqua National Forest",
+  "agency": "U.S. Forest Service, Umpqua National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached by the Garwood Butte Trail from Three Lakes Road (Road 3703) and Forest Service Road 3703-370. The Forest Service warns the structure is in poor condition."
   },
   "staffing": {
     "status": "unknown",
@@ -40,22 +41,57 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Steep, rocky trail with narrow switchbacks; footing is difficult on the last few feet of the climb."
   },
   "rental": null,
   "events": [
     {
       "year": 1942,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "L-4 cab, an updated BC-301 version, built on the summit then called Bear Butte.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/garwood-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/garwood-butte-lookout/",
+        "https://www.fs.usda.gov/r06/umpqua/recreation/trails/garwood-butte-trail"
+      ]
+    },
+    {
+      "year": 1946,
+      "event": "other",
+      "note": "Butte and lookout renamed for Leroy E. Garwood (firelookout.com and Oregon Hikers both give 1946).",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/garwood.html",
+      "source_urls": [
+        "https://www.firelookout.com/or/garwood.html",
+        "https://www.oregonhikers.org/field_guide/Garwood_Butte"
+      ]
+    },
+    {
+      "year": 1973,
+      "event": "staffed_last",
+      "note": "No longer staffed after 1973, per the register. Firelookout.com says abandoned since the 1960s.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/garwood-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/garwood-butte-lookout/",
+        "https://www.firelookout.com/or/garwood.html"
+      ]
+    },
+    {
+      "year": 2012,
+      "event": "other",
+      "note": "Firefighters covered the whole cabin in Structure Protection Wrap.",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r06/umpqua/recreation/trails/garwood-butte-trail"
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 23, 2022",
-      "from": "nhlr"
+      "note": "Added to the National Historic Lookout Register, June 23, 2022.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/garwood-butte-lookout/"
     }
   ],
   "photos": [
@@ -103,6 +139,16 @@
       "kind": "register"
     },
     {
+      "label": "Garwood Butte Trail (U.S. Forest Service, Umpqua National Forest)",
+      "url": "https://www.fs.usda.gov/r06/umpqua/recreation/trails/garwood-butte-trail",
+      "kind": "reference"
+    },
+    {
+      "label": "Garwood Butte (Oregon Hikers Field Guide)",
+      "url": "https://www.oregonhikers.org/field_guide/Garwood_Butte",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -115,6 +161,11 @@
     {
       "label": "Garwood Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/garwood.html",
+      "kind": "site"
+    },
+    {
+      "label": "Garwood Butte on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/2023/08/24/garwood-butte/",
       "kind": "site"
     }
   ],
@@ -154,10 +205,46 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:garwood-butte",
+      "fields": [
+        "height_m"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:garwood-butte",
+      "fields": [
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-garwood-butte",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

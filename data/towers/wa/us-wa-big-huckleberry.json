@@ -13,8 +13,8 @@
   },
   "elevation_m": 1281.4,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -129,6 +129,16 @@
       "label": "Big Huckleberry on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/bighuckleberry.html",
       "kind": "site"
+    },
+    {
+      "label": "Big Huckleberry on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/big-huckleberry.html",
+      "kind": "site"
+    },
+    {
+      "label": "Big Huckleberry on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/big_huckleberry_mountain/gifford_pinchot_national_forest_321.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -140,6 +150,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -161,6 +172,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:big-huckleberry:45.8473:-121.7838",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:big-huckleberry",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-big-huckleberry-mountain-gifford-pinchot-national-forest-321",
       "fields": [
         "links"
       ]

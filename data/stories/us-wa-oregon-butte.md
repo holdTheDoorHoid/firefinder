@@ -1,0 +1,13 @@
+Oregon Butte rises as the high point of southeastern Washington's share of the Blue Mountains.[^3] Its lookout stands on the Umatilla National Forest, inside the Wenaha-Tucannon Wilderness.[^1] The cab was built in 1931 in the gable-roofed L-4 style.[^1][^2][^3] The National Historic Lookout Register says there were once 200 gable-roof L-4 lookouts across the Northwest, before 1933, and that fewer than 15 remain.[^1] A hiking guide also gives 1914 as the year the site was established, with the current structure dating from 1931.[^3] The register has listed the lookout since January 15, 1996.[^1]
+
+In August 1953 a Umatilla National Forest News item, quoted on a Washington lookouts history site, named Spike Armstrong as the lookout on Oregon Butte.[^5] It described his big dog, Shadrack, packing water and groceries to the lookout.[^5] The register says the cab was in active status until 1972. It was restored in 1980 and has been regularly staffed since.[^1]
+
+In July 2021 lightning started the Turkey Tail and Green Ridge fires, which were managed as a single blaze.[^3] According to one hiking guide, that fire burned over 40,000 acres of the Blue Mountains and led to the evacuation of Oregon Butte.[^3] The guide says the flames passed over the summit, but the cab survived thanks to protective fire wrap and retardant drops from aircraft. Trees within 100 yards were damaged.[^3] That account rests on this one guide, so treat it as reported rather than confirmed until Forest Service fire records are checked.
+
+Today the lookout is reached on foot or on horseback.[^4] Forest Service Trail #3134 runs about three miles from the Teepee Trailhead, crossing a ridge and a saddle on the way, and it is maintained for foot and horse use only because it lies inside the wilderness.[^4] The cab is staffed each summer.[^2][^3] A 2006 visit report on the register found it in good shape.[^1] We found no source saying whether the cab can be rented, so check with the Forest Service before planning a stay.
+
+[^1]: Oregon Butte Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/wa/oregon-butte-lookout/ (accessed 2026-10-08).
+[^2]: Oregon Butte Fire Lookout Cabin, Fire Lookout, https://www.firelookout.com/wa/oregonbutte.html (accessed 2026-10-08).
+[^3]: Oregon Butte - TrailChick, TrailChick, https://trailchick.com/wa-state-fire-lookouts/oregon-butte-lookout/ (accessed 2026-10-08).
+[^4]: Oregon Butte Trail #3134, USDA Forest Service Umatilla National Forest, https://www.fs.usda.gov/r06/umatilla/recreation/trails/oregon-butte-trail-3134 (accessed 2026-10-08).
+[^5]: Oregon Butte - FOREST LOOKOUTS, Washington Forest Lookouts, https://washingtonlookouts.weebly.com/oregon-butte.html (accessed 2026-10-08).

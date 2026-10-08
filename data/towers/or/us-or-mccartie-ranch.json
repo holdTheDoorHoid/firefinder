@@ -1,15 +1,17 @@
 {
   "id": "us-or-mccartie-ranch",
   "name": "McCartie Ranch Lookout Site",
-  "other_names": [],
+  "other_names": [
+    "Rodeo Butte"
+  ],
   "country": "US",
   "region": "OR",
   "county": "Lake",
   "location": {
-    "lat": 42.561154,
-    "lon": -121.055455,
+    "lat": 42.55991,
+    "lon": -121.03651,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 1680.4,
   "kind": "tower",
@@ -74,6 +76,11 @@
       "label": "McCartie Ranch on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/mccartieranch.html",
       "kind": "site"
+    },
+    {
+      "label": "Rodeo Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/rodeo-butte.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -82,7 +89,6 @@
       "key": "fflos:US 1842",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "registers",
@@ -96,6 +102,7 @@
       "source": "ffla",
       "key": "ffla:or:mccartie-ranch:42.5599:-121.0365",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -108,19 +115,19 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:rodeo-butte",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
-        {
-          "source": "fflos",
-          "value": {
-            "lat": 42.561154,
-            "lon": -121.055455
-          }
-        },
         {
           "source": "ffla",
           "value": {
@@ -129,10 +136,10 @@
           }
         },
         {
-          "source": "firelookout_com",
+          "source": "fflos",
           "value": {
-            "lat": 42.55991,
-            "lon": -121.03651
+            "lat": 42.561154,
+            "lon": -121.055455
           }
         }
       ],

@@ -13,8 +13,8 @@
   },
   "elevation_m": 1619.1,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -81,6 +81,11 @@
       "label": "Twin Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/twinbutte.html",
       "kind": "site"
+    },
+    {
+      "label": "Twin Buttes on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/twin-buttes.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -92,6 +97,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -113,6 +119,13 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:or:twin-butte:44.3308:-122.2527",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:twin-buttes",
       "fields": [
         "links"
       ]

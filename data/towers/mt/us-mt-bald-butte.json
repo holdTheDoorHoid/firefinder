@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Helena National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Bald Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/baldbutte398.html",
       "kind": "site"
+    },
+    {
+      "label": "Bald Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/bald-butte.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -67,6 +72,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:bald-butte:46.7203:-112.3417",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:bald-butte",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

@@ -13,11 +13,11 @@
   },
   "elevation_m": 1495.7,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 4.3,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -105,6 +105,16 @@
       "label": "Sleeping Beauty on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/sleepingbeauty.html",
       "kind": "site"
+    },
+    {
+      "label": "Sleeping Beauty on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/sleeping-beauty.html",
+      "kind": "site"
+    },
+    {
+      "label": "Sleeping Beauty on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/washington_fire_lookouts/sleeping_beauty_lookout/gifford_pinchot_260.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -116,6 +126,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -137,6 +148,21 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:sleeping-beauty:46.0929:-121.6493",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:sleeping-beauty",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-sleeping-beauty-lookout-gifford-pinchot-260",
       "fields": [
         "links"
       ]

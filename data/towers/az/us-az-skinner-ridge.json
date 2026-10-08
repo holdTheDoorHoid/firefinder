@@ -13,10 +13,10 @@
   },
   "elevation_m": null,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "Aermotor MC-39 tower with 7x7 steel cab",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -37,12 +37,25 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1929,
+      "event": "built",
+      "note": "Steel tower originally erected at Skinner Ridge; still standing there in 1941, then moved to Encino, New Mexico, in 1950.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    }
+  ],
   "photos": [],
   "links": [
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/az/",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Skinner Ridge",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf",
       "kind": "association"
     }
   ],
@@ -56,6 +69,16 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:az:skinner-ridge",
+      "fields": [
+        "material",
+        "design",
+        "events",
         "links"
       ]
     }

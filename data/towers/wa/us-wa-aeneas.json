@@ -19,8 +19,8 @@
   "material": "wood",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "L-4",
+  "height_m": 6.1,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -59,6 +59,13 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: May 1, 1995",
       "from": "nhlr"
+    },
+    {
+      "year": 2024,
+      "event": "removed",
+      "note": "Toppled with a bulldozer in late 2024 by the State of Washington, which replaced it with a tower carrying cameras.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2025/02/cr-wa-2024.pdf"
     }
   ],
   "photos": [
@@ -106,8 +113,18 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/wa/aeneas-lookout/",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Washington lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wa/",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Aeneas Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2025/02/cr-wa-2024.pdf",
       "kind": "association"
     },
     {
@@ -176,11 +193,28 @@
       ]
     },
     {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:wa:aeneas",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/987023831",
       "fields": [
         "registers",
         "access",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:aeneas-mountain",
+      "fields": [
+        "design",
+        "height_m",
         "links"
       ]
     }

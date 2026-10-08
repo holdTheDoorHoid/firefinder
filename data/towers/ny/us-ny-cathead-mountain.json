@@ -17,11 +17,11 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 4.6,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "June 1910:",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,13 +37,38 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1916,
+      "event": "replaced",
+      "note": "The current steel tower replaced a wooden tower that had been in use since 1910.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2020/2020%20Jul%20final.pdf"
+    },
+    {
+      "year": 1929,
+      "event": "modified",
+      "note": "The Aermotor LL25 tower was retrofitted with interior stairs in 1929.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2020/2020%20Jul%20final.pdf"
+    }
+  ],
   "photos": [],
   "links": [
     {
       "label": "FFLA New York lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ny/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association, New York State Chapter: work on Cathead Mountain",
+      "url": "https://www.nysffla.org/News2020/2020%20Jul%20final.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Cathead Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/cathead-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +81,23 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:cathead-mountain",
+      "fields": [
+        "height_m",
+        "agency",
+        "links"
+      ]
+    },
+    {
+      "source": "nysffla_projects",
+      "key": "nysffla_projects:ny:cathead-mountain",
+      "fields": [
+        "events",
         "links"
       ]
     }

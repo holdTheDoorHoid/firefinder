@@ -17,12 +17,12 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 5.5,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Umpqua National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Flat Rock on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/flatrock.html",
       "kind": "site"
+    },
+    {
+      "label": "Flat Rock on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/flat-rock.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +73,16 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:flat-rock:43.1859:-122.7185",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:flat-rock",
+      "fields": [
+        "height_m",
+        "agency",
+        "ownership",
         "links"
       ]
     }

@@ -17,7 +17,7 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 152.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -35,7 +35,7 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
+    "status": "volunteer",
     "as_of": null
   },
   "visit": {
@@ -52,10 +52,38 @@
       "from": "nhlr"
     },
     {
+      "year": 1959,
+      "event": "burned",
+      "note": "Destroyed by the Morton fire; the lookout on duty, Aleta Johnson, was airlifted out.",
+      "from": "scmf_lookouts",
+      "source_url": "https://mountainsfoundation.org/programs/fire-lookouts/fl-seven-lookouts/"
+    },
+    {
+      "year": 1961,
+      "event": "rebuilt",
+      "note": "Rebuilt; it closed again in the 1970s.",
+      "from": "scmf_lookouts",
+      "source_url": "https://mountainsfoundation.org/programs/fire-lookouts/fl-seven-lookouts/"
+    },
+    {
+      "year": 2001,
+      "event": "restored",
+      "note": "Refurbished and put back in service.",
+      "from": "scmf_lookouts",
+      "source_url": "https://mountainsfoundation.org/programs/fire-lookouts/fl-seven-lookouts/"
+    },
+    {
       "year": 2006,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: July 27, 2006",
       "from": "nhlr"
+    },
+    {
+      "year": 2014,
+      "event": "staffed",
+      "note": "Lookout was kept open all year round because of high fire danger.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-sanban-2014.pdf"
     }
   ],
   "photos": [
@@ -127,8 +155,28 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=703",
+      "kind": "register"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
+      "kind": "association"
+    },
+    {
+      "label": "Southern California Mountains Foundation: work on Morton Peak Lookout",
+      "url": "https://mountainsfoundation.org/programs/fire-lookouts/fl-seven-lookouts/",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Morton Peak Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-sanban-2014.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA California-South chapter: Southern California lookouts",
+      "url": "https://www.firelookouthost.org/southern-california",
       "kind": "association"
     },
     {
@@ -139,6 +187,11 @@
     {
       "label": "Southern California Mountains Foundation - Fire Lookout Host Program",
       "url": "https://mountainsfoundation.org/programs/fire-lookouts",
+      "kind": "site"
+    },
+    {
+      "label": "Morton Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/morton-peak.html",
       "kind": "site"
     }
   ],
@@ -165,6 +218,39 @@
       "fields": [
         "kind",
         "status",
+        "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "scmf_lookouts",
+      "key": "scmf_lookouts:ca:morton-peak",
+      "fields": [
+        "staffing",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:morton-peak",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:morton-peak",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_groups",
+      "key": "ffla_groups:ca:socal-morton-peak",
+      "fields": [
         "registers",
         "links"
       ]

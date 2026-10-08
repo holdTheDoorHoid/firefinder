@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Gifford Pinchot National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,16 @@
       "label": "Madcat Meadow on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/madcatmeadow.html",
       "kind": "site"
+    },
+    {
+      "label": "Madcat Meadow on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/madcat-meadow.html",
+      "kind": "site"
+    },
+    {
+      "label": "Madcat Meadow on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/fire_lookouts/madcat_meadow/patrol_station_042.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -67,6 +77,22 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:madcat-meadow:46.1710:-121.5524",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:madcat-meadow",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:fire-lookouts-madcat-meadow-patrol-station-042",
       "fields": [
         "links"
       ]

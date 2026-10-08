@@ -2,21 +2,22 @@
   "id": "us-ca-ship-mountain-four-brothers",
   "name": "Ship Mountain (Four Brothers) Lookout",
   "other_names": [
-    "Ship Mountain"
+    "Ship Mountain",
+    "Ship Mt."
   ],
   "country": "US",
   "region": "CA",
   "county": "Del Norte",
   "location": {
-    "lat": 41.735609,
-    "lon": -123.792981,
+    "lat": 41.72813,
+    "lon": -123.79548,
     "precision": "exact",
-    "from": "nhlr"
+    "from": "ffla"
   },
   "elevation_m": 1621.5,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [
     "aws"
   ],
@@ -54,6 +55,20 @@
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
+    },
+    {
+      "year": 2007,
+      "event": "assessed",
+      "note": "Surveyed to see whether it could be moved from California to Oregon for restoration; waiting on transfer of ownership.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/10/cr-or-2007.pdf"
+    },
+    {
+      "year": 2008,
+      "event": "replaced",
+      "note": "New permanent lookout finally built, replacing a portable trailer lookout used on the site since 1973.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-wdep-2008.pdf"
     },
     {
       "year": 2019,
@@ -146,6 +161,16 @@
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Ship Mountain (Four Brothers) Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-wdep-2008.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Ship Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/ship-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -154,9 +179,9 @@
       "key": "nhlr:US 1313",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
+        "material",
         "roles",
         "registers",
         "agency",
@@ -170,9 +195,25 @@
       "source": "ffla",
       "key": "ffla:ca:ship-mountain:41.7281:-123.7955",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:ca:ship-mountain-four-brothers",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:ship-mountain",
+      "fields": [
         "links"
       ]
     }
@@ -182,6 +223,13 @@
       "field": "location",
       "values": [
         {
+          "source": "ffla",
+          "value": {
+            "lat": 41.72813,
+            "lon": -123.79548
+          }
+        },
+        {
           "source": "nhlr",
           "value": {
             "lat": 41.735609,
@@ -189,10 +237,10 @@
           }
         },
         {
-          "source": "ffla",
+          "source": "ffla_west_reports",
           "value": {
-            "lat": 41.72813,
-            "lon": -123.79548
+            "lat": 41.73561,
+            "lon": -123.79298
           }
         }
       ],

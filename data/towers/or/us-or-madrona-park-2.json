@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "OR",
-  "county": null,
+  "county": "Multnomah",
   "location": {
     "lat": 45.55753,
     "lon": -122.69263,
@@ -21,7 +21,7 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Portland Parks Bureau",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -44,6 +44,11 @@
       "label": "Madrona Park on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/madronapark.html",
       "kind": "site"
+    },
+    {
+      "label": "Madrona Park on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/madrona-park.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,10 +61,19 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:madrona-park",
+      "fields": [
+        "county",
+        "agency",
+        "links"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

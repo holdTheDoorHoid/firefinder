@@ -13,8 +13,8 @@
   },
   "elevation_m": 1191.2,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -132,6 +132,11 @@
       "kind": "association"
     },
     {
+      "label": "Banner Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://californialookouts.weebly.com/banner-mountain.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap node 7579407569",
       "url": "https://www.openstreetmap.org/node/7579407569",
       "kind": "osm"
@@ -146,6 +151,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -166,6 +172,13 @@
     {
       "source": "osm",
       "key": "osm:node/7579407569",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:banner-mountain",
       "fields": [
         "links"
       ]

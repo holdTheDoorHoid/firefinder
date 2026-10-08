@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Wallowa-Whitman National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "West Eagle on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/westeagle.html",
       "kind": "site"
+    },
+    {
+      "label": "West Eagle on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/west-eagle.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -67,6 +72,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:west-eagle:45.1031:-117.4261",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:west-eagle",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

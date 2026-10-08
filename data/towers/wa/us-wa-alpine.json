@@ -3,7 +3,8 @@
   "name": "Alpine Lookout",
   "summary": "Forest Service lookout on Nason Ridge, Chelan County. A 1936 L-4 cab was replaced by an R-6 cab in 1975; a 2019 plan says the 1936 building still stands.",
   "other_names": [
-    "Alpine (Nason Ridge)"
+    "Alpine (Nason Ridge)",
+    "Alpine Mountain"
   ],
   "country": "US",
   "region": "WA",
@@ -95,6 +96,17 @@
       "note": "Date Registered July 1, 1995",
       "from": "research",
       "source_url": "http://nhlr.org/lookouts/us/wa/alpine-lookout/"
+    },
+    {
+      "year": 2006,
+      "event": "restored",
+      "note": "New hip roof installed to protect the lookout better from heavy snow.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-we-2006.pdf",
+      "source_urls": [
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-we-2006.pdf",
+        "https://firelookout.org/wp-content/uploads/2024/10/cr-ewa-2007.pdf"
+      ]
     }
   ],
   "photos": [
@@ -157,12 +169,27 @@
       "year": 2007,
       "w": 800,
       "h": 533
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://trailchick-media.s3.us-west-2.amazonaws.com/IMG_0380.jpg",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/alpine-mountain-lookout/",
+      "credit": "TrailChick Washington lookout guide (trailchick.com)",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
     {
       "label": "NHLR register entry US 123 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wa/alpine-lookout/",
+      "kind": "register"
+    },
+    {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=168",
       "kind": "register"
     },
     {
@@ -181,8 +208,28 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Alpine Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/10/cr-ewa-2007.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Alpine (Nason Ridge) on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/alpine.html",
+      "kind": "site"
+    },
+    {
+      "label": "Alpine on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/alpine.html",
+      "kind": "site"
+    },
+    {
+      "label": "Alpine Mountain in the TrailChick Washington lookout guide",
+      "url": "https://www.trailchick.com/wa-state-fire-lookouts/alpine-mountain-lookout/",
+      "kind": "site"
+    },
+    {
+      "label": "Alpine Lookout on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_climbing/alpine_lookout/nason_ridge_143.htm",
       "kind": "site"
     },
     {
@@ -234,12 +281,42 @@
       ]
     },
     {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:wa:alpine",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/235689615",
       "fields": [
         "material",
         "registers",
         "access",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:alpine",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "trailchick_wa",
+      "key": "trailchick_wa:wa:alpine-mountain-lookout",
+      "fields": [
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-climbing-alpine-lookout-nason-ridge-143",
+      "fields": [
         "links"
       ]
     },
@@ -268,6 +345,10 @@
         },
         {
           "source": "osm",
+          "value": 1975
+        },
+        {
+          "source": "trailchick_wa",
           "value": 1975
         }
       ],

@@ -16,8 +16,8 @@
   },
   "elevation_m": 1013.5,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": "35-ft steel Aermotor LS40 tower",
   "height_m": 11.0,
@@ -95,6 +95,24 @@
       "source_url": "https://en.wikipedia.org/wiki/Vanderwhacker_Mountain"
     },
     {
+      "year": 2003,
+      "event": "restored",
+      "note": "A local group working with the state painted the Vanderwacker Mountain tower in summer 2003, with AmeriCorps students doing much of the work.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ny-2003.pdf",
+      "source_urls": [
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-ny-2003.pdf",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-ny-2004.pdf"
+      ]
+    },
+    {
+      "year": 2004,
+      "event": "restored",
+      "note": "A local group began restoring the tower in 2000 and it was officially reopened in 2004; the observer's cabin has since fallen into disrepair.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/Newsletters/2018-11.pdf"
+    },
+    {
       "year": 2005,
       "event": "restored",
       "note": "A September 2005 Lake Placid News article describes the tower as restored with a state Environmental Protection Fund grant; the year the work was done is not stated",
@@ -140,11 +158,6 @@
       "kind": "reference"
     },
     {
-      "label": "Vanderwacker Mountain (Forest Lookouts (easternuslookouts.weebly.com))",
-      "url": "https://easternuslookouts.weebly.com/vanderwacker-mountain.html",
-      "kind": "reference"
-    },
-    {
       "label": "Vanderwhacker: Great trail climbs to glorious view from restored Adirondack fire tower (Lake Placid News (via Adirondack Architectural Heritage))",
       "url": "https://www.aarch.org/wp-content/uploads/2014/08/050916VLPVanderwhackertower1.pdf",
       "kind": "reference"
@@ -160,6 +173,16 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association, New York State Chapter: work on Vandewhacker Fire Tower",
+      "url": "https://www.nysffla.org/Newsletters/2018-11.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Vandewhacker Fire Tower",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ny-2004.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Vanderwhacker Mountain Fire Tower on andyarthur.org (Andy Arthur)",
       "url": "https://andyarthur.org/explore/vanderwhacker",
       "kind": "site"
@@ -167,6 +190,11 @@
     {
       "label": "andyarthur.org NYS DEC Firetowers list",
       "url": "https://andyarthur.org/p/138058",
+      "kind": "site"
+    },
+    {
+      "label": "Vanderwacker Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/vanderwacker-mountain.html",
       "kind": "site"
     },
     {
@@ -184,6 +212,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -206,6 +235,30 @@
       "key": "andyarthur_ny:vanderwhacker-mountain-fire-tower:43.8982:-74.0959",
       "fields": [
         "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:vanderwacker-mountain",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "nysffla_projects",
+      "key": "nysffla_projects:ny:vandewhacker",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:ny:vandewhacker",
+      "fields": [
+        "events",
         "links"
       ]
     },
@@ -234,7 +287,23 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1918
+        },
+        {
+          "source": "nysffla_projects",
+          "value": 1911
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "research": {
     "researched": "2026-10-08",
     "checked": "2026-10-08",

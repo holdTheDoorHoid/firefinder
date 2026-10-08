@@ -1,6 +1,7 @@
 {
   "id": "us-tn-sewanee",
   "name": "Sewanee Fire Tower",
+  "summary": "A 60-ft steel lookout built by the CCC in 1933-34 in Franklin County, Tennessee; manned until the 1970s, now closed to climbers and used only for maintenance.",
   "other_names": [],
   "country": "US",
   "region": "TN",
@@ -13,11 +14,11 @@
   },
   "elevation_m": 621.5,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "60-ft steel truss tower with 7x7-ft cab; register says International Derrick, nomination says Aermotor MC-39 type",
+  "height_m": 18.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -43,8 +44,8 @@
   "agency": "Tennessee Division of Forestry",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Tennessee Division of Forestry site. The nomination (based on 2014 information) says forestry staff barred entry to the cab interior. No public visiting arrangement found."
   },
   "staffing": {
     "status": "unknown",
@@ -53,21 +54,62 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "No public visiting arrangement found in the sources; the nomination reports cab entry prohibited by forestry staff."
   },
   "rental": null,
   "events": [
     {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register gives build year 1933 and says built by the CCC; nomination says construction began in 1933",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/sewanee-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/tn/sewanee-fire-tower/",
+        "https://npgallery.nps.gov/GetAsset/2007215e-cb5d-4328-b850-d52b968f853e"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "Nomination says construction was completed in 1934 by the CCC",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/GetAsset/2007215e-cb5d-4328-b850-d52b968f853e"
+    },
+    {
+      "year": 1934,
+      "event": "other",
+      "note": "State forestry service contract with Adolph Hunziker dated July 13, 1934, allowing construction, use and maintenance of the lookout on the property",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/GetAsset/2007215e-cb5d-4328-b850-d52b968f853e"
+    },
+    {
+      "year": 1950,
+      "event": "other",
+      "note": "Radio tower #1 and radio equipment building erected about 1950 near the lookout",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/GetAsset/2007215e-cb5d-4328-b850-d52b968f853e"
+    },
+    {
+      "year": 1975,
+      "event": "staffed_last",
+      "note": "Approximate: nomination says the tower was constantly manned until the 1970s and no longer used for observance since the mid-1970s",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/GetAsset/2007215e-cb5d-4328-b850-d52b968f853e"
+    },
+    {
+      "year": 2010,
+      "event": "other",
+      "note": "Radio/cellular lattice tower constructed about 2010 on the site",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/GetAsset/2007215e-cb5d-4328-b850-d52b968f853e"
     },
     {
       "year": 2016,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 20, 2016",
-      "from": "nhlr"
+      "note": "Registered March 20, 2016 as US 1120, TN 27",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/sewanee-fire-tower/"
     }
   ],
   "photos": [
@@ -151,12 +193,22 @@
       "kind": "register"
     },
     {
+      "label": "Sewanee Fire Lookout Tower, National Register of Historic Places nomination (National Park Service (NPGallery))",
+      "url": "https://npgallery.nps.gov/GetAsset/2007215e-cb5d-4328-b850-d52b968f853e",
+      "kind": "reference"
+    },
+    {
+      "label": "Sewanee Fire Lookout Tower, NRHP asset detail (NRIS 15000116) (National Park Service (NPGallery))",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/15000116",
+      "kind": "reference"
+    },
+    {
       "label": "Sewanee (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/towers/",
       "kind": "site"
     },
     {
-      "label": "SEWANEE (easternuslookouts.weebly.com)",
+      "label": "Sewanee (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/sewanee.html",
       "kind": "site"
     },
@@ -176,6 +228,7 @@
         "county",
         "elevation_m",
         "kind",
+        "material",
         "status",
         "registers",
         "agency",
@@ -207,10 +260,32 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tn-sewanee",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

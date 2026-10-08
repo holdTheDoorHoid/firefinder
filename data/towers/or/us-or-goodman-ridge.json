@@ -135,6 +135,16 @@
       "label": "Goodman Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/goodmanridge.html",
       "kind": "site"
+    },
+    {
+      "label": "Goodman Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/goodman-ridge.html",
+      "kind": "site"
+    },
+    {
+      "label": "Goodman Ridge on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/2012/09/27/goodman-ridge/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -172,9 +182,44 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:goodman-ridge",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:goodman-ridge",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 45.58912,
+            "lon": -118.20925
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 45.61097,
+            "lon": -118.21884
+          }
+        }
+      ],
+      "distance_m": 2542,
+      "note": null
+    },
     {
       "field": "status",
       "values": [
@@ -188,6 +233,10 @@
         },
         {
           "source": "firelookout_com",
+          "value": "standing"
+        },
+        {
+          "source": "cherylhill_oregon",
           "value": "standing"
         }
       ],

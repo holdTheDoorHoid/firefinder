@@ -1,0 +1,14 @@
+Sid Ormsbee Lookout stands on Pinyon Peak, roughly 2,250 feet up, on private land inside the Santa Lucia Preserve in Monterey County.[^1][^3] The state announced the name in 1946, while the tower was still unbuilt, and the lookout was completed in 1948.[^1][^3] A July 1948 newspaper report covered its dedication.[^3] It honors Sidney Chase Ormsbee, a state forestry worker who became an Army Air Forces lieutenant and died in August 1943, when anti-aircraft fire brought down his plane off Cape Faro in Sicily.[^3]
+
+The register describes a 16-by-16-foot octagonal cab on a 30-foot enclosed tower.[^1] A lookout history site names the cab as an 809R observation cab on a 30-foot enclosed tower, a model name the register does not use.[^2] A 1993 Cal Fire report, as Monterey County Now relays it, says the new tower took the place of an older lookout on nearby Mt. Toro.[^3]
+
+Monterey County Now says the lookout was decommissioned sometime in the 1980s, though the exact year is unclear.[^3] A Peakbagging page, with a photo dated May 2011, says the tower is no longer used to watch for fires and is slated for preservation.[^4]
+
+The lookout went on the National Historic Lookout Register in June 2010 as US 883.[^1] Two years later, the Monterey County Planning Commission approved a non-commercial telecommunications tower to be affixed to the lookout, to help with emergency communications for firefighters in the Santa Lucia Mountains.[^3] The article does not say whether that equipment was installed.[^3]
+
+Today the tower stands on private land. The register says access is by permission only, and the Monterey County Now article says access requires permission from the Preserve.[^1][^3] A locked gate sits on the road to the lookout.[^4] A plaque at its base honors Ormsbee.[^3] One explanation for the name, offered by the director of the Santa Lucia Conservancy, is that he spent his childhood living in an older lookout on the peak. The article says there does not appear to be evidence that he or his parents ever lived on the peak, and it sets the historical record against that account.[^3] Anyone who wants to see it should ask the Preserve first, and should not climb the tower without permission.
+
+[^1]: Sid Ormsbee Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/ca/sid-ormsbee-lookout/ (accessed 2026-10-08).
+[^2]: Pinyon Peak (Sid Ormsbee) - FOREST LOOKOUTS, Forest Lookouts, https://californialookouts.weebly.com/pinyon-peak-sid-ormsbee.html (accessed 2026-10-08).
+[^3]: The history of Carmel Valley's long-retired fire lookout tower tells a World War II story, Monterey County Now, https://www.montereycountynow.com/people/831/the-history-of-carmel-valley-s-long-retired-fire-lookout-tower-tells-a-world-war/article_9fdeb950-6f78-11e8-b11e-cb085779ed95.html (accessed 2026-10-08).
+[^4]: Pinyon Peak Lookout, California, Peakbagging, http://www.peakbagging.com/CALookoutPhotos/PinyonPk.html (accessed 2026-10-08).

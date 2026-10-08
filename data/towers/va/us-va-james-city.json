@@ -2,7 +2,8 @@
   "id": "us-va-james-city",
   "name": "James City Fire Tower",
   "other_names": [
-    "James City (Toano)"
+    "James City (Toano)",
+    "Toano"
   ],
   "country": "US",
   "region": "VA",
@@ -15,11 +16,11 @@
   },
   "elevation_m": 39.6,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -84,6 +85,11 @@
       "label": "FFLA Virginia lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/va/",
       "kind": "association"
+    },
+    {
+      "label": "Toano (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/toano.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -95,6 +101,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -109,6 +116,14 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:va:toano",
+      "fields": [
+        "height_m",
         "links"
       ]
     }

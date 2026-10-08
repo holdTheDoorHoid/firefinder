@@ -18,7 +18,7 @@
   "material_from": "nhlr",
   "roles": [],
   "design": "L-4 cab with catwalk on a 10-ft treated timber tower (NHLR: 1952); firelookout.com describes an 8-ft wooden L-4 cab from 1933",
-  "height_m": null,
+  "height_m": 6.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -159,6 +159,11 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=557",
+      "kind": "register"
+    },
+    {
       "label": "Devil's Peak Lookout (The Mountaineers)",
       "url": "https://www.mountaineers.org/activities/routes-places/devils-peak-lookout",
       "kind": "reference"
@@ -181,6 +186,16 @@
     {
       "label": "Devils Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/devilspeak.html",
+      "kind": "site"
+    },
+    {
+      "label": "Devil's Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/devils-peak.html",
+      "kind": "site"
+    },
+    {
+      "label": "Devils Peak on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "http://cherylhill.net/firelookouts/2012/09/27/devils-peak/",
       "kind": "site"
     },
     {
@@ -234,6 +249,22 @@
       ]
     },
     {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:devils-peak",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:devils-peak",
+      "fields": [
+        "registers",
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:us-or-devils-peak",
       "fields": [
@@ -260,6 +291,10 @@
         {
           "source": "firelookout_com",
           "value": 1924
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1949
         }
       ],
       "distance_m": null,

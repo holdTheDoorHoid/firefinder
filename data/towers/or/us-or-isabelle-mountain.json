@@ -15,8 +15,8 @@
   },
   "elevation_m": 1369.8,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -95,6 +95,11 @@
       "label": "Mt. Isabelle on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/mtisabelle.html",
       "kind": "site"
+    },
+    {
+      "label": "Mount Isabelle on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/mount-isabelle.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -106,6 +111,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -126,6 +132,13 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:or:mt-isabelle:42.3032:-123.1045",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:mount-isabelle",
       "fields": [
         "links"
       ]

@@ -1,7 +1,9 @@
 {
   "id": "us-wa-darrington-r-s",
   "name": "Darrington R.S.",
-  "other_names": [],
+  "other_names": [
+    "Darrington R.S. (Training LO)"
+  ],
   "country": "US",
   "region": "WA",
   "county": "Snohomish",
@@ -81,6 +83,16 @@
       "year": 2009,
       "w": 778,
       "h": 584
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://trailchick-media.s3.us-west-2.amazonaws.com/darrington-ranger-station.jpg",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/darrington-rs-lookout/",
+      "credit": "TrailChick Washington lookout guide (trailchick.com)",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -92,6 +104,21 @@
     {
       "label": "Darrington R.S. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/darringtonrs.html",
+      "kind": "site"
+    },
+    {
+      "label": "Darrington Ranger Station on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/darrington-ranger-station.html",
+      "kind": "site"
+    },
+    {
+      "label": "Darrington Ranger Station in the TrailChick Washington lookout guide",
+      "url": "https://www.trailchick.com/wa-state-fire-lookouts/darrington-rs-lookout/",
+      "kind": "site"
+    },
+    {
+      "label": "Darrington R.S. (Training LO) on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/darrington_ranger_station/lookout_313.htm",
       "kind": "site"
     }
   ],
@@ -125,9 +152,70 @@
         "events",
         "photos"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:darrington-ranger-station",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "trailchick_wa",
+      "key": "trailchick_wa:wa:darrington-rs-lookout",
+      "fields": [
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-darrington-ranger-station-lookout-313",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "ffla",
+          "value": "gone"
+        },
+        {
+          "source": "firelookout_com",
+          "value": "gone"
+        },
+        {
+          "source": "trailchick_wa",
+          "value": "standing"
+        },
+        {
+          "source": "willhiteweb_wa",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "firelookout.com lists it, but not on its map of standing lookouts."
+    },
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "firelookout_com",
+          "value": 1932
+        },
+        {
+          "source": "trailchick_wa",
+          "value": 1916
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

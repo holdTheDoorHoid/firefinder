@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Clearwater National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -61,6 +61,11 @@
       "label": "Doris Point Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/doris-point-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Doris Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/doris-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -88,6 +93,15 @@
       "key": "idaho_fl:doris-point-lookout:46.5691:-115.4179",
       "fields": [
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:doris-point",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

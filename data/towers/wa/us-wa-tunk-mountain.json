@@ -29,7 +29,7 @@
     }
   ],
   "agency": "Washington Dept. of Natural Resources",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -50,6 +50,20 @@
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
+    },
+    {
+      "year": 2005,
+      "event": "restored",
+      "note": "Chapter took over local management of the lookout and carried out some maintenance.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-we-2005.pdf"
+    },
+    {
+      "year": 2005,
+      "event": "staffed",
+      "note": "Used for fire detection for the first time in many years; a paid contractor staffed it for about a month while Bonaparte was closed for renovation.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-we-2005.pdf"
     },
     {
       "year": 2006,
@@ -94,6 +108,16 @@
       "year": 2000,
       "w": 319,
       "h": 537
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://trailchick-media.s3.us-west-2.amazonaws.com/IMG_7498-1.jpg",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/tunk-mountain-lookout/",
+      "credit": "TrailChick Washington lookout guide (trailchick.com)",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -108,8 +132,28 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Tunk Mountain Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-we-2005.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Tunk Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/tunk.html",
+      "kind": "site"
+    },
+    {
+      "label": "Tunk Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/tunk-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Tunk Mountain in the TrailChick Washington lookout guide",
+      "url": "https://www.trailchick.com/wa-state-fire-lookouts/tunk-mountain-lookout/",
+      "kind": "site"
+    },
+    {
+      "label": "Tunk Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/tunk_mountain/lookout_104.htm",
       "kind": "site"
     }
   ],
@@ -149,6 +193,37 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:wa:tunk-mountain",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:tunk-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "trailchick_wa",
+      "key": "trailchick_wa:wa:tunk-mountain-lookout",
+      "fields": [
+        "ownership",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-tunk-mountain-lookout-104",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
@@ -162,13 +237,17 @@
         {
           "source": "firelookout_com",
           "value": 1933
+        },
+        {
+          "source": "trailchick_wa",
+          "value": 1966
         }
       ],
       "distance_m": null,
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

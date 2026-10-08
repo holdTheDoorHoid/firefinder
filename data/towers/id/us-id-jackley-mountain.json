@@ -16,8 +16,8 @@
   },
   "elevation_m": 2667.3,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": "L-4",
   "height_m": null,
@@ -165,11 +165,6 @@
       "kind": "register"
     },
     {
-      "label": "Jackley - Forest Lookouts (Idaho)",
-      "url": "https://idaholookouts.weebly.com/jackley.html",
-      "kind": "reference"
-    },
-    {
       "label": "Alton Harrington (Idaho Fire Lookouts)",
       "url": "https://www.idahofirelookouts.com/lookout-staff/alton-harrington/",
       "kind": "reference"
@@ -190,6 +185,11 @@
       "kind": "site"
     },
     {
+      "label": "Jackley Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/jackley.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap way 964663243",
       "url": "https://www.openstreetmap.org/way/964663243",
       "kind": "osm"
@@ -204,6 +204,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -240,6 +241,13 @@
     {
       "source": "osm",
       "key": "osm:way/964663243",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:jackley",
       "fields": [
         "links"
       ]

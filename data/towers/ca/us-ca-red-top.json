@@ -1,6 +1,7 @@
 {
   "id": "us-ca-red-top",
   "name": "Red Top Lookout",
+  "summary": "Madera County lookout, construction dated to 1928 (the register gives 1934); retired in 1985; on private land; sources disagree on whether it was torn down in 2010.",
   "other_names": [
     "Redtop Fire Lookout"
   ],
@@ -18,10 +19,10 @@
   "material": "wood",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "Timber tower with a matching BC-301 cab, two stories per the register; fire-lookouts.org describes three stories",
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Sources disagree. The register says it was still standing in 2018; fire-lookouts.org says the owner tore it down in 2010. The site is private land.",
   "registers": [
     {
       "register": "NHLR",
@@ -33,20 +34,46 @@
   "agency": "California Department of Forestry and Fire Protection (Cal Fire MMU)",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "On private land. Fire-lookouts.org says there is no public access; the register says public access is supposed to be restricted."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1985"
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Private land; do not visit without the owner's permission."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1928,
+      "event": "built",
+      "note": "Construction set for June 1928 (newspaper reports, June 16-21) with donated lumber, glass for four sides, and volunteer labor under State Forest Ranger J.E. Wofford; the register gives 1934 and fire-lookouts.org gives about 1938",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/red-top.html",
+      "source_urls": [
+        "https://californialookouts.weebly.com/red-top.html",
+        "http://nhlr.org/lookouts/us/ca/red-top-lookout/",
+        "http://www.fire-lookouts.org/cali/redtop_mtn/index.htm"
+      ]
+    },
+    {
+      "year": 1929,
+      "event": "staffed_first",
+      "note": "County and State agree to maintain a lookout on Red Top Mountain; State covers costs above $1,500",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/red-top.html"
+    },
+    {
+      "year": 1933,
+      "event": "staffed",
+      "note": "Clarence Reed completes the 1933 season (dated November 1, 1933); he is named as the county's lookout in 1934",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/red-top.html"
+    },
     {
       "year": 1934,
       "event": "built",
@@ -54,10 +81,36 @@
       "from": "nhlr"
     },
     {
+      "year": 1942,
+      "event": "other",
+      "note": "State forestry division prepares a new road to the station, to make it more accessible to automobiles (November 14, 1942 report)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/red-top.html"
+    },
+    {
+      "year": 1985,
+      "event": "abandoned",
+      "note": "Ended use as a lookout; tower turned over to the property owner",
+      "from": "research",
+      "source_url": "http://www.fire-lookouts.org/cali/redtop_mtn/index.htm"
+    },
+    {
+      "year": 2010,
+      "event": "removed",
+      "note": "Fire-lookouts.org says the owner tore it down in 2010; the register says it was still standing in 2018",
+      "from": "research",
+      "source_url": "http://www.fire-lookouts.org/cali/redtop_mtn/index.htm",
+      "source_urls": [
+        "http://www.fire-lookouts.org/cali/redtop_mtn/index.htm",
+        "http://nhlr.org/lookouts/us/ca/red-top-lookout/"
+      ]
+    },
+    {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 23, 2019",
-      "from": "nhlr"
+      "note": "Registered December 23, 2019",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/red-top-lookout/"
     }
   ],
   "photos": [
@@ -166,12 +219,37 @@
         "ownership",
         "photos"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:red-top",
+      "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-red-top",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "ffla",
           "value": "standing"
@@ -186,7 +264,7 @@
         }
       ],
       "distance_m": null,
-      "note": "NHLR lists lookouts that were standing when registered."
+      "note": "Research (2026-10-08) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
     },
     {
       "field": "built",
@@ -204,7 +282,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

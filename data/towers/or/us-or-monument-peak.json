@@ -13,8 +13,8 @@
   },
   "elevation_m": 1440.2,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -81,6 +81,11 @@
       "label": "Monument Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/monumentpeak.html",
       "kind": "site"
+    },
+    {
+      "label": "Monument Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/monument-peak1.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -92,6 +97,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -113,6 +119,13 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:or:monument-peak:44.6985:-122.3273",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:monument-peak1",
       "fields": [
         "links"
       ]

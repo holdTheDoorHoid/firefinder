@@ -163,11 +163,6 @@
       "kind": "register"
     },
     {
-      "label": "Forest Fire Lookout Association 2014 report (PDF)",
-      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-idnmt-2014.pdf",
-      "kind": "reference"
-    },
-    {
       "label": "Clearwater National Forest Lookouts (USDA Forest Service)",
       "url": "https://www.fs.usda.gov/media/259185",
       "kind": "reference"
@@ -178,6 +173,11 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Balancing Rock Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-idnmt-2014.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Balancing Rock on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/id/balancingrock.html",
       "kind": "site"
@@ -185,6 +185,11 @@
     {
       "label": "Balancing Rock Patrol Point on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/balancing-rock-patrol-point/",
+      "kind": "site"
+    },
+    {
+      "label": "Balancing Rock on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/balancing-rock.html",
       "kind": "site"
     }
   ],
@@ -234,6 +239,21 @@
       ]
     },
     {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:id:balancing-rock",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:balancing-rock",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:us-id-balancing-rock",
       "fields": [
@@ -248,7 +268,29 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 46.71174,
+            "lon": -115.58719
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 46.7057,
+            "lon": -115.5724
+          }
+        }
+      ],
+      "distance_m": 1313,
+      "note": null
+    }
+  ],
   "research": {
     "researched": "2026-10-08",
     "checked": "2026-10-08",

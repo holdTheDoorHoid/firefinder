@@ -276,6 +276,11 @@
       "kind": "site"
     },
     {
+      "label": "Black Butte on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "http://cherylhill.net/firelookouts/2016/06/15/black-butte/",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap way 644553466",
       "url": "https://www.openstreetmap.org/way/644553466",
       "kind": "osm"
@@ -328,6 +333,18 @@
       ]
     },
     {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:black-butte",
+      "fields": []
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:black-butte",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:us-or-black-butte-deschutes-nf",
       "fields": [
@@ -344,7 +361,23 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "firelookout_com",
+          "value": 1934
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1995
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "research": {
     "researched": "2026-10-08",
     "checked": "2026-10-08",

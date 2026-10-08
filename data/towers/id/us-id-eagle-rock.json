@@ -13,16 +13,16 @@
   },
   "elevation_m": null,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4",
   "height_m": null,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Payette National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -61,6 +61,11 @@
       "label": "Eagle Rock Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/west-central/eagle-rock-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Eagle Rock on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/eagle-rock.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -88,6 +93,17 @@
       "key": "idaho_fl:eagle-rock-lookout:44.8796:-115.6407",
       "fields": [
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:eagle-rock",
+      "fields": [
+        "material",
+        "design",
+        "agency",
+        "ownership",
         "links"
       ]
     }

@@ -17,11 +17,11 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 11.0,
   "status": "standing",
   "status_note": "The tower still stands, but its cab is gone (FFLA).",
   "registers": [],
-  "agency": null,
+  "agency": "Maine Forestry District",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -44,6 +44,11 @@
       "label": "FFLA Maine lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/me/",
       "kind": "association"
+    },
+    {
+      "label": "Ragged Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/ragged-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +61,15 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:me:ragged-mountain",
+      "fields": [
+        "height_m",
+        "agency",
         "links"
       ]
     }

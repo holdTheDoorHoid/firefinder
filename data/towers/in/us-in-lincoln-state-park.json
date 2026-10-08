@@ -3,7 +3,9 @@
   "name": "Lincoln State Park Fire Tower",
   "summary": "A 120-foot Aermotor fire tower in Lincoln State Park, Spencer County, Indiana, built by CCC crews around 1935 and open to the public as of 2025.",
   "other_names": [
-    "Lincoln City"
+    "Lincoln City",
+    "Lincoln",
+    "Lincoln Park"
   ],
   "country": "US",
   "region": "IN",
@@ -16,8 +18,8 @@
   },
   "elevation_m": 182.0,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": "120-foot Aermotor tower built by Civilian Conservation Corps crews",
   "height_m": 36.6,
@@ -98,11 +100,6 @@
       "kind": "register"
     },
     {
-      "label": "Lincoln - Indiana Fire Towers (by Mark A)",
-      "url": "https://www.indianafiretowers.com/lincoln/",
-      "kind": "reference"
-    },
-    {
       "label": "FFLA Indiana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/in/",
       "kind": "association"
@@ -110,6 +107,11 @@
     {
       "label": "Lincoln City (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/lincoln.html",
+      "kind": "site"
+    },
+    {
+      "label": "Lincoln on Indiana Fire Towers (Mark Armantrout)",
+      "url": "https://www.indianafiretowers.com/lincoln/",
       "kind": "site"
     },
     {
@@ -127,6 +129,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -146,7 +149,7 @@
     },
     {
       "source": "eastern_us_lookouts",
-      "key": "eastern_us_lookouts:ga:lincoln",
+      "key": "eastern_us_lookouts:in:lincoln",
       "fields": [
         "photos",
         "links"
@@ -155,6 +158,13 @@
     {
       "source": "osm",
       "key": "osm:node/1699075708",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "indiana_fire_towers",
+      "key": "indiana_fire_towers:in:lincoln",
       "fields": [
         "links"
       ]

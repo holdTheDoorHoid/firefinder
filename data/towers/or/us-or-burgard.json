@@ -21,7 +21,7 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Portland Parks Bureau",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -49,6 +49,11 @@
       "label": "Burgard on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/burgard.html",
       "kind": "site"
+    },
+    {
+      "label": "Burgard on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/burgard.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +75,39 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:burgard",
+      "fields": [
+        "agency",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 45.61254,
+            "lon": -122.78331
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 45.611,
+            "lon": -122.7681
+          }
+        }
+      ],
+      "distance_m": 1195,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

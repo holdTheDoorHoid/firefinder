@@ -14,8 +14,8 @@
   },
   "elevation_m": 1880.3,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [
     "aws"
   ],
@@ -82,6 +82,13 @@
       "source_url": "http://nhlr.org/lookouts/us/or/bolan-mountain-lookout/"
     },
     {
+      "year": 1954,
+      "event": "rebuilt",
+      "note": "The lookout was rebuilt; the 2024 reconstruction copies this version.",
+      "from": "siskiyou_mountain_club",
+      "source_url": "https://www.fs.usda.gov/r06/rogue-siskiyou/newsroom/stories/hope-returns-forest-rebuilding-bolan-mountain-lookout"
+    },
+    {
       "year": 2003,
       "event": "nhlr_registered",
       "note": "Registered March 31, 2003",
@@ -98,6 +105,13 @@
         "https://www.firelookout.com/or/bolanmtn.html",
         "https://www.recreation.gov/camping/campgrounds/234154"
       ]
+    },
+    {
+      "year": 2024,
+      "event": "rebuilt",
+      "note": "Rebuilt by the club, Forest Service staff and contractors in the image of the 1954 lookout with fire-resistant materials; finished in October after 2,000 hours of labor.",
+      "from": "siskiyou_mountain_club",
+      "source_url": "https://www.fs.usda.gov/r06/rogue-siskiyou/newsroom/stories/hope-returns-forest-rebuilding-bolan-mountain-lookout"
     },
     {
       "year": 2024,
@@ -162,8 +176,23 @@
       "kind": "association"
     },
     {
+      "label": "Siskiyou Mountain Club: work on Bolan Mountain Lookout",
+      "url": "https://siskiyoumountainclub.org/blogs/siskiyou-hiker-news/bolan-mountain-lookout-project",
+      "kind": "association"
+    },
+    {
       "label": "Bolan Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/bolanmtn.html",
+      "kind": "site"
+    },
+    {
+      "label": "Bolan Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/bolan-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Bolan Mountain on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/oregons-standing-lookouts/",
       "kind": "site"
     },
     {
@@ -217,8 +246,32 @@
       ]
     },
     {
+      "source": "siskiyou_mountain_club",
+      "key": "siskiyou_mountain_club:or:bolan-mountain",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/815605598",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:bolan-mountain",
+      "fields": [
+        "material",
+        "design",
+        "links"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:bolan-mountain",
       "fields": [
         "links"
       ]
@@ -262,10 +315,37 @@
         {
           "source": "osm",
           "value": "standing"
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": "standing"
+        },
+        {
+          "source": "siskiyou_mountain_club",
+          "value": "standing"
         }
       ],
       "distance_m": null,
       "note": "NHLR lists lookouts that were standing when registered. firelookout.com lists it, but not on its map of standing lookouts."
+    },
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1953
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 2025
+        },
+        {
+          "source": "siskiyou_mountain_club",
+          "value": 1925
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
   "research": {

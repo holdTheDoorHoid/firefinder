@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Boise National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -54,6 +54,11 @@
       "label": "Lava Mountain on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/southern-idaho/lava-mountain/",
       "kind": "site"
+    },
+    {
+      "label": "Lava Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/lava-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -80,6 +85,15 @@
       "source": "idaho_fl",
       "key": "idaho_fl:lava-mountain:43.5832:-115.5540",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:lava-mountain",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

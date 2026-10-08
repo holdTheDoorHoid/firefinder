@@ -149,9 +149,36 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:crane-ridge",
+      "fields": []
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 37.606031,
+            "lon": -121.620286
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 37.60083,
+            "lon": -121.61639
+          }
+        }
+      ],
+      "distance_m": 673,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

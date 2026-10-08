@@ -1,6 +1,7 @@
 {
   "id": "us-ca-thompson-peak",
   "name": "Thompson Peak Lookout",
+  "summary": "1931-32 two-story lookout above Janesville in Plumas NF, with a Cold War radar annex below it; seasonally staffed and reached by a 4WD road.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Two-story summit lookout (completed 1932 per Summit Post); the register calls it an R1 design, a Region 1 revision of the California Region 4AR",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -31,31 +32,79 @@
   "agency": "US Forest Service - Plumas National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached by a seasonal four-wheel-drive road; the lookout and access road were closed for construction in August and September 2016."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2012"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Seasonal 4WD road, NFS Road 28N02A, on the mountain's southeast slopes; check road conditions first."
   },
   "rental": null,
   "events": [
     {
       "year": 1931,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Construction began 1931; register says opened June 1931; Summit Post says completed 1932",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/thompson-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/thompson-peak-lookout/",
+        "https://www.summitpost.org/thompson-peak-diamond-mountains/794813"
+      ]
+    },
+    {
+      "year": 1931,
+      "event": "staffed_first",
+      "note": "Harry Foster at the lookout station by September 1931",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/thompson-peak.html"
+    },
+    {
+      "year": 1933,
+      "event": "fire",
+      "note": "Logging-truck fire south of the peak burned nearly 600 acres; lookout reported it",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/thompson-peak.html"
+    },
+    {
+      "year": 1945,
+      "event": "staffed",
+      "note": "One of the forest's 19 lookouts stayed open in October 1945 to watch the Honey Lake slope",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/thompson-peak.html"
+    },
+    {
+      "year": 1960,
+      "event": "other",
+      "note": "Air Force gap-filler radar annex on the summit fully functional; operated until 1967 (Summit Post)",
+      "from": "research",
+      "source_url": "https://www.summitpost.org/thompson-peak-diamond-mountains/794813"
+    },
+    {
+      "year": 1991,
+      "event": "other",
+      "note": "Reported vandalized in June 1991; damage not estimated",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/thompson-peak.html"
+    },
+    {
+      "year": 2016,
+      "event": "closed",
+      "note": "Lookout and access road closed August 3 to September 30 for construction; fire watch coverage not expected to be affected",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/thompson-peak.html"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 26, 2019",
-      "from": "nhlr"
+      "note": "Registered October 26, 2019 as US 1340",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/thompson-peak-lookout/"
     }
   ],
   "photos": [
@@ -139,6 +188,16 @@
       "kind": "register"
     },
     {
+      "label": "Thompson Peak (Diamond Mountains) (Summit Post)",
+      "url": "https://www.summitpost.org/thompson-peak-diamond-mountains/794813",
+      "kind": "reference"
+    },
+    {
+      "label": "Thompson Peak Lookout, California (Peakbagging)",
+      "url": "http://peakbagging.com/CALookoutPhotos/ThompsonPk.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -187,10 +246,36 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ca:thompson-peak",
+      "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-thompson-peak",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

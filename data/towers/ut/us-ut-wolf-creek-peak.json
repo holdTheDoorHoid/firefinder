@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Uinta National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -44,6 +44,11 @@
       "label": "FFLA Utah lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ut/",
       "kind": "association"
+    },
+    {
+      "label": "Wolf Creek Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/wolf-creek-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -62,6 +67,15 @@
       "source": "ffla",
       "key": "ffla:ut:wolf-creek-peak:40.4763:-111.0244:1",
       "fields": []
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:ut:wolf-creek-peak",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
   "conflicts": [],

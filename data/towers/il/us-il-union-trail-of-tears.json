@@ -1,7 +1,9 @@
 {
   "id": "us-il-union-trail-of-tears",
   "name": "Union (Trail of Tears) Lookout",
+  "summary": "A CCC-built steel fire tower in Trail of Tears State Forest, Illinois, dated 1934-1938 by most accounts; NRHP-listed in 2003, and a 2017 visit found its top unreachable.",
   "other_names": [
+    "Trail OF Tears State Forest",
     "Union Lookout",
     "Trail of Tears Lookout"
   ],
@@ -19,8 +21,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": 30.5,
+  "design": "Steel tower, 80 ft, with a 7-by-7-foot cab (NHLR)",
+  "height_m": 24.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -37,34 +39,68 @@
       "url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001759"
     }
   ],
-  "agency": "Illinois Department of Conservation",
+  "agency": "Illinois Department of Conservation (per NHLR)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Clio, citing a park map, says the tower appears to be closed. A July 2017 register visit report says access to the top is not possible."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "Beside South Forest Road in Trail of Tears State Forest. The 2017 visit report found most wooden steps missing or rotten and no access to the top."
   },
   "rental": null,
   "events": [
     {
+      "year": 1934,
+      "event": "built",
+      "note": "Wikipedia says circa 1934; Clio says built in 1934 by the CCC. The register gives 1936-1938. Conflict noted.",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Union_Lookout",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Union_Lookout",
+        "https://theclio.com/entry/17913"
+      ]
+    },
+    {
       "year": 1936,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register says constructed between 1936 and 1938 by the CCC",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/il/union-trail-of-tears-lookout/"
+    },
+    {
+      "year": 1960,
+      "event": "staffed_last",
+      "note": "Used through the 1960s, per Wikipedia. Year is approximate.",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Union_Lookout"
     },
     {
       "year": 1994,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 12, 1994",
-      "from": "nhlr"
+      "note": "Registered March 12, 1994 as US 81, IL 2",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/il/union-trail-of-tears-lookout/"
+    },
+    {
+      "year": 2003,
+      "event": "nrhp_listed",
+      "note": "Added to the National Register of Historic Places February 5, 2003 (ref. 02001759)",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Union_Lookout"
+    },
+    {
+      "year": 2017,
+      "event": "assessed",
+      "note": "Visit report of July 5, 2017: top not accessible, most wooden steps missing or rotten, paint failing",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/il/union-trail-of-tears-lookout/"
     }
   ],
   "photos": [
@@ -112,6 +148,11 @@
       "kind": "register"
     },
     {
+      "label": "Union Lookout (Clio)",
+      "url": "https://theclio.com/entry/17913",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Illinois lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/il/",
       "kind": "association"
@@ -120,6 +161,11 @@
       "label": "Wikipedia: Union Lookout",
       "url": "https://en.wikipedia.org/wiki/Union_Lookout",
       "kind": "wikipedia"
+    },
+    {
+      "label": "Trail OF Tears State Forest (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/trail-of-tears.html",
+      "kind": "site"
     },
     {
       "label": "Wikidata item Q14688142",
@@ -155,6 +201,13 @@
       ]
     },
     {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:il:trail-of-tears",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q14688142",
       "fields": [
@@ -162,6 +215,22 @@
         "registers",
         "photos",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-il-union-trail-of-tears",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -182,7 +251,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

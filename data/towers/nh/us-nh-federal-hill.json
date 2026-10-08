@@ -17,7 +17,7 @@
   "material_from": "nhlr",
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 6.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -73,9 +73,19 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/nh/federal-hill-lookout/",
+      "kind": "register"
+    },
+    {
       "label": "FFLA New Hampshire lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nh/",
       "kind": "association"
+    },
+    {
+      "label": "Federal Hill (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/federal-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -102,6 +112,14 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:nh:federal-hill",
+      "fields": [
+        "height_m",
         "links"
       ]
     }

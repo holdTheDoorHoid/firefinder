@@ -1,6 +1,7 @@
 {
   "id": "us-nm-el-caso",
   "name": "El Caso Lookout",
+  "summary": "El Caso Lookout, Gila NF: 1934 WPA tower and ground house, NRHP-listed 1988; 2020 chapter report says it is unstaffed, neglected and in need of restoration.",
   "other_names": [
     "EICaso"
   ],
@@ -15,11 +16,11 @@
   },
   "elevation_m": 2696.6,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "31.6-foot Aermotor MC-24 tower with a restored R3 12x12 low-sill cab (register)",
+  "height_m": 9.6,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -43,8 +44,8 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2020"
   },
   "visit": {
     "climbable": null,
@@ -56,14 +57,42 @@
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Lookout and ground house built by the Works Progress Administration on the Gila National Forest",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/el-caso-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nm/el-caso-lookout/",
+        "https://en.wikipedia.org/wiki/El_Caso_Lookout_Complex",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+      ]
+    },
+    {
+      "year": 1988,
+      "event": "nrhp_listed",
+      "note": "Lookout complex (with ground house) added to the National Register of Historic Places",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/El_Caso_Lookout_Complex"
     },
     {
       "year": 2006,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 2, 2006",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register January 2, 2006; nominated by Dave Lorenz",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/el-caso-lookout/"
+    },
+    {
+      "year": 2019,
+      "event": "other",
+      "note": "Photo taken 20 June 2019, captioned 'El Caso Lookout abandoned' in the 2020 report. This dates the photo; it does not say when the lookout was abandoned or last staffed.",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
+      "year": 2020,
+      "event": "assessed",
+      "note": "Chapter year-end report: complex neglected, in need of serious restoration to return it to its National Register condition; not staffed",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
     }
   ],
   "photos": [
@@ -87,14 +116,29 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=681",
+      "kind": "register"
+    },
+    {
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on El Caso Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf",
       "kind": "association"
     },
     {
       "label": "Wikipedia: El Caso Lookout Complex",
       "url": "https://en.wikipedia.org/wiki/El_Caso_Lookout_Complex",
       "kind": "wikipedia"
+    },
+    {
+      "label": "EL Caso on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/el-caso.html",
+      "kind": "site"
     },
     {
       "label": "Wikidata item Q5350956",
@@ -135,16 +179,54 @@
       ]
     },
     {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:nm:el-caso",
+      "fields": [
+        "material",
+        "design",
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/4801686098",
       "fields": [
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:nm:el-caso",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nm-el-caso",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

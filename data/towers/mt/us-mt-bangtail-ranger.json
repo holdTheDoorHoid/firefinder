@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Gallatin National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Bangtail Ranger Station on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/bangtailrs.html",
       "kind": "site"
+    },
+    {
+      "label": "Bangtail Ranger Station on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/bangtail-rs.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +73,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:bangtail-ranger-station:45.7844:-110.7820",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:bangtail-rs",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

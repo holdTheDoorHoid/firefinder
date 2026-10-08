@@ -13,11 +13,11 @@
   },
   "elevation_m": 1505.7,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "cherylhill_oregon",
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -145,6 +145,11 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/or/saddleblanket-mountain-lookout/",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -152,6 +157,16 @@
     {
       "label": "Saddleblanket Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/saddleblanket.html",
+      "kind": "site"
+    },
+    {
+      "label": "Saddleblanket Mtn on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/saddle-blanket-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Saddleblanket Mountain on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "http://cherylhill.net/firelookouts/2013/07/08/saddleblanket-mountain/",
       "kind": "site"
     }
   ],
@@ -190,9 +205,41 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:saddle-blanket-mountain",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:saddleblanket-mountain",
+      "fields": [
+        "material",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "firelookout_com",
+          "value": 1922
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1927
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

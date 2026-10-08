@@ -13,8 +13,8 @@
   },
   "elevation_m": 1850.7,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -117,6 +117,11 @@
       "label": "Miners Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/minersridge163.html",
       "kind": "site"
+    },
+    {
+      "label": "Miners Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/miners-ridge.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -128,6 +133,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -152,9 +158,38 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:miners-ridge",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 46.80267,
+            "lon": -121.36295
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 46.80889,
+            "lon": -121.35444
+          }
+        }
+      ],
+      "distance_m": 948,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

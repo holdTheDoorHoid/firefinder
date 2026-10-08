@@ -13,8 +13,8 @@
   },
   "elevation_m": 922.9,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -106,6 +106,11 @@
       "label": "FFLA Virginia lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/va/",
       "kind": "association"
+    },
+    {
+      "label": "Hazel Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/hazel-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -117,6 +122,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -131,6 +137,13 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:va:hazel-mountain",
+      "fields": [
         "links"
       ]
     }

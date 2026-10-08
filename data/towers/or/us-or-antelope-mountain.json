@@ -151,6 +151,11 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=916",
+      "kind": "register"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -158,6 +163,16 @@
     {
       "label": "Antelope Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/antelope.html",
+      "kind": "site"
+    },
+    {
+      "label": "Antelope Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/antelope-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Antelope Mountain on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/2022/11/10/antelope-mountain/",
       "kind": "site"
     }
   ],
@@ -198,9 +213,45 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:antelope-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:antelope-mountain",
+      "fields": [
+        "registers",
+        "links"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 44.04246,
+            "lon": -118.41924
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 44.03821,
+            "lon": -118.41576
+          }
+        }
+      ],
+      "distance_m": 548,
+      "note": null
+    },
     {
       "field": "built",
       "values": [
@@ -211,6 +262,10 @@
         {
           "source": "firelookout_com",
           "value": 1930
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 1974
         }
       ],
       "distance_m": null,

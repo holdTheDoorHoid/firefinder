@@ -37,13 +37,31 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1923,
+      "event": "other",
+      "note": "A new observer's cabin was built in 1923.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/News2023/2023%20Jan%20final.pdf"
+    }
+  ],
   "photos": [],
   "links": [
     {
       "label": "FFLA New York lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ny/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association, New York State Chapter: work on T-Lake Mountain",
+      "url": "https://www.nysffla.org/News2023/2023%20Jan%20final.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "T Lake Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/t-lake-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +74,21 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:t-lake-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "nysffla_projects",
+      "key": "nysffla_projects:ny:t-lake-mountain",
+      "fields": [
+        "events",
         "links"
       ]
     }

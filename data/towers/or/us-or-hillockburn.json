@@ -93,6 +93,11 @@
       "label": "Hillockburn on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/hillockburn.html",
       "kind": "site"
+    },
+    {
+      "label": "Hillockburn on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/hillockburn.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -128,9 +133,38 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:hillockburn",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 45.18471,
+            "lon": -122.24513
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 45.1941,
+            "lon": -122.2411
+          }
+        }
+      ],
+      "distance_m": 1091,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

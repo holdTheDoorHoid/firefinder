@@ -1,6 +1,7 @@
 {
   "id": "us-wa-wellpinit-mountain",
   "name": "Wellpinit Mountain Lookout",
+  "summary": "Spokane reservation steel tower built 1964 to replace a lookout four miles north; staffed each fire season and still in use.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -13,11 +14,11 @@
   },
   "elevation_m": 1021.1,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "trailchick_wa",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "53 ft steel tower with live-in cab",
+  "height_m": 16.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -32,7 +33,7 @@
   "ownership": "tribal",
   "access": {
     "level": "permission",
-    "note": "On tribal land. Ask the tribe before visiting."
+    "note": "On the Spokane Indian Reservation, administered by the reservation. The sources read do not describe visitor rules; ask the tribal administration before any visit."
   },
   "staffing": {
     "status": "unknown",
@@ -40,22 +41,50 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "TrailChick reports a road of about 3 miles to the summit; a high-clearance 4WD may be needed depending on the season."
   },
   "rental": null,
   "events": [
     {
+      "year": 1962,
+      "event": "other",
+      "note": "Site change discussed: the original survey planned the tower for Spokane Butte; a December 1962 reply proposed Wellpinit Mountain with a 40-foot cabin tower, citing electric service and better reservation coverage; TrailChick says the Colville suggested the site for wider views and electrical service",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/wellpinit-mountain.html"
+    },
+    {
       "year": 1964,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "53 ft steel tower with live-in cab; replaced the Spokane Mountain lookout four miles to the north",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/wellpinit-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/wellpinit-mountain-lookout/",
+        "https://www.trailchick.com/wa-state-fire-lookouts/wellpinit-mountain-lookout/",
+        "https://www.firelookout.com/wa/wellpinit.html"
+      ]
+    },
+    {
+      "year": 2010,
+      "event": "fire",
+      "note": "The lookout called in the Line Fire",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/wellpinit-mountain-lookout/"
+    },
+    {
+      "year": 2021,
+      "event": "fire",
+      "note": "The Sherwood Fire, started from a lightning storm, came within a mile or two of the lookout",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/wellpinit-mountain-lookout/"
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 13, 2022",
-      "from": "nhlr"
+      "note": "Registered April 13, 2022 as US 1563, WA 90",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/wellpinit-mountain-lookout/"
     }
   ],
   "photos": [
@@ -82,6 +111,16 @@
       "year": null,
       "w": 319,
       "h": 444
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://trailchick-media.s3.us-west-2.amazonaws.com/IMG_0592.jpg",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/wellpinit-mountain-lookout/",
+      "credit": "TrailChick Washington lookout guide (trailchick.com)",
+      "license": null,
+      "caption": null,
+      "year": null
     }
   ],
   "links": [
@@ -108,6 +147,11 @@
     {
       "label": "Wellpinit Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/wellpinit.html",
+      "kind": "site"
+    },
+    {
+      "label": "Wellpinit Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/wellpinit_mountain/tower_337.htm",
       "kind": "site"
     }
   ],
@@ -146,10 +190,53 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:wellpinit-mountain",
+      "fields": [
+        "height_m"
+      ]
+    },
+    {
+      "source": "trailchick_wa",
+      "key": "trailchick_wa:wa:wellpinit-mountain-lookout",
+      "fields": [
+        "material",
+        "photos"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-wellpinit-mountain-tower-337",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-wellpinit-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

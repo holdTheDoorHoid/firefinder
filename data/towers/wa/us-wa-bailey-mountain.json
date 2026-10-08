@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Okanogan National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,16 @@
       "label": "Bailey Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/baileymtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Bailey Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/bailey-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Bailey Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/fire_lookouts/bailey_mountain/lookout_368.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -67,6 +77,22 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:bailey-mtn:48.5052:-119.1187",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:bailey-mountain",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:fire-lookouts-bailey-mountain-lookout-368",
       "fields": [
         "links"
       ]

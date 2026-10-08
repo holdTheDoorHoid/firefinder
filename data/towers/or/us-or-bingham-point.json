@@ -1,15 +1,17 @@
 {
   "id": "us-or-bingham-point",
   "name": "Bingham Point Lookout Site",
-  "other_names": [],
+  "other_names": [
+    "Bingham Point (ELO)"
+  ],
   "country": "US",
   "region": "OR",
   "county": "Harney",
   "location": {
-    "lat": 43.94082,
-    "lon": -119.2406,
+    "lat": 44.12545,
+    "lon": -118.36412,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 1801.4,
   "kind": "camp",
@@ -68,6 +70,11 @@
       "label": "Bingham Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/binghampoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Bingham Point (ELO) on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/bingham-point-elo.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -76,7 +83,6 @@
       "key": "fflos:US 1054",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "registers",
@@ -90,6 +96,7 @@
       "source": "ffla",
       "key": "ffla:or:bingham-point:44.1255:-118.3641",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -102,19 +109,19 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:bingham-point-elo",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
-        {
-          "source": "fflos",
-          "value": {
-            "lat": 43.94082,
-            "lon": -119.2406
-          }
-        },
         {
           "source": "ffla",
           "value": {
@@ -123,10 +130,10 @@
           }
         },
         {
-          "source": "firelookout_com",
+          "source": "fflos",
           "value": {
-            "lat": 44.12545,
-            "lon": -118.36412
+            "lat": 43.94082,
+            "lon": -119.2406
           }
         }
       ],

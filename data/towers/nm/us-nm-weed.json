@@ -14,8 +14,8 @@
   },
   "elevation_m": 2442.4,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": "Aermotor LX-24, 48-foot steel tower with a 7x7-foot steel cab",
   "height_m": 14.6,
@@ -67,11 +67,25 @@
       "source_url": "http://nhlr.org/lookouts/us/nm/weed-lookout/"
     },
     {
+      "year": 1966,
+      "event": "restored",
+      "note": "Original wooden steps replaced with metal ones.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
       "year": 1978,
       "event": "other",
       "note": "Cabin and shed at the site were removed.",
       "from": "research",
       "source_url": "http://nhlr.org/lookouts/us/nm/weed-lookout/"
+    },
+    {
+      "year": 1978,
+      "event": "removed",
+      "note": "Cabin and shed that stood at the lookout site were removed.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
     },
     {
       "year": 1988,
@@ -123,6 +137,11 @@
     {
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Weed Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf",
       "kind": "association"
     },
     {
@@ -183,6 +202,16 @@
       "fields": [
         "ownership",
         "access"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:nm:weed",
+      "fields": [
+        "material",
+        "design",
+        "events",
+        "links"
       ]
     },
     {

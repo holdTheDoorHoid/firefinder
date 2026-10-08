@@ -195,6 +195,11 @@
       "label": "Mt. Emerine on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/emerine.html",
       "kind": "site"
+    },
+    {
+      "label": "Mount Emerine on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/mount-emerine.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -235,9 +240,37 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:mount-emerine",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 46.200267,
+            "lon": -113.638933
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 46.1877,
+            "lon": -113.63369
+          }
+        }
+      ],
+      "distance_m": 1454,
+      "note": null
+    },
     {
       "field": "status",
       "values": [

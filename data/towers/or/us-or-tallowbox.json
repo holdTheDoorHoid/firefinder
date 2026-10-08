@@ -1,7 +1,9 @@
 {
   "id": "us-or-tallowbox",
   "name": "Tallowbox Lookout",
-  "other_names": [],
+  "other_names": [
+    "Tallowbox Mountain"
+  ],
   "country": "US",
   "region": "OR",
   "county": "Jackson",
@@ -18,7 +20,7 @@
   "roles": [
     "aws"
   ],
-  "design": null,
+  "design": "D-6",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -37,7 +39,7 @@
     }
   ],
   "agency": "Oregon Department of Forestry",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -64,6 +66,13 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: March 31, 2003",
       "from": "nhlr"
+    },
+    {
+      "year": 2007,
+      "event": "assessed",
+      "note": "Surveyed to assess fire damage caused by vandals.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/10/cr-or-2007.pdf"
     },
     {
       "year": 2011,
@@ -127,8 +136,18 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Tallowbox Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/10/cr-or-2007.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Tallowbox on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/tallowbox.html",
+      "kind": "site"
+    },
+    {
+      "label": "Tallowbox Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/tallowbox-mountain.html",
       "kind": "site"
     }
   ],
@@ -174,6 +193,23 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:tallowbox:42.1963:-123.1515",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:or:tallowbox",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:tallowbox-mountain",
+      "fields": [
+        "design",
+        "ownership",
         "links"
       ]
     }

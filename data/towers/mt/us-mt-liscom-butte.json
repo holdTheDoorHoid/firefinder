@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Custer National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -37,7 +37,19 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2009,
+      "event": "removed",
+      "note": "Lookout removed under a demolition contract; one of only two lookouts lost in the chapter area in 2009. Removed under a demolition contract.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-az-2009.pdf",
+      "source_urls": [
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-az-2009.pdf",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-nidmt-2009.pdf"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -46,8 +58,18 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Liscom Butte",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-az-2009.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Liscom Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/liscombutte.html",
+      "kind": "site"
+    },
+    {
+      "label": "Liscom Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/liscom-butte.html",
       "kind": "site"
     }
   ],
@@ -68,6 +90,23 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:liscom-butte:45.7430:-105.9745",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:mt:liscom-butte",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:liscom-butte",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

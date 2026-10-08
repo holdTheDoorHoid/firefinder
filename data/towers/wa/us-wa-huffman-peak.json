@@ -13,8 +13,8 @@
   },
   "elevation_m": 1251.5,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -86,6 +86,16 @@
       "label": "Huffman Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/huffmanpeak.html",
       "kind": "site"
+    },
+    {
+      "label": "Huffman Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/huffman-peak.html",
+      "kind": "site"
+    },
+    {
+      "label": "Huffman Peak on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/fire_lookouts/huffman_peak_lookout/forest_service_025.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -97,6 +107,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -118,6 +129,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:huffman-peak:45.9797:-122.1629",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:huffman-peak",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:fire-lookouts-huffman-peak-lookout-forest-service-025",
       "fields": [
         "links"
       ]

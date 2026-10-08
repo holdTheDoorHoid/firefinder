@@ -13,10 +13,10 @@
   },
   "elevation_m": 1591.1,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -81,6 +81,11 @@
       "label": "Outerson Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/outersonmtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Outerson Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/outerson-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -114,6 +119,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:outerson-mtn:44.7294:-121.9495",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:outerson-mountain",
+      "fields": [
+        "material",
+        "design",
         "links"
       ]
     }

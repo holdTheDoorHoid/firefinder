@@ -17,7 +17,7 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 27.4,
   "status": "gone",
   "status_note": null,
   "registers": [],
@@ -37,13 +37,43 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2016,
+      "event": "destroyed",
+      "note": "An 80-foot tower in Broome County came down (collapsed or was brought down; cause not stated), reported by a member in Nov 2016.",
+      "from": "nysffla_projects",
+      "source_url": "https://www.nysffla.org/Newsletters/2016/2016-11.pdf"
+    },
+    {
+      "year": 2016,
+      "event": "removed",
+      "note": "The 80-foot tower was taken down in October 2016, the chapter's one loss of the year.",
+      "from": "ffla_east_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ny-2016.pdf"
+    }
+  ],
   "photos": [],
   "links": [
     {
       "label": "FFLA New York lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ny/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association, New York State Chapter: work on Ingraham Hill",
+      "url": "https://www.nysffla.org/Newsletters/2016/2016-11.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Ingraham Hill",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ny-2016.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Ingraham Hill (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/ingraham-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +86,30 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:ny:ingraham-hill",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "nysffla_projects",
+      "key": "nysffla_projects:ny:ingraham-hill",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_east_reports",
+      "key": "ffla_east_reports:ny:ingraham-hill",
+      "fields": [
+        "events",
         "links"
       ]
     }

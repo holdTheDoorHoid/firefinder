@@ -13,8 +13,8 @@
   },
   "elevation_m": 1251.5,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
   "design": null,
   "height_m": null,
@@ -122,6 +122,16 @@
       "label": "Burnt Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/burntpeak.html",
       "kind": "site"
+    },
+    {
+      "label": "Burnt Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/burnt-peak.html",
+      "kind": "site"
+    },
+    {
+      "label": "Burnt Peak on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://willhiteweb.com/fire_lookouts/burnt_peak_lookout/forest_service_030.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -133,6 +143,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -154,6 +165,20 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:burnt-peak:46.0725:-121.8803",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:burnt-peak",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:fire-lookouts-burnt-peak-lookout-forest-service-030",
       "fields": [
         "links"
       ]

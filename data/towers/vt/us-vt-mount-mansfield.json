@@ -12,7 +12,7 @@
     "from": "ffla"
   },
   "elevation_m": null,
-  "kind": "unknown",
+  "kind": "tower",
   "material": null,
   "material_from": null,
   "roles": [],
@@ -44,6 +44,11 @@
       "label": "FFLA Vermont lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/vt/",
       "kind": "association"
+    },
+    {
+      "label": "Mount Mansfield (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/mount-mansfield.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -55,6 +60,14 @@
         "location",
         "county",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:vt:mount-mansfield",
+      "fields": [
+        "kind",
         "links"
       ]
     }

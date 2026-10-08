@@ -4,7 +4,7 @@
   "other_names": [],
   "country": "US",
   "region": "WA",
-  "county": null,
+  "county": "Chelan",
   "location": {
     "lat": 47.63614,
     "lon": -120.28132,
@@ -44,6 +44,11 @@
       "label": "Keystone Point on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/keystonepoint.html",
       "kind": "site"
+    },
+    {
+      "label": "Keystone Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/keystone-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -54,6 +59,14 @@
         "name",
         "location",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:keystone-point",
+      "fields": [
+        "county",
         "links"
       ]
     }

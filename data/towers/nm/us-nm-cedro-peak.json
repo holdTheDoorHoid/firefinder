@@ -18,8 +18,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "14x14 CL-100 series metal cab on electronics building roof",
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -54,6 +54,13 @@
       "from": "nhlr"
     },
     {
+      "year": 1969,
+      "event": "replaced",
+      "note": "Present cab placed on the roof of the electronics building beside a new AT&T transmission tower, on the site of two earlier lookouts.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
       "year": 2006,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: December 15, 2006",
@@ -81,9 +88,24 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=714",
+      "kind": "register"
+    },
+    {
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Cedro Peak Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Cedro Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/cedro-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -110,6 +132,23 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:nm:cedro-peak",
+      "fields": [
+        "design",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:nm:cedro-peak",
+      "fields": [
+        "height_m",
         "links"
       ]
     }

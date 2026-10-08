@@ -14,8 +14,8 @@
   },
   "elevation_m": 214.3,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
   "design": "125-ft steel Aermotor tower with a 7x7 ft metal cab",
   "height_m": 38.1,
@@ -95,6 +95,11 @@
       "kind": "register"
     },
     {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/tx/loves-lookout/",
+      "kind": "register"
+    },
+    {
       "label": "Love's Lookout in Texas (Texas Escapes (texasescapes.com))",
       "url": "https://www.texasescapes.com/AllThingsHistorical/Loves-Lookout-504BB.htm",
       "kind": "reference"
@@ -103,6 +108,11 @@
       "label": "FFLA Texas lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/tx/",
       "kind": "association"
+    },
+    {
+      "label": "Love's (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/loves.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -114,6 +124,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -128,6 +139,14 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:tx:loves",
+      "fields": [
+        "height_m",
         "links"
       ]
     },

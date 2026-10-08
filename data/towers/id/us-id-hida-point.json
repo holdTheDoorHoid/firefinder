@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Payette National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -54,6 +54,11 @@
       "label": "Hida Point on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/west-central/hida-point/",
       "kind": "site"
+    },
+    {
+      "label": "Hida Point on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/hida-point.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -80,6 +85,15 @@
       "source": "idaho_fl",
       "key": "idaho_fl:hida-point:45.5227:-115.2185",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:hida-point",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

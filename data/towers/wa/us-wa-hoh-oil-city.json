@@ -8,10 +8,10 @@
   "region": "WA",
   "county": "Jefferson",
   "location": {
-    "lat": 47.76805,
-    "lon": -124.41194,
+    "lat": 47.76595,
+    "lon": -124.41928,
     "precision": "exact",
-    "from": "fflos"
+    "from": "ffla"
   },
   "elevation_m": 370.0,
   "kind": "ground",
@@ -70,6 +70,11 @@
       "label": "Hoh (Oil City) on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/hohoilcity.html",
       "kind": "site"
+    },
+    {
+      "label": "Hoh (Oil City) on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/hoh-oil-city.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -78,7 +83,6 @@
       "key": "fflos:US 1186",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "registers",
@@ -91,6 +95,7 @@
       "source": "ffla",
       "key": "ffla:wa:aws-hoh-oil-city:47.7659:-124.4193",
       "fields": [
+        "location",
         "kind",
         "status",
         "registers",
@@ -103,19 +108,19 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:hoh-oil-city",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
-        {
-          "source": "fflos",
-          "value": {
-            "lat": 47.76805,
-            "lon": -124.41194
-          }
-        },
         {
           "source": "ffla",
           "value": {
@@ -124,10 +129,10 @@
           }
         },
         {
-          "source": "firelookout_com",
+          "source": "fflos",
           "value": {
-            "lat": 47.76595,
-            "lon": -124.41928
+            "lat": 47.76805,
+            "lon": -124.41194
           }
         }
       ],

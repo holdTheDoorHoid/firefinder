@@ -21,11 +21,11 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "San Carlos Apache Reservation",
+  "ownership": "tribal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "permission",
+    "note": "On tribal land. Ask the tribe before visiting."
   },
   "staffing": {
     "status": "unknown",
@@ -44,6 +44,11 @@
       "label": "FFLA Arizona lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/az/",
       "kind": "association"
+    },
+    {
+      "label": "Edwards on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/edwards.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,6 +61,16 @@
         "county",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:az:edwards",
+      "fields": [
+        "agency",
+        "ownership",
+        "access",
         "links"
       ]
     }

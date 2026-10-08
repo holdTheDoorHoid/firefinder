@@ -13,11 +13,11 @@
   },
   "elevation_m": 1369.2,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "R-6",
+  "height_m": 4.3,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -98,6 +98,16 @@
       "label": "Colonel Bob on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/colonelbob.html",
       "kind": "site"
+    },
+    {
+      "label": "Colonel Bob on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/colonel-bob.html",
+      "kind": "site"
+    },
+    {
+      "label": "Colonel Bob on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_climbing/colonel_bob/lake_quinault_hikes_085.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -130,6 +140,23 @@
     {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:colonel-bob:47.4886:-123.7459",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:colonel-bob",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-climbing-colonel-bob-lake-quinault-hikes-085",
       "fields": [
         "links"
       ]

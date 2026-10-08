@@ -2,7 +2,9 @@
   "id": "us-or-green-mountain-2",
   "name": "Green Mountain Lookout",
   "summary": "BLM lookout in Lake County: first built 1963, replaced under a 2010 federal recovery contract by a 50-foot block tower completed in January 2011; staffed in summers.",
-  "other_names": [],
+  "other_names": [
+    "Green Mt"
+  ],
   "country": "US",
   "region": "OR",
   "county": "Lake",
@@ -183,6 +185,11 @@
       "kind": "association"
     },
     {
+      "label": "Forest Fire Lookout Association chapter reports: work on Green Mountain Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-or-2011.pdf",
+      "kind": "association"
+    },
+    {
       "label": "Green Mountain Lookout - Forest Lookouts Page",
       "url": "https://oregonlookouts.weebly.com/green-mountain2.html",
       "kind": "site"
@@ -190,6 +197,11 @@
     {
       "label": "Green Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/greenmtnor.html",
+      "kind": "site"
+    },
+    {
+      "label": "Green Mountain on Every Lookout in Oregon (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/2018/05/24/green-mountain/",
       "kind": "site"
     },
     {
@@ -236,9 +248,29 @@
       ]
     },
     {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:or:green-mountain-2",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/556877887",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:green-mountain2",
+      "fields": []
+    },
+    {
+      "source": "cherylhill_oregon",
+      "key": "cherylhill_oregon:or:green-mountain",
+      "fields": [
+        "height_m",
         "links"
       ]
     },
@@ -270,10 +302,33 @@
         {
           "source": "firelookout_com",
           "value": 1963
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": 2010
+        },
+        {
+          "source": "ffla_west_reports",
+          "value": 2011
         }
       ],
       "distance_m": null,
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    },
+    {
+      "field": "material",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "masonry"
+        },
+        {
+          "source": "cherylhill_oregon",
+          "value": "concrete"
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources name different materials. Often one describes an earlier structure."
     }
   ],
   "research": {

@@ -13,11 +13,11 @@
   },
   "elevation_m": 2835.6,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "30-ft Aermotor MC-24 tower with 12x12 wooden cab",
+  "height_m": 15.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -52,6 +52,27 @@
       "from": "nhlr"
     },
     {
+      "year": 1934,
+      "event": "replaced",
+      "note": "Steel tower with wooden cab erected in 1934.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
+      "year": 1978,
+      "event": "restored",
+      "note": "All original windows replaced, which cost the lookout National Register eligibility in the 1988 evaluation.",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
+      "year": 1988,
+      "event": "nrhp_listed",
+      "note": "Observer cabin listed on the National Register of Historic Places on 28 January 1988 (date from the chapter table).",
+      "from": "ffla_west_reports",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
       "year": 2022,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: May 22, 2022",
@@ -82,6 +103,16 @@
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
       "kind": "association"
+    },
+    {
+      "label": "Forest Fire Lookout Association chapter reports: work on Black Mountain Lookout",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf",
+      "kind": "association"
+    },
+    {
+      "label": "Black Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/black-mountain.html",
+      "kind": "site"
     },
     {
       "label": "OpenStreetMap node 357600795",
@@ -117,14 +148,48 @@
       ]
     },
     {
+      "source": "ffla_west_reports",
+      "key": "ffla_west_reports:nm:black-mountain",
+      "fields": [
+        "material",
+        "design",
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/357600795",
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:nm:black-mountain",
+      "fields": [
+        "height_m",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": 1934
+        },
+        {
+          "source": "ffla_west_reports",
+          "value": 1925
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,
