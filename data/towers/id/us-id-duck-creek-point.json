@@ -1,6 +1,7 @@
 {
   "id": "us-id-duck-creek-point",
   "name": "Duck Creek Point Lookout",
+  "summary": "A 1935 10x10 cab on a log base in Lemhi County's Yellowjacket Mountains, unstaffed since the 1950s and last visited in 2010; a remote hike-in.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2782.8,
   "kind": "two_story",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "10x10 cab similar to an L-5 on a 9-foot log base",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -32,27 +36,75 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2010"
   },
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "2010 visit report: 60 miles from the nearest paved road; 1.7 mile hike; road to the lookout fairly rough, best by ATV or dirt bike."
   },
   "rental": null,
   "events": [
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built as a ground house; later two-story with a log base",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/duck-creek-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/duck-creek-point-lookout/",
+        "https://www.idahofirelookouts.com/southern-idaho/duck-creek-point-lookout/",
+        "https://idaholookouts.weebly.com/duck-creek-point.html",
+        "https://www.idahoaclimbingguide.com/bookupdates/duck-creek-point/"
+      ]
+    },
+    {
+      "year": 1944,
+      "event": "modified",
+      "note": "9-foot log base added (register gives 1944; Idaho list gives 1943)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/duck-creek-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/duck-creek-point-lookout/",
+        "https://www.idahofirelookouts.com/southern-idaho/duck-creek-point-lookout/"
+      ]
+    },
+    {
+      "year": 1950,
+      "event": "abandoned",
+      "note": "Sources give only 'the 1950s' for last use and abandonment; 1950 is a placeholder for the decade",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/duckcreekpt.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/duckcreekpt.html",
+        "https://www.idahofirelookouts.com/southern-idaho/duck-creek-point-lookout/"
+      ]
+    },
+    {
+      "year": 1975,
+      "event": "other",
+      "note": "Forest inventory of buildings reportedly recommended the building be burned (quoted in the 1982 history)",
+      "from": "research",
+      "source_url": "https://www.idahoaclimbingguide.com/bookupdates/duck-creek-point/"
+    },
+    {
+      "year": 2004,
+      "event": "restored",
+      "note": "New roof",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/duck-creek-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/duck-creek-point-lookout/",
+        "https://www.idahofirelookouts.com/southern-idaho/duck-creek-point-lookout/"
+      ]
     },
     {
       "year": 2010,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 22, 2010",
-      "from": "nhlr"
+      "note": "Registered July 22, 2010 as US 886, ID 80; visit report dated July 9, 2010",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/duck-creek-point-lookout/"
     }
   ],
   "photos": [
@@ -110,6 +162,16 @@
       "label": "NHLR register entry US 886 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/id/duck-creek-point-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Duck Creek Point - FOREST LOOKOUTS (Forest Lookouts (idaholookouts.weebly.com))",
+      "url": "https://idaholookouts.weebly.com/duck-creek-point.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Duck Creek Point (IDAHO: A Climbing Guide (idahoaclimbingguide.com))",
+      "url": "https://www.idahoaclimbingguide.com/bookupdates/duck-creek-point/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
@@ -170,6 +232,20 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-duck-creek-point",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -197,9 +273,15 @@
       "note": "NHLR lists lookouts that were standing when registered. idahofirelookouts.com's status is read from a short summary."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

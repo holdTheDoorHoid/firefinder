@@ -14,6 +14,9 @@
   },
   "elevation_m": 2446.0,
   "kind": "two_story",
+  "material": "stone",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "Two-story stone-and-frame structure, National Park Service rustic style",
   "height_m": 2446.0,
   "status": "standing",
@@ -168,6 +171,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -227,7 +231,23 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "material",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "stone"
+        },
+        {
+          "source": "firelookout_com",
+          "value": "mixed"
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources name different materials. Often one describes an earlier structure."
+    }
+  ],
   "research": {
     "researched": "2026-10-04",
     "checked": "2026-10-04",
@@ -238,5 +258,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

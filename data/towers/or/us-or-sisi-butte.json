@@ -1,6 +1,7 @@
 {
   "id": "us-or-sisi-butte",
   "name": "SiSi Butte Lookout",
+  "summary": "Forest Service lookout in Clackamas County, Oregon: an L-4 cab from 1937-40 came down in 1977 or 1996 (sources disagree); the octagonal cab dates to 1997 and is staffed in summer.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -13,7 +14,12 @@
   },
   "elevation_m": 1682.5,
   "kind": "tower",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [
+    "aws"
+  ],
+  "design": "Current cab is octagonal and live-in on a laminated wood tower; the original was an L-4 cab on a 41-ft timber tower",
   "height_m": 15.2,
   "status": "standing",
   "status_note": null,
@@ -43,10 +49,37 @@
   "rental": null,
   "events": [
     {
+      "year": 1940,
+      "event": "built",
+      "note": "L-4 cab on a 41-foot timber tower, per NHLR and FireLookout.com; the state survey gives about 1937",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/sisi-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/sisi-butte-lookout/",
+        "https://www.firelookout.com/or/sisi.html",
+        "https://heritagedata.prd.state.or.us/historic/index.cfm?do=main.loadFile&load=32546.pdf"
+      ]
+    },
+    {
+      "year": 1977,
+      "event": "removed",
+      "note": "NHLR's date, with historic parts salvaged; disputed by FireLookout.com and the 1992 condition report",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/sisi-butte-lookout/"
+    },
+    {
+      "year": 1992,
+      "event": "other",
+      "note": "Jensen condition report on the old tower recommended its replacement",
+      "from": "research",
+      "source_url": "https://heritagedata.prd.state.or.us/historic/index.cfm?do=main.loadFile&load=32546.pdf"
+    },
+    {
       "year": 1996,
       "event": "removed",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "FireLookout.com's date for the 41-foot tower",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/sisi.html"
     },
     {
       "year": 1997,
@@ -55,10 +88,18 @@
       "from": "nhlr"
     },
     {
+      "year": 1997,
+      "event": "replaced",
+      "note": "Present octagonal cab on a laminated wood tower, per NHLR's Built field",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/sisi-butte-lookout/"
+    },
+    {
       "year": 2001,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 1, 2001",
-      "from": "nhlr"
+      "note": "Registered March 1, 2001 as US 368, OR 42",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/sisi-butte-lookout/"
     }
   ],
   "photos": [
@@ -130,6 +171,11 @@
       "kind": "register"
     },
     {
+      "label": "SiSi Butte Fire Lookout, Historic Resource Survey Form (Oregon Inventory of Historic Properties (Oregon State Historic Preservation Office))",
+      "url": "https://heritagedata.prd.state.or.us/historic/index.cfm?do=main.loadFile&load=32546.pdf",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -154,6 +200,8 @@
         "location",
         "county",
         "elevation_m",
+        "material",
+        "roles",
         "registers",
         "agency",
         "ownership",
@@ -189,6 +237,20 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-sisi-butte",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -208,9 +270,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

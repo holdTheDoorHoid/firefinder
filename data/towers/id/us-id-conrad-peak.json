@@ -1,6 +1,7 @@
 {
   "id": "us-id-conrad-peak",
   "name": "Conrad Peak Lookout",
+  "summary": "A 1955 L-4 cab on a 50-foot tower on Conrad Peak. Not staffed since 1984, drive-up, in disrepair; restoration status unclear.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 1931.8,
   "kind": "tower",
-  "design": "L-4",
-  "height_m": null,
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
+  "design": "L-4 hip-roof cab with catwalk on a 50-foot treated timber tower; replaced a log cupola",
+  "height_m": 15.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,31 +32,71 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Drive-up site on National Forest land. No closure found in the sources. Climbing rules are not documented; ask the St. Joe Ranger District before climbing."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1984"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Drive-up site 17 miles southeast of Avery, per firelookout.com. Sources do not describe climbing conditions."
   },
   "rental": null,
   "events": [
     {
       "year": 1924,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Log cupola cabin, first lookout on the summit. The register dates the cupola it replaced to 1931.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/conradpk.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/conradpk.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/conrad-peak-lookout/",
+        "https://idaholookouts.weebly.com/conrad-peak.html"
+      ]
+    },
+    {
+      "year": 1930,
+      "event": "staffed",
+      "note": "Paul Rasor, as listed by Idaho Fire Lookouts",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/conrad-peak-lookout/"
+    },
+    {
+      "year": 1931,
+      "event": "staffed",
+      "note": "Herman Fricke, as listed by Idaho Fire Lookouts",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/conrad-peak-lookout/"
+    },
+    {
+      "year": 1955,
+      "event": "replaced",
+      "note": "Current 50-foot treated timber tower with L-4 cab built, replacing the log cupola",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/conrad-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/conrad-peak-lookout/",
+        "https://www.firelookout.com/id/conradpk.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/conrad-peak-lookout/"
+      ]
+    },
+    {
+      "year": 1984,
+      "event": "staffed_last",
+      "note": "Last year staffed, per Idaho Fire Lookouts",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/conrad-peak-lookout/"
     },
     {
       "year": 1995,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 2, 1995",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, October 2, 1995",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/conrad-peak-lookout/"
     }
   ],
   "photos": [
@@ -160,6 +204,11 @@
       "kind": "register"
     },
     {
+      "label": "Conrad Peak - Forest Lookouts (Rex's Fire Lookout Page)",
+      "url": "https://idaholookouts.weebly.com/conrad-peak.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -206,6 +255,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:conrad-peak:47.1519:-115.4660",
       "fields": [
+        "material",
         "design",
         "events",
         "photos",
@@ -219,12 +269,35 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-conrad-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

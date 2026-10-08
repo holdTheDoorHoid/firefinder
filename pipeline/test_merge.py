@@ -225,13 +225,63 @@ class Matching(unittest.TestCase):
         self.assertEqual({s["source"] for s in self.ws.tower_with_key("ffla:a")["sources"]}, {"ffla", "ridb"})
         self.assertEqual([u["key"] for u in rep["unplaced"]], ["ffla:b"])
 
-    def test_out_of_scope_hidden(self):
+    def test_sites_with_no_structure_are_shown(self):
+        # Owner decision 2026-10-08: camps, lookout trees and bare points are shown (the map
+        # leaves them off by default); data/structure_kinds.json can hide a kind again.
         self.ws.run({"ffla": [rec("ffla", "t", "Grandview", 35.94, -111.98, "AZ", kind="tree"),
-                              rec("ffla", "c", "Bear Point", 45.5, -115.5, kind="camp")]})
+                              rec("ffla", "c", "Bear Point", 45.5, -115.5, kind="camp"),
+                              rec("ffla", "p", "Burgard", 44.5, -116.5, type_raw="Firefinder", kind="unknown",
+                                  status_raw="Abandoned", status="gone")]})
+        tree = self.ws.tower_with_key("ffla:t")
+        self.assertFalse(tree["hidden"])
+        self.assertEqual(tree["kind"], "tree")
+        self.assertFalse(self.ws.tower_with_key("ffla:c")["hidden"])
+        point = self.ws.tower_with_key("ffla:p")
+        self.assertEqual((point["kind"], point["hidden"], point["material"]), ("point", False, None))
+
+    def test_a_hidden_kind_is_hidden(self):
+        saved = dict(M.HIDDEN_KIND_REASON)
+        M.HIDDEN_KIND_REASON["tree"] = "Tree platform: out of scope (structures only)"
+        try:
+            self.ws.run({"ffla": [rec("ffla", "t", "Grandview", 35.94, -111.98, "AZ", kind="tree")]})
+        finally:
+            M.HIDDEN_KIND_REASON.clear()
+            M.HIDDEN_KIND_REASON.update(saved)
         tree = self.ws.tower_with_key("ffla:t")
         self.assertTrue(tree["hidden"])
         self.assertIn("Tree", tree["hidden_reason"])
-        self.assertTrue(self.ws.tower_with_key("ffla:c")["hidden"])
+
+    def test_a_structure_from_another_source_beats_a_bare_point(self):
+        self.ws.run({"ffla": [rec("ffla", "p", "Prairie City", 44.46, -118.7, "OR", type_raw="Firefinder", kind="unknown")],
+                     "osm": [rec("osm", "n1", "Prairie City Lookout", 44.4601, -118.7, "OR", kind="ground")]})
+        self.assertEqual(self.ws.tower_with_key("ffla:p")["kind"], "ground")
+
+    def test_kind_material_and_roles(self):
+        self.ws.run({
+            "ffla": [rec("ffla", "a", "Shadow Mtn.", 40.2, -105.8, "CO", type_raw="Stone Tower", kind="tower"),
+                     rec("ffla", "b", "Rising Sun AWS", 39.7, -76.06, "MD", type_raw="AWS Tower", kind="tower"),
+                     rec("ffla", "c", "Sawtooth Valley", 43.9, -114.9, "ID", type_raw="Rooftop", kind="unknown"),
+                     rec("ffla", "d", "Big Butte", 46.1, -117.2, "WA", status_raw="Standing*")],
+            "nhlr": [rec("nhlr", "US 9", "Bald Knob", 45.0, -116.0, kind="unknown",
+                         extra={"structure_words": ["kind tower", "steel tower"]})],
+            "firelookout_com": [rec("firelookout_com", "x", "Bald Knob", 45.0, -116.0, kind="tower", type_raw="Tower",
+                                    extra={"design": "L-4"}),
+                                rec("firelookout_com", "y", "Hat Point", 45.4, -116.66, "OR", kind="ground", type_raw="Cabin",
+                                    extra={"design": "L-4"})],
+        })
+        shadow = self.ws.tower_with_key("ffla:a")
+        self.assertEqual((shadow["kind"], shadow["material"], shadow["material_from"]), ("tower", "stone", "ffla"))
+        self.assertEqual(self.ws.tower_with_key("ffla:b")["roles"], ["aws"])
+        self.assertEqual(self.ws.tower_with_key("ffla:c")["kind"], "rooftop")
+        big = self.ws.tower_with_key("ffla:d")
+        self.assertEqual(big["status"], "standing")
+        self.assertIn("cab is gone", big["status_note"])
+        knob = self.ws.tower_with_key("nhlr:US 9")
+        self.assertEqual((knob["kind"], knob["material"], knob["material_from"]), ("tower", "steel", "nhlr"))
+        self.assertIn("material", next(s for s in knob["sources"] if s["source"] == "nhlr")["fields"])
+        # An L-4 ground cab is wood by its design; an L-4 on a tower says nothing about the tower.
+        hat = self.ws.tower_with_key("firelookout_com:y")
+        self.assertEqual((hat["material"], hat["material_from"]), ("wood", "design"))
 
     def test_conflicts_and_verification(self):
         self.ws.run({
@@ -922,6 +972,104 @@ class Validation(unittest.TestCase):
                 self.assertEqual(V.validate(ws.towers, M.DATA / "vocab.json"), 1)
         finally:
             ws.close()
+
+
+class AssociationProjects(unittest.TestCase):
+    """The association-project source family (merge.py ASSOCIATION_SOURCES, DESIGN.md 3.7)."""
+
+    SRC = "test_assoc"
+
+    def setUp(self):
+        import copy
+        self.saved = (list(M.SOURCE_ORDER), copy.deepcopy(M.PRECEDENCE), dict(M.LOCATION_LINEAGE), list(M.ASSOCIATION_SOURCES))
+        M.ASSOCIATION_SOURCES.append(self.SRC)
+        M.register_associations(M.ASSOCIATION_SOURCES)
+        self.ws = Workspace()
+
+    def tearDown(self):
+        self.ws.close()
+        order, prec, lineage, assoc = self.saved
+        M.SOURCE_ORDER[:] = order
+        M.PRECEDENCE.clear(); M.PRECEDENCE.update(prec)
+        M.LOCATION_LINEAGE.clear(); M.LOCATION_LINEAGE.update(lineage)
+        M.ASSOCIATION_SOURCES[:] = assoc
+
+    def assoc_rec(self, key: str, name: str, lat, lon, **kw) -> dict:
+        r = rec(self.SRC, key, name, lat, lon, region="MT", kind="unknown", status=kw.pop("status", "standing"),
+                extra={"association": {"name": "Test Lookout Association", "url": "https://assoc.example/"},
+                       "position_from": "nhlr:US 1", **kw.pop("extra", {})}, **kw)
+        r["url"] = "https://assoc.example/2025-projects/"
+        return r
+
+    def ev(self, year, event, note, urls=("https://assoc.example/2025-projects/",)):
+        e = {"year": year, "event": event, "note": note, "from": self.SRC, "source_url": urls[0]}
+        if len(urls) > 1:
+            e["source_urls"] = list(urls)
+        return e
+
+    def test_registration_puts_the_family_after_the_registers(self):
+        self.assertIn(self.SRC, M.SOURCE_ORDER)
+        self.assertLess(M.SOURCE_ORDER.index("michigan_fire_tower"), M.SOURCE_ORDER.index(self.SRC))
+        self.assertLess(M.SOURCE_ORDER.index(self.SRC), M.SOURCE_ORDER.index("wikidata"))
+        for f in ("design", "height_m", "agency", "staffing", "events", "status", "name"):
+            self.assertEqual(M.PRECEDENCE[f][-1], self.SRC, f)
+        self.assertEqual(M.LOCATION_LINEAGE[self.SRC], "registers")
+        M.register_associations(M.ASSOCIATION_SOURCES)  # idempotent
+        self.assertEqual(M.PRECEDENCE["design"].count(self.SRC), 1)
+        self.assertEqual(M.SOURCE_ORDER.count(self.SRC), 1)
+
+    def test_events_links_and_facts_join_the_register_tower(self):
+        nhlr = rec("nhlr", "US 1", "Numa Ridge Lookout", 48.884, -114.179, "MT", built=1934,
+                   registers=[{"register": "NHLR", "number": "US 1"}])
+        nhlr["agency"] = "National Park Service"
+        a = self.assoc_rec("numa", "Numa Ridge", 48.884, -114.179, extra={
+            "design": "14x14-ft house on a 10-ft tower", "height_ft": 10, "staffing_hint": "staffed", "ownership": "federal"})
+        a["agency"] = "Glacier National Park"
+        a["events"] = [self.ev(1934, "built", "Built; the report gives the year."),
+                       self.ev(2019, "assessed", "Condition assessment by volunteers.", ("https://assoc.example/2019.pdf", "https://assoc.example/news.pdf")),
+                       self.ev(2025, "restored", "Repainted the exterior.")]
+        self.ws.run({"nhlr": [nhlr], self.SRC: [a]})
+        t = self.ws.tower_with_key(f"{self.SRC}:numa")
+        self.assertEqual({s["source"] for s in t["sources"]}, {"nhlr", self.SRC})
+        self.assertEqual(t["agency"], "National Park Service")          # the register outranks the association
+        self.assertEqual(t["design"], "14x14-ft house on a 10-ft tower")  # the association fills a gap
+        self.assertEqual(t["height_m"], 3.0)
+        self.assertEqual(t["staffing"]["status"], "staffed")
+        self.assertEqual(t["ownership"], "federal")
+        ev = {(e["year"], e["event"]): e for e in t["events"]}
+        self.assertEqual(ev[(2025, "restored")]["source_url"], "https://assoc.example/2025-projects/")
+        self.assertEqual(ev[(2025, "restored")]["from"], self.SRC)
+        self.assertEqual(ev[(2019, "assessed")]["source_urls"], ["https://assoc.example/2019.pdf", "https://assoc.example/news.pdf"])
+        self.assertNotIn(1934, [e["year"] for e in t["events"] if e["from"] == self.SRC])  # the register's build year wins
+        link = next(l for l in t["links"] if l["url"] == "https://assoc.example/2025-projects/")
+        self.assertEqual(link["kind"], "association")
+        self.assertIn("Test Lookout Association", link["label"])
+        self.assertEqual(t["location"]["from"], "nhlr")
+        # same position, same lineage: the association does not make it "facts"-verified
+        self.assertEqual(t["verification"], "unverified")
+
+    def test_the_family_never_overrides_a_register_and_a_report_only_tower_is_made(self):
+        a = self.assoc_rec("solo", "Solo Peak Lookout", 47.0, -113.0)
+        a["extra"].pop("position_from")
+        a["extra"]["position_note"] = "given by the association"
+        a["events"] = [self.ev(2020, "restored", "Reroofed.")]
+        self.ws.run({self.SRC: [a]})
+        t = self.ws.tower_with_key(f"{self.SRC}:solo")
+        self.assertEqual(t["name"], "Solo Peak Lookout")
+        self.assertEqual(t["status"], "standing")
+        self.assertEqual(t["events"][0]["source_url"], "https://assoc.example/2025-projects/")
+
+    def test_family_marker_and_the_list_must_agree(self):
+        msgs: list[str] = []
+        write_sources(self.ws.sources, {self.SRC: [self.assoc_rec("a", "A Peak", 47.0, -113.0)],
+                                        "other_assoc": [rec("other_assoc", "b", "B Peak", 47.5, -113.0)]})
+        p = self.ws.sources / f"{self.SRC}.json"
+        d = json.loads(p.read_text()); p.write_text(json.dumps(d))                      # no family marker
+        q = self.ws.sources / "other_assoc.json"
+        d = json.loads(q.read_text()); d["family"] = M.ASSOCIATION_FAMILY; q.write_text(json.dumps(d))  # not in the list
+        M.load_sources(self.ws.sources, log=msgs.append)
+        self.assertTrue(any(self.SRC in m and "no \"family\"" in m for m in msgs), msgs)
+        self.assertTrue(any("other_assoc" in m and "ASSOCIATION_SOURCES" in m for m in msgs), msgs)
 
 
 if __name__ == "__main__":

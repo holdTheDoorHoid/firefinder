@@ -97,7 +97,7 @@ def main() -> None:
             records.append({
                 "key": key, "url": url, "name": name, "country": "US", "region": "WA", "county": None,
                 "lat": None, "lon": None, "elevation_m": None, "type_raw": None, "kind": "unknown",
-                "status_raw": "Standing" if is_standing else None,
+                "status_raw": None,
                 "status": "standing" if is_standing else "unknown", "registers": [], "built": None,
                 "agency": None, "events": [], "photos": [],
                 "links": [{"label": f"{name} on WillhiteWeb.com Washington Fire Lookouts", "url": url,

@@ -1,6 +1,7 @@
 {
   "id": "us-id-sheepeater",
   "name": "Sheepeater Lookout",
+  "summary": "Hike-in, seasonally staffed lookout in Idaho's Frank Church Wilderness; the current cab dates to 1976, and sources disagree on the earlier build dates.",
   "other_names": [
     "Sheepeater Mountain"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 2566.7,
   "kind": "ground",
-  "design": "L-4",
+  "material": "steel",
+  "material_from": "firelookout_com",
+  "roles": [],
+  "design": "Current cab: CL-100 14'x14' flat-roof cab with catwalk on a 6' stone base (NHLR); Keeping Watch lists an R-6 15x15 cabin",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -30,8 +34,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Hike-in only, in the Frank Church wilderness, at an active staffed lookout. No source says whether visitors may enter the cab."
   },
   "staffing": {
     "status": "staffed",
@@ -39,11 +43,48 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": false,
     "trail_note": null
   },
   "rental": null,
   "events": [
+    {
+      "year": 1925,
+      "event": "built",
+      "note": "Hip-roofed log cabin on the summit, per firelookout.com; the UIdaho file dates the original log and frame structure to the late 1920s",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/sheepeater.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/sheepeater.html",
+        "https://objects.lib.uidaho.edu/taylorarchive/b08-PayetteNationalForestLiterature21.pdf"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "L-4 cab, per firelookout.com and Idaho Fire Lookouts; Keeping Watch gives 1934 as the build year",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/sheepeater.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/sheepeater.html",
+        "https://www.idahofirelookouts.com/west-central/sheepeater-mountain/",
+        "https://cdil.lib.uidaho.edu/keeping-watch/items/sheepeater-mountain.html"
+      ]
+    },
+    {
+      "year": 1954,
+      "event": "other",
+      "note": "Yellow-paint mishap at the lookout, recalled by Val Simpson in a 1999 account; not a fire",
+      "from": "research",
+      "source_url": "https://objects.lib.uidaho.edu/taylorarchive/b08-PayetteNationalForestLiterature21.pdf"
+    },
+    {
+      "year": 1957,
+      "event": "built",
+      "note": "NHLR date for an L-4 ground house that replaced the 1920s log structure; conflicts with the 1934 date",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sheepeater-lookout/"
+    },
     {
       "year": 1976,
       "event": "built",
@@ -51,10 +92,23 @@
       "from": "nhlr"
     },
     {
+      "year": 1976,
+      "event": "replaced",
+      "note": "Older structure replaced by a metal cab moved from the Lookout Mountain site; NHLR gives 1976 as the year the current cab was erected",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sheepeater-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/sheepeater-lookout/",
+        "https://www.firelookout.com/id/sheepeater.html",
+        "https://www.idahofirelookouts.com/west-central/sheepeater-mountain/"
+      ]
+    },
+    {
       "year": 2002,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 1, 2002",
-      "from": "nhlr"
+      "note": "Registered April 1, 2002 as NHLR US 403, ID 33",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sheepeater-lookout/"
     }
   ],
   "photos": [
@@ -222,6 +276,16 @@
       "kind": "register"
     },
     {
+      "label": "Yellow Rock Lookout (Payette National Forest literature) (Taylor Wilderness Research Station Archive, University of Idaho)",
+      "url": "https://objects.lib.uidaho.edu/taylorarchive/b08-PayetteNationalForestLiterature21.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Sheepeater Mountain Lookout (Keeping Watch, University of Idaho Library)",
+      "url": "https://cdil.lib.uidaho.edu/keeping-watch/items/sheepeater-mountain.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -268,6 +332,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:sheepeater-mtn:45.3899:-115.3469",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -280,6 +345,21 @@
         "staffing",
         "photos",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-sheepeater",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -300,9 +380,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

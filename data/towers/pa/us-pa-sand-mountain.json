@@ -1,6 +1,7 @@
 {
   "id": "us-pa-sand-mountain",
   "name": "Sand Mountain Fire Tower",
+  "summary": "A 1917 state fire tower on Sand Mountain in Union County, replaced in 1950 by an 80-ft Aermotor moved from Hartley; registered but in poor condition, access prohibited in 2022.",
   "other_names": [
     "Sand Mountain Tower Site (Union County II)"
   ],
@@ -15,8 +16,11 @@
   },
   "elevation_m": 630.9,
   "kind": "tower",
-  "design": "Aermotor",
-  "height_m": 27.4,
+  "material": "steel",
+  "material_from": "design",
+  "roles": [],
+  "design": "80-ft Aermotor moved in from Eastville (Hartley) in 1950; it replaced an original 60-ft steel Aermotor of 1917",
+  "height_m": 24.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -36,20 +40,38 @@
   "agency": "Pennsylvania Bureau of Forestry",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "2022 visit report says access to the tower is prohibited; a large communications tower stands next to the site"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2022-06-04"
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Access to the tower is prohibited according to the June 2022 visit report"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1917,
+      "event": "built",
+      "note": "Steel Aermotor observation tower erected August and September 1917 on Sand Mountain, bought from the Aermotor Company of Chicago; a line about four miles long was built from the Forest House to the tower in 1918",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/sand-mountain-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/sand-mountain-fire-tower/",
+        "https://easternuslookouts.weebly.com/sand-mountain.html"
+      ]
+    },
+    {
+      "year": 1938,
+      "event": "other",
+      "note": "Steel Aermotor tower first built at the Hartley (Eastville) site in Union County; later moved to Sand Mountain",
+      "from": "research",
+      "source_url": "http://www.firetower.org/lookouts/us/pa/hartley-tower-site/"
+    },
     {
       "year": 1950,
       "event": "built",
@@ -57,16 +79,37 @@
       "from": "nhlr"
     },
     {
+      "year": 1950,
+      "event": "replaced",
+      "note": "Original 1917 tower replaced by an 80-ft Aermotor moved in from Eastville (Hartley); the Union County II site entry gives 1951",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/sand-mountain-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/sand-mountain-fire-tower/",
+        "http://www.firetower.org/lookouts/us/pa/hartley-tower-site/",
+        "http://firetower.org/lookouts/us/pa/sand-mountain-tower-site-union-county-ii/"
+      ]
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 16, 2008",
-      "from": "fflos"
+      "note": "Registered September 16, 2008 as US 467, PA 296 (Sand Mountain Tower Site, Union County II)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/sand-mountain-tower-site-union-county-ii/"
     },
     {
       "year": 2017,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 6, 2017",
-      "from": "nhlr"
+      "note": "Registered December 6, 2017 as US 1253, PA 22",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/sand-mountain-fire-tower/"
+    },
+    {
+      "year": 2022,
+      "event": "other",
+      "note": "June 4, 2022 visit report: very poor condition, unstaffed, access prohibited, district awaiting funding to remove the tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/sand-mountain-fire-tower/"
     }
   ],
   "photos": [
@@ -107,6 +150,11 @@
       "kind": "register"
     },
     {
+      "label": "Hartley Tower Site (Former Fire Lookout Sites)",
+      "url": "http://www.firetower.org/lookouts/us/pa/hartley-tower-site/",
+      "kind": "reference"
+    },
+    {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
       "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
       "kind": "site"
@@ -126,6 +174,7 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
         "status",
         "registers",
         "agency",
@@ -147,7 +196,7 @@
       "source": "pa_storymap",
       "key": "pa_storymap:sand-mountain:41.0019:-77.1315",
       "fields": [
-        "kind",
+        "material",
         "design",
         "height_m",
         "photos",
@@ -160,6 +209,22 @@
       "fields": [
         "ownership",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-sand-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -203,9 +268,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

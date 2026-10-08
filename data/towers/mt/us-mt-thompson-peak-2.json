@@ -14,6 +14,9 @@
   },
   "elevation_m": 1400.0,
   "kind": "three_story",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "live-in cab on concrete tower base (resembles an air-traffic-control tower)",
   "height_m": 6.1,
   "status": "standing",
@@ -147,6 +150,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Thompson Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/thompsonpk.html",
       "kind": "site"
@@ -177,10 +185,19 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:thompson-peak-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:mt:thompson-peak:47.1784:-114.9076",
       "fields": [
         "elevation_m",
+        "material",
         "design",
         "height_m",
         "events",
@@ -216,5 +233,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

@@ -2,7 +2,8 @@
   "id": "us-mt-strawberry",
   "name": "Strawberry Lookout",
   "other_names": [
-    "Strawberry Butte"
+    "Strawberry Butte",
+    "Strawberry Lookout Cabin"
   ],
   "country": "US",
   "region": "MT",
@@ -15,6 +16,9 @@
   },
   "elevation_m": 1520.6,
   "kind": "tower",
+  "material": "steel",
+  "material_from": "firelookout_com",
+  "roles": [],
   "design": "Aermotor",
   "height_m": null,
   "status": "standing",
@@ -42,7 +46,14 @@
     "drive_up": null,
     "trail_note": null
   },
-  "rental": null,
+  "rental": {
+    "available": true,
+    "source": "ffla",
+    "provider": "recreation.gov",
+    "url": "https://www.recreation.gov/camping/campgrounds/272173",
+    "ridb_facility_id": "272173",
+    "checked": "2026-10-08"
+  },
   "events": [
     {
       "year": 1941,
@@ -126,8 +137,18 @@
       "kind": "register"
     },
     {
+      "label": "Book or read about Strawberry Lookout Cabin (recreation.gov)",
+      "url": "https://www.recreation.gov/camping/campgrounds/272173",
+      "kind": "rental"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
       "kind": "association"
     },
     {
@@ -164,9 +185,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:strawberry-lookout-cabin",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:mt:strawberry-butte:46.4755:-111.9154",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -207,5 +237,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

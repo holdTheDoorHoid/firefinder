@@ -1,6 +1,7 @@
 {
   "id": "us-az-monte-vista",
   "name": "Monte Vista Lookout",
+  "summary": "A 1966 steel tower on Monte Vista Peak in the Chiricahua Mountains, still an active Forest Service lookout, reached on foot by trail.",
   "other_names": [
     "Monte Vista Peak Lookout"
   ],
@@ -15,8 +16,11 @@
   },
   "elevation_m": 2889.5,
   "kind": "tower",
-  "design": null,
-  "height_m": 12.0,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "40-ft steel tower with USDA CL-100 metal cab, 14 ft by 14 ft (1966 replacement)",
+  "height_m": 12.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -30,8 +34,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached on foot by trail. The cab is an active Forest Service station. The sources give no visitor entry rule for the cab."
   },
   "staffing": {
     "status": "unknown",
@@ -39,16 +43,85 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Trailheads in the Turkey Creek area (Morse Canyon Trail #43 or Pole Bridge Trail #264) and in the Rucker Canyon area, including one at the end of Forest Road 628 off FR-74E."
   },
   "rental": null,
   "events": [
     {
+      "year": 1916,
+      "event": "built",
+      "note": "Original crow's nest tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/monte-vista-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/monte-vista-lookout/",
+        "https://www.gvrhc.org/Library/MonteVistaFireLookout.pdf"
+      ]
+    },
+    {
+      "year": 1922,
+      "event": "replaced",
+      "note": "30-ft Aermotor tower replaced the crow's nest",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/monte-vista-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/monte-vista-lookout/",
+        "https://www.gvrhc.org/Library/MonteVistaFireLookout.pdf"
+      ]
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "Support cabin at the base of the lookout, built by the CCC. This is the NRHP-listed cabin, not the tower.",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Monte_Vista_Lookout_Cabin"
+    },
+    {
+      "year": 1956,
+      "event": "fire",
+      "note": "Erroneous report that the support cabin had been destroyed in a forest fire (per Wikipedia)",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Monte_Vista_Lookout_Cabin"
+    },
+    {
+      "year": 1966,
+      "event": "replaced",
+      "note": "Current 40-ft steel tower with CL-100 14x14 cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/monte-vista-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/monte-vista-lookout/",
+        "https://www.gvrhc.org/Library/MonteVistaFireLookout.pdf"
+      ]
+    },
+    {
+      "year": 1988,
+      "event": "nrhp_listed",
+      "note": "Monte Vista Lookout Cabin added to the National Register, January 28, 1988",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Monte_Vista_Lookout_Cabin"
+    },
+    {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 31, 2003",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, January 31, 2003",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/monte-vista-lookout/"
+    },
+    {
+      "year": 2011,
+      "event": "fire",
+      "note": "Horseshoe II fire ravaged much of the Chiricahua Mountains and destroyed Barfoot Lookout; it came close to Monte Vista but bypassed the site",
+      "from": "research",
+      "source_url": "https://www.gvrhc.org/Library/MonteVistaFireLookout.pdf"
+    },
+    {
+      "year": 2013,
+      "event": "staffed",
+      "note": "2013 summary: lookout is active and generally manned during the high fire danger season",
+      "from": "research",
+      "source_url": "https://www.gvrhc.org/Library/MonteVistaFireLookout.pdf"
     }
   ],
   "photos": [
@@ -70,6 +143,16 @@
       "label": "NHLR register entry US 449 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/az/monte-vista-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Monte Vista Fire Lookout (summary prepared June 2013) (Green Valley Hiking Club)",
+      "url": "https://www.gvrhc.org/Library/MonteVistaFireLookout.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Monte Vista Lookout Cabin (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Monte_Vista_Lookout_Cabin",
+      "kind": "reference"
     },
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
@@ -96,6 +179,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -128,12 +212,34 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-monte-vista",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

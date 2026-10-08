@@ -18,6 +18,7 @@ import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 import { activeFilterCount, applyFilters, defaultFilters, type Filters } from '../lib/filters.ts';
 import { isMaybe, yearState } from '../lib/history.ts';
 import { formatCount } from '../lib/format.ts';
+import { isNoStructure } from '../lib/vocab.ts';
 import { html } from '../lib/html.ts';
 import { buildIndex, type SearchEntry } from '../lib/search.ts';
 import type { Meta, SourceInfo, TowerCollection, TowerFeature, TowerProps } from '../lib/types.ts';
@@ -199,16 +200,22 @@ async function main(): Promise<void> {
     maybeCollection = { type: 'FeatureCollection', features: maybe };
     if (map?.getSource(SRC)) setTowerData(map, collection, maybeCollection);
     const n = shown.length;
-    const total = features.length;
+    // Sites with no structure (camps, lookout trees, bare points) count only when switched on,
+    // and the count says which it is.
+    const withNs = state.filters.noStructure;
+    const noStructureTotal = features.filter((f) => isNoStructure(f.properties.k)).length;
+    const total = withNs ? features.length : features.length - noStructureTotal;
+    const what = withNs ? 'lookout sites' : 'towers and buildings';
     if (state.year !== null) {
       const when = state.year >= thisYear ? 'today' : `in ${state.year}`;
       countEl.textContent =
-        `${formatCount(n)} standing ${when}` + (maybe.length ? `, ${formatCount(maybe.length)} faded` : '') + (filtered.length !== total ? ' (filtered)' : '');
+        `${formatCount(n)} ${what} standing ${when}` + (maybe.length ? `, ${formatCount(maybe.length)} faded` : '') + (filtered.length !== total ? ' (filtered)' : '');
     } else {
+      const ns = withNs && noStructureTotal ? `, including ${formatCount(noStructureTotal)} with no structure` : '';
       countEl.textContent =
-        total === 0 ? 'No lookouts loaded' : n === 0 ? 'No lookouts match your filters' : n === total ? `All ${formatCount(total)} lookouts shown` : `${formatCount(n)} of ${formatCount(total)} lookouts shown`;
+        features.length === 0 ? 'No lookouts loaded' : n === 0 ? 'No lookouts match your filters' : n === total ? `All ${formatCount(total)} ${what} shown${ns}` : `${formatCount(n)} of ${formatCount(total)} ${what} shown`;
     }
-    countEl.classList.toggle('is-empty', n + maybe.length === 0 && total > 0);
+    countEl.classList.toggle('is-empty', n + maybe.length === 0 && features.length > 0);
     const active = activeFilterCount(state.filters);
     filterCountEl.textContent = active ? ` (${active})` : '';
     $('reset-map').hidden = active === 0;
@@ -236,7 +243,9 @@ async function main(): Promise<void> {
     history: () => historyCounts,
     all: () => features,
     filtered: () => filteredNoYear,
-    filtersActive: () => activeFilterCount(state.filters) > 0,
+    // Switching on sites with no structure is said separately, not as "your filters".
+    filtersActive: () => activeFilterCount(state.filters) - (state.filters.noStructure ? 1 : 0) > 0,
+    withNoStructure: () => state.filters.noStructure,
     onChange: (year, maybe) => {
       const was = state.year;
       state.year = year;
@@ -407,7 +416,7 @@ async function main(): Promise<void> {
       ctx.sources = new Map<string, SourceInfo>(meta.sources.map((s) => [s.id, s]));
       if (meta.fixtures) $('fixture-banner').hidden = false;
     }
-    $<HTMLInputElement>('q').placeholder = `Search ${formatCount(features.length)} lookouts, e.g. Hirz Mountain`;
+    $<HTMLInputElement>('q').placeholder = `Search ${formatCount(features.length)} lookout sites, e.g. Hirz Mountain`;
     syncFilters = renderFilterPanel({
       root: filtersBody,
       features: () => features,

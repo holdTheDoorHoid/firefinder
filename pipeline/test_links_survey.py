@@ -313,7 +313,8 @@ class RegisterHelpers(unittest.TestCase):
         self.assertFalse(a(None, "Pig Iron Lookout"))
 
 
-NEW_SOURCES = ["west_us_lookouts", "trailchick_wa", "cherylhill_oregon", "ffla_groups", "willhiteweb_wa"]
+NEW_SOURCES = ["west_us_lookouts", "trailchick_wa", "cherylhill_oregon", "ffla_groups", "willhiteweb_wa",
+               "indiana_fire_towers"]
 
 
 class Registration(unittest.TestCase):

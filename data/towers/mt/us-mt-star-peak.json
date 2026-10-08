@@ -18,6 +18,9 @@
   },
   "elevation_m": 1833.1,
   "kind": "ground",
+  "material": "stone",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "L-4 cab on a stone base",
   "height_m": null,
   "status": "standing",
@@ -79,6 +82,13 @@
       "source_url": "https://www.firelookout.com/mt/squawpk.html"
     },
     {
+      "year": 1933,
+      "event": "staffed",
+      "note": "Staffed by Wag Dodge, later the foreman of the Mann Gulch fire.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/11/2023-newsletter.pdf"
+    },
+    {
       "year": 1952,
       "event": "replaced",
       "note": "Present L-4 cab on a stone base built, replacing the 1930 structure; remains the only active lookout on the Cabinet Ranger District",
@@ -111,6 +121,13 @@
       "source_url": "http://nhlr.org/lookouts/us/mt/star-peak-lookout/"
     },
     {
+      "year": 2003,
+      "event": "staffed_last",
+      "note": "Staffed and maintained until 2003.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/11/2024-newsletter.pdf"
+    },
+    {
       "year": 2004,
       "event": "other",
       "note": "Peak renamed from Squaw Peak to Star Peak/Star Mountain",
@@ -119,6 +136,39 @@
       "source_urls": [
         "http://nhlr.org/lookouts/us/mt/star-peak-lookout/",
         "https://www.firelookout.com/mt/squawpk.html"
+      ]
+    },
+    {
+      "year": 2022,
+      "event": "assessed",
+      "note": "Assessment to document restoration needs for the Cabinet District.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2022-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2022-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2022-newsletter.pdf"
+      ]
+    },
+    {
+      "year": 2023,
+      "event": "restored",
+      "note": "Windows flown out; re-roofed with cedar shingles and the exterior scraped and painted, with Great American Outdoors Act funding.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2023-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2023-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2023-newsletter.pdf"
+      ]
+    },
+    {
+      "year": 2024,
+      "event": "restored",
+      "note": "Windows restored at spring workshops and helicoptered back in June; new shutters, interior and exterior painted, leaving it in restored condition.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/11/2024-newsletter.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2024-newsletter.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2024-completed-projects.pdf"
       ]
     }
   ],
@@ -273,6 +323,11 @@
       "kind": "association"
     },
     {
+      "label": "Northwest Montana Lookout Association: work on Star Peak Lookout",
+      "url": "https://nwmt-ffla.org/2024/09/01/2024-projects/",
+      "kind": "association"
+    },
+    {
       "label": "Squaw Peak (Star Mtn.) on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/squawpk.html",
       "kind": "site"
@@ -297,6 +352,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -331,6 +387,14 @@
       "fields": []
     },
     {
+      "source": "nwmt_projects",
+      "key": "nwmt_projects:mt:star-peak",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q86928492",
       "fields": [
@@ -363,6 +427,21 @@
   ],
   "conflicts": [
     {
+      "field": "built",
+      "values": [
+        {
+          "source": "firelookout_com",
+          "value": 1907
+        },
+        {
+          "source": "nwmt_projects",
+          "value": 1910
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    },
+    {
       "field": "registers",
       "values": [
         {
@@ -388,5 +467,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

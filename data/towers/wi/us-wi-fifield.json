@@ -1,6 +1,7 @@
 {
   "id": "us-wi-fifield",
   "name": "Fifield Lookout",
+  "summary": "1932 Wisconsin Conservation Commission steel ladder tower in Price County: standing with lower ladder cut and cab glass gone; hike-only, no public climbing.",
   "other_names": [
     "Fifield (Wintergreen)"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 483.7,
   "kind": "tower",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "Galvanized steel ladder tower, about 100 ft (30.5 m), on four concrete piers, with a seven-foot square steel cab and a caged exterior ladder",
   "height_m": 30.5,
   "status": "standing",
   "status_note": null,
@@ -33,34 +37,79 @@
       "url": "https://npgallery.nps.gov/AssetDetail/NRIS/07000668"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Chequamegon-Nicolet National Forest); Wisconsin DNR holds a special use permit for the site",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Public may walk to the tower on the original trail from the Wintergreen parking lot, but no public access to climb it. National Forest parking pass required."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Trail from the Wintergreen Parking Lot (crosses an ATV trail) to the tower; hike only, no public climbing"
   },
   "rental": null,
   "events": [
     {
       "year": 1932,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Erected by the Wisconsin Conservation Commission under a special use permit on Forest Service land acquired in 1931; piers inscribed 1932",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/GetAsset/45fa455e-af5a-4a45-8f7c-c67efc529c5c",
+      "source_urls": [
+        "https://npgallery.nps.gov/GetAsset/45fa455e-af5a-4a45-8f7c-c67efc529c5c",
+        "http://nhlr.org/lookouts/us/wi/fifield-lookout/"
+      ]
+    },
+    {
+      "year": 1935,
+      "event": "staffed_first",
+      "note": "Forest Service took over operation; CCC Camp Riley Creek operated the tower for at least 1935 to 1941",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/GetAsset/45fa455e-af5a-4a45-8f7c-c67efc529c5c"
+    },
+    {
+      "year": 1957,
+      "event": "other",
+      "note": "National Register form gives 1957 as the end of the period of significance (1932-1957); not a staffing end date",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/GetAsset/45fa455e-af5a-4a45-8f7c-c67efc529c5c"
+    },
+    {
+      "year": 1973,
+      "event": "modified",
+      "note": "Bottom approximately 20 feet of ladder removed to meet fire tower safety standards",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/GetAsset/45fa455e-af5a-4a45-8f7c-c67efc529c5c"
+    },
+    {
+      "year": 1973,
+      "event": "staffed_last",
+      "note": "Last staffed season per Wikipedia and Forest Lookouts; the nomination does not name a final staffed year",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Fifield_Fire_Lookout_Tower",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Fifield_Fire_Lookout_Tower",
+        "https://centraluslookouts.weebly.com/fifield.html"
+      ]
+    },
+    {
+      "year": 2007,
+      "event": "nrhp_listed",
+      "note": "Added to the National Register of Historic Places in 2007 (Wikipedia gives July 3, 2007)",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Fifield_Fire_Lookout_Tower"
     },
     {
       "year": 2008,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 2, 2008",
-      "from": "nhlr"
+      "note": "Registered January 2, 2008 as US 712",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/fifield-lookout/"
     }
   ],
   "photos": [
@@ -94,6 +143,21 @@
       "label": "NHLR register entry US 712 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wi/fifield-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Fifield Fire Lookout Tower, National Register of Historic Places registration form (National Park Service)",
+      "url": "https://npgallery.nps.gov/GetAsset/45fa455e-af5a-4a45-8f7c-c67efc529c5c",
+      "kind": "reference"
+    },
+    {
+      "label": "Fifield - Forest Lookouts",
+      "url": "https://centraluslookouts.weebly.com/fifield.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Fifield Fire Tower (Travel Wisconsin)",
+      "url": "https://www.travelwisconsin.com/things-to-do/culture-arts/architecture/fifield-fire-tower",
+      "kind": "reference"
     },
     {
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
@@ -159,12 +223,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wi-fifield",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

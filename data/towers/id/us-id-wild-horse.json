@@ -1,6 +1,7 @@
 {
   "id": "us-id-wild-horse",
   "name": "Wild Horse Lookout",
+  "summary": "Abandoned L-4 ground cabin on the Challis National Forest, built 1935 and left by 1946; restored in the 1970s and registered in 2016.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2912.7,
   "kind": "ground",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "L-4",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,37 +32,76 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "TopoZone says the lookout is open to the public. The Register's 2016 visit report describes a long walk up an ATV/UTV road. No closure is recorded in the sources read; TopoZone mentions a 50-inch gate but does not say it is closed. Provisional: rests mainly on one map site."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1946"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Idaho Fire Lookouts lists it as hike-in. TopoZone describes a road about 3.5 miles long, climbing 2,500 feet, with a 50-inch gate, suitable only for high-clearance 4x4 vehicles, dirt bikes or hikers. The Register's visit report describes a long walk up an ATV/UTV road."
   },
   "rental": null,
   "events": [
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "L-4 ground cab, built as part of Forest Service fire lookout work. Idaho Fire Lookouts gives 1936.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/wild-horse-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/wild-horse-lookout/",
+        "https://www.firelookout.com/id/wildhorse.html",
+        "https://idaholookouts.weebly.com/wildhorse.html",
+        "https://www.topozone.com/idaho/custer-id/tower/wildhorse-lookout-2/"
+      ]
+    },
+    {
+      "year": 1943,
+      "event": "staffed_last",
+      "note": "TopoZone says manned until 1943. Other sources give 1946 for abandonment.",
+      "from": "research",
+      "source_url": "https://www.topozone.com/idaho/custer-id/tower/wildhorse-lookout-2/"
     },
     {
       "year": 1946,
       "event": "abandoned",
-      "note": null,
-      "from": "idaho_fl"
+      "note": "Abandoned as a lookout.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/wild-horse-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/wild-horse-lookout/",
+        "https://www.firelookout.com/id/wildhorse.html",
+        "https://www.idahofirelookouts.com/southern-idaho/wildhorse-lookout/",
+        "https://idaholookouts.weebly.com/wildhorse.html"
+      ]
+    },
+    {
+      "year": 1970,
+      "event": "restored",
+      "note": "Restored and rehabbed as an outfitter's cabin. Sources give only 'the 1970s'; year shown is the decade start.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/wild-horse-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/wild-horse-lookout/",
+        "https://www.firelookout.com/id/wildhorse.html",
+        "https://www.idahofirelookouts.com/southern-idaho/wildhorse-lookout/",
+        "https://idaholookouts.weebly.com/wildhorse.html"
+      ]
     },
     {
       "year": 2016,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 27, 2016",
-      "from": "nhlr"
+      "note": "Registered November 27, 2016.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/wild-horse-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/wild-horse-lookout/",
+        "https://www.idahofirelookouts.com/southern-idaho/wildhorse-lookout/"
+      ]
     }
   ],
   "photos": [
@@ -190,6 +233,16 @@
       "kind": "register"
     },
     {
+      "label": "Wildhorse (Forest Lookouts)",
+      "url": "https://idaholookouts.weebly.com/wildhorse.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Wildhorse Lookout Topo Map (TopoZone)",
+      "url": "https://www.topozone.com/idaho/custer-id/tower/wildhorse-lookout-2/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -248,6 +301,22 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-wild-horse",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -296,9 +365,15 @@
       "note": "NHLR lists lookouts that were standing when registered. idahofirelookouts.com's status is read from a short summary."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

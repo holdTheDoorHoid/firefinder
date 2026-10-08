@@ -2,7 +2,8 @@
   "id": "us-id-stranger-mountain-at-crystal-ridge",
   "name": "Stranger Mountain Lookout (from Washington, now at Crystal Ridge)",
   "other_names": [
-    "Crystal Ridge"
+    "Crystal Ridge",
+    "Crystal Peak Relocated Lookout"
   ],
   "country": "US",
   "region": "ID",
@@ -15,16 +16,19 @@
   },
   "elevation_m": null,
   "kind": "tower",
+  "material": null,
+  "material_from": null,
+  "roles": [],
   "design": null,
   "height_m": null,
   "status": "standing",
   "status_note": null,
   "registers": [],
   "agency": null,
-  "ownership": "unknown",
+  "ownership": "private",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "permission",
+    "note": "Private property. The way in is to book a stay through the listing."
   },
   "staffing": {
     "status": "unknown",
@@ -35,7 +39,15 @@
     "drive_up": null,
     "trail_note": null
   },
-  "rental": null,
+  "rental": {
+    "available": true,
+    "source": "ffla",
+    "provider": "Airbnb",
+    "url": "https://www.airbnb.com/rooms/25687274",
+    "ridb_facility_id": null,
+    "checked": "2026-10-08",
+    "manager": "private owner"
+  },
   "events": [
     {
       "year": null,
@@ -68,8 +80,18 @@
       "id": "us-wa-stranger-mountain"
     },
     {
+      "label": "Book or read about Crystal Peak Relocated Lookout (Airbnb)",
+      "url": "https://www.airbnb.com/rooms/25687274",
+      "kind": "rental"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
       "kind": "association"
     },
     {
@@ -93,6 +115,16 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:id:crystal-peak-relocated-lookout",
+      "fields": [
+        "ownership",
+        "access",
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "idaho_fl",
       "key": "idaho_fl:crystal-ridge:47.1401:-116.3292",
       "fields": [
@@ -106,5 +138,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -33,6 +33,9 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from _common import FetchError, fetch_text, ft_to_m, slugify, write_source_json  # noqa: E402
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
+from structure import structure_words  # noqa: E402  (pipeline/structure.py: the closed vocabulary of facts)
+
 SOURCE = "trailchick_wa"
 BASE = "https://www.trailchick.com"
 INDEX_URL = f"{BASE}/wa-state-fire-lookouts/"
@@ -170,6 +173,7 @@ def main() -> None:
         if f["built"]:
             events.append({"year": f["built"], "event": "built", "note": "Current structure", "from": SOURCE})
         extra = {"elevation_ft": f["elev_ft"], "driveable": item.get("driveable"),
+                 "type_text": f["type_raw"], "structure_words": structure_words(f["type_raw"]),
                  "mountain_ranges": item.get("mountain_ranges") or None,
                  "wilderness": item.get("wilderness") or None}
         if f["design"]:
@@ -189,13 +193,13 @@ def main() -> None:
             "lat": round(f["lat"], 5) if f["lat"] is not None else None,
             "lon": round(f["lon"], 5) if f["lon"] is not None else None,
             "elevation_m": ft_to_m(f["elev_ft"]) if f["elev_ft"] else None,
-            "type_raw": f["type_raw"], "kind": kind_of(f["type_raw"]),
-            "status_raw": "RIP (gone)" if rip else "Standing", "status": "gone" if rip else "standing",
+            "type_raw": None, "kind": kind_of(f["type_raw"]),
+            "status_raw": None, "status": "gone" if rip else "standing",
             "registers": [], "built": f["built"], "agency": item.get("land") or None, "events": events,
             "photos": ([{"url": item["image"], "credit": None, "caption": None, "year": None}] if item.get("image") else []),
             "links": [{"label": f"{item['title']} in the TrailChick Washington lookout guide", "url": url,
                        "kind": "site"}],
-            "rental": None, "extra": {k: v for k, v in extra.items() if v is not None},
+            "rental": None, "extra": {k: v for k, v in extra.items() if v not in (None, [])},
         })
     n_coord = sum(1 for r in records if r["lat"] is not None)
     print(f"{len(records)} records, {n_coord} with coordinates", file=sys.stderr)

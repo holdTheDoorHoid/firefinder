@@ -8,6 +8,7 @@ import { formatCount } from '../lib/format.ts';
 import { html, raw } from '../lib/html.ts';
 import { SLIDER_FIRST_YEAR, yearSeries, type YearCounts } from '../lib/history.ts';
 import type { HistoryCounts, TowerFeature } from '../lib/types.ts';
+import { isNoStructure } from '../lib/vocab.ts';
 import { YearChart } from './year-chart.ts';
 
 export interface YearPanelDeps {
@@ -20,6 +21,8 @@ export interface YearPanelDeps {
   /** Lookouts that pass the other filters (the counts follow them). */
   filtered: () => readonly TowerFeature[];
   filtersActive: () => boolean;
+  /** Whether sites with no structure (camps, lookout trees, bare points) are switched on. */
+  withNoStructure?: () => boolean;
   onChange: (year: number | null, maybe: boolean) => void;
 }
 
@@ -123,6 +126,7 @@ export class YearPanel {
           <button type="button" class="years-jump" data-jump="${T}">Today</button>
         </div>
         <p class="years-count" data-count></p>
+        <p class="fine years-scope" data-scope></p>
         <p class="years-maybe" data-maybe></p>
         <label class="years-toggle"><input type="checkbox" data-maybe-toggle> <span data-toggle-label>Show them faded on the map</span></label>
         <p class="fine years-markers">Markers keep today's look: a hollow one is a lookout that is gone now.</p>
@@ -201,6 +205,9 @@ export class YearPanel {
       parts.push(`Another ${formatCount(maybe)} may have: ${listing(why)}.`);
     }
     el.querySelector('[data-maybe]')!.textContent = parts.join(' ');
+    el.querySelector('[data-scope]')!.textContent = this.#d.withNoStructure?.()
+      ? 'Includes sites with no structure (summit camps, lookout trees, bare points), as you switched them on.'
+      : 'Towers and buildings only: sites with no structure (camps, lookout trees, bare points) are left out.';
     const toggle = el.querySelector<HTMLInputElement>('[data-maybe-toggle]')!;
     toggle.checked = this.#maybe;
     toggle.closest('label')!.hidden = maybe === 0;
@@ -226,13 +233,13 @@ export class YearPanel {
     const box = this.#el?.querySelector('[data-notes]');
     const h = this.#d.history();
     if (!box) return;
-    const all = this.#d.all();
+    const all = this.#d.all().filter((f) => !isNoStructure(f.properties.k));
     const starts = all.filter((f) => f.properties.y0 !== undefined);
     const thirties = starts.filter((f) => f.properties.y0! >= 1930 && f.properties.y0! < 1940).length;
     box.innerHTML = html`
       <p><strong>How it is worked out.</strong> A lookout counts as standing in a year if it was built in or before that year and had not yet come down. “Built” is a recorded build, rebuild or first staffing; “came down” is a recorded destruction, fire, removal or abandonment. Today's count uses each lookout's current status instead.</p>
       ${h
-        ? html`<p><strong>The records are thin.</strong> Of ${formatCount(h.total)} lookouts, ${formatCount(h.with_start)} have a recorded build year and only ${formatCount(h.with_end)} a recorded end; ${formatCount(h.no_dates)} have neither (${formatCount(h.standing_no_start)} of those still stand). Lookouts without dates are never left out silently: they are counted above as “may have”, and you can show them faded.</p>`
+        ? html`<p><strong>The records are thin.</strong> Of ${formatCount(h.total)} lookout towers and buildings, ${formatCount(h.with_start)} have a recorded build year and only ${formatCount(h.with_end)} a recorded end; ${formatCount(h.no_dates)} have neither (${formatCount(h.standing_no_start)} of those still stand). Lookouts without dates are never left out silently: they are counted above as “may have”, and you can show them faded.</p>`
         : ''}
       <p>So the line is a floor, not a census. It shows the burst of building in the 1930s (${formatCount(thirties)} of the ${formatCount(starts.length)} recorded build years), but hardly any of the decline after the 1950s, because few removal dates were ever written down where we can find them. The numbers will change as sources and stories are added.</p>`.value;
   }

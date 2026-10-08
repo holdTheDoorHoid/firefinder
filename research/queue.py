@@ -42,6 +42,18 @@ def queue():
     return [x[3] for x in sorted(q)], q
 
 
+def source_pages(t, cap=12):
+    """The tower's linked pages, at most `cap` of them, but never without the association
+    project reports (links of kind "association" other than the FFLA state list): those pages
+    carry the dated work on the lookout, which a story should cite."""
+    links = [l for l in t.get("links") or [] if l.get("url")]
+    urls = [l["url"] for l in links][:cap]
+    for l in links:
+        if l.get("kind") == "association" and "firelookout.org" not in l["url"] and l["url"] not in urls:
+            urls.append(l["url"])
+    return urls
+
+
 def brief(t):
     loc = t.get("location") or {}
     b = {
@@ -53,7 +65,7 @@ def brief(t):
         "agency": t.get("agency"), "access": (t.get("access") or {}).get("level"),
         "registers": [f'{r.get("register")} {r.get("number")}' + (f' ({r["url"]})' if r.get("url") else "") for r in t.get("registers") or []] or None,
         "events": [f'{e.get("year")} {e.get("event")}' + (f' ({e["note"]})' if e.get("note") else "") for e in t.get("events") or []] or None,
-        "source_pages": [l["url"] for l in t.get("links") or [] if l.get("url")][:12] or None,
+        "source_pages": source_pages(t) or None,
         "conflicts": [c.get("note") or f'{c.get("field")}: ' + ", ".join(f'{v.get("source")}={v.get("value")}' for v in c.get("values") or []) for c in t.get("conflicts") or []] or None,
     }
     r = t.get("rental") or {}

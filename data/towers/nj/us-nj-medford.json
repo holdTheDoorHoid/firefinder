@@ -1,6 +1,7 @@
 {
   "id": "us-nj-medford",
   "name": "Medford Station Fire Tower",
+  "summary": "Planned in 1940 and built in 1948 as a 100-foot Aermotor tower at Piper's Corner, Burlington County; still in service, with a staffed observer described in 2026.",
   "other_names": [],
   "country": "US",
   "region": "NJ",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 43.0,
   "kind": "tower",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "100-foot Aermotor tower with a 7x7-foot metal cab",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -28,12 +32,12 @@
   "agency": "New Jersey Forest Fire Service",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Working NJFFS observation post; a 2026 WHYY report describes a staffed observer on duty, and no source read describes public climbing."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2026-06-09"
   },
   "visit": {
     "climbable": null,
@@ -43,16 +47,29 @@
   "rental": null,
   "events": [
     {
+      "year": 1940,
+      "event": "other",
+      "note": "Plans for the tower were set in 1940, per the NHLR page",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/medford-station-fire-tower/"
+    },
+    {
       "year": 1948,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Construction in 1948 after World War II; 1948 newspaper says it was being erected by Corlen Engineering Co. of Collingswood for about $4,500",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/medford-station-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nj/medford-station-fire-tower/",
+        "https://easternuslookouts.weebly.com/medford.html"
+      ]
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 15, 2004",
-      "from": "nhlr"
+      "note": "Registered March 15, 2004",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/medford-station-fire-tower/"
     }
   ],
   "photos": [
@@ -74,6 +91,16 @@
       "label": "NHLR register entry US 568 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/nj/medford-station-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "NJ wildfires: In the AI era, the Forest Service relies on humans (WHYY)",
+      "url": "https://whyy.org/articles/new-jersey-pine-barrens-fire-service-tower/",
+      "kind": "reference"
+    },
+    {
+      "label": "Div B Fire Towers (NJFFS Section B10)",
+      "url": "https://www.sectionb10.org/firetowers",
+      "kind": "reference"
     },
     {
       "label": "Medford Station (Wikipedia (List of New Jersey Forest Fire Service fire towers))",
@@ -100,6 +127,7 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
         "status",
         "registers",
         "agency",
@@ -112,7 +140,6 @@
       "source": "nj_forest_fire_towers",
       "key": "nj_forest_fire_towers:nj:medford-station",
       "fields": [
-        "kind",
         "height_m",
         "ownership",
         "links"
@@ -131,12 +158,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nj-medford",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

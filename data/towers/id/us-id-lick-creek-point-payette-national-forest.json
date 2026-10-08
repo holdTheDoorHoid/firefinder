@@ -1,6 +1,7 @@
 {
   "id": "us-id-lick-creek-point-payette-national-forest",
   "name": "Lick Creek Point Lookout (Payette National Forest)",
+  "summary": "A 1932 L-4 lookout in the Payette National Forest was replaced in 1978 by an R-6 cab that still stands; it is generally staffed in fire season.",
   "other_names": [
     "Lick Creek Point"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 2285.7,
   "kind": "two_story",
-  "design": "R-6",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "R-6 flat cab on a 10-foot concrete base (current cab); the first cab was an L-4 on a wooden base",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -31,7 +35,7 @@
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "Idaho Fire Lookouts lists the site as hike-in and staffed; no source says whether visitors may climb the cab"
   },
   "staffing": {
     "status": "staffed",
@@ -39,11 +43,34 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Listed as hike-in; the sources give no route details"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1932,
+      "event": "built",
+      "note": "First L-4 cab on the site; the sources describe its base as log, log cribbing or enclosed timber",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/lick-creek-point-lookout-payette-national-forest/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/lick-creek-point-lookout-payette-national-forest/",
+        "https://www.firelookout.com/id/lickcreek.html",
+        "https://idaholookouts.weebly.com/lick-creek-point.html"
+      ]
+    },
+    {
+      "year": 1942,
+      "event": "staffed",
+      "note": "Earliest named lookout person: Glen Gwilliams on firelookout.com, spelled Glen Williams on idahofirelookouts.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/lickcreek.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/lickcreek.html",
+        "https://www.idahofirelookouts.com/west-central/lick-creek-point/"
+      ]
+    },
     {
       "year": 1978,
       "event": "built",
@@ -51,10 +78,23 @@
       "from": "nhlr"
     },
     {
+      "year": 1978,
+      "event": "replaced",
+      "note": "R-6 flat cab on a concrete base replaced the 1932 cab; the Register's Built field gives 1978",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/lick-creek-point-lookout-payette-national-forest/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/lick-creek-point-lookout-payette-national-forest/",
+        "https://www.firelookout.com/id/lickcreek.html",
+        "https://www.idahofirelookouts.com/west-central/lick-creek-point/"
+      ]
+    },
+    {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 29, 2020",
-      "from": "nhlr"
+      "note": "Registered September 29, 2020 as US 1436, ID 128",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/lick-creek-point-lookout-payette-national-forest/"
     }
   ],
   "photos": [
@@ -126,6 +166,11 @@
       "kind": "register"
     },
     {
+      "label": "Lick Creek Point - FOREST LOOKOUTS (Forest Lookouts (idaholookouts.weebly.com))",
+      "url": "https://idaholookouts.weebly.com/lick-creek-point.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -172,6 +217,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:lick-creek-point:45.1065:-116.5054",
       "fields": [
+        "material",
         "design",
         "height_m",
         "photos",
@@ -185,6 +231,21 @@
         "staffing",
         "photos",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-lick-creek-point-payette-national-forest",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -205,9 +266,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -14,6 +14,9 @@
   },
   "elevation_m": 2119.9,
   "kind": "two_story",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "Two-story concrete and frame live-in tower with a 15 by 15 ft cab; the 1941 L-4 cab was moved to a museum in 1987",
   "height_m": 3.0,
   "status": "standing",
@@ -27,7 +30,7 @@
     }
   ],
   "agency": "Montana DNRC",
-  "ownership": "unknown",
+  "ownership": "state",
   "access": {
     "level": "restricted",
     "note": "Rented by reservation through the Montana DNRC in July and September; August is kept for fire staffing and is not rentable."
@@ -41,7 +44,15 @@
     "drive_up": true,
     "trail_note": "Reached by vehicle on a narrow, bumpy road; the Flathead Beacon describes 12 miles of it from Olney. The Ralph Thayer Memorial Trail runs next to the lookout. Visitors bring their own water."
   },
-  "rental": null,
+  "rental": {
+    "available": true,
+    "source": "ffla",
+    "provider": "Montana DNRC",
+    "url": "https://dnrc.mt.gov/TrustLand/public-use/FacilityRentals",
+    "ridb_facility_id": null,
+    "checked": "2026-10-08",
+    "manager": "MT DNRC"
+  },
   "events": [
     {
       "year": 1911,
@@ -126,6 +137,17 @@
       "note": "Stillwater State Forest offered the lookout for rent as a pilot project at $35 a night.",
       "from": "research",
       "source_url": "https://dailyinterlake.com/news/2010/jul/16/werner-lookout-available-for-rent-6/"
+    },
+    {
+      "year": 2020,
+      "event": "restored",
+      "note": "First project under a new partnership with Stillwater State Forest: volunteers scraped and painted the exterior.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2020-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2020-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2020fall.pdf"
+      ]
     },
     {
       "year": 2021,
@@ -271,6 +293,11 @@
       "kind": "register"
     },
     {
+      "label": "Book or read about Werner Peak Lookout (Montana DNRC)",
+      "url": "https://dnrc.mt.gov/TrustLand/public-use/FacilityRentals",
+      "kind": "rental"
+    },
+    {
       "label": "A Room With a View (Flathead Beacon)",
       "url": "https://flatheadbeacon.com/2007/08/03/a-room-with-a-view/",
       "kind": "reference"
@@ -288,6 +315,16 @@
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
+      "label": "Northwest Montana Lookout Association: work on Werner Peak Lookout",
+      "url": "https://nwmt-ffla.org/2021/09/01/2021-projects/",
       "kind": "association"
     },
     {
@@ -333,13 +370,31 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:werner-peak-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:mt:werner-peak:48.5772:-114.4328",
       "fields": [
+        "material",
         "design",
         "height_m",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "nwmt_projects",
+      "key": "nwmt_projects:mt:werner-peak",
+      "fields": [
+        "ownership",
+        "events",
         "links"
       ]
     },

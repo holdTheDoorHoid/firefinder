@@ -91,7 +91,7 @@ prose only.
   lookout is not plainly standing (e.g. "Cab removed in 2019; the steel tower remains"). Design
   history belongs in `events`, not `status_note`.
 - `events`: `event` must be one of `built, rebuilt, replaced, staffed_first, staffed_last,
-  staffed, abandoned, destroyed, burned, removed, relocated, restored, modified, fire, closed,
+  staffed, abandoned, destroyed, burned, removed, relocated, restored, modified, assessed, fire, closed,
   rental_opened, nrhp_listed, nhlr_registered, fflos_registered, other` (`other` needs a note).
   Every event cites a source number.
 - **`evidence` (required, internal, not published):** for **every footnoted sentence**, one or

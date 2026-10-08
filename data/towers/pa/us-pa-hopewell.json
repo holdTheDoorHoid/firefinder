@@ -1,6 +1,7 @@
 {
   "id": "us-pa-hopewell",
   "name": "Hopewell Tower",
+  "summary": "Hopewell Tower: an 80-ft steel tower built in 1935 with federal funds and CCC/French Creek labor; registered 2012; current access not verified.",
   "other_names": [],
   "country": "US",
   "region": "PA",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 304.2,
   "kind": "tower",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "80-foot steel McClintic-Marshall tower with 7x7 foot cab",
   "height_m": 24.4,
   "status": "standing",
   "status_note": null,
@@ -43,16 +47,64 @@
   "rental": null,
   "events": [
     {
+      "year": 1933,
+      "event": "other",
+      "note": "Department of Forests and Waters selected a site in Union Township; about ten acres deeded for $1 by Mrs. Louise Brooks of Birdsboro",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/hopewell.html"
+    },
+    {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "80-foot steel tower erected with federal funds; NHLR credits the CCC/French Creek Recreation project",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/hopewell.html",
+      "source_urls": [
+        "https://easternuslookouts.weebly.com/hopewell.html",
+        "http://nhlr.org/lookouts/us/pa/hopewell-tower/"
+      ]
+    },
+    {
+      "year": 1935,
+      "event": "other",
+      "note": "Tower placed in service May 1, 1935; a picnic park was planned around it",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/hopewell.html"
+    },
+    {
+      "year": 1936,
+      "event": "modified",
+      "note": "Works Progress Administration began finishing the access road to the tower, which a 1936 item calls the Williams Hill fire tower",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/hopewell.html"
+    },
+    {
+      "year": 1939,
+      "event": "modified",
+      "note": "About 50 men cleared brush and built a 1 1/2 mile road at the Hopewell fire tower",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/hopewell.html"
+    },
+    {
+      "year": 1939,
+      "event": "staffed",
+      "note": "George H. Wolf named as lookout in a Reading Times item",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/hopewell.html"
+    },
+    {
+      "year": 1990,
+      "event": "other",
+      "note": "Forest Fire Lookout Association formed at a meeting in the District 17 garage at French Creek State Park, followed by a tour of the Hopewell tower and ground cabin (early 1990)",
+      "from": "research",
+      "source_url": "https://firelookout.org/about-us/ffla-history/"
     },
     {
       "year": 2012,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 13, 2012",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register on May 13, 2012",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/hopewell-tower/"
     }
   ],
   "photos": [
@@ -129,6 +181,11 @@
       "kind": "register"
     },
     {
+      "label": "Forest Fire Lookout Association History",
+      "url": "https://firelookout.org/about-us/ffla-history/",
+      "kind": "reference"
+    },
+    {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
       "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
       "kind": "site"
@@ -153,6 +210,7 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
         "status",
         "registers",
         "agency",
@@ -165,7 +223,6 @@
       "source": "pa_storymap",
       "key": "pa_storymap:hopewell-tower:40.2020:-75.8123",
       "fields": [
-        "kind",
         "height_m",
         "ownership",
         "photos",
@@ -185,12 +242,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-hopewell",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

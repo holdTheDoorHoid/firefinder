@@ -33,6 +33,9 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from _common import (FetchError, fetch_text, ft_to_m, names_agree, register_by_url, register_url_key,  # noqa: E402
                      slugify, write_source_json)
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
+from structure import structure_words  # noqa: E402  (pipeline/structure.py: the closed vocabulary of facts)
+
 SOURCE = "cherylhill_oregon"
 BASE = "https://cherylhill.net/firelookouts"
 TABLE_URL = f"{BASE}/oregons-standing-lookouts/"
@@ -171,7 +174,11 @@ def main() -> None:
         built = int(row["built_raw"]) if re.fullmatch(r"(1[89]|20)\d\d", row["built_raw"] or "") else None
         elev = elevation_ft(row["elevation_raw"])
         county = COUNTY_HINTS.get(slug_row)
-        extra = {"area": row["area"], "public_access": row["public"], "elevation_ft": elev}
+        extra = {"area": row["area"], "public_access": row["public"], "elevation_ft": elev,
+                 "status_text": row["status_raw"] or None, "type_text": facts["type_raw"]}
+        words = structure_words(facts["type_raw"])
+        if words:
+            extra["structure_words"] = words
         if ALIASES.get(slug_row):
             extra["aliases"] = ALIASES[slug_row]
         if facts["design"]:
@@ -187,8 +194,8 @@ def main() -> None:
             "key": key, "url": url, "name": row["name"], "country": "US", "region": "OR", "county": county,
             "lat": None, "lon": None,
             "elevation_m": ft_to_m(elev) if elev else None,
-            "type_raw": facts["type_raw"], "kind": "unknown",
-            "status_raw": row["status_raw"], "status": "standing",
+            "type_raw": None, "kind": "unknown",
+            "status_raw": None, "status": "standing",
             "registers": [facts["nhlr"]] if facts["nhlr"] else [],
             "built": built, "agency": row["agency"] or None,
             "events": [{"year": built, "event": "built", "note": None, "from": SOURCE}] if built else [],
@@ -206,7 +213,7 @@ def main() -> None:
         records.append({
             "key": key, "url": d["url"], "name": d["name"], "country": "US", "region": "OR", "county": None,
             "lat": None, "lon": None, "elevation_m": None, "type_raw": None, "kind": "unknown",
-            "status_raw": d["event"], "status": "gone", "registers": [], "built": None, "agency": None,
+            "status_raw": None, "status": "gone", "registers": [], "built": None, "agency": None,
             "events": ([{"year": d["year"], "event": d["event"], "note": "Reported on Every Lookout in Oregon",
                          "from": SOURCE}] if d["event"] else []),
             "photos": [], "links": [{"label": "Every Lookout in Oregon (Cheryl Hill)", "url": d["url"],

@@ -1,6 +1,7 @@
 {
   "id": "us-pa-big-pocono-2017",
   "name": "Big Pocono Lookout (2017)",
+  "summary": "A 40-ft steel tower built in 2017 in Big Pocono State Park, replacing a 1921 21-ft Aermotor LS 40 that was moved to Grey Towers for restoration.",
   "other_names": [
     "Big Pocono"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 634.9,
   "kind": "tower",
-  "design": "Aermotor",
+  "material": "steel",
+  "material_from": "design",
+  "roles": [],
+  "design": "40 ft steel tower (2017), maker not named; predecessor was a 21 ft Aermotor LS 40 steel tower with 7 x 7 ft cab (1921)",
   "height_m": 12.2,
   "status": "standing",
   "status_note": null,
@@ -47,26 +51,69 @@
     {
       "year": 1921,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "21 ft steel tower with 7 x 7 ft cab erected on Big Pocono; Pike County Courier gives 1919 and 35 ft, and a 1921 newspaper expected 20 ft",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/big-pocono-lookout-1921/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/big-pocono-lookout-1921/",
+        "https://easternuslookouts.weebly.com/big-pocono.html",
+        "https://www.pikecountycourier.com/news/local-news/big-pocono-fire-tower-migrates-to-grey-towers-HTPC20171102171109978"
+      ]
+    },
+    {
+      "year": 2017,
+      "event": "relocated",
+      "note": "Old tower moved to Grey Towers National Historic Site, the former home of Gifford Pinchot",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/big-pocono-lookout-2017/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/big-pocono-lookout-2017/",
+        "http://nhlr.org/lookouts/us/pa/big-pocono-lookout-1921/",
+        "https://www.pikecountycourier.com/news/local-news/big-pocono-fire-tower-migrates-to-grey-towers-HTPC20171102171109978"
+      ]
     },
     {
       "year": 2017,
       "event": "removed",
-      "note": "'Removed' field on NHLR detail page: \"2017\".",
-      "from": "nhlr"
+      "note": "Old 21 ft tower disassembled as part of Pennsylvania's fire tower network upgrade",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/big-pocono-lookout-1921/"
+    },
+    {
+      "year": 2017,
+      "event": "replaced",
+      "note": "40 ft steel replacement tower built on the site as part of the upgrade",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/big-pocono-lookout-2017/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/big-pocono-lookout-2017/",
+        "http://nhlr.org/lookouts/us/pa/big-pocono-lookout-1921/",
+        "https://easternuslookouts.weebly.com/big-pocono.html"
+      ]
     },
     {
       "year": 2018,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 15, 2018",
-      "from": "nhlr"
+      "note": "New tower registered on the National Historic Lookout Register January 15, 2018 as US 1264",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/big-pocono-lookout-2017/"
     },
     {
       "year": 2018,
       "event": "replaced",
       "note": null,
       "from": "pa_storymap"
+    },
+    {
+      "year": 2019,
+      "event": "restored",
+      "note": "Grey Towers project reassembled the old tower's restored cab in summer 2019; the register had expected re-erection in 2018 and the project planned placement in 2021",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/big-pocono-lookout-1921/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/big-pocono-lookout-1921/",
+        "https://greytowers.org/fire-tower/"
+      ]
     }
   ],
   "photos": [
@@ -119,6 +166,21 @@
       "kind": "register"
     },
     {
+      "label": "Big Pocono Lookout (1921) (National Historic Lookout Register)",
+      "url": "http://nhlr.org/lookouts/us/pa/big-pocono-lookout-1921/",
+      "kind": "reference"
+    },
+    {
+      "label": "Fire Tower Restoration Project (greytowers.org)",
+      "url": "https://greytowers.org/fire-tower/",
+      "kind": "reference"
+    },
+    {
+      "label": "Big Pocono fire tower migrates to Grey Towers (Pike County Courier)",
+      "url": "https://www.pikecountycourier.com/news/local-news/big-pocono-fire-tower-migrates-to-grey-towers-HTPC20171102171109978",
+      "kind": "reference"
+    },
+    {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
       "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
       "kind": "site"
@@ -143,6 +205,7 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
         "status",
         "registers",
         "agency",
@@ -155,7 +218,7 @@
       "source": "pa_storymap",
       "key": "pa_storymap:big-pocono:41.0424:-75.3526",
       "fields": [
-        "kind",
+        "material",
         "design",
         "height_m",
         "ownership",
@@ -178,12 +241,32 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-big-pocono-2017",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

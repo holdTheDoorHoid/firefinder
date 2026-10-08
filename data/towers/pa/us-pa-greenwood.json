@@ -1,6 +1,7 @@
 {
   "id": "us-pa-greenwood",
   "name": "Greenwood Fire Tower",
+  "summary": "A 60-foot Aermotor lookout on Broad Mountain, built 1921 per the NHLR; still standing and reached on foot, though build-date accounts disagree.",
   "other_names": [],
   "country": "US",
   "region": "PA",
@@ -13,6 +14,9 @@
   },
   "elevation_m": 724.2,
   "kind": "tower",
+  "material": "steel",
+  "material_from": "design",
+  "roles": [],
   "design": "Aermotor",
   "height_m": 18.3,
   "status": "standing",
@@ -28,8 +32,8 @@
   "agency": "Pennsylvania Bureau of Forestry",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached on foot by trails from the park on PA 305 and the Standing Stone Trail; no source read says whether the tower itself can be climbed."
   },
   "staffing": {
     "status": "unknown",
@@ -38,21 +42,35 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Fire Tower Loop Trail from the park; the Greenwood Spur climb from Alan Seeger Natural Area is short but very steep."
   },
   "rental": null,
   "events": [
     {
       "year": 1921,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR gives 1921 for a 60-foot Aermotor tower. A 1922 visitor account says eighty feet, and a hiking guide says the 1930s.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/greenwood-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/greenwood-fire-tower/",
+        "https://easternuslookouts.weebly.com/greenwood.html",
+        "https://www.mountaintravelguide.com/Pennsylvania/huntingdon/Hiking/FireTowerLoopTrail.htm"
+      ]
+    },
+    {
+      "year": 1935,
+      "event": "other",
+      "note": "A Coast and Geodetic Survey station was described at the tower site on Broad Mountain.",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/greenwood.html"
     },
     {
       "year": 2017,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 6, 2017",
-      "from": "nhlr"
+      "note": "Registered December 6, 2017 as US 1252, PA 21, nominated by Ron Stafford.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/greenwood-fire-tower/"
     }
   ],
   "photos": [
@@ -88,6 +106,16 @@
       "kind": "register"
     },
     {
+      "label": "Greenwood Spur (Centred Outdoors)",
+      "url": "https://centredoutdoors.org/destinations/greenwood-spur/",
+      "kind": "reference"
+    },
+    {
+      "label": "Fire Tower Loop Trail, Huntingdon County Pennsylvania Hiking Trails (Mountain Travel Guide)",
+      "url": "https://www.mountaintravelguide.com/Pennsylvania/huntingdon/Hiking/FireTowerLoopTrail.htm",
+      "kind": "reference"
+    },
+    {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
       "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
       "kind": "site"
@@ -112,6 +140,7 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
         "status",
         "registers",
         "agency",
@@ -124,7 +153,7 @@
       "source": "pa_storymap",
       "key": "pa_storymap:greenwood-tower:40.6815:-77.7385",
       "fields": [
-        "kind",
+        "material",
         "design",
         "height_m",
         "ownership",
@@ -145,12 +174,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-greenwood",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

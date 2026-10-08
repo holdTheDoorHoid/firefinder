@@ -1,6 +1,7 @@
 {
   "id": "us-id-mount-greylock",
   "name": "Mount Greylock Lookout",
+  "summary": "A ground-mounted L-4 cab built 1934 or 1935, used as a fire lookout until 1939-1942, now ruined and no longer habitable; access is by hiking.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 3002.3,
   "kind": "ground",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "Standard R1/L-4 ground cabin with a Forest design catwalk (NHLR); ground-mounted L-4 cab (Firelookout.com)",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -37,28 +41,58 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Listed as hike-in on Idaho Fire Lookouts. The climbing guide describes a route of roughly 2.2 miles from a ridge-top parking spot to the summit and shows photos of the ruins. The cab is no longer habitable."
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "L-4 ground cab built, per Firelookout.com and Idaho Fire Lookouts. NHLR and the local history page give 1935",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/greylock.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/greylock.html",
+        "https://www.idahofirelookouts.com/southern-idaho/greylock-mount-lookout/"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "staffed_first",
+      "note": "Served as a fire lookout from 1934 (climbing guide)",
+      "from": "research",
+      "source_url": "https://www.idahoaclimbingguide.com/bookupdates/mount-greylock/"
+    },
+    {
+      "year": 1939,
+      "event": "abandoned",
+      "note": "Abandoned in 1939 or 1940 per NHLR; local history page says around 1939 to 1940",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/mount-greylock-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/mount-greylock-lookout/",
+        "https://idaholookouts.weebly.com/mount-greylock.html"
+      ]
     },
     {
       "year": 1942,
       "event": "abandoned",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Abandoned in 1942 per Firelookout.com and Idaho Fire Lookouts; the climbing guide gives 1942 as the end of fire lookout service",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/greylock.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/greylock.html",
+        "https://www.idahofirelookouts.com/southern-idaho/greylock-mount-lookout/",
+        "https://www.idahoaclimbingguide.com/bookupdates/mount-greylock/"
+      ]
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 30, 2020",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, September 30, 2020",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/mount-greylock-lookout/"
     }
   ],
   "photos": [
@@ -118,6 +152,16 @@
       "kind": "register"
     },
     {
+      "label": "Mount Greylock (Idaho: A Climbing Guide)",
+      "url": "https://www.idahoaclimbingguide.com/bookupdates/mount-greylock/",
+      "kind": "reference"
+    },
+    {
+      "label": "Mount Greylock (Forest Lookouts (Idaho))",
+      "url": "https://idaholookouts.weebly.com/mount-greylock.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -164,6 +208,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:mt-greylock:44.4197:-114.6975",
       "fields": [
+        "material",
         "design",
         "events",
         "photos",
@@ -176,6 +221,19 @@
       "fields": [
         "photos",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-mount-greylock",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -204,9 +262,15 @@
       "note": "NHLR lists lookouts that were standing when registered. idahofirelookouts.com's status is read from a short summary."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

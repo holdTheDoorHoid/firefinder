@@ -1,6 +1,7 @@
 {
   "id": "us-id-middle-fork-peak",
   "name": "Middle Fork Peak Lookout",
+  "summary": "R-6 flat cab on a 10-ft concrete base replaced a 1929 cabin on Middle Fork Peak in Idaho in 1962; the summer staffing status is disputed between sources.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2781.9,
   "kind": "two_story",
-  "design": "R-6",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "R-6 flat cab on 10-ft concrete base (built 1962)",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -25,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/id/middle-fork-peak-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Salmon-Challis National Forest (Salmon-Cobalt Ranger District)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Forest Service road to the summit; the 2018 climbing guide says a 4WD vehicle with exceptionally good tires is required. Idaho Fire Lookouts lists the site as drive-up."
   },
   "staffing": {
     "status": "staffed",
@@ -37,11 +41,23 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Per the 2018 climbing guide: a route starting at Panther Creek follows FS-112 about 15 miles to a 4-way junction, then 14.25 miles to the road end below the summit. A trail from the Middle Fork Salmon River gains about 5,000 feet."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1929,
+      "event": "built",
+      "note": "First lookout on the site, a cabin; sources disagree on its type (DuBois cabin per NHLR, R-4 log cabin per Idaho Fire Lookouts)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/middle-fork-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/middle-fork-peak-lookout/",
+        "https://www.firelookout.com/id/middleforkpeak.html",
+        "https://www.idahofirelookouts.com/southern-idaho/middle-fork-peak-lookout/"
+      ]
+    },
     {
       "year": 1962,
       "event": "built",
@@ -49,10 +65,23 @@
       "from": "nhlr"
     },
     {
+      "year": 1962,
+      "event": "replaced",
+      "note": "Replaced by the present R-6 flat cab on a 10-ft concrete base",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/middle-fork-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/middle-fork-peak-lookout/",
+        "https://www.firelookout.com/id/middleforkpeak.html",
+        "https://www.idahofirelookouts.com/southern-idaho/middle-fork-peak-lookout/"
+      ]
+    },
+    {
       "year": 2012,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 13, 2012",
-      "from": "nhlr"
+      "note": "Registered September 13, 2012 as US 949, ID 101",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/middle-fork-peak-lookout/"
     }
   ],
   "photos": [
@@ -148,6 +177,16 @@
       "kind": "register"
     },
     {
+      "label": "Fire Lookouts (U.S. Forest Service, Salmon-Challis National Forest)",
+      "url": "https://www.fs.usda.gov/r04/salmon-challis/recreation/discover-history/fire-lookouts",
+      "kind": "reference"
+    },
+    {
+      "label": "Middle Fork Peak (IDAHO: A Climbing Guide (idahoaclimbingguide.com), updated July 2018)",
+      "url": "https://www.idahoaclimbingguide.com/bookupdates/middle-fork-peak/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -194,6 +233,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:middle-fork-peak:44.9621:-114.6554",
       "fields": [
+        "material",
         "design",
         "height_m",
         "photos",
@@ -208,12 +248,32 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-middle-fork-peak",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

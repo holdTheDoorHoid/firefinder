@@ -14,6 +14,9 @@
   },
   "elevation_m": 1773.9,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "14x14 ft R-6-style flattop cab on a 30-foot treated timber tower with catwalk; original 1929 one-story log ground house still on site",
   "height_m": 1.8,
   "status": "standing",
@@ -205,6 +208,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Garver Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/garvermtn.html",
       "kind": "site"
@@ -224,6 +232,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -247,6 +256,14 @@
       "fields": [
         "ownership",
         "access",
+        "rental",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:mt:garver-mountain-lookout",
+      "fields": [
         "rental",
         "links"
       ]
@@ -313,5 +330,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

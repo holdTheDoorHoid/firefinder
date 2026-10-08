@@ -1,6 +1,7 @@
 {
   "id": "us-nj-milton",
   "name": "Milton Station Fire Tower",
+  "summary": "CCC-built 1937 80-ft lookout on Morris County park land near Jefferson, NJ; a 2016 visit recorded it as unstaffed, with a lock and chain on a floor below the cabin.",
   "other_names": [],
   "country": "US",
   "region": "NJ",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 408.7,
   "kind": "tower",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "80-ft International Derrick steel tower with 7'x7' metal cab",
   "height_m": 24.0,
   "status": "standing",
   "status_note": null,
@@ -28,31 +32,37 @@
   "agency": "New Jersey Forest Fire Service",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "No official current access statement found. A 2016 register visit report describes a steel square with a lock and chain on a floor below the cabin, meant to block future intruders. A 2026 guide says the park is open sunrise to sunset, that visitors willing to climb are rewarded with views from the top, and that the observer may invite visitors up into the cab when the tower is staffed. No official source confirms that visitors may climb it."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2016-04-15"
   },
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Trailhead parking at the Snow Bowl Area on Weldon Road, Jefferson; 2026 guide says the park is open daily, sunrise to sunset"
   },
   "rental": null,
   "events": [
     {
       "year": 1937,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the CCC under the Woodlands Protective Expansion Project",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/milton-station-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nj/milton-station-fire-tower/",
+        "https://scenesfromthetrail.com/2026/03/23/milton-station-fire-tower-mahlon-dickerson-reservation/"
+      ]
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 3, 2004",
-      "from": "nhlr"
+      "note": "Registered March 3, 2004 as US 563, NJ 16",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/milton-station-fire-tower/"
     }
   ],
   "photos": [
@@ -100,6 +110,11 @@
       "kind": "register"
     },
     {
+      "label": "Milton Station Fire Tower - Mahlon Dickerson Reservation (Scenes from the Trail)",
+      "url": "https://scenesfromthetrail.com/2026/03/23/milton-station-fire-tower-mahlon-dickerson-reservation/",
+      "kind": "reference"
+    },
+    {
       "label": "Milton Station (Wikipedia (List of New Jersey Forest Fire Service fire towers))",
       "url": "https://en.wikipedia.org/wiki/List_of_New_Jersey_Forest_Fire_Service_fire_towers",
       "kind": "site"
@@ -124,6 +139,7 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
         "status",
         "registers",
         "agency",
@@ -136,7 +152,6 @@
       "source": "nj_forest_fire_towers",
       "key": "nj_forest_fire_towers:nj:milton-station",
       "fields": [
-        "kind",
         "height_m",
         "ownership",
         "links"
@@ -155,12 +170,35 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nj-milton",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

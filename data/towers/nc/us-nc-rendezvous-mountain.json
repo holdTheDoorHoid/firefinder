@@ -1,6 +1,7 @@
 {
   "id": "us-nc-rendezvous-mountain",
   "name": "Rendezvous Mountain Lookout",
+  "summary": "Wilkes County state educational forest tower; NHLR dates it to 1936, a 1934-36 state report describes a different steel tower; no longer used and unsafe to climb.",
   "other_names": [],
   "country": "US",
   "region": "NC",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 751.6,
   "kind": "tower",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "NHLR describes a 50-foot Aermotor tower with a 7x7-foot cab; a 1934-36 state report quoted by Forest Lookouts gives a 59-foot-3-inch steel tower; a CCC-built cabin from the early 1930s stands just below the tower",
   "height_m": 18.0,
   "status": "standing",
   "status_note": null,
@@ -34,31 +38,51 @@
   "agency": "NC Department of Environment and Natural Resources",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "tower unsafe to climb per a 2023 Wilkes Record column; NHLR says the tower is now restricted for electronics use; no official closure notice was found"
   },
   "staffing": {
-    "status": "unknown",
+    "status": "unstaffed",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "reached on foot on the state forest grounds; the cabin sits just below the tower; the tower itself is unsafe to climb"
   },
   "rental": null,
   "events": [
     {
+      "year": 1934,
+      "event": "other",
+      "note": "a 1934-36 state biennial report, quoted by Forest Lookouts, says the CCC erected a 59-foot-3-inch steel tower in October 1934; the register and newspaper date the tower to 1936",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/rendezvous-mountain.html"
+    },
+    {
       "year": 1936,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR says the North Carolina Forest Service constructed the 50-foot Aermotor tower in 1936; the Journal-Patriot says the tower was constructed in 1936",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nc/rendezvous-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nc/rendezvous-mountain-lookout/",
+        "https://www.journalpatriot.com/news/rendezvous-mountains-forest-water/article_e23822de-a16e-5f02-83fc-2bf5858af1cf.html"
+      ]
+    },
+    {
+      "year": 1952,
+      "event": "staffed",
+      "note": "1950-52 state report: the Division of Forestry maintained and operated the lookout tower and towerman's residence",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/rendezvous-mountain.html"
     },
     {
       "year": 2008,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 2, 2008",
-      "from": "nhlr"
+      "note": "National Historic Lookout Register registration date April 2, 2008",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nc/rendezvous-mountain-lookout/"
     }
   ],
   "photos": [
@@ -80,6 +104,16 @@
       "label": "NHLR register entry US 726 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/nc/rendezvous-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Rendezvous Mountain's 'forest water' (Wilkes Journal-Patriot)",
+      "url": "https://www.journalpatriot.com/news/rendezvous-mountains-forest-water/article_e23822de-a16e-5f02-83fc-2bf5858af1cf.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Rendezvous Mountain (The Wilkes Record)",
+      "url": "https://thewilkesrecord.com/rendezvous-mountain-p7492-149.htm",
+      "kind": "reference"
     },
     {
       "label": "Rendezvous Mountain (tnlandforms.us (Tom Dunigan))",
@@ -106,6 +140,7 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
         "status",
         "registers",
         "agency",
@@ -118,7 +153,6 @@
       "source": "tnlandforms",
       "key": "tnlandforms:nc:nct142",
       "fields": [
-        "kind",
         "registers",
         "links"
       ]
@@ -138,12 +172,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nc-rendezvous-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

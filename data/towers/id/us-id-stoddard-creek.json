@@ -1,6 +1,7 @@
 {
   "id": "us-id-stoddard-creek",
   "name": "Stoddard Creek Lookout",
+  "summary": "Two-story 10x10 cab dated to 1934 in the Frank Church Wilderness, used into the 1970s, abandoned after, and registered in 2016.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,6 +14,9 @@
   },
   "elevation_m": 2297.0,
   "kind": "two_story",
+  "material": null,
+  "material_from": null,
+  "roles": [],
   "design": null,
   "height_m": 3.0,
   "status": "standing",
@@ -29,7 +33,7 @@
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "Abandoned cab in the Frank Church-River of No Return Wilderness, reached on foot or by horseback. The 1982 history quoted by the climbing guide describes it as unsafe inside. No source describes public entry."
   },
   "staffing": {
     "status": "unknown",
@@ -37,22 +41,53 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Hike-in only. The 1982 history quoted by the climbing guide describes at least two days along the Middle Fork-Stoddard Creek Trail from the mouth of the Middle Fork into the Main Salmon River."
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Two-story 10x10 cab, per NHLR, firelookout.com and Idaho Fire Lookouts. A 1982 history quoted by the climbing guide places the build around 1945.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/stoddard-creek-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/stoddard-creek-lookout/",
+        "https://www.firelookout.com/id/stoddard.html",
+        "https://www.idahofirelookouts.com/west-central/stoddard-creek-lookout/",
+        "https://www.idahoaclimbingguide.com/bookupdates/stoddard-creek-lookout/"
+      ]
+    },
+    {
+      "year": 1941,
+      "event": "staffed_first",
+      "note": "Occupied from about 1941 through the mid-1970s, per NHLR and Idaho Fire Lookouts.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/stoddard-creek-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/stoddard-creek-lookout/",
+        "https://www.idahofirelookouts.com/west-central/stoddard-creek-lookout/"
+      ]
+    },
+    {
+      "year": 1977,
+      "event": "abandoned",
+      "note": "Recently abandoned (1977), per the 1982 history quoted by the climbing guide. Firelookout.com and Idaho Fire Lookouts say abandoned since the 1970s.",
+      "from": "research",
+      "source_url": "https://www.idahoaclimbingguide.com/bookupdates/stoddard-creek-lookout/",
+      "source_urls": [
+        "https://www.idahoaclimbingguide.com/bookupdates/stoddard-creek-lookout/",
+        "https://www.firelookout.com/id/stoddard.html",
+        "https://www.idahofirelookouts.com/west-central/stoddard-creek-lookout/"
+      ]
     },
     {
       "year": 2016,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 20, 2016",
-      "from": "nhlr"
+      "note": "Registered March 20, 2016 (US 1122, ID 107).",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/stoddard-creek-lookout/"
     }
   ],
   "photos": [
@@ -196,6 +231,11 @@
       "kind": "register"
     },
     {
+      "label": "Stoddard Creek Lookout (IDAHO: A Climbing Guide)",
+      "url": "https://www.idahoaclimbingguide.com/bookupdates/stoddard-creek-lookout/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -254,6 +294,19 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-stoddard-creek",
+      "fields": [
+        "summary",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -281,9 +334,15 @@
       "note": "NHLR lists lookouts that were standing when registered. idahofirelookouts.com's status is read from a short summary."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

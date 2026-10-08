@@ -1,6 +1,7 @@
 {
   "id": "us-id-snow-peak-2",
   "name": "Snow Peak Lookout",
+  "summary": "R-6 cab on a 10-foot concrete base, built 1963 after a 1929 cupola cabin; locked and used by Idaho Fish & Game while the Forest Service rehabs it for rental.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2057.1,
   "kind": "two_story",
-  "design": "R-6",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "R-6 flat cab on a 10-foot concrete base",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -25,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/id/snow-peak-lookout/"
     }
   ],
-  "agency": "Idaho Department of Fish & Game",
+  "agency": "U.S. Forest Service, St. Joe National Forest (Idaho Panhandle National Forests); Idaho Fish & Game is a co-user",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Cab is locked and used by Idaho Fish & Game for goat monitoring and communications equipment; the Forest Service says it is not currently available for rent or reservation."
   },
   "staffing": {
     "status": "unknown",
@@ -37,11 +41,40 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Day hike with trails managed jointly with Idaho Fish & Game; one 2024 hiker estimated about 9 miles round trip. The cab is locked."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1929,
+      "event": "built",
+      "note": "Cupola cabin; the site was first developed with this structure",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/snowpeak.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/snowpeak.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/snow-peak-lookout/"
+      ]
+    },
+    {
+      "year": 1950,
+      "event": "staffed",
+      "note": "John M. Johnson listed as known staff, citing the Former Forest Fire Lookout Registry",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/snow-peak-lookout/"
+    },
+    {
+      "year": 1960,
+      "event": "staffed",
+      "note": "William Lassiter listed for 1960 on both firelookout.com and Idaho Fire Lookouts (the latter citing the Kellogg Evening News)",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/snowpeak.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/snowpeak.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/snow-peak-lookout/"
+      ]
+    },
     {
       "year": 1963,
       "event": "built",
@@ -49,10 +82,41 @@
       "from": "nhlr"
     },
     {
+      "year": 1963,
+      "event": "replaced",
+      "note": "R-6 flat cab on a 10-foot concrete base; the register gives 1963 as the build year",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/snowpeak.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/snowpeak.html",
+        "http://nhlr.org/lookouts/us/id/snow-peak-lookout/",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/snow-peak-lookout/"
+      ]
+    },
+    {
+      "year": 1968,
+      "event": "staffed",
+      "note": "Kjell Peterson listed as known staff on Idaho Fire Lookouts",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/snow-peak-lookout/"
+    },
+    {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 24, 2020",
-      "from": "nhlr"
+      "note": "Registered March 24, 2020 as US 1404, ID 111",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/snow-peak-lookout/"
+    },
+    {
+      "year": 2024,
+      "event": "other",
+      "note": "Locked up in August 2024; Idaho Fish & Game using it for goat monitoring and communications equipment; St. Joe National Forest rehabbing it for a future rental program",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/snowpeak.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/snowpeak.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/snow-peak-lookout/"
+      ]
     }
   ],
   "photos": [
@@ -160,6 +224,11 @@
       "kind": "register"
     },
     {
+      "label": "Snow Peak Lookout (Idaho Panhandle National Forests, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r01/idahopanhandle/recreation/snow-peak-lookout",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -205,6 +274,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:snow-peak:47.0453:-115.6329",
       "fields": [
+        "material",
         "design",
         "height_m",
         "ownership",
@@ -218,6 +288,21 @@
       "fields": [
         "photos",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-snow-peak-2",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -238,9 +323,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

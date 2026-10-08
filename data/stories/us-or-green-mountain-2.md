@@ -1,0 +1,12 @@
+The first Green Mountain lookout was a Bureau of Land Management (BLM) building from 1963.[^1][^2][^3] The BLM announced it that August and called for bids in October.[^2] The plan was a two-story building, with concrete block below and a frame story above.[^2] Sources describe the tower under it as a 10-foot concrete base with a wooden live-in cab.[^1][^3][^4]
+
+Before the new building went up, Mrs. Hazel Ward kept watch from a temporary lookout.[^2] A 1964 newspaper visit describes the finished house as 15 1/2 feet square, with living quarters on the lower floor and a tinted-glass spotting room above.[^2] A Klamath Falls contractor built it.[^2] When she spotted a fire, she radioed Lakeview, and a crew rolled out from a fire camp nine miles away by road.[^2] That same article says the house was built the summer before, which does not quite fit the October 1963 bid date, so the exact build season is unclear.[^2]
+
+The old lookout was replaced under a federal recovery contract.[^2] A February 2010 solicitation called for demolishing the existing tower and outhouse, then building a new road, a residence and a new tower.[^2] Sources disagree on when the new tower was finished.[^1][^2][^3][^4] The register says it was constructed in 2011, and the Oregon Lookouts history page reports a completed 50-plus-foot tower in January 2011.[^1][^2] Firelookout.com and The Roaming Civic both date the tower to 2010.[^3][^4]
+
+The current tower is 50 feet tall, with an enclosed observation cab that the register calls a unique BLM design.[^1] Firelookout.com says it is staffed every summer.[^3] A May 2022 trip report describes the lookout as active and standing, and says the road is rough but passable with care.[^4] The primitive campground at its base was locked behind a gate and closed for the season during that visit.[^4] I found no rental listing for it in the sources checked.
+
+[^1]: Green Mountain Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/or/green-mountain-lookout/ (accessed 2026-10-08).
+[^2]: Green Mountain - Forest Lookouts, Oregon Lookouts, https://oregonlookouts.weebly.com/green-mountain2.html (accessed 2026-10-08).
+[^3]: Green Mtn. Fire Lookout Tower, firelookout.com, https://www.firelookout.com/or/greenmtnor.html (accessed 2026-10-08).
+[^4]: Green Mountain Lookout, The Roaming Civic, https://theroamingcivic.com/2022/05/14/green-mountain-lookout/ (accessed 2026-10-08).

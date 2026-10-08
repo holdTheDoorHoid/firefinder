@@ -20,6 +20,10 @@ KIND = {
     "tower": "fire lookout tower", "ground": "ground-level fire lookout cabin",
     "two_story": "two-story fire lookout building", "three_story": "three-story fire lookout building",
     "enclosed_tower": "enclosed fire lookout tower", "platform": "open fire lookout tower",
+    "rooftop": "fire lookout cab on a rooftop", "mobile": "trailer fire lookout",
+    # Sites with no structure (data/structure_kinds.json group "no_structure").
+    "camp": "summit fire lookout camp", "tree": "fire lookout tree",
+    "point": "bare fire lookout point",
 }
 END = {"burned": "burned", "destroyed": "was destroyed", "removed": "was removed", "abandoned": "was abandoned"}
 REGISTER = {

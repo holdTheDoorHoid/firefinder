@@ -17,6 +17,9 @@
   },
   "elevation_m": 2297.0,
   "kind": "ground",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "L-4",
   "height_m": null,
   "status": "standing",
@@ -135,6 +138,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Bald (Ingram) Butte on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/baldingram.html",
       "kind": "site"
@@ -177,9 +185,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:or:bald-butte-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:or:bald-ingram-butte:42.6144:-120.7898",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -212,5 +229,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

@@ -14,6 +14,9 @@
   },
   "elevation_m": 2911.8,
   "kind": "two_story",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "L-4 cab on 10-foot stone base, with catwalk",
   "height_m": null,
   "status": "standing",
@@ -143,6 +146,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Sheep Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wy/sheepmtn.html",
       "kind": "site"
@@ -185,9 +193,18 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:wy:sheep-mountain-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:wy:sheep-mtn:44.1913:-107.0046",
       "fields": [
+        "material",
         "design",
         "events",
         "photos",
@@ -222,5 +239,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

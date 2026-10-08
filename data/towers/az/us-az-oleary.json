@@ -1,6 +1,7 @@
 {
   "id": "us-az-oleary",
   "name": "O'Leary Lookout",
+  "summary": "A 1959 Forest Service tower on O'Leary Peak north of Flagstaff, occupied from 1959 by a Flagstaff gunsmith and registered in 2006; the approach road has an active access alert.",
   "other_names": [
     "O'Leary Peak Lookout Tower"
   ],
@@ -15,8 +16,11 @@
   },
   "elevation_m": 2717.6,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "14 x 14 ft CL-100 series live-in cab with catwalk on a metal tower (register); a 1959 build log says 30 ft",
+  "height_m": 9.8,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -30,8 +34,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=private."
+    "level": "restricted",
+    "note": "Forest Service alert says O'Leary access is restricted and NPS Road 545 is closed between SR 89 and Sunset Crater. The blocked forest road leaves about a mile of hiking to the base of the peak."
   },
   "staffing": {
     "status": "unknown",
@@ -39,22 +43,42 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Walk from the blocked forest road about a mile to the base of the peak, then six switchbacks to the tower, which sits on a neighboring summit."
   },
   "rental": null,
   "events": [
     {
+      "year": 1952,
+      "event": "other",
+      "note": "Forest Service memo says the agency had wanted a lookout on O'Leary Peak for about thirty years",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/oleary-peak.html"
+    },
+    {
       "year": 1959,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Contract to Martin Cline of Globe, Arizona, winning bid $5,480; tower erected June 1959; register gives construction year 1959",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/oleary-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/oleary-lookout/",
+        "https://westlookouts.weebly.com/oleary-peak.html"
+      ]
+    },
+    {
+      "year": 1959,
+      "event": "staffed",
+      "note": "Marion J. Bedwell, a Flagstaff gunsmith, moved into the tower July 11, 1959, and was living there with his husky Buck, per a late-July 1959 newspaper profile",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/oleary-peak.html"
     },
     {
       "year": 2006,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 15, 2006",
-      "from": "nhlr"
+      "note": "Registered March 15, 2006 as US 679, AZ 66; nominated by Dave Lorenz",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/oleary-lookout/"
     }
   ],
   "photos": [
@@ -90,6 +114,21 @@
       "kind": "register"
     },
     {
+      "label": "O'Leary Peak (Forest Lookouts (westlookouts.weebly.com))",
+      "url": "https://westlookouts.weebly.com/oleary-peak.html",
+      "kind": "reference"
+    },
+    {
+      "label": "O'Leary Peak Trail (U.S. Forest Service, Coconino National Forest)",
+      "url": "https://www.fs.usda.gov/r03/coconino/recreation/trails/oleary-peak-trail",
+      "kind": "reference"
+    },
+    {
+      "label": "O'Leary Peak (U.S.) (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/O%27Leary_Peak_(U.S.)",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Arizona lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/az/",
       "kind": "association"
@@ -114,6 +153,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -147,12 +187,34 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-oleary",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

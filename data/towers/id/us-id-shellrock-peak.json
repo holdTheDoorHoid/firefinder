@@ -1,6 +1,7 @@
 {
   "id": "us-id-shellrock-peak",
   "name": "Shellrock Peak Lookout",
+  "summary": "Payette NF lookout: L-4 cab built 1935, unstaffed after 1950 and still standing per sources; hike-in only, with a conflicting early-1930s date.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,6 +14,9 @@
   },
   "elevation_m": 2877.9,
   "kind": "ground",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "L-4",
   "height_m": null,
   "status": "standing",
@@ -28,8 +32,8 @@
   "agency": "US Forest Service - Payette National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Abandoned, unstaffed cabin reached on foot. No source describes public entry into the cabin or a rule for visitors."
   },
   "staffing": {
     "status": "unknown",
@@ -37,28 +41,66 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Remote; the climbing guide says several hard hiking days. A trail runs from the mouth of Brush Creek, but access is better from the Payette National Forest side."
   },
   "rental": null,
   "events": [
     {
+      "year": 1930,
+      "event": "replaced",
+      "note": "Replaced an earlier lookout on Two Point Peak. The climbing guide, quoting a 1982 history, dates the move to the early 1930s; 1930 marks only the decade start.",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/shellrock-peak.html",
+      "source_urls": [
+        "https://idaholookouts.weebly.com/shellrock-peak.html",
+        "https://www.idahoaclimbingguide.com/bookupdates/shellrock-peak-2/"
+      ]
+    },
+    {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "R1/L-4 ground cabin per NHLR; firelookout.com and Forest Lookouts also give 1935.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/shellrock-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/shellrock-peak-lookout/",
+        "https://www.firelookout.com/id/shellrockpeak.html",
+        "https://idaholookouts.weebly.com/shellrock-peak.html"
+      ]
     },
     {
       "year": 1950,
       "event": "abandoned",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Abandoned in 1950 per firelookout.com, Idaho Fire Lookouts and Forest Lookouts.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/shellrockpeak.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/shellrockpeak.html",
+        "https://www.idahofirelookouts.com/west-central/shell-rock-peak-lookout/",
+        "https://idaholookouts.weebly.com/shellrock-peak.html"
+      ]
+    },
+    {
+      "year": 1950,
+      "event": "staffed_last",
+      "note": "No longer staffed after 1950, per NHLR.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/shellrock-peak-lookout/"
+    },
+    {
+      "year": 2019,
+      "event": "other",
+      "note": "Forest Lookouts note: structure still standing, visible on Google Earth.",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/shellrock-peak.html"
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 3, 2020",
-      "from": "nhlr"
+      "note": "Registered October 3, 2020 as US 1454, ID 147.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/shellrock-peak-lookout/"
     }
   ],
   "photos": [
@@ -104,6 +146,21 @@
       "label": "NHLR register entry US 1454 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/id/shellrock-peak-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Shellrock Peak - FOREST LOOKOUTS",
+      "url": "https://idaholookouts.weebly.com/shellrock-peak.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Shellrock Peak - IDAHO: A Climbing Guide",
+      "url": "https://www.idahoaclimbingguide.com/bookupdates/shellrock-peak-2/",
+      "kind": "reference"
+    },
+    {
+      "label": "Shell Rock Peak Fire Lookout Cabin (firelookout.com)",
+      "url": "https://www.firelookout.com/id/shellrock.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
@@ -152,6 +209,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:shellrock-peak:44.9565:-114.9366",
       "fields": [
+        "material",
         "design",
         "events",
         "photos",
@@ -163,6 +221,21 @@
       "key": "idaho_fl:shell-rock-peak-lookout:44.9566:-114.9370",
       "fields": [
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-shellrock-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -191,9 +264,15 @@
       "note": "NHLR lists lookouts that were standing when registered. idahofirelookouts.com's status is read from a short summary."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

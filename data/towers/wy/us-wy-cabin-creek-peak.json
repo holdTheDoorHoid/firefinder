@@ -1,6 +1,7 @@
 {
   "id": "us-wy-cabin-creek-peak",
   "name": "Cabin Creek Peak Lookout",
+  "summary": "A 1941 ground cabin in Wyoming's Salt River Range, listed as standing, though a 2021 article describes only what remains.",
   "other_names": [
     "Cabin Creek"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 3127.2,
   "kind": "ground",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "Ground cabin with four window panels per side; register gives dimensions as approximately 12x12",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -30,8 +34,8 @@
   "agency": "US Forest Service - Bridger-Teton National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached on foot by a long hike; KINGFM reports nothing left that could be rented or used for accommodation."
   },
   "staffing": {
     "status": "unknown",
@@ -39,22 +43,28 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "About 20 miles round trip up Strawberry Creek to McDougal Pass, then on to the lookout (2021 hiking video, as quoted by KINGFM)"
   },
   "rental": null,
   "events": [
     {
       "year": 1941,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register gives 1941 as the build year. A 2021 hiking video quoted by KINGFM dates it to the late 1930s or early 1940s and credits the Civilian Conservation Corps; builder not confirmed elsewhere.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wy/cabin-creek-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wy/cabin-creek-peak-lookout/",
+        "https://kingfm.com/whats-left-of-an-abandoned-fire-lookout-tower-in-wyoming/"
+      ]
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 3, 2022",
-      "from": "nhlr"
+      "note": "Registered May 3, 2022 as US 1568, WY 20",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wy/cabin-creek-peak-lookout/"
     }
   ],
   "photos": [
@@ -138,12 +148,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wy-cabin-creek-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

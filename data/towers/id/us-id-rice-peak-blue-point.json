@@ -1,6 +1,7 @@
 {
   "id": "us-id-rice-peak-blue-point",
   "name": "Rice Peak (Blue Point) Lookout",
+  "summary": "A camp from 1916 that became an L-4 cab, now not in use and reached on foot past a forest-road closure that began in 2014.",
   "other_names": [
     "Rice Peak"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 2650.5,
   "kind": "ground",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "L-4 ground cab on a cement foundation, after an earlier log cupola cabin",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -30,8 +34,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Forest road FS-478 under a temporary closure that began in 2014 and appeared still in place at the August 2020 guide update. Hike-in only."
   },
   "staffing": {
     "status": "unknown",
@@ -39,22 +43,55 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Per the 2020 climbing guide: from the Rice Lake trailhead, the summit is 1.0 mile up the Rice Peak Trail. The Boise NF slide show describes a start where the road washes out and a hike of 4.25 miles each way."
   },
   "rental": null,
   "events": [
     {
+      "year": 1916,
+      "event": "other",
+      "note": "Site first used as a camp lookout. Forest Lookouts lists an alidade established that year.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/rice-peak-blue-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/rice-peak-blue-point-lookout/",
+        "https://idaholookouts.weebly.com/rice-peak-blue-point.html"
+      ]
+    },
+    {
+      "year": 1922,
+      "event": "built",
+      "note": "Log cupola cabin, the first structure built on the site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/rice-peak-blue-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/rice-peak-blue-point-lookout/",
+        "https://idaholookouts.weebly.com/rice-peak-blue-point.html"
+      ]
+    },
+    {
       "year": 1940,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Present L-4 ground cab on a cement foundation. The Boise NF slide show heading says 1937 and a Forest Lookouts page gives only 193?; see notes",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/rice-peak-blue-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/rice-peak-blue-point-lookout/",
+        "https://www.idahofirelookouts.com/west-central/rice-peak-blue-point-lookout/",
+        "https://www.firelookout.com/id/ricepeak.html"
+      ]
     },
     {
       "year": 2012,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 21, 2012",
-      "from": "nhlr"
+      "note": "Added to the National Historic Lookout Register, July 21, 2012",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/rice-peak-blue-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/rice-peak-blue-point-lookout/",
+        "https://www.idahofirelookouts.com/west-central/rice-peak-blue-point-lookout/"
+      ]
     }
   ],
   "photos": [
@@ -246,6 +283,21 @@
       "kind": "register"
     },
     {
+      "label": "Rice Peak (Blue Point) - Forest Lookouts (idaholookouts.weebly.com)",
+      "url": "https://idaholookouts.weebly.com/rice-peak-blue-point.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Rice Peak (IDAHO: A Climbing Guide)",
+      "url": "https://www.idahoaclimbingguide.com/bookupdates/rice-peak/",
+      "kind": "reference"
+    },
+    {
+      "label": "Solitude and Splendid Views: Lookouts on the Boise National Forest (presentation by Susie Osgood) (DocsLib)",
+      "url": "https://docslib.org/doc/9859271/lookouts-on-the-boise-national-forest",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -292,6 +344,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:rice-peak:44.5065:-115.6279",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -304,12 +357,32 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-rice-peak-blue-point",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -28,7 +28,7 @@ const RULES = `RULES (condensed from ${ROOT}/research/STORY_GUIDE.md; open that 
 - **Research JSON** \`${ROOT}/data/research/<id>.json\`, with keys:
   - id, researched ("${today}"), summary (one sentence ≤200 chars);
   - facts: only keys a source supports, from design, height_m, status, status_note (only if not plainly standing), staffing {status, as_of}, access {level: public|restricted|permission|private|closed, note}, visit {climbable, drive_up, trail_note}, agency;
-  - events [{year, event, note, cite:[n]}] (cite is always a LIST of source numbers, everywhere) where event is one of built, rebuilt, replaced, staffed_first, staffed_last, staffed, abandoned, destroyed, burned, removed, relocated, restored, modified, fire, closed, rental_opened, nrhp_listed, nhlr_registered, fflos_registered, other;
+  - events [{year, event, note, cite:[n]}] (cite is always a LIST of source numbers, everywhere) where event is one of built, rebuilt, replaced, staffed_first, staffed_last, staffed, abandoned, destroyed, burned, removed, relocated, restored, modified, assessed, fire, closed, rental_opened, nrhp_listed, nhlr_registered, fflos_registered, other;
   - **evidence** [{cite, supports, quote}], with an EXACT quote (≤300 chars) from the cited source for every footnoted sentence;
   - corrections [{field, current, proposed, cite, why}], only for errors in the brief's record;
   - resolved_conflicts [{field, explanation, cite}];

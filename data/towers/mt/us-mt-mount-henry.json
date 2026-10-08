@@ -13,6 +13,9 @@
   },
   "elevation_m": 2178.1,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
   "design": "L-4",
   "height_m": 3.0,
   "status": "standing",
@@ -32,7 +35,7 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
+    "status": "emergency",
     "as_of": null
   },
   "visit": {
@@ -43,16 +46,77 @@
   "rental": null,
   "events": [
     {
+      "year": 1925,
+      "event": "other",
+      "note": "First lookout on the site: a stone-and-frame cupola lookout built by the Kootenai NF.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+    },
+    {
       "year": 1942,
       "event": "built",
       "note": null,
       "from": "firelookout_com"
     },
     {
+      "year": 1942,
+      "event": "replaced",
+      "note": "The current L-4 cab on a log tower replaced it.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/",
+      "source_urls": [
+        "https://nwmt-ffla.org/2026/03/07/2026-projects/",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2023-newsletter.pdf"
+      ]
+    },
+    {
+      "year": 1973,
+      "event": "abandoned",
+      "note": "Abandoned (a 2023 newsletter says out of use since 1978); now used only in emergencies.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+    },
+    {
       "year": 2000,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: May 12, 2000",
       "from": "nhlr"
+    },
+    {
+      "year": 2016,
+      "event": "assessed",
+      "note": "Condition assessment (August).",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2016-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2016-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2016fallnewsletter.pdf"
+      ]
+    },
+    {
+      "year": 2023,
+      "event": "assessed",
+      "note": "Assessment: pretty good shape but needs a major paint job and a few panes; the outhouse is propped up after being flattened.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2023-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2023-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2023-newsletter.pdf"
+      ]
+    },
+    {
+      "year": 2026,
+      "event": "assessed",
+      "note": "Assessment, aiming at a major restoration in coming years.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+    },
+    {
+      "year": null,
+      "event": "restored",
+      "note": "Partly restored in the 1990s.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
     }
   ],
   "photos": [
@@ -105,6 +169,11 @@
       "kind": "association"
     },
     {
+      "label": "Northwest Montana Lookout Association: work on Mount Henry Lookout",
+      "url": "https://nwmt-ffla.org/2026/03/07/2026-projects/",
+      "kind": "association"
+    },
+    {
       "label": "Mt. Henry on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/mthenry.html",
       "kind": "site"
@@ -141,10 +210,20 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:mt-henry:48.8833:-115.5185",
       "fields": [
+        "material",
         "design",
         "height_m",
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "nwmt_projects",
+      "key": "nwmt_projects:mt:mount-henry",
+      "fields": [
+        "staffing",
+        "events",
         "links"
       ]
     }
@@ -154,5 +233,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

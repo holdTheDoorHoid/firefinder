@@ -13,6 +13,9 @@
   },
   "elevation_m": 1614.2,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "R-6",
   "height_m": 9.1,
   "status": "standing",
@@ -32,7 +35,7 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
+    "status": "unstaffed",
     "as_of": null
   },
   "visit": {
@@ -43,16 +46,62 @@
   "rental": null,
   "events": [
     {
+      "year": 1915,
+      "event": "other",
+      "note": "First structures on the site: a log cabin and a three-legged platform tower.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+    },
+    {
       "year": 1928,
       "event": "built",
       "note": null,
       "from": "firelookout_com"
     },
     {
+      "year": 1928,
+      "event": "replaced",
+      "note": "A second platform tower.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+    },
+    {
+      "year": 1933,
+      "event": "replaced",
+      "note": "A 30-ft pole L-4 tower.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+    },
+    {
+      "year": 1959,
+      "event": "replaced",
+      "note": "The present 32-ft treated-timber R-6 flat-top tower with catwalk.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+    },
+    {
       "year": 2000,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: May 12, 2000",
       "from": "nhlr"
+    },
+    {
+      "year": 2020,
+      "event": "assessed",
+      "note": "One of four Libby District assessments that set the 2021 priorities.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2020-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2020-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2020fall.pdf"
+      ]
+    },
+    {
+      "year": 2026,
+      "event": "assessed",
+      "note": "Assessment for restaffing: tower, catwalk and cab exterior good; photos through two removed shutters show a good interior with basic restaffing equipment.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
     }
   ],
   "photos": [
@@ -105,6 +154,11 @@
       "kind": "association"
     },
     {
+      "label": "Northwest Montana Lookout Association: work on Zeigler Mountain Lookout",
+      "url": "https://nwmt-ffla.org/2026/03/07/2026-projects/",
+      "kind": "association"
+    },
+    {
       "label": "Zeigler Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/zieglermtn.html",
       "kind": "site"
@@ -119,6 +173,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -147,6 +202,15 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "nwmt_projects",
+      "key": "nwmt_projects:mt:zeigler-mountain",
+      "fields": [
+        "staffing",
+        "events",
+        "links"
+      ]
     }
   ],
   "conflicts": [],
@@ -154,5 +218,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

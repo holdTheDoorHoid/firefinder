@@ -1,7 +1,9 @@
 {
   "id": "us-mt-robinson-mountain",
   "name": "Robinson Mountain Lookout",
-  "other_names": [],
+  "other_names": [
+    "Robinson Lookout"
+  ],
   "country": "US",
   "region": "MT",
   "county": "Lincoln",
@@ -13,7 +15,10 @@
   },
   "elevation_m": 2256.7,
   "kind": "ground",
-  "design": null,
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "Gable-roof cupola cabin, 12x14 ft, shake and frame",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -43,10 +48,49 @@
   "rental": null,
   "events": [
     {
+      "year": 1929,
+      "event": "built",
+      "note": "One of the few remaining gable-roof cupola lookouts in the region.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+    },
+    {
+      "year": 1948,
+      "event": "abandoned",
+      "note": "Abandoned.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+    },
+    {
+      "year": 1983,
+      "event": "restored",
+      "note": "Restored to serviceable condition by the Kootenai NF.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+    },
+    {
       "year": 2000,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: May 12, 2000",
       "from": "nhlr"
+    },
+    {
+      "year": 2022,
+      "event": "assessed",
+      "note": "Restoration assessment: needs a little help.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2022-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2022-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2022-newsletter.pdf"
+      ]
+    },
+    {
+      "year": 2026,
+      "event": "assessed",
+      "note": "Assessment: good condition; future structural work needed alongside regular maintenance.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
     }
   ],
   "photos": [
@@ -99,6 +143,11 @@
       "kind": "association"
     },
     {
+      "label": "Northwest Montana Lookout Association: work on Robinson Lookout",
+      "url": "https://nwmt-ffla.org/2026/03/07/2026-projects/",
+      "kind": "association"
+    },
+    {
       "label": "Robinson Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/robinsonmtn.html",
       "kind": "site"
@@ -113,6 +162,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -138,6 +188,15 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "nwmt_projects",
+      "key": "nwmt_projects:mt:robinson",
+      "fields": [
+        "design",
+        "events",
+        "links"
+      ]
     }
   ],
   "conflicts": [],
@@ -145,5 +204,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

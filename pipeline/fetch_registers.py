@@ -32,6 +32,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import RAW_ROOT, RateLimiter, RobotsCache, STATE_ABBR, fetch, write_log  # noqa: E402
+from structure import structure_words  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LOG_PATH = RAW_ROOT / "_logs" / "fetch_registers.log"
@@ -255,6 +256,15 @@ def parse_removed_field(text: str, source: str) -> dict | None:
     return {"year": year, "event": event, "note": note, "from": source}
 
 
+def description_text(html: str) -> str | None:
+    """The plain text of a register page's Description tab, or None when it has none."""
+    desc_idx = html.find("<h2>Description</h2>")
+    if desc_idx == -1:
+        return None
+    d_end = html.find("</div>", desc_idx)
+    return strip_tags(html[desc_idx:d_end])
+
+
 def parse_detail_page(html: str, base: str, source: str, default_status: str) -> dict:
     result: dict = {
         "name": None,
@@ -380,11 +390,13 @@ def parse_detail_page(html: str, base: str, source: str, default_status: str) ->
     if other:
         result["extra"]["other_fields"] = other
 
-    # Description prose is used in-memory only, for a "replica" signal -- never persisted.
-    desc_idx = html.find("<h2>Description</h2>")
-    if desc_idx != -1:
-        d_end = html.find("</div>", desc_idx)
-        desc_text = strip_tags(html[desc_idx:d_end])
+    # Description prose is used in-memory only, for a "replica" signal and short structure
+    # facts ("steel tower", "kind ground": pipeline/structure.py) -- never persisted.
+    desc_text = description_text(html)
+    if desc_text is not None:
+        words = structure_words(desc_text)
+        if words:
+            result["extra"]["structure_words"] = words
         if re.search(r"\breplica\b", desc_text, re.I):
             result["status"] = "replica"
             result["extra"]["status_override_reason"] = "description text mentions 'replica'"

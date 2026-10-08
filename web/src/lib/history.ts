@@ -135,6 +135,7 @@ const SHAPE_OF: Record<string, EventShape> = {
   restored: 'care',
   rental_opened: 'care',
   modified: 'care',
+  assessed: 'care',
   destroyed: 'end',
   burned: 'end',
   removed: 'end',
@@ -149,7 +150,7 @@ export function eventShape(event: string): EventShape {
 }
 
 /** Events that show the lookout was there in that year. */
-const PRESENT = new Set(['built', 'rebuilt', 'replaced', 'staffed_first', 'staffed_last', 'staffed', 'restored', 'rental_opened', 'nrhp_listed', 'nhlr_registered', 'modified']);
+const PRESENT = new Set(['built', 'rebuilt', 'replaced', 'staffed_first', 'staffed_last', 'staffed', 'restored', 'rental_opened', 'nrhp_listed', 'nhlr_registered', 'modified', 'assessed']);
 const END = new Set(['destroyed', 'burned', 'removed', 'abandoned']);
 
 /** Gaps at least this long between two dated events are pointed out. */

@@ -19,9 +19,11 @@ REPO_ROOT = Path(__file__).parent.parent
 # Rental sub-fields worth calling out by name in the commit message (DESIGN.md section 3.3's rental
 # shape). "checked" and "description" are left out: "checked" always moves when a listing is
 # reconfirmed (not interesting on its own) and "description" is often just RIDB's prose
-# reformatted, which would make every refresh "change" nearly every rental.
+# reformatted, which would make every refresh "change" nearly every rental. "status_note" and
+# "manager" come from the FFLA rentals list (a closure such as "Maintenance Closure 2026"), which
+# the same Action re-reads, so a closure appearing or lifting is called out too.
 RENTAL_FIELDS = ["available", "season", "fee", "rules", "max_occupancy", "pets",
-                 "access_note", "warning", "url"]
+                 "access_note", "warning", "url", "status_note", "manager"]
 
 
 def changed_tower_paths(ref: str = "HEAD") -> list[Path]:

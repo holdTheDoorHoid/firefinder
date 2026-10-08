@@ -1,6 +1,7 @@
 {
   "id": "us-id-sundance",
   "name": "Sundance Lookout",
+  "summary": "Bonner County lookout first used as a 1928 camp; its 1935 L-4 cab survived the 1967 Sundance fire and was replaced in 1981 by an R-6 cab, now volunteer-staffed.",
   "other_names": [
     "Sundance Mountain"
   ],
@@ -15,7 +16,10 @@
   },
   "elevation_m": 1919.6,
   "kind": "tower",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "firelookout_com",
+  "roles": [],
+  "design": "R-6",
   "height_m": 6.1,
   "status": "standing",
   "status_note": null,
@@ -31,7 +35,7 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "Volunteer-staffed lookout on Idaho Department of Lands land near Priest Lake. Idaho Fire Lookouts tags it drive-up. No source says whether visitors may enter the cab."
   },
   "staffing": {
     "status": "unknown",
@@ -39,11 +43,50 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Idaho Fire Lookouts tags it Drive-Up. Firelookout.com places it 4 miles ENE of Coolin."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1928,
+      "event": "other",
+      "note": "Tent camp with an alidade on the rock pile, and a camp 1/4 mile west, per NHLR, firelookout.com and Idaho Fire Lookouts.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sundance-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/sundance-lookout/",
+        "https://www.firelookout.com/id/sundance.html",
+        "https://www.idahofirelookouts.com/northern-idaho/sundance-mountain-lookout-2/"
+      ]
+    },
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "L-4 hip-roofed cab on a 20-foot tower. The register calls it a log tower; firelookout.com calls it a pole tower.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sundance-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/sundance-lookout/",
+        "https://www.firelookout.com/id/sundance.html",
+        "https://www.idahofirelookouts.com/northern-idaho/sundance-mountain-lookout-2/",
+        "https://firelookout.org/lookouts/us/id/sundance/"
+      ]
+    },
+    {
+      "year": 1967,
+      "event": "fire",
+      "note": "Sundance fire. Per the register, the 1935 lookout survived its firestorm.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sundance-lookout/"
+    },
+    {
+      "year": 1979,
+      "event": "staffed",
+      "note": "Nancy Glazier listed as known staff, citing the Bonner County Daily Bee.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/northern-idaho/sundance-mountain-lookout-2/"
+    },
     {
       "year": 1981,
       "event": "built",
@@ -51,10 +94,24 @@
       "from": "nhlr"
     },
     {
+      "year": 1981,
+      "event": "replaced",
+      "note": "Idaho Department of Lands replaced the 1935 cab with an R-6 flattop cab with catwalk on a 20-foot timber tower. Firelookout.com gives the tower as 15 feet.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sundance-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/sundance-lookout/",
+        "https://www.firelookout.com/id/sundance.html",
+        "https://www.idahofirelookouts.com/northern-idaho/sundance-mountain-lookout-2/",
+        "https://firelookout.org/lookouts/us/id/sundance/"
+      ]
+    },
+    {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 24, 2009",
-      "from": "nhlr"
+      "note": "Registered April 24, 2009 (US 801, ID 79).",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sundance-lookout/"
     }
   ],
   "photos": [
@@ -174,6 +231,11 @@
       "kind": "register"
     },
     {
+      "label": "Sundance (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/id/sundance/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -219,6 +281,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:sundance-mtn:48.4908:-116.7515",
       "fields": [
+        "material",
         "design",
         "height_m",
         "photos",
@@ -231,6 +294,22 @@
       "fields": [
         "photos",
         "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-sundance",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
@@ -251,9 +330,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-id-whitehawk",
   "name": "Whitehawk Lookout",
+  "summary": "L-4 cab on the Boise National Forest, built in 1933 and staffed in summer; sources disagree on the build year and the NHLR registration year.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,6 +14,9 @@
   },
   "elevation_m": 2555.4,
   "kind": "ground",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "L-4",
   "height_m": null,
   "status": "standing",
@@ -37,7 +41,7 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
@@ -45,14 +49,46 @@
     {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "L-4 cab built about a mile south of the summit. One forest lookout site gives 1934 for the same standard L-4 house.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/whitehawk-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/whitehawk-lookout/",
+        "https://www.firelookout.com/id/whitehawk.html",
+        "https://www.idahofirelookouts.com/west-central/whitehawk-lookout/"
+      ]
+    },
+    {
+      "year": 1940,
+      "event": "staffed",
+      "note": "Franklin A Schoeffler, per Idaho Fire Lookouts' known-staff list. Not confirmed by other sources read.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/whitehawk-lookout/"
+    },
+    {
+      "year": 1976,
+      "event": "staffed",
+      "note": "Donna Kreiensieck, per Idaho Fire Lookouts' known-staff list.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/whitehawk-lookout/"
+    },
+    {
+      "year": 1986,
+      "event": "staffed",
+      "note": "Mr. and Mrs. Ronald G. Harbison, per Idaho Fire Lookouts' known-staff list.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/whitehawk-lookout/"
     },
     {
       "year": 2011,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 24, 2011",
-      "from": "nhlr"
+      "note": "Registered September 24, 2011. Idaho Fire Lookouts gives 2020 for the addition to the Register.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/whitehawk-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/whitehawk-lookout/",
+        "https://www.idahofirelookouts.com/west-central/whitehawk-lookout/"
+      ]
     }
   ],
   "photos": [
@@ -136,6 +172,11 @@
       "kind": "register"
     },
     {
+      "label": "Whitehawk (Forest Lookouts)",
+      "url": "https://idaholookouts.weebly.com/whitehawk.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -182,6 +223,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:whitehawk:44.2874:-115.5307",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -195,12 +237,32 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-whitehawk",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "pass",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

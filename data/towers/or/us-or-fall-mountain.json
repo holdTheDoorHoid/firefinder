@@ -16,6 +16,9 @@
   },
   "elevation_m": 1798.9,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "L-4 ground cab on an 18-foot pole tower",
   "height_m": 5.5,
   "status": "standing",
@@ -55,7 +58,9 @@
     "rules": [],
     "access_note": "It can be accessed by vehicle.",
     "description": "Overview\n\nFall Mountain Lookout Tower is situated about 20 miles from John Day, in central Oregon. It provides 360-degree views of the surrounding Strawberry Mountain Wilderness, as well as the towns of Seneca and Mt. Vernon. The lookout offers access to a variety of recreational activities. In addition to sightseeing, visitors to the area enjoy hunting, hiking and viewing wildlife.\n\nThe lookout can accommodate just two people and provides few amenities. It can be accessed by vehicle. Guests are responsible for their own travel arrangements and safety, and must bring many of their own supplies.\n\nRecreation\n\nRecreational options include wildlife viewing, huckleberry picking, star gazing and hiking the area around the lookout. There is a multiple-use trailhead south of the tower, at Starr Springs. Designated hiking trails into the wilderness are located 30 minutes from the lookout tower by vehicle.\nFacilities\n\nThe one-room, 14-by-14 cabin sits atop an 18-foot tower and sleeps two. The cabin is furnished with a futon bed and a table and chairs. It has electricity and in the kitchen area, an electric stove and refrigerator. The kitchen also contains pots, pans, dishes and tableware.\n\nA catwalk encircles the structure, allowing for unobstructed views of the surrounding area. A vault toilet is located near the base of the tower.\n\nThere is no water available on site. Guests must bring their own water for drinking, cooking and washing, as well as sleeping bags/bedding, a flashlight or lantern for emergencies, first aid kit, towels, garbage bags, toilet paper and dish soap.\nNatural Features\n\nThe tower was built in 1933 and sits at an elevation of 5,949 feet. Before satellite surveillance systems, lookout personnel monitored the forest from this 18-foot perch for signs of smoke, alerting fire guards when necessary. Today guests can watch the sun rise and set, spot wildlife from the catwalk and witness dramatic thunderstorms that traverse the territory during summer months.\n\nContact Info\n\nFor facility specific information, please call (541) 575-3131.\n\nNearby Attractions\n\nThe nearby Strawberry Mountain Wilderness area includes approximately 69,350 acres of land, including mountain peaks and several lakes, as well as the headwaters of Pine, Indian, Strawberry, Canyon, Bear, Lake, Wall, Roberts and Big Creek streams. A variety of wildlife, including elk, mule deer, antelope, black bear, cougar, bighorn sheep, ruffed and blue grouse, pileated woodpecker, sharp-shinned hawk, bald eagle, pine marten, mink and beaver. A varieties of bird and fish can be seen in the area.",
-    "checked": "2026-10-05"
+    "checked": "2026-10-05",
+    "status_note": "Maintenance Closure 2026",
+    "status_note_from": "ffla"
   },
   "events": [
     {
@@ -142,6 +147,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Fall Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/fallmtn.html",
       "kind": "site"
@@ -161,6 +171,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -184,6 +195,14 @@
       "fields": [
         "ownership",
         "access",
+        "rental",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:or:fall-mountain-lookout",
+      "fields": [
         "rental",
         "links"
       ]
@@ -251,5 +270,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

@@ -13,6 +13,9 @@
   },
   "elevation_m": 1031.7,
   "kind": "tower",
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
   "design": null,
   "height_m": null,
   "status": "standing",
@@ -40,7 +43,15 @@
     "drive_up": null,
     "trail_note": null
   },
-  "rental": null,
+  "rental": {
+    "available": true,
+    "source": "ffla",
+    "provider": "West Virginia State Parks",
+    "url": "https://wvstateparks.com/places-to-stay/cabins/seneca-state-forest-cabins/",
+    "ridb_facility_id": null,
+    "checked": "2026-10-08",
+    "manager": "WV State Parks"
+  },
   "events": [
     {
       "year": 1935,
@@ -136,8 +147,18 @@
       "kind": "register"
     },
     {
+      "label": "Book or read about Thorny Mountain Fire Tower (West Virginia State Parks)",
+      "url": "https://wvstateparks.com/places-to-stay/cabins/seneca-state-forest-cabins/",
+      "kind": "rental"
+    },
+    {
       "label": "FFLA West Virginia lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wv/",
+      "kind": "association"
+    },
+    {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
       "kind": "association"
     },
     {
@@ -160,6 +181,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -178,6 +200,14 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:wv:thorny-mountain-fire-tower",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:node/356535887",
       "fields": [
@@ -190,5 +220,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

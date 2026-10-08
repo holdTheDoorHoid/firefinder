@@ -54,6 +54,79 @@ describe('a listing on a lookout another source records as burned', () => {
   });
 });
 
+describe('a rental the FFLA list notes as closed for 2026', () => {
+  const r: TowerRecord = {
+    ...base,
+    id: 'us-id-arid-peak',
+    name: 'Arid Peak Lookout',
+    region: 'ID',
+    status: 'standing',
+    rental: {
+      available: true, provider: 'recreation.gov', url: 'https://www.recreation.gov/camping/campgrounds/234447',
+      checked: '2026-10-05', status_note: 'Maintenance Closure 2026', status_note_from: 'ffla',
+    },
+  };
+  const main = renderTowerMain(r, ctx).value;
+  const panel = renderPanel(r, ctx).value;
+
+  it('is still a rental, with a plain notice (not the gone-lookout warning) before the booking link', () => {
+    expect(isRentable(r)).toBe(true);
+    const note = main.indexOf('Noted: Maintenance Closure 2026');
+    expect(note).toBeGreaterThan(-1);
+    expect(main.indexOf('href="https://www.recreation.gov/camping/campgrounds/234447"')).toBeGreaterThan(note);
+    expect(main).toContain('Forest Fire Lookout Association’s rentals list');
+    expect(main).toContain('Book on recreation.gov');
+    expect(main).not.toContain('Check before booking');
+  });
+
+  it('says so in the side panel too', () => {
+    expect(panel).toContain('Noted: Maintenance Closure 2026');
+    expect(panel).toContain('Book on recreation.gov');
+  });
+
+  it('shows no note when there is none', () => {
+    const plain = renderTowerMain({ ...r, rental: { ...r.rental!, status_note: null } }, ctx).value;
+    expect(plain).not.toContain('Noted:');
+  });
+});
+
+describe('a rental that only the FFLA list knows (booked outside recreation.gov)', () => {
+  const r: TowerRecord = {
+    ...base,
+    id: 'us-wa-north-mountain',
+    name: 'North Mountain Lookout',
+    region: 'WA',
+    status: 'standing',
+    rental: {
+      available: true, source: 'ffla', provider: 'Airbnb', url: 'https://www.airbnb.com/rooms/50778329',
+      manager: 'Friends of North Mountain', checked: '2026-10-08',
+    },
+  };
+  const main = renderTowerMain(r, ctx).value;
+
+  it('names the booking site and the manager, and credits the FFLA list rather than recreation.gov', () => {
+    expect(main).toContain('through Airbnb');
+    expect(main).toContain('Book on Airbnb');
+    expect(main).toContain('href="https://www.airbnb.com/rooms/50778329"');
+    expect(main).toContain('Managed by');
+    expect(main).toContain('Friends of North Mountain');
+    expect(main).toContain('href="https://firelookout.org/resources/rentals/"');
+    expect(main).not.toContain('Data source: ridb.recreation.gov');
+    expect(main).not.toContain('Rental details from recreation.gov');
+  });
+
+  it('does not repeat the provider as the manager', () => {
+    const same = renderTowerMain({ ...r, rental: { ...r.rental!, provider: 'Montana DNRC', manager: 'Montana DNRC' } }, ctx).value;
+    expect(same).not.toContain('Managed by');
+  });
+
+  it('escapes the note and manager', () => {
+    const evil = renderTowerMain({ ...r, rental: { ...r.rental!, manager: '<img src=x>', status_note: '<script>x</script>' } }, ctx).value;
+    expect(evil).not.toContain('<img src=x>');
+    expect(evil).not.toContain('<script>x</script>');
+  });
+});
+
 describe('a moved lookout and its original site link to each other', () => {
   const moved: TowerRecord = {
     ...base,

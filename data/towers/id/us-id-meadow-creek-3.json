@@ -1,6 +1,7 @@
 {
   "id": "us-id-meadow-creek-3",
   "name": "Meadow Creek Lookout",
+  "summary": "A 1933 L-4 ground cab in the Boise National Forest, regularly staffed until 1972 and now mothballed and kept for emergency use.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2695.7,
   "kind": "ground",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "L-4 standard cabin, 14 by 14 ft ground cab",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Described as available for emergencies and as a Drive Up Emergency site; the sources describe no public visiting arrangement"
   },
   "staffing": {
     "status": "unknown",
@@ -37,22 +41,47 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "A 2018 visit report describes access by ATV, UTV or high-clearance vehicle; no route details recorded here"
   },
   "rental": null,
   "events": [
     {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "L-4 standard cabin, described as a 14 by 14 ft ground cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/meadow-creek-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/meadow-creek-lookout/",
+        "https://www.firelookout.com/id/meadowcreek.html",
+        "https://idaholookouts.weebly.com/meadow-creek1.html"
+      ]
+    },
+    {
+      "year": 1945,
+      "event": "staffed",
+      "note": "Mrs. Lois Parish named as watch-keeper in an Idaho Statesman item dated January 28, 1945",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/meadow-creek-lookout/",
+      "source_urls": [
+        "https://www.idahofirelookouts.com/west-central/meadow-creek-lookout/",
+        "https://idaholookouts.weebly.com/meadow-creek1.html"
+      ]
+    },
+    {
+      "year": 1972,
+      "event": "staffed_last",
+      "note": "Last fire season the lookout was regularly staffed",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/meadow-creek1.html"
     },
     {
       "year": 2012,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 21, 2012",
-      "from": "nhlr"
+      "note": "Registered July 21, 2012 as US 944, ID 98",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/meadow-creek-lookout/"
     }
   ],
   "photos": [
@@ -184,6 +213,16 @@
       "kind": "register"
     },
     {
+      "label": "Meadow Creek - FOREST LOOKOUTS (Forest Lookouts (idaholookouts.weebly.com))",
+      "url": "https://idaholookouts.weebly.com/meadow-creek1.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Meadow Creek Lookout - IDAHO: A Climbing Guide",
+      "url": "https://www.idahoaclimbingguide.com/bookupdates/meadow-creek-lookout/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -230,6 +269,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:meadow-creek:44.8682:-115.3890",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -242,12 +282,33 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-meadow-creek-3",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

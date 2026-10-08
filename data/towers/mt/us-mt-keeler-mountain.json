@@ -13,6 +13,9 @@
   },
   "elevation_m": 1153.1,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "R-6",
   "height_m": 15.2,
   "status": "standing",
@@ -32,7 +35,7 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
+    "status": "unstaffed",
     "as_of": null
   },
   "visit": {
@@ -43,16 +46,44 @@
   "rental": null,
   "events": [
     {
+      "year": 1924,
+      "event": "other",
+      "note": "First structures on the site: a 50-ft platform tower and a log cabin (the cabin still stands).",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+    },
+    {
+      "year": 1934,
+      "event": "replaced",
+      "note": "A 50-ft pole tower with an L-4 cab replaced the platform tower.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+    },
+    {
       "year": 1963,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
     },
     {
+      "year": 1963,
+      "event": "replaced",
+      "note": "The present 53-ft treated-lumber R-6 tower, the third lookout on the site.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
+    },
+    {
       "year": 2015,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: August 30, 2015",
       "from": "nhlr"
+    },
+    {
+      "year": 2026,
+      "event": "assessed",
+      "note": "Assessment with the Forest Service on reactivating it as a staffed lookout; lightning protection is the top upgrade; access is closed to protect grizzly habitat.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/2026/03/07/2026-projects/"
     }
   ],
   "photos": [
@@ -117,6 +148,11 @@
       "kind": "association"
     },
     {
+      "label": "Northwest Montana Lookout Association: work on Keeler Mountain Lookout",
+      "url": "https://nwmt-ffla.org/2026/03/07/2026-projects/",
+      "kind": "association"
+    },
+    {
       "label": "Keeler Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/keelermtn.html",
       "kind": "site"
@@ -131,6 +167,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -156,6 +193,15 @@
         "design",
         "height_m",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "nwmt_projects",
+      "key": "nwmt_projects:mt:keeler-mountain",
+      "fields": [
+        "staffing",
+        "events",
         "links"
       ]
     }
@@ -194,5 +240,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

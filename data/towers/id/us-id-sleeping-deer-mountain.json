@@ -1,6 +1,7 @@
 {
   "id": "us-id-sleeping-deer-mountain",
   "name": "Sleeping Deer Mountain Lookout",
+  "summary": "Challis NF lookout: L-4 cab built 1935 in the Frank Church wilderness; last staffed 1997, now on emergency status and in poor shape; reached on foot.",
   "other_names": [
     "Sleeping Deer"
   ],
@@ -15,6 +16,9 @@
   },
   "elevation_m": 2978.5,
   "kind": "ground",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "L-4",
   "height_m": null,
   "status": "standing",
@@ -27,11 +31,11 @@
       "url": "http://nhlr.org/lookouts/us/id/sleeping-deer-mountain-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Salmon-Challis National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "On emergency status, not staffed since 1997, and described as in poor shape. No source describes public entry into the cabin; ask the Salmon-Challis National Forest before going."
   },
   "staffing": {
     "status": "unknown",
@@ -39,22 +43,55 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Vehicle access on the Sleeping Deer Road (FS-086, 22 miles from the saddle) to within 2 miles of the summit. A signed trail from the road end climbs just over a mile. The Forest Service lists a 0.5-mile trail from the Cabin Creek and Melville Ridge trails. Cellphone service is usually unavailable."
   },
   "rental": null,
   "events": [
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "L-4 cab on the ground, the only structure on the summit per firelookout.com; NHLR calls it a hip-roof L-4 groundhouse with a catwalk.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sleeping-deer-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/sleeping-deer-mountain-lookout/",
+        "https://www.firelookout.com/id/sleepingdeer.html",
+        "https://www.idahofirelookouts.com/southern-idaho/sleeping-deer-lookout/"
+      ]
+    },
+    {
+      "year": 1984,
+      "event": "staffed",
+      "note": "Ed Bachel listed as known staff for 1984 to 1985, per Idaho Fire Lookouts.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/southern-idaho/sleeping-deer-lookout/"
+    },
+    {
+      "year": 1997,
+      "event": "staffed_last",
+      "note": "Last staffed in 1997; the cab is now on emergency status.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sleeping-deer-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/sleeping-deer-mountain-lookout/",
+        "https://www.firelookout.com/id/sleepingdeer.html",
+        "https://www.idahofirelookouts.com/southern-idaho/sleeping-deer-lookout/"
+      ]
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: February 12, 2004",
-      "from": "nhlr"
+      "note": "Registered February 12, 2004 as US 547, ID 42.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/sleeping-deer-mountain-lookout/"
+    },
+    {
+      "year": 2015,
+      "event": "other",
+      "note": "Climbing guide: the lookout was in poor shape and was not manned in 2015.",
+      "from": "research",
+      "source_url": "https://www.idahoaclimbingguide.com/bookupdates/sleeping-deer-mountain/"
     }
   ],
   "photos": [
@@ -162,6 +199,16 @@
       "kind": "register"
     },
     {
+      "label": "Sleeping Deer Mountain - IDAHO: A Climbing Guide",
+      "url": "https://www.idahoaclimbingguide.com/bookupdates/sleeping-deer-mountain/",
+      "kind": "reference"
+    },
+    {
+      "label": "Sleeping Deer Lookout Trail #4212 (U.S. Forest Service, Salmon-Challis National Forest)",
+      "url": "https://www.fs.usda.gov/r04/salmon-challis/recreation/trails/sleeping-deer-lookout-trail-4212",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -208,6 +255,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:sleeping-deer:44.7672:-114.6911",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -220,12 +268,33 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-sleeping-deer-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

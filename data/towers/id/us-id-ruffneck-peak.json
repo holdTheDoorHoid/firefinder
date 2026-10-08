@@ -1,6 +1,7 @@
 {
   "id": "us-id-ruffneck-peak",
   "name": "Ruffneck Peak Lookout",
+  "summary": "A 1932 L-4 cab on Ruffneck Peak near the Frank Church wilderness, now listed for emergency use; sources disagree on staffing.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2831.9,
   "kind": "ground",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "L-4 cab, a hip-roofed groundhouse with a catwalk",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Listed as available for emergencies only. In or next to the Frank Church River of No Return Wilderness, and reached on foot."
   },
   "staffing": {
     "status": "unknown",
@@ -37,22 +41,67 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Hike-in site in or near the Frank Church River of No Return Wilderness. No route or distance checked."
   },
   "rental": null,
   "events": [
     {
       "year": 1932,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "L-4 cab built",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/ruffneck-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/ruffneck-peak-lookout/",
+        "https://www.idahofirelookouts.com/southern-idaho/ruffneck-peak/",
+        "https://www.firelookout.com/id/ruffneck.html",
+        "https://en.wikipedia.org/wiki/Ruffneck_Peak"
+      ]
+    },
+    {
+      "year": 1984,
+      "event": "staffed",
+      "note": "Idaho Fire Lookouts lists Manuel Razo (cited to the Idaho Statesman) and Carmen McRae for 1984",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/southern-idaho/ruffneck-peak/"
+    },
+    {
+      "year": 1985,
+      "event": "staffed",
+      "note": "Idaho Fire Lookouts lists Carmen McRae for 1985",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/southern-idaho/ruffneck-peak/"
+    },
+    {
+      "year": 2001,
+      "event": "restored",
+      "note": "Returned to active service. firelookout.com says it was staffed again in 2001",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/ruffneck-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/ruffneck-peak-lookout/",
+        "https://www.idahofirelookouts.com/southern-idaho/ruffneck-peak/",
+        "https://www.firelookout.com/id/ruffneck.html"
+      ]
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: February 12, 2004",
-      "from": "nhlr"
+      "note": "Added to the National Historic Lookout Register, February 12, 2004",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/ruffneck-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/ruffneck-peak-lookout/",
+        "https://www.idahofirelookouts.com/southern-idaho/ruffneck-peak/"
+      ]
+    },
+    {
+      "year": 2012,
+      "event": "fire",
+      "note": "Lookout evacuated July 30, 2012 while the Halstead fire raised concern for staff safety",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/ruffneck-peak.html"
     }
   ],
   "photos": [
@@ -124,6 +173,21 @@
       "kind": "register"
     },
     {
+      "label": "Ruffneck Peak - Forest Lookouts (idaholookouts.weebly.com)",
+      "url": "https://idaholookouts.weebly.com/ruffneck-peak.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Ruffneck Peak (Keeping Watch, University of Idaho)",
+      "url": "https://cdil.lib.uidaho.edu/keeping-watch/items/roughneck-peak.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Ruffneck Peak (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Ruffneck_Peak",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -170,6 +234,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:ruffneck-peak:44.4817:-115.1551",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -182,12 +247,32 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-ruffneck-peak",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

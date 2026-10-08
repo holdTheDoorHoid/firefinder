@@ -1,6 +1,7 @@
 {
   "id": "us-id-williams-peak",
   "name": "Williams Peak Lookout",
+  "summary": "L-4 cab on the Payette National Forest, built 1932 and still used for summer fire detection; registered with the NHLR in 2020.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,6 +14,9 @@
   },
   "elevation_m": 2085.4,
   "kind": "ground",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
   "design": "L-4",
   "height_m": null,
   "status": "standing",
@@ -25,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/id/williams-peak-lookout/"
     }
   ],
-  "agency": "US Forest Service",
+  "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "An active fire lookout. The Forest Service asks visitors to be respectful of the lookout and its space. No source read says whether visitors may enter the cab."
   },
   "staffing": {
     "status": "staffed",
@@ -37,22 +41,55 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Hike-in. Trail #073 is 7.2 miles long and starts at the Williams Peak Trailhead, reached by about 35 miles of Lick Creek Road from McCall, then about two miles on the East Fork Road. The Forest Service calls Lick Creek Road rough and narrow."
   },
   "rental": null,
   "events": [
     {
       "year": 1932,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "L-4 cab built on a ridge northwest of the summit. The NHLR calls it an R1/L-4 ground cabin.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/williams-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/williams-peak-lookout/",
+        "https://www.firelookout.com/id/williamspeak.html",
+        "https://www.idahofirelookouts.com/west-central/williams-peak-lookout/",
+        "https://www.fs.usda.gov/r04/payette/recreation/williams-peak-trailhead"
+      ]
+    },
+    {
+      "year": 2006,
+      "event": "other",
+      "note": "Helicopter 5EV crashed on August 13, 2006, while on a mission on the East Fork South Fork of the Salmon River. Idaho Fire Lookouts, relaying a Payette National Forest Facebook post, says four people died, including the lookout Lillian Patten.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/williams-peak-lookout/"
+    },
+    {
+      "year": 2006,
+      "event": "staffed",
+      "note": "Lillian Patten listed as known staff for 2006.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/williams-peak-lookout/"
+    },
+    {
+      "year": 2017,
+      "event": "staffed",
+      "note": "Daniel Moak listed as known staff for 2017 through 2025 by Idaho Fire Lookouts.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/williams-peak-lookout/"
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 4, 2020",
-      "from": "nhlr"
+      "note": "Registered October 4, 2020. Idaho Fire Lookouts gives the same year for the addition to the Register.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/williams-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/williams-peak-lookout/",
+        "https://www.idahofirelookouts.com/west-central/williams-peak-lookout/"
+      ]
     }
   ],
   "photos": [
@@ -148,6 +185,16 @@
       "kind": "register"
     },
     {
+      "label": "Williams Peak Trailhead (Payette National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r04/payette/recreation/williams-peak-trailhead",
+      "kind": "reference"
+    },
+    {
+      "label": "Williams Peak Trail #073 (Payette National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r04/payette/recreation/trails/williams-peak-trail-073",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -194,6 +241,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:id:williams-peak:45.0186:-115.6629",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -207,12 +255,33 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-williams-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

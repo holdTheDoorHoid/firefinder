@@ -1,6 +1,7 @@
 {
   "id": "us-ny-rondaxe-bald-mountain",
   "name": "Rondaxe (Bald) Mountain Fire Tower",
+  "summary": "Wooden 1912 tower replaced by a steel tower in 1917 on Rondaxe (Bald) Mountain near Old Forge; closed 1990, restored by volunteers 2002-2005, climbable today.",
   "other_names": [
     "Rondaxe Mountain (Bald)",
     "Rondaxe Fire Tower",
@@ -17,8 +18,11 @@
   },
   "elevation_m": 716.0,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "material": "wood",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "35-foot Aermotor LS-40 steel tower with 7x7-foot steel cab (1917, replacing a wooden 1912 tower)",
+  "height_m": 10.7,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -29,28 +33,75 @@
       "url": "http://nhlr.org/lookouts/us/ny/rondaxe-bald-mountain-fire-tower/"
     }
   ],
-  "agency": "NY Dept. of Environmental Conservation",
+  "agency": "NYS Department of Environmental Conservation",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Restored and climbable per Adirondack Explorer; trail is marked with DEC red markers"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2017-12-29"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": false,
+    "trail_note": "Trailhead on Rondaxe Road off Route 28 at Fourth Lake; about 500 ft of climbing in just under a mile; the trail can be icy in December"
   },
   "rental": null,
   "events": [
     {
+      "year": 1912,
+      "event": "built",
+      "note": "Wooden fire tower erected on the summit",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ny/rondaxe-bald-mountain-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ny/rondaxe-bald-mountain-fire-tower/",
+        "http://www.masterpieces.com/ClimbBald.htm"
+      ]
+    },
+    {
+      "year": 1917,
+      "event": "replaced",
+      "note": "Wooden tower replaced by the present steel tower with a 7x7-foot cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ny/rondaxe-bald-mountain-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ny/rondaxe-bald-mountain-fire-tower/",
+        "http://www.masterpieces.com/ClimbBald.htm"
+      ]
+    },
+    {
+      "year": 1990,
+      "event": "closed",
+      "note": "Manned seasonally by rangers until 1990, then closed; the register calls it the last fire tower the state closed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ny/rondaxe-bald-mountain-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ny/rondaxe-bald-mountain-fire-tower/",
+        "http://www.masterpieces.com/ClimbBald.htm",
+        "https://rtwarriors.com/2019/12/19/bald-mountain-firetower-old-forge-ny/"
+      ]
+    },
+    {
       "year": 1995,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 6, 1995",
-      "from": "nhlr"
+      "note": "Registered March 6, 1995 as NHLR US 112",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ny/rondaxe-bald-mountain-fire-tower/"
+    },
+    {
+      "year": 2005,
+      "event": "restored",
+      "note": "Restored 2002-2005 by volunteers working with the DEC; reopened June 18, 2005",
+      "from": "research",
+      "source_url": "http://www.masterpieces.com/ClimbBald.htm",
+      "source_urls": [
+        "http://www.masterpieces.com/ClimbBald.htm",
+        "https://rtwarriors.com/2019/12/19/bald-mountain-firetower-old-forge-ny/",
+        "http://nhlr.org/lookouts/us/ny/rondaxe-bald-mountain-fire-tower/"
+      ]
     }
   ],
   "photos": [
@@ -110,6 +161,26 @@
       "kind": "register"
     },
     {
+      "label": "Bald (Rondaxe) Fire Tower, Old Forge, NY Hiking Directions (Masterpieces (Friends of Bald Mountain))",
+      "url": "http://www.masterpieces.com/ClimbBald.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Featured Hike: Rondaxe Fire Tower, Bald Mountain (Adirondack Explorer)",
+      "url": "https://www.adirondackexplorer.org/recreation/featured-hike-bald-mountain-rondaxe-fire-tower-old-forge/",
+      "kind": "reference"
+    },
+    {
+      "label": "Bald Mountain (Herkimer County, New York) (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Bald_Mountain_(Herkimer_County,_New_York)",
+      "kind": "reference"
+    },
+    {
+      "label": "Bald Mountain Firetower: Old Forge, NY (Road Trip Warriors)",
+      "url": "https://rtwarriors.com/2019/12/19/bald-mountain-firetower-old-forge-ny/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA New York lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ny/",
       "kind": "association"
@@ -139,6 +210,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -170,12 +242,35 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ny-rondaxe-bald-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

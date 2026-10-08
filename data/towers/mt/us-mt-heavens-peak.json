@@ -14,6 +14,9 @@
   },
   "elevation_m": 2075.7,
   "kind": "ground",
+  "material": "mixed",
+  "material_from": "nhlr",
+  "roles": [],
   "design": "Flat-roofed stone-and-frame cab, 12 by 12 feet, on a stone foundation with a stone-wall catwalk",
   "height_m": null,
   "status": "standing",
@@ -39,7 +42,7 @@
     "note": "Backcountry of Glacier National Park; as of 2012 the trail built to the site had long been abandoned"
   },
   "staffing": {
-    "status": "unknown",
+    "status": "unstaffed",
     "as_of": null
   },
   "visit": {
@@ -109,6 +112,28 @@
       "source_urls": [
         "https://whitefishpilot.com/news/2012/sep/12/man-questions-heavens-peak-lookout-9/",
         "https://www.firelookout.com/mt/heavenspeak.html"
+      ]
+    },
+    {
+      "year": 2020,
+      "event": "assessed",
+      "note": "Overnight assessment after a trailless 3,000-ft bushwhack through the 2003 Trapper Fire burn; unstaffed for decades.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2020-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2020-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2020fall.pdf"
+      ]
+    },
+    {
+      "year": 2023,
+      "event": "assessed",
+      "note": "Assessment: generally good shape but in need of extensive painting and other repairs.",
+      "from": "nwmt_projects",
+      "source_url": "https://nwmt-ffla.org/wp-content/uploads/2025/09/2023-completed-projects.pdf",
+      "source_urls": [
+        "https://nwmt-ffla.org/wp-content/uploads/2025/09/2023-completed-projects.pdf",
+        "https://nwmt-ffla.org/wp-content/uploads/2025/11/2023-newsletter.pdf"
       ]
     }
   ],
@@ -213,6 +238,11 @@
       "kind": "association"
     },
     {
+      "label": "Northwest Montana Lookout Association: work on Heavens Peak Lookout",
+      "url": "https://nwmt-ffla.org/2026/03/07/2026-projects/",
+      "kind": "association"
+    },
+    {
       "label": "Wikipedia: Heaven's Peak Fire Lookout",
       "url": "https://en.wikipedia.org/wiki/Heaven%27s_Peak_Fire_Lookout",
       "kind": "wikipedia"
@@ -237,6 +267,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -261,6 +292,16 @@
       "fields": [
         "events",
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "nwmt_projects",
+      "key": "nwmt_projects:mt:heavens-peak",
+      "fields": [
+        "design",
+        "staffing",
+        "events",
         "links"
       ]
     },

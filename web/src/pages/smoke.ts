@@ -10,6 +10,7 @@ import { AttributionControl, Map as MlMap, NavigationControl, setWorkerUrl, type
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 import { html } from '../lib/html.ts';
 import type { TowerCollection, TowerFeature, TowerRecord } from '../lib/types.ts';
+import { isNoStructure } from '../lib/vocab.ts';
 import { BOLD_FONT, LABEL_FONT, loadBaseStyle } from '../map/style.ts';
 import { initChecklistOnPage } from '../ui/checklist-ui.ts';
 import { initCommon } from '../ui/common.ts';
@@ -66,6 +67,8 @@ const ll = (f: TowerFeature): LatLon => ({ lat: f.geometry.coordinates[1], lon: 
 
 /** Standing lookouts with a partner 12–32 km away, in a cluster of at least three. */
 function pickPairs(features: TowerFeature[], n: number): [TowerFeature, TowerFeature][] {
+  // Towers and buildings only: a summit camp or a lookout tree is not a lookout to stand in.
+  features = features.filter((f) => !isNoStructure(f.properties.k));
   const standing = features.filter((f) => f.properties.s === 'standing');
   const out: [TowerFeature, TowerFeature][] = [];
   for (const a of shuffle(standing)) {

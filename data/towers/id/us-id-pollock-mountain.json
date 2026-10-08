@@ -1,6 +1,7 @@
 {
   "id": "us-id-pollock-mountain",
   "name": "Pollock Mountain Lookout",
+  "summary": "A 1930 metal ground cabin on Pollock Mountain in the Payette National Forest, staffed annually; the Forest Service trailhead page shows no trailhead closure.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 2454.6,
   "kind": "ground",
-  "design": null,
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": "Metal ground cabin",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -25,34 +29,74 @@
       "url": "http://nhlr.org/lookouts/us/id/pollock-mountain-lookout/"
     }
   ],
-  "agency": "US Forest Service - Payette National Forest",
+  "agency": "US Forest Service, Payette National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The Forest Service Pollock Trailhead page (last updated May 28, 2026) shows no featured alerts and no closure for the trailhead itself. Its 'temporarily closed until further notice' line is the New Meadows Ranger District office hours, not the trailhead. Season June-October, depending on snow levels. No separate closure notice for the tower was found."
   },
   "staffing": {
     "status": "staffed",
-    "as_of": null
+    "as_of": "2025"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Hike-in per Idaho Fire Lookouts. The trailhead is about seven miles along Smokey Boulder Road, Forest Service Road 074. Nearby trails listed include Pollock Mountain/Cow Camp Trail #179. Check with the New Meadows Ranger District before any trip."
   },
   "rental": null,
   "events": [
     {
+      "year": 1911,
+      "event": "other",
+      "note": "Camp listed as the first entry on the Forest Lookouts timeline",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/pollock-mountain.html"
+    },
+    {
+      "year": 1917,
+      "event": "other",
+      "note": "A 1917 newspaper item quoted by the Forest Lookouts site mentions a lookout guard position at Pollock, Idaho; it may or may not refer to this tower",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/pollock-mountain.html"
+    },
+    {
       "year": 1930,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Metal ground cabin built in 1930 per the register and the other lookout sites",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/pollock-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/pollock-mountain-lookout/",
+        "https://www.firelookout.com/id/pollock.html",
+        "https://www.idahofirelookouts.com/west-central/pollock-mountain-lookout/",
+        "https://idaholookouts.weebly.com/pollock-mountain.html"
+      ]
+    },
+    {
+      "year": 1942,
+      "event": "staffed_first",
+      "note": "Earliest named lookout on the Fire Lookout and Idaho Fire Lookouts lists",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/pollock.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/pollock.html",
+        "https://www.idahofirelookouts.com/west-central/pollock-mountain-lookout/"
+      ]
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 29, 2020",
-      "from": "nhlr"
+      "note": "Registered September 29, 2020 as US 1437, ID 129",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/pollock-mountain-lookout/"
+    },
+    {
+      "year": 2025,
+      "event": "staffed",
+      "note": "Most recent staff entry on the Idaho Fire Lookouts list",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/west-central/pollock-mountain-lookout/"
     }
   ],
   "photos": [
@@ -124,6 +168,21 @@
       "kind": "register"
     },
     {
+      "label": "Pollock Mountain (Forest Lookouts)",
+      "url": "https://idaholookouts.weebly.com/pollock-mountain.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Pollock Trailhead (Payette National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r04/payette/recreation/pollock-trailhead",
+      "kind": "reference"
+    },
+    {
+      "label": "Idaho Lookouts (by Region) (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/id/id-rg/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
       "kind": "association"
@@ -182,12 +241,34 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-pollock-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

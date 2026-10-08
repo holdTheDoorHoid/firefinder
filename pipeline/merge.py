@@ -62,6 +62,8 @@ DATA = REPO / "data"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from state_bbox import STATE_BBOX, flag_coordinate  # noqa: E402
 from photo_credit import extract_photo_credit  # noqa: E402
+import designs as design_names  # noqa: E402
+import structure  # noqa: E402
 
 # Rough boxes for the territories, which state_bbox does not cover.
 TERRITORY_BBOX = {"PR": (17.8, 18.6, -67.4, -65.2), "VI": (17.6, 18.5, -65.1, -64.5),
@@ -83,11 +85,11 @@ SKIP_FILES = {"designs_reference.json", "ridb_excluded.json", "peaks_gnis.json"}
 # master-list sources first, so they seed the towers the others attach to. Sources not named
 # here (a future extract) are processed last, alphabetically, at the lowest precedence.
 SOURCE_ORDER = [
-    "nhlr", "fflos", "ffla", "ridb", "fire_lookouts_org", "tnlandforms",
+    "nhlr", "fflos", "ffla", "ridb", "ffla_rentals", "fire_lookouts_org", "tnlandforms",
     "nj_forest_fire_towers", "firelookout_com", "idaho_fl", "michigan_fire_tower",
     "pa_storymap", "andyarthur_ny", "wikipedia_lookout_lists", "cskt", "eastern_us_lookouts",
     "central_us_lookouts", "wikidata", "osm", "west_us_lookouts", "trailchick_wa", "cherylhill_oregon",
-    "ffla_groups", "willhiteweb_wa",
+    "ffla_groups", "willhiteweb_wa", "indiana_fire_towers",
 ]
 
 # Field precedence: the first source in the list that has a value wins. Mirrored in DESIGN.md
@@ -120,19 +122,19 @@ PRECEDENCE: dict[str, list[str]] = {
              "pa_storymap", "cskt", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
              "idaho_fl", "michigan_fire_tower", "osm",
              "west_us_lookouts", "trailchick_wa", "cherylhill_oregon", "ffla_groups",
-             "willhiteweb_wa"],
+             "willhiteweb_wa", "indiana_fire_towers"],
     "location": ["nhlr", "fflos", "ffla", "fire_lookouts_org", "tnlandforms",
                  "nj_forest_fire_towers", "firelookout_com", "osm", "eastern_us_lookouts",
                  "central_us_lookouts", "wikidata", "ridb", "andyarthur_ny",
                  "wikipedia_lookout_lists", "pa_storymap", "idaho_fl", "michigan_fire_tower",
                  "cskt",
-                 "west_us_lookouts", "trailchick_wa"],
+                 "west_us_lookouts", "trailchick_wa", "indiana_fire_towers"],
     "status": ["ffla", "nhlr", "fflos", "ridb", "fire_lookouts_org", "tnlandforms",
                "nj_forest_fire_towers", "andyarthur_ny", "wikipedia_lookout_lists", "pa_storymap",
                "cskt", "firelookout_com", "idaho_fl", "michigan_fire_tower", "osm",
                "eastern_us_lookouts", "central_us_lookouts", "wikidata",
                "west_us_lookouts", "trailchick_wa", "cherylhill_oregon", "ffla_groups",
-             "willhiteweb_wa"],
+             "willhiteweb_wa", "indiana_fire_towers"],
     "kind": ["ffla", "nhlr", "fflos", "ridb", "firelookout_com", "fire_lookouts_org",
              "tnlandforms", "nj_forest_fire_towers", "pa_storymap", "andyarthur_ny",
              "wikipedia_lookout_lists", "cskt", "osm", "eastern_us_lookouts",
@@ -141,7 +143,7 @@ PRECEDENCE: dict[str, list[str]] = {
                "andyarthur_ny", "wikipedia_lookout_lists", "fire_lookouts_org", "tnlandforms",
                "nj_forest_fire_towers", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
                "michigan_fire_tower",
-               "west_us_lookouts", "trailchick_wa"],
+               "west_us_lookouts", "trailchick_wa", "indiana_fire_towers"],
     "elevation_m": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "tnlandforms",
                     "nj_forest_fire_towers", "ridb", "wikidata", "cskt", "osm",
                     "trailchick_wa", "cherylhill_oregon"],
@@ -151,6 +153,9 @@ PRECEDENCE: dict[str, list[str]] = {
     "design": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "pa_storymap", "cskt",
                "eastern_us_lookouts", "central_us_lookouts",
                "west_us_lookouts", "trailchick_wa", "cherylhill_oregon"],
+    # Explicit words only (a type value, a description, an OSM tag); the design comes after.
+    "material": ["ffla", "nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "ridb", "osm",
+                 "andyarthur_ny"],
     "height_m": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "nj_forest_fire_towers",
                  "pa_storymap", "cskt", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
                  "osm",
@@ -165,7 +170,7 @@ PRECEDENCE: dict[str, list[str]] = {
                   "west_us_lookouts", "trailchick_wa"],
     "access": ["cskt", "osm"],
     "staffing": ["firelookout_com", "fire_lookouts_org", "cskt", "idaho_fl"],
-    "rental": ["ridb"],
+    "rental": ["ridb", "ffla_rentals"],
     "events": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "pa_storymap", "ridb",
                "wikidata", "cskt", "idaho_fl", "michigan_fire_tower", "ffla", "osm",
                "andyarthur_ny",
@@ -183,6 +188,44 @@ PRECEDENCE: dict[str, list[str]] = {
 LOCATION_LINEAGE = {"nhlr": "registers", "fflos": "registers", "ffla": "registers",
                     "firelookout_com": "registers"}
 
+# Association project sources (DESIGN.md 3.7): lookout associations' own year-by-year reports of
+# the work they did on particular lookouts (FFLA chapters, "Friends of" groups, the Catskill Fire
+# Tower Project...), one module in pipeline/regional/ each, all in the one record shape of
+# pipeline/regional/_projects.py. Adding an association is one entry here: the source id
+# (the "source" of its data/sources/<id>.json, which must carry "family": "association_projects").
+# register_associations() then puts it in the match order, at the foot of the facts precedence
+# lists below (the registers and lists outrank it), in the registers' location lineage (its
+# positions are copied from those lists, so they never count as independent confirmation), and
+# gives its page a labelled "association" link on the tower. Its events join the tower's timeline
+# with the report that gives them as their source.
+ASSOCIATION_FAMILY = "association_projects"
+ASSOCIATION_SOURCES: list[str] = [
+    "nwmt_projects",
+    # the West and the Rockies (agent chapters-west)
+    "sand_mountain", "mountaineers_everett", "snoqualmie_lookouts", "buck_rock", "anffla", "scmf_lookouts",
+    "ffla_sdrc", "ffla_monterey", "hi_mountain", "mvffla", "historicorps_west", "siskiyou_mountain_club",
+    "green_mountain_wa", "ffla_ca_south", "ffla_west_reports",
+]
+# Fields an association supplies (the rest -- registers, rental, photos, access -- it does not).
+ASSOCIATION_FIELDS = ("name", "location", "status", "kind", "county", "elevation_m", "built", "design",
+                      "height_m", "agency", "ownership", "staffing", "events")
+
+
+def register_associations(sources: list[str]) -> None:
+    """Put association project sources into SOURCE_ORDER (before Wikidata and OSM), the end of
+    each ASSOCIATION_FIELDS precedence list, and the registers' location lineage. Idempotent."""
+    for sid in sources:
+        if sid not in SOURCE_ORDER:
+            at = SOURCE_ORDER.index("wikidata") if "wikidata" in SOURCE_ORDER else len(SOURCE_ORDER)
+            SOURCE_ORDER.insert(at, sid)
+        for f in ASSOCIATION_FIELDS:
+            if f in PRECEDENCE and sid not in PRECEDENCE[f]:
+                PRECEDENCE[f].append(sid)
+        LOCATION_LINEAGE[sid] = "registers"
+
+
+register_associations(ASSOCIATION_SOURCES)
+
 # Sources that list one lookout twice (a node and a way in OSM; a Facility and a Campground
 # in RIDB; border lookouts on two state maps at firelookout.com; repeated table rows in FFLA;
 # repeat posts at idahofirelookouts.com). Two records from one of these may share a tower if
@@ -191,6 +234,9 @@ DOUBLE_LISTED = {"ffla": 50, "firelookout_com": 100, "idaho_fl": 100, "osm": 100
                  "ridb": 300, "wikidata": 100}
 # Of those, sources whose duplicates may be unnamed or generically named ("Fire Tower").
 DOUBLE_LISTED_GENERIC = {"osm", "wikidata"}
+# FFLA lists a lookout on a state line under "(Border - see X)" in each state, with positions that
+# can differ by a few hundred metres (DE and MD's "Interstate": 270 m).
+BORDER_DOUBLE_LISTED_M = 400
 
 # Sources with approximate positions: never used for location conflicts, and matched with a
 # wider radius when the name agrees.
@@ -233,9 +279,56 @@ CONFLICT_LOCATION_M = 500
 STRONG = 0.85
 PARTIAL = 0.5
 
+# The FFLA rentals list (source ffla_rentals) gives a name, a state and a booking link but no
+# position, so its entries are placed by Matcher.match_rentals(): the recreation.gov facility
+# number in the link, else a name match in the state. This table pins the ones those cannot
+# settle, by the rental's key. The value is a tower id (permanent) or the key of any source
+# record that tower holds. Each entry says why.
+FFLA_RENTAL_OVERRIDES: dict[str, str] = {
+    # Booked through Airbnb, "Managed by private owner" (2026-10). The standing lookout on private
+    # land at Fernwood, Idaho was built on Stranger Mountain near Chewelah, WA in 1959 and moved to
+    # Crystal Ridge/Peak in 1983 (the Airbnb listing says so); FFLA's table calls it "Crystal Ridge
+    # (Relocated Stranger Mtn, WA)". The name "Crystal Peak" alone names an older, gone site 1.5 km
+    # away (us-id-crystal-peak), so the name match cannot choose.
+    "ffla_rentals:id:crystal-peak-relocated-lookout": "us-id-stranger-mountain-at-crystal-ridge",
+    # The 1930s-style replica FFLA lists as "Timber Butte (Replica)", Lane County, OR; the rental is
+    # "Timber Butte Replica" (recreation.gov 233133). The word "Replica" in the rental's name keeps
+    # it from scoring as the same name as the tower's "Timber Butte". Given by the FFLA record's key
+    # because that tower may be new in the run that places the rental (it has no id yet).
+    "ffla_rentals:or:timber-butte-replica-lookout": "ffla:or:timber-butte-replica:43.9253:-122.5716",
+    # Airbnb listing "Lorena Butte Lookout Tower" at Goldendale, WA, private land (Lefever Holbrook
+    # Ranch). NHLR 1549 / FFLA "Lefever (Relocated Lorena Butte)" is the standing lookout there; the
+    # old Lorena Butte site (us-wa-pierson-ridge, "Lorena Butte" alias) is the gone one.
+    "ffla_rentals:wa:lorena-butte-relocated-lookout": "us-wa-lorena-butte-at-lefever",
+    # Washington State Parks rents "Mount Spokane Quartz Mountain Fire Lookout" (the parks.wa.gov
+    # link). Three towers answer to Quartz Mountain in WA; this one is the Mount Spokane vista-house
+    # lookout moved to Quartz Mountain in Spokane County (NHLR 1558), the standing one. The other
+    # two (Colville NF, Wenatchee NF) are gone sites.
+    "ffla_rentals:wa:quartz-mountain-lookout": "us-wa-mount-spokane-at-quartz-mountain",
+}
+
+# Records that spatial matching cannot be trusted to place, pinned to a tower by the record's
+# key. The value is a tower id (permanent) or the key of any source record that tower holds
+# (stable across a from-scratch run, where the tower has no id yet). Used by Matcher.match_source()
+# after the key memory and before the register and spatial steps. Each entry says why.
+RECORD_JOINS: dict[str, str] = {
+    # The recreation.gov rental "POST CREEK GUARD STATION" (234404) is the lookout NHLR registers as
+    # "Post Creek Fireman-Lookout House" (the FFLA lists it as "Post Creek Lookout"): a 1934 CCC
+    # cabin built for fire watching. The names share no words past "Post Creek" and RIDB's pin is
+    # 779 m from the registered position, outside the 400 m a partial name match may span, so
+    # without this it would start a second, permanent tower for the same building.
+    "ridb:234404": "nhlr:US 1363",
+    # "MT. BALDY-BUCKHORN RIDGE" (234432) is the Baldy Mountain Lookout in the Kootenai NF (NHLR
+    # 1512, FFLA "Mt. Baldy Lookout"). Its pin is 370 m from the registered one, inside the 400 m
+    # partial-name limit by 30 m; pinned so a small shift in RIDB's coordinates cannot start a
+    # duplicate tower.
+    "ridb:234432": "nhlr:US 1512",
+}
+
 # Hobbyist and regional sites, with the words used for credits and link labels.
 SOURCE_SITE = {
     "ffla": "Forest Fire Lookout Association (firelookout.org)",
+    "ffla_rentals": "Forest Fire Lookout Association: lookout rentals (firelookout.org)",
     "nhlr": "National Historic Lookout Register (nhlr.org)",
     "fflos": "Former Fire Lookout Sites Register (firetower.org)",
     "ridb": "Recreation.gov",
@@ -258,6 +351,7 @@ SOURCE_SITE = {
     "cherylhill_oregon": "Every Lookout in Oregon (cherylhill.net)",
     "ffla_groups": "FFLA chapters and Friends groups",
     "willhiteweb_wa": "WillhiteWeb.com Washington Fire Lookouts",
+    "indiana_fire_towers": "Indiana Fire Towers (Mark Armantrout)",
 }
 
 # Default photo licence per source, where the source states one (None = not stated).
@@ -285,32 +379,42 @@ STATE_NAMES = {
     "WV": "West Virginia", "WI": "Wisconsin", "WY": "Wyoming", "DC": "District of Columbia",
 }
 
-# Out of scope (DESIGN.md 1: structures only).
-HIDDEN_KIND_REASON = {
-    "tree": "Tree platform: out of scope (structures only)",
-    "camp": "Camp or tent site: out of scope (structures only)",
-}
+# Kinds the owner has chosen to hide, from data/structure_kinds.json ("hidden": true). Since
+# 2026-10-08 none is: camps, lookout trees and bare points are shown as sites with no structure.
+HIDDEN_KIND_REASON = structure.hidden_kind_reasons()
+# Camps, lookout trees and bare lookout points: nothing was built to stand in.
+NO_STRUCTURE = structure.no_structure_kinds()
+
+
+def _design_facts() -> list[dict]:
+    """data/designs.json's designs: each one's kind (cab or steel tower) and, once the designs
+    guide gives it, its "material" (structure.design_material)."""
+    try:
+        return json.loads((DATA / "designs.json").read_text(encoding="utf-8")).get("designs") or []
+    except (OSError, json.JSONDecodeError, AttributeError):
+        return []
+
+
+DESIGN_FACTS = _design_facts()
 # Human decisions on single records, by source key. Each entry hides the tower holding that
 # record (reason shown), however the sources describe it.
 HIDE_KEYS = {
     "osm:node/358671897": "Not confirmed as a fire lookout",  # "East Lookout Tower", Guam (2026-10-04)
 }
-# FFLA "Type" values that are a bare lookout point, not a structure.
-BARE_POINT_TYPES = {
-    "firefinder", "map board", "map boards", "map table", "alidade", "obs pt", "obs. point",
-    "open site", "rock cairn", "high point", "obs deck",
-}
 NEVER_BUILT_STATUS = {"proposed", "planned", "never built"}
 NOT_A_LOOKOUT_SECTION = "sites determined not to have been used as wildland fire lookouts"
+# FFLA's separate "Unknown/Undocumented" list (ca-un): emergency, planned and never-built sites
+# from one survey, which FFLA keeps out of its lookout lists until evidence turns up.
+UNDOCUMENTED_SECTION = "unknown/undocumented"
 
 TOWER_KEYS = [
     "id", "name", "summary", "other_names", "country", "region", "county", "location", "elevation_m",
-    "kind", "design", "height_m", "status", "status_note", "registers", "agency", "ownership", "access",
-    "staffing", "visit", "rental", "events", "photos", "links", "sources", "conflicts",
-    "research", "verification", "locked", "hidden", "hidden_reason", "updated",
+    "kind", "material", "material_from", "roles", "design", "height_m", "status", "status_note", "registers",
+    "agency", "ownership", "access", "staffing", "visit", "rental", "events", "photos", "links", "sources",
+    "conflicts", "research", "verification", "locked", "hidden", "hidden_reason", "updated",
 ]
 FIELD_ORDER = [
-    "name", "location", "county", "elevation_m", "kind", "design", "height_m", "status",
+    "name", "location", "county", "elevation_m", "kind", "material", "roles", "design", "height_m", "status",
     "registers", "agency", "ownership", "access", "staffing", "rental", "events", "photos",
     "links",
 ]
@@ -429,6 +533,7 @@ def name_tokens(s: str) -> list[str]:
 _ANNOTATION_WORDS = re.compile(r"\b(relocated|replica|parts from)\b", re.I)
 _ANNOTATION_RE = re.compile(r"\s*\((?P<body>[^()]*\b(?:relocated|replica|parts from)\b[^()]*)\)", re.I)
 STATE_BY_NAME = {v.lower(): k for k, v in STATE_NAMES.items()}
+_BORDER_POINTER_RE = re.compile(r"^\(border\s*[-\u2013\u2014]\s*see\s+([A-Za-z ]+)\)", re.I)
 
 
 def _state_code(text: str) -> str | None:
@@ -819,10 +924,14 @@ class Rec:
     bad_coords: str | None = None   # why the source's coordinates were not used, if so
     annotation: dict | None = None  # structure history from the name: see parse_annotation()
     status_info: dict | None = None # state note from the name: see parse_status_note()
+    structure: dict = field(default_factory=dict)  # kind/status/material reading: structure.read_record()
 
     @classmethod
     def build(cls, source: str, raw: dict, order: int) -> "Rec":
+        # Kind and status through the deliberate tables in structure.py, not the fetcher's own map.
+        raw, reading = structure.apply(source, raw)
         r = cls(source, raw, order)
+        r.structure = reading
         r.key = str(raw.get("key") or "")
         r.region = (raw.get("region") or None) and str(raw["region"]).upper()
         if _num(raw.get("lat")) and _num(raw.get("lon")) and (raw["lat"], raw["lon"]) != (0, 0):
@@ -916,6 +1025,11 @@ class Tower:
         return min(haversine_m(lat, lon, a, b) for a, b in pts)
 
 
+def is_border_row(rec: Rec) -> bool:
+    """An FFLA row under "(Border - see Montana)": a lookout on a state line, listed in both states."""
+    return bool(_BORDER_POINTER_RE.match(str(rec.extra.get("section") or "")))
+
+
 def is_relocated(rec: Rec) -> bool:
     if rec.annotation and rec.annotation["kind"] in ("relocated", "replica", "parts"):
         return True
@@ -957,6 +1071,10 @@ def load_sources(sources_dir: Path, log=print) -> tuple[dict[str, dict], dict[st
             continue
         sid = str(data.get("source") or path.stem)
         headers[sid] = {k: data.get(k) for k in ("title", "url", "retrieved", "license")}
+        if (data.get("family") == ASSOCIATION_FAMILY) != (sid in ASSOCIATION_SOURCES):
+            log(f"WARNING: {path.name}: " + (f"carries family {ASSOCIATION_FAMILY!r} but {sid!r} is not in ASSOCIATION_SOURCES (merge.py): add it"
+                                             if data.get("family") == ASSOCIATION_FAMILY else
+                                             f"{sid!r} is in ASSOCIATION_SOURCES but the extract has no \"family\": \"{ASSOCIATION_FAMILY}\""))
         headers[sid]["file"] = path.name
         headers[sid]["records"] = len(data["records"])
         recs, seen = [], set()
@@ -1067,6 +1185,8 @@ class Matcher:
         limit = DOUBLE_LISTED.get(a.source)
         if limit is None or a.source != b.source:
             return False
+        if a.source == "ffla" and a.region != b.region and (is_border_row(a) or is_border_row(b)):
+            limit = BORDER_DOUBLE_LISTED_M   # a border lookout in both states' lists, positions a few hundred metres apart
         d = a.dist(b)
         if d is None or d > limit:
             return False
@@ -1083,7 +1203,12 @@ class Matcher:
         return True
 
     def can_join(self, rec: Rec, tower: Tower) -> bool:
+        if rec.source == "ffla_rentals":
+            return True     # one lookout can have several booking pages (two cabins, two sites)
         same = [m for m in tower.members if m.source == rec.source]
+        if rec.source == "ffla" and not rec.has_coords and is_border_row(rec):
+            # a "(Border - see Montana)" pointer is the other state's row again, not a second lookout
+            return all(m.region != rec.region or self.double_listed(rec, m) for m in same)
         return all(self.double_listed(rec, m) for m in same)
 
     # -- candidate scoring --------------------------------------------------------------
@@ -1115,10 +1240,10 @@ class Matcher:
                 if not ok:
                     continue
                 eff = 0.7 if score is None else score
-                # a structure record prefers a tower that is not a tree/camp row at the same spot
+                # a structure record prefers a tower that is not a camp/tree/point row at the same spot
                 kinds = {m.raw.get("kind") for m in t.members} - {None, "unknown"}
-                penalty = 1 if (rec.raw.get("kind") not in (None, "unknown", "tree", "camp")
-                                and kinds and kinds <= {"tree", "camp"}) else 0
+                penalty = 1 if (rec.raw.get("kind") not in (None, "unknown", *NO_STRUCTURE)
+                                and kinds and kinds <= NO_STRUCTURE) else 0
                 out.append((-eff, penalty, d, t, score, same_region))
                 if d <= MATCH_SAME_SPOT_M and score is not None and score < PARTIAL:
                     same_spot_bad_name.append((d, t))
@@ -1181,8 +1306,8 @@ class Matcher:
                         f"there instead of the near one.",
             })
         kinds = {m.raw.get("kind") for m in t.members} - {None, "unknown"}
-        penalty = 1 if (rec.raw.get("kind") not in (None, "unknown", "tree", "camp")
-                        and kinds and kinds <= {"tree", "camp"}) else 0
+        penalty = 1 if (rec.raw.get("kind") not in (None, "unknown", *NO_STRUCTURE)
+                        and kinds and kinds <= NO_STRUCTURE) else 0
         return [(-score, penalty, d, t, score, True)]
 
     def place_without_coords(self) -> None:
@@ -1196,17 +1321,27 @@ class Matcher:
                 continue
             cands = []
             county = record_county(r)
-            for t in self.by_region.get(r.region or "", ()):
-                s = name_score(r.forms, t.forms())
-                if s is None or s < 0.95:
-                    continue
-                tcounties = {c.lower() for c in (record_county(m) for m in t.members) if c}
-                if county and tcounties and county.lower() not in tcounties:
-                    continue
-                if self.can_join(r, t):
-                    cands.append(t)
+            # An FFLA "(Border - see Montana)" pointer has no position because the other state's
+            # list gives it: look for the lookout in both states, whatever the county.
+            border = _BORDER_POINTER_RE.match(str(r.extra.get("section") or ""))
+            border_region = STATE_BY_NAME.get(border.group(1).strip().lower()) if border else None
+            regions = [r.region or ""] + ([border_region] if border_region else [])
+            seen_towers: set = set()
+            for region in regions:
+                for t in self.by_region.get(region, ()):
+                    if t in seen_towers:
+                        continue
+                    seen_towers.add(t)
+                    s = name_score(r.forms, t.forms())
+                    if s is None or s < 0.95:
+                        continue
+                    tcounties = {c.lower() for c in (record_county(m) for m in t.members) if c}
+                    if county and tcounties and county.lower() not in tcounties and not border_region:
+                        continue
+                    if self.can_join(r, t):
+                        cands.append(t)
             if len(cands) == 1:
-                self.attach(r, cands[0], "name")
+                self.attach(r, cands[0], "name", "FFLA border pointer" if border_region else None)
             else:
                 section = str(r.extra.get("section") or "")
                 if section.startswith("(Border"):
@@ -1215,6 +1350,83 @@ class Matcher:
                     r.match_note = "no coordinates; " + ("several same-name lookouts in the state" if cands else "no same-name lookout in the state")
                 self.unplaced.append(r)
         self.deferred = []
+
+    def match_rentals(self, recs: list[Rec]) -> None:
+        """Place the FFLA rentals list (no coordinates) on towers, after every other source.
+
+        In order: FFLA_RENTAL_OVERRIDES; the key matched on an earlier run; the recreation.gov
+        facility number in the booking link (a tower holding that ridb record); the entry's
+        name against the towers of its state. A name match must be a unique one: among towers
+        that name the place (score >= 0.95) the ones recreation.gov already rents win, then
+        the ones not known to be gone; a nearly-the-same name (>= 0.85) is accepted only when
+        it is the one tower in the state that is already rentable, and is listed for review.
+        Anything left is listed as unplaced, with the candidates, for an override."""
+        by_id = {t.id: t for t in self.towers if t.id}
+        for r in sorted(recs, key=lambda x: x.key):
+            target = FFLA_RENTAL_OVERRIDES.get(r.key)
+            if target is not None:
+                t = self.by_key.get(target) or by_id.get(target)
+                if t is None:
+                    self.review.append({"type": "ffla_rental_override_unknown_tower", "key": r.key, "target": target})
+                elif self.can_join(r, t):
+                    self.attach(r, t, "override", f"FFLA_RENTAL_OVERRIDES -> {target}")
+                    continue
+            t = self.by_key.get(r.key)
+            if t is not None:
+                self.attach(r, t, "key")
+                continue
+            fid = (r.raw.get("rental") or {}).get("ridb_facility_id")
+            t = self.by_key.get(f"ridb:{fid}") if fid else None
+            if t is not None and self.can_join(r, t):
+                self.attach(r, t, "facility", f"recreation.gov facility {fid}")
+                continue
+            pool = []
+            for t in self.by_region.get(r.region or "", ()):
+                if not t.members and t.existing is None:
+                    continue
+                s_ = name_score(r.forms, t.forms())
+                if s_ is not None and s_ >= STRONG and self.can_join(r, t):
+                    pool.append((s_, t))
+
+            def rentable(t: Tower) -> bool:   # recreation.gov rents it now
+                return any(m.source == "ridb" and isinstance(m.raw.get("rental"), dict) and m.raw["rental"].get("available")
+                           for m in t.members)
+
+            def gone(t: Tower) -> bool:       # every source that takes a position on it says it is gone
+                sts = {record_status(m) for m in t.members} - {None}
+                return bool(sts) and sts <= {"gone", "ruins", "relocated"}
+
+            strong = [t for s_, t in pool if s_ >= 0.95]
+            chosen, note = None, None
+            # narrow the strong candidates step by step, keeping a narrower set only if it is not empty
+            cands = strong
+            for keep in (rentable, lambda t: not gone(t)):
+                narrower = [t for t in cands if keep(t)]
+                if len(cands) > 1 and narrower:
+                    cands = narrower
+            if len(cands) == 1:
+                chosen = cands[0]
+            elif not strong:
+                loose = [t for s_, t in pool if rentable(t)]
+                if len(loose) == 1:
+                    chosen, note = loose[0], "name nearly matches"
+                    self.review.append({"type": "ffla_rental_loose_name_match", "key": r.key, "tower_seq": chosen.seq})
+            if chosen is not None:
+                self.attach(r, chosen, "name", note)
+            elif r.has_coords:
+                # a rental the extract itself positions (see SITE_POSITIONS in regional/ffla_rentals.py):
+                # the tower already at that spot, else a tower of its own
+                near = [c for c in self.candidates(r) if self.can_join(r, c[3])]
+                if near:
+                    self.attach(r, min(near, key=lambda c: (c[0], c[1], c[2], c[3].seq))[3], "spatial")
+                else:
+                    self.attach(r, self.new_tower(), "new")
+            else:
+                r.match_note = ("several lookouts of that name in the state" if len(cands) > 1
+                                else "no lookout of that name in the state")
+                self.unplaced.append(r)
+                self.review.append({"type": "ffla_rental_unplaced", "key": r.key, "name": r.display, "region": r.region,
+                                    "tower_seqs": sorted(t.seq for t in cands)})
 
     def find_origins(self) -> None:
         """For towers whose name says the structure came from elsewhere ("State Fair
@@ -1269,6 +1481,20 @@ class Matcher:
                 self.attach(r, t, "key")
             else:
                 pending.append(r)
+        # 1b. pinned by RECORD_JOINS
+        if any(r.key in RECORD_JOINS for r in pending):
+            by_id = {t.id: t for t in self.towers if t.id}
+            unpinned = []
+            for r in pending:
+                target = RECORD_JOINS.get(r.key)
+                t = (self.by_key.get(target) or by_id.get(target)) if target else None
+                if target and t is None:
+                    self.review.append({"type": "record_join_unknown_tower", "key": r.key, "target": target})
+                if t is not None and self.can_join(r, t):
+                    self.attach(r, t, "override", f"RECORD_JOINS -> {target}")
+                else:
+                    unpinned.append(r)
+            pending = unpinned
         # 2. register
         rest = []
         for r in pending:
@@ -1389,6 +1615,33 @@ def record_built(rec: Rec) -> int | None:
     if isinstance(b, int) and not isinstance(b, bool):
         years.append(b)
     return min(years) if years else None
+
+
+def record_material(rec: Rec, kind: str | None) -> str | None:
+    """The material a record names for the lookout's main structure (a type value such as
+    "Stone Tower", an OSM tag, or description words read for this kind of structure)."""
+    if kind in NO_STRUCTURE:
+        return None
+    reading = rec.structure or {}
+    return reading.get("material") or structure.words_material(reading.get("words") or [], kind)
+
+
+def tower_design_ids(members: list[Rec], design: str | None, design_src: Rec | None) -> tuple[list[str], dict]:
+    """Recognised designs (pipeline/designs.py) in the tower's design and its sources' type and
+    design wording, and the record each was first found in."""
+    cands: list[tuple[str, Rec | None]] = [(design, design_src)] if isinstance(design, str) and design.strip() else []
+    for m in sorted(members, key=lambda m: (global_rank(m.source), m.key)):
+        for w in (m.raw.get("type_raw"), m.extra.get("design")):
+            if isinstance(w, str) and w.strip():
+                cands.append((w, m))
+    ids: list[str] = []
+    found: dict[str, Rec | None] = {}
+    for text, m in cands:
+        for did in design_names.match_designs(text):
+            if did not in found:
+                ids.append(did)
+                found[did] = m
+    return ids, found
 
 
 def record_height(rec: Rec) -> float | None:
@@ -1581,6 +1834,8 @@ def record_links(rec: Rec) -> list[dict]:
             out.append({"label": f"{src.upper()} register entry{num} ({host})", "url": url, "kind": "register"})
         elif src == "ridb":
             out.append({"label": "Recreation.gov listing", "url": url, "kind": "rental"})
+        elif src == "ffla_rentals":
+            out.append({"label": "FFLA lookout rentals list (firelookout.org)", "url": url, "kind": "association"})
         elif src == "osm":
             obj = url.rstrip("/").rsplit("/", 2)[-2:]
             out.append({"label": f"OpenStreetMap {' '.join(obj)}", "url": url, "kind": "osm"})
@@ -1606,6 +1861,11 @@ def record_links(rec: Rec) -> list[dict]:
             out.append({"label": f"{name} on Every Lookout in Oregon (Cheryl Hill)", "url": url, "kind": "site"})
         elif src == "willhiteweb_wa":
             out.append({"label": f"{name} on WillhiteWeb.com Washington Fire Lookouts", "url": url, "kind": "site"})
+        elif src == "indiana_fire_towers":
+            out.append({"label": f"{name} on Indiana Fire Towers (Mark Armantrout)", "url": url, "kind": "site"})
+        elif src in ASSOCIATION_SOURCES:
+            assoc = (rec.extra.get("association") or {}).get("name") or SOURCE_SITE.get(src, src)
+            out.append({"label": f"{assoc}: work on {name}", "url": url, "kind": "association"})
         else:
             out.append({"label": f"{name} ({SOURCE_SITE.get(src, src)})", "url": url, "kind": "site"})
     for link in raw.get("links") or []:
@@ -1650,7 +1910,8 @@ LINK_KIND_ORDER = ["relocated_from", "relocated_to", "register", "rental", "refe
 
 def pick(field_name: str, members: list[Rec], getter) -> tuple[object, Rec | None]:
     """First value from the members in the field's precedence order (ties by key)."""
-    for m in sorted(members, key=lambda m: (source_rank(field_name, m.source), m.key)):
+    # (within a source, a border row -- the other state's list again -- comes after the home row)
+    for m in sorted(members, key=lambda m: (source_rank(field_name, m.source), is_border_row(m), m.key)):
         v = getter(m)
         if v is not None:
             return v, m
@@ -1884,6 +2145,15 @@ def _add_event(rec: dict, event: dict) -> None:
     rec["events"] = events
 
 
+def _event_refs(out: dict, src_event: dict) -> dict:
+    """Carry the page that supports an event (source_url, and source_urls when several) from a
+    source's event to the tower's, as research events already do."""
+    for k in ("source_url", "source_urls"):
+        if src_event.get(k):
+            out[k] = src_event[k]
+    return out
+
+
 def loose_key(name: str) -> str:
     toks = [t for t in name_tokens(name) if t not in GENERIC_WORDS or t in ("ground", "house", "cabin")]
     return " ".join(toks)
@@ -1963,13 +2233,42 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
     set_field("county", v, s)
     v, s = pick("elevation_m", members, lambda m: round(float(m.raw["elevation_m"]), 1) if _num(m.raw.get("elevation_m")) else None)
     set_field("elevation_m", v, s)
-    v, s = pick("kind", members, lambda m: m.raw.get("kind") if m.raw.get("kind") not in (None, "unknown") else None)
+    # Kind: a bare lookout point ("Firefinder", "Map Board") only when no source records a structure.
+    v, s = pick("kind", members, lambda m: m.raw.get("kind") if m.raw.get("kind") not in (None, "unknown", "point") else None)
+    if v is None:
+        v, s = pick("kind", members, lambda m: m.raw.get("kind") if m.raw.get("kind") == "point" else None)
+    v_design, s_design = pick("design", members, lambda m: (m.extra.get("design") or None) if isinstance(m.extra.get("design"), str) else None)
+    design_ids, design_src = tower_design_ids(members, rec.get("design") if "design" in locked else v_design, s_design)
+    if v is None:
+        # No kind from any source, but a recognised steel-tower design (an Aermotor) is a tower.
+        did = structure.design_is_tower(design_ids, DESIGN_FACTS)
+        if did:
+            v, s = "tower", design_src.get(did)
     tower.source_kind = (v, s.source if s else None)
     if v is None and "kind" not in rec:
         v = "unknown"
     set_field("kind", v, s)
-    v, s = pick("design", members, lambda m: (m.extra.get("design") or None) if isinstance(m.extra.get("design"), str) else None)
-    set_field("design", v, s)
+    set_field("design", v_design, s_design)
+    # Material: explicit source words first, then the design (DESIGN.md 3.5).
+    if "material" not in locked:
+        kind_now = rec.get("kind")
+        mat, mat_src = pick("material", members, lambda m: record_material(m, kind_now))
+        if mat is not None:
+            rec["material"], rec["material_from"] = mat, mat_src.source
+            contributed[mat_src.key].add("material")
+        else:
+            mat, did = structure.design_material(design_ids, kind_now, DESIGN_FACTS)
+            rec["material"], rec["material_from"] = mat, ("design" if mat else None)
+            if mat and design_src.get(did) is not None:
+                contributed[design_src[did].key].add("material")
+    if "roles" not in locked:
+        roles = []
+        for m in sorted(members, key=lambda m: (global_rank(m.source), m.key)):
+            for role in m.structure.get("roles") or []:
+                if role not in roles:
+                    roles.append(role)
+                    contributed[m.key].add("roles")
+        rec["roles"] = roles
     v, s = pick("height_m", members, record_height)
     set_field("height_m", v, s)
     status, status_src = pick("status", members, record_status)
@@ -1979,7 +2278,8 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
     tower.source_status = (status, status_src.source if status_src else None)
     # A note on the status from a name ("(likely gone)", "(unknown)"), shown with the status.
     if "status" not in locked:
-        note, note_src = pick("status", members, lambda m: (m.status_info or {}).get("note") if not (m.status_info or {}).get("access") else None)
+        note, note_src = pick("status", members, lambda m: ((m.status_info or {}).get("note") if not (m.status_info or {}).get("access") else None)
+                              or m.structure.get("status_note"))
         rec["status_note"] = note
         if note_src is not None:
             contributed[note_src.key].add("status")
@@ -2052,6 +2352,10 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
             acc = {"level": "permission", "note": "On tribal land. Ask the tribe before visiting."}
             acc_src = s
         if acc is None:
+            private = next((m for m in members if m.source == "ffla_rentals" and m.extra.get("ownership") == "private"), None)
+            if private is not None:
+                acc, acc_src = {"level": "permission", "note": "Private property. The way in is to book a stay through the listing."}, private
+        if acc is None:
             # A recreation.gov listing is itself evidence of public access.
             ridb = next((m for m in members if m.source == "ridb"), None)
             if ridb is not None:
@@ -2080,13 +2384,16 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
     if not isinstance(rec.get("visit"), dict):
         rec["visit"] = {"climbable": None, "drive_up": None, "trail_note": None}
 
-    # Rental: RIDB only.
+    # Rental: recreation.gov (RIDB) first. The FFLA rentals list adds who manages the lookout and
+    # a closure note ("Maintenance Closure 2026") to a RIDB rental, and is the rental itself
+    # (booking link outside recreation.gov: a state park, a private owner) when RIDB has none.
     if "rental" not in locked:
         ridb = [m for m in members if m.source == "ridb"]
         rentals = [m for m in ridb if isinstance(m.raw.get("rental"), dict)]
         rentals.sort(key=lambda m: (m.raw["rental"].get("available") is not True, m.key))
         old_rental = rec.get("rental")
-        was_ridb = isinstance(old_rental, dict) and old_rental.get("provider") == "recreation.gov"
+        was_ridb = (isinstance(old_rental, dict) and old_rental.get("provider") == "recreation.gov"
+                    and old_rental.get("source") != "ffla")
         if rentals:
             rec["rental"] = copy.deepcopy(rentals[0].raw["rental"])
             rec["rental"].setdefault("checked", headers.get("ridb", {}).get("retrieved"))
@@ -2110,6 +2417,38 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
             )
         else:
             rec.setdefault("rental", None)
+        listed = sorted((m for m in members if m.source == "ffla_rentals" and isinstance(m.raw.get("rental"), dict)),
+                        key=lambda m: m.key)
+        cur_rental = rec.get("rental")
+        if isinstance(cur_rental, dict) and not rentals and cur_rental.get("source") != "ffla":
+            for k in ("status_note", "status_note_from", "manager"):
+                cur_rental.pop(k, None)     # a note the FFLA list no longer gives goes away
+        if not listed and isinstance(old_rental, dict) and old_rental.get("source") == "ffla" and "ffla_rentals" in headers:
+            # Never delete a rental: the FFLA list no longer has this one (removed, renamed, or missed by
+            # matching this run). Leave it visible and say so, as for a vanished recreation.gov facility.
+            rec["rental"]["available"] = False
+            rec["rental"]["warning"] = (
+                f"Last confirmed on the FFLA rentals list {old_rental.get('checked') or 'at an earlier refresh'}. "
+                f"The {headers.get('ffla_rentals', {}).get('retrieved') or today} refresh no longer finds it there. "
+                f"Check with the booking site before relying on this listing.")
+        if listed:
+            noted = next((m for m in listed if m.raw["rental"].get("status_note")), listed[0])
+            fr = noted.raw["rental"]
+            managed = next((m.raw["rental"]["manager"] for m in listed if m.raw["rental"].get("manager")), None)
+            if rentals:
+                cur = rec["rental"]
+            else:
+                first = listed[0].raw["rental"]
+                cur = {"available": True, "source": "ffla", "provider": first.get("provider"), "url": first.get("url"),
+                       "ridb_facility_id": first.get("ridb_facility_id"),
+                       "checked": first.get("checked") or headers.get("ffla_rentals", {}).get("retrieved")}
+                rec["rental"] = cur
+            if managed:
+                cur["manager"] = managed
+            if fr.get("status_note"):
+                cur["status_note"] = fr["status_note"]
+                cur["status_note_from"] = "ffla"
+            contributed[listed[0].key].add("rental")
 
     # Events: one source's build dates (the "built" winner), everything else unioned.
     built, built_src = pick("built", members, record_built)
@@ -2124,7 +2463,7 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
                 k = ("built", e["year"])
                 if k not in seen_ev:
                     seen_ev.add(k)
-                    events.append({"year": e["year"], "event": "built", "note": e.get("note"), "from": e.get("from") or built_src.source})
+                    events.append(_event_refs({"year": e["year"], "event": "built", "note": e.get("note"), "from": e.get("from") or built_src.source}, e))
             contributed[built_src.key].add("events")
         for m in sorted(members, key=lambda m: (source_rank("events", m.source), m.key)):
             for e in m.raw.get("events") or []:
@@ -2134,7 +2473,7 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
                 if k in seen_ev:
                     continue
                 seen_ev.add(k)
-                events.append({"year": e.get("year"), "event": e["event"], "note": e.get("note"), "from": e.get("from") or m.source})
+                events.append(_event_refs({"year": e.get("year"), "event": e["event"], "note": e.get("note"), "from": e.get("from") or m.source}, e))
                 contributed[m.key].add("events")
         if history_event is not None:
             events.append(history_event)
@@ -2199,7 +2538,7 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
         r_.pop("status_note", None)
         if r_.get("available") or r_.get("warning"):
             r_["available"] = False
-            r_["warning"] = rental_warning(rec, status_src)
+            r_["warning"] = rental_warning(rec, status_src, r_)
 
     # Conflicts
     if "conflicts" not in locked:
@@ -2238,7 +2577,8 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
         rec["sources"] = refs
 
     rec.setdefault("locked", [])
-    for k, default in (("county", None), ("elevation_m", None), ("design", None), ("height_m", None),
+    for k, default in (("county", None), ("elevation_m", None), ("material", None), ("material_from", None), ("roles", []),
+                       ("design", None), ("height_m", None),
                        ("agency", None), ("registers", []), ("events", []), ("photos", []),
                        ("links", []), ("conflicts", []), ("rental", None), ("other_names", []),
                        ("verification", "unverified"), ("ownership", "unknown")):
@@ -2246,15 +2586,19 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
     return rec
 
 
-SHORT_NAME = {"ffla": "FFLA", "nhlr": "NHLR", "fflos": "FFLOS", "firelookout_com": "firelookout.com",
+SHORT_NAME = {"ffla": "FFLA", "ffla_rentals": "the FFLA rentals list", "nhlr": "NHLR", "fflos": "FFLOS", "firelookout_com": "firelookout.com",
               "idaho_fl": "idahofirelookouts.com", "osm": "OpenStreetMap", "wikidata": "Wikidata",
               "fire_lookouts_org": "fire-lookouts.org", "pa_storymap": "the PA fire towers StoryMap",
               "andyarthur_ny": "andyarthur.org", "cskt": "CSKT", "ridb": "recreation.gov"}
 
 
-def rental_warning(rec: dict, status_src: Rec | None) -> str:
+def rental_warning(rec: dict, status_src: Rec | None, rental: dict | None = None) -> str:
     """"FFLA reports this lookout burned in 2026, but recreation.gov still lists it. Check
-    with the forest before booking." """
+    with the forest before booking." (A rental that came from the FFLA rentals list says
+    "the FFLA rentals list" where recreation.gov would be.)"""
+    lister = "recreation.gov"
+    if rental and rental.get("source") == "ffla":
+        lister = "the FFLA rentals list"
     who = SHORT_NAME.get(status_src.source, status_src.source) if status_src else "Another source"
     what = "is gone" if rec.get("status") == "gone" else "is in ruins"
     if status_src is not None:
@@ -2270,7 +2614,7 @@ def rental_warning(rec: dict, status_src: Rec | None) -> str:
         whom = "the Bureau of Land Management"
     else:
         whom = "the managing agency"
-    return f"{who} reports this lookout {what}, but recreation.gov still lists it. Check with {whom} before booking."
+    return f"{who} reports this lookout {what}, but {lister} still lists it. Check with {whom} before booking."
 
 
 def conflicts_for(rec: dict, members: list[Rec], loc_src: Rec | None, status_src: Rec | None,
@@ -2336,16 +2680,24 @@ def conflicts_for(rec: dict, members: list[Rec], loc_src: Rec | None, status_src
             out.append({"field": "built", "values": values, "distance_m": None,
                         "note": "Sources give different build years. Often one counts the first lookout on the site "
                                 "and another the structure there now."})
-    # Kind, only where it decides whether the lookout is shown.
+    # Kind, only where it decides whether there was a structure at all (which map group it is in).
     kinds = {}
     for m in sorted(members, key=lambda m: (source_rank("kind", m.source), m.key)):
         k = m.raw.get("kind")
-        if k not in (None, "unknown") and m.source not in kinds:
+        if k not in (None, "unknown", "point") and m.source not in kinds:
             kinds[m.source] = k
-    hidden_kinds = {k for k in kinds.values() if k in HIDDEN_KIND_REASON}
-    if hidden_kinds and set(kinds.values()) - set(HIDDEN_KIND_REASON):
+    if set(kinds.values()) & NO_STRUCTURE and set(kinds.values()) - NO_STRUCTURE:
         out.append({"field": "kind", "values": [{"source": s, "value": k} for s, k in kinds.items()],
-                    "distance_m": None, "note": "Sources disagree on whether this was a structure or a tree/camp site."})
+                    "distance_m": None, "note": "Sources disagree on whether a tower or building stood here, or only a camp or lookout tree."})
+    # Material, when two sources name different ones in so many words.
+    mats = {}
+    for m in sorted(members, key=lambda m: (source_rank("material", m.source), m.key)):
+        v = record_material(m, rec.get("kind"))
+        if v is not None and m.source not in mats:
+            mats[m.source] = v
+    if len(set(mats.values())) > 1 and rec.get("material") in mats.values():
+        out.append({"field": "material", "values": [{"source": s, "value": v} for s, v in mats.items()],
+                    "distance_m": None, "note": "Sources name different materials. Often one describes an earlier structure."})
     return out
 
 
@@ -2368,7 +2720,7 @@ def hidden_for(rec: dict, members: list[Rec]) -> tuple[bool, str | None]:
     kind = rec.get("kind")
     if kind in HIDDEN_KIND_REASON:
         return True, HIDDEN_KIND_REASON[kind]
-    structural = any(m.raw.get("kind") not in (None, "unknown", "tree", "camp") for m in members if m.source != "ffla")
+    structural = any(m.raw.get("kind") not in (None, "unknown", *NO_STRUCTURE) for m in members if m.source != "ffla")
     ffla = [m for m in members if m.source == "ffla"]
     for m in ffla:
         st = str(m.raw.get("status_raw") or "").strip().lower()
@@ -2377,10 +2729,9 @@ def hidden_for(rec: dict, members: list[Rec]) -> tuple[bool, str | None]:
         section = str(m.extra.get("section") or "").lower()
         if section.startswith(NOT_A_LOOKOUT_SECTION) and not registered:
             return True, "Not a fire lookout (FFLA: determined not to have been used as a wildland fire lookout)"
-    if kind == "unknown" and ffla and not structural and not registered:
-        types = {str(m.raw.get("type_raw") or "").strip().lower() for m in ffla}
-        if types and types <= BARE_POINT_TYPES:
-            return True, "Lookout point with no structure: out of scope (structures only)"
+    if (ffla and not structural and not registered
+            and all(str(m.extra.get("section") or "").lower().startswith(UNDOCUMENTED_SECTION) for m in ffla)):
+        return True, "Not confirmed as a lookout (FFLA lists it only as unknown or undocumented)"
     return False, None
 
 
@@ -2758,8 +3109,11 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
 
     order = [s for s in SOURCE_ORDER if s in records] + sorted(set(records) - set(SOURCE_ORDER))
     for sid in order:
-        m.match_source(sid, records[sid])
+        if sid != "ffla_rentals":      # has no positions: placed by name once every tower exists
+            m.match_source(sid, records[sid])
     m.place_without_coords()
+    if "ffla_rentals" in records:
+        m.match_rentals(records["ffla_rentals"])
     m.find_origins()
 
     resolved: list[tuple[Tower, dict]] = []
@@ -2816,6 +3170,43 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
         report_path.parent.mkdir(parents=True, exist_ok=True)
         report_path.write_text(json.dumps(report, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     return report
+
+
+def ffla_rentals_report(m: Matcher, resolved: list[tuple[Tower, dict]]) -> dict | None:
+    """How the FFLA rentals list landed on the towers, and how it compares with recreation.gov's:
+    the rentals FFLA lists that recreation.gov (RIDB) did not give us, and the rentable towers of
+    ours that FFLA does not list. None when there is no ffla_rentals extract."""
+    listed = [mem for t, _ in resolved for mem in t.members if mem.source == "ffla_rentals"]
+    if not listed and not any(u.source == "ffla_rentals" for u in m.unplaced):
+        return None
+    rows, ffla_only, noted, per_how = [], [], [], Counter()
+    for t, r in resolved:
+        for mem in t.members:
+            if mem.source != "ffla_rentals":
+                continue
+            per_how[mem.match] += 1
+            has_ridb = any(o.source == "ridb" and isinstance(o.raw.get("rental"), dict) for o in t.members)
+            row = {"key": mem.key, "name": mem.raw.get("name"), "region": mem.region, "tower": r["id"], "how": mem.match,
+                   "recreation_gov_has_it": has_ridb, "provider": (mem.raw.get("rental") or {}).get("provider")}
+            rows.append(row)
+            if not has_ridb:
+                ffla_only.append(row)
+            if (mem.raw.get("rental") or {}).get("status_note"):
+                noted.append({"tower": r["id"], "name": r["name"], "note": mem.raw["rental"]["status_note"]})
+    unplaced = [{"key": u.key, "name": u.display, "region": u.region, "reason": u.match_note}
+                for u in m.unplaced if u.source == "ffla_rentals"]
+    not_listed = [{"tower": r["id"], "name": r["name"], "region": r.get("region"), "provider": r["rental"].get("provider"),
+                   "url": r["rental"].get("url")}
+                  for t, r in resolved
+                  if not r.get("hidden") and isinstance(r.get("rental"), dict) and r["rental"].get("available") is not False
+                  and not any(mem.source == "ffla_rentals" for mem in t.members)]
+    return {
+        "listed": len(listed) + len(unplaced), "placed": len(listed), "placed_by": dict(sorted(per_how.items())),
+        "unplaced": unplaced,
+        "listed_by_ffla_not_in_recreation_gov_data": sorted(ffla_only, key=lambda x: (x["region"], x["name"])),
+        "with_closure_note": sorted(noted, key=lambda x: x["tower"]),
+        "rentable_but_not_listed_by_ffla": sorted(not_listed, key=lambda x: x["tower"]),
+    }
 
 
 def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, today: str,
@@ -2881,12 +3272,18 @@ def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, 
         for mem in t.members:
             if mem.source in ("nhlr", "fflos") and isinstance(mem.raw.get("rental"), dict) and mem.raw["rental"].get("available"):
                 rental_hints.append({"id": r["id"], "name": r["name"], "key": mem.key})
+    ffla_rentals = ffla_rentals_report(m, resolved)
     match_by_source: dict[str, Counter] = defaultdict(Counter)
     for t, _ in resolved:
         for mem in t.members:
             match_by_source[mem.source][mem.match] += 1
     for rec in m.unplaced:
         match_by_source[rec.source]["unplaced"] += 1
+    # Type/status wording with no deliberate mapping in structure.py (test_structure fails on these).
+    unmapped: dict[str, Counter] = defaultdict(Counter)
+    for rec in [mem for t, _ in resolved for mem in t.members] + list(m.unplaced):
+        for field_, value in rec.structure.get("unmapped") or []:
+            unmapped[rec.source][f"{field_}: {value}"] += 1
 
     def counts(rs: list[dict], key: str) -> dict:
         return dict(sorted(Counter(r.get(key) for r in rs).items(), key=lambda kv: (-kv[1], str(kv[0]))))
@@ -2902,6 +3299,9 @@ def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, 
             "hidden_by_reason": counts(hidden, "hidden_reason"),
             "visible_by_status": counts(visible, "status"),
             "visible_by_kind": counts(visible, "kind"),
+            "visible_with_no_structure": sum(1 for r in visible if r.get("kind") in NO_STRUCTURE),
+            "visible_by_material": counts(visible, "material"),
+            "visible_by_material_from": counts(visible, "material_from"),
             "visible_by_region": dict(sorted(Counter(r.get("region") for r in visible).items())),
             "visible_by_verification": counts(visible, "verification"),
             "multi_source_towers": multi,
@@ -2942,6 +3342,8 @@ def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, 
             for t, r in resolved for mem in t.members if mem.bad_coords == "outside_state"],
         "relocations": relocations or [],
         "rental_hints_without_ridb": rental_hints,
+        "ffla_rentals": ffla_rentals,
+        "unmapped_structure_values": {s_: dict(c.most_common()) for s_, c in sorted(unmapped.items())},
     }
 
 

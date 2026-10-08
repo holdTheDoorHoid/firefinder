@@ -1,6 +1,7 @@
 {
   "id": "us-tn-cove-mountain",
   "name": "Cove Mountain Tower",
+  "summary": "A 1935 CCC-built steel lookout on Cove Mountain in Great Smoky Mountains National Park, now an NPS air-quality station that visitors cannot enter.",
   "other_names": [],
   "country": "US",
   "region": "TN",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 1242.7,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "60-ft steel Aermotor tower with 7x7 ft metal cab",
+  "height_m": 18.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -34,31 +38,37 @@
   "agency": "National Park Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Summit reachable on foot; hikers are not allowed into the tower (per the Hiking in the Smokys guide); the NPS uses the tower for air quality monitoring"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Reached by the Laurel Falls Trail and Cove Mountain Trail; the tower itself is closed to hikers"
   },
   "rental": null,
   "events": [
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the CCC as a 60-ft steel Aermotor tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/cove-mountain-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/tn/cove-mountain-tower/",
+        "https://hikinginthesmokys.com/cove-mountain/"
+      ]
     },
     {
       "year": 2007,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 19, 2007",
-      "from": "nhlr"
+      "note": "Registered March 19, 2007; nominated by Peter Barr",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/cove-mountain-tower/"
     }
   ],
   "photos": [
@@ -94,6 +104,16 @@
       "kind": "register"
     },
     {
+      "label": "Cove Mountain - Hike to Cove Mountain in the Great Smoky Mountains (Hiking in the Smokys)",
+      "url": "https://hikinginthesmokys.com/cove-mountain/",
+      "kind": "reference"
+    },
+    {
+      "label": "NPS Profile: Air above & beyond the Smokies (National Park Service, Great Smoky Mountains National Park)",
+      "url": "https://home.nps.gov/grsm/learn/nature/dff509-focusnps1.htm",
+      "kind": "reference"
+    },
+    {
       "label": "Cove Mountain (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/towers/",
       "kind": "site"
@@ -118,6 +138,8 @@
         "location",
         "county",
         "elevation_m",
+        "kind",
+        "material",
         "status",
         "registers",
         "agency",
@@ -131,7 +153,6 @@
       "source": "tnlandforms",
       "key": "tnlandforms:tn:svt005",
       "fields": [
-        "kind",
         "registers",
         "links"
       ]
@@ -150,12 +171,33 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tn-cove-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

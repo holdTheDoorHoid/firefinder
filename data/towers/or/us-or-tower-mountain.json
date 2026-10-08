@@ -1,6 +1,7 @@
 {
   "id": "us-or-tower-mountain",
   "name": "Tower Mountain Lookout",
+  "summary": "Umatilla NF lookout in Umatilla County, Oregon; first pole tower 1914, present 92-ft steel tower dated 1929 or 1934 by sources, staffed each summer and still in service.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 2076.3,
   "kind": "tower",
-  "design": "Aermotor",
-  "height_m": 1.8,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "92-ft steel Aermotor tower (per FireLookout.com); CCC-built living quarters moved from Lucky Strike Lookout",
+  "height_m": 28.0,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -45,14 +49,30 @@
     {
       "year": 1914,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "First structure, a 60-ft pole tower with a 6x6 cab, per FireLookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/toweror.html"
+    },
+    {
+      "year": 1929,
+      "event": "built",
+      "note": "Register's date for the 92-ft tower built by the Forest Service; FireLookout.com dates its replacement to 1934",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/tower-mountain-lookout/"
+    },
+    {
+      "year": 1934,
+      "event": "replaced",
+      "note": "FireLookout.com says the present 92-ft Aermotor tower replaced the first structure",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/toweror.html"
     },
     {
       "year": 1995,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 5, 1995",
-      "from": "nhlr"
+      "note": "Registered December 5, 1995 as US 142, OR 20",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/tower-mountain-lookout/"
     }
   ],
   "photos": [
@@ -124,6 +144,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "ownership",
@@ -160,12 +181,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-tower-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

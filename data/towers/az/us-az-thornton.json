@@ -1,6 +1,7 @@
 {
   "id": "us-az-thornton",
   "name": "Thornton Lookout",
+  "summary": "A 1945 Aermotor steel tower on the Hualapai Reservation, last recorded as staffed in 2011; sources disagree on county and no public visit route was found.",
   "other_names": [],
   "country": "US",
   "region": "AZ",
@@ -13,8 +14,11 @@
   },
   "elevation_m": 2066.5,
   "kind": "tower",
-  "design": null,
-  "height_m": null,
+  "material": "steel",
+  "material_from": "nhlr",
+  "roles": [],
+  "design": "100 ft Aermotor X-brace open steel tower with 7x7 observation-only cabin",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -25,15 +29,15 @@
       "url": "http://nhlr.org/lookouts/us/az/thornton-lookout/"
     }
   ],
-  "agency": "Bureau of Indian Affairs - Hualapai Reservation",
+  "agency": "Bureau of Indian Affairs, Hualapai Reservation",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "On the Hualapai Reservation, administered by the Bureau of Indian Affairs (Hualapai Reservation) per the register. No public visitor information was found in the sources read."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2011"
   },
   "visit": {
     "climbable": null,
@@ -45,14 +49,30 @@
     {
       "year": 1945,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Constructed as an Aermotor 100-foot X-brace open steel tower; register lists the Indian Emergency Civilian Work Program as a cooperator",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/thornton-lookout/"
+    },
+    {
+      "year": 1998,
+      "event": "modified",
+      "note": "New siding and steps completed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/thornton-lookout/"
+    },
+    {
+      "year": 2011,
+      "event": "staffed",
+      "note": "Register says the lookout continues to be staffed as of 2011",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/thornton-lookout/"
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 25, 2022",
-      "from": "nhlr"
+      "note": "Registered May 25, 2022 as US 1598, AZ 81; nominated by Brad Eells",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/thornton-lookout/"
     }
   ],
   "photos": [
@@ -112,6 +132,7 @@
         "location",
         "county",
         "elevation_m",
+        "material",
         "registers",
         "agency",
         "events",
@@ -143,12 +164,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-thornton",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }

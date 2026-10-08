@@ -275,7 +275,7 @@ def main() -> None:
             recs[key] = {
                 "key": key, "url": None, "name": name, "country": "US", "region": state, "county": county,
                 "lat": None, "lon": None, "elevation_m": None, "type_raw": None, "kind": "unknown",
-                "status_raw": row["condition"] if row else None, "status": status, "registers": registers,
+                "status_raw": None, "status": status, "registers": registers,
                 "built": None, "agency": agency, "events": events, "photos": [], "links": [], "rental": None,
                 "extra": extra,
             }

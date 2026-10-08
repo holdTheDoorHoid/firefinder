@@ -16,6 +16,9 @@
   },
   "elevation_m": 786.7,
   "kind": "tower",
+  "material": "wood",
+  "material_from": "osm",
+  "roles": [],
   "design": "L-4 ground cab, 10 ft square",
   "height_m": null,
   "status": "standing",
@@ -137,6 +140,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Wikipedia: Steliko Lookout",
       "url": "https://en.wikipedia.org/wiki/Steliko_Lookout",
       "kind": "wikipedia"
@@ -199,6 +207,14 @@
       ]
     },
     {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:wa:steliko-point-lookout",
+      "fields": [
+        "rental",
+        "links"
+      ]
+    },
+    {
       "source": "firelookout_com",
       "key": "firelookout_com:wa:steliko-point:47.7406:-120.3443",
       "fields": [
@@ -219,6 +235,7 @@
       "source": "osm",
       "key": "osm:way/985763306",
       "fields": [
+        "material",
         "registers",
         "links"
       ]
@@ -249,5 +266,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

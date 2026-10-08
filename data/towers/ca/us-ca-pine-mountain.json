@@ -14,6 +14,11 @@
   },
   "elevation_m": 1224.4,
   "kind": "ground",
+  "material": null,
+  "material_from": null,
+  "roles": [
+    "aws"
+  ],
   "design": "BC-201 lookout-fireman cabin, windows on three sides, 180-degree viewing area",
   "height_m": null,
   "status": "standing",
@@ -130,6 +135,11 @@
       "kind": "association"
     },
     {
+      "label": "FFLA lookout rentals list (firelookout.org)",
+      "url": "https://firelookout.org/resources/rentals/",
+      "kind": "association"
+    },
+    {
       "label": "Pine Mountain Lookout - Forest Lookouts Page",
       "url": "https://californialookouts.weebly.com/pine-mountain.html",
       "kind": "site"
@@ -144,6 +154,7 @@
         "location",
         "county",
         "elevation_m",
+        "roles",
         "registers",
         "agency",
         "events",
@@ -167,6 +178,14 @@
       "fields": [
         "ownership",
         "access",
+        "rental",
+        "links"
+      ]
+    },
+    {
+      "source": "ffla_rentals",
+      "key": "ffla_rentals:ca:pine-mountain-lookout",
+      "fields": [
         "rental",
         "links"
       ]
@@ -198,5 +217,5 @@
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-05"
+  "updated": "2026-10-08"
 }

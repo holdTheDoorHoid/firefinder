@@ -1,6 +1,7 @@
 {
   "id": "us-or-lava-butte",
   "name": "Lava Butte Lookout",
+  "summary": "A Forest Service lookout on a Deschutes cinder cone, first built in 1931; the 1998 reproduction has a visitor center and is reached by shuttle in summer.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -13,7 +14,10 @@
   },
   "elevation_m": 1511.2,
   "kind": "two_story",
-  "design": "L-4",
+  "material": "wood",
+  "material_from": "design",
+  "roles": [],
+  "design": "1998 reproduction of a gable-roofed L-4 cab with catwalk; first floor is a visitor center",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "First floor is a visitor center. Summer shuttle runs from the Lava Lands Visitor Center. The sources read do not say whether the cab itself is open to visitors."
   },
   "staffing": {
     "status": "unknown",
@@ -38,10 +42,59 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Shuttle runs up Red Cinder Road from early May to mid October; hiking the road is possible all year; a rim trail about 0.35 miles long circles the top."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1931,
+      "event": "built",
+      "note": "First Forest Service lookout on the summit, an L-4 groundhouse",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Lava_Butte",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Lava_Butte",
+        "https://www.firelookout.com/or/lavabutte.html",
+        "http://nhlr.org/lookouts/us/or/lava-butte-lookout/"
+      ]
+    },
+    {
+      "year": 1933,
+      "event": "other",
+      "note": "Steep single-lane road built up the cone to the summit",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Lava_Butte"
+    },
+    {
+      "year": 1957,
+      "event": "replaced",
+      "note": "Larger lookout with a slant-window flat-top cab replaced the 1931 tower",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Lava_Butte",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Lava_Butte",
+        "https://www.firelookout.com/or/lavabutte.html",
+        "http://nhlr.org/lookouts/us/or/lava-butte-lookout/"
+      ]
+    },
+    {
+      "year": 1962,
+      "event": "modified",
+      "note": "Enlarged to hold a small visitor center and museum on the first floor (Wikipedia). Firelookout.com dates the first-floor expansion to 1960",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Lava_Butte",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Lava_Butte",
+        "https://www.firelookout.com/or/lavabutte.html"
+      ]
+    },
+    {
+      "year": 1997,
+      "event": "removed",
+      "note": "Structure dismantled to make way for a new lookout and visitor center",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/lavabutte.html"
+    },
     {
       "year": 1998,
       "event": "built",
@@ -49,10 +102,23 @@
       "from": "nhlr"
     },
     {
+      "year": 1998,
+      "event": "rebuilt",
+      "note": "Current third structure on the site, a reproduction of a gable-roofed L-4 cab with catwalk",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Lava_Butte",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Lava_Butte",
+        "https://www.firelookout.com/or/lavabutte.html",
+        "http://nhlr.org/lookouts/us/or/lava-butte-lookout/"
+      ]
+    },
+    {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 2, 2003",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register as Number 100",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/lava-butte-lookout/"
     }
   ],
   "photos": [
@@ -232,6 +298,11 @@
       "kind": "register"
     },
     {
+      "label": "Lava Butte (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Lava_Butte",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -278,6 +349,7 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:lava-butte:43.9179:-121.3561",
       "fields": [
+        "material",
         "design",
         "photos",
         "links"
@@ -290,12 +362,32 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-lava-butte",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-04"
+  "updated": "2026-10-08"
 }
