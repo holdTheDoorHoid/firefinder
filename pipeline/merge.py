@@ -182,6 +182,18 @@ ASSOCIATION_SOURCES: list[str] = [
     "sand_mountain", "mountaineers_everett", "snoqualmie_lookouts", "buck_rock", "anffla", "scmf_lookouts",
     "ffla_sdrc", "ffla_monterey", "hi_mountain", "mvffla", "historicorps_west", "siskiyou_mountain_club",
     "green_mountain_wa", "ffla_ca_south", "ffla_west_reports",
+    # the East, the South and the Midwest (agent chapters-east), one source per line
+    "nysffla_projects",
+    "st_regis_friends",
+    "hurricane_friends",
+    "mt_arab_friends",
+    "azure_mountain_friends",
+    "bald_mountain_friends",
+    "bramley_friends",
+    "kent_conservation_foundation",
+    "stillwater_friends",
+    "smokies_friends",
+    "ffla_east_reports",
 ]
 # Fields an association supplies (the rest -- registers, rental, photos, access -- it does not).
 ASSOCIATION_FIELDS = ("name", "location", "status", "kind", "county", "elevation_m", "built", "design",
