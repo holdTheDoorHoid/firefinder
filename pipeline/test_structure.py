@@ -216,6 +216,16 @@ class DesignTest(unittest.TestCase):
     def test_design_is_tower(self):
         self.assertEqual(st.design_is_tower(["l4", "ideco"]), "ideco")
         self.assertIsNone(st.design_is_tower(["r6"]))
+        # data/designs.json's "part" says which designs are towers, wooden ones too.
+        facts = [{"id": "r6_timber_towers", "part": "tower", "material": "wood"}, {"id": "l4", "part": "cab", "material": "wood"}]
+        self.assertEqual(st.design_is_tower(["l4", "r6_timber_towers"], facts), "r6_timber_towers")
+        self.assertEqual(st.design_material(["l4", "r6_timber_towers"], "tower", facts), ("wood", "r6_timber_towers"))
+
+    def test_material_by_state(self):
+        facts = [{"id": "l5", "part": "house", "material": "wood", "material_by_state": {"MT": "log", "ID": "log"}}]
+        self.assertEqual(st.design_material(["l5"], "ground", facts, "MT"), ("log", "l5"))
+        self.assertEqual(st.design_material(["l5"], "ground", facts, "OR"), ("wood", "l5"))
+        self.assertEqual(st.design_material(["l5"], "ground", facts), ("wood", "l5"))
 
 
 if __name__ == "__main__":

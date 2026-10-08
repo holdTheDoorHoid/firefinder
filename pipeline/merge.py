@@ -334,8 +334,8 @@ NO_STRUCTURE = structure.no_structure_kinds()
 
 
 def _design_facts() -> list[dict]:
-    """data/designs.json's designs: each one's kind (cab or steel tower) and, once the designs
-    guide gives it, its "material" (structure.design_material)."""
+    """data/designs.json's designs: each one's part (cab, house, tower or whole lookout) and its
+    "material" (structure.design_material)."""
     try:
         return json.loads((DATA / "designs.json").read_text(encoding="utf-8")).get("designs") or []
     except (OSError, json.JSONDecodeError, AttributeError):
@@ -343,6 +343,22 @@ def _design_facts() -> list[dict]:
 
 
 DESIGN_FACTS = _design_facts()
+
+
+def _design_mentions() -> dict[str, list[str]]:
+    """data/design_mentions.json (pipeline/extract_design_mentions.py): design names found in
+    the register and hobbyist prose the extracts do not keep, by source record key. Records whose
+    prose tells of more than one structure ("replaced an Aermotor tower") are left out: their
+    designs may not be today's, so they say nothing about what the lookout is built of."""
+    try:
+        data = json.loads((DATA / "design_mentions.json").read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    several = set(data.get("several_structures") or [])
+    return {k: v for k, v in (data.get("mentions") or {}).items() if k not in several and isinstance(v, list)}
+
+
+DESIGN_MENTIONS = _design_mentions()
 # Human decisions on single records, by source key. Each entry hides the tower holding that
 # record (reason shown), however the sources describe it.
 HIDE_KEYS = {
@@ -1560,11 +1576,12 @@ def record_material(rec: Rec, kind: str | None) -> str | None:
 
 
 def tower_design_ids(members: list[Rec], design: str | None, design_src: Rec | None) -> tuple[list[str], dict]:
-    """Recognised designs (pipeline/designs.py) in the tower's design and its sources' type and
-    design wording, and the record each was first found in."""
+    """Recognised designs (pipeline/designs.py) in the tower's design, its sources' type and
+    design wording and the design names found in their prose (DESIGN_MENTIONS), and the record
+    each was first found in."""
     cands: list[tuple[str, Rec | None]] = [(design, design_src)] if isinstance(design, str) and design.strip() else []
     for m in sorted(members, key=lambda m: (global_rank(m.source), m.key)):
-        for w in (m.raw.get("type_raw"), m.extra.get("design")):
+        for w in (m.raw.get("type_raw"), m.extra.get("design"), *DESIGN_MENTIONS.get(m.key, [])):
             if isinstance(w, str) and w.strip():
                 cands.append((w, m))
     ids: list[str] = []
@@ -2180,7 +2197,7 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
             rec["material"], rec["material_from"] = mat, mat_src.source
             contributed[mat_src.key].add("material")
         else:
-            mat, did = structure.design_material(design_ids, kind_now, DESIGN_FACTS)
+            mat, did = structure.design_material(design_ids, kind_now, DESIGN_FACTS, rec.get("region"))
             rec["material"], rec["material_from"] = mat, ("design" if mat else None)
             if mat and design_src.get(did) is not None:
                 contributed[design_src[did].key].add("material")

@@ -7,7 +7,10 @@ web/public/data/:
 
   towers.geojson   every visible lookout as a point, with short property names (below)
   t/<id>.json      the full canonical record, plus "story_html" when a story exists and
-                   "design_ids" when a standard design is recognised
+                   "design_ids" when a standard design is recognised (the designs its
+                   records name; towers.geojson "d" adds their families), and "design_pair"
+                   ({"cab": "l4", "tower": "r6_timber_towers"}, {"whole": ...}) when the
+                   records describe one structure (designs.pair)
   meta.json        counts, the source list with credit lines and retrieved dates, build date
   designs.json     the tower-designs guide: data/designs.json's facts plus the lookouts of
                    each design and how many lookouts have a recognisable design
@@ -30,9 +33,12 @@ y0 / y1 drive the map's "Lookouts standing in year ..." view (year_range below).
 out when no event records them; a tower that still stands has no y1. meta.json "history" counts
 how many towers have which dates, so the site can say how many it cannot place in time.
 
-d lists the standard designs (L-4, R-6, Aermotor...) recognised in the tower's design field and
-its sources' type and design fields (pipeline/designs.py). designs.json pairs the guide's facts
-(data/designs.json) with every lookout of each design.
+d lists the standard designs (L-4, R-6, Aermotor MC-39...) recognised in the tower's design field,
+its sources' type and design fields, the design names found in its sources' prose (descriptions
+in the extracts, and data/design_mentions.json for the register and hobbyist pages whose prose
+is not kept; pipeline/extract_design_mentions.py), and the lookouts data/designs.json names as
+built to a plan ("examples"), plus each one's family (an Aermotor MC-39 is also an Aermotor).
+designs.json pairs the guide's facts (data/designs.json) with every lookout of each design.
 
 Hidden records (hidden: true) are skipped. Records that fail basic checks are skipped with a
 warning, so one bad file never takes the site down; pass --strict to fail instead.
@@ -640,10 +646,57 @@ def _prepare_out(out: Path, log: Log) -> None:
     (out / "t").mkdir()
 
 
+# Free-text fields of source records that sometimes name a design ("This L-4 style lookout...",
+# "Aermotor Windmill Company"). Only the design names found in them are kept, never the text.
+PROSE_EXTRA_FIELDS = ("description", "notes_raw", "builder", "note")
+# OpenStreetMap tags: design tags are design fields; description and note are prose.
+OSM_DESIGN_TAGS = ("tower:design", "building:design")
+OSM_PROSE_TAGS = ("description", "note")
+
+
+def record_design_words(r: dict) -> list[tuple[str, str]]:
+    """A source record's design wording: ("type", type_raw), ("design", a design field) and
+    ("mention", a design name found in one of its prose fields); ("several", "") when that prose
+    describes more than one structure over time (designs.describes_several)."""
+    extra = r.get("extra") if isinstance(r.get("extra"), dict) else {}
+    tags = extra.get("osm_tags") if isinstance(extra.get("osm_tags"), dict) else {}
+    words = [(f, w.strip()) for f, w in (("type", r.get("type_raw")), ("design", extra.get("design"))) if isinstance(w, str) and w.strip()]
+    words += [("design", tags[t].strip()) for t in OSM_DESIGN_TAGS if isinstance(tags.get(t), str) and tags[t].strip()]
+    prose = [extra.get(k) for k in PROSE_EXTRA_FIELDS] + [tags.get(k) for k in OSM_PROSE_TAGS]
+    for text in prose:
+        for _, span in design_names.find_mentions(text if isinstance(text, str) else None):
+            if ("mention", span) not in words:
+                words.append(("mention", span))
+        if design_names.describes_several(text) and ("several", "") not in words:
+            words.append(("several", ""))
+    return words
+
+
+def load_design_mentions(path: Path | None, log: Log) -> dict[str, list[tuple[str, str]]]:
+    """data/design_mentions.json: design names found in cached page prose, by source record key,
+    as design wording ([("mention", "MC-39"), ...], plus ("several", "") for prose that describes
+    more than one structure)."""
+    if path is None or not path.is_file():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as e:
+        log.warn(f"could not read design mentions: {e}", path)
+        return {}
+    if not isinstance(data, dict):
+        return {}
+    m = data.get("mentions") if isinstance(data.get("mentions"), dict) else {}
+    out = {k: [("mention", t) for t in v if isinstance(t, str)] for k, v in m.items() if isinstance(k, str) and isinstance(v, list)}
+    for k in data.get("several_structures") or []:
+        if k in out:
+            out[k].append(("several", ""))
+    return out
+
+
 def load_source_headers(sources_dir: Path, log: Log, design_strings: dict[str, list[tuple[str, str]]] | None = None,
                         kind_words: dict[str, Counter] | None = None) -> dict[str, dict]:
     """Title, URL, licence and retrieved date of every source extract. With `design_strings`,
-    also collects each source record's type and design wording by record key (for
+    also collects each source record's design wording by record key (record_design_words; for
     designs.tower_designs), e.g. {"ffla:or:...": [("type", "Tower")], "firelookout_com:...": [("design", "L-4")]}."""
     headers: dict[str, dict] = {}
     if not sources_dir.is_dir():
@@ -663,8 +716,7 @@ def load_source_headers(sources_dir: Path, log: Log, design_strings: dict[str, l
             for r in data["records"]:
                 if not isinstance(r, dict) or not isinstance(r.get("key"), str):
                     continue
-                extra = r.get("extra") if isinstance(r.get("extra"), dict) else {}
-                words = [(f, w.strip()) for f, w in (("type", r.get("type_raw")), ("design", extra.get("design"))) if isinstance(w, str) and w.strip()]
+                words = record_design_words(r)
                 if words:
                     design_strings[r["key"]] = words
         if kind_words is not None and sid in structure.SIMPLE_TYPES and isinstance(data.get("records"), list):
@@ -685,60 +737,112 @@ def load_source_headers(sources_dir: Path, log: Log, design_strings: dict[str, l
     return headers
 
 
-def tower_design_texts(rec: dict, design_strings: dict[str, list[tuple[str, str]]]) -> tuple[list[str], bool]:
-    """The tower's own design field first, then its sources' type and design wording; and
+def tower_design_texts(rec: dict, design_strings: dict[str, list[tuple[str, str]]]) -> tuple[list[str], bool, bool]:
+    """The tower's own design field first, then its sources' type, design and prose wording;
     whether any of it is a design field (a type such as FFLA's "Tower" or "Ground" alone says
-    nothing about the plan, so it does not count as a recorded design)."""
+    nothing about the plan, so it does not count as a recorded design); and whether any of it
+    describes more than one structure over time (then its designs are not paired)."""
     texts: list[str] = []
-    has_design = False
+    has_design = several = False
     if isinstance(rec.get("design"), str) and rec["design"].strip():
         texts.append(rec["design"].strip())
         has_design = True
+        several = design_names.describes_several(rec["design"])
     for s in rec.get("sources") or []:
         if isinstance(s, dict) and isinstance(s.get("key"), str):
             for field, w in design_strings.get(s["key"], []):
+                if field == "several":
+                    several = True
+                    continue
                 has_design = has_design or field == "design"
                 if w not in texts:
                     texts.append(w)
-    return texts, has_design
+    return texts, has_design, several
 
 
-def design_entry(rec: dict, did: str, texts: list[str]) -> dict:
+def load_design_facts(facts_path: Path, log: Log) -> dict:
+    """data/designs.json (the guide's curated facts), or {} when it cannot be read."""
+    if not facts_path.is_file():
+        return {}
+    try:
+        facts = json.loads(facts_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as e:
+        log.warn(f"could not read design facts: {e}", facts_path)
+        return {}
+    return facts if isinstance(facts, dict) else {}
+
+
+def design_entries(facts: dict) -> list[dict]:
+    return [d for d in facts.get("designs", []) if isinstance(d, dict) and isinstance(d.get("id"), str)]
+
+
+def design_examples(facts: dict) -> dict[str, list[tuple[str, str | None]]]:
+    """Lookouts data/designs.json names as built to a plan (a one-off plan such as Chimney Rock
+    has no design name for a source to use), by tower id: [(design id, note)]."""
+    out: dict[str, list[tuple[str, str | None]]] = {}
+    for d in design_entries(facts):
+        for ex in d.get("examples") or []:
+            if isinstance(ex, dict) and isinstance(ex.get("id"), str):
+                out.setdefault(ex["id"], []).append((d["id"], ex.get("note") if isinstance(ex.get("note"), str) else None))
+    return out
+
+
+def design_entry(rec: dict, did: str, texts: list[str], matched: list[str] | None = None, family_of: dict[str, str] | None = None, note: str | None = None) -> dict:
     """One lookout in the designs guide: id, name, state, status, kind, and the source's own
-    wording when it says more than the bare design name ("L-4 cab on a 32-foot timber tower")."""
+    wording when it says more than the bare design name ("L-4 cab on a 32-foot timber tower").
+    `matched` are the designs the lookout's records name; when `did` is the family of one of them
+    (an Aermotor that is an MC-39), "via" lists those members. "m" lists variant codes
+    ("MC-39", "CT-2") where the design has them."""
+    matched = matched if matched is not None else [did]
+    family_of = family_of or {}
     entry: dict[str, object] = {"i": rec["id"], "n": rec["name"], "r": rec["region"], "s": rec["status"], "k": rec["kind"]}
-    wording = next((t for t in texts if did in design_names.match_designs(t)), None)
+    via = [m for m in matched if m != did and family_of.get(m) == did]
+    if via:
+        entry["via"] = via
+    look_for = [did] if did in matched else via
+    wording = next((t for t in texts if set(look_for) & set(design_names.match_designs(t))), None) or note
     bare = design_names.DESIGN_NAMES.get(did, did).lower()
     if wording and wording.lower().strip(" .") not in (bare, bare.replace("-", ""), did):
         entry["w"] = wording[:240]
-    if did == "aermotor":
-        models = [m for t in texts for m in design_names.aermotor_models(t)]
-        if models:
-            entry["m"] = sorted(set(models))
+    codes = sorted({c for t in texts for d in [did, *via] for c in design_names.variant_codes(d, t)})
+    if codes:
+        entry["m"] = codes
     return entry
 
 
-def write_designs(out: Path, facts_path: Path, towers: dict[str, list[dict]], with_text: int, total: int, log: Log) -> dict:
+def write_designs(out: Path, facts_path: Path, towers: dict[str, list[dict]], with_text: int, total: int, log: Log, facts: dict | None = None, unmatched_text: int | None = None) -> dict:
     """designs.json for the guide page: the curated facts (data/designs.json) in their order,
-    each with its lookouts, plus coverage counts. Returns the coverage summary for meta.json."""
-    facts: dict = {}
-    if facts_path.is_file():
-        try:
-            facts = json.loads(facts_path.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError) as e:
-            log.warn(f"could not read design facts: {e}", facts_path)
-    entries = [d for d in facts.get("designs", []) if isinstance(d, dict) and isinstance(d.get("id"), str)]
+    each with its lookouts, plus coverage counts. Returns the coverage summary for meta.json.
+
+    A family's head (Aermotor) counts every lookout of the family, but lists only those whose
+    member is not recorded (Aermotor, model unknown); "members" gives each member's count."""
+    if facts is None:
+        facts = load_design_facts(facts_path, log)
+    entries = design_entries(facts)
     known = {d["id"] for d in entries}
     for did in towers:
         if did not in known:
             log.warn(f"design {did!r} matched {len(towers[did])} lookouts but has no entry in {facts_path.name}")
             entries.append({"id": did, "name": design_names.DESIGN_NAMES.get(did, did)})
+    members: dict[str, list[dict]] = {}
+    for d in entries:
+        head = d.get("family")
+        if isinstance(head, str) and head != d["id"]:
+            members.setdefault(head, []).append(d)
     recognised = len({t["i"] for ts in towers.values() for t in ts})
     designs = []
     for d in entries:
-        ts = sorted(towers.get(d["id"], []), key=lambda t: (str(t["r"]), str(t["n"]).lower(), str(t["i"])))
-        status = Counter(str(t["s"]) for t in ts)
-        designs.append({**d, "towers": ts, "count": len(ts), "by_status": dict(sorted(status.items()))})
+        every = sorted(towers.get(d["id"], []), key=lambda t: (str(t["r"]), str(t["n"]).lower(), str(t["i"])))
+        status = Counter(str(t["s"]) for t in every)
+        row = {**d, "count": len(every), "by_status": dict(sorted(status.items()))}
+        if d["id"] in members:
+            own = [t for t in every if not t.get("via")]
+            row["members"] = [{"id": m["id"], "name": m.get("name") or m["id"], "count": len(towers.get(m["id"], []))} for m in members[d["id"]]]
+            row["count_unspecified"] = len(own)
+            row["towers"] = own
+        else:
+            row["towers"] = every
+        designs.append(row)
     coverage = {
         "total": total,
         # A design field from the tower or one of its sources, recognised or not.
@@ -746,6 +850,9 @@ def write_designs(out: Path, facts_path: Path, towers: dict[str, list[dict]], wi
         "recognised": recognised,
         "by_design": {d["id"]: d["count"] for d in designs},
     }
+    if unmatched_text is not None:
+        # Lookouts with a design field that names no design we recognise.
+        coverage["unmatched_text"] = unmatched_text
     _write_json(
         out / "designs.json",
         {
@@ -753,8 +860,10 @@ def write_designs(out: Path, facts_path: Path, towers: dict[str, list[dict]], wi
             "note": facts.get("note"),
             "updated": facts.get("updated"),
             "sources": facts.get("sources", []),
+            "groups": facts.get("groups", {}),
             "coverage": coverage,
             "designs": designs,
+            "equipment": facts.get("equipment", []),
         },
     )
     return coverage
@@ -809,6 +918,7 @@ def build(
     strict: bool = False,
     log: Log | None = None,
     designs_path: Path | None = None,
+    mentions_path: Path | None = None,
     this_year: int | None = None,
     structure_kinds_path: Path | None = None,
 ) -> dict:
@@ -820,8 +930,16 @@ def build(
     kind_words: dict[str, Counter] = {}
     headers = load_source_headers(sources_dir, log, design_strings, kind_words)
     no_structure = structure.no_structure_kinds()
+    for key, found in load_design_mentions(mentions_path if mentions_path is not None else DATA / "design_mentions.json", log).items():
+        words = design_strings.setdefault(key, [])
+        words += [w for w in found if w not in words]
+    designs_path = designs_path if designs_path is not None else DATA / "designs.json"
+    design_facts = load_design_facts(designs_path, log)
+    family_of = {d["id"]: d["family"] for d in design_entries(design_facts) if isinstance(d.get("family"), str)}
+    part_of = {d["id"]: d["part"] for d in design_entries(design_facts) if isinstance(d.get("part"), str)}
+    examples = design_examples(design_facts)
     design_towers: dict[str, list[dict]] = {}
-    with_design_text = 0
+    with_design_text = unmatched_design_text = 0
     ranges: list[tuple[int | None, int | None, str]] = []
 
     _prepare_out(out, log)
@@ -867,14 +985,29 @@ def build(
         else:
             # A plain summary written from the record alone, labelled as such on the page.
             rec["auto_summary"] = auto_summary.summarize(rec)
-        texts, has_design = tower_design_texts(rec, design_strings)
+        texts, has_design, several = tower_design_texts(rec, design_strings)
+        matched = design_names.tower_designs(texts)
+        notes: dict[str, str | None] = {}
+        for did, note in examples.get(rid, []):
+            notes[did] = note
+            if did not in matched:
+                matched.append(did)
         is_structure = rec["kind"] not in no_structure
         with_design_text += has_design and is_structure
-        dids = design_names.tower_designs(texts)
+        unmatched_design_text += has_design and is_structure and not matched
+        dids = design_names.family_ids(matched, family_of)
         if dids:
-            rec["design_ids"] = dids
+            # The tower page names the most specific designs its records name (MC-39, not
+            # "MC-39, Aermotor"); the map's filter (d) also carries their families, so
+            # "Aermotor" finds every Aermotor model.
+            rec["design_ids"] = design_names.most_specific(matched, family_of)
+            paired = design_names.pair(matched, part_of, family_of)
+            # A cab and a tower named in an account of several structures ("an R-6 cab
+            # replaced the Aermotor") may not stand together; one design alone still pairs.
+            if paired and not (several and len(paired) > 1):
+                rec["design_pair"] = paired
             for did in dids:
-                design_towers.setdefault(did, []).append(design_entry(rec, did, texts))
+                design_towers.setdefault(did, []).append(design_entry(rec, did, texts, matched, family_of, notes.get(did)))
         _write_json(out / "t" / f"{rid}.json", rec)
         feat = feature(rec, this_year, dids)
         features.append(feat)
@@ -900,7 +1033,7 @@ def build(
     _write_json(out / "towers.geojson", {"type": "FeatureCollection", "features": features})
 
     structures_n = sum(1 for f in features if f["properties"]["k"] not in no_structure)
-    designs_meta = write_designs(out, designs_path if designs_path is not None else DATA / "designs.json", design_towers, with_design_text, structures_n, log)
+    designs_meta = write_designs(out, designs_path, design_towers, with_design_text, structures_n, log, design_facts, unmatched_design_text)
     kinds_meta = write_structure_kinds(out, structure_kinds_path if structure_kinds_path is not None else structure.VOCAB_FILE,
                                        counts["kind"], counts["material"], kind_words, log)
     source_ids = list(KNOWN_SOURCES) + sorted((set(headers) | set(cited)) - set(KNOWN_SOURCES))
@@ -959,7 +1092,7 @@ def build(
         f"Dates: {hist['with_start']} with a start year, {hist['with_end']} with an end year, "
         f"{hist['no_dates']} with neither ({hist['standing_no_start']} of the standing ones have no start year). "
         f"Designs: {designs_meta['recognised']} lookouts with a recognisable design, "
-        f"{designs_meta['with_design_text'] - designs_meta['recognised']} more with design wording we could not match."
+        f"{designs_meta.get('unmatched_text', 0)} more with design wording we could not match."
     )
     return meta
 

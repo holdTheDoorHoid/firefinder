@@ -637,23 +637,36 @@ DESIGN_MATERIAL_FALLBACK: dict[str, str | None] = {
 TOWER_DESIGN_KINDS = {"steel_tower"}
 
 
-def design_material(design_ids: list[str], kind: str | None, designs: list[dict] | None = None) -> tuple[str | None, str | None]:
+def _design_is_tower(did: str, facts: dict) -> bool:
+    """data/designs.json "part" == "tower" (the supporting structure; the rest are cabs, houses
+    and whole lookouts); older files said "kind": "steel_tower"."""
+    part = facts.get(did, {}).get("part")
+    if part:
+        return part == "tower"
+    k = facts.get(did, {}).get("kind")
+    return k in TOWER_DESIGN_KINDS if k else did in ("aermotor", "ideco", "other_steel")
+
+
+def design_material(design_ids: list[str], kind: str | None, designs: list[dict] | None = None, region: str | None = None) -> tuple[str | None, str | None]:
     """(material, design id) from the lookout's recognised designs. A tower design (Aermotor)
     gives the tower's material; a cab design (L-4) gives it only for a building, since the cab
-    says nothing about what the tower under it was made of."""
+    says nothing about what the tower under it was made of. A design whose material depends on
+    the state (the L-5: log in Montana and Idaho, frame elsewhere) says so in data/designs.json's
+    "material_by_state", read with the lookout's `region`."""
     if kind in no_structure_kinds():
         return None, None
     facts = {d.get("id"): d for d in designs or [] if isinstance(d, dict)}
 
     def mat(did: str) -> str | None:
-        m = facts.get(did, {}).get("material")
+        by_state = facts.get(did, {}).get("material_by_state")
+        m = by_state.get(region) if isinstance(by_state, dict) and region else None
+        m = m or facts.get(did, {}).get("material")
         if isinstance(m, str) and m in MATERIALS:
             return m
         return DESIGN_MATERIAL_FALLBACK.get(did)
 
     def is_tower(did: str) -> bool:
-        k = facts.get(did, {}).get("kind")
-        return k in TOWER_DESIGN_KINDS if k else did in ("aermotor", "ideco", "other_steel")
+        return _design_is_tower(did, facts)
 
     towers = [d for d in design_ids if is_tower(d) and mat(d)]
     cabs = [d for d in design_ids if not is_tower(d) and mat(d)]
@@ -673,8 +686,7 @@ def design_is_tower(design_ids: list[str], designs: list[dict] | None = None) ->
     """A steel-tower design among them (an Aermotor is a tower whatever else is said)."""
     facts = {d.get("id"): d for d in designs or [] if isinstance(d, dict)}
     for did in design_ids:
-        k = facts.get(did, {}).get("kind")
-        if (k in TOWER_DESIGN_KINDS) if k else did in ("aermotor", "ideco", "other_steel"):
+        if _design_is_tower(did, facts):
             return did
     return None
 

@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { buildIndex, normalize, search } from '../src/lib/search.ts';
 import type { TowerFeature } from '../src/lib/types.ts';
-import { ACCESS, DESIGN_NAMES, EVENT, KIND, OWNERSHIP, STAFFING, STATUS, VERIFICATION } from '../src/lib/vocab.ts';
+import { ACCESS, DESIGN_MATERIAL, DESIGN_MATERIAL_LABEL, DESIGN_NAMES, EVENT, KIND, OWNERSHIP, STAFFING, STATUS, VERIFICATION } from '../src/lib/vocab.ts';
 
 const vocab = JSON.parse(readFileSync(resolve(import.meta.dirname, '../../data/vocab.json'), 'utf8')) as Record<string, string[] | Record<string, string>>;
 const codes = (k: string) => {
@@ -31,8 +31,14 @@ describe('design names', () => {
     const block = py.slice(py.indexOf('DESIGN_NAMES: dict[str, str] = {'));
     const pyNames = Object.fromEntries([...block.matchAll(/^\s+"([a-z0-9_]+)": "([^"]+)",$/gm)].map((m) => [m[1], m[2]]));
     expect(DESIGN_NAMES).toEqual(pyNames);
-    const guide = JSON.parse(readFileSync(resolve(import.meta.dirname, '../../data/designs.json'), 'utf8')) as { designs: { id: string }[] };
+    const guide = JSON.parse(readFileSync(resolve(import.meta.dirname, '../../data/designs.json'), 'utf8')) as {
+      designs: { id: string; material: string }[];
+      groups: { materials: { id: string; label: string }[] };
+    };
     expect(guide.designs.map((d) => d.id).sort()).toEqual(Object.keys(DESIGN_NAMES).sort());
+    // The map filter groups designs by material, from the same facts.
+    expect(DESIGN_MATERIAL).toEqual(Object.fromEntries(guide.designs.map((d) => [d.id, d.material])));
+    expect(DESIGN_MATERIAL_LABEL).toEqual(Object.fromEntries(guide.groups.materials.map((g) => [g.id, g.label])));
   });
 });
 
