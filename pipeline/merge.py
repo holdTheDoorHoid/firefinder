@@ -62,6 +62,8 @@ DATA = REPO / "data"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from state_bbox import STATE_BBOX, flag_coordinate  # noqa: E402
 from photo_credit import extract_photo_credit  # noqa: E402
+import designs as design_names  # noqa: E402
+import structure  # noqa: E402
 
 # Rough boxes for the territories, which state_bbox does not cover.
 TERRITORY_BBOX = {"PR": (17.8, 18.6, -67.4, -65.2), "VI": (17.6, 18.5, -65.1, -64.5),
@@ -133,6 +135,9 @@ PRECEDENCE: dict[str, list[str]] = {
               "wikidata", "cskt", "idaho_fl", "osm", "andyarthur_ny", "ffla"],
     "design": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "pa_storymap", "cskt",
                "eastern_us_lookouts", "central_us_lookouts"],
+    # Explicit words only (a type value, a description, an OSM tag); the design comes after.
+    "material": ["ffla", "nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "ridb", "osm",
+                 "andyarthur_ny"],
     "height_m": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "nj_forest_fire_towers",
                  "pa_storymap", "cskt", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
                  "osm"],
@@ -257,32 +262,39 @@ STATE_NAMES = {
     "WV": "West Virginia", "WI": "Wisconsin", "WY": "Wyoming", "DC": "District of Columbia",
 }
 
-# Out of scope (DESIGN.md 1: structures only).
-HIDDEN_KIND_REASON = {
-    "tree": "Tree platform: out of scope (structures only)",
-    "camp": "Camp or tent site: out of scope (structures only)",
-}
+# Kinds the owner has chosen to hide, from data/structure_kinds.json ("hidden": true). Since
+# 2026-10-08 none is: camps, lookout trees and bare points are shown as sites with no structure.
+HIDDEN_KIND_REASON = structure.hidden_kind_reasons()
+# Camps, lookout trees and bare lookout points: nothing was built to stand in.
+NO_STRUCTURE = structure.no_structure_kinds()
+
+
+def _design_facts() -> list[dict]:
+    """data/designs.json's designs: each one's kind (cab or steel tower) and, once the designs
+    guide gives it, its "material" (structure.design_material)."""
+    try:
+        return json.loads((DATA / "designs.json").read_text(encoding="utf-8")).get("designs") or []
+    except (OSError, json.JSONDecodeError, AttributeError):
+        return []
+
+
+DESIGN_FACTS = _design_facts()
 # Human decisions on single records, by source key. Each entry hides the tower holding that
 # record (reason shown), however the sources describe it.
 HIDE_KEYS = {
     "osm:node/358671897": "Not confirmed as a fire lookout",  # "East Lookout Tower", Guam (2026-10-04)
-}
-# FFLA "Type" values that are a bare lookout point, not a structure.
-BARE_POINT_TYPES = {
-    "firefinder", "map board", "map boards", "map table", "alidade", "obs pt", "obs. point",
-    "open site", "rock cairn", "high point", "obs deck",
 }
 NEVER_BUILT_STATUS = {"proposed", "planned", "never built"}
 NOT_A_LOOKOUT_SECTION = "sites determined not to have been used as wildland fire lookouts"
 
 TOWER_KEYS = [
     "id", "name", "summary", "other_names", "country", "region", "county", "location", "elevation_m",
-    "kind", "design", "height_m", "status", "status_note", "registers", "agency", "ownership", "access",
-    "staffing", "visit", "rental", "events", "photos", "links", "sources", "conflicts",
-    "research", "verification", "locked", "hidden", "hidden_reason", "updated",
+    "kind", "material", "material_from", "roles", "design", "height_m", "status", "status_note", "registers",
+    "agency", "ownership", "access", "staffing", "visit", "rental", "events", "photos", "links", "sources",
+    "conflicts", "research", "verification", "locked", "hidden", "hidden_reason", "updated",
 ]
 FIELD_ORDER = [
-    "name", "location", "county", "elevation_m", "kind", "design", "height_m", "status",
+    "name", "location", "county", "elevation_m", "kind", "material", "roles", "design", "height_m", "status",
     "registers", "agency", "ownership", "access", "staffing", "rental", "events", "photos",
     "links",
 ]
@@ -791,10 +803,14 @@ class Rec:
     bad_coords: str | None = None   # why the source's coordinates were not used, if so
     annotation: dict | None = None  # structure history from the name: see parse_annotation()
     status_info: dict | None = None # state note from the name: see parse_status_note()
+    structure: dict = field(default_factory=dict)  # kind/status/material reading: structure.read_record()
 
     @classmethod
     def build(cls, source: str, raw: dict, order: int) -> "Rec":
+        # Kind and status through the deliberate tables in structure.py, not the fetcher's own map.
+        raw, reading = structure.apply(source, raw)
         r = cls(source, raw, order)
+        r.structure = reading
         r.key = str(raw.get("key") or "")
         r.region = (raw.get("region") or None) and str(raw["region"]).upper()
         if _num(raw.get("lat")) and _num(raw.get("lon")) and (raw["lat"], raw["lon"]) != (0, 0):
@@ -1087,10 +1103,10 @@ class Matcher:
                 if not ok:
                     continue
                 eff = 0.7 if score is None else score
-                # a structure record prefers a tower that is not a tree/camp row at the same spot
+                # a structure record prefers a tower that is not a camp/tree/point row at the same spot
                 kinds = {m.raw.get("kind") for m in t.members} - {None, "unknown"}
-                penalty = 1 if (rec.raw.get("kind") not in (None, "unknown", "tree", "camp")
-                                and kinds and kinds <= {"tree", "camp"}) else 0
+                penalty = 1 if (rec.raw.get("kind") not in (None, "unknown", *NO_STRUCTURE)
+                                and kinds and kinds <= NO_STRUCTURE) else 0
                 out.append((-eff, penalty, d, t, score, same_region))
                 if d <= MATCH_SAME_SPOT_M and score is not None and score < PARTIAL:
                     same_spot_bad_name.append((d, t))
@@ -1153,8 +1169,8 @@ class Matcher:
                         f"there instead of the near one.",
             })
         kinds = {m.raw.get("kind") for m in t.members} - {None, "unknown"}
-        penalty = 1 if (rec.raw.get("kind") not in (None, "unknown", "tree", "camp")
-                        and kinds and kinds <= {"tree", "camp"}) else 0
+        penalty = 1 if (rec.raw.get("kind") not in (None, "unknown", *NO_STRUCTURE)
+                        and kinds and kinds <= NO_STRUCTURE) else 0
         return [(-score, penalty, d, t, score, True)]
 
     def place_without_coords(self) -> None:
@@ -1361,6 +1377,33 @@ def record_built(rec: Rec) -> int | None:
     if isinstance(b, int) and not isinstance(b, bool):
         years.append(b)
     return min(years) if years else None
+
+
+def record_material(rec: Rec, kind: str | None) -> str | None:
+    """The material a record names for the lookout's main structure (a type value such as
+    "Stone Tower", an OSM tag, or description words read for this kind of structure)."""
+    if kind in NO_STRUCTURE:
+        return None
+    reading = rec.structure or {}
+    return reading.get("material") or structure.words_material(reading.get("words") or [], kind)
+
+
+def tower_design_ids(members: list[Rec], design: str | None, design_src: Rec | None) -> tuple[list[str], dict]:
+    """Recognised designs (pipeline/designs.py) in the tower's design and its sources' type and
+    design wording, and the record each was first found in."""
+    cands: list[tuple[str, Rec | None]] = [(design, design_src)] if isinstance(design, str) and design.strip() else []
+    for m in sorted(members, key=lambda m: (global_rank(m.source), m.key)):
+        for w in (m.raw.get("type_raw"), m.extra.get("design")):
+            if isinstance(w, str) and w.strip():
+                cands.append((w, m))
+    ids: list[str] = []
+    found: dict[str, Rec | None] = {}
+    for text, m in cands:
+        for did in design_names.match_designs(text):
+            if did not in found:
+                ids.append(did)
+                found[did] = m
+    return ids, found
 
 
 def record_height(rec: Rec) -> float | None:
@@ -1927,13 +1970,42 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
     set_field("county", v, s)
     v, s = pick("elevation_m", members, lambda m: round(float(m.raw["elevation_m"]), 1) if _num(m.raw.get("elevation_m")) else None)
     set_field("elevation_m", v, s)
-    v, s = pick("kind", members, lambda m: m.raw.get("kind") if m.raw.get("kind") not in (None, "unknown") else None)
+    # Kind: a bare lookout point ("Firefinder", "Map Board") only when no source records a structure.
+    v, s = pick("kind", members, lambda m: m.raw.get("kind") if m.raw.get("kind") not in (None, "unknown", "point") else None)
+    if v is None:
+        v, s = pick("kind", members, lambda m: m.raw.get("kind") if m.raw.get("kind") == "point" else None)
+    v_design, s_design = pick("design", members, lambda m: (m.extra.get("design") or None) if isinstance(m.extra.get("design"), str) else None)
+    design_ids, design_src = tower_design_ids(members, rec.get("design") if "design" in locked else v_design, s_design)
+    if v is None:
+        # No kind from any source, but a recognised steel-tower design (an Aermotor) is a tower.
+        did = structure.design_is_tower(design_ids, DESIGN_FACTS)
+        if did:
+            v, s = "tower", design_src.get(did)
     tower.source_kind = (v, s.source if s else None)
     if v is None and "kind" not in rec:
         v = "unknown"
     set_field("kind", v, s)
-    v, s = pick("design", members, lambda m: (m.extra.get("design") or None) if isinstance(m.extra.get("design"), str) else None)
-    set_field("design", v, s)
+    set_field("design", v_design, s_design)
+    # Material: explicit source words first, then the design (DESIGN.md 3.5).
+    if "material" not in locked:
+        kind_now = rec.get("kind")
+        mat, mat_src = pick("material", members, lambda m: record_material(m, kind_now))
+        if mat is not None:
+            rec["material"], rec["material_from"] = mat, mat_src.source
+            contributed[mat_src.key].add("material")
+        else:
+            mat, did = structure.design_material(design_ids, kind_now, DESIGN_FACTS)
+            rec["material"], rec["material_from"] = mat, ("design" if mat else None)
+            if mat and design_src.get(did) is not None:
+                contributed[design_src[did].key].add("material")
+    if "roles" not in locked:
+        roles = []
+        for m in sorted(members, key=lambda m: (global_rank(m.source), m.key)):
+            for role in m.structure.get("roles") or []:
+                if role not in roles:
+                    roles.append(role)
+                    contributed[m.key].add("roles")
+        rec["roles"] = roles
     v, s = pick("height_m", members, record_height)
     set_field("height_m", v, s)
     status, status_src = pick("status", members, record_status)
@@ -1943,7 +2015,8 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
     tower.source_status = (status, status_src.source if status_src else None)
     # A note on the status from a name ("(likely gone)", "(unknown)"), shown with the status.
     if "status" not in locked:
-        note, note_src = pick("status", members, lambda m: (m.status_info or {}).get("note") if not (m.status_info or {}).get("access") else None)
+        note, note_src = pick("status", members, lambda m: ((m.status_info or {}).get("note") if not (m.status_info or {}).get("access") else None)
+                              or m.structure.get("status_note"))
         rec["status_note"] = note
         if note_src is not None:
             contributed[note_src.key].add("status")
@@ -2202,7 +2275,8 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
         rec["sources"] = refs
 
     rec.setdefault("locked", [])
-    for k, default in (("county", None), ("elevation_m", None), ("design", None), ("height_m", None),
+    for k, default in (("county", None), ("elevation_m", None), ("material", None), ("material_from", None), ("roles", []),
+                       ("design", None), ("height_m", None),
                        ("agency", None), ("registers", []), ("events", []), ("photos", []),
                        ("links", []), ("conflicts", []), ("rental", None), ("other_names", []),
                        ("verification", "unverified"), ("ownership", "unknown")):
@@ -2300,16 +2374,24 @@ def conflicts_for(rec: dict, members: list[Rec], loc_src: Rec | None, status_src
             out.append({"field": "built", "values": values, "distance_m": None,
                         "note": "Sources give different build years. Often one counts the first lookout on the site "
                                 "and another the structure there now."})
-    # Kind, only where it decides whether the lookout is shown.
+    # Kind, only where it decides whether there was a structure at all (which map group it is in).
     kinds = {}
     for m in sorted(members, key=lambda m: (source_rank("kind", m.source), m.key)):
         k = m.raw.get("kind")
-        if k not in (None, "unknown") and m.source not in kinds:
+        if k not in (None, "unknown", "point") and m.source not in kinds:
             kinds[m.source] = k
-    hidden_kinds = {k for k in kinds.values() if k in HIDDEN_KIND_REASON}
-    if hidden_kinds and set(kinds.values()) - set(HIDDEN_KIND_REASON):
+    if set(kinds.values()) & NO_STRUCTURE and set(kinds.values()) - NO_STRUCTURE:
         out.append({"field": "kind", "values": [{"source": s, "value": k} for s, k in kinds.items()],
-                    "distance_m": None, "note": "Sources disagree on whether this was a structure or a tree/camp site."})
+                    "distance_m": None, "note": "Sources disagree on whether a tower or building stood here, or only a camp or lookout tree."})
+    # Material, when two sources name different ones in so many words.
+    mats = {}
+    for m in sorted(members, key=lambda m: (source_rank("material", m.source), m.key)):
+        v = record_material(m, rec.get("kind"))
+        if v is not None and m.source not in mats:
+            mats[m.source] = v
+    if len(set(mats.values())) > 1 and rec.get("material") in mats.values():
+        out.append({"field": "material", "values": [{"source": s, "value": v} for s, v in mats.items()],
+                    "distance_m": None, "note": "Sources name different materials. Often one describes an earlier structure."})
     return out
 
 
@@ -2332,7 +2414,7 @@ def hidden_for(rec: dict, members: list[Rec]) -> tuple[bool, str | None]:
     kind = rec.get("kind")
     if kind in HIDDEN_KIND_REASON:
         return True, HIDDEN_KIND_REASON[kind]
-    structural = any(m.raw.get("kind") not in (None, "unknown", "tree", "camp") for m in members if m.source != "ffla")
+    structural = any(m.raw.get("kind") not in (None, "unknown", *NO_STRUCTURE) for m in members if m.source != "ffla")
     ffla = [m for m in members if m.source == "ffla"]
     for m in ffla:
         st = str(m.raw.get("status_raw") or "").strip().lower()
@@ -2341,10 +2423,6 @@ def hidden_for(rec: dict, members: list[Rec]) -> tuple[bool, str | None]:
         section = str(m.extra.get("section") or "").lower()
         if section.startswith(NOT_A_LOOKOUT_SECTION) and not registered:
             return True, "Not a fire lookout (FFLA: determined not to have been used as a wildland fire lookout)"
-    if kind == "unknown" and ffla and not structural and not registered:
-        types = {str(m.raw.get("type_raw") or "").strip().lower() for m in ffla}
-        if types and types <= BARE_POINT_TYPES:
-            return True, "Lookout point with no structure: out of scope (structures only)"
     return False, None
 
 
@@ -2851,6 +2929,11 @@ def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, 
             match_by_source[mem.source][mem.match] += 1
     for rec in m.unplaced:
         match_by_source[rec.source]["unplaced"] += 1
+    # Type/status wording with no deliberate mapping in structure.py (test_structure fails on these).
+    unmapped: dict[str, Counter] = defaultdict(Counter)
+    for rec in [mem for t, _ in resolved for mem in t.members] + list(m.unplaced):
+        for field_, value in rec.structure.get("unmapped") or []:
+            unmapped[rec.source][f"{field_}: {value}"] += 1
 
     def counts(rs: list[dict], key: str) -> dict:
         return dict(sorted(Counter(r.get(key) for r in rs).items(), key=lambda kv: (-kv[1], str(kv[0]))))
@@ -2866,6 +2949,9 @@ def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, 
             "hidden_by_reason": counts(hidden, "hidden_reason"),
             "visible_by_status": counts(visible, "status"),
             "visible_by_kind": counts(visible, "kind"),
+            "visible_with_no_structure": sum(1 for r in visible if r.get("kind") in NO_STRUCTURE),
+            "visible_by_material": counts(visible, "material"),
+            "visible_by_material_from": counts(visible, "material_from"),
             "visible_by_region": dict(sorted(Counter(r.get("region") for r in visible).items())),
             "visible_by_verification": counts(visible, "verification"),
             "multi_source_towers": multi,
@@ -2906,6 +2992,7 @@ def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, 
             for t, r in resolved for mem in t.members if mem.bad_coords == "outside_state"],
         "relocations": relocations or [],
         "rental_hints_without_ridb": rental_hints,
+        "unmapped_structure_values": {s_: dict(c.most_common()) for s_, c in sorted(unmapped.items())},
     }
 
 
