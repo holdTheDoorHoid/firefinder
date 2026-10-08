@@ -96,7 +96,9 @@ class CuratedData(unittest.TestCase):
 class MergeFamily(unittest.TestCase):
     def test_nwmt_projects_is_a_registered_association(self):
         self.assertIn("nwmt_projects", M.ASSOCIATION_SOURCES)
-        self.assertEqual(M.PRECEDENCE["events"][-1], "nwmt_projects")
+        # association sources rank after every register and list, in the order ASSOCIATION_SOURCES gives
+        self.assertIn("nwmt_projects", M.PRECEDENCE["events"])
+        self.assertEqual(M.PRECEDENCE["events"][-len(M.ASSOCIATION_SOURCES):], M.ASSOCIATION_SOURCES)
         self.assertEqual(M.LOCATION_LINEAGE["nwmt_projects"], "registers")
 
 

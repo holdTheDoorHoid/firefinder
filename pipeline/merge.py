@@ -171,7 +171,12 @@ LOCATION_LINEAGE = {"nhlr": "registers", "fflos": "registers", "ffla": "register
 # gives its page a labelled "association" link on the tower. Its events join the tower's timeline
 # with the report that gives them as their source.
 ASSOCIATION_FAMILY = "association_projects"
-ASSOCIATION_SOURCES: list[str] = ["nwmt_projects"]
+ASSOCIATION_SOURCES: list[str] = [
+    "nwmt_projects",
+    # the West and the Rockies (agent chapters-west)
+    "sand_mountain", "mountaineers_everett", "snoqualmie_lookouts", "buck_rock", "anffla", "scmf_lookouts",
+    "ffla_sdrc", "ffla_monterey", "hi_mountain", "mvffla", "historicorps_west", "siskiyou_mountain_club",
+]
 # Fields an association supplies (the rest -- registers, rental, photos, access -- it does not).
 ASSOCIATION_FIELDS = ("name", "location", "status", "kind", "county", "elevation_m", "built", "design",
                       "height_m", "agency", "ownership", "staffing", "events")
