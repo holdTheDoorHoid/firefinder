@@ -17,7 +17,7 @@
  */
 import { formatCount } from '../lib/format.ts';
 import { html, raw, safeUrl, type SafeHtml } from '../lib/html.ts';
-import { fillFor, markerSvg, shapeFor } from '../lib/icons.ts';
+import { fillFor, markerSprite, markerUse, shapeFor } from '../lib/icons.ts';
 import type { Design, DesignGroup, DesignPlan, DesignReference, DesignSource, DesignTower, DesignsFile } from '../lib/types.ts';
 import { regionName, statusWording } from '../lib/vocab.ts';
 import { schematicSvg } from './schematics.ts';
@@ -32,7 +32,9 @@ export interface DesignsExtras {
   toc?: [string, string][];
 }
 
-const EXT = raw('<svg class="ext-icon" width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M9 2h5v5M14 2 7.5 8.5M12 9.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+/** The "opens another site" icon, drawn once in the page's sprite (EXT_SYMBOL) and referenced from every external link. */
+const EXT = raw('<svg class="ext-icon" aria-hidden="true"><use href="#ff-ext"/></svg>');
+const EXT_SYMBOL = '<symbol id="ff-ext" viewBox="0 0 16 16"><path d="M9 2h5v5M14 2 7.5 8.5M12 9.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>';
 
 /** Lists longer than this start folded. */
 const OPEN_UP_TO = 12;
@@ -92,7 +94,7 @@ function statusSummary(by: Record<string, number>): string {
 function towerItem(t: DesignTower, ctx: DesignsContext): SafeHtml {
   if (!/^[a-z]{2}-[a-z0-9]{1,3}-[a-z0-9-]+$/.test(t.i)) return html``;
   const st = statusWording(t.s);
-  return html`<li><a href="${ctx.base}t/${t.i}/">${raw(markerSvg(shapeFor(t.k), fillFor(t.s), { size: 16, className: 'marker-icon' }))}<span class="dt-name">${t.n}</span></a> <span class="dt-status">${st.label}</span>${t.m?.length ? html` <span class="dt-model">${t.m.join(', ')}</span>` : ''}${t.w ? html`<span class="dt-words">Recorded as: “${t.w}”</span>` : ''}</li>`;
+  return html`<li><a href="${ctx.base}t/${t.i}/">${raw(markerUse(shapeFor(t.k), fillFor(t.s)))}${t.n}</a> <span class="dt-status">${st.label}</span>${t.m?.length ? html` <span class="dt-model">${t.m.join(', ')}</span>` : ''}${t.w ? html`<span class="dt-words">Recorded as: “${t.w}”</span>` : ''}</li>`;
 }
 
 function byState(towers: DesignTower[], ctx: DesignsContext): SafeHtml {
@@ -309,5 +311,5 @@ export function designsMain(file: DesignsFile, ctx: DesignsContext, extras: Desi
       )}
     </section>`,
   );
-  return html`${designsCoverage(file)}${designsToc(file, extras)}${sections}`;
+  return html`${designsCoverage(file)}${designsToc(file, extras)}${raw(markerSprite(file.designs.flatMap((d) => (d.towers ?? []).map((t) => [shapeFor(t.k), fillFor(t.s)] as const)), EXT_SYMBOL))}${sections}`;
 }

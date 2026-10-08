@@ -692,6 +692,12 @@ Friends of Sterling Forest's domain has been hijacked for spam; New Hampshire's 
     and other reference documents FFLA lists beside the plans), which are not designs. The page
     has three placeholders filled at prerender: `<!--ff:designs-->` (`designsMain`),
     `<!--ff:structures-->` (`structuresSection`) and `<!--ff:equipment-->` (`designsEnd`).
+    **Weight**: the page lists some 2,600 lookouts, so its markers are drawn once, in a hidden
+    SVG sprite at the top of `designsMain` (`markerSprite` in `lib/icons.ts`, painted by the same
+    `--mk-*` theme tokens), and each entry only points at one (`markerUse`); the "opens another
+    site" icon works the same way. That took `/designs/` from about 2.0 MB to 0.9 MB of HTML
+    (147 KB to 120 KB gzipped) with no visible change. The marker stays decorative
+    (`aria-hidden`): each entry's status is always written out beside the name.
   - **Tower material**: each design's `material` is what the merge's tower `material` falls back
     to (`structure.design_material`: a tower design gives a tower's material, a cab or house only a
     building's), with the design names found in prose included (`data/design_mentions.json`,

@@ -53,7 +53,8 @@
 .dt-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 2px 18px; }
 .dt-list li { padding: 3px 0; font-size: 0.94rem; }
 .dt-list a { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
-.dt-list .marker-icon { flex: none; }
+/* The markers are <use> references to the sprite at the top of the page, so they need a size. */
+.dt-list svg { flex: none; width: 16px; height: 16px; }
 .dt-status, .dt-model { font-size: 0.8rem; color: var(--muted); }
 .dt-words { display: block; font-size: 0.8rem; color: var(--muted); margin-left: 22px; line-height: 1.4; }
 .design-sources { margin: 0; padding-left: 1.2em; font-size: 0.92rem; }
