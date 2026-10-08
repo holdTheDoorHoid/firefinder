@@ -53,7 +53,7 @@ Cache raw responses under `data/raw/` (git-ignored) so nothing is fetched twice.
 | **FFLA resources** | `firelookout.org/resources/…`: *Lookout Rentals* (88 rentals by state, each with its booking link and any closure or manager note: the recreation.gov ones and the state-park and private ones; source `ffla_rentals`, `pipeline/regional/ffla_rentals.py`), *Lookout Types and Historic Plans* (for the designs guide), *Historical Reference Documents*, *Staffing / Volunteer Opportunities* | HTML | Facts + links |
 | **Association project reports** (2026-10-08) | Year-by-year reports of the work lookout associations do on particular lookouts, one source per association, one shared record shape (3.7). First: the Northwest Montana Lookout Association, nwmt-ffla.org: project posts 2025-26, "Completed Projects" PDFs 2014-24 (print-outs of its old website) and the yearly newsletters, 37 lookouts in Glacier NP, the Flathead and Kootenai NFs and Montana DNRC, about 180 dated restoration, repair and assessment events | WordPress posts, PDFs (pdftotext) | No licence stated; facts only, notes in our words, every event linked to its report |
 | **Western association project reports** (2026-10-08) | Fifteen more sources in the same family (3.7) for the West and the Rockies: the FFLA chapter and restoration-grant reports 2003-2025 (212 PDFs from the AZ, CA, CO-UT, ID, NM, OR, WA and WY chapters; `ffla_west_reports`, 248 lookouts, 491 events), the Sand Mountain Society (OR), Mountaineers Everett (WA), Snoqualmie Fire Lookouts, Methow Valley FFLA, Buck Rock Foundation, Angeles NF FLA, Southern California Mountains Foundation, FFLA San Diego-Riverside, Monterey and California South, Hi Mountain Lookout Project, Siskiyou Mountain Club, HistoriCorps and the Green Mountain Lookout story (Washington Trust, WTA). 308 lookouts, 680 dated events in all; survey in `docs/sources/associations_west.md` | WordPress/Squarespace/Wix pages, PDFs (pdftotext) | No licence stated; facts only, notes in our words, every event linked to its page or PDF |
-| **Eastern association projects** (2026-10-08) | The same shape for the East, the South and the Midwest: the FFLA New York State Chapter's monthly newsletters 2016-2026 (121 issues, 75 NY towers), ten single-tower "Friends of" groups with dated logs or newsletters (St. Regis, Hurricane, Mount Arab, Azure, Bald/Rondaxe, Bramley, Stillwater, Kent Conservation Foundation for Nimham, Friends of the Smokies for Mount Cammerer), and the FFLA's own yearly chapter reports 2003-2025 (the only written record of the chapters that otherwise exist on Facebook). Survey of every group considered, with why the others were not read: `docs/sources/associations_east.md` | WordPress and hand-made pages, PDFs (pdftotext) | No licence stated; facts only, notes in our words, every event linked to its report |
+| **Eastern association projects** (2026-10-08) | The same shape for the East, the South and the Midwest: the FFLA New York State Chapter's monthly newsletters 2016-2026 (121 issues, 75 NY towers, 227 events), nine single-tower "Friends of" and similar groups with dated logs or newsletters (St. Regis, Hurricane, Mount Arab, Azure, Bald/Rondaxe, Bramley, Stillwater, the Kent Conservation Foundation for Nimham, Friends of the Smokies for Mount Cammerer), and the FFLA's own yearly chapter and restoration-grant reports 2003-2025 for the eastern chapters (236 PDFs, 122 lookouts, 217 events; the only written record of the chapters that otherwise exist on Facebook). Survey of every group considered, with why the others were not read: `docs/sources/associations_east.md` | WordPress and hand-made pages, PDFs (pdftotext) | No licence stated; facts only, notes in our words, every event linked to its report |
 | Later | USGS historical topos (public domain, `ngmdb.usgs.gov/arcgis/rest/services/topoview/ustOverlay(Auto)/MapServer`), NRHP NPS dataset, Library of Congress HABS/HAER (measured drawings, public domain), Forest History Society, state forestry lists, newspapers | — | — |
 
 ---
@@ -542,6 +542,26 @@ ligatures, so names are compared in a folded form (`_assoc_site.fold`). Image-on
 Sierra-Nevada 2017-2019, Arizona-New Mexico 2004, Oregon 2004) were read from page images and are not
 text-checked; the California Sierra-Nevada 2016 scan holds no project facts. HistoriCorps pages are
 announcements of planned work, so those events say "scheduled".
+
+**Eastern sources** (agent chapters-east, 2026-10-08; the survey with every group, its robots.txt and what it
+holds is `docs/sources/associations_east.md`). Eleven sources, one module each in `pipeline/regional/`, on the same
+shared driver `_assoc_site.py` (`_assoc_east.doc()` only works out PDF or page from the URL): 206 lookout records on 163
+towers, 514 dated events, every record joined to the tower it names. `nysffla_projects` is the New York State
+Chapter's monthly newsletters (2016 to July 2026, 121 issues) read by agents into records (tower, year, event, a
+note in our words, a verbatim run of the issue as evidence), then curated by hand and re-checked against the
+issue's text by the driver (75 towers, 227 events; undated work, plans, trail and hunting closures and towers outside
+New York left out; a tower's observer's cabin is filed as `other`, never as the tower's own build, removal or loss).
+Nine more are single-tower groups with a log or yearly newsletters, read by hand: `st_regis_friends`,
+`hurricane_friends`, `mt_arab_friends` (robots.txt `Crawl-delay: 10`, which the module honours), `azure_mountain_friends`,
+`bald_mountain_friends`, `bramley_friends`, `stillwater_friends`, `kent_conservation_foundation` and `smokies_friends`
+(Mount Cammerer; its 2023 repairs are cited to Smoky Mountain News because the group's own page names no tower).
+`ffla_east_reports` is the FFLA's yearly chapter and restoration-grant reports for the eastern, southern and
+midwestern chapters (236 PDFs, 2003 to 2025, six reading batches; 122 lookouts, 217 events), filtered by the same rules
+as `ffla_west_reports`: no register dates (no `nhlr_registered`), no plans, bare visits, closures without a start
+year or status events with an approximate year; grants awarded are `other` ("FFLA restoration grant awarded
+for ..."). Not read: image-only PDFs (Pennsylvania 2004, 2005, 2008 and 2009, Mount Arab 2010, Azure 2005), garbled ones (New
+Hampshire 2024, Mount Arab 2013 and 2016), and JavaScript-only group sites (Poke-O-Moonshine, Hadley, Stissing).
+Friends of Sterling Forest's domain has been hijacked for spam; New Hampshire's state fire-tower page answers 403.
 
 ---
 
