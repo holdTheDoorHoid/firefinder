@@ -1,6 +1,7 @@
 {
   "id": "us-ca-mount-diablo",
   "name": "Mount Diablo Lookout",
+  "summary": "A CCC-built sandstone summit building (work began 1938, finished 1941-42) with a lookout floor now used for radio gear; the museum draws visitors.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,7 +17,7 @@
   "material": "stone",
   "material_from": "ffla",
   "roles": [],
-  "design": null,
+  "design": "Sandstone summit building with viewing deck, museum space, a fire lookout floor and a rotating aircraft beacon",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,34 +29,78 @@
       "url": "http://nhlr.org/lookouts/us/ca/mount-diablo-lookout/"
     }
   ],
-  "agency": "California Department of Parks and Recreation",
+  "agency": "California Department of Parks and Recreation (Mount Diablo State Park)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The summit museum and visitor center is for visitors; the lookout floor holds radio repeater equipment and is not accessible."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "Visitors head to the summit museum for the view, and the park road passes CCC-built picnic sites on the way to the summit. The sources give no current hours."
   },
   "rental": null,
   "events": [
     {
+      "year": 1921,
+      "event": "other",
+      "note": "Mount Diablo became a park",
+      "from": "research",
+      "source_url": "https://www.mdia.org/articles/mount-diablo-summit-building"
+    },
+    {
+      "year": 1923,
+      "event": "other",
+      "note": "A Berkeley councilman's proposal, reported December 9, 1923, that the peak serve as a fire lookout station for Central California",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mt-diablo.html"
+    },
+    {
+      "year": 1926,
+      "event": "other",
+      "note": "A State Forester letter, reported December 22, 1926, suggested state help for a summit fire lookout",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mt-diablo.html"
+    },
+    {
+      "year": 1931,
+      "event": "fire",
+      "note": "A fire on the south slope nearly destroyed a lookout station on the peak, per a July 28, 1931 newspaper excerpt; the station is not otherwise described",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mt-diablo.html"
+    },
+    {
       "year": 1938,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "CCC began work on the summit building (the register's build year)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/mount-diablo-lookout/"
+    },
+    {
+      "year": 1941,
+      "event": "built",
+      "note": "Lookout tower portion of the summit building completed, per state parks",
+      "from": "research",
+      "source_url": "https://www.parks.ca.gov/?page_id=25059"
+    },
+    {
+      "year": 1942,
+      "event": "built",
+      "note": "Rest of the summit building finished, per state parks",
+      "from": "research",
+      "source_url": "https://www.parks.ca.gov/?page_id=25059"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 1, 2019",
-      "from": "nhlr"
+      "note": "Registered August 1, 2019, nominated by Mike Guerin",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/mount-diablo-lookout/"
     }
   ],
   "photos": [
@@ -127,6 +172,21 @@
       "kind": "register"
     },
     {
+      "label": "Mount Diablo Summit Building (Mount Diablo Interpretive Association)",
+      "url": "https://www.mdia.org/articles/mount-diablo-summit-building",
+      "kind": "reference"
+    },
+    {
+      "label": "Mount Diablo CCC Heritage Adventure (California State Parks)",
+      "url": "https://www.parks.ca.gov/?page_id=25059",
+      "kind": "reference"
+    },
+    {
+      "label": "Mount Diablo State Park CCC Features (California State Parks)",
+      "url": "https://ohp.parks.ca.gov/?page_id=24886",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -167,6 +227,21 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:mt-diablo",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-mount-diablo",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -186,7 +261,13 @@
       "note": "Sources name different materials. Often one describes an earlier structure."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

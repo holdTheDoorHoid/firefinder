@@ -1,6 +1,7 @@
 {
   "id": "us-ca-cuyama-peak",
   "name": "Cuyama Peak Lookout",
+  "summary": "A 1934 modified L-4 lookout in the Los Padres National Forest on a 20-foot steel tower; the cab has collapsed onto the platform, and sources differ on the date.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -18,7 +19,7 @@
   "roles": [
     "aws"
   ],
-  "design": null,
+  "design": "Modified L-4 cab atop a 20-foot steel H-braced tower",
   "height_m": null,
   "status": "standing",
   "status_note": "The tower still stands, but its cab is gone (FFLA).",
@@ -30,11 +31,11 @@
       "url": "http://nhlr.org/lookouts/us/ca/cuyama-peak-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Los Padres National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "A maintained dirt road reaches the top; a blog says it is not advised for passenger cars. The collapsed cab is not a place to climb."
   },
   "staffing": {
     "status": "unknown",
@@ -42,22 +43,53 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "A maintained dirt road reaches the top; the blog advises against passenger cars."
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Modified L-4 cab on a 20-foot steel H-braced tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/cuyama-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/cuyama-peak-lookout/",
+        "https://www.craigrcarey.net/2011/08/lookout-cuyama-peak/"
+      ]
+    },
+    {
+      "year": 1935,
+      "event": "other",
+      "note": "Telephone line to the peak completed in January 1935",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/cuyama-peak.html"
+    },
+    {
+      "year": 1939,
+      "event": "staffed",
+      "note": "Lookout ordered open for the season after lightning storms; the first lookout opened that season",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/cuyama-peak.html"
     },
     {
       "year": 1998,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 10, 1998",
-      "from": "nhlr"
+      "note": "NHLR US 286, CA 20; registered October 10, 1998",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/cuyama-peak-lookout/"
+    },
+    {
+      "year": 2012,
+      "event": "other",
+      "note": "Cab failed structurally and collapsed, per the California Lookouts history page (December 2012); a 2011 blog post already calls the cab collapsed",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/cuyama-peak.html",
+      "source_urls": [
+        "https://californialookouts.weebly.com/cuyama-peak.html",
+        "https://www.craigrcarey.net/2011/08/lookout-cuyama-peak/"
+      ]
     }
   ],
   "photos": [
@@ -213,6 +245,21 @@
       "kind": "register"
     },
     {
+      "label": "Lookout! No. 6: Cuyama Peak (Craig R. Carey (craigrcarey.net))",
+      "url": "https://www.craigrcarey.net/2011/08/lookout-cuyama-peak/",
+      "kind": "reference"
+    },
+    {
+      "label": "What's at Stake (Los Padres ForestWatch)",
+      "url": "https://forestwatch.org/news/whats-at-stake/",
+      "kind": "reference"
+    },
+    {
+      "label": "California Lookouts by County (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/ca/ca-co/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -257,10 +304,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-cuyama-peak",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "us-az-moqui",
   "name": "Moqui Lookout",
+  "summary": "An 83-ft metal tower with a CL-100 cab on the Coconino National Forest, built in 1952 to replace a 1930 Aermotor tower; listed on the NRHP in 1988 as a cabin.",
   "other_names": [],
   "country": "US",
   "region": "AZ",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "83-ft metal tower with 14x14 ft CL-100 live-in cab and catwalk (1952), replacing a 1930 Aermotor fire tower; Wikipedia calls the structure a groundhouse and fire lookout",
+  "height_m": 25.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -46,16 +47,61 @@
   "rental": null,
   "events": [
     {
+      "year": 1930,
+      "event": "built",
+      "note": "Aermotor fire tower built on the site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/moqui-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/moqui-lookout/",
+        "https://en.wikipedia.org/wiki/Moqui_Lookout_Cabin"
+      ]
+    },
+    {
       "year": 1952,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
     },
     {
+      "year": 1952,
+      "event": "replaced",
+      "note": "83-ft metal tower with 14x14 ft CL-100 live-in cab and catwalk built to replace the 1930 Aermotor tower; Wikipedia gives the same dates",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/moqui-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/moqui-lookout/",
+        "https://en.wikipedia.org/wiki/Moqui_Lookout_Cabin"
+      ]
+    },
+    {
+      "year": 1960,
+      "event": "staffed",
+      "note": "Per a comment on a 2014 visit report, the author's parents were lookouts on the tower during the 1960 and 1961 fire seasons",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/moqui-lookout/"
+    },
+    {
+      "year": 1988,
+      "event": "nrhp_listed",
+      "note": "Listed on the National Register of Historic Places as 'Moqui Lookout Cabin' (NRIS 87002457); period of significance 1925 to 1949, significant year 1932, which do not match the 1952 tower",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002457",
+      "source_urls": [
+        "https://npgallery.nps.gov/AssetDetail/NRIS/87002457",
+        "https://treealive.com/nr/87002457"
+      ]
+    },
+    {
       "year": 2006,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 15, 2006",
-      "from": "nhlr"
+      "note": "Registered March 15, 2006 on the National Historic Lookout Register",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/moqui-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/moqui-lookout/",
+        "https://en.wikipedia.org/wiki/Moqui_Lookout_Cabin"
+      ]
     }
   ],
   "photos": [
@@ -89,6 +135,21 @@
       "label": "NHLR register entry US 678 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/az/moqui-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Moqui Lookout Cabin (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Moqui_Lookout_Cabin",
+      "kind": "reference"
+    },
+    {
+      "label": "Moqui Lookout Cabin, National Register of Historic Places record NRIS 87002457 (NPGallery (National Park Service))",
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/87002457",
+      "kind": "reference"
+    },
+    {
+      "label": "Moqui Lookout Cabin, Blue Ridge, Arizona (TreeAlive)",
+      "url": "https://treealive.com/nr/87002457",
+      "kind": "reference"
     },
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
@@ -136,10 +197,29 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-moqui",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

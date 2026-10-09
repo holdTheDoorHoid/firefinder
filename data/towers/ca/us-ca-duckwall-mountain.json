@@ -1,6 +1,7 @@
 {
   "id": "us-ca-duckwall-mountain",
   "name": "Duckwall Mountain Lookout",
+  "summary": "1935 CCC-built 100-ft steel fire tower in the Stanislaus NF; a 2019 NHLR visit calls it abandoned and unsafe, gated; FFLA still lists it standing.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "100-foot steel tower with a 7 by 7 foot cab; Aeromotor design per Peakbagging.com",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,31 +32,51 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Access is gated; NHLR says only Forest Service staff and repeater-site representatives are allowed"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2019"
   },
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Gated; the 2019 visit report calls the tower unsafe. The sources read describe no public route."
   },
   "rental": null,
   "events": [
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by CCC workers; NHLR and Peakbagging.com both date it to 1935",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/duckwall-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/duckwall-mountain-lookout/",
+        "http://www.peakbagging.com/CALookoutPhotos/Duckwall.html"
+      ]
+    },
+    {
+      "year": 1951,
+      "event": "replaced",
+      "note": "Cinder block BC-2 residence built to replace a wood residence that burned in a wildland fire; the date of that fire is not given",
+      "from": "research",
+      "source_url": "http://www.peakbagging.com/CALookoutPhotos/Duckwall.html"
     },
     {
       "year": 2017,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 24, 2017",
-      "from": "nhlr"
+      "note": "Registered April 24, 2017 as US 1190, CA 121",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/duckwall-mountain-lookout/"
+    },
+    {
+      "year": 2019,
+      "event": "assessed",
+      "note": "Register visit report dated January 4, 2019: abandoned and unsafe, no longer used for fire detection, residence vandalized and burned",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/duckwall-mountain-lookout/"
     }
   ],
   "photos": [
@@ -103,6 +124,11 @@
       "kind": "register"
     },
     {
+      "label": "Duckwall Mountain Lookout, California (Peakbagging.com)",
+      "url": "http://www.peakbagging.com/CALookoutPhotos/Duckwall.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -147,10 +173,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-duckwall-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

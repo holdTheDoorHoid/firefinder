@@ -1,0 +1,16 @@
+The McClellanville Lookout Tower stands on Pinckney Street in the town of McClellanville, in Charleston County, South Carolina.[^1][^2] The Town's request for qualifications gives its address as 401 Pinckney Street and places it beside The Village Museum.[^2] The National Historic Lookout Register lists its elevation as 25 feet (8 meters).[^1]
+
+The sources do not agree on who built the tower or when. The Register says the U.S. Fish & Wildlife Service erected it in 1940.[^1] The Town's 2025 request for qualifications dates its construction to the 1930s, when it was built for the U.S. Biological Survey to track migrating birds in the Cape Romain National Wildlife Refuge.[^2] The tower is a 100-foot steel Aermotor with a cab about 7 feet square.[^1][^2]
+
+Later the U.S. Forest Service used it to watch for wildfires and to observe wildlife.[^2] The Register says the South Carolina Forestry Commission staffed it "until recent years," but it gives no end date.[^1]
+
+When Hurricane Hugo struck in 1989, the tower came through the storm while the forests around it took heavy damage.[^1][^2] On July 1, 1995, the Register accepted the tower, which it calls the first South Carolina lookout entered on the register.[^1]
+
+The Town of McClellanville now owns the tower, and it also owns the museum parcel next to it.[^1][^3] The Register notes that the Town was forming a nonprofit to restore the tower and run it as a museum and interpretive site.[^1] In July 2025 the Forest Fire Lookout Association gave the Town a $500 restoration grant for a comprehensive condition assessment. The grant helped bring in matching money for a South Carolina State Historic Preservation Office grant.[^4] The Town's FAQ says that office had already found the property eligible in a comprehensive survey, and that it believes the tower and the museum building could be listed together on one nomination.[^3] The Town's request for qualifications asks for bid-ready plans for the most urgent stabilization repairs, which must meet the Secretary of the Interior's standards and be reviewed by the South Carolina Department of Archives and History.[^2]
+
+Today the sources read do not say whether the public may visit or climb the tower, and our record lists its access as unknown. The 2025 request set an anticipated date of June 1, 2026 for final plans, but the sources read do not say whether they were finished.[^2] Anyone who wants to see it should contact the Town of McClellanville first and should not climb it.
+
+[^1]: McClellanville Lookout Tower, National Historic Lookout Register, http://nhlr.org/lookouts/us/sc/mcclellanville-lookout-tower/ (accessed 2026-10-08).
+[^2]: Request for Qualifications: Plans/Specifications for Stabilization of McClellanville Lookout Tower, Town of McClellanville, https://www.mcclellanvillesc.org/wp-content/uploads/2025/09/9.05.25-RFQ-McClellanville-Lookout-Tower.pdf (accessed 2026-10-08).
+[^3]: Lookout Tower FAQs, Town of McClellanville, https://www.mcclellanvillesc.org/wp-content/uploads/2025/09/Lookout-Tower-FAQs-9.15.25.pdf (accessed 2026-10-08).
+[^4]: 2025 Restoration Grant Annual Report, Forest Fire Lookout Association, https://firelookout.org/wp-content/uploads/2026/01/cr-rest-2025.pdf (accessed 2026-10-08).

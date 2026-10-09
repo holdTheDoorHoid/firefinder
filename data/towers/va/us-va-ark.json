@@ -1,6 +1,7 @@
 {
   "id": "us-va-ark",
   "name": "Ark Fire Tower",
+  "summary": "Gloucester County Aermotor tower at Ark, under construction in 1933: a 2015 scrap auction listing, still standing in 2023; height sources disagree (100 or 125 ft).",
   "other_names": [
     "Ark (Gloucester)"
   ],
@@ -18,7 +19,7 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": "Aermotor",
+  "design": "Four-legged steel Aermotor tower with a glass-enclosed cab",
   "height_m": 30.5,
   "status": "standing",
   "status_note": null,
@@ -33,25 +34,61 @@
   "agency": "Virginia Department of Forestry",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "A chain-link fence surrounds the tower, and neither an NHLR sign nor directions are posted (visit report, April 19, 2023). No source states a public access rule."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2023-04-19"
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "The April 19, 2023 visit report says the steps are too poor to be regularly climbed."
   },
   "rental": null,
   "events": [
     {
+      "year": 1933,
+      "event": "other",
+      "note": "Under construction near the Ark post office, per a Daily Press report of October 7, 1933 quoted by Weebly. Not a completion date.",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/ark.html"
+    },
+    {
+      "year": 1942,
+      "event": "other",
+      "note": "Coast and Geodetic Survey station description: the Ark Lookout Tower, overall height about 125 feet, operated by the Virginia Forest Service",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=GV4409"
+    },
+    {
+      "year": 2015,
+      "event": "other",
+      "note": "Placed up for bid at government auction, listed as scrap condition (Weebly, August 2015). The sources do not record a sale.",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/ark.html"
+    },
+    {
+      "year": 2019,
+      "event": "assessed",
+      "note": "Register: still standing but disused as a fire tower; two radio antennas on top",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/ark-fire-tower/"
+    },
+    {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 24, 2020",
-      "from": "nhlr"
+      "note": "Registered March 24, 2020 as US 1408, VA 41",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/ark-fire-tower/"
+    },
+    {
+      "year": 2023,
+      "event": "assessed",
+      "note": "Register visit April 19, 2023: frame and cab intact; glass not intact; some upper steps and landings missing and sagging; not staffed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/ark-fire-tower/"
     }
   ],
   "photos": [
@@ -85,6 +122,11 @@
       "label": "NHLR register entry US 1408 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/va/ark-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Station GV4409, Ark Lookout Tower (National Geodetic Survey)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=GV4409",
+      "kind": "reference"
     },
     {
       "label": "FFLA Virginia lookout list (firelookout.org)",
@@ -132,10 +174,33 @@
         "agency",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-va-ark",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

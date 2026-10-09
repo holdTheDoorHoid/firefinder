@@ -1,6 +1,7 @@
 {
   "id": "us-pa-mauch-chunk",
   "name": "Mauch Chunk Fire Tower",
+  "summary": "NHLR lists a Mauch Chunk tower in Weiser State Forest, Carbon County, built by CCC crews in 1936. Forest Lookouts describes a 1925 tower moved to Bear Mountain above Mauch Chunk; the sources do not link it to the 1936 tower. Current condition unverified.",
   "other_names": [
     "Bear Mountain"
   ],
@@ -18,7 +19,7 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": "Aermotor",
+  "design": "Aermotor steel fire tower",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -48,16 +49,43 @@
   "rental": null,
   "events": [
     {
+      "year": 1925,
+      "event": "relocated",
+      "note": "Christman's fire tower moved to a higher point on Bear Mountain; a July 1925 item describes a 60-foot steel tower being erected for the district on a mountain locally known as Jew's Head, without naming Bear Mountain",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/christman.html",
+      "source_urls": [
+        "https://easternuslookouts.weebly.com/christman.html",
+        "https://easternuslookouts.weebly.com/bear-mountain1.html"
+      ]
+    },
+    {
       "year": 1936,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register says built by CCC crews; sources do not say whether it replaced the 1925 tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/mauch-chunk-fire-tower/"
+    },
+    {
+      "year": 1940,
+      "event": "staffed",
+      "note": "S. Aubrey Pry named as towerman at the Mauch Chunk fire tower; the page does not say which site",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/mauch-chunk.html"
+    },
+    {
+      "year": 1943,
+      "event": "fire",
+      "note": "Forest fire surrounded the fire tower while Eleanor Steidle was manning it; site not stated",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/mauch-chunk.html"
     },
     {
       "year": 2018,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 15, 2018",
-      "from": "nhlr"
+      "note": "Registered January 15, 2018; nominated by Wyatt Cassidy",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/mauch-chunk-fire-tower/"
     }
   ],
   "photos": [
@@ -91,6 +119,16 @@
       "label": "NHLR register entry US 1265 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/pa/mauch-chunk-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Christman (Forest Lookouts (easternuslookouts.weebly.com))",
+      "url": "https://easternuslookouts.weebly.com/christman.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Mauch Chunk (Forest Lookouts (easternuslookouts.weebly.com))",
+      "url": "https://easternuslookouts.weebly.com/mauch-chunk.html",
+      "kind": "reference"
     },
     {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
@@ -137,10 +175,28 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-mauch-chunk",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

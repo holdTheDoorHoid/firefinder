@@ -1,6 +1,7 @@
 {
   "id": "us-nc-cowee-bald",
   "name": "Cowee Bald Lookout",
+  "summary": "Steel lookout on Cowee Bald in Nantahala National Forest, Jackson County, NC; sources disagree on build year and height, not regularly staffed since the 1960s, top cab normally locked.",
   "other_names": [
     "Cowee Fire Tower"
   ],
@@ -18,7 +19,7 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "Steel tower with a live-in cab with catwalk; the Register gives 40 feet and a 14-by-14-foot cab, while BusyHiker and a photo album say 30 feet",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -39,25 +40,69 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Reached over gated FR 70; gates can be locked in winter; top cab normally locked; no signage noticed at the tower in a 2020 visit report"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": false,
+    "trail_note": "Drive FR 70 from Franklin to the turnaround before the gate, then walk the gravel road about half a mile; BusyHiker calls the views from the stairs limited in one passage and decent in another, and the top cab is normally locked"
   },
   "rental": null,
   "events": [
     {
+      "year": 1933,
+      "event": "built",
+      "note": "BusyHiker says built in 1933; the Register and the photo album say 1936",
+      "from": "research",
+      "source_url": "https://www.busyhiker.com/the-cowee-bald-lookout-tower/"
+    },
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "Register: 40-foot steel tower built 1936; photo album: 30-foot tower built by CCC Company 3445 of the F-20 camp",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nc/cowee-bald-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nc/cowee-bald-lookout/",
+        "https://www.flickr.com/photos/greer82496/albums/72177720312358387/"
+      ]
+    },
+    {
+      "year": 1960,
+      "event": "staffed_last",
+      "note": "Register: not staffed on a regular basis since the 1960s; 1960 is an approximate year. The photo album says fire detection continued until the mid-1990s",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nc/cowee-bald-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nc/cowee-bald-lookout/",
+        "https://www.flickr.com/photos/greer82496/albums/72177720312358387/"
+      ]
+    },
+    {
+      "year": 1980,
+      "event": "rebuilt",
+      "note": "Register: the tower was rebuilt in 1980",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nc/cowee-bald-lookout/"
+    },
+    {
       "year": 1993,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 30, 1993",
-      "from": "nhlr"
+      "note": "Registered December 30, 1993 as US 71, NC 3; nominated by Joe Nicholson, Wayah R.D.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nc/cowee-bald-lookout/"
+    },
+    {
+      "year": 2020,
+      "event": "assessed",
+      "note": "Visit report dated September 4, 2020: tower and access road in excellent condition; no signage on the tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nc/cowee-bald-lookout/"
     }
   ],
   "photos": [
@@ -79,6 +124,16 @@
       "label": "NHLR register entry US 71 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/nc/cowee-bald-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Cowee Mountain Fire Tower (Flickr (photo album))",
+      "url": "https://www.flickr.com/photos/greer82496/albums/72177720312358387/",
+      "kind": "reference"
+    },
+    {
+      "label": "The Cowee Bald Lookout Tower (BusyHiker)",
+      "url": "https://www.busyhiker.com/the-cowee-bald-lookout-tower/",
+      "kind": "reference"
     },
     {
       "label": "Cowee Bald (tnlandforms.us (Tom Dunigan))",
@@ -125,10 +180,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nc-cowee-bald",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

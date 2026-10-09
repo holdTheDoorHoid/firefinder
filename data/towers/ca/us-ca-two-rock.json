@@ -1,6 +1,7 @@
 {
   "id": "us-ca-two-rock",
   "name": "Two Rock Lookout",
+  "summary": "Enclosed 809R-design steel tower eight miles west of Willits, built 1966 and closed in 1994; private land behind a locked gate, with fire cameras added in 2026.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "809R lookout station on an enclosed 30-ft steel tower",
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,8 +32,8 @@
   "agency": "California Department of Forestry and Fire Protection - Mendocino Unit (Cal Fire MEU)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Private land; the register says the site is 3.1 miles behind a locked gate and not open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -46,16 +47,82 @@
   "rental": null,
   "events": [
     {
+      "year": 1932,
+      "event": "built",
+      "note": "Earlier station on the same summit, described as being built in a 1932 newspaper item",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/two-rock.html"
+    },
+    {
+      "year": 1935,
+      "event": "staffed_first",
+      "note": "James Frazier named as lookout (first named lookout in the sources read)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/two-rock.html"
+    },
+    {
+      "year": 1938,
+      "event": "staffed",
+      "note": "Bert Gibson named as fire lookout",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/two-rock.html"
+    },
+    {
+      "year": 1956,
+      "event": "staffed",
+      "note": "Mrs. Russel Horn watching; lookout also served the Ground Observer Corps Skywatch program",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/two-rock.html"
+    },
+    {
       "year": 1966,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Tower built in 1966 per the 2026 news report; the 809R design is from the register",
+      "from": "research",
+      "source_url": "https://localnewsmatters.org/2026/03/10/after-decades-two-rock-lookout-tower-near-willits-will-again-have-eyes-on-the-sky/"
+    },
+    {
+      "year": 1989,
+      "event": "staffed_last",
+      "note": "Reopened with volunteers after state funding was lost; last staffed season in the sources read",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/two-rock.html"
+    },
+    {
+      "year": 1990,
+      "event": "other",
+      "note": "Not staffed that fire season because of budget cuts",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/two-rock.html"
+    },
+    {
+      "year": 1994,
+      "event": "closed",
+      "note": "Permanently closed; land and structure returned to the private owner",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/two-rock-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/two-rock-lookout/",
+        "https://localnewsmatters.org/2026/03/10/after-decades-two-rock-lookout-tower-near-willits-will-again-have-eyes-on-the-sky/"
+      ]
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: February 2, 2020",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/two-rock-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/two-rock-lookout/",
+        "https://localnewsmatters.org/2026/03/10/after-decades-two-rock-lookout-tower-near-willits-will-again-have-eyes-on-the-sky/"
+      ]
+    },
+    {
+      "year": 2026,
+      "event": "other",
+      "note": "Two wildfire early-detection cameras installed; reported active March 31, 2026",
+      "from": "research",
+      "source_url": "https://mendovoice.com/?p=821025"
     }
   ],
   "photos": [
@@ -103,6 +170,16 @@
       "kind": "register"
     },
     {
+      "label": "After decades, Two Rock Lookout tower near Willits will again have eyes on the sky (Local News Matters (localnewsmatters.org))",
+      "url": "https://localnewsmatters.org/2026/03/10/after-decades-two-rock-lookout-tower-near-willits-will-again-have-eyes-on-the-sky/",
+      "kind": "reference"
+    },
+    {
+      "label": "Wildfire lookout cameras now active west of Willits (The Mendocino Voice (mendovoice.com))",
+      "url": "https://mendovoice.com/?p=821025",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -144,10 +221,30 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:two-rock",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-two-rock",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

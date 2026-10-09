@@ -1,6 +1,7 @@
 {
   "id": "us-al-central",
   "name": "Central Lookout Tower",
+  "summary": "100-foot steel tower in Bankhead National Forest, Lawrence County, built 1929-30 and NHLR-registered 2023; a visitor kiosk is nearby, climbing access unconfirmed.",
   "other_names": [],
   "country": "US",
   "region": "AL",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "100-foot steel tower; NHLR says not an Aermotor and probably by the International Derrick Company (unconfirmed)",
   "height_m": 30.5,
   "status": "standing",
   "status_note": null,
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Visitor kiosk site near the tower; no source says whether the tower may be climbed"
   },
   "staffing": {
     "status": "unknown",
@@ -40,11 +41,29 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Kiosk near the tower on AL Highway 33, about 11.4 miles south of Moulton, per the Alabama Birding Trails guide"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1929,
+      "event": "built",
+      "note": "Newspapers describe construction in 1929 and near completion by October; NHLR gives 1930 or earlier and cites a 1930 map",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/central-lookout-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/al/central-lookout-tower/",
+        "https://easternuslookouts.weebly.com/central.html"
+      ]
+    },
+    {
+      "year": 1929,
+      "event": "staffed_first",
+      "note": "Silas Black named as keeper of the tower",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/central.html"
+    },
     {
       "year": 1930,
       "event": "built",
@@ -52,10 +71,25 @@
       "from": "nhlr"
     },
     {
+      "year": 1930,
+      "event": "other",
+      "note": "Mollie Downing climbs to the top; reported June 26, 1930",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/central.html"
+    },
+    {
+      "year": 1940,
+      "event": "staffed",
+      "note": "Frank Armor named chief observer for the Third Army aircraft-warning service during May maneuvers (planned, per April 1940 report)",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/central.html"
+    },
+    {
       "year": 2023,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 1, 2023",
-      "from": "nhlr"
+      "note": "Registered August 1, 2023",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/central-lookout-tower/"
     }
   ],
   "photos": [
@@ -235,6 +269,11 @@
       "kind": "register"
     },
     {
+      "label": "Bankhead National Forest - Central Firetower (Alabama Birding Trails)",
+      "url": "https://alabamabirdingtrails.com/sites/bankhead-national-forest-central-firetower/",
+      "kind": "reference"
+    },
+    {
       "label": "Central (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/central.html",
       "kind": "site"
@@ -279,10 +318,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-al-central",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

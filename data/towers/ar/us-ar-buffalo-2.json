@@ -1,6 +1,7 @@
 {
   "id": "us-ar-buffalo-2",
   "name": "Buffalo Tower",
+  "summary": "Ozark National Forest lookout in Newton County, Arkansas; Register gives a 1935 build, active until 1987, registered 2006. Present condition and access not confirmed.",
   "other_names": [],
   "country": "US",
   "region": "AR",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "100-foot Aermotor tower with a metal cab",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -48,14 +49,38 @@
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register gives 1935 as the build year; constructed by the U.S. Forest Service in the mid-1930s",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ar/buffalo-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ar/buffalo-tower/",
+        "https://encyclopediaofarkansas.net/media/bee-mountain-lookout-10702/"
+      ]
+    },
+    {
+      "year": 1971,
+      "event": "other",
+      "note": "Survey station described at the center base of a lookout tower about 100 feet high; the two sources name different authors for the description",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/buffalo.html",
+      "source_urls": [
+        "https://centraluslookouts.weebly.com/buffalo.html",
+        "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=FG1821"
+      ]
+    },
+    {
+      "year": 1987,
+      "event": "staffed_last",
+      "note": "Register says the tower remained active until 1987; what that activity involved is not stated",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ar/buffalo-tower/"
     },
     {
       "year": 2006,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 27, 2006",
-      "from": "nhlr"
+      "note": "Registered July 27, 2006 as US 672, AR 9; nominated by Michael A. Pfeiffer",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ar/buffalo-tower/"
     }
   ],
   "photos": [
@@ -89,6 +114,16 @@
       "label": "NHLR register entry US 672 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ar/buffalo-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Station FG1821 data sheet (National Geodetic Survey (ngs.noaa.gov))",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=FG1821",
+      "kind": "reference"
+    },
+    {
+      "label": "Buffalo Tower Lookout (Encyclopedia of Arkansas (encyclopediaofarkansas.net))",
+      "url": "https://encyclopediaofarkansas.net/media/bee-mountain-lookout-10702/",
+      "kind": "reference"
     },
     {
       "label": "Buffalo (centraluslookouts.weebly.com)",
@@ -134,10 +169,29 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ar-buffalo-2",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

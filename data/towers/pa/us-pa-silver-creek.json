@@ -1,6 +1,7 @@
 {
   "id": "us-pa-silver-creek",
   "name": "Silver Creek Fire Tower",
+  "summary": "1926 60-foot Aermotor fire tower on Broad Mountain, Blythe Township, Pennsylvania; closed by 2013 and found fenced in 2021; NHLR-registered 2004.",
   "other_names": [],
   "country": "US",
   "region": "PA",
@@ -18,7 +19,7 @@
   "roles": [
     "aws"
   ],
-  "design": "Aermotor",
+  "design": "60-foot steel Aermotor tower with 7x7 observation cab",
   "height_m": 18.3,
   "status": "standing",
   "status_note": null,
@@ -33,12 +34,12 @@
   "agency": "Pennsylvania Bureau of Forestry",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Closed by 2013 for aging and vandalism; a 2021 visitor found it fenced off. No current visiting rules documented."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2021"
   },
   "visit": {
     "climbable": null,
@@ -50,14 +51,41 @@
     {
       "year": 1926,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Erected spring 1926 per NHLR; c.1926 per Forest Lookouts, as a State Forestry Department tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/silver-creek-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/pa/silver-creek-fire-tower/",
+        "https://easternuslookouts.weebly.com/silver-creek.html"
+      ]
+    },
+    {
+      "year": 1930,
+      "event": "staffed",
+      "note": "Mrs. Warren Creasy again in charge in July 1930; had kept the tower four years",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/silver-creek.html"
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 11, 2004",
-      "from": "nhlr"
+      "note": "Registered March 11, 2004 as US 562, PA 10; nominated by Ed Pollack",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/pa/silver-creek-fire-tower/"
+    },
+    {
+      "year": 2013,
+      "event": "closed",
+      "note": "News report of August 25, 2013: closed due to aging and vandalism; upkeep short of budget and maintenance staff",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/silver-creek.html"
+    },
+    {
+      "year": 2021,
+      "event": "other",
+      "note": "July 2021 visitor: out of use and inside a fence that vandals had broken",
+      "from": "research",
+      "source_url": "https://keepyoureyespeeled.net/an-unexpected-hike-to-the-silver-creek-fire-tower-in-locust-lake-state-park/"
     }
   ],
   "photos": [
@@ -91,6 +119,11 @@
       "label": "NHLR register entry US 562 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/pa/silver-creek-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "An Unexpected Hike To The Silver Creek Fire Tower In Locust Lake State Park (Keep Your Eyes Peeled (blog, July 27, 2021))",
+      "url": "https://keepyoureyespeeled.net/an-unexpected-hike-to-the-silver-creek-fire-tower-in-locust-lake-state-park/",
+      "kind": "reference"
     },
     {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
@@ -140,10 +173,32 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-silver-creek",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

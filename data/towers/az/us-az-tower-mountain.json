@@ -1,6 +1,7 @@
 {
   "id": "us-az-tower-mountain",
   "name": "Tower Mountain Lookout",
+  "summary": "A 30-foot steel fire lookout on Tower Mountain in the Prescott National Forest, first used in 1911 and registered in 2003; the register lists it in active service.",
   "other_names": [],
   "country": "US",
   "region": "AZ",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "30-foot D-2 style Pacific Coast Steel tower with a modified L-4 cab",
   "height_m": 9.1,
   "status": "standing",
   "status_note": null,
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/az/tower-mountain-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Prescott National Forest (Bradshaw Ranger District)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Described as in active Forest Service service; no source says the cab is open to visitors."
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,49 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "A trail guide describes a forest road from Crown King to the lookout area and says almost any high-clearance vehicle can make the trip when there is no snow. Ask the Bradshaw Ranger District before visiting."
   },
   "rental": null,
   "events": [
     {
+      "year": 1911,
+      "event": "other",
+      "note": "First used as a daily patrol lookout",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/tower-mountain.html"
+    },
+    {
+      "year": 1924,
+      "event": "built",
+      "note": "Tower completed on Tower Mountain; smoke-locating apparatus not yet installed",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/tower-mountain.html"
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "Register dates the present 30-foot steel tower to 1933; a September 1933 newspaper announced new steel towers, one for Tower Mountain",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/tower-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/tower-mountain-lookout/",
+        "https://westlookouts.weebly.com/tower-mountain.html"
+      ]
+    },
+    {
+      "year": 1938,
+      "event": "staffed",
+      "note": "John F. Alpine placed on the lookout by a ranger of the Prescott National Forest",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/tower-mountain.html"
+    },
+    {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 5, 2003",
-      "from": "nhlr"
+      "note": "Registered August 5, 2003",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/tower-mountain-lookout/"
     }
   ],
   "photos": [
@@ -71,6 +105,11 @@
       "label": "NHLR register entry US 532 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/az/tower-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Towers Mtn/Del Pasco Loop (AZOFFROAD.NET)",
+      "url": "https://azoffroad.net/towers-mtndel-pasco-loop",
+      "kind": "reference"
     },
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
@@ -118,10 +157,32 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-tower-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

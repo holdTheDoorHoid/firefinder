@@ -13,16 +13,16 @@
   },
   "elevation_m": null,
   "kind": "two_story",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "L-4",
+  "height_m": 19.8,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Clearwater National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -67,6 +67,11 @@
       "label": "Lochsa Peak on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/selway-region/lochsa-peak/",
       "kind": "site"
+    },
+    {
+      "label": "Lochsa Peak on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/lochsa-peak.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -94,6 +99,18 @@
       "key": "idaho_fl:lochsa-peak:46.3102:-115.3349",
       "fields": [
         "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:lochsa-peak",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
+        "agency",
+        "ownership",
         "links"
       ]
     }

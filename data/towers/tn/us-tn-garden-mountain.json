@@ -1,6 +1,7 @@
 {
   "id": "us-tn-garden-mountain",
   "name": "Garden Mountain Fire Tower",
+  "summary": "CCC-built 1937 fire tower (also ET-12) on Holston River Mountain in Bays Mountain Park, Kingsport area; NHLR-registered 2020. Height sources conflict (60 vs 100 ft).",
   "other_names": [],
   "country": "US",
   "region": "TN",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "CCC-built fire tower with a seven-foot-square lookout shelter at the top (1953 description)",
   "height_m": 18.0,
   "status": "standing",
   "status_note": null,
@@ -37,31 +38,44 @@
   "agency": "City of Kingsport, Tennessee",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "NHLR lists the location as Bays Mountain Park; the history site places the tower on the Holston River Mountain ridge that borders the park. Visit Kingsport advertised a ranger-guided hike that goes up inside the tower. General opening rules were not confirmed."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": true,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "3.3 miles round trip; the last 8 tenths of a mile is steep with steps and switchbacks; not ADA compliant (Visit Kingsport)"
   },
   "rental": null,
   "events": [
     {
       "year": 1937,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the Civilian Conservation Corps; also called ET-12 and Garden Mountain Fire Tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/garden-mountain-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/tn/garden-mountain-fire-tower/",
+        "https://baysmountainhistory.org/fire-tower"
+      ]
+    },
+    {
+      "year": 1953,
+      "event": "staffed",
+      "note": "Lookout Govan Smith Jr. staffed the tower about five months a year; state-built cabin at its base",
+      "from": "research",
+      "source_url": "https://baysmountainhistory.org/fire-tower/fire-tower-lookout-times-news-1953"
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 24, 2020",
-      "from": "nhlr"
+      "note": "Registered March 24, 2020 as US 1401, TN 37; nominated by Don Gouge",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/garden-mountain-fire-tower/"
     }
   ],
   "photos": [
@@ -83,6 +97,21 @@
       "label": "NHLR register entry US 1401 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/tn/garden-mountain-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Bays Mountain Park Fire Tower (Bays Mountain history (baysmountainhistory.org))",
+      "url": "https://baysmountainhistory.org/fire-tower",
+      "kind": "reference"
+    },
+    {
+      "label": "Fire Lookout Has Lonely Job (Kingsport Times-News, Dec 13, 1953) (Bays Mountain history (baysmountainhistory.org))",
+      "url": "https://baysmountainhistory.org/fire-tower/fire-tower-lookout-times-news-1953",
+      "kind": "reference"
+    },
+    {
+      "label": "Bays Mountain Park Fire Tower Hike Early Arrival Experience (Visit Kingsport)",
+      "url": "https://visitkingsport.com/govconbmp/",
+      "kind": "reference"
     },
     {
       "label": "Garden Mountain (tnlandforms.us (Tom Dunigan))",
@@ -128,10 +157,31 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tn-garden-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

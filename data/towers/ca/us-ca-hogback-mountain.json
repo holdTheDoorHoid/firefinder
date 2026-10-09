@@ -1,6 +1,7 @@
 {
   "id": "us-ca-hogback-mountain",
   "name": "Hogback Mountain Lookout",
+  "summary": "Steel lookout in Shasta-Trinity NF, dated 1977 by the register; its lookout first spotted the 1992 Fountain Fire. Not on the Forest Service rental list.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "California Region 5 Plan C16, a revision of the CL-100 all steel design; the cab sits on a 9-foot brick tower",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -41,21 +42,30 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Hogback is not among the Forest Service lookouts and guard stations offered for rent. Public access to the tower is not confirmed in the sources read."
   },
   "rental": null,
   "events": [
     {
       "year": 1977,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register: the current structure was constructed in 1977. The register's wording implies an earlier structure, which the sources read do not identify.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/hogback-mountain-lookout/"
+    },
+    {
+      "year": 1992,
+      "event": "fire",
+      "note": "Fountain Fire, August 20, 1992: a lookout atop Hogback Mountain first spotted it at about 12:50 p.m., reporting smoke near a historic drinking fountain along Highway 299",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Fountain_Fire"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 26, 2019",
-      "from": "nhlr"
+      "note": "Registered October 26, 2019 as US 1345, CA 168",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/hogback-mountain-lookout/"
     }
   ],
   "photos": [
@@ -89,6 +99,21 @@
       "label": "NHLR register entry US 1345 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ca/hogback-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Fountain Fire (Wikipedia (en.wikipedia.org))",
+      "url": "https://en.wikipedia.org/wiki/Fountain_Fire",
+      "kind": "reference"
+    },
+    {
+      "label": "Cabins for Rent (Shasta-Trinity National Forest (fs.usda.gov))",
+      "url": "https://www.fs.usda.gov/r05/shasta-trinity/recreation/camping-cabins",
+      "kind": "reference"
+    },
+    {
+      "label": "California Lookouts (Standing) (Forest Fire Lookout Association (firelookout.org))",
+      "url": "https://firelookout.org/lookouts/us/ca/ca-st/",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -135,10 +160,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-hogback-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

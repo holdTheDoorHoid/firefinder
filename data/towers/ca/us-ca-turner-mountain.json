@@ -1,6 +1,7 @@
 {
   "id": "us-ca-turner-mountain",
   "name": "Turner Mountain Lookout",
+  "summary": "Lassen NF lookout: 1913 ten-foot house, 1934 Aermotor cab on a 60-ft steel tower, lookouts and a 1914 eruption report; listed standing; public visiting rules not in sources.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": 12.2,
+  "design": "Aermotor 7x7 observation cab atop a 60-foot steel tower, plus a California Region 5 Plan BC-301 ground cabin (NHLR)",
+  "height_m": 18.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -41,21 +42,94 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "No source read says whether the public may visit or climb the tower today"
   },
   "rental": null,
   "events": [
     {
+      "year": 1913,
+      "event": "built",
+      "note": "Three 10-by-10 lookout houses built on the Lassen National Forest; one for Turner or Bald Mountain",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/turner-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/turner-mountain-lookout/",
+        "https://californialookouts.weebly.com/turner-mountain.html"
+      ]
+    },
+    {
+      "year": 1914,
+      "event": "other",
+      "note": "Lookout counted seventeen balls of fire as Lassen Peak erupted, per 1914 newspapers; NHLR text prints the year as 1014",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/turner-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/turner-mountain-lookout/",
+        "https://californialookouts.weebly.com/turner-mountain.html"
+      ]
+    },
+    {
+      "year": 1915,
+      "event": "modified",
+      "note": "Supervisor began installing a summit water tank, to be filled with melting snow (October 1915)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/turner-mountain.html"
+    },
+    {
+      "year": 1915,
+      "event": "staffed",
+      "note": "J.M. Stark was lookout; A.E. McDonnell had taken over by late September 1915",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/turner-mountain.html"
+    },
+    {
+      "year": 1922,
+      "event": "other",
+      "note": "The old water tank was crushed flat by heavy snow, found in summer 1922",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/turner-mountain.html"
+    },
+    {
+      "year": 1930,
+      "event": "other",
+      "note": "Crew found a spring under the rock supplying about 20 gallons a day",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/turner-mountain.html"
+    },
+    {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Aermotor 7x7 observation cab on a 60-foot steel tower constructed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/turner-mountain-lookout/"
+    },
+    {
+      "year": 1937,
+      "event": "fire",
+      "note": "Lookout Oscar Edwall spotted smoke at 1:14 a.m. on July 3; Mineral crew called out and left within a minute",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/turner-mountain.html"
+    },
+    {
+      "year": 1937,
+      "event": "modified",
+      "note": "Tower remodeled and painted in August by the lookout and an ERA foreman (Lide Barber), with new windows; the Susanville paper gives its height as 65 feet",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/turner-mountain.html"
+    },
+    {
+      "year": 2002,
+      "event": "assessed",
+      "note": "Photo caption dated July 3, 2002: calls one lookout the new and active one and labels another photo as the old tower",
+      "from": "research",
+      "source_url": "http://www.peakbagging.com/CALookoutPhotos/TurnerMtn.html"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 28, 2019",
-      "from": "nhlr"
+      "note": "Registered October 28, 2019 as US 1365, CA 188",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/turner-mountain-lookout/"
     }
   ],
   "photos": [
@@ -127,6 +201,11 @@
       "kind": "register"
     },
     {
+      "label": "Turner Mountain Lookout, California (Peakbagging (peakbagging.com))",
+      "url": "http://www.peakbagging.com/CALookoutPhotos/TurnerMtn.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -172,10 +251,31 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-turner-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

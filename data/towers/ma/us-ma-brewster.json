@@ -1,6 +1,7 @@
 {
   "id": "us-ma-brewster",
   "name": "Brewster Fire Tower",
+  "summary": "1949 68-foot steel Massachusetts fire tower in Nickerson State Park, Brewster; NHLR-registered 2008; stair platforms replaced in 2015.",
   "other_names": [],
   "country": "US",
   "region": "MA",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "68-foot steel tower with 10 by 10 foot cab",
+  "height_m": 20.7,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -48,14 +49,23 @@
     {
       "year": 1949,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the Massachusetts Bureau of Fire Control on Cape Cod (register; no second source read)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ma/brewster-fire-tower/"
     },
     {
       "year": 2008,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 14, 2008",
-      "from": "nhlr"
+      "note": "Registered May 14, 2008 as US 731, MA 42; nominated by Henry Isenberg",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ma/brewster-fire-tower/"
+    },
+    {
+      "year": 2015,
+      "event": "modified",
+      "note": "State maintenance crew replaced the stair platforms; the report lists repairs to nine towers that year",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-sne-2015.pdf"
     },
     {
       "year": 2015,
@@ -84,6 +94,16 @@
       "label": "NHLR register entry US 731 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ma/brewster-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "DEM District 1 BR Fire Tower (Cape Cod Fire Department (capecodfd.com))",
+      "url": "https://capecodfd.com/PAGES%20Stations/DEMFT6.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Section 15: Fire Observation Towers (Mass.gov)",
+      "url": "https://www.mass.gov/doc/section-15-fire-observation-towers/download",
+      "kind": "reference"
     },
     {
       "label": "Forest Fire Lookout Association chapter reports: work on Brewster Fire Tower",
@@ -129,6 +149,20 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ma-brewster",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -154,7 +188,13 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

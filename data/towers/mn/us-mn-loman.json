@@ -1,6 +1,7 @@
 {
   "id": "us-mn-loman",
   "name": "Loman Fire Tower",
+  "summary": "1927 80-foot ladder fire tower in Koochiching County, MN, once a state forestry site; now privately owned and not accessible; NHLR-registered 2021.",
   "other_names": [],
   "country": "US",
   "region": "MN",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "80-foot ladder tower; four-legged steel structure with metal cab (described as bird-cage type and, separately, octagonal)",
+  "height_m": 24.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,34 +29,47 @@
       "url": "http://nhlr.org/lookouts/us/mn/loman-fire-tower/"
     }
   ],
-  "agency": "Private Landowner: William Multer",
+  "agency": "Private landowner William Multer per NHLR; originally Minnesota Forest Service per survey table",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Privately owned. The Koochiching survey compilation says the owner is a private party and the site is not accessible. Do not visit or climb without the landowner's permission."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Privately owned and not accessible per the Koochiching survey compilation"
   },
   "rental": null,
   "events": [
     {
       "year": 1927,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR: built in 1927 as an 80-foot ladder tower. Survey table also gives 1927 and 80 feet.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mn/loman-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mn/loman-fire-tower/",
+        "https://upload.wikimedia.org/wikipedia/commons/a/ae/Koochiching_County_Towers.pdf"
+      ]
+    },
+    {
+      "year": 1967,
+      "event": "assessed",
+      "note": "1967 survey note: four-legged structure, 80 feet high, standing; privately owned",
+      "from": "research",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Koochiching_County_Towers.pdf"
     },
     {
       "year": 2021,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 8, 2021",
-      "from": "nhlr"
+      "note": "Registered January 8, 2021; nominated by Jacob Hufnagle",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mn/loman-fire-tower/"
     }
   ],
   "photos": [
@@ -77,6 +91,11 @@
       "label": "NHLR register entry US 1482 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/mn/loman-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Minnesota Fire Lookout Towers, Koochiching County (survey compilation) (Wikimedia Commons)",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Koochiching_County_Towers.pdf",
+      "kind": "reference"
     },
     {
       "label": "FFLA Minnesota lookout list (firelookout.org)",
@@ -126,6 +145,22 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mn-loman",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -151,7 +186,13 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

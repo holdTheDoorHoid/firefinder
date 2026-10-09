@@ -1,6 +1,7 @@
 {
   "id": "us-ca-pilot-hill",
   "name": "Pilot Hill Lookout",
+  "summary": "El Dorado County enclosed tower: 1958 as-built plans, replacing a 1935 CCC lookout; volunteer-staffed since its 2019 reopening. Sources disagree on the build year.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Enclosed tower based on the revised 809R plan, with a few deviations; aluminum sheeting, angled cab windows and steel mullions",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -31,8 +32,8 @@
   "agency": "California Department of Forestry and Fire Protection",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Register: not readily accessible to the public; about 1.5 miles from a paved road, behind a private subdivision and security gate (note marked MVT 10/91)"
   },
   "staffing": {
     "status": "unknown",
@@ -46,16 +47,50 @@
   "rental": null,
   "events": [
     {
+      "year": 1935,
+      "event": "built",
+      "note": "CCC lookout on the site, later replaced by the present building",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/pilot-hill-lookout/"
+    },
+    {
       "year": 1958,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "As-built plans (Plan No. 237) drawn up in 1958; building believed to date from the Folsom Dam project",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/pilot-hill-lookout/"
+    },
+    {
+      "year": 2008,
+      "event": "removed",
+      "note": "Fire-watch cameras removed by 2008",
+      "from": "research",
+      "source_url": "http://www.peakbagging.com/CALookoutPhotos/PilotHill.html"
     },
     {
       "year": 2015,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 16, 2015",
-      "from": "nhlr"
+      "note": "Registered March 16, 2015 as US 1065, CA 106; nominated by Al Ramirez",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/pilot-hill-lookout/"
+    },
+    {
+      "year": 2019,
+      "event": "restored",
+      "note": "CAL FIRE repairs and renovations completed; tower reopened June 2019",
+      "from": "research",
+      "source_url": "http://www.peakbagging.com/CALookoutPhotos/PilotHill.html"
+    },
+    {
+      "year": 2019,
+      "event": "staffed",
+      "note": "Reopened staffed entirely by volunteers, mostly on 6 to 12 hour shifts",
+      "from": "research",
+      "source_url": "http://www.peakbagging.com/CALookoutPhotos/PilotHill.html",
+      "source_urls": [
+        "http://www.peakbagging.com/CALookoutPhotos/PilotHill.html",
+        "https://www.cbsnews.com/sacramento/news/pilot-peak-volunteers-keep-watch-for-wildfires/"
+      ]
     }
   ],
   "photos": [
@@ -103,6 +138,26 @@
       "kind": "register"
     },
     {
+      "label": "Pilot Hill Lookout, California (Peakbagging (peakbagging.com))",
+      "url": "http://www.peakbagging.com/CALookoutPhotos/PilotHill.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Cal Fire Lookouts (CAL FIRE (fact sheet, PDF))",
+      "url": "https://34c031f8-c9fd-4018-8c5a-4159cdff6b0d-cdn-endpoint.azureedge.net/-/media/calfire-website/about/communications/fact-sheets/fire-and-emergency-response/misc/lookouts.pdf?rev=62bbab0cc04d476196aa38cb39be6249&hash=B3DDEA1F83484A120E777AF13FC501EE",
+      "kind": "reference"
+    },
+    {
+      "label": "Volunteers at El Dorado County's Pilot Peak keep watch for wildfires (CBS Sacramento (cbsnews.com))",
+      "url": "https://www.cbsnews.com/sacramento/news/pilot-peak-volunteers-keep-watch-for-wildfires/",
+      "kind": "reference"
+    },
+    {
+      "label": "California Lookouts (by County) (Forest Fire Lookout Association (firelookout.org))",
+      "url": "https://firelookout.org/lookouts/us/ca/ca-co/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -145,6 +200,20 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-pilot-hill",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -170,7 +239,13 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

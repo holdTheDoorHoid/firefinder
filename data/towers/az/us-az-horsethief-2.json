@@ -1,6 +1,7 @@
 {
   "id": "us-az-horsethief-2",
   "name": "Horsethief Lookout",
+  "summary": "A 1934 steel lookout in the Bradshaw Range of the Prescott NF, NHLR-registered 2003. Two sources agree on 1934; coordinates conflict and staffing is unverified.",
   "other_names": [],
   "country": "US",
   "region": "AZ",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "40-foot Pacific Coast Steel tower with a modified L-4 live-in cab",
+  "height_m": 12.2,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -41,15 +42,27 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "A trail guide describes the Horsethief Basin road as a remote route that off-roaders drive."
   },
   "rental": null,
   "events": [
     {
+      "year": 1934,
+      "event": "built",
+      "note": "NHLR says constructed in 1934; trail guide says erected in 1934 at the end of the CCC-built road",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/horsethief-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/horsethief-lookout/",
+        "https://www.trailsoffroad.com/US/arizona/trails/3597-horsethief-basin"
+      ]
+    },
+    {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 5, 2003",
-      "from": "nhlr"
+      "note": "Registered August 5, 2003",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/horsethief-lookout/"
     }
   ],
   "photos": [
@@ -71,6 +84,11 @@
       "label": "NHLR register entry US 527 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/az/horsethief-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Horsethief Basin (Trails Offroad)",
+      "url": "https://www.trailsoffroad.com/US/arizona/trails/3597-horsethief-basin",
+      "kind": "reference"
     },
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
@@ -117,6 +135,21 @@
         "location",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-horsethief-2",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -149,7 +182,13 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

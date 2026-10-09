@@ -13,10 +13,10 @@
   },
   "elevation_m": 1302.4,
   "kind": "ground",
-  "material": null,
-  "material_from": null,
+  "material": "wood",
+  "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -81,6 +81,11 @@
       "label": "Hardesty Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/hardesty.html",
       "kind": "site"
+    },
+    {
+      "label": "Hardesty Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/hardesty-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -114,6 +119,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:or:hardesty-mtn:43.7992:-122.6687",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:hardesty-mountain",
+      "fields": [
+        "material",
+        "design",
         "links"
       ]
     }

@@ -1,6 +1,7 @@
 {
   "id": "us-az-black-rock",
   "name": "Black Rock Lookout",
+  "summary": "Two-story BLM lookout in Mohave County, Arizona, built 1981 and NHLR-registered in 2022; sources disagree on the county spelling and the coordinates.",
   "other_names": [],
   "country": "US",
   "region": "AZ",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Two-story BLM lookout design (2-story cab)",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,7 +29,7 @@
       "url": "http://nhlr.org/lookouts/us/az/black-rock-lookout/"
     }
   ],
-  "agency": "Department of the Interior - Bureau of Land Management",
+  "agency": "Bureau of Land Management (Arizona Strip District)",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -48,14 +49,16 @@
     {
       "year": 1981,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built year 1981 on the Register entry",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/black-rock-lookout/"
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 15, 2022",
-      "from": "nhlr"
+      "note": "Registered May 15, 2022 as US 1574, AZ 78; nominated by Wade Luther",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/black-rock-lookout/"
     }
   ],
   "photos": [
@@ -89,6 +92,11 @@
       "label": "NHLR register entry US 1574 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/az/black-rock-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Mohave County, Arizona (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Mohave_County,_Arizona",
+      "kind": "reference"
     },
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
@@ -134,6 +142,19 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-black-rock",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -159,7 +180,13 @@
       "note": "They share a register number."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

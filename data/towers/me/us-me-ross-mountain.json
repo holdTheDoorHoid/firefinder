@@ -1,6 +1,7 @@
 {
   "id": "us-me-ross-mountain",
   "name": "Ross Mountain Fire Tower",
+  "summary": "1914 guyed 60-foot fire tower first erected elsewhere, moved twice, at Ross Mountain since the 1940s; no longer in active use, kept by Maine Forest Service.",
   "other_names": [],
   "country": "US",
   "region": "ME",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Guyed 60-foot tower with an 8 by 8 foot wooden cab; first erected in 1914 at another location",
+  "height_m": 18.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -48,14 +49,23 @@
     {
       "year": 1914,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "First erected at another location, per the Register; the Register's build year is 1914 for the first site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/me/ross-mountain-fire-tower/"
+    },
+    {
+      "year": 1940,
+      "event": "relocated",
+      "note": "Moved to its present site. The tower has been moved twice; the Register gives only 'the 1940s' for the present site, so the year shown stands for the decade",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/me/ross-mountain-fire-tower/"
     },
     {
       "year": 1996,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 30, 1996",
-      "from": "nhlr"
+      "note": "Registered May 30, 1996 as US 170, ME 8; nominated by Bob Spear, FFLA",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/me/ross-mountain-fire-tower/"
     }
   ],
   "photos": [
@@ -77,6 +87,11 @@
       "label": "NHLR register entry US 170 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/me/ross-mountain-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Fire Towers (Maine Atlas Project (maine.gov))",
+      "url": "https://www.maine.gov/sos/maineatlas/explore-the-atlas/fire-towers",
+      "kind": "reference"
     },
     {
       "label": "FFLA Maine lookout list (firelookout.org)",
@@ -123,10 +138,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-me-ross-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "us-ca-basalt-hill",
   "name": "Basalt Hill Lookout",
+  "summary": "Cal Fire octagonal cab on a 20 ft tower above San Luis Reservoir, Merced County; built 1947 per the Register, with a station reported in 1945; NHLR-registered 2010.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "16 by 16 ft octagonal CalFire cab on a 20 ft enclosed tower; a 1948 clipping describes a 16-foot-square tower with a garage at ground level, living quarters above and an observation room on top",
+  "height_m": 6.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/ca/basalt-hill-lookout/"
     }
   ],
-  "agency": "Department of Forestry and Fire Protection (Cal Fire)",
+  "agency": "California Department of Forestry and Fire Protection (Cal Fire)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Cal Fire site with radio towers at the summit; no source says the cab is open to visitors"
   },
   "staffing": {
     "status": "unknown",
@@ -41,21 +42,46 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Rough track from San Luis Reservoir State Recreation Area up to the summit, per a Bay Area Peaks hike report"
   },
   "rental": null,
   "events": [
     {
+      "year": 1945,
+      "event": "staffed_first",
+      "note": "Aug 1945 newspaper item: a station in operation atop Basalt Hill, Vern Yarborough in charge. Not clear it is the same structure as the current tower",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/basalt-hill.html"
+    },
+    {
       "year": 1947,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR build field and Wikipedia's first date. A Jan 1948 clipping shows the new tower still under construction, so 1947 may be the start of work rather than completion",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/basalt-hill-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/basalt-hill-lookout/",
+        "https://en.wikipedia.org/wiki/Basalt_Hill_Lookout",
+        "https://californialookouts.weebly.com/basalt-hill.html"
+      ]
+    },
+    {
+      "year": 1947,
+      "event": "staffed",
+      "note": "Forrest Eckler on the job during 1947, living in a cabin until the new tower was ready",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/basalt-hill.html"
     },
     {
       "year": 2010,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 19, 2010",
-      "from": "nhlr"
+      "note": "Registered on the NHLR June 19, 2010",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/basalt-hill-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/basalt-hill-lookout/",
+        "https://en.wikipedia.org/wiki/Basalt_Hill_Lookout"
+      ]
     }
   ],
   "photos": [
@@ -115,6 +141,16 @@
       "kind": "register"
     },
     {
+      "label": "Basalt Hill Lookout (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Basalt_Hill_Lookout",
+      "kind": "reference"
+    },
+    {
+      "label": "Basalt (Bay Area Peaks)",
+      "url": "https://www.bayareapeaks.com/merced/basalt-hill/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -155,10 +191,31 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:basalt-hill",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-basalt-hill",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

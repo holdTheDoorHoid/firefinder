@@ -1,0 +1,9 @@
+The Blackstone Fire Tower, also called the Nottoway Fire Tower, stands near the town of Blackstone in Nottoway County, Virginia.[^1][^2] The National Historic Lookout Register dates it to 1942 and describes a 125-foot steel tower with a wooden cab.[^1] A Coast and Geodetic Survey station description dated 1942 calls it a four-legged steel fire tower with a wooden cab, about 125 feet high, roughly 1.6 miles northeast of Blackstone on the north side of the railroad tracks that run beside U.S. 460.[^2] That description shows the tower was already standing by 1942, so the register's date may be the build year or only the first record of the tower. The sources do not say which.[^1][^2]
+
+Neither source says who staffed the tower or what fires it watched.[^1][^2] The register says the tower is now privately owned and has stopped serving as a fire lookout, but it gives no date for that change.[^1] The Forest Lookouts site lists the Virginia Department of Forestry as the agency, which may be out of date.[^1][^2] The Forest Fire Lookout Association's Virginia list still marks the tower as standing.[^3] The register calls it in good condition and records its registration on September 3, 2014, with a nomination by Kristin Scholetzky.[^1]
+
+Because the register lists the tower as privately owned, visitors should get the owner's permission before going onto the property.[^1]
+
+[^1]: Blackstone (Nottoway) Fire Tower, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/va/blackstone-nottoway-fire-tower/ (accessed 2026-10-08).
+[^2]: Nottoway (Blackstone), Forest Lookouts (easternuslookouts.weebly.com), https://easternuslookouts.weebly.com/nottoway-blackstone.html (accessed 2026-10-08).
+[^3]: Virginia Lookouts, Forest Fire Lookout Association (firelookout.org), https://firelookout.org/lookouts/us/va/ (accessed 2026-10-08).

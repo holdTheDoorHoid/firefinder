@@ -1,6 +1,7 @@
 {
   "id": "us-ca-armstrong-hill",
   "name": "Armstrong Hill Lookout",
+  "summary": "Aermotor observation cab on an 80-foot steel tower in the Eldorado National Forest; built 1937, now closed, with a 2004 register note that dismantling was planned.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor 7x7 observation cab on an 80-foot X-brace open steel tower, with a BC-201 cabin for the operator",
+  "height_m": 24.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,31 +32,68 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Register note says the lookout is closed; the grounds are accessible to visitors"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2020 visit report"
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Closed lookout; visitors should not climb it. The June 2020 visit report says the tower is in rough shape, with the first two flights of stairs missing and all of the glass broken out."
   },
   "rental": null,
   "events": [
     {
       "year": 1937,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register 'Built' field gives 1937",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/armstrong-hill-lookout/"
+    },
+    {
+      "year": 1938,
+      "event": "other",
+      "note": "Annual forest fire guard school opened at Armstrong Lookout the week before the June 2, 1938 Mountain Democrat notice; Ranger George B. Young of Lumberyard District in charge",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/armstrong-hill.html"
+    },
+    {
+      "year": 1939,
+      "event": "staffed",
+      "note": "January 1, 2003 register comment recalls a lookout named Mike moving to the hill in 1939 or 1940",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/armstrong-hill-lookout/"
+    },
+    {
+      "year": 1943,
+      "event": "staffed_last",
+      "note": "Same recollection says Mike stayed until about 1943",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/armstrong-hill-lookout/"
+    },
+    {
+      "year": 2004,
+      "event": "other",
+      "note": "September 4, 2004 register comment: lookout closed, grounds accessible; a USFS employee said it is scheduled for dismantling, but the Eldorado NF has no money for that at this time; four structures on site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/armstrong-hill-lookout/"
     },
     {
       "year": 2014,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 3, 2014",
-      "from": "nhlr"
+      "note": "Registered September 3, 2014 as US 1041, CA 99",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/armstrong-hill-lookout/"
+    },
+    {
+      "year": 2020,
+      "event": "other",
+      "note": "June 12, 2020 visit report: tower in rough shape; first two flights of stairs missing; glass broken out",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/armstrong-hill-lookout/"
     }
   ],
   "photos": [
@@ -121,10 +159,32 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:armstrong-hill",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-armstrong-hill",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

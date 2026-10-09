@@ -1,6 +1,7 @@
 {
   "id": "us-ca-verdi-peak",
   "name": "Verdi Peak Lookout",
+  "summary": "Tahoe National Forest lookout cab on Verdi Peak at 8,385 ft, built 1983 to replace earlier structures; out of service since at least 1998.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "KEV cab (per a 1986 survey, no further detail)",
   "height_m": 121.9,
   "status": "standing",
   "status_note": null,
@@ -40,22 +41,45 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "OHV routes lead to Verdi Peak Road; the Forest Service calls the roads moderately difficult, and most are recommended for 4x4 only."
   },
   "rental": null,
   "events": [
     {
+      "year": 1939,
+      "event": "other",
+      "note": "A lookout has been on Verdi Peak since at least 1939 (register)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/verdi-peak-lookout/"
+    },
+    {
+      "year": 1958,
+      "event": "staffed",
+      "note": "Miss Lane Endicott, working the lookout alone in her third season; ten fires to her credit",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/verdi-peak.html"
+    },
+    {
       "year": 1983,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Cab built, replacing earlier structures",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/verdi-peak-lookout/"
+    },
+    {
+      "year": 1998,
+      "event": "other",
+      "note": "No longer in service since at least 1998 (register)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/verdi-peak-lookout/"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 27, 2019",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/verdi-peak-lookout/"
     }
   ],
   "photos": [
@@ -139,6 +163,11 @@
       "kind": "register"
     },
     {
+      "label": "Verdi Peak OHV Routes (USDA Forest Service, Tahoe National Forest (fs.usda.gov))",
+      "url": "https://fs.usda.gov/r05/tahoe/recreation/verdi-peak-ohv-routes",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -183,10 +212,29 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-verdi-peak",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

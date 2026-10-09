@@ -1,6 +1,7 @@
 {
   "id": "us-nm-eagle-peak",
   "name": "Eagle Peak Lookout",
+  "summary": "1955 Forest Service CL-100 series lookout cab on 9,801 ft Eagle Peak in Gila National Forest; replaced a 1929 tower; NHLR-registered 2022; seasonal staffing reported in 2020.",
   "other_names": [],
   "country": "US",
   "region": "NM",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": "14x14 CL-100 to CL-106 series cab on 10-ft concrete block base",
+  "design": "USDA Forest Service Standard Plan CL-100 to CL-106 series; 14 by 14 foot steel cab on a 10-foot concrete blockhouse base",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/nm/eagle-peak-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Gila National Forest (Reserve Ranger District)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Active Forest Service fire lookout. The sources read do not say whether the cab is open to visitors; check with the Reserve Ranger District before going."
   },
   "staffing": {
     "status": "unknown",
@@ -41,10 +42,21 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Reached by Wilson Canyon Trail #768 and Forest Road 38 (Eagle Peak Road). The Forest Service says the trail and road together are 1.5 miles one way. A road guide calls the road unpaved."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1929,
+      "event": "built",
+      "note": "Earlier lookout tower on Eagle Peak, per a Forest Service history cited by Wikipedia and quoted by the westlookouts page",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Eagle_Peak_Lookout",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Eagle_Peak_Lookout",
+        "https://westlookouts.weebly.com/eagle-peak.html"
+      ]
+    },
     {
       "year": 1955,
       "event": "built",
@@ -52,10 +64,43 @@
       "from": "nhlr"
     },
     {
+      "year": 1955,
+      "event": "replaced",
+      "note": "Current CL-100 series cab on a 10-foot base replaced the 1929 tower (NHLR gives 1955 as the build year)",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Eagle_Peak_Lookout",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Eagle_Peak_Lookout",
+        "http://nhlr.org/lookouts/us/nm/eagle-peak-lookout/"
+      ]
+    },
+    {
+      "year": 1967,
+      "event": "staffed",
+      "note": "A lookout was stationed on the peak as of April 15, 1967, with a second person to join",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/eagle-peak.html"
+    },
+    {
+      "year": 1988,
+      "event": "assessed",
+      "note": "Evaluated for the National Register under the Southwest lookouts theme; not eligible due to age",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
+      "year": 2020,
+      "event": "staffed",
+      "note": "Staffed by seasonal Forest Service employees, per the 2020 New Mexico chapter report",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 22, 2022",
-      "from": "nhlr"
+      "note": "Registered May 22, 2022 as US 1586, NM 44; nominated by Mark Gutzman",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/eagle-peak-lookout/"
     }
   ],
   "photos": [
@@ -103,6 +148,26 @@
       "kind": "register"
     },
     {
+      "label": "Eagle Peak (Forest Lookouts (westlookouts.weebly.com))",
+      "url": "https://westlookouts.weebly.com/eagle-peak.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Eagle Peak Lookout (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Eagle_Peak_Lookout",
+      "kind": "reference"
+    },
+    {
+      "label": "Divide Trail #15 (U.S. Forest Service, Gila National Forest)",
+      "url": "https://www.fs.usda.gov/r03/gila/recreation/trails/divide-trail-15",
+      "kind": "reference"
+    },
+    {
+      "label": "How to drive the unpaved road to lookout at Eagle Peak in New Mexico (Dangerous Roads)",
+      "url": "https://www.dangerousroads.org/north-america/usa/7049-eagle-peak.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA New Mexico lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/nm/",
       "kind": "association"
@@ -148,10 +213,31 @@
         "design",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nm-eagle-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

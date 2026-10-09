@@ -1,0 +1,11 @@
+The Burns (Bell) tower was built in the early 1950s by the Tennessee Division of Forestry to spot fires in Dickson County and the land around it.[^1] The register calls it a steel International Derrick MC-39, and a federal nomination covering the Tennessee Division of Forestry's fire lookout towers from 1933 to 1975 says the MC-39 and the International Derrick 1933 model were nearly identical in design.[^1][^3] The register puts its height at about 80 feet, with steel stair treads.[^1]
+
+The sources we read describe no particular fires it watched. A district forester told a visitor in February 2023 that the tower is not staffed anymore and was last used for fire detection in the mid-1970s. He also said there was no money in the budget for maintaining it.[^1]
+
+The same visit described the steel tower as overall in decent shape, with several cab windows missing and the wood landings deteriorating.[^1] A Tennessee Landforms list of lookout towers, however, marks the Bell tower as removed, so the two sources disagree.[^2] The register added the tower on December 31, 2023, as US 1778, TN 74.[^1]
+
+At the February 2023 visit, the tower was on the grounds of the Highland Rim district headquarters of the state forestry division, inside Montgomery Bell State Park.[^1] The register says the site is normally open on weekdays during business hours and closed on weekends.[^1] It was shut at the time of the visit for storm cleanup.[^1] A sign at the tower says it can be climbed at the user's risk, but the forester advised against climbing because of the deteriorated landings.[^1] The newest source we found is from 2023, so check with the division before planning a visit.
+
+[^1]: Burns (Bell) Lookout Tower, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/tn/burns-bell-lookout-tower/ (accessed 2026-10-08).
+[^2]: Tennessee Lookout Towers, Tennessee Landforms (tnlandforms.us), https://tnlandforms.us/towers/ (accessed 2026-10-08).
+[^3]: Tennessee Division of Forestry Fire Lookout Towers, 1933 to 1975, National Register multiple property document, National Park Service NPGallery, https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/64501237.pdf (accessed 2026-10-08).

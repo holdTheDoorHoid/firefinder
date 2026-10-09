@@ -1,6 +1,7 @@
 {
   "id": "us-ca-howell-hill",
   "name": "Howell Hill Lookout",
+  "summary": "State-built 60-foot steel lookout near Colfax, erected in 1930 after a county funding dispute; a 2024 trip report found it closed behind a locked gate.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "60-foot steel tower with a 7-by-7-foot cab, an Aermotor Company product; a house on the grounds was built under the ECW program in 1935",
+  "height_m": 18.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,31 +32,72 @@
   "agency": "California Department of Forestry and Fire Protection - Nevada-Yuba-Placer Unit (Cal Fire NEU)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "A 2024 trip report found the facility closed, with a locked gate at the junction with Mt. Howell Rd"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "1930"
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Do not pass the locked gate. Check with Cal Fire before planning any visit."
   },
   "rental": null,
   "events": [
     {
       "year": 1930,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Erected by the State in 1930 as the Mt. Howell Lookout Station on the McDonald ranch near Landers Station. Lions clubs and residents donated time and money for the access road.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/howell-hill-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/howell-hill-lookout/",
+        "https://californialookouts.weebly.com/howell-hill.html"
+      ]
+    },
+    {
+      "year": 1930,
+      "event": "staffed",
+      "note": "A November 1930 notice said the Landers Lookout station would close for the winter. Whether that is this tower is not confirmed.",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/howell-hill.html"
+    },
+    {
+      "year": 1930,
+      "event": "staffed_first",
+      "note": "Ed Hinchey of Colfax was to be in charge of the station after June 1, 1930",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/howell-hill.html"
+    },
+    {
+      "year": 1935,
+      "event": "other",
+      "note": "House on the grounds built under the Emergency Conservation Work program; the register says it still reflects its CCC origin",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/howell-hill-lookout/"
+    },
+    {
+      "year": 1957,
+      "event": "modified",
+      "note": "Cab modification and catwalk addition, circa 1957",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/howell-hill-lookout/"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 24, 2019",
-      "from": "nhlr"
+      "note": "Registered October 24, 2019 as US 1336, CA 159",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/howell-hill-lookout/"
+    },
+    {
+      "year": 2024,
+      "event": "closed",
+      "note": "A 2024 trip report found the facility closed behind a locked gate, with buildings near the tower boarded up",
+      "from": "research",
+      "source_url": "https://www.snwburd.com/bob/trip_reports/2024-05-23.html"
     }
   ],
   "photos": [
@@ -103,6 +145,11 @@
       "kind": "register"
     },
     {
+      "label": "Trip report, Howell Hill section (2024-05-23) (snwburd.com)",
+      "url": "https://www.snwburd.com/bob/trip_reports/2024-05-23.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -144,10 +191,33 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:howell-hill",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-howell-hill",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

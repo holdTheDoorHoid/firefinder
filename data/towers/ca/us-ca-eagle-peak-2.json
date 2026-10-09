@@ -1,6 +1,7 @@
 {
   "id": "us-ca-eagle-peak-2",
   "name": "Eagle Peak Lookout",
+  "summary": "Tehama County tower with a 1963 steel cab on a lookout site used since at least 1933; CAL FIRE site, NHLR-registered 2019; last staffing listed 2008.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Steel cab based on USFS design CL-30 on a USFS 1600-series tower; earlier BC-301 cab on an enclosed timber tower",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -31,8 +32,8 @@
   "agency": "California Department of Forestry and Fire Protection - Tehama-Glenn Unit (Cal Fire TGU)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Site is 2.7 miles from the nearest paved road (NHLR); CAL FIRE does not rent lookouts (2008 CAL FIRE list)"
   },
   "staffing": {
     "status": "unknown",
@@ -46,16 +47,60 @@
   "rental": null,
   "events": [
     {
+      "year": 1933,
+      "event": "other",
+      "note": "Earliest known lookout structure here, an open platform, per NHLR: 'since at least 1933'",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/eagle-peak-lookout/"
+    },
+    {
+      "year": 1938,
+      "event": "other",
+      "note": "October 14, 1938 item: station known locally as Pigeon Roost, because wandering homing pigeons favored it",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/eagle-peak.html"
+    },
+    {
       "year": 1963,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Current tower and steel cab; the year is written on the northwest pier",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/eagle-peak-lookout/"
+    },
+    {
+      "year": 1971,
+      "event": "fire",
+      "note": "Smoke from a 100-acre grass fire west of Henleyville was spotted from the lookout (Red Bluff Daily News item of July 27, 1971, reprinted)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/eagle-peak.html"
+    },
+    {
+      "year": 1972,
+      "event": "other",
+      "note": "California Department of Forestry took over the site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/eagle-peak-lookout/"
+    },
+    {
+      "year": 1982,
+      "event": "modified",
+      "note": "Lower room added 'ten years later' than the 1972 takeover; the year is derived from that phrase; the story says about a decade later",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/eagle-peak-lookout/"
+    },
+    {
+      "year": 2008,
+      "event": "staffed",
+      "note": "June 2008 CAL FIRE list names lookouts that may be staffed in the 2008 fire season, including Eagle Peak",
+      "from": "research",
+      "source_url": "https://www.citlink.net/~dburnett/CAL%20FIRE%20DATA/Lookouts.pdf"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 28, 2019",
-      "from": "nhlr"
+      "note": "Registered October 28, 2019 as US 1360, CA 183",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/eagle-peak-lookout/"
     }
   ],
   "photos": [
@@ -115,6 +160,11 @@
       "kind": "register"
     },
     {
+      "label": "CAL FIRE Lookouts (June 2008) (CAL FIRE (copy hosted at citlink.net))",
+      "url": "https://www.citlink.net/~dburnett/CAL%20FIRE%20DATA/Lookouts.pdf",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -157,10 +207,30 @@
       "fields": [
         "ownership"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-eagle-peak-2",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
