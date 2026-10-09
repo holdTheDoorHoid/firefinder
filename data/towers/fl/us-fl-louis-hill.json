@@ -1,6 +1,7 @@
 {
   "id": "us-fl-louis-hill",
   "name": "Hill",
+  "summary": "Bradford County, FL steel tower erected by the Florida Forest Service in 1939; last dated record is a 1942 repaint and towerman. No source found on its condition today.",
   "other_names": [
     "Louis Hill Lookout Tower"
   ],
@@ -18,12 +19,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "design": "100-foot steel tower",
+  "height_m": 30.5,
+  "status": "unknown",
+  "status_note": "Last dated history is a 1942 repaint; no source read states its condition today",
   "registers": [],
-  "agency": null,
+  "agency": "Florida Forest Service",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -39,9 +40,36 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1939,
+      "event": "built",
+      "note": "Florida Forest Service erected a 100-foot steel tower on land donated by W.H. Edwards, Jr.",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/louis-hill.html"
+    },
+    {
+      "year": 1939,
+      "event": "other",
+      "note": "Telegraph (May 1939, as quoted) said the tower would be named Louis Hill Tower and dedicated to the memory of a young Bradford County man, now deceased; caretaker's home complete, tower not yet manned",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/louis-hill.html"
+    },
+    {
+      "year": 1942,
+      "event": "staffed",
+      "note": "State Forestry Department repaired and painted tower and house; towerman Prescott named (Telegraph, July 1942, as quoted)",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/louis-hill.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Louis Hill - Forest Lookouts",
+      "url": "https://easternuslookouts.weebly.com/louis-hill.html",
+      "kind": "reference"
+    },
     {
       "label": "Hill (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/hill.html",
@@ -73,12 +101,48 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-fl-louis-hill",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

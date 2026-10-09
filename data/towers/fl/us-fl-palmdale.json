@@ -1,6 +1,7 @@
 {
   "id": "us-fl-palmdale",
   "name": "Palmdale Lookout Tower",
+  "summary": "Glades County, FL tower credited to the Florida Forest Service; its only height in the sources read is an OpenStreetMap tag (60.96 m). No build date, builder history, or condition source found.",
   "other_names": [],
   "country": "US",
   "region": "FL",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Steel lattice observation tower (OpenStreetMap tags)",
   "height_m": 61.0,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "No source read says whether the tower still stands",
   "registers": [],
   "agency": "Florida Forest Service",
   "ownership": "unknown",
@@ -72,12 +73,47 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-fl-palmdale",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

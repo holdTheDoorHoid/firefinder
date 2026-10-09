@@ -1,0 +1,13 @@
+Blue Ridge Lookout stood about 15 miles east of Springville, with views toward the coastal range and over Yokohl Valley and Exeter.[^5] It was built in 1930 as an early cooperative lookout, jointly erected by the Forest Service and the California Department of Forestry (CDF).[^1] The open steel tower was an Aermotor Company product, about 60 feet tall, with a 7-by-7-foot observation cab.[^1] A residence followed in 1931 and a garage in 1932, and the cab was reworked in 1960.[^1]
+
+A 1991 note in the register describes the site as an intensively used communications site, with tremendous electromagnetic radiation at cab level.[^1] The sources do not say when routine fire watch ended, and they name no notable fires at this lookout.
+
+CAL FIRE had planned to take the tower down until local lookout enthusiasts stepped in.[^2] In May 2010 it was lifted off its mountain after a four-year effort and taken to CAL FIRE headquarters in Visalia for full restoration.[^2] The restored tower went to the Tulare County Fairgrounds, where it opened to visitors during the county fair in October 2011.[^3]
+
+In 2024 the Buck Rock Foundation and CAL FIRE opened the lookout during the county fair, with Foundation representatives giving tours. Hundreds of visitors came over three days.[^4] Buck Rock describes it as a lookout taken out of service and now displayed at the fairgrounds.[^4] The Sun-Gazette reported in 2017 that it was on permanent display there.[^5] The register, however, says only the cabin is used in a ground-level display.[^1] The sources disagree on whether the full tower or just the cabin is shown today. No regular opening hours appear in them, so check with the fairgrounds before a visit.
+
+[^1]: Blue Ridge Lookout Site (Tulare County), Former Fire Lookout Sites Register (firetower.org), http://firetower.org/lookouts/us/ca/blue-ridge-lookout-site-tulare-county/ (accessed 2026-10-09).
+[^2]: California Sierra/Nevada chapter report 2010, Forest Fire Lookout Association, https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sn-nevada-2010.pdf (accessed 2026-10-09).
+[^3]: California Sierra/Nevada chapter report 2011, Forest Fire Lookout Association, https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sn-nevada-2011.pdf (accessed 2026-10-09).
+[^4]: Blue Ridge at the Tulare County Fair, Buck Rock Foundation, https://buckrock.org/2024/09/30/blue-ridge-at-the-tulare-county-fair/ (accessed 2026-10-09).
+[^5]: Preserving our parks' fire lookouts, The Sun-Gazette, https://thesungazette.com/article/lifestyles/2017/03/29/preserving-our-parks-fire-lookouts/ (accessed 2026-10-09).

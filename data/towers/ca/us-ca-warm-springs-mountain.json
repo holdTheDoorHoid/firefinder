@@ -1,6 +1,7 @@
 {
   "id": "us-ca-warm-springs-mountain",
   "name": "Warm Springs Mountain Lookout Site",
+  "summary": "Angeles NF lookout built 1934 to plan BC-301; cab burned in a 1987 fire, steel tower still stands; restoration abandoned; sources disagree on the fire's name.",
   "other_names": [
     "Warm Springs"
   ],
@@ -18,10 +19,10 @@
   "material": "steel",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": 7.6,
+  "design": "California Region 5 Plan BC-301 wood cab on a 20-foot H-brace open steel tower",
+  "height_m": 6.1,
   "status": "standing",
-  "status_note": "The tower still stands, but its cab is gone (FFLA).",
+  "status_note": null,
   "registers": [
     {
       "register": "FFLOS",
@@ -33,32 +34,46 @@
   "agency": "US Forest Service - Angeles National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached on foot by a fire road, 6.5 miles one way from Lake Hughes Road (trail report). A Do Not Climb sign is posted on the tower. No official access rule found."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "No summit trail remains; the approach is a 6.5-mile fire road from Lake Hughes Road. A Do Not Climb sign is posted on the tower."
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Constructed in 1934 to California Region 5 plan BC-301 (registry)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/warm-springs-mountain-lookout-site/"
+    },
+    {
+      "year": 1969,
+      "event": "other",
+      "note": "Newspaper (Aug 19, 1969, quoted by Forest Lookouts) says the tower first spotted smoke near a Los Angeles water reservoir; it does not name the observer",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/warm-springs-mountain.html"
     },
     {
       "year": 1987,
       "event": "burned",
-      "note": "The cab was lost in the Ruby Ridge Fire; only the metal tower platform remains.",
-      "from": "anffla",
-      "source_url": "https://www.anffla.org/towers/inactive-towers/"
+      "note": "Overrun by a 1987 fire and burned; cab lost. Registry says 'Ruby Fire'; ANFFLA and Angeles Adventures say 'Ruby Ridge Fire'; Forest Lookouts describes a September 1987 fire northeast of Castaic Lake",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/warm-springs-mountain-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/warm-springs-mountain-lookout-site/",
+        "https://www.anffla.org/towers/inactive-towers/",
+        "https://californialookouts.weebly.com/warm-springs-mountain.html",
+        "https://angelesadventures.com/warm-springs/"
+      ]
     },
     {
       "year": 1987,
@@ -69,8 +84,9 @@
     {
       "year": 2019,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: November 3, 2019",
-      "from": "fflos"
+      "note": "Registered November 3, 2019; nominated by Brad Eells",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/warm-springs-mountain-lookout-site/"
     }
   ],
   "photos": [
@@ -190,6 +206,11 @@
       "kind": "register"
     },
     {
+      "label": "Warm Springs (Angeles Adventures)",
+      "url": "https://angelesadventures.com/warm-springs/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -252,6 +273,22 @@
       "source": "ffla_groups",
       "key": "ffla_groups:ca:warm-springs",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-warm-springs-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -275,9 +312,15 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

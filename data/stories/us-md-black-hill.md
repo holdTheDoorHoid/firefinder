@@ -1,0 +1,13 @@
+The Black Hill tower stands in Elk Neck State Forest, south of the Elk Neck forestry office at 130 McKinneytown Road, near North East in Cecil County.[^1][^2] Maryland's Bureau of Forestry, later the Maryland Forest Service, put up fire towers statewide between 1915 and the mid-1940s.[^1] The state describes this one as a steel tower from the 1940s.[^1] A state survey says it was probably erected in the late 1940s, possibly jointly by DNR and ATT.[^2]
+
+The design is unusual.[^2] The tower has two cabs, one above the other, and it is the only one of the 16 DNR towers still in their original locations to have two cabs.[^1][^2] The survey table lists it at 110 feet and in fair condition.[^2] Who added the second cab is not settled. The survey suggests it may date from early joint use with ATT, while the notice dates a second cab, along with new antennas and equipment, to the 1950s and credits Western Union.[^1][^2] The sources disagree on the company and the date, and I could not resolve it.
+
+I found no record of notable fires or staffing at this tower in the sources I read.
+
+A DNR survey, covering towers the department managed as of December 2006, found the stairs and framework in sound structural condition, the cab in poor repair, and no current use.[^2] It recommended keeping the property as part of the state forest, and removing the structure if the tower could not be restored.[^2] A later DNR notice proposed demolishing this tower and the Long Hill tower in Pasadena.[^1] The Maryland Historical Trust found that demolition would cause an adverse effect through the direct loss of both towers, which have been determined eligible for the National Register of Historic Places.[^1] Comments were requested by September 30, 2025.[^1] I found no record that the demolition has happened. The Forest Fire Lookout Association still lists the tower as standing, without the asterisk it uses for towers whose cab is gone.[^3]
+
+To reach the tower, head south from North East on Turkey Point Road (Route 272), turn left onto McKinneytown Road, and follow the gravel road for roughly a mile.[^2] The state notes that abandoned towers are a safety risk, so stay off it.[^1]
+
+[^1]: Long Hill and Black Hill Fire Towers Forestry, Maryland Department of Natural Resources, https://dnr.maryland.gov/forests/Documents/Long-Hill-and-Black-Hill-Fire-Towers-Forestry.pdf (accessed 2026-10-09).
+[^2]: Fire Tower Report, Maryland Department of Natural Resources Forest Service, https://dnr.maryland.gov/forests/documents/fire/Fire_Tower_Report.pdf (accessed 2026-10-09).
+[^3]: Maryland Lookouts, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/md/ (accessed 2026-10-09).

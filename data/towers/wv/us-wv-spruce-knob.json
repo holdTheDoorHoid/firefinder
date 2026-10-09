@@ -1,6 +1,7 @@
 {
   "id": "us-wv-spruce-knob",
   "name": "Spruce Knob Tower Site",
+  "summary": "Pendleton County, WV summit: 1916 wooden fire lookout is gone. The register says it was replaced by a stone-faced concrete observation tower; the summit tower finished in 1969 may be that replacement (not stated outright). Registered as a former lookout site in 2017.",
   "other_names": [],
   "country": "US",
   "region": "WV",
@@ -16,10 +17,10 @@
   "material": "stone",
   "material_from": "ffla",
   "roles": [],
-  "design": null,
+  "design": "Register: the 1916 wooden lookout 'has since been replaced with a stone-faced concrete observation tower'. Byrd Center: the 1969 summit observation tower has two levels of observation platforms and an enclosed space for exhibit panels. NPS: a two-story observation tower stands at the peak. The register does not date the replacement or name the 1969 tower.",
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "gone",
+  "status_note": "The 1916 wooden fire lookout is gone. A visitor observation tower stands on the summit, finished 1969. Register and Forest Fire Lookout Association lists do not describe the observation tower as a lookout.",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/wv/spruce-knob-tower-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Monongahela National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The observation tower is found along the half-mile Whispering Spruce Trail that circles the mountain top (National Park Service). No closure found in the sources read; current conditions not checked."
   },
   "staffing": {
     "status": "unknown",
@@ -41,15 +42,37 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Half-mile Whispering Spruce Trail circles the summit and passes the observation tower (National Park Service)."
   },
   "rental": null,
   "events": [
     {
+      "year": 1916,
+      "event": "built",
+      "note": "Lookout station under construction on the summit at 4,860 ft, per the 4th Biennial Report of the state Forest, Game and Fish Warden.",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/spruce-knob1.html"
+    },
+    {
+      "year": 1916,
+      "event": "staffed_first",
+      "note": "Moses R. Bennett put on duty as watchman in spring 1916, before the station was finished, to meet local people and distribute literature.",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/spruce-knob1.html"
+    },
+    {
+      "year": 1969,
+      "event": "built",
+      "note": "Summit observation tower finished in summer 1969 after work in 1966 and 1967; dedicated 13 September 1969 with a keynote by Senator Robert Byrd.",
+      "from": "research",
+      "source_url": "https://byrdcenter.org/blog/making-west-virginias-tallest-peak-a-stairway-to-the-stars"
+    },
+    {
       "year": 2017,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 26, 2017",
-      "from": "fflos"
+      "note": "Registered 26 January 2017 as US 1641, WV 32, nominated by Brian Powell.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wv/spruce-knob-tower-site/"
     }
   ],
   "photos": [],
@@ -58,6 +81,16 @@
       "label": "FFLOS register entry US 1641 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wv/spruce-knob-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Making West Virginia's tallest peak a stairway to the stars (Robert C. Byrd Center for Congressional History and Education)",
+      "url": "https://byrdcenter.org/blog/making-west-virginias-tallest-peak-a-stairway-to-the-stars",
+      "kind": "reference"
+    },
+    {
+      "label": "Hiking Spruce Knob (National Park Service)",
+      "url": "https://home.nps.gov/articles/000/hiking-spruce-knob.htm",
+      "kind": "reference"
     },
     {
       "label": "FFLA West Virginia lookout list (firelookout.org)",
@@ -109,12 +142,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wv-spruce-knob",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "gone"
+        },
         {
           "source": "ffla",
           "value": "standing"
@@ -125,12 +177,18 @@
         }
       ],
       "distance_m": null,
-      "note": null
+      "note": "Research (2026-10-09) gives gone where the source records give standing. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

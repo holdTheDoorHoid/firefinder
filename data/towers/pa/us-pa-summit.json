@@ -1,6 +1,7 @@
 {
   "id": "us-pa-summit",
   "name": "Summit Tower",
+  "summary": "Centre County, PA steel tower; a 1924 newspaper gives 60 ft, not the 80 ft in our record, and the 1921 build date and 2018 replacement could not be confirmed.",
   "other_names": [
     "Sandy Ridge (Summit)",
     "Sandy Ridge Fire Tower"
@@ -19,12 +20,12 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": "Aermotor",
+  "design": "steel structure (1924 newspaper description); Aermotor maker not confirmed in sources read",
   "height_m": 24.4,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "No readable recent source; the record says standing, and it says a replacement was built in 2018 that we could not confirm",
   "registers": [],
-  "agency": "Moshannon State Forest",
+  "agency": "Pennsylvania Bureau of Forestry (owner per 1993 newspaper item)",
   "ownership": "state",
   "access": {
     "level": "unknown",
@@ -48,6 +49,20 @@
       "from": "pa_storymap"
     },
     {
+      "year": 1924,
+      "event": "other",
+      "note": "Altoona Tribune item (September 20, 1924), quoted by Forest Lookouts: steel tower sixty feet high, about 2,300 feet above sea level, with views over 325,000 acres",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/sandy-ridge-summit.html"
+    },
+    {
+      "year": 1993,
+      "event": "other",
+      "note": "Vandalism reported in the Altoona Mirror on May 5, 1993: six windows broken, damage set at $300",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/sandy-ridge-summit.html"
+    },
+    {
       "year": 2018,
       "event": "replaced",
       "note": null,
@@ -69,6 +84,11 @@
     }
   ],
   "links": [
+    {
+      "label": "DCNR Initiative To Replace, Renovate Fire Towers Across The State (PA Environment Digest)",
+      "url": "http://www.paenvironmentdigest.com/newsletter/default.asp?NewsletterArticleID=42592",
+      "kind": "reference"
+    },
     {
       "label": "Fire Towers of Pennsylvania StoryMap (Shawn Lesitsky)",
       "url": "https://www.arcgis.com/apps/MapSeries/index.html?appid=ed47c97ebe7246868ce8ef3e7139a0b4",
@@ -119,12 +139,47 @@
         "elevation_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-summit",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "pa_storymap",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

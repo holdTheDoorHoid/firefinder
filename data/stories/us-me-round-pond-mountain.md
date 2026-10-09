@@ -1,0 +1,14 @@
+Round Pond Mountain stands in western Aroostook County.[^1] Its trail starts at Round Pond, inside the Allagash Wilderness Waterway.[^1] The earliest dated record I found is a 1948 Maine Forest Service panoramic map centred on the tower in Township 13, Range 12.[^2] It does not say when the tower was built, and I could not find a builder.
+
+In 2018 the Maine Public Lands Division did footing and guy-line maintenance at the tower site. The state also built a new cab in its Ashland shop, to be installed in 2019.[^3] The 2020 report says the work was first scheduled for the fall of 2020.[^4] A window opened in August, and new cabs were flown onto the Allagash, Deboullie and Round Pond towers within about a week.[^4] A 2020 State Historic Preservation Office liaison report also lists a fire tower platform replacement at Round Pond Mountain.[^5]
+
+The new cabs were designed by Kleinschmidt Associates and modelled on the cab that was on Deboullie Mountain. Bureau of Parks and Lands staff built one, and a local contractor built the other two.[^6] The 2020 report names Shiretown Structures of Houlton as the builder of those two.[^4] A 2020 column by the Allagash Wilderness Waterway superintendent says hikers can visit the new cabs on three Maine mountains.[^6]
+
+The Round Pond Mountain Trail is about five miles round trip.[^1] Its guide describes the summit tower as decommissioned and says it should not be climbed until further notice.[^1] That guide is undated and disagrees with the column, so I could not settle which one is current. Visitors to the Allagash area must go through a checkpoint and pay day-use or camping fees. The guide also says to take care on area logging roads and to pull over for trucks.[^1] Check with the Bureau of Parks and Lands before any visit, and do not climb the tower unless they confirm it is open.
+
+[^1]: Round Pond Mountain Trail, Maine Trail Finder, https://www.mainetrailfinder.com/trails/trail/round-pond-mountain-trail (accessed 2026-10-09).
+[^2]: Round Pond Mt. 1948, Fire Tower Maps, Maine Forest Service, Maine Department of Agriculture, Conservation and Forestry, https://digitalmaine.com/arc_firetower/80 (accessed 2026-10-09).
+[^3]: 2018 Maine Chapter Annual Report, Forest Fire Lookout Association, https://firelookout.org/wp-content/uploads/2024/11/cr-me-2018.pdf (accessed 2026-10-09).
+[^4]: Maine Chapter annual report 2020, Forest Fire Lookout Association, https://firelookout.org/wp-content/uploads/2024/11/cr-me-2020.pdf (accessed 2026-10-09).
+[^5]: State Historic Preservation Office liaison report 2020, Forest Fire Lookout Association, https://firelookout.org/wp-content/uploads/2024/11/cr-shpo-2020.pdf (accessed 2026-10-09).
+[^6]: Matthew LaRoche, "Hikers can visit fire tower cabs on these 3 Maine mountains", Bangor Daily News, https://www.bangordailynews.com/2020/11/05/outdoors/hikers-can-visit-fire-tower-cabs-on-these-3-maine-mountains/ (accessed 2026-10-09).

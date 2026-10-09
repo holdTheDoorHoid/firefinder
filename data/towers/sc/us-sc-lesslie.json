@@ -1,6 +1,7 @@
 {
   "id": "us-sc-lesslie",
   "name": "Lesslie Fire Tower",
+  "summary": "York County, SC tower registered with the NHLR as US 1477 in 2021; the register names the SC Forestry Commission as administrator but gives no build date, design or condition.",
   "other_names": [],
   "country": "US",
   "region": "SC",
@@ -18,8 +19,8 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "The register lists the tower but gives no current condition, and no source read says whether it still stands",
   "registers": [
     {
       "register": "NHLR",
@@ -28,7 +29,7 @@
       "url": "http://nhlr.org/lookouts/us/sc/lesslie-fire-tower/"
     }
   ],
-  "agency": "South Carolina Forestry Commission",
+  "agency": "South Carolina Forestry Commission (listed as administrator by the register)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -48,8 +49,9 @@
     {
       "year": 2021,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 8, 2021",
-      "from": "nhlr"
+      "note": "Registered January 8, 2021 as US 1477, SC 35; nominated by Si Ballenger",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sc/lesslie-fire-tower/"
     }
   ],
   "photos": [
@@ -71,6 +73,11 @@
       "label": "NHLR register entry US 1477 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/sc/lesslie-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Pictures From Our Past (South Carolina Forestry Commission (scfc.gov))",
+      "url": "https://www.scfc.gov/about-us/history/pictures-from-our-past/",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -89,12 +96,46 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-sc-lesslie",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

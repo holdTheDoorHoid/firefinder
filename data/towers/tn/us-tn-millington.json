@@ -1,6 +1,7 @@
 {
   "id": "us-tn-millington",
   "name": "Millington Lookout Tower",
+  "summary": "Shelby County, TN 100' Aermotor MC-39 tower moved to Millington from near Fordyce, Arkansas in the late 1980s; NHLR-registered 2023; administrator Baseball USA Stadium; no public access info found.",
   "other_names": [],
   "country": "US",
   "region": "TN",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "design": "100' Aermotor MC-39 tower",
+  "height_m": 30.5,
+  "status": "unknown",
+  "status_note": "Register notes a site visit marked 1/2/23 and does not say whether the tower stands today; brief's 'standing' is not stated in the Register",
   "registers": [
     {
       "register": "NHLR",
@@ -28,7 +29,7 @@
       "url": "http://nhlr.org/lookouts/us/tn/millington-lookout-tower/"
     }
   ],
-  "agency": "Baseball USA Stadium",
+  "agency": "Baseball USA Stadium (administrator per NHLR)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -47,9 +48,17 @@
   "events": [
     {
       "year": 2023,
+      "event": "assessed",
+      "note": "Register notes a site visit marked 1/2/23",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/millington-lookout-tower/"
+    },
+    {
+      "year": 2023,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 10, 2023",
-      "from": "nhlr"
+      "note": "Registered August 10, 2023 as US 1763, TN 67; nominated by Jason Johns",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/millington-lookout-tower/"
     }
   ],
   "photos": [
@@ -71,6 +80,11 @@
       "label": "NHLR register entry US 1763 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/tn/millington-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Millington in Shelby County, Tennessee (Historical Marker Database)",
+      "url": "https://www.hmdb.org/m.asp?m=148608",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -89,12 +103,48 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tn-millington",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

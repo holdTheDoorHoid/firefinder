@@ -1,6 +1,7 @@
 {
   "id": "us-id-copeland",
   "name": "Copeland",
+  "summary": "Boundary County, ID 40-foot pole tower in an old ranger station yard, dated 1928 and abandoned in the 1940s; a statewide list says standing, present condition unknown.",
   "other_names": [
     "Copeland Ranger Station"
   ],
@@ -18,10 +19,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "design": "40-foot pole tower in the yard of an old ranger station",
+  "height_m": 12.2,
+  "status": "unknown",
+  "status_note": "Two sites say abandoned in the 1940s and do not say whether the pole remains; a statewide lookout list marks it Tower Standing; no recent visit report found",
   "registers": [],
   "agency": "Kaniksu National Forest",
   "ownership": "federal",
@@ -35,13 +36,30 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Idaho Fire Lookouts tags it Drive-Up. The tower stood in an old station yard, so check with the forest before going to look for it."
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1928,
+      "event": "built",
+      "note": "Dated to 1928 as a 40-foot pole tower in the yard of the old ranger station",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/copelandrs.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/copelandrs.html",
+        "https://www.idahofirelookouts.com/northern-idaho/copeland-ranger-station/"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Boundary County Historic Places blog",
+      "url": "https://www.bchistoricplaces.org/blog",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -98,12 +116,31 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-copeland",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "ffla",
           "value": "standing"
@@ -118,12 +155,18 @@
         }
       ],
       "distance_m": null,
-      "note": "firelookout.com lists it, but not on its map of standing lookouts. idahofirelookouts.com's status is read from a short summary."
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "pass",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

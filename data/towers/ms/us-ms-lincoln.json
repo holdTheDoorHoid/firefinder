@@ -1,6 +1,7 @@
 {
   "id": "us-ms-lincoln",
   "name": "Lincoln Lookout Tower",
+  "summary": "Lincoln County, MS tower described by the NHLR as a 100 ft Aermotor MC-39 and administered by the Mississippi Forestry Commission; registered May 2026, with no build date or recent condition report found.",
   "other_names": [],
   "country": "US",
   "region": "MS",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "design": "100 ft Aermotor MC-39 tower",
+  "height_m": 30.5,
+  "status": "unknown",
+  "status_note": "The Register describes the tower in the present tense and the 2020 state list shows a Lincoln County Tower, but no visit report or condition survey was found",
   "registers": [
     {
       "register": "NHLR",
@@ -46,10 +47,18 @@
   "rental": null,
   "events": [
     {
+      "year": 2020,
+      "event": "other",
+      "note": "Listed as 'Lincoln County Tower' under Forestry Commission, State in the July 29, 2020 state public-lands list; the list does not confirm it is the same structure",
+      "from": "research",
+      "source_url": "https://www.sos.ms.gov/content/documents/lands/Public%20Lands%20by%20Agency%20by%20Location.pdf"
+    },
+    {
       "year": 2026,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 19, 2026",
-      "from": "nhlr"
+      "note": "Registered May 19, 2026 as US 1817, MS 63",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ms/lincoln-lookout-tower/"
     }
   ],
   "photos": [
@@ -83,6 +92,16 @@
       "label": "NHLR register entry US 1817 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ms/lincoln-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Public Lands by Agency and by Location (July 29, 2020) (Mississippi Secretary of State)",
+      "url": "https://www.sos.ms.gov/content/documents/lands/Public%20Lands%20by%20Agency%20by%20Location.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Lincoln County wildfire protection plan (CWPP) (Mississippi Forestry Commission)",
+      "url": "https://www.mfc.ms.gov/wp-content/uploads/2020/12/LINCOLN_CWPP.pdf",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -103,12 +122,48 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ms-lincoln",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

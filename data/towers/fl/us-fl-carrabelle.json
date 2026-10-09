@@ -1,6 +1,7 @@
 {
   "id": "us-fl-carrabelle",
   "name": "Carrabelle Lookout Tower",
+  "summary": "Franklin County, FL lattice observation tower; a 2005 state surplus sale is the only dated record, and no source read confirms it still stands.",
   "other_names": [],
   "country": "US",
   "region": "FL",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Lattice observation tower (OpenStreetMap tags)",
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Only dated record is a 2005 surplus sale; no source read says whether the tower was moved or still stands",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -37,9 +38,22 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2005,
+      "event": "other",
+      "note": "Bids opened to sell the tower as state surplus; winning bid $1,100",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/carrabelle.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Surplus Equipment and Fire Towers (Florida Department of Agriculture and Consumer Services)",
+      "url": "https://www.fdacs.gov/Forest-Wildfire/For-Communities/Surplus-Equipment-and-Fire-Towers",
+      "kind": "reference"
+    },
     {
       "label": "Carrabelle (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/carrabelle.html",
@@ -70,12 +84,46 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-fl-carrabelle",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

@@ -1,0 +1,13 @@
+The Mount Morris fire lookout stands on a mountain that lies south-southwest of Tupper Lake village, in New York's Franklin County.[^1][^2] A lookout station went up on the summit in July 1909 at a cost of $924.84.[^2] Wikipedia says no tower was needed then, because the view from the top was already open.[^1] A 22-foot steel tower was bought in 1918 and finished in 1919, and Wikipedia identifies it as an Aermotor LS40 model.[^2][^1] A new cabin was put up at the station in 1924.[^2]
+
+Fire wardens and observers worked from the tower.[^2] In June 1944 volunteers searched the mountain for a six-year-old boy who had been left at a cabin partway up, while his father, a fire warden, climbed on to the tower.[^2] In 1957 vandals damaged the telephone lines and radio equipment at the summit, and the replacements had to be carried up on foot.[^2] We did not find any source that names a fire the lookout spotted.
+
+Lookout work ended with the 1971 season, when aerial detection had made the tower less necessary.[^1] In January 1976 the state declared the tower surplus, and the Town of Altamont board voted unanimously to submit a bid; the town's offer was $1.[^2] If the bid were accepted, the site would have joined the Big Tupper Lake Ski Center.[^2] Wikipedia says ownership later passed to the town of Altamont, which uses the cabin for ski center work.[^1] The sources do not agree on who owns the tower today.[^1][^3]
+
+The New York state chapter's list says the tower remains on private property and is closed to the public.[^3] Wikipedia gives the same closed status.[^1] The Forest Fire Lookout Association's list shows it as standing.[^4] We found no recent report of its condition. Please do not climb it or go onto the land without the owner's permission. A different Mount Morris watchtower, in Marcus Garvey Park in Harlem, had been newly reopened by November 2019. It is not this lookout.[^5]
+
+[^1]: Mount Morris (New York), Wikipedia, https://en.wikipedia.org/wiki/Mount_Morris_(New_York) (accessed 2026-10-09).
+[^2]: Mount Morris, Forest Lookouts (eastern US), https://easternuslookouts.weebly.com/mount-morris.html (accessed 2026-10-09).
+[^3]: Searchable list of NY Fire Towers, New York State Chapter, Forest Fire Lookout Association, https://nysffla.org/alphalist.html (accessed 2026-10-09).
+[^4]: New York lookout list, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/ny/ (accessed 2026-10-09).
+[^5]: Newsletter, November 2019, New York State Chapter, Forest Fire Lookout Association, https://www.nysffla.org/Newsletters/2019-11.pdf (accessed 2026-10-09).

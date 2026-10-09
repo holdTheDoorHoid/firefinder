@@ -1,6 +1,7 @@
 {
   "id": "us-or-lookout-mountain-2",
   "name": "Lookout Mountain",
+  "summary": "Marion County, OR ODF lookout: 1938 tower destroyed by the 1962 Columbus Day Hurricane, 1965 portable-cab replacement; sources disagree on whether any tower stands today.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": "L-6",
+  "design": "82-foot timber tower with L-6 cab (1938, per Forest Lookouts); firelookout.com instead gives a 34-foot steel tower with 7x7 cab",
   "height_m": 25.0,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "FFLA list shows standing; Forest Lookouts has a bare Removed note under its 1965 entry; firelookout.com says the superstructure is still there",
   "registers": [],
-  "agency": "Oregon Department of Forestry",
+  "agency": "Oregon Department of Forestry (Clackamas-Marion unit)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,7 +38,51 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1938,
+      "event": "built",
+      "note": "Tower built; Forest Lookouts gives 82-foot timber tower with L-6 cab, firelookout.com gives 34-foot steel tower with 7x7 cab",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/lookout-mountain2.html",
+      "source_urls": [
+        "https://oregonlookouts.weebly.com/lookout-mountain2.html",
+        "https://www.firelookout.com/or/lookoutmtnodf34.html"
+      ]
+    },
+    {
+      "year": 1938,
+      "event": "staffed",
+      "note": "Chas. Pierce named as the lookout in a September 1938 Forest Log item",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/lookout-mountain2.html"
+    },
+    {
+      "year": 1940,
+      "event": "modified",
+      "note": "Mill City CCC camp crews built a two-room cabin and wood-shed garage on the mountain",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/lookout-mountain2.html"
+    },
+    {
+      "year": 1962,
+      "event": "destroyed",
+      "note": "Columbus Day Hurricane completely destroyed the Lookout Mountain tower (district report, October 12, 1962)",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/lookout-mountain2.html"
+    },
+    {
+      "year": 1965,
+      "event": "replaced",
+      "note": "30-foot steel tower with portable cab (Forest Lookouts); 40-foot crank-up tower with travel trailer living quarters (firelookout.com)",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/lookout-mountain2.html",
+      "source_urls": [
+        "https://oregonlookouts.weebly.com/lookout-mountain2.html",
+        "https://www.firelookout.com/or/lookoutmtnodf34.html"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -85,12 +130,31 @@
         "agency",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-lookout-mountain-2",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "ffla",
           "value": "standing"
@@ -101,12 +165,18 @@
         }
       ],
       "distance_m": null,
-      "note": "firelookout.com lists it, but not on its map of standing lookouts."
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

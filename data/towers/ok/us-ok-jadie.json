@@ -1,6 +1,7 @@
 {
   "id": "us-ok-jadie",
   "name": "Jadie Tower",
+  "summary": "McCurtain County, OK tower; agency sheet dates it 1953 (registry says 1950), observer retired 2016, station listed closed, and the land is now Ouachita National Forest property.",
   "other_names": [],
   "country": "US",
   "region": "OK",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "design": "110-foot galvanized steel tower (agency sheet); the registry says a 100-foot Aermotor with a 7x7-foot cab",
+  "height_m": 33.5,
+  "status": "unknown",
+  "status_note": "Agency sheet lists the station as closed, and its observer retired in 2016; the sheet is a 2025 Instagram post of a circa 1985 photo, so the closed status may be out of date; no source read confirms the tower's condition today",
   "registers": [
     {
       "register": "NHLR",
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/ok/jadie-tower/"
     }
   ],
-  "agency": "Oklahoma Forestry Services and Tiak Ranger District",
+  "agency": "Oklahoma Forestry Services and Tiak Ranger District (Ouachita National Forest); land now owned by USDA-Ouachita NF",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Station listed as closed by Oklahoma Forestry Services; the tower is on Ouachita National Forest land and no public visiting arrangement was found"
   },
   "staffing": {
     "status": "unknown",
@@ -52,10 +53,32 @@
       "from": "nhlr"
     },
     {
+      "year": 1952,
+      "event": "other",
+      "note": "Property was part of the Land Utilization Project (OK-LU-24) under an agreement dated October 15, 1952",
+      "from": "research",
+      "source_url": "https://www.instagram.com/p/DHIjsy2huHE/"
+    },
+    {
+      "year": 1953,
+      "event": "built",
+      "note": "Agency data sheet: tower erected 1953. The registry's 1950 'Built' field and its 1930s description disagree",
+      "from": "research",
+      "source_url": "https://www.instagram.com/p/DHIjsy2huHE/"
+    },
+    {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 28, 2009",
-      "from": "nhlr"
+      "note": "Registered July 28, 2009 as US 821, OK 4",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ok/jadie-tower/"
+    },
+    {
+      "year": 2016,
+      "event": "staffed_last",
+      "note": "Forest tower observer retired in 2016; station listed as closed",
+      "from": "research",
+      "source_url": "https://www.instagram.com/p/DHIjsy2huHE/"
     }
   ],
   "photos": [
@@ -77,6 +100,16 @@
       "label": "NHLR register entry US 821 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ok/jadie-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Jadie (Forest Lookouts (centraluslookouts.weebly.com))",
+      "url": "https://centraluslookouts.weebly.com/jadie.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Jadie Fire Tower, circa 1985 (Oklahoma Forestry Services (Instagram post dated March 13, 2025))",
+      "url": "https://www.instagram.com/p/DHIjsy2huHE/",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -97,12 +130,49 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ok-jadie",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

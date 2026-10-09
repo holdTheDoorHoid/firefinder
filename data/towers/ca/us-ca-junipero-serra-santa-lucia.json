@@ -1,6 +1,7 @@
 {
   "id": "us-ca-junipero-serra-santa-lucia",
   "name": "Junipero Serra (Santa Lucia) Lookout Site",
+  "summary": "Monterey County, CA lookout on Santa Lucia (Junipero Serra) Peak, built 1935; cabin removed, tower remains; Forest Service listed the trail to it closed in Aug 2026.",
   "other_names": [
     "Junipero Serra (Santa Lucia PK)",
     "Junipero Serra"
@@ -19,10 +20,10 @@
   "material": "steel",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "30-foot K-brace open steel tower with a California Region 5 Plan BC-301 cabin; wood cab per Forest Lookouts",
   "height_m": 9.1,
   "status": "standing",
-  "status_note": "The tower still stands, but its cab is gone (FFLA).",
+  "status_note": null,
   "registers": [
     {
       "register": "FFLOS",
@@ -31,11 +32,11 @@
       "url": "http://firetower.org/lookouts/us/ca/junipero-serra-santa-lucia-lookout-site/"
     }
   ],
-  "agency": "US Forest Service - Los Padres National Forest",
+  "agency": "US Forest Service, Los Padres National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Reached on foot through the Ventana Wilderness. Forest Service lists the Santa Lucia Peak Trail (6E01) closed as of Aug 2026 after the Timber and Plaskett fires."
   },
   "staffing": {
     "status": "unknown",
@@ -43,22 +44,35 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "2.3-mile trail forks from the Santa Lucia Trail (5E03). No motorized use in wilderness; no wilderness permits issued. Closed per Forest Service page; do not attempt the tower."
   },
   "rental": null,
   "events": [
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register gives 1935 as the build year; Forest Lookouts says the CCC constructed it",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/junipero-serra-santa-lucia-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/junipero-serra-santa-lucia-lookout-site/",
+        "https://californialookouts.weebly.com/junipero-serra.html"
+      ]
+    },
+    {
+      "year": 1979,
+      "event": "abandoned",
+      "note": "Only a hiking blog gives this date; not in the Register or Forest Lookouts, unconfirmed",
+      "from": "research",
+      "source_url": "https://modernhiker.com/hike/hiking-junipero-serra-peak/"
     },
     {
       "year": 2019,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: December 20, 2019",
-      "from": "fflos"
+      "note": "Registered on the Former Fire Lookout Sites Register on December 20, 2019",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/junipero-serra-santa-lucia-lookout-site/"
     }
   ],
   "photos": [
@@ -92,6 +106,16 @@
       "label": "FFLOS register entry US 1864 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ca/junipero-serra-santa-lucia-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Santa Lucia Peak Trail 6E01 (USDA Forest Service, Los Padres National Forest)",
+      "url": "https://www.fs.usda.gov/r05/lospadres/recreation/trails/santa-lucia-peak-trail-6e01",
+      "kind": "reference"
+    },
+    {
+      "label": "Junipero Serra Peak (Modern Hiker)",
+      "url": "https://modernhiker.com/hike/hiking-junipero-serra-peak/",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -152,6 +176,22 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-junipero-serra-santa-lucia",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -175,9 +215,15 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }
