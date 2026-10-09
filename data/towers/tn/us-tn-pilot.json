@@ -1,6 +1,7 @@
 {
   "id": "us-tn-pilot",
   "name": "Pilot",
+  "summary": "Overton County, TN Division of Forestry tower listed as Alpine (Pilot); a 2014 survey found it ruinous, though Tennessee Landforms still shows it standing.",
   "other_names": [
     "Alpine (Pilot)"
   ],
@@ -20,8 +21,8 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "A 2014 field survey found the tower in ruinous condition, and it was not on the March 26, 2014 list of standing Tennessee fire towers. Current condition is not confirmed.",
   "registers": [],
   "agency": "Tennessee Division of Forestry",
   "ownership": "unknown",
@@ -39,9 +40,22 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2014,
+      "event": "assessed",
+      "note": "Field survey by Tennessee Valley Archaeological Research found the Pilot tower ruinous; it was replaced in the National Register study",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/64501237.pdf"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Tennessee Division of Forestry Fire Lookout Towers, 1933 to 1975 (National Register multiple property documentation form) (National Park Service (npgallery))",
+      "url": "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/64501237.pdf",
+      "kind": "reference"
+    },
     {
       "label": "Pilot (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/towers/",
@@ -74,12 +88,46 @@
         "agency",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tn-pilot",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "tnlandforms",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

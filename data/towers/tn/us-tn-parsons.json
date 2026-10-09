@@ -1,6 +1,7 @@
 {
   "id": "us-tn-parsons",
   "name": "Parsons",
+  "summary": "Decatur County, TN tower; Tennessee Landforms lists it standing at 670 ft (no. 8-4), but it is missing from the 2014 extant-tower list. No build or staffing source found.",
   "other_names": [],
   "country": "US",
   "region": "TN",
@@ -18,10 +19,10 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Tennessee Landforms marks it standing, but it is not on the Division of Forestry list of towers still standing on March 26, 2014, and no later source was found",
   "registers": [],
-  "agency": null,
+  "agency": "Tennessee Division of Forestry (inferred from its state forest tower number)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,9 +38,27 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2014,
+      "event": "other",
+      "note": "Not on the list of Tennessee Division of Forestry towers still standing as of March 26, 2014",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/64501237.pdf"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Tennessee Division of Forestry Fire Lookout Towers, 1933-1975 (National Register multiple property documentation form) (National Register of Historic Places, National Park Service)",
+      "url": "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/64501237.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Tennessee (National Historic Lookout Register (nhlr.org))",
+      "url": "http://nhlr.org/lookouts/us/tn/",
+      "kind": "reference"
+    },
     {
       "label": "Parsons (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/towers/",
@@ -59,12 +78,46 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tn-parsons",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "tnlandforms",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "pass",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

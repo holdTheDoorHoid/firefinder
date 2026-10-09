@@ -1,6 +1,7 @@
 {
   "id": "us-me-number-9-mountain",
   "name": "Number 9 Mountain",
+  "summary": "Aroostook County, ME: wood lookout from 1914, 36-foot steel tower built 1919 and removed in 1993 per Maine Memory; the FFLA list still shows it standing.",
   "other_names": [],
   "country": "US",
   "region": "ME",
@@ -16,16 +17,16 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "36-foot steel tower built in 1919; wood and log-crib lookouts stood on the mountain before it",
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "gone",
+  "status_note": "The 36-foot steel tower was removed in 1993, according to Maine Memory; the FFLA list still shows a standing tower.",
   "registers": [],
-  "agency": null,
+  "agency": "Maine Forest Service",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "No current access rules, owner or visiting guidance found in the sources read"
   },
   "staffing": {
     "status": "unknown",
@@ -37,9 +38,80 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1914,
+      "event": "built",
+      "note": "Lookout station established with a wood tower (Forest Lookouts, citing the 1914 report and photo inventory)",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/maine.html",
+      "source_urls": [
+        "https://easternuslookouts.weebly.com/maine.html",
+        "https://www.mainememory.net/record/19126"
+      ]
+    },
+    {
+      "year": 1915,
+      "event": "replaced",
+      "note": "Wood tower replaced by a log crib tower with a cab (Forest Lookouts); the Maine Memory caption calls the replacement a wood tower",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/maine.html",
+      "source_urls": [
+        "https://easternuslookouts.weebly.com/maine.html",
+        "https://www.mainememory.net/record/19126"
+      ]
+    },
+    {
+      "year": 1917,
+      "event": "staffed",
+      "note": "W. B. Hussey of Patten assigned as watchman",
+      "from": "research",
+      "source_url": "https://www.mainememory.net/record/19126",
+      "source_urls": [
+        "https://www.mainememory.net/record/19126",
+        "https://www.mainememory.net/sitebuilder/site/193/slideshow/229/display?format=slideshow&prev_object_id=452&slide_num=18"
+      ]
+    },
+    {
+      "year": 1919,
+      "event": "built",
+      "note": "36-foot steel tower built",
+      "from": "research",
+      "source_url": "https://www.mainememory.net/record/19126",
+      "source_urls": [
+        "https://www.mainememory.net/record/19126",
+        "https://www.mainememory.net/sitebuilder/site/193/slideshow/229/display?format=slideshow&prev_object_id=452&slide_num=18"
+      ]
+    },
+    {
+      "year": 1993,
+      "event": "removed",
+      "note": "36-foot steel tower removed",
+      "from": "research",
+      "source_url": "https://www.mainememory.net/record/19126",
+      "source_urls": [
+        "https://www.mainememory.net/record/19126",
+        "https://www.mainememory.net/sitebuilder/site/193/slideshow/229/display?format=slideshow&prev_object_id=452&slide_num=18"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Maine lookouts (Forest Lookouts (easternuslookouts.weebly.com))",
+      "url": "https://easternuslookouts.weebly.com/maine.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Old fire lookout tower, Number Nine Mountain, ca. 1918 (Maine Memory Network)",
+      "url": "https://www.mainememory.net/record/19126",
+      "kind": "reference"
+    },
+    {
+      "label": "Looking Out: Maine's Fire Towers, slide 18 (Maine History Online (Maine Memory Network))",
+      "url": "https://www.mainememory.net/sitebuilder/site/193/slideshow/229/display?format=slideshow&prev_object_id=452&slide_num=18",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Maine lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/me/",
@@ -58,12 +130,48 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-me-number-9-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "gone"
+        },
+        {
+          "source": "ffla",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives gone where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

@@ -1,0 +1,8 @@
+Salem is a Rusk County tower that the Forest Fire Lookout Association lists as standing.[^1] The Forest Lookouts Texas list credits the Texas Forest Service with it.[^2] The earliest dated record I found is a bid notice dated April 8, 1965, quoted on the Forest Lookouts page for the tower.[^3] The notice was a call for bids to remove an existing lookout tower and erect a new one four miles northeast of New Salem, so it does not show that the new tower was built or when.[^3] The new tower was to be 80 feet tall, with an observation cab at the top. The old tower was to be dismantled and hauled to storage.[^3] Bids were to go to the Texas A&M University System's manager of physical plants, at the fire control office in Lufkin.[^3]
+
+I did not find when the older tower went up, and no source I read confirms whether the replacement was finished. A Texas Escapes column says some of the older East Texas towers remain in place, though they see little use.[^4] I found no access, visit or rental information for Salem, so treat its status as unverified and do not climb it without the land manager's permission.
+
+[^1]: Texas Lookouts, Forest Fire Lookout Association (firelookout.org), https://firelookout.org/lookouts/us/tx/ (accessed 2026-10-09).
+[^2]: Texas, Forest Lookouts (centraluslookouts.weebly.com), https://centraluslookouts.weebly.com/texas.html (accessed 2026-10-09).
+[^3]: Salem, Forest Lookouts (centraluslookouts.weebly.com), https://centraluslookouts.weebly.com/salem.html (accessed 2026-10-09).
+[^4]: Bowman's East Texas Fire Lookout Towers, Texas Escapes, https://texasescapes.com/BobBowman/Fire-lookout-towers.htm (accessed 2026-10-09).

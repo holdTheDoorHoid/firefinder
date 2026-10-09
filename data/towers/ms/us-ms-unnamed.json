@@ -1,6 +1,7 @@
 {
   "id": "us-ms-unnamed",
   "name": "Unnamed lookout",
+  "summary": "Only an OpenStreetMap point tagged fire lookout at 31.60, -90.05 in Mississippi. A 2020 state list has a Lawrence County Tower that may match; identity and status unconfirmed.",
   "other_names": [],
   "country": "US",
   "region": "MS",
@@ -18,8 +19,8 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "We could not confirm that a structure stands at this map point.",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -37,9 +38,27 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2020,
+      "event": "other",
+      "note": "Lawrence County Tower is listed under the Forestry Commission, State in a list dated July 29, 2020. Whether it is this point is unconfirmed.",
+      "from": "research",
+      "source_url": "https://www.sos.ms.gov/content/documents/lands/Public%20Lands%20by%20Agency%20by%20Location.pdf"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Public Lands by Agency and by Location (Mississippi Secretary of State)",
+      "url": "https://www.sos.ms.gov/content/documents/lands/Public%20Lands%20by%20Agency%20by%20Location.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Mississippi | National Historic Lookout Register",
+      "url": "http://nhlr.org/lookouts/us/ms/",
+      "kind": "reference"
+    },
     {
       "label": "OpenStreetMap node 8225532064",
       "url": "https://www.openstreetmap.org/node/8225532064",
@@ -56,12 +75,45 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ms-unnamed",
+      "fields": [
+        "summary",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-mi-lookout-tower-2",
   "name": "Lookout Tower",
+  "summary": "Map-only 'Lookout Tower' beside Whitefish Point Light, Chippewa, MI; OpenStreetMap tags it an observation tower, but no source confirms a fire lookout or its condition.",
   "other_names": [],
   "country": "US",
   "region": "MI",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Lattice tower, per OpenStreetMap tags",
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Shown on OpenStreetMap only; no source read describes its condition",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -41,6 +42,26 @@
   "photos": [],
   "links": [
     {
+      "label": "Lookout Tower Map - Chippewa, Michigan, USA (Mapcarta)",
+      "url": "https://mapcarta.com/W977086897",
+      "kind": "reference"
+    },
+    {
+      "label": "Whitefish Point Light Station (Great Lakes Shipwreck Historical Society)",
+      "url": "https://shipwreckmuseum.com/visit/whitefish-point-light/",
+      "kind": "reference"
+    },
+    {
+      "label": "Michigan (National Historic Lookout Register)",
+      "url": "http://nhlr.org/lookouts/us/mi/",
+      "kind": "reference"
+    },
+    {
+      "label": "Michigan (Former Fire Lookout Sites)",
+      "url": "http://firetower.org/lookouts/us/mi/",
+      "kind": "reference"
+    },
+    {
       "label": "OpenStreetMap way 977086897",
       "url": "https://www.openstreetmap.org/way/977086897",
       "kind": "osm"
@@ -57,12 +78,45 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mi-lookout-tower-2",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

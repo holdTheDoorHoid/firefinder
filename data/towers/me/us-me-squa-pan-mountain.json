@@ -1,6 +1,7 @@
 {
   "id": "us-me-squa-pan-mountain",
   "name": "Squa-Pan Mountain",
+  "summary": "Aroostook County, ME tower: 1917-18 steel tower planned, 26-ft tower completed, 26-ft wood tower by 1920; FFLA lists standing, cab gone; status unclear.",
   "other_names": [],
   "country": "US",
   "region": "ME",
@@ -16,16 +17,16 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "26-foot wood tower listed in the 1920 inventory; a 48-foot steel tower was partly erected in 1917 with completion planned for 1918",
   "height_m": null,
-  "status": "standing",
-  "status_note": "The tower still stands, but its cab is gone (FFLA).",
+  "status": "unknown",
+  "status_note": "FFLA lists the structure as standing with the cab no longer in place. The lookout history lists the tower as removed, with no date. The Former Fire Lookout Sites register says it is not known whether Squa Pan still stands.",
   "registers": [],
-  "agency": null,
+  "agency": "Maine Forestry District (historical)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "The Former Fire Lookout Sites register says its Squa Pan site is on private property; land status of the FFLA point was not confirmed"
   },
   "staffing": {
     "status": "unknown",
@@ -37,9 +38,63 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1917,
+      "event": "other",
+      "note": "48-foot steel tower partly erected, with completion planned for 1918, per the 1917 Forest Commissioner annual report as quoted by the lookout history",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/squa-pan-mountain-52.html"
+    },
+    {
+      "year": 1918,
+      "event": "built",
+      "note": "26-foot tower completed, per the 1918 Forest Commissioner annual report as quoted by the lookout history",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/squa-pan-mountain-52.html"
+    },
+    {
+      "year": 1920,
+      "event": "other",
+      "note": "Maine Forestry Service panorama map centered on the Squaw-Pan Mt. fire tower in Township 11 Range 4",
+      "from": "research",
+      "source_url": "https://archive.org/details/statedocs_maine_arc_firetower-95"
+    },
+    {
+      "year": 2008,
+      "event": "fflos_registered",
+      "note": "Former Fire Lookout Sites registered its Squa Pan Mountain Tower Site, a separate point, on September 15, 2008",
+      "from": "research",
+      "source_url": "http://www.firetower.org/lookouts/us/me/squa-pan-mountain-tower-site/"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Squa Pan Mountain #52 (Forest Lookouts)",
+      "url": "https://easternuslookouts.weebly.com/squa-pan-mountain-52.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Squa Pan Mountain Tower Site (Former Fire Lookout Sites)",
+      "url": "http://www.firetower.org/lookouts/us/me/squa-pan-mountain-tower-site/",
+      "kind": "reference"
+    },
+    {
+      "label": "Squapan Fire Tower (historical) (TopoZone)",
+      "url": "https://www.topozone.com/maine/aroostook-me/tower/squapan-fire-tower-historical/",
+      "kind": "reference"
+    },
+    {
+      "label": "Scopan Lake (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Scopan_Lake",
+      "kind": "reference"
+    },
+    {
+      "label": "Squaw-Pan Mt. 1920 (Maine Forestry Service, Internet Archive)",
+      "url": "https://archive.org/details/statedocs_maine_arc_firetower-95",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Maine lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/me/",
@@ -58,12 +113,48 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-me-squa-pan-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

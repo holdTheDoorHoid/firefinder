@@ -1,6 +1,7 @@
 {
   "id": "us-mo-sam-a-baker-state-park",
   "name": "Mudlick Mountain",
+  "summary": "Steel fire tower on Mudlick Mountain in Sam A. Baker State Park, Wayne County, MO; standing by 1935, reported 85 ft; last dated mention 1972-73; current condition not confirmed.",
   "other_names": [
     "Sam A. Baker State Park Fire Tower"
   ],
@@ -18,16 +19,16 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Steel four-legged tower with an enclosed observing room at the top (1963 NGS description)",
   "height_m": 25.9,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "No source read confirms the tower's condition after a 1972-73 road-work mention; present condition not confirmed",
   "registers": [],
-  "agency": "Sam A. Baker State Park",
+  "agency": "Missouri Conservation Commission (towersite owner per 1947-48 state manual); located in Sam A. Baker State Park",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Inside Sam A. Baker State Park. MDC lists hiking loops that reach the natural area. No source read says the tower itself is open to climbing."
   },
   "staffing": {
     "status": "unknown",
@@ -36,12 +37,60 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "MDC: the 1.5 mile Shut-Ins Trail loop and the 12 mile Mudlick Mountain hiking loop provide access to the natural area."
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1935,
+      "event": "other",
+      "note": "Already standing by July 4, 1935, when a newspaper describes it as the great steel fire tower on one of the park's highest points",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/mudlick-mountain.html"
+    },
+    {
+      "year": 1947,
+      "event": "other",
+      "note": "1947-48 state manual lists the towersite as owned by the Missouri Conservation Commission",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/mudlick-mountain.html"
+    },
+    {
+      "year": 1958,
+      "event": "fire",
+      "note": "Fire burned eight acres of a Wayne County farm and took two hours to bring under control; reported January 10, 1958 (fire date not given)",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/mudlick-mountain.html"
+    },
+    {
+      "year": 1958,
+      "event": "staffed",
+      "note": "A towerman at Mudlick discovered a fire (reported January 1958); no name given",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/mudlick-mountain.html"
+    },
+    {
+      "year": 1963,
+      "event": "assessed",
+      "note": "National Geodetic Survey station description: about 100 ft tall, four-legged steel structure",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/mudlick-mountain.html"
+    },
+    {
+      "year": 1972,
+      "event": "other",
+      "note": "FY1972-73 state report: road reshaped at the tower; last dated mention found",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/mudlick-mountain.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Mudlick Mountain (Missouri Department of Conservation)",
+      "url": "https://mdc.mo.gov/discover-nature/places/natural-areas/mudlick-mountain",
+      "kind": "reference"
+    },
     {
       "label": "Mudlick Mountain (centraluslookouts.weebly.com)",
       "url": "https://centraluslookouts.weebly.com/mudlick-mountain.html",
@@ -75,12 +124,50 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mo-sam-a-baker-state-park",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

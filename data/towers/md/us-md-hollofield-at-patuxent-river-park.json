@@ -1,6 +1,7 @@
 {
   "id": "us-md-hollofield-at-patuxent-river-park",
   "name": "Hollofield Lookout (now at Patuxent River Park)",
+  "summary": "Hollofield forestry tower near Ellicott City; FFLA's Patuxent River Park destination conflicts with a DNR report naming Merkle NRMA, and no build date was found.",
   "other_names": [
     "Patuxent River Park"
   ],
@@ -20,10 +21,10 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "standing",
-  "status_note": "The tower still stands, but its cab is gone (FFLA).",
+  "status": "unknown",
+  "status_note": "Disputed. FFLA lists a Patuxent River Park tower as standing, with its cab no longer in place (its asterisk); a DNR report says the Hollofield tower was removed and its upper section is now an observation platform at Merkle NRMA.",
   "registers": [],
-  "agency": null,
+  "agency": "Park Service (Maryland DNR), per DNR report",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -43,10 +44,16 @@
     {
       "year": null,
       "event": "relocated",
-      "note": "Moved from Hollofield to Patuxent River Park.",
-      "from": "ffla",
-      "moved_from": "Hollofield",
-      "moved_to": "Patuxent River Park"
+      "note": "FFLA: Patuxent River Park tower relocated from Hollofield, marked Standing*; the DNR report does not agree",
+      "from": "research",
+      "source_url": "https://firelookout.org/lookouts/us/md/"
+    },
+    {
+      "year": null,
+      "event": "removed",
+      "note": "DNR report: forestry tower removed and replaced by a modern communications tower (report covers towers managed as of December 2006)",
+      "from": "research",
+      "source_url": "https://dnr.maryland.gov/forests/documents/fire/Fire_Tower_Report.pdf"
     }
   ],
   "photos": [],
@@ -56,6 +63,26 @@
       "url": "../us-md-hollofield/",
       "kind": "relocated_from",
       "id": "us-md-hollofield"
+    },
+    {
+      "label": "Maryland's Forest Fire Lookout Towers Poster (Maryland Department of Natural Resources)",
+      "url": "https://dnr.maryland.gov/Pages/md-conservation-history/FireLookoutTowersPoster.aspx",
+      "kind": "reference"
+    },
+    {
+      "label": "Fire Tower Report (draft) (Maryland Department of Natural Resources)",
+      "url": "https://dnr.maryland.gov/forests/documents/fire/Fire_Tower_Report.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "The View From the Top: Commercial Outdoor Lift System (Hill Hiker, Inc.)",
+      "url": "https://hillhiker.com/portfolio/project-of-the-year-2019/",
+      "kind": "reference"
+    },
+    {
+      "label": "Patuxent River Park (Prince George's County Department of Parks and Recreation)",
+      "url": "https://outdoors.pgparks.com/parks_trails/patuxent-river-park",
+      "kind": "reference"
     },
     {
       "label": "FFLA Maryland lookout list (firelookout.org)",
@@ -76,12 +103,46 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-md-hollofield-at-patuxent-river-park",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

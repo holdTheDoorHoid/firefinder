@@ -1,6 +1,7 @@
 {
   "id": "us-tx-lookout-tower",
   "name": "lookout tower",
+  "summary": "OpenStreetMap outline named 'lookout tower', tagged as an observation tower; the page names no state, town or county; not on the FFLA or NHLR lists; no build, owner or condition record found.",
   "other_names": [],
   "country": "US",
   "region": "TX",
@@ -18,8 +19,8 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "OpenStreetMap maps an observation tower outline but records no condition; no other source read says whether it stands",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -41,6 +42,16 @@
   "photos": [],
   "links": [
     {
+      "label": "Texas Lookouts (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/tx/",
+      "kind": "reference"
+    },
+    {
+      "label": "Texas | National Historic Lookout Register",
+      "url": "https://nhlr.org/lookouts/us/tx/",
+      "kind": "reference"
+    },
+    {
       "label": "OpenStreetMap way 1131201458",
       "url": "https://www.openstreetmap.org/way/1131201458",
       "kind": "osm"
@@ -57,12 +68,44 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tx-lookout-tower",
+      "fields": [
+        "summary",
+        "status",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-tn-life",
   "name": "Life",
+  "summary": "Henderson County, TN tower numbered 8-13 by the state; Landforms lists it standing, but the 2014 NRHP list of extant towers leaves it out. No build or design record found.",
   "other_names": [],
   "country": "US",
   "region": "TN",
@@ -18,10 +19,10 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Tennessee Landforms lists it as standing. The 2014 NRHP document's list of towers extant on March 26, 2014 does not include it, and no newer record was found.",
   "registers": [],
-  "agency": null,
+  "agency": "Tennessee Division of Forestry",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,9 +38,39 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1976,
+      "event": "other",
+      "note": "Numbered 8-13 (district-tower) on the Division of Forestry's 1976 list of towers, as reported by Tennessee Landforms",
+      "from": "research",
+      "source_url": "https://tnlandforms.us/towers/"
+    },
+    {
+      "year": 2014,
+      "event": "assessed",
+      "note": "Not among the Tennessee towers listed as extant as of March 26, 2014 in the NRHP multiple property document, whose only Henderson County entry is Natchez Trace",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/64501237.pdf"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Life, Tennessee (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Life,_Tennessee",
+      "kind": "reference"
+    },
+    {
+      "label": "Tennessee Division of Forestry Fire Lookout Towers, 1933 to 1975 (National Register multiple property document) (National Park Service, NPGallery)",
+      "url": "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/64501237.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Tennessee (National Historic Lookout Register (nhlr.org))",
+      "url": "http://nhlr.org/lookouts/us/tn/",
+      "kind": "reference"
+    },
     {
       "label": "Life (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/towers/",
@@ -59,12 +90,46 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tn-life",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "tnlandforms",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

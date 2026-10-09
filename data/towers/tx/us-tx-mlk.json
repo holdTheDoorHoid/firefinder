@@ -1,6 +1,7 @@
 {
   "id": "us-tx-mlk",
   "name": "MLK Lookout",
+  "summary": "OpenStreetMap outline 'MLK Lookout' (the page names no state): freestanding observation tower, height tag 6, access tag yes; not on the FFLA or NHLR lists; no build, owner or condition record found.",
   "other_names": [],
   "country": "US",
   "region": "TX",
@@ -18,14 +19,14 @@
   "roles": [],
   "design": null,
   "height_m": 6.0,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "OpenStreetMap records height and construction but no condition; no photo or statement of standing found",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=yes."
+    "level": "public",
+    "note": "OpenStreetMap tags the outline access=yes; no site or owner source confirms public access, and the tag is not permission to climb"
   },
   "staffing": {
     "status": "unknown",
@@ -40,6 +41,16 @@
   "events": [],
   "photos": [],
   "links": [
+    {
+      "label": "Texas Lookouts (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/tx/",
+      "kind": "reference"
+    },
+    {
+      "label": "Texas | National Historic Lookout Register",
+      "url": "https://nhlr.org/lookouts/us/tx/",
+      "kind": "reference"
+    },
     {
       "label": "OpenStreetMap way 1502512351",
       "url": "https://www.openstreetmap.org/way/1502512351",
@@ -59,12 +70,46 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tx-mlk",
+      "fields": [
+        "summary",
+        "height_m",
+        "status",
+        "access",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

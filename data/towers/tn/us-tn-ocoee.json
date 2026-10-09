@@ -1,6 +1,7 @@
 {
   "id": "us-tn-ocoee",
   "name": "Ocoee",
+  "summary": "Partial exhibit of the Oswald Dome fire tower (built 1935 on Bean Mountain, removed 2003) at the Ocoee Whitewater Center, Polk County, TN; not a standing lookout.",
   "other_names": [],
   "country": "US",
   "region": "TN",
@@ -18,14 +19,14 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "relocated",
+  "status_note": "The tower is no longer on Bean Mountain. A segment of the structure and its cab were restored and set up as an exhibit at the Ocoee Whitewater Center in 2004.",
   "registers": [],
   "agency": "Cherokee National Forest",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Roadside exhibit beside U.S. 64 near the Ocoee Whitewater Center. The sources describe no access restriction and no climbing."
   },
   "staffing": {
     "status": "unknown",
@@ -33,13 +34,58 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "The exhibit is beside U.S. 64. The original summit is reached by Oswald Dome Road, a Forest Service road, and by trails."
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "Built in 1935 and located on Bean Mountain, also called Oswald Dome",
+      "from": "research",
+      "source_url": "https://www.hmdb.org/m.asp?m=279864",
+      "source_urls": [
+        "https://www.hmdb.org/m.asp?m=279864",
+        "https://en.wikipedia.org/wiki/Oswald_Dome"
+      ]
+    },
+    {
+      "year": 2003,
+      "event": "removed",
+      "note": "Disassembled and removed from its original location, per the marker. Wikipedia gives only the 2004 move.",
+      "from": "research",
+      "source_url": "https://www.hmdb.org/m.asp?m=279864"
+    },
+    {
+      "year": 2004,
+      "event": "relocated",
+      "note": "A segment of the structure and its cab were restored and relocated to the Ocoee Whitewater Center site",
+      "from": "research",
+      "source_url": "https://www.hmdb.org/m.asp?m=279864",
+      "source_urls": [
+        "https://www.hmdb.org/m.asp?m=279864",
+        "https://en.wikipedia.org/wiki/Oswald_Dome"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "The Heyday for Fire Towers (historical marker) (Historical Marker Database (hmdb.org))",
+      "url": "https://www.hmdb.org/m.asp?m=279864",
+      "kind": "reference"
+    },
+    {
+      "label": "Oswald Dome (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Oswald_Dome",
+      "kind": "reference"
+    },
+    {
+      "label": "Ocoee (waypoint POT004), Tennessee Lookout Towers (Tennessee Landforms (tnlandforms.us))",
+      "url": "https://tnlandforms.us/towers/m.php?wpt=POT004",
+      "kind": "reference"
+    },
     {
       "label": "Ocoee (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/towers/",
@@ -60,12 +106,48 @@
         "agency",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tn-ocoee",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "relocated"
+        },
+        {
+          "source": "tnlandforms",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives relocated where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

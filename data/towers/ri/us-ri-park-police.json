@@ -1,6 +1,7 @@
 {
   "id": "us-ri-park-police",
   "name": "Park Police fire tower",
+  "summary": "Only OpenStreetMap names a Park Police fire tower at Brenton Point, Newport, RI; no build, staffing or condition source found, and no RI lookout list has it.",
   "other_names": [],
   "country": "US",
   "region": "RI",
@@ -18,8 +19,8 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Map entry only; no source read says whether the tower still stands",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -41,6 +42,21 @@
   "photos": [],
   "links": [
     {
+      "label": "Brenton Point State Park History (1976) (Rhode Island State Parks)",
+      "url": "https://riparks.ri.gov/History-HistoryBrentonPoint",
+      "kind": "reference"
+    },
+    {
+      "label": "Brenton Point State Park (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Brenton_Point_State_Park",
+      "kind": "reference"
+    },
+    {
+      "label": "Rhode Island Fire Towers (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/ri/",
+      "kind": "reference"
+    },
+    {
       "label": "OpenStreetMap way 384208227",
       "url": "https://www.openstreetmap.org/way/384208227",
       "kind": "osm"
@@ -57,12 +73,44 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ri-park-police",
+      "fields": [
+        "summary",
+        "status",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

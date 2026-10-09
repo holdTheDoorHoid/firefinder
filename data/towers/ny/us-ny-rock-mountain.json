@@ -1,6 +1,7 @@
 {
   "id": "us-ny-rock-mountain",
   "name": "Rock Mountain",
+  "summary": "Lewis County, NY: wooden lookout built 1922 by Fisher Forestry on a rock mountain in Watson; NYSFFLA says removed, FFLA lists a standing windmill tower; status unresolved.",
   "other_names": [],
   "country": "US",
   "region": "NY",
@@ -16,20 +17,20 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Wooden tower built 1922 (NYSFFLA); the FFLA list gives the type as Windmill Tower",
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "NYSFFLA marks the 1922 Rock Mt. tower removed; the FFLA list shows a standing Windmill Tower at the same name and coordinates. Not resolved by any source read.",
   "registers": [],
-  "agency": null,
+  "agency": "Fisher Forestry and Realty Company, built with Conservation Commission cooperation",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Listed among privately owned fire towers (CNY Hiking); no public access described in the sources read"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "emergency",
+    "as_of": "1922"
   },
   "visit": {
     "climbable": null,
@@ -37,9 +38,54 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1922,
+      "event": "built",
+      "note": "Wooden tower erected by a private Lowville contractor, with Conservation Commission cooperation, as a secondary and emergency station",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/number-four.html",
+      "source_urls": [
+        "https://easternuslookouts.weebly.com/number-four.html",
+        "https://nysffla.org/alphalist.html"
+      ]
+    },
+    {
+      "year": 1922,
+      "event": "staffed_first",
+      "note": "The 1922 newspaper says the company maintained an observer to watch for fire during dry periods",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/number-four.html"
+    },
+    {
+      "year": 1928,
+      "event": "other",
+      "note": "Steel tower erected at Number Four; NYSFFLA says it made the wooden Rock Mt. tower unnecessary",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/number-four.html",
+      "source_urls": [
+        "https://easternuslookouts.weebly.com/number-four.html",
+        "https://nysffla.org/alphalist.html"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Number Four (Forest Lookouts, with transcribed 1922 and 1928 newspaper items) (Forest Lookouts (easternuslookouts.weebly.com))",
+      "url": "https://easternuslookouts.weebly.com/number-four.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Rock Mt. Fire Tower (entry in the Searchable list of NY Fire Towers) (New York State Chapter, Forest Fire Lookout Association (nysffla.org))",
+      "url": "https://nysffla.org/alphalist.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Fire Towers in New York State (CNY Hiking (cnyhiking.com))",
+      "url": "https://www.cnyhiking.com/NYStateFireTowers.htm",
+      "kind": "reference"
+    },
     {
       "label": "FFLA New York lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ny/",
@@ -58,12 +104,49 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ny-rock-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

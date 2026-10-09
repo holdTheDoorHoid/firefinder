@@ -1,6 +1,7 @@
 {
   "id": "us-ms-fire-tower",
   "name": "Fire Tower",
+  "summary": "Only an OpenStreetMap point called Fire Tower near Starkville, MS. Not matched to any register entry; may duplicate the Maben or Oktibbeha tower. Standing status unconfirmed.",
   "other_names": [],
   "country": "US",
   "region": "MS",
@@ -18,8 +19,8 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "No source we read confirms that a tower stands at this map point.",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -37,9 +38,32 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2013,
+      "event": "other",
+      "note": "OpenStreetMap point named Fire Tower; its version 3 edit comment reads outlook_tower to observation. The page gives the edit only as almost 13 years ago, so 2013 is our estimate.",
+      "from": "research",
+      "source_url": "https://www.openstreetmap.org/node/2290548977"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Maben Lookout Tower (National Historic Lookout Register)",
+      "url": "http://nhlr.org/lookouts/us/ms/maben-lookout-tower/",
+      "kind": "reference"
+    },
+    {
+      "label": "Oktibbeha Lookout Tower (National Historic Lookout Register)",
+      "url": "http://nhlr.org/lookouts/us/ms/oktibbeha-lookout-tower/",
+      "kind": "reference"
+    },
+    {
+      "label": "Public Lands by Agency and by Location (Mississippi Secretary of State)",
+      "url": "https://www.sos.ms.gov/content/documents/lands/Public%20Lands%20by%20Agency%20by%20Location.pdf",
+      "kind": "reference"
+    },
     {
       "label": "OpenStreetMap node 2290548977",
       "url": "https://www.openstreetmap.org/node/2290548977",
@@ -57,12 +81,45 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ms-fire-tower",
+      "fields": [
+        "summary",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

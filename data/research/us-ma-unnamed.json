@@ -1,0 +1,64 @@
+{
+  "id": "us-ma-unnamed",
+  "researched": "2026-10-09",
+  "summary": "Probably the Norwell Fire Tower (US 619, MA 30): a 70-ft steel lookout built 1956 for the state fire control bureau; OpenStreetMap tags it access=no.",
+  "facts": {
+    "design": "70-foot steel tower with a wooden 10x10 cab",
+    "height_m": 21.3,
+    "agency": "Massachusetts Bureau of Forest Fire Control",
+    "access": {
+      "level": "restricted",
+      "note": "OpenStreetMap tags the node access=no; the register describes no public visits"
+    }
+  },
+  "events": [
+    {"year": 1916, "event": "other", "note": "Earlier iron tower on Prospect Hill: 48 ft per the register, 40 ft per Forest Lookouts", "cite": [2, 3]},
+    {"year": 1956, "event": "built", "note": "Current steel tower built by the Bureau of Fire Control at the Navy's request, to replace the 1916 tower", "cite": [2, 3]},
+    {"year": 2004, "event": "nhlr_registered", "note": "Registered December 15, 2004; nominated by Henry Isenberg", "cite": [2]}
+  ],
+  "evidence": [
+    {"cite": [1], "supports": "OSM node tagged emergency=fire_lookout", "quote": "fire_lookout"},
+    {"cite": [1], "supports": "OSM node tagged access=no", "quote": "access"},
+    {"cite": [1], "supports": "node longitude -70.8213861", "quote": "-70.8213861"},
+    {"cite": [2], "supports": "tower is in the Town of Norwell, Plymouth County", "quote": "Plymouth County, Massachusetts"},
+    {"cite": [2], "supports": "register prints longitude 70.821940 W; latitude field is garbled", "quote": "N 70.821940°"},
+    {"cite": [2], "supports": "Bureau of Fire Control built the tower at the Navy's request to replace the earlier tower", "quote": "At the request of the Navy, the Bureau of Fire Control constructed Norwell Fire Tower"},
+    {"cite": [2], "supports": "earlier Prospect Hill tower was 48 ft iron, built 1916", "quote": "It was a 48’ iron tower constructed in 1916."},
+    {"cite": [2], "supports": "current tower is a steel tower with a wooden cab", "quote": "steel tower with a wooden"},
+    {"cite": [2], "supports": "registered December 15, 2004", "quote": "December 15, 2004"},
+    {"cite": [2], "supports": "nominated by Henry Isenberg", "quote": "Henry Isenberg"},
+    {"cite": [2], "supports": "administered by Mass. Bureau of Forest Fire Control", "quote": "Mass. Bureau of Forest Fire Control"},
+    {"cite": [3], "supports": "1956 steel tower, 70 ft, 10x10 cab", "quote": "1956: A 70-foot steel tower with a 10x10 cab was erected."},
+    {"cite": [3], "supports": "1916 tower on Prospect Hill, 40 ft", "quote": "A new 40-foot tower with stairs was erected on Prospect Hill in Hingham."},
+    {"cite": [2], "supports": "registered as US 619, MA 30", "quote": "US 619, MA 30"},
+    {"cite": [2], "supports": "located in the Town of Norwell", "quote": "Town of Norwell"},
+    {"cite": [2], "supports": "current tower is a 70 ft steel tower with a wooden 10x10 cab", "quote": "It is a 70’ steel tower with a wooden 10’x10’ cab"},
+    {"cite": [2], "supports": "Bureau built the current tower in 1956 to replace the earlier tower", "quote": "constructed Norwell Fire Tower in1956 to replace it"},
+    {"cite": [2], "supports": "earlier tower stood on Prospect Hill just to the northeast", "quote": "The first fire tower in this area was on Prospect Hill located just to the northeast"},
+    {"cite": [3], "supports": "separate Judges Hill entry in Norwell", "quote": "JUDGES HILL"}
+  ],
+  "corrections": [
+    {
+      "field": "name",
+      "current": "Unnamed lookout",
+      "proposed": "Norwell Fire Tower",
+      "cite": [1, 2],
+      "why": "The register's Norwell Fire Tower has the same longitude as this OSM node, about 50 m apart. The register's latitude is garbled, so a human should confirm the identity before the name changes."
+    }
+  ],
+  "resolved_conflicts": [
+    {
+      "field": "height_m",
+      "explanation": "The register gives the 1916 iron tower as 48 ft; Forest Lookouts gives 40 ft. Both give the 1956 steel tower as 70 ft.",
+      "cite": [2, 3]
+    }
+  ],
+  "sources": [
+    {"n": 1, "title": "Unnamed lookout (OpenStreetMap node 7993187278)", "publisher": "OpenStreetMap", "url": "https://www.openstreetmap.org/node/7993187278", "accessed": "2026-10-09"},
+    {"n": 2, "title": "Norwell Fire Tower", "publisher": "National Historic Lookout Register", "url": "http://nhlr.org/lookouts/us/ma/norwell-fire-tower/", "accessed": "2026-10-09"},
+    {"n": 3, "title": "Massachusetts - Forest Lookouts", "publisher": "Eastern US Lookouts", "url": "https://easternuslookouts.weebly.com/massachusetts.html", "accessed": "2026-10-09"}
+  ],
+  "confidence": "medium",
+  "verification": {"checked": "2026-10-09", "claims_checked": 12, "unsupported_removed": 0, "errors_fixed": 1, "quotes_spot_checked": 19, "quotes_not_found": 0, "verdict": "fixed"},
+  "notes_for_editor": "Identity is a probable match, not confirmed. The OSM node (42.192218, -70.821386) and the register's longitude (70.821940 W) agree within about 50 m, but the register prints 'N 70.821940°' where a latitude should be, so the latitude cannot be checked from the register. Confirm on a map or with Norwell sources before renaming. Condition and current use are unknown; the register was last updated in 2016. The Forest Lookouts page puts the 1956 tower under its Prospect Hill (Hingham/Norwell) entry and also has a Judges Hill (Norwell) entry; the register places the current tower away from Prospect Hill. The register's 'in1956' is a typo for 'in 1956'. Search results show FFLA Massachusetts Facebook posts that place the tower on Judge's Hill and give an 1 August 1956 service date; those pages would not load here, so they are not cited and should be checked directly."
+}

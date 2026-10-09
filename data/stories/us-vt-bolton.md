@@ -1,0 +1,10 @@
+The Bolton Firetower stands at Bolton Valley Resort in the town of Bolton, Vermont, at an elevation of 3,150 feet.[^1] The Vermont Daily Chronicle says the tower is wooden and that no other wooden tower in the state is known to have survived.[^2] The sources do not say when it was built, who built it, or what it was first used for.[^1][^2]
+
+A tower on Bolton Mountain has its own entry on the Forest Lookouts site. A January 1922 report describes a steel tower set on the summit, donated by C.D. Ordway and largely built by Ralph Dunsmoor, and says the state forestry department and the Burlington section of the Green Mountain Club helped pay for it.[^3] That entry ends with the word "Removed." It does not say whether the steel tower stood where the wooden one stands today.[^3]
+
+Visitors can reach the present tower on foot.[^4] One guide describes the Vista Peak trail as a 3.1-mile out-and-back hike that starts near The Backcountry and Nordic Center, and says hiking access is free.[^4] Another guide describes the Vista Lookout Tower Trail at Bolton Valley Resort, with parking near the main base lodge, and says the top of the tower gives views of Camel's Hump and Mount Mansfield.[^1] The sources do not give the tower's height or its condition, so before visiting, check with Bolton Valley Resort that the tower is open to climb.
+
+[^1]: 14 Fire Towers to Climb in Vermont, Vermont Vacation, https://vermontvacation.com/14-fire-towers-to-climb-in-vermont/ (accessed 2026-10-09).
+[^2]: Watching from above: The story of Vermont's fire towers, Vermont Daily Chronicle, https://vermontdailychronicle.com/watching-from-above-the-story-of-vermonts-fire-towers/ (accessed 2026-10-09).
+[^3]: Bolton Mountain - Forest Lookouts, easternuslookouts.weebly.com, https://easternuslookouts.weebly.com/bolton-mountain.html (accessed 2026-10-09).
+[^4]: 5 Fire Towers to Climb for Vermont Fall Foliage Views, Old Stagecoach Inn, https://oldstagecoach.com/vermont-fall-foliage-fire-tower-hikes (accessed 2026-10-09).

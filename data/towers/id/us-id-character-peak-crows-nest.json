@@ -1,6 +1,7 @@
 {
   "id": "us-id-character-peak-crows-nest",
   "name": "Character Peak Crows Nest",
+  "summary": "A 1932 Forest Service camp and crow's nest on Character Peak; by the 2022 visit the platform was gone, leaving two scorched trees.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Crow's nest platform set between two trees",
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "gone",
+  "status_note": "No platform was left at the 2022 visit; two scorched trees still stand.",
   "registers": [],
-  "agency": null,
+  "agency": "Coeur d'Alene National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -33,13 +34,62 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Listed as hike-in; there is no platform to climb."
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1932,
+      "event": "built",
+      "note": "Crow's nest in place about the same time as the camp; year approximate",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/cda-region/character-peak-crows-nest/"
+    },
+    {
+      "year": 1932,
+      "event": "other",
+      "note": "Forest Service fire camp set up on the north end of the ridge",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/cda-region/character-peak-crows-nest/",
+      "source_urls": [
+        "https://www.idahofirelookouts.com/cda-region/character-peak-crows-nest/",
+        "http://www.firelookout.com/id/characterpeak.html"
+      ]
+    },
+    {
+      "year": 1947,
+      "event": "abandoned",
+      "note": "Camp and crow's nest abandoned by 1947",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/cda-region/character-peak-crows-nest/",
+      "source_urls": [
+        "https://www.idahofirelookouts.com/cda-region/character-peak-crows-nest/",
+        "http://www.firelookout.com/id/characterpeak.html"
+      ]
+    },
+    {
+      "year": 2010,
+      "event": "assessed",
+      "note": "Kresek's book has the nest still standing as of 2010, as read by the site's authors",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/cda-region/character-peak-crows-nest/"
+    },
+    {
+      "year": 2021,
+      "event": "fire",
+      "note": "Deceitful Gulch Fire hit the area hard; the two trees the nest was built between were scorched at the base",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/cda-region/character-peak-crows-nest/"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Character Peak Fire Lookout (firelookout.com)",
+      "url": "http://www.firelookout.com/id/characterpeak.html",
+      "kind": "reference"
+    },
     {
       "label": "Character Peak Crows Nest on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/cda-region/character-peak-crows-nest/",
@@ -57,12 +107,48 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-character-peak-crows-nest",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "gone"
+        },
+        {
+          "source": "idaho_fl",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives gone where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

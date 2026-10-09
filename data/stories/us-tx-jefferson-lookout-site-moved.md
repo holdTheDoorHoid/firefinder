@@ -1,0 +1,9 @@
+No source we could read gives a build year for this steel lookout. A September 30, 1957 item from The Marshall News Messenger, quoted on a lookout history website, reports that a new crew leader had joined the Texas Forest Service at the Jefferson lookout tower.[^2] A Coast and Geodetic Survey station description, written in 1958, says the tower had a glass-enclosed cab on a four-legged steel frame, about 100 feet tall, and stood about 1.5 miles west-northwest of Jefferson.[^2]
+
+The register says the Jeffersonian Institute moved the tower in 2003 to its current spot in downtown Jefferson, and that it is now used as a cell tower.[^1] The Forest Fire Lookout Association lists a standing tower called Jefferson (Loc 2), relocated from Jefferson (Loc 1), and marks the Loc 1 point as gone.[^3] The register's coordinates match the Loc 1 point, and the two listed points are about 3.4 km apart, so the sources do not agree on where the tower stands.[^1][^3] Only the register gives a date for the move, and no source we read gives its distance.
+
+The register gives the owner as Etex Wireless.[^1] It also says the local tourism office and chamber of commerce have offered to work with the owner on restoring the tower's steps and making it an educational, historical resource.[^1] Nothing we read says that work has happened. The tower is privately owned and in use as a cell tower.[^1] We would not climb it.
+
+[^1]: Jefferson Lookout Site, Former Fire Lookout Sites Register (firetower.org), http://firetower.org/lookouts/us/tx/jefferson-lookout-site/ (accessed 2026-10-09).
+[^2]: Jefferson - Forest Lookouts, centraluslookouts.weebly.com, https://centraluslookouts.weebly.com/jefferson.html (accessed 2026-10-09).
+[^3]: Texas Lookouts, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/tx/ (accessed 2026-10-09).
