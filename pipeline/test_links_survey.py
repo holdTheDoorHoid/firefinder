@@ -123,6 +123,62 @@ class WeeblyWest(unittest.TestCase):
                           ("Alsea Summit", "Benton", "OR"), ("Joe's Lookout", "Benton", "OR"),
                           ("Mountain Home Rock", "Benton", "OR")])
 
+    def test_county_header_spellings(self):
+        # the sidebar headers of the real sites that the plain "<Name> County" rule missed
+        # (2026-10-08: 145 Idaho County lookouts were filed under Gem, 85 Lane County ones under Lake)
+        h = self.ww.NAV_COUNTY_HEADER_RE
+        for text, name in [("BAKER COUNTY", "BAKER"), ("Los Angeles County", "Los Angeles"),
+                           ("IDAHO COUNTY (A-L)", "IDAHO"), ("IDAHO COUNTY (M-W)", "IDAHO"),
+                           ("LANE COUNTY - 2", "LANE"), ("**Harney County***", "Harney"),
+                           ("Harney County (cont.)", "Harney"), ("Harney County cont.", "Harney"),
+                           ("LANE COUNTY \u2013 2", "LANE"), ("De Soto Parish", "De Soto")]:
+            m = h.match(text)
+            self.assertIsNotNone(m, text)
+            self.assertEqual(m.group("name"), name, text)
+        # lookouts whose names merely contain the word
+        for text in ["Los Angeles County Fairplex", "Pike County Peak", "Bear Mountain (Fowler)", "County Line Ridge"]:
+            self.assertIsNone(h.match(text), text)
+
+    def test_nav_entries_split_and_numbered_county_headers(self):
+        html = nav([("/gem-county.html", "GEM COUNTY"), ("/emmett-ridge.html", "Emmett Ridge"),
+                    ("/idaho-county-a-l.html", "IDAHO COUNTY (A-L)"), ("/bear-point.html", "Bear Point"),
+                    ("/idaho-county-m-w.html", "IDAHO COUNTY (M-W)"), ("/moe-peak.html", "Moe Peak"),
+                    ("/kootenai-county.html", "KOOTENAI COUNTY"), ("/mica-peak.html", "Mica Peak"),
+                    ("/lane-county---2.html", "LANE COUNTY - 2"), ("/fawn-rock.html", "Fawn Rock"),
+                    ("/lake-county.html", "LAKE COUNTY"), ("/harney-county1.html", "**Harney County***"),
+                    ("/pike-county-peak.html", "Pike County Peak"), ("/page.html", "************")])
+        e = self.ww.nav_entries(html, "county", ["ID"])
+        self.assertEqual([(x["text"], x["county"]) for x in e],
+                         [("Emmett Ridge", "Gem"), ("Bear Point", "Idaho"), ("Moe Peak", "Idaho"),
+                          ("Mica Peak", "Kootenai"), ("Fawn Rock", "Lane"), ("Pike County Peak", "Harney")])
+
+    def test_top_level_page_ends_the_county(self):
+        # Montana's "To Locate" is a top-level page, not a county: Jimmy Peak, listed after it, is not Toole County's
+        def item(rel, text, cls):
+            return f'<li><a href="{rel}" class="{cls}">{text}</a></li>'
+        html = ("<html><body>" + item("/toole-county.html", "TOOLE COUNTY", "wsite-menu-item")
+                + item("/grassy-butte.html", "Grassy Butte", "wsite-menu-subitem")
+                + item("/to-locate.html", "To Locate", "wsite-menu-item")
+                + item("/jimmy-peak.html", "Jimmy Peak", "wsite-menu-item") + "</body></html>")
+        e = self.ww.nav_entries(html, "county", ["MT"])
+        self.assertEqual([(x["text"], x["county"]) for x in e], [("Grassy Butte", "Toole"), ("Jimmy Peak", None)])
+
+    def test_divider_and_county_note_pages_are_not_lookouts(self):
+        page = '<html><body><h2 class="wsite-content-title"><strong>%s</strong></h2><div class="paragraph">September 1941: "Something new."</div><a href="/x.html">x</a></body></html>'
+        for name in ["************", "?", "****Harney County****", "IDAHO COUNTY (A-L)"]:
+            self.assertIsNone(self.ww.parse_page(page % name, {"county": "Harney", "state": "OR"}, "oregonlookouts.weebly.com"), name)
+
+    def test_committed_extract_has_the_split_counties(self):
+        # the committed extract was re-read after the header fix
+        d = json.loads((Path(__file__).resolve().parent.parent / "data" / "sources" / "west_us_lookouts.json").read_text())
+        recs = d["records"]
+        count = lambda st, c: sum(1 for r in recs if r["region"] == st and r["county"] == c)
+        self.assertGreater(count("ID", "Idaho"), 100)
+        self.assertLess(count("ID", "Gem"), 30)
+        self.assertGreater(count("OR", "Lane"), 50)
+        self.assertFalse([r["key"] for r in recs if not any(ch.isalnum() for ch in r["name"])])
+        self.assertIsNone(next(r for r in recs if r["key"] == "west_us_lookouts:mt:jimmy-peak")["county"])
+
     def test_nav_entries_state_site(self):
         html = nav([("/arizona.html", "ARIZONA"), ("/apache-maid.html", "Apache Maid"),
                     ("/new-mexico.html", "NEW MEXICO"), ("/oso-ridge.html", "Oso Ridge"),

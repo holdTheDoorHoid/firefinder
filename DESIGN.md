@@ -394,6 +394,15 @@ links) and WillhiteWeb (a link, and a "standing" status for its 57 Cascades stan
 California-South chapter's "Destroyed in 2024 Line Fire" for Keller Peak therefore shows as a status
 conflict, not an overrule, until the owner or the FFLA refresh agrees.
 
+Ron Kemnow's western sites file each lookout under the county header of the sidebar above it
+(`weebly_west.nav_entries`), so the county is only as good as the header reading. Headers that
+broke it on 2026-10-08: "IDAHO COUNTY (A-L)" / "(M-W)" (145 Idaho County lookouts were filed under
+Gem), "LANE COUNTY - 2" (85 Lane County lookouts under Lake), and the top-level page "To Locate"
+(Jimmy Peak, listed after it, was filed under Toole). `NAV_COUNTY_HEADER_RE` now reads a split,
+numbered, "(cont.)" or asterisk-wrapped county header, and a top-level page that is not a county ends
+the county above it; divider pages ("************", "?") and county notes are not lookouts.
+`pipeline/test_links_survey.py` carries the real header strings.
+
 **Ownership and access** only where a source says so: CSKT → tribal, access `permission`;
 RIDB (USFS/BLM) → federal; NY DEC and PA state forests → state (via those extracts); an agency
 naming a National Forest/Park, BLM or Fish & Wildlife on a register page → federal; tribal
