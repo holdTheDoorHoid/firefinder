@@ -1,6 +1,7 @@
 {
   "id": "us-id-chateau-rock",
   "name": "Chateau Rock Lookout Site",
+  "summary": "Clearwater NF L-4 cab on a boulder pile, built 1931 and in ruins since 1961; Idaho Fire Lookouts lists 1943 smokechasers and a hike-in site with no closure stated.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4 cab with a catwalk on concrete footings, reached by a scramble over the boulders and ladders for the last 80 feet",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "ruins",
+  "status_note": "In ruins since 1961 per three sources; Idaho Fire Lookouts lists it as Hike-In Ruins; no source describes the remains in detail",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/id/chateau-rock-lookout-site/"
     }
   ],
-  "agency": "U.S.Forest Service",
+  "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "On Clearwater National Forest land; Idaho Fire Lookouts lists it as hike-in and no closure is stated. The route is a rock scramble with ladders, and no source says it is safe to climb"
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,49 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Hike-in per Idaho Fire Lookouts; the cab sat atop a boulder pile reached by scrambling and ladders"
   },
   "rental": null,
   "events": [
     {
+      "year": 1931,
+      "event": "built",
+      "note": "L-4 cab with a catwalk on concrete footings; ladders for the last 80 feet",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/id/chateau-rock-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/id/chateau-rock-lookout-site/",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/chateau-rock-lookout/",
+        "https://www.firelookout.com/id/chateaurock.html"
+      ]
+    },
+    {
+      "year": 1943,
+      "event": "staffed",
+      "note": "Idaho Fire Lookouts lists Warren Yahr and Bill Fry, both smokechasers, under known staff for 1943",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/chateau-rock-lookout/"
+    },
+    {
+      "year": 1961,
+      "event": "other",
+      "note": "Cab described as in ruins from 1961; no cause given",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/id/chateau-rock-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/id/chateau-rock-lookout-site/",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/chateau-rock-lookout/",
+        "https://www.firelookout.com/id/chateaurock.html",
+        "https://www.fs.usda.gov/media/259185"
+      ]
+    },
+    {
       "year": 2011,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: July 22, 2011",
-      "from": "fflos"
+      "note": "Registered July 22, 2011; nominated by Rod Fosback",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/id/chateau-rock-lookout-site/"
     }
   ],
   "photos": [
@@ -83,6 +117,11 @@
       "label": "FFLOS register entry US 1101 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/id/chateau-rock-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Clearwater National Forest Lookouts (list compiled by Margaret Sand, Walde Lookout and Cindy Schacher, June 2016) (U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/media/259185",
+      "kind": "reference"
     },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
@@ -153,12 +192,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-chateau-rock",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

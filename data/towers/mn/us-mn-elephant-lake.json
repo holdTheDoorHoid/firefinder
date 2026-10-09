@@ -1,6 +1,7 @@
 {
   "id": "us-mn-elephant-lake",
   "name": "Elephant Lake Lookout",
+  "summary": "Ladder-style 80-foot tower moved from Ash River to Elephant Lake by the CCC in 1940; register and county list disagree on whether it still stands.",
   "other_names": [],
   "country": "US",
   "region": "MN",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Ladder-style steel tower, 80 feet tall",
   "height_m": 24.4,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "The Forest Fire Lookout Association county list marks it gone; the 2021 register says it currently houses communications equipment",
   "registers": [
     {
       "register": "NHLR",
@@ -46,10 +47,29 @@
   "rental": null,
   "events": [
     {
+      "year": 1924,
+      "event": "other",
+      "note": "Stood at Ash River from 1924 (register gives 1924-1935)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mn/elephant-lake-lookout/"
+    },
+    {
+      "year": 1940,
+      "event": "relocated",
+      "note": "Re-erected by the Civilian Conservation Corps at Elephant Lake",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mn/elephant-lake-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mn/elephant-lake-lookout/",
+        "https://centraluslookouts.weebly.com/elephant-lake.html"
+      ]
+    },
+    {
       "year": 2021,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 8, 2021",
-      "from": "nhlr"
+      "note": "Registered January 8, 2021 as US 1481, MN 16; nominated by Jacob Hufnagle",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mn/elephant-lake-lookout/"
     }
   ],
   "photos": [
@@ -83,6 +103,11 @@
       "label": "NHLR register entry US 1481 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/mn/elephant-lake-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Minnesota Lookouts (By County) (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/mn/mn-co/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Minnesota lookout list (firelookout.org)",
@@ -159,12 +184,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mn-elephant-lake",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -179,12 +222,18 @@
         }
       ],
       "distance_m": null,
-      "note": "NHLR lists lookouts that were standing when registered."
+      "note": "Research (2026-10-09) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

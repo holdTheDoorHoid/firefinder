@@ -1,6 +1,7 @@
 {
   "id": "us-or-high-rock",
   "name": "High Rock Lookout Site",
+  "summary": "Clackamas County lookout cab built 1925 on High Rock in the Mount Hood National Forest; deactivated 1964-65 and destroyed before 1970. The summit is now a public peak with views.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -18,10 +19,10 @@
   "roles": [
     "aws"
   ],
-  "design": null,
+  "design": "Region-5 cab per register; a 1947 survey note describes a white lookout house about 12 x 12 feet on a stone foundation; a 1955 note refers to a 14 x 14 lookout house",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The cab was gone by 1970 (NGS recovery note). A 2020 trip report describes the summit and its view and mentions no structure.",
   "registers": [
     {
       "register": "FFLOS",
@@ -30,11 +31,11 @@
       "url": "http://firetower.org/lookouts/us/or/high-rock-lookout-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Mount Hood National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Peak reached by a forest road and an unmarked trail; a 2020 trip report lists no permits or fees"
   },
   "staffing": {
     "status": "unknown",
@@ -42,16 +43,80 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "About 1.12 miles round trip on a narrow forest road and an unmarked final trail; the road is drivable in a 4x4 vehicle with good clearance (2020 trip report)"
   },
   "rental": null,
   "events": [
     {
+      "year": 1925,
+      "event": "built",
+      "note": "Region-5 cab built in 1925 (register and firelookout.com)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/high-rock-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/high-rock-lookout-site/",
+        "https://www.firelookout.com/or/highrock34.html"
+      ]
+    },
+    {
+      "year": 1926,
+      "event": "staffed",
+      "note": "A patrolman was posted at High Rock as lookout (July 1926 item quoted by Forest Lookouts)",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/high-rock1.html"
+    },
+    {
+      "year": 1942,
+      "event": "other",
+      "note": "Frame cabin added for the Aircraft Warning Service; station activated October 10, 1942",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/high-rock-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/high-rock-lookout-site/",
+        "https://www.firelookout.com/or/highrock34.html",
+        "https://oregonlookouts.weebly.com/high-rock1.html"
+      ]
+    },
+    {
+      "year": 1943,
+      "event": "other",
+      "note": "Aircraft Warning Service station inactivated October 16, 1943; site retained by the Forest Service for fire detection",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/high-rock1.html"
+    },
+    {
+      "year": 1955,
+      "event": "other",
+      "note": "NGS recovery note refers to a 14 x 14 USFS lookout house at the station",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/high-rock1.html"
+    },
+    {
+      "year": 1964,
+      "event": "closed",
+      "note": "Lookout deactivated (Forest Lookouts); register and firelookout.com give 1965 as the last year",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/high-rock1.html",
+      "source_urls": [
+        "https://oregonlookouts.weebly.com/high-rock1.html",
+        "http://firetower.org/lookouts/us/or/high-rock-lookout-site/",
+        "https://www.firelookout.com/or/highrock34.html"
+      ]
+    },
+    {
+      "year": 1970,
+      "event": "destroyed",
+      "note": "NGS recovery note: station destroyed prior to July 1970",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/high-rock1.html"
+    },
+    {
       "year": 2010,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: August 25, 2010",
-      "from": "fflos"
+      "note": "Registered August 25, 2010 as US 601, OR 42",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/high-rock-lookout-site/"
     }
   ],
   "photos": [
@@ -73,6 +138,11 @@
       "label": "FFLOS register entry US 601 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/or/high-rock-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "High Rock (My Wild Adventure (mywildadventure.com))",
+      "url": "https://www.mywildadventure.com/post/high-rock",
+      "kind": "reference"
     },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
@@ -144,12 +214,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-high-rock",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

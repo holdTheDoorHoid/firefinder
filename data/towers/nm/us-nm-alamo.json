@@ -1,6 +1,7 @@
 {
   "id": "us-nm-alamo",
   "name": "Alamo Lookout Site",
+  "summary": "Lincoln NF site at 9,270 ft: 1926 Aermotor LX cab on a 35-ft tower, now gone; a US Air Force telemetry antenna occupies the ground, with only a benchmark left.",
   "other_names": [
     "Alamo Peak"
   ],
@@ -18,10 +19,10 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "Aermotor LX-25 type cab on a 35-foot tower (the register calls it LX-24)",
   "height_m": 10.7,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The tower is gone. A US Air Force telemetry antenna occupies the site, and only a benchmark remains",
   "registers": [
     {
       "register": "FFLOS",
@@ -30,11 +31,11 @@
       "url": "http://firetower.org/lookouts/us/nm/alamo-lookout-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "US Forest Service, Lincoln National Forest",
   "ownership": "federal",
   "access": {
-    "level": "public",
-    "note": "Listed as a visitor site on recreation.gov. Check the listing for seasonal closures."
+    "level": "restricted",
+    "note": "The Forest Service page is labeled 'Site Open', but a US Air Force telemetry antenna occupies the site and no source describes public access to that facility today. The register says the site was accessible in 2015, when a telemetry station already occupied it"
   },
   "staffing": {
     "status": "unknown",
@@ -48,16 +49,47 @@
   "rental": null,
   "events": [
     {
+      "year": 1925,
+      "event": "replaced",
+      "note": "Alamogordo and Albuquerque papers report a new 35-foot all-steel tower replacing the old wooden tower; the register and Forest Service date the lookout to 1926",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/alamo-peak.html"
+    },
+    {
       "year": 1926,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Aermotor LX cab on a 35-foot tower; the register says built in 1926 as an LX-24, and the Forest Service says erected in 1926 as an LX-25",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/nm/alamo-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/nm/alamo-lookout-site/",
+        "https://www.fs.usda.gov/r03/lincoln/recreation/alamo-lookout"
+      ]
+    },
+    {
+      "year": 1933,
+      "event": "staffed",
+      "note": "May 1933 Alamogordo News item: Alex Quick and family moved out to the tower to maintain a lookout for forest fires",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/alamo-peak.html"
     },
     {
       "year": 2015,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: August 30, 2015",
-      "from": "fflos"
+      "note": "Registered August 30, 2015 as US 1604, NM 3; nominated by Mark Gutzman",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/nm/alamo-lookout-site/"
+    },
+    {
+      "year": 2015,
+      "event": "other",
+      "note": "By the 2015 register entry the site was occupied by a Holloman AFB telemetry station; the tower's removal date is not in these sources",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/nm/alamo-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/nm/alamo-lookout-site/",
+        "https://www.fs.usda.gov/r03/lincoln/recreation/alamo-lookout"
+      ]
     }
   ],
   "photos": [
@@ -79,6 +111,11 @@
       "label": "FFLOS register entry US 1604 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/nm/alamo-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Alamo Lookout (U.S. Forest Service, Lincoln National Forest)",
+      "url": "https://www.fs.usda.gov/r03/lincoln/recreation/alamo-lookout",
+      "kind": "reference"
     },
     {
       "label": "FFLA New Mexico lookout list (firelookout.org)",
@@ -150,6 +187,20 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nm-alamo",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -173,9 +224,15 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

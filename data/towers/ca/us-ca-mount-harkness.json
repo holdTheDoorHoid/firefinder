@@ -1,6 +1,7 @@
 {
   "id": "us-ca-mount-harkness",
   "name": "Mount Harkness Lookout",
+  "summary": "Stone-tower lookout in Lassen Volcanic NP, built 1931 (1930 construction reported); NRHP-listed 2017; restored 2019-20; lost in the 2021 Dixie Fire.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "15 by 15 ft cab with log catwalk and railings on a 15 ft stone tower; classic NPS rustic design",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Reported lost in the 2021 Dixie Fire.",
   "registers": [
     {
       "register": "NHLR",
@@ -52,36 +53,61 @@
   "rental": null,
   "events": [
     {
+      "year": 1930,
+      "event": "staffed_first",
+      "note": "First park-operated lookout station, established in 1930 per a Park Service report quoted on Forest Lookouts. The register and Wikipedia give 1931 for the build.",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mount-harkness.html"
+    },
+    {
       "year": 1931,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register and Wikipedia date the build to 1931.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/mount-harkness-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/mount-harkness-lookout/",
+        "https://en.wikipedia.org/wiki/Mount_Harkness_Fire_Lookout"
+      ]
     },
     {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 29, 2003",
-      "from": "nhlr"
+      "note": "Registered May 29, 2003 as US 516, CA 54.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/mount-harkness-lookout/"
+    },
+    {
+      "year": 2017,
+      "event": "nrhp_listed",
+      "note": "Added to the National Register of Historic Places June 19, 2017 (ref. 100001211).",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Mount_Harkness_Fire_Lookout"
     },
     {
       "year": 2019,
       "event": "restored",
-      "note": "First season of restoration work carried out jointly by HistoriCorps and the National Park Service.",
-      "from": "ffla_west_reports",
+      "note": "First season of restoration work by HistoriCorps and the National Park Service.",
+      "from": "research",
       "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-north-2019.pdf"
     },
     {
       "year": 2020,
       "event": "restored",
-      "note": "Second season of restoration work carried out by HistoriCorps and the National Park Service.",
-      "from": "ffla_west_reports",
+      "note": "Second season of restoration work by HistoriCorps and the National Park Service.",
+      "from": "research",
       "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-north-2020.pdf"
     },
     {
       "year": 2021,
       "event": "burned",
-      "note": "'Removed' field on NHLR detail page: \"2021 (Dixie Fire)\".",
-      "from": "nhlr"
+      "note": "Reported lost in the Dixie Fire, August 8, 2021.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/mount-harkness-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/mount-harkness-lookout/",
+        "https://en.wikipedia.org/wiki/Mount_Harkness_Fire_Lookout"
+      ]
     }
   ],
   "photos": [
@@ -177,6 +203,11 @@
       "kind": "register"
     },
     {
+      "label": "2019 Year-End Report, California-Northern Chapter (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-north-2019.pdf",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -250,6 +281,19 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:mount-harkness",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-mount-harkness",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -269,9 +313,15 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

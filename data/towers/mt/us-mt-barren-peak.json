@@ -1,6 +1,7 @@
 {
   "id": "us-mt-barren-peak",
   "name": "Barren Peak Lookout",
+  "summary": "Kootenai National Forest lookout in Lincoln County, MT, built 1940 with an L-4 cab; abandoned since the 1970s, with its cab collapsed by 2017.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "nhlr",
   "roles": [],
-  "design": "L-4",
+  "design": "10' wooden tower with L-4 cab",
   "height_m": 3.0,
   "status": "ruins",
-  "status_note": null,
+  "status_note": "Abandoned since the 1970s; the cab had collapsed by 2017 (firelookout.com)",
   "registers": [
     {
       "register": "NHLR",
@@ -28,34 +29,72 @@
       "url": "http://nhlr.org/lookouts/us/mt/barren-peak-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Kootenai National Forest)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached on foot from a forest road to the trailhead; no closure or private land described in the sources read. The collapsed cab is not a place to climb."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1970s"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Trail 299 about 2.7 miles to Divide Trail 6, then an unmarked spur to the summit (SummitPost)"
   },
   "rental": null,
   "events": [
     {
       "year": 1940,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built as a wooden tower with L-4 cab, replacing an earlier camp",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/barren-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/barren-peak-lookout/",
+        "https://www.firelookout.com/mt/barren.html"
+      ]
+    },
+    {
+      "year": 1944,
+      "event": "staffed",
+      "note": "John M. Richards manned the lookout in the summers of 1944 and 1945, during World War II",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/barren-peak-lookout/"
+    },
+    {
+      "year": 1966,
+      "event": "other",
+      "note": "USGS topographic map portrayed in 1966 (published 1971) marks a lookout tower on the peak, as described by Pastmaps",
+      "from": "research",
+      "source_url": "https://pastmaps.com/map/barren-peak-lincoln-county-mt-usgs-topo-1966-p1971"
+    },
+    {
+      "year": 1970,
+      "event": "abandoned",
+      "note": "Abandoned 'since the 1970s'; the sources give a decade, not an exact year",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/barren-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/barren-peak-lookout/",
+        "https://www.firelookout.com/mt/barren.html"
+      ]
     },
     {
       "year": 2011,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 7, 2011",
-      "from": "nhlr"
+      "note": "Registered April 7, 2011 as US 905, MT 53; nominated by John M. Richards",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/barren-peak-lookout/"
+    },
+    {
+      "year": 2017,
+      "event": "other",
+      "note": "Cab had collapsed by 2017, per firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/barren.html"
     }
   ],
   "photos": [
@@ -137,6 +176,16 @@
       "kind": "register"
     },
     {
+      "label": "Barren Peak (SummitPost)",
+      "url": "https://www.summitpost.org/barren-peak/823846",
+      "kind": "reference"
+    },
+    {
+      "label": "1966 Map of Barren Peak, Lincoln County, MT (Pastmaps)",
+      "url": "https://pastmaps.com/map/barren-peak-lincoln-county-mt-usgs-topo-1966-p1971",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
       "kind": "association"
@@ -196,6 +245,22 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-barren-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -219,9 +284,15 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

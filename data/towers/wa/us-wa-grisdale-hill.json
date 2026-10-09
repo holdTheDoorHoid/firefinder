@@ -1,6 +1,7 @@
 {
   "id": "us-wa-grisdale-hill",
   "name": "Grisdale Hill Lookout Site",
+  "summary": "Mason County, WA Forest Service lookout, also called Camp 3: in use by 1939, house moved off the hill in 1942 per Willhite Web; footings and an OSM ruin mark the summit.",
   "other_names": [
     "Grisdale Hill (Camp 3)",
     "Grisdale Lookout"
@@ -22,7 +23,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Lookout house moved to Dennie Ahl Hill in 1942 according to Willhite Web; old footings and an OpenStreetMap ruin mark the summit; no source dates these observations",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,15 +32,15 @@
       "url": "http://firetower.org/lookouts/us/wa/grisdale-hill-lookout-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Olympic National Forest)",
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "Willhite Web's route follows Forest Service roads and says gates likely block the way; no source gives a public access rule"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "1939"
   },
   "visit": {
     "climbable": null,
@@ -49,10 +50,32 @@
   "rental": null,
   "events": [
     {
+      "year": 1939,
+      "event": "staffed",
+      "note": "Lookout at Camp 3 in use by August 3, 1939 (newspaper articles, per Willhite Web); a Shelton-Mason County Journal item placed in the same 1939 passage names Johnnie Boyce as stationed there, but the quoted item gives no date",
+      "from": "research",
+      "source_url": "http://www.willhiteweb.com/washington_fire_lookouts/grisdale_lookout/camp_three_418.htm"
+    },
+    {
+      "year": 1942,
+      "event": "relocated",
+      "note": "Lookout house moved to Dennie Ahl Hill per 1942 Aircraft Warning Service documents cited by Willhite Web",
+      "from": "research",
+      "source_url": "http://www.willhiteweb.com/washington_fire_lookouts/grisdale_lookout/camp_three_418.htm"
+    },
+    {
+      "year": 1946,
+      "event": "fire",
+      "note": "Newspaper item (quoted by Willhite Web) reports a fire near the old lookout at Camp 3, apparently started by pigeon hunters; the guide reads it as the lookout being gone by then",
+      "from": "research",
+      "source_url": "http://www.willhiteweb.com/washington_fire_lookouts/grisdale_lookout/camp_three_418.htm"
+    },
+    {
       "year": 2012,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 11, 2012",
-      "from": "fflos"
+      "note": "Registered January 11, 2012 as US 1183, WA 84",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/grisdale-hill-lookout-site/"
     }
   ],
   "photos": [
@@ -86,6 +109,11 @@
       "label": "FFLOS register entry US 1183 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wa/grisdale-hill-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Dennie Ahl Fire Lookout Tower (firelookout.com)",
+      "url": "https://www.firelookout.com/wa/dennieahl.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -167,12 +195,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-grisdale-hill",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

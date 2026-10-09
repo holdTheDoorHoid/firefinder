@@ -1,6 +1,7 @@
 {
   "id": "us-wa-ned-hill",
   "name": "Ned Hill Lookout",
+  "summary": "Clallam County, WA pole platform lookout built 1933 on Olympic National Forest land; 1935 fire date disputed; reported collapsed in 2025.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "Pole platform tower of standing snags and poles",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Collapsed; TrailChick gives April 2025 as the date reported, and firelookout.com says it collapsed over the winter of 2024/2025",
   "registers": [
     {
       "register": "NHLR",
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/wa/ned-hill-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Olympic National Forest)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "On Olympic National Forest land with a hiking route to the site; no closure is described in the sources read"
   },
   "staffing": {
     "status": "unknown",
@@ -40,22 +41,62 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Walk the hiker trail from a gravel-road trailhead; directions begin at the west end of Sequim on Highway 101. Sources differ on length (1.1 miles per a visitor page; TrailChick gives a usual distance of 2.2). A visitor page warns that climbing will bring down pieces."
   },
   "rental": null,
   "events": [
     {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Constructed 1933 per the register; firelookout.com says it was a pole platform tower built in 1933; a visitor page describes standing snags and poles",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/ned-hill-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/ned-hill-lookout/",
+        "https://www.firelookout.com/wa/nedhill.html",
+        "http://www.willhiteweb.com/olympic_mountains/ned_hill_lookout/trail_map_228.htm"
+      ]
+    },
+    {
+      "year": 1935,
+      "event": "fire",
+      "note": "TrailChick says the Maynard Peak fire burned over the area and the lookout's two main posts in 1935. A visitor page says the fire was in 'the early part of the century'. The year is disputed.",
+      "from": "research",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/ned-hill-lookout/",
+      "source_urls": [
+        "https://www.trailchick.com/wa-state-fire-lookouts/ned-hill-lookout/",
+        "http://www.willhiteweb.com/olympic_mountains/ned_hill_lookout/trail_map_228.htm"
+      ]
+    },
+    {
+      "year": 1935,
+      "event": "other",
+      "note": "Panorama photos taken August 21, 1935 (Washington Lookouts page); TrailChick credits the 1935 panoramas to the USFS",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/ned-hill.html",
+      "source_urls": [
+        "https://washingtonlookouts.weebly.com/ned-hill.html",
+        "https://www.trailchick.com/wa-state-fire-lookouts/ned-hill-lookout/"
+      ]
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 22, 2022",
-      "from": "nhlr"
+      "note": "Registered May 22, 2022 as US 1579, WA 93",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/ned-hill-lookout/"
+    },
+    {
+      "year": 2025,
+      "event": "destroyed",
+      "note": "Collapsed. TrailChick reports April 2025; firelookout.com says over the winter of 2024/2025.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wa/nedhill.html",
+      "source_urls": [
+        "https://www.firelookout.com/wa/nedhill.html",
+        "https://www.trailchick.com/wa-state-fire-lookouts/ned-hill-lookout/"
+      ]
     }
   ],
   "photos": [
@@ -170,6 +211,21 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-ned-hill",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -197,9 +253,15 @@
       "note": "NHLR lists lookouts that were standing when registered. firelookout.com lists it, but not on its map of standing lookouts."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

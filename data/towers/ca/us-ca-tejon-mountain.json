@@ -1,6 +1,7 @@
 {
   "id": "us-ca-tejon-mountain",
   "name": "Tejon Mountain Lookout Site",
+  "summary": "Los Angeles County lookout site at 4,870 ft; built before 1922 per Register, 1936 per county reports; now ruins with cabin remains and 1936 piers.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "ruins",
-  "status_note": null,
+  "status_note": "The Register describes remains of the wood cabin and dated piers on site. It describes no standing tower",
   "registers": [
     {
       "register": "FFLOS",
@@ -35,8 +36,8 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "1937"
   },
   "visit": {
     "climbable": null,
@@ -52,10 +53,43 @@
       "from": "fflos"
     },
     {
+      "year": 1935,
+      "event": "other",
+      "note": "Sawmill Mountain page says its 30-foot steel tower was moved to Tejon by 1935. Not confirmed as the same structure",
+      "from": "research",
+      "source_url": "https://angelesadventures.com/sawmill-mountain/"
+    },
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "County annual report: Tejon Lookout Tower and observer's cabin erected December 1936. Register piers dated 1936",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/tejon-mountain-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/tejon-mountain-lookout-site/",
+        "https://californialookouts.weebly.com/tejon-mountain.html"
+      ]
+    },
+    {
+      "year": 1937,
+      "event": "staffed",
+      "note": "County annual report: an observer is maintained at the tower through cooperation between three counties",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/tejon-mountain.html"
+    },
+    {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: April 15, 2020",
-      "from": "fflos"
+      "note": "Registered April 15, 2020; nominated by Brad Eells",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/tejon-mountain-lookout-site/"
+    },
+    {
+      "year": null,
+      "event": "built",
+      "note": "Register Built field reads Prior to 1922. Newspaper reports had the tower in service by 1922",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/tejon-mountain-lookout-site/"
     }
   ],
   "photos": [
@@ -103,6 +137,11 @@
       "kind": "register"
     },
     {
+      "label": "Sawmill Mountain Lookout (Angeles Adventures)",
+      "url": "https://angelesadventures.com/sawmill-mountain/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -144,12 +183,31 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:tejon-mountain",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-tejon-mountain",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

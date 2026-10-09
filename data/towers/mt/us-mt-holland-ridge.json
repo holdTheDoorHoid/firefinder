@@ -1,6 +1,7 @@
 {
   "id": "us-mt-holland-ridge",
   "name": "Holland Ridge Lookout",
+  "summary": "Missoula County site with a 1931 14x14 ft stone and shake cabin still standing; its gabled L-4 cab, abandoned in 1953, is gone; reached by a 6.3-mile hike.",
   "other_names": [
     "Holland Lookout"
   ],
@@ -18,9 +19,9 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": "L-4",
+  "design": "14x14 ft stone and shake cabin (1931); gabled L-4 cab from the early 1930s, no longer standing",
   "height_m": null,
-  "status": "gone",
+  "status": "standing",
   "status_note": null,
   "registers": [
     {
@@ -33,8 +34,8 @@
   "agency": "US Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Hike from a trailhead in the Flathead National Forest; no closure or permit found in the sources read"
   },
   "staffing": {
     "status": "unknown",
@@ -43,27 +44,51 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "About 6.3 miles one way from the trailhead, with roughly 4,000 ft of climbing (2014 hike report)"
   },
   "rental": null,
   "events": [
     {
+      "year": 1921,
+      "event": "other",
+      "note": "Site first established with a camp; the source gives no structure for 1921",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/holland-ridge-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/holland-ridge-lookout/",
+        "https://www.firelookout.com/mt/hollandridge.html"
+      ]
+    },
+    {
       "year": 1931,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "14x14 ft stone and shake cabin; still standing per the register and Firelookout.com",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/holland-ridge-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/holland-ridge-lookout/",
+        "https://www.firelookout.com/mt/hollandridge.html",
+        "https://tallpineshiker.blogspot.com/2014/10/holland-lookout-cabin.html"
+      ]
     },
     {
       "year": 1953,
       "event": "abandoned",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Register and Firelookout.com say the L-4 cab was abandoned and is gone; the 2014 blog says the 1931 stone cabin was abandoned that year and is still there",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/holland-ridge-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/holland-ridge-lookout/",
+        "https://www.firelookout.com/mt/hollandridge.html",
+        "https://tallpineshiker.blogspot.com/2014/10/holland-lookout-cabin.html"
+      ]
     },
     {
       "year": 2021,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 9, 2021",
-      "from": "nhlr"
+      "note": "Registered January 9, 2021 as US 1494, MT 72; nominated by Kyle Stetler",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/holland-ridge-lookout/"
     }
   ],
   "photos": [
@@ -159,6 +184,11 @@
       "kind": "register"
     },
     {
+      "label": "Holland lookout cabin (Tall Pines Hiker (blog))",
+      "url": "https://tallpineshiker.blogspot.com/2014/10/holland-lookout-cabin.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
       "kind": "association"
@@ -230,9 +260,51 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-holland-ridge",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "standing"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "firelookout_com",
+          "value": "standing"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives standing where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    },
     {
       "field": "location",
       "values": [
@@ -253,34 +325,17 @@
       ],
       "distance_m": 599,
       "note": "They share a register number."
-    },
-    {
-      "field": "status",
-      "values": [
-        {
-          "source": "ffla",
-          "value": "gone"
-        },
-        {
-          "source": "nhlr",
-          "value": "standing"
-        },
-        {
-          "source": "firelookout_com",
-          "value": "standing"
-        },
-        {
-          "source": "osm",
-          "value": "standing"
-        }
-      ],
-      "distance_m": null,
-      "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

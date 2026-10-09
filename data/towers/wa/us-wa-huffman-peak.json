@@ -1,6 +1,7 @@
 {
   "id": "us-wa-huffman-peak",
   "name": "Huffman Peak Lookout Site",
+  "summary": "Gifford Pinchot NF summit in Skamania County, WA. A 1932 L-6 cab is disputed by 1934 photos; the 2020 Big Hollow Fire burned the peak; no standing cab is described.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-6 cab on a small foundation of built-up rocks",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Cab removed at an unknown date; the 2020 Big Hollow Fire burned the summit, and no source describes a cab still standing",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/wa/huffman-peak-lookout-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Gifford Pinchot National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached on foot. Forest Road 5701 is closed to the public beyond the Siouxon Trailhead, and hikers travel at their own risk in the burned areas."
   },
   "staffing": {
     "status": "unknown",
@@ -41,15 +42,34 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Hike Siouxon Trail #130 from the Upper Siouxon (Huffman Peak) Trailhead; WillhiteWeb gives a 2-mile hike from the Siouxon Peak site"
   },
   "rental": null,
   "events": [
     {
+      "year": 1932,
+      "event": "built",
+      "note": "Register gives 1932 for the L-6 cab; WillhiteWeb's July 1934 panoramas show no structure on the summit, so the date is disputed",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/huffman-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/huffman-peak-lookout-site/",
+        "http://willhiteweb.com/fire_lookouts/huffman_peak_lookout/forest_service_025.htm"
+      ]
+    },
+    {
       "year": 2012,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: June 24, 2012",
-      "from": "fflos"
+      "note": "Registered June 24, 2012 as US 1324, WA 224",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/huffman-peak-lookout-site/"
+    },
+    {
+      "year": 2020,
+      "event": "burned",
+      "note": "Big Hollow Fire burned the summit",
+      "from": "research",
+      "source_url": "http://willhiteweb.com/fire_lookouts/huffman_peak_lookout/forest_service_025.htm"
     }
   ],
   "photos": [
@@ -76,6 +96,11 @@
       "label": "FFLOS register entry US 1324 (firetower.org)",
       "url": "http://www.firetower.org/lookouts/us/wa/huffman-peak-lookout-site/US%201324,%20WA%20224",
       "kind": "register"
+    },
+    {
+      "label": "Trailhead: Siouxon (Gifford Pinchot National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r06/giffordpinchot/recreation/trailhead-siouxon",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -146,12 +171,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-huffman-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

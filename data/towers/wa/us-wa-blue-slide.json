@@ -1,6 +1,7 @@
 {
   "id": "us-wa-blue-slide",
   "name": "Blue Slide Lookout Site",
+  "summary": "Yakima County lookout site: 1942 cabin, 1946 L-4 tower, 1960 40-ft tower; removed or toppled 1971-72 (sources differ); footings on site per photos.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "D-6 cupola cabin (1942); 30-foot treated timber L-4 tower (1946); 40-foot treated timber tower with R-6 flat cab (1960)",
+  "height_m": 12.2,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Removed or toppled in 1971 or 1972; sources differ on the year. Willhite's photo captions show footings and an emergency cabin, with no dates given.",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached by a rough gravel road or a hike (Willhite); no closure found in these pages"
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,73 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Willhite: high clearance 4WD needed or it is a hike"
   },
   "rental": null,
   "events": [
     {
+      "year": 1942,
+      "event": "built",
+      "note": "Site developed with a D-6 cupola cabin trucked from the Darland Lookout",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/blue-slide-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/blue-slide-lookout-site/",
+        "https://www.firelookout.com/wa/blueslide.html",
+        "http://willhiteweb.com/washington_fire_lookouts/blue_slide_lookout/ahtanum_state_forest_240.htm"
+      ]
+    },
+    {
+      "year": 1946,
+      "event": "replaced",
+      "note": "30-foot treated timber tower with L-4 cab replaced the cabin",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/blue-slide-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/blue-slide-lookout-site/",
+        "http://willhiteweb.com/washington_fire_lookouts/blue_slide_lookout/ahtanum_state_forest_240.htm"
+      ]
+    },
+    {
+      "year": 1960,
+      "event": "replaced",
+      "note": "40-foot treated timber tower with R-6 flat cab",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/blue-slide-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/blue-slide-lookout-site/",
+        "http://willhiteweb.com/washington_fire_lookouts/blue_slide_lookout/ahtanum_state_forest_240.htm"
+      ]
+    },
+    {
+      "year": 1971,
+      "event": "removed",
+      "note": "Register says removed in 1971; firelookout.com says promptly destroyed in 1971",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/blue-slide-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/blue-slide-lookout-site/",
+        "https://www.firelookout.com/wa/blueslide.html"
+      ]
+    },
+    {
+      "year": 1972,
+      "event": "destroyed",
+      "note": "Oregonian item dated April 4, 1972, as quoted by Willhite and Weebly: station toppled over a cliff after its guy wires were cut",
+      "from": "research",
+      "source_url": "http://willhiteweb.com/washington_fire_lookouts/blue_slide_lookout/ahtanum_state_forest_240.htm",
+      "source_urls": [
+        "http://willhiteweb.com/washington_fire_lookouts/blue_slide_lookout/ahtanum_state_forest_240.htm",
+        "https://washingtonlookouts.weebly.com/blue-slide.html"
+      ]
+    },
+    {
       "year": 2012,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: July 19, 2012",
-      "from": "fflos"
+      "note": "Registered July 19, 2012 as US 1358, WA 258; nominated by Ray Kresek",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/blue-slide-lookout-site/"
     }
   ],
   "photos": [
@@ -71,6 +129,11 @@
       "label": "FFLOS register entry US 1358 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wa/blue-slide-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Blue Slide Trail #4W621 (U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r06/okanogan-wenatchee/recreation/trails/blue-slide-trail",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -141,12 +204,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-blue-slide",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

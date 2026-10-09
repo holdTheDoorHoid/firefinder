@@ -1,6 +1,7 @@
 {
   "id": "us-id-fly-hill",
   "name": "Fly Hill Lookout Site",
+  "summary": "Clearwater National Forest L-4 cab on a log crib, built 1934 and abandoned in the 1950s. No remains are described and no source covers the site today.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Register says the cab is now gone. No source describes remains at the site.",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,25 +32,57 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Drive-up per Idaho Fire Lookouts. No source describes a closure or permit rule."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "No cab stands. The sources give no route or visitor information."
   },
   "rental": null,
   "events": [
     {
+      "year": 1931,
+      "event": "staffed",
+      "note": "Mark E Lawrence listed as known staff by Idaho Fire Lookouts. Predates the 1934 build date; the sources do not explain the gap.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/fly-hill-lookout/"
+    },
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "L-4 cab atop a log crib, per the register, firelookout.com and Idaho Fire Lookouts.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/id/fly-hill-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/id/fly-hill-lookout-site/",
+        "https://www.firelookout.com/id/flyhill.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/fly-hill-lookout/"
+      ]
+    },
+    {
+      "year": 1950,
+      "event": "abandoned",
+      "note": "Sources give only the 1950s decade; 1950 marks the start of that decade, not a dated event.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/id/fly-hill-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/id/fly-hill-lookout-site/",
+        "https://www.firelookout.com/id/flyhill.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/fly-hill-lookout/"
+      ]
+    },
+    {
       "year": 2011,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 20, 2011",
-      "from": "fflos"
+      "note": "Registered January 20, 2011.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/id/fly-hill-lookout-site/"
     }
   ],
   "photos": [
@@ -83,6 +116,11 @@
       "label": "FFLOS register entry US 823 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/id/fly-hill-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Fixed Fire Detection Lookout History on the Clearwater National Forest (Clearwater National Forest study (digital copy))",
+      "url": "https://nfsl.contentdm.oclc.org/digital/api/collection/p17053coll2/id/28879/download",
+      "kind": "reference"
     },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
@@ -153,12 +191,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-fly-hill",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

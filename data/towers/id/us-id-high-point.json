@@ -1,6 +1,7 @@
 {
   "id": "us-id-high-point",
   "name": "High Point Lookout Site",
+  "summary": "Idaho lookout on the Caribou-Targhee National Forest: 1922 pole platform tower, 1934 frame cabin, destroyed 1966. Register photos from 2021 show footings and debris remaining.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "Pole platform tower (1922), then frame cabin (1934)",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Destroyed in 1966. The register says wood footings and concrete debris remain at the site.",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,46 +29,93 @@
       "url": "http://firetower.org/lookouts/us/id/high-point-lookout-site/"
     }
   ],
-  "agency": "US Forest Service - Caribou-Targee National Forest",
+  "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Drive-up per Idaho Fire Lookouts, on Caribou-Targhee National Forest land. No source describes a closure or permit requirement."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "No tower stands. Only footings and debris remain, per the register."
   },
   "rental": null,
   "events": [
     {
       "year": 1922,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Pole platform tower with a small observation cabin and a residence ground cabin.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/id/high-point-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/id/high-point-lookout-site/",
+        "https://www.firelookout.com/id/highpoint319.html",
+        "https://www.idahofirelookouts.com/southern-idaho/high-point-lookout/"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "replaced",
+      "note": "Frame cabin replaced the original structure.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/id/high-point-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/id/high-point-lookout-site/",
+        "https://www.firelookout.com/id/highpoint319.html",
+        "https://www.idahofirelookouts.com/southern-idaho/high-point-lookout/"
+      ]
+    },
+    {
+      "year": 1937,
+      "event": "fire",
+      "note": "Item reports two fires extinguished in the previous week, one near Hatchery Butte. It does not say which station spotted them.",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/high-point.html"
+    },
+    {
+      "year": 1937,
+      "event": "other",
+      "note": "Same item says a new lookout station was established on Highpoint. This conflicts with the 1922 build date; the sources do not reconcile it.",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/high-point.html"
+    },
+    {
+      "year": 1937,
+      "event": "staffed",
+      "note": "Herman Blazer placed in charge, per a Post-Register item quoted on the Forest Lookouts Idaho page.",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/high-point.html"
     },
     {
       "year": 1966,
       "event": "destroyed",
-      "note": null,
-      "from": "idaho_fl"
+      "note": "Destroyed in 1966.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/id/high-point-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/id/high-point-lookout-site/",
+        "https://www.firelookout.com/id/highpoint319.html",
+        "https://www.idahofirelookouts.com/southern-idaho/high-point-lookout/"
+      ]
     },
     {
       "year": 1966,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"1966\".",
-      "from": "fflos"
+      "note": "Register lists removal in 1966.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/id/high-point-lookout-site/"
     },
     {
       "year": 2021,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: August 12, 2021",
-      "from": "fflos"
+      "note": "Registered August 12, 2021; nominated by Brad Eells.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/id/high-point-lookout-site/"
     }
   ],
   "photos": [
@@ -194,12 +242,33 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:id:high-point",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-high-point",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

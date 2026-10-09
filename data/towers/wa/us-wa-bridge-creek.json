@@ -1,6 +1,7 @@
 {
   "id": "us-wa-bridge-creek",
   "name": "Bridge Creek Lookout Site",
+  "summary": "Okanogan NF site of a 1930s camp with a platform tower, abandoned in the 1940s; no remains described, reached by a 1.3-mile hike from FR 100.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Platform tower at a camp",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Abandoned in the 1940s; the sources describe no remains at the site",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/wa/bridge-creek-lookout-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "Okanogan National Forest, U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "On Okanogan National Forest land, reached on foot from a pass on FR 100 where there is parking. Willhite notes a sign asking visitors to close a gate after entering."
   },
   "staffing": {
     "status": "unknown",
@@ -40,22 +41,35 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Park at the pass on FR 100, reached from the Twisp River Road by Little Bridge Creek Road and about 3 miles of gravel. The hike is 1.3 miles with 550 feet of gain (Willhite)."
   },
   "rental": null,
   "events": [
     {
       "year": 1930,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register's Built field reads 1930's; 1930 is the start of that decade, not a dated record",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/bridge-creek-lookout-site/"
+    },
+    {
+      "year": 1940,
+      "event": "abandoned",
+      "note": "Sources say abandoned in the 1940's; 1940 is the start of that decade, not a dated record",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/bridge-creek-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/bridge-creek-lookout-site/",
+        "https://www.firelookout.com/wa/bridgecreek.html"
+      ]
     },
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: April 9, 2020",
-      "from": "fflos"
+      "note": "Registered April 9, 2020 as US 1984, WA 483",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/bridge-creek-lookout-site/"
     }
   ],
   "photos": [],
@@ -64,6 +78,11 @@
       "label": "FFLOS register entry US 1984 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wa/bridge-creek-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Two Forest Service fire guards become the first smokejumpers to parachute into a forest fire in Washington on August 10, 1940 (HistoryLink.org)",
+      "url": "https://teach.historylink.org/history/two-forest-service-fire-guards-become-first-smokejumpers-parachute/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -132,12 +151,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-bridge-creek",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

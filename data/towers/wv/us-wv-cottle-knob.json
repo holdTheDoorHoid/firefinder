@@ -1,6 +1,7 @@
 {
   "id": "us-wv-cottle-knob",
   "name": "Cottle Knob Tower Site",
+  "summary": "Cottle Knob lookout in Nicholas County: FFLOS and Eastern lookouts say removed; firelookout.org lists a standing tower at Pocahontas Co. H.S. as relocated.",
   "other_names": [],
   "country": "US",
   "region": "WV",
@@ -18,8 +19,8 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "relocated",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Sources conflict. FFLOS and the Eastern lookouts page say the tower was removed, while firelookout.org lists a standing tower at Pocahontas Co. H.S. coded as relocated from Cottle Knob (Standing*).",
   "registers": [
     {
       "register": "FFLOS",
@@ -48,8 +49,9 @@
     {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 16, 2008",
-      "from": "fflos"
+      "note": "Date registered per FFLOS",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wv/cottle-knob-tower-site/"
     },
     {
       "year": null,
@@ -115,12 +117,46 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wv-cottle-knob",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-ca-needles",
   "name": "Needles Lookout",
+  "summary": "Sequoia NF rock lookout built 1937-38 by the CCC and reached by stairs; destroyed by a structure fire on July 28, 2011; no source shows a replacement.",
   "other_names": [
     "Needles Pk Fire Lookout"
   ],
@@ -18,10 +19,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": "L-4",
+  "design": "L-4 cab with catwalk, 14 by 14 feet (NHLR); fire-lookouts.org calls it a C-3 style cab",
   "height_m": 85.3,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Destroyed by a structure fire on July 28, 2011; the sources read do not describe a replacement cabin",
   "registers": [
     {
       "register": "NHLR",
@@ -36,15 +37,15 @@
       "url": "http://firetower.org/lookouts/us/ca/the-needles-lookout-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Sequoia National Forest",
   "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "volunteer",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2011"
   },
   "visit": {
     "climbable": null,
@@ -54,16 +55,44 @@
   "rental": null,
   "events": [
     {
+      "year": 1937,
+      "event": "other",
+      "note": "CCC crew building a trail to the Needles; a stairway was needed up the rock",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/the-needles.html"
+    },
+    {
       "year": 1938,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR Built field gives 1938; Forest Service release says constructed 1937-38 by the CCC; fire-lookouts.org gives 1937",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/needles-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/needles-lookout/",
+        "https://californialookouts.weebly.com/the-needles.html",
+        "https://www.fire-lookouts.org/cali/needles_peak/index.htm"
+      ]
+    },
+    {
+      "year": 1939,
+      "event": "staffed_first",
+      "note": "Millard R. James placed in charge when the new cabin opened in June 1939 (newspaper quoted on californialookouts.weebly.com)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/the-needles.html"
+    },
+    {
+      "year": 1972,
+      "event": "fire",
+      "note": "270-acre fire started near the lookout in June 1972; Marie Cox ordered to evacuate, then went back on duty",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/the-needles.html"
     },
     {
       "year": 2001,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 10, 2001",
-      "from": "nhlr"
+      "note": "Registered June 10, 2001 as US 382, CA 43",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/needles-lookout/"
     },
     {
       "year": 2007,
@@ -79,17 +108,37 @@
       "from": "nhlr"
     },
     {
+      "year": 2011,
+      "event": "closed",
+      "note": "Forest Road 21S05, trail 32E22 and the rock formation closed during the fire",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/needles-lookout/"
+    },
+    {
+      "year": 2011,
+      "event": "destroyed",
+      "note": "Structure fire destroyed the lookout on July 28, 2011; cause under investigation per the Forest Service release",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/needles-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/needles-lookout/",
+        "https://californialookouts.weebly.com/the-needles.html",
+        "https://www.fire-lookouts.org/cali/needles_peak/index.htm"
+      ]
+    },
+    {
       "year": 2012,
       "event": "other",
-      "note": "Rebuild planning funded with about $13,000; hazardous material from the fire removed and most of the environmental review (NEPA) completed.",
-      "from": "ffla_west_reports",
-      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sn-nevada-2012.pdf"
+      "note": "Hazardous materials removal completed October 2012; a Forest Service project lead proposed the rebuild, and the Kern and Tulare Counties Resource Advisory Committee awarded part of the requested funding",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/needles_peak/index.htm"
     },
     {
       "year": 2019,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: December 1, 2019",
-      "from": "fflos"
+      "note": "Registered December 1, 2019 as US 1846, CA 41",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/the-needles-lookout-site/"
     }
   ],
   "photos": [
@@ -293,6 +342,20 @@
       "fields": [
         "height_m"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-needles",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -320,9 +383,15 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

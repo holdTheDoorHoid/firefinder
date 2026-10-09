@@ -1,0 +1,16 @@
+The Blue Ridge lookout went up in 1930 on a mountain in Tulare County, California.[^1][^2] A December 1930 newspaper report places it east of Exeter.[^2] A 2017 article places it 15 miles east of Springville, so the sources do not agree on the landmark.[^6]
+
+The Forest Service and the state forestry department (CDF) put it up together as a cooperative lookout.[^1] The register describes a 60-foot open steel Aermotor tower with a 7-by-7 observation cab.[^1] The 1930 report gave the planned height as 60 feet, but an April 1931 report said the structure rose seventy feet above its base.[^2] The residence was built in 1931.[^1] The station was dedicated on May 24 that year.[^1] The garage followed in 1932, and the cab was modified in 1960.[^1]
+
+The sources I read name no notable fires at this lookout and describe no regular staffing after the early years. In 1931 a state ranger tested night signaling from the tower to the forest service headquarters in Porterville, using a gasoline lantern.[^2] The only later staffing they mention came at the 2024 county fair.[^5]
+
+The tower was lifted off its mountain in May 2010, after what a Forest Fire Lookout Association chapter report called a four-year process.[^3] CAL FIRE had planned to remove it until local enthusiasts stepped in, and the Buck Rock Foundation worked to save it.[^3][^6] The tower went to CAL FIRE headquarters in Visalia for full restoration.[^3] After restoration, the tower went to the Tulare County Fairgrounds, which welcomed visitors during the October 2011 county fair.[^4]
+
+Today the lookout is not on its mountain.[^1] The sources disagree on how much is on display. A 2017 article says the building is on permanent display at the fairgrounds,[^6] while the register entry says only the cabin is shown at ground level.[^1] In 2024 the Buck Rock Foundation and CAL FIRE again opened the lookout during the fair and gave tours.[^5] Outside the fair, I found no regular hours. As for the summit, the register entry, marked "MVT 10/91," says neither the house nor the garage has suffered significant loss of integrity.[^1] No source I read says whether they still stand. The same entry calls the summit an intensively used communications site, and nothing I read says whether the public may visit it.[^1]
+
+[^1]: Blue Ridge Lookout Site (Tulare County), Former Fire Lookout Sites Register, http://firetower.org/lookouts/us/ca/blue-ridge-lookout-site-tulare-county/ (accessed 2026-10-09).
+[^2]: Blue Ridge, Forest Lookouts (newspaper transcriptions, Fresno Bee, 1930-1931), https://californialookouts.weebly.com/blue-ridge1.html (accessed 2026-10-09).
+[^3]: California Sierra Nevada Chapter annual report 2010, Forest Fire Lookout Association, https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sn-nevada-2010.pdf (accessed 2026-10-09).
+[^4]: California Sierra Nevada Chapter annual report 2011, Forest Fire Lookout Association, https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sn-nevada-2011.pdf (accessed 2026-10-09).
+[^5]: Volunteer News, Buck Rock Foundation, https://buckrock.org/category/volunteer-news/ (accessed 2026-10-09).
+[^6]: Preserving our parks' fire lookouts, The Sun-Gazette, https://thesungazette.com/article/lifestyles/2017/03/29/preserving-our-parks-fire-lookouts/ (accessed 2026-10-09).
