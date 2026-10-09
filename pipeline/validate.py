@@ -8,6 +8,9 @@ Errors (exit status 1):
   * a kind, status, ownership, access level, staffing status, verification or event name
     that is not in data/vocab.json
   * malformed lists: registers, events, photos, links, sources, conflicts, locked
+  * a retired tower (merged_into: merge.py folded it into another tower, RECORD_JOINS) that is not
+    hidden, still lists sources, or names a tower that is missing, hidden or itself retired; research
+    or a story filed under a retired id
 
 Research files (data/research/<id>.json, research/STORY_GUIDE.md) and stories
 (data/stories/<id>.md) are checked too. Errors: a file that is not a JSON object, an id that
@@ -192,7 +195,17 @@ def check(rec: object, path: Path, vocab: dict) -> tuple[list[str], list[str]]:
         bad = [i for i, x in enumerate(val) if not ok(x)]
         if bad:
             errs.append(f"{key}[{bad[0]}] is malformed" + (f" (and {len(bad) - 1} more)" if len(bad) > 1 else ""))
-    if isinstance(rec.get("sources"), list) and not rec["sources"]:
+    merged = rec.get("merged_into")
+    if merged is not None:
+        # A retired tower (merge.py, RECORD_JOINS): hidden, no records of its own, and the id of the
+        # tower that has them now.
+        if not (isinstance(merged, str) and ID_RE.match(merged)) or merged == rid:
+            errs.append(f"merged_into {merged!r} is not the id of another tower")
+        elif rec.get("hidden") is not True:
+            errs.append("merged_into is set but the tower is not hidden")
+        if rec.get("sources"):
+            errs.append("a tower with merged_into still lists sources")
+    elif isinstance(rec.get("sources"), list) and not rec["sources"]:
         errs.append("sources is empty")
     photo_keys = ("file", "thumb", "url", "source_url", "credit", "license", "caption", "year")
     if isinstance(rec.get("photos"), list) and any(isinstance(p, dict) and not all(k in p for k in photo_keys) for p in rec["photos"]):
@@ -400,6 +413,8 @@ def validate(towers_dir: Path, vocab_path: Path, log=print, research_dir: Path |
     n_err = n_warn = 0
     warn_kinds: Counter = Counter()
     internal_links: list[tuple[Path, str]] = []
+    merged: dict[str, str] = {}      # retired tower id -> the tower that has its records
+    hidden_ids: set[str] = set()
     for path in files:
         try:
             rec = json.loads(path.read_text(encoding="utf-8"))
@@ -418,6 +433,10 @@ def validate(towers_dir: Path, vocab_path: Path, log=print, research_dir: Path |
                 errs.append(f"duplicate id (also in {seen[rid]})")
             else:
                 seen[rid] = path
+            if isinstance(rec, dict) and isinstance(rec.get("merged_into"), str):
+                merged[rid] = rec["merged_into"]
+            if isinstance(rec, dict) and rec.get("hidden") is True:
+                hidden_ids.add(rid)
         for e in errs:
             log(f"ERROR {path.relative_to(towers_dir)}: {e}")
         for w in warns:
@@ -428,6 +447,16 @@ def validate(towers_dir: Path, vocab_path: Path, log=print, research_dir: Path |
         if target not in seen:
             log(f"ERROR {path.relative_to(towers_dir)}: links to tower {target}, which does not exist")
             n_err += 1
+    for rid, target in sorted(merged.items()):
+        why = ("does not exist" if target not in seen else "is itself merged away" if target in merged
+               else "is hidden" if target in hidden_ids else None)
+        if why:
+            log(f"ERROR {seen[rid].relative_to(towers_dir)}: merged into {target}, which {why}")
+            n_err += 1
+        for folder, ext in ((research_dir, ".json"), (stories_dir, ".md")):
+            if folder is not None and (folder / f"{rid}{ext}").is_file():
+                log(f"ERROR {folder.name}/{rid}{ext}: tower {rid} was merged into {target}; move this to {target}{ext}")
+                n_err += 1
     log(f"Checked {len(files)} tower records: {n_err} error(s), {n_warn} warning(s).")
     for kind, n in warn_kinds.most_common(8):
         log(f"  warning x{n}: {kind}")

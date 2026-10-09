@@ -310,6 +310,8 @@ export interface Meta {
     /** Camps, lookout trees and bare points. */
     no_structure?: number;
     hidden?: number;
+    /** Towers the merge folded into others; their old addresses redirect (redirects.json). */
+    merged?: number;
     rentable?: number;
     registered?: number;
     stories?: number;

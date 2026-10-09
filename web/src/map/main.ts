@@ -20,6 +20,7 @@ import { isMaybe, yearState } from '../lib/history.ts';
 import { formatCount } from '../lib/format.ts';
 import { isNoStructure } from '../lib/vocab.ts';
 import { html } from '../lib/html.ts';
+import { resolveRedirect, type RedirectsFile } from '../lib/redirects.ts';
 import { buildIndex, type SearchEntry } from '../lib/search.ts';
 import type { Meta, SourceInfo, TowerCollection, TowerFeature, TowerProps } from '../lib/types.ts';
 import { parseState, serializeState, type AppState, type Basemap } from '../lib/urlstate.ts';
@@ -568,6 +569,11 @@ async function main(): Promise<void> {
     const go = async () => (await getSeen())?.set(ids, km);
     if (m.isStyleLoaded()) void go();
     else m.once('load', () => void go());
+  }
+  if (state.selected && !byId.has(state.selected)) {
+    // A lookout the merge folded into another keeps its address: follow the redirect (src/lib/redirects.ts).
+    const moved = await getJson<RedirectsFile>('data/redirects.json').catch(() => null);
+    state.selected = resolveRedirect(state.selected, moved);
   }
   if (state.selected) {
     const f = byId.get(state.selected);

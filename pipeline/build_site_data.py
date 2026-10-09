@@ -32,6 +32,9 @@ towers.geojson properties (absent optional keys mean null / false; see meta.json
   unplaced.json    the lookouts no source places and GNIS could not place either ("Lookouts we
                    can't place yet", one page per state), from data/merge_report.json's
                    "unplaced_lookouts" (pipeline/merge.py)
+  redirects.json   {"redirects": {old id: new id}}: towers the merge folded into others (their
+                   files say merged_into). Their pages are not built; the prerender step writes a
+                   small redirecting page at each old address so old links keep working
 
 Coordinates are [lon, lat] rounded to 5 decimal places.
 
@@ -46,7 +49,8 @@ is not kept; pipeline/extract_design_mentions.py), and the lookouts data/designs
 built to a plan ("examples"), plus each one's family (an Aermotor MC-39 is also an Aermotor).
 designs.json pairs the guide's facts (data/designs.json) with every lookout of each design.
 
-Hidden records (hidden: true) are skipped. Records that fail basic checks are skipped with a
+Hidden records (hidden: true) are skipped, and so are retired ones (merged_into), which are
+listed in redirects.json instead. Records that fail basic checks are skipped with a
 warning, so one bad file never takes the site down; pass --strict to fail instead.
 
 If the towers folder has no records and --fallback-fixtures is given, the sample records in
@@ -1032,6 +1036,7 @@ def build(
     counts: dict[str, Counter] = {k: Counter() for k in ("status", "kind", "region", "verification", "material")}
     hidden = rentable = registered = stories = skipped = approximate = 0
     approximate_by_region: Counter = Counter()
+    merged: dict[str, str] = {}      # retired tower id -> the tower that has its records
     names: dict[str, str] = {}
     cited: Counter[str] = Counter()
     any_fixture = fixtures
@@ -1047,6 +1052,9 @@ def build(
         if problem:
             log.warn(f"skipped: {problem}", path)
             skipped += 1
+            continue
+        if isinstance(rec.get("merged_into"), str) and rec["merged_into"]:
+            merged[rec["id"]] = rec["merged_into"]
             continue
         if rec.get("hidden"):
             hidden += 1
@@ -1121,6 +1129,14 @@ def build(
 
     features.sort(key=lambda f: f["properties"]["i"])
     _write_json(out / "towers.geojson", {"type": "FeatureCollection", "features": features})
+    redirects = {old: new for old, new in sorted(merged.items()) if new in names}
+    for old, new in sorted(merged.items()):
+        if new not in names:
+            log.warn(f"{old} was merged into {new}, which is not a visible lookout; no redirect for it")
+    _write_json(out / "redirects.json", {
+        "note": "Towers the merge folded into others (merged_into): the old address redirects to the new one.",
+        "redirects": redirects,
+    })
     unplaced = load_unplaced(report_path, names, log) if not fixtures else []
     in_scope = [u for u in unplaced if not u.get("out_of_scope")]
     _write_json(out / "unplaced.json", {
@@ -1164,6 +1180,7 @@ def build(
             "structures": kinds_meta.get("structures", structures_n),
             "no_structure": kinds_meta.get("no_structure", len(features) - structures_n),
             "hidden": hidden,
+            "merged": len(redirects),
             "skipped": skipped,
             "rentable": rentable,
             "registered": registered,
@@ -1189,7 +1206,7 @@ def build(
     hist = meta["history"]
     log.info(
         f"Wrote {len(features)} lookouts ({structures_n} structures, {len(features) - structures_n} with no structure; "
-        f"{hidden} hidden, {skipped} skipped, {stories} stories) "
+        f"{hidden} hidden, {len(redirects)} merged into others, {skipped} skipped, {stories} stories) "
         f"to {out}; towers.geojson is {size / 1024:.0f} KiB"
     )
     log.info(

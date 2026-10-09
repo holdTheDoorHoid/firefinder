@@ -111,6 +111,30 @@ class NameNormalisation(unittest.TestCase):
         # a moved structure's origin is a different place, not another name for this one
         self.assertLess(self.s("Colville Museum (Relocated Graves Mountain)", "Graves Mountain Lookout"), M.PARTIAL)
 
+    def test_county_and_forest_notes_are_not_names(self):
+        # FFLOS and NHLR put the county or forest in a parenthesis; that says where, not what
+        self.assertEqual(M.name_variants("Pine Hill Tower Site (Potter County)"), ["Pine Hill Tower Site"])
+        self.assertEqual(M.name_variants("Black Mountain Lookout (Boundary County)"), ["Black Mountain Lookout"])
+        self.assertEqual(M.name_variants("Bald Mountain Lookout (Sierra NF)"), ["Bald Mountain Lookout"])
+        self.assertEqual(M.name_variants("Black Butte Lookout Site (Shasta-Trinity National Forest)"),
+                         ["Black Butte Lookout Site"])
+        self.assertEqual(M.name_variants("Moose River (Lewis Co.)"), ["Moose River"])
+        self.assertEqual(M.name_variants("Sand Mountain Tower Site (Centre County I)"), ["Sand Mountain Tower Site"])
+        # a place that only contains the word is a name: where the Johnstone Peak lookout stands now
+        self.assertEqual(M.name_variants("Johnstone Peak Lookout (Los Angeles County Fairplex)"),
+                         ["Johnstone Peak Lookout", "Los Angeles County Fairplex"])
+        # a county number or a state code may follow the county or forest word
+        self.assertEqual(M.name_variants("Bald Butte Lookout (Fremont-Winema National Forest, OR)"), ["Bald Butte Lookout"])
+        # an alternate name beside the note still counts
+        self.assertEqual(M.name_variants("Putnam (Liberty) (Potter County)"), ["Putnam", "Liberty"])
+        # plain "Forest" is a name (Forest Hill), and so is a place that only contains "co"
+        self.assertEqual(M.name_variants("Fort Hill (Forest Hill)"), ["Fort Hill", "Forest Hill"])
+        self.assertEqual(M.name_variants("Hat Creek (Coburn)"), ["Hat Creek", "Coburn"])
+        # so two lookouts that only share a county are not the same name
+        self.assertLess(self.s("Pine Hill Tower Site (Potter County)", "Round Top Tower Site (Potter County)"), M.PARTIAL)
+        # ...while the same lookout with and without the note is
+        self.assertEqual(self.s("Pine Hill Tower Site (Potter County)", "Pine Hill Tower"), 1.0)
+
     def test_generic_names_have_no_score(self):
         self.assertIsNone(self.s("Fire Tower", "Bald Mountain"))
         self.assertIsNone(self.s("Lookout Tower", "Bald Mountain"))
@@ -194,6 +218,17 @@ class Matching(unittest.TestCase):
         self.assertNotEqual(self.ws.tower_with_key("ffla:bm")["id"], self.ws.tower_with_key("osm:bk")["id"])
         self.assertNotEqual(self.ws.tower_with_key("ffla:x")["id"], self.ws.tower_with_key("ffla:y")["id"])
         self.assertNotEqual(self.ws.tower_with_key("ffla:z")["id"], self.ws.tower_with_key("fflos:US 674")["id"])
+
+    def test_a_shared_county_note_does_not_join_two_lookouts(self):
+        # FFLOS names the county in a parenthesis; "Round Top (Potter County)" 1 km from "Pine Hill
+        # Tower Site (Potter County)" is another lookout (the note used to be an alternate name,
+        # so both answered to "Potter County" and the second joined the first)
+        self.ws.run({
+            "fflos": [rec("fflos", "pine", "Pine Hill Tower Site (Potter County)", 41.7000, -77.8000, "PA", status="gone")],
+            "ffla": [rec("ffla", "top", "Round Top (Potter County)", 41.7090, -77.8000, "PA", status="gone")],
+        })
+        pine, top = self.ws.tower_with_key("fflos:pine"), self.ws.tower_with_key("ffla:top")
+        self.assertNotEqual(pine["id"], top["id"])
 
     def test_same_source_only_when_double_listed(self):
         self.ws.run({
