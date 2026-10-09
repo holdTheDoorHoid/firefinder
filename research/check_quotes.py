@@ -66,7 +66,10 @@ def cites(e):
 
 
 def check(rid):
-    r = json.load(open(os.path.join(ROOT, "data", "research", f"{rid}.json"), encoding="utf-8"))
+    path = os.path.join(ROOT, "data", "research", f"{rid}.json")
+    if not os.path.exists(path):  # not written (the researcher gave up or was blocked): nothing to check
+        return {"id": rid, "found": 0, "close": 0, "missing": 0, "unreadable": 0, "no_source": 0, "bad": [], "absent": True}
+    r = json.load(open(path, encoding="utf-8"))
     urls = {s.get("n"): s.get("url") for s in r.get("sources") or [] if isinstance(s, dict)}
     out = {"id": rid, "found": 0, "close": 0, "missing": 0, "unreadable": 0, "no_source": 0, "bad": []}
     for e in r.get("evidence") or []:
@@ -114,7 +117,7 @@ def main():
     rows = [check(i) for i in ids]
     tot = {k: sum(r[k] for r in rows) for k in ("found", "close", "missing", "unreadable", "no_source")}
     for r in rows:
-        flag = "MISSING" if r["missing"] or r["no_source"] else "ok"
+        flag = "ABSENT" if r.get("absent") else "MISSING" if r["missing"] or r["no_source"] else "ok"
         print(f"{flag:8} {r['id']}: found {r['found']}, close {r['close']}, missing {r['missing']}, "
               f"unreadable {r['unreadable']}, no source {r['no_source']}")
         if a.verbose:
