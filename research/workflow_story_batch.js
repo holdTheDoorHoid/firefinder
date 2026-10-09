@@ -26,6 +26,7 @@ const RULES = `RULES (condensed from ${ROOT}/research/STORY_GUIDE.md; open that 
   - Every factual sentence gets a footnote [^n]. Definitions at the end, one per source, each with a full http(s) URL: \`[^1]: Title, Publisher, https://… (accessed ${today}).\`
   - Never invent names, dates or numbers. Where sources disagree, say so. Don't encourage climbing closed or private towers.
   - **Gone, moved or ruined lookouts** (check the brief's status): the story still runs built → staffing → fate, and "today" means what a source says remains at the site (footings, a foundation, a radio tower, nothing) and whether the site is public. Say plainly when no source describes the site today; never invent remains or a view. For a moved or replica tower, cover both the original site and where the structure stands now.
+  - When sources say nothing about a topic (staffing, fires...), leave it out rather than writing a sentence about the missing evidence. The one exception is what remains at the site today, where "no source describes the site now" helps a visitor.
 - **Research JSON** \`${ROOT}/data/research/<id>.json\`, with keys:
   - id, researched ("${today}"), summary (one sentence ≤200 chars);
   - facts: only keys a source supports, from design, height_m, status, status_note (only if not plainly standing), staffing {status, as_of}, access {level: public|restricted|permission|private|closed, note}, visit {climbable, drive_up, trail_note}, agency;
