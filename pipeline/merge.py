@@ -75,7 +75,10 @@ def inside_us(lat: float, lon: float) -> bool:
     return any(a <= lat <= b and c <= lon <= d for a, b, c, d in [*STATE_BBOX.values(), *TERRITORY_BBOX.values()])
 
 # Files in data/sources that are not lists of lookouts.
-SKIP_FILES = {"designs_reference.json", "ridb_excluded.json", "peaks_gnis.json"}
+SKIP_FILES = {"designs_reference.json", "ridb_excluded.json", "peaks_gnis.json", "gnis_places.json"}
+# USGS GNIS names for the approximate positions (DESIGN.md 3.5, "Approximate locations"): an
+# extract of the gazetteer, written by pipeline/fetch_gnis_places.py, read from the sources folder.
+GNIS_FILE = "gnis_places.json"
 
 # ---------------------------------------------------------------------------------------
 # Source configuration
@@ -926,6 +929,225 @@ def round_coord(x: float) -> float:
 
 
 # ---------------------------------------------------------------------------------------
+# Approximate positions from USGS GNIS (DESIGN.md 3.5, "Approximate locations")
+# ---------------------------------------------------------------------------------------
+#
+# About 2,000 source records name a lookout and its county but give no position, so no tower
+# holds them. Owner's decision 2026-10-08: when the USGS gazetteer (GNIS) has exactly one natural
+# feature of a high-ground class with the same name in that county, the lookout is shown there as
+# an *approximate* location, clearly marked. A town of that name alone is not enough (it stays off
+# the map, listed on the "Lookouts we can't place yet" page with the town as a hint).
+#
+# The approximate position is never used to match anything: an approximate tower is kept out of
+# the spatial grid, so no record can join it, or be kept from a tower, because of where its pin
+# is. A record with real coordinates joins it only by name, state and county (Matcher.approx_join),
+# and then its coordinates replace the pin.
+
+# GNIS feature classes that are high ground a lookout could stand on, and why each is in:
+GNIS_HIGH_GROUND = {
+    "Summit",  # hills, mountains, knobs, peaks, buttes, domes: where nearly every lookout stood
+    "Ridge",   # ridges and spurs, the other common site ("Black Jack Ridge", "Pine Ridge")
+    "Gap",     # gaps, saddles and passes; a tower named for a gap stands on the knob above it
+    "Pillar",  # rock pillars and pinnacles ("Moro Rock", "Chimney Rock", "The Needle")
+    "Cliff",   # bluffs, ledges and escarpments ("Hawks Nest", "Eagle Bluff")
+    "Bench",   # a bench on a mountainside, a few western lookout names
+}
+# Left out on purpose: "Range" (a whole range of hills or mountains: its GNIS point can be tens
+# of km from any one lookout on it), "Cape" (a point of land into water), "Slope", "Flat",
+# "Plain", "Basin", "Valley" and the other low or flat classes, and "Arch" / "Crater".
+GNIS_TOWN = {"Populated Place"}
+# Words at the end of a lookout's name that only say "lookout" ("Bald Knob Fire Tower Site").
+GNIS_LOOKOUT_WORDS = (GENERIC_WORDS - {"the", "of", "and"}) | {"l", "o"}
+GNIS_LEADING_WORDS = {"the", "historic", "former"}
+# Feature words that do not name a place on their own ("Mountain Lookout", "Hill Fire Tower").
+GNIS_FEATURE_WORDS = {"mount", "mountain", "mountains", "peak", "hill", "hills", "knob", "ridge", "butte",
+                      "point", "gap", "rock", "rocks", "dome", "bluff", "summit", "top"}
+# A name variant that names a county, forest or park, not the lookout: "(Tioga County)". (Plain
+# "Forest" stays a name: Forest Hill.)
+_GNIS_NOT_A_NAME_RE = re.compile(r"\b(county|co|parish|borough|national forest|nf|state forest|"
+                                 r"ranger district|state park|wma|nwr|national wildlife refuge)\b\.?", re.I)
+
+
+def named_forms(forms: list) -> list:
+    """Name forms without the ones that only name a county or forest: FFLOS writes "Pine Hill Tower
+    Site (Potter County)" and "Round Top Tower Site (Potter County)", whose parentheticals would
+    otherwise make the two the same name."""
+    return [f for f in forms if not _GNIS_NOT_A_NAME_RE.search(f.full)]
+# A lookout that GNIS places must not land on a lookout already on the map: if a tower with a
+# position stands within this distance of the GNIS feature, the record is probably that lookout
+# under another name, and it is left unplaced (listed, with the nearby tower named).
+APPROX_GUARD_M = 1000
+# A record with coordinates but no county joins an approximate tower by name only when its
+# position is within this distance of the pin (a guard against a same-named lookout elsewhere in
+# the state; the pin is never used to choose between towers).
+APPROX_JOIN_NO_COUNTY_M = 25_000
+# Two approximate pins this close are listed for review (merge_report "approximate.close_pairs").
+APPROX_CLOSE_M = 3000
+
+
+def _gnis_tokens(text: str) -> list[str]:
+    toks = name_tokens(text)
+    # "Bald Mt." is Bald Mountain; "Mt. Baldy" is Mount Baldy.
+    if len(toks) > 1 and toks[-1] == "mount":
+        toks[-1] = "mountain"
+    return toks
+
+
+def gnis_feature_key(name: str) -> str | None:
+    """A GNIS feature name as it is compared: abbreviations expanded, spaces and punctuation
+    dropped ("Bald Knob" and "Baldknob" are one name). None for a feature GNIS marks as gone
+    ("(historical)")."""
+    if not name or "(historical)" in name.lower():
+        return None
+    toks = _gnis_tokens(name)
+    while toks and toks[0] in GNIS_LEADING_WORDS:
+        toks.pop(0)  # "The Pinnacle" is looked up as "pinnacle", like the lookout's name
+    return "".join(toks) or None
+
+
+def gnis_lookout_keys(name: str | None, aliases: list[str] | None = None) -> list[str]:
+    """The keys a lookout's names are looked up under in GNIS: each name variant (the name, a
+    parenthetical alternate, each side of a slash, the source's aliases) without the words that
+    only say "lookout" at its end ("Bald Knob Fire Tower" -> "baldknob"). A variant left with
+    only feature words ("Mountain Lookout" -> "mountain") or naming a county or forest is not
+    looked up."""
+    out: list[str] = []
+    for v in name_variants(name, aliases):
+        if _GNIS_NOT_A_NAME_RE.search(v):
+            continue
+        toks = _gnis_tokens(v)
+        while toks and toks[-1] in GNIS_LOOKOUT_WORDS:
+            toks.pop()
+        while toks and toks[0] in GNIS_LEADING_WORDS:
+            toks.pop(0)
+        if len(toks) > 1 and toks[-1] == "mount":
+            toks[-1] = "mountain"
+        if not toks or all(t in GNIS_FEATURE_WORDS for t in toks):
+            continue
+        key = "".join(toks)
+        if key not in out:
+            out.append(key)
+    return out
+
+
+def county_key(county: str | None) -> str | None:
+    """A county name as it is compared: "St. Louis County" = "Saint Louis"; "Bedford (city)",
+    a Virginia independent city, stays apart from Bedford County."""
+    if not isinstance(county, str) or not county.strip():
+        return None
+    c = ascii_fold(county).lower()
+    c = re.sub(r"\b(county|parish|borough|census area|municipality|co)\b\.?", " ", c)
+    c = re.sub(r"\bste\b\.?", "sainte", c)
+    c = re.sub(r"\bst\b\.?", "saint", c)
+    return re.sub(r"[^a-z0-9]+", "", c) or None
+
+
+_COUNTY_SPLIT_RE = re.compile(r"\s*(?:/|&|,|;|\bor\b)\s*", re.I)
+
+
+def county_keys(county: str | None) -> set[str]:
+    """The counties a county field names: "Siskiyou/ Trinity" and "Bath / Augusta" name two (a
+    lookout on a county line); "King and Queen" and "Miami-Dade" are one county."""
+    if not isinstance(county, str):
+        return set()
+    return {k for part in _COUNTY_SPLIT_RE.split(county) if (k := county_key(part))}
+
+
+@dataclass(frozen=True)
+class GnisFeature:
+    id: int
+    name: str
+    cls: str
+    region: str
+    county: str
+    lat: float
+    lon: float
+
+    def as_dict(self) -> dict:
+        return {"id": self.id, "name": self.name, "class": self.cls, "county": self.county,
+                "lat": self.lat, "lon": self.lon}
+
+
+class GnisIndex:
+    """The GNIS extract (data/sources/gnis_places.json, pipeline/fetch_gnis_places.py): the
+    high-ground features and towns whose names some lookout record without a position carries,
+    every county of every state, and which names were looked up."""
+
+    def __init__(self, data: dict) -> None:
+        self.retrieved = data.get("retrieved")
+        self.looked_up = {st: set(keys) for st, keys in (data.get("keys") or {}).items()}
+        self.counties = {st: {county_key(c): c for c in names if county_key(c)} for st, names in (data.get("counties") or {}).items()}
+        self.by_name: dict[tuple, list[GnisFeature]] = defaultdict(list)
+        for st, rows in (data.get("features") or {}).items():
+            for fid, name, cls, county, lat, lon in rows:
+                key, ck = gnis_feature_key(name), county_key(county)
+                if key and ck:
+                    self.by_name[(st, ck, key)].append(GnisFeature(int(fid), name, cls, st, county, float(lat), float(lon)))
+
+    @classmethod
+    def load(cls, path: Path) -> "GnisIndex | None":
+        try:
+            return cls(json.loads(path.read_text(encoding="utf-8")))
+        except (OSError, json.JSONDecodeError, TypeError, ValueError):
+            return None
+
+    def lookup(self, region: str | None, county: str | None, keys: list[str]) -> dict:
+        """{"outcome": ..., "feature": GnisFeature | None, "candidates": [...], "town": GnisFeature | None}.
+
+        outcome: "summit" (exactly one high-ground feature of the name in the county: place it),
+        "ambiguous" (several), "town" (no high-ground feature, a town of the name), "none"
+        (neither), "no_county" (the record names no county), "county_unknown" (its county is
+        not a county of the state in GNIS: misspelt, or several counties), "no_name" (only
+        generic words), "not_looked_up" (the extract predates this record: re-run
+        pipeline/fetch_gnis_places.py)."""
+        out: dict = {"outcome": None, "feature": None, "candidates": [], "town": None}
+        st = (region or "").upper()
+        if not keys:
+            out["outcome"] = "no_name"
+            return out
+        if not county_key(county):
+            out["outcome"] = "no_county"
+            return out
+        ck = county_key(county)
+        if ck not in self.counties.get(st, {}):
+            out["outcome"] = "county_unknown"
+            return out
+        if not any(k in self.looked_up.get(st, ()) for k in keys):
+            out["outcome"] = "not_looked_up"
+            return out
+        high: dict[int, GnisFeature] = {}
+        towns: dict[int, GnisFeature] = {}
+        for k in keys:
+            for f in self.by_name.get((st, ck, k), ()):
+                if f.cls in GNIS_HIGH_GROUND:
+                    high.setdefault(f.id, f)
+                elif f.cls in GNIS_TOWN:
+                    towns.setdefault(f.id, f)
+        if len(towns) == 1:
+            out["town"] = next(iter(towns.values()))
+        if len(high) == 1:
+            out["outcome"], out["feature"] = "summit", next(iter(high.values()))
+        elif high:
+            out["outcome"] = "ambiguous"
+            out["candidates"] = sorted(high.values(), key=lambda f: f.id)
+        else:
+            out["outcome"] = "town" if towns else "none"
+        return out
+
+
+def gnis_keys_for(rec: "Rec") -> list[str]:
+    extra = rec.extra
+    aliases = []
+    for k in ("aliases", "alt_name", "old_name"):
+        v = extra.get(k)
+        if isinstance(v, str):
+            aliases.extend(x.strip() for x in v.split(";") if x.strip())
+        elif isinstance(v, list):
+            aliases.extend(str(x) for x in v if x)
+    return gnis_lookout_keys(rec.display, aliases)
+
+
+# ---------------------------------------------------------------------------------------
 # Working objects
 # ---------------------------------------------------------------------------------------
 
@@ -953,6 +1175,7 @@ class Rec:
     annotation: dict | None = None  # structure history from the name: see parse_annotation()
     status_info: dict | None = None # state note from the name: see parse_status_note()
     structure: dict = field(default_factory=dict)  # kind/status/material reading: structure.read_record()
+    gnis: dict | None = None        # GNIS lookup for a record no source places: GnisIndex.lookup()
 
     @classmethod
     def build(cls, source: str, raw: dict, order: int) -> "Rec":
@@ -1023,10 +1246,32 @@ class Tower:
     slug_text: str | None = None        # what the id is made from, when not the plain name
     source_status: tuple = (None, None)  # (status, source) as the sources gave it, before research
     source_kind: tuple = (None, None)
+    approx: GnisFeature | None = None   # the GNIS feature an approximate tower is shown on, this run
+    approx_existing: dict | None = None  # the approximate location an existing tower file has
+    old_county: str | None = None
 
     @property
     def sources(self) -> set:
         return {m.source for m in self.members}
+
+    @property
+    def is_approximate(self) -> bool:
+        """Shown at an approximate (GNIS) position: no member has coordinates of its own."""
+        return (self.approx is not None or self.approx_existing is not None) and not any(m.has_coords for m in self.members)
+
+    def pin(self) -> tuple[float, float] | None:
+        """Where an approximate tower is drawn. Only a guard on joins by name: never matched on."""
+        if self.approx is not None:
+            return (self.approx.lat, self.approx.lon)
+        loc = self.approx_existing or {}
+        return (float(loc["lat"]), float(loc["lon"])) if _num(loc.get("lat")) and _num(loc.get("lon")) else None
+
+    def counties(self) -> set:
+        """The tower's counties as compared (county_key), from its records and its file."""
+        keys = county_keys(self.old_county)
+        for m in self.members:
+            keys |= county_keys(record_county(m))
+        return keys
 
     def points(self) -> list[tuple[float, float]]:
         pts = [(m.lat, m.lon) for m in self.members if m.has_coords]
@@ -1163,9 +1408,13 @@ class Matcher:
             names = [existing.get("name")] + list(existing.get("other_names") or [])
             t.old_forms = [f for n in names if isinstance(n, str) for f in name_forms(n)]
             loc = existing.get("location") or {}
-            if _num(loc.get("lat")) and _num(loc.get("lon")):
+            if loc.get("approximate"):
+                # An approximate (GNIS) position is never matched on: kept out of the grid.
+                t.approx_existing = loc
+            elif _num(loc.get("lat")) and _num(loc.get("lon")):
                 t.old_point = (float(loc["lat"]), float(loc["lon"]))
                 self.grid[cell_of(*t.old_point)].add(t)
+            t.old_county = existing.get("county") if isinstance(existing.get("county"), str) else None
             if existing.get("region"):
                 t.old_region = str(existing["region"]).upper()
                 self.by_region[t.old_region].add(t)
@@ -1363,8 +1612,12 @@ class Matcher:
                     s = name_score(r.forms, t.forms())
                     if s is None or s < 0.95:
                         continue
-                    tcounties = {c.lower() for c in (record_county(m) for m in t.members) if c}
-                    if county and tcounties and county.lower() not in tcounties and not border_region:
+                    # counties compared as names ("St Lawrence" = "St. Lawrence County"); a tower on a
+                    # county line ("Siskiyou/ Trinity") is in both
+                    tcounties = set()
+                    for mem in t.members:
+                        tcounties |= county_keys(record_county(mem))
+                    if county and tcounties and not (county_keys(county) & tcounties) and not border_region:
                         continue
                     if self.can_join(r, t):
                         cands.append(t)
@@ -1378,6 +1631,181 @@ class Matcher:
                     r.match_note = "no coordinates; " + ("several same-name lookouts in the state" if cands else "no same-name lookout in the state")
                 self.unplaced.append(r)
         self.deferred = []
+
+    # -- approximate positions (GNIS) ----------------------------------------------------
+
+    def mapped_near(self, lat: float, lon: float, radius_m: float) -> list[tuple[float, Tower]]:
+        """Towers with a real position within radius_m, nearest first (approximate ones are not in the grid)."""
+        out, seen = [], set()
+        for c in cells_around(lat, lon, radius_m):
+            for t in self.grid.get(c, ()):
+                if t in seen:
+                    continue
+                seen.add(t)
+                d = t.min_dist(lat, lon)
+                if d is not None and d <= radius_m:
+                    out.append((d, t))
+        return sorted(out, key=lambda x: (x[0], x[1].seq))
+
+    def similar_named(self, r: Rec, floor: float = STRONG) -> list[Tower]:
+        """Towers in the record's state whose name is close to its own (score >= floor) and whose
+        county, when both give one, is the same: lookouts already on the map it may be."""
+        cks = county_keys(record_county(r))
+        out = []
+        for t in self.by_region.get(r.region or "", ()):
+            if not t.members and t.existing is None:
+                continue
+            s_ = name_score(named_forms(r.forms), named_forms(t.forms()))
+            if s_ is None or s_ < floor:
+                continue
+            tcs = t.counties()
+            if cks and tcs and not (cks & tcs):
+                continue
+            out.append(t)
+        return sorted(out, key=lambda t: t.seq)
+
+    def place_approximately(self, gnis: "GnisIndex | None") -> None:
+        """Records still unplaced after place_without_coords(): look each one up in GNIS, and give
+        those with exactly one same-name high-ground feature in their county a tower of their own
+        at that feature, marked approximate (DESIGN.md 3.5, "Approximate locations"). Records of
+        different sources on the same feature are one lookout. Not placed, and kept in
+        `unplaced` with the reason in `rec.gnis["outcome"]`: a town match only, no match, no or an
+        unrecognised county, several features, several same-name lookouts already on the map, a
+        lookout already on the map within APPROX_GUARD_M of the feature or with a close name in
+        the county, or two records of one source on one feature."""
+        if gnis is None:
+            return
+        groups: dict[int, list[Rec]] = defaultdict(list)
+        features: dict[int, GnisFeature] = {}
+        for r in self.unplaced:
+            if r.source == "ffla_rentals" or r.has_coords:
+                continue
+            res = gnis.lookup(r.region, record_county(r), gnis_keys_for(r))
+            r.gnis = res
+            if r.match_note and "several same-name" in r.match_note:
+                res["outcome"] = "same_name_on_map"   # it is probably one of them
+                continue
+            if res["outcome"] != "summit":
+                continue
+            f = res["feature"]
+            near = self.mapped_near(f.lat, f.lon, APPROX_GUARD_M)
+            if near:
+                res["outcome"], res["near"], res["near_m"] = "near_mapped_lookout", near[0][1], round(near[0][0])
+                continue
+            similar = self.similar_named(r)
+            if similar:
+                res["outcome"], res["similar"] = "similar_name_on_map", similar[0]
+                continue
+            groups[f.id].append(r)
+            features[f.id] = f
+        # A record of the same lookout that GNIS could not place by itself (no county given, or a
+        # town-only match) joins its group as place_without_coords() would join the tower on a later
+        # run: a strong same name (>= 0.95) in the state, a county that agrees when it gives one, and
+        # only one such group. So a first run and a later one give the same towers.
+        grouped = {r.key for recs in groups.values() for r in recs}
+        for r in self.unplaced:
+            if (r.key in grouped or r.source == "ffla_rentals" or r.has_coords or not r.gnis
+                    or r.gnis["outcome"] not in ("no_county", "county_unknown", "town", "none", "not_looked_up", "no_name")
+                    or not (r.match_note or "").endswith("no same-name lookout in the state")):
+                continue
+            cks = county_keys(record_county(r))
+            hits = []
+            for fid, recs in groups.items():
+                if recs[0].region != r.region:
+                    continue
+                gcks = set().union(*(county_keys(record_county(x)) for x in recs))
+                if cks and gcks and not (cks & gcks):
+                    continue
+                s_ = name_score(named_forms(r.forms), named_forms([f_ for x in recs for f_ in x.forms]))
+                if s_ is not None and s_ >= 0.95:
+                    hits.append(fid)
+            if len(hits) == 1:
+                r.gnis["joined_by_name"] = True
+                groups[hits[0]].append(r)
+        placed: set = set()
+        for fid in sorted(groups):
+            recs = sorted(groups[fid], key=lambda x: (global_rank(x.source), x.key))
+            if any(a.source == b.source for i, a in enumerate(recs) for b in recs[i + 1:]):
+                for r in recs:
+                    r.gnis["outcome"] = "same_source_twice"   # two lookouts, or one listed twice: a human decides
+                continue
+            why = provisional_hidden(recs)
+            if why:
+                # never built, not a fire lookout, not confirmed as one: a tower made of these records
+                # would be hidden, so a guessed position (and a permanent id) would serve nobody
+                for r in recs:
+                    r.gnis["outcome"], r.gnis["hidden_reason"] = "out_of_scope", why
+                continue
+            t = self.new_tower()
+            t.approx = features[fid]
+            for r in recs:
+                self.attach(r, t, "approximate", f"GNIS {t.approx.cls.lower()} {t.approx.name}")
+                placed.add(r.key)
+        self.unplaced = [r for r in self.unplaced if r.key not in placed]
+
+    def refresh_approximate(self, gnis: "GnisIndex | None") -> None:
+        """An approximate tower from an earlier run whose records still have no position: look
+        them up again, so a GNIS change moves the pin. If they no longer match one feature the
+        tower keeps the position it has (merge never deletes) and the report says so. A lookout
+        that now appears on the map nearby, or under a close name, is listed for review: the
+        two may be one."""
+        for t in self.towers:
+            if t.approx is not None or t.approx_existing is None or not t.members or any(m.has_coords for m in t.members):
+                continue
+            feats: dict[int, GnisFeature] = {}
+            for m in t.members:
+                if m.source == "ffla_rentals":
+                    continue
+                res = gnis.lookup(m.region, record_county(m), gnis_keys_for(m)) if gnis else {"outcome": None}
+                m.gnis = res
+                if res["outcome"] == "summit":
+                    feats[res["feature"].id] = res["feature"]
+            if len(feats) == 1:
+                t.approx = next(iter(feats.values()))
+            else:
+                self.review.append({"type": "approximate_no_longer_matched", "tower_seq": t.seq,
+                                    "note": "No single GNIS feature matches its records any more; the pin it had is kept."})
+            pin = t.pin()
+            near = self.mapped_near(pin[0], pin[1], APPROX_GUARD_M) if pin else []
+            similar = [u for m in t.members for u in self.similar_named(m) if u is not t and not u.is_approximate]
+            if near or similar:
+                self.review.append({"type": "approximate_possible_duplicate", "tower_seq": t.seq,
+                                    "tower_seqs": sorted({u.seq for _, u in near} | {u.seq for u in similar}),
+                                    "note": "A lookout with a position now stands near this approximate pin, or has a close "
+                                            "name in the county; the two may be one lookout."})
+
+    def approx_join(self, r: Rec) -> bool:
+        """A record with coordinates that no tower near it took: if it names an approximate tower
+        of its state (score >= 0.95) in the same county, it joins it, and its position replaces the
+        pin (the tower keeps its id). A record with no county must lie within
+        APPROX_JOIN_NO_COUNTY_M of the pin. Several candidates: none is taken (review)."""
+        cks = county_keys(record_county(r))
+        cands = []
+        for t in self.by_region.get(r.region or "", ()):
+            if not t.is_approximate:
+                continue
+            s_ = name_score(named_forms(r.forms), named_forms(t.forms()))
+            if s_ is None or s_ < 0.95:
+                continue
+            if cks:
+                if not (cks & t.counties()):
+                    continue
+            else:
+                pin = t.pin()
+                if pin is None or haversine_m(r.lat, r.lon, pin[0], pin[1]) > APPROX_JOIN_NO_COUNTY_M:
+                    continue
+            if self.can_join(r, t):
+                cands.append(t)
+        if len(cands) == 1:
+            t = cands[0]
+            pin = t.pin()
+            d = round(haversine_m(r.lat, r.lon, pin[0], pin[1])) if pin else None
+            self.attach(r, t, "approx_join", "named an approximately placed lookout; its position replaces the pin")
+            self.review.append({"type": "approximate_replaced", "key": r.key, "tower_seq": t.seq, "pin_distance_m": d})
+            return True
+        if len(cands) > 1:
+            self.review.append({"type": "approximate_join_ambiguous", "key": r.key, "tower_seqs": sorted(t.seq for t in cands)})
+        return False
 
     def match_rentals(self, recs: list[Rec]) -> None:
         """Place the FFLA rentals list (no coordinates) on towers, after every other source.
@@ -1578,10 +2006,14 @@ class Matcher:
             self.attach(r, t, "spatial", note)
             done.add(r.key)
         unmatched = [r for r in rest if r.key not in done]
-        # 4. records with no coordinates wait for place_without_coords(), after every source
+        # 4. records with no coordinates wait for place_without_coords(), after every source;
+        #    a record with coordinates that names an approximately placed lookout joins it
         leftover = []
         for r in unmatched:
-            (leftover if r.has_coords else self.deferred).append(r)
+            if not r.has_coords:
+                self.deferred.append(r)
+            elif not self.approx_join(r):
+                leftover.append(r)
         # 5. new towers, joining same-source double listings into one
         groups: list[list[Rec]] = []
         near: dict[tuple, list] = defaultdict(list)
@@ -1986,6 +2418,18 @@ def location_pick(members: list[Rec]):
     return v, m
 
 
+def approximate_location(f: GnisFeature) -> dict:
+    """The location of a lookout no source places, shown on the one same-name GNIS high-ground
+    feature in its county. The lowest precedence there is: any real position replaces it."""
+    return {"lat": round_coord(f.lat), "lon": round_coord(f.lon), "precision": "approximate", "from": "gnis",
+            "approximate": True, "method": "gnis_name_match",
+            "gnis": {"id": f.id, "name": f.name, "class": f.cls, "county": f.county}}
+
+
+def is_approximate_location(loc: object) -> bool:
+    return isinstance(loc, dict) and loc.get("approximate") is True
+
+
 def precision_of(m: Rec) -> str:
     if m.source in APPROXIMATE or m.coordinate_problem:
         return "approximate"
@@ -2248,9 +2692,12 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
     # Location and region
     loc, loc_src = location_pick(members)
     if loc is not None and "location" not in locked:
+        # A real position from any source; it replaces an approximate (GNIS) one outright.
         rec["location"] = {"lat": round_coord(loc[0]), "lon": round_coord(loc[1]),
                            "precision": precision_of(loc_src), "from": loc_src.source}
         contributed[loc_src.key].add("location")
+    elif loc is None and tower.approx is not None and "location" not in locked:
+        rec["location"] = approximate_location(tower.approx)
     if "region" not in locked:
         region_src = loc_src or next((m for m in members if m.region), None)
         if region_src and region_src.region:
@@ -2766,9 +3213,10 @@ def hidden_for(rec: dict, members: list[Rec]) -> tuple[bool, str | None]:
 
 def verification_for(rec: dict, members: list[Rec]) -> str:
     """"facts" when two independent sources (lineage groups) agree on location (within
-    500 m of the shown position) and status; otherwise "unverified"."""
+    500 m of the shown position) and status; otherwise "unverified". An approximate (GNIS)
+    position is never "facts": no source gives it."""
     loc = rec.get("location") or {}
-    if not _num(loc.get("lat")):
+    if not _num(loc.get("lat")) or is_approximate_location(loc):
         return "unverified"
     want = status_group(rec.get("status"))
     if want is None:
@@ -3008,6 +3456,10 @@ def apply_research(t: Tower, rec: dict, res: dict, vocab: dict) -> dict:
     verdict = check.get("verdict")
     if "verification" not in locked:
         rec["verification"] = "verified" if verdict in VERIFIED_VERDICTS else "researched"
+        if is_approximate_location(rec.get("location")):
+            # Owner's rule (2026-10-08): an approximate pin always carries the Unverified badge,
+            # until a source or a human gives its real position.
+            rec["verification"] = "unverified"
         fields.add("verification")
     rec["research"] = {"researched": when, "checked": check.get("checked"), "verdict": verdict,
                        "confidence": res.get("confidence")}
@@ -3043,7 +3495,9 @@ def assign_ids(towers: list[tuple[Tower, dict]], taken: set[str]) -> None:
     def sort_key(item):
         t, r = item
         loc = r.get("location") or {}
-        return (r.get("region") or "", slug_of(t, r), -(loc.get("lat") or 0), loc.get("lon") or 0,
+        # an approximately placed lookout comes after real ones of the same name, so it never takes
+        # the plain id from a lookout a source places, in a fresh run as in a later one
+        return (r.get("region") or "", slug_of(t, r), is_approximate_location(loc), -(loc.get("lat") or 0), loc.get("lon") or 0,
                 min((m.key for m in t.members), default=""))
 
     for t, r in sorted(new, key=sort_key):
@@ -3119,12 +3573,16 @@ def near_misses(towers: list[tuple[Tower, dict]]) -> list[dict]:
 
 def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: str,
         dry_run: bool = False, log=print, photos_manifest: dict | None = None,
-        photos_manifest_path: Path | None = None, research_dir: Path | None = None) -> dict:
+        photos_manifest_path: Path | None = None, research_dir: Path | None = None,
+        gnis_path: Path | None = None) -> dict:
     # `photos_manifest` (an already-loaded dict) wins when given -- tests pass {} for
     # isolation; otherwise load from `photos_manifest_path` (default data/photos_manifest.json).
     if photos_manifest is None:
         photos_manifest = load_photo_manifest(photos_manifest_path or DATA / "photos_manifest.json")
     headers, records = load_sources(sources_dir, log)
+    # USGS GNIS names for the approximate positions; without the extract nothing new is placed
+    # approximately (towers placed so on an earlier run keep their pins).
+    gnis = GnisIndex.load(gnis_path or sources_dir / GNIS_FILE)
     research, research_problems = load_research(research_dir)
     existing = load_towers(towers_dir, log)
     m = Matcher(log)
@@ -3141,6 +3599,8 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
         if sid != "ffla_rentals":      # has no positions: placed by name once every tower exists
             m.match_source(sid, records[sid])
     m.place_without_coords()
+    m.place_approximately(gnis)
+    m.refresh_approximate(gnis)
     if "ffla_rentals" in records:
         m.match_rentals(records["ffla_rentals"])
     m.find_origins()
@@ -3184,7 +3644,7 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text(dump(ordered(r)), encoding="utf-8")
 
-    report = build_report(m, resolved, headers, today, written, unchanged, relocations)
+    report = build_report(m, resolved, headers, today, written, unchanged, relocations, gnis)
     report["research"] = {
         "files": len(research) + sum(1 for p in research_problems if "JSON" in p["problem"] or "file name" in p["problem"]),
         "applied": len(research_rows),
@@ -3238,8 +3698,122 @@ def ffla_rentals_report(m: Matcher, resolved: list[tuple[Tower, dict]]) -> dict 
     }
 
 
+def provisional_hidden(recs: list[Rec]) -> str | None:
+    """Why a tower made of these records would be hidden (hidden_for), or None."""
+    kind, _ = pick("kind", recs, lambda m: m.raw.get("kind") if m.raw.get("kind") not in (None, "unknown", "point") else None)
+    hidden, why = hidden_for({"kind": kind}, recs)
+    return why if hidden else None
+
+
+def unplaced_entry(r: Rec) -> dict:
+    """One record no tower holds, for the report and the "Lookouts we can't place yet" page:
+    who lists it, its county, what GNIS had (outcome, a town of the name as a hint, and the
+    features or towers that kept it off the map)."""
+    res = r.gnis or {}
+    town = res.get("town")
+    out = {"key": r.key, "source": r.source, "name": r.display, "region": r.region, "county": record_county(r),
+           "url": r.raw.get("url") if isinstance(r.raw.get("url"), str) else None,
+           "reason": r.match_note, "gnis": res.get("outcome"),
+           "town": town.as_dict() if town else None}
+    if res.get("feature") is not None and res.get("outcome") != "summit":
+        out["feature"] = res["feature"].as_dict()
+    if res.get("candidates"):
+        out["candidates"] = [f.as_dict() for f in res["candidates"]]
+    for k in ("near", "similar"):
+        if res.get(k) is not None:
+            out[k] = res[k].id
+    if res.get("near_m") is not None:
+        out["near_m"] = res["near_m"]
+    if res.get("hidden_reason"):
+        out["out_of_scope"] = res["hidden_reason"]
+    return out
+
+
+def unplaced_lookouts(m: Matcher, entries: dict[str, dict]) -> list[dict]:
+    """The unplaced records grouped into lookouts for the site: records of one state with the
+    same name and county (or both without one) are one lookout, listed by every source that has
+    it. Sorted by state, then name."""
+    groups: dict[tuple, list[Rec]] = defaultdict(list)
+    for r in m.unplaced:
+        keys = gnis_keys_for(r) or [loose_key(r.display or "") or r.key]
+        groups[(r.region or "", county_key(record_county(r)) or "", keys[0])].append(r)
+    out = []
+    for (region, ck, key), recs in groups.items():
+        recs = sorted(recs, key=lambda x: (source_rank("name", x.source), x.key))
+        first = entries[recs[0].key]
+        county = next((record_county(x) for x in sorted(recs, key=lambda x: (source_rank("county", x.source), x.key)) if record_county(x)), None)
+        town = next((entries[x.key]["town"] for x in recs if entries[x.key].get("town")), None)
+        row = {"name": recs[0].display or "Unnamed lookout", "region": region or None, "county": county,
+               "records": [{"source": x.source, "key": x.key, "name": x.display, "url": entries[x.key]["url"]} for x in recs],
+               "gnis": first.get("gnis"), "town": town}
+        for k in ("feature", "candidates", "near", "near_m", "similar"):
+            if first.get(k) is not None:
+                row[k] = first[k]
+        if any((x.match_note or "").startswith("no coordinates; several") for x in recs):
+            row["gnis"] = "same_name_on_map"
+        if any(x.source == "ffla_rentals" for x in recs) and len(recs) == 1:
+            row["gnis"] = "rental_unmatched"
+        # never built, not a fire lookout, or not confirmed as one: by its own records, or by another
+        # source's record of the same lookout that GNIS grouped with it (place_approximately)
+        why = provisional_hidden(recs) or next((entries[x.key]["out_of_scope"] for x in recs if entries[x.key].get("out_of_scope")), None)
+        if why:
+            row["out_of_scope"] = why
+        out.append(row)
+    out.sort(key=lambda x: (x["region"] or "", (x["name"] or "").lower(), x["county"] or "", x["records"][0]["key"]))
+    used: Counter = Counter()
+    for row in out:
+        slug = slugify(row["name"] + (" " + row["county"] if row["county"] else ""))
+        used[(row["region"], slug)] += 1
+        n = used[(row["region"], slug)]
+        row["anchor"] = slug + (f"-{n}" if n > 1 else "")
+    return out
+
+
+def approximate_report(m: Matcher, resolved: list[tuple[Tower, dict]], gnis: "GnisIndex | None", entries: dict[str, dict]) -> dict:
+    """How many lookouts are shown at an approximate (GNIS) position, by state and feature class,
+    each one with the feature and its records, and what kept the others off the map."""
+    rows = []
+    by_region: dict[str, list[Tower]] = defaultdict(list)
+    for t, r in resolved:
+        if not r.get("hidden"):
+            by_region[r.get("region") or ""].append(t)
+    for t, r in resolved:
+        loc = r.get("location") or {}
+        if not is_approximate_location(loc) or r.get("hidden"):
+            continue
+        # same-named lookouts elsewhere in the state (other counties): a risk to keep an eye on
+        forms = named_forms(t.forms())
+        elsewhere = sorted(u.id for u in by_region[r.get("region") or ""]
+                           if u is not t and u.id and (name_score(forms, named_forms(u.forms())) or 0) >= 0.95)
+        rows.append({"id": r["id"], "name": r["name"], "region": r.get("region"), "county": r.get("county"),
+                     "feature": loc.get("gnis"), "lat": loc.get("lat"), "lon": loc.get("lon"),
+                     "records": [mem.key for mem in t.members],
+                     **({"same_name_elsewhere_in_state": elsewhere} if elsewhere else {})})
+    rows.sort(key=lambda x: (x["region"] or "", x["id"]))
+    # Two pins close together under different names may be one lookout listed twice (FFLOS's
+    # "Delaware Water Gap Tower Site" and the weebly site's "Mount Minsi", 1.1 km apart): for review.
+    close = [{"a": a["id"], "b": b["id"], "distance_m": round(d)}
+             for i, a in enumerate(rows) for b in rows[i + 1:]
+             if a["region"] == b["region"] and (d := haversine_m(a["lat"], a["lon"], b["lat"], b["lon"])) <= APPROX_CLOSE_M]
+    outcomes = Counter(e.get("gnis") or "not_looked_up_no_extract" for e in entries.values() if e["source"] != "ffla_rentals")
+    return {
+        "note": "Lookouts no source places, shown on the one same-name GNIS high-ground feature in their county "
+                "(DESIGN.md 3.5, 'Approximate locations'). 'unplaced_by_gnis_outcome' counts the records left off the map.",
+        "gnis_extract": {"file": GNIS_FILE, "retrieved": gnis.retrieved} if gnis else None,
+        "classes": sorted(GNIS_HIGH_GROUND),
+        "towers": len(rows),
+        "by_state": dict(sorted(Counter(x["region"] for x in rows).items())),
+        "by_class": dict(Counter((x["feature"] or {}).get("class") for x in rows).most_common()),
+        "with_same_name_elsewhere_in_state": sum(1 for x in rows if x.get("same_name_elsewhere_in_state")),
+        "close_pairs": close,
+        "unplaced_by_gnis_outcome": dict(outcomes.most_common()),
+        "placed": rows,
+    }
+
+
 def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, today: str,
-                 written: int, unchanged: int, relocations: list[dict] | None = None) -> dict:
+                 written: int, unchanged: int, relocations: list[dict] | None = None,
+                 gnis: "GnisIndex | None" = None) -> dict:
     visible = [r for _, r in resolved if not r.get("hidden")]
     hidden = [r for _, r in resolved if r.get("hidden")]
     seq_to_id = {t.seq: t.id for t, _ in resolved}
@@ -3302,6 +3876,7 @@ def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, 
             if mem.source in ("nhlr", "fflos") and isinstance(mem.raw.get("rental"), dict) and mem.raw["rental"].get("available"):
                 rental_hints.append({"id": r["id"], "name": r["name"], "key": mem.key})
     ffla_rentals = ffla_rentals_report(m, resolved)
+    entries = {r.key: unplaced_entry(r) for r in m.unplaced}
     match_by_source: dict[str, Counter] = defaultdict(Counter)
     for t, _ in resolved:
         for mem in t.members:
@@ -3337,6 +3912,7 @@ def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, 
             "towers_by_number_of_sources": {("5+" if k == 5 else str(k)): v for k, v in sorted(n_sources.items())},
             "rentable": sum(1 for r in visible if isinstance(r.get("rental"), dict) and r["rental"].get("available") is not False),
             "registered": sum(1 for r in visible if r.get("registers")),
+            "approximate": sum(1 for r in visible if is_approximate_location(r.get("location"))),
         },
         "matching": {
             "note": "How each source record found its tower on this run. 'key' means it was matched "
@@ -3357,8 +3933,9 @@ def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, 
             "pairs": nm,
         },
         "review": review,
-        "unplaced": [{"key": r.key, "name": r.display, "region": r.region, "county": record_county(r),
-                      "reason": r.match_note} for r in m.unplaced],
+        "unplaced": [entries[r.key] for r in m.unplaced],
+        "unplaced_lookouts": unplaced_lookouts(m, entries),
+        "approximate": approximate_report(m, resolved, gnis, entries),
         "coordinates_not_used": [{"key": mem.key, "name": mem.display, "region": mem.region,
                                   "lat": mem.raw.get("lat"), "lon": mem.raw.get("lon")}
                                  for t, _ in resolved for mem in t.members if mem.bad_coords == "outside_us"]
@@ -3393,7 +3970,10 @@ def main(argv: list[str] | None = None) -> int:
     log(f"{c['towers']} towers ({c['visible']} visible, {c['hidden']} hidden); "
         f"{c['multi_source_towers']} from 2+ sources; {rep['files']['written']} written, "
         f"{rep['files']['unchanged']} unchanged; {rep['near_misses']['count']} near misses; "
-        f"{len(rep['unplaced'])} records without a place")
+        f"{len(rep['unplaced'])} records without a place; {c['approximate']} lookouts at an approximate (GNIS) position")
+    lost = rep["approximate"]["unplaced_by_gnis_outcome"].get("not_looked_up", 0)
+    if lost:
+        log(f"NOTE: {lost} records without a position were never looked up in GNIS: run pipeline/fetch_gnis_places.py")
     if args.dry_run:
         log("dry run: nothing written")
     return 0

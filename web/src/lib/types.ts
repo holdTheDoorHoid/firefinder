@@ -21,6 +21,8 @@
  *                             (absent = still standing, or not recorded: see lib/history.ts)
  *   d   design ids            "l4" or "l4|r6" (designs.json ids)            (absent = none recognised)
  *   m   material              vocab.material ("steel")                      (absent = not recorded)
+ *   ap  approximate position  1: no source gives one; shown on the one same-name USGS GNIS
+ *                             summit, ridge or similar feature in its county (absent = a source's)
  *
  * Sites with no structure (k = camp, tree or point: vocab.ts NO_STRUCTURE_KINDS) are in the
  * file too; the map leaves them off until the visitor switches them on.
@@ -45,6 +47,7 @@ export interface TowerProps {
   y1?: number;
   d?: string;
   m?: string;
+  ap?: 1;
 }
 
 export interface TowerFeature {
@@ -180,7 +183,20 @@ export interface TowerRecord {
   country?: string | null;
   region: string;
   county?: string | null;
-  location: { lat: number; lon: number; precision?: string | null; from?: string | null };
+  location: {
+    lat: number;
+    lon: number;
+    precision?: string | null;
+    from?: string | null;
+    /**
+     * True when no source gives a position and the lookout is shown on the one same-name USGS
+     * GNIS high-ground feature in its county (`method` "gnis_name_match", `gnis` the feature).
+     * Any real position replaces it on a later merge.
+     */
+    approximate?: boolean | null;
+    method?: string | null;
+    gnis?: GnisFeatureRef | null;
+  };
   elevation_m?: number | null;
   kind: string;
   /** What the main structure is built of (vocab.material), or null when no source says. */
@@ -220,6 +236,58 @@ export interface TowerRecord {
   design_pair?: { cab?: string; house?: string; tower?: string; whole?: string } | null;
 }
 
+/** The USGS GNIS feature an approximate location is placed on. */
+export interface GnisFeatureRef {
+  id: number;
+  name: string;
+  /** GNIS feature class: Summit, Ridge, Gap, Pillar, Cliff, Bench (or Populated Place for a town). */
+  class: string;
+  county?: string | null;
+  lat?: number | null;
+  lon?: number | null;
+}
+
+/** unplaced.json: lookouts sources list by name that no source places (pipeline/merge.py unplaced_lookouts). */
+export interface UnplacedRecord {
+  source: string;
+  key: string;
+  name?: string | null;
+  url?: string | null;
+}
+
+export interface UnplacedLookout {
+  anchor: string;
+  name: string;
+  region?: string | null;
+  county?: string | null;
+  records: UnplacedRecord[];
+  /**
+   * What the USGS gazetteer had: "town" (a town of the name only), "none", "ambiguous" (several
+   * high points of the name), "no_county", "county_unknown", "near_mapped_lookout" (a lookout
+   * already on the map stands at the one high point of the name), "similar_name_on_map",
+   * "same_name_on_map", "same_source_twice", "rental_unmatched", "no_name", "not_looked_up".
+   */
+  gnis?: string | null;
+  town?: GnisFeatureRef | null;
+  feature?: GnisFeatureRef | null;
+  candidates?: GnisFeatureRef[] | null;
+  near?: string | null;
+  near_name?: string | null;
+  near_m?: number | null;
+  similar?: string | null;
+  similar_name?: string | null;
+  /** Why it would not be shown even with a position: never built, not a fire lookout, not confirmed. */
+  out_of_scope?: string | null;
+}
+
+export interface UnplacedFile {
+  note?: string | null;
+  /** Lookouts listed, not counting those out of scope. */
+  count: number;
+  by_region: Record<string, number>;
+  lookouts: UnplacedLookout[];
+}
+
 export interface SourceInfo {
   id: string;
   title: string;
@@ -250,6 +318,12 @@ export interface Meta {
     by_region?: Record<string, number>;
     by_verification?: Record<string, number>;
     by_material?: Record<string, number>;
+    /** Shown at an approximate (GNIS) position, by state too. */
+    approximate?: number;
+    approximate_by_region?: Record<string, number>;
+    /** Lookouts no source places, listed on the "Lookouts we can't place yet" pages. */
+    unplaced?: number;
+    unplaced_by_region?: Record<string, number>;
   };
   sources: SourceInfo[];
   /** How many lookouts can be placed in time (pipeline build_site_data.history_counts). */
@@ -410,6 +484,11 @@ export interface DesignsFile {
   coverage: DesignCoverage;
   designs: Design[];
   equipment?: DesignReference[] | null;
+}
+
+/** Shown at an approximate position because no source gives one (USGS GNIS name match). */
+export function isApproximate(r: Pick<TowerRecord, 'location'>): boolean {
+  return r.location?.approximate === true;
 }
 
 export function isRentable(r: Pick<TowerRecord, 'rental'>): boolean {

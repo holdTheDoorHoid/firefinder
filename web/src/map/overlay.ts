@@ -48,7 +48,7 @@ function usgsAttribution(base: string): string {
   return `<a href="https://www.usgs.gov/programs/national-geospatial-program/national-map" target="_blank" rel="noopener">USGS The National Map</a> (<a href="${base}about/#sources">full credits</a>)`;
 }
 
-/** Draw the 32 marker images for this theme (dark mode flips what "hollow" looks like). */
+/** Draw the 64 marker images for this theme (dark mode flips what "hollow" looks like); half of them dashed, for approximate locations. */
 function addIcons(map: MlMap, theme: Theme): void {
   const ratio = 2;
   const px = ICON_PX * ratio;
@@ -59,12 +59,14 @@ function addIcons(map: MlMap, theme: Theme): void {
   for (const shape of SHAPES) {
     for (const fill of FILLS) {
       for (const rent of [false, true]) {
-        const name = iconName(shape, fill, rent);
-        ctx.clearRect(0, 0, px, px);
-        drawMarker(ctx, shape, fill, rent, px, theme);
-        const image = ctx.getImageData(0, 0, px, px);
-        if (map.hasImage(name)) map.updateImage(name, image);
-        else map.addImage(name, image, { pixelRatio: ratio });
+        for (const approx of [false, true]) {
+          const name = iconName(shape, fill, rent, approx);
+          ctx.clearRect(0, 0, px, px);
+          drawMarker(ctx, shape, fill, rent, px, theme, approx);
+          const image = ctx.getImageData(0, 0, px, px);
+          if (map.hasImage(name)) map.updateImage(name, image);
+          else map.addImage(name, image, { pixelRatio: ratio });
+        }
       }
     }
   }
@@ -77,13 +79,15 @@ const ICON_EXPR: ExpressionSpecification = [
   '-',
   ['match', ['get', 's'], 'standing', 'solid', 'gone', 'hollow', 'ruins', 'ruin', 'half'],
   ['case', ['==', ['get', 'rt'], 1], '-rent', ''],
+  ['case', ['==', ['get', 'ap'], 1], '-ap', ''],
 ];
 
-/** Draw standing and rentable lookouts on top of gone ones where they overlap. */
+/** Draw standing and rentable lookouts on top of gone ones where they overlap, approximate ones underneath. */
 const SORT_EXPR: ExpressionSpecification = [
   '+',
   ['match', ['get', 's'], 'standing', 2, 'gone', 0, 1],
   ['case', ['==', ['get', 'rt'], 1], 2, 0],
+  ['case', ['==', ['get', 'ap'], 1], -4, 0],
 ];
 
 export interface OverlayOptions {

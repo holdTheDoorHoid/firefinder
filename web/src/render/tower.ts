@@ -8,7 +8,7 @@ import { html, raw, safeUrl, isSafeStoryHtml, type SafeHtml } from '../lib/html.
 import { fillFor, markerSvg, rentBadgeSvg, shapeFor } from '../lib/icons.ts';
 import { MARKS, MARK_LABELS } from '../lib/checklist.ts';
 import { renderTimeline } from './timeline.ts';
-import { builtYear, isRentable, type Conflict, type SourceInfo, type TowerEvent, type TowerProps, type TowerRecord } from '../lib/types.ts';
+import { builtYear, isApproximate, isRentable, type Conflict, type SourceInfo, type TowerEvent, type TowerProps, type TowerRecord } from '../lib/types.ts';
 import { eyeHeight, megabytes, reconstructionNote } from '../view3d/describe.ts';
 import { estimateBytes, panoramaLevels, planTiles } from '../view3d/tiles.ts';
 import {
@@ -58,6 +58,7 @@ const SHORT_SOURCE: Record<string, string> = {
   osm: 'OpenStreetMap',
   wikidata: 'Wikidata',
   research: 'Firefinder research',
+  gnis: 'USGS GNIS',
 };
 
 export function sourceShortName(id: string | null | undefined, ctx: RenderContext): string {
@@ -80,15 +81,21 @@ export function mapLink(r: Pick<TowerRecord, 'id' | 'location'>, ctx: Pick<Rende
   return `${ctx.base}?at=${zoom}/${lat.toFixed(4)}/${lon.toFixed(4)}&t=${r.id}`;
 }
 
-export function editIssueUrl(r: Pick<TowerRecord, 'id' | 'name'>, ctx: RenderContext): string {
+export function editIssueUrl(r: Pick<TowerRecord, 'id' | 'name'>, ctx: RenderContext, extra: Record<string, string> = {}): string {
   const q = new URLSearchParams({
     template: 'edit.yml',
     title: `Edit: ${r.name} (${r.id})`,
     tower_id: r.id,
     tower_name: r.name,
     page_url: towerUrl(r.id, ctx),
+    ...extra,
   });
   return `https://github.com/${ctx.repo}/issues/new?${q.toString()}`;
+}
+
+/** The edit form for a lookout at an approximate location, opened on "Location on the map". */
+export function locationIssueUrl(r: Pick<TowerRecord, 'id' | 'name'>, ctx: RenderContext): string {
+  return editIssueUrl(r, ctx, { title: `Location: ${r.name} (${r.id})`, topic: 'Location on the map' });
 }
 
 export function takedownIssueUrl(r: Pick<TowerRecord, 'id' | 'name'> | null, ctx: RenderContext): string {
@@ -116,8 +123,48 @@ export function eyebrowWhat(kind: string): string {
   return isNoStructure(kind) ? 'Lookout site, no structure' : 'Fire lookout';
 }
 
-function icon(kind: string, status: string, rentable = false, size = 20): SafeHtml {
-  return raw(markerSvg(shapeFor(kind), fillFor(status), { rentable, size, className: 'marker-icon' }));
+function icon(kind: string, status: string, rentable = false, size = 20, approximate = false): SafeHtml {
+  return raw(markerSvg(shapeFor(kind), fillFor(status), { rentable, size, approximate, className: 'marker-icon' }));
+}
+
+/* ---------- Approximate locations (USGS GNIS name match) ---------- */
+
+/** GNIS feature classes in plain words ("the one ridge of that name"). */
+const GNIS_CLASS_WORDS: Record<string, string> = {
+  Summit: 'summit',
+  Ridge: 'ridge',
+  Gap: 'gap',
+  Pillar: 'rock pillar',
+  Cliff: 'cliff or bluff',
+  Bench: 'bench',
+};
+
+const GNIS_URL = 'https://www.usgs.gov/tools/geographic-names-information-system-gnis';
+
+/** What the approximate pin stands on, in words: {name: "Black Jack Ridge", what: "ridge"}. */
+export function approximateFeature(r: Pick<TowerRecord, 'location'>): { name: string; what: string; cls: string } | null {
+  if (!isApproximate(r)) return null;
+  const g = r.location.gnis;
+  return { name: g?.name ?? 'a hill of its name', what: GNIS_CLASS_WORDS[g?.class ?? ''] ?? 'high point', cls: g?.class ?? '' };
+}
+
+/** How far off the pin may be, by what it stands on. */
+function approximateCaveat(cls: string): string {
+  if (cls === 'Ridge') return 'A ridge can run for miles, so the lookout may have stood some way along it.';
+  if (cls === 'Gap') return 'A gap is a low pass, so the lookout probably stood on higher ground beside it.';
+  return 'The lookout may have stood on it or nearby.';
+}
+
+/** The notice on the tower page: where the pin is, why, and how to give the real spot. */
+export function approximateNotice(r: TowerRecord, ctx: RenderContext): SafeHtml {
+  const f = approximateFeature(r);
+  if (!f) return html``;
+  const county = r.location.gnis?.county ?? r.county;
+  const where = county ? placeLine({ county, region: r.region }) : regionName(r.region);
+  return html`<div class="notice tone-caution approx-notice" role="note">${raw(markerSvg(shapeFor(r.kind), fillFor(r.status), { size: 22, approximate: true, className: 'notice-icon' }))}<div>
+    <p class="notice-title">Approximate location</p>
+    <p>No source gives where this lookout stood, so the map shows it on <strong>${f.name}</strong>, the one ${f.what} of that name in ${where} in the ${externalLink(GNIS_URL, 'USGS Geographic Names Information System')}. ${approximateCaveat(f.cls)} Know where it stood? <a href="${locationIssueUrl(r, ctx)}">Suggest an edit</a>.</p>
+  </div></div>`;
 }
 
 const EXT = raw('<svg class="ext-icon" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M9 2h5v5M14 2 7.5 8.5M12 9.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>');
@@ -160,8 +207,9 @@ export function badges(r: TowerRecord): SafeHtml {
     <li class="badge badge-status status-${r.status}" title="${st.meaning}">${icon(r.kind, r.status)}<span>${st.label}</span></li>
     ${rent ? html`<li class="badge badge-rent">${raw(rentBadgeSvg(14))}<span>Rentable</span></li>` : ''}
     ${isNoStructure(r.kind) ? html`<li class="badge badge-nostructure" title="${NO_STRUCTURE_MEANING}"><span>No structure</span></li>` : ''}
+    ${isApproximate(r) ? html`<li class="badge badge-approx" title="No source gives where it stood; shown on the hill or ridge of its name">${icon(r.kind, r.status, false, 18, true)}<span>Approximate location</span></li>` : ''}
     <li class="badge badge-access tone-${acc.tone}" title="${acc.meaning}">${acc.tone === 'ok' ? CHECK : acc.tone === 'unknown' ? INFO : WARN}<span>${acc.label}</span></li>
-    ${r.verification === 'unverified'
+    ${r.verification === 'unverified' || isApproximate(r)
       ? html`<li class="badge badge-unverified" title="${ver.meaning}">${WARN}<span>Unverified</span></li>`
       : html`<li class="badge badge-ver ver-${r.verification}" title="${ver.meaning}"><span>${ver.label}</span></li>`}
     ${r.fixture ? html`<li class="badge badge-fixture"><span>Sample entry</span></li>` : ''}
@@ -205,7 +253,7 @@ export function movedNotice(r: TowerRecord, ctx: RenderContext): SafeHtml {
 }
 
 export function unverifiedNotice(r: TowerRecord, ctx: RenderContext): SafeHtml {
-  if (r.verification !== 'unverified') return html``;
+  if (r.verification !== 'unverified' || isApproximate(r)) return html``; // approximateNotice says it
   return html`<div class="notice tone-caution" role="note">${WARN}<div>
     <p class="notice-title">Unverified entry</p>
     <p>This comes from a single source and nobody has checked it yet, so details may be wrong. If you know better, <a href="${editIssueUrl(r, ctx)}">suggest an edit</a>.</p>
@@ -384,7 +432,10 @@ export function factRows(r: TowerRecord, opts: { short?: boolean; base?: string 
   if (!opts.short) {
     rows.push(['Land', OWNERSHIP[r.ownership ?? 'unknown'] ?? r.ownership]);
     rows.push(['Location', placeLine(r)]);
-    const prec = r.location.precision && r.location.precision !== 'exact' ? ` (${r.location.precision})` : '';
+    const approx = approximateFeature(r);
+    const prec = approx
+      ? html`<span class="sub">Approximate: placed on ${approx.name} (a ${approx.what}), from USGS GNIS. No source gives where it stood.</span>`
+      : r.location.precision && r.location.precision !== 'exact' ? ` (${r.location.precision})` : '';
     rows.push([
       'Coordinates',
       html`<span class="coords" data-coords="${plainCoords(r.location.lat, r.location.lon)}">${formatCoords(r.location.lat, r.location.lon)}</span>${prec}${disagree('location')}`,
@@ -641,6 +692,14 @@ const FIELD_NAMES: Record<string, string> = {
 export function sourcesSection(r: TowerRecord, ctx: RenderContext): SafeHtml {
   const refs = r.sources ?? [];
   const links = (r.links ?? []).filter((l) => safeUrl(l.url) && !String(l.kind ?? '').startsWith('relocated_'));
+  const approx = approximateFeature(r);
+  const gnisItem = approx
+    ? html`<li id="src-gnis">
+        <span class="src-title">${externalLink(GNIS_URL, 'USGS Geographic Names Information System (GNIS)')}</span>
+        <span class="src-fields">Gave us: an approximate location, on ${approx.name} (a ${approx.what})</span>
+        <span class="credit-line">USGS Geographic Names Information System (GNIS) · Public domain</span>
+      </li>`
+    : '';
   return html`
     ${refs.length
       ? html`<ol class="sources">${refs.map((s) => {
@@ -652,7 +711,7 @@ export function sourcesSection(r: TowerRecord, ctx: RenderContext): SafeHtml {
             ${fields.length ? html`<span class="src-fields">Gave us: ${fields.join(', ')}</span>` : ''}
             <span class="credit-line">${info?.credit ?? title}${info?.license ? html` · ${info.license}` : ''}${info?.retrieved ? html` · retrieved ${formatDate(info.retrieved)}` : ''}</span>
           </li>`;
-        })}</ol>`
+        })}${gnisItem}</ol>`
       : html`<p class="muted">No sources recorded.</p>`}
     ${links.length
       ? html`<h3 class="h-small">More about this lookout elsewhere</h3><ul class="links">${links.map((l) => html`<li>${externalLink(l.url, l.label)}</li>`)}</ul>`
@@ -696,10 +755,10 @@ export function miniMap(r: TowerRecord, ctx: RenderContext): SafeHtml {
         ${tiles.map(
           (t) => html`<img src="${USGS_TILE.replace('{z}', String(Z)).replace('{y}', String(t.y)).replace('{x}', String(t.x))}" alt="" width="256" height="256" loading="lazy" decoding="async" style="left:${t.left}px;top:${t.top}px">`,
         )}
-        <span class="minimap-pin" style="left:${W / 2}px;top:${H / 2}px">${icon(r.kind, r.status, isRentable(r), 26)}</span>
+        <span class="minimap-pin" style="left:${W / 2}px;top:${H / 2}px">${icon(r.kind, r.status, isRentable(r), 26, isApproximate(r))}</span>
       </span>
     </a>
-    <figcaption><span>${formatCoords(lat, lon)}</span><span class="credit-line">Map: <a href="https://www.usgs.gov/programs/national-geospatial-program/national-map" rel="noopener">USGS The National Map</a></span></figcaption>
+    <figcaption><span>${isApproximate(r) ? 'Approximate location: ' : ''}${formatCoords(lat, lon)}</span><span class="credit-line">Map: <a href="https://www.usgs.gov/programs/national-geospatial-program/national-map" rel="noopener">USGS The National Map</a></span></figcaption>
   </figure>`;
 }
 
@@ -734,7 +793,9 @@ export function viewSection(r: TowerRecord, ctx: RenderContext): SafeHtml {
   const eye = eyeHeight({ kind: r.kind, height_m: r.height_m, lon });
   const recon = reconstructionNote(r.status, eye.source);
   const gone = r.status === 'gone' || r.status === 'ruins';
+  const approx = approximateFeature(r);
   return html`<p class="lede">${gone ? 'What the lookout saw from its cab' : 'What you see from the cab'}: every ridge out to about 93 miles, the named peaks in sight, and other fire lookouts within view, worked out from terrain data in your browser.</p>
+    ${approx ? html`<div class="notice tone-caution" role="note">${WARN}<div><p class="notice-title">From an approximate location</p><p>This view, and what it could see, are worked out from ${approx.name}, where the map places the lookout, not from a recorded site. The real view may differ.</p></div></div>` : ''}
     ${recon ? html`<div class="notice tone-unknown" role="note">${INFO}<div><p>${recon}</p></div></div>` : ''}
     <div class="pano-host" data-pano="${panoramaPayload(r)}">
       <p class="pano-start"><button type="button" class="btn btn-primary btn-view" data-pano-start disabled>${PANO_ICON}<span>Show the view from the cab</span></button>
@@ -790,6 +851,7 @@ export function renderTowerMain(r: TowerRecord, ctx: RenderContext): SafeHtml {
     <div class="notices">
       ${accessInfo(r).tone === 'stop' ? accessNotice(r) : ''}
       ${movedNotice(r, ctx)}
+      ${approximateNotice(r, ctx)}
       ${unverifiedNotice(r, ctx)}
       ${r.status !== 'standing' || r.status_note
         ? html`<p class="status-meaning">${icon(r.kind, r.status, false, 16)} <strong>${statusWording(r.status).label}:</strong> ${r.status !== 'standing' ? statusWording(r.status).meaning : ''}${r.status_note ? html` ${r.status_note}` : ''}</p>`
@@ -834,6 +896,7 @@ export function describeTower(r: TowerRecord): string {
   if (built) d += `, built ${built}`;
   d += '.';
   if (isRentable(r)) d += ' Rentable on recreation.gov.';
+  if (isApproximate(r)) d += ' Location approximate.';
   d += ' Visit and stay information, history and sources.';
   return d;
 }
@@ -883,7 +946,9 @@ export function renderPanel(r: TowerRecord, ctx: RenderContext, opts: { hiddenBy
     ${accessNotice(r, { compact: true })}
     ${movedNotice(r, ctx)}
     ${r.status_note ? html`<p class="fine status-note">${r.status_note}</p>` : ''}
-    ${r.verification === 'unverified' ? html`<p class="fine warn-text">Unverified: from a single source, not yet checked.</p>` : ''}
+    ${isApproximate(r)
+      ? html`<p class="fine warn-text approx-line"><strong>Approximate location.</strong> No source gives where it stood, so it is shown on ${approximateFeature(r)!.name} (USGS GNIS). Unverified.</p>`
+      : r.verification === 'unverified' ? html`<p class="fine warn-text">Unverified: from a single source, not yet checked.</p>` : ''}
     ${stay}
     <dl class="kv kv-panel">${factRows(r, { short: true, base: ctx.base }).map(([k, v]) => html`<div><dt>${k}</dt><dd>${v}</dd></div>`)}</dl>
     ${checklistButtons(r.id)}
@@ -891,6 +956,7 @@ export function renderPanel(r: TowerRecord, ctx: RenderContext, opts: { hiddenBy
       <button type="button" class="btn" data-action="view-cab" data-id="${r.id}">${PANO_ICON}View from the cab</button>
       <button type="button" class="btn" data-action="viewshed" data-id="${r.id}" aria-pressed="false">${SEEN_ICON}<span data-viewshed-label>What it could see</span></button>
     </div>
+    ${isApproximate(r) ? html`<p class="fine">Both views are worked out from the approximate location, so they may not match what its lookout saw.</p>` : ''}
     <p class="panel-actions"><a class="btn" href="${towerPath(r.id, ctx)}">Open full page<span class="visually-hidden">: ${r.name}</span></a></p>
     <p class="fine">History, photos, sources and “Suggest an edit” are on the full page.</p>`;
 }
@@ -902,7 +968,8 @@ export function renderPanelStub(p: TowerProps, ctx: RenderContext, message: stri
     <p class="eyebrow">${eyebrowWhat(p.k)} · ${placeLine({ county: p.c ?? null, region: p.r })}</p>
     <h2 id="panel-title" tabindex="-1">${p.n}</h2>
     <ul class="badges"><li class="badge badge-status status-${p.s}">${icon(p.k, p.s, false)}<span>${st.label}</span></li>
-    ${p.rt ? html`<li class="badge badge-rent">${raw(rentBadgeSvg(14))}<span>Rentable</span></li>` : ''}</ul>
+    ${p.rt ? html`<li class="badge badge-rent">${raw(rentBadgeSvg(14))}<span>Rentable</span></li>` : ''}
+    ${p.ap ? html`<li class="badge badge-approx">${icon(p.k, p.s, false, 18, true)}<span>Approximate location</span></li>` : ''}</ul>
     <p class="muted" role="status">${message}</p>
     <p class="panel-actions"><a class="btn" href="${towerPath(p.i, ctx)}">Open full page</a></p>`;
 }

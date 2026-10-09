@@ -26,10 +26,15 @@ export interface Filters {
    * default, so the map shows towers and buildings. The kind filter covers structures only.
    */
   noStructure: boolean;
+  /**
+   * Show lookouts at approximate locations (no source gives a position; shown on the hill or
+   * ridge of their name in their county, a dashed marker). On by default.
+   */
+  approximate: boolean;
 }
 
 export function defaultFilters(): Filters {
-  return { status: null, kind: null, verification: null, rentable: false, registered: false, region: null, mine: null, design: null, material: null, noStructure: false };
+  return { status: null, kind: null, verification: null, rentable: false, registered: false, region: null, mine: null, design: null, material: null, noStructure: false, approximate: true };
 }
 
 /** The design ids of a map point ("l4|r6" -> ["l4", "r6"]). */
@@ -46,6 +51,7 @@ export function matches(p: TowerProps, f: Filters, checklist?: ChecklistLookup |
   if (isNoStructure(p.k)) {
     if (!f.noStructure) return false;
   } else if (f.kind && !f.kind.has(p.k)) return false;
+  if (!f.approximate && p.ap) return false;
   if (f.status && !f.status.has(p.s)) return false;
   if (f.verification && !f.verification.has(p.v)) return false;
   if (f.rentable && !p.rt) return false;
@@ -79,6 +85,7 @@ export function activeFilterCount(f: Filters): number {
   if (f.design) n++;
   if (f.material) n++;
   if (f.noStructure) n++;
+  if (!f.approximate) n++;
   if (f.mine && f.mine.size) n++;
   return n;
 }

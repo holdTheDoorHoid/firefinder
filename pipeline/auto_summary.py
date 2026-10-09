@@ -102,4 +102,9 @@ def summarize(rec: dict) -> str | None:
     rental = rec.get("rental") or {}
     if rental.get("available") is True:
         out.append("It can be rented for overnight stays through recreation.gov.")
+    loc = rec.get("location") or {}
+    if loc.get("approximate") is True:
+        feature = (loc.get("gnis") or {}).get("name")
+        out.append("No source gives where it stood; the map shows it approximately"
+                   + (f", on {feature}." if feature else "."))
     return " ".join(out)

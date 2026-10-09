@@ -27,6 +27,7 @@ describe('marker palette', () => {
       otherEdge: '--mk-other-edge',
       rent: '--mk-rent',
       rentEdge: '--mk-rent-edge',
+      approxEdge: '--mk-approx-edge',
     };
     for (const [key, token] of Object.entries(want)) {
       expect(t.get(token), token).toBeDefined();

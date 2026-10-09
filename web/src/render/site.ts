@@ -34,6 +34,7 @@ export function mapKey(): SafeHtml {
     <ul class="key-list" aria-label="Marker shapes">${SHAPE_ROWS.map(([s, label]) => html`<li>${raw(markerSvg(s, 'solid', { size: 22 }))}<span>${label}</span></li>`)}</ul>
     <ul class="key-list" aria-label="Marker fills">${FILL_ROWS.map(([f, label]) => html`<li>${raw(markerSvg('tri', f, { size: 22 }))}<span>${label}</span></li>`)}
       <li>${raw(markerSvg('tri', 'solid', { size: 22, rentable: true }))}<span>Amber dot at the top right: you can rent it (bookable on recreation.gov)</span></li>
+      <li>${raw(markerSvg('tri', 'hollow', { size: 22, approximate: true }))}<span>Dashed outline: approximate location. No source says where it stood, so it is shown on the hill or ridge of its name in its county</span></li>
     </ul>
     <p class="fine">Numbered circles are groups of nearby lookouts. Zoom in or select one to spread them out.</p>
   </div>`;

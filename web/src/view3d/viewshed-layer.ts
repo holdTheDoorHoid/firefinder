@@ -123,7 +123,7 @@ export class SeenLayer {
     const [lon, lat] = first.geometry.coordinates;
     const near = this.#d
       .towers()
-      .filter((f) => !this.ids.includes(f.properties.i))
+      .filter((f) => !this.ids.includes(f.properties.i) && !f.properties.ap)
       .map((f) => ({ f, d: distanceM(lat, lon, f.geometry.coordinates[1], f.geometry.coordinates[0]) }))
       .filter((x) => x.d > 200 && x.d <= this.km * 1000)
       .sort((a, b) => a.d - b.d)
@@ -266,6 +266,8 @@ export class SeenLayer {
     const sw = (v: number[], striped = false) =>
       `background:${striped ? `repeating-linear-gradient(135deg, ${rgba(c.stripe)} 0 2px, ${rgba(v)} 2px 7px)` : rgba(v)}`;
     const names = this.ids.map((id) => ({ id, name: (this.#d.tower(id)?.properties.n ?? id).replace(/\s+(Lookout|Fire Tower)$/i, '') }));
+    // Lookouts at an approximate (GNIS) location: their views are from the hill of their name.
+    const approx = names.filter((t) => this.#d.tower(t.id)?.properties.ap);
     const one = this.#data && this.#data.observers.length === 1 ? this.#data.observers[0] : null;
     const done = !busy && !failed && this.#data;
     this.#card.innerHTML = html`
@@ -281,6 +283,9 @@ export class SeenLayer {
         <select id="seen-r">${[20, 40, 60].map((k) => html`<option value="${k}" ${k === this.km ? 'selected' : ''}>${Math.round(k / 1.609)} mi (${k} km)</option>`)}</select>
         <button type="button" class="btn" data-seen-nearby ${busy || this.ids.length >= 12 ? 'disabled' : ''}>Add nearby lookouts</button>
       </div>
+      ${approx.length
+        ? html`<p class="seen-approx">${approx.map((t) => t.name).join(', ')}: approximate location. ${approx.length > 1 ? 'Their views are' : 'Its view is'} worked out from the hill or ridge of ${approx.length > 1 ? 'their names' : 'its name'}, not a recorded site.</p>`
+        : ''}
       <ul class="seen-legend">
         <li><span class="seen-swatch" style="${sw(c.one)}"></span>${multi ? 'Seen by 1 lookout' : 'Ground in its line of sight'}</li>
         ${multi ? html`<li><span class="seen-swatch" style="${sw(c.two, true)}"></span>Seen by 2 or more (striped)</li>` : ''}

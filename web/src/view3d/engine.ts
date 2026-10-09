@@ -136,7 +136,8 @@ export interface ViewshedData {
 
 interface TowerFeature {
   geometry: { coordinates: [number, number] };
-  properties: { i: string; n: string; k: string; s: string };
+  /** ap: 1 for a lookout at an approximate (GNIS) location; these are not labelled. */
+  properties: { i: string; n: string; k: string; s: string; ap?: 1 };
 }
 
 type PeakRow = [string, number, number, number];
@@ -212,7 +213,8 @@ export class TerrainEngine {
     if (!p) {
       p = fetch(`${base}data/towers.geojson`)
         .then((r) => (r.ok ? r.json() : { features: [] }))
-        .then((g: { features?: TowerFeature[] }) => g.features ?? [])
+        // other lookouts in view are labelled at their sites: not ones at approximate (GNIS) locations
+        .then((g: { features?: TowerFeature[] }) => (g.features ?? []).filter((f) => !f.properties.ap))
         .catch(() => []);
       this.#towers.set(base, p);
     }
