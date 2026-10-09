@@ -1,6 +1,7 @@
 {
   "id": "us-nh-deer-mountain",
   "name": "Deer Mountain Lookout",
+  "summary": "Pittsburg, NH summit tower: 1911 first lookout, 1933 steel tower, closed 1976. Steel frame remains with cab and steps gone; climbing unsafe; reached on foot.",
   "other_names": [
     "Deer Mountain (Pittsburg)"
   ],
@@ -18,10 +19,10 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "Steel tower dating to 1933; cab removed, steel frame remains",
   "height_m": null,
   "status": "standing",
-  "status_note": "The tower still stands, but its cab is gone (FFLA).",
+  "status_note": null,
   "registers": [
     {
       "register": "NHLR",
@@ -33,20 +34,41 @@
   "agency": "New Hampshire Department of Natural and Cultural Resources",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Wooden steps removed to discourage climbing; the trail guide calls the structure unsafe. Reached on foot by a hiking trail."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Hiking trail follows a brook to the summit, where the tower remains"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1911,
+      "event": "built",
+      "note": "First tower on the site, built by the New Hampshire Timberland Owners Association",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nh/deer-mountain-lookout/"
+    },
+    {
+      "year": 1915,
+      "event": "built",
+      "note": "State took control of the site and built a 30-foot wooden tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nh/deer-mountain-lookout/"
+    },
+    {
+      "year": 1922,
+      "event": "rebuilt",
+      "note": "Tower rebuilt",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nh/deer-mountain-lookout/"
+    },
     {
       "year": 1933,
       "event": "built",
@@ -54,10 +76,32 @@
       "from": "nhlr"
     },
     {
+      "year": 1933,
+      "event": "replaced",
+      "note": "Replaced by the current steel structure; the NHLR Built field gives 1933",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nh/deer-mountain-lookout/"
+    },
+    {
+      "year": 1976,
+      "event": "closed",
+      "note": "Closed; NHLR says the cab was later removed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nh/deer-mountain-lookout/"
+    },
+    {
+      "year": 1985,
+      "event": "burned",
+      "note": "FFLA says the state burned the cab around 1985, and the stairs and landings at the same time. NHLR and Trail Finder say the cab was removed instead.",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/03/cr-nh-2023.pdf"
+    },
+    {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 22, 2022",
-      "from": "nhlr"
+      "note": "Registered May 22, 2022 as US 1575, NH 22",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nh/deer-mountain-lookout/"
     }
   ],
   "photos": [
@@ -79,6 +123,16 @@
       "label": "NHLR register entry US 1575 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/nh/deer-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "New Hampshire chapter report 2023 (cr-nh-2023.pdf) (Forest Fire Lookout Association (firelookout.org))",
+      "url": "https://firelookout.org/wp-content/uploads/2024/03/cr-nh-2023.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Deer Mountain Firetower Trail (Trail Finder (trailfinder.info))",
+      "url": "https://www.trailfinder.info/trails/trail/deer-mountain-firetower-trail",
+      "kind": "reference"
     },
     {
       "label": "FFLA New Hampshire lookout list (firelookout.org)",
@@ -112,12 +166,33 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nh-deer-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

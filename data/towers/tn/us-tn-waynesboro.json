@@ -1,6 +1,7 @@
 {
   "id": "us-tn-waynesboro",
   "name": "Waynesboro Lookout Tower",
+  "summary": "Wayne County, TN 45-ft Aermotor MC-39 on private land; NHLR-registered 2023 after a 2022 visit, but Tennessee Landforms marks it removed. Status unresolved.",
   "other_names": [],
   "country": "US",
   "region": "TN",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "design": "45' Aermotor MC-39",
+  "height_m": 13.7,
+  "status": "unknown",
+  "status_note": "NHLR describes a November 2022 site visit to a tower on private property; Tennessee Landforms marks it removed, undated. The sources conflict.",
   "registers": [
     {
       "register": "NHLR",
@@ -34,11 +35,11 @@
       "url": null
     }
   ],
-  "agency": "Tennessee Division of Forestry",
+  "agency": "Tennessee Division of Forestry (administrator per NHLR)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "NHLR says the tower is on private property and privately owned; no public access is described"
   },
   "staffing": {
     "status": "unknown",
@@ -52,10 +53,25 @@
   "rental": null,
   "events": [
     {
+      "year": 2014,
+      "event": "assessed",
+      "note": "Listed among the extant towers as of March 26, 2014",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/64501237.pdf"
+    },
+    {
+      "year": 2022,
+      "event": "assessed",
+      "note": "NHLR records a site visit dated 11/26/22 to a tower on private property",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/waynesboro-lookout-tower/"
+    },
+    {
       "year": 2023,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 9, 2023",
-      "from": "nhlr"
+      "note": "Registered August 9, 2023 as US 1762, TN 66; nominated by Jason Johns",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/waynesboro-lookout-tower/"
     }
   ],
   "photos": [
@@ -77,6 +93,11 @@
       "label": "NHLR register entry US 1762 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/tn/waynesboro-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Tennessee Division of Forestry Fire Lookout Towers, 1933 to 1975 (National Register of Historic Places multiple property form (NPGallery))",
+      "url": "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/64501237.pdf",
+      "kind": "reference"
     },
     {
       "label": "Waynesboro (tnlandforms.us (Tom Dunigan))",
@@ -110,12 +131,31 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tn-waynesboro",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "nhlr",
           "value": "standing"
@@ -126,12 +166,18 @@
         }
       ],
       "distance_m": null,
-      "note": "NHLR lists lookouts that were standing when registered."
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-mt-elk-mountain-2",
   "name": "Elk Mountain Lookout",
+  "summary": "A 1923 frame cab and 1940 L-4 cab on a pole tower in Lincoln County, Montana; now in ruins, and a trail listing says the site is closed.",
   "other_names": [
     "Elk Patrol"
   ],
@@ -18,10 +19,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "10x10 ft frame cab with roof platform (1923); 10 ft pole tower with L-4 cab (1940); separate L-6 cab about 1 mile northeast",
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "ruins",
+  "status_note": "The register says the tower now lies in ruins after vandalism and decay; the Forest Fire Lookout Association's Montana list still shows it standing.",
   "registers": [
     {
       "register": "NHLR",
@@ -30,11 +31,11 @@
       "url": "http://nhlr.org/lookouts/us/mt/elk-mountain-lookout/"
     }
   ],
-  "agency": "US Forest Service",
+  "agency": "US Forest Service, Kootenai National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "A travel listing for the Elk Patrol Trail says the old structure is now closed to the public; a Visit Montana listing for the Elk Mountain Trail does not mention a closure."
   },
   "staffing": {
     "status": "unknown",
@@ -47,6 +48,24 @@
   },
   "rental": null,
   "events": [
+    {
+      "year": 1923,
+      "event": "built",
+      "note": "Developed with a 10x10 ft frame cab and roof platform",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/elk-mountain-lookout/"
+    },
+    {
+      "year": 1940,
+      "event": "built",
+      "note": "10 ft pole tower with L-4 cab, built about 1/4 mile southwest of the summit",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/elk-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/elk-mountain-lookout/",
+        "https://www.firelookout.com/mt/elkmt.html"
+      ]
+    },
     {
       "year": 2021,
       "event": "nhlr_registered",
@@ -111,6 +130,21 @@
       "kind": "register"
     },
     {
+      "label": "Elk Mtn. Fire Lookout Tower (firelookout.com)",
+      "url": "https://www.firelookout.com/mt/elkmt.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Elk Patrol Trail in Fortine Montana (travelmt.com)",
+      "url": "http://www.travelmt.com/mt_sites_6937_Elk+Patrol+Trail.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Elk Mountain Trail (Visit Montana)",
+      "url": "https://www.visitmt.com/listing/elk-mountain-trail-5429",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
       "kind": "association"
@@ -143,9 +177,38 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-elk-mountain-2",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "ruins"
+        },
+        {
+          "source": "ffla",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives ruins where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    },
     {
       "field": "location",
       "values": [
@@ -168,9 +231,15 @@
       "note": "They share a register number."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-sc-whitmire",
   "name": "Whitmire Tower",
+  "summary": "Union County, SC lookout in the Sumter National Forest; register dates it to about 1935 and Forest Service use to the 1980s; upper deck closed to visitors.",
   "other_names": [],
   "country": "US",
   "region": "SC",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "100' Aermotor LS-40 tower with 7'x7' metal cab and low hip roof",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,31 +32,40 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Upper deck closed to visitors per HikingWNC; the only visit described is a roadside stop"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1980s"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "Roadside stop, about 0.1 mile round trip; no tower access per HikingWNC"
   },
   "rental": null,
   "events": [
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register 'Built' field gives 1935; description says built around 1935",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sc/whitmire-tower/"
+    },
+    {
+      "year": 1980,
+      "event": "staffed_last",
+      "note": "Placeholder for 'until the 1980s'; the register gives no exact year",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sc/whitmire-tower/"
     },
     {
       "year": 2013,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 27, 2013",
-      "from": "nhlr"
+      "note": "Registered January 27, 2013 as US 963, SC 17",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sc/whitmire-tower/"
     }
   ],
   "photos": [
@@ -77,6 +87,11 @@
       "label": "NHLR register entry US 963 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/sc/whitmire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "012 – Whitmire Fire Tower (SC) (HikingWNC)",
+      "url": "https://hikingwnc.com/012-whitmire-fire-tower-sc/",
+      "kind": "reference"
     },
     {
       "label": "OpenStreetMap node 357098866",
@@ -110,12 +125,35 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-sc-whitmire",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

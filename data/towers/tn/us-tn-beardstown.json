@@ -1,6 +1,7 @@
 {
   "id": "us-tn-beardstown",
   "name": "Beardstown Lookout Tower",
+  "summary": "Perry County, TN steel Aermotor tower built about 1950 for the state forestry division; in use to the early 1970s; a 2018 photo exists, but a Lobelville tower list entry says removed.",
   "other_names": [
     "Lobelville"
   ],
@@ -18,10 +19,10 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "design": "steel Aermotor tower, about 73 ft tall (model not stated)",
+  "height_m": 22.3,
+  "status": "unknown",
+  "status_note": "Last dated evidence is a March 2018 photo on the Register; a Tennessee tower list marks a Lobelville tower in Perry County as removed, and the sources do not show whether that is this tower",
   "registers": [
     {
       "register": "NHLR",
@@ -50,14 +51,23 @@
     {
       "year": 1950,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Constructed around 1950 (Register 'Built' field 1950)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/beardstown-lookout-tower/"
+    },
+    {
+      "year": 2014,
+      "event": "other",
+      "note": "A Lobelville tower in Perry County is listed as extant in the National Register study as of March 26, 2014; identity with Beardstown not confirmed",
+      "from": "research",
+      "source_url": "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/64501237.pdf"
     },
     {
       "year": 2018,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 3, 2018",
-      "from": "nhlr"
+      "note": "Registered April 3, 2018 as US 1272, TN 31; nominated by Andrew T. Lutes",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/beardstown-lookout-tower/"
     }
   ],
   "photos": [
@@ -79,6 +89,11 @@
       "label": "NHLR register entry US 1272 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/tn/beardstown-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Tennessee Division of Forestry Fire Lookout Towers, 1933 to 1975 (National Register multiple property document) (National Park Service, National Register of Historic Places)",
+      "url": "https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/64501237.pdf",
+      "kind": "reference"
     },
     {
       "label": "Lobelville (tnlandforms.us (Tom Dunigan))",
@@ -111,12 +126,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tn-beardstown",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "nhlr",
           "value": "standing"
@@ -127,12 +160,18 @@
         }
       ],
       "distance_m": null,
-      "note": "NHLR lists lookouts that were standing when registered."
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

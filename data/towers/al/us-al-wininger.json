@@ -1,6 +1,7 @@
 {
   "id": "us-al-wininger",
   "name": "Wininger Lookout Tower",
+  "summary": "Jackson County, AL 120-foot International Derrick tower dated 1955, administered by the Alabama Forestry Commission and identical to Fabius Lookout; NHLR-registered 2009. Condition and access not stated.",
   "other_names": [],
   "country": "US",
   "region": "AL",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "design": "120-foot International Derrick structure, identical to its neighbor Fabius Lookout",
+  "height_m": 36.6,
+  "status": "unknown",
+  "status_note": "Register page gives no present condition",
   "registers": [
     {
       "register": "NHLR",
@@ -28,7 +29,7 @@
       "url": "http://nhlr.org/lookouts/us/al/wininger-lookout-tower/"
     }
   ],
-  "agency": "Alabama Forestry Commission",
+  "agency": "Alabama Forestry Commission (administrator per register)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -48,14 +49,16 @@
     {
       "year": 1955,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register 'Built' field gives 1955; builder not named on the page",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/wininger-lookout-tower/"
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 30, 2009",
-      "from": "nhlr"
+      "note": "Registered June 30, 2009; nominated by Thomas Kaufmann",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/wininger-lookout-tower/"
     }
   ],
   "photos": [
@@ -77,6 +80,11 @@
       "label": "NHLR register entry US 819 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/al/wininger-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Fabius Lookout Tower (National Historic Lookout Register)",
+      "url": "http://nhlr.org/lookouts/us/al/fabius-lookout-tower/",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -97,12 +105,48 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-al-wininger",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "pass",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-sc-woodlawn",
   "name": "Woodlawn Lookout",
+  "summary": "Forest Service lookout in McCormick County, SC, built May 1936 by a CCC camp; state forestry staff manned it from 1974-75; a 2020 visit found the lower stairs gone and the cab damaged.",
   "other_names": [],
   "country": "US",
   "region": "SC",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "100' LS-40 Aermotor tower with 7'x7' galvanized sheet metal cab with hip roof",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,31 +32,51 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Upper deck not open to visitors (HikingWNC); lower staircase removed and base fence mostly down (2020 Register visit report); no official closure notice found"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "HikingWNC lists a roadside stop of 0.1 miles round trip with no tower access"
   },
   "rental": null,
   "events": [
     {
       "year": 1936,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Constructed May 1936 as the fourth tower in the Long Cane Division, built by the Bradley CCC camp (Register); work reported started in May 1936 (Index-Journal item quoted by Forest Lookouts)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sc/woodlawn-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/sc/woodlawn-lookout/",
+        "https://easternuslookouts.weebly.com/woodlawn1.html"
+      ]
+    },
+    {
+      "year": 1974,
+      "event": "staffed",
+      "note": "State Forestry Commission personnel began manning the tower in the 1974-75 season, per a state forestry report quoted by Forest Lookouts",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/woodlawn1.html"
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 17, 2009",
-      "from": "nhlr"
+      "note": "Registered November 17, 2009 as US 838, SC 8; nominated by Ron Stafford",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sc/woodlawn-lookout/"
+    },
+    {
+      "year": 2020,
+      "event": "assessed",
+      "note": "Visit report dated September 16, 2020: bottom staircase removed, windows broken, base fence mostly pulled down",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sc/woodlawn-lookout/"
     }
   ],
   "photos": [
@@ -103,6 +124,16 @@
       "kind": "register"
     },
     {
+      "label": "History of the Enoree and Long Cane Ranger Districts (U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r08/francismarionsumter/natural-resources/arch-cultural/history-enoree-and-long-cane-ranger",
+      "kind": "reference"
+    },
+    {
+      "label": "017 – Woodlawn Lookout Tower (SC) (HikingWNC)",
+      "url": "https://hikingwnc.com/017-woodlawn-lookout-tower-sc/",
+      "kind": "reference"
+    },
+    {
       "label": "Woodlawn (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/woodlawn1.html",
       "kind": "site"
@@ -133,12 +164,34 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-sc-woodlawn",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

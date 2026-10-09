@@ -1,0 +1,8 @@
+The National Historic Lookout Register lists the Green Mountain Lookout Tower in Madison County, Alabama, in the Green Mountain Nature Preserve, at an elevation of 1,352 feet (412 m).[^1] The tower is 80 feet tall and has a diagonal staircase.[^1] The Register says the tower was first placed at Redstone Arsenal, but it does not say when or why it was moved.[^1] I found no other source for the move.
+
+The Register names the Land Trust of North Alabama as administrator.[^1] The Land Trust has also created a trail on the mountain.[^2] A WAFF report from August 2024 says the new route begins at Riverview Drive SE and ends at Green Mountain Road, heading northward.[^2] Work on the trail started in 2022, when 200 people turned out to smooth its surface. The owners of the property gave the Land Trust a trail license, and they have indicated they plan to donate the land to the trust.[^2] The same report gives the trail as 3.2 miles in one place and as a three-mile path in another.[^2]
+
+The Register records a site visit dated November 27, 2021, and says the tower was registered on August 2, 2023.[^1] Our record lists the tower as standing, but the Register gives no status. The most recent dated entries I found are the 2021 visit and the 2023 registration, and neither describes the tower's condition now.[^1] The Register does not say whether visitors may climb the tower, so ask the Land Trust before going near it.
+
+[^1]: Green Mountain Lookout Tower, National Historic Lookout Register, http://nhlr.org/lookouts/us/al/green-mountain-lookout-tower/ (accessed 2026-10-09).
+[^2]: Land Trust of North Alabama created a new trail on Green Mountain, WAFF, https://www.waff.com/2024/08/06/land-trust-north-alabama-created-new-trail-green-mountain (accessed 2026-10-09).

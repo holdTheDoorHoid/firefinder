@@ -1,6 +1,7 @@
 {
   "id": "us-al-pinnacle",
   "name": "Pinnacle Lookout Tower",
+  "summary": "Shelby County, AL steel tower begun by the CCC in the late 1930s and finished by the Alabama Forestry Commission in 1942; NHLR-registered 2009 as US 843. Current condition not confirmed.",
   "other_names": [],
   "country": "US",
   "region": "AL",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "design": "100' International Derrick & Equipment Company steel tower with 7'x7' cab",
+  "height_m": 30.5,
+  "status": "unknown",
+  "status_note": "The Register does not say whether the tower still stands or what condition it is in; the 'standing' status in our record is not confirmed by any source read",
   "registers": [
     {
       "register": "NHLR",
@@ -48,14 +49,16 @@
     {
       "year": 1942,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Begun in the late 1930s by the CCC and finished by the Alabama Forestry Commission in 1942 (NHLR description; Built field 1942)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/pinnacle-lookout-tower/"
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 2, 2009",
-      "from": "nhlr"
+      "note": "Registered December 2, 2009 as US 843, AL 22; nominated by Thomas Kaufmann",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/pinnacle-lookout-tower/"
     }
   ],
   "photos": [
@@ -77,6 +80,11 @@
       "label": "NHLR register entry US 843 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/al/pinnacle-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Thomas Kaufmann: Keeping Alabama's historic lookout towers (1819 News)",
+      "url": "https://1819news.com/news/item/thomas-kaufmann-keeping-alabamas-historic-lookout-towers",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -97,12 +105,49 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-al-pinnacle",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-ar-bar-of-ranch",
   "name": "Bar ōf Ranch Tower",
+  "summary": "Former Charlotte fire tower, a 100-foot MC-39, moved to Bar ōf Ranch near Clinton, AR; the register gives no build or move dates and says it is on private property.",
   "other_names": [],
   "country": "US",
   "region": "AR",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "design": "100-foot MC-39 tower",
+  "height_m": 30.5,
+  "status": "unknown",
+  "status_note": "Register does not describe the tower's present condition",
   "registers": [
     {
       "register": "NHLR",
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/ar/bar-ōf-ranch-tower-relocated/"
     }
   ],
-  "agency": "Bill Eoff",
+  "agency": "Bill Eoff (administrator per register; private ranch)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Register says the tower is on private property; no public access described"
   },
   "staffing": {
     "status": "unknown",
@@ -48,8 +49,9 @@
     {
       "year": 2026,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 16, 2026",
-      "from": "nhlr"
+      "note": "Registered August 16, 2026; administrator Bill Eoff; described as relocated from the former Charlotte Fire Tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ar/bar-ōf-ranch-tower-relocated/"
     },
     {
       "year": null,
@@ -133,12 +135,49 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ar-bar-of-ranch",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

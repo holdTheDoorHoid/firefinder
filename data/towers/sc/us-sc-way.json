@@ -1,6 +1,7 @@
 {
   "id": "us-sc-way",
   "name": "Way Lookout",
+  "summary": "Orangeburg County, SC tower near Bouchetts Cross Roads, built for the state forestry commission about 1940, replaced by steel in 1957-58; NHLR-registered 2016; condition not confirmed.",
   "other_names": [],
   "country": "US",
   "region": "SC",
@@ -18,8 +19,8 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "NHLR registration (2016) gives no current condition; no source read says whether the tower still stands",
   "registers": [
     {
       "register": "NHLR",
@@ -31,8 +32,8 @@
   "agency": "South Carolina Forestry Commission",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Administered by the South Carolina Forestry Commission; the sources read give no public visit information"
   },
   "staffing": {
     "status": "unknown",
@@ -41,15 +42,37 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "No visit information found; ask the Forestry Commission before going to the site."
   },
   "rental": null,
   "events": [
     {
+      "year": 1940,
+      "event": "built",
+      "note": "Report for the fiscal year July 1940 to June 1941 lists the Way Tower among three towers constructed that year",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/way.html"
+    },
+    {
+      "year": 1941,
+      "event": "other",
+      "note": "Buildings and fence at the site completed by CCC labor (report for 1941-42)",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/way.html"
+    },
+    {
+      "year": 1957,
+      "event": "replaced",
+      "note": "Report for 1957-58 says the old wooden tower was replaced by a new steel structure",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/way.html"
+    },
+    {
       "year": 2016,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 21, 2016",
-      "from": "nhlr"
+      "note": "Registered November 21, 2016; nominated by Terrie D. Johnson",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sc/way-lookout/"
     }
   ],
   "photos": [
@@ -97,6 +120,11 @@
       "kind": "register"
     },
     {
+      "label": "Pictures From Our Past (South Carolina Forestry Commission)",
+      "url": "https://www.scfc.gov/about-us/history/pictures-from-our-past/",
+      "kind": "reference"
+    },
+    {
       "label": "Way (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/way.html",
       "kind": "site"
@@ -127,12 +155,48 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-sc-way",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

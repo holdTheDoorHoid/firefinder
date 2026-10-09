@@ -1,6 +1,7 @@
 {
   "id": "us-tn-dyersburg",
   "name": "Dyersburg Lookout Tower",
+  "summary": "A Dyer County Aermotor-style lookout administered by the Division of Forestry; registered 2023, but the TNLandForms.us list marks it removed and no build date is known.",
   "other_names": [],
   "country": "US",
   "region": "TN",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "Aermotor-style tower",
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "TNLandForms.us list (independent site, revised January 8, 2026) marks it removed; the 2023 NHLR entry gives no status",
   "registers": [
     {
       "register": "NHLR",
@@ -31,8 +32,8 @@
   "agency": "Tennessee Division of Forestry",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "NHLR describes no obvious access points"
   },
   "staffing": {
     "status": "unknown",
@@ -48,8 +49,9 @@
     {
       "year": 2023,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 1, 2023",
-      "from": "nhlr"
+      "note": "Registered January 1, 2023; nominated by Jason Johns",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/tn/dyersburg-lookout-tower/"
     }
   ],
   "photos": [
@@ -103,12 +105,30 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tn-dyersburg",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "nhlr",
           "value": "standing"
@@ -119,12 +139,18 @@
         }
       ],
       "distance_m": null,
-      "note": "NHLR lists lookouts that were standing when registered."
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

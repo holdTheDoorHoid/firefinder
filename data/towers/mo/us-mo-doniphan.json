@@ -1,6 +1,7 @@
 {
   "id": "us-mo-doniphan",
   "name": "Doniphan Lookout",
+  "summary": "Ripley County, MO 100-foot Aermotor LS40 tower built 1958-59 on MDC's Doniphan Towersite; tornado-destroyed and rebuilt in 1985; closed to the public for repairs.",
   "other_names": [],
   "country": "US",
   "region": "MO",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "100-foot Aermotor LS40 tower",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,31 +32,54 @@
   "agency": "Missouri Department of Conservation",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "MDC notice says the firetower is closed to the public for repairs (undated); the register says it was not open to the public as of 2023"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "Reached by a gravel road to the top of the hill at the towersite; the tower is closed to the public. Do not climb."
   },
   "rental": null,
   "events": [
     {
       "year": 1958,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register gives the build period as 1958-1959",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mo/doniphan-lookout/"
+    },
+    {
+      "year": 1964,
+      "event": "modified",
+      "note": "New garage built at the Doniphan Towersite (FY1964-65)",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/doniphan.html"
+    },
+    {
+      "year": 1985,
+      "event": "destroyed",
+      "note": "Tornado destroyed the tower in February 1985",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/doniphan.html"
+    },
+    {
+      "year": 1985,
+      "event": "rebuilt",
+      "note": "Listed as rebuilt after the February 1985 tornado; no rebuild date given",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/doniphan.html"
     },
     {
       "year": 2023,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 31, 2023",
-      "from": "nhlr"
+      "note": "Registered December 31, 2023; nominated by Jerry Lutes",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mo/doniphan-lookout/"
     }
   ],
   "photos": [
@@ -77,6 +101,11 @@
       "label": "NHLR register entry US 1776 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/mo/doniphan-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Doniphan Towersite (Missouri Department of Conservation)",
+      "url": "https://mdc.mo.gov/discover-nature/places/doniphan-towersite",
+      "kind": "reference"
     },
     {
       "label": "Doniphan (centraluslookouts.weebly.com)",
@@ -109,12 +138,34 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mo-doniphan",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

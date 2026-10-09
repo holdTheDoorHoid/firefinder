@@ -1,6 +1,7 @@
 {
   "id": "us-ms-lamar",
   "name": "Lamar Lookout Tower",
+  "summary": "Lamar County, MS all-steel tower near Purvis; NHLR gives 1957 build with Mississippi Forestry Commission crews and 2022 registration; private land, no public access described.",
   "other_names": [],
   "country": "US",
   "region": "MS",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "design": "All-steel tower; no model or plan named in the sources read",
+  "height_m": 30.5,
+  "status": "unknown",
+  "status_note": "Register lists the tower but gives no current condition; the record's 'standing' is not backed by a dated source read",
   "registers": [
     {
       "register": "NHLR",
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/ms/lamar-lookout-tower/"
     }
   ],
-  "agency": "Private Land Owner",
+  "agency": "Private Land Owner (administers the site per NHLR); Mississippi Forestry Commission listed as cooperator",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Register lists the location as private land; no public access described in the sources read"
   },
   "staffing": {
     "status": "unknown",
@@ -48,14 +49,16 @@
     {
       "year": 1957,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Build year from the NHLR 'Built' field; the description says Mississippi Forestry Commission employees completed construction. The description itself is undated.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ms/lamar-lookout-tower/"
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 11, 2022",
-      "from": "nhlr"
+      "note": "Registered May 11, 2022 as US 1571, MS 6; nominated by Jennifer Payne",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ms/lamar-lookout-tower/"
     }
   ],
   "photos": [
@@ -77,6 +80,11 @@
       "label": "NHLR register entry US 1571 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ms/lamar-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Lamar County, Mississippi (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Lamar_County,_Mississippi",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -97,12 +105,49 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ms-lamar",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

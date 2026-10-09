@@ -1,6 +1,7 @@
 {
   "id": "us-ms-clay",
   "name": "Clay Lookout Tower",
+  "summary": "100 ft Aermotor tower in Clay County, MS, registered by NHLR in 2022 as US 1674. No build date, staffing or fire history found; a 2020 state list conflicts with the register's private-property note.",
   "other_names": [],
   "country": "US",
   "region": "MS",
@@ -16,9 +17,9 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "standing",
+  "design": "100-foot Aermotor",
+  "height_m": 30.5,
+  "status": "unknown",
   "status_note": null,
   "registers": [
     {
@@ -31,8 +32,8 @@
   "agency": "Mississippi Forestry Commission",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "NHLR describes the tower as on private property. A 2020 state list shows a Clay County Tower under the Forestry Commission, which we could not confirm is this structure."
   },
   "staffing": {
     "status": "unknown",
@@ -46,10 +47,18 @@
   "rental": null,
   "events": [
     {
+      "year": 2020,
+      "event": "other",
+      "note": "Listed as Clay County Tower under Forestry Commission, State, in a Secretary of State public lands list dated July 29, 2020. Identity with this tower unconfirmed.",
+      "from": "research",
+      "source_url": "https://www.sos.ms.gov/content/documents/lands/Public%20Lands%20by%20Agency%20by%20Location.pdf"
+    },
+    {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 10, 2022",
-      "from": "nhlr"
+      "note": "Registered July 10, 2022 as US 1674, MS 37; nominated by Jason Johns",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ms/clay-lookout-tower/"
     }
   ],
   "photos": [
@@ -83,6 +92,11 @@
       "label": "NHLR register entry US 1674 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ms/clay-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Public Lands by Agency and by Location (Mississippi Secretary of State)",
+      "url": "https://www.sos.ms.gov/content/documents/lands/Public%20Lands%20by%20Agency%20by%20Location.pdf",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -103,12 +117,49 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ms-clay",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-ms-barge",
   "name": "Barge Lookout Tower",
+  "summary": "Winston County, MS: an 80 ft oil derrick converted to a lookout; build date and staffing unknown, owned by a Barge timber company, registered on NHLR in 2022.",
   "other_names": [],
   "country": "US",
   "region": "MS",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "design": "80 ft oil derrick converted to a lookout tower",
+  "height_m": 24.4,
+  "status": "unknown",
+  "status_note": "The register lists the tower but does not describe its current condition",
   "registers": [
     {
       "register": "NHLR",
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/ms/barge-lookout-tower/"
     }
   ],
-  "agency": "C.A. Barge Forest Products",
+  "agency": "C.A. Barge Forest Products (administers, per NHLR 'Administered by')",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "The register says the Barge timber company owns the tower; no public access is described"
   },
   "staffing": {
     "status": "unknown",
@@ -48,8 +49,9 @@
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 10, 2022",
-      "from": "nhlr"
+      "note": "Registered July 10, 2022 as US 1669, MS 33",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ms/barge-lookout-tower/"
     }
   ],
   "photos": [
@@ -121,6 +123,11 @@
       "kind": "register"
     },
     {
+      "label": "Richard Barge Thrived With Timberlands (Southern Loggin' Times)",
+      "url": "https://www.southernloggintimesmagazine.com/richard-barge-thrived-with-timberlands/page/29",
+      "kind": "reference"
+    },
+    {
       "label": "Barge (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/barge.html",
       "kind": "site"
@@ -150,12 +157,49 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ms-barge",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

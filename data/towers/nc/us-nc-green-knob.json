@@ -1,6 +1,7 @@
 {
   "id": "us-nc-green-knob",
   "name": "Green Knob Lookout",
+  "summary": "Pisgah National Forest lookout off the Blue Ridge Parkway: built 1931 or 1932 (sources differ), staffed through the 1970s, restored 1996; cab locked, trail and stairs open.",
   "other_names": [],
   "country": "US",
   "region": "NC",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "32-foot steel tower with a wooden cab and catwalk in a steep pyramid-roof design (Register)",
+  "height_m": 9.8,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,28 +29,70 @@
       "url": "http://nhlr.org/lookouts/us/nc/green-knob-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Appalachian Ranger District (Register)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Trail and overlook are public. The top cab is locked: TEHCC says locked for restoration (undated revision), and Romantic Asheville says the Forest Service opens it only for special tours. The stairs remain as a viewpoint. The Forest Service Green Knob Trail page shows an undated 'Temporarily closed due to storm damage' notice, scope unclear."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "volunteer",
+    "as_of": "undated (Register text)"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "About half a mile from the Green Knob Overlook at Blue Ridge Parkway milepost 350.4; the top cab is not open to visitors. The Forest Service 2.8-mile Green Knob Trail page shows a temporary storm-damage closure notice, undated."
   },
   "rental": null,
   "events": [
     {
+      "year": 1932,
+      "event": "built",
+      "note": "Register and TEHCC: built by the CCC and USFS (TEHCC credits the CCC) in 1932. Romantic Asheville and CNY Hiking give 1931.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nc/green-knob-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nc/green-knob-lookout/",
+        "https://tehcc.org/wiki/Green_Knob_Tower_Trail"
+      ]
+    },
+    {
+      "year": 1970,
+      "event": "staffed_last",
+      "note": "Staffed 'through the 1970s' per two blogs; the decade only is given, so 1970 is a placeholder for the decade",
+      "from": "research",
+      "source_url": "https://www.romanticasheville.com/green_knob_tower.htm",
+      "source_urls": [
+        "https://www.romanticasheville.com/green_knob_tower.htm",
+        "https://www.cnyhiking.com/LostCoveTrail.htm"
+      ]
+    },
+    {
+      "year": 1996,
+      "event": "restored",
+      "note": "Register says restored in 1996; Romantic Asheville and CNY Hiking say repaired in 1996",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nc/green-knob-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nc/green-knob-lookout/",
+        "https://www.romanticasheville.com/green_knob_tower.htm",
+        "https://www.cnyhiking.com/LostCoveTrail.htm"
+      ]
+    },
+    {
       "year": 1998,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 1, 1998",
-      "from": "nhlr"
+      "note": "Registered March 1, 1998; nominated by R. Fred Foster, North Carolina Registrar",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nc/green-knob-lookout/"
+    },
+    {
+      "year": 2013,
+      "event": "restored",
+      "note": "Cab restored in 2013 per Romantic Asheville",
+      "from": "research",
+      "source_url": "https://www.romanticasheville.com/green_knob_tower.htm"
     }
   ],
   "photos": [
@@ -85,6 +128,26 @@
       "kind": "register"
     },
     {
+      "label": "Green Knob Tower Trail (TEHCC Wiki (tehcc.org))",
+      "url": "https://tehcc.org/wiki/Green_Knob_Tower_Trail",
+      "kind": "reference"
+    },
+    {
+      "label": "Green Knob Lookout Tower, Blue Ridge Parkway (Romantic Asheville (romanticasheville.com))",
+      "url": "https://www.romanticasheville.com/green_knob_tower.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Lost Cove Ridge Trail (CNY Hiking (cnyhiking.com))",
+      "url": "https://www.cnyhiking.com/LostCoveTrail.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Green Knob Trail (USDA Forest Service (fs.usda.gov))",
+      "url": "https://www.fs.usda.gov/r08/northcarolina/recreation/trails/green-knob-trail",
+      "kind": "reference"
+    },
+    {
       "label": "Green Knob (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/nctowers.html",
       "kind": "site"
@@ -116,12 +179,35 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nc-green-knob",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

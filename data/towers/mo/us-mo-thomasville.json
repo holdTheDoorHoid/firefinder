@@ -1,6 +1,7 @@
 {
   "id": "us-mo-thomasville",
   "name": "Thomasville Fire Tower",
+  "summary": "Shannon County, MO tower built by the Missouri Department of Conservation in 1957; NHLR-registered 2013 and described as still staffed in high fire danger, but a Forest Lookouts list marks it Removed.",
   "other_names": [
     "Thomasville (Federal)"
   ],
@@ -18,10 +19,10 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "design": "100-ft Aermotor tower with 7x7 cab",
+  "height_m": 30.5,
+  "status": "unknown",
+  "status_note": "Disputed: NHLR describes it as still staffed in periods of high fire danger; a Forest Lookouts list marks it Removed. No dated removal confirmed.",
   "registers": [
     {
       "register": "NHLR",
@@ -50,14 +51,16 @@
     {
       "year": 1957,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the Missouri Department of Conservation (NHLR description)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mo/thomasville-fire-tower/"
     },
     {
       "year": 2013,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 1, 2013",
-      "from": "nhlr"
+      "note": "Registered September 1, 2013 as US 974, MO 4",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mo/thomasville-fire-tower/"
     }
   ],
   "photos": [],
@@ -66,6 +69,11 @@
       "label": "NHLR register entry US 974 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/mo/thomasville-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Thomasville Towersite Map (Missouri Department of Conservation)",
+      "url": "https://mdc.mo.gov/sites/default/files/mo_nature/downloads/conservation-areas/4907map.pdf",
+      "kind": "reference"
     },
     {
       "label": "Thomasville (Federal) (centraluslookouts.weebly.com)",
@@ -97,12 +105,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mo-thomasville",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "nhlr",
           "value": "standing"
@@ -113,12 +139,18 @@
         }
       ],
       "distance_m": null,
-      "note": "NHLR lists lookouts that were standing when registered."
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

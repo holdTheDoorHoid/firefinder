@@ -1,6 +1,7 @@
 {
   "id": "us-ar-buffalo",
   "name": "Buffalo Lookout Tower",
+  "summary": "Searcy County, AR 100-foot Aermotor LS-40 privately owned by Tom Astor, NHLR-registered 2023 after a 2022 site visit; no build history. Not the Newton County Buffalo Tower.",
   "other_names": [],
   "country": "US",
   "region": "AR",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "design": "100-foot Aermotor LS-40 tower",
+  "height_m": 30.5,
+  "status": "unknown",
+  "status_note": "Register gives no present condition; the only dated evidence is a site visit on March 20, 2022",
   "registers": [
     {
       "register": "NHLR",
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/ar/buffalo-lookout-tower/"
     }
   ],
-  "agency": "Privately Owned - Tom Astor",
+  "agency": "Privately owned (Tom Astor, per register)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Register lists the tower as privately owned; no public access described"
   },
   "staffing": {
     "status": "unknown",
@@ -46,10 +47,18 @@
   "rental": null,
   "events": [
     {
+      "year": 2022,
+      "event": "other",
+      "note": "Site visit logged 3/20/22 on the register page",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ar/buffalo-lookout-tower/"
+    },
+    {
       "year": 2023,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 10, 2023",
-      "from": "nhlr"
+      "note": "Registered August 10, 2023; nominated by Jason Johns; cooperator Arkansas Forestry",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ar/buffalo-lookout-tower/"
     }
   ],
   "photos": [
@@ -71,6 +80,11 @@
       "label": "NHLR register entry US 1764 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ar/buffalo-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Buffalo Tower (National Historic Lookout Register)",
+      "url": "http://nhlr.org/lookouts/us/ar/buffalo-tower/",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -91,12 +105,49 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ar-buffalo",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }
