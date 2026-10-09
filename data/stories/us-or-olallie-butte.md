@@ -1,0 +1,13 @@
+Olallie Butte is a 7,215-foot summit in Jefferson County, Oregon.[^1][^2] A 1911 entry says a lookout point was set up there, with an early fire-finder mounted on a post.[^3] The sources disagree about the first real structure.[^1][^2][^3][^4] A 1958 historical file, quoted on one Oregon lookout list, puts a lumber structure on the summit in July 1913, measuring 7 by 10 feet and built by Bush Osborne.[^3][^4] The Former Fire Lookout Sites register and firelookout.com instead describe a 30-foot steel windmill tower with a 6-by-6-foot cab and a tent cabin, put up in 1915.[^1][^2] The register adds that a cupola cabin followed in 1920.[^1]
+
+Newspaper items quoted on that same list name some of the people who staffed it.[^3] A 1921 item reported that John Lewis had taken the summer lookout job.[^3] In 1926 W.E. Curran was back on duty.[^3] That July, the lookout Curran reported a fire on Woodside Point, which had started from blasting on the Clackamas River trail.[^3] A ranger and a patrolman put it out by midnight.[^3] In 1929 a paper said Calvin Burnside would take the summer job again, as he had the season before.[^3]
+
+The Forest Service stopped using the lookout in 1967, and the cabin was abandoned that year.[^4][^1] In 1972 Congress placed 61,360 acres of Mount Hood and Willamette forest land inside the Warm Springs Reservation, and the lookout sat on that land.[^3][^4] In 1982 the cupola caved in through the roof.[^1][^4] One guide instead says a windstorm later pushed the wooden lookout off its foundation.[^5]
+
+Today the summit sits within the Warm Springs Reservation.[^1][^5] Oregon Hikers says the old lookout's remains can still be seen at the top.[^5] A hiking guide says the former National Forest trail to it is no longer officially maintained, and another lists no fees or permits for the trip.[^5][^4] Outdoor Pilgrim says only the rocky base and some weathered timber are left.[^4] Visitors should check the reservation's rules before going.
+
+[^1]: Olallie Butte Lookout Site, Former Fire Lookout Sites register, http://firetower.org/lookouts/us/or/olallie-butte-lookout-site/ (accessed 2026-10-09).
+[^2]: Olallie Butte Fire Lookout Cabin, firelookout.com, https://www.firelookout.com/or/olalliebutte.html (accessed 2026-10-09).
+[^3]: Olallie Butte, Rex's Fire Lookout Page, https://oregonlookouts.weebly.com/olallie-butte.html (accessed 2026-10-09).
+[^4]: Olallie Butte, Outdoor Pilgrim, https://outdoorpilgrim.com/oregon-cohp-ollalie-butte/ (accessed 2026-10-09).
+[^5]: Olallie Butte, Oregon Hikers Field Guide, https://www.oregonhikers.org/field_guide/Olallie_Butte (accessed 2026-10-09).

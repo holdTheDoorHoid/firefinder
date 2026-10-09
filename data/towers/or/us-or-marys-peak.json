@@ -1,6 +1,7 @@
 {
   "id": "us-or-marys-peak",
   "name": "Marys Peak Lookout Site",
+  "summary": "Benton County summit: a 1915 fire watch, a log lookout from the 1930s, a 1959 tower lost in 1962, a 1963 vista center. A BPA radio station and Forest Service buildings stand there now.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "30 x 32 ft log cabin (1933 per register) with an L-4 cab added in the 1940s",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The lookout buildings are gone. The BPA historic report describes a microwave radio station and Forest Service communication buildings at the summit.",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/or/marys-peak-lookout-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Siuslaw National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Paved road to the Day Use Area, with the summit reached on foot. The road is not maintained in winter, and a visitor guide discourages driving to the summit in the off-season."
   },
   "staffing": {
     "status": "unknown",
@@ -41,10 +42,74 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Summit Trail #1388 (1.6 miles roundtrip) from the Day Use Area, or a gravel access road, per a visitor guide"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1915,
+      "event": "staffed",
+      "note": "Summer fire watch from a tent on the summit, with a telephone line built up to it",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/marys-peak.html"
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "30 x 32 ft log cabin per register and Kamstra. Other sources date the first structure differently",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/marys-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/marys-peak-lookout-site/",
+        "https://www.firelookout.com/or/maryspeak.html"
+      ]
+    },
+    {
+      "year": 1937,
+      "event": "staffed_first",
+      "note": "Forest Service station reported in operation on the summit; Kemnow calls Ken Burkholder the first lookout",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/marys-peak.html"
+    },
+    {
+      "year": 1942,
+      "event": "built",
+      "note": "BPA report says the Civilian Conservation Corps constructed a fire lookout",
+      "from": "research",
+      "source_url": "https://www.bpa.gov/-/media/Aep/efw/nepa/completed/marys-peak-communications-site/bpa-communications-site-at-marys-peak-oregon-historic-sites-form.pdf"
+    },
+    {
+      "year": 1959,
+      "event": "replaced",
+      "note": "BPA: log structure deteriorated and was demolished and replaced. Register: a 41 ft R-6 flat tower built this year",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/marys-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/marys-peak-lookout-site/",
+        "https://www.bpa.gov/-/media/Aep/efw/nepa/completed/marys-peak-communications-site/bpa-communications-site-at-marys-peak-oregon-historic-sites-form.pdf"
+      ]
+    },
+    {
+      "year": 1961,
+      "event": "other",
+      "note": "BPA microwave radio station largely constructed at the summit (not a lookout)",
+      "from": "research",
+      "source_url": "https://www.bpa.gov/-/media/Aep/efw/nepa/completed/marys-peak-communications-site/bpa-communications-site-at-marys-peak-oregon-historic-sites-form.pdf"
+    },
+    {
+      "year": 1962,
+      "event": "destroyed",
+      "note": "Register: the 1959 tower was destroyed in the Columbus Day 1962 windstorm",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/marys-peak-lookout-site/"
+    },
+    {
+      "year": 1963,
+      "event": "built",
+      "note": "Tourist vista center with lookout quarters on the top floor; register says used for emergencies in the 1970s and removed before 1980",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/marys-peak-lookout-site/"
+    },
     {
       "year": 2010,
       "event": "fflos_registered",
@@ -83,6 +148,16 @@
       "label": "FFLOS register entry US 718 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/or/marys-peak-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Marys Peak (Outdoor Pilgrim)",
+      "url": "https://outdoorpilgrim.com/oregon-cohp-marys-peak/",
+      "kind": "reference"
+    },
+    {
+      "label": "BPA Microwave Radio Stations, Mary's Peak historic resources form (Bonneville Power Administration)",
+      "url": "https://www.bpa.gov/-/media/Aep/efw/nepa/completed/marys-peak-communications-site/bpa-communications-site-at-marys-peak-oregon-historic-sites-form.pdf",
+      "kind": "reference"
     },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
@@ -140,12 +215,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-marys-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

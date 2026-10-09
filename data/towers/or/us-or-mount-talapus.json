@@ -1,6 +1,7 @@
 {
   "id": "us-or-mount-talapus",
   "name": "Mount Talapus Lookout Site",
+  "summary": "Multnomah County, OR lookout cabin built on Mount Talapus in 1933 and since removed; 1934 panoramas survive; no source describes the site today.",
   "other_names": [
     "Talapus Mountain"
   ],
@@ -18,10 +19,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Lookout cabin built in 1933",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Register says the cabin has since been removed; firelookout.com describes it as abandoned; no removal date is given",
   "registers": [
     {
       "register": "FFLOS",
@@ -50,14 +51,31 @@
     {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Lookout cabin built on the site (register and firelookout.com); firelookout.com lists it as abandoned, with no date given for that",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/mount-talapus-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/mount-talapus-lookout-site/",
+        "https://www.firelookout.com/or/talapusmtn.html"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "other",
+      "note": "Panorama photos taken June 25, 1934; Forest Lookouts credits Robert Cooper, and the register copy is courtesy of Tammy McLeod",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/mt-talapus.html",
+      "source_urls": [
+        "https://oregonlookouts.weebly.com/mt-talapus.html",
+        "http://firetower.org/lookouts/us/or/mount-talapus-lookout-site/"
+      ]
     },
     {
       "year": 2019,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: October 14, 2019",
-      "from": "fflos"
+      "note": "Registered October 14, 2019 as US 1767, OR 508; nominated by Tammy McLeod",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/mount-talapus-lookout-site/"
     }
   ],
   "photos": [
@@ -79,6 +97,11 @@
       "label": "FFLOS register entry US 1767 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/or/mount-talapus-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Osborne Fire Lookout Panoramas (The Nature Conservancy)",
+      "url": "https://www.maps.tnc.org/osbornephotos/about.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
@@ -136,12 +159,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-mount-talapus",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

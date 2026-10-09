@@ -1,0 +1,13 @@
+Marys Peak is the highest summit in Oregon's Coast Range.[^1] A fire watch was on its summit as early as 1915.[^2] That year a telephone line was being built up to the top, and M.P. Burnett, who went by Telt, was furnished a tent and a flagpole to watch for fires.[^2]
+
+The first cabin is harder to date, and the sources disagree. The register and Rex Kamstra's page say a 30-by-32-foot log cabin was built in 1933, with an L-4 cab added at the top in the 1940s.[^3][^4] A July 1937 newspaper item reports that a Forest Service station went into operation on the summit, and that one man would be stationed there at all times.[^2] The BPA's historic report says the Civilian Conservation Corps built a fire lookout in 1942.[^5] Kemnow's page calls Ken Burkholder the first lookout on the peak, which conflicts with the 1915 watch.[^2]
+
+The register describes a 41-foot treated timber tower built in 1959 and destroyed in the Columbus Day windstorm of 1962.[^3] The BPA report says instead that the log structure had deteriorated by 1959 and was demolished and replaced.[^5] Kamstra's page gives the lookout's span as 1933 to 1959.[^4] In 1963 a tourist vista center with lookout quarters on its top floor was built.[^3] The register says it was used for emergencies in the 1970s and removed before 1980.[^3]
+
+As the BPA's historic report describes the summit, a microwave radio station largely built in 1961 stands there, with a Forest Service communication building and an antenna tower beside it, inside the Mary's Peak Scenic-Botanic Area.[^5] A visitor guide says the Forest Service leaves the paved access road open year-round, though it is not maintained in winter, and that visitors can walk to the summit on Summit Trail #1388, 1.6 miles round trip.[^1] We found no source that describes any remains of the lookout buildings on the summit.
+
+[^1]: Marys Peak, Outdoor Pilgrim, https://outdoorpilgrim.com/oregon-cohp-marys-peak/ (accessed 2026-10-09).
+[^2]: Mary's Peak - Forest Lookouts, Forest Lookouts (Ron Kemnow), https://oregonlookouts.weebly.com/marys-peak.html (accessed 2026-10-09).
+[^3]: Marys Peak Lookout Site, Former Fire Lookout Sites Register, http://firetower.org/lookouts/us/or/marys-peak-lookout-site/ (accessed 2026-10-09).
+[^4]: Marys Peak Fire Lookout Tower, Firelookout.com (Rex Kamstra), https://www.firelookout.com/or/maryspeak.html (accessed 2026-10-09).
+[^5]: BPA Microwave Radio Stations, Mary's Peak historic resources form, Bonneville Power Administration, https://www.bpa.gov/-/media/Aep/efw/nepa/completed/marys-peak-communications-site/bpa-communications-site-at-marys-peak-oregon-historic-sites-form.pdf (accessed 2026-10-09).

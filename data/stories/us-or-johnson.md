@@ -1,0 +1,12 @@
+Johnson Mountain lies in Coos County, on the Siskiyou National Forest near Powers.[^1][^3] The site sits atop the northernmost of three summits, at 2,941 feet.[^1] The register and firelookout.com both date the first tower to 1933: a 40-foot wooden L-4 tower.[^1][^2] A 1934 Coos Bay Times item, quoted on the Oregon lookouts page, listed a 40-foot wooden lookout tower for the mountain among a Civilian Conservation Corps camp's projects.[^3] A 1936 letter from the Forest Supervisor, quoted on the same page, says the tower was built on the mountain.[^3]
+
+A guard was on the mountain in 1914, nearly two decades before the first tower.[^1][^3] A June 1914 Siskiyou Bulletin notice, quoted on the page, says guard J.P. Hayes would take up his duties there on June 15.[^3] By December 1925 the Coos Bay Times listed the Johnson Mountain station among the lookout stations the Coos FPA maintained.[^3] In 1941 the lookout was staffed 105 days, and reports went through the Powers Ranger Station over a West Coast Telephone line.[^3]
+
+In 1948 the Forest Service began building a replacement east of the first tower, which newspapers said had been declared unsafe.[^3] An August 19, 1949 item said the new tower would be ready for occupancy that week, and that the old one would come down once the lookout moved in.[^3] The register and firelookout.com put the replacement at 50 feet, while the 1948 and 1949 newspaper items quoted on the Oregon page give 63 or 65 feet.[^1][^2][^3] The register and firelookout.com both date the tower's removal to 1968. The register says it was removed, and firelookout.com says it was destroyed.[^1][^2]
+
+firelookout.org's county list marks the site as gone.[^4] I found no source that describes what remains on the summit today, or whether the public can reach it. Check with the Siskiyou National Forest before you go.
+
+[^1]: Johnson Lookout Site, Former Fire Lookout Sites register (firetower.org), http://firetower.org/lookouts/us/or/johnson-lookout-site/ (accessed 2026-10-09).
+[^2]: Johnson Mountain Fire Lookout Tower, firelookout.com, https://www.firelookout.com/or/johnsonmtn.html (accessed 2026-10-09).
+[^3]: Johnson Mountain, Forest Lookouts (oregonlookouts.weebly.com), https://oregonlookouts.weebly.com/johnson-mountain.html (accessed 2026-10-09).
+[^4]: Oregon fire lookouts list, firelookout.org, https://firelookout.org/lookouts/us/or/ (accessed 2026-10-09).

@@ -1,6 +1,7 @@
 {
   "id": "us-or-round-mountain",
   "name": "Round Mountain Lookout Site",
+  "summary": "Ochoco NF summit in Crook County, OR: a 1930s cabin, a 1950s timber tower gone by 1972, and communication equipment on the summit today.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "Cabin in the 1930s, then a timber tower in the 1950s: treated timber R-6 per FFLOS, enclosed L-4 per firelookout.com",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Tower gone by 1972 (removed, destroyed or burned, depending on the source); the summit now has a communication tower",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/or/round-mountain-lookout-site/"
     }
   ],
-  "agency": "U.S.Forest Service",
+  "agency": "U.S. Forest Service, Ochoco National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "A trail listing gives trailheads at Walton Lake and near Lookout Mountain; no source describes limits at the communication site"
   },
   "staffing": {
     "status": "unknown",
@@ -41,15 +42,64 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Trailheads at Walton Lake (north) and near Lookout Mountain (south), per a trail listing"
   },
   "rental": null,
   "events": [
     {
+      "year": 1930,
+      "event": "built",
+      "note": "Cabin built in the 1930s; sources give only the decade, so 1930 stands for the 1930s",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/round-mountain-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/round-mountain-lookout-site/",
+        "https://www.firelookout.com/or/roundmtn97.html"
+      ]
+    },
+    {
+      "year": 1950,
+      "event": "replaced",
+      "note": "Timber tower replaced the cabin in the 1950s (R-6 per FFLOS, enclosed L-4 per firelookout.com); only the decade is given",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/round-mountain-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/round-mountain-lookout-site/",
+        "https://www.firelookout.com/or/roundmtn97.html"
+      ]
+    },
+    {
+      "year": 1952,
+      "event": "staffed",
+      "note": "Carol Lochrie listed as known lookout personnel for 1952",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/roundmtn97.html"
+    },
+    {
+      "year": 1972,
+      "event": "destroyed",
+      "note": "Sources differ: FFLOS says removed in 1972, firelookout.com says destroyed, and a trail listing says burned down in a fire",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/round-mountain-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/round-mountain-lookout-site/",
+        "https://www.firelookout.com/or/roundmtn97.html",
+        "https://www.komoot.com/highlight/5711756"
+      ]
+    },
+    {
       "year": 2011,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: July 16, 2011",
-      "from": "fflos"
+      "note": "US 1087, OR 444, registered July 16, 2011",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/round-mountain-lookout-site/"
+    },
+    {
+      "year": 2020,
+      "event": "other",
+      "note": "Forest Service decision signed 09/09/2020 for the AT&T Round Mountain Communication Site, marked completed; the record describes a planned 40-foot monopole tower",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r06/ochoco/projects/57762"
     }
   ],
   "photos": [
@@ -83,6 +133,16 @@
       "label": "FFLOS register entry US 1087 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/or/round-mountain-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Round Mountain (Komoot)",
+      "url": "https://www.komoot.com/highlight/5711756",
+      "kind": "reference"
+    },
+    {
+      "label": "AT&T Round Mountain Communication Site (USDA Forest Service Ochoco National Forest)",
+      "url": "https://www.fs.usda.gov/r06/ochoco/projects/57762",
+      "kind": "reference"
     },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
@@ -141,12 +201,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-round-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }
