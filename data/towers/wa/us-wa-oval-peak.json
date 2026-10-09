@@ -1,6 +1,7 @@
 {
   "id": "us-wa-oval-peak",
   "name": "Oval Peak Lookout Site",
+  "summary": "Okanogan County, WA summit site: an L-4 cab dated 1940 was removed or destroyed in 1950, and one researcher doubts a structure ever stood there.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4 cab, dated 1940 in the register",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Cab removed or destroyed in 1950, per the sources. Willhite doubts a lookout structure ever stood on the summit.",
   "registers": [
     {
       "register": "FFLOS",
@@ -41,15 +42,46 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Wikipedia says there is a summit register and that talus can make climbing difficult."
   },
   "rental": null,
   "events": [
     {
+      "year": 1940,
+      "event": "built",
+      "note": "L-4 cab dated 1940 in the register and firelookout.com; Willhite reports the same through the Kresek Inventory but doubts a structure ever stood",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/oval-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/oval-peak-lookout-site/",
+        "https://www.firelookout.com/wa/ovalpeak.html",
+        "http://willhiteweb.com/fire_lookouts/oval_peak_lookout/national_forest_108.htm"
+      ]
+    },
+    {
+      "year": 1950,
+      "event": "destroyed",
+      "note": "firelookout.com and Willhite (citing the Kresek Inventory) say the cab was destroyed in 1950",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wa/ovalpeak.html",
+      "source_urls": [
+        "https://www.firelookout.com/wa/ovalpeak.html",
+        "http://willhiteweb.com/fire_lookouts/oval_peak_lookout/national_forest_108.htm"
+      ]
+    },
+    {
+      "year": 1950,
+      "event": "removed",
+      "note": "Register says the L-4 cab was removed in 1950",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/oval-peak-lookout-site/"
+    },
+    {
       "year": 2012,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: November 18, 2012",
-      "from": "fflos"
+      "note": "Registered November 18, 2012; nominated by Ray Kresek",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/oval-peak-lookout-site/"
     }
   ],
   "photos": [],
@@ -58,6 +90,11 @@
       "label": "FFLOS register entry US 1458 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wa/oval-peak-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Oval Peak (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Oval_Peak",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -127,12 +164,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-oval-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

@@ -1,0 +1,10 @@
+The Washington Division of Forestry/DNR ran a fire lookout on the summit of Galbraith Mountain, about five miles southeast of Bellingham.[^1][^2][^3] Built in 1942, it was a two-story building measuring 12 by 12 feet, which the sources call a "smokehouse."[^1][^2] Willhite's guide gives the same size and year.[^3] He also reports that the Mountaineers called it the Lake Samish Lookout, and he thinks their outing photos date from 1954 or 1955.[^3]
+
+The sources disagree on how the lookout ended. The register says it was removed in 1954, FireLookout.com says it was destroyed that year, and Willhite says it was destroyed in the mid-1950s.[^1][^2][^3] All three date its end to the mid-1950s.[^1][^2][^3]
+
+Today the summit carries communication towers.[^3][^4] Wikipedia counts four radio towers on the mountain, three of them on the summit.[^4] The Whatcom Mountain Bike Coalition maintains trails under a recreational use agreement with the landowners.[^3] A 2018 purchase and sale agreement among the city of Bellingham, the Whatcom Land Trust and Galbraith Tree Farm LLC locks in public recreational use of up to 65 miles of trails.[^4] Willhite says Galbraith Lane is a private road with an easement, and that hikers can walk up the gated road from it and reach the summit by sticking to the road.[^3] He also warns that hiking on the mountain bike trails is forbidden.[^3] No source describes what remains of the lookout itself.
+
+[^1]: Galbraith Lookout Site, Former Fire Lookout Sites Register (firetower.org), http://firetower.org/lookouts/us/wa/galbraith-lookout-site/ (accessed 2026-10-09).
+[^2]: Galbraith Fire Lookout Cabin, FireLookout.com, https://www.firelookout.com/wa/galbraith.html (accessed 2026-10-09).
+[^3]: Galbraith Mountain, WillhiteWeb.com (Washington Fire Lookouts), http://www.willhiteweb.com/washington_fire_lookouts/galbraith_mountain/bike_trails_006.htm (accessed 2026-10-09).
+[^4]: Galbraith Mountain, Wikipedia, https://en.wikipedia.org/wiki/Galbraith_Mountain (accessed 2026-10-09).

@@ -1,6 +1,7 @@
 {
   "id": "us-wa-horseshoe-ridge",
   "name": "Horseshoe Ridge Lookout Site",
+  "summary": "A 1934 six-foot pole tower with an L-4 cab on a Skamania County ridge; abandoned in 1952 or later, now gone, with scattered remains and a Forest Service trail past the site.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "6-foot pole tower with an L-4 cab",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Gone. The register gives 1952 for abandonment; Willhite says the date is unclear and cites a 1964 image.",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,31 +32,56 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Forest Service trail 140 passes the site. When the Forest Service page was read, the trail was listed as temporarily closed because of the High Lava Fire."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Trail 140 is 6.9 miles and runs along the ridge past the site. Nothing stands at the site to climb. The trailhead on Willhite's map is unsigned."
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Six-foot pole tower with an L-4 cab; Willhite reports the same build year",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/horseshoe-ridge-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/horseshoe-ridge-lookout-site/",
+        "https://www.firelookout.com/wa/horseshoeridge.html",
+        "http://willhiteweb.com/washington_fire_lookouts/horseshoe_ridge/lookout_268.htm"
+      ]
+    },
+    {
+      "year": 1952,
+      "event": "abandoned",
+      "note": "The register's abandonment year; Willhite says the date is unclear",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/horseshoe-ridge-lookout-site/"
+    },
+    {
+      "year": 1964,
+      "event": "other",
+      "note": "A Forest Service image shows the lookout in good condition (per Willhite); the register captions a 1964 photo",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/horseshoe-ridge-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/horseshoe-ridge-lookout-site/",
+        "http://willhiteweb.com/washington_fire_lookouts/horseshoe_ridge/lookout_268.htm"
+      ]
     },
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: April 6, 2020",
-      "from": "fflos"
+      "note": "Registered April 6, 2020; nominated by Tammy McLeod",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/horseshoe-ridge-lookout-site/"
     }
   ],
   "photos": [
@@ -77,6 +103,11 @@
       "label": "FFLOS register entry US 1974 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wa/horseshoe-ridge-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Trail #140 Horseshoe Ridge (USDA Forest Service, Gifford Pinchot National Forest)",
+      "url": "https://www.fs.usda.gov/r06/giffordpinchot/recreation/trails/trail-140-horseshoe-ridge",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -147,12 +178,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-horseshoe-ridge",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

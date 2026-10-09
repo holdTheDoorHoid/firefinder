@@ -1,6 +1,7 @@
 {
   "id": "us-wa-hyas-mountain",
   "name": "Hyas Mountain Lookout Site",
+  "summary": "Olympic NF summit: a 1943 AWS cabin, then a 1956 R-6 tower removed or destroyed in 1971. No source describes remains today.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -18,10 +19,10 @@
   "roles": [
     "aws"
   ],
-  "design": "R-6",
+  "design": "R-6 flat-top cab on a 40-ft treated timber tower (1956); earlier AWS cabin",
   "height_m": 12.2,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Tower removed or destroyed in 1971; no source describes a standing structure.",
   "registers": [
     {
       "register": "FFLOS",
@@ -33,8 +34,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Walk on Olympic National Forest land. None of the pages read mentions a gate or closure."
   },
   "staffing": {
     "status": "unknown",
@@ -42,16 +43,60 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "1.3 miles one way, about 700 ft of gain, along an old road off FR 2923. The author says the road is brushy, with fallen trees."
   },
   "rental": null,
   "events": [
     {
+      "year": 1943,
+      "event": "built",
+      "note": "15x18 ft AWS cabin per FFLOS; WillhiteWeb dates the AWS station to 1942 and quotes a 12x16 ft shake cabin",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/hyas-mountain-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/hyas-mountain-lookout-site/",
+        "http://willhiteweb.com/fire_lookouts/hyas_mountain/lookout_site_010.htm",
+        "https://washingtonlookouts.weebly.com/hyas-mountain.html"
+      ]
+    },
+    {
+      "year": 1943,
+      "event": "other",
+      "note": "State memo: station used for over a year as an AWS station and a summer fire lookout",
+      "from": "research",
+      "source_url": "http://willhiteweb.com/fire_lookouts/hyas_mountain/lookout_site_010.htm"
+    },
+    {
+      "year": 1956,
+      "event": "replaced",
+      "note": "40-ft treated timber tower with R-6 cab replaced the cabin; a 1956 newspaper item quoted by WillhiteWeb says 30 ft",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/hyas-mountain-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/hyas-mountain-lookout-site/",
+        "http://willhiteweb.com/fire_lookouts/hyas_mountain/lookout_site_010.htm"
+      ]
+    },
+    {
+      "year": 1971,
+      "event": "removed",
+      "note": "Register says removed; firelookout.com, WillhiteWeb and the Weebly listing say destroyed",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/hyas-mountain-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/hyas-mountain-lookout-site/",
+        "https://www.firelookout.com/wa/hyas.html",
+        "http://willhiteweb.com/fire_lookouts/hyas_mountain/lookout_site_010.htm",
+        "https://washingtonlookouts.weebly.com/hyas-mountain.html"
+      ]
+    },
+    {
       "year": 2012,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 13, 2012",
-      "from": "fflos"
+      "note": "Registered January 13, 2012",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/hyas-mountain-lookout-site/"
     }
   ],
   "photos": [
@@ -145,12 +190,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-hyas-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

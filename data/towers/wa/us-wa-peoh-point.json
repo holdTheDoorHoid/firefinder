@@ -1,6 +1,7 @@
 {
   "id": "us-wa-peoh-point",
   "name": "Peoh Point Lookout Site",
+  "summary": "DNR lookout above Cle Elum: L-4 cab built 1951, DNR live-in cab on a concrete base 1974, removed 1996; part of the structure now sits in a communications building.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4 cab (1951), then a DNR live-in cab on a 10-foot concrete block base (1974)",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Cab removed in 1996; a small portion is part of a communications structure on the point",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "Washington Dept. of Natural Resources",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "A yellow gate on the access road may be locked (Willhite); the point now holds communication buildings. Level is our reading of the gate and the communications use, not a posted rule"
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,70 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Willhite: drive-up or under a mile, with a gate just under a mile from the lookout; if locked, walk the road. A 2022 trip report found the road ends at a yellow gate, about a half-mile walk to the point"
   },
   "rental": null,
   "events": [
     {
+      "year": 1950,
+      "event": "other",
+      "note": "Three miles of road built to reach a proposed lookout",
+      "from": "research",
+      "source_url": "http://www.willhiteweb.com/hiking/cle_elum/peoh_point/lookout_189.htm",
+      "source_urls": [
+        "http://www.willhiteweb.com/hiking/cle_elum/peoh_point/lookout_189.htm",
+        "https://washingtonlookouts.weebly.com/peoh-point.html"
+      ]
+    },
+    {
+      "year": 1951,
+      "event": "built",
+      "note": "L-4 cab built, per the register, firelookout.com and Willhite",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/peoh-point-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/peoh-point-lookout-site/",
+        "https://www.firelookout.com/wa/peoh.html",
+        "http://www.willhiteweb.com/hiking/cle_elum/peoh_point/lookout_189.htm"
+      ]
+    },
+    {
+      "year": 1951,
+      "event": "replaced",
+      "note": "Forest Lookouts says a 14x14-foot ground house was built as a replacement lookout that year; this conflicts with the L-4 cab account",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/peoh-point.html"
+    },
+    {
+      "year": 1974,
+      "event": "built",
+      "note": "DNR live-in cab on a 10-foot concrete block base",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/peoh-point-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/peoh-point-lookout-site/",
+        "http://www.willhiteweb.com/hiking/cle_elum/peoh_point/lookout_189.htm"
+      ]
+    },
+    {
+      "year": 1996,
+      "event": "removed",
+      "note": "Register says removed by DNR; firelookout.com says ordered destroyed; Forest Lookouts says the remaining portion became a communications building",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/peoh-point-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/peoh-point-lookout-site/",
+        "https://www.firelookout.com/wa/peoh.html",
+        "https://washingtonlookouts.weebly.com/peoh-point.html"
+      ]
+    },
+    {
       "year": 2012,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: August 15, 2012",
-      "from": "fflos"
+      "note": "Registered August 15, 2012 as US 1376, WA 276; nominated by Ray Kresek",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/peoh-point-lookout-site/"
     }
   ],
   "photos": [
@@ -83,6 +138,11 @@
       "label": "FFLOS register entry US 1376 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wa/peoh-point-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Peoh Point trip report (2022-10-18) (Washington Trails Association)",
+      "url": "https://www.wta.org/go-hiking/trip-reports/trip_report.2022-10-18.3519202829",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -152,12 +212,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-peoh-point",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

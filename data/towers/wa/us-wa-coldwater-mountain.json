@@ -1,6 +1,7 @@
 {
   "id": "us-wa-coldwater-mountain",
   "name": "Coldwater Mountain Lookout Site",
+  "summary": "Ground-mounted L-4 cab on Coldwater Peak from 1935 to 1968; the cabin is gone and the summit now holds research instruments, reached by a hiking trail.",
   "other_names": [
     "Coldwater Peak",
     "Coldwater"
@@ -19,10 +20,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "Ground-mounted L-4 cab, no tower",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The cabin was removed in 1968; the summit now holds research instruments, not a lookout.",
   "registers": [
     {
       "register": "FFLOS",
@@ -34,25 +35,63 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Summit reached by a hiking trail in Mount St. Helens National Volcanic Monument; the winter road is gated at Coldwater Lake and the trail starts about a mile past the gate."
   },
   "staffing": {
     "status": "unknown",
-    "as_of": null
+    "as_of": "1937 (last staffing item found in sources read)"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "Hike from the Johnson Visitors Center area. The cabin was removed, so there is no lookout to climb."
   },
   "rental": null,
   "events": [
     {
+      "year": 1935,
+      "event": "built",
+      "note": "Developed as a ground-mounted L-4 cab; Wikipedia gives the lookout years as 1935 to 1968",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Coldwater_Peak",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Coldwater_Peak",
+        "http://firetower.org/lookouts/us/wa/coldwater-mountain-lookout-site/",
+        "http://www.willhiteweb.com/washington/fire_lookouts/coldwater_peak_lookout/st_helens_254.htm"
+      ]
+    },
+    {
+      "year": 1937,
+      "event": "staffed",
+      "note": "A July 1937 item says the Cold Water Peak lookout position was being filled by an experienced man",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/coldwater-peak.html"
+    },
+    {
+      "year": 1964,
+      "event": "closed",
+      "note": "A May 1964 item says three Spirit Lake district lookouts, one named Coldwater Creek, would close that summer except for possible emergency use; the item does not explicitly name this cabin",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/coldwater-peak.html"
+    },
+    {
+      "year": 1968,
+      "event": "removed",
+      "note": "Cabin removed",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/coldwater-mountain-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/coldwater-mountain-lookout-site/",
+        "https://www.firelookout.com/wa/coldwater.html"
+      ]
+    },
+    {
       "year": 2012,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: June 23, 2012",
-      "from": "fflos"
+      "note": "Registered June 23, 2012 as US 1310, WA 210; nominated by Ray Kresek",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/coldwater-mountain-lookout-site/"
     }
   ],
   "photos": [
@@ -86,6 +125,11 @@
       "label": "FFLOS register entry US 1310 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wa/coldwater-mountain-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Coldwater Peak (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Coldwater_Peak",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -156,12 +200,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-coldwater-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

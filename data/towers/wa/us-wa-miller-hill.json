@@ -1,6 +1,7 @@
 {
   "id": "us-wa-miller-hill",
   "name": "Miller Hill Lookout Site",
+  "summary": "Thurston County, WA wooden lookout from the 1930s, abandoned in 1958 and now gone; four concrete footings reported on the summit inside a private timber tract.",
   "other_names": [
     "Miller Hill (Weyerhauser No. 1)"
   ],
@@ -18,10 +19,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "Wooden tower",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The tower is gone. A trip report describes four concrete footings on the summit.",
   "registers": [
     {
       "register": "FFLOS",
@@ -30,34 +31,53 @@
       "url": "http://firetower.org/lookouts/us/wa/miller-hill-lookout-site/"
     }
   ],
-  "agency": "Department of Natural Resources",
+  "agency": "Washington State Division of Forestry (Department of Natural Resources)",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Private Weyerhaeuser Vail Tree Farm land behind gates; no entry August 1 to December 31 without a special access permit; owner asks hikers to come only when the gate is closed and no harvest is under way"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "No tower remains. The trip report says the owner asks hikers to come only when the gate is closed and no harvest is under way"
   },
   "rental": null,
   "events": [
     {
       "year": 1930,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Both lookout listings give only the 1930s; 1930 is the year on the record (see corrections)",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wa/millerhill.html",
+      "source_urls": [
+        "https://www.firelookout.com/wa/millerhill.html",
+        "http://firetower.org/lookouts/us/wa/miller-hill-lookout-site/",
+        "http://willhiteweb.com/washington_fire_lookouts/miller_hill/vail_tree_farm_296.htm"
+      ]
+    },
+    {
+      "year": 1958,
+      "event": "abandoned",
+      "note": "Abandoned in 1958 per the register, firelookout.com and the trip report",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/miller-hill-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/miller-hill-lookout-site/",
+        "https://www.firelookout.com/wa/millerhill.html",
+        "http://willhiteweb.com/washington_fire_lookouts/miller_hill/vail_tree_farm_296.htm"
+      ]
     },
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: April 6, 2020",
-      "from": "fflos"
+      "note": "Registered April 6, 2020 on the Former Fire Lookout Sites register",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/miller-hill-lookout-site/"
     }
   ],
   "photos": [
@@ -161,12 +181,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-miller-hill",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

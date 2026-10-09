@@ -1,0 +1,16 @@
+Fir Mountain stands in Okanogan County, Washington, at 5,689 feet, or 1,734 meters.[^1][^4] Its lookout was a frame cabin, 12 feet by 12 feet.[^1][^2] A 1923 note reprinted by Forest Lookouts says a cabin had been built "last fall" by ranger labor, which points to 1922.[^3] The Willhite page gives 1922 as well.[^4] The register and firelookout.com both date the cabin to 1925, so the sources disagree.[^1][^2] The same 1923 note says a ranger had fixed up a stand for a fire finder that would be installed on the mountain.[^3]
+
+The earliest lookout named in our sources is William Sprengle, listed for 1923 on firelookout.com.[^2] Richard Hunner was the lookout in 1928.[^3][^4] In July 1932 the Republic News-Miner said work would begin right away to reconstruct the building.[^3] A June 1936 item said Earl Robertson would be stationed there for the fire season, and the Willhite page lists him for 1936.[^3][^4] A September 1937 item tells how he reported telephone trouble, then freed a yearling deer tangled in the ground wire.[^3] Joe Hills was the lookout from 1950 to 1952.[^2][^4] Alvin Schertenleid, Ted Gurr, Cal Bedient and Cary Winschell followed for 1953 to 1956.[^2][^4] Firelookout.com alone names Les Julian for 1957, the last name in our sources.[^2]
+
+The sources agree that the cabin was gone by 1958.[^1][^2][^4][^5] They differ on how it ended. The register says it was removed that year, while firelookout.com, the Willhite page and Out There Outdoors say it was destroyed.[^1][^2][^4][^5]
+
+Out There Outdoors says some remnants of the lookout are on the windswept summit.[^5] Wenatchee Outdoors calls the summit an overlook where a lookout once stood, now removed.[^6] A trip note on the Willhite page says an old toilet on top has collapsed.[^4] Out There says the summit looks out over distant peaks, and Wenatchee Outdoors calls it a 360-degree overlook.[^5][^6]
+
+Both hike write-ups say no permit is needed.[^5][^6] Wenatchee Outdoors has hikers turn south onto Forest Road 31 from Highway 20 near milepost 293.5, and gives the trail as 4.8 miles round trip with 2,200 feet of climbing.[^6] Out There Outdoors suggests the Sweat Creek parking on the north side of Highway 20 as an alternate access point when deep snow rules out driving to the trailhead.[^5] The Willhite page says the trail can get faint in places.[^4]
+
+[^1]: Fir Mountain Lookout Site, Former Fire Lookout Sites Register, http://firetower.org/lookouts/us/wa/fir-mountain-lookout-site/ (accessed 2026-10-09).
+[^2]: Fir Mtn. Fire Lookout Cabin, firelookout.com, https://www.firelookout.com/wa/firmtn.html (accessed 2026-10-09).
+[^3]: Fir Mountain, Forest Lookouts (Washington), https://washingtonlookouts.weebly.com/fir-mountain.html (accessed 2026-10-09).
+[^4]: Fir Mountain Fire Lookout Site, WillhiteWeb.com: Fire Lookouts, http://www.willhiteweb.com/washington_fire_lookouts/fir_mountain/lookout_087.htm (accessed 2026-10-09).
+[^5]: Hike of the Month: Fir Mountain, Out There Outdoors, https://outthereoutdoors.com/hike-of-the-month-fir-mountain-okanogan-wenatchee-national-forest/ (accessed 2026-10-09).
+[^6]: Fir Mountain, Wenatchee Outdoors, https://wenatcheeoutdoors.org/2017/01/24/fir-mountain/ (accessed 2026-10-09).

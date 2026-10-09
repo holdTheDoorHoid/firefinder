@@ -1,6 +1,7 @@
 {
   "id": "us-wa-mcafee-hill",
   "name": "McAfee Hill Lookout Site",
+  "summary": "McAfee Hill cabin lookout, built in the 1940s and gone by 1952; a visit found no footings, and access needs a Rayonier permit as of 2017.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "cabin",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The cabin was gone by 1952. Willhite found no footings, only an old battery pit.",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "Washington Division of Forestry/DNR",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "permission",
+    "note": "A Rayonier Timber permit was required as of 2017, per Willhite. A seasonal permit allowed driving to the summit in hunting season; the annual permit allowed access from about mid-January to June 30 without driving in."
   },
   "staffing": {
     "status": "unknown",
@@ -41,15 +42,28 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Many gates; Willhite's route covered 18 miles round-trip, by bike on a general access permit."
   },
   "rental": null,
   "events": [
     {
+      "year": 1952,
+      "event": "removed",
+      "note": "Cabin gone by 1952 per the register, which says it was built in the 1940s; firelookout.com says 'Gone 1952'.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/mcafee-hill-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/mcafee-hill-lookout-site/",
+        "https://www.firelookout.com/wa/macafeehill.html",
+        "http://www.willhiteweb.com/washington_fire_lookouts/macafee_hill/lookout_198.htm"
+      ]
+    },
+    {
       "year": 2012,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 17, 2012",
-      "from": "fflos"
+      "note": "Registered January 17, 2012.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/mcafee-hill-lookout-site/"
     }
   ],
   "photos": [
@@ -139,12 +153,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-mcafee-hill",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

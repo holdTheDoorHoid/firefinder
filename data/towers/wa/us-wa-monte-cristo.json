@@ -1,6 +1,7 @@
 {
   "id": "us-wa-monte-cristo",
   "name": "Monte Cristo Lookout Site",
+  "summary": "Klickitat County, WA lookout: L-4 cab on a tower built 1930 on Monte Cristo; no longer standing per the Register; Forest Service says evidence remains along Trail 53.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "L-4 cab on a tower, built 1930",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Register says the lookout is no longer standing; firelookout.com marks it abandoned and gone; the Forest Service says evidence of an old fire lookout can still be found on Trail 53",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Trail 53 is open to hikers, bikers and horse riders per the Forest Service; no closure described in the sources read"
   },
   "staffing": {
     "status": "unknown",
@@ -40,22 +41,36 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Forest Service Trail 53 is 4.1 miles from the upper trailhead on Forest Road 8600-080. Willhite's North Trail has a hiking distance of 2 miles and its access leaves Highway 141 west of Trout Lake; the last mile is rough, rocky road and there is no parking where the trail leaves the road."
   },
   "rental": null,
   "events": [
     {
       "year": 1930,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "L-4 cab on a tower constructed on the site",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/monte-cristo-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/monte-cristo-lookout-site/",
+        "https://www.firelookout.com/wa/montecristo.html",
+        "http://willhiteweb.com/washington_fire_lookouts/monte_cristo/lookout_262.htm"
+      ]
+    },
+    {
+      "year": 1956,
+      "event": "other",
+      "note": "USGS survey referred to a monument 44 feet east of the lookout house's center; the source does not say whether the lookout was in use",
+      "from": "research",
+      "source_url": "http://willhiteweb.com/washington_fire_lookouts/monte_cristo/lookout_262.htm"
     },
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: April 15, 2020",
-      "from": "fflos"
+      "note": "Registered April 15, 2020, nominated by Tammy McLeod",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/monte-cristo-lookout-site/"
     }
   ],
   "photos": [
@@ -127,6 +142,11 @@
       "kind": "register"
     },
     {
+      "label": "Trail 53 Monte Cristo (Gifford Pinchot National Forest, USDA Forest Service)",
+      "url": "https://www.fs.usda.gov/r06/giffordpinchot/recreation/trails/trail-53-monte-cristo",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Washington lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wa/",
       "kind": "association"
@@ -194,12 +214,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-monte-cristo",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

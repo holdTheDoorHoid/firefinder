@@ -1,6 +1,7 @@
 {
   "id": "us-wa-ohop",
   "name": "Ohop Lookout Site",
+  "summary": "Pierce County, WA: a 70-ft timber lookout built in 1937, used by the AWS in 1942, and removed in 1969. The site is on Hancock timberland that requires a permit.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "70-foot timber tower with L-6 cab and ground cabin living quarters",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Tower removed in 1969; no source we read describes remains on the ground",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "Washington Division of Forestry/DNR",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "permission",
+    "note": "Land is part of Hancock Timber's Eatonville Forest; WillhiteWeb says a permit is required"
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,48 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "About 5 miles on roads from Eatonville to a gate; per WillhiteWeb a permit is required"
   },
   "rental": null,
   "events": [
     {
+      "year": 1937,
+      "event": "built",
+      "note": "70-foot timber tower with L-6 cab; phone lines placed the same year",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/ohop-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/ohop-lookout-site/",
+        "https://www.firelookout.com/wa/ohop.html",
+        "http://www.willhiteweb.com/puget_sound_hiking/ohop_lookout/eatonville_296.htm"
+      ]
+    },
+    {
+      "year": 1942,
+      "event": "other",
+      "note": "Used by the AWS, activated March 9, 1942",
+      "from": "research",
+      "source_url": "http://www.willhiteweb.com/puget_sound_hiking/ohop_lookout/eatonville_296.htm"
+    },
+    {
+      "year": 1969,
+      "event": "removed",
+      "note": "Structure lasted until 1969 and was removed",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/ohop-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/ohop-lookout-site/",
+        "https://www.firelookout.com/wa/ohop.html",
+        "http://www.willhiteweb.com/puget_sound_hiking/ohop_lookout/eatonville_296.htm"
+      ]
+    },
+    {
       "year": 2012,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: June 18, 2012",
-      "from": "fflos"
+      "note": "Registered June 18, 2012 as US 1292, WA 192",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/ohop-lookout-site/"
     }
   ],
   "photos": [
@@ -140,12 +173,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-ohop",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

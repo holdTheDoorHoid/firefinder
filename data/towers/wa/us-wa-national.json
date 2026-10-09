@@ -1,6 +1,7 @@
 {
   "id": "us-wa-national",
   "name": "National Lookout Site",
+  "summary": "State fire tower near Ashford, built 1936 with CCC labor; 1965 40-ft R-6 replacement removed or destroyed in 1969; footings and debris remain on a gated state-land road.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": "R-6",
+  "design": "1936: 60-ft wooden tower with 8x8 cab (CCC). 1965: 40-ft wooden DNR tower with R-6 live-in cab",
   "height_m": 12.2,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Lookout gone; the 1965 replacement tower was removed or destroyed in 1969. Sources describe footings and debris; the original cab's whereabouts are unknown",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "Washington Division of Forestry/DNR",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Hike is on state land; the road is probably gated at the start of its 4 miles, and visitors are asked not to block gates. No closure described"
   },
   "staffing": {
     "status": "unknown",
@@ -40,11 +41,84 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "About 4 miles of road walk if gated, with 1,100 feet of gain; route from Highway 706 east of Elbe, past the Nisqually River"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "60-ft wooden tower with 8x8 cab, built by the CCC",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/national-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/national-lookout-site/",
+        "https://www.firelookout.com/wa/national.html",
+        "https://washingtonlookouts.weebly.com/national.html",
+        "http://www.willhiteweb.com/puget_sound_hiking/national_lookout/tahoma_state_forest_305.htm"
+      ]
+    },
+    {
+      "year": 1942,
+      "event": "staffed",
+      "note": "Dave Anderson was the lookout man in 1942",
+      "from": "research",
+      "source_url": "http://www.willhiteweb.com/puget_sound_hiking/national_lookout/tahoma_state_forest_305.htm"
+    },
+    {
+      "year": 1942,
+      "event": "staffed_first",
+      "note": "Aircraft Warning Service post activated August 14, 1942 (Seattle Filter Center); manned 24 hours a day during WWII",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/national.html",
+      "source_urls": [
+        "https://washingtonlookouts.weebly.com/national.html",
+        "http://www.willhiteweb.com/puget_sound_hiking/national_lookout/tahoma_state_forest_305.htm"
+      ]
+    },
+    {
+      "year": 1943,
+      "event": "closed",
+      "note": "AWS post deactivated July 1, 1943",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/national.html"
+    },
+    {
+      "year": 1965,
+      "event": "relocated",
+      "note": "Old 1936 cab exhibited at the Southwest Washington Fair in 1965; a 1965 newspaper said it would go on display at Camp Six. Willhite could not find it today",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/national.html",
+      "source_urls": [
+        "https://washingtonlookouts.weebly.com/national.html",
+        "http://www.willhiteweb.com/puget_sound_hiking/national_lookout/tahoma_state_forest_305.htm"
+      ]
+    },
+    {
+      "year": 1965,
+      "event": "replaced",
+      "note": "40-ft wooden DNR tower with R-6 live-in cab replaced the 60-ft tower. Forest Lookouts also gives 1964-66 from a state biennial report",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/national-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/national-lookout-site/",
+        "https://washingtonlookouts.weebly.com/national.html",
+        "http://www.willhiteweb.com/puget_sound_hiking/national_lookout/tahoma_state_forest_305.htm"
+      ]
+    },
+    {
+      "year": 1969,
+      "event": "destroyed",
+      "note": "1965 tower removed (register) or destroyed (firelookout.com, Willhite) in 1969",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/national-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/national-lookout-site/",
+        "https://www.firelookout.com/wa/national.html",
+        "http://www.willhiteweb.com/puget_sound_hiking/national_lookout/tahoma_state_forest_305.htm"
+      ]
+    },
     {
       "year": 2012,
       "event": "fflos_registered",
@@ -153,12 +227,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-national",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

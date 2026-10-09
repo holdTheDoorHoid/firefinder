@@ -1,6 +1,7 @@
 {
   "id": "us-wa-mobray",
   "name": "Mobray Lookout Site",
+  "summary": "Grays Harbor County, WA DNR lookout site: 12-ft tower built 1937, 30-ft cab tower in 1942, gone by 1963; footings reported and roadside access.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "12' wooden tower (1937), replaced in 1942 by a 30' wooden tower with an 8'x8' cab",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The 1942 tower was removed or destroyed in 1963 (sources differ); Willhite reports the 1942 footings are still there",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "Washington Division of Forestry/DNR",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Roadside site on the paved Wynoochee Valley Road; Willhite describes roadside parking near the high point; no closure described in the sources read"
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,58 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "No trail. About 17 miles from Montesano on Wynoochee Valley Road, then park on the roadside near the high point. Willhite has missed the footings several times, and trees were thinned in late 2021."
   },
   "rental": null,
   "events": [
     {
+      "year": 1937,
+      "event": "built",
+      "note": "12-foot wooden tower; a 1937 survey party placed it directly above the Mobray Benchmark",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/mobray-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/mobray-lookout-site/",
+        "http://www.willhiteweb.com/washington_fire_lookouts/mobray_lookout/grays_harbor_county_039.htm"
+      ]
+    },
+    {
+      "year": 1942,
+      "event": "replaced",
+      "note": "30-foot wooden tower with 8x8 foot cab replaced the 1937 tower",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/mobray-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/mobray-lookout-site/",
+        "http://www.willhiteweb.com/washington_fire_lookouts/mobray_lookout/grays_harbor_county_039.htm",
+        "https://www.firelookout.com/wa/mobray.html"
+      ]
+    },
+    {
+      "year": 1963,
+      "event": "destroyed",
+      "note": "firelookout.com and Willhite say the 1942 tower was destroyed in 1963",
+      "from": "research",
+      "source_url": "http://www.willhiteweb.com/washington_fire_lookouts/mobray_lookout/grays_harbor_county_039.htm",
+      "source_urls": [
+        "http://www.willhiteweb.com/washington_fire_lookouts/mobray_lookout/grays_harbor_county_039.htm",
+        "https://www.firelookout.com/wa/mobray.html"
+      ]
+    },
+    {
+      "year": 1963,
+      "event": "removed",
+      "note": "Register says the 1942 tower was removed in 1963",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/mobray-lookout-site/"
+    },
+    {
       "year": 2012,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 19, 2012",
-      "from": "fflos"
+      "note": "Registered January 19, 2012, nominated by Ray Kresek",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/mobray-lookout-site/"
     }
   ],
   "photos": [
@@ -140,12 +183,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-mobray",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }
