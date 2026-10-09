@@ -1,15 +1,17 @@
 {
   "id": "us-ma-sandwich-2",
   "name": "Sandwich Fire Tower",
-  "other_names": [],
+  "other_names": [
+    "Sandwich/Camp Edwards Army Base #1 Tower Site"
+  ],
   "country": "US",
   "region": "MA",
   "county": "Barnstable",
   "location": {
-    "lat": 41.67778,
-    "lon": -70.42833,
+    "lat": 41.733625,
+    "lon": -70.486292,
     "precision": "exact",
-    "from": "nhlr"
+    "from": "osm"
   },
   "elevation_m": 18.9,
   "kind": "tower",
@@ -26,6 +28,12 @@
       "number": "US 623",
       "state_number": "MA 34",
       "url": "http://nhlr.org/lookouts/us/ma/sandwich-fire-tower/"
+    },
+    {
+      "register": "FFLOS",
+      "number": "US 53",
+      "state_number": "MA 53",
+      "url": "http://firetower.org/lookouts/us/ma/sandwichcamp-edwards-army-base-1-tower-site/"
     }
   ],
   "agency": "Mass. Bureau of Forest Fire Control",
@@ -56,6 +64,12 @@
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: December 15, 2004",
       "from": "nhlr"
+    },
+    {
+      "year": 2008,
+      "event": "fflos_registered",
+      "note": "Date registered per FFLOS detail page: September 4, 2008",
+      "from": "fflos"
     }
   ],
   "photos": [
@@ -77,6 +91,16 @@
       "label": "NHLR register entry US 623 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ma/sandwich-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "FFLOS register entry US 53 (firetower.org)",
+      "url": "http://firetower.org/lookouts/us/ma/sandwichcamp-edwards-army-base-1-tower-site/",
+      "kind": "register"
+    },
+    {
+      "label": "OpenStreetMap node 12215345768",
+      "url": "https://www.openstreetmap.org/node/12215345768",
+      "kind": "osm"
     }
   ],
   "sources": [
@@ -85,7 +109,6 @@
       "key": "nhlr:US 623",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "kind",
@@ -97,9 +120,67 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "fflos",
+      "key": "fflos:US 53",
+      "fields": [
+        "registers",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/12215345768",
+      "fields": [
+        "location",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "osm",
+          "value": {
+            "lat": 41.733625,
+            "lon": -70.486292
+          }
+        },
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 41.67778,
+            "lon": -70.42833
+          }
+        }
+      ],
+      "distance_m": 7856,
+      "note": null
+    },
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        },
+        {
+          "source": "osm",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

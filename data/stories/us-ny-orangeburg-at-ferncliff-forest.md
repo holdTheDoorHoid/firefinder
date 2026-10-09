@@ -1,0 +1,15 @@
+The tower at Ferncliff Forest in Dutchess County, New York, is a 1933 International Derrick fire tower.[^1] It came from Orangeburg, South Carolina.[^2] The Register gives 1933 as the build year, describes the tower as about 80 feet high, and says it was moved to the forest in 2007.[^1] The 2018 visit report for the Register also records the name Carnegie on one of the steel members.[^1]
+
+The site has held several towers. The Register says the Astor family built a stone overlook there around 1912, and that the Army built a 40-foot wooden tower in 1942 to help protect the President during the war.[^1] The Register says the wartime tower was taken out of service in 2000. A 2020 blog post puts its removal in 2006, and Wikipedia says it was deemed unsafe in 2006 and replaced in 2007 by the current observation tower.[^2][^3]
+
+The Register and the blog date different steps in 2007. The Register says the derrick tower was moved to the forest that year. The blog says the current tower was constructed in the summer of 2007 and that it came from Orangeburg, South Carolina, but it gives no date for the move.[^1][^2]
+
+The Forest Fire Lookout Association's New York list shows the tower as standing.[^4] The Register says it is administered by Ferncliff Forest, Inc., a nonprofit that is open year round. The overlook is open every day, and the Register describes it as an easy walk of about 15 minutes from the Ferncliff Forest parking lot, with about 120 feet of elevation change. It says the overlook draws more than 10,000 visitors a year.[^1] Its 2018 visit report found the footings and structural steel in very good condition, but the cab needed paint and its window panes were missing.[^1]
+
+Crime and graffiti have been an ongoing problem. A May 2023 newsletter from the New York State chapter of the Forest Fire Lookout Association describes an April visit. Its writer had arranged with Ferncliff Forest to paint over graffiti, but by then criminals had been at work across the tower, inside the cab and on the roof, footings and steel.[^5] The newsletter also says a radio repeater was in the tower, with its power coming from a nearby comm tower, and that the group discussed how to manage the ongoing crimes at the site.[^5] Because the newest sources read date from 2023, check with Ferncliff Forest about the tower's current condition before a visit.
+
+[^1]: Ferncliff Forest Fire Tower, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/ny/ferncliff-forest-fire-tower/ (accessed 2026-10-08).
+[^2]: Ferncliff Forest Fire Tower, Scenes from the Trail (scenesfromthetrail.com), https://scenesfromthetrail.com/2020/10/10/ferncliff-forest-fire-tower/ (accessed 2026-10-08).
+[^3]: Mount Rutsen, Wikipedia, https://en.wikipedia.org/wiki/Mount_Rutsen (accessed 2026-10-08).
+[^4]: Lookouts in New York, Forest Fire Lookout Association (firelookout.org), https://firelookout.org/lookouts/us/ny/ (accessed 2026-10-08).
+[^5]: New York State chapter newsletter, May 2023, Forest Fire Lookout Association (nysffla.org), https://www.nysffla.org/News2023/2023%20May%20final.pdf (accessed 2026-10-08).

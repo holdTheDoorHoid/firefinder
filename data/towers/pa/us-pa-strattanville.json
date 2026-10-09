@@ -58,6 +58,11 @@
       "label": "FFLOS register entry US 500 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/pa/strattanville-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Strattanville (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/strattenville.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -76,9 +81,38 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:pa:strattenville",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 41.185897,
+            "lon": -79.346432
+          }
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": {
+            "lat": 41.2011,
+            "lon": -79.3398
+          }
+        }
+      ],
+      "distance_m": 1779,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

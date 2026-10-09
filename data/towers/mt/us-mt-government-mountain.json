@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Kootenai National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Government Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/governmentmtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Government Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/government-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +75,40 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:government-mountain",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 48.04148,
+            "lon": -115.78897
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 48.0313,
+            "lon": -115.7261
+          }
+        }
+      ],
+      "distance_m": 4810,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

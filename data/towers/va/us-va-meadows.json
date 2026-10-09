@@ -15,11 +15,11 @@
   },
   "elevation_m": 48.2,
   "kind": "tower",
-  "material": null,
-  "material_from": null,
+  "material": "steel",
+  "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -78,6 +78,11 @@
       "label": "FFLA Virginia lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/va/",
       "kind": "association"
+    },
+    {
+      "label": "Meadows (lower henrico) (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/meadows.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -105,9 +110,41 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:va:meadows",
+      "fields": [
+        "material",
+        "design",
+        "height_m",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 37.510601,
+            "lon": -77.238788
+          }
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": {
+            "lat": 37.5065,
+            "lon": -77.2691
+          }
+        }
+      ],
+      "distance_m": 2712,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

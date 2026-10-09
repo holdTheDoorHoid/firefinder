@@ -16,8 +16,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "R-6",
+  "height_m": 3.0,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -29,7 +29,7 @@
     }
   ],
   "agency": "Washington State Division of Forestry/DNR",
-  "ownership": "unknown",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -93,6 +93,16 @@
       "label": "Burnt Hill on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/burnthill.html",
       "kind": "site"
+    },
+    {
+      "label": "Burnt Hill on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/burnt-hill.html",
+      "kind": "site"
+    },
+    {
+      "label": "Burnt Hill on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/burnt_hill/lookout_site_200.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -127,6 +137,23 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:burnt-hill",
+      "fields": [
+        "design",
+        "height_m",
+        "ownership",
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-burnt-hill-lookout-site-200",
+      "fields": [
+        "links"
+      ]
     }
   ],
   "conflicts": [
@@ -153,9 +180,16 @@
             "lat": 47.35677,
             "lon": -123.86331
           }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 47.3258,
+            "lon": -123.865
+          }
         }
       ],
-      "distance_m": 7007,
+      "distance_m": 7821,
       "note": "They share a register number."
     }
   ],

@@ -1,6 +1,7 @@
 {
   "id": "us-mt-hogback-mountain",
   "name": "Hogback Mountain Lookout",
+  "summary": "Helena NF lookout NE of Helena, MT: L-4 cab 1936, present R-6 cab 1961; NHLR-registered 2022; 2018 Forest Service disposal notice and 2024 threat report; manned in summer per recreation.gov.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,7 +17,7 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": "R-6",
+  "design": "R-6 flat cab atop a 10-foot concrete base (built 1961); first lookout had an L-4 cab (1936)",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/mt/hogback-mountain-lookout/"
     }
   ],
-  "agency": "US Forest Service",
+  "agency": "U.S. Forest Service, Helena-Lewis and Clark National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Reached by passenger vehicle per the nearby cabin's recreation.gov listing, which says the lookout is manned mid-June through September. Whether the cab is open to visitors is not stated. Level is my judgment."
   },
   "staffing": {
     "status": "unknown",
@@ -40,11 +41,36 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
   "events": [
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "first lookout with an L-4 cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/hogback-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/hogback-mountain-lookout/",
+        "https://www.firelookout.com/mt/hogbackmtn.html"
+      ]
+    },
+    {
+      "year": 1945,
+      "event": "fire",
+      "note": "smoke seen from the lookout; fire spread from about five acres to 25 acres in under two hours",
+      "from": "research",
+      "source_url": "https://montanalookouts.weebly.com/hogback-mountain.html"
+    },
+    {
+      "year": 1958,
+      "event": "other",
+      "note": "walkie-talkie radio and binoculars taken in a break-in at the lookout",
+      "from": "research",
+      "source_url": "https://montanalookouts.weebly.com/hogback-mountain.html"
+    },
     {
       "year": 1961,
       "event": "built",
@@ -52,10 +78,36 @@
       "from": "nhlr"
     },
     {
+      "year": 1961,
+      "event": "replaced",
+      "note": "present R-6 flat cab on 10-foot concrete base",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/hogback-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/hogback-mountain-lookout/",
+        "https://www.firelookout.com/mt/hogbackmtn.html"
+      ]
+    },
+    {
+      "year": 2018,
+      "event": "assessed",
+      "note": "Forest Service Hogback Lookout Disposal project began September 10, 2018; the lookout was determined excess",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r01/helena-lewisclark/projects/54666"
+    },
+    {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 12, 2022",
-      "from": "nhlr"
+      "note": "registered April 12, 2022 as US 1537, MT 100; nominated by Kyle Stetler",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/hogback-mountain-lookout/"
+    },
+    {
+      "year": 2024,
+      "event": "other",
+      "note": "Forest Fire Lookout Association chapter report says Hogback seems to be the primary lookout threatened",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2025/01/cr-id-n-mt-2024.pdf"
     }
   ],
   "photos": [
@@ -163,6 +215,21 @@
       "kind": "register"
     },
     {
+      "label": "Indian Flats Cabin, Helena-Lewis and Clark National Forest (Recreation.gov)",
+      "url": "https://www.recreation.gov/camping/poi/234451",
+      "kind": "reference"
+    },
+    {
+      "label": "Hogback Lookout Disposal (NEPA project 54666) (USDA Forest Service, Helena-Lewis and Clark National Forest)",
+      "url": "https://www.fs.usda.gov/r01/helena-lewisclark/projects/54666",
+      "kind": "reference"
+    },
+    {
+      "label": "North Idaho/Montana Chapter report (2024) (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/wp-content/uploads/2025/01/cr-id-n-mt-2024.pdf",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
       "kind": "association"
@@ -222,10 +289,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-hogback-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

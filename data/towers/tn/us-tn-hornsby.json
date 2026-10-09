@@ -6,10 +6,10 @@
   "region": "TN",
   "county": "Hardeman",
   "location": {
-    "lat": 35.282954,
-    "lon": -88.866625,
+    "lat": 35.2267,
+    "lon": -88.8664,
     "precision": "exact",
-    "from": "nhlr"
+    "from": "tnlandforms"
   },
   "elevation_m": 170.1,
   "kind": "tower",
@@ -107,6 +107,11 @@
       "label": "NHLR register entry US 1709 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/tn/hornsby-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Hornsby (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -115,7 +120,6 @@
       "key": "nhlr:US 1709",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "kind",
@@ -127,9 +131,39 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:hrt002",
+      "fields": [
+        "location",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "tnlandforms",
+          "value": {
+            "lat": 35.2267,
+            "lon": -88.8664
+          }
+        },
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 35.282954,
+            "lon": -88.866625
+          }
+        }
+      ],
+      "distance_m": 6255,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

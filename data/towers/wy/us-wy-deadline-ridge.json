@@ -2,7 +2,9 @@
   "id": "us-wy-deadline-ridge",
   "name": "Deadline Ridge Lookout",
   "summary": "Bridger-Teton cab in the Wyoming Range, moved in from Red Castles, abandoned by the early 1970s and restored by Sublette County volunteers in 2015-2019.",
-  "other_names": [],
+  "other_names": [
+    "Deadline Ridge (castle)"
+  ],
   "country": "US",
   "region": "WY",
   "county": "Sublette",
@@ -201,6 +203,11 @@
       "label": "Deadline Ridge Lookout at firelookout.com",
       "url": "http://www.firelookout.com/wy/deadlineridge.html",
       "kind": "site"
+    },
+    {
+      "label": "Deadline Ridge (castle) on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/deadline-ridge.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -239,6 +246,13 @@
       ]
     },
     {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wy:deadline-ridge",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:us-wy-deadline-ridge",
       "fields": [
@@ -255,6 +269,27 @@
     }
   ],
   "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 42.437985,
+            "lon": -110.504552
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 42.39972,
+            "lon": -110.48417
+          }
+        }
+      ],
+      "distance_m": 4572,
+      "note": null
+    },
     {
       "field": "built",
       "values": [

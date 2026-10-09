@@ -1,6 +1,7 @@
 {
   "id": "us-ca-robbs-peak",
   "name": "Robbs Peak Lookout",
+  "summary": "Eldorado NF lookout on Robbs Peak (6,686 ft): CCC-built 1937 cab, Forest Service staffed 1934-1978, now summer day use beside a rented hut.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,7 +17,7 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4 14 by 14 foot cab with outriggers on a 9-foot enclosed wooden base",
   "height_m": 209.1,
   "status": "standing",
   "status_note": null,
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/ca/robbs-peak-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Eldorado National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Open to the public for day use in summer; not included with the hut rental"
   },
   "staffing": {
     "status": "unknown",
@@ -41,21 +42,76 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Vehicle access in summer only, by the Robbs Peak road (13N31)"
   },
   "rental": null,
   "events": [
     {
+      "year": 1915,
+      "event": "staffed",
+      "note": "Newspaper notice that a man would go on duty as lookout at Robb's Peak",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/robbs-peak.html"
+    },
+    {
+      "year": 1934,
+      "event": "staffed_first",
+      "note": "Forest Service start of its staffed period; sits awkwardly beside the 1915 notice",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/media/121930"
+    },
+    {
+      "year": 1936,
+      "event": "other",
+      "note": "Notice that a new lookout house would be erected on Robb's Peak",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/robbs-peak.html"
+    },
+    {
       "year": 1937,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "CCC-built L-4 cab; the hut was also built by the CCC that year",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/robbs-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/robbs-peak-lookout/",
+        "https://www.mtdemocrat.com/news/restoration-in-the-works-at-robbs-hut/article_06aca0e6-21c8-11ee-a737-cb77dff0ba1d.html"
+      ]
+    },
+    {
+      "year": 1978,
+      "event": "staffed_last",
+      "note": "Forest Service staffed period ends",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/media/121930"
+    },
+    {
+      "year": 1987,
+      "event": "other",
+      "note": "Former lookout station on the peak to be available as a mountain hut after an open house; $15 per night per party",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/robbs-peak.html"
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 21, 2004",
-      "from": "nhlr"
+      "note": "Registered as US 599, CA 70 on September 21, 2004",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/robbs-peak-lookout/"
+    },
+    {
+      "year": 2004,
+      "event": "nrhp_listed",
+      "note": "Lookout named to the National Register of Historic Places",
+      "from": "research",
+      "source_url": "https://www.mtdemocrat.com/news/restoration-in-the-works-at-robbs-hut/article_06aca0e6-21c8-11ee-a737-cb77dff0ba1d.html"
+    },
+    {
+      "year": 2015,
+      "event": "nrhp_listed",
+      "note": "Hut named to the National Register of Historic Places",
+      "from": "research",
+      "source_url": "https://www.mtdemocrat.com/news/restoration-in-the-works-at-robbs-hut/article_06aca0e6-21c8-11ee-a737-cb77dff0ba1d.html"
     },
     {
       "year": 2017,
@@ -122,6 +178,16 @@
       "kind": "register"
     },
     {
+      "label": "Robbs Hut rental guide (PDF) (U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/media/121930",
+      "kind": "reference"
+    },
+    {
+      "label": "Restoration in the works at Robbs Hut (Mountain Democrat (mtdemocrat.com))",
+      "url": "https://www.mtdemocrat.com/news/restoration-in-the-works-at-robbs-hut/article_06aca0e6-21c8-11ee-a737-cb77dff0ba1d.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -179,10 +245,30 @@
       "fields": [
         "height_m"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-robbs-peak",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

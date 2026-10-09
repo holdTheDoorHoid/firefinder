@@ -93,6 +93,16 @@
       "label": "Carbon Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/carbonridge.html",
       "kind": "site"
+    },
+    {
+      "label": "Carbon Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/carbon-ridge.html",
+      "kind": "site"
+    },
+    {
+      "label": "Carbon Ridge on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington/fire_lookouts/carbon_ridge_lookout/site_281.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -127,9 +137,45 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:carbon-ridge",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-carbon-ridge-lookout-site-281",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 47.04457,
+            "lon": -121.94014
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 47.02399,
+            "lon": -121.88122
+          }
+        }
+      ],
+      "distance_m": 5018,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

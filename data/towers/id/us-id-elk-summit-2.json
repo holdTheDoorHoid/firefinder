@@ -183,13 +183,13 @@
       "kind": "register"
     },
     {
-      "label": "Elk Summit Lookout (Nez Perce-Clearwater National Forests, U.S. Forest Service)",
-      "url": "https://www.fs.usda.gov/r01/nezperce-clearwater/recreation/elk-summit-lookout",
-      "kind": "reference"
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/id/elk-summit-lookout/",
+      "kind": "register"
     },
     {
-      "label": "Elk Summit (Forest Lookouts (idaholookouts.weebly.com))",
-      "url": "https://idaholookouts.weebly.com/elk-summit.html",
+      "label": "Elk Summit Lookout (Nez Perce-Clearwater National Forests, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r01/nezperce-clearwater/recreation/elk-summit-lookout",
       "kind": "reference"
     },
     {
@@ -205,6 +205,11 @@
     {
       "label": "Elk Summit Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/selway-region/elk-summit-lookout/",
+      "kind": "site"
+    },
+    {
+      "label": "Elk Summit on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/elk-summit.html",
       "kind": "site"
     },
     {
@@ -268,6 +273,13 @@
       ]
     },
     {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:elk-summit",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:us-id-elk-summit-2",
       "fields": [
@@ -284,7 +296,29 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 45.8791,
+            "lon": -115.539927
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 45.87,
+            "lon": -115.42
+          }
+        }
+      ],
+      "distance_m": 9339,
+      "note": null
+    }
+  ],
   "research": {
     "researched": "2026-10-08",
     "checked": "2026-10-08",

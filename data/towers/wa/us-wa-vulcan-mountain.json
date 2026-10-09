@@ -129,6 +129,16 @@
       "label": "Vulcan Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wa/vulcanmtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Vulcan Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://washingtonlookouts.weebly.com/vulcan-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Vulcan Mountain on WillhiteWeb.com Washington Fire Lookouts",
+      "url": "http://www.willhiteweb.com/washington_fire_lookouts/vulcan_mountain/lookout_105.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -165,9 +175,45 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wa:vulcan-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "willhiteweb_wa",
+      "key": "willhiteweb_wa:wa:washington-fire-lookouts-vulcan-mountain-lookout-105",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 48.96063,
+            "lon": -118.68375
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 48.9891,
+            "lon": -118.6489
+          }
+        }
+      ],
+      "distance_m": 4061,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

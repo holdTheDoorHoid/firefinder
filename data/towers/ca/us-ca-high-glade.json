@@ -1,6 +1,7 @@
 {
   "id": "us-ca-high-glade",
   "name": "High Glade Lookout",
+  "summary": "1935 CCC-built Lake County lookout burned in the 2018 Ranch Fire, then rebuilt on a 35-foot steel tower and staffed again in 2026.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "Civilian Conservation Corps lookout built from USFS plans; the Forest Service describes a 10-by-10-foot cabin on a 35-foot steel tower",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/ca/high-glade-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Mendocino National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Staffed Forest Service lookout on High Glade Road; the 2024 release asked visitors to avoid the road during construction. Current visiting rules are not in the sources read."
   },
   "staffing": {
     "status": "unknown",
@@ -48,20 +49,75 @@
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the Civilian Conservation Corps from USFS plans; standard 14x14 cab per the Register",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/high-glade-lookout/"
+    },
+    {
+      "year": 1940,
+      "event": "staffed",
+      "note": "Lookout-fireman Delmar O. Tilley stationed at High Glade; accepted for military service",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/high-glade.html"
+    },
+    {
+      "year": 1996,
+      "event": "fire",
+      "note": "Wildfire overran the lookout station; station had been evacuated beforehand",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/high-glade.html"
     },
     {
       "year": 2016,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 20, 2016",
-      "from": "nhlr"
+      "note": "Registered March 20, 2016 as US 1123, CA 109; nominated by Bill Ulmer",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/high-glade-lookout/"
+    },
+    {
+      "year": 2018,
+      "event": "burned",
+      "note": "Ranch Fire in July 2018; the Register says the cab was destroyed about July 31 and the steel tower remains, while the 2026 Forest Service feature says the tower burned to the ground",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/high-glade-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/high-glade-lookout/",
+        "https://www.fs.usda.gov/about-agency/features/high-glade-lookout-rebuilt-and-ready-fire-duty"
+      ]
+    },
+    {
+      "year": 2022,
+      "event": "other",
+      "note": "Disaster supplemental funding secured for the design and rebuild",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r05/mendocino/newsroom/releases/forest-begins-reconstruction-high-glade-lookout"
+    },
+    {
+      "year": 2024,
+      "event": "other",
+      "note": "Forest Service release of October 11, 2024: contractors beginning reconstruction; construction site to be closed to the public",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r05/mendocino/newsroom/releases/forest-begins-reconstruction-high-glade-lookout"
+    },
+    {
+      "year": 2025,
+      "event": "rebuilt",
+      "note": "Forest Service says the lookout was rebuilt in 2025",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/about-agency/features/high-glade-lookout-rebuilt-and-ready-fire-duty"
     },
     {
       "year": 2026,
       "event": "rebuilt",
       "note": "From FFLA status column value 'New 2026'",
       "from": "ffla"
+    },
+    {
+      "year": 2026,
+      "event": "staffed",
+      "note": "Seasonal shift begun by two lookouts, one a long-time lookout who had served at High Glade before",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/about-agency/features/high-glade-lookout-rebuilt-and-ready-fire-duty"
     }
   ],
   "photos": [
@@ -133,6 +189,16 @@
       "kind": "register"
     },
     {
+      "label": "Mendocino National Forest begins reconstruction of High Glade Lookout (USDA Forest Service, Mendocino National Forest)",
+      "url": "https://www.fs.usda.gov/r05/mendocino/newsroom/releases/forest-begins-reconstruction-high-glade-lookout",
+      "kind": "reference"
+    },
+    {
+      "label": "High Glade Lookout rebuilt and ready for fire duty (USDA Forest Service, Mendocino National Forest)",
+      "url": "https://www.fs.usda.gov/about-agency/features/high-glade-lookout-rebuilt-and-ready-fire-duty",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -190,10 +256,29 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-high-glade",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

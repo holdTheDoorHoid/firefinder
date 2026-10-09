@@ -1,6 +1,7 @@
 {
   "id": "us-wv-caddell-mountain",
   "name": "Caddell Mountain Lookout",
+  "summary": "80-foot steel tower built at Carlin Hill in 1925, moved to Caddell Mountain in Preston County in 1946; registered 2013 and still standing and maintained as of 2017.",
   "other_names": [],
   "country": "US",
   "region": "WV",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "80-foot steel tower",
+  "height_m": 24.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -46,16 +47,43 @@
   "rental": null,
   "events": [
     {
+      "year": 1925,
+      "event": "built",
+      "note": "Built at Carlin Hill near Smithfield, Wetzel County, as a state-owned fire tower",
+      "from": "research",
+      "source_url": "http://www.firetower.org/lookouts/us/wv/carlin-hill-tower-site/"
+    },
+    {
       "year": 1946,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
     },
     {
+      "year": 1946,
+      "event": "relocated",
+      "note": "Dismantled in summer 1946 at Carlin Hill, moved to Caddell Mountain, and re-erected that fall; the Carlin Hill site was removed from service in 1946",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wv/caddell-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wv/caddell-mountain-lookout/",
+        "https://easternuslookouts.weebly.com/caddell-mountain.html",
+        "http://www.firetower.org/lookouts/us/wv/carlin-hill-tower-site/"
+      ]
+    },
+    {
       "year": 2013,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 12, 2013",
-      "from": "nhlr"
+      "note": "Registered December 12, 2013 as US 979, WV 9; nominated by Ron Stafford",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wv/caddell-mountain-lookout/"
+    },
+    {
+      "year": 2017,
+      "event": "other",
+      "note": "Carlin Hill record says the West Virginia Division of Forestry continued to maintain the relocated tower as of 2017",
+      "from": "research",
+      "source_url": "http://www.firetower.org/lookouts/us/wv/carlin-hill-tower-site/"
     }
   ],
   "photos": [
@@ -108,6 +136,11 @@
       "kind": "register"
     },
     {
+      "label": "Carlin Hill Tower Site (Former Fire Lookout Sites (firetower.org))",
+      "url": "http://www.firetower.org/lookouts/us/wv/carlin-hill-tower-site/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA West Virginia lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wv/",
       "kind": "association"
@@ -150,6 +183,20 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wv-caddell-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -173,7 +220,13 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

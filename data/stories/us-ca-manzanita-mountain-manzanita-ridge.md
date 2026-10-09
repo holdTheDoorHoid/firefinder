@@ -1,0 +1,14 @@
+Manzanita Mountain sits in Modoc County on the Modoc National Forest, and the California Department of Forestry and Fire Protection's Lassen-Modoc Unit now administers the lookout.[^1] A new lookout house went up on the mountain in 1934.[^1][^2] A March 1935 newspaper item described a house of the newest style, put up the previous summer.[^2] The Register calls that first building an ECW lookout built for the forest that year.[^1] The tower follows the Fredonyer design, and the Register counts just five Fredonyer-style towers statewide.[^1]
+
+A forest fire broke out near the Manzanita Lookout Station in 1940.[^2] A November 1944 work-budget memo classed the building as a lookout observation unit with living quarters below.[^2] It also listed a two-car garage and noted that the station served as headquarters for a logging-area patrolman as well as the lookout.[^2] The Forest Lookouts page credits the lookout with 28 first discoveries between 1942 and 1946.[^2]
+
+In August 1952 a fire broke out inside the lookout building.[^2] Gasoline fumes from a radio battery generator caught from a refrigerator flame in the same room.[^2] The damage was small, but afterward all gasoline-powered generators were taken out of lookout living space.[^2]
+
+The Register's built field reads 1934/1974, and it says the existing building replaced the 1934 original.[^1] It also says CDF took over the site in the early 1970s.[^1] The Register lists the lookout as US 1332, CA 155, registered October 23, 2019.[^1] CAL FIRE's 2008 and 2022 fact sheets both list it as the Manzanita Peak Lookout in Modoc County, and the 2008 sheet named it among lookouts that might be staffed that fire season.[^3][^4]
+
+The sources do not say whether the lookout is staffed today, or whether the public can visit it. A 2008 CAL FIRE fact sheet says the agency does not rent its lookouts.[^3] Please do not climb or enter this site, and check with CAL FIRE's Lassen-Modoc Unit before planning a trip nearby.[^1]
+
+[^1]: Manzanita Mountain (Manzanita Ridge) Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/ca/manzanita-mountain-manzanita-ridge-lookout/ (accessed 2026-10-08).
+[^2]: Manzanita Mountain, Forest Lookouts (californialookouts.weebly.com), https://californialookouts.weebly.com/manzanita-mountain.html (accessed 2026-10-08).
+[^3]: Lookouts, CAL FIRE fact sheet, June 2008, hosted at citlink.net, https://www.citlink.net/~dburnett/CAL%20FIRE%20DATA/Lookouts.pdf (accessed 2026-10-08).
+[^4]: Lookouts, CAL FIRE fact sheet, March 2022, https://34c031f8-c9fd-4018-8c5a-4159cdff6b0d-cdn-endpoint.azureedge.net/-/media/calfire-website/about/communications/fact-sheets/fire-and-emergency-response/misc/lookouts.pdf?rev=62bbab0cc04d476196aa38cb39be6249&hash=B3DDEA1F83484A120E777AF13FC501EE (accessed 2026-10-08).

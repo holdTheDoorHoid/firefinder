@@ -1,0 +1,15 @@
+The Banner Mountain lookout stands about four miles east of Nevada City, in Nevada County,[^3][^1] and has been a fire lookout site since 1911.[^2] A 1914 newspaper account says the station came about because the forest needed better ways to find fires.[^2] The first tower was a wooden structure put up in the spring of 1911, and B.F. Howe began duty on it July 1, 1911.[^2] A 1931 trade report puts that frame tower at 40 feet.[^2]
+
+In 1926 a steel tower replaced the wooden one.[^2] A 1926 Livermore Journal item gave its height as 60 feet and said the state and federal forestry departments had put it up together.[^2] The register dates the lookout to 1926, but it also says the original platform tower went up in 1911, and that the 1926 cab was reworked in 1961 to add a catwalk.[^1] Newspapers disagree on the height: a 1948 report says 65 feet, and a 1971 report says 60 feet.[^2]
+
+Howe stayed on the job for decades. A December 1931 trade report says he had served there more than two decades.[^2] In June 1914 the tower register logged 391 visitors.[^2] In October 1938 the forest supervisor had the station staffed again for a while, because of weather and the amount of debris being burned.[^2] In the 1950s it also served as both a fire observation post and a Ground Observer Corps station.[^2] In 1971 two students staffed the tower through two fire seasons, and one paper boasted of California's first 'Women's Liberation' fire lookout crew.[^2]
+
+The original residence burned in 1962, and a replacement house and garage went up in 1963 and 1964.[^1] A 2008 project description proposed clearing trees that blocked the view toward Nevada City, Grass Valley and Cascade Shores.[^4] The register lists the tower as administered by CAL FIRE's Nevada-Yuba-Placer Unit and records its registration as October 2019.[^1]
+
+Today a 2026 CAL FIRE unit fire plan says volunteers staff the lookout every year during fire season.[^3] A CAL FIRE list of lookouts that might be staffed in 2008 also named Banner Mountain.[^5] The sources read for this story do not say whether the tower is open to visitors or rented out, so no access advice is given here.
+
+[^1]: Banner Mountain Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/ca/banner-mountain-lookout/ (accessed 2026-10-08).
+[^2]: Banner Mountain - Forest Lookouts, California Lookouts (compilation of 1911 to 1971 newspaper and trade items), https://californialookouts.weebly.com/banner-mountain.html (accessed 2026-10-08).
+[^3]: 2026 NEU Fire Plan, CAL FIRE Nevada-Yuba-Placer Unit, https://34c031f8-c9fd-4018-8c5a-4159cdff6b0d-cdn-endpoint.azureedge.net/-/media/osfm-website/what-we-do/community-wildfire-preparedness-and-mitigation/pre-fire-planning/2026-maps/2026-neu-fire-plan.pdf?rev=4695793401484edbb97cc2bd81563021&hash=1BDDD77D3D9F93682607548780C4B3C6 (accessed 2026-10-08).
+[^4]: Banner Mountain Fire Station-Maintenance Project, CEQAnet, https://ceqanet.lci.ca.gov/2008098211 (accessed 2026-10-08).
+[^5]: CAL FIRE lookout staffing list for the 2008 fire season, mirrored at citlink.net, https://www.citlink.net/~dburnett/CAL%20FIRE%20DATA/Lookouts.pdf (accessed 2026-10-08).

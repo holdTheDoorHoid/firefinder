@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Payette National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -54,6 +54,11 @@
       "label": "Black Butte on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/west-central/black-butte/",
       "kind": "site"
+    },
+    {
+      "label": "Black Butte on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/black-butte.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -82,9 +87,40 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:black-butte",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 45.18133,
+            "lon": -114.85083
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 45.1717,
+            "lon": -114.7418
+          }
+        }
+      ],
+      "distance_m": 8613,
+      "note": null
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

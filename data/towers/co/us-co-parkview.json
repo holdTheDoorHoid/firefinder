@@ -1,6 +1,7 @@
 {
   "id": "us-co-parkview",
   "name": "Parkview Lookout",
+  "summary": "Forest Service ground cabin built in 1916 on Parkview Mountain's summit; unused as a lookout since 1948, still standing, and condition is poor-fair per a 2019 report.",
   "other_names": [
     "Parkview Mountain"
   ],
@@ -18,7 +19,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Ground cabin with concrete walls and a wood frame",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -30,11 +31,11 @@
       "url": "http://nhlr.org/lookouts/us/co/parkview-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Routt National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached on foot by hiking up from Willow Creek Pass per 2008 and 2022 accounts; no closure found in sources. Official Forest Service access status was not verified, and the cab's condition is poor to fair."
   },
   "staffing": {
     "status": "unknown",
@@ -42,16 +43,69 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Hike from Willow Creek Pass on Colorado 125, or drive part way on primitive roads (SummitPost). A 2008 Denver Post hike starts at a small parking area 0.3 miles south of the pass on Forest Service Road 266.1H."
   },
   "rental": null,
   "events": [
     {
+      "year": 1916,
+      "event": "built",
+      "note": "Ground cabin built by the Forest Service; NHLR calls it the groundhouse built in 1916.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/co/parkview-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/co/parkview-lookout/",
+        "https://westlookouts.weebly.com/parkview.html",
+        "https://www.denverpost.com/2008/09/25/historic-lookout-vistas-of-the-park/",
+        "http://www.summitpost.org/mountain/rock/152632/Parkview-Mountain.html"
+      ]
+    },
+    {
+      "year": 1919,
+      "event": "staffed",
+      "note": "A November 1919 Routt County Sentinel item, quoted by Forest Lookouts, says an officer was stationed on the peak through dry summer periods.",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/parkview.html"
+    },
+    {
+      "year": 1948,
+      "event": "staffed_last",
+      "note": "Not used since 1948, per NHLR.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/co/parkview-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/co/parkview-lookout/",
+        "http://www.summitpost.org/mountain/rock/152632/Parkview-Mountain.html"
+      ]
+    },
+    {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 13, 2003",
-      "from": "nhlr"
+      "note": "Date registered on the National Historic Lookout Register: August 13, 2003.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/co/parkview-lookout/"
+    },
+    {
+      "year": 2007,
+      "event": "restored",
+      "note": "SummitPost describes the cabin as recently restored to usable condition and links a 2007 photo showing restoration. The text itself is undated.",
+      "from": "research",
+      "source_url": "http://www.summitpost.org/mountain/rock/152632/Parkview-Mountain.html"
+    },
+    {
+      "year": 2008,
+      "event": "other",
+      "note": "A 2008 Denver Post article says the building still served as a radio repeater station for firefighters.",
+      "from": "research",
+      "source_url": "https://www.denverpost.com/2008/09/25/historic-lookout-vistas-of-the-park/"
+    },
+    {
+      "year": 2019,
+      "event": "assessed",
+      "note": "A 2019 report rates the exterior poor to fair and says it has had no maintenance for a long time.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/co/parkview-lookout/"
     }
   ],
   "photos": [
@@ -188,6 +242,16 @@
       "kind": "register"
     },
     {
+      "label": "Historic lookout, vistas of the park (The Denver Post)",
+      "url": "https://www.denverpost.com/2008/09/25/historic-lookout-vistas-of-the-park/",
+      "kind": "reference"
+    },
+    {
+      "label": "Rabbit Ears Range: Parkview Mountain Fire Lookout (ADVENTR.co)",
+      "url": "https://adventr.co/2022/09/rabbit-ears-range-parkview-mountain-fire-lookout/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Colorado lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/co/",
       "kind": "association"
@@ -241,10 +305,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-co-parkview",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,23 +1,25 @@
 {
   "id": "us-tn-fall-creek-falls-2",
   "name": "Fall Creek Falls Lookout Tower",
-  "other_names": [],
+  "other_names": [
+    "Bradden Knob"
+  ],
   "country": "US",
   "region": "TN",
   "county": "Bledsoe",
   "location": {
-    "lat": 35.65725,
-    "lon": -85.3479,
+    "lat": 35.6696,
+    "lon": -85.3059,
     "precision": "exact",
-    "from": "nhlr"
+    "from": "tnlandforms"
   },
   "elevation_m": 522.1,
-  "kind": "unknown",
+  "kind": "tower",
   "material": null,
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 24.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -26,6 +28,12 @@
       "number": "US 50",
       "state_number": "TN 1",
       "url": "http://nhlr.org/lookouts/us/tn/fall-creek-falls-lookout-tower/"
+    },
+    {
+      "register": "NRHP",
+      "number": "15000444",
+      "state_number": null,
+      "url": "https://npgallery.nps.gov/AssetDetail/NRIS/15000444"
     }
   ],
   "agency": "Tennessee Department of Agriculture",
@@ -46,6 +54,12 @@
   "rental": null,
   "events": [
     {
+      "year": 1895,
+      "event": "built",
+      "note": null,
+      "from": "wikidata"
+    },
+    {
       "year": 1993,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: May 27, 1993",
@@ -64,6 +78,18 @@
       "year": null,
       "w": 250,
       "h": 377
+    },
+    {
+      "file": "03/035b0c0f9a917cddf071505fb19e1a3a0dfc948c.webp",
+      "thumb": "03/035b0c0f9a917cddf071505fb19e1a3a0dfc948c.t.webp",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/FCF_Fire_Lookout_Tower.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:FCF_Fire_Lookout_Tower.jpg",
+      "credit": "Jennifveal, via Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "caption": null,
+      "year": null,
+      "w": 1000,
+      "h": 667
     }
   ],
   "links": [
@@ -71,6 +97,26 @@
       "label": "NHLR register entry US 50 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/tn/fall-creek-falls-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Bradden Knob (tnlandforms.us (Tom Dunigan))",
+      "url": "https://tnlandforms.us/towers/",
+      "kind": "site"
+    },
+    {
+      "label": "Fall Creek Falls (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/fall-creek-falls.html",
+      "kind": "site"
+    },
+    {
+      "label": "Wikidata item Q86925971",
+      "url": "https://www.wikidata.org/wiki/Q86925971",
+      "kind": "wikidata"
+    },
+    {
+      "label": "OpenStreetMap way 1094656625",
+      "url": "https://www.openstreetmap.org/way/1094656625",
+      "kind": "osm"
     }
   ],
   "sources": [
@@ -79,7 +125,6 @@
       "key": "nhlr:US 50",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "status",
@@ -89,10 +134,66 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "tnlandforms",
+      "key": "tnlandforms:tn:blt002",
+      "fields": [
+        "location",
+        "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:tn:fall-creek-falls",
+      "fields": [
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q86925971",
+      "fields": [
+        "registers",
+        "events",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1094656625",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "tnlandforms",
+          "value": {
+            "lat": 35.6696,
+            "lon": -85.3059
+          }
+        },
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 35.65725,
+            "lon": -85.3479
+          }
+        }
+      ],
+      "distance_m": 4035,
+      "note": null
+    }
+  ],
+  "verification": "facts",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

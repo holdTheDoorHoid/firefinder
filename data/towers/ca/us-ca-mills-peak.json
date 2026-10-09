@@ -1,6 +1,7 @@
 {
   "id": "us-ca-mills-peak",
   "name": "Mills Peak Lookout",
+  "summary": "Plumas NF lookout in Sierra County; first L-4 ground house dated 1933 by NHLR (1932 brochure, 1934 press). Staffed per NHLR; restored and reactivated 2005 per NHLR.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "First lookout was an L-4 ground house (NHLR); the current structure is described as a tower with stairs, a platform and a compact cab (Calexplornia)",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Entry to the cab may depend on staffing, fire conditions and posted rules; ask before entering"
   },
   "staffing": {
     "status": "unknown",
@@ -40,22 +41,73 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "About 3 miles of dirt road to the tower; NHLR visitor comment says a car can make the route, while Calexplornia recommends a high-clearance vehicle for the narrow last stretch"
   },
   "rental": null,
   "events": [
     {
+      "year": 1932,
+      "event": "built",
+      "note": "Older Forest Service brochure, as reported by Calexplornia, gives 1932 at 7,342 feet",
+      "from": "research",
+      "source_url": "https://www.calexplornia.com/mills-peak-fire-lookout-spectacular-views-lakes-basin-rec-plumas-county"
+    },
+    {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR build year for the first Mills Peak Lookout, an L-4 ground house",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/mills-peak-lookout/"
+    },
+    {
+      "year": 1934,
+      "event": "staffed_first",
+      "note": "Ben Hankey moved to the new lookout at Mills Peak from Mount Elwell (article dated August 2, 1934); 1946 item says construction completed August 1934",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mills-peak.html"
+    },
+    {
+      "year": 1946,
+      "event": "staffed",
+      "note": "Hankey served every season from 1934 except 1945 and is credited with first spotting 117 fires",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mills-peak.html"
+    },
+    {
+      "year": 1960,
+      "event": "staffed",
+      "note": "T.L. Louton in charge; Forest Service counted 1,520 visitors that season",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mills-peak.html"
+    },
+    {
+      "year": 1971,
+      "event": "staffed",
+      "note": "Audrey Flury posted at the lookout; about 2,200 visitors a year",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mills-peak.html"
+    },
+    {
+      "year": 1975,
+      "event": "staffed",
+      "note": "Lin and May Ness new lookouts on Mills Peak (first-year lookouts, August 1975)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mills-peak.html"
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 21, 2004",
-      "from": "nhlr"
+      "note": "Registered September 21, 2004",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/mills-peak-lookout/"
+    },
+    {
+      "year": 2005,
+      "event": "restored",
+      "note": "NHLR: recently restored and reactivated for fire detection in 2005",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/mills-peak-lookout/"
     }
   ],
   "photos": [
@@ -77,6 +129,11 @@
       "label": "NHLR register entry US 602 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ca/mills-peak-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Mills Peak Fire Lookout: Road, History, and Sweeping Views (Calexplornia (calexplornia.com))",
+      "url": "https://www.calexplornia.com/mills-peak-fire-lookout-spectacular-views-lakes-basin-rec-plumas-county",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -134,10 +191,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-mills-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

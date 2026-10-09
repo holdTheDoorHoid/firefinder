@@ -1,0 +1,8 @@
+The National Historic Lookout Register dates Mount Bradley's lookout to 1933 and describes it as a USFS R1 cabin on a 13-foot enclosed timber tower.[^1] The register lists the Shasta-Trinity National Forest as the administrator.[^1] Newspaper reports from 1930 and 1932 point to an earlier start.[^2] In July 1930 the Shasta National Forest announced a station just west of Dunsmuir, because past fires in the Sacramento River canyon had caused firefighting trouble.[^2] By July 1932 a lookout house was complete, so a lookout could live on the peak that summer.[^2] The two sets of dates conflict, and this story keeps both.
+
+Frank Bascom was named the lookout for the 1943 season.[^2] In 1956 Mt. Bradley was the first lookout manned that year, and it was the only station with direct telephone contact to Forest Service headquarters.[^2] Pearl Cowen spent her summers there around 1960 and was in charge in 1962.[^2] A report on the October 1962 damage called it minor compared with Black Butte, citing two shutters gone, a broken window and some lost shingles.[^2] In June 1963 Cowen described a lightning strike on a tree near the cabin that knocked her to the floor.[^2]
+
+The register describes the structure as maintained, but says a proposed aerial tramway project threatens it.[^1] It was registered on April 16, 2020.[^1] Current access and rental details were not in the pages I could reach, so check with the Forest Service before planning a visit.
+
+[^1]: Mount Bradley Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/ca/mount-bradley-lookout/ (accessed 2026-10-08).
+[^2]: Mt. Bradley - FOREST LOOKOUTS, Forest Lookouts (California), https://californialookouts.weebly.com/mt-bradley.html (accessed 2026-10-08).

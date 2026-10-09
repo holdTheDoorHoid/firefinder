@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Lolo National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Bear Gulch on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/beargulch.html",
       "kind": "site"
+    },
+    {
+      "label": "Bear Gulch on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/bear-gulch.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +75,40 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:bear-gulch",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 47.11773,
+            "lon": -114.9278
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 47.1477,
+            "lon": -114.9203
+          }
+        }
+      ],
+      "distance_m": 3380,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

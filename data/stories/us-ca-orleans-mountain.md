@@ -1,0 +1,11 @@
+The National Historic Lookout Register credits the Civilian Conservation Corps with building the present lookout in 1933. It describes a 14-by-14-foot cab that people can live in, set on an enclosed timber tower.[^1] A 1958 item places the lookout on the dividing line between Six Rivers and Klamath national forest land.[^2] Older records show a lookout there well before then.[^2] The Klamath Forest approved a lookout house on the mountain in July 1914, and a 1913 item mentions a telephone line built to the lookout.[^2] A new lookout house was reported complete in October 1933, built with CCC labor.[^2] The sources do not say what became of the 1914 building, so this story treats 1933 as a replacement.
+
+Staffing ran for decades. A 1916 item names Orvern Quick as lookout.[^2] Stossel Prigmore had served at the lookout since 1951, and a 1965 item reported him going up for the fire season.[^2] Elvin Prigmore had served sixteen seasons in the Orleans District by 1959.[^2] The NHLR says staffing ended in 1981, when the lookout was reduced to emergency-only use.[^1]
+
+Two fire episodes appear in the records. In 1921, as the season wound down, the lookout came down from the peak to help with two big fires.[^2] In July 1938 the lookout spotted a fire that destroyed a home on Camp Creek, and a CCC crew reached the scene in time to save the outbuildings.[^2]
+
+Wildfire has come close more than once.[^2][^3] A 2013 item says the lookout was covered in fire-retardant foil to protect it from the nearby Orleans Complex of fires.[^2] A 2025 year-end report from the California-Northern chapter says the lookout was covered in fire-prevention material for a second straight year and came through another close call.[^3] Current access and rental details were not in the pages I could reach, so check with the Forest Service before planning a visit.
+
+[^1]: Orleans Mountain Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/ca/orleans-mountain-lookout/ (accessed 2026-10-08).
+[^2]: Orleans Mountain - FOREST LOOKOUTS, Forest Lookouts (California), https://californialookouts.weebly.com/orleans-mountain.html (accessed 2026-10-08).
+[^3]: 2025 Year-End Report, California-Northern Chapter (PDF), Forest Fire Lookout Association, https://firelookout.org/wp-content/uploads/2026/01/cr-cal-north-2025.pdf (accessed 2026-10-08).

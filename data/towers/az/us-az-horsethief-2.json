@@ -6,10 +6,10 @@
   "region": "AZ",
   "county": "Yavapai",
   "location": {
-    "lat": 34.16225,
-    "lon": -112.22017,
+    "lat": 34.162531,
+    "lon": -112.270441,
     "precision": "exact",
-    "from": "nhlr"
+    "from": "osm"
   },
   "elevation_m": 1321.0,
   "kind": "tower",
@@ -76,6 +76,11 @@
       "label": "FFLA Arizona lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/az/",
       "kind": "association"
+    },
+    {
+      "label": "OpenStreetMap node 359278887",
+      "url": "https://www.openstreetmap.org/node/359278887",
+      "kind": "osm"
     }
   ],
   "sources": [
@@ -84,7 +89,6 @@
       "key": "nhlr:US 527",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "material",
@@ -105,12 +109,27 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:node/359278887",
+      "fields": [
+        "location",
+        "links"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "location",
       "values": [
+        {
+          "source": "osm",
+          "value": {
+            "lat": 34.162531,
+            "lon": -112.270441
+          }
+        },
         {
           "source": "nhlr",
           "value": {
@@ -126,8 +145,8 @@
           }
         }
       ],
-      "distance_m": 6675,
-      "note": "They share a register number."
+      "distance_m": 4625,
+      "note": null
     }
   ],
   "verification": "unverified",

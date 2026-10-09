@@ -1,0 +1,13 @@
+The Sawmill Peak lookout stands in Butte County, California, outside the community of Magalia.[^3] The National Historic Lookout Register lists it as US 1310 and dates the lookout to 1931.[^1] The register places the site in the Lassen National Forest and names Cal Fire as its administrator. A Forest Service project page says the Plumas National Forest administers the site, so the sources disagree on who runs it.[^1][^3]
+
+The register describes a 30-foot K-brace tower that superseded a steel design introduced in the 1920s.[^1] The register says fire destroyed the first wood cab, which used a USFS 4-AR design, but it gives no date.[^1] The replacement cab, plan BC-301, was supplanted by a CDF cab, plan 259, which the register calls the first 732-6A style cab built.[^1]
+
+Staffing records we could read are thin. A February 1937 obituary, reprinted on the Forest Lookouts site, calls Dave Reese a lookout at Sawmill Peak for six years.[^2] It also says he joined the Forest Service about nine years before, and if that timeline is right, he was on the peak before the register's 1931 date. The sources do not say whether an earlier lookout stood there, so we leave that open.[^2][^1]
+
+A 1938 Lassen Advocate item names Neal Perdue as the lookout stationed at Sawmill Peak. He reported what looked like smoke four miles south, but it turned out to be a broken water line.[^2] In March 1939 a California Ranger item says residents reported the lookout building had vanished during a windy stretch. The item explains that a CCC crew had removed the old building the day before, ahead of installing a new lookout structure.[^2]
+
+The register's description, marked "MVT 10/91," refers to the existing cab, so it may not reflect the site today.[^1] A PG&E passive reflector also sits on the peak, and PG&E has asked the Forest Service to reissue its special use permit for a new 30-year term.[^3] We could not read the Butte County lookout page, so we do not know whether anyone staffs the lookout today, and we found no source on visitor access. Check with Cal Fire or the Forest Service before planning a visit.
+
+[^1]: Sawmill Peak Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/ca/sawmill-peak-lookout/ (accessed 2026-10-08).
+[^2]: Sawmill Peak, Forest Lookouts (californialookouts.weebly.com), https://californialookouts.weebly.com/sawmill-peak.html (accessed 2026-10-08).
+[^3]: PG&E SUP Reissue Sawmill Peak Passive Reflector, Plumas National Forest project summary, USDA Forest Service, https://www.fs.usda.gov/r05/plumas/projects/61948 (accessed 2026-10-08).

@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Medicine Bow National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Barrett Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/wy/barrettridge.html",
       "kind": "site"
+    },
+    {
+      "label": "Barrett Ridge on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://westlookouts.weebly.com/barrett-ridge.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +75,40 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:wy:barrett-ridge",
+      "fields": [
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 41.32657,
+            "lon": -106.52627
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 41.30083,
+            "lon": -106.49806
+          }
+        }
+      ],
+      "distance_m": 3707,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

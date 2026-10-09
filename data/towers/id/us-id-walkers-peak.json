@@ -49,6 +49,11 @@
       "label": "Walkers Peak on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/id/walkerspeak.html",
       "kind": "site"
+    },
+    {
+      "label": "Walker Peak on idahofirelookouts.com",
+      "url": "https://www.idahofirelookouts.com/west-central/walker-peak/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +75,38 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "idaho_fl",
+      "key": "idaho_fl:walker-peak:44.6709:-115.3146",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 44.6575,
+            "lon": -115.35282
+          }
+        },
+        {
+          "source": "idaho_fl",
+          "value": {
+            "lat": 44.67091,
+            "lon": -115.31464
+          }
+        }
+      ],
+      "distance_m": 3368,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

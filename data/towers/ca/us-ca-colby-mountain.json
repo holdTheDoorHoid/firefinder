@@ -1,6 +1,7 @@
 {
   "id": "us-ca-colby-mountain",
   "name": "Colby Mountain Lookout",
+  "summary": "A CCC-built 1934 lookout in Lassen National Forest; a closure reported in January 2026 was reversed in February, and the 2026 season status is unconfirmed.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "14x14 ft L-4 cab with catwalk on a 30-ft steel tower",
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Active lookout. The register says it is open from June until late October. Its closure was reversed in February 2026; I found no later report."
   },
   "staffing": {
     "status": "unknown",
@@ -46,16 +47,50 @@
   "rental": null,
   "events": [
     {
+      "year": 1912,
+      "event": "built",
+      "note": "First lookout on the site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/colby-mountain-lookout/"
+    },
+    {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Civilian Conservation Corps replaced the 1912 lookout with the present L-4 cab on a 30-ft steel tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/colby-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/colby-mountain-lookout/",
+        "https://www.latimes.com/california/newsletter/2026-01-30/essential-california-fire-lookout-closing"
+      ]
     },
     {
       "year": 2001,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 6, 2001",
-      "from": "nhlr"
+      "note": "Registered October 6, 2001; nominated by Ken Jordan, primary lookout",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/colby-mountain-lookout/"
+    },
+    {
+      "year": 2025,
+      "event": "other",
+      "note": "Jordan was told he would not return the next year; KRCR reported the tower was slated for demolition",
+      "from": "research",
+      "source_url": "https://krcrtv.com/news/local/colby-mountain-fire-lookout-tower-set-for-demolition-sparking-community-outcry"
+    },
+    {
+      "year": 2026,
+      "event": "closed",
+      "note": "Per the Los Angeles Times (January 2026), the Forest Service had shut the lookout; a spokesperson wrote that it was closed for the winter, as each year, and that no decision had been made about its future",
+      "from": "research",
+      "source_url": "https://www.latimes.com/california/newsletter/2026-01-30/essential-california-fire-lookout-closing"
+    },
+    {
+      "year": 2026,
+      "event": "other",
+      "note": "Chico Enterprise-Record reported that the Forest Service reversed the closure and the lookout would remain staffed for fire season",
+      "from": "research",
+      "source_url": "https://www.chicoer.com/2026/02/06/forest-service-reverses-decision-to-close-historic-colby-mountain-lookout/"
     }
   ],
   "photos": [
@@ -94,6 +129,21 @@
       "label": "NHLR register entry (nhlr.org)",
       "url": "http://nhlr.org/nhlr.org/lookouts/us/ca/colby-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "A remote fire lookout worker fights for his job (Los Angeles Times)",
+      "url": "https://www.latimes.com/california/newsletter/2026-01-30/essential-california-fire-lookout-closing",
+      "kind": "reference"
+    },
+    {
+      "label": "Colby Mountain fire lookout tower set for demolition, sparking community outcry (KRCR)",
+      "url": "https://krcrtv.com/news/local/colby-mountain-fire-lookout-tower-set-for-demolition-sparking-community-outcry",
+      "kind": "reference"
+    },
+    {
+      "label": "Forest Service reverses decision to close historic Colby Mountain Lookout (Chico Enterprise-Record)",
+      "url": "https://www.chicoer.com/2026/02/06/forest-service-reverses-decision-to-close-historic-colby-mountain-lookout/",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -140,10 +190,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-colby-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,7 +1,9 @@
 {
   "id": "us-id-battle-creek",
   "name": "Battle Creek Lookout",
-  "other_names": [],
+  "other_names": [
+    "Battle Creek (ridge)"
+  ],
   "country": "US",
   "region": "ID",
   "county": "Idaho",
@@ -16,13 +18,13 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "L-4",
+  "height_m": 6.1,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Bitterroot National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -54,6 +56,11 @@
       "label": "Battle Creek Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/selway-region/battle-creek-lookout/",
       "kind": "site"
+    },
+    {
+      "label": "Battle Creek (ridge) on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://idaholookouts.weebly.com/battle-creek.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -82,9 +89,42 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:id:battle-creek",
+      "fields": [
+        "design",
+        "height_m",
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 46.21065,
+            "lon": -114.6865
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 46.21131,
+            "lon": -114.62732
+          }
+        }
+      ],
+      "distance_m": 4554,
+      "note": null
+    }
+  ],
   "verification": "facts",
   "locked": [],
   "hidden": false,

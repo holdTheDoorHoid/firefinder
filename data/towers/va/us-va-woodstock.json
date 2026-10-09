@@ -1,6 +1,7 @@
 {
   "id": "us-va-woodstock",
   "name": "Woodstock Lookout Tower",
+  "summary": "Steel observation tower on Massanutten Mountain, built 1935 by the CCC; a standing day-use Forest Service observation site reached by a four-mile road.",
   "other_names": [],
   "country": "US",
   "region": "VA",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "Steel observation tower",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Day-use site open year round, sunrise to sunset, no fee; access subject to Virginia DOT closures; no potable water on site"
   },
   "staffing": {
     "status": "unknown",
@@ -40,22 +41,29 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Drive Woodstock Tower Road (SR 758) about four miles to the top of the mountain; the footpath to the tower is on the left"
   },
   "rental": null,
   "events": [
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the Civilian Conservation Corps; materials or funds from the Woodstock Chamber of Commerce (sources differ)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/woodstock-lookout-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/va/woodstock-lookout-tower/",
+        "https://www.fs.usda.gov/r08/gwj/recreation/woodstock-tower-observation-site",
+        "https://archives.countylib.org/exhibits/show/fv/wt"
+      ]
     },
     {
       "year": 2014,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 3, 2014",
-      "from": "nhlr"
+      "note": "Registered September 3, 2014; nominated by Kristin Scholetzky",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/woodstock-lookout-tower/"
     }
   ],
   "photos": [
@@ -77,6 +85,16 @@
       "label": "NHLR register entry US 1032 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/va/woodstock-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Woodstock Tower Observation Site (U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r08/gwj/recreation/woodstock-tower-observation-site",
+      "kind": "reference"
+    },
+    {
+      "label": "Woodstock Tower (Shenandoah County Library Archives (Slices of Fort Valley Virginia))",
+      "url": "https://archives.countylib.org/exhibits/show/fv/wt",
+      "kind": "reference"
     },
     {
       "label": "FFLA Virginia lookout list (firelookout.org)",
@@ -135,10 +153,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-va-woodstock",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

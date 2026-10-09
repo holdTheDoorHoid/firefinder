@@ -1,0 +1,15 @@
+Mount Oso is a ridge trending northwest, lying west of the San Joaquin Valley in Stanislaus County.[^1] The National Historic Lookout Register lists the California Department of Forestry and Fire Protection as the administrator.[^1] A lookout went up on the peak in July 1921, when the State Board of Forestry set out to erect a station, with money from stockmen's groups and three counties, and a 12-and-a-half-mile telephone line.[^2] The Register says that first structure is long gone.[^1]
+
+Local papers name several of the men who worked it.[^2] E.M. Bushby, who had served the year before, was set to return in 1924.[^2] Otto Seegers went on duty in 1928.[^2] In August 1936 the lookout, Otto Seeger, reported a fire burning in rough ground north of Flat Mountain, and CCC camp crews were called out to fight it for about a week.[^2] In July 1938 the local district kept Paul Kraft on as lookout.[^2]
+
+The Register says the earlier station closed in 1938, a patrolman covered for a few years, and a second tower went up in 1942.[^1] The July 1938 item still names a lookout, so any closure came later that year, though the Register gives no month.[^1][^2]
+
+The tower on the summit now dates from 1979.[^1] The Register says it was reportedly a World War II surplus Army observation tower brought from Tracy Airport, possibly an Aermotor product, with its cab altered for a catwalk and door.[^1] A 1980 Modesto Bee report, copied on Forest Lookouts, gives its height as 40 feet and says it replaced one built in 1921.[^2] That does not match the Register's 1942 tower, so the early history is unsettled.[^1][^2] A May 1980 item announced the CDF dedication.[^2] The Register lists the site as registered on December 1, 2019, as US 1393, CA 216.[^1]
+
+The Register describes many radio vaults and towers on the site, and says it is not open to the public, about 13 miles from paved road. That description is dated October 1991.[^1] Bay Area Peaks describes a private road to the summit.[^3] CAL FIRE's June 2008 list of lookouts that might be staffed that season does not include Mount Oso, and the same list says CAL FIRE does not rent lookouts.[^4] The Forest Fire Lookout Association lists the tower as standing.[^5] Because the road is private, do not try to reach or climb the tower. Check with the owner or CAL FIRE first.
+
+[^1]: Mount Oso Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/ca/mount-oso-lookout/ (accessed 2026-10-08).
+[^2]: Mount Oso, Forest Lookouts (californialookouts.weebly.com), https://californialookouts.weebly.com/mount-oso.html (accessed 2026-10-08).
+[^3]: Oso, Bay Area Peaks, https://www.bayareapeaks.com/stanislaus/mount-oso/ (accessed 2026-10-08).
+[^4]: CAL FIRE Lookouts, CAL FIRE staffing list (June 2008), hosted at citlink.net, https://www.citlink.net/~dburnett/CAL%20FIRE%20DATA/Lookouts.pdf (accessed 2026-10-08).
+[^5]: California Lookouts (by County), Forest Fire Lookout Association, https://firelookout.org/lookouts/us/ca/ca-co/ (accessed 2026-10-08).

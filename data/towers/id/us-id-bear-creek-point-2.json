@@ -1,6 +1,7 @@
 {
   "id": "us-id-bear-creek-point-2",
   "name": "Bear Creek Point Lookout",
+  "summary": "1934 L-5 cab on the Salmon/Salmon-Challis NF in Valley County, Idaho, inside the River of No Return Wilderness; abandoned in the 1950s, still standing, NHLR-registered 2008.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,7 +17,7 @@
   "material": "log",
   "material_from": "design",
   "roles": [],
-  "design": "L-5",
+  "design": "L-5 cab; NHLR gives 10 by 10 foot groundhouse, Forest Lookouts gives two-story 12 by 12 log cabin",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -40,22 +41,37 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Hike-in only, by trail within the River of No Return Wilderness."
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "L-5 cab built; all four sources agree on 1934",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/bear-creek-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/bear-creek-point-lookout/",
+        "https://www.firelookout.com/id/bearcreekpoint.html",
+        "https://idaholookouts.weebly.com/bear-creek-point.html",
+        "https://www.idahofirelookouts.com/west-central/bear-creek-point-lookout/"
+      ]
+    },
+    {
+      "year": 1951,
+      "event": "staffed",
+      "note": "Clipping (July 12, 1951, The Recorder-Herald): Charles L. Powell, Jr. of Kennewick, Washington has taken over 'Bear Creek lookout'. The clipping does not clearly identify this site.",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/bear-creek-point.html"
     },
     {
       "year": 2008,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 20, 2008",
-      "from": "nhlr"
+      "note": "Registered November 20, 2008 as US 748, ID 50; nominated by Jill Osborn",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/bear-creek-point-lookout/"
     }
   ],
   "photos": [
@@ -101,6 +117,11 @@
       "label": "NHLR register entry US 748 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/id/bear-creek-point-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Bear Creek Point Lookout (Idaho Fire Lookouts (idahofirelookouts.com))",
+      "url": "https://www.idahofirelookouts.com/west-central/bear-creek-point-lookout/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
@@ -162,10 +183,30 @@
         "design",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-bear-creek-point-2",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

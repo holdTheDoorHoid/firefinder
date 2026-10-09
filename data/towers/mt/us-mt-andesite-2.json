@@ -21,7 +21,7 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Private",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -44,6 +44,16 @@
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
       "kind": "association"
+    },
+    {
+      "label": "Andesite on firelookout.com (Rex Kamstra)",
+      "url": "https://www.firelookout.com/mt/andesite.html",
+      "kind": "site"
+    },
+    {
+      "label": "Andesite on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/andesite.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -58,9 +68,53 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "firelookout_com",
+      "key": "firelookout_com:mt:andesite:45.2731:-111.3908",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:andesite",
+      "fields": [
+        "agency",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 45.2646,
+            "lon": -111.40617
+          }
+        },
+        {
+          "source": "firelookout_com",
+          "value": {
+            "lat": 45.27308,
+            "lon": -111.3908
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 45.2731,
+            "lon": -111.3889
+          }
+        }
+      ],
+      "distance_m": 1649,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

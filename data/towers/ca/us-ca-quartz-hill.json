@@ -1,6 +1,7 @@
 {
   "id": "us-ca-quartz-hill",
   "name": "Quartz Hill Lookout",
+  "summary": "Siskiyou County lookout on a summit above Scott Valley; Forest Service lookout in 1947; NHLR-registered 2016; current status and access unresolved.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -18,8 +19,8 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Brief lists standing, but no source read confirms it. An undated trip report found a lookout at the summit closed up, either for good or for the season. Firelookout.org tags the site FFLOS (former-sites register).",
   "registers": [
     {
       "register": "NHLR",
@@ -31,8 +32,8 @@
   "agency": "California Department of Forestry & Fire Protection",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Undated trip report: east approach gated for private property and no trespassing about a mile before the summit; west approach has a locked gate about half a mile short of the lookout. Visiting permission not found."
   },
   "staffing": {
     "status": "unknown",
@@ -46,10 +47,18 @@
   "rental": null,
   "events": [
     {
+      "year": 1947,
+      "event": "staffed",
+      "note": "Ray Arnold, lookout on Quartz Hill for the Forest Service (Siskiyou Daily News, July 8, 1947); the item cites a Klamath National Forest official",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/quartz-hill.html"
+    },
+    {
       "year": 2016,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 27, 2016",
-      "from": "nhlr"
+      "note": "Registered November 27, 2016",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/quartz-hill-lookout/"
     }
   ],
   "photos": [
@@ -71,6 +80,11 @@
       "label": "NHLR register entry US 1153 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ca/quartz-hill-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Trip report (condrey_1) (snwburd.com trip reports)",
+      "url": "https://www.snwburd.com/bob/trip_reports/condrey_1.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -127,10 +141,45 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-quartz-hill",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-08) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

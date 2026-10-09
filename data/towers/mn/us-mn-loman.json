@@ -87,6 +87,11 @@
       "label": "Minnesota Fire Tower Blog",
       "url": "https://minnesotafiretower.blogspot.com/search/label/Loman",
       "kind": "site"
+    },
+    {
+      "label": "Loman (centraluslookouts.weebly.com)",
+      "url": "https://centraluslookouts.weebly.com/loman.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -114,9 +119,38 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "central_us_lookouts",
+      "key": "central_us_lookouts:mn:loman",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 48.512826,
+            "lon": -93.779504
+          }
+        },
+        {
+          "source": "central_us_lookouts",
+          "value": {
+            "lat": 48.5128,
+            "lon": -93.80326
+          }
+        }
+      ],
+      "distance_m": 1750,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -1,6 +1,7 @@
 {
   "id": "us-ca-harvey-mountain",
   "name": "Harvey Mountain Lookout",
+  "summary": "1919 Lassen National Forest lookout cab in the 1918 4A design; a 1934 steel tower beside it was later removed. Staffed in fire season.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "4A lookout cab in the original 1918 design, with thick iron straps over the wood between the windows",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/ca/harvey-mountain-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Lassen National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Staffed Forest Service lookout; the sources read do not describe public visiting rules."
   },
   "staffing": {
     "status": "unknown",
@@ -46,23 +47,75 @@
   "rental": null,
   "events": [
     {
+      "year": 1915,
+      "event": "staffed",
+      "note": "Lookout Luther S. York resigned; Earl Slater took over for the rest of the season",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/harvey-mountain.html"
+    },
+    {
       "year": 1919,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Cab built to the 1918 4A design",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/harvey-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/harvey-mountain-lookout/",
+        "http://www.peakbagging.com/CALookoutPhotos/HarveyMtn.html"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "modified",
+      "note": "Steel Aermotor fire tower built beside the cab, which was used as quarters; the tower was later removed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/harvey-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/harvey-mountain-lookout/",
+        "http://www.peakbagging.com/CALookoutPhotos/HarveyMtn.html"
+      ]
+    },
+    {
+      "year": 1937,
+      "event": "fire",
+      "note": "Lookout sighted a blaze in the Termo district about 30 miles away; equipment at the scene within 1 hour 20 minutes",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/harvey-mountain.html"
+    },
+    {
+      "year": 1953,
+      "event": "assessed",
+      "note": "Inspection note: lookout in good condition",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/harvey-mountain.html"
     },
     {
       "year": 2003,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 29, 2003",
-      "from": "nhlr"
+      "note": "Registered May 29, 2003 as US 517, CA 55",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/harvey-mountain-lookout/"
     },
     {
       "year": 2020,
       "event": "other",
-      "note": "FFLA restoration grant of $500 for materials to replace catwalk deck boards and top handrails and refurbish shutters; work postponed to 2021 by fire season and COVID.",
-      "from": "ffla_west_reports",
+      "note": "FFLA $500 restoration grant for catwalk deck boards, top handrails and shutters; work postponed to the following year",
+      "from": "research",
       "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-rest-2020.pdf"
+    },
+    {
+      "year": 2020,
+      "event": "staffed",
+      "note": "Vickie Lamoureux staffed the lookout",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-rest-2020.pdf"
+    },
+    {
+      "year": 2023,
+      "event": "staffed",
+      "note": "Vickie Lamoureux staffing the lookout, her 42nd summer as a lookout",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r05/newsroom/stories/standing-watch-ongoing-tradition-fire-lookouts"
     }
   ],
   "photos": [
@@ -122,6 +175,16 @@
       "kind": "register"
     },
     {
+      "label": "Harvey Mountain Lookout, Lassen County, California (Peakbagging)",
+      "url": "http://www.peakbagging.com/CALookoutPhotos/HarveyMtn.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Standing Watch: The Ongoing Tradition of Fire Lookouts (USDA Forest Service Pacific Southwest Region)",
+      "url": "https://www.fs.usda.gov/r05/newsroom/stories/standing-watch-ongoing-tradition-fire-lookouts",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -178,10 +241,29 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-harvey-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -44,6 +44,11 @@
       "label": "FFLA Vermont lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/vt/",
       "kind": "association"
+    },
+    {
+      "label": "Round Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/round-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -58,9 +63,38 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:vt:round-mountain",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 44.60199,
+            "lon": -71.66195
+          }
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": {
+            "lat": 44.60311,
+            "lon": -71.6294
+          }
+        }
+      ],
+      "distance_m": 2580,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -12,7 +12,7 @@
     "from": "nhlr"
   },
   "elevation_m": 251.2,
-  "kind": "unknown",
+  "kind": "tower",
   "material": null,
   "material_from": null,
   "roles": [],
@@ -101,6 +101,16 @@
       "label": "NHLR register entry US 837 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/sc/parsons-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "NHLR register entry (nhlr.org)",
+      "url": "http://nhlr.org/nhlr.org/lookouts/us/sc/parsons-mountain-lookout/",
+      "kind": "register"
+    },
+    {
+      "label": "Parson's Mountain (easternuslookouts.weebly.com)",
+      "url": "https://easternuslookouts.weebly.com/parsons-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -120,9 +130,39 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "eastern_us_lookouts",
+      "key": "eastern_us_lookouts:sc:parsons-mountain",
+      "fields": [
+        "kind",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 34.08306,
+            "lon": -82.36278
+          }
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": {
+            "lat": 34.10012,
+            "lon": -82.35429
+          }
+        }
+      ],
+      "distance_m": 2052,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

@@ -68,6 +68,11 @@
       "label": "Shirley Gap on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/or/shirleygap.html",
       "kind": "site"
+    },
+    {
+      "label": "Shirley Gap on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://oregonlookouts.weebly.com/shirley-gap.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -102,9 +107,38 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:or:shirley-gap",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "fflos",
+          "value": {
+            "lat": 43.44396,
+            "lon": -122.95672
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 43.531,
+            "lon": -122.9609
+          }
+        }
+      ],
+      "distance_m": 9684,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

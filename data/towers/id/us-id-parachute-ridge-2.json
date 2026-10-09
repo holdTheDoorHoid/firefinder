@@ -49,6 +49,11 @@
       "label": "Parachute Ridge on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/id/parachuteridge.html",
       "kind": "site"
+    },
+    {
+      "label": "Parachute Ridge on idahofirelookouts.com",
+      "url": "https://www.idahofirelookouts.com/selway-region/parachute-ridge/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +75,38 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "idaho_fl",
+      "key": "idaho_fl:parachute-ridge:45.8646:-114.8923",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 45.82499,
+            "lon": -114.91862
+          }
+        },
+        {
+          "source": "idaho_fl",
+          "value": {
+            "lat": 45.86464,
+            "lon": -114.89233
+          }
+        }
+      ],
+      "distance_m": 4856,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

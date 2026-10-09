@@ -1,6 +1,7 @@
 {
   "id": "us-ca-snag-hill",
   "name": "Snag Hill Lookout",
+  "summary": "Cal Fire tower built in 1994 by a mining company to replace Hayden Hill Lookout; register says staffed in severe weather, and a July 2026 fire burned nearby.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Tower with a spiral staircase; the register calls its design unique in the Cal Fire inventory",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -35,8 +36,8 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "emergency",
+    "as_of": "2015"
   },
   "visit": {
     "climbable": null,
@@ -48,14 +49,41 @@
     {
       "year": 1994,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the Lassen Gold Mine Company for Cal Fire to replace Hayden Hill Lookout nine miles northeast; the mine took over the Hayden Hill site and the old lookout was torn down",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/snag-hill-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/snag-hill-lookout/",
+        "http://peakbagging.com/Fire_Lookouts_Page.html"
+      ]
+    },
+    {
+      "year": 2002,
+      "event": "staffed",
+      "note": "Photo caption for a photo taken August 6, 2002 says the lookout was usually staffed during fire season",
+      "from": "research",
+      "source_url": "http://www.peakbagging.com/CALookoutPhotos/SnagHill.html"
+    },
+    {
+      "year": 2015,
+      "event": "staffed",
+      "note": "Register says staffed when severe weather was predicted, as of 2015",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/snag-hill-lookout/"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 20, 2019",
-      "from": "nhlr"
+      "note": "Registered October 20, 2019 as US 1324, CA 147",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/snag-hill-lookout/"
+    },
+    {
+      "year": 2026,
+      "event": "fire",
+      "note": "3-6 Fire burned about 5 acres in the Dixie Valley area near the lookout, reported July 16, 2026; aircraft and ground crews responded",
+      "from": "research",
+      "source_url": "https://mynews4.com/news/local/cal-fire-fights-3-6-fire-as-blaze-grows-to-about-5-acres"
     }
   ],
   "photos": [
@@ -101,6 +129,26 @@
       "label": "NHLR register entry US 1324 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ca/snag-hill-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Snag Hill Lookout, California (Peakbagging)",
+      "url": "http://www.peakbagging.com/CALookoutPhotos/SnagHill.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Forest Fire Lookout Page (Peakbagging)",
+      "url": "http://peakbagging.com/Fire_Lookouts_Page.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Cal Fire fights 3-6 Fire as blaze grows to about 5 acres (KRNV)",
+      "url": "https://mynews4.com/news/local/cal-fire-fights-3-6-fire-as-blaze-grows-to-about-5-acres",
+      "kind": "reference"
+    },
+    {
+      "label": "CAL FIRE Lookouts (undated list) (citlink.net copy of a CAL FIRE list)",
+      "url": "https://www.citlink.net/~dburnett/CAL%20FIRE%20DATA/Lookouts.pdf",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -157,10 +205,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-snag-hill",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

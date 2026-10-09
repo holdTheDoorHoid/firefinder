@@ -1,6 +1,7 @@
 {
   "id": "us-wi-cedarville",
   "name": "Cedarville Lookout",
+  "summary": "1933 steel fire tower in Marinette County; the state retired it in 2016 and the county approved removal, but the registry still lists it standing.",
   "other_names": [],
   "country": "US",
   "region": "WI",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "80-foot International Stacy steel tower with internal corner-leg ladder (register); 1934 survey: square skeleton steel tower with enclosed cab",
+  "height_m": 24.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -39,7 +40,7 @@
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
@@ -48,14 +49,41 @@
     {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Erected November 1933 per the register; the Central US page also gives 1933.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/cedarville-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wi/cedarville-lookout/",
+        "https://centraluslookouts.weebly.com/cedarville.html"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "other",
+      "note": "A USGS station description from 1934 calls the tower the Cedarville fire lookout of the Wisconsin Department of Conservation.",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/cedarville.html"
+    },
+    {
+      "year": 2015,
+      "event": "other",
+      "note": "DNR decided to retire all 72 fire towers statewide; announced December 17, 2015 (FOX 11) with closure set for the spring.",
+      "from": "research",
+      "source_url": "https://fox11online.com/news/local/northwoods/fire-towers-retired-across-northwoods"
+    },
+    {
+      "year": 2016,
+      "event": "other",
+      "note": "Marinette County committee approved a plan to remove the towers (Bay Cities Online report dated February 5, 2016); timing uncertain and no confirmed removal in these sources.",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/cedarville.html"
     },
     {
       "year": 2017,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 9, 2017",
-      "from": "nhlr"
+      "note": "Registered June 9, 2017.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/cedarville-lookout/"
     }
   ],
   "photos": [
@@ -77,6 +105,21 @@
       "label": "NHLR register entry US 1200 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wi/cedarville-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "DNR Removing Fire Towers from Service (Door County Pulse)",
+      "url": "https://doorcountypulse.com/dnr-removing-fire-towers-from-service/",
+      "kind": "reference"
+    },
+    {
+      "label": "Fire towers retired across Northwoods (WLUK FOX 11)",
+      "url": "https://fox11online.com/news/local/northwoods/fire-towers-retired-across-northwoods",
+      "kind": "reference"
+    },
+    {
+      "label": "Wisconsin Lookouts (by County) (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/wi/wi-co/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
@@ -133,10 +176,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wi-cedarville",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

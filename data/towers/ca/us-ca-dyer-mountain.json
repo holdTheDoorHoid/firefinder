@@ -1,6 +1,7 @@
 {
   "id": "us-ca-dyer-mountain",
   "name": "Dyer Mountain Lookout",
+  "summary": "Built 1934 in Lassen National Forest; last used as a lookout in 2007 and called unsafe for use; a 2020 project moved its radio gear to a container.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "California Region 5 Plan BC-301 cabin on an enclosed timber tower",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -32,30 +33,92 @@
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "The register and the 2011-2012 CAL FIRE plan call the building unsafe for use; that is not a formal closure, and no current opening or closure notice was found"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2011-2012"
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "No public route described in the sources read; the register calls the building unsafe for use"
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register gives 1934; Forest Lookouts says a Conservation Corps crew erected the lookout that year",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/dyer-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/dyer-mountain-lookout/",
+        "https://californialookouts.weebly.com/dyer-mountain.html"
+      ]
+    },
+    {
+      "year": 1937,
+      "event": "fire",
+      "note": "September 1937 fire, started by a spark from a flatcar's brake shoe, destroyed a logging trestle over Dry Creek; the Dyer Mountain lookout was first to report it",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/dyer-mountain.html"
+    },
+    {
+      "year": 1937,
+      "event": "other",
+      "note": "High winds tore the west shutters off in June 1937",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/dyer-mountain.html"
+    },
+    {
+      "year": 1955,
+      "event": "staffed",
+      "note": "John and Lillian Dulvick began their tenth summer season at the lookout",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/dyer-mountain.html"
+    },
+    {
+      "year": 1991,
+      "event": "staffed",
+      "note": "Staffed for the 1991 fire season with severity funds, per a 1992 Lassen County Times item",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/dyer-mountain.html"
+    },
+    {
+      "year": 1992,
+      "event": "staffed",
+      "note": "Opened June 15, 1992, funded for two months",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/dyer-mountain.html"
+    },
+    {
+      "year": 2007,
+      "event": "staffed_last",
+      "note": "Register says the tower has not been used as a lookout since 2007",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/dyer-mountain-lookout/"
+    },
+    {
+      "year": 2011,
+      "event": "assessed",
+      "note": "CAL FIRE 2011-2012 plan update: building unsafe, not staffed, Forest Service might pursue demolition; removed from CAL FIRE's list of historic buildings to preserve",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/dyer-mountain-lookout/"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 31, 2019",
-      "from": "nhlr"
+      "note": "Registered October 31, 2019 as US 1376, CA 199",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/dyer-mountain-lookout/"
+    },
+    {
+      "year": 2020,
+      "event": "other",
+      "note": "Decision signed November 7, 2020 for a new special use permit to move CAL FIRE radio equipment from the lookout into a 10 by 10 foot container; project marked completed",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r05/lassen/projects/58752"
     }
   ],
   "photos": [
@@ -77,6 +140,11 @@
       "label": "NHLR register entry US 1376 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ca/dyer-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Calfire Dyer Communications Site Project (project #58752) (U.S. Forest Service, Lassen National Forest (fs.usda.gov))",
+      "url": "https://www.fs.usda.gov/r05/lassen/projects/58752",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -134,10 +202,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-dyer-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

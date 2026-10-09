@@ -1,6 +1,7 @@
 {
   "id": "us-ca-hayfork-bally",
   "name": "Hayfork Bally Lookout",
+  "summary": "Trinity County lookout site since at least 1920; the current CL-100 cab on a 1965 steel tower is staffed by the Forest Service, with a radio site nearby.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "USFS National Plan CL-100 13x13 cabin on a 42-foot K-Brace steel tower (1965)",
   "height_m": 13.0,
   "status": "standing",
   "status_note": null,
@@ -28,15 +29,15 @@
       "url": "http://nhlr.org/lookouts/us/ca/hayfork-bally-lookout/"
     }
   ],
-  "agency": "US Forest Service - Shasta-Trinity National Forest",
+  "agency": "U.S. Forest Service, Shasta-Trinity National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Active Forest Service fire lookout and radio site; the sources read do not state public visiting rules."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2025"
   },
   "visit": {
     "climbable": null,
@@ -46,16 +47,82 @@
   "rental": null,
   "events": [
     {
+      "year": 1915,
+      "event": "staffed",
+      "note": "Frank Hoffman in charge of the lookout; Bob Dahlstrom fire guard in the section",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/hayfork-bally.html"
+    },
+    {
+      "year": 1920,
+      "event": "staffed",
+      "note": "Miss Elsie Luckie, Forest Service lookout, living alone at the summit",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/hayfork-bally-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/hayfork-bally-lookout/",
+        "https://californialookouts.weebly.com/hayfork-bally.html"
+      ]
+    },
+    {
+      "year": 1931,
+      "event": "modified",
+      "note": "Two-room house and horse barn for the lookout; lumber packed in by mule",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/hayfork-bally.html"
+    },
+    {
+      "year": 1932,
+      "event": "other",
+      "note": "Station abandoned for the season in October",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/hayfork-bally.html"
+    },
+    {
+      "year": 1939,
+      "event": "other",
+      "note": "Observer on a 35-foot steel tower during a thunderstorm; tower charged with electricity",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/hayfork-bally.html"
+    },
+    {
+      "year": 1958,
+      "event": "other",
+      "note": "U.S. Air Force Gap Filler radar site established near the lookout (operated 1958-63)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/hayfork-bally-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/hayfork-bally-lookout/",
+        "https://californialookouts.weebly.com/hayfork-bally.html"
+      ]
+    },
+    {
+      "year": 1963,
+      "event": "other",
+      "note": "Air Force site discontinued and returned to the Forest Service",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/hayfork-bally.html"
+    },
+    {
       "year": 1965,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Current CL-100 cabin on a 42-foot K-Brace steel tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/hayfork-bally-lookout/"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 29, 2019",
-      "from": "nhlr"
+      "note": "Registered October 29, 2019 as US 1366, CA 189",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/hayfork-bally-lookout/"
+    },
+    {
+      "year": 2025,
+      "event": "staffed",
+      "note": "Still-active fire lookout staffed by the Forest Service on the day of a July 2025 visit",
+      "from": "research",
+      "source_url": "https://seedsandsystems.substack.com/p/smoke-signals-and-seedlings-a-visit-to-hayfork-bally"
     }
   ],
   "photos": [
@@ -127,6 +194,11 @@
       "kind": "register"
     },
     {
+      "label": "Smoke, Signals, and Seedlings: A Visit to Hayfork Bally (Seeds & Systems (seedsandsystems.substack.com))",
+      "url": "https://seedsandsystems.substack.com/p/smoke-signals-and-seedlings-a-visit-to-hayfork-bally",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -184,10 +256,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-hayfork-bally",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

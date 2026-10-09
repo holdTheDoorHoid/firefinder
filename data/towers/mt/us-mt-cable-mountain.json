@@ -17,12 +17,12 @@
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 6.1,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Deerlodge National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Cable Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/cablemtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Cable Mountain on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/cable-mountain.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +75,41 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:cable-mountain",
+      "fields": [
+        "height_m",
+        "agency",
+        "ownership",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 46.21766,
+            "lon": -113.2213
+          }
+        },
+        {
+          "source": "west_us_lookouts",
+          "value": {
+            "lat": 46.2527,
+            "lon": -113.19339
+          }
+        }
+      ],
+      "distance_m": 4448,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

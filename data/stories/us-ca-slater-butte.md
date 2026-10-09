@@ -1,0 +1,11 @@
+Slater Butte Lookout sits in the Klamath National Forest in Siskiyou County, in the Happy Camp District.[^1][^2] Crews were still finishing it in 1933.[^2] A Klamath National Forest chronology, quoted on a lookout history site, reports that Morford moved five Civilian Conservation Corps workers and two other carpenters to the butte to finish the tower and cab that October.[^2] A November 1933 newspaper item described a new lookout house under construction with CCC labor.[^2]
+
+The register says the original was a California Region 5 variant of the L4 cabin, with shutters that prop up, on a timber tower 22 feet high and enclosed.[^1] It may later have been rebuilt to the 1949 BC-1401 revision of the BC-301 design.[^1]
+
+A September 1966 newspaper item on a 1,150-acre fire along the Klamath River said the Slater Butte station had been abandoned because the fire lay in its way.[^2] By June 1967 a substitute, Mrs. Lawrence Young, was working the station while the regular operator, Mrs. Ann Wilson, was ill.[^2] The item says Mrs. Young had worked the lookout for years with her husband until his health ended his service.[^2] The sources read do not say exactly when the station reopened.
+
+The register says the cabin got new shutters in 2012, and that the operator, Barbara Geidel, finished her 11th season there in 2019.[^1] It lists the lookout as registered on November 1, 2019.[^1] An ALERTCalifornia post says two camera sites were set up at the lookout in partnership with the Klamath National Forest, to help emergency managers see the area.[^3] The sources read do not say whether the lookout is staffed now or whether visitors may go up, so check with the Klamath National Forest before a trip.
+
+[^1]: Slater Butte Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/ca/slater-butte-lookout/ (accessed 2026-10-08).
+[^2]: Slater Butte - FOREST LOOKOUTS, Forest Lookouts, https://californialookouts.weebly.com/slater-butte.html (accessed 2026-10-08).
+[^3]: New cameras online: Slater Butte Lookout 1 & 2, ALERTCalifornia, LinkedIn post, https://www.linkedin.com/posts/alertcalifornia_new-cameras-online-slater-butte-lookout-activity-7448435653102526465-wutg (accessed 2026-10-08).

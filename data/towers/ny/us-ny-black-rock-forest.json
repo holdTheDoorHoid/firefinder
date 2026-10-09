@@ -1,6 +1,7 @@
 {
   "id": "us-ny-black-rock-forest",
   "name": "Black Rock Forest Fire Tower",
+  "summary": "Black Rock Forest tower, Orange County NY: NHLR gives a 1929 erection and 1933 build year, 80 ft Aermotor LS-42; a 2007 visit found no roof and no public access.",
   "other_names": [
     "Black Rock"
   ],
@@ -18,10 +19,10 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor LS-42, 80 ft, with 7x7 metal cab (NHLR)",
+  "height_m": 24.4,
   "status": "standing",
-  "status_note": "The tower still stands, but its cab is gone (FFLA).",
+  "status_note": null,
   "registers": [
     {
       "register": "NHLR",
@@ -33,20 +34,34 @@
   "agency": "Black Rock Forest Consortium",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "permission",
+    "note": "Not accessible to the public; lower landing locked; entry by permission of the Forest Manager (2007 visit report)"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Contact the Forest Manager at the Black Rock Forest office (2007 visit report)"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1927,
+      "event": "other",
+      "note": "Dr. Ernest G. Stillman established the forest (context for the tower's owner, not the tower itself)",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Black_Rock_Forest"
+    },
+    {
+      "year": 1929,
+      "event": "built",
+      "note": "NHLR description: erected in 1929 as a private lookout on the Stillman estate",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ny/black-rock-forest-fire-tower/"
+    },
     {
       "year": 1933,
       "event": "built",
@@ -54,10 +69,36 @@
       "from": "nhlr"
     },
     {
+      "year": 1933,
+      "event": "other",
+      "note": "NHLR Built field gives 1933; this conflicts with the 1929 erection date in the NHLR description",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ny/black-rock-forest-fire-tower/"
+    },
+    {
+      "year": 1989,
+      "event": "other",
+      "note": "Ownership transferred to the Black Rock Forest Consortium",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ny/black-rock-forest-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ny/black-rock-forest-fire-tower/",
+        "https://en.wikipedia.org/wiki/Black_Rock_Forest"
+      ]
+    },
+    {
       "year": 2006,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 15, 2006",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register on December 15, 2006",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ny/black-rock-forest-fire-tower/"
+    },
+    {
+      "year": 2007,
+      "event": "assessed",
+      "note": "Visit report dated May 1, 2007: no roof; staffed sometimes; not accessible to the public; entry by permission",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ny/black-rock-forest-fire-tower/"
     }
   ],
   "photos": [
@@ -84,6 +125,11 @@
       "label": "NHLR register entry (nhlr.org)",
       "url": "http://nhlr.org/nhlr.org/lookouts/us/ny/black-rock-forest-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Black Rock Forest (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Black_Rock_Forest",
+      "kind": "reference"
     },
     {
       "label": "FFLA New York lookout list (firelookout.org)",
@@ -129,6 +175,22 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ny-black-rock-forest",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -154,7 +216,13 @@
       "note": "They share a register number."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

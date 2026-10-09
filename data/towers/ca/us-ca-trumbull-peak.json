@@ -1,6 +1,7 @@
 {
   "id": "us-ca-trumbull-peak",
   "name": "Trumbull Peak Lookout",
+  "summary": "CCC-built 1934-35 steel tower and quarters in Mariposa County; abandoned by 2012, restoration status disputed, listed as standing.",
   "other_names": [
     "Trumbull"
   ],
@@ -18,8 +19,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "41 ft steel tower with 7 ft x 7 ft metal cab, plus 19 ft x 30 ft C-2 quarters built partly on stilts",
+  "height_m": 12.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -30,7 +31,7 @@
       "url": "http://nhlr.org/lookouts/us/ca/trumbull-peak-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Stanislaus National Forest (Groveland Ranger District)",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -50,20 +51,36 @@
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register: built by the CCC from 1934-35; Built field gives 1935",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/trumbull-peak-lookout/"
     },
     {
       "year": 1998,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 4, 1998",
-      "from": "nhlr"
+      "note": "Date Registered on NHLR page: June 4, 1998",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/trumbull-peak-lookout/"
+    },
+    {
+      "year": 2009,
+      "event": "other",
+      "note": "Trumbull Peak Cabin Restoration (project 1665): decision signed March 24, 2009; project page lists status Completed",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r05/stanislaus/projects/archive/1665"
     },
     {
       "year": 2011,
       "event": "fire",
-      "note": "Abandoned lookout was threatened by the Motor Fire but protected and saved.",
-      "from": "ffla_west_reports",
+      "note": "Motor Fire threatened the abandoned lookout; protected and saved",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sn-nevada-2012.pdf"
+    },
+    {
+      "year": 2012,
+      "event": "other",
+      "note": "Trail improved in 2012; plan to make a recreation rental put on hold; tower heavily vandalized",
+      "from": "research",
       "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sn-nevada-2012.pdf"
     }
   ],
@@ -86,6 +103,16 @@
       "label": "NHLR register entry US 285 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ca/trumbull-peak-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Trumbull Peak Cabin Restoration (project 1665) (USDA Forest Service, Stanislaus National Forest)",
+      "url": "https://www.fs.usda.gov/r05/stanislaus/projects/archive/1665",
+      "kind": "reference"
+    },
+    {
+      "label": "Forest Fire Lookout Association, Central California chapter report (2008)",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-cent-2008.pdf",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -145,10 +172,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-trumbull-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

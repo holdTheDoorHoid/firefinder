@@ -1,6 +1,7 @@
 {
   "id": "us-va-groundhog-mountain",
   "name": "Groundhog Mountain Tower",
+  "summary": "Log observation tower on the Blue Ridge Parkway built to look like a tobacco barn; dated 1935 or 1942 by different sources; public picnic-area tower, standing.",
   "other_names": [],
   "country": "US",
   "region": "VA",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Log observation tower about 20 feet high, built to look like an old tobacco barn",
   "height_m": 6.1,
   "status": "standing",
   "status_note": null,
@@ -31,31 +32,44 @@
   "agency": "National Park Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Managed as a picnic area beside the Blue Ridge Parkway with parking; the tower is open to climb by a single flight of stairs"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "Park beside the Parkway and walk up the single flight of stairs to the top"
   },
   "rental": null,
   "events": [
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register 'Built' field; disputed by the 1942 date below",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/groundhog-mountain-tower/"
+    },
+    {
+      "year": 1942,
+      "event": "built",
+      "note": "Park Service says the Virginia State Forest Service first erected it; a Commons photo caption gives the same year; disputed by the register's 1935",
+      "from": "research",
+      "source_url": "https://www.nps.gov/places/groundhog-mt-picnic-area.htm",
+      "source_urls": [
+        "https://www.nps.gov/places/groundhog-mt-picnic-area.htm",
+        "https://commons.wikimedia.org/wiki/Category:Groundhog_Mountain_Tower"
+      ]
     },
     {
       "year": 2014,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 3, 2014",
-      "from": "nhlr"
+      "note": "Registered September 3, 2014; nominated by Kristin Scholetzky",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/groundhog-mountain-tower/"
     }
   ],
   "photos": [
@@ -89,6 +103,21 @@
       "label": "NHLR register entry US 1034 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/va/groundhog-mountain-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Groundhog Mountain Picnic Area (U.S. National Park Service)",
+      "url": "https://www.nps.gov/places/groundhog-mt-picnic-area.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Category:Groundhog Mountain Tower (Wikimedia Commons)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Groundhog_Mountain_Tower",
+      "kind": "reference"
+    },
+    {
+      "label": "Groundhog Mountain Tower (Wikipédia (French))",
+      "url": "https://fr.wikipedia.org/wiki/Groundhog_Mountain_Tower",
+      "kind": "reference"
     },
     {
       "label": "FFLA Virginia lookout list (firelookout.org)",
@@ -148,6 +177,22 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-va-groundhog-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -167,7 +212,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "us-wi-zenith",
   "name": "Zenith Lookout",
+  "summary": "100-foot Wisconsin standard tower in Lincoln County west of Tomahawk, built December 1939 per the register; a July 1977 burglary report names a state DNR employee as the reporter. Listed as standing.",
   "other_names": [],
   "country": "US",
   "region": "WI",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Wisconsin standard tower with an external protected ladder",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -48,14 +49,23 @@
     {
       "year": 1939,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built December 1939 per the register",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/zenith-lookout/"
+    },
+    {
+      "year": 1977,
+      "event": "other",
+      "note": "July 1977 burglary reported by a state DNR employee; door torn off, glass broken, communications radio damaged",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/zenith.html"
     },
     {
       "year": 2017,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 19, 2017",
-      "from": "nhlr"
+      "note": "Registered June 19, 2017; nominated by Tyler Bormann",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/zenith-lookout/"
     }
   ],
   "photos": [
@@ -77,6 +87,11 @@
       "label": "NHLR register entry US 1213 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wi/zenith-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Wisconsin Decommissioning Fire Outlook Towers (Associated Press via CBS Minnesota)",
+      "url": "https://www.cbsnews.com/minnesota/news/wisconsin-decommissioning-fire-outlook-towers/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
@@ -134,10 +149,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wi-zenith",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

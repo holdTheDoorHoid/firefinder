@@ -1,6 +1,7 @@
 {
   "id": "us-wi-matson-n",
   "name": "Matson (N) Lookout",
+  "summary": "Marathon County DNR fire tower built 1951 (94 ft per NHLR), NHLR-registered 2017; a 2021 DNR surplus listing offered it for removal, its current status is unconfirmed, and its catalog address (Plover, WI) is not reconciled with Marathon County.",
   "other_names": [
     "N (Matson)"
   ],
@@ -18,10 +19,10 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": 3.0,
-  "status": "standing",
-  "status_note": null,
+  "design": "94-foot tower with an inside corner ladder that appears to be an Aermotor",
+  "height_m": 28.7,
+  "status": "unknown",
+  "status_note": "FFLOS still lists it as standing, but a 2021 DNR surplus listing offered it for removal by December 8, 2021; no source read confirms removal or that it still stands.",
   "registers": [
     {
       "register": "NHLR",
@@ -33,31 +34,69 @@
   "agency": "Wisconsin Department of Natural Resources",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "2021 listing describes a steel fence and a removed first length of the cab ladder to prevent unauthorized access"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Fenced site; the sources read give no public visit route"
   },
   "rental": null,
   "events": [
     {
       "year": 1951,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built 1951 per NHLR; the 2021 DNR listing also says it was constructed in 1951",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/matson-n-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wi/matson-n-lookout/",
+        "https://bid.wisconsinsurplus.com/Public/Auction/CatalogPreview?auctionId=ZIJWTHxzQsMcg%2BYSpwzB3w%3D%3D"
+      ]
+    },
+    {
+      "year": 2005,
+      "event": "other",
+      "note": "Renamed Matson in 2005 to honor John Kenneth Matson (Ken), a 45-year DNR lookout; historically named N Tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/matson-n-lookout/"
+    },
+    {
+      "year": 2009,
+      "event": "staffed_last",
+      "note": "Staffed intermittently during spring fire season through 2009",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/matson-n-lookout/"
+    },
+    {
+      "year": 2012,
+      "event": "other",
+      "note": "Still used as a Marathon County radio tower until approximately 2012",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/matson-n-lookout/"
     },
     {
       "year": 2017,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 28, 2017",
-      "from": "nhlr"
+      "note": "Registered August 28, 2017 as US 1248, WI 43; nominated by Tyler Bormann",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/matson-n-lookout/"
+    },
+    {
+      "year": 2021,
+      "event": "other",
+      "note": "DNR surplus auction (Aug 18 to Sep 2, 2021) offered the tower for removal with a December 8, 2021 deadline; communications equipment no longer in use. No source read confirms the removal was completed.",
+      "from": "research",
+      "source_url": "https://bid.wisconsinsurplus.com/Public/Auction/CatalogPreview?auctionId=ZIJWTHxzQsMcg%2BYSpwzB3w%3D%3D",
+      "source_urls": [
+        "https://bid.wisconsinsurplus.com/Public/Auction/CatalogPreview?auctionId=ZIJWTHxzQsMcg%2BYSpwzB3w%3D%3D",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-wi-2021.pdf"
+      ]
     }
   ],
   "photos": [
@@ -84,6 +123,21 @@
       "label": "NHLR register entry (nhlr.org)",
       "url": "http://nhlr.org/nhlr.org/lookouts/us/wi/matson-n-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "#21950-128 - Wisconsin Dept. of Natural Resources - Multi Location - CLOSED (Lot 46463: Fire Detection Tower to be Removed - Matson Tower) (Wisconsin Surplus (bid.wisconsinsurplus.com))",
+      "url": "https://bid.wisconsinsurplus.com/Public/Auction/CatalogPreview?auctionId=ZIJWTHxzQsMcg%2BYSpwzB3w%3D%3D",
+      "kind": "reference"
+    },
+    {
+      "label": "Accomplishments 2021, Wisconsin (Forest Fire Lookout Association (firelookout.org))",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-wi-2021.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Wisconsin Lookouts (by County) (Forest Fire Lookout Association (firelookout.org))",
+      "url": "https://firelookout.org/lookouts/us/wi/wi-co/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
@@ -130,10 +184,48 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wi-matson-n",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-08) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

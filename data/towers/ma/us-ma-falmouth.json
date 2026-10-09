@@ -1,6 +1,7 @@
 {
   "id": "us-ma-falmouth",
   "name": "Falmouth Fire Tower",
+  "summary": "68-foot Howlands Park Hill tower in Falmouth, MA; built 1947 per the Register, origin disputed, observers reported in 2017, listed as active by state.",
   "other_names": [
     "Massachusetts State Tower #4",
     "DCR District 1 Fire Tower"
@@ -19,8 +20,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": 58.5,
+  "design": "68-foot tower with 10x10-foot cab",
+  "height_m": 20.7,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -49,23 +50,64 @@
   "rental": null,
   "events": [
     {
+      "year": 1914,
+      "event": "other",
+      "note": "40-foot steel tower built at the request of local officials; the 1947 tower replaced it per the Register",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ma/falmouth-fire-tower/"
+    },
+    {
+      "year": 1942,
+      "event": "other",
+      "note": "The 1914 tower served as an observation post for the Anti Aircraft Intelligence Service, 1942-45",
+      "from": "research",
+      "source_url": "https://nedefenses.com/index.php/West_Falmouth_Loc_58A"
+    },
+    {
+      "year": 1946,
+      "event": "replaced",
+      "note": "Per New England Defenses the 1914 tower was dismantled and replaced by a 1930 tower from Loc 59A; the Register does not mention this",
+      "from": "research",
+      "source_url": "https://nedefenses.com/index.php/West_Falmouth_Loc_58A"
+    },
+    {
       "year": 1947,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register: constructed 1947, 68 ft with 10x10 cab. New England Defenses: assembled 1947",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ma/falmouth-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ma/falmouth-fire-tower/",
+        "https://nedefenses.com/index.php/West_Falmouth_Loc_58A"
+      ]
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 15, 2004",
-      "from": "nhlr"
+      "note": "Registered December 15, 2004 as US 608, MA 19",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ma/falmouth-fire-tower/"
+    },
+    {
+      "year": 2014,
+      "event": "assessed",
+      "note": "Visit report March 27, 2014: good condition, needs paint, not staffed, no sign posted and no signed directions",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ma/falmouth-fire-tower/"
     },
     {
       "year": 2015,
       "event": "modified",
-      "note": "The state maintenance crew installed a new antenna on the tower.",
-      "from": "ffla_east_reports",
+      "note": "State maintenance crew installed a new antenna",
+      "from": "research",
       "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-sne-2015.pdf"
+    },
+    {
+      "year": 2017,
+      "event": "staffed",
+      "note": "Observers spent eight hours a day in the towers from March through October",
+      "from": "research",
+      "source_url": "https://www.capeandislands.org/in-this-place/2017-11-20/cape-cod-fire-towers-still-standing-watch-after-more-than-a-century"
     }
   ],
   "photos": [
@@ -99,6 +141,26 @@
       "label": "NHLR register entry US 608 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ma/falmouth-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Section 15. Fire Observation Towers (Mass.gov)",
+      "url": "https://www.mass.gov/doc/section-15-fire-observation-towers/download",
+      "kind": "reference"
+    },
+    {
+      "label": "West Falmouth Loc 58A (New England Defenses)",
+      "url": "https://nedefenses.com/index.php/West_Falmouth_Loc_58A",
+      "kind": "reference"
+    },
+    {
+      "label": "Cape Cod Fire Towers: Still Standing Watch After More Than A Century (WCAI / Cape and Islands)",
+      "url": "https://www.capeandislands.org/in-this-place/2017-11-20/cape-cod-fire-towers-still-standing-watch-after-more-than-a-century",
+      "kind": "reference"
+    },
+    {
+      "label": "1947 Fire Raged Through Beebe Woods (OnCape Magazine)",
+      "url": "https://oncapemagazine.com/1947-fire-raged-through-beebe-woods/",
+      "kind": "reference"
     },
     {
       "label": "Forest Fire Lookout Association chapter reports: work on Falmouth Fire Tower",
@@ -156,10 +218,30 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ma-falmouth",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

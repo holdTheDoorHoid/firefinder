@@ -186,6 +186,11 @@
       "kind": "site"
     },
     {
+      "label": "Surveyors Ridge Lookout on idahofirelookouts.com",
+      "url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/surveyors-ridge-lookout/",
+      "kind": "site"
+    },
+    {
       "label": "Surveyor's Ridge on Forest Lookouts, western US (Ron Kemnow)",
       "url": "https://idaholookouts.weebly.com/surveyors-ridge.html",
       "kind": "site"
@@ -247,6 +252,14 @@
       ]
     },
     {
+      "source": "idaho_fl",
+      "key": "idaho_fl:surveyors-ridge-lookout:47.0046:-115.6321",
+      "fields": [
+        "photos",
+        "links"
+      ]
+    },
+    {
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:id:surveyors-ridge",
       "fields": [
@@ -270,6 +283,27 @@
     }
   ],
   "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 46.994139,
+            "lon": -115.533469
+          }
+        },
+        {
+          "source": "idaho_fl",
+          "value": {
+            "lat": 47.00463,
+            "lon": -115.6321
+          }
+        }
+      ],
+      "distance_m": 7570,
+      "note": null
+    },
     {
       "field": "built",
       "values": [

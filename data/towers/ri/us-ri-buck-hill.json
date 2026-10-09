@@ -1,6 +1,7 @@
 {
   "id": "us-ri-buck-hill",
   "name": "Buck Hill Fire Tower",
+  "summary": "65-foot steel tower in Burrillville, RI, dated 1938 by NHLR but likely relocated from the Blackstone Valley site (first operated 1926); unstaffed; no public access per 2017 visit.",
   "other_names": [
     "Buck Hill (Burrillville)"
   ],
@@ -18,8 +19,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "65-foot steel tower with 8-by-8-foot cab",
+  "height_m": 19.8,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -33,12 +34,12 @@
   "agency": "RI Dept. of Environmental Mgmt.",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Register visit report (July 28, 2017) lists 'No public access' and no signed directions"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2017-07-28"
   },
   "visit": {
     "climbable": null,
@@ -48,16 +49,64 @@
   "rental": null,
   "events": [
     {
+      "year": 1926,
+      "event": "other",
+      "note": "Blackstone Valley tower (65-foot steel, at Durfee Hill) first operated; the Forest Lookouts site says that tower was later moved to Buck Hill",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ri/blackstone-valley-tower-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ri/blackstone-valley-tower-site/",
+        "https://easternuslookouts.weebly.com/buck-hill.html"
+      ]
+    },
+    {
+      "year": 1937,
+      "event": "other",
+      "note": "Blackstone Valley tower stopped operating at the end of the 1937 fire season",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ri/blackstone-valley-tower-site/"
+    },
+    {
+      "year": 1937,
+      "event": "relocated",
+      "note": "1937 study says a tower on Buck Hill would complete coverage; 'the Blackstone Valley Tower has been moved to Buck Hill' (3rd Annual report, as quoted)",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/buck-hill.html"
+    },
+    {
       "year": 1938,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR 'Built' field; probably the year the tower went up on Buck Hill (see resolved_conflicts)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ri/buck-hill-fire-tower/"
+    },
+    {
+      "year": 1952,
+      "event": "other",
+      "note": "General clean-up and minor repairs at the Buck Hill Tower, Pulaski State Forest work highlights",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/buck-hill.html"
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 23, 2009",
-      "from": "nhlr"
+      "note": "Registered June 23, 2009 as US 808, RI 4; nominated by Henry Isenberg",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ri/buck-hill-fire-tower/"
+    },
+    {
+      "year": 2016,
+      "event": "assessed",
+      "note": "Visit report November 20, 2016: good condition, cab with no obvious damage; not staffed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ri/buck-hill-fire-tower/"
+    },
+    {
+      "year": 2017,
+      "event": "assessed",
+      "note": "Visit report July 28, 2017: good general condition; needs paint; some upper stairs a bit soft, rotted cab door, cracked or shot glass, bee/hornet infestation; antennae on cab railing",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ri/buck-hill-fire-tower/"
     }
   ],
   "photos": [
@@ -110,6 +159,11 @@
       "kind": "register"
     },
     {
+      "label": "Blackstone Valley Tower Site (Former Fire Lookout Sites Register (firetower.org))",
+      "url": "http://firetower.org/lookouts/us/ri/blackstone-valley-tower-site/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Rhode Island lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ri/",
       "kind": "association"
@@ -152,10 +206,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ri-buck-hill",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

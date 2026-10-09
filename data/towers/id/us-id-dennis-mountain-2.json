@@ -49,6 +49,11 @@
       "label": "Dennis Mtn. on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/id/dennismtn.html",
       "kind": "site"
+    },
+    {
+      "label": "Dennis Mountain on idahofirelookouts.com",
+      "url": "https://www.idahofirelookouts.com/selway-region/dennis-mountain/",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -70,9 +75,38 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "idaho_fl",
+      "key": "idaho_fl:dennis-mountain:45.5669:-114.9198",
+      "fields": [
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ffla",
+          "value": {
+            "lat": 45.52611,
+            "lon": -114.91922
+          }
+        },
+        {
+          "source": "idaho_fl",
+          "value": {
+            "lat": 45.56686,
+            "lon": -114.91983
+          }
+        }
+      ],
+      "distance_m": 4531,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,
