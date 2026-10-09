@@ -1,6 +1,7 @@
 {
   "id": "us-al-payne",
   "name": "Payne Lookout Tower",
+  "summary": "Lattice observation tower in Talladega National Forest, Hale County, Alabama; NHLR-registered January 2026; in great condition as of August 2025 per the register.",
   "other_names": [],
   "country": "US",
   "region": "AL",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "lattice observation tower (OpenStreetMap tags)",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Not reachable by vehicle; the stair enclosure is fenced with razor wire"
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,31 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Off an unmarked Forest Service road; the register describes a three-quarter-mile hike"
   },
   "rental": null,
   "events": [
     {
+      "year": 1980,
+      "event": "other",
+      "note": "Pastmaps listing for the 1980 USGS topographic map of Payne Lake names the Payne Lookout Tower among local landmarks",
+      "from": "research",
+      "source_url": "https://pastmaps.com/map/payne-lake-hale-county-al-usgs-topo-1980"
+    },
+    {
+      "year": 2025,
+      "event": "assessed",
+      "note": "Register description: in great condition as of August 2025, no vandalism seen, stairs mostly intact",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/payne-lookout-tower/"
+    },
+    {
       "year": 2026,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 2, 2026",
-      "from": "nhlr"
+      "note": "Registered January 2, 2026; nominated by Brendon Minchew",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/payne-lookout-tower/"
     }
   ],
   "photos": [
@@ -71,6 +87,16 @@
       "label": "NHLR register entry US 1806 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/al/payne-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "1980 Map of Payne Lake, Mertz, AL (Pastmaps)",
+      "url": "https://pastmaps.com/map/payne-lake-hale-county-al-usgs-topo-1980",
+      "kind": "reference"
+    },
+    {
+      "label": "Payne Lake Recreation Area (Alabama Mound Trail)",
+      "url": "https://alabamamoundtrail.org/attraction/payne-lake-recreation-area/",
+      "kind": "reference"
     },
     {
       "label": "OpenStreetMap node 358992607",
@@ -103,10 +129,31 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-al-payne",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

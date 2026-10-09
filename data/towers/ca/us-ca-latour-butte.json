@@ -1,6 +1,7 @@
 {
   "id": "us-ca-latour-butte",
   "name": "Latour Butte Lookout",
+  "summary": "19-foot CCC-era tower on Latour Butte, Shasta County; register gives build years 1935/1978; not readily accessible behind locked gates.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "19-foot CCC building based closely on Forest Service L-101 or L-301 plan; original cab replaced with CDF standard cab design",
+  "height_m": 5.8,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,8 +32,8 @@
   "agency": "California Department of Forestry and Fire Protection - Shasta-Trinity Unit (Cal Fire SHU)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Register: not readily accessible to the public, about 11 miles from paved road, behind locked gates. The note is attributed to 10/91."
   },
   "staffing": {
     "status": "unknown",
@@ -48,14 +49,23 @@
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register Built field reads 1935/1978; CCC building",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/latour-butte-lookout/"
+    },
+    {
+      "year": 1978,
+      "event": "other",
+      "note": "Second year in the register's Built field (1935/1978); the register text does not say what happened",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/latour-butte-lookout/"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: October 26, 2019",
-      "from": "nhlr"
+      "note": "Registered October 26, 2019 as US 1347, CA 170",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/latour-butte-lookout/"
     }
   ],
   "photos": [
@@ -103,6 +113,11 @@
       "kind": "register"
     },
     {
+      "label": "LaTour Demonstration State Forest (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/LaTour_Demonstration_State_Forest",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -133,10 +148,30 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-latour-butte",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

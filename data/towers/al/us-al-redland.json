@@ -1,6 +1,7 @@
 {
   "id": "us-al-redland",
   "name": "Redland Fire Lookout Tower",
+  "summary": "100-foot Aermotor fire tower in Elmore County, Alabama; Register says it is now a radio relay station. Build year conflicts (1949 field, 1948 description); no staffing or access sources.",
   "other_names": [],
   "country": "US",
   "region": "AL",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "100-foot Aermotor tower",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -48,14 +49,16 @@
     {
       "year": 1949,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built field on the NHLR page gives 1949. The NHLR description says the Alabama Forestry Commission constructed it in 1948 (see resolved_conflicts).",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/redland-fire-lookout-tower/"
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 22, 2009",
-      "from": "nhlr"
+      "note": "Registered April 22, 2009 as US 775, AL 8; nominated by Thomas Kaufmann",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/redland-fire-lookout-tower/"
     }
   ],
   "photos": [
@@ -77,6 +80,11 @@
       "label": "NHLR register entry US 775 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/al/redland-fire-lookout-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Thomas Kaufmann: Keeping Alabama's historic lookout towers (1819 News)",
+      "url": "https://1819news.com/news/item/thomas-kaufmann-keeping-alabamas-historic-lookout-towers",
+      "kind": "reference"
     },
     {
       "label": "OpenStreetMap node 358950411",
@@ -109,10 +117,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-al-redland",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

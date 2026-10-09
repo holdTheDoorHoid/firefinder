@@ -1,6 +1,7 @@
 {
   "id": "us-al-desoto-falls",
   "name": "DeSoto Falls Tower",
+  "summary": "Lookout Mountain tower in DeKalb County, AL, relocated and rebuilt at DeSoto Falls in 1952 by the Alabama Forestry Commission; removed around 2010.",
   "other_names": [],
   "country": "US",
   "region": "AL",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "100-foot Aermotor MC-39 steel tower with 7-by-7-foot cab",
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "gone",
+  "status_note": "Removed around 2010 according to both registers; no tower remains to climb",
   "registers": [
     {
       "register": "NHLR",
@@ -34,18 +35,18 @@
       "url": "http://firetower.org/lookouts/us/al/desoto-falls-tower-site/"
     }
   ],
-  "agency": "Alabama Forestry Commission",
+  "agency": "Alabama Forestry Commission (administrator per NHLR); site managed by the Alabama Division of State Parks",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "No tower remains; the site is inside DeSoto State Park, a public recreation area"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
@@ -58,22 +59,40 @@
       "from": "nhlr"
     },
     {
+      "year": 1952,
+      "event": "relocated",
+      "note": "Relocated by the Alabama Forestry Commission and reconstructed at the DeSoto Falls site; the register's Built field gives 1952",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/desoto-falls-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/al/desoto-falls-tower/",
+        "http://firetower.org/lookouts/us/al/desoto-falls-tower-site/"
+      ]
+    },
+    {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 7, 2009",
-      "from": "nhlr"
+      "note": "Accepted by NHLR on January 7, 2009; nominated by Thomas Kaufmann",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/desoto-falls-tower/"
     },
     {
       "year": 2010,
       "event": "removed",
-      "note": "'Removed' field on NHLR detail page: \"circa 2010\" (about 2010).",
-      "from": "nhlr"
+      "note": "Registers say removed around 2010 ('circa 2010' in the Removed field)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/desoto-falls-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/al/desoto-falls-tower/",
+        "http://firetower.org/lookouts/us/al/desoto-falls-tower-site/"
+      ]
     },
     {
       "year": 2017,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: October 6, 2017",
-      "from": "fflos"
+      "note": "Added to FFLOS on October 6, 2017; nominated by Rob Grant",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/al/desoto-falls-tower-site/"
     }
   ],
   "photos": [
@@ -112,6 +131,16 @@
       "label": "FFLOS register entry US 1703 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/al/desoto-falls-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "DeSoto State Park (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/DeSoto_State_Park",
+      "kind": "reference"
+    },
+    {
+      "label": "A History of State Forestry in Alabama (Alabama Department of Conservation, Division of Forestry)",
+      "url": "https://forestry.alabama.gov/Pages/Management/Forms/History_State_Forestry.pdf",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -142,12 +171,31 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-al-desoto-falls",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "gone"
+        },
         {
           "source": "nhlr",
           "value": "standing"
@@ -158,10 +206,16 @@
         }
       ],
       "distance_m": null,
-      "note": "NHLR lists lookouts that were standing when registered."
+      "note": "Research (2026-10-09) gives gone where the source records give standing. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

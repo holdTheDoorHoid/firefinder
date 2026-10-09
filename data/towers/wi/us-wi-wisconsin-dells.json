@@ -1,6 +1,7 @@
 {
   "id": "us-wi-wisconsin-dells",
   "name": "Wisconsin Dells Lookout",
+  "summary": "Standing steel lookout (site used since 1934) approved 1958; staffed until the 2015 statewide decommissioning; county disputed; now on private land.",
   "other_names": [
     "Dells (Blue Mound)"
   ],
@@ -18,7 +19,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "steel lookout tower approved in 1958 at $6,140 to replace a wooden tower; height and cab not given in the sources read",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -33,12 +34,12 @@
   "agency": "Wisconsin Department of Natural Resources",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "NHLR: surrounded by private land and only accessed by a DNR easement; no public visit information in the sources read"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2015"
   },
   "visit": {
     "climbable": null,
@@ -48,16 +49,50 @@
   "rental": null,
   "events": [
     {
+      "year": 1934,
+      "event": "built",
+      "note": "Lookout structure at the site since 1934, per a 1958 bulletin quoted by NHLR; the earlier tower was wooden",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/wisconsin-dells-lookout/"
+    },
+    {
       "year": 1958,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR Built field gives 1958",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/wisconsin-dells-lookout/"
+    },
+    {
+      "year": 1958,
+      "event": "replaced",
+      "note": "Steel tower approved for $6,140 to replace the 24-year-old wooden tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/wisconsin-dells-lookout/"
+    },
+    {
+      "year": 2015,
+      "event": "closed",
+      "note": "Wisconsin decommissioned its lookout network; 72 towers still in use were decommissioned",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/wisconsin-dells-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wi/wisconsin-dells-lookout/",
+        "https://www.wjfw.com/news/connecting-the-dots-the-fire-towers-of-wisconsin/article_fd447056-4b4e-11ed-b245-cf384385e71f.html"
+      ]
+    },
+    {
+      "year": 2015,
+      "event": "staffed_last",
+      "note": "Intermittent spring-season staffing ended with the network decommissioning",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/wisconsin-dells-lookout/"
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 22, 2022",
-      "from": "nhlr"
+      "note": "Registered May 22, 2022 as US 1589, WI 49; nominated by Brecken Young",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/wisconsin-dells-lookout/"
     }
   ],
   "photos": [
@@ -79,6 +114,16 @@
       "label": "NHLR register entry US 1589 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wi/wisconsin-dells-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "DNR decommissioning all Wisconsin fire towers (Door County Pulse)",
+      "url": "https://doorcountypulse.com/dnr-decommissioning-wisconsin-fire-towers/",
+      "kind": "reference"
+    },
+    {
+      "label": "Connecting the dots: the fire towers of Wisconsin (WJFW)",
+      "url": "https://www.wjfw.com/news/connecting-the-dots-the-fire-towers-of-wisconsin/article_fd447056-4b4e-11ed-b245-cf384385e71f.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
@@ -123,10 +168,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wi-wisconsin-dells",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

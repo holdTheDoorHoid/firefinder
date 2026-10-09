@@ -1,6 +1,7 @@
 {
   "id": "us-sc-barnwell",
   "name": "Barnwell Lookout Tower",
+  "summary": "An 80-foot steel lookout on SC Highway 64 in Barnwell, dated to 1935; fire observation ended in 1993 and it now serves as a radio repeater site.",
   "other_names": [],
   "country": "US",
   "region": "SC",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "Steel tower, appears to be an Aermotor LS-40 (per register), with a 10 x 7 x 7 ft steel cab",
   "height_m": 24.4,
   "status": "standing",
   "status_note": null,
@@ -31,15 +32,15 @@
   "agency": "South Carolina Forestry Commission",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Lowest steps removed to discourage climbing; the tower now carries a radio repeater."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
@@ -48,8 +49,28 @@
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register says about 1935 and SC Picture Project says 1935; a December 1935 paper still lists tower construction as pending",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sc/barnwell-lookout-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/sc/barnwell-lookout-tower/",
+        "https://www.scpictureproject.org/barnwell-county/barnwell-fire-lookout.html",
+        "https://historicnewspapers.sc.edu/lccn/sn93067675/1935-12-05/ed-1/seq-1/ocr.txt"
+      ]
+    },
+    {
+      "year": 1938,
+      "event": "other",
+      "note": "CCC enrollees repainted the living quarters at the tower site (1938-39)",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/barnwell.html"
+    },
+    {
+      "year": 1993,
+      "event": "other",
+      "note": "Fire observation ended statewide; tower decommissioned as a fire tower and now a radio repeater site",
+      "from": "research",
+      "source_url": "https://www.scpictureproject.org/barnwell-county/barnwell-fire-lookout.html"
     },
     {
       "year": 2014,
@@ -84,6 +105,21 @@
       "kind": "register"
     },
     {
+      "label": "Barnwell Fire Lookout (SC Picture Project)",
+      "url": "https://www.scpictureproject.org/barnwell-county/barnwell-fire-lookout.html",
+      "kind": "reference"
+    },
+    {
+      "label": "The Barnwell People-Sentinel, 5 December 1935, page 1 (University of South Carolina Libraries, Historic Newspapers)",
+      "url": "https://historicnewspapers.sc.edu/lccn/sn93067675/1935-12-05/ed-1/seq-1/ocr.txt",
+      "kind": "reference"
+    },
+    {
+      "label": "The Barnwell People-Sentinel, 24 December 1936, page 1 (University of South Carolina Libraries, Historic Newspapers)",
+      "url": "https://historicnewspapers.sc.edu/lccn/sn93067675/1936-12-24/ed-1/seq-1/ocr.txt",
+      "kind": "reference"
+    },
+    {
       "label": "Barnwell (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/barnwell.html",
       "kind": "site"
@@ -116,10 +152,31 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-sc-barnwell",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

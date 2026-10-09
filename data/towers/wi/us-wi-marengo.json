@@ -1,6 +1,7 @@
 {
   "id": "us-wi-marengo",
   "name": "Marengo Lookout",
+  "summary": "Third Marengo tower, a 100-foot stair-type built 1987 in Ashland County; preceded by a 1939 tower destroyed in 1941; state network decommissioned 2015; listed as standing.",
   "other_names": [],
   "country": "US",
   "region": "WI",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "100-foot stair-type tower, likely an Aermotor MC-39 (present tower, erected 1987)",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -35,27 +36,61 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2015"
   },
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "A visitor report on the NHLR page says the road is heavily rutted on a small stretch. No public access level is established in the sources read."
   },
   "rental": null,
   "events": [
     {
+      "year": 1939,
+      "event": "built",
+      "note": "First 100-foot Wisconsin Standard tower on the point, per NHLR",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/marengo-lookout/"
+    },
+    {
+      "year": 1941,
+      "event": "destroyed",
+      "note": "Destroyed in a fall windstorm, September 1941, per NHLR",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/marengo-lookout/"
+    },
+    {
+      "year": 1949,
+      "event": "replaced",
+      "note": "Replacement 65-foot steel tower with enclosed cab; NHLR says the mountain 'presumably' stood vacant until approximately 1949, when photographs show a replacement",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/marengo-lookout/"
+    },
+    {
       "year": 1987,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Present 100-foot stair-type tower erected, likely an Aermotor MC-39; the 65-foot tower had served until the late 1980s",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/marengo-lookout/"
+    },
+    {
+      "year": 2015,
+      "event": "staffed_last",
+      "note": "Saw active service until 2015, when Wisconsin decommissioned its lookout network; WJFW says the 72 towers still in use were decommissioned that year",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/marengo-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wi/marengo-lookout/",
+        "https://www.wjfw.com/news/connecting-the-dots-the-fire-towers-of-wisconsin/article_fd447056-4b4e-11ed-b245-cf384385e71f.html"
+      ]
     },
     {
       "year": 2018,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 3, 2018",
-      "from": "nhlr"
+      "note": "Registered April 3, 2018; NHLR US 1271, WI 52",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/marengo-lookout/"
     }
   ],
   "photos": [
@@ -127,6 +162,11 @@
       "kind": "register"
     },
     {
+      "label": "Connecting the dots: the fire towers of Wisconsin (WJFW)",
+      "url": "https://www.wjfw.com/news/connecting-the-dots-the-fire-towers-of-wisconsin/article_fd447056-4b4e-11ed-b245-cf384385e71f.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wi/",
       "kind": "association"
@@ -169,10 +209,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wi-marengo",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

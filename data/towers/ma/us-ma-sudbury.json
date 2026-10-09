@@ -1,6 +1,7 @@
 {
   "id": "us-ma-sudbury",
   "name": "Sudbury Fire Tower",
+  "summary": "1966 steel fire tower on Nobscot Hill, Framingham and Sudbury, Mass.; run by the Mass. Bureau of Forest Fire Control; staffed at a 2012 visit; climbable only when open.",
   "other_names": [
     "Framingham Tower Site"
   ],
@@ -18,8 +19,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Current 75-foot steel tower with stairs and a wooden cab per NHLR; the FFLA post gives 68 feet",
+  "height_m": 22.9,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -39,37 +40,80 @@
   "agency": "Mass. Bureau of Forest Fire Control",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Wikipedia says the fire tower can be climbed when it is open; no current opening schedule or closure notice was found."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2012-09-27"
   },
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Nobscot Hill has many public hiking trails; the tower sits near the summit beside radio towers."
   },
   "rental": null,
   "events": [
     {
+      "year": 1915,
+      "event": "other",
+      "note": "Framingham Tower Site 45-foot iron tower first operated (FFLOS); NHLR calls the earlier Sudbury tower 48 feet",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/framingham-tower-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ma/framingham-tower-site/",
+        "http://nhlr.org/lookouts/us/ma/sudbury-fire-tower/"
+      ]
+    },
+    {
+      "year": 1965,
+      "event": "abandoned",
+      "note": "Framingham Tower Site used until 1965 (FFLOS)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/framingham-tower-site/"
+    },
+    {
       "year": 1966,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Current 75-foot steel tower with stairs and wooden cab (NHLR)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ma/sudbury-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ma/sudbury-fire-tower/",
+        "https://www.facebook.com/FFLAMASS/posts/at-one-time-in-massachusetts-there-were-two-fire-towers-standing-within-100ft-of/1851079025133883/"
+      ]
+    },
+    {
+      "year": 1966,
+      "event": "replaced",
+      "note": "Earlier iron tower replaced by current steel tower (NHLR); FFLA gives the new tower as 68 feet",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ma/sudbury-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ma/sudbury-fire-tower/",
+        "https://www.facebook.com/FFLAMASS/posts/at-one-time-in-massachusetts-there-were-two-fire-towers-standing-within-100ft-of/1851079025133883/"
+      ]
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 15, 2004",
-      "from": "nhlr"
+      "note": "Registered December 15, 2004 as US 625, MA 36",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ma/sudbury-fire-tower/"
     },
     {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 3, 2008",
-      "from": "fflos"
+      "note": "Framingham Tower Site registered September 3, 2008 as US 36, MA 36",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/framingham-tower-site/"
+    },
+    {
+      "year": 2012,
+      "event": "staffed",
+      "note": "Visit report dated September 27, 2012 answers yes to whether the tower is staffed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ma/sudbury-fire-tower/"
     }
   ],
   "photos": [
@@ -96,6 +140,16 @@
       "label": "FFLOS register entry US 36 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ma/framingham-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Nobscot Hill (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Nobscot_Hill",
+      "kind": "reference"
+    },
+    {
+      "label": "Facebook post on the Sudbury and Framingham fire towers, November 23, 2016 (Forest Fire Lookout Association Massachusetts Chapter)",
+      "url": "https://www.facebook.com/FFLAMASS/posts/at-one-time-in-massachusetts-there-were-two-fire-towers-standing-within-100ft-of/1851079025133883/",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -125,6 +179,23 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ma-sudbury",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -144,7 +215,13 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

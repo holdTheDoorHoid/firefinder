@@ -1,6 +1,7 @@
 {
   "id": "us-az-signal-hill",
   "name": "Signal Hill Lookout",
+  "summary": "Grand Canyon National Park fire tower in Coconino County, Arizona, built 1929 as a 35-foot Aermotor LS-40; inactive since at least 2009; the register and park disagree on the rim.",
   "other_names": [],
   "country": "US",
   "region": "AZ",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "35-foot Aermotor LS-40 tower with 7-by-7-foot cab",
+  "height_m": 10.7,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -46,16 +47,36 @@
   "rental": null,
   "events": [
     {
+      "year": 1926,
+      "event": "other",
+      "note": "A fire lookout 'was established at Signal Hill' in 1926, per the Report of the Director of the National Park Service, as quoted on the Forest Lookouts Arizona page; unclear whether it is the same site as the 1929 tower",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/arizona.html"
+    },
+    {
       "year": 1929,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built 1929 as a 35-foot Aermotor LS-40 tower; the register and the 2009 park page agree",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/signal-hill-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/signal-hill-lookout/",
+        "https://home.nps.gov/grca/learn/nature/cynsk-v13.htm"
+      ]
+    },
+    {
+      "year": 1937,
+      "event": "staffed",
+      "note": "Roy Lemons manned the tower in 1937, according to a July 1995 park interview quoted on the 2009 park page",
+      "from": "research",
+      "source_url": "https://home.nps.gov/grca/learn/nature/cynsk-v13.htm"
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 25, 2009",
-      "from": "nhlr"
+      "note": "Registered April 25, 2009, as US 805, AZ 70",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/signal-hill-lookout/"
     }
   ],
   "photos": [
@@ -77,6 +98,16 @@
       "label": "NHLR register entry US 805 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/az/signal-hill-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Canyon Sketches Vol 13 - Sept. 2009 (Grand Canyon National Park (U.S. National Park Service))",
+      "url": "https://home.nps.gov/grca/learn/nature/cynsk-v13.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "ARIZONA - FOREST LOOKOUTS (Forest Lookouts (westlookouts.weebly.com))",
+      "url": "https://westlookouts.weebly.com/arizona.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
@@ -111,10 +142,30 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-signal-hill",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,0 +1,14 @@
+The Hayward Lookout is a 100-foot Aermotor tower in Sawyer County, Wisconsin, with a stairway in the style of the U.S. Forest Service.[^1] The Wisconsin Department of Natural Resources administers it.[^1] The National Historic Lookout Register says the year of construction is unknown. It also mentions a 1940 tower survey that suggests a wooden stairway tower was standing at that time, but the sources do not say whether that was this structure.[^1]
+
+The sources read do not name anyone who staffed the Hayward tower or list the fires it watched. A Sawyer County Record article quotes Trent Marty, director of the DNR's bureau of forest protection, saying that 60 towers were manned the year before the article ran, typically for 17 days in the spring.[^2]
+
+In 2016 the DNR planned to take 72 fire towers out of service. Five of them were in Sawyer County, and Hayward was one of those five.[^2] A recent structural assessment judged the towers unsafe; most went up in the 1930s or 1940s.[^2]
+
+Afterward, Sawyer County told the DNR it was interested in taking over two towers on county forest sites. One is described as "off Highway B four miles east of Hayward," and the article gives that tower no name.[^3] An earlier article places the Hayward tower "south of Hayward," so the two descriptions do not clearly agree, and linking the county's tower to the Hayward Lookout is an inference.[^2][^3] The county's forest administrator outlined three options: use the towers for its own communications equipment, lease them to a telecom company, or have them removed.[^3]
+
+The firelookout.org listing shows the tower as standing.[^4] The county article says the two tower sites it discussed are secured with fences and locks. That describes the situation after the DNR decommissioned its towers, not necessarily today, and it is unclear whether it covers the Hayward tower. No source read gives current access rules, and the record marks access as unknown. Anyone planning a visit should check with the DNR or Sawyer County first, and should stay off a tower that is fenced or locked.
+
+[^1]: Hayward Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/wi/hayward-lookout/ (accessed 2026-10-09).
+[^2]: "DNR will discontinue fire towers in 2016," Sawyer County Record (apg-wi.com), https://www.apg-wi.com/sawyer_county_record/sports/outdoors/dnr-will-discontinue-fire-towers-in-2016/article_99555dd8-b485-11e5-ae50-e70e7acc48a6.html (accessed 2026-10-09).
+[^3]: "County considers uses for former DNR fire towers," Sawyer County Record (apg-wi.com), https://www.apg-wi.com/sawyer_county_record/news/local/county-considers-uses-for-former-dnr-fire-towers/article_61d01fc2-070c-11e6-9122-bbd94888350c.html (accessed 2026-10-09).
+[^4]: Wisconsin lookout listing, firelookout.org, https://firelookout.org/lookouts/us/wi/ (accessed 2026-10-09).

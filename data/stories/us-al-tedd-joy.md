@@ -1,0 +1,14 @@
+The Tedd Joy Lookout is a 100-foot steel tower on Rock Mountain in Jefferson County, Alabama.[^1][^2] The Alabama Forestry Commission administers it.[^1] It honors F.M. "Tedd" Joy, who managed the land department of the Tennessee Coal, Iron & Railroad Company, and a stone marker on site dedicates the tower to him.[^1][^2]
+
+According to a December 1944 issue of *Alabama Conservation*, quoted in a Facebook post by Bill Coleman, the Civilian Conservation Corps built the tower in 1941 for the Department of Forestry.[^3][^4] Another quotation of the same article credits the Division of Forestry as the builder, so the sources we could read name the builder two ways.[^4] The article's closing lines place the tower in an 18,000-acre wildlife sanctuary that the Jefferson County Sportsman's Association established and named for Joy.[^3]
+
+The sources disagree on when the name was chosen. A December 28, 1942 item in the Anniston Star already described the tower as named for him, but the 1944 article says the naming was decided right after his death.[^2][^4] The same article describes a dedication on November 9 at the Jefferson County Courthouse, where a granite tablet was to be attached to a boulder at the tower's base. The passage we could read gives the day but not the year.[^4] It also describes a towerman who kept constant watch for fire.[^4]
+
+Later the tower went quiet. Coleman writes that a road built to the tower in the early 1970s was never used and that the tower stayed unmanned.[^3] The register says the bottom section of stairs is missing and the tower is in poor overall shape.[^1] Coleman describes a broken cab lock, cab contents thrown out of the windows, and squatters who had set up tents at the site.[^3] He says he would not think about climbing it, and the missing bottom flight of stairs makes that advice easy to follow.[^3]
+
+We found no source that says whether the public can visit the site or climb the tower today, so treat access as unknown. The register accepted the lookout on May 27, 2016.[^1] Check with the Alabama Forestry Commission before going, and do not climb the structure.
+
+[^1]: Tedd Joy Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/al/tedd-joy-lookout/ (accessed 2026-10-09).
+[^2]: Ted Joy, Forest Lookouts, https://easternuslookouts.weebly.com/ted-joy.html (accessed 2026-10-09).
+[^3]: Bill Coleman, Facebook post on the Rock Mountain tower, undated, https://www.facebook.com/billco1/videos/when-we-found-it-the-grounds-around-the-tower-were-landscaped-with-rock-gardens-/890696150566710/ (accessed 2026-10-09).
+[^4]: Bill Coleman, Facebook post quoting Alabama Conservation, December 1944, undated post, https://www.facebook.com/billco1/videos/this-is-longer-than-what-i-normally-post-because-lengthy-posts-can-be-overlooked/1332960244916335/ (accessed 2026-10-09).

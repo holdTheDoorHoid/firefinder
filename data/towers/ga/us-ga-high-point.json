@@ -1,6 +1,7 @@
 {
   "id": "us-ga-high-point",
   "name": "High Point Lookout",
+  "summary": "Steel fire tower in Chattooga County, Georgia, run by the Georgia Forestry Commission; NHLR-registered 2017. Build date disputed (1930s vs 1956); no staffing or access sources found.",
   "other_names": [],
   "country": "US",
   "region": "GA",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "steel tower with six-by-six-foot metal cab",
+  "height_m": 18.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -58,10 +59,25 @@
   "rental": null,
   "events": [
     {
+      "year": 1930,
+      "event": "built",
+      "note": "NHLR gives the decade only: built in the 1930s to watch Taylors Ridge. Sources disagree with the 1956 entry below.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ga/high-point-lookout/"
+    },
+    {
+      "year": 1956,
+      "event": "built",
+      "note": "Forest Lookouts, quoting an Armuchee Ranger District history, gives 1956; the NHLR page says built in the 1930s. Sources disagree.",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/high-point.html"
+    },
+    {
       "year": 2017,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 28, 2017",
-      "from": "nhlr"
+      "note": "Registered August 28, 2017 as US 1239, GA 23; nominated by Justin Peel",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ga/high-point-lookout/"
     }
   ],
   "photos": [
@@ -83,6 +99,11 @@
       "label": "NHLR register entry US 1239 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ga/high-point-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "High Point (Forest Lookouts (easternuslookouts.weebly.com))",
+      "url": "https://easternuslookouts.weebly.com/high-point.html",
+      "kind": "reference"
     },
     {
       "label": "High Point Lookout Tower (tnlandforms.us (Tom Dunigan))",
@@ -115,10 +136,29 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ga-high-point",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

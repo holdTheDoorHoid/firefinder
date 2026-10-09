@@ -1,6 +1,7 @@
 {
   "id": "us-wi-wolf-river",
   "name": "Wolf River Lookout",
+  "summary": "1939 79-foot International Stacy lookout in Forest County, WI; staffed until the 2015 statewide decommissioning; FFLOS lists it standing; access unknown.",
   "other_names": [],
   "country": "US",
   "region": "WI",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "79-foot International Stacy tower with inside corner ladder (NHLR)",
+  "height_m": 24.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -32,11 +33,11 @@
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "No access or ownership information in the sources read; FFLOS lists the tower as standing"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2015"
   },
   "visit": {
     "climbable": null,
@@ -48,14 +49,34 @@
     {
       "year": 1939,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built November 1939 per NHLR",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/wolf-river-lookout/"
+    },
+    {
+      "year": 2015,
+      "event": "closed",
+      "note": "Statewide decommissioning: 72 towers still in use; the Wolf River tower is not named individually in the sources",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/wolf-river-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wi/wolf-river-lookout/",
+        "https://www.wjfw.com/news/connecting-the-dots-the-fire-towers-of-wisconsin/article_fd447056-4b4e-11ed-b245-cf384385e71f.html"
+      ]
+    },
+    {
+      "year": 2015,
+      "event": "staffed_last",
+      "note": "Intermittent spring-season staffing ended when Wisconsin decommissioned its lookout network",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/wolf-river-lookout/"
     },
     {
       "year": 2017,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 9, 2017",
-      "from": "nhlr"
+      "note": "Registered June 9, 2017 as US 1197, WI 9; nominated by Tyler Bormann",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/wolf-river-lookout/"
     }
   ],
   "photos": [
@@ -77,6 +98,16 @@
       "label": "NHLR register entry US 1197 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wi/wolf-river-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "DNR decommissioning all Wisconsin fire towers (Door County Pulse)",
+      "url": "https://doorcountypulse.com/dnr-decommissioning-wisconsin-fire-towers/",
+      "kind": "reference"
+    },
+    {
+      "label": "Connecting the dots: the fire towers of Wisconsin (WJFW)",
+      "url": "https://www.wjfw.com/news/connecting-the-dots-the-fire-towers-of-wisconsin/article_fd447056-4b4e-11ed-b245-cf384385e71f.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
@@ -121,10 +152,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wi-wolf-river",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

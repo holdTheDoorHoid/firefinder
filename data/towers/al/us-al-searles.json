@@ -1,6 +1,7 @@
 {
   "id": "us-al-searles",
   "name": "Searles Lookout",
+  "summary": "Tuscaloosa County steel lookout that both registers record as out of use by April 2016 and removed by October 2016, so it is not standing.",
   "other_names": [],
   "country": "US",
   "region": "AL",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "100-foot steel tower, in poor shape",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -54,20 +55,27 @@
     {
       "year": 2016,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 27, 2016",
-      "from": "nhlr"
+      "note": "NHLR registration date May 27, 2016",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/searles-lookout/"
     },
     {
       "year": 2016,
       "event": "removed",
-      "note": "'Removed' field on NHLR detail page: \"2016\".",
-      "from": "nhlr"
+      "note": "Both registers say the tower was removed by October 2016",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/searles-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/al/searles-lookout/",
+        "http://firetower.org/lookouts/us/al/searles-lookout-tower-site/"
+      ]
     },
     {
       "year": 2022,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: June 21, 2022",
-      "from": "fflos"
+      "note": "Former Fire Lookout Sites Register registration date June 21, 2022",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/al/searles-lookout-tower-site/"
     }
   ],
   "photos": [
@@ -136,6 +144,19 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-al-searles",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -155,7 +176,13 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

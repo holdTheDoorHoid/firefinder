@@ -1,6 +1,7 @@
 {
   "id": "us-az-reno",
   "name": "Reno Lookout",
+  "summary": "Greenlee County, Arizona, tower on the Apache-Sitgreaves National Forest; its 1965 replacement is listed as standing and it reportedly survived the 2011 Wallow Fire.",
   "other_names": [],
   "country": "US",
   "region": "AZ",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "54-foot K-brace steel tower with CL-100 cab and catwalk (1965 replacement)",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -46,16 +47,42 @@
   "rental": null,
   "events": [
     {
+      "year": 1931,
+      "event": "built",
+      "note": "Original 48-foot Aermotor tower, per the register's description; the Arizona history gives no date for the first tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/reno-lookout/"
+    },
+    {
       "year": 1965,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
     },
     {
+      "year": 1965,
+      "event": "replaced",
+      "note": "Register Built field gives 1965; the Arizona history says an earlier Aermotor model LX-25 was replaced by a 54-foot K-brace tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/reno-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/reno-lookout/",
+        "https://westlookouts.weebly.com/arizona.html"
+      ]
+    },
+    {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 2, 2009",
-      "from": "nhlr"
+      "note": "Registered September 2, 2009, as US 830, AZ 77",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/reno-lookout/"
+    },
+    {
+      "year": 2011,
+      "event": "fire",
+      "note": "Wallow Fire started a few days before a June 1, 2011 post placed it a couple of miles from the lookout; a June 2, 2011 post reported the tower safe after a burnout",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/arizona.html"
     }
   ],
   "photos": [
@@ -77,6 +104,11 @@
       "label": "NHLR register entry US 830 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/az/reno-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "ARIZONA - FOREST LOOKOUTS (Forest Lookouts (westlookouts.weebly.com))",
+      "url": "https://westlookouts.weebly.com/arizona.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
@@ -110,10 +142,29 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-reno",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

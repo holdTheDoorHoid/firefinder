@@ -1,6 +1,7 @@
 {
   "id": "us-ct-mohawk-mountain",
   "name": "Mohawk Mountain Lookout",
+  "summary": "Mohawk Mountain summit lookout: wooden tower 1922, steel tower 1937; its 7x7 cab now sits on a relay tower. End of fire use conflicts (1988 vs 1970s).",
   "other_names": [],
   "country": "US",
   "region": "CT",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "7x7 foot metal cab mounted on a much larger microwave transmission tower (NHLR); wooden summit tower 1922, steel tower 1937",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -31,25 +32,69 @@
   "agency": "Connecticut Dept. of Environmental Protection",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Summit reached by a marked road and trails in Mohawk State Forest. The cab sits on a communications tower, and no source read says it is open to climbers."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2017-01-08"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Road and trails to the summit are very well marked (NHLR visit report, January 2017)."
   },
   "rental": null,
   "events": [
     {
+      "year": 1922,
+      "event": "built",
+      "note": "Wooden lookout tower built on the summit after a fire destroyed 5,000 acres; a 1922 state report credits the White Memorial Foundation's assistance",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/mohawk-mountain.html",
+      "source_urls": [
+        "https://easternuslookouts.weebly.com/mohawk-mountain.html",
+        "https://cornwallhistoricalsociety.org/forest-fires/"
+      ]
+    },
+    {
+      "year": 1924,
+      "event": "staffed",
+      "note": "A watchman was maintained during the fire season (Bridgeport Telegram item dated July 24, 1924, quoted on the Eastern US lookouts page)",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/mohawk-mountain.html"
+    },
+    {
+      "year": 1937,
+      "event": "replaced",
+      "note": "Steel tower erected to replace the 1922 wooden tower (Hartford Courant item dated August 20, 1937); observer kept in all months except winter",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/mohawk-mountain.html"
+    },
+    {
+      "year": 1988,
+      "event": "staffed_last",
+      "note": "Register says aircraft detection phased the tower out in 1988, the last fire tower operated in Connecticut. Cold War CT says seasonal use reportedly ran until the seventies (conflict, see resolved_conflicts)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ct/mohawk-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ct/mohawk-mountain-lookout/",
+        "https://coldwar-ct.com/ATT_Mohawk_Mountain.html"
+      ]
+    },
+    {
       "year": 1994,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 22, 1994",
-      "from": "nhlr"
+      "note": "NHLR registration date August 22, 1994",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ct/mohawk-mountain-lookout/"
+    },
+    {
+      "year": 2017,
+      "event": "assessed",
+      "note": "NHLR visit report dated January 8, 2017: good condition; reports the original tower and a former Booth Hill observation tower removed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ct/mohawk-mountain-lookout/"
     }
   ],
   "photos": [
@@ -85,6 +130,21 @@
       "kind": "register"
     },
     {
+      "label": "Forest Fires (Cornwall Historical Society)",
+      "url": "https://cornwallhistoricalsociety.org/forest-fires/",
+      "kind": "reference"
+    },
+    {
+      "label": "Mohawk Mountain State Forest State Park: Overview (Connecticut DEEP)",
+      "url": "https://portal.ct.gov/deep/state-parks/forests/mohawk-mountain-state-forest-state-park/overview",
+      "kind": "reference"
+    },
+    {
+      "label": "ATT Mohawk Mountain microwave facility (Cold War Connecticut)",
+      "url": "https://coldwar-ct.com/ATT_Mohawk_Mountain.html",
+      "kind": "reference"
+    },
+    {
       "label": "Mohawk Mountain (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/mohawk-mountain.html",
       "kind": "site"
@@ -114,10 +174,32 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ct-mohawk-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

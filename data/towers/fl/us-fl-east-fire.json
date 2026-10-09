@@ -1,6 +1,7 @@
 {
   "id": "us-fl-east-fire",
   "name": "East Fire Tower",
+  "summary": "East (Taylor) Fire Tower, a 1931 Aermotor in Osceola National Forest, NHLR-registered 2013; no dated source confirms it stands today.",
   "other_names": [],
   "country": "US",
   "region": "FL",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": "Aermotor",
+  "design": "100-foot Aermotor LS-4 tower with a 7x7 foot cab (NHLR)",
   "height_m": 30.5,
   "status": "standing",
   "status_note": null,
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/fl/east-fire-tower/"
     }
   ],
-  "agency": "Osceola National Forest",
+  "agency": "Osceola National Forest (USDA Forest Service)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Inside Osceola National Forest. No source read says the tower cab is open to climbers."
   },
   "staffing": {
     "status": "unknown",
@@ -40,22 +41,28 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Osceola National Forest Road 202 (East Tower Trail) runs between CR 250 and CR 125 to a primitive hunting camp; onX recommends 4WD and high clearance."
   },
   "rental": null,
   "events": [
     {
       "year": 1931,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Erected as a 100-foot Aermotor tower with a 7x7 cab; formerly the Taylor Fire Tower; third lookout built on the Osceola National Forest",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/fl/east-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/fl/east-fire-tower/",
+        "https://easternuslookouts.weebly.com/east-tower-taylor-gs.html"
+      ]
     },
     {
       "year": 2013,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 1, 2013",
-      "from": "nhlr"
+      "note": "NHLR date registered September 1, 2013",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/fl/east-fire-tower/"
     }
   ],
   "photos": [
@@ -77,6 +84,21 @@
       "label": "NHLR register entry US 978 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/fl/east-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "East Tower Hunt Camp (USDA Forest Service)",
+      "url": "https://www.fs.usda.gov/r08/florida/recreation/east-tower-hunt-camp",
+      "kind": "reference"
+    },
+    {
+      "label": "East Tower - Osceola NF 202 (onX Maps)",
+      "url": "https://www.onxmaps.com/offroad/trails/us/florida/east-tower-osceola-nf-202-9yz3nk3w56lk",
+      "kind": "reference"
+    },
+    {
+      "label": "Taylor Fire Tower 1931 (National Forests in Florida (Flickr))",
+      "url": "https://www.flickr.com/photos/60261693@N06/19774208455/",
+      "kind": "reference"
     },
     {
       "label": "East Tower (easternuslookouts.weebly.com)",
@@ -112,10 +134,31 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-fl-east-fire",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

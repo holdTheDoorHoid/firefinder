@@ -1,6 +1,7 @@
 {
   "id": "us-al-smith-westervelt",
   "name": "Smith-Westervelt Lookout",
+  "summary": "Tuscaloosa County steel lookout dedicated in 1940 to H.E. Westervelt; sources conflict on the first wooden tower, and its current condition is unverified.",
   "other_names": [
     "Westervelt Fire Tower"
   ],
@@ -18,8 +19,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "100-foot steel tower (NHLR); a 1966 report describes a wooden tower built in 1940",
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -50,14 +51,41 @@
     {
       "year": 1940,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR says the steel tower was built circa 1940 to replace a wooden tower that burned; the 1966 Tuscaloosa News item says the wooden tower was built in 1940. The sources conflict on which tower dates to 1940",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/smith-westervelt-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/al/smith-westervelt-lookout/",
+        "https://easternuslookouts.weebly.com/westervelt.html"
+      ]
+    },
+    {
+      "year": 1940,
+      "event": "other",
+      "note": "Dedicated in July 1940 to Herbert E. Westervelt, founder of Gulf States Paper",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/smith-westervelt-lookout/"
+    },
+    {
+      "year": 1966,
+      "event": "destroyed",
+      "note": "Tuscaloosa News item dated March 5, 1966, quoted on the Forest Lookouts page: the Westervelt tower at Buhl is listed among towers destroyed in a tornado; the same report says the wooden tower was lifted off its foundation",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/westervelt.html"
+    },
+    {
+      "year": 1966,
+      "event": "other",
+      "note": "Same report says plans were already under way to replace the Westervelt tower with a steel structure",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/westervelt.html"
     },
     {
       "year": 2016,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: May 27, 2016",
-      "from": "nhlr"
+      "note": "NHLR registration date May 27, 2016",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/smith-westervelt-lookout/"
     }
   ],
   "photos": [
@@ -79,6 +107,11 @@
       "label": "NHLR register entry US 1135 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/al/smith-westervelt-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Westervelt (Forest Lookouts)",
+      "url": "https://easternuslookouts.weebly.com/westervelt.html",
+      "kind": "reference"
     },
     {
       "label": "OpenStreetMap node 358968701",
@@ -111,10 +144,29 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-al-smith-westervelt",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

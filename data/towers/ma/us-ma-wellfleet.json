@@ -1,6 +1,7 @@
 {
   "id": "us-ma-wellfleet",
   "name": "Wellfleet Fire Tower",
+  "summary": "1960 steel fire tower on Route 6 in South Wellfleet, Mass., on DCR land; first tower dates to 1927; a state survey lists it as active; vehicle access crosses private land.",
   "other_names": [],
   "country": "US",
   "region": "MA",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Current 70-foot steel tower with a 10 by 10 foot wooden cab per NHLR; the first tower was a 68-foot iron tower per NHLR",
+  "height_m": 21.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/ma/wellfleet-fire-tower/"
     }
   ],
-  "agency": "Mass. Bureau of Forest Fire Control",
+  "agency": "Mass. Bureau of Forest Fire Control (NHLR); land is DCR property (state survey)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "State survey says vehicle access crosses private property; no public visiting or climbing information was found."
   },
   "staffing": {
     "status": "unknown",
@@ -46,16 +47,31 @@
   "rental": null,
   "events": [
     {
+      "year": 1927,
+      "event": "built",
+      "note": "Tower erected on Route Six in South Wellfleet at a cost of $2,000 (local history blog, which quotes a 1927 newspaper calling it steel; NHLR calls the first tower iron)",
+      "from": "research",
+      "source_url": "https://south-wellfleet.com/2013/08/19/the-south-wellfleet-fire-tower/"
+    },
+    {
       "year": 1960,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
     },
     {
+      "year": 1960,
+      "event": "replaced",
+      "note": "Original tower replaced by the current 70-foot steel tower (NHLR)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ma/wellfleet-fire-tower/"
+    },
+    {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 15, 2004",
-      "from": "nhlr"
+      "note": "Registered December 15, 2004 as US 629, MA 40",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ma/wellfleet-fire-tower/"
     }
   ],
   "photos": [
@@ -77,6 +93,16 @@
       "label": "NHLR register entry US 629 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ma/wellfleet-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "The South Wellfleet Fire Tower (South Wellfleet, Massachusetts (local history blog))",
+      "url": "https://south-wellfleet.com/2013/08/19/the-south-wellfleet-fire-tower/",
+      "kind": "reference"
+    },
+    {
+      "label": "Section 15: Fire Observation Towers (Commonwealth of Massachusetts (mass.gov))",
+      "url": "https://www.mass.gov/doc/section-15-fire-observation-towers/download",
+      "kind": "reference"
     },
     {
       "label": "OpenStreetMap node 2382888859",
@@ -109,6 +135,21 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ma-wellfleet",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -134,7 +175,13 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "us-sc-parsons-mountain",
   "name": "Parsons Mountain Lookout",
+  "summary": "73-foot Forest Service lookout on Parsons Mountain near Abbeville, SC; built 1935, used until 1989; fenced and posted no trespassing at a 2020 visit.",
   "other_names": [],
   "country": "US",
   "region": "SC",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "73-foot LS-40 Aermotor tower with 7x7-foot galvanized metal cab and hip roof",
+  "height_m": 22.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,31 +32,61 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "The 2020 Register visit found no access and no-trespassing signs. The Forest Service trail page describes a hike up the Tower trail to the tower."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2020"
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Forest Service describes a hiking trail to the tower; the 2020 Register visit found the tower fenced and signed no trespassing."
   },
   "rental": null,
   "events": [
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register: constructed November 1935",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sc/parsons-mountain-lookout/"
+    },
+    {
+      "year": 1936,
+      "event": "staffed_first",
+      "note": "April 1936 newspaper report: lookouts stationed on the tower",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/parsons-mountain.html"
+    },
+    {
+      "year": 1973,
+      "event": "other",
+      "note": "Forest Service closed the tower road to motor vehicles, citing vandalism (May 1973 announcement)",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/parsons-mountain.html"
+    },
+    {
+      "year": 1989,
+      "event": "staffed_last",
+      "note": "Register: used by the Forest Service actively until 1989",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sc/parsons-mountain-lookout/"
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 17, 2009",
-      "from": "nhlr"
+      "note": "Registered November 17, 2009 as US 837, SC 7",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sc/parsons-mountain-lookout/"
+    },
+    {
+      "year": 2020,
+      "event": "assessed",
+      "note": "NHLR volunteer visit, September 16, 2020",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/sc/parsons-mountain-lookout/"
     }
   ],
   "photos": [
@@ -108,6 +139,16 @@
       "kind": "register"
     },
     {
+      "label": "Parsons Mountain Historical Marker (Historical Marker Database (hmdb.org))",
+      "url": "https://www.hmdb.org/m.asp?m=43727",
+      "kind": "reference"
+    },
+    {
+      "label": "Parson's Mountain Lake and Tower Trails (Francis Marion and Sumter National Forests, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r08/francismarionsumter/recreation/trails/parsons-mountain-lake-and-tower-trails",
+      "kind": "reference"
+    },
+    {
       "label": "Parson's Mountain (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/parsons-mountain.html",
       "kind": "site"
@@ -138,6 +179,22 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-sc-parsons-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -163,7 +220,13 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

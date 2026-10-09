@@ -1,0 +1,14 @@
+The Civilian Conservation Corps built the first Red Oak fire tower in 1934, a wooden framed tower with a wooden cab.[^1][^2] The register says that first tower stood 30 feet tall.[^3] In 1964 the current tower replaced it.[^1] That steel tower is 80 feet tall, a height that both the register and a 2023 news report give.[^3][^4]
+
+The sources do not agree on where the tower sits or how large its cab is.[^3][^1] The register places it on Cranberry Ridge east of Cowen, while the Forest Service puts it about 12 miles south of Cowen.[^3][^1] The register gives the cab as 14 by 14 feet, and the 2023 news report describes a 12 by 13 foot cabin.[^3][^4]
+
+I did not find the names of any lookouts who worked the tower, or any particular fire it watched. What the sources do record is damage. Reports from June and October 1976 describe the electrical service torn out. The June report adds that locks were broken to get into the cab and that the interior electric heaters were stolen.[^2] The June report says the tower was still kept up to detect fires in emergencies and to support forest communications.[^2] The Forest Service says the fire towers on the Monongahela were retired by the late 1970s.[^1]
+
+Restoration came much later, through a partnership between the Forest Service, the Appalachian Forest National Heritage Area, HistoriCorps, the Preservation Alliance of West Virginia and Secure Rural Schools funding.[^1] As of 2023, the register says roof, floor and window repairs were complete, and that lightning protection, lighting and pit toilets had been added.[^3] A news report from November 2023 put the project at roughly 80 to 90 percent done and estimated a stay at $75 to $100 a night, pending approval.[^4]
+
+The Forest Service opened the tower for overnight rental in September 2026.[^1] Guests can sleep in the cab, which has two twin cots, a pair of folding chairs, a small table, and lights with outlets.[^1] The campsite has RV power, a fire ring and grill, and a vault toilet, but no drinking water.[^1] Bookings go through Recreation.gov, and the 2027 season runs from April 15 through November 30.[^1] The 2026 release does not give a price, so check the listing before you go.[^1]
+
+[^1]: Red Oak Fire Lookout Opens for Overnight Stays, USDA Forest Service, Monongahela National Forest, https://www.fs.usda.gov/r09/monongahela/newsroom/releases/red-oak-fire-lookout-opens-overnight-stays (accessed 2026-10-09).
+[^2]: Red Oak, Forest Lookouts (easternuslookouts.weebly.com), https://easternuslookouts.weebly.com/red-oak.html (accessed 2026-10-09).
+[^3]: Red Oak Knob Fire Tower, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/wv/red-oak-knob-fire-tower/ (accessed 2026-10-09).
+[^4]: Red Oak Tower in WV being turned into overnight rental, WTRF, https://www.wtrf.com/west-virginia/red-oak-fire-tower-in-west-virginia-being-converted-into-overnight-stay-rental/ (accessed 2026-10-09).

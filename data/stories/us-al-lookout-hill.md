@@ -1,0 +1,13 @@
+The Lookout Hill Fire Tower is in Monroe County, Alabama, and the Alabama Forestry Commission administers it.[^1] The register numbers it US 850, AL 28, while a blog post gives AL 29.[^1][^2] The blog also places the site in a land-management area tied to the Red Hills salamander.[^2]
+
+The sources disagree on when it was built. The register's description credits a junior African-American company, number 4435, with building the tower at Civilian Conservation Corps camp P-76 in 1939.[^1] The same description gives a 100-foot MC-39 design with a 7-by-7-foot cab.[^1] The register's separate Built field, however, reads 1941.[^1] The blog repeats the 1939 date.[^2]
+
+Staffing records are thin, but the blog gives some detail. It says a family named Findley lived at the tower and manned it in the 1950s and early 1960s.[^2] The blog quotes Gary Cole saying that Jane Ellen Briggs was the tower person before he started.[^2] Cole was a forest ranger assigned to north Monroe County from June 1976.[^2] He says he manned the tower until 1982, when he became county forestry supervisor, and calls himself the last tower man there.[^2] A house at the tower's base had been torn down by 1976.[^2] I found no record of particular fires the tower watched.
+
+The blog author last got to climb the tower in 1983. It was locked that day, and the author did not get into the cab.[^2] A 1819 News column by Thomas Kaufmann gives the most common explanation for why the lookouts became neglected: aircraft could spot fires across a much larger area than a 100-foot tower.[^3] The same column says there are probably fewer than 75 historic lookouts still standing in Alabama, and that many are in poor repair, unsafe and illegal to climb.[^3]
+
+The register lists a registration date of December 11, 2009, and gives no current condition.[^1] The blog author filmed a video of the tower in February 2016.[^2] I found no later report of restoration or public access. Neither the register nor the blog says whether the public may enter the tower, so check with the Alabama Forestry Commission before visiting, and do not climb a locked or unsafe tower.
+
+[^1]: Lookout Hill Fire Tower, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/al/lookout-hill-fire-tower/ (accessed 2026-10-09).
+[^2]: Lookout Hill Tower, Jackson's Ramblings (jacksonsramblings.com), https://jacksonsramblings.com/lookout-hill-tower/ (accessed 2026-10-09).
+[^3]: Thomas Kaufmann, "Keeping Alabama's historic lookout towers," 1819 News, https://1819news.com/news/item/thomas-kaufmann-keeping-alabamas-historic-lookout-towers (accessed 2026-10-09).

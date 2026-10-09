@@ -1,6 +1,7 @@
 {
   "id": "us-ma-west-brookfield",
   "name": "West Brookfield Fire Tower",
+  "summary": "Ragged Hill tower: 1918 48-ft lookout, destroyed by the 1938 hurricane, rebuilt by the CCC in 1939 as a 60-ft steel tower; NHLR-registered 2004; no staffing or access sources found.",
   "other_names": [],
   "country": "US",
   "region": "MA",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "60-foot steel tower with a perched 10x10 wooden cab, built by the CCC in 1939",
+  "height_m": 18.3,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -46,22 +47,49 @@
   "rental": null,
   "events": [
     {
+      "year": 1917,
+      "event": "other",
+      "note": "State bought a 50-foot tower for Ragged Mountain; erection postponed for lack of funds",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/massachusetts.html"
+    },
+    {
+      "year": 1918,
+      "event": "built",
+      "note": "48-foot tower with a 10 by 10 foot room erected; not put into operation that year; 3 miles of telephone line installed",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/massachusetts.html"
+    },
+    {
+      "year": 1938,
+      "event": "destroyed",
+      "note": "Destroyed by the Great New England Hurricane, September 21, 1938",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/massachusetts.html"
+    },
+    {
       "year": 1939,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Civilian Conservation Corps erected a 60-foot steel tower with a 10x10 wood cab, replacing the 1918 tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ma/west-brookfield-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ma/west-brookfield-fire-tower/",
+        "https://easternuslookouts.weebly.com/massachusetts.html"
+      ]
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 15, 2004",
-      "from": "nhlr"
+      "note": "Registered December 15, 2004 as US 630, MA 41",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ma/west-brookfield-fire-tower/"
     },
     {
       "year": 2015,
       "event": "modified",
-      "note": "The state maintenance crew completed new electrical wiring to the cab and the tower lines.",
-      "from": "ffla_east_reports",
+      "note": "State maintenance crew completed electrical wiring to the cab and tower lines",
+      "from": "research",
       "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-sne-2015.pdf"
     }
   ],
@@ -84,6 +112,11 @@
       "label": "NHLR register entry US 630 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ma/west-brookfield-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Massachusetts lookouts, Ragged Hill entry (Forest Lookouts (easternuslookouts.weebly.com))",
+      "url": "https://easternuslookouts.weebly.com/massachusetts.html",
+      "kind": "reference"
     },
     {
       "label": "Forest Fire Lookout Association chapter reports: work on West Brookfield Fire Tower",
@@ -117,10 +150,30 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ma-west-brookfield",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

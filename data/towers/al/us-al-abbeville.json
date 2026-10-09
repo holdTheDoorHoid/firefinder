@@ -1,6 +1,7 @@
 {
   "id": "us-al-abbeville",
   "name": "Abbeville Lookout Tower",
+  "summary": "Henry County, AL tower built by the Alabama Forestry Commission in 1960; NHLR-registered 2009 as US 844; now decommissioned and privately owned, with no public access described.",
   "other_names": [],
   "country": "US",
   "region": "AL",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "design": "100' Aermotor MC-39 tower with 7'x7' cab",
+  "height_m": 30.5,
+  "status": "unknown",
+  "status_note": "Register says it has been decommissioned and is privately owned; no statement of current condition or recent photo found",
   "registers": [
     {
       "register": "NHLR",
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/al/abbeville-lookout-tower/"
     }
   ],
-  "agency": "George & Rebecca Taylor",
+  "agency": "George & Rebecca Taylor (administrators per NHLR); built by the Alabama Forestry Commission",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Decommissioned and now privately owned per NHLR; no public access described in the sources read"
   },
   "staffing": {
     "status": "unknown",
@@ -48,14 +49,16 @@
     {
       "year": 1960,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the Alabama Forestry Commission (NHLR 'Built' field and description)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/abbeville-lookout-tower/"
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 2, 2009",
-      "from": "nhlr"
+      "note": "Registered December 2, 2009 as US 844, AL 23; nominated by Thomas Kaufmann",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/al/abbeville-lookout-tower/"
     }
   ],
   "photos": [
@@ -110,10 +113,47 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-al-abbeville",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
