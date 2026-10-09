@@ -1,6 +1,7 @@
 {
   "id": "us-id-maple-peak",
   "name": "Maple Peak Lookout Site",
+  "summary": "Maple Peak lookout site, Shoshone County: L-4 cab from 1938, moved to Sunset Peak in 1950; only a rock foundation remains; road and hiking access.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "L-4 cab on a rock foundation (cab moved to Sunset Peak in 1950)",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Cab moved to Sunset Peak in 1950; only the rock foundation remains at Maple Peak. No source says what became of the moved cab.",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Road reaches the point; a hiker describes a spur road and a hiking route. No closure or permit rule in the pages read. Road condition not confirmed."
   },
   "staffing": {
     "status": "unknown",
@@ -40,11 +41,23 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "About 8 miles one way: roughly 6 miles on the State Line Trail from Thompson Pass, then a 2-mile road walk on the Maple Peak spur road."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1938,
+      "event": "built",
+      "note": "Site received an L-4 cab. Register's Built field says 1950 (see corrections)",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/maplepeak.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/maplepeak.html",
+        "https://www.idahofirelookouts.com/cda-region/maple-peak-lookout/",
+        "https://willhiteweb.com/idaho_lookouts/maple_peak/clear_peak_067.htm"
+      ]
+    },
     {
       "year": 1950,
       "event": "built",
@@ -52,10 +65,25 @@
       "from": "fflos"
     },
     {
+      "year": 1950,
+      "event": "relocated",
+      "note": "L-4 cab moved to Sunset Peak Lookout",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/id/maple-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/id/maple-peak-lookout-site/",
+        "https://www.firelookout.com/id/maplepeak.html",
+        "https://www.idahofirelookouts.com/cda-region/maple-peak-lookout/",
+        "https://willhiteweb.com/idaho_lookouts/maple_peak/clear_peak_067.htm",
+        "https://www.idahofirelookouts.com/cda-region/sunset-peak-lookout/"
+      ]
+    },
+    {
       "year": 2019,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 18, 2019",
-      "from": "fflos"
+      "note": "Registered September 18, 2019; nominated by Tom Taylor",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/id/maple-peak-lookout-site/"
     }
   ],
   "photos": [
@@ -77,6 +105,21 @@
       "label": "FFLOS register entry US 1756 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/id/maple-peak-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Maple Peak Lookout Site (WillhiteWeb.com)",
+      "url": "https://willhiteweb.com/idaho_lookouts/maple_peak/clear_peak_067.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Sunset Peak Lookout (Idaho Fire Lookouts)",
+      "url": "https://www.idahofirelookouts.com/cda-region/sunset-peak-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Sunset Peak Lookout Site (Former Fire Lookout Sites register (firetower.org))",
+      "url": "http://www.firetower.org/lookouts/us/id/sunset-peak-lookout-site/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
@@ -134,12 +177,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-maple-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

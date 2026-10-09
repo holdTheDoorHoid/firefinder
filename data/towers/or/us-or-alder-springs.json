@@ -1,6 +1,7 @@
 {
   "id": "us-or-alder-springs",
   "name": "Alder Springs Lookout Site",
+  "summary": "Deschutes NF lookout on Green Ridge near Sisters, Oregon: a tree platform, then a 1940 timber tower that sources date differently; gone by 1965.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": "L-4",
+  "design": "Treated timber tower with a 7x7-foot steel cab (register); the L-4 cab appears only in a 1944 history-page entry",
   "height_m": 23.2,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Gone by 1965 per the register and firelookout.com; firelookout.com also says the 70-foot crow's nest is still there",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,7 +29,7 @@
       "url": "http://firetower.org/lookouts/us/or/alder-springs-lookout-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Deschutes National Forest)",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -39,12 +40,26 @@
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
   "rental": null,
   "events": [
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "Firelookout.com dates the 70-foot crow's nest to 1935; the register gives the tree platform no date",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/aldersprings.html"
+    },
+    {
+      "year": 1939,
+      "event": "other",
+      "note": "Five Fingered Sentinal butte chosen for a new lookout, per a 1939 Bend Bulletin item",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/alder-springs.html"
+    },
     {
       "year": 1940,
       "event": "built",
@@ -52,10 +67,54 @@
       "from": "firelookout_com"
     },
     {
+      "year": 1940,
+      "event": "replaced",
+      "note": "85-foot treated timber tower with steel cab and a cabin replaced the tree platform, per the register and firelookout.com",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/alder-springs-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/alder-springs-lookout-site/",
+        "https://www.firelookout.com/or/aldersprings.html"
+      ]
+    },
+    {
+      "year": 1940,
+      "event": "staffed",
+      "note": "Charles Lewis was the lookout in July 1940",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/alder-springs.html"
+    },
+    {
+      "year": 1941,
+      "event": "fire",
+      "note": "Six-acre hunter fire directly west of the lookout, extinguished by forest service employees (October 1941)",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/alder-springs.html"
+    },
+    {
+      "year": 1944,
+      "event": "built",
+      "note": "History page lists a 76-foot treated timber tower with a 14x14 L-4 cab, a couple miles north of the tree lookout; conflicts with the 1940 tower",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/alder-springs.html"
+    },
+    {
+      "year": 1959,
+      "event": "fire",
+      "note": "One fire reported from the station during the 1959 fire season",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/alder-springs.html"
+    },
+    {
       "year": 1965,
       "event": "removed",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Gone by 1965 per the register and firelookout.com",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/alder-springs-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/alder-springs-lookout-site/",
+        "https://www.firelookout.com/or/aldersprings.html"
+      ]
     },
     {
       "year": 2010,
@@ -162,6 +221,21 @@
       "kind": "register"
     },
     {
+      "label": "Alder Springs Tree (Forest Lookouts (Oregon), Rex's Fire Lookout Page)",
+      "url": "https://oregonlookouts.weebly.com/alder-springs-tree.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Green Ridge Lookout (Deschutes National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r06/deschutes/recreation/green-ridge-lookout",
+      "kind": "reference"
+    },
+    {
+      "label": "Green Ridge Lookout, Deschutes National Forest (Recreation.gov)",
+      "url": "https://www.recreation.gov/camping/campgrounds/234477",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -222,6 +296,21 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-alder-springs",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -266,9 +355,15 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

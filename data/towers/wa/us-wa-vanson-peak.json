@@ -1,6 +1,7 @@
 {
   "id": "us-wa-vanson-peak",
   "name": "Vanson Peak Lookout Site",
+  "summary": "Lewis County, WA summit site: L-4 cab dated 1930, Aircraft Warning Service post 1942-44, cab removed or destroyed in the 1960s; reached by trail, no lookout standing.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4 cab",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Cab removed or destroyed in the 1960s; no source describes a standing structure, only a photo captioned as a lookout front step",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "On Monument land reached by trail; the easiest approach starts on Weyerhaeuser land and needs a Longview-St Helens access permit or key (Willhite)"
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,73 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Day hike from the Goat Mountain trail per WTA; Willhite gives 2 miles from the permit area and 6.5 miles from the Goat Creek trailhead"
   },
   "rental": null,
   "events": [
     {
+      "year": 1929,
+      "event": "other",
+      "note": "Photos taken when the site was a camp, before the cab (Willhite)",
+      "from": "research",
+      "source_url": "http://willhiteweb.com/washington_fire_lookouts/vanson_peak_lookout/goat_ridge_trail_245.htm"
+    },
+    {
+      "year": 1930,
+      "event": "built",
+      "note": "L-4 cab. Register and firelookout.com give 1930; Willhite says likely 1930",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/vanson-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/vanson-peak-lookout-site/",
+        "https://www.firelookout.com/wa/vansonpeak.html",
+        "http://willhiteweb.com/washington_fire_lookouts/vanson_peak_lookout/goat_ridge_trail_245.htm"
+      ]
+    },
+    {
+      "year": 1942,
+      "event": "staffed_first",
+      "note": "Aircraft Warning Service spotting post; Seattle Filter Center activated it March 19, 1942",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/vanson-peak.html",
+      "source_urls": [
+        "https://washingtonlookouts.weebly.com/vanson-peak.html",
+        "http://willhiteweb.com/washington_fire_lookouts/vanson_peak_lookout/goat_ridge_trail_245.htm"
+      ]
+    },
+    {
+      "year": 1944,
+      "event": "staffed_last",
+      "note": "Aircraft Warning Service post deactivated April 1, 1944",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/vanson-peak.html"
+    },
+    {
+      "year": 1960,
+      "event": "destroyed",
+      "note": "Year is a placeholder for the decade: sources say only sometime in the 1960s. Register says removed rather than destroyed",
+      "from": "research",
+      "source_url": "http://willhiteweb.com/washington_fire_lookouts/vanson_peak_lookout/goat_ridge_trail_245.htm",
+      "source_urls": [
+        "http://willhiteweb.com/washington_fire_lookouts/vanson_peak_lookout/goat_ridge_trail_245.htm",
+        "https://www.firelookout.com/wa/vansonpeak.html",
+        "http://firetower.org/lookouts/us/wa/vanson-peak-lookout-site/"
+      ]
+    },
+    {
+      "year": 1964,
+      "event": "closed",
+      "note": "May 1964 newspaper item (dated May 5, 1964) says it will be closed that summer except for possible emergency use; the sources do not confirm the closure happened",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/vanson-peak.html"
+    },
+    {
       "year": 2012,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: July 18, 2012",
-      "from": "fflos"
+      "note": "Registered July 18, 2012 as FFLOS US 1350, WA 250",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/vanson-peak-lookout-site/"
     }
   ],
   "photos": [
@@ -107,6 +165,11 @@
       "label": "FFLOS register entry US 1350 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wa/vanson-peak-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Vanson Peak via Goat Mountain (Washington Trails Association)",
+      "url": "https://www.wta.org/go-hiking/hikes/vanson-peak",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -177,12 +240,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-vanson-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

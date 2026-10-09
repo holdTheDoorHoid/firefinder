@@ -1,6 +1,7 @@
 {
   "id": "us-ca-black-mountain-black-hill",
   "name": "Black Mountain (Black Hill) Tower Site",
+  "summary": "Cleveland NF, San Diego County, CA 20-ft open timber tower with 14x14 live-in cab built 1935, last staffed 1975, torn down 1983 per register; now only a radio repeater site.",
   "other_names": [
     "Black Mountain"
   ],
@@ -18,10 +19,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": "20-ft open timber tower with a Region 5 C3 14x14-ft wood cab",
-  "height_m": null,
+  "design": "20-foot non-battered open timber tower with a Region 5 14x14-ft live-in wood cab",
+  "height_m": 6.1,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Torn down in 1983 per the register; FFLA-SDRC says standing in 1979 and demolished or removed by 1986. Only a radio repeater site is at the location now.",
   "registers": [
     {
       "register": "FFLOS",
@@ -50,20 +51,36 @@
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Constructed in 1935 per the register; FFLA-SDRC gives no build date",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/black-mountain-black-hill-tower-site/"
+    },
+    {
+      "year": 1975,
+      "event": "staffed_last",
+      "note": "Last staffed in 1975",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/black-mountain-black-hill-tower-site/"
+    },
+    {
+      "year": 1979,
+      "event": "other",
+      "note": "Seen standing in 1979 (FFLA-SDRC)",
+      "from": "research",
+      "source_url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/black-mountain/"
     },
     {
       "year": 1983,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"1983\".",
-      "from": "fflos"
+      "note": "Torn down in 1983 per the register",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/black-mountain-black-hill-tower-site/"
     },
     {
       "year": 1986,
       "event": "removed",
-      "note": "Seen standing in 1979 and gone by 1986; demolished or removed.",
-      "from": "ffla_sdrc",
+      "note": "FFLA-SDRC: demolished or removed by 1986; this window conflicts with the register's 1983 date",
+      "from": "research",
       "source_url": "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/black-mountain/"
     },
     {
@@ -130,6 +147,11 @@
       "kind": "register"
     },
     {
+      "label": "Black Mountain (San Diego County, California) (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Black_Mountain_(San_Diego_County,_California)",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -193,12 +215,32 @@
       "source": "ffla_groups",
       "key": "ffla_groups:ca:black-mountain-san-diego",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-black-mountain-black-hill",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

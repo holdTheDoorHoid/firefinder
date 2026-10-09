@@ -1,6 +1,7 @@
 {
   "id": "us-md-powellville",
   "name": "Powellville Fire Tower",
+  "summary": "Wicomico County, MD steel fire tower built 1943 with US Navy funds, 140 ft; NHLR-registered 2017 when DNR planned removal; now listed as gone.",
   "other_names": [],
   "country": "US",
   "region": "MD",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "steel tower, 140 feet",
+  "height_m": 42.7,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Forest Fire Lookout Association Maryland list marks it Tower Gone, undated; the 2017 NHLR entry says DNR planned to remove it. No removal date or site description found.",
   "registers": [
     {
       "register": "NHLR",
@@ -48,14 +49,23 @@
     {
       "year": 1943,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built with US Navy funds during WWII, for fire detection and as an aircraft and watercraft warning site",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/md/powellville-fire-tower/"
     },
     {
       "year": 2017,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 23, 2017",
-      "from": "nhlr"
+      "note": "Registered August 23, 2017 as US 1234, MD 7",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/md/powellville-fire-tower/"
+    },
+    {
+      "year": 2017,
+      "event": "other",
+      "note": "Maryland DNR planned to remove the tower, per the NHLR entry as of 2017",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/md/powellville-fire-tower/"
     }
   ],
   "photos": [
@@ -87,6 +97,11 @@
       "label": "NHLR register entry (nhlr.org)",
       "url": "http://nhlr.org/nhlr.org/lookouts/us/md/powellville-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Wildfire History (Maryland Department of Natural Resources)",
+      "url": "https://dnr.maryland.gov/centennial/Pages/Wildfire-History.aspx",
+      "kind": "reference"
     },
     {
       "label": "FFLA Maryland lookout list (firelookout.org)",
@@ -145,6 +160,20 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-md-powellville",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -168,9 +197,15 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

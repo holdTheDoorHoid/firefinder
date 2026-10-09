@@ -1,6 +1,7 @@
 {
   "id": "us-wa-simcoe-butte",
   "name": "Simcoe Butte Lookout Site",
+  "summary": "Klickitat County summit with a 1948 L-5 cab tower, removed or destroyed in 1958 and replaced by Sopelia; the summit is Yakama Nation land, so ask permission first.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Wooden ring-connected tower with an L-5 cab (10 ft per register and firelookout.com; 12 ft per the 1948 sources)",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Tower removed or destroyed in 1958; the Sopelia lookout that replaced it burned in 2013; no source describes remains on the summit",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/wa/simcoe-butte-lookout-site/"
     }
   ],
-  "agency": "Yakima Indian Reservation",
+  "agency": "Yakama Nation (the register lists the Yakima Indian Reservation); tower built by the state Division of Forestry in 1948",
   "ownership": "tribal",
   "access": {
     "level": "permission",
-    "note": "On tribal land. Ask the tribe before visiting."
+    "note": "Summit is officially on Yakama Nation land, and most of the reservation is closed to non-tribal visitors; ask the Yakama Nation before going"
   },
   "staffing": {
     "status": "unknown",
@@ -46,10 +47,67 @@
   "rental": null,
   "events": [
     {
+      "year": 1941,
+      "event": "other",
+      "note": "A survey party described a temporary fire lookout on the summit: a rock windbreak and a field telephone",
+      "from": "research",
+      "source_url": "http://www.willhiteweb.com/washington_fire_lookouts/simcoe_butte_lookout/status_pass_235.htm"
+    },
+    {
+      "year": 1948,
+      "event": "built",
+      "note": "State Division of Forestry built a 12-foot ring-connected tower with an L-5 cab (Willhite); the register and firelookout.com give 10 ft",
+      "from": "research",
+      "source_url": "http://www.willhiteweb.com/washington_fire_lookouts/simcoe_butte_lookout/status_pass_235.htm",
+      "source_urls": [
+        "http://www.willhiteweb.com/washington_fire_lookouts/simcoe_butte_lookout/status_pass_235.htm",
+        "http://firetower.org/lookouts/us/wa/simcoe-butte-lookout-site/",
+        "https://www.firelookout.com/wa/simcoebutte.html",
+        "https://washingtonlookouts.weebly.com/simcoe-butte.html"
+      ]
+    },
+    {
+      "year": 1958,
+      "event": "destroyed",
+      "note": "firelookout.com says the tower was destroyed in 1958; conflicts with the register's 'removed'",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wa/simcoebutte.html"
+    },
+    {
+      "year": 1958,
+      "event": "removed",
+      "note": "Register says the tower was removed in 1958",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/simcoe-butte-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/simcoe-butte-lookout-site/",
+        "http://www.willhiteweb.com/washington_fire_lookouts/simcoe_butte_lookout/status_pass_235.htm"
+      ]
+    },
+    {
+      "year": 1959,
+      "event": "replaced",
+      "note": "Sopelia lookout, an R-6 flat cab on concrete pillars, built the following year on a nearby site to replace the Simcoe Butte lookout",
+      "from": "research",
+      "source_url": "http://www.firetower.org/lookouts/us/wa/sopelia-lookout-site/",
+      "source_urls": [
+        "http://www.firetower.org/lookouts/us/wa/sopelia-lookout-site/",
+        "http://www.willhiteweb.com/washington_fire_lookouts/simcoe_butte_lookout/status_pass_235.htm"
+      ]
+    },
+    {
       "year": 2012,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: August 15, 2012",
-      "from": "fflos"
+      "note": "Registered August 15, 2012 as US 1381, WA 281",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/simcoe-butte-lookout-site/"
+    },
+    {
+      "year": 2013,
+      "event": "burned",
+      "note": "Nearby Sopelia lookout burned in a 2013 forest fire",
+      "from": "research",
+      "source_url": "http://www.firetower.org/lookouts/us/wa/sopelia-lookout-site/"
     }
   ],
   "photos": [
@@ -71,6 +129,16 @@
       "label": "FFLOS register entry US 1381 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wa/simcoe-butte-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Visiting the Yakama Reservation Fire Lookouts (TrailChick)",
+      "url": "https://www.trailchick.com/visiting-the-yakama-reservation/",
+      "kind": "reference"
+    },
+    {
+      "label": "Sopelia Lookout Site (Former Fire Lookout Sites register, Forest Fire Lookout Association)",
+      "url": "http://www.firetower.org/lookouts/us/wa/sopelia-lookout-site/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -141,12 +209,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-simcoe-butte",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

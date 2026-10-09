@@ -1,6 +1,7 @@
 {
   "id": "us-mt-yager-butte",
   "name": "Yager Butte Lookout",
+  "summary": "Yager Butte, Powder River County, MT: 1958 53-ft R-6 tower; FFA list marks the site tower gone; sources disagree on where it now stands (Diamond Butte or a site named Tarter).",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "firelookout_com",
   "roles": [],
-  "design": "R-6",
-  "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "design": "53-foot treated timber R-6 tower with flat cab",
+  "height_m": 16.2,
+  "status": "relocated",
+  "status_note": "Gone from Yager Butte per the FFA list; a Flickr caption says it moved to Diamond Butte in 1958, while the FFA list names a relocated Yager Butte tower at a private site named Tarter as standing",
   "registers": [
     {
       "register": "NHLR",
@@ -46,16 +47,40 @@
   "rental": null,
   "events": [
     {
+      "year": 1956,
+      "event": "built",
+      "note": "A cabin built in 1956 (firelookout.com)",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/yagerbutte.html"
+    },
+    {
       "year": 1958,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "53-foot R-6 tower built (NHLR and firelookout.com)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/yager-butte-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/mt/yager-butte-lookout/",
+        "https://www.firelookout.com/mt/yagerbutte.html"
+      ]
+    },
+    {
+      "year": 1958,
+      "event": "relocated",
+      "note": "Flickr caption says the lookout was moved to Diamond Butte in 1958; the FFA list places a relocated Yager Butte tower at Tarter instead",
+      "from": "research",
+      "source_url": "https://firelookout.org/lookouts/us/mt/",
+      "source_urls": [
+        "https://firelookout.org/lookouts/us/mt/",
+        "https://www.flickr.com/photos/outlawpete/52242950766"
+      ]
     },
     {
       "year": 2016,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 27, 2016",
-      "from": "nhlr"
+      "note": "Registered November 27, 2016 as US 1157, MT 66",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/yager-butte-lookout/"
     }
   ],
   "photos": [
@@ -101,6 +126,11 @@
       "label": "NHLR register entry US 1157 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/mt/yager-butte-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Diamond Butte Lookout (Flickr)",
+      "url": "https://www.flickr.com/photos/outlawpete/52242950766",
+      "kind": "reference"
     },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
@@ -161,6 +191,20 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-yager-butte",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -199,9 +243,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

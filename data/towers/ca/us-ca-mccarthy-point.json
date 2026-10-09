@@ -1,6 +1,7 @@
 {
   "id": "us-ca-mccarthy-point",
   "name": "McCarthy Point Lookout",
+  "summary": "Tehama County, CA CCC lookout cabin built 1936 in Lassen NF, used for WWII aircraft monitoring and later rented; destroyed in the 2024 Park Fire, with only the foundation left.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "One-story, two-room CCC cabin with a glassed-in bedroom used for fire detection and a kitchen",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Destroyed in the 2024 Park Fire; all that remains is the stone foundation. The register 'Removed 2004' field conflicts with this",
   "registers": [
     {
       "register": "NHLR",
@@ -34,11 +35,11 @@
       "url": "http://firetower.org/lookouts/us/ca/mccarthy-point-lookout-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Lassen National Forest, Almanor Ranger District)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Forest Service notice: destroyed in the 2024 Park Fire and no longer accessible or available for recreational use"
   },
   "staffing": {
     "status": "unknown",
@@ -54,26 +55,50 @@
     {
       "year": 1936,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by the Civilian Conservation Corps (CCC) for spotting wildfires",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/mccarthy-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/mccarthy-point-lookout/",
+        "https://www.fs.usda.gov/r05/lassen/recreation/mccarthy-point-lookout"
+      ]
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 1, 2004",
-      "from": "nhlr"
+      "note": "Registered June 1, 2004 as NHLR US 583, CA 60; nominator listed as unknown",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/mccarthy-point-lookout/"
     },
     {
       "year": 2004,
       "event": "removed",
-      "note": "'Removed' field on NHLR detail page: \"2004\".",
-      "from": "nhlr"
+      "note": "Disputed: the 'Removed' field on the NHLR and FFLOS pages says 2004, but their descriptions and the Forest Service say it burned in the 2024 Park Fire",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/mccarthy-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/mccarthy-point-lookout/",
+        "http://firetower.org/lookouts/us/ca/mccarthy-point-lookout-site/"
+      ]
+    },
+    {
+      "year": 2024,
+      "event": "burned",
+      "note": "Destroyed in the 2024 Park Fire; the stone foundation remains",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/mccarthy-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/mccarthy-point-lookout/",
+        "https://www.fs.usda.gov/r05/lassen/recreation/mccarthy-point-lookout",
+        "https://www.sfgate.com/california-parks/article/california-lookout-cabin-destroyed-wildfire-19777708.php"
+      ]
     },
     {
       "year": 2026,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 2, 2026",
-      "from": "fflos"
+      "note": "Registered January 2, 2026 as FFLOS US 2116; nominated by Darin McQuoid",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/mccarthy-point-lookout-site/"
     }
   ],
   "photos": [
@@ -138,6 +163,16 @@
       "kind": "register"
     },
     {
+      "label": "McCarthy Point Lookout (Forest Service, Lassen National Forest)",
+      "url": "https://www.fs.usda.gov/r05/lassen/recreation/mccarthy-point-lookout",
+      "kind": "reference"
+    },
+    {
+      "label": "Treasured Northern California wilderness stay destroyed in wildfire (SFGate)",
+      "url": "https://www.sfgate.com/california-parks/article/california-lookout-cabin-destroyed-wildfire-19777708.php",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -191,6 +226,20 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-mccarthy-point",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -214,9 +263,15 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

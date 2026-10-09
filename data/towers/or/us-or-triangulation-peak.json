@@ -1,6 +1,7 @@
 {
   "id": "us-or-triangulation-peak",
   "name": "Triangulation Peak Lookout Site",
+  "summary": "Willamette NF lookout site east of Detroit, Oregon: a 14x14 L-4 cab built in 1933, staffed in 1934, removed in 1967; FS trailhead page shows it closed.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": "L-4",
+  "design": "14x14 L-4 cab (lookout house)",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Removed in 1967 per the register and Rex's page; firelookout.com says destroyed that year",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/or/triangulation-peak-lookout-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Willamette National Forest)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Forest Service trailhead page reads Site Closed, citing a closure order for the Beachie Creek and Lionshead fires; no end date is given"
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,55 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Triangulation Trailhead on FS Road 2233; follow Triangulation Trail about 1.5 miles to the Triangulation Peak trail junction; a hike of about 2.1 miles to the old site per a hiking site; two kinds of Mt. Jefferson Wilderness entry permit apply June 15 to October 15"
   },
   "rental": null,
   "events": [
     {
+      "year": 1931,
+      "event": "other",
+      "note": "April 1931 news item said Triangulation Peak would be one of eleven new emergency lookout stations that year; a plan, not a build record",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/triangulation-peak.html"
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "Register says the USFS built an L-4 cab; Rex's page says the CCC constructed a 14x14 L-4 lookout house that year",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/triangulation-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/triangulation-peak-lookout-site/",
+        "https://oregonlookouts.weebly.com/triangulation-peak.html",
+        "https://www.firelookout.com/or/triangulationpeak.html"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "staffed",
+      "note": "Ed Schroeder employed by the USFS as lookout at Triangulation Point all summer, per a 1934 newspaper item quoted on Rex's page",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/triangulation-peak.html"
+    },
+    {
+      "year": 1967,
+      "event": "removed",
+      "note": "Register and Rex's page say removed; firelookout.com says destroyed",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/triangulation-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/triangulation-peak-lookout-site/",
+        "https://oregonlookouts.weebly.com/triangulation-peak.html",
+        "https://www.firelookout.com/or/triangulationpeak.html"
+      ]
+    },
+    {
       "year": 2010,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 21, 2010",
-      "from": "fflos"
+      "note": "Registered September 21, 2010",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/triangulation-peak-lookout-site/"
     }
   ],
   "photos": [
@@ -114,6 +154,16 @@
       "kind": "register"
     },
     {
+      "label": "Triangulation Trailhead (Willamette National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r06/willamette/recreation/triangulation-trailhead",
+      "kind": "reference"
+    },
+    {
+      "label": "Cascader: Triangulation Peak: Mt Jefferson Wilderness (Cascade Ramblings)",
+      "url": "http://www.cascaderamblings.com/cascade.php?cascade=1010643277.30402",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -171,12 +221,33 @@
         "design",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-triangulation-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

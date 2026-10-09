@@ -1,6 +1,7 @@
 {
   "id": "us-ca-berryessa-peak",
   "name": "Berryessa Peak Lookout Site",
+  "summary": "Napa County lookout on Berryessa Peak, built 1948 (CDF 809R design), destroyed by the Rumsey Fire in October 2004; no source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": 17.4,
+  "design": "CDF 809R design, 30-foot K-brace enclosed steel tower",
+  "height_m": 9.1,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Destroyed by the Rumsey Fire in October 2004; register lists it as removed in 2004",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,7 +29,7 @@
       "url": "http://firetower.org/lookouts/us/ca/berryessa-peak-lookout-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "Disputed: U.S. Forest Service per the Former Fire Lookout Sites register; California Department of Forestry (CAL FIRE) per West Lookouts and Wikipedia",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -48,8 +49,13 @@
     {
       "year": 1948,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Built 1948 per the Former Fire Lookout Sites register; dedication ceremony June 1948 per a California Division of Forestry photograph",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/berryessa-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/berryessa-peak-lookout-site/",
+        "https://archive.org/details/casbcfm_000140"
+      ]
     },
     {
       "year": 2004,
@@ -60,15 +66,37 @@
     },
     {
       "year": 2004,
+      "event": "destroyed",
+      "note": "Lookout destroyed by the Rumsey Fire in October 2004 (register, FFLA western report, and newspaper quoted by West Lookouts)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/berryessa-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/berryessa-peak-lookout-site/",
+        "https://californialookouts.weebly.com/berryessa-peak.html",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-wd-2004.pdf",
+        "https://en.wikipedia.org/wiki/Rumsey_Fire"
+      ]
+    },
+    {
+      "year": 2004,
+      "event": "fire",
+      "note": "Rumsey Fire burned October 10 to 16, 2004 and destroyed 39,138 acres; officials confirmed arson",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Rumsey_Fire"
+    },
+    {
+      "year": 2004,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"2004\".",
-      "from": "fflos"
+      "note": "Register records the lookout as removed in 2004",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/berryessa-peak-lookout-site/"
     },
     {
       "year": 2018,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: December 8, 2018",
-      "from": "fflos"
+      "note": "Registered December 8, 2018 as US 1736, CA 21",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/berryessa-peak-lookout-site/"
     }
   ],
   "photos": [
@@ -176,6 +204,16 @@
       "kind": "register"
     },
     {
+      "label": "Rumsey Fire (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Rumsey_Fire",
+      "kind": "reference"
+    },
+    {
+      "label": "Berryessa Peak Lookout dedication, Napa, 1948 (Internet Archive (California Division of Forestry Black Cards collection, Cal Fire Museum))",
+      "url": "https://archive.org/details/casbcfm_000140",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -233,12 +271,32 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-berryessa-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

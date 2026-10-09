@@ -1,6 +1,7 @@
 {
   "id": "us-mt-jackson-ranger",
   "name": "Jackson Ranger Station Lookout",
+  "summary": "Platform atop a garage in Beaverhead County, MT; built 1930 per NHLR (1930s per its description); still there on private property.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Platform atop a garage, not a tower",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -31,8 +32,8 @@
   "agency": "Private Property",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Now on private property, per the NHLR and firelookout.com."
   },
   "staffing": {
     "status": "unknown",
@@ -48,14 +49,16 @@
     {
       "year": 1930,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR Built field gives 1930; its description says sometime in the 1930s",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/jackson-ranger-station-lookout/"
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 14, 2022",
-      "from": "nhlr"
+      "note": "Registered April 14, 2022 as US 1566, MT 112",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/mt/jackson-ranger-station-lookout/"
     }
   ],
   "photos": [
@@ -147,6 +150,18 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-jackson-ranger",
+      "fields": [
+        "summary",
+        "design",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -198,9 +213,15 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "pass",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }
