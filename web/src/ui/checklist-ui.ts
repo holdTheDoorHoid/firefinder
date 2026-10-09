@@ -5,13 +5,32 @@
  */
 import { Checklist, MARKS, MARK_LABELS, browserStorage, STORAGE_KEY, type Mark } from '../lib/checklist.ts';
 import { html } from '../lib/html.ts';
+import type { RedirectsFile } from '../lib/redirects.ts';
 
 let shared: Checklist | null = null;
+let redirectsLoad: Promise<RedirectsFile | null> | null = null;
+
+/**
+ * The list of lookouts the merge folded into others (data/redirects.json), fetched once per page.
+ * Null if it cannot be had (offline, dev server without data): nothing is then moved.
+ */
+export function loadRedirects(): Promise<RedirectsFile | null> {
+  redirectsLoad ??= fetch(`${import.meta.env.BASE_URL}data/redirects.json`)
+    .then((res) => (res.ok ? (res.json() as Promise<RedirectsFile>) : null))
+    .catch(() => null);
+  return redirectsLoad;
+}
+
+/** Wait until ticks saved under retired lookout ids have been moved to the ids that replaced them. */
+export async function checklistReady(list: Checklist): Promise<void> {
+  list.setRedirects(await loadRedirects());
+}
 
 /** One checklist per page, kept in sync with other tabs. */
 export function getChecklist(): Checklist {
   if (shared) return shared;
   const list = new Checklist(browserStorage());
+  void checklistReady(list);
   try {
     window.addEventListener('storage', (e) => {
       if (e.key === STORAGE_KEY) list.reload();
@@ -85,7 +104,8 @@ export function initChecklistDialog(list: Checklist): void {
   };
   const result = dialog.querySelector<HTMLElement>('[data-cl-result]')!;
 
-  dialog.querySelector('[data-cl-download]')!.addEventListener('click', () => {
+  dialog.querySelector('[data-cl-download]')!.addEventListener('click', async () => {
+    await checklistReady(list);
     const blob = new Blob([JSON.stringify(list.toFile(), null, 2) + '\n'], { type: 'application/json' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
@@ -106,7 +126,9 @@ export function initChecklistDialog(list: Checklist): void {
       result.textContent = 'That file is too large to be a Firefinder checklist.';
       return;
     }
-    const r = list.importText(await f.text());
+    const text = await f.text();
+    await checklistReady(list);
+    const r = list.importText(text);
     if (!r.ok) {
       result.textContent = r.error;
     } else {

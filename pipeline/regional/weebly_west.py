@@ -83,7 +83,22 @@ STATE_BY_NAME.update({"ARIZONA": "AZ", "COLORADO": "CO", "IDAHO": "ID", "MONTANA
 
 PLSS_RE = re.compile(r"^\d{1,2}\s*[NS]\s*-\s*\d{1,3}\s*[EW]\s*-\s*\d{1,2}$", re.I)
 COUNTY_HEADER_RE = re.compile(r"^(.*?)\s+(?:County|Parish)\.?$", re.I)
-NAV_LINK_RE = W.NAV_LINK_RE
+# A county header in the sidebar (the page's own location line uses the plain COUNTY_HEADER_RE).
+# Besides "BAKER COUNTY" the author writes "IDAHO COUNTY (A-L)" and "IDAHO COUNTY (M-W)" (a county split
+# into two alphabetical halves), "LANE COUNTY - 2" (a second page of one county), "(cont.)" and, once,
+# "**Harney County***" (a county note set off with asterisks). Words after the county word that name
+# something else ("Los Angeles County Fairplex", "Pike County Peak") are not headers.
+NAV_COUNTY_HEADER_RE = re.compile(
+    r"^[\s*\W_]*(?P<name>[A-Za-z][A-Za-z.' -]*?)\s+(?:County|Parish)\b"
+    r"(?:\s*(?:\([^()]*\)|[-\u2013\u2014]+\s*(?:\d+\b|[A-Za-z]\b|cont\.?|continued|part\s*\w+\b)|cont\.?|continued))*"
+    r"[\s*\W_]*$",
+    re.I,
+)
+# A sidebar anchor with its attributes, so a top-level menu item ("wsite-menu-item": a county, or a page
+# such as "To Locate") can be told from a lookout inside a county's dropdown ("wsite-menu-subitem").
+NAV_ANCHOR_RE = re.compile(r'<a\s+([^>]*href="[^"]+"[^>]*)>(.*?)</a>', re.S | re.I)
+HREF_RE = re.compile(r'href="([^"]+)"')
+TOP_LEVEL_RE = re.compile(r'class="[^"]*\bwsite-menu-item\b')
 # A quote or a dated news item starts the page's narrative; nothing after it is location data.
 NARRATIVE_START_RE = re.compile(
     r"^(?:<?\d{4}\b|[A-Z][a-z]+\.?\s+\d{1,2},?\s+\d{4}|[\"“]|Activated:|Built|Constructed|In\s)", re.I
@@ -118,30 +133,36 @@ def norm(text: str) -> str:
 def nav_entries(html: str, group: str, states: list[str]) -> list[dict]:
     """Every tower page in a site's sidebar nav, with the county or state its header puts it under:
     [{"rel": "/quail-prairie-mountain.html", "text": "Quail Prairie Mountain", "county": ..., "state": ...}].
-    A header is a nav link whose text is "<Name> County" (county sites) or a state name (west site);
-    county pages and state pages are not towers and are not returned."""
+    A header is a nav link whose text is "<Name> County" (county sites; NAV_COUNTY_HEADER_RE lists the
+    spellings) or a state name (west site); county pages and state pages are not towers and are not
+    returned. On a county site a top-level page that is not a county ends the county above it."""
     body = html[html.find("<body"):]
     body = re.sub(r"<script.*?</script>", "", body, flags=re.S)
     body = re.sub(r"<style.*?</style>", "", body, flags=re.S)
     out, seen = [], set()
     county = None
     state = states[0] if len(states) == 1 else None
-    for rel, raw in NAV_LINK_RE.findall(body):
+    for attrs, raw in NAV_ANCHOR_RE.findall(body):
         text = norm(raw)
-        rel = htmlmod.unescape(rel)
+        rel = htmlmod.unescape(HREF_RE.search(attrs).group(1))
         if not rel.endswith(".html") or rel.startswith("http") or not text:
             continue
+        top_level = bool(TOP_LEVEL_RE.search(attrs))
         if group == "state":
             code = STATE_BY_NAME.get(re.sub(r"[>\s.]+$", "", text).upper())
             if code and not rel.rstrip("0123456789.html").endswith("-notes"):
                 state, county = code, None
                 continue
         else:
-            m = COUNTY_HEADER_RE.match(text)
+            m = NAV_COUNTY_HEADER_RE.match(text)
             if m and ("county" in rel.lower() or "parish" in rel.lower()):
-                county = re.sub(r"\s+", " ", m.group(1)).strip().title()
+                county = re.sub(r"\s+", " ", m.group("name")).strip().title()
                 continue
-        if SKIP_NAME_RE.search(text) or text.upper() in SKIP_PAGE_NAMES:
+            if top_level:
+                # a top-level page that is not a county ("To Locate", with Jimmy Peak and Mount Jumbo
+                # listed after it): what follows is not in the county above it
+                county = None
+        if SKIP_NAME_RE.search(text) or text.upper() in SKIP_PAGE_NAMES or not re.search(r"[A-Za-z0-9]", text):
             continue
         if rel in seen:
             continue
@@ -202,7 +223,9 @@ def parse_page(html: str, entry: dict, host: str) -> dict | None:
     name = norm(nodes[0])
     if not name or name.upper() in SKIP_PAGE_NAMES or SKIP_NAME_RE.search(name):
         return None
-    if COUNTY_HEADER_RE.match(name) or name.upper() in STATE_BY_NAME:
+    if not re.search(r"[A-Za-z0-9]", name):
+        return None  # a divider ("************")
+    if COUNTY_HEADER_RE.match(name) or NAV_COUNTY_HEADER_RE.match(name) or name.upper() in STATE_BY_NAME:
         return None  # a county or state index page
     loc = parse_location_nodes(nodes)
     full_name = W.unshout(f"{name} ({loc['qualifier']})" if loc["qualifier"] else name)

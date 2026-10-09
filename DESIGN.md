@@ -291,9 +291,8 @@ the pinned ones (`record_join_moved` in the review file). The report lists the r
 checks that `merged_into` names a visible tower that is not itself retired, and that no research
 or story file is left under a retired id. Research and a story belong to the tower that stays:
 choose the survivor as the one with a story. The site gives the old address a small redirecting
-page, and the map follows `?t=<old id>` (3.6). A visitor's checklist marks on a retired id do not
-move to the new tower (the checklist is a list of ids kept in the browser); the retired ids are
-few, and most are days old.
+page, and the map follows `?t=<old id>` (3.6). A visitor's checklist marks on a retired id move to
+the tower that took it (4, "Checklist"), so a retirement never costs anyone a tick.
 
 **FFLA's other views and border rows.** The alphabetical list fixes a record's key; the by-county,
 standing and by-region views only enrich it (county) and are paired with it by key, by the same
@@ -393,6 +392,15 @@ Friends pages (agency and status from the California-South table, plus the destr
 links) and WillhiteWeb (a link, and a "standing" status for its 57 Cascades standing lookouts). The
 California-South chapter's "Destroyed in 2024 Line Fire" for Keller Peak therefore shows as a status
 conflict, not an overrule, until the owner or the FFLA refresh agrees.
+
+Ron Kemnow's western sites file each lookout under the county header of the sidebar above it
+(`weebly_west.nav_entries`), so the county is only as good as the header reading. Headers that
+broke it on 2026-10-08: "IDAHO COUNTY (A-L)" / "(M-W)" (145 Idaho County lookouts were filed under
+Gem), "LANE COUNTY - 2" (85 Lane County lookouts under Lake), and the top-level page "To Locate"
+(Jimmy Peak, listed after it, was filed under Toole). `NAV_COUNTY_HEADER_RE` now reads a split,
+numbered, "(cont.)" or asterisk-wrapped county header, and a top-level page that is not a county ends
+the county above it; divider pages ("************", "?") and county notes are not lookouts.
+`pipeline/test_links_survey.py` carries the real header strings.
 
 **Ownership and access** only where a source says so: CSKT → tribal, access `permission`;
 RIDB (USFS/BLM) → federal; NY DEC and PA state forests → state (via those extracts); an agency
@@ -715,7 +723,14 @@ Friends of Sterling Forest's domain has been hijacked for spam; New Hampshire's 
   Approximate locations filter (the state's own list when a state is chosen) and the sitemap.
 - **Checklist**: localStorage `firefinder.checklist.v1`, with export/import as JSON; works on
   the map (filter "my visited") and on tower pages. Every storage access is wrapped in
-  try/catch.
+  try/catch. **Retired towers** (3.5): once a page has fetched `data/redirects.json`
+  (`web/src/ui/checklist-ui.ts`), `Checklist.setRedirects` moves every mark saved under a retired
+  id to the id that replaced it (a chain is followed), keeps each mark that either id had (so
+  "stayed" is never lost to a plain "visited", and "want to go" stays), and saves. The same list is
+  applied when another tab's change is reloaded, on export (the file names only surviving
+  lookouts) and on import (a backup made before the merge still lands on the right towers).
+  Without the list (offline, not yet fetched) nothing is moved and nothing is lost: the marks
+  are moved the next time a page loads it.
 - **About / credits / takedown** page: every source with its licence and credit line; how to
   ask for a photo or text to be removed (open an issue or email).
 - Accessibility: status is never shown by colour alone (shape and label too); keyboard-usable

@@ -20,12 +20,12 @@ import { isMaybe, yearState } from '../lib/history.ts';
 import { formatCount } from '../lib/format.ts';
 import { isNoStructure } from '../lib/vocab.ts';
 import { html } from '../lib/html.ts';
-import { resolveRedirect, type RedirectsFile } from '../lib/redirects.ts';
+import { resolveRedirect } from '../lib/redirects.ts';
 import { buildIndex, type SearchEntry } from '../lib/search.ts';
 import type { Meta, SourceInfo, TowerCollection, TowerFeature, TowerProps } from '../lib/types.ts';
 import { parseState, serializeState, type AppState, type Basemap } from '../lib/urlstate.ts';
 import { towerPath, type RenderContext } from '../render/tower.ts';
-import { bindChecklistButtons, getChecklist, initChecklistDialog } from '../ui/checklist-ui.ts';
+import { bindChecklistButtons, getChecklist, initChecklistDialog, loadRedirects } from '../ui/checklist-ui.ts';
 import { initCommon } from '../ui/common.ts';
 import { effectiveTheme, onThemeChange } from '../ui/theme.ts';
 import siteConfig from '../../site.config.json';
@@ -572,8 +572,7 @@ async function main(): Promise<void> {
   }
   if (state.selected && !byId.has(state.selected)) {
     // A lookout the merge folded into another keeps its address: follow the redirect (src/lib/redirects.ts).
-    const moved = await getJson<RedirectsFile>('data/redirects.json').catch(() => null);
-    state.selected = resolveRedirect(state.selected, moved);
+    state.selected = resolveRedirect(state.selected, await loadRedirects());
   }
   if (state.selected) {
     const f = byId.get(state.selected);

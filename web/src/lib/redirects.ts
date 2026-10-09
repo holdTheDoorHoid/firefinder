@@ -5,7 +5,7 @@
  * lists old id -> new id in redirects.json, the prerender step writes a redirecting page at each
  * old address, and the map follows the same list for `?t=<old id>`.
  */
-import { isTowerId } from './checklist.ts';
+import { isTowerId } from './tower-id.ts';
 
 export interface RedirectsFile {
   note?: string;
