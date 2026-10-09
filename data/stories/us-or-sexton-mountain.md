@@ -1,0 +1,14 @@
+Sexton Mountain Lookout sits on a summit in Josephine County, Oregon, at about 3,800 feet.[^1] The register says the Oregon Department of Forestry first used the peak with a tent in 1914, followed by a cupola cabin in 1921.[^1] A Grants Pass newspaper item from 1919 already mentions a newly finished lookout station on Mt. Sexton, so the early dates do not line up neatly.[^2]
+
+A 1921 fire near Galice, reported by the Sexton Mountain lookout, covered about 30 acres before it was put under control.[^2] In June 1930, Mr. and Mrs. Nealy were in charge of the station for the season.[^2]
+
+In 1932 a weather station with a cupola on its roof went up on the summit.[^1][^2] The cupola was to be used by the state forestry department as a lookout, but a March 1932 item said an investigation had found construction errors that would make it almost impossible to mount a fire finder within the tower.[^2] A 30-foot tower with a lookout cab took its place in 1962 or 1963, and the sources disagree on the year.[^1][^2]
+
+On the night of April 1, 2006, vandals destroyed the historic lookout and three Oregon Department of Forestry repeater antennas.[^2] The register also says vandals burned it that year.[^1] In 2007 a 40-foot steel tower, topped by a flat-roofed cab, replaced it.[^1] The Forest Lookouts history page dates the completion of that steel tower to October 2007, with service beginning in the 2008 fire season.[^2] A 2007 Oregon chapter report also mentions a joint survey with the Forestry department on moving the 1921 D-6 cupola cabin to the Tillamook Forestry Center.[^3]
+
+The register lists the Oregon Department of Forestry as the administering agency.[^1] A 2021 visitor described the lookout as unmanned and said it did not appear to be in regular use.[^4] The road to the summit is gated, and the visitor drove 5.3 miles to the gate before walking about 0.8 mile to the top.[^4] A fence surrounds the tower, and the visitor found no way to gain access.[^4] An older D-6 cupola cabin still stands on the site, though its cupola is gone.[^4] No source describes a reopening, so please do not try to climb the fenced tower, and check with the Oregon Department of Forestry before planning a visit.
+
+[^1]: Sexton Mountain Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/or/sexton-mountain-lookout/ (accessed 2026-10-08).
+[^2]: Sexton Mountain, Oregon lookouts history (Forest Lookouts, oregonlookouts.weebly.com), https://oregonlookouts.weebly.com/sexton-mountain.html (accessed 2026-10-08).
+[^3]: Oregon Chapter Report 2007, Forest Fire Lookout Association, https://firelookout.org/wp-content/uploads/2024/10/cr-or-2007.pdf (accessed 2026-10-08).
+[^4]: Sexton Mountain, Every Lookout in Oregon (cherylhill.net), https://cherylhill.net/firelookouts/2021/07/07/sexton-mountain/ (accessed 2026-10-08).

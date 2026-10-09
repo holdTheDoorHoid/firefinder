@@ -1,0 +1,12 @@
+The Buck Mountain fire tower stands on a summit in Hamilton County, New York, near Long Lake. The register gives the summit as 2,425 feet, while the town's notice says 2,400.[^1][^3] Whitney Park, a private landowner, built a 60-foot Aermotor LS-40 steel tower in 1933 to guard its property.[^1] The state fire lookout association's newsletter says that in winter, sled dogs brought the tower parts up the mountain, though it admits how little history it has of this private tower.[^2] The Town of Long Lake's notice adds that a wooden fire observatory may have stood on the summit before the steel tower.[^3]
+
+The land now belongs to Cedar Heights Timber LLC.[^3] The register, which was recorded on December 25, 2022, had expected the tower to reopen in summer 2022 under an agreement between that owner and Hamilton County.[^1] The reopening came more than a year later. The newsletter and the town's notice both record that the tower opened to the public on September 2, 2023.[^2][^3][^4]
+
+The trail was a joint effort of the town, Hamilton County Soil and Water, and the Adirondack Mountain Club.[^3] The club's crews put in two summer seasons hand-building rock steps and wooden staircases for the steepest stretch.[^3] The final phase of the work was the tower's rehabilitation, which added a sheet metal roof, treads, galvanized steps and fencing. The town's notice does not date that work.[^3]
+
+The trail is 1.2 miles one way, with 500 feet of elevation gain, and starts at a parking lot on South Sabattis Road, off NYS Route 30.[^3] The landowner granted an easement across its land for the trail.[^3] From the tower, the notice says, the 360-degree view takes in the Whitney Wilderness and Little Tupper Lake.[^3] The notice does not say whether visitors may go up into the cab. It refers to trail rules without listing them, so check the rules before you climb.[^3]
+
+[^1]: Buck Fire Tower, National Historic Lookout Register, http://nhlr.org/lookouts/us/ny/buck-fire-tower/ (accessed 2026-10-08).
+[^2]: Around the State, September 2023 newsletter, New York State chapter of the Forest Fire Lookout Association, https://www.nysffla.org/News2023/2023%20Sep%20final.pdf (accessed 2026-10-08).
+[^3]: Buck Mountain Fire Tower Open September 2, 2023, Town of Long Lake, https://www.mylonglake.com/2023/09/02/buck-mountain-fire-tower-open-september-2-2023/ (accessed 2026-10-08).
+[^4]: Annual Report 2024, Forest Fire Lookout Association, New York State Chapter, https://firelookout.org/wp-content/uploads/2024/03/cr-ny-2023.pdf (accessed 2026-10-08).

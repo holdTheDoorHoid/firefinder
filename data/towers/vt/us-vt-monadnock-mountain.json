@@ -1,6 +1,7 @@
 {
   "id": "us-vt-monadnock-mountain",
   "name": "Monadnock Mountain Fire Tower",
+  "summary": "Steel fire tower on Monadnock Mountain in Lemington, Vermont, built by the CCC in 1938-1940; trail and tower listed as closed to public access in the 2020 chapter report and still closed in the 2021 report.",
   "other_names": [],
   "country": "US",
   "region": "VT",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "steel tower built by the Civilian Conservation Corps",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -31,38 +32,54 @@
   "agency": "Town of Lemington, Vermont",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Trail and tower closed to public access per the 2020 and 2021 Vermont chapter reports. No later report was read."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Trail closed to public access as of the 2021 Vermont chapter report."
   },
   "rental": null,
   "events": [
     {
       "year": 1938,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR gives 1938 as the build year; its description says the CCC built the tower between 1938 and 1940",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/vt/monadnock-mountain-fire-tower/"
+    },
+    {
+      "year": 2005,
+      "event": "other",
+      "note": "The Trust for Public Land conserved the 1,471-acre mountaintop and conveyed it to the Town of Lemington",
+      "from": "research",
+      "source_url": "https://www.tpl.org/our-work/lemington-community-forest"
     },
     {
       "year": 2020,
       "event": "closed",
-      "note": "The Monadnock Mountain trail and fire tower were closed to public access; still closed in the 2021 report.",
-      "from": "ffla_east_reports",
+      "note": "Vermont chapter report for 2020: trail and tower closed to public access",
+      "from": "research",
       "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-vt-2020.pdf"
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 24, 2020",
-      "from": "nhlr"
+      "note": "Registered March 24, 2020; nominated by Craig Hamelin",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/vt/monadnock-mountain-fire-tower/"
+    },
+    {
+      "year": 2021,
+      "event": "closed",
+      "note": "Vermont chapter report for 2021: trail continues to remain closed",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-vt-2021.pdf"
     }
   ],
   "photos": [
@@ -134,6 +151,16 @@
       "kind": "register"
     },
     {
+      "label": "Lemington Community Forest (The Trust for Public Land)",
+      "url": "https://www.tpl.org/our-work/lemington-community-forest",
+      "kind": "reference"
+    },
+    {
+      "label": "Vermont Chapter report for 2021 (Forest Fire Lookout Association (firelookout.org))",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-vt-2021.pdf",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Vermont lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/vt/",
       "kind": "association"
@@ -195,10 +222,31 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-vt-monadnock-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

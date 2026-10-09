@@ -1,0 +1,15 @@
+The Graham Mountain fire tower in Orange County, New York, was first erected by the state on Pocotello Mountain, also called Sayers Hill, and later moved to its present site.[^1] The Register uses that spelling.[^1] The 1930 state report spells the mountain Pocatello, and a Middletown newspaper places the tower at Sayer's Hill near Lake Pocatello.[^2]
+
+A Middletown newspaper reported in August 1930 that the new tower and cabin were ready for public inspection, with nine flights of steps leading up to the enclosed platform.[^2] A state annual report from the same year says the tower was erected to protect the eastern and southern slopes of the Shawangunk range.[^2] The Register describes a 60-foot Aermotor LS-40 tower with a 7-by-7-foot steel cab.[^1] The Register gives no build year, so 1930 is the earliest date we found.[^1]
+
+The tower was dismantled and moved to a nearby site in 1948.[^1] The Register lists the tower as registered on March 6, 1995, under the number US 105, NY 5.[^1]
+
+A former firewarden and FFLA historian, Bob Spear, wrote in the Register's notes that the tower was once a strategic lookout on the Shawangunk ridge, which he said was always prone to bad fires.[^1] The sources we read name no particular fire it watched. A former observer, Steve Canfield, is named in the April 2021 FFLA newsletter, but the newsletter does not say when he served.[^3] The Register's visit notes say the tower has not been regularly staffed since 1989 and call it abandoned.[^1]
+
+The tower is no longer in service.[^1] The Register says the Highlands Group of the Forest Fire Lookout Association has done some maintenance on the tower and ground cabin, while NYSDEC Forest Rangers look after only the cabin.[^1] A July 2004 visit report said the tower needed paint and that electronic sites were encroaching on it.[^1] The April 2021 newsletter found good-looking footings, a lot of communications equipment on site, and repairs that would likely need only new lumber.[^3]
+
+Today's access is uncertain. The access road leaves Mountain Road below Otisville and usually has a secured gate, because it also serves radio antennas.[^1] Bob Spear's notes say the land may be private, and that ownership of the area has long been unclear.[^1] His route parks near an abandoned house that was there at one time, then takes about ten minutes of fairly level walking to the road that leads to the tower.[^1] No source we read says whether the public may climb it now. Check with NYSDEC before going, and do not climb a tower that is closed or stands on private land.
+
+[^1]: Graham Mountain Fire Tower, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/ny/graham-mountain-fire-tower/ (accessed 2026-10-08).
+[^2]: Pocatello Mountain, Forest Lookouts (easternuslookouts.weebly.com), https://easternuslookouts.weebly.com/pocatello-mountain.html (accessed 2026-10-08).
+[^3]: Forest Fire Lookout Association, New York State Chapter, April 2021 newsletter (nysffla.org), https://www.nysffla.org/News2021/Apr-2021-final.pdf (accessed 2026-10-08).

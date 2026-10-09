@@ -1,6 +1,7 @@
 {
   "id": "us-nm-dead-mans-peak",
   "name": "Dead Man's Peak Lookout",
+  "summary": "A Santa Fe NF tower on Dead Man's Peak, erected 1933, with a 2002 steel cab per the 2020 chapter report; NHLR-registered 2014; reported staffed in 2020.",
   "other_names": [
     "Deadman"
   ],
@@ -18,8 +19,8 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": "30-ft Aermotor MC-24 tower with 12x12 wooden cab",
-  "height_m": null,
+  "design": "30-ft Aermotor MC-24 tower with a 12x12 ft cab; the 2020 chapter report says a steel cab replaced the wooden one in 2002, while the NHLR text still says wooden",
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -37,8 +38,8 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2020"
   },
   "visit": {
     "climbable": null,
@@ -48,23 +49,71 @@
   "rental": null,
   "events": [
     {
+      "year": 1913,
+      "event": "other",
+      "note": "The site has held a fire tower since at least 1913",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/dead-mans-peak-lookout/"
+    },
+    {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Erected in 1933 as a 30-ft Aermotor MC-24 with a 12x12 ft wooden cab; the Civilian Conservation Corps built it per the 2020 chapter report",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/dead-mans-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nm/dead-mans-peak-lookout/",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+      ]
+    },
+    {
+      "year": 1933,
+      "event": "replaced",
+      "note": "Replaced an earlier wooden platform tower built in the 1920s",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/dead-mans-peak-lookout/"
+    },
+    {
+      "year": 1963,
+      "event": "rebuilt",
+      "note": "Renovation approved under the Accelerated Public Works Program; the tower was rebuilt in the mid-1960s",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+    },
+    {
+      "year": 1969,
+      "event": "modified",
+      "note": "Roof modified and original nine-pane windows replaced",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/dead-mans-peak-lookout/"
+    },
+    {
+      "year": 1988,
+      "event": "assessed",
+      "note": "Evaluated for the 1988 thematic NRHP nomination; found not eligible because of loss of integrity",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
     },
     {
       "year": 2002,
       "event": "replaced",
-      "note": "Contractor built a new steel cab modeled on the earlier wooden cab; it was trucked to the site and set on the tower by crane.",
-      "from": "ffla_west_reports",
+      "note": "A contractor built a new steel cab modeled on the wooden one; it was trucked in and set by crane",
+      "from": "research",
       "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
     },
     {
       "year": 2014,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 24, 2014",
-      "from": "nhlr"
+      "note": "Registered April 24, 2014; nominated by Scott Waltemeyer",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/dead-mans-peak-lookout/"
+    },
+    {
+      "year": 2020,
+      "event": "staffed",
+      "note": "Described as staffed in 2020 (the 2020 report's 'currently staffed') and the only lookout on the Cuba Ranger District",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
     }
   ],
   "photos": [
@@ -175,10 +224,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nm-dead-mans-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

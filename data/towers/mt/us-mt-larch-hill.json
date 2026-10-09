@@ -21,8 +21,8 @@
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
-  "ownership": "unknown",
+  "agency": "Lewis and Clark National Forest",
+  "ownership": "federal",
   "access": {
     "level": "unknown",
     "note": null
@@ -49,6 +49,11 @@
       "label": "Larch Hill on firelookout.com (Rex Kamstra)",
       "url": "https://www.firelookout.com/mt/larchhill.html",
       "kind": "site"
+    },
+    {
+      "label": "Larch Hill on Forest Lookouts, western US (Ron Kemnow)",
+      "url": "https://montanalookouts.weebly.com/larch-hill.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -68,6 +73,15 @@
       "source": "firelookout_com",
       "key": "firelookout_com:mt:larch-hill:47.7347:-113.1524",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "west_us_lookouts",
+      "key": "west_us_lookouts:mt:larch-hill",
+      "fields": [
+        "agency",
+        "ownership",
         "links"
       ]
     }

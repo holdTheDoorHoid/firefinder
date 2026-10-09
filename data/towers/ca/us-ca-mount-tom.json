@@ -1,6 +1,7 @@
 {
   "id": "us-ca-mount-tom",
   "name": "Mount Tom Lookout",
+  "summary": "CCC-built C-3 cab lookout on a steel tower in Sierra National Forest, Fresno County; NHLR-registered 1999 and still in service per NHLR. Build year and height differ between sources.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": "C-3 cab on 30-ft K-braced tower",
+  "design": "C-3 wooden cab (14 by 14 ft) with catwalk on a 30-32 ft K-braced steel tower with straight stairway",
   "height_m": 18.3,
   "status": "standing",
   "status_note": null,
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Seasonal: closed in winter due to heavy snow; in summer the public may access the tower and surrounding area when open for service (fire-lookouts.org, older page)"
   },
   "staffing": {
     "status": "unknown",
@@ -41,35 +42,45 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Closed in winter due to heavy snow. Sources read give no drive-up or trail directions and do not say whether the cab may be climbed."
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": null,
-      "from": "fire_lookouts_org"
+      "note": "Built by the CCC as a compass lookout with steel structure base; fire-lookouts.org gives 1934. Forest Lookouts gives 1935 (see resolved_conflicts)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/mount-tom-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/mount-tom-lookout/",
+        "https://www.fire-lookouts.org/cali/mt_tom/index.htm"
+      ]
     },
     {
       "year": 1999,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: April 21, 1999",
-      "from": "nhlr"
+      "note": "Registered April 21, 1999 as US 306, CA 34",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/mount-tom-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/mount-tom-lookout/",
+        "https://www.fire-lookouts.org/cali/mt_tom/index.htm"
+      ]
     },
     {
       "year": 2010,
       "event": "restored",
-      "note": "New cabinets, new floor and plumbing upgrades by volunteers under a Fresno County RAC grant.",
-      "from": "ffla_west_reports",
-      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sn-nevada-2010.pdf"
+      "note": "Maintenance by volunteers over several weekends: new cabinets, new floor, plumbing upgrades (FFLA report as reproduced on fire-lookouts.org)",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/mt_tom/index.htm"
     },
     {
       "year": 2011,
       "event": "other",
-      "note": "Second-round Fresno County RAC grant of about $18,000 (shared with Delilah) to continue rehabilitation; new roof and outhouse planned.",
-      "from": "ffla_west_reports",
-      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-sn-nevada-2011.pdf"
+      "note": "New roof and outhouse scheduled; completion not confirmed in sources read",
+      "from": "research",
+      "source_url": "https://www.fire-lookouts.org/cali/mt_tom/index.htm"
     },
     {
       "year": 2018,
@@ -195,10 +206,31 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-mount-tom",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

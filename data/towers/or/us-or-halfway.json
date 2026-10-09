@@ -1,6 +1,7 @@
 {
   "id": "us-or-halfway",
   "name": "Halfway Lookout",
+  "summary": "1938 52-ft timber tower in the yard of the Pine Ranger Station near Halfway, Oregon; emergency use only, fenced; record height corrected.",
   "other_names": [
     "Halfway (Pine Ranger Station)",
     "Pine Ranger Station"
@@ -19,8 +20,8 @@
   "material": "wood",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": 2.1,
+  "design": "52-ft timber tower (register: open timber; firelookout.com: treated timber) with a 7x7 ft observation cab and catwalk",
+  "height_m": 15.8,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -34,31 +35,39 @@
   "agency": "US Forest Service - Wallowa-Whitman National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "On the grounds of the Pine Ranger Station, a Forest Service office. A fence now surrounds the tower to keep climbers off it."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "About two miles southeast of Halfway, on the Pine Ranger Station grounds. A 2023 visitor suggested asking a ranger onsite during visiting hours. A fence keeps people off the tower."
   },
   "rental": null,
   "events": [
     {
       "year": 1938,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built in the yard of the Pine Ranger Station (Pine Field Office) on the Wallowa-Whitman National Forest",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/halfway-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/halfway-lookout/",
+        "https://www.firelookout.com/or/halfway.html",
+        "https://theroamingcivic.com/2023/09/01/pine-ranger-station-lookout/",
+        "https://cherylhill.net/firelookouts/oregons-standing-lookouts/"
+      ]
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 3, 2022",
-      "from": "nhlr"
+      "note": "Registered July 3, 2022 as US 1623, OR 144",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/halfway-lookout/"
     }
   ],
   "photos": [
@@ -92,6 +101,16 @@
       "label": "NHLR register entry US 1623 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/or/halfway-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Pine Ranger Station L.O. (The Roaming Civic)",
+      "url": "https://theroamingcivic.com/2023/09/01/pine-ranger-station-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Oregon's Standing Lookouts (Every Lookout in Oregon (cherylhill.net))",
+      "url": "https://cherylhill.net/firelookouts/oregons-standing-lookouts/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
@@ -164,10 +183,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-halfway",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

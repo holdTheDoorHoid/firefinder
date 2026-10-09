@@ -1,6 +1,7 @@
 {
   "id": "us-oh-copperhead",
   "name": "Copperhead Fire Tower",
+  "summary": "Ohio's first fire tower: a 60-foot steel lookout built in 1924 in Shawnee State Forest, restored, climbable at visitors' own risk, on the NHLR since 1991.",
   "other_names": [
     "Copperhead Hill"
   ],
@@ -18,7 +19,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "60-foot steel tower with stairs and an observation cabin at the top",
   "height_m": 18.3,
   "status": "standing",
   "status_note": null,
@@ -30,34 +31,62 @@
       "url": "http://nhlr.org/lookouts/us/oh/copperhead-fire-tower/"
     }
   ],
-  "agency": "Ohio Dept. of Natural Resources",
+  "agency": "Ohio Department of Natural Resources (Ohio Division of Forestry as cooperator)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=permissive."
+    "level": "public",
+    "note": "In Shawnee State Forest. Two later pages say visitors may climb to the top at their own risk. No hours or parking details given."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2026-10-08"
   },
   "visit": {
-    "climbable": null,
+    "climbable": true,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Climb at your own risk, per the Portsmouth and Scioto Historical pages. The 360-degree view covers the surrounding forest and hills. Sources give no hours or parking details."
   },
   "rental": null,
   "events": [
     {
       "year": 1924,
       "event": "built",
-      "note": null,
-      "from": "osm"
+      "note": "Built by the state as the first fire tower in Ohio, a 60-foot steel tower on Copperhead Hill.",
+      "from": "research",
+      "source_url": "https://portsmouthohio.org/day-trip-to-copperhead-fire-tower/",
+      "source_urls": [
+        "https://portsmouthohio.org/day-trip-to-copperhead-fire-tower/",
+        "https://mail.sciotohistorical.org/items/show/51",
+        "http://nhlr.org/lookouts/us/oh/copperhead-fire-tower/"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "staffed",
+      "note": "A Chillicothe Gazette item said James Morgan would man the tower, with Isom Morgan as his substitute.",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/copperhead-hill.html"
+    },
+    {
+      "year": 1948,
+      "event": "modified",
+      "note": "A newspaper item said a short-wave station would be set up in the tower. The sources do not confirm it was completed.",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/copperhead-hill.html"
     },
     {
       "year": 1991,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 16, 1991",
-      "from": "nhlr"
+      "note": "Date registered on the National Historic Lookout Register: March 16, 1991 (US 15, OH 2).",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/oh/copperhead-fire-tower/"
+    },
+    {
+      "year": 2003,
+      "event": "assessed",
+      "note": "NHLR visit report, October 2, 2003: needs paint, stairs appear to be rotting, no glass or shutters in the cab.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/oh/copperhead-fire-tower/"
     }
   ],
   "photos": [
@@ -96,6 +125,21 @@
       "label": "NHLR register entry (nhlr.org)",
       "url": "http://nhlr.org/nhlr.org/lookouts/us/oh/copperhead-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Day Trip to Copperhead Fire Tower (City of Portsmouth Ohio)",
+      "url": "https://portsmouthohio.org/day-trip-to-copperhead-fire-tower/",
+      "kind": "reference"
+    },
+    {
+      "label": "Copperhead Fire Tower (Scioto Historical)",
+      "url": "https://mail.sciotohistorical.org/items/show/51",
+      "kind": "reference"
+    },
+    {
+      "label": "Copperhead Fire Tower (Scenic Scioto Heritage Trail)",
+      "url": "https://www.sciotoheritagetrail.com/copperhead-fire-tower.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA Ohio lookout list (firelookout.org)",
@@ -155,10 +199,33 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-oh-copperhead",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

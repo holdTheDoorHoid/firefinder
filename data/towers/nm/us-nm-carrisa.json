@@ -1,6 +1,7 @@
 {
   "id": "us-nm-carrisa",
   "name": "Carrisa Lookout",
+  "summary": "1935 CCC lookout complex in Otero County with an 80-foot Aermotor MC-39 tower; restored 2010-2012, NRHP-listed 1988, cabin rental planned, road gated.",
   "other_names": [],
   "country": "US",
   "region": "NM",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": "80-ft Aermotor MC-39 tower with 7x7 cab",
-  "height_m": null,
+  "design": "80-foot Aermotor MC-39 steel tower with a 7 by 7 foot steel cab, plus an observer's cabin and tool shed",
+  "height_m": 24.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "public",
-    "note": "Listed as a visitor site on recreation.gov. Check the listing for seasonal closures."
+    "level": "restricted",
+    "note": "Forest Service page (updated February 19, 2025) marks the site Site Open, but the road to the lookout is gated and closed; the area is reached on foot."
   },
   "staffing": {
     "status": "unknown",
@@ -40,22 +41,53 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "The road to the lookout is gated and closed; access to the area is by foot."
   },
   "rental": null,
   "events": [
     {
+      "year": 1932,
+      "event": "other",
+      "note": "October 20, 1932 newspaper item mentions a new Forest Service road at a Carisso tower; may or may not refer to this site",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/carrissa.html"
+    },
+    {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Complex constructed by the Civilian Conservation Corps; the Forest Service dates the tower's erection to 1934 and the cabin and shed to 1935",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/carrisa-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nm/carrisa-lookout/",
+        "https://www.fs.usda.gov/r03/lincoln/recreation/carrissa-lookout",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+      ]
+    },
+    {
+      "year": 1958,
+      "event": "staffed",
+      "note": "April 1958 item says a man was to serve as fire guard at the Carrizo fire lookout that summer; August 1958 item says a couple served as fire guards there (spelled Carizozo); link to this tower not certain",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/carrissa.html"
     },
     {
       "year": 1988,
       "event": "nrhp_listed",
-      "note": "Lookout complex listed on the National Register of Historic Places on 28 January 1988 (date from the chapter table); name misspelled Carissa in the nomination.",
-      "from": "ffla_west_reports",
+      "note": "Complex listed on the National Register of Historic Places; 1/28/1988 in the 2020 report's table",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r03/lincoln/recreation/carrissa-lookout",
+      "source_urls": [
+        "https://www.fs.usda.gov/r03/lincoln/recreation/carrissa-lookout",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+      ]
+    },
+    {
+      "year": 2010,
+      "event": "restored",
+      "note": "Restoration and rehabilitation began in 2010",
+      "from": "research",
       "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
     },
     {
@@ -68,8 +100,20 @@
     {
       "year": 2012,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: February 12, 2012",
-      "from": "nhlr"
+      "note": "Registered February 12, 2012 as US 940, NM 29; nominated by Mark H. Gutzman",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/carrisa-lookout/"
+    },
+    {
+      "year": 2012,
+      "event": "restored",
+      "note": "Restoration and rehabilitation completed in 2012",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r03/lincoln/recreation/carrissa-lookout",
+      "source_urls": [
+        "https://www.fs.usda.gov/r03/lincoln/recreation/carrissa-lookout",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+      ]
     }
   ],
   "photos": [
@@ -108,6 +152,11 @@
       "label": "NHLR register entry (nhlr.org)",
       "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=943",
       "kind": "register"
+    },
+    {
+      "label": "Carrissa Lookout (U.S. Forest Service, Lincoln National Forest)",
+      "url": "https://www.fs.usda.gov/r03/lincoln/recreation/carrissa-lookout",
+      "kind": "reference"
     },
     {
       "label": "FFLA New Mexico lookout list (firelookout.org)",
@@ -180,10 +229,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nm-carrisa",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

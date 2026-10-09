@@ -1,0 +1,14 @@
+The Cerro Pelado lookout stands in Sandoval County, New Mexico, within the Santa Fe National Forest.[^1] A 2020 Forest Fire Lookout Association report places it on the Jemez Ranger District.[^2] The present cab follows a Forest Service standard plan: a flat-top metal cab of 14 by 14 feet with a catwalk, set on a 10-foot cinder block base with a storage room.[^1] The register dates the cab to 1965, when it replaced an L-4 ground house that the register dates to 1932.[^1]
+
+The site was in use well before that.[^3] A 1916 Santa Fe New Mexican item, quoted by West Lookouts, says the Cerro Pelado rangers had a telephone link into the Forest Service network, and that they were testing heliograph signals with Rabbit Mountain.[^3] A 1946 Santa Fe New Mexican item describes a lookout who worked in a small wood-and-glass tower anchored with wire cables, and it gives the peak as 11,000 feet, against the register's 10,012 feet.[^3][^1] A wood-and-glass tower does not fit the register's ground house, so the sources do not agree on what stood there before 1965.[^1][^3]
+
+The peak's name also appears on a 2022 fire.[^4] The Cerro Pelado Fire burned on the Jemez Ranger District in spring 2022.[^4] The Forest Service later found that it began as a holdover from the Pino West Piles prescribed fire, a debris pile burn that smoldered unseen under wet snow.[^4] The release does not say whether the fire reached the lookout.[^4]
+
+The Forest Fire Lookout Association lists the lookout as a standing two-story cab.[^6] The register recorded it on May 22, 2022.[^1] On August 3, 2026, two lightning fires on the Santa Fe National Forest were reported by the Cerro Pelado Lookout, which suggests the post was manned that summer.[^5] The register does not address visitor access.[^1] Because the lookout was reporting fires in 2026, treat it as a working post rather than a visitor site.[^5]
+
+[^1]: Cerro Pelado Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/nm/cerro-pelado-lookout/ (accessed 2026-10-08).
+[^2]: 2020 Year-End Report, Forest Fire Lookout Association, New Mexico Chapter, https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf (accessed 2026-10-08).
+[^3]: Cerro Pelado - Forest Lookouts, West Lookouts, https://westlookouts.weebly.com/cerro-pelado.html (accessed 2026-10-08).
+[^4]: USDA Forest Service confirms cause of the 2022 Cerro Pelado Fire on the Santa Fe National Forest, USDA Forest Service, https://www.fs.usda.gov/r03/santafe/newsroom/releases/usda-forest-service-confirms-cause-2022-cerro-pelado-fire-santa-fe (accessed 2026-10-08).
+[^5]: New starts and updates on wildfires on the Santa Fe National Forest, USDA Forest Service, https://www.fs.usda.gov/r03/santafe/newsroom/releases/new-starts-and-updates-wildfires-santa-fe-national-forest (accessed 2026-10-08).
+[^6]: New Mexico Lookouts, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/nm/ (accessed 2026-10-08).

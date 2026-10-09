@@ -1,6 +1,7 @@
 {
   "id": "us-wa-tunk-mountain",
   "name": "Tunk Mountain Lookout",
+  "summary": "A 1933 Forest Service detection lookout was replaced in 1966 by a state timber tower; the cab is now privately owned and locked, and sources disagree on who holds the site.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,7 +17,7 @@
   "material": "wood",
   "material_from": "nhlr",
   "roles": [],
-  "design": "L-4",
+  "design": "14x14-ft DNR cab on a 40-ft timber tower (1966); original 1933 cab was L-4 on a 40-ft pole tower",
   "height_m": 12.2,
   "status": "standing",
   "status_note": null,
@@ -28,28 +29,73 @@
       "url": "http://nhlr.org/lookouts/us/wa/tunk-mountain-lookout/"
     }
   ],
-  "agency": "Washington Dept. of Natural Resources",
+  "agency": "Washington Dept. of Natural Resources (NHLR administrator; other sources describe private ownership)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Privately owned and locked per TrailChick (updated March 2026); the summit area is open to the public, the cab is not."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2026"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "Road reported relatively well maintained in November 2017; snow stopped the visitor about a mile below the lookout. Cab is locked; do not climb or enter."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "U.S. Forest Service detection lookout: L-4 cab on a 40-ft pole tower. All three sources give 1933.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/tunk-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/tunk-mountain-lookout/",
+        "https://www.firelookout.com/wa/tunk.html",
+        "https://www.trailchick.com/wa-state-fire-lookouts/tunk-mountain-lookout/"
+      ]
+    },
+    {
+      "year": 1952,
+      "event": "staffed",
+      "note": "firelookout.com lists named lookout staff from 1952 to 1962; 1953-1954 marked not staffed.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wa/tunk.html"
+    },
     {
       "year": 1966,
       "event": "built",
       "note": "'Built' field on NHLR detail page",
       "from": "nhlr"
+    },
+    {
+      "year": 1966,
+      "event": "replaced",
+      "note": "Pole tower replaced by the current 40-ft timber tower with a 14x14-ft DNR cab.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/tunk-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wa/tunk-mountain-lookout/",
+        "https://www.firelookout.com/wa/tunk.html",
+        "https://www.trailchick.com/wa-state-fire-lookouts/tunk-mountain-lookout/"
+      ]
+    },
+    {
+      "year": 2004,
+      "event": "other",
+      "note": "NHLR: lookout purchased by American Resources.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/tunk-mountain-lookout/"
+    },
+    {
+      "year": 2005,
+      "event": "other",
+      "note": "Eastern Washington FFLA chapter took up local management and performed some maintenance; not described as a restoration.",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-we-2005.pdf"
     },
     {
       "year": 2005,
@@ -61,15 +107,27 @@
     {
       "year": 2005,
       "event": "staffed",
-      "note": "Used for fire detection for the first time in many years; a paid contractor staffed it for about a month while Bonaparte was closed for renovation.",
-      "from": "ffla_west_reports",
-      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-we-2005.pdf"
+      "note": "Paid contractor staffed the lookout about one month while Bonaparte Lookout was renovated. The chapter report calls the contractor a Forest Service contractor and does not name a firm.",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-we-2005.pdf",
+      "source_urls": [
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-we-2005.pdf",
+        "http://nhlr.org/lookouts/us/wa/tunk-mountain-lookout/"
+      ]
     },
     {
       "year": 2006,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 2, 2006",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, January 2, 2006.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wa/tunk-mountain-lookout/"
+    },
+    {
+      "year": 2021,
+      "event": "staffed",
+      "note": "Temporarily staffed from Bonaparte during the Spur/Walker Creek Fire, after the Bonaparte lookout was evacuated.",
+      "from": "research",
+      "source_url": "https://www.trailchick.com/wa-state-fire-lookouts/tunk-mountain-lookout/"
     }
   ],
   "photos": [
@@ -224,6 +282,23 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-tunk-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -247,7 +322,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

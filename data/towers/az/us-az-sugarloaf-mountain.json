@@ -1,6 +1,7 @@
 {
   "id": "us-az-sugarloaf-mountain",
   "name": "Sugarloaf Mountain Lookout",
+  "summary": "A 1935 CCC-built ground house on Sugarloaf Mountain in Chiricahua National Monument; the register says unstaffed and sources disagree on build details, but a public trail reaches it.",
   "other_names": [
     "Sugarloaf"
   ],
@@ -18,7 +19,7 @@
   "material": "mixed",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "14x14 ft ground house with stone base and permanent overhang roof per NHLR; the CCC narrative describes frame construction on a masonry foundation with concrete basement, cistern and hardwood floors",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -33,31 +34,48 @@
   "agency": "National Park Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached by a public hiking trail in Chiricahua National Monument. The sources do not say whether visitors may enter the cabin, and NPS still uses it to monitor summer lightning."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "undated"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Sugarloaf Mountain Trail: moderate, 1.8 miles (2.8 km) round trip, starts at the Sugarloaf parking lot, uphill with little rough terrain."
   },
   "rental": null,
   "events": [
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built by CCC enrollees from Camp NM-2-A as a fire lookout house; Company 828 began excavation and materials were packed in by mule; the narrative says it was finished in summer and fall 1935",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/sugarloaf-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/sugarloaf-mountain-lookout/",
+        "https://npshistory.com/publications/chir/ccc-narrative-history.pdf"
+      ]
     },
     {
       "year": 2004,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 1, 2004",
-      "from": "nhlr"
+      "note": "Registered June 1, 2004 as US 575, AZ 55",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/sugarloaf-mountain-lookout/"
+    },
+    {
+      "year": 2008,
+      "event": "nrhp_listed",
+      "note": "Wikidata gives a 21 November 2008 start time for a National Register contributing-property claim within the Chiricahua National Monument Historic Designed Landscape; the NPS page confirms the landscape is on the Register but I did not confirm this date",
+      "from": "research",
+      "source_url": "https://www.wikidata.org/wiki/Q86928403",
+      "source_urls": [
+        "https://www.wikidata.org/wiki/Q86928403",
+        "https://www.nps.gov/articles/850007.htm"
+      ]
     }
   ],
   "photos": [
@@ -249,6 +267,21 @@
       "kind": "register"
     },
     {
+      "label": "A Narrative History of The Civilian Conservation Corps at Chiricahua National Monument (National Park Service)",
+      "url": "https://npshistory.com/publications/chir/ccc-narrative-history.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Sugarloaf Mountain Trail (National Park Service)",
+      "url": "https://www.nps.gov/thingstodo/sugarloaf-mountain-trail.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Chiricahua National Monument Historic Designed Landscape (National Park Service)",
+      "url": "https://www.nps.gov/articles/850007.htm",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Arizona lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/az/",
       "kind": "association"
@@ -306,10 +339,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-sugarloaf-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

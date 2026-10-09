@@ -1,0 +1,15 @@
+Babbit Peak Lookout sits in Sierra County on the Tahoe National Forest, at 8,727 feet.[^1] The spelling varies in the sources. The register and the 1929 and 1965 newspaper items use Babbit. Newspaper items from 1930 to 1960, and the Forest Fire Lookout Association list, use Babbitt.[^1][^2][^5]
+
+The earliest sources place the lookout on Bald Mountain. A forest road was finished to the top of the mountain in 1928, and a new station was built there the next year.[^2] A 1929 paper said it would be called Babbit Lookout, in memory of a pioneer ranger of the area.[^2] By late August 1929 the building was finished and in use.[^2] No source states outright that Bald Mountain and Babbit Peak are the same summit. The 1929 station name matches the register's, so this story treats them as one site.[^1][^2] The register describes the cab as one of the classic "Dunce Cap" designs, a California region style with a steep roof, dating from 1923. It notes that few examples survive.[^1]
+
+The earliest named lookout in these papers is Fred Kyler, announced in May 1930 as the Forest Service's lookout on Babbitt Peak.[^2] In August 1935 a ranger watching from the lookout saw lightning strike an airways beacon south of Verdi. Repairs were made before nightfall.[^2] Mrs. Joe Murphy was at the lookout in 1944.[^2] In 1960 the lookout was one of three in Northern California picked for a time-lapse camera, part of a study tied to a new radar fire detection system.[^2]
+
+The station was closed in the fall of 1964.[^2] It was due to reopen in late June 1965, with Mrs. Jean Dixon as operator.[^2] Later, a 2007 FFLA chapter report describes a relief lookout there who reported fires to the Tahoe, Toiyabe and Plumas national forests.[^3] A 2009 report mentions more than 700 visitors to the lookout that year.[^4]
+
+The register's 2011 visit report calls it a staffed lookout in good condition and a great place to visit.[^1] Its directions give three routes to a final six-mile leg, and say a two-wheel-drive vehicle with medium clearance can make it.[^1] A gate about half a mile from the tower may be closed. If it is, the register says to park about three quarters of a mile away and walk in.[^1] The 2011 visit is the latest staffing record in these sources. The register lists the Sierraville Ranger District as a cooperator, so check with that district before going up.[^1]
+
+[^1]: Babbit Peak Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/ca/babbit-peak-lookout/ (accessed 2026-10-08).
+[^2]: Babbitt Peak, California forest lookouts history site, https://californialookouts.weebly.com/babbitt-peak.html (accessed 2026-10-08).
+[^3]: Forest Fire Lookout Association chapter report, 2007, https://firelookout.org/wp-content/uploads/2024/10/cr-nca-2007.pdf (accessed 2026-10-08).
+[^4]: Forest Fire Lookout Association chapter report, 2009, https://firelookout.org/wp-content/uploads/2024/11/cr-nca-2009.pdf (accessed 2026-10-08).
+[^5]: California lookout list, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/ca/ (accessed 2026-10-08).

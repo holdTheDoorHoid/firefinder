@@ -1,6 +1,7 @@
 {
   "id": "us-ca-cone-peak",
   "name": "Cone Peak Lookout",
+  "summary": "1923 wood ground cab on Cone Peak, later sheathed in metal and full of radio gear; the Forest Service lists the site closed after the 2026 fires.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -18,7 +19,7 @@
   "roles": [
     "aws"
   ],
-  "design": "all-metal tower",
+  "design": "Ground cab on a rock foundation: a 13 by 13 foot wooden cab, later clad in metal siding, with a flat roof from 1959",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -33,38 +34,83 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Forest Service listing, updated August 31, 2026: site closed after the Timber and Plaskett Fires; emergency closure order with exceptions applies"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2023"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Accessible only by hiking on the Vicente Flat Trail to the Cone Peak Rd, then the Cone Peak Trail; the access road had major washout damage in December 2021"
   },
   "rental": null,
   "events": [
     {
       "year": 1923,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Original 13 by 13 foot wooden ground cab on a rock foundation, hauled up the trail by mules in pieces",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/cone-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/cone-peak-lookout/",
+        "https://californialookouts.weebly.com/cone-peak.html"
+      ]
+    },
+    {
+      "year": 1959,
+      "event": "modified",
+      "note": "Hipped roof replaced with a flat roof that could take a small helicopter",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/cone-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/cone-peak-lookout/",
+        "https://californialookouts.weebly.com/cone-peak.html"
+      ]
+    },
+    {
+      "year": 1990,
+      "event": "staffed_last",
+      "note": "Last known lookout to staff the facility worked there until 1990",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/cone-peak-lookout/"
     },
     {
       "year": 2018,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 8, 2018",
-      "from": "nhlr"
+      "note": "Date registered December 8, 2018",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/cone-peak-lookout/"
+    },
+    {
+      "year": 2018,
+      "event": "other",
+      "note": "Cab used to hold radio repeater equipment and could not immediately be reactivated as a lookout",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/cone-peak-lookout/"
     },
     {
       "year": 2020,
       "event": "fire",
-      "note": "Dolan Fire burned over the peak and the all-metal tower survived undamaged.",
-      "from": "ffla_west_reports",
+      "note": "Dolan Fire burned over the peak; the FFLA California-South report says the structure survived undamaged",
+      "from": "research",
       "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-south-2020.pdf"
+    },
+    {
+      "year": 2021,
+      "event": "other",
+      "note": "Access road to the lookout trailhead suffered major washout damage in December 2021; repairs begun",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/03/cr-cal-south-2023.pdf"
+    },
+    {
+      "year": 2026,
+      "event": "closed",
+      "note": "Forest Service lists the site as closed in August 2026 due to the Timber and Plaskett Fires",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r05/lospadres/recreation/cone-peak-lookout-4e12"
     }
   ],
   "photos": [
@@ -172,6 +218,16 @@
       "kind": "register"
     },
     {
+      "label": "2023 Year-End Report (Forest Fire Lookout Association (firelookout.org))",
+      "url": "https://firelookout.org/wp-content/uploads/2024/03/cr-cal-south-2023.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Cone Peak Lookout - 4E12 (U.S. Forest Service, Los Padres National Forest)",
+      "url": "https://www.fs.usda.gov/r05/lospadres/recreation/cone-peak-lookout-4e12",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -246,10 +302,31 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-cone-peak",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

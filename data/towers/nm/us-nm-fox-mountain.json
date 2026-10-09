@@ -1,6 +1,7 @@
 {
   "id": "us-nm-fox-mountain",
   "name": "Fox Mountain Lookout",
+  "summary": "1959 Forest Service CL-100 series cab on a 10-foot block base on Fox Mountain, Gila National Forest; seasonal staffing in 2020; unpaved access road.",
   "other_names": [],
   "country": "US",
   "region": "NM",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": "14x14 CL-100 to CL-106 series flat-top cab on 10-ft concrete block base",
+  "design": "CL-100 series steel flat-top cab on a 10-foot block base with storage room",
   "height_m": 3.0,
   "status": "standing",
   "status_note": null,
@@ -40,22 +41,50 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Unpaved Forest Road 770 from NM-32, about 5.2 miles to the summit; a road guide says it is usually impassable November through June and recommends a 4x4."
   },
   "rental": null,
   "events": [
     {
+      "year": 1936,
+      "event": "other",
+      "note": "Survey station description written by the Coast and Geodetic Survey in 1936 refers to a lookout station on the summit; the sources do not say what stood there",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/fox-mountain.html"
+    },
+    {
       "year": 1959,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built in 1959 as a CL-100 series cab on a 10-foot block base",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/fox-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/nm/fox-mountain-lookout/",
+        "https://westlookouts.weebly.com/fox-mountain.html",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
+      ]
+    },
+    {
+      "year": 1988,
+      "event": "assessed",
+      "note": "Evaluated for the 1988 thematic National Register nomination and found not eligible due to age",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
     },
     {
       "year": 2006,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 2, 2006",
-      "from": "nhlr"
+      "note": "Registered January 2, 2006; nominated by Dave Lorenz",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nm/fox-mountain-lookout/"
+    },
+    {
+      "year": 2020,
+      "event": "staffed",
+      "note": "Staffed seasonally, per the 2020 year-end report",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-nm-2020.pdf"
     }
   ],
   "photos": [
@@ -82,6 +111,11 @@
       "label": "NHLR register entry (nhlr.org)",
       "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=682",
       "kind": "register"
+    },
+    {
+      "label": "How to drive the unpaved road to the lookout at Fox Mountain in New Mexico (Dangerous Roads)",
+      "url": "https://www.dangerousroads.org/north-america/usa/7050-fox-mountain.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA New Mexico lookout list (firelookout.org)",
@@ -154,10 +188,29 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nm-fox-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

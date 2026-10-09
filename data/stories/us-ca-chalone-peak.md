@@ -1,0 +1,16 @@
+Chalone Peak Lookout stands on North Chalone Peak, the high point of Pinnacles National Park in Monterey County, California.[^1][^4] The California Department of Forestry built the present lookout in 1952, after a fire and explosions in 1951 had destroyed the one before it.[^1][^2]
+
+Newspaper reports fill in the earlier history. A February 1935 item says Washington had approved a $2,500 lookout station on North Chalone.[^2] In July 1951 two blasts and a fire wrecked a lookout built by the Civilian Conservation Corps, along with a smaller building used by the aircraft warning service during World War II.[^2] The papers give different causes. One points to butane gas leaking from a refrigerator or stove, and another to gas from a tank lit by a refrigerator's pilot light.[^2] A replacement tower was estimated to cost $17,000.[^2] The sources we read do not say whether the 1935 station is the one that was destroyed.
+
+The present cab is octagonal wood, 16 by 16 feet, on a 20-foot steel tower that is wrapped in aluminum siding.[^1] A later guide says its angled windows were meant to reduce glare.[^4] The register accepted the lookout on January 12, 2002 as US 396, CA 47, after a nomination by Dave Doyle.[^1] Ownership passed to the National Park Service in 1990.[^1]
+
+In March 1963 vandals broke into the lookout and lit a fire on the floor.[^2] In May 2019 a register visitor found the cab door boarded up, second-story windows broken, graffiti inside, and the Osborne fire finder still in place.[^1] The visitor advised the park to store the finder more securely.[^1]
+
+In 2019 the Park Service said it was interested in refurbishing the tower if funding could be found, and otherwise would consider removing it.[^1] A 2018 estimate put stabilization at $200,000.[^1] In 2025 a Forest Fire Lookout Association chapter reported that Pinnacles National Park had decided to demolish the tower, citing the lack of funds to restore it, which the chapter put at $300,000 to $1 million, and ongoing access limits. It said demolition might come as late as 2031.[^3] The two cost figures come from different years and may cover different work.
+
+Today the lookout is a landmark on the summit hike.[^4] The walk from Bear Gulch Reservoir is about 9 miles round trip and climbs roughly 2,040 feet.[^4] The register describes a 4.5-mile hike each way through a wilderness area.[^1] The door was boarded up in 2019.[^1] The guide says public access to the inside has not been established, and it suggests viewing the lookout as a landmark seen from outside.[^4] Official naturalists and condor trackers who visit the peak do not enter the tower, the register says.[^1]
+
+[^1]: Chalone Peak Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/ca/chalone-peak-lookout/ (accessed 2026-10-08).
+[^2]: North Chalone Peak, Forest Lookouts (californialookouts.weebly.com), https://californialookouts.weebly.com/north-chalone-peak.html (accessed 2026-10-08).
+[^3]: Cal-South 2025 Annual Report, Forest Fire Lookout Association California-South Chapter, https://firelookout.org/wp-content/uploads/2026/01/cr-cal-south-2025.pdf (accessed 2026-10-08).
+[^4]: North Chalone Peak, Parkwolf, https://www.parkwolf.app/parks/pinnacles-national-park/places/north-chalone-peak (accessed 2026-10-08).

@@ -1,6 +1,7 @@
 {
   "id": "us-az-apache-maid",
   "name": "Apache Maid Lookout",
+  "summary": "A 1961 metal-tower lookout on Apache Maid Mountain in the Coconino National Forest, last reported staffed in a 2011 register visit.",
   "other_names": [],
   "country": "US",
   "region": "AZ",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "14' x 14' metal CL-100 series cab on a 30' metal tower",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -35,8 +36,8 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2011"
   },
   "visit": {
     "climbable": null,
@@ -46,16 +47,36 @@
   "rental": null,
   "events": [
     {
+      "year": 1959,
+      "event": "other",
+      "note": "Erection planned for fiscal 1960 was deferred to fiscal 1961 because of other regional priorities",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/apache-maid.html"
+    },
+    {
       "year": 1961,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Erected by contractor Martin C. Cline; contract completed and accepted April 29, 1961",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/apache-maid-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/apache-maid-lookout/",
+        "https://westlookouts.weebly.com/apache-maid.html"
+      ]
     },
     {
       "year": 2006,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 15, 2006",
-      "from": "nhlr"
+      "note": "Registered March 15, 2006",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/apache-maid-lookout/"
+    },
+    {
+      "year": 2011,
+      "event": "staffed",
+      "note": "Register visit report dated September 11, 2011 marks the lookout staffed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/apache-maid-lookout/"
     }
   ],
   "photos": [
@@ -94,6 +115,11 @@
       "label": "NHLR register entry (nhlr.org)",
       "url": "http://nhlr.org/nhlr.org/lookouts/us/az/apache-maid-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Apache Maid Cabin (Recreation.gov (Coconino National Forest Recreation))",
+      "url": "https://recreation.gov/camping/campgrounds/234680",
+      "kind": "reference"
     },
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
@@ -153,10 +179,29 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-apache-maid",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

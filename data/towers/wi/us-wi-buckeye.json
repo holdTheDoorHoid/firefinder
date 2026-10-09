@@ -1,6 +1,7 @@
 {
   "id": "us-wi-buckeye",
   "name": "Buckeye Lookout",
+  "summary": "An 80-foot International Stacy fire tower in Florence County, Wisconsin, built November 1933 per the register (Central US Lookouts says 1935), staffed until 2015 and still standing.",
   "other_names": [],
   "country": "US",
   "region": "WI",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "80-foot International Stacy tower with a corner leg ladder",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -48,14 +49,34 @@
     {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register gives November 1933; Central US Lookouts gives a steel tower erected in 1935",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/buckeye-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wi/buckeye-lookout/",
+        "https://centraluslookouts.weebly.com/buckeye.html"
+      ]
+    },
+    {
+      "year": 2015,
+      "event": "other",
+      "note": "Statewide plan, announced December 2015, to stop using the DNR lookout towers after an early-2015 assessment of 72; Buckeye is not named in the sources found",
+      "from": "research",
+      "source_url": "https://dailyreporter.com/2015/12/17/state-to-take-fire-outlook-towers-out-of-commission/"
+    },
+    {
+      "year": 2015,
+      "event": "staffed_last",
+      "note": "Staffed regularly during spring fire season until 2015",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/buckeye-lookout/"
     },
     {
       "year": 2017,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 9, 2017",
-      "from": "nhlr"
+      "note": "Registered June 9, 2017 as US 1201, WI 13",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/buckeye-lookout/"
     }
   ],
   "photos": [
@@ -82,6 +103,16 @@
       "label": "NHLR register entry (nhlr.org)",
       "url": "http://nhlr.org/nhlr.org/lookouts/us/wi/buckeye-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "DNR fires up plans to decommission old lookout towers (UPDATE) (The Daily Reporter)",
+      "url": "https://dailyreporter.com/2015/12/17/state-to-take-fire-outlook-towers-out-of-commission/",
+      "kind": "reference"
+    },
+    {
+      "label": "Wisconsin Lookouts (by County) (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/wi/wi-co/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
@@ -138,10 +169,29 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wi-buckeye",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

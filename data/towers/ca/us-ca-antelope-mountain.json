@@ -1,6 +1,7 @@
 {
   "id": "us-ca-antelope-mountain",
   "name": "Antelope Mountain Lookout",
+  "summary": "Lookout site above Eagle Lake: a CCC-era two-story structure, then a 1975 solar-powered tower; NHLR-registered 1996; shutters replaced by Forest Service staff in 2020.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -35,27 +36,64 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2021-06-13"
   },
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "From Eagle Lake, turn left after the Summit Campsite (register visit report, June 2021)."
   },
   "rental": null,
   "events": [
     {
+      "year": 1931,
+      "event": "other",
+      "note": "Lookout station established to watch for fires (May 7, 1931 newspaper note)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/antelope-mountain.html"
+    },
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "Two-story structure built by the CCC, per the register",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/antelope-mountain-lookout/"
+    },
+    {
+      "year": 1936,
+      "event": "fire",
+      "note": "Alarm from the Antelope station; roughly 2,000-acre brush and grass fire on McDonald Peak",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/antelope-mountain.html"
+    },
+    {
+      "year": 1938,
+      "event": "other",
+      "note": "Lightning struck the station; lookout Ted Thompson temporarily blinded",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/antelope-mountain.html"
+    },
+    {
       "year": 1975,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Current tower; register gives 1975 as the build year",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/antelope-mountain-lookout/"
+    },
+    {
+      "year": 1978,
+      "event": "modified",
+      "note": "Solar-powered installation dedicated by the Forest Service (December 1978 item)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/antelope-mountain.html"
     },
     {
       "year": 1996,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 26, 1996",
-      "from": "nhlr"
+      "note": "Registered January 26, 1996 as US 182, CA 7",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/antelope-mountain-lookout/"
     },
     {
       "year": 2020,
@@ -67,12 +105,12 @@
     {
       "year": 2020,
       "event": "restored",
-      "note": "New shutters installed by Forest Service staff, using an FFLA small grant. All the old, heavy shutters replaced with new ones designed, built and installed by a Forest Service employee.",
-      "from": "ffla_west_reports",
-      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-north-2020.pdf",
+      "note": "Old shutters replaced by Forest Service staff with a $500 FFLA restoration grant for materials",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-rest-2020.pdf",
       "source_urls": [
-        "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-north-2020.pdf",
-        "https://firelookout.org/wp-content/uploads/2024/11/cr-rest-2020.pdf"
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-rest-2020.pdf",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-north-2020.pdf"
       ]
     }
   ],
@@ -119,6 +157,11 @@
       "label": "NHLR register entry US 182 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ca/antelope-mountain-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "FFLA 2020 restoration grants report (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-rest-2020.pdf",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -175,10 +218,29 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:antelope-mountain",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-antelope-mountain",
+      "fields": [
+        "summary",
+        "agency",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "us-or-summit-point",
   "name": "Summit Point Lookout",
+  "summary": "Summit Point's 1949 timber tower with an L-4 cab sits in Wallowa-Whitman NF; staffed in summers as of 2013, and a 2023 report calls it active and standing.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,7 +17,7 @@
   "material": "wood",
   "material_from": "nhlr",
   "roles": [],
-  "design": "L-4",
+  "design": "20-foot open timber tower with 14 by 14 foot L-4 cab",
   "height_m": 6.1,
   "status": "standing",
   "status_note": null,
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/or/summit-point-lookout/"
     }
   ],
-  "agency": "US Forest Service - Wallowa-Whitman National Forest",
+  "agency": "U.S. Forest Service, Wallowa-Whitman National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "A 2013 visitor report says the spur road was closed to traffic and gated that year; the lookout is reached on foot from the trailhead. No source read says whether the public may enter the cab."
   },
   "staffing": {
     "status": "unknown",
@@ -40,22 +41,71 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "A 2013 visit describes about a mile's walk from the trailhead. A 2023 trip report reaches the trailhead over forest roads NF-77 and NF-7715."
   },
   "rental": null,
   "events": [
     {
       "year": 1949,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built to replace an earlier open platform tower (used from the 1930s, per firelookout.com). A September 1949 newspaper item says it was complete except for painting.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/summit-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/summit-point-lookout/",
+        "https://www.firelookout.com/or/summitpoint.html",
+        "https://oregonlookouts.weebly.com/summit-point.html"
+      ]
+    },
+    {
+      "year": 1951,
+      "event": "other",
+      "note": "Oregon Lookouts lists a 20-foot treated timber tower with an L-4 model 1936 cab as erected in 1951. This conflicts with the 1949 completion.",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/summit-point.html"
+    },
+    {
+      "year": 1964,
+      "event": "staffed",
+      "note": "Galen West was due up at the lookout for the summer; an August 27 item said Terry Speelman of Richland would replace him.",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/summit-point.html"
+    },
+    {
+      "year": 1988,
+      "event": "staffed",
+      "note": "Ronalee Leckenby is listed as lookout personnel for 1988-1989 and 1993-1995, per firelookout.com.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/summitpoint.html"
+    },
+    {
+      "year": 1996,
+      "event": "other",
+      "note": "firelookout.com lists 1996 and 1999 as not staffed.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/summitpoint.html"
+    },
+    {
+      "year": 2013,
+      "event": "other",
+      "note": "A woman in the lookout said the spur road was gated that year because people were driving up at night.",
+      "from": "research",
+      "source_url": "https://cherylhill.net/firelookouts/2013/08/25/summit-point/"
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 6, 2022",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register on July 6, 2022 as US 1642.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/summit-point-lookout/"
+    },
+    {
+      "year": 2023,
+      "event": "assessed",
+      "note": "A September 2023 trip report describes the lookout as active and currently standing.",
+      "from": "research",
+      "source_url": "https://theroamingcivic.com/2023/09/02/summit-point-lookout/"
     }
   ],
   "photos": [
@@ -101,6 +151,11 @@
       "label": "NHLR register entry US 1642 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/or/summit-point-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Summit Point L.O. (The Roaming Civic)",
+      "url": "https://theroamingcivic.com/2023/09/02/summit-point-lookout/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
@@ -174,6 +229,22 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-summit-point",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -197,7 +268,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

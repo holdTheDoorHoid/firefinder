@@ -1,0 +1,16 @@
+Green Peter Lookout stands in Linn County, Oregon, about nine miles northeast of Sweet Home.[^1][^2] The National Historic Lookout Register says the site first had a cabin in 1916, and a cupola lookout replaced it in 1920.[^1] The Forest Lookouts history page also dates the cupola to 1920 and says an alidade was set up on the site in 1912.[^3] A 2006 Corvallis Gazette-Times report, quoted on that same page, gives 1923 as the build year of the original structure, so the early dates do not fully agree.[^3] The sources also differ on elevation: the Register lists 3,835 feet, while firelookout.com and cherylhill.net list 3,977 feet.[^1][^2][^4]
+
+The cab on the site today is an L-4 live-in design.[^1] The Register says it was built in 1949 at Jordan Lookout and moved to Green Peter in 1970, a move firelookout.com also describes.[^1][^2] The history page tells it differently. It says the old cupola came down in October 1969, and a new 14-by-14 building finished in 1970 used materials from the Jordan and Swamp Mountain lookouts.[^3] Cherylhill's directory gives 1970 as the year built.[^4] The Register says the lookout was rebuilt in 2004, with its walls torn down to the studs.[^1]
+
+The Army's Aircraft Warning Service ran a station here from August 1942 to September 1943.[^3] A combination woodshed and living room and a service road were built to support it.[^3] Mr. and Mrs. Ernest Whitcomb were in charge through the winter of 1942 to 1943.[^3]
+
+In 1931 a fire near Sodaville was reported from the Green Peter and Hurricane Deck lookouts, and the Hill Fire Patrol put it out before much harm was done.[^3] In 1950 the Green Peter lookout, Clarence Jacobson, reported a holdover fire two miles south of Sodaville.[^3] A drying east wind pushed the flames from a clearing into green timber. The Fire Patrol reported that timber damage was slight, though a few young trees died.[^3] In 1957 David Schmidt spent the summer as a lookout here.[^3]
+
+A note from Jim Basting printed on the Register page says that with smoke-detection cameras the lookout is no longer manned, but it does not say when.[^1] A camera on a 120-foot radio tower beside the lookout makes a full turn every six minutes, and it can be controlled manually if a fire is spotted.[^1] Cherylhill's directory, as of July 2026, lists the lookout as "Unmanned - cameras in use."[^4]
+
+Cherylhill marks the site as legally accessible to the public, but notes that this does not mean access to the lookout itself.[^4] The sources read do not say whether the cabin can be rented or visited. The Oregon Department of Forestry administers the site, so check with it before planning a trip.[^1]
+
+[^1]: Green Peter Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/or/green-peter-lookout/ (accessed 2026-10-08).
+[^2]: Green Peter Fire Lookout Cabin, firelookout.com, https://www.firelookout.com/or/greenpeter.html (accessed 2026-10-08).
+[^3]: Green Peter - FOREST LOOKOUTS, Forest Lookouts (oregonlookouts.weebly.com), https://oregonlookouts.weebly.com/green-peter.html (accessed 2026-10-08).
+[^4]: Oregon's Standing Lookouts – Every Lookout in Oregon, Cheryl Hill (cherylhill.net), https://cherylhill.net/firelookouts/oregons-standing-lookouts/ (accessed 2026-10-08).

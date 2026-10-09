@@ -1,0 +1,12 @@
+East Pocket Lookout sits on the summit of East Pocket Knob, about 7.5 miles north of Sedona, on land managed by Coconino National Forest.[^3] The tower went up in 1943 as one of the rare CT-2 timber towers made by Timber Engineering Corp.[^1][^2][^3] Its 14-by-14-foot live-in cab, with a catwalk, follows a modified L-4 pattern.[^1][^2] Wikipedia notes that just two wooden fire lookouts survive in Arizona, and this tower is one of them.[^3]
+
+In 1948 a newspaper item that one local history site quotes said plans called for radio lookout sets at Elden, East Pocket and Baker Butte.[^2] The tower came under threat in May 2014, when the Slide Fire was reported burning north through Oak Creek Canyon and endangering about 100 structures, including this tower.[^2] The threat led to the tower's evacuation.[^2] I found no dated record of who staffs the tower now, so staffing is unconfirmed.
+
+The National Historic Lookout Register added East Pocket on April 1, 2001, nominated by Dave Lorenz of the AZ/NM Forest Fire Lookout Association.[^1] More recently, the Pocket Fire ignited on June 19, 2026, about 7 miles north of Sedona.[^4] The Forest Service reports that the tower received structure protection during that fight, and that the fire never claimed a single structure or home.[^4] None of the sources I read report the tower burning, moving or coming down, so it appears to be standing.[^1][^2][^4]
+
+Getting up there means walking, since the summit lies in the Red Rock-Secret Mountain Wilderness.[^3] The A. B. Young Trail climbs about two miles one way, with 33 switchbacks and roughly 1,950 feet of gain.[^3] The trail was first built in the 1880s to reach grazing pastures, and the Civilian Conservation Corps rebuilt it in the 1930s.[^3] I could not confirm whether the public may enter the cab itself, and none of the sources describe the tower as a rental. Treat it as a working lookout and check with the Forest Service before you climb.
+
+[^1]: East Pocket Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/az/east-pocket-lookout/ (accessed 2026-10-08).
+[^2]: East Pocket, Forest Lookouts, https://westlookouts.weebly.com/east-pocket.html (accessed 2026-10-08).
+[^3]: East Pocket Knob, Wikipedia, https://en.wikipedia.org/wiki/East_Pocket_Knob (accessed 2026-10-08).
+[^4]: Recent Large Wildfires, Coconino National Forest, U.S. Forest Service, https://www.fs.usda.gov/r03/coconino/fire/info/recent-large-wildfires (accessed 2026-10-08).

@@ -1,6 +1,7 @@
 {
   "id": "us-wv-bell-knob",
   "name": "Bell Knob Fire Tower",
+  "summary": "Steel tower with a wooden cab, built 1931 at Dolly Sods and moved to Bell Knob in 1943; cab partly collapsed in snow; unstaffed; reached on foot, top locked.",
   "other_names": [],
   "country": "US",
   "region": "WV",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "Wooden cab on 30-foot steel legs",
   "height_m": 3.0,
   "status": "standing",
   "status_note": "The tower still stands, but its cab is gone (FFLA).",
@@ -31,20 +32,31 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached on foot by a grassy road off Forest Road 19 on Monongahela National Forest land. A 2013 travel post says it may be unsteady."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2020"
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "A 2020 Register visit report found the stairs manageable only for the first flight, with the top locked. Do not climb."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1931,
+      "event": "built",
+      "note": "Completed at Dolly Sods (Plains) as a 30-foot steel tower",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wv/dolly-sods-plains-tower-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wv/dolly-sods-plains-tower-site/",
+        "http://nhlr.org/media/5663/monongahela-nf-fire-towers.pdf"
+      ]
+    },
     {
       "year": 1943,
       "event": "built",
@@ -52,10 +64,42 @@
       "from": "nhlr"
     },
     {
+      "year": 1943,
+      "event": "relocated",
+      "note": "Moved to Bell Knob; the Army's 13th Corps paid for the move",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wv/bell-knob-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wv/bell-knob-fire-tower/",
+        "http://firetower.org/lookouts/us/wv/dolly-sods-plains-tower-site/",
+        "http://nhlr.org/media/5663/monongahela-nf-fire-towers.pdf"
+      ]
+    },
+    {
+      "year": 2010,
+      "event": "other",
+      "note": "Cab collapsed under a record snowfall per the Forest Lookouts page and a 2013 travel post; the Register says portions collapsed before October 2015",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/bell-knob.html",
+      "source_urls": [
+        "https://easternuslookouts.weebly.com/bell-knob.html",
+        "https://wvtravelqueen.com/2013/11/04/mountain-state-monday-bell-knob-fire-tower/",
+        "http://nhlr.org/lookouts/us/wv/bell-knob-fire-tower/"
+      ]
+    },
+    {
       "year": 2016,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 27, 2016",
-      "from": "nhlr"
+      "note": "Registered November 27, 2016 as US 1148, WV 16",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wv/bell-knob-fire-tower/"
+    },
+    {
+      "year": 2020,
+      "event": "assessed",
+      "note": "Register visit report, August 4, 2020: stairs manageable for first flight only, top locked, not staffed",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wv/bell-knob-fire-tower/"
     }
   ],
   "photos": [
@@ -216,6 +260,21 @@
       "kind": "register"
     },
     {
+      "label": "Dolly Sods (Plains) Tower Site (Former Fire Lookout Sites Register (firetower.org))",
+      "url": "http://firetower.org/lookouts/us/wv/dolly-sods-plains-tower-site/",
+      "kind": "reference"
+    },
+    {
+      "label": "Fire Towers: Fifty Years of Early Detection and Fire Protection (USDA Forest Service, Monongahela National Forest (PDF))",
+      "url": "http://nhlr.org/media/5663/monongahela-nf-fire-towers.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Mountain State Monday: Bell Knob Fire Tower (West Virginia Travel Queen (blog))",
+      "url": "https://wvtravelqueen.com/2013/11/04/mountain-state-monday-bell-knob-fire-tower/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA West Virginia lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wv/",
       "kind": "association"
@@ -273,6 +332,20 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wv-bell-knob",
+      "fields": [
+        "summary",
+        "design",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -296,7 +369,13 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

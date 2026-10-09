@@ -1,6 +1,7 @@
 {
   "id": "us-ca-calandra",
   "name": "Calandra Lookout",
+  "summary": "Enclosed L-601 tower with a BC-301 cab on Williams Hill, Monterey County; named for a Cal Fire ranger killed in 1939 and a 1945 fire on the hill; 2019 visit found it serviceable but unstaffed.",
   "other_names": [
     "Calandra (Williams Hill)",
     "Williams Hill (Calandra)"
@@ -19,8 +20,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "L-601 enclosed tower, 30 feet tall, with a BC-301 14x14 wood cab and aluminum sheet siding",
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,34 +32,76 @@
       "url": "http://nhlr.org/lookouts/us/ca/calandra-lookout/"
     }
   ],
-  "agency": "Cal Fire",
+  "agency": "Cal Fire (formerly the California Department of Forestry)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "The summit is reached by a BLM road that ends at a locked gate, or by a private road Cal Fire may use with the landowner's permission. The Register lists no NHLR sign and no signed directions to the tower."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2019"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Two dirt roads lead toward the top of Williams Hill. One crosses private land, used with Cal Fire's permission. The BLM road ends at a locked gate at the summit."
   },
   "rental": null,
   "events": [
     {
+      "year": 1939,
+      "event": "other",
+      "note": "Assistant State Forest Ranger Joseph Calandra, the lookout's namesake, was entrapped by the Bixby Mountain Fire near Big Sur on 16 August 1939 and succumbed to his burn injuries",
+      "from": "research",
+      "source_url": "https://lessons.wildfire.gov/incident/bixby-mountain-fire-entrapment-fatality-1939",
+      "source_urls": [
+        "https://lessons.wildfire.gov/incident/bixby-mountain-fire-entrapment-fatality-1939",
+        "http://nhlr.org/lookouts/us/ca/calandra-lookout/"
+      ]
+    },
+    {
       "year": 1942,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR gives 1942 as the build year and says the cab was constructed that year; Peakbagging's 2010 note gives 1944",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/calandra-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/calandra-lookout/",
+        "http://www.peakbagging.com/CALookoutPhotos/Williams-Calandra.html"
+      ]
+    },
+    {
+      "year": 1945,
+      "event": "fire",
+      "note": "Fire on Williams Hill, 28 July 1945: dozer operator Edward Gates was overtaken by fire; Assistant State Forest Ranger Paul Nesgis was reported missing and his body was found the following March",
+      "from": "research",
+      "source_url": "https://lessons.wildfire.gov/incident/williams-fire-entrapment-fatalities-1945",
+      "source_urls": [
+        "https://lessons.wildfire.gov/incident/williams-fire-entrapment-fatalities-1945",
+        "http://nhlr.org/lookouts/us/ca/calandra-lookout/"
+      ]
     },
     {
       "year": 2002,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 12, 2002",
-      "from": "nhlr"
+      "note": "Date registered on the National Historic Lookout Register: January 12, 2002",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/calandra-lookout/"
+    },
+    {
+      "year": 2010,
+      "event": "assessed",
+      "note": "Visit by Brad Eells in June 2010: lookout on BLM land, updated with aluminum sheet siding, original outhouse intact, interior reported vandalized",
+      "from": "research",
+      "source_url": "http://www.peakbagging.com/CALookoutPhotos/Williams-Calandra.html"
+    },
+    {
+      "year": 2019,
+      "event": "assessed",
+      "note": "Visit report by Scott McClintock, 4 November 2019: serviceable; needs paint; would need state building inspection and a radiation safety check; not staffed; no NHLR sign posted",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/calandra-lookout/"
     }
   ],
   "photos": [
@@ -123,6 +166,21 @@
       "kind": "register"
     },
     {
+      "label": "Williams Fire Entrapment Fatalities 1945 (Wildland Fire Lessons Learned Center)",
+      "url": "https://lessons.wildfire.gov/incident/williams-fire-entrapment-fatalities-1945",
+      "kind": "reference"
+    },
+    {
+      "label": "Bixby Mountain Fire Entrapment Fatality 1939 (Wildland Fire Lessons Learned Center)",
+      "url": "https://lessons.wildfire.gov/incident/bixby-mountain-fire-entrapment-fatality-1939",
+      "kind": "reference"
+    },
+    {
+      "label": "Williams Hill, Calandra Lookout, California (Peakbagging)",
+      "url": "http://www.peakbagging.com/CALookoutPhotos/Williams-Calandra.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -178,10 +236,33 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-calandra",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

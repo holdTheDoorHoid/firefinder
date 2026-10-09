@@ -1,6 +1,7 @@
 {
   "id": "us-ca-lyons-peak",
   "name": "Lyons Peak Lookout",
+  "summary": "A lookout has stood on Lyons Peak since 1913; the present 1964 cab is closed to the public by private land and litigation, and a 2021 shutter project was suspended.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": "13x13-ft CL-30 steel cab on a 41-ft L-1600 K-brace tower (the only such combination in California)",
+  "design": "13x13-ft CL-30 series steel cab on a 41-ft L-1600 series K-brace tower (chapter); NHLR gives a CL-160 cab",
   "height_m": 12.5,
   "status": "standing",
   "status_note": null,
@@ -28,34 +29,47 @@
       "url": "http://nhlr.org/lookouts/us/ca/lyons-peak-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Cleveland National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Tower surrounded by private land; access severely limited by litigation; helicopter or law enforcement escort only; base no longer open to the public."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2021"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "No public route to the tower. The chapter says access is by helicopter or law enforcement escort only."
   },
   "rental": null,
   "events": [
     {
+      "year": 1913,
+      "event": "built",
+      "note": "First lookout: a narrow 5x5-ft ground cabin on the rock (NHLR); the chapter says the peak has hosted a lookout tower since 1913.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/lyons-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/lyons-peak-lookout/",
+        "https://www.ffla-sandiego.org/fire-lookout/southern-california-towers/lyons-peak/"
+      ]
+    },
+    {
       "year": 1964,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Present cab with catwalk constructed in 1964 (NHLR).",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/lyons-peak-lookout/"
     },
     {
       "year": 2008,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 16, 2008",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register, December 16, 2008.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/lyons-peak-lookout/"
     },
     {
       "year": 2018,
@@ -70,6 +84,13 @@
       "note": "Emergency stabilization funds bought wood, bolts and paint to cover the windows; materials hauled up on 9 May and decomposing ceiling plywood removed.",
       "from": "ffla_west_reports",
       "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ca-south-2018.pdf"
+    },
+    {
+      "year": 2021,
+      "event": "modified",
+      "note": "Volunteers airlifted in by sheriff helicopter fixed plywood shutters over the windows to protect the cab; the project is marked suspended.",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-south-ca-2021.pdf"
     },
     {
       "year": 2021,
@@ -218,6 +239,23 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-lyons-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -237,7 +275,13 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "us-ca-blue-ridge",
   "name": "Blue Ridge Lookout",
+  "summary": "1934 steel lookout tower on Blue Ridge, Klamath National Forest, Siskiyou County; NHLR-registered 1995; 2020 Register visit found it unstaffed and in poor condition.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -18,7 +19,7 @@
   "roles": [
     "aws"
   ],
-  "design": null,
+  "design": "Aermotor steel tower with 7 by 7 foot cab per the Register; a 1952 survey describes a four-legged steel tower with a 10 foot square metal house on top",
   "height_m": 33.5,
   "status": "standing",
   "status_note": null,
@@ -37,27 +38,76 @@
     "note": "OpenStreetMap tags the structure access=private."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2020"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Road-trip guide: the summit road is unpaved and needs a 4x4; the 2020 Register visit found no sign and no signed directions to the tower"
   },
   "rental": null,
   "events": [
     {
+      "year": 1910,
+      "event": "other",
+      "note": "July 1910: telephone line being built to the Blue Ridge station, where a guard was to act as lookout; a tower came later",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/blue-ridge2.html"
+    },
+    {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register and road guide give 1934; a May 2, 1934 diary entry describes scouting an old sled road to see whether trucks could be used to haul steel for the tower",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/blue-ridge-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/blue-ridge-lookout/",
+        "https://californialookouts.weebly.com/blue-ridge2.html",
+        "https://www.dangerousroads.org/north-america/usa/11757-road-trip-guide-conquering-blue-ridge-in-siskiyou-county.html"
+      ]
+    },
+    {
+      "year": 1935,
+      "event": "staffed_first",
+      "note": "July 1935 inspection found the station operating in fine condition, with its emergency telephone wire still being hooked up",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/blue-ridge2.html"
+    },
+    {
+      "year": 1936,
+      "event": "staffed",
+      "note": "Lookout resigned in August 1936 and was replaced by another man",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/blue-ridge2.html"
+    },
+    {
+      "year": 1943,
+      "event": "staffed",
+      "note": "Two women went on duty at the Forest Service lookout station in June 1943",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/blue-ridge2.html"
     },
     {
       "year": 1995,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 8, 1995",
-      "from": "nhlr"
+      "note": "Registered March 8, 1995 as US 114, CA 5",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/blue-ridge-lookout/"
+    },
+    {
+      "year": 2004,
+      "event": "assessed",
+      "note": "Register visit September 4, 2004: needs paint; no staff; no sign or signed directions",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/blue-ridge-lookout/"
+    },
+    {
+      "year": 2020,
+      "event": "assessed",
+      "note": "Register visit October 21, 2020: needs paint; wood, stairs and glass not in good order; no staff; no sign or signed directions",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/blue-ridge-lookout/"
     }
   ],
   "photos": [
@@ -122,6 +172,11 @@
       "kind": "register"
     },
     {
+      "label": "Road trip guide: Conquering Blue Ridge in Siskiyou County (dangerousroads.org)",
+      "url": "https://www.dangerousroads.org/north-america/usa/11757-road-trip-guide-conquering-blue-ridge-in-siskiyou-county.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -181,6 +236,22 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-blue-ridge",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -204,7 +275,13 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,0 +1,16 @@
+Lookout use on Antelope Peak, above Eagle Lake, goes back further than the current tower. The national register says the peak was first used as a lookout in the early 1900s, and that the Civilian Conservation Corps built a two-story structure there in 1933.[^1] The oldest dated item I found is a May 1931 newspaper note, quoted on a California lookout history site, saying a station had been set up to spot fires and pinpoint where they were.[^2] The sources disagree on when the lookout began, and this story does not settle it.[^1][^2]
+
+The register dates the current tower to 1975.[^1] It calls the design unique and credits NASA, the Department of Energy and the Forest Service with building it together.[^1] In December 1978 the Forest Service held a dedication for the station's solar power setup.[^2] The register says the tower was the first U.S. lookout to be outfitted completely with solar power.[^1]
+
+The alarm came from the Antelope station during a fire response in July 1936.[^2] A brush and grass fire that burned about 2,000 acres on McDonald Peak was fought by Civilian Conservation Corps crews from the Secret Valley and Willow Creek camps, and officials blamed a sheepherder's campfire.[^2] In July 1938 lightning struck the station, but the arrester sent the charge into the ground.[^2] Ted Thompson, the lookout, was temporarily blinded for close to an hour.[^2]
+
+By 2020 the lookout's old shutters were due for replacement.[^4] The Lassen National Forest received a $500 FFLA restoration grant for materials, and Forest Service employee Todd Amrein designed and installed new shutters.[^4] The lookout was unstaffed that season because of hiring problems.[^4] The FFLA's Northern California report describes the same work, done only by Forest Service staff because of COVID.[^3]
+
+The register's visit reports from 2020 and 2021 give a mixed picture. The August 2020 report marks staffing as sometimes and notes moderate signs of traffic on the road and the shutters up.[^1] The June 2021 report marks it as staffed.[^1] It also notes peeling paint, aging wood, an outhouse that needs a new roof, and a communications tower about 50 feet away.[^1] Together with the solar array, that tower blocks much of the northern view.[^1]
+
+The register's directions from Eagle Lake say to turn left after the Summit Campsite.[^1] The June 2021 visit also noted that the sign post at 32N02 and 32N73 was missing.[^1] No source here says whether the cab is open to visitors. The register lists the Eagle Lake Ranger District as a cooperator, so check with that district before going up, and do not climb the tower if it is closed.[^1]
+
+[^1]: Antelope Mountain Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/ca/antelope-mountain-lookout/ (accessed 2026-10-08).
+[^2]: Antelope Mountain, California forest lookouts history site, https://californialookouts.weebly.com/antelope-mountain.html (accessed 2026-10-08).
+[^3]: Northern California region report, 2020, Forest Fire Lookout Association, https://firelookout.org/wp-content/uploads/2024/11/cr-ca-north-2020.pdf (accessed 2026-10-08).
+[^4]: FFLA 2020 restoration grants report, Forest Fire Lookout Association, https://firelookout.org/wp-content/uploads/2024/11/cr-rest-2020.pdf (accessed 2026-10-08).

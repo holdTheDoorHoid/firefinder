@@ -1,6 +1,7 @@
 {
   "id": "us-az-escudilla",
   "name": "Escudilla Lookout",
+  "summary": "Apache-Sitgreaves NF lookout; 1933 Aermotor MC-24 tower, 1965 or early-1970s 54-ft rebuild; destroyed in the June 2011 Wallow Fire; NHLR-registered 2009.",
   "other_names": [
     "Escudilla Peak Lookout"
   ],
@@ -18,7 +19,7 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": "Aermotor",
+  "design": "Aermotor MC-24 (1933); 54-ft steel K-Brace tower with CL-100 cab (1965 or early-1970s rebuild)",
   "height_m": 16.5,
   "status": "standing",
   "status_note": null,
@@ -48,16 +49,66 @@
   "rental": null,
   "events": [
     {
+      "year": 1914,
+      "event": "other",
+      "note": "Fifty-foot lookout tower and ranger's cabin reported on the summit in a January 9, 1914 newspaper item; the item does not give a build date",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/escudilla.html"
+    },
+    {
+      "year": 1915,
+      "event": "other",
+      "note": "On June 23, 1915, St. Johns Boy Scouts climbed the fifty-foot tower while Forest officers explained the fire-locating method",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/escudilla.html"
+    },
+    {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Aermotor MC-24 tower constructed; NHLR gives 1933 as the build year of a 54-foot tower",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/escudilla.html",
+      "source_urls": [
+        "https://westlookouts.weebly.com/escudilla.html",
+        "http://nhlr.org/lookouts/us/az/escudilla-lookout/"
+      ]
+    },
+    {
+      "year": 1965,
+      "event": "replaced",
+      "note": "54-foot steel K-Brace tower with CL-100 cab built to replace the earlier structure; Peakbagging dates the rebuild to the early 1970s",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/escudilla.html",
+      "source_urls": [
+        "https://westlookouts.weebly.com/escudilla.html",
+        "http://www.peakbagging.com/AZPhotos/EscudillaLO.html"
+      ]
     },
     {
       "year": 2009,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 2, 2009",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register on September 2, 2009",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/escudilla-lookout/"
+    },
+    {
+      "year": 2011,
+      "event": "destroyed",
+      "note": "Tower destroyed in the June 2011 Wallow Fire per NHLR and Peakbagging; Forest Lookouts says extensive damage",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/escudilla-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/escudilla-lookout/",
+        "http://www.peakbagging.com/AZPhotos/EscudillaLO.html",
+        "https://westlookouts.weebly.com/escudilla.html"
+      ]
+    },
+    {
+      "year": 2011,
+      "event": "fire",
+      "note": "Wallow Fire swept over Escudilla Mountain on June 6, 2011",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/escudilla.html"
     }
   ],
   "photos": [
@@ -91,6 +142,11 @@
       "label": "NHLR register entry US 826 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/az/escudilla-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Escudilla Lookout, Arizona (Peakbagging.com)",
+      "url": "http://www.peakbagging.com/AZPhotos/EscudillaLO.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
@@ -151,6 +207,19 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-escudilla",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -176,7 +245,13 @@
       "note": "They share a register number."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

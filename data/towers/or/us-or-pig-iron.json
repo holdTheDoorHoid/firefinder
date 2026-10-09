@@ -1,6 +1,7 @@
 {
   "id": "us-or-pig-iron",
   "name": "Pig Iron Lookout",
+  "summary": "Prefabricated 1950 Weyerhaeuser lookout on a 10 ft tower in the Umpqua NF; restored, reported staffed, reached by a gated road walk, with a 2024 closure notice on one post.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,8 +17,8 @@
   "material": "wood",
   "material_from": "firelookout_com",
   "roles": [],
-  "design": null,
-  "height_m": 4.3,
+  "design": "prefabricated L-4-type cab on a 10 ft wooden tower (cab size disputed: 10x10 ft or 14x14 ft)",
+  "height_m": 3.0,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "On a July 2, 2022 visit a locked gate on the access road blocked vehicles, and visitors walked about a mile from it. The 2022 post says vandals had cut the gate and a Forest Service crew seemed to have recently fixed it. A notice on that post says the area was closed as of July 20, 2024, due to the active Diamond Complex; no source read says when it reopened. No rentals are mentioned in the sources."
   },
   "staffing": {
     "status": "volunteer",
@@ -40,22 +41,54 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Reach the gate by the Mowich Loop Road and NF-100, then walk about a mile. A 2023 visitor also came by a trail from Road 250. Pig Iron Trail #1438 is reported as overgrown and steep."
   },
   "rental": null,
   "events": [
     {
       "year": 1950,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Prefabricated by the Weyerhaeuser Sales Company; the current structure was built into the fall of 1950.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/pig-iron-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/pig-iron-lookout/",
+        "https://www.firelookout.com/or/pigiron.html",
+        "https://oregonlookouts.weebly.com/pig-iron.html"
+      ]
+    },
+    {
+      "year": 1950,
+      "event": "staffed_first",
+      "note": "Dwight Berryman lived in a tent; the fire finder stood outdoors under a cover when not in use.",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/pig-iron.html"
+    },
+    {
+      "year": 1951,
+      "event": "staffed",
+      "note": "Mainly staffed during the afternoon hours. Former lookout Gary Wilson says he manned it that summer.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/pig-iron-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/pig-iron-lookout/",
+        "https://oregonlookouts.weebly.com/pig-iron.html"
+      ]
+    },
+    {
+      "year": 1962,
+      "event": "staffed",
+      "note": "An August 4, 1962 News-Review item, under Staffing, names Russell Dondero, a Roseburg resident who attends Whitman College.",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/pig-iron.html"
     },
     {
       "year": 2000,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 1, 2000",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register on March 1, 2000.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/pig-iron-lookout/"
     }
   ],
   "photos": [
@@ -89,6 +122,11 @@
       "label": "NHLR register entry US 335 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/or/pig-iron-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Pig Iron - The Roaming Civic",
+      "url": "https://theroamingcivic.com/tag/pig-iron/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
@@ -162,6 +200,22 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-pig-iron",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -187,7 +241,13 @@
       "note": "They share a register number."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

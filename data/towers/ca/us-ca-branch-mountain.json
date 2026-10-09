@@ -1,6 +1,7 @@
 {
   "id": "us-ca-branch-mountain",
   "name": "Branch Mountain Lookout",
+  "summary": "1935 BC-301 structure on a 30 foot steel tower in Los Padres NF, San Luis Obispo County; last staffed 1992; private land around it; threatened by the 2025 Gifford Fire.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -18,8 +19,8 @@
   "roles": [
     "aws"
   ],
-  "design": null,
-  "height_m": null,
+  "design": "California Region 5 Plan BC-301 structure on a 30 foot K-brace open steel tower",
+  "height_m": 9.1,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -30,15 +31,15 @@
       "url": "http://nhlr.org/lookouts/us/ca/branch-mountain-lookout/"
     }
   ],
-  "agency": "US Forest Service - Los Padres National Forest",
+  "agency": "US Forest Service, Los Padres National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Register: site completely surrounded by private property and not accessible to the public; the small plot under the tower is Forest Service land"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1992"
   },
   "visit": {
     "climbable": null,
@@ -50,14 +51,62 @@
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register gives 1935; a photo credited to the USFS shows the tower under construction c. 1935",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/branch-mountain-lookout/"
+    },
+    {
+      "year": 1936,
+      "event": "fire",
+      "note": "July 1936 (Santa Maria Daily Times): lightning, chief cause of the fires, struck the lookout station; building shaken but undamaged",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/branch-mountain.html"
+    },
+    {
+      "year": 1936,
+      "event": "other",
+      "note": "October 1936 (Santa Ynez Valley News): a 24-mile telephone line from Pozo to the lookout station was nearly complete",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/branch-mountain.html"
+    },
+    {
+      "year": 1986,
+      "event": "assessed",
+      "note": "Thornton's 1986 survey notes the ground cabin as a WWII Aircraft Warning Service built structure",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/branch-mountain-lookout/"
+    },
+    {
+      "year": 1992,
+      "event": "staffed_last",
+      "note": "Last staffed in 1992 per logbook entries; the 2012 trip report found observation reports last dated 1992",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/branch-mountain-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/branch-mountain-lookout/",
+        "https://www.snwburd.com/bob/trip_reports/branch_1.html"
+      ]
+    },
+    {
+      "year": 2012,
+      "event": "assessed",
+      "note": "Trip report April 15, 2012: tower and lookout cabin still standing; lookout cabin shuttered; ground cabin dilapidated",
+      "from": "research",
+      "source_url": "https://www.snwburd.com/bob/trip_reports/branch_1.html"
     },
     {
       "year": 2019,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: November 30, 2019",
-      "from": "nhlr"
+      "note": "Registered November 30, 2019 as US 1392, CA 215",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/branch-mountain-lookout/"
+    },
+    {
+      "year": 2025,
+      "event": "fire",
+      "note": "FFLA post dated September 2, 2025: lookout threatened by the Gifford Fire; post does not say whether damaged",
+      "from": "research",
+      "source_url": "https://www.facebook.com/forestfirelookout/posts/this-picture-shows-the-branch-mountain-lookout-which-had-been-threatened-by-the-/1198245312344863/"
     }
   ],
   "photos": [
@@ -213,6 +262,11 @@
       "kind": "register"
     },
     {
+      "label": "FFLA post on Branch Mountain Lookout threatened by the Gifford Fire (Forest Fire Lookout Association (Facebook))",
+      "url": "https://www.facebook.com/forestfirelookout/posts/this-picture-shows-the-branch-mountain-lookout-which-had-been-threatened-by-the-/1198245312344863/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -274,10 +328,32 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-branch-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

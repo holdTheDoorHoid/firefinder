@@ -1,6 +1,7 @@
 {
   "id": "us-ca-leviathan",
   "name": "Leviathan Lookout",
+  "summary": "Forest Service two-story lookout on Leviathan Peak, Alpine County, CA; register says 1957 build, a 1958 Reno item says permanent construction began Oct 1958; reached by 4WD road to a gate.",
   "other_names": [
     "Leviathan Peak"
   ],
@@ -18,7 +19,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Two-story: concrete-block ground floor with a cab and catwalk; an R4 adaptation of a flat-roof design similar to R6. A 1958 item describes a glass cab on a cinder-block base about ten feet high, built for a man and wife lookout team.",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -33,8 +34,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Public road ends at a locked gate about a quarter mile from the tower; the last section is for service vehicles, per a third-party guide. The summit also has transmission facilities."
   },
   "staffing": {
     "status": "unknown",
@@ -42,29 +43,59 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "4WD recommended on Leviathan Peak Road (Forest Road 31057); the road is closed in winter and usually opens early April to late November, per a third-party guide. The sources read do not say whether the cab may be entered."
   },
   "rental": null,
   "events": [
     {
+      "year": 1956,
+      "event": "other",
+      "note": "Two fishermen at Topaz Lake spotted a fire on the West Walker River; this led to considering a lookout on the peak",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/leviathan-peak.html"
+    },
+    {
       "year": 1957,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register gives 1957 as the build year; conflicts with the 1958 article",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/leviathan-lookout/"
+    },
+    {
+      "year": 1957,
+      "event": "other",
+      "note": "Temporary lookout facilities established atop the peak in 1957 and 1958 (Reno Evening Gazette item, Oct. 20, 1958)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/leviathan-peak.html"
+    },
+    {
+      "year": 1958,
+      "event": "built",
+      "note": "Construction of the permanent station began the week of Oct. 20, 1958 (Reno Evening Gazette item); the register's 1957 date is disputed",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/leviathan-peak.html"
     },
     {
       "year": 1998,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 4, 1998",
-      "from": "nhlr"
+      "note": "Registered June 4, 1998; nominated by Mark Swift; US 282, CA 16",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/leviathan-lookout/"
     },
     {
       "year": 2024,
       "event": "assessed",
-      "note": "Lookout evaluated on 14 August and a report submitted.",
-      "from": "ffla_west_reports",
+      "note": "Volunteer schedule in the FFLA California South 2024 report lists an August 14 evaluation of Leviathan Lookout, with a report to be submitted to Jeff Baggett. The schedule does not confirm the evaluation was done.",
+      "from": "research",
       "source_url": "https://firelookout.org/wp-content/uploads/2025/01/cr-cal-south-2024.pdf"
+    },
+    {
+      "year": 2024,
+      "event": "other",
+      "note": "August 2024 photo on the register page shows the lookout standing",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/leviathan-lookout/"
     }
   ],
   "photos": [
@@ -141,6 +172,16 @@
       "kind": "register"
     },
     {
+      "label": "Leviathan Peak Lookout, Alpine County, California (Peakbagging.com)",
+      "url": "http://peakbagging.com/CALookoutPhotos/LeviathanPeak.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Ultimate 4WD Destination: Leviathan Peak in California (Dangerous Roads)",
+      "url": "https://www.dangerousroads.org/north-america/usa/3949-leviathan-peak.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -202,10 +243,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-leviathan",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,0 +1,15 @@
+Sugarloaf Mountain Lookout stands on Sugarloaf Mountain in Chiricahua National Monument, Cochise County, Arizona.[^1] Enrollees from the monument's Civilian Conservation Corps camp, NM-2-A, built it as a fire lookout house, and the register dates the work to 1935.[^1][^2] Company 828 began excavating the foundation and carried building materials up by mule pack train, and the enrollees finished the house in the summer and fall of 1935.[^2] The register gives the lookout an elevation of 7,238 feet.[^1] The National Park Service gives the summit of Sugarloaf Mountain as 7,310 feet, so the two figures may describe different points.[^3]
+
+The register describes a 14-by-14-foot ground house with a stone base and a permanent overhang roof, and says it is one of two known examples of this NPS design.[^1] The camp's narrative says the house was wood-framed over a masonry base, with a concrete cellar, a cistern and hardwood flooring.[^2] The two accounts differ on how the building was made, so the design details are uncertain.[^1][^2]
+
+The narrative says enrollees manned the house, but the sentence that says so gives no year.[^2] A later summary in the same narrative says a fire lookout had been constructed on Sugarloaf Mountain by 1937. That is compatible with a 1935 finish, but it gives a much looser date.[^2] The register says the lookout is not staffed, but it gives no date for that answer.[^1] The Park Service says lightning activity is still monitored from the lookout during the summer.[^3] I found no record of a fire tied to the lookout in the sources I read.
+
+The register added the lookout on June 1, 2004.[^1] Wikidata lists it as a National Register contributing property within the monument's historic designed landscape, with a start date of 21 November 2008.[^4] The Park Service page confirms that the monument's designed landscape is on the National Register, but I could not confirm that 2008 date there.[^5] Nothing I read says the lookout has been moved, rebuilt or burned.[^1][^2][^3]
+
+Today the Sugarloaf Mountain Trail is a moderate hike of 1.8 miles round trip that starts at the Sugarloaf parking lot.[^3] The sources do not say whether visitors may go inside the cabin. Because it is still used to watch for summer lightning, treat it as a working building and enjoy it from the trail.[^3]
+
+[^1]: Sugarloaf Mountain Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/az/sugarloaf-mountain-lookout/ (accessed 2026-10-08).
+[^2]: A Narrative History of The Civilian Conservation Corps at Chiricahua National Monument, National Park Service, https://npshistory.com/publications/chir/ccc-narrative-history.pdf (accessed 2026-10-08).
+[^3]: Sugarloaf Mountain Trail, National Park Service, https://www.nps.gov/thingstodo/sugarloaf-mountain-trail.htm (accessed 2026-10-08).
+[^4]: Sugarloaf Mountain Lookout, Wikidata, https://www.wikidata.org/wiki/Q86928403 (accessed 2026-10-08).
+[^5]: Chiricahua National Monument Historic Designed Landscape, National Park Service, https://www.nps.gov/articles/850007.htm (accessed 2026-10-08).

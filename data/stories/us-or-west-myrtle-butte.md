@@ -1,0 +1,19 @@
+West Myrtle Butte Lookout sits in Grant County, Oregon, on the Malheur National Forest, 27 miles north-northwest of Burns.[^2] The sources disagree about when it went up. The National Historic Lookout Register dates the tower to 1928, and so does Cheryl Hill's statewide list.[^1][^4] Firelookout.com and the Forest Lookouts history say 1929, and the history quotes a Forest inventory that records a steel Aermotor tower erected that year beside a 16-by-20-foot wood-frame living quarters.[^2][^3] The heights disagree as well, with figures of 60, 64, 67 and 80 feet.[^1][^2][^3][^7]
+
+Before the tower, a lookout worked from a tree on the summit.[^2] A May 1930 letter quoted by the Forest Lookouts history says a 64-foot tower had replaced the old 90-foot tree.[^3]
+
+Staffing started early. In 1929 a lookout-fireman named Truxton Dalton was on the station, and he reported a smoke at 8 a.m. on July 12, about four miles away.[^3] He drove out by car and found a camp stove fire at the edge of the timber. A sheep herder nearby admitted he had put pitch wood in the stove to warm the water.[^3] A travelers' register kept over the two seasons before May 1930 logged 180 visitors, and the writer thought many more had visited without signing it.[^3] Fireman Paul Gillingham was on duty in October 1938.[^3] Cheryl Hill's Oregon list, which gives its count as of July 2026, shows the tower as unmanned.[^4]
+
+The Register lists the tower as US 428, OR 53, registered on July 16, 2002.[^1] It says that once the lookout was downgraded to emergency use, the Forest began renting the ground living quarters to raise money for upkeep.[^1] The Forest's current cabin rental page does not list this site. It names four former guard stations and Fall Mountain Lookout.[^6]
+
+A 2018 draft facility plan for the Malheur National Forest, as reported by Cheryl Hill's site, said West Myrtle Butte was no longer needed for the fire program. It recommended decommissioning the site and said the towers should at least be secured against public access. The plan also mentions preliminary talk of adding the site to the rental program.[^5]
+
+The most recent detailed condition report we found is a September 2021 trip report. It describes the tower and living quarters as abandoned but still standing, with broken windows in the living quarters but otherwise fair condition. It says the Forest had deemed the tower unfit for use and that all the structures were slated for decommissioning, yet the tower was open to climb.[^7] We found no closure order in the sources, so check with the Malheur National Forest before planning a visit. Because the Forest has judged the tower unfit for use, do not climb it.[^5][^7]
+
+[^1]: West Myrtle Butte Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/or/west-myrtle-butte-lookout/ (accessed 2026-10-08).
+[^2]: West Myrtle Butte Fire Lookout Tower, Fire Lookout (firelookout.com), https://www.firelookout.com/or/westmyrtle.html (accessed 2026-10-08).
+[^3]: West Myrtle Butte, Forest Lookouts (oregonlookouts.weebly.com), https://oregonlookouts.weebly.com/west-myrtle-butte.html (accessed 2026-10-08).
+[^4]: Oregon's Standing Lookouts, Cheryl Hill (cherylhill.net), https://cherylhill.net/firelookouts/oregons-standing-lookouts/ (accessed 2026-10-08).
+[^5]: Lookouts in the Malheur National Forest, Cheryl Hill (cherylhill.net), https://cherylhill.net/firelookouts/2018/02/19/lookouts-in-the-malheur-national-forest/ (accessed 2026-10-08).
+[^6]: Cabin Rentals, Malheur National Forest, U.S. Forest Service, https://www.fs.usda.gov/r06/malheur/recreation/cabin-rentals (accessed 2026-10-08).
+[^7]: West Myrtle Butte L.O., The Roaming Civic (theroamingcivic.com), https://theroamingcivic.com/2021/09/04/west-myrtle-butte-lookout/ (accessed 2026-10-08).

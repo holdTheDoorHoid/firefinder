@@ -1,6 +1,7 @@
 {
   "id": "us-ca-chalone-peak",
   "name": "Chalone Peak Lookout",
+  "summary": "Pinnacles National Park lookout on North Chalone Peak, built 1952 after a 1951 blast and fire; the park has decided to demolish it, with funding unsecured.",
   "other_names": [
     "North Chalone Peak"
   ],
@@ -18,7 +19,7 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "Octagonal 16 by 16 foot wood cab on a 20 foot steel tower enclosed in aluminum siding; revised CDF 809R design",
   "height_m": 6.1,
   "status": "standing",
   "status_note": null,
@@ -33,31 +34,79 @@
   "agency": "National Park Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "The summit is reached on foot. The cab door was boarded up at the May 2019 register visit, and public access to the inside is not established."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2019"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Summit hike from Bear Gulch Reservoir, about 9 miles round trip with roughly 2,040 feet of climbing (Parkwolf); the register describes 4.5 miles each way through a wilderness area."
   },
   "rental": null,
   "events": [
     {
+      "year": 1935,
+      "event": "other",
+      "note": "Approval received for a $2,500 lookout station on North Chalone; sources read do not confirm the station was finished or whether it is the one destroyed in 1951",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/north-chalone-peak.html"
+    },
+    {
+      "year": 1951,
+      "event": "destroyed",
+      "note": "Two blasts and a fire wrecked the CCC-built lookout and a World War II aircraft warning building (reported July 1951)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/north-chalone-peak.html"
+    },
+    {
       "year": 1952,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Current tower built by the California Department of Forestry; replacement estimated at $17,000",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/chalone-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/ca/chalone-peak-lookout/",
+        "https://californialookouts.weebly.com/north-chalone-peak.html"
+      ]
+    },
+    {
+      "year": 1963,
+      "event": "fire",
+      "note": "Vandals broke into the lookout and lit a fire on the floor",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/north-chalone-peak.html"
+    },
+    {
+      "year": 1990,
+      "event": "other",
+      "note": "Ownership transferred to the National Park Service",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/chalone-peak-lookout/"
     },
     {
       "year": 2002,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 12, 2002",
-      "from": "nhlr"
+      "note": "Registered January 12, 2002 as US 396, CA 47; nominated by Dave Doyle",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/chalone-peak-lookout/"
+    },
+    {
+      "year": 2019,
+      "event": "assessed",
+      "note": "May 7, 2019 register visit: door boarded up, windows broken, graffiti, wood siding and deck need replacing, Osborne fire finder still in place",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ca/chalone-peak-lookout/"
+    },
+    {
+      "year": 2025,
+      "event": "other",
+      "note": "Pinnacles National Park decided to demolish the tower; chapter report says demolition may be as late as 2031, funding not secured",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2026/01/cr-cal-south-2025.pdf"
     }
   ],
   "photos": [
@@ -91,6 +140,16 @@
       "label": "NHLR register entry US 396 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/ca/chalone-peak-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Cal-South 2025 Annual Report (Forest Fire Lookout Association, California-South Chapter)",
+      "url": "https://firelookout.org/wp-content/uploads/2026/01/cr-cal-south-2025.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "North Chalone Peak (Parkwolf)",
+      "url": "https://www.parkwolf.app/parks/pinnacles-national-park/places/north-chalone-peak",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -164,10 +223,32 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-chalone-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

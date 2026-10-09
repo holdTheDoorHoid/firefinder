@@ -1,6 +1,7 @@
 {
   "id": "us-az-greens-peak",
   "name": "Greens Peak Lookout",
+  "summary": "A 54-foot metal lookout on the White Mountains' Greens Peak, built in 1962 to replace a 1933 Aermotor tower; registered on the NHLR in 2002.",
   "other_names": [],
   "country": "US",
   "region": "AZ",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "54-ft metal tower with a 14 x 14 CL 100 live-in cab with catwalk (built 1962), replacing a 1933 Aermotor MC24 lookout",
+  "height_m": 16.5,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Reached by high-clearance 4WD up FR 61C, or about 2 miles on foot from FR 117. No source read confirms whether the tower itself is open to visitors."
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,39 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "FR 117 north from State Route 260 near Pole Knoll Recreation Area, then FR 61 to FR 61C; about 2 miles on foot from FR 117 per Arizona Highways"
   },
   "rental": null,
   "events": [
     {
+      "year": 1933,
+      "event": "built",
+      "note": "Aermotor MC24 lookout built on the summit (PeakBagging spells it Aeromotor)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/greens-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/greens-peak-lookout/",
+        "http://www.peakbagging.com/AZPhotos/GreensPeak.html"
+      ]
+    },
+    {
+      "year": 1962,
+      "event": "replaced",
+      "note": "54-ft metal tower with a 14 x 14 CL 100 live-in cab with catwalk constructed, replacing the 1933 Aermotor MC24",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/greens-peak-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/az/greens-peak-lookout/",
+        "http://www.peakbagging.com/AZPhotos/GreensPeak.html"
+      ]
+    },
+    {
       "year": 2002,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 4, 2002",
-      "from": "nhlr"
+      "note": "Registered March 4, 2002; nominated by Dave Lorenz, Director, AZ/NM FFLA",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/az/greens-peak-lookout/"
     }
   ],
   "photos": [
@@ -76,6 +100,16 @@
       "label": "NHLR register entry (nhlr.org)",
       "url": "http://nhlr.org/nhlr.org/lookouts/us/az/greens-peak-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Greens Peak (Arizona Highways)",
+      "url": "https://www.arizonahighways.com/greens-peak",
+      "kind": "reference"
+    },
+    {
+      "label": "Greens Peak Lookout, Arizona (PeakBagging)",
+      "url": "http://www.peakbagging.com/AZPhotos/GreensPeak.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
@@ -134,10 +168,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-greens-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

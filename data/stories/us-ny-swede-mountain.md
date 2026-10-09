@@ -1,0 +1,16 @@
+The Swede Mountain fire tower stands in Hague, in Warren County, New York.[^1][^6] The National Historic Lookout Register says it was built in 1918 "because the area was prone to forest fires," and describes a 47-foot Aermotor LS-47 tower.[^1] The Forest Lookouts history adds an earlier chapter: the Conservation Commission set up a lookout station on the site in 1912, and a 47-foot steel tower was bought and erected in 1918.[^2]
+
+A May 1913 Post-Star notice, quoted by the Forest Lookouts history, named Fred Bolton of Hague as fire observer at Swede Mountain.[^2] A new cabin for the observer's living quarters went up in 1922.[^2] The sources I read do not say who staffed the tower in later decades or name any fires it spotted.
+
+The state took the tower out of fire-watch service in 1968, and the register also gives 1968 as the year it closed.[^1][^5] Warren County bought the tower in 1995 and used it as a site for radio communication equipment.[^5] The register still names the state Department of Environmental Conservation as administrator, but the 2021 news report says the county owns the tower and the land around it.[^1][^5]
+
+The register lists the tower's registration date as January 26, 2017, under the numbers US 1091, NY 36.[^1] In 2023 the Forest Fire Lookout Association awarded a $500 grant for roof repairs to Warren County Parks, Recreation & Railroad.[^4] Nationwide, it was the sole restoration grant that year.[^3] The grant report says a replacement roof panel had been delivered and that installation was expected in the spring of 2024.[^4] I could not confirm whether that work was finished. The register calls the model LS-47, and the grant report says LS-40.[^1][^4]
+
+A news report dated August 13, 2021 says the tower is now open to the public, with a county trail to it.[^5][^6] The county's news report puts the trail at 1.8 miles round trip and about 240 feet of climbing, and says it crosses private land under an agreement with a landowner.[^5] The sources do not say whether visitors may climb the tower itself, so ask Warren County before assuming you may. Most of what I read dates from 2021 to 2024, so the site may look different today.
+
+[^1]: Swede Mountain Fire Tower, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/ny/swede-mountain-fire-tower/ (accessed 2026-10-08).
+[^2]: Swede Mountain, Forest Lookouts (easternuslookouts.weebly.com), https://easternuslookouts.weebly.com/swede-mountain.html (accessed 2026-10-08).
+[^3]: New York State Forest Fire Lookout Association, January 2024 report, https://www.nysffla.org/News2024/2024%20Jan%20final.pdf (accessed 2026-10-08).
+[^4]: Forest Fire Lookout Association, 2023 Restoration Grant Annual Report, https://firelookout.org/wp-content/uploads/2024/03/cr-restoration-2023.pdf (accessed 2026-10-08).
+[^5]: Swede Mountain Fire Tower Trail opens to the public, WRGB (cbs6albany.com), https://cbs6albany.com/news/local/swede-mountain-fire-trail-opens-to-the-public (accessed 2026-10-08).
+[^6]: Warren County opens new hiking trail leading to Swede Mountain fire tower, The Post-Star (poststar.com), https://poststar.com/news/local/article_ebede6f8-1d6c-5a36-91f6-7af86f453ce2.html (accessed 2026-10-08).

@@ -1,6 +1,7 @@
 {
   "id": "us-or-sod-house",
   "name": "Sod House Lookout",
+  "summary": "CCC-built 1933 Aermotor tower above Malheur NWR headquarters; abandoned as a fire lookout, closed by 2012, and used mostly for wildlife viewing.",
   "other_names": [
     "Headquarters (Sod House) (USFWS)",
     "Headquarters (Sod House)"
@@ -19,8 +20,8 @@
   "material": "steel",
   "material_from": "firelookout_com",
   "roles": [],
-  "design": "Aermotor",
-  "height_m": 30.2,
+  "design": "Aermotor tower with 7x7 metal cab",
+  "height_m": 27.4,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -34,31 +35,54 @@
   "agency": "U.S. Fish & Wildlife Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Tower closed as of the May 2012 visit, bottom stairs removed. The site is on refuge headquarters grounds, and the directory lists it as legally accessible to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Sits on a bluff above the refuge headquarters."
   },
   "rental": null,
   "events": [
     {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Constructed by the Civilian Conservation Corps at the Malheur refuge headquarters.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/sod-house-lookout/"
+    },
+    {
+      "year": 1935,
+      "event": "other",
+      "note": "CCC camp preparing foundation piers for a 99-foot steel observation tower; newspaper gives the planned height.",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/sod-house.html"
     },
     {
       "year": 2002,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 16, 2002",
-      "from": "nhlr"
+      "note": "Registered on the National Historic Lookout Register July 16, 2002.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/sod-house-lookout/"
+    },
+    {
+      "year": 2012,
+      "event": "closed",
+      "note": "May 15, 2012 visit: tower closed, bottom set of stairs removed.",
+      "from": "research",
+      "source_url": "https://cherylhill.net/firelookouts/2012/05/23/sodhouse-tower/"
+    },
+    {
+      "year": 2016,
+      "event": "other",
+      "note": "January 2, 2016: a group occupied the refuge headquarters; the lookout on the hill above was being used as an observation point.",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/sod-house.html"
     }
   ],
   "photos": [
@@ -97,6 +121,11 @@
       "label": "NHLR register entry (nhlr.org)",
       "url": "http://www.nhlr.org/Lookouts/Lookout.aspx?id=445",
       "kind": "register"
+    },
+    {
+      "label": "Oregon's Standing Lookouts (Cheryl Hill)",
+      "url": "https://cherylhill.net/firelookouts/oregons-standing-lookouts/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
@@ -170,10 +199,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-sod-house",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-08",
+    "checked": "2026-10-08",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

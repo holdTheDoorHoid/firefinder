@@ -1,0 +1,15 @@
+Hickman Butte Lookout sits in the Mount Hood National Forest, inside the Bull Run Watershed that supplies Portland's drinking water.[^1][^5] The National Historic Lookout Register says a tent camp lookout was first set up on the butte in 1906.[^1] A 40-foot tower with a 7-by-7-foot cab went up in 1933.[^1][^2] The Register says ground-level living quarters were added later, while firelookout.com dates them to 1933.[^1][^2] A Morning Oregonian item from September 1928, quoted on the history page, shows a Forest Service lookout there building a new cabin for the next summer.[^3]
+
+The tower that stands today is a 41-foot treated timber tower with an L-4 cab.[^1][^3] The dates for it do not agree. The Register says the L-4 was built in 1952, firelookout.com says it replaced the older tower in 1953, and the history page says 1954.[^1][^2][^3] Portland's water bureau says it was built in the early 1950s and has stood 45 feet above the butte for seven decades.[^5]
+
+During World War II the site was an Aircraft Warning Service station, from October 1942 to October 1943.[^3] The Forest Service kept it afterward for fire detection.[^3] A 1946 notice on the history page said a Mr. Ten Eyck would man the lookout that summer, and a 1954 notice named George Stamaris and his wife as the summer staff.[^3] In late August 1954 the lookout was closed one Tuesday during a week of unusually high humidity.[^3] The sources read do not name any particular fire it spotted.
+
+In 2007 the Portland Water Bureau began sharing staffing costs with the Forest Service.[^5] Before that, the lookout relied on volunteers, and the bureau said that arrangement offered no guarantee of a seasoned, qualified staffer for the whole fire season.[^5] Since then the bureau says the same experienced person has staffed the lookout every fire season for more than 15 years, and that person is a Forest Service contractor.[^5]
+
+Today the lookout is staffed and remains in active service.[^1][^4] The Register says access is only with an official escort, firelookout.com says it is closed to public entry, and the Cheryl Hill directory lists it as not accessible to the public.[^1][^2][^4] Anyone curious about it should contact the Forest Service rather than try to climb it on their own.
+
+[^1]: Hickman Butte Lookout, National Historic Lookout Register (nhlr.org), http://nhlr.org/lookouts/us/or/hickman-butte-lookout/ (accessed 2026-10-08).
+[^2]: Hickman Butte Fire Lookout Tower, firelookout.com, https://www.firelookout.com/or/hickmanbutte.html (accessed 2026-10-08).
+[^3]: Hickman Butte - FOREST LOOKOUTS, Forest Lookouts (oregonlookouts.weebly.com), https://oregonlookouts.weebly.com/hickman-butte.html (accessed 2026-10-08).
+[^4]: Oregon's Standing Lookouts – Every Lookout in Oregon, Cheryl Hill (cherylhill.net), https://cherylhill.net/firelookouts/oregons-standing-lookouts/ (accessed 2026-10-08).
+[^5]: Protecting Portland's primary source of drinking water from 4,430 feet, Portland Water Bureau (portland.gov), https://www.portland.gov/water/news/2022/4/20/protecting-portlands-primary-source-drinking-water-4430-feet (accessed 2026-10-08).
