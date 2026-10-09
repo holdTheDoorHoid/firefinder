@@ -291,9 +291,8 @@ the pinned ones (`record_join_moved` in the review file). The report lists the r
 checks that `merged_into` names a visible tower that is not itself retired, and that no research
 or story file is left under a retired id. Research and a story belong to the tower that stays:
 choose the survivor as the one with a story. The site gives the old address a small redirecting
-page, and the map follows `?t=<old id>` (3.6). A visitor's checklist marks on a retired id do not
-move to the new tower (the checklist is a list of ids kept in the browser); the retired ids are
-few, and most are days old.
+page, and the map follows `?t=<old id>` (3.6). A visitor's checklist marks on a retired id move to
+the tower that took it (4, "Checklist"), so a retirement never costs anyone a tick.
 
 **FFLA's other views and border rows.** The alphabetical list fixes a record's key; the by-county,
 standing and by-region views only enrich it (county) and are paired with it by key, by the same
@@ -724,7 +723,14 @@ Friends of Sterling Forest's domain has been hijacked for spam; New Hampshire's 
   Approximate locations filter (the state's own list when a state is chosen) and the sitemap.
 - **Checklist**: localStorage `firefinder.checklist.v1`, with export/import as JSON; works on
   the map (filter "my visited") and on tower pages. Every storage access is wrapped in
-  try/catch.
+  try/catch. **Retired towers** (3.5): once a page has fetched `data/redirects.json`
+  (`web/src/ui/checklist-ui.ts`), `Checklist.setRedirects` moves every mark saved under a retired
+  id to the id that replaced it (a chain is followed), keeps each mark that either id had (so
+  "stayed" is never lost to a plain "visited", and "want to go" stays), and saves. The same list is
+  applied when another tab's change is reloaded, on export (the file names only surviving
+  lookouts) and on import (a backup made before the merge still lands on the right towers).
+  Without the list (offline, not yet fetched) nothing is moved and nothing is lost: the marks
+  are moved the next time a page loads it.
 - **About / credits / takedown** page: every source with its licence and credit line; how to
   ask for a photo or text to be removed (open an issue or email).
 - Accessibility: status is never shown by colour alone (shape and label too); keyboard-usable

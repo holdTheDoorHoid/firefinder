@@ -4,7 +4,18 @@
  * Every storage access is wrapped in try/catch. If the browser blocks storage (private mode,
  * strict settings, full quota) the checklist keeps working in memory for this page, and
  * `persistent` turns false so the UI can warn: "this will be lost, use Export".
+ *
+ * Retired towers: when the merge folds one tower into another (data/redirects.json, see
+ * src/lib/redirects.ts) a tick saved under the old id moves to the surviving id: on load (as soon
+ * as the list is known: `setRedirects`), on reload from another tab, on export and on import. If
+ * both ids carry ticks the survivor keeps each mark that either had, so the strongest state wins
+ * ("stayed" always includes "visited", and is never lost to a plain "visited") and a "want to go"
+ * is not dropped either (the app lets a lookout be both visited and wanted).
  */
+import { resolveRedirect, type RedirectsFile } from './redirects.ts';
+import { isTowerId } from './tower-id.ts';
+
+export { isTowerId };
 
 export type Mark = 'visited' | 'stayed' | 'want';
 export const MARKS: readonly Mark[] = ['visited', 'stayed', 'want'];
@@ -16,7 +27,6 @@ export const MARK_LABELS: Record<Mark, string> = {
 
 export const STORAGE_KEY = 'firefinder.checklist.v1';
 const BACKUP_KEY = 'firefinder.checklist.v1.unreadable-backup';
-const ID_RE = /^[a-z]{2}-[a-z0-9]{1,3}-[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const MAX_IDS = 100_000;
 
 export interface StorageLike {
@@ -40,10 +50,6 @@ export type ImportResult =
 
 export type Marks = Record<Mark, boolean>;
 
-export function isTowerId(value: unknown): value is string {
-  return typeof value === 'string' && value.length <= 120 && ID_RE.test(value);
-}
-
 /** Safely get window.localStorage; even reading the property can throw. */
 export function browserStorage(): StorageLike | null {
   try {
@@ -58,6 +64,7 @@ export class Checklist {
   #storage: StorageLike | null;
   #sets: Record<Mark, Set<string>> = { visited: new Set(), stayed: new Set(), want: new Set() };
   #listeners = new Set<() => void>();
+  #redirects: RedirectsFile | null = null;
   /** False when changes cannot be saved in this browser. */
   persistent = true;
   /** Plain-language reason when something went wrong, for the UI. */
@@ -102,7 +109,46 @@ export class Checklist {
       }
     }
     this.#sets = fresh;
+    // Another tab (or an older page) may have saved ids that have been retired since.
+    if (this.#migrate(fresh) > 0) this.#save();
     this.#emit();
+  }
+
+  /**
+   * Tell the checklist which towers were folded into others (data/redirects.json). Ticks saved
+   * under a retired id move to the surviving id and are saved; returns how many retired ids were
+   * moved. Later loads, sets, exports and imports use the list too. A missing list changes nothing.
+   */
+  setRedirects(file: RedirectsFile | null | undefined): number {
+    if (!file || typeof file.redirects !== 'object' || file.redirects === null) return 0;
+    this.#redirects = file;
+    const moved = this.#migrate(this.#sets);
+    if (moved > 0) {
+      this.#save();
+      this.#emit();
+    }
+    return moved;
+  }
+
+  /** The id a tower has now: itself, or the tower it was folded into. */
+  #resolve(id: string): string {
+    return this.#redirects ? resolveRedirect(id, this.#redirects) : id;
+  }
+
+  /** Move ticks from retired ids to their survivors, in place; returns the number of ids moved. */
+  #migrate(sets: Record<Mark, Set<string>>): number {
+    if (!this.#redirects) return 0;
+    const moved = new Set<string>();
+    for (const mark of MARKS) {
+      for (const id of [...sets[mark]]) {
+        const now = this.#resolve(id);
+        if (now === id) continue;
+        sets[mark].delete(id);
+        sets[mark].add(now);
+        moved.add(id);
+      }
+    }
+    return moved.size;
   }
 
   has(id: string, mark: Mark): boolean {
@@ -125,6 +171,7 @@ export class Checklist {
    */
   set(id: string, mark: Mark, on: boolean): void {
     if (!isTowerId(id)) return;
+    id = this.#resolve(id);
     const apply = (m: Mark, value: boolean) => (value ? this.#sets[m].add(id) : this.#sets[m].delete(id));
     apply(mark, on);
     if (mark === 'stayed' && on) apply('visited', true);
@@ -149,18 +196,21 @@ export class Checklist {
   }
 
   toFile(now = new Date()): ChecklistFile {
+    // Retired ids go out under the tower that took them, even if they are still in memory.
+    const sets: Record<Mark, Set<string>> = { visited: new Set(this.#sets.visited), stayed: new Set(this.#sets.stayed), want: new Set(this.#sets.want) };
+    this.#migrate(sets);
     return {
       app: 'firefinder',
       kind: 'checklist',
       version: 1,
       exported: now.toISOString(),
-      visited: this.ids('visited'),
-      stayed: this.ids('stayed'),
-      want: this.ids('want'),
+      visited: [...sets.visited].sort(),
+      stayed: [...sets.stayed].sort(),
+      want: [...sets.want].sort(),
     };
   }
 
-  /** Merge a checklist file into this one. Never removes anything. */
+  /** Merge a checklist file into this one. Never removes anything; ids of retired towers land on the tower that took them. */
   importText(text: string): ImportResult {
     let data: unknown;
     try {
@@ -188,12 +238,13 @@ export class Checklist {
     for (const mark of MARKS) {
       const list = obj[mark];
       if (!Array.isArray(list)) continue;
-      for (const id of list) {
+      for (const raw of list) {
         if (++seen > MAX_IDS) break;
-        if (!isTowerId(id)) {
+        if (!isTowerId(raw)) {
           ignored++;
           continue;
         }
+        const id = this.#resolve(raw);
         if (!this.#sets[mark].has(id)) {
           this.#sets[mark].add(id);
           added[mark]++;
