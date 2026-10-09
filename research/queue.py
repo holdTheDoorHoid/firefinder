@@ -6,7 +6,10 @@
   research/queue.py --briefs ID [ID...]  compact JSON briefs (what a researcher needs, nothing else)
 
 Priority: 1 rentable, 2 standing + on the National Historic Lookout Register, 3 other standing;
-within a tier, towers with more independent sources and links first (more to work with)."""
+within a tier, towers with more independent sources and links first (more to work with).
+With --gone (owner-approved batches only, DESIGN 1): 4 relocated, ruins or replica structures on a
+lookout register, 5 gone structures on a register (NHLR or FFLOS). Sites with no structure
+(camps, lookout trees, bare points) are never queued."""
 import argparse, glob, json, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,20 +26,29 @@ def researched(tid):
     return os.path.exists(os.path.join(ROOT, "data", "research", f"{tid}.json"))
 
 
-def tier(t):
+NO_STRUCTURE = {"camp", "tree", "point"}
+
+
+def tier(t, gone=False):
     if (t.get("rental") or {}).get("available"):
         return 1
-    if t.get("status") == "standing" and any(r.get("register") == "NHLR" for r in t.get("registers") or []):
+    regs = {r.get("register") for r in t.get("registers") or []}
+    if t.get("status") == "standing" and "NHLR" in regs:
         return 2
     if t.get("status") == "standing":
         return 3
+    if gone and t.get("kind") not in NO_STRUCTURE and regs & {"NHLR", "FFLOS"}:
+        if t.get("status") in ("relocated", "ruins", "replica"):
+            return 4
+        if t.get("status") == "gone":
+            return 5
     return None
 
 
-def queue():
+def queue(gone=False):
     q = []
     for t in towers():
-        k = tier(t)
+        k = tier(t, gone)
         if k and not researched(t["id"]):
             q.append((k, -len(t.get("sources") or []), -len(t.get("links") or []), t["id"]))
     return [x[3] for x in sorted(q)], q
@@ -79,6 +91,7 @@ def main():
     ap.add_argument("--summary", action="store_true")
     ap.add_argument("--next", type=int)
     ap.add_argument("--briefs", nargs="+")
+    ap.add_argument("--gone", action="store_true", help="also queue registered gone, moved and ruined structures")
     a = ap.parse_args()
     if a.briefs and not (a.summary or a.next):
         # fast path: read only the requested records
@@ -89,11 +102,14 @@ def main():
                 out.append(brief(json.load(open(hits[0]))))
         print(json.dumps(out, ensure_ascii=False))
         return
-    ids, q = queue()
+    ids, q = queue(a.gone)
     if a.summary:
         from collections import Counter
         c = Counter(x[0] for x in q)
-        print({"rentable": c[1], "standing+NHLR": c[2], "other standing": c[3], "total": len(ids)})
+        out = {"rentable": c[1], "standing+NHLR": c[2], "other standing": c[3]}
+        if a.gone:
+            out.update({"moved/ruins/replica+register": c[4], "gone+register": c[5]})
+        print({**out, "total": len(ids)})
     if a.next:
         print("\n".join(ids[: a.next]))
     if a.briefs:
