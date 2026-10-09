@@ -401,7 +401,10 @@ records name a lookout and its county but give no coordinates (most from the hob
   Site" -> Bald Knob), with Mt/Mtn/Pk expanded and "Bald Mt." read as Bald Mountain, spaces and
   punctuation ignored ("Bald Knob" = "Baldknob", "Hawk's Nest" = "Hawks Nest"), a leading "The"
   dropped on both sides; each parenthetical alternate and slash part counts, county or forest notes
-  ("(Tioga County)") do not; a numbered name ("Bald Knob #2") must match exactly. "Mount Pisgah" and
+  ("(Tioga County)") do not, here nor in the name comparisons of the joins and guards below
+  (`named_forms`; elsewhere in the merge such a note still counts as an alternate name, so FFLOS's
+  "Pine Hill Tower Site (Potter County)" and "Round Top Tower Site (Potter County)" score as one
+  name); a numbered name ("Bald Knob #2") must match exactly. "Mount Pisgah" and
   "Pisgah Mountain" stay different names. A name of feature words only ("Mountain Lookout") is not
   looked up.
 - *Placed* only when the record's county is recognised in GNIS (missing, misspelt or several
@@ -428,7 +431,9 @@ records name a lookout and its county but give no coordinates (most from the hob
   more is kept (merge never deletes) and reported; a lookout that appears near the pin or under a
   close name is reported as a possible duplicate.
 - *Report.* `merge_report.json` has `counts.approximate`, `approximate` (by state, by class, each pin
-  with its feature and records, and the reasons the others stayed off the map) and, for the site,
+  with its feature and records, same-named lookouts elsewhere in the state, pairs of pins within
+  3 km of each other (`close_pairs`: perhaps one lookout under two names), and the reasons the others
+  stayed off the map) and, for the site,
   `unplaced_lookouts`: the unplaced records grouped into lookouts (same state, name and county),
   each with its sources, what GNIS had (`gnis`: town, none, ambiguous, no_county, county_unknown,
   near_mapped_lookout, similar_name_on_map, same_name_on_map, same_source_twice, ...), a town of the

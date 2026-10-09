@@ -962,9 +962,17 @@ GNIS_LEADING_WORDS = {"the", "historic", "former"}
 # Feature words that do not name a place on their own ("Mountain Lookout", "Hill Fire Tower").
 GNIS_FEATURE_WORDS = {"mount", "mountain", "mountains", "peak", "hill", "hills", "knob", "ridge", "butte",
                       "point", "gap", "rock", "rocks", "dome", "bluff", "summit", "top"}
-# A name variant that names a county, forest or park, not the lookout: "(Tioga County)".
-_GNIS_NOT_A_NAME_RE = re.compile(r"\b(county|co|parish|borough|national forest|nf|state forest|forest|"
-                                 r"ranger district|district|state park|wma|nwr|refuge)\b\.?", re.I)
+# A name variant that names a county, forest or park, not the lookout: "(Tioga County)". (Plain
+# "Forest" stays a name: Forest Hill.)
+_GNIS_NOT_A_NAME_RE = re.compile(r"\b(county|co|parish|borough|national forest|nf|state forest|"
+                                 r"ranger district|state park|wma|nwr|national wildlife refuge)\b\.?", re.I)
+
+
+def named_forms(forms: list) -> list:
+    """Name forms without the ones that only name a county or forest: FFLOS writes "Pine Hill Tower
+    Site (Potter County)" and "Round Top Tower Site (Potter County)", whose parentheticals would
+    otherwise make the two the same name."""
+    return [f for f in forms if not _GNIS_NOT_A_NAME_RE.search(f.full)]
 # A lookout that GNIS places must not land on a lookout already on the map: if a tower with a
 # position stands within this distance of the GNIS feature, the record is probably that lookout
 # under another name, and it is left unplaced (listed, with the nearby tower named).
@@ -973,6 +981,8 @@ APPROX_GUARD_M = 1000
 # position is within this distance of the pin (a guard against a same-named lookout elsewhere in
 # the state; the pin is never used to choose between towers).
 APPROX_JOIN_NO_COUNTY_M = 25_000
+# Two approximate pins this close are listed for review (merge_report "approximate.close_pairs").
+APPROX_CLOSE_M = 3000
 
 
 def _gnis_tokens(text: str) -> list[str]:
@@ -1645,7 +1655,7 @@ class Matcher:
         for t in self.by_region.get(r.region or "", ()):
             if not t.members and t.existing is None:
                 continue
-            s_ = name_score(r.forms, t.forms())
+            s_ = name_score(named_forms(r.forms), named_forms(t.forms()))
             if s_ is None or s_ < floor:
                 continue
             tcs = t.counties()
@@ -1706,7 +1716,7 @@ class Matcher:
                 gcks = set().union(*(county_keys(record_county(x)) for x in recs))
                 if cks and gcks and not (cks & gcks):
                     continue
-                s_ = name_score(r.forms, [f_ for x in recs for f_ in x.forms])
+                s_ = name_score(named_forms(r.forms), named_forms([f_ for x in recs for f_ in x.forms]))
                 if s_ is not None and s_ >= 0.95:
                     hits.append(fid)
             if len(hits) == 1:
@@ -1774,7 +1784,7 @@ class Matcher:
         for t in self.by_region.get(r.region or "", ()):
             if not t.is_approximate:
                 continue
-            s_ = name_score(r.forms, t.forms())
+            s_ = name_score(named_forms(r.forms), named_forms(t.forms()))
             if s_ is None or s_ < 0.95:
                 continue
             if cks:
@@ -3772,14 +3782,19 @@ def approximate_report(m: Matcher, resolved: list[tuple[Tower, dict]], gnis: "Gn
         if not is_approximate_location(loc) or r.get("hidden"):
             continue
         # same-named lookouts elsewhere in the state (other counties): a risk to keep an eye on
-        forms = t.forms()
+        forms = named_forms(t.forms())
         elsewhere = sorted(u.id for u in by_region[r.get("region") or ""]
-                           if u is not t and u.id and (name_score(forms, u.forms()) or 0) >= 0.95)
+                           if u is not t and u.id and (name_score(forms, named_forms(u.forms())) or 0) >= 0.95)
         rows.append({"id": r["id"], "name": r["name"], "region": r.get("region"), "county": r.get("county"),
                      "feature": loc.get("gnis"), "lat": loc.get("lat"), "lon": loc.get("lon"),
                      "records": [mem.key for mem in t.members],
                      **({"same_name_elsewhere_in_state": elsewhere} if elsewhere else {})})
     rows.sort(key=lambda x: (x["region"] or "", x["id"]))
+    # Two pins close together under different names may be one lookout listed twice (FFLOS's
+    # "Delaware Water Gap Tower Site" and the weebly site's "Mount Minsi", 1.1 km apart): for review.
+    close = [{"a": a["id"], "b": b["id"], "distance_m": round(d)}
+             for i, a in enumerate(rows) for b in rows[i + 1:]
+             if a["region"] == b["region"] and (d := haversine_m(a["lat"], a["lon"], b["lat"], b["lon"])) <= APPROX_CLOSE_M]
     outcomes = Counter(e.get("gnis") or "not_looked_up_no_extract" for e in entries.values() if e["source"] != "ffla_rentals")
     return {
         "note": "Lookouts no source places, shown on the one same-name GNIS high-ground feature in their county "
@@ -3790,6 +3805,7 @@ def approximate_report(m: Matcher, resolved: list[tuple[Tower, dict]], gnis: "Gn
         "by_state": dict(sorted(Counter(x["region"] for x in rows).items())),
         "by_class": dict(Counter((x["feature"] or {}).get("class") for x in rows).most_common()),
         "with_same_name_elsewhere_in_state": sum(1 for x in rows if x.get("same_name_elsewhere_in_state")),
+        "close_pairs": close,
         "unplaced_by_gnis_outcome": dict(outcomes.most_common()),
         "placed": rows,
     }

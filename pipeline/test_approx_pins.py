@@ -81,6 +81,9 @@ class Keys(unittest.TestCase):
         self.assertEqual(M.gnis_lookout_keys("Lookout Mountain"), ["lookoutmountain"])
         self.assertEqual(M.gnis_lookout_keys("The Pinnacle"), [M.gnis_feature_key("The Pinnacle")])
         self.assertIsNone(M.gnis_feature_key("Bald Knob (historical)"))
+        self.assertEqual(M.gnis_lookout_keys("Forest Hill"), ["foresthill"])
+        a, b = M.name_forms("Pine Hill Tower Site (Potter County)"), M.name_forms("Round Top Tower Site (Potter County)")
+        self.assertLess(M.name_score(M.named_forms(a), M.named_forms(b)), 0.5)
 
     def test_counties(self):
         self.assertEqual(M.county_key("St. Louis County"), M.county_key("Saint Louis"))
@@ -192,6 +195,14 @@ class Placement(unittest.TestCase):
         self.assertEqual(len(self.ws.towers_by_id()), 1)
         u = rep["unplaced"][0]
         self.assertEqual((u["gnis"], u["near"]), ("near_mapped_lookout", self.ws.tower_with_key("osm:node/1")["id"]))
+
+    def test_close_pins_are_listed_for_review(self):
+        gnis_file(self.ws, {"AL": FEATURES["AL"] + [[106, "Little Ridge", "Ridge", "Clay", 33.31, -85.80]]}, AL)
+        rep = self.ws.run({"eastern_us_lookouts": [weebly("black-jack-ridge", "Black Jack Ridge", "Clay"),
+                                                   weebly("little-ridge", "Little Ridge", "Clay")]})
+        self.assertEqual(rep["counts"]["approximate"], 2)
+        self.assertEqual(len(rep["approximate"]["close_pairs"]), 1)
+        self.assertEqual(rep["approximate"]["close_pairs"][0]["distance_m"], 1112)
 
     def test_out_of_scope_records_are_not_placed(self):
         ffla = rec("ffla", "al:horn:null:null", "Horn Mountain", None, None, "AL", county="Clay", status_raw="Proposed", status="unknown", kind=None)
