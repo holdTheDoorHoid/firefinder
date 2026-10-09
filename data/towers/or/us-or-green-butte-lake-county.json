@@ -1,6 +1,7 @@
 {
   "id": "us-or-green-butte-lake-county",
   "name": "Green Butte Lookout Site (Lake County)",
+  "summary": "Green Butte platform in the Deschutes National Forest, dated to 1990 for the Spring Butte rebuild; still standing but weakening on a May 2023 visit.",
   "other_names": [
     "Green Butte"
   ],
@@ -18,9 +19,9 @@
   "material": "wood",
   "material_from": "firelookout_com",
   "roles": [],
-  "design": null,
+  "design": "Wooden platform, five or six feet tall (sources differ)",
   "height_m": null,
-  "status": "gone",
+  "status": "standing",
   "status_note": null,
   "registers": [
     {
@@ -33,8 +34,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached by Deschutes National Forest roads and a short user trail; the trip report describes no closure of the platform"
   },
   "staffing": {
     "status": "unknown",
@@ -43,27 +44,59 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Walk up from the signed NF-720 junction; a higher-clearance vehicle can go farther; a small user trail leads from the end of the road to the platform. The trip report warns heavy snow will most likely bring it down."
   },
   "rental": null,
   "events": [
     {
+      "year": 1990,
+      "event": "built",
+      "note": "Six-foot wooden platform, used while the Spring Butte lookout was being reconstructed (firelookout.com and The Roaming Civic)",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/greenbutte88.html",
+      "source_urls": [
+        "https://www.firelookout.com/or/greenbutte88.html",
+        "https://theroamingcivic.com/2023/05/15/green-butte-lookout/"
+      ]
+    },
+    {
       "year": 1998,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register's build date (circa 1998); conflicts with the 1990 date in other sources",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/green-butte-lookout-site-lake-county/"
     },
     {
       "year": 2000,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"circa 2000\" (about 2000).",
-      "from": "fflos"
+      "note": "Register says removed circa 2000; the May 2023 visit found the platform still standing",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/green-butte-lookout-site-lake-county/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/green-butte-lookout-site-lake-county/",
+        "https://theroamingcivic.com/2023/05/15/green-butte-lookout/"
+      ]
     },
     {
       "year": 2021,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 8, 2021",
-      "from": "fflos"
+      "note": "Registered January 8, 2021",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/green-butte-lookout-site-lake-county/"
+    },
+    {
+      "year": 2022,
+      "event": "fire",
+      "note": "Lightning fire started on the slope in August 2022 and burned about 23 acres around the top of the butte",
+      "from": "research",
+      "source_url": "https://theroamingcivic.com/2023/05/15/green-butte-lookout/"
+    },
+    {
+      "year": 2023,
+      "event": "assessed",
+      "note": "Trip report visit on May 15, 2023: platform still standing among brush but weakened",
+      "from": "research",
+      "source_url": "https://theroamingcivic.com/2023/05/15/green-butte-lookout/"
     }
   ],
   "photos": [],
@@ -72,6 +105,16 @@
       "label": "FFLOS register entry US 2057 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/or/green-butte-lookout-site-lake-county/",
       "kind": "register"
+    },
+    {
+      "label": "Green Butte L.O. (The Roaming Civic (trip report))",
+      "url": "https://theroamingcivic.com/2023/05/15/green-butte-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Spring Butte Lookout (National Historic Lookout Register)",
+      "url": "http://nhlr.org/lookouts/us/or/spring-butte-lookout/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
@@ -129,12 +172,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-green-butte-lake-county",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "standing"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -149,7 +211,7 @@
         }
       ],
       "distance_m": null,
-      "note": null
+      "note": "Research (2026-10-09) gives standing where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     },
     {
       "field": "built",
@@ -167,9 +229,15 @@
       "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

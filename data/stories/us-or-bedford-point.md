@@ -1,0 +1,12 @@
+Bedford Point is a summit in the Mount Hood National Forest, about nine miles southeast of Estacada in Clackamas County, at 2,359 feet.[^1] The first lookout, set up in 1931, was a tent with a fire finder and a telephone.[^2] A 1932 newspaper notice, quoted on an Oregon lookout history page, reported that a new station had been finished there that July.[^3] The register says the tent gave way in 1939 to a 20-foot pole L-4 tower on a small point above Bedford Creek.[^2][^1] A federal survey from 1947 described the lookout house as wooden, about 12 feet on each side and 15 feet tall, with a peaked roof.[^3] No source explains how that house relates to the 1939 tower.[^1][^2][^3]
+
+The Forest Service planned to have Everett Osborne in charge of the new lookout that season.[^3] A 1935 item said Joyce Pederson presided at the station, and in 1941 the lookout was manned for 120 days.[^3] A 1956 account called it a primary station that passed messages on to the Estacada ranger station, and named Bob Bywnn of West Linn as its operator.[^3] A June 1932 notice also said the lookout would give a view of the whole North Fork and the LaDee burn.[^3]
+
+A lookout history page says the station was deactivated in 1964 and then removed.[^3] The register gives 1969 as the year it was gone.[^2] A 2020 hiking account also reports the tower came down in the 1960s, yet the map still lists it as Bedford Point Lookout.[^4]
+
+A hiker who went up in April 2020 found the top thickly grown over, with no outlook.[^4] The hiker also came across concrete footings, one knocked down, plus part of a rock wall and an old cable.[^4] By 2020 a berm on the forest road stopped vehicles where the hike began, and the walk to the spur road up to the summit was about 2.2 miles.[^4] The April 2020 account is the most recent description found.[^4] No source found gives a current access rule.
+
+[^1]: Bedford Point Fire Lookout Tower, Firelookout.com, https://www.firelookout.com/or/bedfordpoint.html (accessed 2026-10-09).
+[^2]: Bedford Point Lookout Site, Former Fire Lookout Sites Register, http://firetower.org/lookouts/us/or/bedford-point-lookout-site/ (accessed 2026-10-09).
+[^3]: Bedford Point, Oregon Lookouts history site, https://oregonlookouts.weebly.com/bedford-point.html (accessed 2026-10-09).
+[^4]: Bedford Point – Just Peachy, Just Peachy hiking blog, http://cherylhill.net/blog/2020/04/30/bedford-point/ (accessed 2026-10-09).

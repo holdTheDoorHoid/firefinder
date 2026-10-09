@@ -1,0 +1,12 @@
+Hardesty Mountain, in Lane County, Oregon, became a fire-watch point in 1912, when a camp was set up on the summit and a sighting tool called an alidade was put in place for locating fires.[^1][^2] In 1921 a ready-cut lookout house was shipped from Portland to Reserve, packed up the mountain on mule back, and put up by Ranger C.B. McFarland.[^2] The register and Rex's page list a D-6 cupola cabin for 1921.[^1][^3] The Forest Service says a lookout was in place from 1920, a year earlier.[^4] In 1939 the CCC built a 14-by-14-foot L-4 ground cabin to replace it.[^1][^2]
+
+The Oregon history page names several lookouts. John Cain was there in 1916, Nell Southworth in 1920, and Mrs. Walter Allan, formerly Southworth, in 1921.[^2] J. N. Smithson worked the lookout in several summers in the 1920s and again in 1930.[^2] In July 1924 he reported smoke from a new fire eight miles away. It was a small fire that four or five itinerant railroad workers had built to warm themselves.[^2] In 1934 W. P. Sheridan and his wife spent the rest of the summer at the station.[^2] From August 1942 to September 1943 the site was also listed as activated for the Eugene Filter Center.[^2]
+
+The Forest Service says the lookout was removed in 1968.[^4] The register and the Oregon history page agree on 1968.[^1][^2] Rex's page says it was destroyed that year instead.[^3]
+
+According to the Forest Service, concrete pillars are all that is left.[^4] The site is reached by Hardesty Trail #3469, a Forest Service hike about five miles one way to the summit from the lower trailhead, where a recreation pass is required.[^4] Trees partly block the view from the top, and the agency says to contact the local ranger station for current conditions.[^4] Because only concrete pillars remain, there is no tower to climb.[^4]
+
+[^1]: Hardesty Mountain Lookout Site, Former Fire Lookout Sites Register, Forest Fire Lookout Association, http://firetower.org/lookouts/us/or/hardesty-mountain-lookout-site/ (accessed 2026-10-09).
+[^2]: Hardesty Mountain, Forest Lookouts, https://oregonlookouts.weebly.com/hardesty-mountain.html (accessed 2026-10-09).
+[^3]: Hardesty Mtn. Fire Lookout Cabin, Rex's Fire Lookout Page, https://www.firelookout.com/or/hardesty.html (accessed 2026-10-09).
+[^4]: Hardesty Trail #3469, USDA Forest Service, Willamette National Forest, https://www.fs.usda.gov/r06/willamette/recreation/trails/hardesty-trail-3469 (accessed 2026-10-09).

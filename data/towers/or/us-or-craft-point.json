@@ -1,6 +1,7 @@
 {
   "id": "us-or-craft-point",
   "name": "Craft Point Lookout",
+  "summary": "Malheur NF pole platform built 1930, abandoned in the 1940s; last reported standing in May 2021; closure notice for 2024 fires; current state unknown.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,9 +17,9 @@
   "material": "wood",
   "material_from": "firelookout_com",
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "gone",
+  "design": "15-foot pole platform observation tower",
+  "height_m": 4.6,
+  "status": "standing",
   "status_note": null,
   "registers": [
     {
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/us/or/craft-point-lookout/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Malheur National Forest)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "A notice on a 2021 visit report says the area was closed as of July 14, 2024, because of the Falls and Telephone fires. No later notice found."
   },
   "staffing": {
     "status": "unknown",
@@ -41,21 +42,27 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "2021 visitor parked near where the road was blocked by large rocks and walked to the summit. Check the closure first."
   },
   "rental": null,
   "events": [
     {
       "year": 1930,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built as a 15-foot platform observation tower (register); 'pole platform tower' in 2021 visit report",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/craft-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/or/craft-point-lookout/",
+        "https://theroamingcivic.com/2021/05/30/craft-point-lookout/"
+      ]
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 25, 2022",
-      "from": "nhlr"
+      "note": "Registered December 25, 2022 as US 1705, OR 167",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/or/craft-point-lookout/"
     }
   ],
   "photos": [
@@ -77,6 +84,11 @@
       "label": "NHLR register entry US 1705 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/or/craft-point-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Craft Point L.O. (The Roaming Civic)",
+      "url": "https://theroamingcivic.com/2021/05/30/craft-point-lookout/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
@@ -135,12 +147,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-craft-point",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "standing"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -155,12 +187,18 @@
         }
       ],
       "distance_m": null,
-      "note": "NHLR lists lookouts that were standing when registered."
+      "note": "Research (2026-10-09) gives standing where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }
