@@ -3,6 +3,7 @@
   "name": "Post Creek Fireman-Lookout House",
   "summary": "A 1934 Civilian Conservation Corps BC-201 fireman-lookout cabin in the Shasta-Trinity National Forest, now rented by the Forest Service through Recreation.gov.",
   "other_names": [
+    "Post Creek Guard Station",
     "Post Creek"
   ],
   "country": "US",
@@ -48,10 +49,16 @@
   },
   "rental": {
     "available": true,
-    "source": "ffla",
     "provider": "recreation.gov",
     "url": "https://www.recreation.gov/camping/campgrounds/234404",
     "ridb_facility_id": "234404",
+    "season": null,
+    "max_occupancy": 4,
+    "pets": null,
+    "fee": null,
+    "rules": [],
+    "access_note": null,
+    "description": "Overview\n\nPost Creek Guard Station was built in 1934 by the Civilian Conservation Corps for use as a wildfire lookout. It is now available for recreational use. This historic guard station is eligible for inclusion to the National Register of Historic Places.\n\nGuests can drive to Post Creek Guard Station, though much of the trip is on gravel Forest roads, depending upon which route is chosen. This charming cabin offers beautiful views of the nearby mountains and forest. Some amenities are provided, but guests will have to bring supplies and gear. Post Creek Guard Station offers the chance to relish the peace and quiet in a beautiful, secluded location.\nRecreation\n\nPost Creek Guard Station is an ideal location to relax and enjoy the view. Guests who want to do something a bit more active can find hiking and other recreational activities in the nearby wilderness. On hot days guests can take a dip in the swimming hole at Post Creek, located a quarter mile from the guard station.\nFacilities\n\nThis 19x30 cabin accommodates up to four people comfortably and has two rooms. The kitchen is equipped with a table and chairs and is fully stocked with pots, pans, dishes, and utensils. There are two-barrel chairs and a coffee table in the living area. Sleeping accommodations include a queen bed, a twin bed, and a futon bed on which guests can pullout and sleeping bags can be placed on the floor to accommodate a total of six people in the cabin. There is a flushing toilet and water for dishes inside the cabin. A fire pit and picnic table are located outside. The cabin does not have electricity, heat, a stove or refrigerator. Guests should bring their own potable water for drinking, cooking and washing; all linens including sheets, blankets, sleeping bags and/or blankets, and pillows; kitchen linens; and a camp cook stove with fuel. The use of portable stoves using gas, jellied petroleum or pressurized liquid fuel are allowed outside with a valid California Campfire Permit.\n\nNatural Features\n\nThe guard station is located in the Hayfork area of the Shasta-Trinity National Forest on a ridgeline above Beegum Gorge. Beegum Creek, which is just to the north of the cabin, is a major waterway in this area. The Yolla Bolly Mountains in the Yolla Bolly-Middle Eel Wilderness are to the south.\n\nNearby Attractions\n\nGuests may wish to explore the many hiking trails and mountain lakes in the nearby Yolla Bolly-Middle Eel Wilderness or dip in the cold water at Beegum Creek.",
     "checked": "2026-10-08"
   },
   "events": [
@@ -120,7 +127,7 @@
       "kind": "register"
     },
     {
-      "label": "Book or read about Post Creek Lookout (recreation.gov)",
+      "label": "Recreation.gov listing",
       "url": "https://www.recreation.gov/camping/campgrounds/234404",
       "kind": "rental"
     },
@@ -157,7 +164,6 @@
         "material",
         "registers",
         "agency",
-        "ownership",
         "events",
         "photos",
         "links"
@@ -170,6 +176,16 @@
         "kind",
         "status",
         "registers",
+        "links"
+      ]
+    },
+    {
+      "source": "ridb",
+      "key": "ridb:234404",
+      "fields": [
+        "ownership",
+        "access",
+        "rental",
         "links"
       ]
     },
@@ -196,7 +212,29 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 40.235595,
+            "lon": -122.925628
+          }
+        },
+        {
+          "source": "ridb",
+          "value": {
+            "lat": 40.23333,
+            "lon": -122.91694
+          }
+        }
+      ],
+      "distance_m": 779,
+      "note": null
+    }
+  ],
   "research": {
     "researched": "2026-10-08",
     "checked": "2026-10-08",
