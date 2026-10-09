@@ -1,6 +1,7 @@
 {
   "id": "us-wi-indian-lake",
   "name": "Indian Lake Lookout",
+  "summary": "Oneida County, WI 100-ft Aermotor tower built 1936; sold and taken down in June 2017; the planned re-erection in New Richmond is not confirmed; the site is listed as gone.",
   "other_names": [
     "Indian Lookout Tower"
   ],
@@ -18,8 +19,8 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "100-foot Aermotor tower with a US Forest Service-style stairway",
+  "height_m": 30.5,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -50,14 +51,27 @@
     {
       "year": 1936,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR and the 2017 article both give 1936.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/indian-lake-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wi/indian-lake-lookout/",
+        "http://www.indianlakeassociation.com/uploads/4/4/2/8/44289113/firetowerarticle_6.14.2017.pdf"
+      ]
     },
     {
       "year": 2017,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 9, 2017",
-      "from": "nhlr"
+      "note": "Registered June 9, 2017 (US 1196, WI 8). The registration predates the June 2017 removal described in the article.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/indian-lake-lookout/"
+    },
+    {
+      "year": 2017,
+      "event": "removed",
+      "note": "Sold right after DNR decommissioning and taken down over two days; the article is dated June 13, 2017. The buyers planned to re-erect it in New Richmond, WI.",
+      "from": "research",
+      "source_url": "http://www.indianlakeassociation.com/uploads/4/4/2/8/44289113/firetowerarticle_6.14.2017.pdf"
     }
   ],
   "photos": [
@@ -79,6 +93,21 @@
       "label": "NHLR register entry US 1196 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wi/indian-lake-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "The Day the Tower Came Down: June 13, 2017 (Dave Noel) (Indian Lake Association)",
+      "url": "http://www.indianlakeassociation.com/uploads/4/4/2/8/44289113/firetowerarticle_6.14.2017.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Connecting the dots: the fire towers of Wisconsin (WJFW)",
+      "url": "https://www.wjfw.com/news/connecting-the-dots-the-fire-towers-of-wisconsin/article_fd447056-4b4e-11ed-b245-cf384385e71f.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Wisconsin Chapter 2025 report (Forest Fire Lookout Association (firelookout.org))",
+      "url": "https://firelookout.org/wp-content/uploads/2026/01/cr-wi-2025.pdf",
+      "kind": "reference"
     },
     {
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
@@ -136,6 +165,19 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wi-indian-lake",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -155,9 +197,15 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

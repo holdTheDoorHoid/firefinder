@@ -1,6 +1,7 @@
 {
   "id": "us-va-carters-mountain",
   "name": "Carters Mountain Fire Tower",
+  "summary": "Albemarle County, VA steel lookout built 1933 near Charlottesville; privately owned, NHLR-registered 2020, removed March 2023. No staffing or fire record found.",
   "other_names": [],
   "country": "US",
   "region": "VA",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "100-foot steel tower with an 8-foot-square cab",
   "height_m": 30.5,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Removed in March 2023 per both registers; no source describes what remains on the site",
   "registers": [
     {
       "register": "NHLR",
@@ -34,11 +35,11 @@
       "url": "http://firetower.org/lookouts/us/va/carters-mountain-fire-tower-site/"
     }
   ],
-  "agency": "Private Owner",
+  "agency": "Private Owner (per NHLR)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Privately owned; the register describes no public access"
   },
   "staffing": {
     "status": "unknown",
@@ -54,26 +55,45 @@
     {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built 1933 per NHLR description (privately owned 100-foot steel tower)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/carters-mountain-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/va/carters-mountain-fire-tower/",
+        "http://firetower.org/lookouts/us/va/carters-mountain-fire-tower-site/"
+      ]
+    },
+    {
+      "year": 1958,
+      "event": "other",
+      "note": "Federal survey station record (Coast and Geodetic Survey, 1958) describes the tower and its glass room",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/carters-mountain.html"
     },
     {
       "year": 2020,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: March 24, 2020",
-      "from": "nhlr"
+      "note": "Registered March 24, 2020 as US 1410, VA 42; nominated by John McDonald",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/carters-mountain-fire-tower/"
     },
     {
       "year": 2023,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: December 31, 2023",
-      "from": "fflos"
+      "note": "Registered December 31, 2023 as US 2098, VA 46",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/va/carters-mountain-fire-tower-site/"
     },
     {
       "year": 2023,
       "event": "removed",
-      "note": "'Removed' field on NHLR detail page: \"2023\".",
-      "from": "nhlr"
+      "note": "Removed March 2023 per NHLR description; both registers say 2023",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/carters-mountain-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/va/carters-mountain-fire-tower/",
+        "http://firetower.org/lookouts/us/va/carters-mountain-fire-tower-site/"
+      ]
     }
   ],
   "photos": [
@@ -384,6 +404,21 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-va-carters-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -407,9 +442,15 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

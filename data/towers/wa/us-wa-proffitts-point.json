@@ -1,6 +1,7 @@
 {
   "id": "us-wa-proffitts-point",
   "name": "Proffitts Point Lookout Site",
+  "summary": "King County, WA cabin lookout near Skykomish: built 1920, gone by 1938; site is private land now crossed by power lines, with no remains found.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Cabin on the knoll; no tower is described",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Gone by 1938 per the register, firelookout.com and Willhite; power lines cross the site and Willhite found no evidence of the lookout",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/wa/proffitts-point-lookout-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Mt. Baker-Snoqualmie National Forest, per the register)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Firelookout.com and Willhite both say the site is on private property; Willhite says permission from the landowner or power company is needed to use the easement"
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,48 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Willhite's road route reaches a gate with No Trespassing signs; he says the site is private property and permission is needed"
   },
   "rental": null,
   "events": [
     {
+      "year": 1920,
+      "event": "built",
+      "note": "Cabin built in 1920 per the register and firelookout.com; Willhite says a cabin from the 1920s",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/proffitts-point-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/proffitts-point-lookout-site/",
+        "https://www.firelookout.com/wa/proffittspoint.html",
+        "https://www.willhiteweb.com/washington_fire_lookouts/profitts_point/lookout_316.htm"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "other",
+      "note": "August 5, 1934 Osborne photo survey panoramic images show the cleared knoll and cabin (photos, not a lookout event)",
+      "from": "research",
+      "source_url": "https://www.willhiteweb.com/washington_fire_lookouts/profitts_point/lookout_316.htm"
+    },
+    {
+      "year": 1938,
+      "event": "removed",
+      "note": "Gone by 1938 per all three sources; none describes how it came down",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/proffitts-point-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/proffitts-point-lookout-site/",
+        "https://www.firelookout.com/wa/proffittspoint.html",
+        "https://www.willhiteweb.com/washington_fire_lookouts/profitts_point/lookout_316.htm"
+      ]
+    },
+    {
       "year": 2012,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: April 24, 2012",
-      "from": "fflos"
+      "note": "Registered April 24, 2012 as US 1255, WA 155; nominated by Ray Kresek",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/proffitts-point-lookout-site/"
     }
   ],
   "photos": [
@@ -95,6 +128,11 @@
       "label": "FFLOS register entry US 1255 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wa/proffitts-point-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Profitts Point Lookout Site (WillhiteWeb.com)",
+      "url": "https://www.willhiteweb.com/washington_fire_lookouts/profitts_point/lookout_316.htm",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -152,6 +190,21 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-proffitts-point",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -184,9 +237,15 @@
       "note": "They share a register number."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

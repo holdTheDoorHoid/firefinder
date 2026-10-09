@@ -1,0 +1,8 @@
+A fire lookout went up on Diamond Peak in 1934.[^1][^2] It was a 50-foot pole structure topped by an L-4 cab, and it was in use into the late 1950s.[^2] Around 1960 it came down.[^1][^2] The sources agree on that date but not on the verb: the register says the tower was removed, while the Willhite site says it was destroyed.[^1][^2]
+
+A patrol platform stood about three-quarters of a mile from the summit, just past the 4,413-foot point. It looked into a blind spot the summit could not see.[^1][^2] The register says it was still there in the 1980s, with help from a tree growing underneath it.[^1] Willhite's page says it still stands and will soon collapse or burn, but it gives no date for that observation.[^2]
+
+Today Willhite lists the summit hike at about 1.8 miles with roughly 800 feet of climbing. Fair gravel roads run to a year-round gate just before Petit Lake.[^2] Willhite says the access road was shut in the late 1990s to protect grizzly bear habitat.[^2] Photo captions on the same page describe footings at the tower site and steps leading up to it, and a former road is now a trail.[^2] No source says whether the public may pass the gate, so check with the Kaniksu National Forest before you go.[^1][^2]
+
+[^1]: Diamond Peak Lookout Site (Kaniksu NF), Former Fire Lookout Sites Register, firetower.org, http://firetower.org/lookouts/us/wa/diamond-peak-lookout-site-kaniksu-nf/ (accessed 2026-10-09).
+[^2]: Diamond Peak Lookout & Patrol Site, WillhiteWeb.com, https://www.willhiteweb.com/washington_fire_lookouts/diamond_peak_lookout_site/patrol_tower_360.htm (accessed 2026-10-09).

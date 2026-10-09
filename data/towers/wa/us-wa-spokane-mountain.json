@@ -1,6 +1,7 @@
 {
   "id": "us-wa-spokane-mountain",
   "name": "Spokane Mountain Lookout Site",
+  "summary": "D-6 cupola cabin built 1934 on the Spokane Indian Reservation; abandoned 1964; burned in the 2015 Carpenter Road Fire; no source describes the site now.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": "D-6",
+  "design": "D-6 cupola cabin",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Burned in the 2015 Carpenter Road Fire",
   "registers": [
     {
       "register": "FFLOS",
@@ -40,16 +41,47 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Turn from West End Road about a mile west of Turtle Lake recreation area; the turn is not signed. The trip report describes a dirt road in fair condition for most vehicles, but it predates the fire."
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "D-6 cupola cabin constructed on the site",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/spokane-mountain-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/spokane-mountain-lookout-site/",
+        "https://www.willhiteweb.com/washington_fire_lookouts/spokane_mountain_lookout/tower_338.htm"
+      ]
+    },
+    {
+      "year": 1964,
+      "event": "abandoned",
+      "note": "Abandoned when a steel tower went up on Wellpinit Mountain; Willhite says the Wellpinit site had better views and utilities",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/spokane-mountain-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/spokane-mountain-lookout-site/",
+        "https://www.willhiteweb.com/washington_fire_lookouts/spokane_mountain_lookout/tower_338.htm",
+        "https://www.trailchick.com/wa-state-fire-lookouts/wellpinit-mountain-lookout/"
+      ]
+    },
+    {
+      "year": 2015,
+      "event": "burned",
+      "note": "Burned in the Carpenter Road Fire; the register's Removed field also gives 2015",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/spokane-mountain-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/spokane-mountain-lookout-site/",
+        "https://www.willhiteweb.com/washington_fire_lookouts/spokane_mountain_lookout/tower_338.htm",
+        "https://www.firelookout.com/wa/spokmtn.html",
+        "https://washingtonlookouts.weebly.com/spokane-mountain.html",
+        "https://www.trailchick.com/wa-state-fire-lookouts/wellpinit-mountain-lookout/"
+      ]
     },
     {
       "year": 2015,
@@ -60,8 +92,9 @@
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: April 16, 2020",
-      "from": "fflos"
+      "note": "Registered April 16, 2020 as US 2013, WA 495",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/spokane-mountain-lookout-site/"
     }
   ],
   "photos": [
@@ -95,6 +128,16 @@
       "label": "FFLOS register entry US 2013 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wa/spokane-mountain-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Spokane Mountain Lookout - Spokane Indian Reservation (WillhiteWeb)",
+      "url": "https://www.willhiteweb.com/washington_fire_lookouts/spokane_mountain_lookout/tower_338.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Wellpinit Mountain Lookout (TrailChick)",
+      "url": "https://www.trailchick.com/wa-state-fire-lookouts/wellpinit-mountain-lookout/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -155,12 +198,32 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-spokane-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

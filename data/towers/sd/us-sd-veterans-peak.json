@@ -1,6 +1,7 @@
 {
   "id": "us-sd-veterans-peak",
   "name": "Veterans Peak Lookout Site",
+  "summary": "Wooden CCC lookout built 1939 near Sturgis; registers say removed in the 1950s, yet a 1963 item still lists the station. A radio tower stands on the summit now.",
   "other_names": [
     "Veterans"
   ],
@@ -18,10 +19,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "Wooden tower about 30 to 40 feet high with a log-sided cabin",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Lookout gone; a radio tower now stands on the summit.",
   "registers": [
     {
       "register": "FFLOS",
@@ -33,31 +34,89 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached by Vanocker Canyon Road; a road to the summit is used by hikers. Radio towers now stand on the summit."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "emergency",
+    "as_of": "June 1963"
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "No lookout left to climb; the summit guide calls the walk a short, but fun hike"
   },
   "rental": null,
   "events": [
     {
       "year": 1939,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Built by the Civilian Conservation Corps",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/sd/veterans-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/sd/veterans-peak-lookout-site/",
+        "https://www.summitpost.org/veterans-peak/917826",
+        "https://westlookouts.weebly.com/veterans.html"
+      ]
+    },
+    {
+      "year": 1940,
+      "event": "staffed",
+      "note": "June 1940 newspaper item: secondary or emergency lookout, used only in times of fire hazard",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/veterans.html"
+    },
+    {
+      "year": 1948,
+      "event": "fire",
+      "note": "August 1948 fire 25 miles south of Deadwood and Lead, discovered by emergency lookout Wesley Groshong; described as definitely man-caused",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/veterans.html"
+    },
+    {
+      "year": 1949,
+      "event": "staffed",
+      "note": "Byron Hazeltine listed as lookout personnel",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/sd/veteran.html"
     },
     {
       "year": 1950,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"1950s\" (about 1950).",
-      "from": "fflos"
+      "note": "Decade only: the register and summit guide say the 1950s, so 1950 is a placeholder year within that decade; the 1963 item conflicts",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/sd/veterans-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/sd/veterans-peak-lookout-site/",
+        "https://www.summitpost.org/veterans-peak/917826",
+        "https://westlookouts.weebly.com/veterans.html"
+      ]
+    },
+    {
+      "year": 1954,
+      "event": "fire",
+      "note": "July 14, 1954 fire near the lookout burned half an acre",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/veterans.html"
+    },
+    {
+      "year": 1962,
+      "event": "staffed",
+      "note": "April 1962 Lead Daily Call item: Royce Coffield stationed at the lookout",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/veterans.html",
+      "source_urls": [
+        "https://westlookouts.weebly.com/veterans.html",
+        "https://www.firelookout.com/sd/veteran.html"
+      ]
+    },
+    {
+      "year": 1963,
+      "event": "staffed",
+      "note": "June 1963: Veterans Peak and Norris Peak stations to be manned depending on weather",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/veterans.html"
     },
     {
       "year": 2022,
@@ -85,6 +144,11 @@
       "label": "FFLOS register entry US 2092 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/sd/veterans-peak-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Veterans Peak (Summit Post)",
+      "url": "https://www.summitpost.org/veterans-peak/917826",
+      "kind": "reference"
     },
     {
       "label": "FFLA South Dakota lookout list (firelookout.org)",
@@ -143,12 +207,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-sd-veterans-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-wa-davis-peak",
   "name": "Davis Peak Lookout Site",
+  "summary": "Kittitas County lookout built 1934 as an L-4 cab on the ground, staffed to 1965 and removed or destroyed in 1968; only rock remnants of the site are described, on a hiking trail.",
   "other_names": [
     "Powderhorn/Davis Peak"
   ],
@@ -18,10 +19,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4 cab on the ground",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Removed or destroyed in 1968; sources describe only rock remnants at the site",
   "registers": [
     {
       "register": "FFLOS",
@@ -33,8 +34,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached by a hiking trail from the Paris Creek/Davis Peak Trailhead off the Salmon la Sac road; the sources read describe no closure"
   },
   "staffing": {
     "status": "unknown",
@@ -43,27 +44,72 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Hike of 5.5 miles with 3,900 feet of gain from the trailhead (Willhite)"
   },
   "rental": null,
   "events": [
     {
+      "year": 1933,
+      "event": "staffed",
+      "note": "Aaron Jurgens listed as known lookout personnel; the date comes a year before the 1934 cab and the page gives no context",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wa/davispeak.html"
+    },
+    {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "L-4 cab on the ground; panoramic photos taken from the roof that year",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/davis-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/davis-peak-lookout-site/",
+        "http://www.willhiteweb.com/hiking/cle_elum/davis_peak/trail_202.htm"
+      ]
+    },
+    {
+      "year": 1944,
+      "event": "staffed",
+      "note": "Marge Lumsden occupied the lookout",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/davis-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/davis-peak-lookout-site/",
+        "http://www.willhiteweb.com/hiking/cle_elum/davis_peak/trail_202.htm"
+      ]
+    },
+    {
+      "year": 1964,
+      "event": "staffed",
+      "note": "Marianna Kearney listed as known lookout personnel",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wa/davispeak.html"
+    },
+    {
+      "year": 1965,
+      "event": "staffed_last",
+      "note": "Lumsden's last season per Willhite; she was landed by helicopter in deep snow",
+      "from": "research",
+      "source_url": "http://www.willhiteweb.com/hiking/cle_elum/davis_peak/trail_202.htm"
     },
     {
       "year": 1968,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"1968\".",
-      "from": "fflos"
+      "note": "Removed or destroyed; the register and SummitPost say removed, the Fire Lookout Association says destroyed, Willhite says destroyed or removed",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/davis-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/davis-peak-lookout-site/",
+        "https://www.firelookout.com/wa/davispeak.html",
+        "http://www.willhiteweb.com/hiking/cle_elum/davis_peak/trail_202.htm",
+        "https://www.summitpost.org/davis-peak/315322"
+      ]
     },
     {
       "year": 2012,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: August 22, 2012",
-      "from": "fflos"
+      "note": "Registered August 22, 2012 as US 1396, WA 296",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/davis-peak-lookout-site/"
     }
   ],
   "photos": [
@@ -159,6 +205,16 @@
       "kind": "register"
     },
     {
+      "label": "Davis Peak - Salmon La Sac Hiking Trails (WillhiteWeb)",
+      "url": "http://www.willhiteweb.com/hiking/cle_elum/davis_peak/trail_202.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Davis Peak (SummitPost)",
+      "url": "https://www.summitpost.org/davis-peak/315322",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Washington lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wa/",
       "kind": "association"
@@ -215,12 +271,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-davis-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

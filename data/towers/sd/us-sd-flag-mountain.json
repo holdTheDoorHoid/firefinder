@@ -1,6 +1,7 @@
 {
   "id": "us-sd-flag-mountain",
   "name": "Flag Mountain Lookout Site",
+  "summary": "Pennington County lookout built 1940 on Flag Mountain by CCC labor; register says removed 1975, cab gone, a stone or concrete base remains; sources disagree on build year and 1951 abandonment.",
   "other_names": [],
   "country": "US",
   "region": "SD",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "10-foot stone base with L-4 cab",
   "height_m": 4.3,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Cab gone; part of the base remains. The register gives 1975 as the removal year.",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,40 +29,79 @@
       "url": "http://firetower.org/lookouts/us/sd/flag-mountain-lookout-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Black Hills National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "On Black Hills National Forest land; reached by Forest Service Road 189.2 and a short walk, per a hiking blog and an onX trail page"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "A hiking blog describes a rough one-way road about a mile to the top, a short climb of stairs from the parking area, and says the Flag Mountain Lookout Road does not reach the top"
   },
   "rental": null,
   "events": [
     {
       "year": 1940,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Firelookout and Forest Lookouts give 1940; the register gives 1940-1941 and a hiking blog and onX give 1941",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/sd/flagmtn.html",
+      "source_urls": [
+        "https://www.firelookout.com/sd/flagmtn.html",
+        "https://westlookouts.weebly.com/flag-mountain.html"
+      ]
+    },
+    {
+      "year": 1942,
+      "event": "staffed",
+      "note": "Dan Weirs listed as lookout",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/sd/flagmtn.html"
+    },
+    {
+      "year": 1951,
+      "event": "abandoned",
+      "note": "Claimed by a Black Hills ATV travel site; staffing lists in the other sources run past 1951",
+      "from": "research",
+      "source_url": "https://blackhillsatvdestinations.com/flag-mountain-fire-tower/"
+    },
+    {
+      "year": 1952,
+      "event": "staffed",
+      "note": "William A. Reman began duties April 28, 1952 per Forest Lookouts; firelookout lists him in 1951",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/flag-mountain.html",
+      "source_urls": [
+        "https://westlookouts.weebly.com/flag-mountain.html",
+        "https://www.firelookout.com/sd/flagmtn.html"
+      ]
+    },
+    {
+      "year": 1963,
+      "event": "staffed",
+      "note": "Claire Marvin listed, served multiple years",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/sd/flagmtn.html"
     },
     {
       "year": 1975,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"1975\".",
-      "from": "fflos"
+      "note": "Register Removed field",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/sd/flag-mountain-lookout-site/"
     },
     {
       "year": 2026,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 2, 2026",
-      "from": "fflos"
+      "note": "Registered January 2, 2026, nominated by Dixie Boyle",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/sd/flag-mountain-lookout-site/"
     }
   ],
   "photos": [
@@ -83,6 +123,21 @@
       "label": "FFLOS register entry US 2122 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/sd/flag-mountain-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Flag Mountain Lookout/Fire Tower (Black Hills Hiking, Biking, and More)",
+      "url": "https://www.blackhillshikingbikingandmore.com/flag-mountain-lookoutfire-tower",
+      "kind": "reference"
+    },
+    {
+      "label": "Flag Mountain Fire Tower (Black Hills ATV Destinations)",
+      "url": "https://blackhillsatvdestinations.com/flag-mountain-fire-tower/",
+      "kind": "reference"
+    },
+    {
+      "label": "Flag Mountain - FS 189.2 (onX Maps)",
+      "url": "https://www.onxmaps.com/offroad/trails/us/south-dakota/flag-mountain-fs-1892-e7qego472z1y",
+      "kind": "reference"
     },
     {
       "label": "FFLA South Dakota lookout list (firelookout.org)",
@@ -141,12 +196,33 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-sd-flag-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

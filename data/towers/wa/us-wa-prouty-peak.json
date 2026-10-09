@@ -1,6 +1,7 @@
 {
   "id": "us-wa-prouty-peak",
   "name": "Prouty Peak Lookout Site",
+  "summary": "Pend Oreille County, WA tower built 1930 (40-ft L-4); taken down in 1935 per three sources, though firelookout.com says abandoned in the 1940s; no remains described.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "40-foot pole tower with an L-4 cab; a tent cabin and a patrol tower stood half a mile northeast",
+  "height_m": 12.2,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Register and firelookout.com say it is gone; no source describes what, if anything, remains on the summit",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,7 +29,7 @@
       "url": "http://firetower.org/lookouts/us/wa/prouty-peak-lookout-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (Colville National Forest, per the register)",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -48,20 +49,47 @@
     {
       "year": 1930,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "40-foot pole tower with L-4 cab on the peak; tent cabin and patrol tower half a mile northeast (register, firelookout.com, Willhite)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/prouty-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/prouty-peak-lookout-site/",
+        "https://www.firelookout.com/wa/proutypeak.html",
+        "https://willhiteweb.com/fire_lookouts/prouty_peak_lookout/green_mountain_209.htm"
+      ]
+    },
+    {
+      "year": 1933,
+      "event": "other",
+      "note": "Jimmie Monroe struck by lightning at the site, per Willhite; the source does not describe a fire or a staffing role",
+      "from": "research",
+      "source_url": "https://willhiteweb.com/fire_lookouts/prouty_peak_lookout/green_mountain_209.htm"
     },
     {
       "year": 1935,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"1935\".",
-      "from": "fflos"
+      "note": "Register says destroyed in 1935; Willhite and the Forest Lookouts page say the legs were sawn off and the tower pushed over the cliff after the fire season",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/prouty-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/prouty-peak-lookout-site/",
+        "https://willhiteweb.com/fire_lookouts/prouty_peak_lookout/green_mountain_209.htm",
+        "https://washingtonlookouts.weebly.com/prouty-peak.html"
+      ]
+    },
+    {
+      "year": 1940,
+      "event": "abandoned",
+      "note": "Firelookout.com says 'Abandoned 1940s'; the year 1940 stands in for the decade only and conflicts with the 1935 account",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wa/proutypeak.html"
     },
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: April 17, 2020",
-      "from": "fflos"
+      "note": "Registered April 17, 2020 as US 2030, WA 501; nominated by Tammy McLeod",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/prouty-peak-lookout-site/"
     }
   ],
   "photos": [],
@@ -70,6 +98,11 @@
       "label": "FFLOS register entry US 2030 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wa/prouty-peak-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Prouty Peak Lookout Site & Patrol Point on Green Mountain (WillhiteWeb.com)",
+      "url": "https://willhiteweb.com/fire_lookouts/prouty_peak_lookout/green_mountain_209.htm",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -127,12 +160,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-prouty-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

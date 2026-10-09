@@ -1,6 +1,7 @@
 {
   "id": "us-ca-reyes-peak",
   "name": "Reyes Peak Lookout Site",
+  "summary": "Los Padres NF lookout built 1927 on Reyes Peak, destroyed by the 1932 Matilija Fire and not rebuilt; footing pipes and debris remained at the 2011 visit.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "California Region 5 Plan 4AR cabin with a 14 by 14 ft cab on an open timber tower",
+  "height_m": 6.1,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Destroyed by the Matilija Fire in September 1932 and not rebuilt; only footing pipes and debris were left at the 2011 visit",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "US Forest Service - Los Padres National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached by a one-mile walk from the Reyes Peak trailhead; no closure appears in the sources read, but the newest visit described is from 2011"
   },
   "staffing": {
     "status": "unknown",
@@ -41,15 +42,28 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "About one mile from the Reyes Peak trailhead, steep in places (Carey, 2011)"
   },
   "rental": null,
   "events": [
     {
+      "year": 1922,
+      "event": "other",
+      "note": "Newspaper reports describe plans for a standard lookout station on the summit; the 1922 plans came before the 1927 cabin",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/reyes-peak.html"
+    },
+    {
       "year": 1927,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Constructed as a California Region 5 Plan 4AR cabin on an open timber tower; Peakbagging and Carey give the same year",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/reyes-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/reyes-peak-lookout-site/",
+        "http://www.craigrcarey.net/2011/05/lookout-reyes-peak/",
+        "http://www.peakbagging.com/CALookoutPhotos/Reyes.html"
+      ]
     },
     {
       "year": 1932,
@@ -58,10 +72,37 @@
       "from": "fflos"
     },
     {
+      "year": 1932,
+      "event": "destroyed",
+      "note": "Lookout burned in the Matilija Fire (newspaper of 13 September 1932) and was not rebuilt",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/reyes-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/reyes-peak-lookout-site/",
+        "https://californialookouts.weebly.com/reyes-peak.html",
+        "http://www.peakbagging.com/CALookoutPhotos/Reyes.html"
+      ]
+    },
+    {
+      "year": 1932,
+      "event": "fire",
+      "note": "Matilija Fire started in early September 1932 and burned close to 220,000 acres in the Santa Barbara National Forest",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Matilija_Fire"
+    },
+    {
+      "year": 1932,
+      "event": "staffed",
+      "note": "Lookout William Green was at the post when the Matilija Fire reached the peak, per 1932 newspapers",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/reyes-peak.html"
+    },
+    {
       "year": 2019,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: December 20, 2019",
-      "from": "fflos"
+      "note": "Registered December 20, 2019 as US 1859, CA 54",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/reyes-peak-lookout-site/"
     }
   ],
   "photos": [
@@ -133,6 +174,16 @@
       "kind": "register"
     },
     {
+      "label": "Reyes Peak (LO site), California (Peakbagging)",
+      "url": "http://www.peakbagging.com/CALookoutPhotos/Reyes.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Matilija Fire (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Matilija_Fire",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -180,12 +231,34 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:reyes-peak",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-reyes-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-ca-stag-dome",
   "name": "Stag Dome Lookout Site",
+  "summary": "Fresno County lookout site built 1934 on Stag Dome, a Plan R1 cabin on a short timber pole; removal date unknown and no source describes lookout remains.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "Plan R1 cabin on a short pole, open timber tower",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Register lists the lookout removal date as unknown; a 2018 trip report found no lookout remains at the summit",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/ca/stag-dome-lookout-site/"
     }
   ],
-  "agency": "US Forest Service - Sierra National Forest",
+  "agency": "US Forest Service - Sierra National Forest (per the register; see resolved_conflicts)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "No closure appears in the sources read; reached by a Forest Service trail to Deer Cove, then cross-country to the summit, since no trail reaches it"
   },
   "staffing": {
     "status": "unknown",
@@ -41,21 +42,23 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Deer Cove Trail, a decently maintained Forest Service trail that starts just outside the national park boundary; the last stretch is cross-country (Burd, 2018)"
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register gives 1934; the californialookouts listing shows 1933 beside the site name",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/stag-dome-lookout-site/"
     },
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 29, 2020",
-      "from": "fflos"
+      "note": "Registered January 29, 2020 as US 1894, CA 89",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/stag-dome-lookout-site/"
     }
   ],
   "photos": [
@@ -128,12 +131,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-stag-dome",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

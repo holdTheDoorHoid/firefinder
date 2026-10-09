@@ -1,6 +1,7 @@
 {
   "id": "us-wy-bridger-peak",
   "name": "Bridger Peak Lookout Site",
+  "summary": "Stone lookout on Carbon County's Bridger Peak: planned in 1911, dated 1925 by the register, removed in the 1960s; a foundation and radio site remain.",
   "other_names": [],
   "country": "US",
   "region": "WY",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Stone walls described as very thick, a small window facing each direction and a platform on top (oral history quoted in the register)",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Register says the lookout was removed in the 1960s; a rock foundation and a radio facility remain on the summit.",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Two trip reports (2022 and 2026) describe hiking to the summit by the Continental Divide Trail or a forest road, and neither mentions a closure. Inferred from those accounts; no official access statement was found."
   },
   "staffing": {
     "status": "unknown",
@@ -41,27 +42,48 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "2022 hike started at the trailhead on the south side of Battle Pass and followed the ridge. A 2026 hike went up the Continental Divide Trail, with the forest road planned as the way back."
   },
   "rental": null,
   "events": [
     {
+      "year": 1911,
+      "event": "other",
+      "note": "Plan announced for a stone and cement station with a man kept there in summer. The item does not confirm a build.",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/bridger-peak.html"
+    },
+    {
+      "year": 1921,
+      "event": "other",
+      "note": "Lookout house in use: sixty persons signed the travelers' register that summer",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/bridger-peak.html"
+    },
+    {
       "year": 1925,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register's build year. A 1921 item already mentions the lookout house, so the building may be older.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wy/bridger-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wy/bridger-peak-lookout-site/",
+        "https://westlookouts.weebly.com/bridger-peak.html"
+      ]
     },
     {
       "year": 1960,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"1960s\" (about 1960).",
-      "from": "fflos"
+      "note": "Register says removed in the 1960s; 1960 is approximate",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wy/bridger-peak-lookout-site/"
     },
     {
       "year": 2026,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 1, 2026",
-      "from": "fflos"
+      "note": "Date registered January 1, 2026 (US 2107, WY 9)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wy/bridger-peak-lookout-site/"
     }
   ],
   "photos": [
@@ -83,6 +105,16 @@
       "label": "FFLOS register entry US 2107 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wy/bridger-peak-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Wyoming Hiked: Bridger Peak on the Continental Divide Trail (The Adventuring Heidi)",
+      "url": "https://theadventuringheidi.com/2026/09/10/wyoming-hiked-bridger-peak-on-the-continental-divide-trail/",
+      "kind": "reference"
+    },
+    {
+      "label": "Bridger Peak (Moments in Dirt and Ink (valhikes.blogspot.com))",
+      "url": "https://valhikes.blogspot.com/2022/08/bridger-peak.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA Wyoming lookout list (firelookout.org)",
@@ -140,12 +172,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wy-bridger-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

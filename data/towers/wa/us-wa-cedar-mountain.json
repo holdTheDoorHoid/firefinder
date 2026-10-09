@@ -1,6 +1,7 @@
 {
   "id": "us-wa-cedar-mountain",
   "name": "Cedar Mountain Lookout Site",
+  "summary": "Fairwood tree lookout on two cut trees, built by Fred Fraser and used until about 1950; the summit is now in Spring Lake/Lake Desire Park and no remains are described.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Platform on two trees cut off about 50 feet up, with two adjoining trees as a ladder and a tent at the base",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Used until about 1950; no source we read describes what, if anything, remains of the platform",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "State Division of Forestry",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Inside Spring Lake/Lake Desire Park; the summit is reached by a hiker-only Summit Trail, and a private home sits just below the summit"
   },
   "staffing": {
     "status": "unknown",
@@ -41,15 +42,27 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Distance 1.2 miles and elevation gain 400 feet, from the southeast trailhead (Willhite)"
   },
   "rental": null,
   "events": [
     {
+      "year": 1950,
+      "event": "staffed_last",
+      "note": "Used until about 1950 per the register and Willhite; neither gives a build year",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/cedar-mountain-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/cedar-mountain-lookout-site/",
+        "http://www.willhiteweb.com/puget_sound_hiking/mcgarvey_park/cedar_mountain_264.htm"
+      ]
+    },
+    {
       "year": 2021,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: February 22, 2021",
-      "from": "fflos"
+      "note": "Registered February 22, 2021 as US 2068, WA 506",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/cedar-mountain-lookout-site/"
     }
   ],
   "photos": [
@@ -83,6 +96,11 @@
       "label": "FFLOS register entry US 2068 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wa/cedar-mountain-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Spring Lake/Lake Desire Park and McGarvey Park (King County, Washington)",
+      "url": "https://kingcounty.gov/en/dept/dnrp/nature-recreation/parks-recreation/king-county-parks/natural-working-lands/spring-lake",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -140,9 +158,39 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-cedar-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    },
     {
       "field": "kind",
       "values": [
@@ -159,9 +207,15 @@
       "note": "Sources disagree on whether a tower or building stood here, or only a camp or lookout tree."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

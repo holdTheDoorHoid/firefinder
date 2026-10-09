@@ -1,6 +1,7 @@
 {
   "id": "us-ut-lava-point",
   "name": "Lava Point Lookout Site",
+  "summary": "Zion National Park ground lookout: original burned in the 1950s or 1960s, small cabin torn down in 1999; now an NPS overlook open May to September. No source describes remains.",
   "other_names": [],
   "country": "US",
   "region": "UT",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Small ground cabin of local design, about 10 by 10 feet; no tower",
   "height_m": null,
   "status": "gone",
   "status_note": null,
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/ut/lava-point-lookout-site/"
     }
   ],
-  "agency": "National Park Service",
+  "agency": "National Park Service (Zion National Park)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Off Kolob Terrace Road, with parking and a viewpoint; typically accessible May through September, as weather allows"
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,65 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "The final 1.5 miles of road are dirt and can become impassable when wet"
   },
   "rental": null,
   "events": [
     {
+      "year": 1957,
+      "event": "burned",
+      "note": "Lightning strike burned the lookout station, per Willhite. The register dates the fire to about 1963 instead.",
+      "from": "research",
+      "source_url": "https://www.willhiteweb.com/utah/fire_lookouts/lava_point_lookout/pictures_033.htm"
+    },
+    {
+      "year": 1957,
+      "event": "rebuilt",
+      "note": "Quickly rebuilt with a small 10 by 10 ground cabin of local design, per Willhite. The register says the cabin went up soon after the fire.",
+      "from": "research",
+      "source_url": "https://www.willhiteweb.com/utah/fire_lookouts/lava_point_lookout/pictures_033.htm",
+      "source_urls": [
+        "https://www.willhiteweb.com/utah/fire_lookouts/lava_point_lookout/pictures_033.htm",
+        "http://firetower.org/lookouts/us/ut/lava-point-lookout-site/"
+      ]
+    },
+    {
+      "year": 1959,
+      "event": "other",
+      "note": "Zion boundaries expanded, making land for an access road to the lookout possible (Willhite). A 1959 Salt Lake Tribune report, quoted on another site, describes a Senate-approved bill that included land for that road.",
+      "from": "research",
+      "source_url": "https://www.willhiteweb.com/utah/fire_lookouts/lava_point_lookout/pictures_033.htm",
+      "source_urls": [
+        "https://www.willhiteweb.com/utah/fire_lookouts/lava_point_lookout/pictures_033.htm",
+        "https://westlookouts.weebly.com/lava-point.html"
+      ]
+    },
+    {
+      "year": 1963,
+      "event": "burned",
+      "note": "Register says the original building burned down about 1963; conflicts with the 1957 date in Willhite",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ut/lava-point-lookout-site/"
+    },
+    {
+      "year": 1999,
+      "event": "removed",
+      "note": "Cabin torn down or removed; USU says the area was later turned into a viewpoint by the Park Service",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ut/lava-point-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ut/lava-point-lookout-site/",
+        "https://www.willhiteweb.com/utah/fire_lookouts/lava_point_lookout/pictures_033.htm",
+        "https://extension.usu.edu/rra/photos/lava-point-lookout-3"
+      ]
+    },
+    {
       "year": 2011,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: December 8, 2011",
-      "from": "fflos"
+      "note": "Registered December 8, 2011 as FFLOS US 1170, UT 2",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ut/lava-point-lookout-site/"
     }
   ],
   "photos": [
@@ -83,6 +133,21 @@
       "label": "FFLOS register entry US 1170 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ut/lava-point-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Lava Point Lookout and Viewpoint (WillhiteWeb.com)",
+      "url": "https://www.willhiteweb.com/utah/fire_lookouts/lava_point_lookout/pictures_033.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Lava Point Overlook (U.S. National Park Service)",
+      "url": "https://www.nps.gov/places/lava-point-overlook.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Lava Point Lookout (Utah State University RRA photo collection)",
+      "url": "https://extension.usu.edu/rra/photos/lava-point-lookout-3",
+      "kind": "reference"
     },
     {
       "label": "FFLA Utah lookout list (firelookout.org)",
@@ -135,12 +200,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ut-lava-point",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

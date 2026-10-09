@@ -1,6 +1,7 @@
 {
   "id": "us-sd-castle-peak",
   "name": "Castle Peak Lookout Site",
+  "summary": "Black Hills secondary lookout built 1939 on Castle Peak; sources disagree on 1961 demolition versus 1964 burning, and no source describes the summit remains today.",
   "other_names": [],
   "country": "US",
   "region": "SD",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "30' wooden tower with 7x7' cab",
+  "height_m": 9.1,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Demolished and its remains scattered; the register says they were later burned. No structure is described as standing.",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,40 +29,71 @@
       "url": "http://firetower.org/lookouts/us/sd/castle-peak-lookout-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Black Hills National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Summit is on public land managed by the Mystic Ranger District of the Black Hills National Forest; no tower remains to climb"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "Road 238 is the reference point for most trips to the summit, per SummitPost"
   },
   "rental": null,
   "events": [
     {
       "year": 1939,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register, firelookout and a 1939 newspaper item give 1939; SummitPost says built around 1937",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/sd/castle-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/sd/castle-peak-lookout-site/",
+        "https://www.firelookout.com/sd/castlepeak.html",
+        "https://westlookouts.weebly.com/castle-peak.html",
+        "https://www.summitpost.org/castle-peak/906106"
+      ]
+    },
+    {
+      "year": 1939,
+      "event": "staffed",
+      "note": "Secondary lookout, manned intermittently when fire hazard was great",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/sd/castle-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/sd/castle-peak-lookout-site/",
+        "https://westlookouts.weebly.com/castle-peak.html"
+      ]
     },
     {
       "year": 1961,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"1961\".",
-      "from": "fflos"
+      "note": "Register date; lookout demolished and remains scattered down the ridge",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/sd/castle-peak-lookout-site/"
+    },
+    {
+      "year": 1964,
+      "event": "burned",
+      "note": "Firelookout and SummitPost give 1964; the register says only that the remains were later burned",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/sd/castlepeak.html",
+      "source_urls": [
+        "https://www.firelookout.com/sd/castlepeak.html",
+        "https://www.summitpost.org/castle-peak/906106"
+      ]
     },
     {
       "year": 2026,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 2, 2026",
-      "from": "fflos"
+      "note": "Registered January 2, 2026, nominated by Dixie Boyle",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/sd/castle-peak-lookout-site/"
     }
   ],
   "photos": [
@@ -83,6 +115,11 @@
       "label": "FFLOS register entry US 2125 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/sd/castle-peak-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Castle Peak (SummitPost)",
+      "url": "https://www.summitpost.org/castle-peak/906106",
+      "kind": "reference"
     },
     {
       "label": "FFLA South Dakota lookout list (firelookout.org)",
@@ -140,12 +177,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-sd-castle-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

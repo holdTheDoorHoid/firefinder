@@ -1,6 +1,7 @@
 {
   "id": "us-va-birch-knob",
   "name": "Birch Knob Lookout Site",
+  "summary": "Birch Knob's 1964-1978 fire tower was dismantled in 1980; a steel observation deck from 2003 stands on the summit and is open for day use.",
   "other_names": [
     "Birch Knob (Pine Mountain)"
   ],
@@ -18,9 +19,9 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "54-foot fire tower (1964-1978); steel observation deck completed 2003 with 183 steps",
   "height_m": null,
-  "status": "gone",
+  "status": "standing",
   "status_note": null,
   "registers": [
     {
@@ -33,25 +34,59 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Day use only, sunrise to sunset, late March to late December; no fee (Forest Service)"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "Gravel Birch Knob Road (FS 616) runs to the tower; 183 steps to the deck"
   },
   "rental": null,
   "events": [
     {
+      "year": 1964,
+      "event": "other",
+      "note": "Fire tower in operation at the site from 1964 to 1978; the build date is not given",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/va/birch-knob-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/va/birch-knob-lookout-site/",
+        "https://www.vaco.org/county-connections/visit-dickenson-county-birch-knob-tower/"
+      ]
+    },
+    {
+      "year": 1980,
+      "event": "removed",
+      "note": "Fire tower dismantled; its piers remain on the summit",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/va/birch-knob-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/va/birch-knob-lookout-site/",
+        "https://www.vaco.org/county-connections/visit-dickenson-county-birch-knob-tower/"
+      ]
+    },
+    {
+      "year": 2003,
+      "event": "replaced",
+      "note": "Steel observation deck completed December 2003 by the Forest Service at about the old tower's site",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/va/birch-knob-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/va/birch-knob-lookout-site/",
+        "https://www.vaco.org/county-connections/visit-dickenson-county-birch-knob-tower/"
+      ]
+    },
+    {
       "year": 2017,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 23, 2017",
-      "from": "fflos"
+      "note": "Registered January 23, 2017 as FFLOS US 1634; nominated by Kristin Reynolds",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/va/birch-knob-lookout-site/"
     }
   ],
   "photos": [
@@ -73,6 +108,16 @@
       "label": "FFLOS register entry US 1634 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/va/birch-knob-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Birch Knob Observation Site (U.S. Forest Service (George Washington and Jefferson National Forests))",
+      "url": "https://www.fs.usda.gov/r08/gwj/recreation/birch-knob-observation-site",
+      "kind": "reference"
+    },
+    {
+      "label": "Visit Dickenson County and the Birch Knob Tower (Virginia Association of Counties)",
+      "url": "https://www.vaco.org/county-connections/visit-dickenson-county-birch-knob-tower/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Virginia lookout list (firelookout.org)",
@@ -123,12 +168,49 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-va-birch-knob",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "standing"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives standing where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

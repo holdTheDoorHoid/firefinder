@@ -1,6 +1,7 @@
 {
   "id": "us-wa-neah",
   "name": "Neah Lookout Site",
+  "summary": "Neah Lookout near Neah Bay: 80-ft Coast Guard-era tower of 1942, moved to Sooes Peak in 1957 and down by 1973; ground cabin remains at the site.",
   "other_names": [
     "Neah AWS"
   ],
@@ -18,10 +19,10 @@
   "material": "steel",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "80-foot steel tower with a 7-by-7-foot cab on a rectangular ground cabin",
+  "height_m": 24.4,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Tower moved to Sooes Peak in 1957 and down there since 1973; the ground cabin remains at the Neah site, and accounts of the footings differ",
   "registers": [
     {
       "register": "FFLOS",
@@ -33,8 +34,8 @@
   "agency": "Makah Indian Tribe",
   "ownership": "tribal",
   "access": {
-    "level": "permission",
-    "note": "On tribal land. Ask the tribe before visiting."
+    "level": "restricted",
+    "note": "Makah Indian Tribe administers the site; Willhite says access runs through the Olympic Tree Farm and is open for non-motorized recreation"
   },
   "staffing": {
     "status": "unknown",
@@ -48,10 +49,73 @@
   "rental": null,
   "events": [
     {
+      "year": 1942,
+      "event": "built",
+      "note": "US Coast Guard 80-foot steel tower with a 7-by-7-foot cab, built to spot aircraft",
+      "from": "research",
+      "source_url": "http://www.willhiteweb.com/washington_fire_lookouts/neah_lookout/coast_guard_190.htm",
+      "source_urls": [
+        "http://www.willhiteweb.com/washington_fire_lookouts/neah_lookout/coast_guard_190.htm",
+        "https://www.firelookout.com/wa/neah.html"
+      ]
+    },
+    {
+      "year": 1942,
+      "event": "staffed_first",
+      "note": "AWS site during WWII; Art and Aunt Ruth Claplanhoo staffed it during WWII (exact years not given)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/neah-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/neah-lookout-site/",
+        "http://www.willhiteweb.com/washington_fire_lookouts/neah_lookout/coast_guard_190.htm"
+      ]
+    },
+    {
+      "year": 1953,
+      "event": "abandoned",
+      "note": "Inventory says the site was abandoned in 1953 and unused for four years before the move",
+      "from": "research",
+      "source_url": "http://www.willhiteweb.com/washington_fire_lookouts/neah_lookout/coast_guard_190.htm",
+      "source_urls": [
+        "http://www.willhiteweb.com/washington_fire_lookouts/neah_lookout/coast_guard_190.htm",
+        "https://www.firelookout.com/wa/neah.html"
+      ]
+    },
+    {
+      "year": 1957,
+      "event": "relocated",
+      "note": "Tower moved to Sooes Peak under an agreement between the Makah Tribe and Crown Zellerbach; the Tribe paid $3,000",
+      "from": "research",
+      "source_url": "http://www.willhiteweb.com/washington_fire_lookouts/neah_lookout/coast_guard_190.htm",
+      "source_urls": [
+        "http://www.willhiteweb.com/washington_fire_lookouts/neah_lookout/coast_guard_190.htm",
+        "http://firetower.org/lookouts/us/wa/neah-lookout-site/"
+      ]
+    },
+    {
+      "year": 1973,
+      "event": "removed",
+      "note": "Taken down or dropped in 1973; the tower lies on the ground at Sooes Peak (Sites record) or remains on the summit (Sooes Peak page)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/neah-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/neah-lookout-site/",
+        "http://willhiteweb.com/washington_fire_lookouts/sooes_peak/tsoo_yess_peak_189.htm"
+      ]
+    },
+    {
       "year": 2010,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 4, 2010",
-      "from": "fflos"
+      "note": "Registered September 4, 2010",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/neah-lookout-site/"
+    },
+    {
+      "year": 2010,
+      "event": "other",
+      "note": "Timber sale around 2010 removed the trees at the Neah site, opening the views",
+      "from": "research",
+      "source_url": "http://www.willhiteweb.com/washington_fire_lookouts/neah_lookout/coast_guard_190.htm"
     }
   ],
   "photos": [
@@ -97,6 +161,11 @@
       "label": "FFLOS register entry US 623 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wa/neah-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Sooes Peak (Tsoo-Yess Peak) (Willhite Web (willhiteweb.com))",
+      "url": "http://willhiteweb.com/washington_fire_lookouts/sooes_peak/tsoo_yess_peak_189.htm",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -156,12 +225,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-neah",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

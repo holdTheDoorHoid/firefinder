@@ -1,0 +1,13 @@
+The mountain is named for Robert McDonald, a forestry pioneer, according to one lookout site.[^2] In 1963 the Washington Department of Natural Resources put up a new 40-foot wooden live-in tower on the mountain.[^1][^4] The first lookout on the site had been a 50-foot spar tree, though little is recorded about it.[^1] The new tower was built to replace the Pinnacle Peak lookout, which, according to Willhite, was to be staffed one more year before it was abandoned.[^2][^3]
+
+The first named lookout was Carol Sorensen, who worked from mid-June to mid-September 1964.[^2][^3] Willhite's page spells her name Sorenson.[^3] Vandalism came early. One site says the new tower suffered vandalism before anyone could staff it in 1964.[^2] Willhite's page records a door panel kicked out in the fall of 1963.[^3] A 2020 trip report says DNR staffed a lookout on the mountain from 1963 to 1969.[^5] That date range does not match the 1964 start in the other sources, and the sources do not settle it.[^2][^3]
+
+The tower came down on June 4, 1969. DNR crews pulled it over to make room for a heliport.[^4][^3] A newspaper clipping reprinted on Willhite's page says the department decided to take the tower down after vandalism turned up.[^3] By March 1970 every structure had been cleared off the site, and the land went back to Burlington Northern, Inc.[^3]
+
+Today the mountain is reached by old logging roads from Kent-Kangley Road, just south of Kangley.[^5] A 2020 trip report says an old logging road follows the ridge to the true summit and is closed to the public, a closure meant to safeguard the Cedar River Watershed.[^5] No source we read describes what, if anything, is left on the summit. A 1972 survey record describes a reference mark set in a drill hole in the old tower's concrete step.[^4] That is the last description of remains we found.
+
+[^1]: McDonald Mountain Lookout Site, Former Fire Lookout Sites, http://firetower.org/lookouts/us/wa/mcdonald-mountain-lookout-site/ (accessed 2026-10-09).
+[^2]: McDonald Mtn. (Point) Fire Lookout Tower, firelookout.com, https://www.firelookout.com/wa/mcdonaldmtn.html (accessed 2026-10-09).
+[^3]: McDonald Point Lookout, WillhiteWeb.com, https://www.willhiteweb.com/washington_fire_lookouts/mcdonald_point/crows_nest_415.htm (accessed 2026-10-09).
+[^4]: McDonald - Forest Lookouts, washingtonlookouts.weebly.com, https://washingtonlookouts.weebly.com/mcdonald.html (accessed 2026-10-09).
+[^5]: McDonald Mountain trip report, Washington Trails Association, https://www.wta.org/go-hiking/trip-reports/trip_report-2020-07-24-6401861735 (accessed 2026-10-09).

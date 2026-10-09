@@ -1,6 +1,7 @@
 {
   "id": "us-wa-lookout-mountain-gpnf",
   "name": "Lookout Mountain Lookout Site (GPNF)",
+  "summary": "Wooden L-4 tower built 1932 on Lookout Mountain, Lewis County, WA; removed or destroyed 1968; sources disagree on the forest; no site description found.",
   "other_names": [
     "Lookout Mountain"
   ],
@@ -18,10 +19,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "10-foot wooden L-4 tower (register and firelookout.com)",
+  "height_m": 3.0,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Removed in 1968 per the register; firelookout.com says destroyed in 1968.",
   "registers": [
     {
       "register": "FFLOS",
@@ -48,10 +49,36 @@
   "rental": null,
   "events": [
     {
+      "year": 1932,
+      "event": "built",
+      "note": "10-foot wooden L-4 tower (height as given by the register)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/lookout-mountain-lookout-site-gpnf/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/lookout-mountain-lookout-site-gpnf/",
+        "https://www.firelookout.com/wa/lookoutmtn136.html"
+      ]
+    },
+    {
+      "year": 1968,
+      "event": "destroyed",
+      "note": "firelookout.com says destroyed",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wa/lookoutmtn136.html"
+    },
+    {
+      "year": 1968,
+      "event": "removed",
+      "note": "Register says the tower was removed",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/lookout-mountain-lookout-site-gpnf/"
+    },
+    {
       "year": 2012,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: May 26, 2012",
-      "from": "fflos"
+      "note": "Registered May 26, 2012 as US 1281, WA 181; nominated by Ray Kresek",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/lookout-mountain-lookout-site-gpnf/"
     }
   ],
   "photos": [],
@@ -60,6 +87,11 @@
       "label": "FFLOS register entry US 1281 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wa/lookout-mountain-lookout-site-gpnf/",
       "kind": "register"
+    },
+    {
+      "label": "Washington Lookouts (by Region) (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/wa/wa-rg/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Washington lookout list (firelookout.org)",
@@ -117,12 +149,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-lookout-mountain-gpnf",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

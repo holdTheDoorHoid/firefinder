@@ -1,6 +1,7 @@
 {
   "id": "us-wy-windy-mountain",
   "name": "Windy Mountain Lookout Site",
+  "summary": "1940 fire tower on Windy Mountain in Shoshone National Forest, Park County, Wyoming; gone, with only the tower piers left at the site.",
   "other_names": [],
   "country": "US",
   "region": "WY",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "Modified L-4-style cabin on a 20-foot open timber tower",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Gone; all that remains at the site are the tower piers",
   "registers": [
     {
       "register": "FFLOS",
@@ -39,7 +40,7 @@
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
@@ -48,14 +49,21 @@
     {
       "year": 1940,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register gives 1940; the 1940 brochure describes the tower as being erected that year, and the handbook (printed 1941) says it was being erected",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wy/windy-mountain-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wy/windy-mountain-lookout-site/",
+        "https://westlookouts.weebly.com/windy-mountain.html",
+        "https://www.npshistory.com/publications/usfs/handbooks/shoshone/sec6.htm"
+      ]
     },
     {
       "year": 2022,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: May 1, 2022",
-      "from": "fflos"
+      "note": "Added to the Former Fire Lookout Sites register on May 1, 2022",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wy/windy-mountain-lookout-site/"
     }
   ],
   "photos": [
@@ -101,6 +109,11 @@
       "label": "FFLOS register entry US 2077 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wy/windy-mountain-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Shoshone National Forest, Wyoming (handbook, printed 1941), section 6 (npshistory.com (U.S. Forest Service handbook))",
+      "url": "https://www.npshistory.com/publications/usfs/handbooks/shoshone/sec6.htm",
+      "kind": "reference"
     },
     {
       "label": "FFLA Wyoming lookout list (firelookout.org)",
@@ -157,12 +170,32 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:wy:windy-mountain",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-wy-windy-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

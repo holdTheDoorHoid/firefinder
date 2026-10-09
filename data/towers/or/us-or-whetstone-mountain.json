@@ -1,6 +1,7 @@
 {
   "id": "us-or-whetstone-mountain",
   "name": "Whetstone Mountain Lookout Site",
+  "summary": "Whetstone Mountain lookout, Marion County, OR: 20-ft tower with L-5 cab built 1933-34, gone by 1967 or burned 1968; hike reported closed in 2026.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": "L-5",
+  "design": "20-foot wooden tower with an L-5 cab (register)",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Gone by 1967 per the register and firelookout.com; Forest Lookouts says the structure was burned in October 1968",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Oregon Hikers marks the hike closed (notice dated August 2026, Austin Fire); the Forest Service trail page lists current wildfire closures on the Willamette National Forest. Not checked against a current closure order."
   },
   "staffing": {
     "status": "unknown",
@@ -41,15 +42,66 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Trail #3369 climbs toward the summit from both ends. Hike Oregon describes the summit as a flat area where a lookout once stood. No source describes what remains there."
   },
   "rental": null,
   "events": [
     {
+      "year": 1933,
+      "event": "built",
+      "note": "Forest Lookouts: 10 by 10 L-5 lookout house constructed by the CCC; Oregon Statesman item from September 1933 describes building under way",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/whetstone-mountain.html"
+    },
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "Register: 20-foot wooden tower with L-5 cab built in 1934; firelookout.com gives 1934 for the L-5 cab",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/whetstone-mountain-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/whetstone-mountain-lookout-site/",
+        "https://www.firelookout.com/or/whetstonemtn.html"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "other",
+      "note": "Panorama photos taken by Robert Cooper and Albert Arnst (May 24, 1934)",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/whetstone-mountain.html"
+    },
+    {
+      "year": 1967,
+      "event": "removed",
+      "note": "Gone by 1967 per the register and firelookout.com",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/whetstone-mountain-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/whetstone-mountain-lookout-site/",
+        "https://www.firelookout.com/or/whetstonemtn.html"
+      ]
+    },
+    {
+      "year": 1968,
+      "event": "removed",
+      "note": "Forest Lookouts: structure disposed of by burning on October 11, 1968",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/whetstone-mountain.html"
+    },
+    {
       "year": 2010,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 21, 2010",
-      "from": "fflos"
+      "note": "Registered September 21, 2010 as US 661, OR 93",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/whetstone-mountain-lookout-site/"
+    },
+    {
+      "year": 2026,
+      "event": "closed",
+      "note": "Oregon Hikers notice (August 2026): area closed because of the Austin Fire",
+      "from": "research",
+      "source_url": "https://www.oregonhikers.org/field_guide/Whetstone_Mountain_Hike"
     }
   ],
   "photos": [
@@ -71,6 +123,21 @@
       "label": "FFLOS register entry US 661 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/or/whetstone-mountain-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Whetstone Mountain Hike (Oregon Hikers Field Guide)",
+      "url": "https://www.oregonhikers.org/field_guide/Whetstone_Mountain_Hike",
+      "kind": "reference"
+    },
+    {
+      "label": "Whetstone Mountain Trail #3369 (Willamette National Forest)",
+      "url": "https://www.fs.usda.gov/r06/willamette/recreation/trails/whetstone-mountain-trail-3369",
+      "kind": "reference"
+    },
+    {
+      "label": "Whetstone Mountain (Hike Oregon)",
+      "url": "https://www.hikeoregon.net/whetstone-mountain.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
@@ -130,12 +197,33 @@
         "design",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-whetstone-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

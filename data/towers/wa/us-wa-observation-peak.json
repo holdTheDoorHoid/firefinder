@@ -1,6 +1,7 @@
 {
   "id": "us-wa-observation-peak",
   "name": "Observation Peak Lookout Site",
+  "summary": "Summit site of a 1934 L-4 cab, dated to the 1960s and described as removed, abandoned or destroyed; a half-mile trail climbs to the summit.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "L-4 cab",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The L-4 cab is gone. Sources date its end to the 1960s but differ on whether it was removed, abandoned or destroyed.",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Forest Service page says Trail 132 is open to hikers and horses, but the same page carries a Trail Temporarily Closed banner."
   },
   "staffing": {
     "status": "unknown",
@@ -41,10 +42,72 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Trail 132A, about 0.5 miles, climbs from Trail 132 to the summit. Trail 132 ends on Road 58 at the Observation Peak Trailhead. Willhite gives 2.5 miles from the north trailhead."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1924,
+      "event": "fire",
+      "note": "Patrols missed the fire for three months; it was found after two days of low humidity; the lookout's prompt, accurate location held it to Class A; elapsed time from origin to end 92 days and 23 hours",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/observation-peak.html"
+    },
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "L-4 cab, per the register and the Forest Service",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/observation-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/observation-peak-lookout-site/",
+        "https://www.fs.usda.gov/r06/giffordpinchot/recreation/trails/trail-132-observation",
+        "https://willhiteweb.com/washington_fire_lookouts/observation_peak_lookout/trapper_creek_wilderness_267.htm"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "replaced",
+      "note": "L-4 cab replaced a D-6 cupola cabin from the 1920s, per the register; Willhite doubts the earlier cabin",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/observation-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/observation-peak-lookout-site/",
+        "https://willhiteweb.com/washington_fire_lookouts/observation_peak_lookout/trapper_creek_wilderness_267.htm"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "staffed",
+      "note": "Summer fire watch, per an August 1934 Oregonian item quoted by Kemnow",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/observation-peak.html"
+    },
+    {
+      "year": 1960,
+      "event": "abandoned",
+      "note": "Forest Service says abandoned in the 1960s; year is the decade start only",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r06/giffordpinchot/recreation/trails/trail-132-observation"
+    },
+    {
+      "year": 1960,
+      "event": "destroyed",
+      "note": "firelookout.com and Willhite say destroyed in the 1960s; year is the decade start only",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wa/observationpeak.html",
+      "source_urls": [
+        "https://www.firelookout.com/wa/observationpeak.html",
+        "https://willhiteweb.com/washington_fire_lookouts/observation_peak_lookout/trapper_creek_wilderness_267.htm"
+      ]
+    },
+    {
+      "year": 1960,
+      "event": "removed",
+      "note": "Register says the L-4 was removed in the 1960s; year is the decade start only",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/observation-peak-lookout-site/"
+    },
     {
       "year": 2012,
       "event": "fflos_registered",
@@ -133,6 +196,16 @@
       "kind": "register"
     },
     {
+      "label": "Trail #132 Observation (U.S. Forest Service, Gifford Pinchot National Forest)",
+      "url": "https://www.fs.usda.gov/r06/giffordpinchot/recreation/trails/trail-132-observation",
+      "kind": "reference"
+    },
+    {
+      "label": "Observation Peak Lookout Site, Trapper Creek Wilderness (WillhiteWeb.com)",
+      "url": "https://willhiteweb.com/washington_fire_lookouts/observation_peak_lookout/trapper_creek_wilderness_267.htm",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Washington lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wa/",
       "kind": "association"
@@ -188,12 +261,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-observation-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

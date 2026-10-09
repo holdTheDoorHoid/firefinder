@@ -1,0 +1,15 @@
+The Summit Guard Station lookout is hard to pin down, and the sources disagree about what stood here. The Former Fire Lookout Sites register describes a 1930s crow's nest tree platform that was removed long ago.[^1][^2] The Forest Lookouts page describes a small platform at the top of a rickety ladder, and says the lookout came from an old white fir about 300 feet from the house, with a small firefinder mounted on a cutoff tree.[^3] The same page also names a "Summit Tree Tower" that was dismantled in 1949.[^3]
+
+The agency says the site was first established as the Summit Ranger Station some time before 1908, as part of the former Wenaha National Forest.[^4] The Civilian Conservation Corps built a two-story residence, a garage, a gas house and a barn in 1935, and a guard station cabin followed in 1938.[^4]
+
+The only staffing account we found is from September 1931.[^3] It describes the station's fireman-lookout, Bill Monroe, driving back from a small lightning fire when a plane circled the fire he had just left and then a spot where he had seen a small puff of smoke.[^3] Monroe phoned the dispatcher just as the first lookout report came in. The account says this let him order the proper number of men and supplies about an hour sooner than would otherwise have been possible.[^3]
+
+The lookout tree did not last.[^1][^3] A Pendleton Ranger District annual report, quoted on the Forest Lookouts page, records an entry dated March 17, 1949 saying the old Summit Tree Tower was dismantled for safety reasons.[^3] The register gives no removal year.[^1]
+
+Today the Forest Service rents a guard station cabin as a rustic bunkhouse, for $45 a night per group and up to four people.[^4][^5] The Forest Service page gives the rental season as ending November 14 in one place and November 20 in another.[^4] The agency describes an exceptional view to the south and says there is no water on site.[^4] The sources disagree on how to book. The Forest Service page points to Recreation.gov, while the Recreation.gov listing says the bunkhouse does not offer reservations through that site and calls the location unstaffed.[^4][^5] The cabin is open to rent, but no source describes the lookout site itself as open to visitors, and none says what remains of the lookout tree or whether the cabin stands on the same spot.[^1][^3][^4]
+
+[^1]: Summit Guard Station Lookout Site, Former Fire Lookout Sites, http://firetower.org/lookouts/us/or/summit-guard-station-lookout-site/ (accessed 2026-10-09).
+[^2]: Summit Guard Station Fire Lookout Tower, firelookout.com, https://www.firelookout.com/or/summitgs.html (accessed 2026-10-09).
+[^3]: Summit Guard Station - Forest Lookouts, oregonlookouts.weebly.com, https://oregonlookouts.weebly.com/summit-guard-station.html (accessed 2026-10-09).
+[^4]: Summit Guard Station, Umatilla National Forest, U.S. Forest Service, https://www.fs.usda.gov/r06/umatilla/recreation/summit-guard-station (accessed 2026-10-09).
+[^5]: Summit Guard Station Bunkhouse, Recreation.gov, https://www.recreation.gov/camping/poi/234461 (accessed 2026-10-09).

@@ -1,6 +1,7 @@
 {
   "id": "us-sd-cicero-peak",
   "name": "Cicero Peak Lookout Site",
+  "summary": "Custer County lookout built 1939 on Cicero Peak; decommissioned 1973-74, moved off the mountain in 1980 and shown at a Rapid City attraction until 1997. Summit now has no tower.",
   "other_names": [],
   "country": "US",
   "region": "SD",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "30-foot steel tower with L-4 cab, replacing an earlier wooden tower",
   "height_m": 9.1,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Tower taken off the mountain in 1980; no source says where it stands now, and no source describes the summit remains",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,40 +29,87 @@
       "url": "http://firetower.org/lookouts/us/sd/cicero-peak-lookout-site/"
     }
   ],
-  "agency": "Black Hills National Forest",
+  "agency": "U.S. Forest Service, Black Hills National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "National forest land; hiking road from Custer is closed to motor vehicles each year from December 15 to May 15 (SummitPost)"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "Rugged 1.6-mile road to the summit, per SummitPost; there is no tower to climb"
   },
   "rental": null,
   "events": [
     {
       "year": 1939,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Firelookout and a 1939 newspaper item give 1939; the register and Wikipedia give a 1939-1940 span",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/sd/ciceropeak.html",
+      "source_urls": [
+        "https://www.firelookout.com/sd/ciceropeak.html",
+        "https://westlookouts.weebly.com/cicero-peak.html",
+        "http://firetower.org/lookouts/us/sd/cicero-peak-lookout-site/",
+        "https://en.wikipedia.org/wiki/Cicero_Peak_(South_Dakota)"
+      ]
+    },
+    {
+      "year": 1939,
+      "event": "staffed_first",
+      "note": "Elmer Jorgenson named as lookout in 1939 coverage",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/sd/ciceropeak.html",
+      "source_urls": [
+        "https://www.firelookout.com/sd/ciceropeak.html",
+        "https://westlookouts.weebly.com/cicero-peak.html"
+      ]
+    },
+    {
+      "year": 1973,
+      "event": "staffed_last",
+      "note": "Forest Lookouts lists 1973 as the final season of staffing; Wikipedia says the tower was used until 1974",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/cicero-peak.html",
+      "source_urls": [
+        "https://westlookouts.weebly.com/cicero-peak.html",
+        "https://en.wikipedia.org/wiki/Cicero_Peak_(South_Dakota)"
+      ]
     },
     {
       "year": 1980,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"1980\".",
-      "from": "fflos"
+      "note": "Wikipedia gives March 19, 1980; Forest Lookouts gives October 1980; SummitPost gives 1980",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Cicero_Peak_(South_Dakota)",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Cicero_Peak_(South_Dakota)",
+        "https://westlookouts.weebly.com/cicero-peak.html",
+        "https://www.summitpost.org/cicero-peak/899234"
+      ]
+    },
+    {
+      "year": 1997,
+      "event": "closed",
+      "note": "Rapid City attraction that displayed the tower closed in 1997",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/sd/cicero-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/sd/cicero-peak-lookout-site/",
+        "https://westlookouts.weebly.com/cicero-peak.html"
+      ]
     },
     {
       "year": 2026,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 2, 2026",
-      "from": "fflos"
+      "note": "Registered January 2, 2026, nominated by Dixie Boyle",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/sd/cicero-peak-lookout-site/"
     }
   ],
   "photos": [],
@@ -70,6 +118,16 @@
       "label": "FFLOS register entry US 2124 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/sd/cicero-peak-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Cicero Peak (South Dakota) (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Cicero_Peak_(South_Dakota)",
+      "kind": "reference"
+    },
+    {
+      "label": "Cicero Peak (SummitPost)",
+      "url": "https://www.summitpost.org/cicero-peak/899234",
+      "kind": "reference"
     },
     {
       "label": "FFLA South Dakota lookout list (firelookout.org)",
@@ -127,12 +185,34 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-sd-cicero-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

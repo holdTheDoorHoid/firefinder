@@ -1,6 +1,7 @@
 {
   "id": "us-va-high-knob-jefferson-nf",
   "name": "High Knob Lookout (Jefferson NF)",
+  "summary": "A 1938 CCC ground house, a 1978-79 three-story tower burned in 2007, and a replacement opened in 2014 that stands on the same site.",
   "other_names": [
     "High Knob (JNF)",
     "High Knob"
@@ -19,9 +20,9 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Replacement tower of stone, concrete and steel with an ADA-accessible ramp and an open circular deck",
   "height_m": null,
-  "status": "gone",
+  "status": "standing",
   "status_note": null,
   "registers": [
     {
@@ -31,28 +32,73 @@
       "url": "http://nhlr.org/lookouts/us/va/high-knob-lookout-jefferson-nf/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Clinch Ranger District",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Recreation area open late May to late September per the Forest Service; separate tower hours are not listed"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2015"
   },
   "visit": {
-    "climbable": null,
+    "climbable": true,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "ADA-accessible ramp (WCYB, 2014); open circular deck (NHLR visit report, 2015)"
   },
   "rental": null,
   "events": [
     {
+      "year": 1938,
+      "event": "built",
+      "note": "Original wooden ground house with a hip roof built by CCC Company 2348 in 1938-39",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/high-knob-lookout-jefferson-nf/"
+    },
+    {
+      "year": 1978,
+      "event": "rebuilt",
+      "note": "Job Corps built a three-story, eight-sided structure in 1978-79",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/high-knob-lookout-jefferson-nf/"
+    },
+    {
       "year": 1997,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: September 1, 1997",
-      "from": "nhlr"
+      "note": "Registered September 1, 1997 as US 227, VA 6; nominated by Joseph A. Marinangeli",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/high-knob-lookout-jefferson-nf/"
+    },
+    {
+      "year": 2007,
+      "event": "burned",
+      "note": "Destroyed by arson early on October 31, 2007 per NHLR; Forest Lookouts says vandals burned it",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/high-knob-lookout-jefferson-nf/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/va/high-knob-lookout-jefferson-nf/",
+        "https://easternuslookouts.weebly.com/high-knob3.html",
+        "https://wcyb.com/news/virginia-news/the-return-of-high-knobs-tower"
+      ]
+    },
+    {
+      "year": 2012,
+      "event": "other",
+      "note": "Groundbreaking for the replacement held August 28, 2012",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/high-knob3.html"
+    },
+    {
+      "year": 2014,
+      "event": "rebuilt",
+      "note": "Replacement stone, concrete and steel tower opened in 2014; WCYB reported it nearly complete in July 2014",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/high-knob-lookout-jefferson-nf/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/va/high-knob-lookout-jefferson-nf/",
+        "https://wcyb.com/news/virginia-news/the-return-of-high-knobs-tower"
+      ]
     }
   ],
   "photos": [
@@ -98,6 +144,16 @@
       "label": "NHLR register entry US 227 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/va/high-knob-lookout-jefferson-nf/",
       "kind": "register"
+    },
+    {
+      "label": "The return of High Knob's tower (WCYB)",
+      "url": "https://wcyb.com/news/virginia-news/the-return-of-high-knobs-tower",
+      "kind": "reference"
+    },
+    {
+      "label": "High Knob Recreation Area (U.S. Forest Service (George Washington and Jefferson National Forests))",
+      "url": "https://www.fs.usda.gov/r08/gwj/recreation/high-knob-recreation-area",
+      "kind": "reference"
     },
     {
       "label": "FFLA Virginia lookout list (firelookout.org)",
@@ -150,12 +206,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-va-high-knob-jefferson-nf",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "standing"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -166,12 +242,18 @@
         }
       ],
       "distance_m": null,
-      "note": "NHLR lists lookouts that were standing when registered."
+      "note": "Research (2026-10-09) gives standing where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

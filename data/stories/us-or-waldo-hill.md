@@ -1,0 +1,14 @@
+Waldo Hill, south of Cave Junction, got a 20-foot wooden tower with an L-4 cab in 1940.[^1][^2][^3][^6] The timbers were Port Orford cedar.[^3] A May 1940 plan described the view as complementary to Tennessee Mountain's and said the site filled a gap where numerous fires occurred in a high-value area.[^3] The agency was the Oregon Department of Forestry, though one history page lists the Siskiyou National Forest first.[^1][^2][^3]
+
+Crews kept the tower going. They repaired the roof in 1952, and in 1955 added new stairs, a catwalk, flooring and creosote.[^3] In 1965 they repaired windows and shutters and repainted the stairs.[^3] In 1956 the site hosted a four-day guard training camp, and a District Ranger's letter thanked the lookout for patience during it.[^3] The register says the tower was staffed into the 1970s.[^1]
+
+In 1980 the tower was dismantled, and its timbers were flown to a new site on Little Grayback Ridge.[^3][^4] The register says the cab was moved there in 1981.[^1][^5] The Little Grayback page says much of the new lookout's material was taken from an old lookout it names Waldo Mountain.[^4] A 2020 visitor's blog says much of the material came from Waldo Hill, and cautions against confusing it with Waldo Mountain east of Eugene.[^6] Construction began on July 1, 1980, with materials flown in by Forest Service helicopter.[^4] The 1980 annual report quoted there says the new lookout gives better detection coverage than Waldo.[^4]
+
+The National Historic Lookout Register says the Little Grayback cab is in active service as a study site for electronic fire detection systems.[^5] A 2020 visitor reported that the lookout is no longer staffed, that it hosts cameras, and that a sign warns the area is under surveillance.[^6] The same visitor described 5.5 miles of rough gravel road and a gate that was partly open.[^6] Because the site still serves a monitoring role, the sources give no sign that the public is invited up. No source describes what, if anything, remains at the original Waldo Hill site.
+
+[^1]: Waldo Hill Lookout Site, Former Fire Lookout Sites Register, http://firetower.org/lookouts/us/or/waldo-hill-lookout-site/ (accessed 2026-10-09).
+[^2]: Waldo Hill Fire Lookout Tower, firelookout.com, https://www.firelookout.com/or/waldohill.html (accessed 2026-10-09).
+[^3]: Waldo Hill, Forest Lookouts, oregonlookouts.weebly.com, https://oregonlookouts.weebly.com/waldo-hill.html (accessed 2026-10-09).
+[^4]: Little Grayback Mountain, Forest Lookouts, oregonlookouts.weebly.com, https://oregonlookouts.weebly.com/little-grayback-mountain.html (accessed 2026-10-09).
+[^5]: Little Grayback Mountain Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/or/little-grayback-mountain-lookout/ (accessed 2026-10-09).
+[^6]: Little Grayback – Every Lookout in Oregon, cherylhill.net, https://cherylhill.net/firelookouts/2020/07/12/little-grayback/ (accessed 2026-10-09).
