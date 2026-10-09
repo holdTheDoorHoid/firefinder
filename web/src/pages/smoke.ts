@@ -68,7 +68,9 @@ const ll = (f: TowerFeature): LatLon => ({ lat: f.geometry.coordinates[1], lon: 
 /** Standing lookouts with a partner 12–32 km away, in a cluster of at least three. */
 function pickPairs(features: TowerFeature[], n: number): [TowerFeature, TowerFeature][] {
   // Towers and buildings only: a summit camp or a lookout tree is not a lookout to stand in.
-  features = features.filter((f) => !isNoStructure(f.properties.k));
+  // Towers and buildings at a recorded position: not sites with no structure, nor lookouts at an
+  // approximate (GNIS) location, whose bearings would be guesses.
+  features = features.filter((f) => !isNoStructure(f.properties.k) && !f.properties.ap);
   const standing = features.filter((f) => f.properties.s === 'standing');
   const out: [TowerFeature, TowerFeature][] = [];
   for (const a of shuffle(standing)) {

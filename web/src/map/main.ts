@@ -112,6 +112,7 @@ async function main(): Promise<void> {
   let features: TowerFeature[] = [];
   let filteredNoYear: TowerFeature[] = [];
   let historyCounts: HistoryCounts | null = null;
+  let unplacedByRegion: Record<string, number> | null = null;
   const thisYear = new Date().getFullYear();
   let byId = new Map<string, TowerFeature>();
   let shownIds = new Set<string>();
@@ -212,8 +213,11 @@ async function main(): Promise<void> {
         `${formatCount(n)} ${what} standing ${when}` + (maybe.length ? `, ${formatCount(maybe.length)} faded` : '') + (filtered.length !== total ? ' (filtered)' : '');
     } else {
       const ns = withNs && noStructureTotal ? `, including ${formatCount(noStructureTotal)} with no structure` : '';
+      // How many of those shown are at approximate (GNIS) locations: the dashed markers.
+      const approx = shown.filter((f) => f.properties.ap).length;
+      const ap = approx ? `${ns ? ' and' : ','} ${formatCount(approx)} at approximate locations` : '';
       countEl.textContent =
-        features.length === 0 ? 'No lookouts loaded' : n === 0 ? 'No lookouts match your filters' : n === total ? `All ${formatCount(total)} ${what} shown${ns}` : `${formatCount(n)} of ${formatCount(total)} ${what} shown`;
+        features.length === 0 ? 'No lookouts loaded' : n === 0 ? 'No lookouts match your filters' : n === total ? `All ${formatCount(total)} ${what} shown${ns}${ap}` : `${formatCount(n)} of ${formatCount(total)} ${what} shown${ap}`;
     }
     countEl.classList.toggle('is-empty', n + maybe.length === 0 && features.length > 0);
     const active = activeFilterCount(state.filters);
@@ -337,7 +341,12 @@ async function main(): Promise<void> {
         getJson<TowerRecord>(`data/t/${id}.json`),
         import('../view3d/panorama-view.ts'),
       ]);
-      const view = new PanoramaView(dlg.querySelector<HTMLElement>('[data-cab-host]')!, {
+      const host = dlg.querySelector<HTMLElement>('[data-cab-host]')!;
+      if (rec.location.approximate) {
+        // An approximate (GNIS) location: say so above the view (DESIGN.md 3.5).
+        host.insertAdjacentHTML('beforebegin', html`<p class="notice tone-caution" role="note"><span><strong>Approximate location.</strong> No source gives where this lookout stood. The view is from ${rec.location.gnis?.name ?? 'the hill of its name'}, where the map places it, so it may differ from what its lookout saw.</span></p>`.value);
+      }
+      const view = new PanoramaView(host, {
         tower: { id, name: rec.name, lat: rec.location.lat, lon: rec.location.lon, kind: rec.kind, status: rec.status, height_m: rec.height_m, elevation_m: rec.elevation_m },
       });
       dlg.addEventListener('close', () => view.destroy(), { once: true });
@@ -413,6 +422,7 @@ async function main(): Promise<void> {
     index = buildIndex(features);
     if (meta) {
       historyCounts = meta.history ?? null;
+      unplacedByRegion = meta.counts.unplaced_by_region ?? null;
       ctx.sources = new Map<string, SourceInfo>(meta.sources.map((s) => [s.id, s]));
       if (meta.fixtures) $('fixture-banner').hidden = false;
     }
@@ -423,6 +433,7 @@ async function main(): Promise<void> {
       filters: () => state.filters,
       checklist,
       onChange: setFilters,
+      unplaced: () => unplacedByRegion,
     });
     if (state.year !== null) years.open(state.year, state.yearMaybe);
     else update();

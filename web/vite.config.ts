@@ -17,7 +17,7 @@ function partials(): Plugin {
     transformIndexHtml: {
       order: 'pre',
       handler(html, ctx) {
-        const page = ctx.path.includes('about') ? 'about' : ctx.path.includes('learn') ? 'learn' : ctx.path.includes('designs') ? 'designs' : ctx.path.includes('404') ? 'none' : ctx.path.includes('tower') ? 'tower' : 'map';
+        const page = ctx.path.includes('about') ? 'about' : ctx.path.includes('learn') ? 'learn' : ctx.path.includes('designs') ? 'designs' : ctx.path.includes('404') || ctx.path.includes('unplaced') ? 'none' : ctx.path.includes('tower') ? 'tower' : 'map';
         let header = read('header.html');
         header = header.replace(`data-nav="${page}"`, `data-nav="${page}" aria-current="page"`);
         return html
@@ -44,6 +44,7 @@ export default defineConfig({
         about: resolve(root, 'about/index.html'),
         smoke: resolve(root, 'learn/smoke/index.html'),
         designs: resolve(root, 'designs/index.html'),
+        unplaced: resolve(root, 'unplaced/index.html'),
         tower: resolve(root, 'tower.html'),
         notfound: resolve(root, '404.html'),
       },

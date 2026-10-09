@@ -34,6 +34,8 @@ export interface FilterPanelDeps {
   filters: () => Filters;
   checklist: ChecklistLookup & { counts(): Record<Mark, number> };
   onChange: (next: Filters) => void;
+  /** Lookouts no source places, by state (meta.json counts.unplaced_by_region), for the links to their lists. */
+  unplaced?: () => Record<string, number> | null;
 }
 
 const STATUS_LABEL: Record<string, string> = {
@@ -98,6 +100,11 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
       <legend>${NO_STRUCTURE_LABEL}</legend>
       <p class="fs-help">${NO_STRUCTURE_MEANING} Off unless you switch them on, so the map shows towers and buildings. <a href="${import.meta.env.BASE_URL}designs/#structure-types">About structure types</a></p>
       <label class="opt"><input type="checkbox" name="nostructure" value="1"><span class="opt-icon">${raw(markerSvg('diamond', 'solid', { size: 20 }))}</span><span class="opt-label">Show sites with no structure<span class="opt-hint">${NO_STRUCTURE_KINDS.map((k) => KIND[k]?.label ?? k).join(', ')}</span></span><span class="opt-count" data-count="nostructure"></span></label>
+    </fieldset>
+    <fieldset class="fs fs-approx">
+      <legend>Approximate locations</legend>
+      <p class="fs-help">No source says where these stood, so each is shown on the hill or ridge of its name in its county (a dashed marker). <span data-unplaced-link></span></p>
+      <label class="opt"><input type="checkbox" name="approximate" value="1"><span class="opt-icon">${raw(markerSvg('tri', 'solid', { size: 20, approximate: true }))}</span><span class="opt-label">Show approximate locations<span class="opt-hint">Placed by name from the USGS gazetteer</span></span><span class="opt-count" data-count="approximate"></span></label>
     </fieldset>
     <fieldset class="fs">
       <legend>Staying and history</legend>
@@ -183,6 +190,9 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
       case 'nostructure':
         f.noStructure = (input as HTMLInputElement).checked;
         break;
+      case 'approximate':
+        f.approximate = (input as HTMLInputElement).checked;
+        break;
       case 'mine': {
         const next = new Set(f.mine ?? []);
         if ((input as HTMLInputElement).checked) next.add(input.value as Mark);
@@ -217,6 +227,7 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
     set('rentable', '1', f.rentable);
     set('registered', '1', f.registered);
     set('nostructure', '1', f.noStructure);
+    set('approximate', '1', f.approximate);
     for (const m of MARKS) set('mine', m, !!f.mine?.has(m));
     const sel = root.querySelector<HTMLSelectElement>('#f-state');
     if (sel) {
@@ -287,6 +298,20 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
       if (share) share.textContent = `Recorded for ${formatCount(recorded)} of ${formatCount(others.length)} lookouts, from the sources' own words or the lookout's design.`;
     }
     write('nostructure', feats.filter((x) => isNoStructure(x.properties.k) && matches(x.properties, { ...f, noStructure: true }, d.checklist)).length);
+    write('approximate', feats.filter((x) => x.properties.ap && matches(x.properties, { ...f, approximate: true }, d.checklist)).length);
+    const link = root.querySelector('[data-unplaced-link]');
+    if (link) {
+      const byRegion = d.unplaced?.() ?? null;
+      const base = import.meta.env.BASE_URL;
+      const n = byRegion ? (f.region ? byRegion[f.region] ?? 0 : Object.values(byRegion).reduce((a, b) => a + b, 0)) : 0;
+      link.innerHTML = !byRegion
+        ? ''
+        : f.region
+          ? n
+            ? html`<a href="${base}unplaced/${f.region.toLowerCase()}/">${formatCount(n)} more in ${regionName(f.region)} we can't place yet</a>`.value
+            : ''
+          : html`<a href="${base}unplaced/">${formatCount(n)} more lookouts we can't place yet</a>`.value;
+    }
     write('rentable', countWith({ rentable: true }));
     write('registered', countWith({ registered: true }));
     for (const m of MARKS) write(`mine:${m}`, d.checklist.counts()[m]);

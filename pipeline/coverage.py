@@ -4,7 +4,9 @@
 Run it after `python3 pipeline/merge.py`. It reads every extract in data/sources/ and every
 canonical tower in data/towers/, and lists each source record (from any source, not just FFLA)
 that no tower holds, with the reason, and per source how many records there are, how many sit on
-a visible tower, how many only on a hidden (out of scope) tower, and how many are not held.
+a visible tower, how many only on a hidden (out of scope) tower, and how many are not held. Of the
+held ones, "approx" counts those on a tower shown at an approximate (GNIS) location: no source gives
+its position (DESIGN.md 3.5, "Approximate locations").
 
 A record is "held" when a tower's sources[] has its key. Out-of-scope records (tree platforms,
 bare lookout points, ...) are still held, by a hidden tower, so they count as covered here; the
@@ -12,8 +14,10 @@ bare lookout points, ...) are still held, by a hidden tower, so they count as co
 
   no_coordinates       the source gives no position (an FFLA row without lat/long, a rental
                        listed by name only that no tower's name matched). A tower needs a
-                       position, so merge.py can place such a record only by register number or
-                       a unique same-name tower in its state.
+                       position, so merge.py can place such a record only by register number, a
+                       unique same-name tower in its state, or approximately, on the one
+                       same-name GNIS high point in its county; the rest are listed on the site's
+                       "Lookouts we can't place yet" pages.
   coordinates_outside_us   the position is not in the United States (a swapped or mistyped pair)
   duplicate_key        the key repeats inside the extract (merge keeps the first)
   unmatched            usable coordinates but no tower: this should never happen after a merge.
@@ -77,7 +81,8 @@ def load_holders(towers_dir: Path) -> dict[str, list[dict]]:
             # a source entry the merge kept only because its record disappeared is not a holder
             if isinstance(s, dict) and s.get("key") and not s.get("missing_since"):
                 held[str(s["key"])].append({"id": t.get("id"), "hidden": bool(t.get("hidden")),
-                                            "hidden_reason": t.get("hidden_reason")})
+                                            "hidden_reason": t.get("hidden_reason"),
+                                            "approximate": merge.is_approximate_location(t.get("location"))})
     return held
 
 
@@ -119,6 +124,7 @@ def audit(sources_dir: Path, towers_dir: Path, report_path: Path | None = None,
             towers = holders.get(str(key))
             if towers:
                 c["held_visible" if any(not t["hidden"] for t in towers) else "held_hidden_only"] += 1
+                c["held_approximate"] += any(t["approximate"] and not t["hidden"] for t in towers)
                 seen.add(key)
                 continue
             why = reason_not_held(source, raw, seen)
@@ -130,18 +136,18 @@ def audit(sources_dir: Path, towers_dir: Path, report_path: Path | None = None,
                 "county": raw.get("county"), "lat": raw.get("lat"), "lon": raw.get("lon"),
                 "reason": why, "note": review.get(str(key)) or None,
             })
-        per_source[source] = {k: c.get(k, 0) for k in ("records", "held_visible", "held_hidden_only", "not_held", *REASONS)}
+        per_source[source] = {k: c.get(k, 0) for k in ("records", "held_visible", "held_approximate", "held_hidden_only", "not_held", *REASONS)}
     not_held.sort(key=lambda r: (r["source"], r["region"] or "", str(r["name"] or ""), r["key"]))
     return {
         "per_source": per_source,
         "totals": {k: sum(v[k] for v in per_source.values()) for k in
-                   ("records", "held_visible", "held_hidden_only", "not_held", *REASONS)},
+                   ("records", "held_visible", "held_approximate", "held_hidden_only", "not_held", *REASONS)},
         "not_held": not_held,
     }
 
 
 def format_report(result: dict, show_list: bool = True) -> str:
-    cols = [("records", "records"), ("held_visible", "on a visible tower"), ("held_hidden_only", "hidden only"),
+    cols = [("records", "records"), ("held_visible", "on a visible tower"), ("held_approximate", "approx"), ("held_hidden_only", "hidden only"),
             ("not_held", "NOT HELD"), ("no_coordinates", "no coords"), ("coordinates_outside_us", "outside US"),
             ("duplicate_key", "dup key"), ("unmatched", "UNMATCHED")]
     rows = [["source", *[c[1] for c in cols]]]

@@ -25,7 +25,7 @@ DECIDED came from the owner's interview on 2026-10-03. Do not change them withou
 | Contributing | GitHub only: a "Suggest an edit" button on each tower opens a pre-filled GitHub issue. |
 | Checklist | Visited / stayed / want-to-go, saved in the browser (localStorage) with export/import. No accounts, nothing collected. |
 | Publishing | Public from the start. Thin or unchecked entries show a visible **Unverified** badge. |
-| Access | Exact location for every site. Private, tribal and closed sites get a prominent access label. Warn, don't hide. |
+| Access | Exact location for every site. Private, tribal and closed sites get a prominent access label. Warn, don't hide. **Owner changed 2026-10-08: approximate pins, clearly marked**, for lookouts a source names with their county but no position: when USGS GNIS has exactly one same-name high-ground feature (summit, ridge, gap, pillar, cliff, bench) in that county, the lookout is shown there with a dashed marker, an "Approximate location" note on its page and always the Unverified badge; any real position from any source replaces it on the next merge, the lookout keeping its id. A town of that name only, or no match: not on the map, but listed per state on "Lookouts we can't place yet" with a pre-filled "Suggest a location" issue link. Rules in 3.5, "Approximate locations". |
 | History tone | Story first: readable narrative with footnoted sources at the end of every page. |
 | Registry data | Use **facts** (location, type, status, years, register numbers, agency) from FFLA / NHLR / FFLOS, with credit and a link on every tower page. Write our own prose; never copy their text. The owner sends a partnership / permission note (draft in `docs/outreach/`). |
 | Photos | Mirror photos from all sources now, **with credit and a takedown note**, including hobbyist and registry sites. The owner chose this knowingly; do not relitigate. |
@@ -55,6 +55,7 @@ Cache raw responses under `data/raw/` (git-ignored) so nothing is fetched twice.
 | **Association project reports** (2026-10-08) | Year-by-year reports of the work lookout associations do on particular lookouts, one source per association, one shared record shape (3.7). First: the Northwest Montana Lookout Association, nwmt-ffla.org: project posts 2025-26, "Completed Projects" PDFs 2014-24 (print-outs of its old website) and the yearly newsletters, 37 lookouts in Glacier NP, the Flathead and Kootenai NFs and Montana DNRC, about 180 dated restoration, repair and assessment events | WordPress posts, PDFs (pdftotext) | No licence stated; facts only, notes in our words, every event linked to its report |
 | **Western association project reports** (2026-10-08) | Fifteen more sources in the same family (3.7) for the West and the Rockies: the FFLA chapter and restoration-grant reports 2003-2025 (212 PDFs from the AZ, CA, CO-UT, ID, NM, OR, WA and WY chapters; `ffla_west_reports`, 248 lookouts, 491 events), the Sand Mountain Society (OR), Mountaineers Everett (WA), Snoqualmie Fire Lookouts, Methow Valley FFLA, Buck Rock Foundation, Angeles NF FLA, Southern California Mountains Foundation, FFLA San Diego-Riverside, Monterey and California South, Hi Mountain Lookout Project, Siskiyou Mountain Club, HistoriCorps and the Green Mountain Lookout story (Washington Trust, WTA). 308 lookouts, 680 dated events in all; survey in `docs/sources/associations_west.md` | WordPress/Squarespace/Wix pages, PDFs (pdftotext) | No licence stated; facts only, notes in our words, every event linked to its page or PDF |
 | **Eastern association projects** (2026-10-08) | The same shape for the East, the South and the Midwest: the FFLA New York State Chapter's monthly newsletters 2016-2026 (121 issues, 75 NY towers, 227 events), nine single-tower "Friends of" and similar groups with dated logs or newsletters (St. Regis, Hurricane, Mount Arab, Azure, Bald/Rondaxe, Bramley, Stillwater, the Kent Conservation Foundation for Nimham, Friends of the Smokies for Mount Cammerer), and the FFLA's own yearly chapter and restoration-grant reports 2003-2025 for the eastern chapters (236 PDFs, 122 lookouts, 217 events; the only written record of the chapters that otherwise exist on Facebook). Survey of every group considered, with why the others were not read: `docs/sources/associations_east.md` | WordPress and hand-made pages, PDFs (pdftotext) | No licence stated; facts only, notes in our words, every event linked to its report |
+| **USGS GNIS** (reference) | Named summits for the panorama's labels (`peaks_gnis.json`, `fetch_peaks.py`), and the high-ground features and towns behind approximate locations (`gnis_places.json`, `fetch_gnis_places.py`, 3.5) | Domestic Names bulk file (`prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/DomesticNames/`), one cached download | Public domain; credit "USGS Geographic Names Information System (GNIS)" |
 | Later | USGS historical topos (public domain, `ngmdb.usgs.gov/arcgis/rest/services/topoview/ustOverlay(Auto)/MapServer`), NRHP NPS dataset, Library of Congress HABS/HAER (measured drawings, public domain), Forest History Society, state forestry lists, newspapers | — | — |
 
 ---
@@ -263,8 +264,13 @@ pages, WillhiteWeb (WA), and Indiana Fire Towers:
    facility sits 45 m from Black Butte, ID (a coordinate slip) but is genuinely Lookout Butte's
    listing, 64 km away. Across a state line only 400 m with a strong name, or 100 m.
 4. **Name only**, for records with no coordinates, after every source: a unique same-name
-   tower in the state (and county, when both give one). Otherwise the record is listed in the
-   review file as unplaced; it does not make a tower, since a tower needs a position.
+   tower in the state (and county, when both give one; counties are compared as names, so
+   "St Lawrence" = "St. Lawrence County", and a tower on a county line, "Siskiyou/ Trinity", is in
+   both). Otherwise the record has no position of its own; it may still get an *approximate* one
+   (below), else it is listed in the review file as unplaced.
+4b. **Approximate (GNIS)**, for the records step 4 left: see "Approximate locations" below. A
+   record with coordinates that no tower near it takes, and that names an approximately placed
+   lookout of its state and county, joins it before step 5 (its position replaces the pin).
 5. Anything else **starts a new tower**.
 
 **FFLA's other views and border rows.** The alphabetical list fixes a record's key; the by-county,
@@ -377,6 +383,57 @@ lookout tree vs a tower or building, which decides the map group); `material` wh
 name different materials in words;
 `registers` as above.
 
+**Approximate locations** (owner's decision 2026-10-08; `Matcher.place_approximately`, the GNIS
+helpers above it in `pipeline/merge.py`, tests in `pipeline/test_approx_pins.py`). About 2,000 source
+records name a lookout and its county but give no coordinates (most from the hobby sites).
+
+- *Gazetteer.* `pipeline/fetch_gnis_places.py` reads the USGS GNIS Domestic Names file (cached under
+  `$FIREFINDER_RAW_ROOT/gnis/`, shared with `fetch_peaks.py`, never committed) and writes the small
+  committed extract `data/sources/gnis_places.json` (`"kind": "reference"`): the high-ground features
+  and populated places whose names match a record without a position, every county of every state,
+  and the name keys looked up. Re-run it after adding a source whose records lack coordinates; until
+  then the merge counts those records as `not_looked_up`.
+- *Classes* (high ground a lookout stands on): Summit, Ridge, Gap (a tower named for a gap stands on
+  the knob above it), Pillar, Cliff, Bench. Left out: Range (a whole range: its point can be tens of
+  km from the lookout; it would have added no match), Cape (a point of land into water), and the low
+  or flat classes.
+- *Names.* A lookout's name is looked up without its trailing lookout words ("Bald Knob Fire Tower
+  Site" -> Bald Knob), with Mt/Mtn/Pk expanded and "Bald Mt." read as Bald Mountain, spaces and
+  punctuation ignored ("Bald Knob" = "Baldknob", "Hawk's Nest" = "Hawks Nest"), a leading "The"
+  dropped on both sides; each parenthetical alternate and slash part counts, county or forest notes
+  ("(Tioga County)") do not; a numbered name ("Bald Knob #2") must match exactly. "Mount Pisgah" and
+  "Pisgah Mountain" stay different names. A name of feature words only ("Mountain Lookout") is not
+  looked up.
+- *Placed* only when the record's county is recognised in GNIS (missing, misspelt or several
+  counties: not placed) and GNIS has **exactly one** same-name high-ground feature there. Not placed
+  either when several same-name lookouts are already on the map in the state, when a lookout with a
+  position stands within 1 km of the feature (usually the same lookout under another name: Cheaha
+  Mountain's tower is "Bunker"), when a lookout with a close name (score >= 0.85) is on the map in
+  the county, when one source lists two lookouts on one feature, or when the records would make a
+  hidden tower (never built, not a fire lookout, not confirmed). Records of several sources on one
+  feature are one lookout; a record of it with no county (or only a town match) joins it by name, as
+  step 4 would on a later run.
+- *Data.* `location` = `{lat, lon, precision: "approximate", from: "gnis", approximate: true,
+  method: "gnis_name_match", gnis: {id, name, class, county}}`. It has the **lowest** location
+  precedence: any member with coordinates gives the location instead, and the approximate keys go.
+  The tower keeps its id (approximate towers sort after real ones of the same slug, so they never
+  take a plain id from one).
+- *Never matched on.* An approximate tower is kept out of the spatial grid: no record joins it, or is
+  kept from another tower, because of where its pin is. A later record with coordinates joins it only
+  by name (>= 0.95), state and county (Matcher.approx_join); with no county, only within 25 km of the
+  pin. A record with no coordinates joins it by name like any tower (step 4).
+- *Never "facts".* Verification stays `unverified` while the position is approximate, research
+  overlay included.
+- *Later runs* look the records up again (a GNIS change moves the pin); a pin no record supports any
+  more is kept (merge never deletes) and reported; a lookout that appears near the pin or under a
+  close name is reported as a possible duplicate.
+- *Report.* `merge_report.json` has `counts.approximate`, `approximate` (by state, by class, each pin
+  with its feature and records, and the reasons the others stayed off the map) and, for the site,
+  `unplaced_lookouts`: the unplaced records grouped into lookouts (same state, name and county),
+  each with its sources, what GNIS had (`gnis`: town, none, ambiguous, no_county, county_unknown,
+  near_mapped_lookout, similar_name_on_map, same_name_on_map, same_source_twice, ...), a town of the
+  name as a hint, and `out_of_scope` when it would be hidden anyway.
+
 **Coverage check.** After a merge, `python3 pipeline/coverage.py` lists every source record, from
 every source, that no tower holds, with the reason, and per source how many records sit on a
 visible tower, on a hidden one only, or on none. `--strict` exits 1 if a record with a usable
@@ -385,7 +442,7 @@ position (FFLA rows it publishes without coordinates, rentals no name settles) a
 remainder: a tower needs a position.
 
 **Verification**: `facts` when two independent sources agree on location (within 500 m of the
-shown position) and status; otherwise `unverified`. NHLR, FFLOS, FFLA and firelookout.com count
+shown position) and status; otherwise `unverified`. An approximate (GNIS) position is never `facts`. NHLR, FFLOS, FFLA and firelookout.com count
 as one lineage for this (FFLA carries the register numbers, and 3,173 of firelookout.com's 3,266
 coordinates are byte-identical to an FFLA row). `researched`/`verified` are never downgraded.
 
@@ -451,8 +508,13 @@ tower (`--research` to point elsewhere), so a re-merge never loses research:
   `i` id, `n` name, `r` state, `c` county, `k` kind, `s` status, `v` verification, `a` access,
   `b` year built, `rt` 1 if rentable, `rg` 1 if on a register, `o` other names joined by `|`,
   `y0` / `y1` first year it stood / year it came down (only when an event records it; §4.2),
-  `d` recognised design ids joined by `|`, `m` material. Sites with no structure (`k` camp,
+  `d` recognised design ids joined by `|`, `m` material, `ap` 1 for an approximate (GNIS)
+  location. Sites with no structure (`k` camp,
   tree, point) are in the file; the map leaves them off until switched on.
+- `unplaced.json`: the lookouts no source places (`merge_report.json`'s `unplaced_lookouts`, read by
+  `build_site_data.py --report`), for the "Lookouts we can't place yet" pages; `meta.json` counts
+  `approximate`, `approximate_by_region`, `unplaced` and `unplaced_by_region` (out-of-scope entries
+  are listed on the pages but not counted).
 - `t/<id>.json`: the full canonical record plus the story HTML, when one exists.
 - `meta.json`: counts, source list with retrieved dates, and build date; `history` (how many
   towers have a start year, an end year, neither) and `designs` (design coverage). `counts.total`
@@ -468,7 +530,8 @@ tower (`--research` to point elsewhere), so a re-merge never loses research:
   USGS GNIS (`data/sources/peaks_gnis.json`, fetched by `pipeline/fetch_peaks.py`) cut into
   1° cells, `peaks/<floor lat>_<floor lon>.json` = `[[name, lat, lon, gnis_id], …]` (4 dp), plus
   `peaks/index.json` listing the cells. Files in `data/sources/` with `"kind": "reference"` are
-  not lookout sources: `merge.py` and `build_site_data.py` skip them.
+  not lookout sources: `merge.py` and `build_site_data.py` skip them (the other one is
+  `gnis_places.json`, the GNIS names behind approximate locations, 3.5).
 
 ### 3.7 Association project sources
 
@@ -588,16 +651,31 @@ Friends of Sterling Forest's domain has been hijacked for spam; New Hampshire's 
 - **Map page**: clustered points styled by status (standing vs gone) and kind (triangle: tower;
   house: a building, including rooftop cabs and trailers; circle: unknown; diamond: no
   structure); filters (status, kind of structure, a "Show sites with no structure" switch that
-  is off by default (`&ns=1`), rentable, state, design, "Built of" material (`&mat=steel`),
+  is off by default (`&ns=1`), "Show approximate locations", on by default (`&ap=0` hides them),
+  rentable, state, design, "Built of" material (`&mat=steel`),
   register, verification); search by name (all sites); a side panel with the facts card and a
-  link to the full page; deep-linkable URL state. The count says what it counts: "All 7,523
+  link to the full page; deep-linkable URL state. A lookout at an approximate location has a
+  **dashed outline** (the fill still says the status), drawn under the others; the key explains it,
+  and the count adds "…, 109 at approximate locations". The count says what it counts: "All 7,523
   towers and buildings shown", or with the switch on "All 8,093 lookout sites shown, including
   570 with no structure".
 - **Tower pages**: prerendered static HTML at `/t/<id>/` (shareable, findable by search
   engines). Layout from the top: name, status, access badges; *Visit & stay* (rental rules
   and the recreation.gov button, access, staffing); facts card; timeline; story with
   footnotes; photos with credits; sources; "Suggest an edit" (pre-filled GitHub issue);
-  checklist buttons.
+  checklist buttons. A lookout at an approximate location gets an "Approximate location" badge
+  beside Unverified and a notice under the title: placed on <feature>, the one <class> of that name
+  in <county> in USGS GNIS, how far off that may be, and "Know where it stood? Suggest an edit"
+  (the edit form, titled "Location: ..."); the facts card, mini-map pin and Sources (GNIS credited)
+  say so too.
+- **Lookouts we can't place yet** (`/unplaced/`, one page per state `/unplaced/<st>/`, prerendered from
+  `unplaced.json`): every lookout a source names but none places, alphabetical: name, county, the
+  sources that list it (linked), what the gazetteer had (a town of the name with a map link, the
+  lookout on the map it may be, several places of the name...), and a **Suggest a location** button
+  opening the Suggest-an-edit form (`edit.yml`) pre-filled (title "Location: <name> (<county>,
+  <state>)", what is known, a link back to the entry). Entries that would be hidden anyway (never
+  built, not a fire lookout) are listed apart, folded. Linked from the About page, the map's
+  Approximate locations filter (the state's own list when a state is chosen) and the sitemap.
 - **Checklist**: localStorage `firefinder.checklist.v1`, with export/import as JSON; works on
   the map (filter "my visited") and on tower pages. Every storage access is wrapped in
   try/catch.
@@ -629,6 +707,11 @@ Friends of Sterling Forest's domain has been hijacked for spam; New Hampshire's 
   the distance, 150 m–1.5 km, is ignored so a mountain is not hidden by its own slope); other
   lookouts at typical heights, gone ones at their old sites. Where the whole skyline varies by
   less than 1.5°, heights start drawn ×2, labelled on the view and on the pressed button.
+- **Approximate locations** (3.5): the panorama and "what it could see" still run for a lookout at
+  an approximate (GNIS) location, with a caution that they are worked out from the feature it is
+  placed on, not a recorded site (tower page, map panel, cab dialog, viewshed card). Such lookouts
+  are not labelled as "other lookouts" in panoramas, not added by "Add nearby lookouts", and never
+  used by the smoke lesson.
 - **Viewshed** ("What it could see"): ground in line of sight within 20, 40 or 60 km, on a
   Web Mercator grid, counted over up to 12 lookouts; map URL `&vs=<ids>&vr=<km>`.
 - **Lesson** `/learn/smoke/`: two standing lookouts 12–32 km apart in a cluster of at least

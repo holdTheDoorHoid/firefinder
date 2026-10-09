@@ -9,6 +9,8 @@
  *   ● circle    type unknown
  *   ◆ diamond   no structure: camp, lookout tree, bare point
  *   amber dot at the top right = rentable
+ *   dashed outline = approximate location: no source gives one, so the lookout is shown on the
+ *                    hill or ridge of its name in its county (USGS GNIS); see DESIGN.md 3.5
  *
  * "Hollow" means the inside matches the background, so the palette flips with the theme: in
  * dark mode a standing marker is a bright solid shape and a gone one a dark shape with a light
@@ -45,8 +47,8 @@ export function fillFor(status: string): Fill {
   return 'half';
 }
 
-export function iconName(shape: Shape, fill: Fill, rentable: boolean): string {
-  return `ff-${shape}-${fill}${rentable ? '-rent' : ''}`;
+export function iconName(shape: Shape, fill: Fill, rentable: boolean, approximate = false): string {
+  return `ff-${shape}-${fill}${rentable ? '-rent' : ''}${approximate ? '-ap' : ''}`;
 }
 
 /** Geometry in a 24 x 24 box. */
@@ -64,6 +66,12 @@ const LOWER_HALF: Record<Shape, string> = {
 };
 const DOT: Record<Shape, [number, number]> = { tri: [12, 14.6], house: [12, 14.6], circle: [12, 12], diamond: [12, 12] };
 const BADGE: [number, number, number] = [18.9, 5.0, 3.6];
+/**
+ * An approximate location's outline: dashes in the theme's ink over a background-coloured line,
+ * so it reads as dashed on every fill and in both themes (the fill keeps saying the status).
+ */
+const APPROX_WIDTH = 2.3;
+const APPROX_DASH: [number, number] = [2.3, 1.7];
 
 export interface MarkerPalette {
   halo: string;
@@ -75,6 +83,8 @@ export interface MarkerPalette {
   otherEdge: string;
   rent: string;
   rentEdge: string;
+  /** The dashes of an approximate location's outline. */
+  approxEdge: string;
 }
 
 /** Keep in step with the --mk-* tokens in src/styles/base.css. */
@@ -89,6 +99,7 @@ export const MARKER_PALETTE: Record<MarkerTheme, MarkerPalette> = {
     otherEdge: '#2b3c55',
     rent: '#e2a325',
     rentEdge: '#5a3b00',
+    approxEdge: '#1c2620',
   },
   dark: {
     halo: '#0e1411',
@@ -100,6 +111,7 @@ export const MARKER_PALETTE: Record<MarkerTheme, MarkerPalette> = {
     otherEdge: '#9fb7da',
     rent: '#f2b63e',
     rentEdge: '#2a1b00',
+    approxEdge: '#f1eee4',
   },
 };
 
@@ -125,16 +137,21 @@ function paintFor(fill: Fill, c: MarkerPalette): Paint {
 }
 
 /** Inline SVG markup for a marker. Decorative: always pair it with a text label. */
-export function markerSvg(shape: Shape, fill: Fill, opts: { rentable?: boolean; size?: number; className?: string } = {}): string {
+export function markerSvg(shape: Shape, fill: Fill, opts: { rentable?: boolean; size?: number; className?: string; approximate?: boolean } = {}): string {
   const c = MARKER_PALETTE.light;
   const p = paintFor(fill, c);
   const size = opts.size ?? 20;
-  const cls = `mk mk-${fill}${opts.className ? ` ${opts.className}` : ''}`;
+  const cls = `mk mk-${fill}${opts.approximate ? ' mk-approx' : ''}${opts.className ? ` ${opts.className}` : ''}`;
   let body = `<path class="mk-halo" d="${OUTLINE[shape]}" fill="none" stroke="${c.halo}" stroke-width="4.2" stroke-linejoin="round"/>`;
   body += `<path class="mk-body" d="${OUTLINE[shape]}" fill="${p.fill}"/>`;
   if (p.half) body += `<path class="mk-half" d="${LOWER_HALF[shape]}" fill="${p.half}"/>`;
   if (p.dot) body += `<circle class="mk-dot" cx="${DOT[shape][0]}" cy="${DOT[shape][1]}" r="2.5" fill="${p.dot}"/>`;
-  body += `<path class="mk-edge" d="${OUTLINE[shape]}" fill="none" stroke="${p.stroke}" stroke-width="${p.width}" stroke-linejoin="round"/>`;
+  if (opts.approximate) {
+    body += `<path class="mk-approx-gap" d="${OUTLINE[shape]}" fill="none" stroke="${c.halo}" stroke-width="${APPROX_WIDTH}" stroke-linejoin="round"/>`;
+    body += `<path class="mk-approx-edge" d="${OUTLINE[shape]}" fill="none" stroke="${c.approxEdge}" stroke-width="${APPROX_WIDTH}" stroke-dasharray="${APPROX_DASH.join(' ')}"/>`;
+  } else {
+    body += `<path class="mk-edge" d="${OUTLINE[shape]}" fill="none" stroke="${p.stroke}" stroke-width="${p.width}" stroke-linejoin="round"/>`;
+  }
   if (opts.rentable) {
     const [x, y, r] = BADGE;
     body += `<circle class="mk-rent-halo" cx="${x}" cy="${y}" r="${r + 1.3}" fill="${c.halo}"/><circle class="mk-rent" cx="${x}" cy="${y}" r="${r}" fill="${c.rent}" stroke="${c.rentEdge}" stroke-width="1.2"/>`;
@@ -153,6 +170,7 @@ const PALETTE_VARS: MarkerPalette = {
   otherEdge: 'var(--mk-other-edge)',
   rent: 'var(--mk-rent)',
   rentEdge: 'var(--mk-rent-edge)',
+  approxEdge: 'var(--mk-approx-edge)',
 };
 
 /** Id of a marker's `<symbol>` in the sprite from `markerSprite`. */
@@ -214,7 +232,7 @@ export function rentBadgeSvg(size = 14): string {
 }
 
 /** Browser only: draw a marker into a canvas context scaled so the 24-unit box fills `px`. */
-export function drawMarker(ctx: CanvasRenderingContext2D, shape: Shape, fill: Fill, rentable: boolean, px: number, theme: MarkerTheme = 'light'): void {
+export function drawMarker(ctx: CanvasRenderingContext2D, shape: Shape, fill: Fill, rentable: boolean, px: number, theme: MarkerTheme = 'light', approximate = false): void {
   const c = MARKER_PALETTE[theme];
   const p = paintFor(fill, c);
   const s = px / 24;
@@ -237,9 +255,19 @@ export function drawMarker(ctx: CanvasRenderingContext2D, shape: Shape, fill: Fi
     ctx.arc(DOT[shape][0], DOT[shape][1], 2.5, 0, Math.PI * 2);
     ctx.fill();
   }
-  ctx.strokeStyle = p.stroke;
-  ctx.lineWidth = p.width;
-  ctx.stroke(outline);
+  if (approximate) {
+    ctx.strokeStyle = c.halo;
+    ctx.lineWidth = APPROX_WIDTH;
+    ctx.stroke(outline);
+    ctx.setLineDash(APPROX_DASH);
+    ctx.strokeStyle = c.approxEdge;
+    ctx.stroke(outline);
+    ctx.setLineDash([]);
+  } else {
+    ctx.strokeStyle = p.stroke;
+    ctx.lineWidth = p.width;
+    ctx.stroke(outline);
+  }
   if (rentable) {
     const [x, y, r] = BADGE;
     ctx.fillStyle = c.halo;

@@ -4,7 +4,9 @@
  *
  * Input:  dist/tower.html (template with hashed asset links, from Vite)
  *         dist/data/t/<id>.json, dist/data/meta.json (from pipeline/build_site_data.py)
- * Output: dist/t/<id>/index.html, filled dist/about/index.html, dist/sitemap.xml
+ * Output: dist/t/<id>/index.html, filled dist/about/index.html, dist/sitemap.xml,
+ *         dist/unplaced/index.html and dist/unplaced/<st>/index.html ("Lookouts we can't place yet",
+ *         from dist/data/unplaced.json)
  *
  * Plain string templates and synchronous file writes: ~9,000 pages take a few seconds.
  */
@@ -21,6 +23,9 @@ import { designsEnd, designsMain } from '../src/render/designs.ts';
 import type { DesignsFile } from '../src/lib/types.ts';
 import { structuresSection } from '../src/render/structures.ts';
 import type { StructureKindsFile } from '../src/lib/types.ts';
+import type { UnplacedFile } from '../src/lib/types.ts';
+import { escapeHtml } from '../src/lib/html.ts';
+import { unplacedHead, unplacedIndexMain, unplacedPageStates, unplacedStateMain } from '../src/render/unplaced.ts';
 
 const t0 = performance.now();
 const root = resolve(import.meta.dirname, '..');
@@ -118,18 +123,51 @@ if (existsSync(designsPath)) {
   );
 }
 
+/* ---------- Lookouts we can't place yet: an index and one page per state ---------- */
+const unplacedTemplatePath = join(dist, 'unplaced', 'index.html');
+const unplacedPages: string[] = [];
+if (existsSync(unplacedTemplatePath)) {
+  const tpl = readFileSync(unplacedTemplatePath, 'utf8');
+  if (!tpl.includes('<!--ff:unplaced-->')) fail('unplaced/index.html template has no <!--ff:unplaced--> placeholder');
+  const file: UnplacedFile = existsSync(join(dataDir, 'unplaced.json'))
+    ? (JSON.parse(readFileSync(join(dataDir, 'unplaced.json'), 'utf8')) as UnplacedFile)
+    : { count: 0, by_region: {}, lookouts: [] };
+  if (!existsSync(join(dataDir, 'unplaced.json'))) console.warn('prerender: dist/data/unplaced.json is missing; the list pages are empty');
+  const page = (region: string | null) => {
+    const head = unplacedHead(file, region);
+    const body = region ? unplacedStateMain(file, region, meta, ctx).value : unplacedIndexMain(file, meta, ctx).value;
+    const canonical = `${ctx.siteUrl}unplaced/${region ? `${region.toLowerCase()}/` : ''}`;
+    // Function replacements: a "$" in a lookout's name must not be read as a replacement pattern.
+    return tpl
+      .replace(/<title>[^<]*<\/title>/, () => `<title>${escapeHtml(head.title)}</title>\n  <link rel="canonical" href="${escapeHtml(canonical)}">${meta.fixtures ? '\n  <meta name="robots" content="noindex">' : ''}`)
+      .replace(/<meta name="description" content="[^"]*">/, () => `<meta name="description" content="${escapeHtml(head.description)}">`)
+      .replace('<!--ff:banner-->', () => banner)
+      .replace('<!--ff:unplaced-->', () => body)
+      .replace(/\n\s+/g, '\n');
+  };
+  writeFileSync(unplacedTemplatePath, page(null));
+  unplacedPages.push('unplaced/');
+  for (const region of unplacedPageStates(file)) {
+    const dir = join(dist, 'unplaced', region.toLowerCase());
+    mkdirSync(dir, { recursive: true });
+    writeFileSync(join(dir, 'index.html'), page(region));
+    unplacedPages.push(`unplaced/${region.toLowerCase()}/`);
+  }
+}
+
 /* ---------- Sitemap ---------- */
 writeFileSync(
   join(dist, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
     `<url><loc>${ctx.siteUrl}</loc></url>\n<url><loc>${ctx.siteUrl}about/</loc></url>\n<url><loc>${ctx.siteUrl}learn/smoke/</loc></url>\n<url><loc>${ctx.siteUrl}designs/</loc></url>\n` +
+    (meta.fixtures ? '' : unplacedPages.map((p) => `<url><loc>${ctx.siteUrl}${p}</loc></url>\n`).join('')) +
     sitemap.join('\n') +
     '\n</urlset>\n',
 );
 
 const ms = performance.now() - t0;
 console.log(
-  `prerender: ${pages} tower pages in ${(ms / 1000).toFixed(2)} s` +
+  `prerender: ${pages} tower pages and ${unplacedPages.length} "can't place yet" pages in ${(ms / 1000).toFixed(2)} s` +
     (meta.fixtures ? ' (FIXTURE DATA: pages are marked noindex and left out of the sitemap)' : '') +
     (unsafeStories ? `; ${unsafeStories} unsafe stories replaced by a notice` : ''),
 );

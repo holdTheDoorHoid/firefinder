@@ -26,6 +26,12 @@ towers.geojson properties (absent optional keys mean null / false; see meta.json
   k  kind          s  status         v  verification       a  access level
   b  built year    rt rentable (1)   rg on a register (1)   o  other names, "|"-joined
   c  county        y0 first year it stood   y1 year it came down   d  design ids, "|"-joined
+  ap 1 = approximate position: no source gives one, so the lookout is shown on the one same-name
+       USGS GNIS summit, ridge or similar feature in its county (DESIGN.md 3.5)
+
+  unplaced.json    the lookouts no source places and GNIS could not place either ("Lookouts we
+                   can't place yet", one page per state), from data/merge_report.json's
+                   "unplaced_lookouts" (pipeline/merge.py)
 
 Coordinates are [lon, lat] rounded to 5 decimal places.
 
@@ -93,6 +99,7 @@ GEOJSON_FORMAT = {
     "y1": "year it came down: destroyed, burned, removed or abandoned (absent = still standing, or not recorded)",
     "d": "standard designs recognised (designs.json ids) joined with | (absent = none recognised)",
     "m": "material of the main structure (vocab.material) (absent = not recorded)",
+    "ap": "1 = approximate position: no source gives one; shown on the same-name USGS GNIS feature in its county (absent = a source's position)",
 }
 
 # Events that show a lookout stood at the site in that year, and events that end it. The
@@ -621,6 +628,44 @@ def built_year(rec: dict) -> int | None:
     return min(years) if years else None
 
 
+def is_approximate(rec: dict) -> bool:
+    """Shown at an approximate (GNIS) position because no source gives one (merge.approximate_location)."""
+    loc = rec.get("location")
+    return isinstance(loc, dict) and loc.get("approximate") is True
+
+
+# What the "Lookouts we can't place yet" pages need of each unplaced lookout (merge.py
+# unplaced_lookouts), and of its records.
+UNPLACED_KEYS = ("anchor", "name", "region", "county", "gnis", "town", "feature", "candidates", "near", "near_m",
+                 "similar", "out_of_scope")
+
+
+def load_unplaced(report_path: Path | None, names: dict[str, str], log: Log) -> list[dict]:
+    """The unplaced lookouts from data/merge_report.json, for unplaced.json. A tower a row points
+    at ("near", "similar") gets its name, and is dropped if it is not on the site."""
+    if report_path is None or not report_path.is_file():
+        return []
+    try:
+        rows = json.loads(report_path.read_text(encoding="utf-8")).get("unplaced_lookouts") or []
+    except (OSError, json.JSONDecodeError, AttributeError) as e:
+        log.warn(f"could not read the unplaced lookouts: {e}", report_path)
+        return []
+    out = []
+    for row in rows:
+        if not isinstance(row, dict) or not isinstance(row.get("name"), str) or not isinstance(row.get("records"), list):
+            continue
+        item = {k: row[k] for k in UNPLACED_KEYS if row.get(k) is not None}
+        for k in ("near", "similar"):
+            if k in item:
+                if item[k] in names:
+                    item[f"{k}_name"] = names[item[k]]
+                else:
+                    item.pop(k)
+        item["records"] = [{k: r.get(k) for k in ("source", "key", "name", "url")} for r in row["records"] if isinstance(r, dict)]
+        out.append(item)
+    return out
+
+
 def is_rentable(rec: dict) -> bool:
     r = rec.get("rental")
     return isinstance(r, dict) and r.get("available") is not False
@@ -658,6 +703,8 @@ def feature(rec: dict, this_year: int | None = None, design_ids: list[str] | Non
         props["d"] = "|".join(design_ids)
     if isinstance(rec.get("material"), str) and rec["material"]:
         props["m"] = rec["material"]
+    if is_approximate(rec):
+        props["ap"] = 1
     return {
         "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [round(loc["lon"], 5), round(loc["lat"], 5)]},
@@ -957,6 +1004,7 @@ def build(
     mentions_path: Path | None = None,
     this_year: int | None = None,
     structure_kinds_path: Path | None = None,
+    report_path: Path | None = None,
 ) -> dict:
     log = log or Log()
     files = sorted(towers_dir.rglob("*.json")) if towers_dir.is_dir() else []
@@ -982,7 +1030,9 @@ def build(
     features: list[dict] = []
     seen: dict[str, Path] = {}
     counts: dict[str, Counter] = {k: Counter() for k in ("status", "kind", "region", "verification", "material")}
-    hidden = rentable = registered = stories = skipped = 0
+    hidden = rentable = registered = stories = skipped = approximate = 0
+    approximate_by_region: Counter = Counter()
+    names: dict[str, str] = {}
     cited: Counter[str] = Counter()
     any_fixture = fixtures
 
@@ -1058,6 +1108,10 @@ def build(
             counts["material"][rec["material"]] += 1
         rentable += is_rentable(rec)
         registered += bool(rec.get("registers"))
+        names[rid] = rec["name"]
+        if is_approximate(rec):
+            approximate += 1
+            approximate_by_region[rec["region"]] += 1
         for s in rec.get("sources") or []:
             if isinstance(s, dict) and isinstance(s.get("source"), str):
                 cited[s["source"]] += 1
@@ -1067,6 +1121,15 @@ def build(
 
     features.sort(key=lambda f: f["properties"]["i"])
     _write_json(out / "towers.geojson", {"type": "FeatureCollection", "features": features})
+    unplaced = load_unplaced(report_path, names, log) if not fixtures else []
+    in_scope = [u for u in unplaced if not u.get("out_of_scope")]
+    _write_json(out / "unplaced.json", {
+        "note": "Lookouts that sources list by name but no source places, and that USGS GNIS could not place "
+                "either (DESIGN.md 3.5, 'Approximate locations'). From pipeline/merge.py.",
+        "count": len(in_scope),
+        "by_region": dict(sorted(Counter(u.get("region") or "" for u in in_scope).items())),
+        "lookouts": unplaced,
+    })
 
     structures_n = sum(1 for f in features if f["properties"]["k"] not in no_structure)
     designs_meta = write_designs(out, designs_path, design_towers, with_design_text, structures_n, log, design_facts, unmatched_design_text)
@@ -1105,6 +1168,11 @@ def build(
             "rentable": rentable,
             "registered": registered,
             "stories": stories,
+            # Shown at an approximate (GNIS) position, and listed as not placed at all.
+            "approximate": approximate,
+            "approximate_by_region": dict(sorted(approximate_by_region.items())),
+            "unplaced": len(in_scope),
+            "unplaced_by_region": dict(sorted(Counter(u.get("region") or "" for u in in_scope).items())),
             "by_status": dict(sorted(counts["status"].items())),
             "by_kind": dict(sorted(counts["kind"].items())),
             "by_region": dict(sorted(counts["region"].items())),
@@ -1159,6 +1227,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--photos", type=Path, default=None, help="unused; kept so old invocations still parse (photos now resolve via site.config.json's photosBase)")
     ap.add_argument("--sources", type=Path, default=DATA / "sources", help="source extracts (default: data/sources)")
     ap.add_argument("--vocab", type=Path, default=DATA / "vocab.json")
+    ap.add_argument("--report", type=Path, default=DATA / "merge_report.json",
+                    help="merge report, read for the lookouts no source places (default: data/merge_report.json)")
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT, help="output folder (default: web/public/data)")
     ap.add_argument("--fallback-fixtures", action="store_true", help="use web/fixtures when the towers folder is empty")
     ap.add_argument("--strict", action="store_true", help="fail if any record is skipped")
@@ -1186,7 +1256,8 @@ def main(argv: list[str] | None = None) -> int:
     stories = stories or DATA / "stories"
     photos = photos or DATA / "photos"
 
-    build(towers, stories, photos, args.sources, args.vocab, args.out, fixtures=fixtures, strict=args.strict, log=log)
+    build(towers, stories, photos, args.sources, args.vocab, args.out, fixtures=fixtures, strict=args.strict, log=log,
+          report_path=args.report)
     if log.warnings:
         log.info(f"{log.warnings} warning(s); see above.")
     return 0
