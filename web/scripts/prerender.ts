@@ -4,7 +4,8 @@
  *
  * Input:  dist/tower.html (template with hashed asset links, from Vite)
  *         dist/data/t/<id>.json, dist/data/meta.json (from pipeline/build_site_data.py)
- * Output: dist/t/<id>/index.html, filled dist/about/index.html, dist/sitemap.xml,
+ * Output: dist/t/<id>/index.html (and a redirecting page at the address of each tower the merge
+ *         folded into another, from dist/data/redirects.json), filled dist/about/index.html, dist/sitemap.xml,
  *         dist/unplaced/index.html and dist/unplaced/<st>/index.html ("Lookouts we can't place yet",
  *         from dist/data/unplaced.json)
  *
@@ -15,6 +16,8 @@ import { join, resolve } from 'node:path';
 import { performance } from 'node:perf_hooks';
 import config from '../site.config.json' with { type: 'json' };
 import { isTowerId } from '../src/lib/checklist.ts';
+import type { RedirectsFile } from '../src/lib/redirects.ts';
+import { renderRedirectPage } from '../src/render/redirect.ts';
 import { isSafeStoryHtml } from '../src/lib/html.ts';
 import type { Meta, SourceInfo, TowerRecord } from '../src/lib/types.ts';
 import { renderTowerHead, renderTowerMain, type RenderContext } from '../src/render/tower.ts';
@@ -71,6 +74,7 @@ mkdirSync(outDir);
 let pages = 0;
 let unsafeStories = 0;
 const sitemap: string[] = [];
+const towerNames = new Map<string, string>();
 for (const file of files) {
   const rec = JSON.parse(readFileSync(join(dataDir, 't', file), 'utf8')) as TowerRecord;
   if (!isTowerId(rec.id) || `${rec.id}.json` !== file) {
@@ -86,8 +90,26 @@ for (const file of files) {
   ).replace(/\n\s+/g, '\n'); // drop template indentation (about a third of each page); no <pre> here
   mkdirSync(join(outDir, rec.id));
   writeFileSync(join(outDir, rec.id, 'index.html'), page);
+  towerNames.set(rec.id, rec.name);
   pages++;
   if (!rec.fixture) sitemap.push(`<url><loc>${ctx.siteUrl}t/${rec.id}/</loc>${rec.updated ? `<lastmod>${rec.updated}</lastmod>` : ''}</url>`);
+}
+
+/* ---------- Old addresses of towers the merge folded into others ---------- */
+let redirectPages = 0;
+const redirectsPath = join(dataDir, 'redirects.json');
+if (existsSync(redirectsPath)) {
+  const { redirects } = JSON.parse(readFileSync(redirectsPath, 'utf8')) as RedirectsFile;
+  for (const [oldId, newId] of Object.entries(redirects)) {
+    const name = towerNames.get(newId);
+    if (!isTowerId(oldId) || !name || towerNames.has(oldId)) {
+      console.warn(`prerender: no redirect page for ${oldId} -> ${newId}`);
+      continue;
+    }
+    mkdirSync(join(outDir, oldId));
+    writeFileSync(join(outDir, oldId, 'index.html'), renderRedirectPage({ id: newId, name }, ctx));
+    redirectPages++;
+  }
 }
 rmSync(join(dist, 'tower.html'));
 rmSync(join(dataDir, '.firefinder-site-data'), { force: true }); // the pipeline's own bookkeeping file
@@ -167,7 +189,7 @@ writeFileSync(
 
 const ms = performance.now() - t0;
 console.log(
-  `prerender: ${pages} tower pages and ${unplacedPages.length} "can't place yet" pages in ${(ms / 1000).toFixed(2)} s` +
+  `prerender: ${pages} tower pages, ${redirectPages} redirects and ${unplacedPages.length} "can't place yet" pages in ${(ms / 1000).toFixed(2)} s` +
     (meta.fixtures ? ' (FIXTURE DATA: pages are marked noindex and left out of the sitemap)' : '') +
     (unsafeStories ? `; ${unsafeStories} unsafe stories replaced by a notice` : ''),
 );

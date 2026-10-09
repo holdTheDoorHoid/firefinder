@@ -209,6 +209,16 @@ class RecordHandling(unittest.TestCase):
         self.assertEqual(props, {"i": "us-or-good", "n": "Good Lookout", "r": "OR", "k": "tower", "s": "standing", "v": "unverified", "a": "public", "b": 1931, "rt": 1, "rg": 1, "o": "Old / Name", "y0": 1931})
         self.assertEqual(sorted(p.name for p in (self.out / "t").iterdir()), ["us-or-good.json"])
 
+    def test_a_retired_tower_is_a_redirect_not_a_page_or_a_hidden_count(self) -> None:
+        self.write("keep.json", tower("us-or-keep"))
+        self.write("old.json", tower("us-or-old", hidden=True, merged_into="us-or-keep", sources=[]))
+        self.write("lost.json", tower("us-or-lost", hidden=True, merged_into="us-or-gone", sources=[]))
+        meta = self.build()
+        self.assertEqual(meta["counts"]["total"], 1)
+        self.assertEqual((meta["counts"]["hidden"], meta["counts"]["merged"]), (0, 1))
+        self.assertEqual(sorted(p.name for p in (self.out / "t").iterdir()), ["us-or-keep.json"])
+        self.assertEqual(json.loads((self.out / "redirects.json").read_text())["redirects"], {"us-or-old": "us-or-keep"})
+
     def test_strict_mode_fails_on_bad_records(self) -> None:
         self.write("broken.json", "{not json")
         with self.assertRaises(SystemExit):

@@ -127,7 +127,10 @@ in the crawl cache (NHLR, FFLOS, firelookout.com) store short structure facts fr
 ### 3.3 Canonical tower (`data/towers/<region>/<id>.json`)
 
 `id` = `us-<st>-<slug>`, with `-2`, `-3`… for same-name sites in one state (there are dozens of
-"Bald Mountain"s). **Ids never change once published** (they are URLs and checklist keys).
+"Bald Mountain"s). **Ids never change once published** (they are URLs and checklist keys). When two
+towers turn out to be one lookout, one id is retired, never deleted: its file stays, hidden, with
+`"merged_into": "<id of the tower that has its records>"` and no sources, and the site redirects its
+address (3.5, "Retired towers").
 
 ```json
 {
@@ -238,11 +241,15 @@ the easternuslookouts and centraluslookouts weebly sites, the association projec
 Kemnow's western weebly sites, TrailChick (WA), Every Lookout in Oregon, the FFLA chapter and Friends
 pages, WillhiteWeb (WA), and Indiana Fire Towers:
 
-1. **Key**: the record's key is already in a tower's `sources[].key`. A record named in
-   `RECORD_JOINS` (merge.py; each entry says why) joins its pinned tower right after this, for
-   the few a position and name cannot be trusted to find: recreation.gov's "Post Creek Guard
-   Station" is NHLR's "Post Creek Fireman-Lookout House", 779 m away under another name, and
-   would otherwise start a second, permanent tower.
+0. **Pinned by a human.** A record named in `RECORD_JOINS` (`pipeline/record_joins.py`; each entry
+   says why) goes to its pinned tower before anything else, even when an earlier run put it in a
+   tower of its own. It is for the few a position and name cannot be trusted to find (recreation.gov's
+   "Post Creek Guard Station" is NHLR's "Post Creek Fireman-Lookout House", 779 m away under another
+   name) and for pairs of separate towers that the review of the report's possible duplicates showed
+   to be one lookout (`docs/sources/dedupe_review_2026-10.md`). The target is a tower id or the key
+   of a record that tower holds, and a key target must come from a source matched earlier than the
+   record that joins it (the order above). Two records of one source are never pinned together.
+1. **Key**: the record's key is already in a tower's `sources[].key`.
 2. **Register number**. NHLR and FFLOS number their entries separately ("NHLR US 674" is
    Apache Maid, AZ; "FFLOS US 674" is Buzzard Butte, OR), so the register name is part of the
    key. US numbers decide; state numbers ("WI 49") only when no US number matches. A register
@@ -273,6 +280,21 @@ pages, WillhiteWeb (WA), and Indiana Fire Towers:
    lookout of its state and county, joins it before step 5 (its position replaces the pin).
 5. Anything else **starts a new tower**.
 
+**Retired towers.** Merge never deletes, so a tower the review shows to be the same lookout as
+another is not removed: its id stays. When every record of an existing tower is pinned in
+`RECORD_JOINS` to one other tower, merge retires it before matching anything: it leaves the
+position and register indexes (nothing can match it again), its records go to the other tower, and
+its file is rewritten hidden, with `hidden_reason` "Merged into <id>: the same lookout",
+`merged_into` the other tower's id, and `sources: []`. A tower that keeps other records only loses
+the pinned ones (`record_join_moved` in the review file). The report lists the retired towers
+(`merged_towers`, `counts.merged_away`; they are not in `counts.towers` or `hidden`). `validate.py`
+checks that `merged_into` names a visible tower that is not itself retired, and that no research
+or story file is left under a retired id. Research and a story belong to the tower that stays:
+choose the survivor as the one with a story. The site gives the old address a small redirecting
+page, and the map follows `?t=<old id>` (3.6). A visitor's checklist marks on a retired id do not
+move to the new tower (the checklist is a list of ids kept in the browser); the retired ids are
+few, and most are days old.
+
 **FFLA's other views and border rows.** The alphabetical list fixes a record's key; the by-county,
 standing and by-region views only enrich it (county) and are paired with it by key, by the same
 name at the same spot, by position alone (FFLA spells "Remer - first" and "Remer #1" in different
@@ -302,7 +324,12 @@ core with Peak / Mountain / Butte removed: "Bald Mtn. L.O." = "Bald Mountain Loo
 "Abbot Butte" ≈ "Abbot" (0.95), "Bald Mountain" vs "Bald Knob" only 0.6. North/South,
 Upper/Lower, Big/Little and different numbers mark different places (0.2). A one-letter slip
 in a long name still counts as strong. A parenthetical is an alternate name ("Putnam
-(Liberty)"), except a structure-history note (below); "(North)", "(#2)" stay part of the name.
+(Liberty)"), except a structure-history note (below) and a county or forest note ("(Potter
+County)", "(Centre County II)", "(Sierra NF)", "(Fremont-Winema National Forest, OR)": it must end
+in the county or forest word, so "(Los Angeles County Fairplex)" is still a name); "(North)",
+"(#2)" stay part of the name. Before 2026-10-08 a county note counted as an alternate name, so FFLOS's
+"Pine Hill Tower Site (Potter County)" and "Round Top Tower Site (Potter County)" scored as the
+same name (`_PLACE_NOTE_RE` in merge.py).
 
 **Moved, copied and rebuilt structures.** FFLA writes them as "<where it is now> (<note>)":
 "State Fair (Relocated Padlock Hill)", "Crystal Ridge (Relocated Stranger Mtn, WA)",
@@ -338,7 +365,7 @@ node + way (100 m; 50 m if unnamed), Wikidata (100 m), RIDB facility + campgroun
 | Field | Precedence |
 |---|---|
 | name | NHLR, FFLOS > RIDB (cleaned) > FFLA > firelookout.com > fire-lookouts.org > tnlandforms.us > NJFFS table > andyarthur.org > Wikipedia lists > PA StoryMap > CSKT > the weebly sites > Wikidata > idahofirelookouts.com > michiganfiretower.com > OSM. A bare name borrows "Lookout"/"Fire Tower" only if another source spells it that way; every other name goes to `other_names` |
-| location | NHLR, FFLOS > FFLA > fire-lookouts.org > tnlandforms.us > NJFFS table > firelookout.com > OSM > the weebly sites > Wikidata > RIDB > andyarthur.org > Wikipedia lists > PA StoryMap > idahofirelookouts.com > michiganfiretower.com > CSKT, with *corroborated precedence*: if the winner is confirmed by no other lineage and lies > 500 m from a position that is, the best confirmed position wins (NHLR's Taylor Mountain, ID sits 253 km outside its own county). Rows outside their own state are used last |
+| location | NHLR, FFLOS > FFLA > fire-lookouts.org > tnlandforms.us > NJFFS table > firelookout.com > OSM > the weebly sites > Wikidata > RIDB > andyarthur.org > Wikipedia lists > PA StoryMap > idahofirelookouts.com > michiganfiretower.com > CSKT, with *corroborated precedence*: if the winner is confirmed by no other lineage and lies > 500 m from a position that is, the best confirmed position wins (NHLR's Taylor Mountain, ID sits 253 km outside its own county). Rows outside their own state are used last. `LOCATION_PICKS` (`pipeline/record_joins.py`) names, for a few towers, the record whose position a human checked and found right where the top-ranked source has a slip |
 | status | FFLA > NHLR, FFLOS > RIDB > fire-lookouts.org > tnlandforms.us > NJFFS table > andyarthur.org > Wikipedia lists > PA StoryMap > CSKT > firelookout.com > idahofirelookouts.com > michiganfiretower.com > OSM > the weebly sites > Wikidata. OSM features imported from GNIS make no status claim (FFLA calls a third of them gone); a "standing" row named "(Replica)" is `replica` |
 | kind | FFLA > NHLR, FFLOS > RIDB > firelookout.com > fire-lookouts.org > tnlandforms.us > NJFFS table > PA StoryMap > andyarthur.org > Wikipedia lists > CSKT > OSM > the weebly sites > Wikidata > idahofirelookouts.com > michiganfiretower.com. Each record's kind is its type value read through `structure.py`, else its description words (NHLR/FFLOS "100-foot steel tower", "ground cabin"; words about an earlier structure or the living quarters are skipped), else the fetcher's reading. A bare `point` counts only when no source records a structure; with no kind at all, a recognised steel-tower design (Aermotor, IDECO) makes it a `tower` |
 | material | Explicit words first: FFLA > NHLR, FFLOS > firelookout.com > fire-lookouts.org > RIDB > OSM (`tower:construction`, `building:material`) > andyarthur.org; type values ("Stone Tower", "Log Crib") and description words read for the tower's kind (a tower's material is the tower's, not the cab's). Then the design (`material_from: "design"`): `data/designs.json`'s `material` for each design when present, else a fallback (L-4, L-6, R-6, D-6 wood; D-1 log; Aermotor, IDECO, other steel makers steel; L-5, cupola houses, California plans none, since their sources describe two materials). A steel-tower design gives a tower's material; a cab design only a building's |
@@ -402,9 +429,10 @@ records name a lookout and its county but give no coordinates (most from the hob
   punctuation ignored ("Bald Knob" = "Baldknob", "Hawk's Nest" = "Hawks Nest"), a leading "The"
   dropped on both sides; each parenthetical alternate and slash part counts, county or forest notes
   ("(Tioga County)") do not, here nor in the name comparisons of the joins and guards below
-  (`named_forms`; elsewhere in the merge such a note still counts as an alternate name, so FFLOS's
-  "Pine Hill Tower Site (Potter County)" and "Round Top Tower Site (Potter County)" score as one
-  name); a numbered name ("Bald Knob #2") must match exactly. "Mount Pisgah" and
+  (`named_forms`, which also drops a main name or slash part with the word county or forest in it;
+  since 2026-10-08 the whole merge leaves a parenthetical county or forest note out of the names, so
+  "Pine Hill Tower Site (Potter County)" and "Round Top Tower Site (Potter County)" no longer score
+  as one name); a numbered name ("Bald Knob #2") must match exactly. "Mount Pisgah" and
   "Pisgah Mountain" stay different names. A name of feature words only ("Mountain Lookout") is not
   looked up.
 - *Placed* only when the record's county is recognised in GNIS (missing, misspelt or several
@@ -520,6 +548,10 @@ tower (`--research` to point elsewhere), so a re-merge never loses research:
   `build_site_data.py --report`), for the "Lookouts we can't place yet" pages; `meta.json` counts
   `approximate`, `approximate_by_region`, `unplaced` and `unplaced_by_region` (out-of-scope entries
   are listed on the pages but not counted).
+- `redirects.json`: `{"redirects": {old id: new id}}` for the retired towers (3.5, "Retired towers"),
+  whose files are not published as pages; `scripts/prerender.ts` writes a redirecting page at each
+  old address (`dist/t/<old id>/index.html`), and the map follows `?t=<old id>`. `meta.json` counts
+  them (`counts.merged`).
 - `t/<id>.json`: the full canonical record plus the story HTML, when one exists.
 - `meta.json`: counts, source list with retrieved dates, and build date; `history` (how many
   towers have a start year, an end year, neither) and `designs` (design coverage). `counts.total`

@@ -11,9 +11,13 @@ The merge adds and refreshes; it never deletes:
   * A source record that matched a tower before is matched to it again by its key.
   * Fields named in a tower's "locked" list are never overwritten.
   * A tower whose source records have all disappeared is kept as it is.
+  * Two towers that turn out to be one lookout (RECORD_JOINS) become one tower; the other keeps its
+    file and id, hidden, with "merged_into" naming the tower that took its records.
 
 Matching, in order (first hit wins):
 
+  0. pinned    a record named in RECORD_JOINS (pipeline/record_joins.py) goes to the tower it is
+               pinned to, even if an earlier run put it elsewhere
   1. key       the record's key is already in some tower's sources[].key
   2. register  a shared register number. NHLR and FFLOS number their entries separately
                ("NHLR US 674" and "FFLOS US 674" are different lookouts), so the register
@@ -64,6 +68,7 @@ from state_bbox import STATE_BBOX, flag_coordinate  # noqa: E402
 from photo_credit import extract_photo_credit  # noqa: E402
 import designs as design_names  # noqa: E402
 import structure  # noqa: E402
+from record_joins import LOCATION_PICKS, RECORD_JOINS  # noqa: E402
 
 # Rough boxes for the territories, which state_bbox does not cover.
 TERRITORY_BBOX = {"PR": (17.8, 18.6, -67.4, -65.2), "VI": (17.6, 18.5, -65.1, -64.5),
@@ -322,23 +327,13 @@ FFLA_RENTAL_OVERRIDES: dict[str, str] = {
     "ffla_rentals:wa:quartz-mountain-lookout": "us-wa-mount-spokane-at-quartz-mountain",
 }
 
-# Records that spatial matching cannot be trusted to place, pinned to a tower by the record's
-# key. The value is a tower id (permanent) or the key of any source record that tower holds
-# (stable across a from-scratch run, where the tower has no id yet). Used by Matcher.match_source()
-# after the key memory and before the register and spatial steps. Each entry says why.
-RECORD_JOINS: dict[str, str] = {
-    # The recreation.gov rental "POST CREEK GUARD STATION" (234404) is the lookout NHLR registers as
-    # "Post Creek Fireman-Lookout House" (the FFLA lists it as "Post Creek Lookout"): a 1934 CCC
-    # cabin built for fire watching. The names share no words past "Post Creek" and RIDB's pin is
-    # 779 m from the registered position, outside the 400 m a partial name match may span, so
-    # without this it would start a second, permanent tower for the same building.
-    "ridb:234404": "nhlr:US 1363",
-    # "MT. BALDY-BUCKHORN RIDGE" (234432) is the Baldy Mountain Lookout in the Kootenai NF (NHLR
-    # 1512, FFLA "Mt. Baldy Lookout"). Its pin is 370 m from the registered one, inside the 400 m
-    # partial-name limit by 30 m; pinned so a small shift in RIDB's coordinates cannot start a
-    # duplicate tower.
-    "ridb:234432": "nhlr:US 1512",
-}
+# Records that spatial matching cannot be trusted to place, or that two towers turned out to share,
+# pinned to a tower by the record's key. The value is a tower id (permanent) or the key of any source
+# record that tower holds (stable across a from-scratch run, where the tower has no id yet). Used by
+# Matcher.match_source() before the key memory, the register and the spatial steps: a pinned record goes to
+# its tower even if an earlier run put it elsewhere, and a tower all of whose records are pinned to
+# one other tower is retired (Matcher.retire_pinned_towers). The table, with the reason for every
+# entry, is in pipeline/record_joins.py, which also holds LOCATION_PICKS (location_pick()).
 
 # Hobbyist and regional sites, with the words used for credits and link labels.
 SOURCE_SITE = {
@@ -442,7 +437,7 @@ TOWER_KEYS = [
     "id", "name", "summary", "other_names", "country", "region", "county", "location", "elevation_m",
     "kind", "material", "material_from", "roles", "design", "height_m", "status", "status_note", "registers",
     "agency", "ownership", "access", "staffing", "visit", "rental", "events", "photos", "links", "sources",
-    "conflicts", "research", "verification", "locked", "hidden", "hidden_reason", "updated",
+    "conflicts", "research", "verification", "locked", "hidden", "hidden_reason", "merged_into", "updated",
 ]
 FIELD_ORDER = [
     "name", "location", "county", "elevation_m", "kind", "material", "roles", "design", "height_m", "status",
@@ -562,6 +557,16 @@ def name_tokens(s: str) -> list[str]:
 
 
 _ANNOTATION_WORDS = re.compile(r"\b(relocated|replica|parts from)\b", re.I)
+# A parenthetical that says which county or forest a lookout is in, not what it is called: FFLOS's
+# "Pine Hill Tower Site (Potter County)", NHLR's "Black Mountain Lookout (Boundary County)",
+# "Bald Mountain Lookout (Sierra NF)", "Sand Mountain Tower Site (Centre County I)". It must END in
+# the county or forest word (a county number or a state code may follow), so a place that merely
+# contains the word stays a name: NHLR's "(Los Angeles County Fairplex)" is where the lookout now
+# stands. Never a name variant (name_variants). Plain "Forest" stays a name too: Forest Hill.
+_PLACE_NOTE_RE = re.compile(
+    r"(?:\b(?:county|co|parish|borough)\.?(?:\s+(?:[ivx]+|\d+))?"
+    r"|\b(?:national forests?|nf|state forest|state park|ranger district|wma|nwr|national wildlife refuge)"
+    r"(?:\s*,\s*[A-Za-z]{2})?)\s*$", re.I)
 _ANNOTATION_RE = re.compile(r"\s*\((?P<body>[^()]*\b(?:relocated|replica|parts from)\b[^()]*)\)", re.I)
 STATE_BY_NAME = {v.lower(): k for k, v in STATE_NAMES.items()}
 _BORDER_POINTER_RE = re.compile(r"^\(border\s*[-\u2013\u2014]\s*see\s+([A-Za-z ]+)\)", re.I)
@@ -699,8 +704,9 @@ def status_note_text(info: dict, source: str) -> dict:
 
 def name_variants(name: str | None, aliases: list[str] | None = None) -> list[str]:
     """The ways a record names its lookout: the name without any parenthetical, the
-    parenthetical itself when it is an alternate name ("Putnam (Liberty)"), each side of a
-    slash ("Moore Creek/ Perley Creek"), and any aliases the source lists."""
+    parenthetical itself when it is an alternate name ("Putnam (Liberty)", but not a county or
+    forest note: "(Potter County)"), each side of a slash ("Moore Creek/ Perley Creek"), and any
+    aliases the source lists."""
     out: list[str] = []
     for raw in [name, *(aliases or [])]:
         c = clean_name(raw)
@@ -714,7 +720,11 @@ def name_variants(name: str | None, aliases: list[str] | None = None) -> list[st
             p = paren.strip()
             # "(Relocated X)", "(Replica)", "(Parts from X)" describe the structure's history,
             # not another name for this place: see parse_annotation()
-            if p and not re.match(r"^(same as|see\b|railroad|military|unk|\?)", p, re.I) and not _ANNOTATION_WORDS.search(p):
+            # A county or forest note ("(Potter County)", "(Sierra NF)") says where the lookout is,
+            # not what it is called: "Pine Hill Tower Site (Potter County)" and "Round Top Tower
+            # Site (Potter County)" would otherwise share the name "Potter County".
+            if (p and not re.match(r"^(same as|see\b|railroad|military|unk|\?)", p, re.I)
+                    and not _ANNOTATION_WORDS.search(p) and not _PLACE_NOTE_RE.search(p)):
                 out.append(p)
         for part in re.split(r"\s*/\s*", main):
             if part and part != main:
@@ -969,9 +979,9 @@ _GNIS_NOT_A_NAME_RE = re.compile(r"\b(county|co|parish|borough|national forest|n
 
 
 def named_forms(forms: list) -> list:
-    """Name forms without the ones that only name a county or forest: FFLOS writes "Pine Hill Tower
-    Site (Potter County)" and "Round Top Tower Site (Potter County)", whose parentheticals would
-    otherwise make the two the same name."""
+    """Name forms without the ones that only name a county or forest. name_variants() already
+    leaves a parenthetical county or forest note out ("Pine Hill Tower Site (Potter County)"); this
+    also drops a main name, slash part or alias with the word anywhere in it."""
     return [f for f in forms if not _GNIS_NOT_A_NAME_RE.search(f.full)]
 # A lookout that GNIS places must not land on a lookout already on the map: if a tower with a
 # position stands within this distance of the GNIS feature, the record is probably that lookout
@@ -1249,6 +1259,8 @@ class Tower:
     approx: GnisFeature | None = None   # the GNIS feature an approximate tower is shown on, this run
     approx_existing: dict | None = None  # the approximate location an existing tower file has
     old_county: str | None = None
+    merged_into: str | None = None      # id of the tower that took this one's records (a retired tower)
+    moved_out: set = field(default_factory=set)   # keys of records RECORD_JOINS moved to another tower this run
 
     @property
     def sources(self) -> set:
@@ -1405,6 +1417,11 @@ class Matcher:
         t = Tower(seq=len(self.towers), existing=existing, path=path)
         if existing:
             t.id = existing["id"]
+            if isinstance(existing.get("merged_into"), str) and existing["merged_into"]:
+                # A retired tower (RECORD_JOINS): it keeps its id and its file, and nothing matches it.
+                t.merged_into = existing["merged_into"]
+                self.towers.append(t)
+                return t
             names = [existing.get("name")] + list(existing.get("other_names") or [])
             t.old_forms = [f for n in names if isinstance(n, str) for f in name_forms(n)]
             loc = existing.get("location") or {}
@@ -1428,6 +1445,56 @@ class Matcher:
                         self.by_register.setdefault(k, t)
         self.towers.append(t)
         return t
+
+    def pin_target(self, pin: str) -> "Tower | None":
+        """The tower a RECORD_JOINS entry names: a tower holding that record key, else that tower id.
+        A retired tower leads on to the tower that took it."""
+        t = self.by_key.get(pin)
+        if t is None:
+            t = next((u for u in self.towers if u.id == pin), None)
+        seen = set()
+        while t is not None and t.merged_into and t.seq not in seen:
+            seen.add(t.seq)
+            t = next((u for u in self.towers if u.id == t.merged_into), None)
+        return t
+
+    def retire_pinned_towers(self) -> None:
+        """Retire the towers RECORD_JOINS folds into others, before any record is matched.
+
+        A tower of an earlier run all of whose records are pinned to one other tower is one
+        lookout with that tower. It keeps its id and its file (merge never deletes, ids never
+        change) but nothing may match it any more: it leaves the position and register indexes,
+        and its records go where they are pinned. run() writes it back hidden, with merged_into."""
+        retiring: dict[int, Tower] = {}
+        for t in self.towers:
+            ex = t.existing
+            if ex is None or t.merged_into:
+                continue
+            keys = [str(s["key"]) for s in ex.get("sources") or []
+                    if isinstance(s, dict) and s.get("key") and s.get("source") != "research"]
+            if not keys or any(k not in RECORD_JOINS for k in keys):
+                continue
+            targets = {self.pin_target(RECORD_JOINS[k]) for k in keys}
+            if len(targets) != 1 or None in targets:
+                continue
+            dest = next(iter(targets))
+            if dest is not t:
+                retiring[t.seq] = dest
+        for seq, dest in retiring.items():
+            t = self.towers[seq]
+            if dest.seq in retiring:     # joined onto a tower that is itself retiring: a human has to untangle it
+                self.review.append({"type": "record_join_chain", "tower_seq": t.seq, "into_seq": dest.seq})
+                continue
+            if t.old_point:
+                self.grid[cell_of(*t.old_point)].discard(t)
+            for region in list(self.by_region):
+                self.by_region[region].discard(t)
+            for k in [k for k, v in self.by_register.items() if v is t]:
+                del self.by_register[k]
+            for k in [k for k, v in self.by_key.items() if v is t]:
+                self.by_key[k] = dest        # its records are found by key again, in the tower that took them
+            t.old_forms, t.old_point, t.approx_existing = [], None, None
+            t.merged_into = dest.id
 
     def attach(self, rec: Rec, tower: Tower, how: str, note: str | None = None) -> None:
         rec.match, rec.match_note = how, note
@@ -1817,11 +1884,10 @@ class Matcher:
         the ones not known to be gone; a nearly-the-same name (>= 0.85) is accepted only when
         it is the one tower in the state that is already rentable, and is listed for review.
         Anything left is listed as unplaced, with the candidates, for an override."""
-        by_id = {t.id: t for t in self.towers if t.id}
         for r in sorted(recs, key=lambda x: x.key):
             target = FFLA_RENTAL_OVERRIDES.get(r.key)
             if target is not None:
-                t = self.by_key.get(target) or by_id.get(target)
+                t = self.pin_target(target)     # a tower id retired by RECORD_JOINS leads on to its tower
                 if t is None:
                     self.review.append({"type": "ffla_rental_override_unknown_tower", "key": r.key, "target": target})
                 elif self.can_join(r, t):
@@ -1930,27 +1996,27 @@ class Matcher:
 
     def match_source(self, source: str, recs: list[Rec]) -> None:
         pending: list[Rec] = []
-        # 1. key
+        # 1. RECORD_JOINS first: a record a human has pinned goes to its tower even when an earlier
+        #    run put it elsewhere (the tower it leaves keeps its other records, or is retired).
+        # 1b. then the key memory: a record already in some tower's sources[].key
         for r in recs:
+            pin = RECORD_JOINS.get(r.key)
+            if pin is not None:
+                target = self.pin_target(pin)
+                if target is None:
+                    self.review.append({"type": "record_join_unknown_tower", "key": r.key, "target": pin})
+                elif target is not self.by_key.get(r.key) and self.can_join(r, target):
+                    old = self.by_key.get(r.key)
+                    if old is not None:     # moved out of a tower that keeps other records
+                        old.moved_out.add(r.key)
+                        self.review.append({"type": "record_join_moved", "key": r.key, "tower_seqs": [old.seq, target.seq]})
+                    self.attach(r, target, "override", f"RECORD_JOINS -> {pin}")
+                    continue
             t = self.by_key.get(r.key)
             if t is not None:
                 self.attach(r, t, "key")
             else:
                 pending.append(r)
-        # 1b. pinned by RECORD_JOINS
-        if any(r.key in RECORD_JOINS for r in pending):
-            by_id = {t.id: t for t in self.towers if t.id}
-            unpinned = []
-            for r in pending:
-                target = RECORD_JOINS.get(r.key)
-                t = (self.by_key.get(target) or by_id.get(target)) if target else None
-                if target and t is None:
-                    self.review.append({"type": "record_join_unknown_tower", "key": r.key, "target": target})
-                if t is not None and self.can_join(r, t):
-                    self.attach(r, t, "override", f"RECORD_JOINS -> {target}")
-                else:
-                    unpinned.append(r)
-            pending = unpinned
         # 2. register
         rest = []
         for r in pending:
@@ -2405,8 +2471,15 @@ def location_pick(members: list[Rec]):
     position is confirmed by no other lineage and lies over 500 m from a position that is.
     Then the best corroborated position wins (NHLR's Taylor Mountain, ID sits 253 km from
     its own county; FFLA's position there is confirmed by idahofirelookouts.com). Rows the
-    source itself flags as outside its state are used only as a last resort."""
+    source itself flags as outside its state are used only as a last resort. A tower with an
+    entry in LOCATION_PICKS (pipeline/record_joins.py) shows the position of the record it names
+    instead: a human has checked which source is right."""
     good = [m for m in members if m.has_coords and not m.coordinate_problem]
+    by_key = {m.key: m for m in good}
+    for m in good:
+        chosen = by_key.get(LOCATION_PICKS.get(m.key, ""))
+        if chosen is not None:      # a human has checked which source is right (pipeline/record_joins.py)
+            return location_of(chosen), chosen
     v, m = pick("location", good, location_of)
     if v is None:
         return pick("location", members, location_of)
@@ -3045,7 +3118,7 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
         member_keys = {m.key for m in members}
         for s_ in ex.get("sources") or []:
             if isinstance(s_, dict) and s_.get("key") not in member_keys and s_.get("source") not in present \
-                    and s_.get("source") != "research":
+                    and s_.get("source") != "research" and s_.get("key") not in tower.moved_out:
                 stale = dict(s_)
                 stale["fields"] = []
                 stale.setdefault("missing_since", today)
@@ -3510,6 +3583,17 @@ def assign_ids(towers: list[tuple[Tower, dict]], taken: set[str]) -> None:
         t.id = cand
 
 
+def retired_record(existing: dict, into: str) -> dict:
+    """A tower folded into another (RECORD_JOINS): the file stays, with its id, but hidden and with
+    no records of its own; merged_into names the tower that has them now."""
+    rec = copy.deepcopy(existing)
+    rec["hidden"] = True
+    rec["hidden_reason"] = f"Merged into {into}: the same lookout"
+    rec["merged_into"] = into
+    rec["sources"] = []
+    return rec
+
+
 def ordered(rec: dict) -> dict:
     out = {k: rec[k] for k in TOWER_KEYS if k in rec}
     for k in rec:
@@ -3593,6 +3677,7 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
     taken = {t.id for t in m.towers if t.id}
     if len(taken) != len(existing):
         raise SystemExit("Existing towers have duplicate ids; fix them before merging.")
+    m.retire_pinned_towers()
 
     order = [s for s in SOURCE_ORDER if s in records] + sorted(set(records) - set(SOURCE_ORDER))
     for sid in order:
@@ -3606,8 +3691,12 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
     m.find_origins()
 
     resolved: list[tuple[Tower, dict]] = []
+    retired: list[Tower] = []
     for t in m.towers:
         if not t.members and t.existing is None:
+            continue
+        if not t.members and t.merged_into:
+            retired.append(t)
             continue
         if not t.members:
             resolved.append((t, copy.deepcopy(t.existing)))
@@ -3615,14 +3704,24 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
         resolved.append((t, resolve(t, today, headers, photos_manifest)))
     assign_ids(resolved, taken)
     relocations = link_relocations(resolved)
+    survivors = {t.id for t, _ in resolved}
+    stubs: list[tuple[Tower, dict]] = []     # retired towers: kept for their ids, their records are elsewhere
+    for t in retired:
+        if t.merged_into in survivors:
+            stubs.append((t, retired_record(t.existing, t.merged_into)))
+        else:
+            m.review.append({"type": "retired_tower_target_missing", "tower": t.id, "merged_into": t.merged_into})
+            stubs.append((t, copy.deepcopy(t.existing)))
 
     # Research on top of the sources, every run (so a re-merge never loses it).
     vocab = _vocab()
-    by_id = {t.id: (t, r) for t, r in resolved}
+    by_id = {t.id: (t, r) for t, r in resolved + stubs}
     research_rows: dict[str, dict] = {}
     for rid, res in sorted(research.items()):
-        if rid not in by_id:
-            research_problems.append({"file": f"{rid}.json", "problem": "no tower has this id"})
+        if rid not in by_id or by_id[rid][1].get("merged_into"):
+            merged = by_id[rid][1].get("merged_into") if rid in by_id else None
+            research_problems.append({"file": f"{rid}.json", "problem": (
+                f"tower {rid} was merged into {merged}; move this research there" if merged else "no tower has this id")})
             continue
         t, r = by_id[rid]
         r["id"] = rid
@@ -3631,7 +3730,7 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
             research_problems.append({"file": f"{rid}.json", "problem": prob})
 
     written = unchanged = 0
-    for t, r in resolved:
+    for t, r in resolved + stubs:
         r["id"] = t.id
         if t.existing is not None and without_updated(ordered(r)) == without_updated(ordered(t.existing)):
             r["updated"] = t.existing.get("updated") or today
@@ -3644,7 +3743,7 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text(dump(ordered(r)), encoding="utf-8")
 
-    report = build_report(m, resolved, headers, today, written, unchanged, relocations, gnis)
+    report = build_report(m, resolved, headers, today, written, unchanged, relocations, gnis, stubs)
     report["research"] = {
         "files": len(research) + sum(1 for p in research_problems if "JSON" in p["problem"] or "file name" in p["problem"]),
         "applied": len(research_rows),
@@ -3811,9 +3910,20 @@ def approximate_report(m: Matcher, resolved: list[tuple[Tower, dict]], gnis: "Gn
     }
 
 
+def merged_towers_report(stubs: list[tuple[Tower, dict]]) -> list[dict]:
+    """Towers RECORD_JOINS folded into others: the retired id, the tower that has its records now, and
+    (in the run that retired it) the records that moved."""
+    out = []
+    for t, r in sorted(stubs, key=lambda x: x[1]["id"]):
+        moved = [str(s_["key"]) for s_ in (t.existing or {}).get("sources") or []
+                 if isinstance(s_, dict) and s_.get("key") and s_.get("source") != "research"]
+        out.append({"id": r["id"], "into": r.get("merged_into"), "name": r.get("name"), "moved_records": sorted(moved)})
+    return out
+
+
 def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, today: str,
                  written: int, unchanged: int, relocations: list[dict] | None = None,
-                 gnis: "GnisIndex | None" = None) -> dict:
+                 gnis: "GnisIndex | None" = None, stubs: list[tuple[Tower, dict]] | None = None) -> dict:
     visible = [r for _, r in resolved if not r.get("hidden")]
     hidden = [r for _, r in resolved if r.get("hidden")]
     seq_to_id = {t.seq: t.id for t, _ in resolved}
@@ -3841,7 +3951,8 @@ def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, 
     review = []
     for t, r in resolved:
         mems = list(t.members)
-        for mem in mems:
+        # a join a human pinned (RECORD_JOINS) is a decision, not a doubt: the names differ on purpose
+        for mem in ([] if any(m_.key in RECORD_JOINS for m_ in mems) else mems):
             others = [f for o in mems if o is not mem for f in o.forms]
             s_ = name_score(mem.forms, others)
             if s_ is not None and s_ < PARTIAL:
@@ -3898,6 +4009,7 @@ def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, 
         "files": {"written": written, "unchanged": unchanged},
         "counts": {
             "towers": len(resolved),
+            "merged_away": len(stubs or []),   # retired towers: files kept, not counted in "towers"
             "visible": len(visible),
             "hidden": len(hidden),
             "hidden_by_reason": counts(hidden, "hidden_reason"),
@@ -3947,6 +4059,7 @@ def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, 
              "tower": r["id"], "used_for_location": (r.get("location") or {}).get("from") == mem.source}
             for t, r in resolved for mem in t.members if mem.bad_coords == "outside_state"],
         "relocations": relocations or [],
+        "merged_towers": merged_towers_report(stubs or []),
         "rental_hints_without_ridb": rental_hints,
         "ffla_rentals": ffla_rentals,
         "unmapped_structure_values": {s_: dict(c.most_common()) for s_, c in sorted(unmapped.items())},
