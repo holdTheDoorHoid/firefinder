@@ -1,0 +1,10 @@
+In February 1927, the Middlesboro Daily News reported that the Log Mountain Forest Protective Association, working under government supervision, was building telephone lines to the top of Bryson Mountain, where a lookout tower was to be erected.[^1] In September 1927, the same paper reported the tower complete, citing Robert Hall, who led the Tennessee and Kentucky forest service.[^1] The paper described it as sixty feet high, inside circular glass, with over 200 square miles in view.[^1]
+
+Tennessee Landforms lists the summit at 3,202 feet and marks the tower removed.[^2] The Forest Lookouts site gives the agency as the Tennessee Division of Forestry, District 2, but the February 1927 report credits the local protective association with the telephone-line work on the way to the planned tower, so the sources do not fully agree on who built it.[^1] A National Register study credits the division with 208 fire lookout towers built between about 1930 and 1970, a window that starts after the 1927 reports.[^3]
+
+A 2001 trip report found the lookout tower gone and wrote that the whole top of the mountain may have been removed.[^4] The same writer said the top looked like strip-mining and restoration work.[^4] The newest source I found is that 2001 report. The writer says the best access is through Middlesboro, Kentucky, and warns that the gravel road to the top may stop being maintained.[^4] No source I found describes the site today or says whether that road is still open.
+
+[^1]: Bryson Mountain, Forest Lookouts, https://easternuslookouts.weebly.com/bryson-mountain.html (accessed 2026-10-10).
+[^2]: Tennessee Lookout Towers, Tennessee Landforms, https://tnlandforms.us/towers/ (accessed 2026-10-10).
+[^3]: Tennessee Division of Forestry Fire Lookout Towers MPS, National Park Service, https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/64501237.pdf (accessed 2026-10-10).
+[^4]: Claiborne County High Point Trip Report, Bryson Mtn, Mike Beavers, cohp.org, http://www.cohp.org/tn/Claiborne_1.html (accessed 2026-10-10).

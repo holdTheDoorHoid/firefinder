@@ -1,0 +1,6 @@
+Dodge, an unincorporated community in eastern Walker County, sits along the northern margin of the Sam Houston National Forest.[^1] A lookout at Dodge is listed under Walker County and the Texas Forest Service.[^2] A 1935 Coast and Geodetic Survey description places a survey mark centered under a bolt at the apex of the roof of the lookout house, about 0.6 mile east of the hamlet, and gives slope distances from the station to the nearest corner of the concrete footings.[^3] The Forest Fire Lookout Association places the site at 30.74587 north, 95.39027 west and lists the tower as gone.[^4] No source I could read describes what, if anything, remains at the site today, or whether it is open to visitors.
+
+[^1]: Dodge, Texas, Wikipedia, https://en.wikipedia.org/wiki/Dodge,_Texas (accessed 2026-10-10).
+[^2]: Texas - Forest Lookouts, Central US Lookouts, https://centraluslookouts.weebly.com/texas.html (accessed 2026-10-10).
+[^3]: Dodge - FOREST LOOKOUTS, Central US Lookouts, https://centraluslookouts.weebly.com/dodge.html (accessed 2026-10-10).
+[^4]: Texas Lookouts - Forest Fire Lookout Association, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/tx/ (accessed 2026-10-10).

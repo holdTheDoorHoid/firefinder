@@ -1,6 +1,7 @@
 {
   "id": "us-or-dead-horse",
   "name": "Dead Horse",
+  "summary": "Lake County, OR: a crow's nest dated to 1913, still there in 1993 and marked abandoned; no source describes the site since then.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Crow's nest",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Firelookout.com says still there in 1993 and abandoned; no source describes the site after 1993",
   "registers": [],
-  "agency": null,
+  "agency": "Fremont National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,9 +38,43 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1911,
+      "event": "other",
+      "note": "Forest Guard Lester E. Elder used Deadhorse Rim as a patrol lookout during July and August 1911 (Forest Lookouts)",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/deadhorse-rim.html"
+    },
+    {
+      "year": 1913,
+      "event": "built",
+      "note": "Firelookout.com dates the crow's nest to 1913",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/deadhorse.html"
+    },
+    {
+      "year": 1915,
+      "event": "other",
+      "note": "A June 3, 1915 document, quoted on Forest Lookouts, says fire-finding instruments will be placed on Dead Horse Rim",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/deadhorse-rim.html"
+    },
+    {
+      "year": 1993,
+      "event": "other",
+      "note": "Firelookout.com says the crow's nest was still there in 1993",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/deadhorse.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Deadhorse Rim (Forest Lookouts)",
+      "url": "https://oregonlookouts.weebly.com/deadhorse-rim.html",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
@@ -70,12 +105,47 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-dead-horse",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

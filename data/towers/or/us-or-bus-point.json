@@ -1,6 +1,7 @@
 {
   "id": "us-or-bus-point",
   "name": "Bus Point",
+  "summary": "Wasco County, OR: a crow's nest 95 feet up a large tree, dated to 1933; described as abandoned but still there, though a 2013 visitor could not find it.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "gone",
+  "design": "Crow's nest at the 95-foot level of a large tree",
+  "height_m": 29.0,
+  "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Mt. Hood National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,9 +38,50 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "Firelookout.com says the lookout was established in 1933",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/buspoint.html"
+    },
+    {
+      "year": 1933,
+      "event": "other",
+      "note": "Panorama photographs dated November 7, 1933 (Forest Lookouts); the Forest Service survey of lookout panoramas in Oregon and Washington ran from 1933 to 1935",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/bus-point-tree.html",
+      "source_urls": [
+        "https://oregonlookouts.weebly.com/bus-point-tree.html",
+        "https://www.maps.tnc.org/osbornephotos/about.html"
+      ]
+    },
+    {
+      "year": 2013,
+      "event": "other",
+      "note": "A visit on July 20, 2013 could not find the crow's nest; the post calls the site abandoned",
+      "from": "research",
+      "source_url": "https://cherylhill.net/firelookouts/2013/07/23/bus-point/"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Bus Point Tree (Forest Lookouts)",
+      "url": "https://oregonlookouts.weebly.com/bus-point-tree.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Bus Point (Every Lookout in Oregon)",
+      "url": "https://cherylhill.net/firelookouts/2013/07/23/bus-point/",
+      "kind": "reference"
+    },
+    {
+      "label": "The Osborne Panoramas (The Nature Conservancy)",
+      "url": "https://www.maps.tnc.org/osbornephotos/about.html",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
@@ -70,12 +112,48 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-bus-point",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "standing"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives standing where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

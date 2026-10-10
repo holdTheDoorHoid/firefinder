@@ -1,6 +1,7 @@
 {
   "id": "us-mt-swan-valley",
   "name": "Swan Valley",
+  "summary": "Lake County, MT lookout site listed under Montana DNRC: 1923 platform at Goat Creek G.S., 1930s tree platform; both sources say abandoned, not gone; no current state found.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,16 +17,16 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "30-foot platform in a yard (1923); 100-foot tree platform (1930s)",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Both sources say abandoned. Firelookout.com says the 100-foot tree platform was still there in the 1980s. No source says whether any of it stands now.",
   "registers": [],
-  "agency": null,
+  "agency": "Montana DNRC",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "No source we read says whether the site is open to the public."
   },
   "staffing": {
     "status": "unknown",
@@ -37,9 +38,22 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1923,
+      "event": "built",
+      "note": "30-foot platform in the yard at Goat Creek G.S.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/swanvalley.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Lake County, Montana (Forest Lookouts (Rex's Fire Lookout Page))",
+      "url": "https://montanalookouts.weebly.com/lake-county.html",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
@@ -70,12 +84,49 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-swan-valley",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

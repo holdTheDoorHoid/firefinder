@@ -1,6 +1,7 @@
 {
   "id": "us-mt-wolf-peak",
   "name": "Wolf Peak",
+  "summary": "Kootenai NF crow's nest with tent cabin, listed under 1935 and abandoned in 1941; no source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Crow's nest with a tent cabin",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Listed as abandoned in 1941; no source says what remains.",
   "registers": [],
-  "agency": null,
+  "agency": "Kootenai National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,7 +38,22 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1935,
+      "event": "other",
+      "note": "Listed under 1935 as a crow's nest with a tent cabin. The entry does not give a build date or builder.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/wolfpeak335.html"
+    },
+    {
+      "year": 1941,
+      "event": "abandoned",
+      "note": "Listed as abandoned in 1941.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/wolfpeak335.html"
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -70,12 +86,47 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-wolf-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

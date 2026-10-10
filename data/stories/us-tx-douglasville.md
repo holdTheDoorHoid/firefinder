@@ -1,0 +1,6 @@
+Douglassville sits in Cass County, Texas.[^1] A 1958 Coast and Geodetic Survey description of the station says the lookout tower has a glass-enclosed cab on a four-legged steel structure, colored gray.[^2] The same description gives its overall height as about 100 feet and places the station about five miles east of the town.[^2] Central US Lookouts lists the tower under Cass County and the Texas Forest Service.[^3] The Forest Fire Lookout Association, which spells the name Douglasville, places the site at 33.18519 north, 94.27639 west and lists the tower as gone.[^4] No source I could read describes what, if anything, remains at the site today, or whether it is open to visitors.
+
+[^1]: Douglassville, Texas, Cass County, TexasEscapes.com, https://texasescapes.com/EastTexasTowns/Douglassville-Texas.htm (accessed 2026-10-10).
+[^2]: Douglassville - FOREST LOOKOUTS, Central US Lookouts, https://centraluslookouts.weebly.com/douglassville.html (accessed 2026-10-10).
+[^3]: Texas - Forest Lookouts, Central US Lookouts, https://centraluslookouts.weebly.com/texas.html (accessed 2026-10-10).
+[^4]: Texas Lookouts - Forest Fire Lookout Association, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/tx/ (accessed 2026-10-10).

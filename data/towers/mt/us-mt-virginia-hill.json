@@ -1,6 +1,7 @@
 {
   "id": "us-mt-virginia-hill",
   "name": "Virginia Hill",
+  "summary": "Lincoln County, MT Kootenai NF crow's nest site from 1936; FFLA lists it as abandoned, not gone; firelookout.com says still there in the 1980s; no source describes it today.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Two crow's nests, about a quarter mile apart on the ridgetop",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "FFLA lists it as Abandoned, not gone. firelookout.com says it was still there in the 1980s. No source describes its current condition.",
   "registers": [],
-  "agency": null,
+  "agency": "Kootenai National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,9 +38,26 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "firelookout.com describes two crow's nests; Forest Lookouts describes a tree observation post established in the same year",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/virginiahill.html",
+      "source_urls": [
+        "https://www.firelookout.com/mt/virginiahill.html",
+        "https://montanalookouts.weebly.com/lincoln-county.html"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Lincoln County (Forest Lookouts)",
+      "url": "https://montanalookouts.weebly.com/lincoln-county.html",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
@@ -70,12 +88,47 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-virginia-hill",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

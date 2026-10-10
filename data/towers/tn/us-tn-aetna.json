@@ -1,6 +1,7 @@
 {
   "id": "us-tn-aetna",
   "name": "Aetna",
+  "summary": "Marion County, TN Division of Forestry tower at 1,915 ft, code 3-27; NGS mark FC1879 described in 1961 as a 4-legged wooden lookout with glass cab; both lists mark it removed.",
   "other_names": [],
   "country": "US",
   "region": "TN",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Four-legged wooden lookout tower with a glass-enclosed cab, about 55 feet overall, per the 1961 NGS station description",
+  "height_m": 16.8,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -44,9 +45,33 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1961,
+      "event": "other",
+      "note": "Coast and Geodetic Survey first observed and described the station (NGS mark FC1879); the description places a T.S.F.S. lookout tower on the station",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=FC1879"
+    },
+    {
+      "year": null,
+      "event": "removed",
+      "note": "Both lists mark the tower removed; no date given",
+      "from": "research",
+      "source_url": "https://tnlandforms.us/towers/",
+      "source_urls": [
+        "https://tnlandforms.us/towers/",
+        "https://easternuslookouts.weebly.com/aetna.html"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "NGS Datasheet FC1879 (Whiteside TSFS Lot SC 36) (National Geodetic Survey (ngs.noaa.gov))",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=FC1879",
+      "kind": "reference"
+    },
     {
       "label": "Aetna (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/towers/",
@@ -80,12 +105,31 @@
         "agency",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tn-aetna",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }
