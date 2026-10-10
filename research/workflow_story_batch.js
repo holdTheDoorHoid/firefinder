@@ -86,4 +86,7 @@ for (const x of results.filter(Boolean)) for (const v of x.verify || []) rows.pu
 const verdicts = {}
 for (const v of rows) verdicts[v.verdict] = (verdicts[v.verdict] || 0) + 1
 log(`Checked ${rows.length} of ${ids.length} (${MODEL}): ${JSON.stringify(verdicts)}`)
-return { verdicts, checked: rows.length, rows: rows.map((v) => ({ id: v.id, verdict: v.verdict, u: v.unsupported_removed, e: v.errors_fixed, nf: v.quotes_not_found, c: v.copied_prose_found })) }
+// Keep the completion report small: totals, plus only the rows that need a look.
+const problems = rows.filter((v) => v.verdict === 'fail' || v.quotes_not_found > 0).map((v) => ({ id: v.id, verdict: v.verdict, nf: v.quotes_not_found, note: (v.note || '').slice(0, 300) }))
+const missing = ids.filter((id) => !rows.some((v) => v.id === id))
+return { verdicts, checked: rows.length, of: ids.length, problems, missing }
