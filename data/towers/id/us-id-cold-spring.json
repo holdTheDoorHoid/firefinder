@@ -1,6 +1,7 @@
 {
   "id": "us-id-cold-spring",
   "name": "Cold Spring Lookout",
+  "summary": "Log cabin from 1931 and a 40-foot L-4 tower from 1939; the tower was gone by 1953, and the 1931 cabin remains as a rental.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,28 +17,65 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "L-4 cab",
+  "height_m": 12.2,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The 1939 tower is gone; the 1931 log cabin remains and is on the Recreational Rental Program.",
   "registers": [],
   "agency": "Clearwater National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "The cabin is on the Recreational Rental Program, according to Idaho Fire Lookouts."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "Idaho Fire Lookouts lists the site as a hike-in rental."
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1931,
+      "event": "built",
+      "note": "Log cabin. Firelookout.com says it is still there.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/coldspring268.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/coldspring268.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/cold-spring-lookout/"
+      ]
+    },
+    {
+      "year": 1939,
+      "event": "built",
+      "note": "40-foot tower with an L-4 cab.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/coldspring268.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/coldspring268.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/cold-spring-lookout/"
+      ]
+    },
+    {
+      "year": 1953,
+      "event": "abandoned",
+      "note": "Firelookout.com: lookout abandoned 1953; tower gone.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/coldspring268.html"
+    },
+    {
+      "year": 1953,
+      "event": "removed",
+      "note": "Idaho Fire Lookouts: tower removed 1953.",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/cold-spring-lookout/"
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -96,12 +134,34 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-cold-spring",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

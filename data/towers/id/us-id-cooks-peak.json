@@ -1,6 +1,7 @@
 {
   "id": "us-id-cooks-peak",
   "name": "Cooks Peak Lookout",
+  "summary": "Boundary County lookout: log cabin 1930, pole tower 1936, abandoned 1958 per Idaho sources; footings and a cabin reported on the peak; a Forest Service trail leads there.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,28 +17,90 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Log cabin (1930), then a pole tower (1936)",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "ruins",
+  "status_note": "Tower gone; footings and a decaying cabin reported on the summit in an undated hiking write-up",
   "registers": [],
   "agency": "Kaniksu National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Forest Service lists Trail #236 to the peak as a recreation trail; no closure reported in these sources"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1961"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "About one mile of single-track from the official trailhead of Trail #236 to the summit, per a hiking write-up"
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1930,
+      "event": "built",
+      "note": "Log cabin lookout",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/northern-idaho/cooks-peak-lookout/",
+      "source_urls": [
+        "https://www.idahofirelookouts.com/northern-idaho/cooks-peak-lookout/",
+        "https://www.firelookout.com/id/cookspeak.html",
+        "https://idahomagazine.com/article/marker-trees-idaho/"
+      ]
+    },
+    {
+      "year": 1932,
+      "event": "staffed_first",
+      "note": "Dan Kimball, first staff member named in the sources",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/cookspeak.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/cookspeak.html",
+        "https://www.idahofirelookouts.com/northern-idaho/cooks-peak-lookout/"
+      ]
+    },
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "Pole tower constructed",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/northern-idaho/cooks-peak-lookout/",
+      "source_urls": [
+        "https://www.idahofirelookouts.com/northern-idaho/cooks-peak-lookout/",
+        "https://www.firelookout.com/id/cookspeak.html",
+        "https://idahomagazine.com/article/marker-trees-idaho/"
+      ]
+    },
+    {
+      "year": 1958,
+      "event": "abandoned",
+      "note": "Idaho Fire Lookouts and Idaho Magazine give 1958; firelookout.com lists staff for 1960-1961",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/northern-idaho/cooks-peak-lookout/",
+      "source_urls": [
+        "https://www.idahofirelookouts.com/northern-idaho/cooks-peak-lookout/",
+        "https://idahomagazine.com/article/marker-trees-idaho/",
+        "https://www.firelookout.com/id/cookspeak.html"
+      ]
+    },
+    {
+      "year": 1961,
+      "event": "staffed_last",
+      "note": "Durward Stolp listed for 1960-1961 on firelookout.com; conflicts with the 1958 abandonment year",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/cookspeak.html"
+    },
+    {
+      "year": 1964,
+      "event": "removed",
+      "note": "firelookout.com says gone by 1964; no removal date given",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/cookspeak.html"
+    }
+  ],
   "photos": [
     {
       "file": "b8/b8ac997093c9eed7f08c2c849826fb4d732d0242.webp",
@@ -53,6 +116,26 @@
     }
   ],
   "links": [
+    {
+      "label": "Cooks Peak Trail #236 (U.S. Forest Service, Idaho Panhandle National Forests)",
+      "url": "https://www.fs.usda.gov/r01/idahopanhandle/recreation/cooks-peak-trail-236",
+      "kind": "reference"
+    },
+    {
+      "label": "Cooks Peak (NaughtyHiker)",
+      "url": "https://www.naughtyhiker.com/cooks-peak/",
+      "kind": "reference"
+    },
+    {
+      "label": "Marker Trees (Idaho Magazine)",
+      "url": "https://idahomagazine.com/article/marker-trees-idaho/",
+      "kind": "reference"
+    },
+    {
+      "label": "From the Archives, Jan. 25, 2024 (Bonners Ferry Herald)",
+      "url": "https://bonnersferryherald.com/news/2024/jan/25/from-the-archives-jan-25-2024/",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -110,6 +193,22 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-cooks-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -135,9 +234,15 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

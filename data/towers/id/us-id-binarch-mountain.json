@@ -1,6 +1,7 @@
 {
   "id": "us-id-binarch-mountain",
   "name": "Binarch Mountain Lookout",
+  "summary": "1920s 40-foot pole tower; 1934 80-foot Aermotor tower moved to Newport Hill in 1959. The Newport Hill page lists its own 40-foot Aermotor tower (developed 1938) and its 1959 cabin as removed. No source describes the original site now.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,16 +17,16 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": "Aermotor",
-  "height_m": 12.2,
+  "design": "40-foot pole tower with 7x7 cab (1920s), replaced in 1934 by an 80-foot Aermotor MC-40 steel tower with 7x7 cab",
+  "height_m": 24.4,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Tower dismantled and moved to Newport Hill in 1959. The Newport Hill page lists its 40-foot tower and 1959 cabin as removed. No source describes what remains at the original site now.",
   "registers": [],
   "agency": "Kaniksu National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Listed as a hike-in site on Kaniksu National Forest land; no source mentions a closure."
   },
   "staffing": {
     "status": "unknown",
@@ -33,11 +34,90 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": false,
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1920,
+      "event": "built",
+      "note": "40-foot pole tower with 7x7 cab and a cabin with living quarters (1920s; exact year not given)",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/binarch-mountain.html",
+      "source_urls": [
+        "https://idaholookouts.weebly.com/binarch-mountain.html",
+        "https://www.idahofirelookouts.com/northern-idaho/binarch-mountain-lookout/",
+        "https://www.firelookout.com/id/binarch.html"
+      ]
+    },
+    {
+      "year": 1930,
+      "event": "staffed",
+      "note": "Mr. and Mrs. Sutliff, per Idaho Fire Lookouts (USFS photo collection)",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/northern-idaho/binarch-mountain-lookout/"
+    },
+    {
+      "year": 1931,
+      "event": "staffed",
+      "note": "Jim Parr, per Idaho Fire Lookouts",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/northern-idaho/binarch-mountain-lookout/"
+    },
+    {
+      "year": 1934,
+      "event": "replaced",
+      "note": "80-foot Aermotor MC-40 steel tower with 7x7 cab and another cabin replaced the pole tower",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/binarch-mountain.html",
+      "source_urls": [
+        "https://idaholookouts.weebly.com/binarch-mountain.html",
+        "https://www.idahofirelookouts.com/northern-idaho/binarch-mountain-lookout/",
+        "https://www.firelookout.com/id/binarch.html"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "staffed",
+      "note": "Al Bennett, per Idaho Fire Lookouts",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/northern-idaho/binarch-mountain-lookout/"
+    },
+    {
+      "year": 1944,
+      "event": "staffed",
+      "note": "Phil McVay for 1944 to 1946, per Idaho Fire Lookouts; the same page also lists Robert L McVey for that period (Closed Season)",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/northern-idaho/binarch-mountain-lookout/"
+    },
+    {
+      "year": 1952,
+      "event": "staffed",
+      "note": "Ralph Jaszowski, per Idaho Fire Lookouts",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/northern-idaho/binarch-mountain-lookout/"
+    },
+    {
+      "year": 1955,
+      "event": "other",
+      "note": "Tower still standing in 1955 per firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/binarch.html"
+    },
+    {
+      "year": 1959,
+      "event": "relocated",
+      "note": "Tower dismantled and moved to Newport Hill. The Newport Hill page does not mention Binarch; it dates its 40-foot Aermotor tower to 1938 and its cabin living quarters to 1959.",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/binarch-mountain.html",
+      "source_urls": [
+        "https://idaholookouts.weebly.com/binarch-mountain.html",
+        "https://www.idahofirelookouts.com/northern-idaho/binarch-mountain-lookout/",
+        "https://firelookout.com/id/newporthill.html"
+      ]
+    }
+  ],
   "photos": [
     {
       "file": "cf/cf90cabe75dbb952ea938cae8cc92f320b152522.webp",
@@ -53,6 +133,11 @@
     }
   ],
   "links": [
+    {
+      "label": "Newport Hill Fire Lookout Tower (firelookout.com)",
+      "url": "https://firelookout.com/id/newporthill.html",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -113,12 +198,34 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-binarch-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

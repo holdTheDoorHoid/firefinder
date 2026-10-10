@@ -1,6 +1,7 @@
 {
   "id": "us-id-blackhawk-mountain",
   "name": "Blackhawk Mountain",
+  "summary": "Pole L-4 lookout tower near Elk City, Idaho, built about 1930 and destroyed in 1960; sources disagree on its height. No source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": "L-4",
+  "design": "pole L-4 tower",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Destroyed in 1960 per firelookout.com, Forest Lookouts and a Forest Service list; no source describes the site since then",
   "registers": [],
   "agency": "Nez Perce National Forest",
   "ownership": "federal",
@@ -33,11 +34,36 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Idaho Fire Lookouts lists it as hike-in; no route is given in the sources read"
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1930,
+      "event": "built",
+      "note": "Built about 1930 (approximate year in all sources)",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/blackhawk.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/blackhawk.html",
+        "https://idaholookouts.weebly.com/blackhawk-mountain.html",
+        "https://www.fs.usda.gov/media/259204"
+      ]
+    },
+    {
+      "year": 1960,
+      "event": "destroyed",
+      "note": "Tower and cab destroyed in 1960",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/blackhawk.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/blackhawk.html",
+        "https://idaholookouts.weebly.com/blackhawk-mountain.html",
+        "https://www.fs.usda.gov/media/259204"
+      ]
+    }
+  ],
   "photos": [
     {
       "file": "0a/0ab84defbbf5bd2623ea9933ede8e704a72655bb.webp",
@@ -53,6 +79,11 @@
     }
   ],
   "links": [
+    {
+      "label": "Nez Perce National Forest Lookouts (USDA Forest Service (list compiled April 2010 from Kresek and other sources))",
+      "url": "https://www.fs.usda.gov/media/259204",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -111,12 +142,32 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-blackhawk-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-id-grassy-mountain",
   "name": "Grassy Mountain Lookout",
+  "summary": "Shoshone County, ID: 1924 log cabin with cupola, then a 30-ft L-4 pole tower (c.1936), destroyed 1962 or late 1950s; nothing left but the view, drive-up site.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,16 +17,16 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": "L-4",
+  "design": "30-foot pole tower with L-4 cab (c.1936), replacing a log cabin with cupola built 1924",
   "height_m": 9.1,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Destroyed 1962 per Idaho Fire Lookouts and WillhiteWeb.com, or late 1950s per firelookout.com; Idaho Fire Lookouts says nothing is left but the view",
   "registers": [],
   "agency": "Coeur d'Alene National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "WillhiteWeb.com says the site can be driven to the very top, several Forest Service roads access the mountain, and the site should be open for quite some time; no closure described"
   },
   "staffing": {
     "status": "unknown",
@@ -33,11 +34,56 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "WillhiteWeb.com lists hiking distance as drive up; no trail needed"
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1924,
+      "event": "built",
+      "note": "Log cabin with cupola. Dates conflict (1924 in most sources, 1925-26 photo captions, 1927-28 packer recollection); see resolved_conflicts",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/grassymtn.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/grassymtn.html",
+        "https://www.idahofirelookouts.com/cda-region/grassy-mtn-lookout/",
+        "https://idaholookouts.weebly.com/grassy-mountain.html",
+        "https://willhiteweb.com/idaho_lookouts/grassy_mountain_lookout/pictures_065.htm"
+      ]
+    },
+    {
+      "year": 1927,
+      "event": "staffed",
+      "note": "Known staff listed as Bliss Haynes and Glenn Maryott, each marked (Diary)",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/cda-region/grassy-mtn-lookout/"
+    },
+    {
+      "year": 1936,
+      "event": "replaced",
+      "note": "30-foot pole tower with L-4 cab replaced the log cabin",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/grassymtn.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/grassymtn.html",
+        "https://idaholookouts.weebly.com/grassy-mountain.html",
+        "https://willhiteweb.com/idaho_lookouts/grassy_mountain_lookout/pictures_065.htm"
+      ]
+    },
+    {
+      "year": 1962,
+      "event": "destroyed",
+      "note": "Idaho Fire Lookouts and WillhiteWeb.com give 1962; firelookout.com gives the late 1950s",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/cda-region/grassy-mtn-lookout/",
+      "source_urls": [
+        "https://www.idahofirelookouts.com/cda-region/grassy-mtn-lookout/",
+        "https://willhiteweb.com/idaho_lookouts/grassy_mountain_lookout/pictures_065.htm",
+        "https://www.firelookout.com/id/grassymtn.html"
+      ]
+    }
+  ],
   "photos": [
     {
       "file": "3d/3d2a806d820c3bc444115bcb0916e9905b3eb1a4.webp",
@@ -53,6 +99,11 @@
     }
   ],
   "links": [
+    {
+      "label": "Grassy Mountain Lookout Site (WillhiteWeb.com)",
+      "url": "https://willhiteweb.com/idaho_lookouts/grassy_mountain_lookout/pictures_065.htm",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -112,12 +163,34 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-grassy-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

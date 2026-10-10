@@ -1,6 +1,7 @@
 {
   "id": "us-id-experimental",
   "name": "Experimental Lookout",
+  "summary": "Bonner County, ID lookout on Experimental Point: a c.1918 platform and cupola cabin, abandoned in 1932, with the cabin's removal reported but undated; sources disagree on the forest and none describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Platform atop a frame cabin, with an enclosed cupola added later",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Abandoned 1932; firelookout.com reports the cabin removed, undated; the FFLA list marks it Ground Gone",
   "registers": [],
   "agency": "Kaniksu National Forest",
   "ownership": "federal",
@@ -33,16 +34,42 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Listed as a hike-in on idahofirelookouts.com"
   },
   "rental": null,
   "events": [
     {
+      "year": 1917,
+      "event": "other",
+      "note": "University of Idaho photo titled Experiment Station Lookout, dated 1917",
+      "from": "research",
+      "source_url": "https://www.lib.uidaho.edu/digital/expforest/items/expforsav287.html"
+    },
+    {
+      "year": 1918,
+      "event": "built",
+      "note": "Platform atop a frame cabin, enclosed cupola added later; July 1918 photo shows lumber packed in to build a lookout cabin",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/experimental.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/experimental.html",
+        "https://www.idahofirelookouts.com/northern-idaho/experimental-lookout/",
+        "https://idaholookouts.weebly.com/experimental.html",
+        "https://www.lib.uidaho.edu/digital/expforest/items/expforsav286.html"
+      ]
+    },
+    {
       "year": 1932,
       "event": "abandoned",
-      "note": null,
-      "from": "idaho_fl"
+      "note": "Site abandoned; firelookout.com also reports the cabin removed, with no separate date, so no removal event is dated",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/experimental.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/experimental.html",
+        "https://www.idahofirelookouts.com/northern-idaho/experimental-lookout/",
+        "https://idaholookouts.weebly.com/experimental.html"
+      ]
     }
   ],
   "photos": [
@@ -60,6 +87,21 @@
     }
   ],
   "links": [
+    {
+      "label": "Packing lumber to build lookout cabin on Experiment Station Lookout (Experimental Forest and Savenac Nursery Archive, University of Idaho Library)",
+      "url": "https://www.lib.uidaho.edu/digital/expforest/items/expforsav286.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Experiment Station Lookout from rock slide on hill just west of it (Experimental Forest and Savenac Nursery Archive, University of Idaho Library)",
+      "url": "https://www.lib.uidaho.edu/digital/expforest/items/expforsav287.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Lookout on Experimental Point [01] (Experimental Forest and Savenac Nursery Archive, University of Idaho Library)",
+      "url": "https://www.lib.uidaho.edu/digital/expforest/items/expforsav283.html",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -118,12 +160,32 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-experimental",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-id-black-mare",
   "name": "Black Mare",
+  "summary": "Log cabin lookout in Valley County, Idaho, recorded in 1925 and abandoned in 1946; now listed as ruins. No source describes what remains or whether the public may visit.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "log cabin",
   "height_m": null,
   "status": "ruins",
-  "status_note": null,
+  "status_note": "Firelookout.com and Idaho Fire Lookouts both describe the site as ruins; neither says what is left",
   "registers": [],
   "agency": "Payette National Forest",
   "ownership": "federal",
@@ -33,11 +34,41 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Idaho Fire Lookouts lists it as hike-in; no trail route is described in the sources read"
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1925,
+      "event": "built",
+      "note": "Log cabin recorded at the site",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/blackmare.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/blackmare.html",
+        "https://idaholookouts.weebly.com/black-mare.html"
+      ]
+    },
+    {
+      "year": 1944,
+      "event": "staffed",
+      "note": "Salt Lake Tribune item, August 1944, quoted by Forest Lookouts: one family serving two lookouts, including a woman and her son checking fires at Black Mare",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/black-mare.html"
+    },
+    {
+      "year": 1946,
+      "event": "abandoned",
+      "note": "Abandoned in 1946 per firelookout.com and Forest Lookouts (citing Kresek)",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/blackmare.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/blackmare.html",
+        "https://idaholookouts.weebly.com/black-mare.html"
+      ]
+    }
+  ],
   "photos": [
     {
       "file": "78/789cc8a72c1e3602f746668c7f770feb28fbc0c8.webp",
@@ -53,6 +84,11 @@
     }
   ],
   "links": [
+    {
+      "label": "Black Mare Lookout (Keeping Watch, Center for Digital Inquiry and Learning, University of Idaho)",
+      "url": "https://cdil.lib.uidaho.edu/keeping-watch/items/black-mare.html",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -111,6 +147,20 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-black-mare",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -155,9 +205,15 @@
       "note": "idahofirelookouts.com's status is read from a short summary."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

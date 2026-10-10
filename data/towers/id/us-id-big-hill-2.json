@@ -1,6 +1,7 @@
 {
   "id": "us-id-big-hill-2",
   "name": "Big Hill",
+  "summary": "Payette NF 15 ft platform, 1930s; abandoned, dated 1942; firelookout.com says still there in 2000; current state unknown.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -18,8 +19,8 @@
   "roles": [],
   "design": null,
   "height_m": 4.6,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Abandoned. firelookout.com says it was still there in 2000; no source we read says it is gone.",
   "registers": [],
   "agency": "Payette National Forest",
   "ownership": "federal",
@@ -33,11 +34,37 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": false,
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1930,
+      "event": "built",
+      "note": "15-foot platform from the 1930s (listings give the decade only)",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/bighill307.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/bighill307.html",
+        "https://idaholookouts.weebly.com/big-hill-p.html"
+      ]
+    },
+    {
+      "year": 1942,
+      "event": "abandoned",
+      "note": "Abandonment dated 1942 on the Forest Lookouts page",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/big-hill-p.html"
+    },
+    {
+      "year": 2000,
+      "event": "other",
+      "note": "firelookout.com says the platform was still there in 2000",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/bighill307.html"
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -98,12 +125,30 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-big-hill-2",
+      "fields": [
+        "summary",
+        "height_m",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -118,12 +163,18 @@
         }
       ],
       "distance_m": null,
-      "note": "idahofirelookouts.com's status is read from a short summary."
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

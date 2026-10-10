@@ -1,6 +1,7 @@
 {
   "id": "us-id-fairfield",
   "name": "Fairfield Lookout",
+  "summary": "Camas County, ID firefinder on a grain elevator in Fairfield: approved in 1941, dated 1942, staffed in lightning storms; listed abandoned, not gone, and no source describes the elevator today.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Firefinder mounted atop a grain elevator",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Listed as abandoned, not removed; no source says whether the elevator or firefinder still stands",
   "registers": [],
   "agency": "Sawtooth National Forest",
   "ownership": "federal",
@@ -28,16 +29,31 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "emergency",
+    "as_of": "1940s"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1941,
+      "event": "other",
+      "note": "Camas County commissioners approved a lookout on top of the Fairfield elevator, as quoted from the Idaho Evening Times",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/fairfield.html"
+    },
+    {
+      "year": 1942,
+      "event": "built",
+      "note": "Firefinder placed atop the elevator, per idahofirelookouts.com's history line",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/southern-idaho/fairfield-lookout/"
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -97,12 +113,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-fairfield",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -117,12 +152,18 @@
         }
       ],
       "distance_m": null,
-      "note": "idahofirelookouts.com's status is read from a short summary."
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

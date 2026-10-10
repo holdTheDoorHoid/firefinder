@@ -1,6 +1,7 @@
 {
   "id": "us-id-benning",
   "name": "Benning",
+  "summary": "Kaniksu National Forest tower near Clark Fork: a 40-foot L-4 cab tower built in 1930, abandoned by 1951, now ruins; hike-in site.",
   "other_names": [
     "Benning Mountain"
   ],
@@ -18,10 +19,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": "L-4",
+  "design": "40-foot tower with an L-4 cab",
   "height_m": 12.2,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Abandoned in 1951; the sources describe ruins, not a standing tower.",
   "registers": [],
   "agency": "Kaniksu National Forest",
   "ownership": "federal",
@@ -35,11 +36,34 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Idaho Fire Lookouts calls the site a hike-in location with ruins."
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1930,
+      "event": "built",
+      "note": "40-foot tower with an L-4 cab",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/benning.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/benning.html",
+        "https://idaholookouts.weebly.com/benning.html"
+      ]
+    },
+    {
+      "year": 1951,
+      "event": "abandoned",
+      "note": "Abandoned in 1951; firelookout.com lists ruins from the same year",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/benning.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/benning.html",
+        "https://idaholookouts.weebly.com/benning.html"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -100,6 +124,21 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-benning",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -132,9 +171,15 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }
