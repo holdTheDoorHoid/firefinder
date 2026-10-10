@@ -1,6 +1,7 @@
 {
   "id": "us-ca-mount-pinos-aws",
   "name": "Mount Pinos - AWS Site",
+  "summary": "Ventura County AWS post built 1942-43 for aircraft spotting and fire detection; the register lists it as gone with no removal date.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -18,10 +19,10 @@
   "roles": [
     "aws"
   ],
-  "design": null,
+  "design": "standard AWS post structure with a ground cabin and cupola",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Register list shows Gone; detail page gives removal as unknown; no source describes what remains",
   "registers": [
     {
       "register": "FFLOS",
@@ -50,14 +51,16 @@
     {
       "year": 1942,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Built 1942-43 per the register's Built field; description says constructed in 1942/43",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/mount-pinos-aws-site/"
     },
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: April 16, 2020",
-      "from": "fflos"
+      "note": "Registered April 16, 2020; nominated by Brad Eells",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/mount-pinos-aws-site/"
     }
   ],
   "photos": [
@@ -79,6 +82,11 @@
       "label": "FFLOS register entry US 2016 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ca/mount-pinos-aws-site/",
       "kind": "register"
+    },
+    {
+      "label": "Mount Pinos, Airplane Spotting Station, California (PeakBagging)",
+      "url": "http://www.peakbagging.com/CALookoutPhotos/MtPinos.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -114,12 +122,31 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-mount-pinos-aws",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

@@ -1,0 +1,10 @@
+Windy Cut was a fire lookout in the Lassen National Forest, in Tehama County, California.[^1] The Former Fire Lookout Sites register gives the site an elevation of 3,767 feet (1,148 meters).[^1] The register says the lookout was built in 1936 and had an unusual design. A 1986 survey gave it the code C4.[^1]
+
+The register places the building beside Highway 32, and says it may have had other uses that it could not document.[^1] It also suggests the lookout may have watched the Deer Creek drainage to the west.[^1] A 2017 Chico Enterprise-Record article tells the story differently. It places the Windy Cut Bridge below the former lookout site, and says the bridge is six miles along a dirt road from Highway 32.[^2] The two accounts do not fit together easily, and the sources do not say which one is right.
+
+The register dates the removal to sometime after 1984 and before 1986, with no exact year given.[^1] The same entry cites the 1986 survey for the C4 code, which sits oddly beside a removal before 1986.[^1] The register added the site on December 13, 2020.[^1]
+
+In 2017 the bridge carried Forest Road 27N08 over Deer Creek, connecting Highway 32 with the Lassen Trail and Ponderosa Way.[^2] The bridge had been closed in November 2016, after an inspection found that a concrete seat had deteriorated and a girder was not safely supported.[^2] The article reports that the bridge was reopened after repairs.[^2] According to the register, Forest maps still note a helispot at the location.[^1] No source we read describes what, if anything, remains of the lookout itself, whether the site is open to visitors, or the bridge's status since 2017.[^1][^2]
+
+[^1]: Windy Cut Lookout Site, Former Fire Lookout Sites register, Forest Fire Lookout Association, http://firetower.org/lookouts/us/ca/windy-cut-lookout-site/ (accessed 2026-10-10).
+[^2]: Deer Creek bridge in Lassen Forest reopened after repairs, Chico Enterprise-Record, https://www.chicoer.com/2017/09/26/deer-creek-bridge-in-lassen-forest-reopened-after-repairs/ (accessed 2026-10-10).

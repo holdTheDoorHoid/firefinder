@@ -1,6 +1,7 @@
 {
   "id": "us-tn-bon-aqua",
   "name": "Bon Aqua Lookout Tower Site",
+  "summary": "Hickman County, TN tower site; a 2006 visit found a 60-foot steel tower on private property, but Forest Lookouts marks it removed and the state list marks it standing with a question mark.",
   "other_names": [],
   "country": "US",
   "region": "TN",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "60-foot steel tower with diagonal stairs (2006 visit report)",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Forest Lookouts marks it removed with no date; the Tennessee tower list marks it standing with a question mark; a 2006 visit found the tower standing",
   "registers": [
     {
       "register": "FFLOS",
@@ -37,8 +38,8 @@
   "agency": "Tennessee Division of Forestry",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "The 2006 visit found it on private property with no trespassing signs and a home on the site; no current access information found"
   },
   "staffing": {
     "status": "unknown",
@@ -52,10 +53,18 @@
   "rental": null,
   "events": [
     {
+      "year": 2006,
+      "event": "assessed",
+      "note": "Visit report dated February 26, 2006 by Jerry Lutes: 60-foot steel tower with diagonal stairs, on private property",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/tn/bon-aqua-lookout-tower-site/"
+    },
+    {
       "year": 2015,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: March 16, 2015",
-      "from": "fflos"
+      "note": "Registered March 16, 2015 as US 1592, TN 3",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/tn/bon-aqua-lookout-tower-site/"
     }
   ],
   "photos": [],
@@ -107,12 +116,48 @@
         "agency",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tn-bon-aqua",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

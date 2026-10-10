@@ -1,6 +1,7 @@
 {
   "id": "us-ca-west-libre",
   "name": "West Libre Lookout Site",
+  "summary": "Los Angeles County lookout built 1936 by Angeles NF; register says purposely burned 1969, another source says demolished before 1980; nothing remains at site.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "California Region 5 Plan BC-301 cabin on a 20 ft enclosed timber tower",
+  "height_m": 6.1,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Register says purposely burned by USFS personnel in 1969; peakbagging.com says demolished before 1980 with no date; peakbagging.com says nothing remains at the site",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,7 +29,7 @@
       "url": "http://firetower.org/lookouts/us/ca/west-libre-lookout-site/"
     }
   ],
-  "agency": "US Forest Service - Angeles National Forest",
+  "agency": "US Forest Service, Angeles National Forest",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -48,20 +49,27 @@
     {
       "year": 1936,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Constructed by the Angeles National Forest",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/west-libre-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/west-libre-lookout-site/",
+        "http://www.peakbagging.com/CALookoutPhotos/WestLiebre.html"
+      ]
     },
     {
       "year": 1969,
       "event": "burned",
-      "note": "'Removed' field on FFLOS detail page: \"1969 (Burned)\".",
-      "from": "fflos"
+      "note": "Register: purposely burned by USFS personnel",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/west-libre-lookout-site/"
     },
     {
       "year": 2019,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: November 3, 2019",
-      "from": "fflos"
+      "note": "Registered on the Former Fire Lookout Sites register on November 3, 2019",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/west-libre-lookout-site/"
     }
   ],
   "photos": [
@@ -83,6 +91,16 @@
       "label": "FFLOS register entry US 1791 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ca/west-libre-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "West Liebre (Lookout Site), California (Peakbagging.com)",
+      "url": "http://www.peakbagging.com/CALookoutPhotos/WestLiebre.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Lookouts Archives (Angeles Adventures)",
+      "url": "https://angelesadventures.com/tag/lookouts/",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -117,12 +135,32 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-west-libre",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

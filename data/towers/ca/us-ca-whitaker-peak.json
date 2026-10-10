@@ -1,6 +1,7 @@
 {
   "id": "us-ca-whitaker-peak",
   "name": "Whitaker Peak Lookout Site",
+  "summary": "Los Angeles County lookout built 1934 by Angeles NF; 1959 newspaper account says it was evacuated during a fire; 2012 blog says removed; 2022 trip report notes towers on the point.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "California Region 5 Plan BC-301 cabin on a 10 ft open timber tower",
+  "height_m": 3.0,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Register gives the removal date as unknown; a 2012 blog says the lookout was completely removed; a 2022 trip report describes towers on the point",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,34 +29,50 @@
       "url": "http://firetower.org/lookouts/us/ca/whitaker-peak-lookout-site/"
     }
   ],
-  "agency": "US Forest Service - Angeles National Forest",
+  "agency": "US Forest Service, Angeles National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "2012 and 2022 trip reports describe hikers walking a fire road to the tower point; no official access notice was read"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "1959"
   },
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Walk an unshaded fire road to the lookout point and the point with towers, per a 2022 trip report"
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Constructed by the Angeles National Forest",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/whitaker-peak-lookout-site/"
+    },
+    {
+      "year": 1959,
+      "event": "fire",
+      "note": "Third blaze on Whitaker Peak charred about 100 acres and forced evacuation of the lookout tower",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/whittaker-peak.html"
+    },
+    {
+      "year": 1959,
+      "event": "staffed",
+      "note": "Officials said, in an Arizona Republic report of October 19, 1959 quoted on Forest Lookouts, that a lookout at the Whitaker Peak station saw a man set a fire",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/whittaker-peak.html"
     },
     {
       "year": 2019,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: November 3, 2019",
-      "from": "fflos"
+      "note": "Registered on the Former Fire Lookout Sites register on November 3, 2019",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/whitaker-peak-lookout-site/"
     }
   ],
   "photos": [
@@ -127,6 +144,21 @@
       "kind": "register"
     },
     {
+      "label": "Whittaker Peak (Forest Lookouts)",
+      "url": "https://californialookouts.weebly.com/whittaker-peak.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Whitaker Peak (Valhikes (Blogger))",
+      "url": "https://valhikes.blogspot.com/2012/11/whitaker-peak.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Whitaker Peak - California (Peakery)",
+      "url": "https://peakery.com/whitaker-peak-california/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -159,12 +191,35 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-whitaker-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

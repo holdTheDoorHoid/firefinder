@@ -1,6 +1,7 @@
 {
   "id": "us-wi-grantsburg",
   "name": "Grantsburg Lookout Site",
+  "summary": "Burnett County, WI DNR tower on Tower Hill (1932 per register), staffed to 2011, sold and taken down in 2020; owner planned a private rebuild at Montreal, WI. Unconfirmed since.",
   "other_names": [],
   "country": "US",
   "region": "WI",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "110-foot DNR fire tower with a cab on top",
+  "height_m": 33.5,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Taken down in February 2020 and sold to a private owner, who planned to rebuild it at Montreal, WI; no source after 2020 confirms that it stands there. The original Tower Hill site is not described today.",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "Private Owner (was Wisconsin Department of Natural Resources)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Now on private property for private use; no source describes public access. The original Tower Hill site was DNR land, and no source describes it today."
   },
   "staffing": {
     "status": "unknown",
@@ -48,20 +49,53 @@
     {
       "year": 1932,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Built by the State of Wisconsin, per the register. WE ARE says 1937 (see resolved_conflicts)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wi/grantsburg-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wi/grantsburg-lookout-site/",
+        "http://firetower.org/media/4074/new-life-for-an-old-tower-_-news-_-burnettcountysentinelcom.pdf"
+      ]
+    },
+    {
+      "year": 1988,
+      "event": "staffed",
+      "note": "Dorene Snyder worked as a smoke spotter in the tower from 1988 to 2011",
+      "from": "research",
+      "source_url": "https://thewearenetwork.com/dnr-tower-proudly-served-for-88-years/",
+      "source_urls": [
+        "https://thewearenetwork.com/dnr-tower-proudly-served-for-88-years/",
+        "http://firetower.org/media/4074/new-life-for-an-old-tower-_-news-_-burnettcountysentinelcom.pdf"
+      ]
+    },
+    {
+      "year": 2011,
+      "event": "staffed_last",
+      "note": "Burnett County DNR staff continued to staff its towers until 2011",
+      "from": "research",
+      "source_url": "http://firetower.org/media/4074/new-life-for-an-old-tower-_-news-_-burnettcountysentinelcom.pdf",
+      "source_urls": [
+        "http://firetower.org/media/4074/new-life-for-an-old-tower-_-news-_-burnettcountysentinelcom.pdf",
+        "http://firetower.org/lookouts/us/wi/grantsburg-lookout-site/"
+      ]
     },
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: March 25, 2020",
-      "from": "fflos"
+      "note": "Registered March 25, 2020, nominated by Priscilla Bauer",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wi/grantsburg-lookout-site/"
     },
     {
       "year": 2020,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"2020\".",
-      "from": "fflos"
+      "note": "Sold to a private owner and disassembled in February 2020; reported as headed for Montreal, WI",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wi/grantsburg-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wi/grantsburg-lookout-site/",
+        "http://firetower.org/media/4074/new-life-for-an-old-tower-_-news-_-burnettcountysentinelcom.pdf"
+      ]
     }
   ],
   "photos": [
@@ -88,6 +122,11 @@
       "label": "FFLOS register entry US 1951 (firetower.org)",
       "url": "http://firetower.org/media/4074/new-life-for-an-old-tower-_-news-_-burnettcountysentinelcom.pdf",
       "kind": "register"
+    },
+    {
+      "label": "DNR tower proudly served for 88 years (The WE ARE Network)",
+      "url": "https://thewearenetwork.com/dnr-tower-proudly-served-for-88-years/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
@@ -120,12 +159,33 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wi-grantsburg",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

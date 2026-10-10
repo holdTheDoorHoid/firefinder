@@ -1,6 +1,7 @@
 {
   "id": "us-wa-sulphur-point",
   "name": "Sulphur Point Lookout Site",
+  "summary": "Whatcom County 20-foot L-4 tower built 1935, a 1942 AWS spotting post, abandoned 1959; remnants seen on a 2014 visit, nothing confirmed since.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "20-foot wooden tower with an L-4 cab",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The register says it was abandoned in 1959 and is gone. A Forest Lookouts page says destroyed, with no date. WillhiteWeb found remnants on a 2014 visit.",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,31 +32,79 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Off-trail route on Forest Service land, starting from FR 12 and an abandoned road with a blockade. No closure found in the sources."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "WillhiteWeb gives 1.8 miles round trip and 846 feet of cumulative gain, with a creek crossing, a lava field and a steep forested hill. The tower is gone, so there is nothing to climb."
   },
   "rental": null,
   "events": [
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "20-foot wooden tower with an L-4 cab constructed on the site",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/sulphur-point-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/sulphur-point-lookout-site/",
+        "https://www.firelookout.com/wa/sulphurpoint.html",
+        "http://willhiteweb.com/washington/fire_lookouts/sulphur_butte_lookout/baker_lake_215.htm"
+      ]
+    },
+    {
+      "year": 1935,
+      "event": "other",
+      "note": "Panorama photos taken September 11, 1935 by Wernstedt",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/sulphur-point-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/sulphur-point-lookout-site/",
+        "https://washingtonlookouts.weebly.com/sulphur-butte.html"
+      ]
+    },
+    {
+      "year": 1942,
+      "event": "staffed",
+      "note": "Used by the AWS to spot enemy aircraft threats; activated March 21 to August 24, 1942 under the Bellingham Filter Center",
+      "from": "research",
+      "source_url": "https://washingtonlookouts.weebly.com/sulphur-butte.html",
+      "source_urls": [
+        "https://washingtonlookouts.weebly.com/sulphur-butte.html",
+        "http://willhiteweb.com/washington/fire_lookouts/sulphur_butte_lookout/baker_lake_215.htm"
+      ]
+    },
+    {
+      "year": 1959,
+      "event": "abandoned",
+      "note": "Abandoned; register and FireLookout.com say gone; Forest Lookouts says destroyed, undated",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/sulphur-point-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/sulphur-point-lookout-site/",
+        "https://www.firelookout.com/wa/sulphurpoint.html",
+        "http://willhiteweb.com/washington/fire_lookouts/sulphur_butte_lookout/baker_lake_215.htm"
+      ]
+    },
+    {
+      "year": 2014,
+      "event": "other",
+      "note": "WillhiteWeb visit found remnants of the tower, living quarters, a storage cellar and two firewood piles",
+      "from": "research",
+      "source_url": "http://willhiteweb.com/washington/fire_lookouts/sulphur_butte_lookout/baker_lake_215.htm"
     },
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: April 3, 2020",
-      "from": "fflos"
+      "note": "Registered April 3, 2020; nominated by Tammy McLeod",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/sulphur-point-lookout-site/"
     }
   ],
   "photos": [
@@ -139,6 +188,16 @@
       "kind": "register"
     },
     {
+      "label": "Sulphur Butte (Forest Lookouts)",
+      "url": "https://washingtonlookouts.weebly.com/sulphur-butte.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Sulphur Butte Lookout - Baker Lake Sights (WillhiteWeb.com)",
+      "url": "http://willhiteweb.com/washington/fire_lookouts/sulphur_butte_lookout/baker_lake_215.htm",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Washington lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wa/",
       "kind": "association"
@@ -183,12 +242,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-sulphur-point",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

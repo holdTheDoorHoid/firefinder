@@ -1,6 +1,7 @@
 {
   "id": "us-wa-stafford",
   "name": "Stafford Lookout Site",
+  "summary": "Kittitas County site: 1933 camp, L-4 cab built 1935, abandoned around 1966; footings and anchors remain on a one-mile old-road hike.",
   "other_names": [],
   "country": "US",
   "region": "WA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4 cab",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The register says the lookout was abandoned in 1966 and is no longer standing; FireLookout.com also lists it as gone.",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,31 +32,79 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Directions run from the North Fork Teanaway Road to the Stafford Creek Road (9703) on Wenatchee National Forest land; WillhiteWeb says high clearance is best and the road can be walked."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "WillhiteWeb gives one mile one-way with 700 feet of gain. A 2020 trip report describes it as an old road leading to the old lookout site. Nothing is left to climb."
   },
   "rental": null,
   "events": [
     {
+      "year": 1933,
+      "event": "staffed",
+      "note": "B. D. March named as Stafford Creek lookout-fireman; WillhiteWeb says the site was a camp unless an earlier structure existed",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/wa/stafford.html",
+      "source_urls": [
+        "https://www.firelookout.com/wa/stafford.html",
+        "http://willhiteweb.com/fire_lookouts/stafford_creek_lookout/cle_elum_048.htm"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "other",
+      "note": "Panoramas taken from the ground; trees cut to open the view",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/stafford-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/stafford-lookout-site/",
+        "http://willhiteweb.com/fire_lookouts/stafford_creek_lookout/cle_elum_048.htm"
+      ]
+    },
+    {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "L-4 cab constructed on the site",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/stafford-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/stafford-lookout-site/",
+        "https://www.firelookout.com/wa/stafford.html",
+        "http://willhiteweb.com/fire_lookouts/stafford_creek_lookout/cle_elum_048.htm"
+      ]
+    },
+    {
+      "year": 1938,
+      "event": "other",
+      "note": "Forest Service building a combination garage and woodshed (WillhiteWeb)",
+      "from": "research",
+      "source_url": "http://willhiteweb.com/fire_lookouts/stafford_creek_lookout/cle_elum_048.htm"
+    },
+    {
+      "year": 1966,
+      "event": "abandoned",
+      "note": "Abandoned; register says no longer standing, WillhiteWeb says everything abandoned around that year",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/stafford-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wa/stafford-lookout-site/",
+        "https://www.firelookout.com/wa/stafford.html",
+        "http://willhiteweb.com/fire_lookouts/stafford_creek_lookout/cle_elum_048.htm"
+      ]
     },
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: April 13, 2020",
-      "from": "fflos"
+      "note": "Registered April 13, 2020; nominated by Tammy McLeod",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wa/stafford-lookout-site/"
     }
   ],
   "photos": [
@@ -103,6 +152,16 @@
       "kind": "register"
     },
     {
+      "label": "Stafford Creek Lookout Site (WillhiteWeb.com)",
+      "url": "http://willhiteweb.com/fire_lookouts/stafford_creek_lookout/cle_elum_048.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Stafford Lookout trip report, April 29, 2020 (Washington Trails Association)",
+      "url": "https://www.wta.org/go-hiking/trip-reports/trip_report-2020-04-29-4093243884",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Washington lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wa/",
       "kind": "association"
@@ -147,12 +206,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wa-stafford",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

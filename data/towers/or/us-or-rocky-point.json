@@ -1,6 +1,7 @@
 {
   "id": "us-or-rocky-point",
   "name": "Rocky Point Lookout Site",
+  "summary": "Gone: a cabin built in the 1920s and gone by the 1950s. No source found describes what, if anything, remains at the site today.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "cabin",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Cabin gone by the 1950s. No source describes the site now.",
   "registers": [
     {
       "register": "FFLOS",
@@ -46,10 +47,33 @@
   "rental": null,
   "events": [
     {
+      "year": 1920,
+      "event": "built",
+      "note": "Decade only: sources say a cabin was built in the 1920s",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/rocky-point-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/rocky-point-lookout-site/",
+        "https://www.firelookout.com/or/rockypoint.html"
+      ]
+    },
+    {
+      "year": 1950,
+      "event": "removed",
+      "note": "Decade only: cabin gone by the 1950s; no removal date or cause given",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/rocky-point-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/rocky-point-lookout-site/",
+        "https://www.firelookout.com/or/rockypoint.html"
+      ]
+    },
+    {
       "year": 2010,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: November 15, 2010",
-      "from": "fflos"
+      "note": "Registered November 15, 2010; nominated by Ray Kresek",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/rocky-point-lookout-site/"
     }
   ],
   "photos": [],
@@ -101,12 +125,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-rocky-point",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

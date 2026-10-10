@@ -1,6 +1,7 @@
 {
   "id": "us-nj-windbeam",
   "name": "Windbeam Lookout Site",
+  "summary": "Passaic Co., NJ tower built on Windbeam Mountain in 1920; moved in 1971 and 1983, and now stands at Ramapo Mountain State Forest, not on the original summit.",
   "other_names": [],
   "country": "US",
   "region": "NJ",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Steel angle-iron tower with a one-room penthouse for the warden (1931 newspaper description); the moved tower is an Aermotor, LS-40 or LS-42 per the two registers, with a 7'x7' cab",
   "height_m": 13.7,
-  "status": "gone",
-  "status_note": null,
+  "status": "relocated",
+  "status_note": "The Windbeam Mountain site is gone. The tower was moved and has stood at Ramapo Mountain State Forest since 1983, as the Ramapo Lookout (US 45, NJ 2).",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,15 +29,15 @@
       "url": "http://firetower.org/lookouts/us/nj/windbeam-lookout-site/"
     }
   ],
-  "agency": "North Jersey District Water Supply",
+  "agency": "NJ Forest Fire Service administers the moved tower (NHLR); North Jersey District Water Supply is listed for the original site (FFLOS)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "2007"
   },
   "visit": {
     "climbable": null,
@@ -48,14 +49,48 @@
     {
       "year": 1920,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Built with funds from the Ringwood Company; the state annual report says in service from June 15, 1920",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/windbeam.html",
+      "source_urls": [
+        "https://easternuslookouts.weebly.com/windbeam.html",
+        "http://firetower.org/lookouts/us/nj/windbeam-lookout-site/"
+      ]
+    },
+    {
+      "year": 1971,
+      "event": "relocated",
+      "note": "Moved off Windbeam Mountain. The Windbeam entry says Pierson Ridge; the Pierson Ridge entry says Ringwood State Park, with National Guard and volunteer labor",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/nj/windbeam-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/nj/windbeam-lookout-site/",
+        "http://firetower.org/lookouts/us/nj/pierson-ridge-tower-site/"
+      ]
     },
     {
       "year": 1971,
       "event": "removed",
       "note": "'Removed' field on FFLOS detail page: \"1971\".",
       "from": "fflos"
+    },
+    {
+      "year": 1983,
+      "event": "relocated",
+      "note": "Remains moved to Ramapo Mountain State Forest and rebuilt from 1983 per the Pierson Ridge entry; NHLR says present location since 1983",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/nj/pierson-ridge-tower-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/nj/pierson-ridge-tower-site/",
+        "http://nhlr.org/lookouts/us/nj/ramapo-lookout/"
+      ]
+    },
+    {
+      "year": 2007,
+      "event": "staffed",
+      "note": "NHLR visit report dated May 1, 2007 for the Ramapo Lookout answers yes to Staffed?",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/nj/ramapo-lookout/"
     },
     {
       "year": 2014,
@@ -83,6 +118,21 @@
       "label": "FFLOS register entry US 1551 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/nj/windbeam-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Pierson Ridge Tower Site (Former Fire Lookout Sites Register (firetower.org))",
+      "url": "http://firetower.org/lookouts/us/nj/pierson-ridge-tower-site/",
+      "kind": "reference"
+    },
+    {
+      "label": "Ramapo Lookout (National Historic Lookout Register (nhlr.org))",
+      "url": "http://nhlr.org/lookouts/us/nj/ramapo-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "List of New Jersey Forest Fire Service fire towers (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/List_of_New_Jersey_Forest_Fire_Service_fire_towers",
+      "kind": "reference"
     },
     {
       "label": "Windbeam (easternuslookouts.weebly.com)",
@@ -115,12 +165,32 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nj-windbeam",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

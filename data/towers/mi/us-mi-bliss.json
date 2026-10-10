@@ -1,6 +1,7 @@
 {
   "id": "us-mi-bliss",
   "name": "Bliss Lookout Site",
+  "summary": "Emmet County, Michigan, state lookout at 950 ft; the register says it was believed removed about 2008, and a communications tower now occupies the site.",
   "other_names": [],
   "country": "US",
   "region": "MI",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Believed removed about 2008; the register says a communications tower now occupies the site",
   "registers": [
     {
       "register": "FFLOS",
@@ -39,17 +40,36 @@
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
   "rental": null,
   "events": [
     {
+      "year": 1982,
+      "event": "other",
+      "note": "Bliss Lookout Tower is listed among the landmarks on a 1982 USGS topographic sheet (Pastmaps)",
+      "from": "research",
+      "source_url": "https://pastmaps.com/map/bliss-emmet-county-mi-usgs-topo-1982-p1983"
+    },
+    {
+      "year": 2008,
+      "event": "removed",
+      "note": "Believed removed about 2008 per the register; the regional list gives 'Removed' with no date",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/mi/bliss-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/mi/bliss-lookout-site/",
+        "https://easternuslookouts.weebly.com/bliss.html"
+      ]
+    },
+    {
       "year": 2014,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: March 14, 2014",
-      "from": "fflos"
+      "note": "Date registered March 14, 2014",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/mi/bliss-lookout-site/"
     }
   ],
   "photos": [],
@@ -58,6 +78,11 @@
       "label": "FFLOS register entry US 1546 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/mi/bliss-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "1982 Map of Bliss, MI (Pastmaps)",
+      "url": "https://pastmaps.com/map/bliss-emmet-county-mi-usgs-topo-1982-p1983",
+      "kind": "reference"
     },
     {
       "label": "Bliss (easternuslookouts.weebly.com)",
@@ -88,12 +113,31 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mi-bliss",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

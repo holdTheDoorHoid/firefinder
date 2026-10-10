@@ -1,6 +1,7 @@
 {
   "id": "us-wy-blue-ridge",
   "name": "Blue Ridge Lookout",
+  "summary": "Shoshone NF stone-and-rock fire lookout in the Wind River Range, built by the CCC in 1938 and NHLR-registered in 1998; sources disagree on whether the structure still stands.",
   "other_names": [],
   "country": "US",
   "region": "WY",
@@ -16,10 +17,10 @@
   "material": "stone",
   "material_from": "ffla",
   "roles": [],
-  "design": null,
+  "design": "open rock structure with fire finder, flag, and stone wall, reached by stone stairs",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Sources disagree: firelookout.com says Gone; the Association's Wyoming list says Stone Walls, Abandoned; no source describes the present condition",
   "registers": [
     {
       "register": "NHLR",
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "A family blog describes a one-mile round-trip hike to the lookout; the Forest Service is not cited for access and no closure is described in the sources read"
   },
   "staffing": {
     "status": "unknown",
@@ -41,15 +42,27 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "About one mile round trip from a trailhead on the Sinks Canyon-Louis Lake Road, about 23 miles southwest of Lander (per a family blog); check current conditions with the Shoshone National Forest"
   },
   "rental": null,
   "events": [
     {
+      "year": 1938,
+      "event": "built",
+      "note": "Built by the CCC; the groundhouse, now the Louis Lake Guard Station, was also CCC-built",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wy/blue-ridge-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/wy/blue-ridge-lookout/",
+        "https://www.havemediawilltravel.com/blue-ridge-lookout-a-perfect-family-hike/"
+      ]
+    },
+    {
       "year": 1998,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 22, 1998",
-      "from": "nhlr"
+      "note": "Registered August 22, 1998 as US 255, WY 6; nominated by Burns Davison, district ranger, Washakie RD",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wy/blue-ridge-lookout/"
     }
   ],
   "photos": [
@@ -145,6 +158,11 @@
       "kind": "register"
     },
     {
+      "label": "Blue Ridge Lookout: A Perfect Family Hike (Have Media Will Travel (havemediawilltravel.com))",
+      "url": "https://www.havemediawilltravel.com/blue-ridge-lookout-a-perfect-family-hike/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Wyoming lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wy/",
       "kind": "association"
@@ -189,12 +207,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wy-blue-ridge",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -209,12 +246,18 @@
         }
       ],
       "distance_m": null,
-      "note": "NHLR lists lookouts that were standing when registered. firelookout.com lists it, but not on its map of standing lookouts."
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

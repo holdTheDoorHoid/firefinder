@@ -1,6 +1,7 @@
 {
   "id": "us-wv-sharp-knob",
   "name": "Sharp Knob Tower Site",
+  "summary": "Pocahontas County, WV Forest Service lookout built 1936 by CCC labor (40 ft, 14x14 cab); last staffed 1970; now a former site, with no source found describing it today.",
   "other_names": [],
   "country": "US",
   "region": "WV",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "40' steel tower with a 14'x14' cab",
   "height_m": 12.2,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Register lists it as a former lookout site, with no removal date or removal field; no source read says whether anything stands today",
   "registers": [
     {
       "register": "FFLOS",
@@ -48,14 +49,32 @@
     {
       "year": 1936,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Built with CCC labor; 40-foot steel tower with a 14x14 cab; on the Gauley Ranger District",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wv/sharp-knob-tower-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wv/sharp-knob-tower-site/",
+        "https://easternuslookouts.weebly.com/sharps-knob.html",
+        "http://nhlr.org/media/5663/monongahela-nf-fire-towers.pdf"
+      ]
+    },
+    {
+      "year": 1970,
+      "event": "staffed_last",
+      "note": "Last year the lookout was staffed",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wv/sharp-knob-tower-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wv/sharp-knob-tower-site/",
+        "https://easternuslookouts.weebly.com/sharps-knob.html"
+      ]
     },
     {
       "year": 2017,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 26, 2017",
-      "from": "fflos"
+      "note": "Registered January 26, 2017; nominated by Brian M. Powell",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wv/sharp-knob-tower-site/"
     }
   ],
   "photos": [
@@ -77,6 +96,11 @@
       "label": "FFLOS register entry US 1655 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wv/sharp-knob-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Fire Towers: Fifty Years of Early Detection and Fire Protection (USDA Forest Service, Monongahela National Forest)",
+      "url": "http://nhlr.org/media/5663/monongahela-nf-fire-towers.pdf",
+      "kind": "reference"
     },
     {
       "label": "FFLA West Virginia lookout list (firelookout.org)",
@@ -124,12 +148,48 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wv-sharp-knob",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

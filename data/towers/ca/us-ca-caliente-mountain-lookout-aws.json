@@ -1,6 +1,7 @@
 {
   "id": "us-ca-caliente-mountain-lookout-aws",
   "name": "Caliente Mountain Lookout-AWS Site",
+  "summary": "Aircraft Warning Service ground cabin on Caliente Mountain (San Luis Obispo County), built 1943; collapsed by 2013 and listed as removed; access restricted.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -18,10 +19,10 @@
   "roles": [
     "aws"
   ],
-  "design": null,
+  "design": "Ground cabin with an observation cupola, built for Aircraft Warning Service use",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Cabin collapsed by 2013; the register lists the structure as removed, with collapsed remains",
   "registers": [
     {
       "register": "FFLOS",
@@ -33,8 +34,8 @@
   "agency": "United States Army Ground Observer Corps",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "A February 2013 blog post says ranchers and oil-company security blocked the writer's attempt on the south side of the peak, a climb he called off-limits; no public route is described"
   },
   "staffing": {
     "status": "unknown",
@@ -48,16 +49,36 @@
   "rental": null,
   "events": [
     {
+      "year": 1935,
+      "event": "other",
+      "note": "District Ranger E. M. Lyda planned to investigate a lookout on Caliente peak (Santa Maria Times, October 1935, as quoted by Forest Lookouts)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/caliente-mountain.html",
+      "source_urls": [
+        "https://californialookouts.weebly.com/caliente-mountain.html",
+        "http://firetower.org/lookouts/us/ca/caliente-mountain-lookout-aws-site/"
+      ]
+    },
+    {
       "year": 1943,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Built for Aircraft Warning Service use; ground cabin with observation cupola",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/caliente-mountain-lookout-aws-site/"
+    },
+    {
+      "year": 2012,
+      "event": "other",
+      "note": "Cabin found fully collapsed, per a February 2013 blog post; the blogger estimates it fell before early May 2012 from summit entries",
+      "from": "research",
+      "source_url": "http://davidstillman.blogspot.com/2013/02/caliente-mountain-lookout-hpscuyama.html"
     },
     {
       "year": 2019,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: December 20, 2019",
-      "from": "fflos"
+      "note": "Registered December 20, 2019 as US 1861, CA 56, nominated by Brad Eells",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/caliente-mountain-lookout-aws-site/"
     }
   ],
   "photos": [
@@ -117,6 +138,11 @@
       "kind": "register"
     },
     {
+      "label": "Caliente Mountain (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Caliente_Mountain",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -163,12 +189,32 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-caliente-mountain-lookout-aws",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

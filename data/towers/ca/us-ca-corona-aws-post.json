@@ -1,6 +1,7 @@
 {
   "id": "us-ca-corona-aws-post",
   "name": "Corona AWS Post Site",
+  "summary": "WWII Aircraft Warning Service observation tower at Corona, filed in the register with former fire lookouts; register's circa 1934 date conflicts with its own description, and no source describes remains at the site.",
   "other_names": [
     "Corona AWS"
   ],
@@ -22,8 +23,8 @@
   ],
   "design": null,
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Register lists removal as Unknown and the exact location as unknown; no source describes a standing structure or remains at the site",
   "registers": [
     {
       "register": "FFLOS",
@@ -32,7 +33,7 @@
       "url": "http://firetower.org/lookouts/us/ca/corona-aws-post-site/"
     }
   ],
-  "agency": "United States Army Ground Observer Corps",
+  "agency": "United States Army Ground Observer Corps (civilian Aircraft Warning Service)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -52,8 +53,20 @@
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register Built field says Circa 1934, but its description places the post in World War II and volunteers were organized into the Aircraft Warning Service in May 1941; date conflicts",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/corona-aws-post-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/corona-aws-post-site/",
+        "https://en.wikipedia.org/wiki/Aircraft_Warning_Service"
+      ]
+    },
+    {
+      "year": 1944,
+      "event": "other",
+      "note": "Aircraft Warning Service, of which this post was part, deactivated May 29, 1944 (service-wide date, not a post-specific one)",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Aircraft_Warning_Service"
     },
     {
       "year": 2019,
@@ -155,6 +168,11 @@
       "kind": "register"
     },
     {
+      "label": "Aircraft Warning Service (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Aircraft_Warning_Service",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -186,12 +204,46 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-corona-aws-post",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

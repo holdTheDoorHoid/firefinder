@@ -1,6 +1,7 @@
 {
   "id": "us-va-deer-head",
   "name": "Deer Head Lookout",
+  "summary": "Register visit report from May 2022 found the tower standing but damaged; a lookout index lists it as gone. No later report found.",
   "other_names": [
     "Deerhead Mountain"
   ],
@@ -18,9 +19,9 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "International Derrick, 1930 model, between 40 and 60 feet tall",
   "height_m": null,
-  "status": "gone",
+  "status": "standing",
   "status_note": null,
   "registers": [
     {
@@ -30,7 +31,7 @@
       "url": "http://nhlr.org/lookouts/us/va/deer-head-lookout/"
     }
   ],
-  "agency": null,
+  "agency": "Virginia Department of Forestry",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -50,14 +51,23 @@
     {
       "year": 1930,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register gives 1930 as the build year",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/deer-head-lookout/"
+    },
+    {
+      "year": 2022,
+      "event": "assessed",
+      "note": "Visit report of May 23, 2022 by Rocco Germani: cab ceiling collapsed, roof parts missing, what appears to be an antenna mounted on a corner of the cab",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/deer-head-lookout/"
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: February 27, 2022",
-      "from": "nhlr"
+      "note": "Registered February 27, 2022",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/va/deer-head-lookout/"
     }
   ],
   "photos": [
@@ -123,12 +133,29 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-va-deer-head",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "standing"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -139,12 +166,18 @@
         }
       ],
       "distance_m": null,
-      "note": "NHLR lists lookouts that were standing when registered."
+      "note": "Research (2026-10-10) gives standing where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

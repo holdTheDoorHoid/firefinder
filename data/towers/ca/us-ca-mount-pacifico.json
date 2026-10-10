@@ -1,6 +1,7 @@
 {
   "id": "us-ca-mount-pacifico",
   "name": "Mount Pacifico Lookout Site",
+  "summary": "Mount Pacifico's 1932 open lookout tower with no cab, known from one 1932 Los Angeles Times story and a photo; removal unknown and summit metal posts unconfirmed.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Open tower with steel rungs to a small platform (1932 Los Angeles Times story, as quoted by Angeles Adventures); no cab, per Angeles Adventures' comparison with other San Gabriel lookouts",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Register lists removal as Unknown; a visitor found possible metal posts on the summit but could not link them to the lookout",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "US Forest Service - Angeles National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Wikipedia describes the summit as reached by the Pacific Crest Trail on Angeles National Forest land; no source says whether the lookout site itself is open"
   },
   "staffing": {
     "status": "unknown",
@@ -41,21 +42,34 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "The Pacific Crest Trail is the main hiking route to the summit; Wikipedia describes a strenuous 11.9-mile route"
   },
   "rental": null,
   "events": [
     {
       "year": 1932,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register gives 1932; the December 4, 1932 Los Angeles Times story is the only source for the structure (as quoted by Angeles Adventures)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/mount-pacifico-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/mount-pacifico-lookout-site/",
+        "https://angelesadventures.com/mount-pacifico-lookout/"
+      ]
+    },
+    {
+      "year": 1986,
+      "event": "other",
+      "note": "Structure not listed in Mark V. Thornton's 1986 Fire Lookout Inventory",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/mount-pacifico-lookout-site/"
     },
     {
       "year": 2019,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: November 3, 2019",
-      "from": "fflos"
+      "note": "Registered November 3, 2019 as US 1786, CA 32; nominated by Brad Eells",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/mount-pacifico-lookout-site/"
     }
   ],
   "photos": [
@@ -91,6 +105,16 @@
       "kind": "register"
     },
     {
+      "label": "Pacifico Mountain (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Pacifico_Mountain",
+      "kind": "reference"
+    },
+    {
+      "label": "Mount Pacifico Lookout (Angeles Adventures)",
+      "url": "https://angelesadventures.com/mount-pacifico-lookout/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -122,12 +146,49 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-mount-pacifico",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

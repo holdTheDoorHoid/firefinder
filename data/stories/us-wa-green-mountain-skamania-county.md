@@ -1,0 +1,5 @@
+The lookout site sits at 4,442 feet in the Gifford Pinchot National Forest, about 16 miles northwest of Stevenson in Skamania County.[^1][^2] The U.S. Forest Service administers the land.[^1] The site appears in the Former Fire Lookout Sites Register, which covers former lookout sites, as number US 1320, WA 220.[^1] The register gives its position as 45.861070 N, 122.124270 W.[^1] It says a tower was built here in the 1930s and is now gone.[^1][^2] The site entered the register on June 24, 2012, after a nomination by Ray Kresek.[^1] The Forest Fire Lookout Association's Washington list shows the site as "Tower Gone."[^3] None of the cited sources describes what, if anything, remains on the mountain today.
+
+[^1]: Green Mountain Lookout Site (Skamania County), Former Fire Lookout Sites, http://firetower.org/lookouts/us/wa/green-mountain-lookout-site-skamania-county/ (accessed 2026-10-10).
+[^2]: Green Mtn. Fire Lookout Tower, firelookout.com, https://www.firelookout.com/wa/greenmtn154.html (accessed 2026-10-10).
+[^3]: Fire lookouts in Washington, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/wa/ (accessed 2026-10-10).

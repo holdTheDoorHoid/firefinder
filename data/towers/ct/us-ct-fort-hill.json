@@ -1,6 +1,7 @@
 {
   "id": "us-ct-fort-hill",
   "name": "Fort Hill Tower Site",
+  "summary": "Groton, CT fire tower on Fort Hill: lookout stationed 1932, smoke spotted 1938; register says the steel tower was moved to North Stonington.",
   "other_names": [],
   "country": "US",
   "region": "CT",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "Steel tower (per register and Forest Lookouts)",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "relocated",
+  "status_note": "Register says the steel tower was eventually moved to North Stonington. Forest Lookouts marks it Removed. The new location is not confirmed.",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,7 +29,7 @@
       "url": "http://firetower.org/lookouts/us/ct/fort-hill-tower-site/"
     }
   ],
-  "agency": null,
+  "agency": "State of Connecticut (per AHGP guide: used by the State as a fire lookout)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -46,10 +47,32 @@
   "rental": null,
   "events": [
     {
+      "year": 1932,
+      "event": "staffed",
+      "note": "Tower at Chasanba lodge used to station a lookout (item dated April 2, 1932, quoted from The Day by Forest Lookouts)",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/fort-hill.html"
+    },
+    {
+      "year": 1938,
+      "event": "fire",
+      "note": "Groton fire tower spotted smoke on Fort Hill the day before the item dated April 25, 1938; fire under control by 3:22",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/fort-hill.html"
+    },
+    {
+      "year": 1951,
+      "event": "other",
+      "note": "Item dated February 24, 1951: new tower being built on Stewart Hill to replace the Fort Hill tower",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/stewart-hill.html"
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 9, 2008",
-      "from": "fflos"
+      "note": "Date registered September 9, 2008 (US 66, CT 5)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ct/fort-hill-tower-site/"
     }
   ],
   "photos": [],
@@ -58,6 +81,16 @@
       "label": "FFLOS register entry US 66 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ct/fort-hill-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Stewart Hill (Forest Lookouts (easternuslookouts.weebly.com))",
+      "url": "https://easternuslookouts.weebly.com/stewart-hill.html",
+      "kind": "reference"
+    },
+    {
+      "label": "A Historic Journey through Groton Connecticut (AHGP)",
+      "url": "https://ahgp.org/ct/a-historic-journey-through-groton-connecticut.html",
+      "kind": "reference"
     },
     {
       "label": "Fort Hill (easternuslookouts.weebly.com)",
@@ -88,12 +121,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ct-fort-hill",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

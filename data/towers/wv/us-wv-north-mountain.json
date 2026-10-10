@@ -1,6 +1,7 @@
 {
   "id": "us-wv-north-mountain",
   "name": "North Mountain Tower Site",
+  "summary": "Berkeley County tower on the Monongahela dated 1935 (1929 in one list); removed in 2008; no source describes what remains at the site.",
   "other_names": [],
   "country": "US",
   "region": "WV",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Removed in 2008 according to the register and Eastern US Lookouts; no source describes what remains at the site",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,7 +29,7 @@
       "url": "http://firetower.org/lookouts/us/wv/north-mountain-tower-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service (register); West Virginia Division of Forestry (Eastern US Lookouts)",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -46,22 +47,40 @@
   "rental": null,
   "events": [
     {
+      "year": 1929,
+      "event": "other",
+      "note": "Eastern US Lookouts entry: 'a tower was erected' in 1929; disagrees with the register and forest history",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/north-mountain.html"
+    },
+    {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register 'Built' field; forest history lists North Mountain Tower (1935) among the towers built by the CCC",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wv/north-mountain-tower-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wv/north-mountain-tower-site/",
+        "http://nhlr.org/media/5663/monongahela-nf-fire-towers.pdf"
+      ]
     },
     {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 16, 2008",
-      "from": "fflos"
+      "note": "Register entry dated September 16, 2008",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wv/north-mountain-tower-site/"
     },
     {
       "year": 2008,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"2008\".",
-      "from": "fflos"
+      "note": "Register and Eastern US Lookouts both give 2008 for removal",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wv/north-mountain-tower-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wv/north-mountain-tower-site/",
+        "https://easternuslookouts.weebly.com/north-mountain.html"
+      ]
     }
   ],
   "photos": [],
@@ -70,6 +89,11 @@
       "label": "FFLOS register entry US 165 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wv/north-mountain-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Monongahela National Forest fire towers history (PDF) (National Historic Lookout Register)",
+      "url": "http://nhlr.org/media/5663/monongahela-nf-fire-towers.pdf",
+      "kind": "reference"
     },
     {
       "label": "FFLA West Virginia lookout list (firelookout.org)",
@@ -114,12 +138,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wv-north-mountain",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

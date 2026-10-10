@@ -1,6 +1,7 @@
 {
   "id": "us-la-red-dirt",
   "name": "Red Dirt Lookout Site",
+  "summary": "Kisatchie NF site in Natchitoches Parish, LA: CCC-built steel tower removed in 1983 to Fort Sill, Oklahoma; the byway guide lists the site as a stop; no remains described.",
   "other_names": [],
   "country": "US",
   "region": "LA",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": 34.1,
+  "design": "100' steel tower with 11'x11' steel cab and 3' walkway all around",
+  "height_m": 30.5,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Removed in 1983 to Fort Sill, Oklahoma, per the register; no source we read describes what remains on the Louisiana site.",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Inferred from the Longleaf Trail guide listing the site as a stop; no visitor rules or site condition are described"
   },
   "staffing": {
     "status": "unknown",
@@ -41,15 +42,41 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "The Longleaf Trail guide lists the Red Dirt Fire Tower Site as a stop; it says nothing about what remains"
   },
   "rental": null,
   "events": [
     {
+      "year": 1937,
+      "event": "built",
+      "note": "Built by CCC Company 1491, per the register. The byway guide says the site dates back to 1936 (see resolved_conflicts)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/la/red-dirt-lookout-site/"
+    },
+    {
+      "year": 1983,
+      "event": "relocated",
+      "note": "Removed to Fort Sill, Oklahoma, per the register",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/la/red-dirt-lookout-site/"
+    },
+    {
+      "year": 1983,
+      "event": "removed",
+      "note": "Removed because it was no longer needed; replaced by a forest-wide system of aerial detection",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/la/red-dirt-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/la/red-dirt-lookout-site/",
+        "https://ia801407.us.archive.org/20/items/CAT10713717/CAT10713717.pdf"
+      ]
+    },
+    {
       "year": 2011,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: February 23, 2011",
-      "from": "fflos"
+      "note": "Registered February 23, 2011 as US 854, LA 1, nominated by Geoffrey R. Lehmann",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/la/red-dirt-lookout-site/"
     }
   ],
   "photos": [
@@ -90,6 +117,11 @@
       "kind": "register"
     },
     {
+      "label": "Longleaf Trail Scenic Byway guide, Kisatchie Ranger District (Kisatchie Ranger District (Internet Archive copy))",
+      "url": "https://ia801407.us.archive.org/20/items/CAT10713717/CAT10713717.pdf",
+      "kind": "reference"
+    },
+    {
       "label": "Red Dirt (centraluslookouts.weebly.com)",
       "url": "https://centraluslookouts.weebly.com/red-dirt.html",
       "kind": "site"
@@ -122,12 +154,34 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-la-red-dirt",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

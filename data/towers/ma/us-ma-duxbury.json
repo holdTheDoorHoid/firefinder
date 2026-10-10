@@ -1,6 +1,7 @@
 {
   "id": "us-ma-duxbury",
   "name": "Duxbury Tower Site",
+  "summary": "Stone lookout on top of the Myles Standish Monument on Captain's Hill, Duxbury, MA; firetower.org says it operated from 1889 and was staffed until 1910. Monument is now a state park.",
   "other_names": [
     "Captain's Hill"
   ],
@@ -18,10 +19,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": 21.3,
-  "status": "gone",
-  "status_note": null,
+  "design": "Stone lookout on top of the 116-foot granite Myles Standish Monument",
+  "height_m": 35.4,
+  "status": "unknown",
+  "status_note": "The granite monument still stands as a state park; no source checked says what, if anything, of the lookout remains.",
   "registers": [
     {
       "register": "FFLOS",
@@ -30,11 +31,11 @@
       "url": "http://firetower.org/lookouts/us/ma/duxbury-tower-site/"
     }
   ],
-  "agency": "January 1920:",
+  "agency": "Town of Duxbury (municipal tower)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Myles Standish Monument State Reservation is a public recreation area; the monument's 125 steps can be climbed when it is open."
   },
   "staffing": {
     "status": "unknown",
@@ -43,15 +44,48 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "The park has walking trails and picnic tables."
   },
   "rental": null,
   "events": [
     {
+      "year": 1889,
+      "event": "built",
+      "note": "firetower.org says first operated in 1889; the monument was not completed until 1898, so this date is unverified.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/duxbury-tower-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ma/duxbury-tower-site/",
+        "https://en.wikipedia.org/wiki/Myles_Standish_Monument_State_Reservation"
+      ]
+    },
+    {
+      "year": 1898,
+      "event": "other",
+      "note": "Monument shaft completed.",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Myles_Standish_Monument_State_Reservation"
+    },
+    {
+      "year": 1910,
+      "event": "staffed_last",
+      "note": "Staffed until 1910.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/duxbury-tower-site/"
+    },
+    {
+      "year": 1920,
+      "event": "other",
+      "note": "Commonwealth of Massachusetts began owning the monument and grounds.",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Myles_Standish_Monument_State_Reservation"
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 3, 2008",
-      "from": "fflos"
+      "note": "Registered on the Former Fire Lookout Sites Register as US 26, MA 26 (September 3, 2008).",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/duxbury-tower-site/"
     }
   ],
   "photos": [
@@ -73,6 +107,11 @@
       "label": "FFLOS register entry US 26 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ma/duxbury-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Myles Standish Monument State Reservation (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Myles_Standish_Monument_State_Reservation",
+      "kind": "reference"
     },
     {
       "label": "Captain's Hill (easternuslookouts.weebly.com)",
@@ -105,12 +144,50 @@
         "agency",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ma-duxbury",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

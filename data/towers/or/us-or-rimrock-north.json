@@ -1,6 +1,7 @@
 {
   "id": "us-or-rimrock-north",
   "name": "Rimrock North Lookout Site",
+  "summary": "Gone: an L-4 cab built in 1934 and abandoned in 1941. A hiking guide describes footings at a Rim Rock site; not confirmed as this register entry.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "L-4 cab",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Cab abandoned in 1941 and is gone. No source describes the register's point today.",
   "registers": [
     {
       "register": "FFLOS",
@@ -41,15 +42,32 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "A hiking guide lists a 7.9-mile Surveyors Ridge hike that reaches its Rim Rock site; the guide does not confirm it is this register entry."
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "L-4 cab built on the site",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/rimrock-north-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/rimrock-north-lookout-site/",
+        "https://www.firelookout.com/or/rimrocknorth.html"
+      ]
+    },
+    {
+      "year": 1941,
+      "event": "abandoned",
+      "note": "Register's 'Removed' field reads 'abandoned 1941'",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/rimrock-north-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/or/rimrock-north-lookout-site/",
+        "https://www.firelookout.com/or/rimrocknorth.html",
+        "https://www.oregonhikers.org/field_guide/Rim_Rock_Fire_Lookout_Site"
+      ]
     },
     {
       "year": 1941,
@@ -60,8 +78,9 @@
     {
       "year": 2019,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 18, 2019",
-      "from": "fflos"
+      "note": "Registered September 18, 2019",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/or/rimrock-north-lookout-site/"
     }
   ],
   "photos": [
@@ -83,6 +102,11 @@
       "label": "FFLOS register entry US 1758 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/or/rimrock-north-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Rim Rock Fire Lookout Site (Oregon Hikers Field Guide)",
+      "url": "https://www.oregonhikers.org/field_guide/Rim_Rock_Fire_Lookout_Site",
+      "kind": "reference"
     },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
@@ -129,6 +153,20 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-rimrock-north",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -161,9 +199,15 @@
       "note": "They share a register number."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

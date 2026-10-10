@@ -1,6 +1,7 @@
 {
   "id": "us-ky-bald-rock",
   "name": "Bald Rock Lookout Site",
+  "summary": "Former Forest Service lookout in Laurel County, KY, built in the 1930s; site is now the Bald Rock Picnic Area. Sources disagree on removal (1970 vs mid-1970s).",
   "other_names": [],
   "country": "US",
   "region": "KY",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Tower with a cabin; type not given",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Tower removed; the site is now the Forest Service's Bald Rock Picnic Area",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Forest Service picnic area on the former site; no source restricts entry"
   },
   "staffing": {
     "status": "unknown",
@@ -40,22 +41,42 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Picnic area off KY 192 north of Laurel River Lake"
   },
   "rental": null,
   "events": [
     {
+      "year": 1936,
+      "event": "built",
+      "note": "Forest Service gives 1936 as the start of the tower on this site; the Register says only the 1930s",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r08/danielboone/recreation/bald-rock-picnic-area"
+    },
+    {
+      "year": 1950,
+      "event": "other",
+      "note": "A 1950 survey description places a survey disk near the lookout tower",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/bald-rock.html"
+    },
+    {
       "year": 1970,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"mid-1970s\" (about 1970).",
-      "from": "fflos"
+      "note": "Forest Service says the tower stood until 1970; the Register says removed in the mid-1970s",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r08/danielboone/recreation/bald-rock-picnic-area",
+      "source_urls": [
+        "https://www.fs.usda.gov/r08/danielboone/recreation/bald-rock-picnic-area",
+        "http://firetower.org/lookouts/us/ky/bald-rock-lookout-site/"
+      ]
     },
     {
       "year": 2017,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: June 19, 2017",
-      "from": "fflos"
+      "note": "Registered June 19, 2017 as US 1701, KY 4; nominated by Robert Wittenback",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ky/bald-rock-lookout-site/"
     }
   ],
   "photos": [
@@ -77,6 +98,11 @@
       "label": "FFLOS register entry US 1701 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ky/bald-rock-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Bald Rock Picnic Area (U.S. Forest Service (fs.usda.gov))",
+      "url": "https://www.fs.usda.gov/r08/danielboone/recreation/bald-rock-picnic-area",
+      "kind": "reference"
     },
     {
       "label": "Bald Rock (easternuslookouts.weebly.com)",
@@ -109,12 +135,33 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ky-bald-rock",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

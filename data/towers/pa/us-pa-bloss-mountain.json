@@ -1,6 +1,7 @@
 {
   "id": "us-pa-bloss-mountain",
   "name": "Bloss Mountain Tower Site",
+  "summary": "Aermotor tower built 1921 on Maple Hill, moved to Bloss Mountain in 1939 and removed in 1986; no source found describes the site today.",
   "other_names": [
     "Bloss Lookout Tower"
   ],
@@ -18,10 +19,10 @@
   "material": "steel",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Aermotor",
+  "height_m": 24.4,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The register says the tower was removed in 1986. No source I found describes what remains at the site.",
   "registers": [
     {
       "register": "FFLOS",
@@ -48,10 +49,51 @@
   "rental": null,
   "events": [
     {
+      "year": 1921,
+      "event": "built",
+      "note": "Steel Aermotor tower built on Maple Hill, per the Maple Hill register entry",
+      "from": "research",
+      "source_url": "http://www.firetower.org/lookouts/us/pa/maple-hill-tower-site-tioga-county/"
+    },
+    {
+      "year": 1939,
+      "event": "other",
+      "note": "Stone observer's cabin being built near the tower, per the 1939 Wellsboro notice",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/bloss-mountain.html"
+    },
+    {
+      "year": 1939,
+      "event": "relocated",
+      "note": "Moved from Maple Hill to Bloss Mountain and renamed",
+      "from": "research",
+      "source_url": "http://www.firetower.org/lookouts/us/pa/maple-hill-tower-site-tioga-county/",
+      "source_urls": [
+        "http://www.firetower.org/lookouts/us/pa/maple-hill-tower-site-tioga-county/",
+        "http://firetower.org/lookouts/us/pa/bloss-mountain-tower-site/",
+        "https://easternuslookouts.weebly.com/bloss-mountain.html"
+      ]
+    },
+    {
+      "year": 1949,
+      "event": "staffed",
+      "note": "Glen Campbell listed as towerman at Bloss Tower",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/bloss-mountain.html"
+    },
+    {
+      "year": 1986,
+      "event": "removed",
+      "note": "Register says the steel tower was removed",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/bloss-mountain-tower-site/"
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 16, 2008",
-      "from": "fflos"
+      "note": "Date registered September 16, 2008",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/bloss-mountain-tower-site/"
     }
   ],
   "photos": [],
@@ -60,6 +102,11 @@
       "label": "FFLOS register entry US 209 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/pa/bloss-mountain-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Maple Hill Tower Site (Tioga County) (Former Fire Lookout Sites register)",
+      "url": "http://www.firetower.org/lookouts/us/pa/maple-hill-tower-site-tioga-county/",
+      "kind": "reference"
     },
     {
       "label": "Bloss Mountain (easternuslookouts.weebly.com)",
@@ -102,12 +149,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-bloss-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

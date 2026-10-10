@@ -1,6 +1,7 @@
 {
   "id": "us-ca-bald-mountain-lookout-aws-san-luis-obispo-county",
   "name": "Bald Mountain Lookout - AWS Site (San Luis Obispo County)",
+  "summary": "Circa 1942/43 Aircraft Warning Service post on the Los Padres NF, San Luis Obispo County; Forest Service built and staffed it; register lists removal as unknown; marked gone.",
   "other_names": [
     "Bald Mountain AWS"
   ],
@@ -20,10 +21,10 @@
   "roles": [
     "aws"
   ],
-  "design": null,
+  "design": "Standard AWS post structure with a ground cabin and cupola",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Former Fire Lookout Sites register gives removal as unknown; the Forest Fire Lookout Association California list marks it gone; no source describes the site now",
   "registers": [
     {
       "register": "FFLOS",
@@ -32,7 +33,7 @@
       "url": "http://firetower.org/lookouts/us/ca/bald-mountain-lookout-aws-site-san-luis-obispo-county/"
     }
   ],
-  "agency": "US Forest Service - Los Padres National Forest",
+  "agency": "US Forest Service, Los Padres National Forest; cooperator US Army Ground Observer Corps",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -52,14 +53,23 @@
     {
       "year": 1942,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Built circa 1942/43 as a standard AWS post; the register's description says constructed in 1942 or 1943",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/bald-mountain-lookout-aws-site-san-luis-obispo-county/"
+    },
+    {
+      "year": 1944,
+      "event": "other",
+      "note": "The Aircraft Warning Service it belonged to was deactivated May 29, 1944; no source gives this post's closing date",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Aircraft_warning_service"
     },
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: April 23, 2020",
-      "from": "fflos"
+      "note": "Registered April 23, 2020 as US 2043, CA 149; nominated by Brad Eells",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/bald-mountain-lookout-aws-site-san-luis-obispo-county/"
     }
   ],
   "photos": [
@@ -81,6 +91,11 @@
       "label": "FFLOS register entry US 2043 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ca/bald-mountain-lookout-aws-site-san-luis-obispo-county/",
       "kind": "register"
+    },
+    {
+      "label": "Aircraft Warning Service (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Aircraft_warning_service",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -116,12 +131,31 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-bald-mountain-lookout-aws-san-luis-obispo-county",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

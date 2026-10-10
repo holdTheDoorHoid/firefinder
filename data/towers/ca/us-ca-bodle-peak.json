@@ -1,6 +1,7 @@
 {
   "id": "us-ca-bodle-peak",
   "name": "Bodle Peak Lookout Site",
+  "summary": "LA County tower moved from Blue Ridge to Bodle Peak in 1930, re-erected 1932, then moved to Triunfo Peak; only foundations and piers are described at Bodle today.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "Steel X-brace tower with an 8x8 observation cabin; register says 60 ft tall, Angeles Adventures says 50 ft",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Tower was dismantled and re-erected on Triunfo Peak; sources describe only foundation ruins and tower piers at Bodle Peak",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,7 +29,7 @@
       "url": "http://firetower.org/lookouts/us/ca/bodle-peak-lookout-site/"
     }
   ],
-  "agency": "Los Angeles County Fire Department",
+  "agency": "Los Angeles County Forestry Department (now Los Angeles County Fire Department)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -46,16 +47,51 @@
   "rental": null,
   "events": [
     {
+      "year": 1930,
+      "event": "relocated",
+      "note": "Tower dismantled at Blue Ridge in 1930 and moved to Bodle Peak; register and Angeles Adventures both give 1930 for the move",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/bodle-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/bodle-peak-lookout-site/",
+        "https://angelesadventures.com/bodle-peak-lookout/"
+      ]
+    },
+    {
       "year": 1932,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Re-assembled at Bodle Peak during 1932 (register Built field gives 1932)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/bodle-peak-lookout-site/"
+    },
+    {
+      "year": 1934,
+      "event": "relocated",
+      "note": "Re-erected on Triunfo Peak; Triunfo register says during 1934, Bodle register says sometime after 1934",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/bodle-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/bodle-peak-lookout-site/",
+        "http://firetower.org/lookouts/us/ca/triunfo-peak-lookout-site/"
+      ]
     },
     {
       "year": 1934,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"1934\".",
-      "from": "fflos"
+      "note": "Dismantled at Bodle Peak in 1934 (Triunfo register); Bodle register Removed field also gives 1934",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/bodle-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/bodle-peak-lookout-site/",
+        "http://firetower.org/lookouts/us/ca/triunfo-peak-lookout-site/"
+      ]
+    },
+    {
+      "year": 2018,
+      "event": "fire",
+      "note": "Area burned over in the 2018 Woolsey Fire, per the register",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/bodle-peak-lookout-site/"
     },
     {
       "year": 2019,
@@ -97,6 +133,16 @@
       "kind": "register"
     },
     {
+      "label": "Bodle Peak Lookout (Angeles Adventures)",
+      "url": "https://angelesadventures.com/bodle-peak-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Triunfo Peak Lookout Site (Former Fire Lookout Sites Register)",
+      "url": "http://firetower.org/lookouts/us/ca/triunfo-peak-lookout-site/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -128,12 +174,31 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-bodle-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }
