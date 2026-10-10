@@ -1,6 +1,7 @@
 {
   "id": "us-id-mink-point",
   "name": "Mink Point Lookout",
+  "summary": "Mink Point, Idaho County: crow's nest built 1926 in Nez Perce National Forest, abandoned about 1950; no source describes what remains at the site today.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -18,8 +19,8 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Listed as abandoned around 1950; no source we read says whether anything remains",
   "registers": [],
   "agency": "Nez Perce National Forest",
   "ownership": "federal",
@@ -33,13 +34,45 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Idaho Fire Lookouts lists it as a hike-in site"
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1926,
+      "event": "built",
+      "note": "Crow's nest",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/minkpoint.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/minkpoint.html",
+        "https://www.idahofirelookouts.com/selway-region/mink-point-lookout/",
+        "https://www.fs.usda.gov/media/259204",
+        "https://idaholookouts.weebly.com/mink-point.html"
+      ]
+    },
+    {
+      "year": 1950,
+      "event": "abandoned",
+      "note": "Abandoned about 1950; Forest Service list marks the date approximate",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/minkpoint.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/minkpoint.html",
+        "https://www.idahofirelookouts.com/selway-region/mink-point-lookout/",
+        "https://www.fs.usda.gov/media/259204",
+        "https://idaholookouts.weebly.com/mink-point.html"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Nez Perce National Forest Lookouts (USDA Forest Service)",
+      "url": "https://www.fs.usda.gov/media/259204",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -96,12 +129,47 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-mink-point",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "facts",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "pass",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

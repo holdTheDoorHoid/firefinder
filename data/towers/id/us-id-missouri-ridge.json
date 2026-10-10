@@ -1,6 +1,7 @@
 {
   "id": "us-id-missouri-ridge",
   "name": "Missouri Ridge Lookout",
+  "summary": "Payette NF tower in Valley County, Idaho, built 1935 as a ten-foot pole L-4; sources disagree on destroyed in 1960 vs removed in the 1960s; site today undescribed.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": "L-4",
+  "design": "ten-foot pole tower with L-4 cab",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Two sources say destroyed in 1960; a third says removed in the 1960s. No source describes what remains.",
   "registers": [],
   "agency": "Payette National Forest",
   "ownership": "federal",
@@ -34,10 +35,40 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Idaho Fire Lookouts tags the site as hike-in"
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "Ten-foot pole tower with L-4 cab at the southwest end of the ridge",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/missouriridge.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/missouriridge.html",
+        "https://idaholookouts.weebly.com/missouri-ridge.html"
+      ]
+    },
+    {
+      "year": 1960,
+      "event": "destroyed",
+      "note": "Sources 1 and 2 give 1960; source 3 gives removal in the 1960s",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/missouriridge.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/missouriridge.html",
+        "https://www.idahofirelookouts.com/west-central/missouri-ridge-lookout/"
+      ]
+    },
+    {
+      "year": 1960,
+      "event": "removed",
+      "note": "Source 3 gives removal in the 1960s; conflicts with destroyed in 1960",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/missouri-ridge.html"
+    }
+  ],
   "photos": [
     {
       "file": "ba/bae9081f62251a5cc44d705daae451b6a48127e0.webp",
@@ -53,6 +84,11 @@
     }
   ],
   "links": [
+    {
+      "label": "Missouri Ridge Lookout (Archival Idaho Photograph Collection, University of Idaho Library)",
+      "url": "https://www.lib.uidaho.edu/digital/archivalidaho/items/archivalidaho157.html",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -111,6 +147,20 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-missouri-ridge",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -136,9 +186,15 @@
       "note": null
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

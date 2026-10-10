@@ -1,0 +1,44 @@
+{
+  "id": "us-id-lightning-mountain",
+  "researched": "2026-10-10",
+  "summary": "Kaniksu NF lookout on Lightning Mountain: 1923 pole tower and log cabin, abandoned in the 1940s; one listing says the cabin was still there, unconfirmed.",
+  "facts": {
+    "design": "Crude pole tower with a log cabin",
+    "status_note": "Abandoned in the 1940s. Firelookout.com says the log cabin was still there; the Idaho listing gives only Abandoned",
+    "agency": "Kaniksu National Forest",
+    "visit": {"drive_up": false, "trail_note": "Listed as a hike-in"}
+  },
+  "events": [
+    {"year": 1923, "event": "built", "note": "Crude pole tower and log cabin", "cite": [1, 2, 3]},
+    {"year": 1940, "event": "abandoned", "note": "Listed as abandoned in the 1940s; the sources give only the decade", "cite": [1, 2, 3]}
+  ],
+  "evidence": [
+    {"cite": [1], "supports": "1923 crude pole tower and log cabin; abandoned in the 1940s; log cabin still there", "quote": "1923: crude pole tower, log cabin (still there). Abandoned 1940s."},
+    {"cite": [1], "supports": "Location 11 miles NNE of Clark Fork, Bonner County", "quote": "11 miles NNE of Clark Fork"},
+    {"cite": [1], "supports": "Bonner County", "quote": "Bonner County, Idaho"},
+    {"cite": [1], "supports": "Elevation 6,116 feet", "quote": "Elevation 6116'"},
+    {"cite": [1], "supports": "Kaniksu National Forest", "quote": "Kaniksu National Forest"},
+    {"cite": [2], "supports": "Elevation 6,116 feet and Kaniksu National Forest", "quote": "Elevation: 6116′ Kaniksu National Forest"},
+    {"cite": [2], "supports": "Listed as a hike-in", "quote": "Hike-in Abandoned"},
+    {"cite": [2], "supports": "1923 crude pole tower and log cabin", "quote": "1923 – Crude pole tower and log cabin"},
+    {"cite": [2], "supports": "Abandoned in the 1940s", "quote": "1940’s – Abandoned"},
+    {"cite": [3], "supports": "1923 crude pole tower and log cabin, credited to Kresek", "quote": "1923: crude pole tower, log cabin (Kresek)"},
+    {"cite": [3], "supports": "Abandoned in the 1940s, credited to Kresek", "quote": "1940's: Abandoned (Kresek)"}
+  ],
+  "corrections": [
+    {"field": "kind", "current": "platform", "proposed": "tower", "cite": [1, 2, 3], "why": "All three listings describe a crude pole tower with a log cabin, not a platform."},
+    {"field": "events.abandoned.year", "current": 1940, "proposed": "1940s (decade only)", "cite": [1, 2, 3], "why": "The listings say 1940s and give no exact year, so the record's 1940 is more precise than the sources."},
+    {"field": "status", "current": "gone", "proposed": "unknown (sources conflict)", "cite": [1, 2], "why": "No source here says the lookout is gone. Firelookout.com says the log cabin was still there, though undated; the Idaho listing says only Abandoned."}
+  ],
+  "resolved_conflicts": [
+    {"field": "status", "explanation": "The record says gone. Firelookout.com says the log cabin was still there, with no date. The Idaho listing gives only Abandoned. The story reports the remark and says no source confirms it today, and does not call the site gone or standing.", "cite": [1, 2]}
+  ],
+  "sources": [
+    {"n": 1, "title": "Lightning Mtn. Fire Lookout Tower", "publisher": "firelookout.com", "url": "https://www.firelookout.com/id/lightningmtn.html", "accessed": "2026-10-10"},
+    {"n": 2, "title": "Lightning Mountain Lookout - Idaho Fire Lookouts", "publisher": "Idaho Fire Lookouts", "url": "https://www.idahofirelookouts.com/northern-idaho/lightning-mountain-lookout/", "accessed": "2026-10-10"},
+    {"n": 3, "title": "Lightning Mountain - FOREST LOOKOUTS", "publisher": "Forest Lookouts (western US)", "url": "https://idaholookouts.weebly.com/lightning-mountain.html", "accessed": "2026-10-10"}
+  ],
+  "confidence": "low",
+  "verification": {"checked": "2026-10-10", "claims_checked": 9, "unsupported_removed": 0, "errors_fixed": 1, "quotes_spot_checked": 11, "quotes_not_found": 0, "verdict": "fixed"},
+  "notes_for_editor": "Thin record: three listings and no primary source. Ron Kemnow's page credits its dates to Ray Kresek; the other two do not say where theirs come from. I found no Kaniksu National Forest list for this lookout. Status is unresolved: the 'still there' remark on firelookout.com is undated. Staffing: Idaho Fire Lookouts says no documented staffing history, so the story leaves staffing out. Access beyond 'hike-in' is not established. No new photos. The corrections (kind platform to tower, 1940 to 1940s, status gone to unknown) need a check before they are applied."
+}

@@ -1,6 +1,7 @@
 {
   "id": "us-id-tungston-mountain",
   "name": "Tungston Mountain",
+  "summary": "Boundary County, ID site with a 1937 entry of unknown type, abandoned in the 1940s and listed as gone; no source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Listed as gone; no source describes what, if anything, remains on the peak",
   "registers": [],
   "agency": "Kaniksu National Forest",
   "ownership": "federal",
@@ -33,11 +34,22 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": false,
     "trail_note": null
   },
   "rental": null,
   "events": [
+    {
+      "year": 1937,
+      "event": "other",
+      "note": "Dated 1937 with the type unknown (firelookout.com). The Bethlehem Mountain entry describes a 1937 pole tower on the southwest point of Tungston Mountain; not confirmed as the same structure",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/tungstonmtn.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/tungstonmtn.html",
+        "https://firelookout.com/id/bethlehem.html"
+      ]
+    },
     {
       "year": 1940,
       "event": "abandoned",
@@ -47,6 +59,11 @@
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Bethlehem Mtn. Fire Lookout Tower (firelookout.com)",
+      "url": "https://firelookout.com/id/bethlehem.html",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -103,12 +120,31 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-tungston-mountain",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

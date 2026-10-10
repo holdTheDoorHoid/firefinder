@@ -1,6 +1,7 @@
 {
   "id": "us-id-quartz-ridge",
   "name": "Quartz Ridge Lookout",
+  "summary": "Idaho County's 100-foot steel Aermotor lookout tower, built 1934 in the Nez Perce National Forest, was gone by 1969; a 1951 survey disk is on record.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,16 +17,16 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": "Aermotor",
+  "design": "100-foot steel Aermotor tower with an L-4 cab for living quarters; one source gives the model as Aermotor MC-40",
   "height_m": 30.5,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Gone by 1969 per firelookout.com, Idaho Fire Lookouts and the Forest Service list.",
   "registers": [],
   "agency": "Nez Perce National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Idaho Fire Lookouts lists it as drive-up on national forest land; no closure or permit is described in the sources read"
   },
   "staffing": {
     "status": "unknown",
@@ -33,11 +34,59 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Idaho Fire Lookouts lists it as drive-up. The only item on record at the site is the 1951 survey disk; whether it survives is not stated."
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "L-4 cab living quarters with a 100-foot steel Aermotor tower",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/quartzridge.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/quartzridge.html",
+        "https://www.idahofirelookouts.com/selway-region/quartz-ridge-lookout/",
+        "https://idaholookouts.weebly.com/quartz-ridge.html",
+        "https://www.fs.usda.gov/media/259204"
+      ]
+    },
+    {
+      "year": 1936,
+      "event": "staffed",
+      "note": "January 1936 item, quoted on Rex's page, names Al Moore on duty on top of the tower when lightning hit it",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/quartz-ridge.html"
+    },
+    {
+      "year": 1951,
+      "event": "other",
+      "note": "Forest Service set a survey disk stamped QUARTZ RG 1951 in rock outcrop, per the NGS record",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=QZ0745"
+    },
+    {
+      "year": 1962,
+      "event": "assessed",
+      "note": "USGS described the survey disk in 1962; the last condition note in the NGS record reads GOOD",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=QZ0745"
+    },
+    {
+      "year": 1969,
+      "event": "removed",
+      "note": "Gone by 1969 per firelookout.com, Idaho Fire Lookouts and the Forest Service list; Rex's page says Removed without a date",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/quartzridge.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/quartzridge.html",
+        "https://www.idahofirelookouts.com/selway-region/quartz-ridge-lookout/",
+        "https://idaholookouts.weebly.com/quartz-ridge.html",
+        "https://www.fs.usda.gov/media/259204"
+      ]
+    }
+  ],
   "photos": [
     {
       "file": "ad/ad3cd8d4bfcd38deb4756cf970d175e717fa1a25.webp",
@@ -53,6 +102,16 @@
     }
   ],
   "links": [
+    {
+      "label": "QZ0745 Quartz Ridge (NGS datasheet) (National Geodetic Survey)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=QZ0745",
+      "kind": "reference"
+    },
+    {
+      "label": "Nez Perce National Forest Lookouts (USDA Forest Service)",
+      "url": "https://www.fs.usda.gov/media/259204",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -113,6 +172,22 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-quartz-ridge",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -138,9 +213,15 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

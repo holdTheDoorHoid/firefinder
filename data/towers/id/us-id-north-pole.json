@@ -1,6 +1,7 @@
 {
   "id": "us-id-north-pole",
   "name": "North Pole Lookout",
+  "summary": "Nez Perce National Forest cupola cabin on North Pole, built 1927 (D-6) and abandoned in 1950; a 2020 climbing guide says only the foundation remains.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -19,13 +20,13 @@
   "design": "D-6",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Abandoned in 1950 and destroyed at a later date; the 2020 climbing guide says only the foundation remains.",
   "registers": [],
   "agency": "Nez Perce National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Hike to the peak on a trail in the Gospel Hump Wilderness; the climbing guide says it is easily reached by trail. No closure appears in the sources read."
   },
   "staffing": {
     "status": "unknown",
@@ -33,11 +34,37 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "About 2.5 miles and 1,225 ft of gain from Wildhorse Campground; trail not frequently maintained but in fair condition (2020 guide)."
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1927,
+      "event": "built",
+      "note": "Cupola cabin; D-6 design per Forest Lookouts (Kresek)",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/northpole.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/northpole.html",
+        "https://idahoaclimbingguide.com/bookupdates/north-pole",
+        "https://idaholookouts.weebly.com/north-pole.html"
+      ]
+    },
+    {
+      "year": 1950,
+      "event": "abandoned",
+      "note": "Decommissioned in 1950 per the climbing guide",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/northpole.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/northpole.html",
+        "https://idahoaclimbingguide.com/bookupdates/north-pole",
+        "https://idaholookouts.weebly.com/north-pole.html",
+        "https://www.idahofirelookouts.com/selway-region/north-pole-lookout/"
+      ]
+    }
+  ],
   "photos": [
     {
       "file": "63/6388ee2bf255300bef550cd284d0dcdfd6024fc9.webp",
@@ -53,6 +80,16 @@
     }
   ],
   "links": [
+    {
+      "label": "North Pole (book update, July 2020) (Idaho Climbing Guide)",
+      "url": "https://idahoaclimbingguide.com/bookupdates/north-pole",
+      "kind": "reference"
+    },
+    {
+      "label": "North Pole (SummitPost)",
+      "url": "https://summitpost.org/north-pole/155177",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -112,12 +149,33 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-north-pole",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }
