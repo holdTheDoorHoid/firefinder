@@ -8,8 +8,10 @@
 Priority: 1 rentable, 2 standing + on the National Historic Lookout Register, 3 other standing;
 within a tier, towers with more independent sources and links first (more to work with).
 With --gone (owner-approved batches only, DESIGN 1): 4 relocated, ruins or replica structures on a
-lookout register, 5 gone structures on a register (NHLR or FFLOS). Sites with no structure
-(camps, lookout trees, bare points) are never queued."""
+lookout register, 5 gone structures on a register (NHLR or FFLOS).
+With --gone-all as well (owner: "keep going until I tell you to stop", 2026-10-09): 6 gone, moved
+or ruined structures with no register page, 7 structures whose status no source settles.
+Sites with no structure (camps, lookout trees, bare points) are never queued."""
 import argparse, glob, json, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,7 +31,7 @@ def researched(tid):
 NO_STRUCTURE = {"camp", "tree", "point"}
 
 
-def tier(t, gone=False):
+def tier(t, gone=False, gone_all=False):
     if (t.get("rental") or {}).get("available"):
         return 1
     regs = {r.get("register") for r in t.get("registers") or []}
@@ -42,13 +44,18 @@ def tier(t, gone=False):
             return 4
         if t.get("status") == "gone":
             return 5
+    if gone_all and t.get("kind") not in NO_STRUCTURE and not (t.get("location") or {}).get("approximate"):
+        if t.get("status") in ("gone", "relocated", "ruins", "replica"):
+            return 6
+        if t.get("status") in (None, "unknown"):
+            return 7
     return None
 
 
-def queue(gone=False):
+def queue(gone=False, gone_all=False):
     q = []
     for t in towers():
-        k = tier(t, gone)
+        k = tier(t, gone or gone_all, gone_all)
         if k and not researched(t["id"]):
             q.append((k, -len(t.get("sources") or []), -len(t.get("links") or []), t["id"]))
     return [x[3] for x in sorted(q)], q
@@ -92,6 +99,7 @@ def main():
     ap.add_argument("--next", type=int)
     ap.add_argument("--briefs", nargs="+")
     ap.add_argument("--gone", action="store_true", help="also queue registered gone, moved and ruined structures")
+    ap.add_argument("--gone-all", action="store_true", help="also queue unregistered gone structures and unknown-status ones")
     a = ap.parse_args()
     if a.briefs and not (a.summary or a.next):
         # fast path: read only the requested records
@@ -102,13 +110,15 @@ def main():
                 out.append(brief(json.load(open(hits[0]))))
         print(json.dumps(out, ensure_ascii=False))
         return
-    ids, q = queue(a.gone)
+    ids, q = queue(a.gone, a.gone_all)
     if a.summary:
         from collections import Counter
         c = Counter(x[0] for x in q)
         out = {"rentable": c[1], "standing+NHLR": c[2], "other standing": c[3]}
-        if a.gone:
+        if a.gone or a.gone_all:
             out.update({"moved/ruins/replica+register": c[4], "gone+register": c[5]})
+        if a.gone_all:
+            out.update({"gone, no register": c[6], "status unknown": c[7]})
         print({**out, "total": len(ids)})
     if a.next:
         print("\n".join(ids[: a.next]))
