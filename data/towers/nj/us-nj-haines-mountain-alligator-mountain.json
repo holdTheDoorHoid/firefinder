@@ -1,6 +1,7 @@
 {
   "id": "us-nj-haines-mountain-alligator-mountain",
   "name": "Haines Mountain (Alligator Mountain) Lookout Site",
+  "summary": "Built 1900 by area fire wardens as a Sussex County observation post in Edison Acres WMA; registered 2016 as a former site; no source describes what remains.",
   "other_names": [],
   "country": "US",
   "region": "NJ",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Observation post built by area fire wardens to watch westward",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Listed on the register as a former lookout site; no source found describes what stands there now",
   "registers": [
     {
       "register": "FFLOS",
@@ -48,14 +49,16 @@
     {
       "year": 1900,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Built field on the register page gives 1900; built by area fire wardens",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/nj/haines-mountain-alligator-mountain-lookout-site/"
     },
     {
       "year": 2016,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: July 24, 2016",
-      "from": "fflos"
+      "note": "Registered July 24, 2016 as US 1621, NJ 6; nominated by Robert Spear",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/nj/haines-mountain-alligator-mountain-lookout-site/"
     }
   ],
   "photos": [
@@ -77,6 +80,11 @@
       "label": "FFLOS register entry US 1621 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/nj/haines-mountain-alligator-mountain-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Former Lookout Sites in New Jersey (Former Fire Lookout Sites (FFLOS) register)",
+      "url": "http://firetower.org/lookouts/us/NJ",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -95,12 +103,47 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nj-haines-mountain-alligator-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

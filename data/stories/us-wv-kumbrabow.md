@@ -1,0 +1,9 @@
+Kumbrabow's lookout stood on Rich Mountain, inside Kumbrabow State Forest in southern Randolph County, West Virginia.[^1][^2] The Forest Fire Lookout Association's register gives the site an elevation of 3,793 feet (1,156 metres) and lists the West Virginia Division of Forestry as its administrator.[^1] The register calls it the Kumbrabow Tower Site, while the association's county table also lists it as Lone Tree (Kumbrabow).[^1][^3]
+
+The county table marks the tower as gone.[^3] The register says the tower was formerly located in the forest.[^1] In 2013 the Division of Forestry built an observation deck at the site of the former tower.[^1][^2] Travis Miller, the division's management forester, said there had been an old fire tower on the site.[^2] About 16 acres were timbered to open the view, and the state built a small picnic shelter in the same area.[^2]
+
+The 2013 report calls the overlook a new destination for day trips and says the spot is fairly remote.[^2] It describes a two-hour hike, and says the gates on the Rich Mountain Fire Trail were to be open to dedication guests that Saturday from 10 a.m. to noon.[^2] The area can be reached by the Potato Hole, Meat Box and Rich Mountain Fire trails.[^2] Miller hoped to add a permanent vehicle access and a shorter hike later.[^2] No source here says whether that road was built.[^2] Neither the register nor the 2013 report describes the site as it stands now.[^1][^2]
+
+[^1]: Kumbrabow Tower Site, Former Fire Lookout Sites register, Forest Fire Lookout Association, http://firetower.org/lookouts/us/wv/kumbrabow-tower-site/ (accessed 2026-10-10).
+[^2]: New overlook to offer spectacular view on Rich Mountain, WV MetroNews, https://wvmetronews.com/2013/09/20/new-overlook-to-offer-spectacular-view-on-rich-mountain/ (accessed 2026-10-10).
+[^3]: West Virginia Fire Towers (by County), Forest Fire Lookout Association, https://firelookout.org/lookouts/us/wv/wv-co/ (accessed 2026-10-10).

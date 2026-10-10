@@ -1,6 +1,7 @@
 {
   "id": "us-va-spear-mountain",
   "name": "Spear Mountain Tower Site",
+  "summary": "Buckingham County, VA fire tower built before 1941 and reported rotten by 1954; the summit was cleared in 1963 for an AT&T troposcatter relay whose concrete reflectors remain on private land.",
   "other_names": [],
   "country": "US",
   "region": "VA",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Register says the tower was reported rotten on the ground in 1954 and the site was cleared in 1963 for an AT&T troposcatter facility; the relay's concrete reflectors remain",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "Private Owner",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Private land; the CLUI entry says the site is privately owned and used as part of a residence, and the 2013 WSET report asks readers not to try to see it"
   },
   "staffing": {
     "status": "unknown",
@@ -54,14 +55,30 @@
     {
       "year": 1954,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"by 1954\".",
-      "from": "fflos"
+      "note": "Reported rotten on the ground in 1954; the register's Removed field reads 'by 1954'",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/va/spear-mountain-tower-site/"
+    },
+    {
+      "year": 1963,
+      "event": "other",
+      "note": "Site cleared for an AT&T troposcatter communications facility",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/va/spear-mountain-tower-site/"
+    },
+    {
+      "year": 2005,
+      "event": "other",
+      "note": "Property bought from the government by a landowner, who built a house on the site",
+      "from": "research",
+      "source_url": "https://wset.com/archive/the-mystery-of-spears-mountain"
     },
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: March 24, 2020",
-      "from": "fflos"
+      "note": "Registered March 24, 2020",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/va/spear-mountain-tower-site/"
     }
   ],
   "photos": [],
@@ -70,6 +87,21 @@
       "label": "FFLOS register entry US 1936 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/va/spear-mountain-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "AT&T Troposcatter Relay Station, Buckingham County, VA (Cold War C4I)",
+      "url": "https://coldwar-c4i.net/ATT_Project/Buckingham/index.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Buckingham AT&T Relay Site, Virginia (The Center for Land Use Interpretation)",
+      "url": "https://clui.org/ludb/site/buckingham-att-relay-site",
+      "kind": "reference"
+    },
+    {
+      "label": "The Mystery of Spears Mountain (WSET)",
+      "url": "https://wset.com/archive/the-mystery-of-spears-mountain",
+      "kind": "reference"
     },
     {
       "label": "FFLA Virginia lookout list (firelookout.org)",
@@ -101,12 +133,31 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-va-spear-mountain",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

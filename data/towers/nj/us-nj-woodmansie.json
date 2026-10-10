@@ -1,6 +1,7 @@
 {
   "id": "us-nj-woodmansie",
   "name": "Woodmansie Lookout Site",
+  "summary": "Timber observation post built 1906 near Woodmansie; register says Ocean County, township sources say Burlington; no source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "NJ",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Timber observation post built by area fire wardens, with a crude ladder on one side",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Listed on the register as a former lookout site; no source found describes what stands there now",
   "registers": [
     {
       "register": "FFLOS",
@@ -48,14 +49,23 @@
     {
       "year": 1906,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Built field on the register page gives 1906; built by area fire wardens",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/nj/woodmansie-lookout-site/"
+    },
+    {
+      "year": 2015,
+      "event": "fire",
+      "note": "1,012-acre Woodmansie wildfire on September 7, 2015 in Section B5, Woodland Township; contained the next day. The post does not mention the lookout.",
+      "from": "research",
+      "source_url": "https://www.facebook.com/sectionb10/posts/throwbackthursdaytoday-we-go-back-to-the-1012-acre-woodmansie-wildfire-on-septem/4858947230806398/"
     },
     {
       "year": 2016,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: July 24, 2016",
-      "from": "fflos"
+      "note": "Registered July 24, 2016 as US 1620, NJ 5; nominated by Robert Spear",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/nj/woodmansie-lookout-site/"
     }
   ],
   "photos": [
@@ -77,6 +87,21 @@
       "label": "FFLOS register entry US 1620 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/nj/woodmansie-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "#ThrowbackThursday! Today we go back to the 1,012-acre Woodmansie wildfire (NJFFS Section B10, Facebook)",
+      "url": "https://www.facebook.com/sectionb10/posts/throwbackthursdaytoday-we-go-back-to-the-1012-acre-woodmansie-wildfire-on-septem/4858947230806398/",
+      "kind": "reference"
+    },
+    {
+      "label": "Woodland Township, New Jersey (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Woodland_Township,_New_Jersey",
+      "kind": "reference"
+    },
+    {
+      "label": "Former Lookout Sites in New Jersey (Former Fire Lookout Sites (FFLOS) register)",
+      "url": "http://firetower.org/lookouts/us/NJ",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -94,12 +119,46 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nj-woodmansie",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

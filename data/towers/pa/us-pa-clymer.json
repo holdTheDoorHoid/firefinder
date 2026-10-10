@@ -1,6 +1,7 @@
 {
   "id": "us-pa-clymer",
   "name": "Clymer Tower Site",
+  "summary": "Indiana County, PA steel tower moved from Chickaree in 1930 and removed in 1978 per the register; the Clymer entry's 1930 build date conflicts with a 1921 build date.",
   "other_names": [],
   "country": "US",
   "region": "PA",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "Steel tower; the Chickaree entry calls it a steel Aermotor tower",
   "height_m": 18.3,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Register says it was removed in 1978; no source describes the site now",
   "registers": [
     {
       "register": "FFLOS",
@@ -46,10 +47,36 @@
   "rental": null,
   "events": [
     {
+      "year": 1921,
+      "event": "built",
+      "note": "Built as a steel Aermotor tower at Chickaree (Chickaree register entry)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/chickaree-tower-site/"
+    },
+    {
+      "year": 1930,
+      "event": "relocated",
+      "note": "Moved from Chickaree and renamed Clymer (Chickaree register entry; 1930 Indiana Gazette item)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/chickaree-tower-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/pa/chickaree-tower-site/",
+        "https://easternuslookouts.weebly.com/clymer.html"
+      ]
+    },
+    {
+      "year": 1978,
+      "event": "removed",
+      "note": "Register: removed in 1978",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/clymer-tower-site/"
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 16, 2008",
-      "from": "fflos"
+      "note": "Registered September 16, 2008",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/clymer-tower-site/"
     }
   ],
   "photos": [],
@@ -58,6 +85,11 @@
       "label": "FFLOS register entry US 246 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/pa/clymer-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Chickaree Tower Site (Former Fire Lookout Sites register)",
+      "url": "http://firetower.org/lookouts/us/pa/chickaree-tower-site/",
+      "kind": "reference"
     },
     {
       "label": "Clymer (easternuslookouts.weebly.com)",
@@ -89,12 +121,31 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-clymer",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

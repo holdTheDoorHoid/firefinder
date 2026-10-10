@@ -1,6 +1,7 @@
 {
   "id": "us-me-mud-pond-mountain",
   "name": "Mud Pond Mountain Tower Site",
+  "summary": "Aroostook County, ME: former lookout site west of Ashland. The register says local sources had the old wooden tower standing in 1998; no build date or current status found.",
   "other_names": [],
   "country": "US",
   "region": "ME",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "Very old wooden tower, per the register; no height or build date given",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "The register says local sources reported the tower still standing in 1998. No later source was found.",
   "registers": [
     {
       "register": "FFLOS",
@@ -46,10 +47,18 @@
   "rental": null,
   "events": [
     {
+      "year": 1998,
+      "event": "other",
+      "note": "Local sources said the wooden tower was still standing (a secondhand report, not verified)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/me/mud-pond-mountain-tower-site/"
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 15, 2008",
-      "from": "fflos"
+      "note": "Registered on the Former Fire Lookout Sites register on September 15, 2008, nominated by Bob Spear",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/me/mud-pond-mountain-tower-site/"
     }
   ],
   "photos": [],
@@ -76,12 +85,46 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-me-mud-pond-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "pass",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

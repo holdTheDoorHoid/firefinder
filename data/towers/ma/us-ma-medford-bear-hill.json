@@ -1,6 +1,7 @@
 {
   "id": "us-ma-medford-bear-hill",
   "name": "Medford Bear Hill Tower Site",
+  "summary": "Register lists a steel lookout on Bear Hill used 1919-1926; a 2011 blog describes a standing concrete tower there, and the two accounts do not match.",
   "other_names": [],
   "country": "US",
   "region": "MA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "design": "70-foot steel tower (register); the 2011 blog describes a reinforced concrete tower beside a working water holder",
+  "height_m": 21.3,
+  "status": "unknown",
+  "status_note": "Register says the steel tower was no longer used after 1926; a 2011 blog describes a standing concrete tower on Bear Hill. Not confirmed whether they are the same structure",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Bear Hill is in the Middlesex Fells reservation, which has trails; the current sources do not say whether the concrete tower is open to climbers"
   },
   "staffing": {
     "status": "unknown",
@@ -41,10 +42,31 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "In 2011 the writer walked a few minutes uphill from a parking lot to reach the tower"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1910,
+      "event": "replaced",
+      "note": "Blog, citing Friends of the Fells: a wooden observation tower was replaced by a reinforced concrete tower in the year an electric trolley station opened at Sheepfold",
+      "from": "research",
+      "source_url": "https://reversedview.blogspot.com/2011/05/bear-hill-tower-stoneham.html"
+    },
+    {
+      "year": 1919,
+      "event": "other",
+      "note": "Register: first operated in 1919",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/medford-bear-hill-tower-site/"
+    },
+    {
+      "year": 1926,
+      "event": "abandoned",
+      "note": "Register: no longer used after 1926",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/medford-bear-hill-tower-site/"
+    },
     {
       "year": 2008,
       "event": "fflos_registered",
@@ -71,6 +93,16 @@
       "label": "FFLOS register entry US 38 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ma/medford-bear-hill-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "The Reversed View of Massachusetts: Bear Hill Tower, Stoneham (The Reversed View of Massachusetts (blog, May 22, 2011))",
+      "url": "https://reversedview.blogspot.com/2011/05/bear-hill-tower-stoneham.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Middlesex Fells Reservation (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Middlesex_Fells_Reservation",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,12 +120,49 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ma-medford-bear-hill",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

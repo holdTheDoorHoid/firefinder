@@ -1,6 +1,7 @@
 {
   "id": "us-wi-five-mile",
   "name": "Five Mile Lookout",
+  "summary": "Washburn County, WI tower built August 1932; NHLR-registered 2017 as a standing 84-ft tower, but the FFLOS Wisconsin list marks it gone; the sources disagree and no site description found.",
   "other_names": [],
   "country": "US",
   "region": "WI",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "design": "84-foot Wisconsin standard tower with external protected ladder",
+  "height_m": 25.6,
+  "status": "unknown",
+  "status_note": "FFLOS Wisconsin list marks the tower Gone; the 2017 NHLR entry describes it in the present tense as an 84-foot tower. The sources disagree and no source records its removal",
   "registers": [
     {
       "register": "NHLR",
@@ -48,14 +49,16 @@
     {
       "year": 1932,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built August 1932 per NHLR Built field",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/five-mile-lookout/"
     },
     {
       "year": 2017,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: August 28, 2017",
-      "from": "nhlr"
+      "note": "Registered August 28, 2017 as US 1242, WI 37; nominated by Tyler Bormann",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/five-mile-lookout/"
     }
   ],
   "photos": [
@@ -77,6 +80,11 @@
       "label": "NHLR register entry US 1242 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wi/five-mile-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "What A 1977 Inferno In The North Woods Left In Its Wake (PBS Wisconsin)",
+      "url": "https://pbswisconsin.org/news-item/what-a-1977-inferno-in-the-north-woods-left-in-its-wake/",
+      "kind": "reference"
     },
     {
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
@@ -110,12 +118,30 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wi-five-mile",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -126,12 +152,18 @@
         }
       ],
       "distance_m": null,
-      "note": "NHLR lists lookouts that were standing when registered."
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

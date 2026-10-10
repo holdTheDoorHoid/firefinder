@@ -1,6 +1,7 @@
 {
   "id": "us-wv-backbone",
   "name": "Backbone Tower Site",
+  "summary": "Tucker County, WV: the state's 1922 Backbone Mountain tower was replaced in 1963 by the Olson Tower, which stands on about the same site.",
   "other_names": [
     "Backbone Mountain"
   ],
@@ -21,7 +22,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Removed. Its 1963 replacement, the Olson Tower, stands on about the same site on the mountaintop.",
   "registers": [
     {
       "register": "FFLOS",
@@ -33,25 +34,49 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Olson Tower: open when roads are snow-free; the cab is closed, but visitors may climb to just below it."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "Forest Service directions end at a parking lot below the Olson Tower on Forest Road 717."
   },
   "rental": null,
   "events": [
     {
+      "year": 1922,
+      "event": "built",
+      "note": "Built by the state; later transferred to Monongahela National Forest",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r09/monongahela/recreation/olson-observation-tower",
+      "source_urls": [
+        "https://www.fs.usda.gov/r09/monongahela/recreation/olson-observation-tower",
+        "https://en.wikipedia.org/wiki/Backbone_Mountain"
+      ]
+    },
+    {
+      "year": 1963,
+      "event": "replaced",
+      "note": "Replaced by Olson Tower on approximately the same site",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wv/backbone-tower-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wv/backbone-tower-site/",
+        "https://www.fs.usda.gov/r09/monongahela/recreation/olson-observation-tower",
+        "https://en.wikipedia.org/wiki/Olson_Observation_Tower"
+      ]
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 16, 2008",
-      "from": "fflos"
+      "note": "Registered September 16, 2008",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wv/backbone-tower-site/"
     }
   ],
   "photos": [
@@ -135,6 +160,26 @@
       "kind": "register"
     },
     {
+      "label": "Olson Observation Tower (Monongahela National Forest, USDA Forest Service)",
+      "url": "https://www.fs.usda.gov/r09/monongahela/recreation/olson-observation-tower",
+      "kind": "reference"
+    },
+    {
+      "label": "Olson Observation Tower (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Olson_Observation_Tower",
+      "kind": "reference"
+    },
+    {
+      "label": "Backbone Mountain (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Backbone_Mountain",
+      "kind": "reference"
+    },
+    {
+      "label": "Enjoy The Hike Or Stay The Night: Mountaintop Fire Towers (West Virginia Tourism)",
+      "url": "https://wvtourism.com/tour-rent-fire-towers/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA West Virginia lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wv/",
       "kind": "association"
@@ -166,12 +211,32 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wv-backbone",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

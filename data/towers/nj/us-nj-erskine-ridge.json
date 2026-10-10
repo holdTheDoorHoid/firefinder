@@ -1,6 +1,7 @@
 {
   "id": "us-nj-erskine-ridge",
   "name": "Erskine Ridge Lookout Site",
+  "summary": "Wooden Ringwood Company lookout in Ringwood State Park, destroyed by fire in 1954; registered 2014; no source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "NJ",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "Wooden lookout, probably no more than 40 ft tall (register estimate)",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Destroyed by fire in 1954 according to the register; no source describes what remains at the site",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "New Jersey Division of Parks & Forestry",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Site lies inside Ringwood State Park; no source says whether the old site or its trail is open or marked"
   },
   "staffing": {
     "status": "unknown",
@@ -40,22 +41,31 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Register says a trail once led from Camp Yawpo to the lookout; no source says whether it can still be followed"
   },
   "rental": null,
   "events": [
     {
       "year": 1954,
+      "event": "destroyed",
+      "note": "Destroyed by a fire, according to Section 2 Chief Fire Warden Frank Scardo (register description)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/nj/erskine-ridge-lookout-site/"
+    },
+    {
+      "year": 1954,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"1954\".",
-      "from": "fflos"
+      "note": "Register's Removed field gives 1954",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/nj/erskine-ridge-lookout-site/"
     },
     {
       "year": 2014,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: April 16, 2014",
-      "from": "fflos"
+      "note": "Registered April 16, 2014 as US 1550, NJ 2; nominated by Bob Spear",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/nj/erskine-ridge-lookout-site/"
     }
   ],
   "photos": [],
@@ -64,6 +74,11 @@
       "label": "FFLOS register entry US 1550 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/nj/erskine-ridge-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Ringwood State Park (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Ringwood_State_Park",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -82,12 +97,33 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nj-erskine-ridge",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

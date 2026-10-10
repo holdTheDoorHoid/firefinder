@@ -1,6 +1,7 @@
 {
   "id": "us-pa-cross-mountain",
   "name": "Cross Mountain Tower Site",
+  "summary": "Steel I-S fire tower, built 1934 per register (1935 newspaper says soon to be erected), removed 1962; the mountain now has a private Cold War concrete microwave tower.",
   "other_names": [],
   "country": "US",
   "region": "PA",
@@ -24,10 +25,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "steel I-S tower (register); 80-foot forest fire tower (1935 Gettysburg Times item)",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Fire tower removed in 1962 per the register; a separate Cold War concrete microwave tower (Cannonball) on the mountain is on private property, and no source describes remains of the fire tower",
   "registers": [
     {
       "register": "FFLOS",
@@ -36,11 +37,11 @@
       "url": "http://firetower.org/lookouts/us/pa/cross-mountain-tower-site/"
     }
   ],
-  "agency": null,
+  "agency": "Pennsylvania department of forests (per the 1935 Gettysburg Times item)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "Applies to the Cannonball concrete tower atop Cross Mountain, on private property and not accessible to the public; no access information for the 1934 fire-tower site"
   },
   "staffing": {
     "status": "unknown",
@@ -54,10 +55,43 @@
   "rental": null,
   "events": [
     {
+      "year": 1934,
+      "event": "built",
+      "note": "Register: steel I-S tower built 1934. A March 1935 newspaper item says the tower will soon be erected, so the year is disputed",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/cross-mountain-tower-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/pa/cross-mountain-tower-site/",
+        "https://easternuslookouts.weebly.com/pennsylvania-a-f.html"
+      ]
+    },
+    {
+      "year": 1935,
+      "event": "other",
+      "note": "Gettysburg Times item, March 5, 1935: an 80-foot fire tower on Cross Mountain to be erected by the Pennsylvania department of forests, to provide fire detection for western Washington County, Maryland, and Franklin County",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/pennsylvania-a-f.html"
+    },
+    {
+      "year": 1962,
+      "event": "removed",
+      "note": "Register: steel I-S tower removed in 1962",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/cross-mountain-tower-site/"
+    },
+    {
+      "year": 1977,
+      "event": "other",
+      "note": "Cannonball Cold War concrete microwave tower on Cross Mountain abandoned in 1977; a separate structure from the fire tower",
+      "from": "research",
+      "source_url": "http://coldwar-c4i.net/Cannonball/pef2.html"
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 16, 2008",
-      "from": "fflos"
+      "note": "Registered September 16, 2008; nominated by Henry Isenberg",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/cross-mountain-tower-site/"
     }
   ],
   "photos": [],
@@ -66,6 +100,16 @@
       "label": "FFLOS register entry US 259 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/pa/cross-mountain-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Pennsylvania (A-F) (Forest Lookouts)",
+      "url": "https://easternuslookouts.weebly.com/pennsylvania-a-f.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Presidential Emergency Facilities - Site 2 - Cannonball (Cold War C4I (coldwar-c4i.net))",
+      "url": "http://coldwar-c4i.net/Cannonball/pef2.html",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -80,12 +124,32 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-cross-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
   "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

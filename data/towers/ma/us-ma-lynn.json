@@ -1,6 +1,7 @@
 {
   "id": "us-ma-lynn",
   "name": "Lynn Tower Site",
+  "summary": "The register lists a 1926 iron lookout on Burrill Hill in Lynn Woods and says it was last used in the late 1960s; a WPA stone tower built 1935-36 stands on the same hill in the city park.",
   "other_names": [],
   "country": "US",
   "region": "MA",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "design": "70-foot iron tower (register); later WPA stone tower, about 48 feet tall",
+  "height_m": 21.3,
+  "status": "unknown",
+  "status_note": "The register does not say whether the 1926 iron tower survives; a WPA stone tower stands on Burrill Hill, and the sources do not say whether it is on the same spot",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/ma/lynn-tower-site/"
     }
   ],
-  "agency": null,
+  "agency": "City of Lynn",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Stone tower stands in the municipal Lynn Woods forest park, which has trails; no current source says whether the tower itself is open to climb"
   },
   "staffing": {
     "status": "unknown",
@@ -41,10 +42,38 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Trails link the stone tower with Dungeon Rock and other sites, including Great Frog Boulder and Balanced Boulder"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1926,
+      "event": "built",
+      "note": "70-foot iron tower erected at the city's request in Lynn Woods Park (register)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/lynn-tower-site/"
+    },
+    {
+      "year": 1929,
+      "event": "other",
+      "note": "Flyer says earlier towers on Burrill Hill and other hills were wooden, and that a steel tower went up on Mount Gilead in 1929; does not match the register's 1926 iron tower",
+      "from": "research",
+      "source_url": "http://dieselbikes.com/newsletter/released_publications/Stone%20Tower%20%20Flyerprint.pdf"
+    },
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "WPA stone tower; construction began December 1935 and was finished the following September",
+      "from": "research",
+      "source_url": "http://dieselbikes.com/newsletter/released_publications/Stone%20Tower%20%20Flyerprint.pdf"
+    },
+    {
+      "year": 2008,
+      "event": "assessed",
+      "note": "Renovation flyer: stones missing from the damaged hip wall; rehabilitation estimated to exceed $225,000",
+      "from": "research",
+      "source_url": "http://dieselbikes.com/newsletter/released_publications/Stone%20Tower%20%20Flyerprint.pdf"
+    },
     {
       "year": 2008,
       "event": "fflos_registered",
@@ -71,6 +100,16 @@
       "label": "FFLOS register entry US 13 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ma/lynn-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Stone Tower Renovation Project (flyer) (Friends of Lynn Woods (copy hosted on dieselbikes.com))",
+      "url": "http://dieselbikes.com/newsletter/released_publications/Stone%20Tower%20%20Flyerprint.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "A Lynn Woods landmark: the Stone Tower on Burrill Hill (Axeleratio (Axel Drefahl))",
+      "url": "https://www.axeleratio.com/pic/city/lynn/stone_tower.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -90,12 +129,50 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ma-lynn",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-ma-hingham",
   "name": "Hingham Tower Site",
+  "summary": "Prospect Hill lookout, Hingham: a 48-foot tower on leased land, built 1916 per Norwell register, removed 1955; Norwell tower built 1956; no source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "MA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "48-foot tower on leased land (steel per the Hingham record; iron per the Norwell entry)",
+  "height_m": 14.6,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Removed in 1955 according to the register. No source describes what remains of the Prospect Hill site today.",
   "registers": [
     {
       "register": "FFLOS",
@@ -46,6 +47,27 @@
   "rental": null,
   "events": [
     {
+      "year": 1916,
+      "event": "built",
+      "note": "Iron tower on Prospect Hill, 48 feet tall, per the Norwell entry",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ma/norwell-fire-tower/"
+    },
+    {
+      "year": 1955,
+      "event": "removed",
+      "note": "Removed after a U.S. Army request for national security reasons, per the Hingham register entry",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/hingham-tower-site/"
+    },
+    {
+      "year": 1956,
+      "event": "replaced",
+      "note": "Norwell Fire Tower built to replace the Prospect Hill tower, at the Navy's request",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/ma/norwell-fire-tower/"
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
       "note": "Date registered per FFLOS detail page: September 3, 2008",
@@ -58,6 +80,11 @@
       "label": "FFLOS register entry US 25 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ma/hingham-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Norwell Fire Tower (National Historic Lookout Register)",
+      "url": "http://nhlr.org/lookouts/us/ma/norwell-fire-tower/",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -74,12 +101,31 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ma-hingham",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

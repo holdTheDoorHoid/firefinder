@@ -1,6 +1,7 @@
 {
   "id": "us-ma-westwood",
   "name": "Westwood Tower Site",
+  "summary": "Norfolk County, MA municipal 40-ft steel tower on Grossman Camp Hill, used 1930 to 1955; the register says it still stands, which conflicts with our 'gone' status.",
   "other_names": [],
   "country": "US",
   "region": "MA",
@@ -16,9 +17,9 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "gone",
+  "design": "40-foot steel tower, municipal",
+  "height_m": 12.2,
+  "status": "standing",
   "status_note": null,
   "registers": [
     {
@@ -46,10 +47,25 @@
   "rental": null,
   "events": [
     {
+      "year": 1930,
+      "event": "staffed_first",
+      "note": "First operated in 1930 per the register; the register gives no build date",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/westwood-tower-site/"
+    },
+    {
+      "year": 1955,
+      "event": "staffed_last",
+      "note": "Used until 1955 per the register",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/westwood-tower-site/"
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 3, 2008",
-      "from": "fflos"
+      "note": "Registered September 3, 2008; nominated by Henry Isenberg",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/westwood-tower-site/"
     }
   ],
   "photos": [
@@ -71,6 +87,11 @@
       "label": "FFLOS register entry US 18 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ma/westwood-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Fire Tower Quest (Red Knights Massachusetts Chapter 2)",
+      "url": "http://www.rk-mass2.org/FireTower1.pdf",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,12 +109,47 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ma-westwood",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "standing"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives standing where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

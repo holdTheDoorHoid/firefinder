@@ -1,6 +1,7 @@
 {
   "id": "us-wi-meteor",
   "name": "Meteor Lookout",
+  "summary": "Sawyer County, WI: a 100-foot Aermotor lookout built in 1934 and administered by the Wisconsin DNR; the Forest Fire Lookout Association now lists it as gone.",
   "other_names": [],
   "country": "US",
   "region": "WI",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "100-foot Aermotor tower with a US Forest Service-style stairway",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Listed as gone by the Forest Fire Lookout Association. No source describes what stands at the site today.",
   "registers": [
     {
       "register": "NHLR",
@@ -48,14 +49,16 @@
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "NHLR gives November 1934",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/meteor-lookout/"
     },
     {
       "year": 2017,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 28, 2017",
-      "from": "nhlr"
+      "note": "Registered June 28, 2017",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/wi/meteor-lookout/"
     }
   ],
   "photos": [
@@ -77,6 +80,11 @@
       "label": "NHLR register entry US 1215 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/us/wi/meteor-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Meteor Hills Radio Tower weather map (Yr)",
+      "url": "https://www.yr.no/en/map/weather/2-5262729/United%20States/Wisconsin/Sawyer/Meteor%20Hills%20Radio%20Tower",
+      "kind": "reference"
     },
     {
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
@@ -110,6 +118,19 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wi-meteor",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -129,9 +150,15 @@
       "note": "NHLR lists lookouts that were standing when registered."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

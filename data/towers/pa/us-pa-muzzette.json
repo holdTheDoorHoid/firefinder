@@ -1,6 +1,7 @@
 {
   "id": "us-pa-muzzette",
   "name": "Muzzette Tower Site",
+  "summary": "Steel Aermotor tower built by the U.S. Forest Service in 1935 in Forest County; removed before 1995, and no source describes the site now.",
   "other_names": [
     "Muzette Lookout Tower (likely gone)"
   ],
@@ -18,10 +19,10 @@
   "material": "steel",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "steel Aermotor tower",
   "height_m": null,
   "status": "gone",
-  "status_note": "Sources suggest it is gone.",
+  "status_note": "Removed before 1995, according to the register; OpenStreetMap labels it likely gone.",
   "registers": [
     {
       "register": "FFLOS",
@@ -48,10 +49,32 @@
   "rental": null,
   "events": [
     {
+      "year": 1935,
+      "event": "built",
+      "note": "Built by the U.S. Forest Service, per the register",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/muzzette-tower-site/"
+    },
+    {
+      "year": 1936,
+      "event": "other",
+      "note": "Labeled as the Muzette Fire Tower on a 1936 map of the Marienville area",
+      "from": "research",
+      "source_url": "https://pastmaps.com/map/marienville-forest-county-pa-usgs-topo-1936-p1953"
+    },
+    {
+      "year": 1995,
+      "event": "removed",
+      "note": "Removed before 1995, per the register",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/muzzette-tower-site/"
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 16, 2008",
-      "from": "fflos"
+      "note": "Registered September 16, 2008",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/muzzette-tower-site/"
     }
   ],
   "photos": [],
@@ -60,6 +83,11 @@
       "label": "FFLOS register entry US 393 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/pa/muzzette-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "1936 Map of Marienville, PA (Pastmaps)",
+      "url": "https://pastmaps.com/map/marienville-forest-county-pa-usgs-topo-1936-p1953",
+      "kind": "reference"
     },
     {
       "label": "OpenStreetMap node 357364635",
@@ -91,12 +119,30 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-muzzette",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

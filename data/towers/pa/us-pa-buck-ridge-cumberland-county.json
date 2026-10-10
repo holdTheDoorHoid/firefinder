@@ -1,6 +1,7 @@
 {
   "id": "us-pa-buck-ridge-cumberland-county",
   "name": "Buck Ridge Tower Site (Cumberland County)",
+  "summary": "Cumberland County, PA former lookout site; a Blaw-Knox tower the register dates to 1934, but the Staley's Knob entry dates its move to Buck Ridge to 1934 too; no source describes the site today.",
   "other_names": [
     "Buck Ridge"
   ],
@@ -26,10 +27,10 @@
   "material": "steel",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "Blaw-Knox tower (register entry only)",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Listed as a former lookout site; no source read says whether the tower was removed or what remains",
   "registers": [
     {
       "register": "FFLOS",
@@ -56,10 +57,46 @@
   "rental": null,
   "events": [
     {
+      "year": 1904,
+      "event": "built",
+      "note": "First tree tower at Staley's Knob, before the tower moved to Buck Ridge",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/staleys-knob-tower-site/"
+    },
+    {
+      "year": 1912,
+      "event": "replaced",
+      "note": "Wooden tower replaced the 1904 tree tower at Staley's Knob",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/staleys-knob-tower-site/"
+    },
+    {
+      "year": 1922,
+      "event": "replaced",
+      "note": "Wooden tower at Staley's Knob replaced",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/staleys-knob-tower-site/"
+    },
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "Register gives 1934 as the build year of the Blaw-Knox tower; conflicts with the Staley's Knob entry (see resolved_conflicts)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/buck-ridge-tower-site-cumberland-county/"
+    },
+    {
+      "year": 1934,
+      "event": "relocated",
+      "note": "Staley's Knob entry: tower moved in 1934 and renamed Buck Ridge",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/staleys-knob-tower-site/"
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 16, 2008",
-      "from": "fflos"
+      "note": "Registered September 16, 2008",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/pa/buck-ridge-tower-site-cumberland-county/"
     }
   ],
   "photos": [],
@@ -68,6 +105,11 @@
       "label": "FFLOS register entry US 229 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/pa/buck-ridge-tower-site-cumberland-county/",
       "kind": "register"
+    },
+    {
+      "label": "Staley's Knob Tower Site (Former Fire Lookout Sites register)",
+      "url": "http://firetower.org/lookouts/us/pa/staleys-knob-tower-site/",
+      "kind": "reference"
     },
     {
       "label": "Buck Ridge (easternuslookouts.weebly.com)",
@@ -96,12 +138,46 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-pa-buck-ridge-cumberland-county",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
   "verification": "unverified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

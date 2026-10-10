@@ -1,6 +1,7 @@
 {
   "id": "us-ma-adams",
   "name": "Adams Tower Site",
+  "summary": "1911 lookout cab on a 50-ft observation tower on Mount Greylock; discontinued after 1913 for poor visibility; cab removed; summit reachable by road.",
   "other_names": [],
   "country": "US",
   "region": "MA",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "50-foot observation tower (register says iron; the Willhite history page says steel) with a lookout cab built on top in 1911",
+  "height_m": 15.2,
   "status": "gone",
   "status_note": null,
   "registers": [
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/ma/adams-tower-site/"
     }
   ],
-  "agency": null,
+  "agency": "State Forester, Berkshire County office (per the Willhite history page)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Summit reachable by road today per the Willhite history page; the old lookout site is not described separately"
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,46 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Appalachian Trail crosses the summit"
   },
   "rental": null,
   "events": [
     {
+      "year": 1911,
+      "event": "modified",
+      "note": "Lookout cab built on top of a pre-existing 50-foot steel observation tower",
+      "from": "research",
+      "source_url": "https://willhiteweb.com/appalachian_trail/fire_lookouts/mount_graylock/adams_tower_052.htm"
+    },
+    {
+      "year": 1911,
+      "event": "staffed_first",
+      "note": "Operations started October 17, 1911; Thomas Buxton had been the fire lookout that season",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/adams-tower-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ma/adams-tower-site/",
+        "https://willhiteweb.com/appalachian_trail/fire_lookouts/mount_graylock/adams_tower_052.htm"
+      ]
+    },
+    {
+      "year": 1913,
+      "event": "abandoned",
+      "note": "Use discontinued at the end of the 1913 fire season due to poor visibility",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/adams-tower-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ma/adams-tower-site/",
+        "https://willhiteweb.com/appalachian_trail/fire_lookouts/mount_graylock/adams_tower_052.htm"
+      ]
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 3, 2008",
-      "from": "fflos"
+      "note": "Date registered September 3, 2008; nominated by Henry Isenberg",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/adams-tower-site/"
     }
   ],
   "photos": [
@@ -71,6 +102,11 @@
       "label": "FFLOS register entry US 43 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ma/adams-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Mount Greylock Lookout (WillhiteWeb.com)",
+      "url": "https://willhiteweb.com/appalachian_trail/fire_lookouts/mount_graylock/adams_tower_052.htm",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -88,12 +124,33 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ma-adams",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

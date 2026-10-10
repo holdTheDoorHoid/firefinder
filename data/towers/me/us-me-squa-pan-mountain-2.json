@@ -1,6 +1,7 @@
 {
   "id": "us-me-squa-pan-mountain-2",
   "name": "Squa Pan Mountain Tower Site",
+  "summary": "Aroostook County, ME: 1917-1920 tower history; sources disagree on whether it stands. The register point is on private land east of Masardis.",
   "other_names": [],
   "country": "US",
   "region": "ME",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "26-foot wood tower in the 1920 inventory; a 48-foot steel tower was partly erected in 1917",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "The Forest Lookouts history lists the tower as removed, undated. The FFLA list shows a Squa-Pan tower standing at a different point with its cab gone. The register says it is not known whether Squa Pan still stands.",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/me/squa-pan-mountain-tower-site/"
     }
   ],
-  "agency": null,
+  "agency": "Maine Forestry District (historical)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "The register says the site is on private property."
   },
   "staffing": {
     "status": "unknown",
@@ -46,10 +47,32 @@
   "rental": null,
   "events": [
     {
+      "year": 1917,
+      "event": "other",
+      "note": "48-foot steel tower partly erected, completion planned for 1918",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/squa-pan-mountain-52.html"
+    },
+    {
+      "year": 1918,
+      "event": "built",
+      "note": "26-foot tower completed, per the 1918 Forest Commissioner's report as quoted by the Forest Lookouts history; type not stated",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/squa-pan-mountain-52.html"
+    },
+    {
+      "year": 1920,
+      "event": "other",
+      "note": "Maine Forest Service panorama map centered on the Scopan Mt. tower in Township 11 Range 4",
+      "from": "research",
+      "source_url": "https://digitalmaine.com/arc_firetower/95"
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 15, 2008",
-      "from": "fflos"
+      "note": "Registered on the Former Fire Lookout Sites register on September 15, 2008, nominated by Bob Spear",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/me/squa-pan-mountain-tower-site/"
     }
   ],
   "photos": [],
@@ -58,6 +81,21 @@
       "label": "FFLOS register entry US 77 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/me/squa-pan-mountain-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Squa Pan Mountain #52 (Forest Lookouts)",
+      "url": "https://easternuslookouts.weebly.com/squa-pan-mountain-52.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Scopan Mt. 1920 (Maine Forest Service, digitalmaine.com)",
+      "url": "https://digitalmaine.com/arc_firetower/95",
+      "kind": "reference"
+    },
+    {
+      "label": "Maine Fire Towers (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/me/",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -74,12 +112,48 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-me-squa-pan-mountain-2",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

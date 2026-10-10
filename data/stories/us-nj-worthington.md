@@ -1,0 +1,9 @@
+Around 1900, local residents built a 50-foot wooden lookout tower in Walnut Valley.[^1] The register says it was meant to give views west into Pennsylvania and across the New Jersey farmland.[^1] At first, people from the area used it for Sunday outings and picnics.[^1] Later, fire wardens used it to keep watch for wildfires.[^1]
+
+The register says the State of New Jersey built the Catfish Tower in 1922 as its replacement, several miles to the north on the same ridge.[^1] WillhiteWeb's page on the Catfish Tower describes a 60-foot Aermotor LS-40 that the state built near Catfish Pond that year.[^2] Wikipedia's list of New Jersey fire towers gives the Catfish Station a height of 60 feet.[^3] Willhite also says a wooden tower stood at the Catfish site before 1922.[^2] The register puts the earlier wooden tower in Walnut Valley, so the sources disagree about where it stood.[^1][^2]
+
+The register says the site lies within the Delaware Water Gap National Recreation Area, which the National Park Service administers.[^1] The register also mentions unconfirmed reports of cable and timber from the old tower along the Appalachian Trail, at its former site.[^1] We found no source that confirms those remains. No source we read describes the site today or says whether visitors can reach that spot. Willhite lists the Catfish Tower as a standing lookout that is staffed when fire danger is moderate to high.[^2]
+
+[^1]: Worthington Lookout Site, Former Fire Lookout Sites Register, http://firetower.org/lookouts/us/nj/worthington-lookout-site/ (accessed 2026-10-10).
+[^2]: Catfish Fire Tower, WillhiteWeb.com, https://willhiteweb.com/appalachian_trail/fire_lookouts/catfish_lookout/tower_047.htm (accessed 2026-10-10).
+[^3]: List of New Jersey Forest Fire Service fire towers, Wikipedia, https://en.wikipedia.org/wiki/List_of_New_Jersey_Forest_Fire_Service_fire_towers (accessed 2026-10-10).

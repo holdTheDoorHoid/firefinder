@@ -1,6 +1,7 @@
 {
   "id": "us-ky-viva",
   "name": "Viva Lookout Site",
+  "summary": "Kentucky State Division of Forestry tower in Laurel County, built 1937 and removed in the late 1970s; the site could not be reached and shows no remains in aerial photos.",
   "other_names": [],
   "country": "US",
   "region": "KY",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Register says the tower was removed in the late 1970s; the former site could not be accessed and online aerial and satellite photos did not reveal anything of the site being left",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/ky/viva-lookout-site/"
     }
   ],
-  "agency": null,
+  "agency": "Kentucky State Division of Forestry (operator per the register)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Register says the ridge is no longer open to vehicles and the former tower site could not be accessed; no public route is described"
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,17 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Register says vehicles can no longer use the ridge access; no trail is described"
   },
   "rental": null,
   "events": [
     {
       "year": 1937,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Built 1937 per the register; operated by the Kentucky State Division of Forestry",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ky/viva-lookout-site/"
     },
     {
       "year": 1970,
@@ -60,8 +62,9 @@
     {
       "year": 2026,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 2, 2026",
-      "from": "fflos"
+      "note": "Registered January 2, 2026 on the Former Fire Lookout Sites register; nominated by Robert Wittenback",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ky/viva-lookout-site/"
     }
   ],
   "photos": [],
@@ -70,6 +73,11 @@
       "label": "FFLOS register entry US 2118 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ky/viva-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Viva (Coal Camp Project, University of Kentucky Appalachian Projects)",
+      "url": "https://appalachianprojects.as.uky.edu/node/4802",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -86,12 +94,32 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ky-viva",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

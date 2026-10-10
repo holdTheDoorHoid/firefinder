@@ -1,6 +1,7 @@
 {
   "id": "us-ma-rockport-tower-site-2",
   "name": "Rockport Tower Site #2",
+  "summary": "Pigeon Hill, Rockport MA: municipal 40-ft wooden tower first operated 1929 and used until 1941; FFLOS-registered 2008; no source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "MA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "design": "40-foot wooden tower",
+  "height_m": 12.2,
+  "status": "unknown",
+  "status_note": "Listed among former lookout sites and used until 1941; the register does not say whether the tower still stands, and no source describes the site today",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,7 +29,7 @@
       "url": "http://firetower.org/lookouts/us/ma/rockport-tower-site-2/"
     }
   ],
-  "agency": null,
+  "agency": "Municipal, per FFLOS (no agency named)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -46,10 +47,25 @@
   "rental": null,
   "events": [
     {
+      "year": 1929,
+      "event": "other",
+      "note": "First operated in 1929 per FFLOS; no build date is given",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/rockport-tower-site-2/"
+    },
+    {
+      "year": 1941,
+      "event": "other",
+      "note": "Used by the municipality until 1941; the register gives no reason for the end of use",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/rockport-tower-site-2/"
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 3, 2008",
-      "from": "fflos"
+      "note": "Date Registered September 3, 2008; nominated by Henry Isenberg",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ma/rockport-tower-site-2/"
     }
   ],
   "photos": [],
@@ -58,6 +74,11 @@
       "label": "FFLOS register entry US 12 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ma/rockport-tower-site-2/",
       "kind": "register"
+    },
+    {
+      "label": "Rockport Tower Site #1 (Former Fire Lookout Sites (firetower.org))",
+      "url": "http://firetower.org/lookouts/us/ma/rockport-tower-site-1/",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -74,12 +95,48 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ma-rockport-tower-site-2",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "fflos",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }
