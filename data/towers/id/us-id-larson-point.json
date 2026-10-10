@@ -1,6 +1,7 @@
 {
   "id": "us-id-larson-point",
   "name": "Larson Point",
+  "summary": "Log cabin lookout on Clearwater National Forest, built 1930 per the Forest Service list and gone by 1960; no source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,16 +17,16 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "log cabin",
   "height_m": null,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "US Forest Service - Clearwater National Forest",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Hike-in site on Clearwater National Forest land; no source describes a closure"
   },
   "staffing": {
     "status": "unknown",
@@ -33,13 +34,43 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Listed as hike-in by Idaho Fire Lookouts; the sources give no route details"
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1930,
+      "event": "built",
+      "note": "Forest Service list gives 1930; firelookout.com and Idaho Fire Lookouts give only the 1930s",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/media/259185",
+      "source_urls": [
+        "https://www.fs.usda.gov/media/259185",
+        "https://www.firelookout.com/id/larsonpoint.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/larson-point/"
+      ]
+    },
+    {
+      "year": 1960,
+      "event": "removed",
+      "note": "All three sources record the cabin as gone in 1960; the sources give no reason",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/larsonpoint.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/larsonpoint.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/larson-point/",
+        "https://www.fs.usda.gov/media/259185"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Clearwater National Forest Lookouts (list compiled June 2016) (US Forest Service)",
+      "url": "https://www.fs.usda.gov/media/259185",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -82,12 +113,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-larson-point",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

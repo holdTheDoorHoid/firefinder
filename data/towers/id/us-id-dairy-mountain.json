@@ -1,6 +1,7 @@
 {
   "id": "us-id-dairy-mountain",
   "name": "Dairy Mountain Lookout",
+  "summary": "Nez Perce NF lookout: 75-ft crow's nest in 1927, log cabin in 1929, pole tower in 1945; destroyed 1960. Sources disagree on the 1945 tower's size.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,37 +17,95 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "1945 pole tower with L-4 cab per two sites (40 ft), or 50-ft L-6 with gable roof per the Forest Service list; earlier 75-ft crow's nest (1927) and log cabin (1929)",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Destroyed 1960; the FFLA list marks the tower gone",
   "registers": [],
-  "agency": null,
+  "agency": "Nez Perce National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "1927"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Idaho Fire Lookouts tags the site Drive-Up. The tower is gone and no source describes the site now."
   },
   "rental": null,
   "events": [
     {
+      "year": 1927,
+      "event": "built",
+      "note": "75-foot crow's nest",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/dairymtn.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/dairymtn.html",
+        "https://www.fs.usda.gov/media/259204"
+      ]
+    },
+    {
+      "year": 1927,
+      "event": "staffed",
+      "note": "Ted Oliver is the one known staff entry",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/selway-region/dairy-mountain-lookout/"
+    },
+    {
+      "year": 1929,
+      "event": "built",
+      "note": "log cabin",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/dairymtn.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/dairymtn.html",
+        "https://www.fs.usda.gov/media/259204",
+        "https://www.idahofirelookouts.com/selway-region/dairy-mountain-lookout/"
+      ]
+    },
+    {
+      "year": 1945,
+      "event": "built",
+      "note": "pole tower with L-4 cab per two sites (40 ft); Forest Service list gives a 50-ft L-6 with gable roof",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/dairymtn.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/dairymtn.html",
+        "https://www.fs.usda.gov/media/259204",
+        "https://www.idahofirelookouts.com/selway-region/dairy-mountain-lookout/"
+      ]
+    },
+    {
       "year": 1960,
       "event": "destroyed",
-      "note": null,
-      "from": "idaho_fl"
+      "note": "tower destroyed; the year is given by sites 1-3, and the FFLA list (site 4) marks it gone without a date",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/dairymtn.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/dairymtn.html",
+        "https://www.fs.usda.gov/media/259204",
+        "https://www.idahofirelookouts.com/selway-region/dairy-mountain-lookout/"
+      ]
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Nez Perce National Forest Lookouts (USDA Forest Service, Nez Perce National Forest)",
+      "url": "https://www.fs.usda.gov/media/259204",
+      "kind": "reference"
+    },
+    {
+      "label": "Idaho Lookouts (by Region) (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/id/id-rg/",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -90,12 +149,33 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-dairy-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

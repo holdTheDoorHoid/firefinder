@@ -1,0 +1,8 @@
+Red Horse Mountain, about 11 miles southeast of Coeur d'Alene in the Coeur d'Alene National Forest, is first recorded with an L-4 cab on its summit in 1931.[^1][^3] The Idaho Fire Lookouts site lists Beb Lemons as staff in the 1940s, with "Letter to Ray" in parentheses after the name.[^2] Three sites list a second L-4 cab in 1945, but WillhiteWeb says only that another cab may have been built that year.[^1][^2][^3][^4] The cab was destroyed in 1952, although the Kootenai County list dates that to c.1952.[^1][^2][^3][^4] WillhiteWeb also reports that a 1956 USGS party said the lookout tower had been removed, so the sources disagree on whether a tower or only a cab stood here.[^1][^3]
+
+The Idaho Fire Lookouts site lists the summit as drive-up.[^2] WillhiteWeb describes a forest-road route ending in an unmarked spur for the last half mile, and notes that most visitors leave the car and walk that stretch.[^3] It rates the access as easy, mentions some views from the summit, and notes that the north views are growing over with trees.[^3] A photo caption notes some metal from the lookout in the firepit.[^3] Apart from that, no source we read describes what remains on the summit now.[^3]
+
+[^1]: Red Horse Fire Lookout Cabin, firelookout.com, https://www.firelookout.com/id/redhorse.html (accessed 2026-10-10).
+[^2]: Red Horse Lookout, Idaho Fire Lookouts, https://www.idahofirelookouts.com/cda-region/red-horse-lookout/ (accessed 2026-10-10).
+[^3]: Red Horse Mountain Lookout Site, WillhiteWeb.com, https://willhiteweb.com/idaho_lookouts/red_horse_mountain/map_014.htm (accessed 2026-10-10).
+[^4]: Kootenai County - Forest Lookouts, idaholookouts.weebly.com, https://idaholookouts.weebly.com/kootenai-county.html (accessed 2026-10-10).

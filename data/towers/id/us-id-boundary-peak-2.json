@@ -1,6 +1,7 @@
 {
   "id": "us-id-boundary-peak-2",
   "name": "Boundary Peak Lookout",
+  "summary": "Clearwater NF lookout built in 1934. Sources disagree on whether it was abandoned and gone by 1964 or burned in 1954. No source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "20-foot L-4 tower",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Gone by 1964 according to two lookout-history pages; the Forest Service list says it burned in 1954.",
   "registers": [],
-  "agency": null,
+  "agency": "Clearwater National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -33,13 +34,49 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "20-foot L-4 tower per firelookout.com and idahofirelookouts.com; the Forest Service list says L-4 cabin",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/boundarypeak268.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/boundarypeak268.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/boundary-peak-lookout-2/",
+        "https://www.fs.usda.gov/media/259185"
+      ]
+    },
+    {
+      "year": 1954,
+      "event": "burned",
+      "note": "Forest Service Clearwater list says burned in 1954; the other two pages say abandoned in the 1950s",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/media/259185"
+    },
+    {
+      "year": 1964,
+      "event": "other",
+      "note": "Listed as gone by 1964",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/boundarypeak268.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/boundarypeak268.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/boundary-peak-lookout-2/"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Clearwater National Forest Lookouts (USDA Forest Service)",
+      "url": "https://www.fs.usda.gov/media/259185",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -82,12 +119,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-boundary-peak-2",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

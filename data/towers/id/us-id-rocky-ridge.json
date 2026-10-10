@@ -1,6 +1,7 @@
 {
   "id": "us-id-rocky-ridge",
   "name": "Rocky Ridge Lookout",
+  "summary": "Clearwater National Forest cabin lookout in Idaho County, Idaho: log cabin with 1924 cupola cabin, abandoned in the 1940s; sources differ on the 1914 or 1917 start.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "log cabin, with a cupola cabin from 1924",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Listed as ground gone. No source we read describes what, if anything, remains at the site.",
   "registers": [],
-  "agency": null,
+  "agency": "Clearwater National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -33,16 +34,45 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Idaho Fire Lookouts lists the site as drive-up."
   },
   "rental": null,
   "events": [
     {
+      "year": 1917,
+      "event": "built",
+      "note": "Log cabin, per firelookout.com and Idaho Fire Lookouts; the 2016 Forest Service list gives 1914",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/rockyridge.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/rockyridge.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/rocky-ridge-lookout/",
+        "https://www.fs.usda.gov/media/259185"
+      ]
+    },
+    {
+      "year": 1924,
+      "event": "built",
+      "note": "Cupola cabin, per all three sources",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/rockyridge.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/rockyridge.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/rocky-ridge-lookout/",
+        "https://www.fs.usda.gov/media/259185"
+      ]
+    },
+    {
       "year": 1940,
       "event": "abandoned",
-      "note": null,
-      "from": "idaho_fl"
+      "note": "Sources say the 1940s only; no exact year is given. 1940 is the start of that decade, used as a sort key",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/rockyridge.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/rockyridge.html",
+        "https://www.fs.usda.gov/media/259185"
+      ]
     }
   ],
   "photos": [
@@ -60,6 +90,11 @@
     }
   ],
   "links": [
+    {
+      "label": "Clearwater National Forest Lookouts (USDA Forest Service)",
+      "url": "https://www.fs.usda.gov/media/259185",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -104,12 +139,32 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-rocky-ridge",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-id-idamont",
   "name": "Idamont",
+  "summary": "Boundary County crow's nest in the Kaniksu NF, set up in the 1930s and abandoned in 1942; no source describes what remains.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Crow's nest",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Abandoned in 1942. No source says whether any structure remains.",
   "registers": [],
-  "agency": null,
+  "agency": "Kaniksu National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -33,11 +34,34 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Idaho Fire Lookouts labels the entry 'Hike-In Abandoned'. No source describes the site today."
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1930,
+      "event": "built",
+      "note": "Crow's nest. The sources say only 'the 1930s'; 1930 stands in for the decade.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/idamont.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/idamont.html",
+        "https://www.idahofirelookouts.com/northern-idaho/idamont/"
+      ]
+    },
+    {
+      "year": 1942,
+      "event": "abandoned",
+      "note": "Both lookout sites give 1942 as the year it was abandoned.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/idamont.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/idamont.html",
+        "https://www.idahofirelookouts.com/northern-idaho/idamont/"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -82,9 +106,38 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-idamont",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    },
     {
       "field": "location",
       "values": [
@@ -107,9 +160,15 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "pass",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

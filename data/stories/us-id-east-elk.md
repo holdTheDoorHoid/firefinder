@@ -1,0 +1,5 @@
+East Elk Lookout was a cupola cabin built in 1931 in Clearwater County, Idaho.[^1][^2] The sites list its elevation at 5,720 feet.[^1][^2] The firelookout.com page places it 11 miles east of what it calls Headquarters.[^1] Both pages carry the initials CTPA.[^1][^2] The Elk Butte page on the same site names the Clearwater-Potlatch Timber Protective Association, which is probably what the initials stand for.[^1][^2][^3] The Idaho Fire Lookouts site lists one known staff member, Bill Bailey, for 1933, at what it calls the Columbia Breaks Fire Center.[^2] No second source confirms that entry. The cabin was abandoned in 1961, and both pages list it as gone.[^1][^2] Neither page describes what remains at the site today.[^1][^2] The Idaho site files the lookout among its drive-up sites.[^2]
+
+[^1]: East Elk Fire Lookout Cabin, firelookout.com, https://www.firelookout.com/id/eastelk.html (accessed 2026-10-10).
+[^2]: East Elk Lookout, Idaho Fire Lookouts, https://www.idahofirelookouts.com/st-joe-clearwater-region/east-elk-lookout/ (accessed 2026-10-10).
+[^3]: Elk Butte Lookout, firelookout.com, https://firelookout.com/id/elkbutteid.html (accessed 2026-10-10).

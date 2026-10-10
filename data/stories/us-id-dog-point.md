@@ -1,0 +1,4 @@
+Dog Point Lookout was a log cabin in the Nez Perce National Forest, about five miles southeast of the Moose Creek Ranger Station.[^1] Two web listings for the site give 1937 as the year it went up, and both describe a log cabin with a ladder for access.[^1][^2] The firelookout.com page places it in Idaho County.[^1] The sites list its elevation at 5,744 feet.[^1][^2] The cabin was abandoned in 1939, and both pages now list the lookout as gone.[^1][^2] Neither page describes what, if anything, remains on the ground today.[^1][^2] The Idaho Fire Lookouts site files it in its Selway region and labels it a hike-in lookout.[^2]
+
+[^1]: Dog Point Fire Lookout Cabin, firelookout.com, https://www.firelookout.com/id/dogpoint.html (accessed 2026-10-10).
+[^2]: Dog Point Lookout, Idaho Fire Lookouts, https://www.idahofirelookouts.com/selway-region/dog-point-lookout/ (accessed 2026-10-10).

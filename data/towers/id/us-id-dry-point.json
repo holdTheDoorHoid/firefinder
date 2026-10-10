@@ -1,6 +1,7 @@
 {
   "id": "us-id-dry-point",
   "name": "Dry Point Lookout",
+  "summary": "A 1934 20-foot L-4 lookout in the Clearwater National Forest, abandoned in the 1940s and burned in the 1960s.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "20-foot L-4 tower",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Abandoned in the 1940s and recorded as gone; the Forest Service list gives a 1960s burn.",
   "registers": [],
-  "agency": null,
+  "agency": "Clearwater National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -33,13 +34,44 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": false,
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "20-foot L-4 tower about half a mile south of the summit",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/drypoint.html"
+    },
+    {
+      "year": 1940,
+      "event": "abandoned",
+      "note": "Abandoned in the 1940s; the exact year is not given",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/drypoint.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/drypoint.html",
+        "https://www.fs.usda.gov/media/259185"
+      ]
+    },
+    {
+      "year": 1960,
+      "event": "burned",
+      "note": "Burned in the 1960s; the exact year is not given (Forest Service list only)",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/media/259185"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Clearwater National Forest Lookouts (list compiled June 2016) (U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/media/259185",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -82,12 +114,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-dry-point",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

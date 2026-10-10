@@ -1,0 +1,5 @@
+Dry Point Lookout stood in the Clearwater National Forest, and it was built in 1934.[^1] The firelookout.com page calls it a 20-foot L-4 tower, located about half a mile south of the summit.[^1] The Forest Service list calls the structure an L-4 cabin.[^3] The firelookout.com page and the Forest Service list both place it about 21 miles east-northeast of Kooskia.[^1][^3] Its elevation is listed as 4,000 feet.[^1][^2] It was abandoned in the 1940s.[^1][^3] The Forest Service list says it burned in the 1960s, while the two websites say only that it is gone.[^1][^2][^3] No source describes what remains at the site today.[^1][^2][^3] The Idaho Fire Lookouts site labels the lookout hike-in.[^2]
+
+[^1]: Dry Point Fire Lookout Tower, firelookout.com, https://www.firelookout.com/id/drypoint.html (accessed 2026-10-10).
+[^2]: Dry Point Lookout, Idaho Fire Lookouts, https://www.idahofirelookouts.com/st-joe-clearwater-region/dry-point-lookout/ (accessed 2026-10-10).
+[^3]: Clearwater National Forest Lookouts (list compiled June 2016), U.S. Forest Service, https://www.fs.usda.gov/media/259185 (accessed 2026-10-10).

@@ -1,6 +1,7 @@
 {
   "id": "us-id-grouse-point",
   "name": "Grouse Point Lookout",
+  "summary": "L-4 tower on the Clearwater NF dated 1934 and burned in the Pete King Fire; a separate 1933 Grouse Point three miles north of Lochsa RS is easily confused with it.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "L-4 tower",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Burned in 1934; no source describes what, if anything, remains at the site",
   "registers": [],
-  "agency": null,
+  "agency": "Clearwater National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -33,11 +34,29 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Idaho Fire Lookouts lists it as hike-in"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "Firelookout.com lists an L-4 tower for 1934",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/grousepoint.html"
+    },
+    {
+      "year": 1934,
+      "event": "burned",
+      "note": "Forest Service list and Idaho Fire Lookouts both say it burned in 1934; the Idaho page names the Pete King Wildfire",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/media/259185",
+      "source_urls": [
+        "https://www.fs.usda.gov/media/259185",
+        "https://www.idahofirelookouts.com/selway-region/grouse-point-lookout-2/"
+      ]
+    },
     {
       "year": 1934,
       "event": "destroyed",
@@ -47,6 +66,21 @@
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Clearwater National Forest Lookouts (USDA Forest Service)",
+      "url": "https://www.fs.usda.gov/media/259185",
+      "kind": "reference"
+    },
+    {
+      "label": "Grouse Point Fire Lookout Tower (firelookout.com (Rex Kamstra))",
+      "url": "https://www.firelookout.com/id/grousepoint269.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Grouse Point Lookout (Idaho Fire Lookouts (idahofirelookouts.com))",
+      "url": "https://www.idahofirelookouts.com/st-joe-clearwater-region/grouse-point-lookout/",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -90,6 +124,20 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-grouse-point",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -115,9 +163,15 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

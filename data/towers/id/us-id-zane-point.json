@@ -1,6 +1,7 @@
 {
   "id": "us-id-zane-point",
   "name": "Zane Point",
+  "summary": "St. Joe NF crow's nest in Benewah County, abandoned as a lookout; firelookout.com says it is still there, and no recent description of the site was found.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,16 +17,16 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Crow's nest",
   "height_m": null,
-  "status": "gone",
+  "status": "standing",
   "status_note": null,
   "registers": [],
   "agency": "St. Joe National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "On St. Joe National Forest land; Idaho Fire Lookouts classes it as hike-in; no closure or permit described"
   },
   "staffing": {
     "status": "unknown",
@@ -33,8 +34,8 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Idaho Fire Lookouts classes the site as hike-in."
   },
   "rental": null,
   "events": [],
@@ -85,12 +86,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-zane-point",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "standing"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -105,12 +124,18 @@
         }
       ],
       "distance_m": null,
-      "note": "idahofirelookouts.com's status is read from a short summary."
+      "note": "Research (2026-10-10) gives standing where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-id-cross-trails",
   "name": "Cross Trails",
+  "summary": "Nez Perce National Forest lookout about 20 miles SSW of Elk City; listed abandoned or gone, with no history or site description in the sources.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -18,10 +19,10 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "The 2010 Forest Service list and Idaho Fire Lookouts say abandoned; the FFLA index says gone; no source describes what remains",
   "registers": [],
-  "agency": null,
+  "agency": "Nez Perce National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -40,6 +41,11 @@
   "events": [],
   "photos": [],
   "links": [
+    {
+      "label": "Nez Perce National Forest Lookouts (compiled April 2010 by Cindy L. Schacher) (USDA Forest Service)",
+      "url": "https://www.fs.usda.gov/media/259204",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -81,12 +87,45 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-cross-trails",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

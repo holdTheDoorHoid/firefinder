@@ -1,6 +1,7 @@
 {
   "id": "us-id-moscow-bar",
   "name": "Moscow Bar Lookout",
+  "summary": "Clearwater NF site at 5,274 ft: L-4 cab built 1934 (1931 per one source), abandoned in the 1940s, now gone; no source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "L-4 cab, with a 20-foot L-6 tower about two miles northwest as a patrol point",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Abandoned in the 1940s; no source describes what remains",
   "registers": [],
-  "agency": null,
+  "agency": "Clearwater National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -33,11 +34,23 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Idaho Fire Lookouts labels the site 'Drive-Up Abandoned'; no source describes current access"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "L-4 cab (per firelookout.com and the 2016 Clearwater list); Idaho Fire Lookouts dates the L-4 to 1931",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/moscowbar.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/moscowbar.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/moscow-bar-lookout/",
+        "https://www.fs.usda.gov/media/259185"
+      ]
+    },
     {
       "year": 1940,
       "event": "abandoned",
@@ -47,6 +60,16 @@
   ],
   "photos": [],
   "links": [
+    {
+      "label": "The Clearwater Story, Appendix B (USDA Forest Service Region 1)",
+      "url": "https://npshistory.com/publications/usfs/region/1/clearwater/story/appb.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Clearwater National Forest Lookouts (USDA Forest Service, Clearwater National Forest)",
+      "url": "https://www.fs.usda.gov/media/259185",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -90,6 +113,20 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-moscow-bar",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -115,9 +152,15 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

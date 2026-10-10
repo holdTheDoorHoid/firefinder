@@ -1,6 +1,7 @@
 {
   "id": "us-id-dam-ridge",
   "name": "Dam Ridge Lookout",
+  "summary": "St. Joe NF lookout with an L-4 tower from 1934, destroyed 1954. No documented staffing; FFLA lists the tower gone and no source describes the site now.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "L-4 tower, 1934",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Destroyed 1954 per two lookout-history pages; the FFLA list marks the tower gone",
   "registers": [],
-  "agency": null,
+  "agency": "St. Joe National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -33,20 +34,41 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Idaho Fire Lookouts labels the site Hike-In and gives its elevation as 5,050 feet. No source describes its current condition."
   },
   "rental": null,
   "events": [
     {
+      "year": 1934,
+      "event": "built",
+      "note": "L-4 tower",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/damridge.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/damridge.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/dam-ridge-lookout/"
+      ]
+    },
+    {
       "year": 1954,
       "event": "destroyed",
-      "note": null,
-      "from": "idaho_fl"
+      "note": "no cause given in these sources",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/damridge.html",
+      "source_urls": [
+        "https://www.firelookout.com/id/damridge.html",
+        "https://www.idahofirelookouts.com/st-joe-clearwater-region/dam-ridge-lookout/"
+      ]
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Idaho Lookouts (by Region) (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/id/id-rg/",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Idaho lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/id",
@@ -90,12 +112,33 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-dam-ridge",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }
