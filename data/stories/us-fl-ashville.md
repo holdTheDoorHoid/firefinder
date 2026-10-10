@@ -1,0 +1,4 @@
+Ashville's lookout was a 100-foot Aermotor steel tower in Jefferson County, Florida.[^1] Aermotor, a windmill maker, also made galvanized steel fire towers under the Aermotor Corporation name.[^2] The record dates its erection to March 1956.[^1] The record puts the dismantling into sections at circa 2003, so that date is approximate.[^1] The top 80 feet were then set up again at the Gum Creek Hunting Preserve in Madison County, where the record calls them a private observation tower.[^1] The record names no public access to that upper section.[^1] No source we found says whether the upper section still stands, or what, if anything, remains at the original Ashville site.[^1]
+
+[^1]: Ashville - FOREST LOOKOUTS, Eastern U.S. Lookouts, https://easternuslookouts.weebly.com/ashville.html (accessed 2026-10-10).
+[^2]: Aermotor Windmill Company, Wikipedia, https://en.wikipedia.org/wiki/Aermotor_Windmill_Company (accessed 2026-10-10).

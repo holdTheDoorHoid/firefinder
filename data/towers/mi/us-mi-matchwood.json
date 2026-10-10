@@ -1,6 +1,7 @@
 {
   "id": "us-mi-matchwood",
   "name": "Matchwood",
+  "summary": "Gogebic County, Michigan, Ottawa National Forest steel lookout built 1936; a 1977 report announced its dismantling and a cab exhibit, but completion is not confirmed.",
   "other_names": [],
   "country": "US",
   "region": "MI",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "110-foot steel tower with a 7 x 7 foot cab",
   "height_m": 33.5,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "A May 1977 report said the tower would be dismantled; no source we read confirms the work was done",
   "registers": [],
   "agency": "Ottawa National Forest",
   "ownership": "federal",
@@ -37,7 +38,22 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "110-foot steel tower with a 7 x 7 cab erected",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/matchwood.html"
+    },
+    {
+      "year": 1977,
+      "event": "other",
+      "note": "May 1977 report said the tower will be dismantled; completion not confirmed",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/matchwood.html"
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -61,12 +77,48 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mi-matchwood",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

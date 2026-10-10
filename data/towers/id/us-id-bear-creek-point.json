@@ -1,6 +1,7 @@
 {
   "id": "us-id-bear-creek-point",
   "name": "Bear Creek Point Lookout",
+  "summary": "1934 L-5 cab in Valley County, Idaho, inside the River of No Return Wilderness; abandoned in the 1950s, still listed as standing, reached only on foot.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "L-5 cab; three sources give 10 by 10 feet, and Forest Lookouts gives a two-story 12 by 12 log cabin",
   "height_m": null,
-  "status": "gone",
+  "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "U.S. Forest Service",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -33,16 +34,50 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Hike-in only, by trail within the River of No Return Wilderness."
   },
   "rental": null,
   "events": [
     {
+      "year": 1934,
+      "event": "built",
+      "note": "L-5 cab built; all four history sources give 1934",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/bear-creek-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/bear-creek-point-lookout/",
+        "https://www.firelookout.com/id/bearcreekpoint.html",
+        "https://idaholookouts.weebly.com/bear-creek-point.html",
+        "https://www.idahofirelookouts.com/west-central/bear-creek-point-lookout/"
+      ]
+    },
+    {
       "year": 1950,
       "event": "abandoned",
-      "note": null,
-      "from": "idaho_fl"
+      "note": "Sources give only the decade, the 1950s; 1950 stands in for the decade",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/bear-creek-point-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/us/id/bear-creek-point-lookout/",
+        "https://www.firelookout.com/id/bearcreekpoint.html",
+        "https://idaholookouts.weebly.com/bear-creek-point.html",
+        "https://www.idahofirelookouts.com/west-central/bear-creek-point-lookout/"
+      ]
+    },
+    {
+      "year": 1951,
+      "event": "staffed",
+      "note": "July 12, 1951 Recorder-Herald item, quoted on Forest Lookouts, names Charles L. Powell, Jr. as taking over a 'Bear Creek lookout'; the item does not clearly identify this site",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/bear-creek-point.html"
+    },
+    {
+      "year": 2008,
+      "event": "nhlr_registered",
+      "note": "Registered November 20, 2008 as US 748, ID 50; nominated by Jill Osborn",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/us/id/bear-creek-point-lookout/"
     }
   ],
   "photos": [
@@ -61,6 +96,26 @@
   ],
   "links": [
     {
+      "label": "Bear Creek Point Lookout (National Historic Lookout Register (nhlr.org))",
+      "url": "http://nhlr.org/lookouts/us/id/bear-creek-point-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Bear Creek Point Fire Lookout Cabin (Forest Fire Lookout page (firelookout.com))",
+      "url": "https://www.firelookout.com/id/bearcreekpoint.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Bear Creek Point (Forest Lookouts (idaholookouts.weebly.com))",
+      "url": "https://idaholookouts.weebly.com/bear-creek-point.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Idaho Lookouts list (Forest Fire Lookout Association (firelookout.org))",
+      "url": "https://firelookout.org/lookouts/us/id",
+      "kind": "reference"
+    },
+    {
       "label": "Bear Creek Point Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/west-central/bear-creek-point-lookout/",
       "kind": "site"
@@ -78,12 +133,48 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-bear-creek-point",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "standing"
+        },
+        {
+          "source": "idaho_fl",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives standing where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

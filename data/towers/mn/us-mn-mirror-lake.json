@@ -1,6 +1,7 @@
 {
   "id": "us-mn-mirror-lake",
   "name": "Mirror Lake",
+  "summary": "1933 Minnesota Forest Service steel tower; 2003 county note says its cab was removed and it was used as an ARMER radio site. FFLA lists it gone. No source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "MN",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "100-foot steel stairway tower; the county list names Aermotor and a square cab (cab later removed)",
+  "height_m": 30.5,
   "status": "gone",
-  "status_note": null,
+  "status_note": "FFLA lists it gone, but the St. Louis County list's 2003 note says it was in use as a communications site with the cab removed",
   "registers": [],
-  "agency": null,
+  "agency": "Minnesota Forest Service",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,9 +38,38 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "dated 1933 with the Minnesota Forest Service as owner (builder not stated); number 102 on the St. Louis County list",
+      "from": "research",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/St_Louis_County_Towers.pdf"
+    },
+    {
+      "year": 2003,
+      "event": "modified",
+      "note": "cab removed and the tower in use as an ARMER site, per a 2003 note on the county list; the state dates first ARMER build to 2004, so the date needs checking",
+      "from": "research",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/St_Louis_County_Towers.pdf",
+      "source_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/c/ce/St_Louis_County_Towers.pdf",
+        "https://dps.mn.gov/divisions/hsem/networks/armer"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "St. Louis County Minnesota Fire Lookout Towers (Wikimedia Commons)",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/St_Louis_County_Towers.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Allied Radio Matrix for Emergency Response (ARMER) (Minnesota Department of Public Safety)",
+      "url": "https://dps.mn.gov/divisions/hsem/networks/armer",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Minnesota lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mn/",
@@ -58,12 +88,32 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mn-mirror-lake",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

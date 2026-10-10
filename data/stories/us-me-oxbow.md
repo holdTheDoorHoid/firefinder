@@ -1,0 +1,5 @@
+A fire tower once stood at the Mouth of the Oxbow Road, in Oxbow Plantation in Aroostook County.[^1] The only dated source found for the tower is a 1945 360-degree panoramic map from the Maine Forest Service, centered on the tower, and the state archives gives the map's size as 30 by 30 inches.[^1] The map belongs to the archives' Fire Tower Maps collection, and its record gives the creation date as January 1, 1945.[^1] The Forest Fire Lookout Association places the site at 46.44017 north, 68.38432 west.[^2] A Maine lookout list describes Oxbow as an "Auxiliary Lookout" in the Maine Forestry District.[^3] The association's list marks the tower as gone.[^2] No source describes what, if anything, remains at the site today, or whether the land is open to visitors.[^1][^2][^3]
+
+[^1]: Mouth of the Oxbow Road, 1945, Maine State Archives, https://digitalmaine.com/arc_firetower/47/ (accessed 2026-10-10).
+[^2]: Maine Fire Towers, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/me/ (accessed 2026-10-10).
+[^3]: MAINE - FOREST LOOKOUTS, Forest Lookouts, https://easternuslookouts.weebly.com/maine.html (accessed 2026-10-10).

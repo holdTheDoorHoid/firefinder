@@ -1,0 +1,3 @@
+Argyle's lookout was a steel tower in Walton County, Florida.[^1] The only dated entry we found is from January 2, 2004, when the tower was taken down and relocated to a private spot.[^1] The record does not name the new site, so no source we found places the steel today or says whether anyone can see it.[^1] Because the new location is described as private, the public has no recorded access to the tower.[^1] No source we found describes what, if anything, remains at the original Argyle site.[^1]
+
+[^1]: Argyle - FOREST LOOKOUTS, Eastern U.S. Lookouts, https://easternuslookouts.weebly.com/argyle.html (accessed 2026-10-10).

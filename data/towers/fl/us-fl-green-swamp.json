@@ -1,6 +1,7 @@
 {
   "id": "us-fl-green-swamp",
   "name": "Green Swamp",
+  "summary": "Polk County tower moved here from Providence in 1990; the newest account found (2006) says it stood, and no later status was found.",
   "other_names": [],
   "country": "US",
   "region": "FL",
@@ -16,16 +17,16 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "design": "100-foot tower topped by a cubicle-sized room, 132 steps",
+  "height_m": 30.5,
+  "status": "unknown",
+  "status_note": "Last described as standing in a 2006 newspaper account; no later source found.",
   "registers": [],
-  "agency": null,
+  "agency": "Florida Division of Forestry",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "In 2006 the owner was the Florida Division of Forestry, and the structures were described as no longer considered safe."
   },
   "staffing": {
     "status": "unknown",
@@ -37,9 +38,49 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1963,
+      "event": "built",
+      "note": "Eastern US Lookouts says a lookout tower was erected at Providence in 1963; a 2006 newspaper dates the Green Swamp Tower's construction to 1963 and does not mention a move.",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/providence1.html",
+      "source_urls": [
+        "https://easternuslookouts.weebly.com/providence1.html",
+        "https://www.orlandosentinel.com/2006/06/05/floridas-fire-towers-lose-stature/"
+      ]
+    },
+    {
+      "year": 1990,
+      "event": "relocated",
+      "note": "The Providence tower was dismantled into three sections, moved about two miles north and re-erected as the Green Swamp tower.",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/green-swamp.html",
+      "source_urls": [
+        "https://easternuslookouts.weebly.com/green-swamp.html",
+        "https://easternuslookouts.weebly.com/providence1.html"
+      ]
+    },
+    {
+      "year": 2006,
+      "event": "assessed",
+      "note": "Officially retired; structures described as no longer considered safe; antenna still attached, radio gone.",
+      "from": "research",
+      "source_url": "https://www.orlandosentinel.com/2006/06/05/floridas-fire-towers-lose-stature/"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Providence - Forest Lookouts (Eastern US Lookouts)",
+      "url": "https://easternuslookouts.weebly.com/providence1.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Florida's fire towers lose stature (Orlando Sentinel (reprinted from the Lakeland Ledger))",
+      "url": "https://www.orlandosentinel.com/2006/06/05/floridas-fire-towers-lose-stature/",
+      "kind": "reference"
+    },
     {
       "label": "Green Swamp (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/green-swamp.html",
@@ -58,12 +99,49 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-fl-green-swamp",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "eastern_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-id-smith-triangle",
   "name": "Smith Triangle Lookout",
+  "summary": "Kaniksu National Forest hike-in lookout near Porthill, Idaho; sources disagree on a 1934 tower vs a 1937 cabin; destroyed in the 1950s, now listed as gone.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Sources disagree: firelookout.com gives a 20-foot L-4 tower dated 1934; idahofirelookouts.com lists a small cabin in 1937",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Forest Fire Lookout Association's Idaho list marks it as gone, type Ground; no source describes remains on the site",
   "registers": [],
-  "agency": null,
+  "agency": "Kaniksu National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -33,20 +34,77 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Listed as a hike-in site on idahofirelookouts.com; no trail described"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "firelookout.com: 20-foot L-4 tower; idahofirelookouts.com gives a different first structure (see 1937)",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/id/smithtriangle.html"
+    },
+    {
+      "year": 1934,
+      "event": "staffed_first",
+      "note": "Howard Green, listed as lookout in 1934; earliest documented staffing",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/northern-idaho/smith-triangle-lookout/",
+      "source_urls": [
+        "https://www.idahofirelookouts.com/northern-idaho/smith-triangle-lookout/",
+        "https://www.firelookout.com/id/smithtriangle.html"
+      ]
+    },
+    {
+      "year": 1935,
+      "event": "staffed",
+      "note": "Ed Johnson, listed for 1935 and 1936",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/northern-idaho/smith-triangle-lookout/",
+      "source_urls": [
+        "https://www.idahofirelookouts.com/northern-idaho/smith-triangle-lookout/",
+        "https://www.firelookout.com/id/smithtriangle.html"
+      ]
+    },
+    {
+      "year": 1937,
+      "event": "built",
+      "note": "idahofirelookouts.com: small cabin; conflicts with the 1934 tower date on firelookout.com",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/northern-idaho/smith-triangle-lookout/"
+    },
     {
       "year": 1950,
       "event": "destroyed",
       "note": null,
       "from": "idaho_fl"
+    },
+    {
+      "year": null,
+      "event": "destroyed",
+      "note": "Destroyed in the 1950s; sources give only the decade, no single year",
+      "from": "research",
+      "source_url": "https://www.idahofirelookouts.com/northern-idaho/smith-triangle-lookout/",
+      "source_urls": [
+        "https://www.idahofirelookouts.com/northern-idaho/smith-triangle-lookout/",
+        "https://www.firelookout.com/id/smithtriangle.html"
+      ]
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Smith Triangle Fire Lookout Cabin (firelookout.com)",
+      "url": "https://www.firelookout.com/id/smithtriangle.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Idaho Lookouts (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/id/",
+      "kind": "reference"
+    },
     {
       "label": "Smith Triangle Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/northern-idaho/smith-triangle-lookout/",
@@ -64,12 +122,32 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-smith-triangle",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }
