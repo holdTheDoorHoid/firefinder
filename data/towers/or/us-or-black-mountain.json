@@ -1,6 +1,7 @@
 {
   "id": "us-or-black-mountain",
   "name": "Black Mountain",
+  "summary": "Ochoco NF crow's nest tree platform built 1937; firelookout.com says it is still there and the cabin was moved to the Ochoco Ranger Station; sources disagree on design and dates.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,9 +17,9 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "gone",
+  "design": "70-foot crow's nest tree platform, with a frame cabin that has since been moved",
+  "height_m": 21.3,
+  "status": "standing",
   "status_note": null,
   "registers": [],
   "agency": "Ochoco National Forest",
@@ -41,8 +42,9 @@
     {
       "year": 1937,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Crow's nest tree platform, per firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/blackmtnoch.html"
     }
   ],
   "photos": [
@@ -97,6 +99,16 @@
   ],
   "links": [
     {
+      "label": "Whispers of the past at the Old Ochoco Ranger Station site (Central Oregonian)",
+      "url": "https://centraloregonian.com/2023/12/30/whispers-of-the-past-at-the-old-ochoco-ranger-station-site/",
+      "kind": "reference"
+    },
+    {
+      "label": "Black Mountain Lookout, Ochoco Mountains (oregonphotos.com)",
+      "url": "http://www.oregonphotos.com/BlackMtn.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
       "kind": "association"
@@ -143,12 +155,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-black-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "standing"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -159,12 +189,18 @@
         }
       ],
       "distance_m": null,
-      "note": null
+      "note": "Research (2026-10-10) gives standing where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

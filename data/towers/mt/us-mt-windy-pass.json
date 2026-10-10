@@ -1,6 +1,7 @@
 {
   "id": "us-mt-windy-pass",
   "name": "Windy Pass",
+  "summary": "Gallatin County, MT ground-level lookout (log cabin c.1914, L-4 cab 1931), listed abandoned and gone; a 1934 Forest Service rental cabin on the same trail is not tied to it.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,16 +17,16 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": "L-4",
+  "design": "Log cabin (c.1914), later an L-4 cab (1931)",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "firelookout.com says abandoned and gone, with no dates; the FFLA Montana list marks it gone",
   "registers": [],
   "agency": "Gallatin National Forest",
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "No source describes access to the old lookout site. A separate Forest Service rental, Windy Pass Cabin, is open June 16 to October 14 and has no motorized access"
   },
   "staffing": {
     "status": "unknown",
@@ -33,13 +34,58 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Windy Pass Cabin, the 1934 rental, is a 2.5-mile hike or horseback ride up the Windy Pass Trail with a 1,300 ft climb. No source describes a route to the old lookout site"
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1914,
+      "event": "built",
+      "note": "Log cabin, around 1914 (c.1914 per the Forest Lookouts page)",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/windypass.html",
+      "source_urls": [
+        "https://www.firelookout.com/mt/windypass.html",
+        "https://montanalookouts.weebly.com/windy-pass.html"
+      ]
+    },
+    {
+      "year": 1931,
+      "event": "modified",
+      "note": "L-4 cab recorded in 1931",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/windypass.html",
+      "source_urls": [
+        "https://www.firelookout.com/mt/windypass.html",
+        "https://montanalookouts.weebly.com/windy-pass.html"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "other",
+      "note": "Windy Pass Cabin, a Forest Service rental on the same trail, was built in 1934; no source links it to the lookout",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r01/custergallatin/recreation/windy-pass-cabin"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Windy Pass Cabin (Custer Gallatin National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r01/custergallatin/recreation/windy-pass-cabin",
+      "kind": "reference"
+    },
+    {
+      "label": "Windy Pass (Custer Gallatin National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r01/custergallatin/recreation/windy-pass",
+      "kind": "reference"
+    },
+    {
+      "label": "Plan a Trip to a Forest Service Cabin or Lookout in Montana (Wild Montana)",
+      "url": "https://wildmontana.org/2022/12/19/community/plan-a-trip-to-a-forest-service-cabin-or-lookout-in-montana/",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
@@ -86,12 +132,33 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-windy-pass",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

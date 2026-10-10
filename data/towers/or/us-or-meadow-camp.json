@@ -1,6 +1,7 @@
 {
   "id": "us-or-meadow-camp",
   "name": "Meadow Camp",
+  "summary": "Josephine County crow's nest dated 1920s?, abandoned; reported still standing in 2001 and 'still there' undated. The record's gone status has no matching source.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Crow's nest, no cab; firelookout.com dates it to the 1920s with a question mark",
   "height_m": null,
-  "status": "gone",
+  "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": "Siskiyou National Forest/BLM",
+  "agency": "Siskiyou National Forest/BLM per firelookout.com; the Forest Lookouts page says Bureau of Land Management",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -37,9 +38,34 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1920,
+      "event": "built",
+      "note": "Crow's nest; firelookout.com dates it to the 1920s with a question mark, so 1920 is a decade marker only",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/meadowcamp.html"
+    },
+    {
+      "year": 2001,
+      "event": "other",
+      "note": "Josephine County lookout list says the crow's nest was still standing in 2001",
+      "from": "research",
+      "source_url": "https://josephinelookouts.blogspot.com/"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Josephine County Fire Lookouts (josephinelookouts.blogspot.com)",
+      "url": "https://josephinelookouts.blogspot.com/",
+      "kind": "reference"
+    },
+    {
+      "label": "Oregon's Standing Lookouts (cherylhill.net)",
+      "url": "https://cherylhill.net/firelookouts/oregons-standing-lookouts/",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
@@ -85,12 +111,29 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-meadow-camp",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "standing"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -101,12 +144,18 @@
         }
       ],
       "distance_m": null,
-      "note": null
+      "note": "Research (2026-10-10) gives standing where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

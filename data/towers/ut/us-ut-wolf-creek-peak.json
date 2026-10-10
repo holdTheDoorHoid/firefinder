@@ -1,6 +1,7 @@
 {
   "id": "us-ut-wolf-creek-peak",
   "name": "Wolf Creek Peak",
+  "summary": "Wasatch County, UT peak where a Uinta National Forest lookout station was maintained by 1914; the Forest Fire Lookout Association lists the site as abandoned, and no source describes what remains.",
   "other_names": [],
   "country": "US",
   "region": "UT",
@@ -18,28 +19,48 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Listed by the Forest Fire Lookout Association as abandoned, not gone; no source describes what, if anything, remains at the top of the peak",
   "registers": [],
   "agency": "Uinta National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Forest Service trailhead on the peak, reached by Forest Service roads and a one-mile trail from Wolf Creek Campground; no source describes lookout remains"
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "1914"
   },
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Trailhead at the upper end of Forest Service Road 091; the one-mile Wolf Creek Peak Trail runs from Wolf Creek Campground"
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1914,
+      "event": "staffed",
+      "note": "A January 1914 item calls the new Wolf Creek lookout station one where a lookout was maintained during dangerous fire seasons (Ogden Examiner, quoted by Forest Lookouts)",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/wolf-creek-peak.html"
+    },
+    {
+      "year": null,
+      "event": "abandoned",
+      "note": "Listed in the Association's table of Utah lookout sites and non-lookout structures with type Unknown and status Abandoned",
+      "from": "research",
+      "source_url": "https://firelookout.org/lookouts/us/ut/"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Trail Hollow Trail #075 (Uinta-Wasatch-Cache National Forest)",
+      "url": "https://www.fs.usda.gov/r04/uinta-wasatch-cache/recreation/trails/trail-hollow-trail-075",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Utah lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ut/",
@@ -76,12 +97,49 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ut-wolf-creek-peak",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

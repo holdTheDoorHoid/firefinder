@@ -1,0 +1,15 @@
+Crane Mountain lies northwest of Warrensburg in Warren County, and the Conservation Commission built a wood fire lookout tower on its summit in September 1911.[^5] A history quoted in a Stories from Open Space trip report says the first observer was James Burch of Athol.[^3] The commission bought a 35-foot steel Aermotor tower in 1918, and the trip report dates its erection to March 1919.[^5][^3] A Post-Star report from April 1919, quoted on the Forest Lookouts page, gives the height as 40 feet, so the sources do not fully agree.[^1]
+
+In 1929 the fire observer stationed on the mountain, J.H. Adams, broadcast the alarm for a fire on Spruce Mountain, which locals more often called Huckleberry Mountain.[^1] A bad drought in October 1973 brought the tower back into service for a short time, and it was credited with spotting two fires.[^3][^4]
+
+Lookout use wound down around 1970.[^5] Wikipedia says the tower stopped at the end of the 1970 season, while the trip report says the DEC put Crane on an inactive list in 1971 but kept maintaining it.[^5][^3] The tower was deemed surplus in 1984.[^5] In December 1987 a DEC crew took it apart, and a helicopter carried the cab to a field owned by Robert and Edith Baker.[^3]
+
+The Grangers, Dick and Perky, paid the Bakers $50 for the cab in the early 1990s.[^3][^4] Dick built a platform for it on their wooded property on Clarence Russell Road, where it sat for about 30 years.[^3] The Grangers had saved it from being sold for scrap, but its supports rotted until the cab became a hazard.[^2][^3] By October 2024 it had moved to the Martins' farm in Thurman, in time for the Oct. 12 Thurman Fall Farm Tour.[^2][^4] It cannot go back on the summit, so the Martins can set it on a knoll on their farm, where it would have a view of the mountain.[^4]
+
+The tower itself is gone from the summit. The trip report says a helicopter removed its parts, and no source I read describes what, if anything, remains up there today.[^3] The cab is the part you can still see.[^4] According to the trip report, people could step inside it on nature walks and at two events a year.[^3] The sources give the farm's name three ways, as Martin's Lumber, Martin's Lumberyard and Martin's Tree Farm.[^2][^4][^3]
+
+[^1]: Crane Mountain, Forest Lookouts, https://easternuslookouts.weebly.com/crane-mountain.html (accessed 2026-10-10).
+[^2]: Forest Fire Lookout Association, New York State Chapter newsletter, October 2024, https://www.nysffla.org/News2024/2024%20Oct%20final.pdf (accessed 2026-10-10).
+[^3]: Remembering the Crane Mountain Fire Tower, by Dan Forbush, Stories from Open Space, https://www.stories-from-open-space.org/trip-reports/remembering-the-crane-mountain-fire-tower (accessed 2026-10-10).
+[^4]: Crane Mountain fire tower finds new home, Tim Rowland, Adirondack Explorer, https://www.adirondackexplorer.org/communities/history/crane-mountain-fire-tower-restoration/ (accessed 2026-10-10).
+[^5]: Crane Mountain (New York), Wikipedia, https://en.wikipedia.org/wiki/Crane_Mountain_(New_York) (accessed 2026-10-10).

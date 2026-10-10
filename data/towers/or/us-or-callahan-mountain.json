@@ -1,6 +1,7 @@
 {
   "id": "us-or-callahan-mountain",
   "name": "Callahan Mountain",
+  "summary": "Douglas County, OR: 1930 crow's nest on a lookout tree at Umpqua NF; abandoned in the 1950s, cabin destroyed 1965; last description 2007 says tree standing.",
   "other_names": [
     "Callahan"
   ],
@@ -18,10 +19,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Crow's nest on a lookout tree (110 feet per firelookout.com); one-room shake-sided lookout dwelling built 1922",
   "height_m": 6.1,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Firelookout.com says the crow's nest was still there in the 1980s; Forest Lookouts says the lookout tree was still standing in 2007; FFLA lists it as abandoned. No later description found",
   "registers": [],
   "agency": "Umpqua National Forest",
   "ownership": "federal",
@@ -41,10 +42,46 @@
   "rental": null,
   "events": [
     {
+      "year": 1922,
+      "event": "built",
+      "note": "One-room shake-sided lookout dwelling constructed for $34.07, per Umpqua National Forest files as cited by Forest Lookouts",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/callahan.html"
+    },
+    {
       "year": 1930,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "110-foot crow's nest dated to 1930 by firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/callahanmtn.html"
+    },
+    {
+      "year": 1934,
+      "event": "staffed",
+      "note": "Observer sent to Callahan station during dry weather in March 1934, per Roseburg News-Review item",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/callahan.html"
+    },
+    {
+      "year": 1965,
+      "event": "destroyed",
+      "note": "Cabin half a mile from the lookout destroyed in 1965, per firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/callahanmtn.html"
+    },
+    {
+      "year": 2007,
+      "event": "other",
+      "note": "Forest Lookouts: the lookout tree still standing, most improvements gone; latest description found",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/callahan.html"
+    },
+    {
+      "year": null,
+      "event": "abandoned",
+      "note": "Firelookout.com: abandoned in the 1950s (exact year not given, so no year is recorded)",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/callahanmtn.html"
     }
   ],
   "photos": [
@@ -110,12 +147,29 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-callahan-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -126,12 +180,18 @@
         }
       ],
       "distance_m": null,
-      "note": null
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

@@ -1,0 +1,11 @@
+Brewster Rock is a summit about 20 miles southeast of Coos Bay, Oregon, at 2,311 feet.[^1][^2] In December 1933 Civilian Conservation Corps crews began building a trail to it, and in August 1934 the Umpqua National Forest supervisor judged it practical to haul a 50-foot tower of treated lumber to the rock along that trail.[^2] The tower frame was finished by October 1934, and Forest Lookouts reports a new tower and lookout house on the rock in April 1936.[^2] Firelookout.com dates the 50-foot wooden, live-in tower to 1935, so the sources disagree on the year.[^1] A 1942 survey description quoted on Forest Lookouts says the house was painted white and the supports were left unpainted.[^2]
+
+Newspapers name several people who worked the station.[^2] Mr. and Mrs. Ed Joyce moved to Brewster Rock from Coos Mountain in September 1934.[^2] Robert Waggoner of Coquille was posted there in 1936, but he gave up the job and went home that October after falling ill.[^2] Rollie and Mrs. Alford spent the summer of 1939 at the lookout.[^2] In 1949 a college student worked it for the Coos Fire Patrol, and a 1961 item said one lookout had worked the post for seven summers.[^2]
+
+The sources disagree on how the tower ended.[^1][^2] Firelookout.com says it was destroyed in 1964, while Forest Lookouts says the tower and cab were dismantled that year.[^1][^2] A Coos District annual report noted in 1965 that Elk Mountain, about 3.5 miles southwest of Sitkum, served as a replacement for Brewster Rock.[^2] In February 1972 the 7.3-acre lookout site was offered at a public oral auction.[^2]
+
+The Forest Fire Lookout Association's Oregon list also marks the tower as gone.[^3] No source we read describes what, if anything, remains on the summit today, or whether the site is open to visitors, so check before you go.
+
+[^1]: Brewster Rock Fire Lookout Tower, firelookout.com, https://www.firelookout.com/or/brewsterrock.html (accessed 2026-10-10).
+[^2]: Brewster Rock - Forest Lookouts, Forest Lookouts (Ron Kemnow), https://oregonlookouts.weebly.com/brewster-rock.html (accessed 2026-10-10).
+[^3]: Oregon Lookouts, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/or/ (accessed 2026-10-10).

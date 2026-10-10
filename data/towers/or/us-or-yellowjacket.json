@@ -1,6 +1,7 @@
 {
   "id": "us-or-yellowjacket",
   "name": "Yellowjacket",
+  "summary": "Rogue River NF crow's nest in a 30-foot tree, built 1917; staffed into the 1920s; abandoned 1928 after a cupola went up on Dutchman's Peak. Present state unknown.",
   "other_names": [
     "Yellowjacket Mountain"
   ],
@@ -18,10 +19,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "crow's nest in the top of a 30-foot tree, with a cabin nearby",
   "height_m": 30.5,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Fire Lookout Association list says Abandoned; firelookout.com, undated, says the crow's nest was still there when written; no later source found",
   "registers": [],
   "agency": "Rogue River National Forest",
   "ownership": "federal",
@@ -41,16 +42,78 @@
   "rental": null,
   "events": [
     {
+      "year": 1916,
+      "event": "other",
+      "note": "1916 report recommended a 100-foot steel tower that would need 125 trees felled; the crow's nest was built instead in 1917",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/yellowjacket-mountain.html"
+    },
+    {
       "year": 1917,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Crow's nest in the top of a 30-foot tree with a cabin nearby; firelookout.com also gives 1917",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/yellowjacket.html",
+      "source_urls": [
+        "https://www.firelookout.com/or/yellowjacket.html",
+        "https://oregonlookouts.weebly.com/yellowjacket-mountain.html"
+      ]
+    },
+    {
+      "year": 1919,
+      "event": "staffed",
+      "note": "J. J. Deadmond listed against Yellowjacket Lookout in the 1919 personnel table (also 1920)",
+      "from": "research",
+      "source_url": "https://foresthistory.org/wp-content/uploads/2017/01/HISTORY-OF-THE-ROGUE-RIVER-NATIONAL-FORESTvol1.pdf"
+    },
+    {
+      "year": 1921,
+      "event": "staffed",
+      "note": "A. Schichtl listed against Yellowjacket Lookout (also 1923)",
+      "from": "research",
+      "source_url": "https://foresthistory.org/wp-content/uploads/2017/01/HISTORY-OF-THE-ROGUE-RIVER-NATIONAL-FORESTvol1.pdf"
+    },
+    {
+      "year": 1922,
+      "event": "staffed",
+      "note": "Alex Schichtl listed as an Applegate guard against Yellowjacket Lookout in the 1922 table",
+      "from": "research",
+      "source_url": "https://foresthistory.org/wp-content/uploads/2017/01/HISTORY-OF-THE-ROGUE-RIVER-NATIONAL-FORESTvol1.pdf"
+    },
+    {
+      "year": 1924,
+      "event": "fire",
+      "note": "Guard burned on a Red Mountain fire crawled to the station; A. H. Peachey gave first aid (Morning Oregonian item, quoted by Forest Lookouts)",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/yellowjacket-mountain.html"
+    },
+    {
+      "year": 1925,
+      "event": "staffed",
+      "note": "Alex Schichtl listed against Yellowjacket Lookout (also 1926)",
+      "from": "research",
+      "source_url": "https://foresthistory.org/wp-content/uploads/2017/01/HISTORY-OF-THE-ROGUE-RIVER-NATIONAL-FORESTvol1.pdf"
+    },
+    {
+      "year": 1927,
+      "event": "other",
+      "note": "Cupola lookout house built on Dutchman's Peak, a separate structure",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/dutchmans-peak.html"
     },
     {
       "year": 1928,
       "event": "abandoned",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "Abandoned after the cupola cabin was constructed atop nearby Dutchman's Peak",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/yellowjacket.html"
+    },
+    {
+      "year": 1932,
+      "event": "other",
+      "note": "Crater National Forest officially proclaimed the Rogue River National Forest (July 9; the volume covers up to July 1, 1932)",
+      "from": "research",
+      "source_url": "https://foresthistory.org/wp-content/uploads/2017/01/HISTORY-OF-THE-ROGUE-RIVER-NATIONAL-FORESTvol1.pdf"
     }
   ],
   "photos": [
@@ -68,6 +131,16 @@
     }
   ],
   "links": [
+    {
+      "label": "History of the Rogue River National Forest, volume 1 (foresthistory.org (PDF))",
+      "url": "https://foresthistory.org/wp-content/uploads/2017/01/HISTORY-OF-THE-ROGUE-RIVER-NATIONAL-FORESTvol1.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Dutchman's Peak - Forest Lookouts (Forest Lookouts, western US (Ron Kemnow))",
+      "url": "https://oregonlookouts.weebly.com/dutchmans-peak.html",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
@@ -116,12 +189,29 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-yellowjacket",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -132,12 +222,18 @@
         }
       ],
       "distance_m": null,
-      "note": null
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

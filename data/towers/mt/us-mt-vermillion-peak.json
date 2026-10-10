@@ -1,6 +1,7 @@
 {
   "id": "us-mt-vermillion-peak",
   "name": "Vermillion Peak",
+  "summary": "Sanders County, MT pole L-4 tower in the Kootenai NF; firelookout.com dates it 1935 but 1936 items show construction, and it was destroyed in 1963. No site description.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "pole L-4 tower",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Destroyed in 1963 per firelookout.com and the Forest Lookouts page; the Montana list also marks it gone",
   "registers": [],
   "agency": "Kootenai National Forest",
   "ownership": "federal",
@@ -37,7 +38,40 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "firelookout.com gives 1935 as the build year; 1936 newspaper items disagree (see resolved_conflicts)",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/vermillionpeak.html"
+    },
+    {
+      "year": 1936,
+      "event": "other",
+      "note": "September 1936 newspaper item: crew packing equipment for a new lookout at the head of Graves Creek; Ben Cox foreman in charge",
+      "from": "research",
+      "source_url": "https://montanalookouts.weebly.com/vermillion-peak.html"
+    },
+    {
+      "year": 1946,
+      "event": "other",
+      "note": "June 1946: Forest Service packers found the lookout station wrecked after a bear got into the lookout",
+      "from": "research",
+      "source_url": "https://montanalookouts.weebly.com/vermillion-peak.html"
+    },
+    {
+      "year": 1963,
+      "event": "destroyed",
+      "note": "Destroyed in 1963 per firelookout.com; the Forest Lookouts page gives the same year and cites Kresek",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/vermillionpeak.html",
+      "source_urls": [
+        "https://www.firelookout.com/mt/vermillionpeak.html",
+        "https://montanalookouts.weebly.com/vermillion-peak.html"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -84,12 +118,31 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-vermillion-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

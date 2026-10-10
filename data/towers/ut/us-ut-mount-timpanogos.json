@@ -1,6 +1,7 @@
 {
   "id": "us-ut-mount-timpanogos",
   "name": "Mount Timpanogos",
+  "summary": "Forest Service glass-and-steel lookout house on Mount Timpanogos, built 1927; still standing as a summit shelter that hikers reach on foot.",
   "other_names": [],
   "country": "US",
   "region": "UT",
@@ -16,30 +17,66 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Four-sided galvanized steel structure with glass windows; a pyramid-shaped survey cap was added later",
   "height_m": null,
-  "status": "gone",
+  "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "U.S. Forest Service",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached on foot by summit trails; tens of thousands of hikers climb to it each year"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": true,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "The most popular routes start at Aspen Grove or Timpooneke Campground"
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1927,
+      "event": "built",
+      "note": "Steel lookout house completed on the summit under ranger V.N. West",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/mt-timpanogos.html",
+      "source_urls": [
+        "https://westlookouts.weebly.com/mt-timpanogos.html",
+        "https://www.tert.org/timp-history/glass-house-on-timpanogos-2003-daily-herald-article/"
+      ]
+    },
+    {
+      "year": 1980,
+      "event": "modified",
+      "note": "Utah State Prison inmates painted the building aluminum",
+      "from": "research",
+      "source_url": "https://www.sltrib.com/news/2026/09/23/what-know-about-tin-shack-mount/"
+    },
+    {
+      "year": 2026,
+      "event": "other",
+      "note": "Lightning struck the steel shelter during a storm; a 19-year-old in the group died and the other nine hikers suffered minor injuries",
+      "from": "research",
+      "source_url": "https://www.sltrib.com/news/2026/09/23/what-know-about-tin-shack-mount/"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Glass House on Timpanogos (Randy Wright, Daily Herald (July 20, 2003); reprinted by Timpanogos Emergency Response Team)",
+      "url": "https://www.tert.org/timp-history/glass-house-on-timpanogos-2003-daily-herald-article/",
+      "kind": "reference"
+    },
+    {
+      "label": "What to know about the 'Tin Shack' on Mount Timpanogos, where lightning killed a teen (Sean P. Means, Salt Lake Tribune (Sept. 23, 2026))",
+      "url": "https://www.sltrib.com/news/2026/09/23/what-know-about-tin-shack-mount/",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Utah lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ut/",
@@ -75,12 +112,49 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ut-mount-timpanogos",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "standing"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives standing where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-or-hunchback-mountain",
   "name": "Hunchback Mountain",
+  "summary": "Clackamas County, OR: three 1930s crow's nests along a ridgetop, listed as abandoned; no source says what remains at the site today.",
   "other_names": [
     "Hunch Back"
   ],
@@ -18,12 +19,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Three crow's nests about a quarter mile apart along the ridgetop",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Listed as abandoned; no source says whether anything remains",
   "registers": [],
-  "agency": "Mt Hood National Forest",
+  "agency": "Mt. Hood National Forest",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -42,6 +43,16 @@
   "events": [],
   "photos": [],
   "links": [
+    {
+      "label": "Crow's Nests of Mt Hood National Forest (The Roaming Civic)",
+      "url": "https://theroamingcivic.com/2021/11/23/crows-nests-of-mt-hood-national-forest/",
+      "kind": "reference"
+    },
+    {
+      "label": "Hunchback Trail #793 (USDA Forest Service, Mount Hood National Forest)",
+      "url": "https://www.fs.usda.gov/r06/mthood/recreation/trails/hunchback-trail-793",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
@@ -86,12 +97,46 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-hunchback-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

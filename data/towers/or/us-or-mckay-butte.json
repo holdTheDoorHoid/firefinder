@@ -1,6 +1,7 @@
 {
   "id": "us-or-mckay-butte",
   "name": "McKay Butte",
+  "summary": "Deschutes County tree platform with tent cabin dated 1933 and abandoned in 1936; no source we read says what remains today.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Tree platform with a tent cabin, dated 1933",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Abandoned in 1936; no source we read says whether anything remains at the site",
   "registers": [],
   "agency": "State",
   "ownership": "state",
@@ -37,9 +38,36 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1933,
+      "event": "built",
+      "note": "Firelookout.com dates a tree platform with a tent cabin to 1933; the page does not say who built it",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/mckaybutte.html"
+    },
+    {
+      "year": 1936,
+      "event": "abandoned",
+      "note": "Firelookout.com says abandoned 1936; the Oregon list gives no date",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/mckaybutte.html"
+    },
+    {
+      "year": 1938,
+      "event": "other",
+      "note": "Forest Lookouts page dates a set of panorama photos June 25, 1938, two years after the abandonment year",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/mckay-butte.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Oregon's Standing Lookouts (cherylhill.net)",
+      "url": "https://cherylhill.net/firelookouts/oregons-standing-lookouts/",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
@@ -84,12 +112,46 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-mckay-butte",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

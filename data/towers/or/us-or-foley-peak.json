@@ -1,6 +1,7 @@
 {
   "id": "us-or-foley-peak",
   "name": "Foley Peak",
+  "summary": "Tillamook County, OR site with a 1930s crow's nest and a 1943 AWS cabin; listed abandoned with ruins; one map list says partly standing; no source says gone.",
   "other_names": [],
   "country": "US",
   "region": "OR",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "1930s crow's nest; 1943 AWS cabin (12x29) and woodshed (12x16)",
   "height_m": null,
   "status": "gone",
   "status_note": null,
   "registers": [],
-  "agency": "Northwest Oregon FPA",
+  "agency": "Northwest Oregon FPA (firelookout.com); Oregon Department of Forestry (Oregon lookouts history)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -39,14 +40,43 @@
   "rental": null,
   "events": [
     {
+      "year": 1930,
+      "event": "other",
+      "note": "Crow's nest, dated only to the 1930s by firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/or/foleypeak.html"
+    },
+    {
       "year": 1943,
       "event": "built",
-      "note": null,
-      "from": "firelookout_com"
+      "note": "AWS cabin and woodshed built at the Foley Lookout, per the 1943 annual report quoted by the Oregon lookouts history",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/foley-peak.html",
+      "source_urls": [
+        "https://oregonlookouts.weebly.com/foley-peak.html",
+        "https://www.firelookout.com/or/foleypeak.html"
+      ]
+    },
+    {
+      "year": 1943,
+      "event": "other",
+      "note": "Activated May 24, 1943; the page names the Portland Filter Center",
+      "from": "research",
+      "source_url": "https://oregonlookouts.weebly.com/foley-peak.html"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Aircraft Warning Service (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Aircraft_warning_service",
+      "kind": "reference"
+    },
+    {
+      "label": "Oregon Fire Lookouts List (Best Maps Ever)",
+      "url": "https://bestmapsever.com/pages/oregon-fire-lookouts-list",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Oregon lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/or/",
@@ -92,6 +122,18 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-or-foley-peak",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -111,9 +153,15 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }
