@@ -1,6 +1,7 @@
 {
   "id": "us-mt-obermayer-shagnasti-mountain",
   "name": "Obermayer (Shagnasti) Mountain",
+  "summary": "Kootenai National Forest crow's nest in Lincoln County, dated 1921. Its lookout, Anton Obermayer, died in an August 1931 fire. Current condition unknown.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Crow's nest with an 8-by-8-foot log cabin",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Listed as abandoned by the Forest Fire Lookout Association; the lookout website says the log cabin was still there, but that remark is undated",
   "registers": [],
   "agency": "Kootenai National Forest",
   "ownership": "federal",
@@ -37,9 +38,39 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1921,
+      "event": "built",
+      "note": "Crow's nest with an 8x8 ft log cabin, per the firelookout.com entry for 1921",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/obermayer.html"
+    },
+    {
+      "year": 1931,
+      "event": "fire",
+      "note": "Lookout Anton (Antone) Obermayer killed by a falling tree while leaving the station; sources name the fire the Keno Mountain fire or the Deer Creek Fire and differ on the night",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/obermayer.html",
+      "source_urls": [
+        "https://www.firelookout.com/mt/obermayer.html",
+        "https://lessons.wildfire.gov/incident/deer-creek-fire-lookout-hit-by-tree-fatality-1931",
+        "https://montanalookouts.weebly.com/yaak-mountain.html"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Deer Creek Fire Lookout Hit by Tree Fatality 1931 (Wildland Fire Lessons Learned Center)",
+      "url": "https://lessons.wildfire.gov/incident/deer-creek-fire-lookout-hit-by-tree-fatality-1931",
+      "kind": "reference"
+    },
+    {
+      "label": "Yaak Mountain (Montana Forest Lookouts website)",
+      "url": "https://montanalookouts.weebly.com/yaak-mountain.html",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
@@ -73,12 +104,29 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-obermayer-shagnasti-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -89,12 +137,18 @@
         }
       ],
       "distance_m": null,
-      "note": null
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

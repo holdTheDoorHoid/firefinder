@@ -1,6 +1,7 @@
 {
   "id": "us-mt-mountain-meadow",
   "name": "Mountain Meadow",
+  "summary": "Flathead County, MT crow's nest and camp dated 1929, abandoned 1938; firelookout.com says the crow's nest is still there, undated; FFLA lists Abandoned.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "crow's nest",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "FFLA lists it as Abandoned; firelookout.com says the crow's nest is 'still there' with no date. Neither source calls it gone.",
   "registers": [],
   "agency": "Flathead National Forest",
   "ownership": "federal",
@@ -37,7 +38,22 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1929,
+      "event": "built",
+      "note": "Crow's nest and camp, per firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/mountainmeadow.html"
+    },
+    {
+      "year": 1938,
+      "event": "abandoned",
+      "note": "Abandoned in 1938, per firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/mountainmeadow.html"
+    }
+  ],
   "photos": [
     {
       "file": "4d/4dcb7e900b66feeecc25717492fd4da6349c5b6c.webp",
@@ -99,12 +115,29 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-mountain-meadow",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -115,12 +148,18 @@
         }
       ],
       "distance_m": null,
-      "note": null
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

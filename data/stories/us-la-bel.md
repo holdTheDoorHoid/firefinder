@@ -1,0 +1,8 @@
+Bel Lookout Tower stood in Allen Parish, and the Forest Lookouts site names the Louisiana Forestry Commission as its agency.[^2] In 1915 Louisiana directed funds to fire protection work, which allowed lookout watchmen to be hired.[^1] Before the first two towers, rungs had been nailed to a pine tree, with a perch built high up on it.[^1] The first steel fire tower in the state went up near Bogalusa in 1922, and a second tower followed near Urania in 1923.[^1] Thirty-nine fire towers had gone up by 1943, and fifty-six by 1950.[^1]
+
+Wikipedia's list marks the tower as torn down.[^1] The same list says aerial photos showed it until 2018, and that Google Street View can show it.[^1]
+
+Wikipedia gives its position as 30°31′21″N 93°5′1″W.[^1] No source describes what, if anything, remains at the site, or whether it is open to the public.
+
+[^1]: List of fire lookout towers in Louisiana, Wikipedia, https://en.wikipedia.org/wiki/List_of_fire_lookout_towers_in_Louisiana (accessed 2026-10-10).
+[^2]: Bel - FOREST LOOKOUTS, Forest Lookouts site, https://centraluslookouts.weebly.com/bel.html (accessed 2026-10-10).

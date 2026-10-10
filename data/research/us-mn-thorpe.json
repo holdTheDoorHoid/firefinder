@@ -1,0 +1,83 @@
+{
+  "id": "us-mn-thorpe",
+  "researched": "2026-10-10",
+  "summary": "Hubbard County, MN Thorpe Lookout site: FFLA lists the tower gone; a 2019 blog says it used to be there and recommends visiting the spot; OSM keeps a tower point with no status tag.",
+  "facts": {
+    "status": "gone",
+    "status_note": "FFLA lists the tower as gone; the OpenStreetMap point has tower tags but no status tag; a 2019 blog says the old tower used to be located at the spot",
+    "access": {
+      "level": "public",
+      "note": "A 2019 blog post about Paul Bunyan State Forest recommends visiting the spot; no current access notice was found"
+    }
+  },
+  "evidence": [
+    {
+      "cite": [2],
+      "supports": "OpenStreetMap node coordinates, about the same spot as the FFLA coordinates",
+      "quote": "47.0964816 , -94.8541141"
+    },
+    {
+      "cite": [1],
+      "supports": "Thorpe is in Hubbard County; FFLA lists the tower as gone",
+      "quote": "Thorpe Hubbard 47.09624 -94.85394 Tower Gone"
+    },
+    {
+      "cite": [2],
+      "supports": "OpenStreetMap point named Thorpe Lookout Tower",
+      "quote": "Thorpe Lookout Tower"
+    },
+    {
+      "cite": [2],
+      "supports": "OpenStreetMap point tagged as an observation tower; no status tag",
+      "quote": "tower:type observation"
+    },
+    {
+      "cite": [3],
+      "supports": "2019 post says the old fire tower used to be located at Thorpe Lookout",
+      "quote": "I highly recommend finding your way up to Thorpe Lookout, where the old fire tower used to be located."
+    },
+    {
+      "cite": [3],
+      "supports": "2019 post recommends the spot for a campfire and a view of the sunset",
+      "quote": "It is the perfect place to start a campfire, roast marshmallows and see the sunset against the forest."
+    },
+    {
+      "cite": [3],
+      "supports": "North Country National Scenic Trail passes through the forest",
+      "quote": "North Country National Scenic Trail all pass through the forest"
+    }
+  ],
+  "resolved_conflicts": [
+    {
+      "field": "status",
+      "explanation": "The brief records OSM as 'standing', but the OSM node carries only man_made=tower and tower:type=observation with no status or disused tag, so it does not say standing. The FFLA list says gone and the 2019 blog says the old tower used to be there. The record stays gone. The OSM point is a map marker and does not show what is on the ground.",
+      "cite": [1, 2, 3]
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Minnesota Lookouts",
+      "publisher": "Forest Fire Lookout Association",
+      "url": "https://firelookout.org/lookouts/us/mn/",
+      "accessed": "2026-10-10"
+    },
+    {
+      "n": 2,
+      "title": "Thorpe Lookout Tower",
+      "publisher": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/7895315914",
+      "accessed": "2026-10-10"
+    },
+    {
+      "n": 3,
+      "title": "Paul Bunyan State Forest",
+      "publisher": "Minnesota Bucket List (blog)",
+      "url": "https://mnbucketlist.com/2019/10/05/paul-bunyan-state-forest/",
+      "accessed": "2026-10-10"
+    }
+  ],
+  "verification": {"checked": "2026-10-10", "claims_checked": 7, "unsupported_removed": 0, "errors_fixed": 3, "quotes_spot_checked": 7, "quotes_not_found": 0, "verdict": "fixed"},
+  "confidence": "low",
+  "notes_for_editor": "Thin record. No build date, builder, height, staffing or fire history was found, so the story leaves them out. The brief's 'osm=standing' conflict is not supported by the OSM tags, and the record stays gone. A Minnesota Adventure Trails Facebook post seen only as a search snippet says an old U.S. Forest Service tower 'once stood here in the early-to-mid 1900s'. The page is behind a login wall, the snippet is not quoted, and it is not cited. A Star Tribune fire-tower piece returned HTTP 429 and was not read. Access 'public' rests on a 2019 blog recommendation and needs a current check before it is treated as settled."
+}

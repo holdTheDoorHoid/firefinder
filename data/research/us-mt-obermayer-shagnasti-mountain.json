@@ -1,0 +1,48 @@
+{
+  "id": "us-mt-obermayer-shagnasti-mountain",
+  "researched": "2026-10-10",
+  "summary": "Kootenai National Forest crow's nest in Lincoln County, dated 1921. Its lookout, Anton Obermayer, died in an August 1931 fire. Current condition unknown.",
+  "facts": {
+    "design": "Crow's nest with an 8-by-8-foot log cabin",
+    "status": "unknown",
+    "status_note": "Listed as abandoned by the Forest Fire Lookout Association; the lookout website says the log cabin was still there, but that remark is undated",
+    "agency": "Kootenai National Forest"
+  },
+  "events": [
+    {"year": 1921, "event": "built", "note": "Crow's nest with an 8x8 ft log cabin, per the firelookout.com entry for 1921", "cite": [1]},
+    {"year": 1931, "event": "fire", "note": "Lookout Anton (Antone) Obermayer killed by a falling tree while leaving the station; sources name the fire the Keno Mountain fire or the Deer Creek Fire and differ on the night", "cite": [1, 3, 4]}
+  ],
+  "evidence": [
+    {"cite": [1], "supports": "Kootenai National Forest", "quote": "Kootenai National Forest"},
+    {"cite": [1], "supports": "11 miles north-northwest of Yaak", "quote": "11 miles NNW of Yaak"},
+    {"cite": [1], "supports": "Lincoln County, Montana", "quote": "Lincoln County, Montana"},
+    {"cite": [1], "supports": "elevation 5,367 feet", "quote": "Elevation 5367'"},
+    {"cite": [1], "supports": "1921 crow's nest with 8x8 ft log cabin; cabin described as still there, undated", "quote": "1921: crows nest, 8x8' log cabin (still there)."},
+    {"cite": [1], "supports": "site named in honor of Antone Obermayer, killed in the 1931 fire", "quote": "Named in honor of Antone Obermayer, killed in the 1931"},
+    {"cite": [1], "supports": "the fire is called the Keno Mountain fire", "quote": "Keno Mountain fire. Abandoned 1940s."},
+    {"cite": [1], "supports": "lookout abandoned in the 1940s", "quote": "Abandoned 1940s."},
+    {"cite": [2], "supports": "FFLA lists site as Crowsnest type with status Abandoned", "quote": "Obermayer (Shagnasti) Mountain Lincoln 48.98181 -115.79920 Crowsnest Abandoned"},
+    {"cite": [3], "supports": "Anton Obermayer, 22, fire lookout, killed trying to escape the Deer Creek Fire on the night of August 27, 1931", "quote": "Anton Obermayer, a 22-year-old fire lookout on the Kootenai National Forest, was killed while attempting to escape the Deer Creek Fire in far northwestern Montana on the night of August 27,1931."},
+    {"cite": [3], "supports": "struck by a falling tree while hiking to safety", "quote": "Obermayer was struck by a falling tree while he hiked to safety."},
+    {"cite": [3], "supports": "search party sent out the following morning", "quote": "a search party was sent out the following morning"},
+    {"cite": [3], "supports": "body discovered under the tree (the page says the tree had been felled by strong winds)", "quote": "His body was discovered under that tree"},
+    {"cite": [4], "supports": "1931 newspaper: killed by a falling tree while fleeing the station, last night", "quote": "Fleeing to safety from his fire-menaced lookout station in the Yaak river region of northwest Montana last night, Anton Obermeyer, 22, forest service observer, was killed by a falling tree."},
+    {"cite": [4], "supports": "forest officials ordered him to abandon his station as the fire crept toward it", "quote": "Forest officials said they ordered Obermeyer to abandon his station when the fire crept toward it"},
+    {"cite": [4], "supports": "newspaper report dated August 27, 1931", "quote": "August 27, 1931"}
+  ],
+  "corrections": [
+    {"field": "status", "current": "gone", "proposed": "unknown", "cite": [2, 1], "why": "The FFLA list gives this site's status as Abandoned, which the pipeline mapped to gone (data/sources/ffla.json status_raw). No source records its removal, and firelookout.com says the log cabin was still there, undated. Abandoned is not in the status vocabulary, so unknown is the closest honest value."}
+  ],
+  "resolved_conflicts": [
+    {"field": "status", "explanation": "The record's gone value comes from the FFLA word Abandoned. The standing value from firelookout.com rests on an undated remark that the cabin was still there. Neither source describes the site today, so the status is unknown.", "cite": [2, 1]}
+  ],
+  "sources": [
+    {"n": 1, "title": "Obermayer (Shagnasti) Mtn. Fire Lookout Tower", "publisher": "firelookout.com", "url": "https://www.firelookout.com/mt/obermayer.html", "accessed": "2026-10-10"},
+    {"n": 2, "title": "Montana Lookouts", "publisher": "Forest Fire Lookout Association", "url": "https://firelookout.org/lookouts/us/mt/", "accessed": "2026-10-10"},
+    {"n": 3, "title": "Deer Creek Fire Lookout Hit by Tree Fatality 1931", "publisher": "Wildland Fire Lessons Learned Center", "url": "https://lessons.wildfire.gov/incident/deer-creek-fire-lookout-hit-by-tree-fatality-1931", "accessed": "2026-10-10"},
+    {"n": 4, "title": "Yaak Mountain", "publisher": "Montana Forest Lookouts website", "url": "https://montanalookouts.weebly.com/yaak-mountain.html", "accessed": "2026-10-10"}
+  ],
+  "confidence": "medium",
+  "verification": {"checked": "2026-10-10", "claims_checked": 14, "unsupported_removed": 0, "errors_fixed": 1, "quotes_spot_checked": 16, "quotes_not_found": 0, "verdict": "fixed"},
+  "notes_for_editor": "Name: firelookout.com has Antone Obermayer, the federal page Anton Obermayer, and the quoted 1931 newspaper Anton Obermeyer. Fire: firelookout.com says the Keno Mountain fire; the federal page says the Deer Creek Fire and gives the fuller account. Night: the federal page says the night of August 27; the report, dated August 27, says last night. The 1940s abandonment is undated, so no abandoned event was written. The record's kind platform matches the vocabulary entry for crow's nests. The status mapping of FFLA Abandoned to gone may affect other Montana entries with that word. Current condition is not documented."
+}

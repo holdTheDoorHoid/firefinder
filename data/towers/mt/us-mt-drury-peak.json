@@ -1,6 +1,7 @@
 {
   "id": "us-mt-drury-peak",
   "name": "Drury Peak",
+  "summary": "Lolo NF crow's nest from the 1930s in Mineral County, MT; both listings say abandoned. No source describes what remains on the peak.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "crow's nest",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Listed as abandoned; no source describes what, if anything, remains on the peak",
   "registers": [],
-  "agency": null,
+  "agency": "Lolo National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -70,12 +71,46 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-drury-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

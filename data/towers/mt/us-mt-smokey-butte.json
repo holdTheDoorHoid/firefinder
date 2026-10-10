@@ -1,6 +1,7 @@
 {
   "id": "us-mt-smokey-butte",
   "name": "Smokey Butte",
+  "summary": "Abandoned Kootenai National Forest lookout 10 miles SE of Libby, Montana: a tent cabin with a crow's nest in 1935, abandoned in 1942; no source says what remains.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Tent cabin with a crow's nest",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Sources say it was abandoned in 1942; neither says the structure was removed.",
   "registers": [],
-  "agency": null,
+  "agency": "Kootenai National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,7 +38,26 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "Tent cabin with a crow's nest, per firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/smokeybutte.html"
+    },
+    {
+      "year": 1942,
+      "event": "abandoned",
+      "note": "Abandoned 1942 per firelookout.com; the FFLA list marks it abandoned without a year",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/smokeybutte.html",
+      "source_urls": [
+        "https://www.firelookout.com/mt/smokeybutte.html",
+        "https://firelookout.org/lookouts/us/mt/"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -70,12 +90,47 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-smokey-butte",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

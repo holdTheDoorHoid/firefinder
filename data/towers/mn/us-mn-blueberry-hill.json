@@ -1,6 +1,7 @@
 {
   "id": "us-mn-blueberry-hill",
   "name": "Blueberry Hill",
+  "summary": "Itasca County site with two towers: the first dismantled in 1937; a 1939 81-ft steel ladder tower, described as a relocated Remer tower. Gone; no site description found.",
   "other_names": [],
   "country": "US",
   "region": "MN",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "steel ladder tower",
+  "height_m": 24.7,
   "status": "gone",
   "status_note": null,
   "registers": [],
@@ -37,9 +38,38 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1937,
+      "event": "removed",
+      "note": "First tower at the site dismantled; a survey note covers 1934 to 1947",
+      "from": "research",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/A-Z_List-Towers.pdf"
+    },
+    {
+      "year": 1939,
+      "event": "relocated",
+      "note": "Replacement 81-ft ladder tower, described as the relocated first Remer tower; the Cass County entry says the first Remer tower was likely moved here when the second Remer was built",
+      "from": "research",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/A-Z_List-Towers.pdf",
+      "source_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/9f/A-Z_List-Towers.pdf",
+        "https://upload.wikimedia.org/wikipedia/commons/2/29/Cass_County_Towers.pdf"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Minnesota fire lookouts A-Z list (PDF) (Wikimedia Commons)",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/A-Z_List-Towers.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Cass County Fire Lookout Towers (PDF) (Wikimedia Commons)",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Cass_County_Towers.pdf",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Minnesota lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mn/",
@@ -70,12 +100,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mn-blueberry-hill",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

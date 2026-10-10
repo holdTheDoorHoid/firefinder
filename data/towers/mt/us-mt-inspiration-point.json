@@ -1,6 +1,7 @@
 {
   "id": "us-mt-inspiration-point",
   "name": "Inspiration Point",
+  "summary": "Flathead NF ground cabin with an L-4 cab dated 1930 and abandoned in 1943 per firelookout.com; the FFLA Montana list says it is gone.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Ground cabin with an L-4 cab",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Listed as Gone by the FFLA Montana list; firelookout.com says it was abandoned in 1943. Neither describes what, if anything, remains.",
   "registers": [],
-  "agency": null,
+  "agency": "Flathead National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,9 +38,29 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1930,
+      "event": "other",
+      "note": "firelookout.com dates the L-4 cab to 1930. It does not say the cabin was built that year.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/inspirationpoint.html"
+    },
+    {
+      "year": 1943,
+      "event": "abandoned",
+      "note": null,
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/inspirationpoint.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Definitions (National Historic Lookout Register)",
+      "url": "http://nhlr.org/definitions/",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
@@ -70,12 +91,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-inspiration-point",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

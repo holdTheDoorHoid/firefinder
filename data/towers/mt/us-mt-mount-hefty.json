@@ -1,6 +1,7 @@
 {
   "id": "us-mt-mount-hefty",
   "name": "Mount Hefty",
+  "summary": "Flathead NF summit 20 miles northwest of Polebridge; a 1930s cabin near the Canadian border is listed abandoned, but a 2016 article describes a fire lookout on top, so the sources disagree.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -18,14 +19,14 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Forest Lookouts says the 1930s cabin was abandoned; a 2016 Wildsight article describes a fire lookout on top of Mt. Hefty",
   "registers": [],
-  "agency": null,
+  "agency": "Flathead National Forest",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached by trail #15 from the Thoma-Colts Creek (#18) trailhead; the trip report says a ranger told hikers the Forest Service no longer maintained the northern part of trail #15"
   },
   "staffing": {
     "status": "unknown",
@@ -34,12 +35,22 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "About 2.6 miles from the #18 trailhead to the trail #15 junction; the 2016 article lists a 15.6 km round trip of about 3 hours"
   },
   "rental": null,
   "events": [],
   "photos": [],
   "links": [
+    {
+      "label": "Special Places: Mt. Hefty Lookout (Wildsight)",
+      "url": "https://wildsight.ca/2016/08/05/special-places-mt-hefty-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Mount Hefty (Follow That Nerd)",
+      "url": "https://followthatnerd.com/mount-hefty/",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
@@ -70,12 +81,47 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-mount-hefty",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-mt-beartrap-mountain",
   "name": "Beartrap Mountain",
+  "summary": "Lincoln County, MT crow's nest near Eureka, dated 1936 by one source; the association lists it Abandoned, not gone; no source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "crow's nest",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Listed as Abandoned; firelookout.com's 1936 line adds that the crow's nest was still there, with no separate date for that note. No source says it is gone.",
   "registers": [],
   "agency": "Kootenai National Forest",
   "ownership": "federal",
@@ -37,9 +38,33 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1936,
+      "event": "built",
+      "note": "Crow's nest, per firelookout.com. The only source giving this year for Beartrap; see notes_for_editor.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/beartrapmtn.html"
+    },
+    {
+      "year": null,
+      "event": "abandoned",
+      "note": "Abandoned, per the Forest Fire Lookout Association and firelookout.com; no date given",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/beartrapmtn.html",
+      "source_urls": [
+        "https://www.firelookout.com/mt/beartrapmtn.html",
+        "https://firelookout.org/lookouts/us/mt/"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Lincoln County - Forest Lookouts (Montana Lookouts (montanalookouts.weebly.com))",
+      "url": "https://montanalookouts.weebly.com/lincoln-county.html",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
@@ -73,12 +98,29 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-beartrap-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -89,12 +131,18 @@
         }
       ],
       "distance_m": null,
-      "note": null
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

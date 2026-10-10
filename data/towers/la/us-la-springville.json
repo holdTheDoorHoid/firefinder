@@ -1,6 +1,7 @@
 {
   "id": "us-la-springville",
   "name": "Springville Lookout Tower",
+  "summary": "Livingston Parish, LA tower burned in September 1974 after a fallen pole shorted a line; a tower stood until a March 2018 teardown per Wikipedia and WBRZ.",
   "other_names": [],
   "country": "US",
   "region": "LA",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "A 1974 account says fire destroyed the tower; Wikipedia and WBRZ report a tower torn down in March 2018. The sources do not say whether it was rebuilt",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -28,8 +29,8 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "1974"
   },
   "visit": {
     "climbable": null,
@@ -37,9 +38,40 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1974,
+      "event": "destroyed",
+      "note": "Newspaper account dated September 5, 1974: a telephone pole fell and shorted a line, setting the tower on fire; instruments and a two-way radio burned",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/springville.html"
+    },
+    {
+      "year": 1974,
+      "event": "staffed",
+      "note": "Towerman Colyear Zeigler was on duty when the fire started",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/springville.html"
+    },
+    {
+      "year": 2018,
+      "event": "removed",
+      "note": "Wikipedia: removed March 2018; WBRZ: torn down Monday, March 12, 2018",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_fire_lookout_towers_in_Louisiana",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/List_of_fire_lookout_towers_in_Louisiana",
+        "https://www.wbrz.com/videos/watch-local-landmark-torn-down-in-livingston-parish/"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "WATCH: Local landmark torn down in Livingston Parish (WBRZ)",
+      "url": "https://www.wbrz.com/videos/watch-local-landmark-torn-down-in-livingston-parish/",
+      "kind": "reference"
+    },
     {
       "label": "Springville Lookout Tower (Wikipedia)",
       "url": "https://en.wikipedia.org/wiki/List_of_fire_lookout_towers_in_Louisiana",
@@ -70,12 +102,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-la-springville",
+      "fields": [
+        "summary",
+        "status",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

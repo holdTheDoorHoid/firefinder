@@ -1,6 +1,7 @@
 {
   "id": "us-mt-mushroom-mountain",
   "name": "Mushroom Mountain",
+  "summary": "Lincoln County, MT crow's nest dated to the 1920s, later abandoned; FFLA lists it Abandoned, not gone; no source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "crow's nest",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "FFLA lists it as Abandoned; firelookout.com says abandoned with no date. Neither source calls it gone.",
   "registers": [],
-  "agency": null,
+  "agency": "Kootenai National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -70,12 +71,46 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-mushroom-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

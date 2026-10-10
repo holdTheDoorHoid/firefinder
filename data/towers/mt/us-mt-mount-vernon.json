@@ -1,6 +1,7 @@
 {
   "id": "us-mt-mount-vernon",
   "name": "Mount Vernon",
+  "summary": "Lincoln County, MT crow's nest with tent cabin, built 1934 and abandoned 1942; FFLA lists it Abandoned, not gone; no source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "crow's nest with a tent cabin",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "FFLA lists it as Abandoned; firelookout.com says abandoned 1942. Neither source calls it gone.",
   "registers": [],
-  "agency": null,
+  "agency": "Kootenai National Forest",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,7 +38,22 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "Crow's nest and tent cabin, per firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/mountvernon.html"
+    },
+    {
+      "year": 1942,
+      "event": "abandoned",
+      "note": "Abandoned, per firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/mountvernon.html"
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -70,12 +86,47 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-mount-vernon",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "pass",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }
