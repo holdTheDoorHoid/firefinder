@@ -1,6 +1,7 @@
 {
   "id": "us-tx-snap",
   "name": "Snap",
+  "summary": "Texas Forest Service lookout in Panola County that shares its name with the Snap community; Coast and Geodetic Survey first observed its station in 1958; listed as gone; no site description found.",
   "other_names": [],
   "country": "US",
   "region": "TX",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Listed as gone on the Forest Fire Lookout Association's Texas list; no source describes what remains at the site",
   "registers": [],
   "agency": "Texas Forest Service",
   "ownership": "unknown",
@@ -37,9 +38,27 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1958,
+      "event": "other",
+      "note": "Coast and Geodetic Survey first observed the station and described it; the datasheet marks the station as a lookout tower",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=CR1127"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Snap, TX (Texas State Historical Association, Handbook of Texas)",
+      "url": "https://www.tshaonline.org/handbook/entries/snap-tx",
+      "kind": "reference"
+    },
+    {
+      "label": "NGS Data Sheet for station CR1127 (SNAP LOOKOUT TOWER) (National Geodetic Survey)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=CR1127",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Texas lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/tx/",
@@ -71,12 +90,30 @@
         "agency",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tx-snap",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

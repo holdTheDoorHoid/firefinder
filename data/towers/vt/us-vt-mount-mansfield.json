@@ -1,6 +1,7 @@
 {
   "id": "us-vt-mount-mansfield",
   "name": "Mount Mansfield",
+  "summary": "Chittenden County, VT: a fire lookout was engaged for summer 1921 alongside the Taft Lodge custodian post; no tower, build date or removal found; FFLOS lists type unknown, abandoned.",
   "other_names": [],
   "country": "US",
   "region": "VT",
@@ -18,28 +19,46 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "FFLOS lists the site as Abandoned with an unknown structure type; no source read describes a tower on the summit or its removal",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Mount Mansfield is in Mount Mansfield State Forest with the Long Trail on the main ridge and a toll road to The Nose (Wikipedia). The lookout site itself is not described."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "1921"
   },
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Long Trail along the main ridge; steep toll road from Stowe to The Nose (Wikipedia). No source describes lookout remains on the summit."
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1921,
+      "event": "staffed",
+      "note": "D. D. Holmes of Morristown engaged for the coming summer as fire lookout, per the Burlington Free Press (April 26, 1921), as quoted by Forest Lookouts",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/mount-mansfield.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "100 Years of Taft Lodge on Mount Mansfield (Green Mountain Club (greenmountainclub.org))",
+      "url": "https://greenmountainclub.org/100-years-of-taft-lodge-on-mount-mansfield/",
+      "kind": "reference"
+    },
+    {
+      "label": "Mount Mansfield (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Mount_Mansfield",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Vermont lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/vt/",
@@ -70,12 +89,48 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-vt-mount-mansfield",
+      "fields": [
+        "summary",
+        "status",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

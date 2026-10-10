@@ -1,0 +1,5 @@
+Arrowwood National Wildlife Refuge, in Stutsman and Foster counties, North Dakota, was established on September 4, 1935, and the U.S. Fish and Wildlife Service manages it.[^1] A steel lookout tower was erected on the refuge in 1936, according to a compiled list of North Dakota lookouts.[^2] The Forest Fire Lookout Association numbers this tower 1, places it at 47.26897 north and 98.85183 west, and lists it as removed.[^3] The same list records a second steel tower on the refuge, also erected in 1936, and says both were demolished.[^2] The refuge drew 14,500 visitors in 2004.[^1] The refuge runs for 16 miles beside the James River and mixes wetlands, forest and prairie.[^1] No source describes what remains at this tower site today, or whether the spot is open to the public.
+
+[^1]: Arrowwood National Wildlife Refuge, Wikipedia, https://en.wikipedia.org/wiki/Arrowwood_National_Wildlife_Refuge (accessed 2026-10-10).
+[^2]: North Dakota - Forest Lookouts, West Lookouts, https://westlookouts.weebly.com/north-dakota.html (accessed 2026-10-10).
+[^3]: North Dakota Lookouts, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/nd/ (accessed 2026-10-10).

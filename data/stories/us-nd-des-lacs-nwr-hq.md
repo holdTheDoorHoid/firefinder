@@ -1,0 +1,6 @@
+President Franklin D. Roosevelt established the Des Lacs National Wildlife Refuge in 1935, and it extends from the Canadian border to near Kenmare, North Dakota.[^1][^4] Its headquarters office had a lookout tower behind it, and that tower was completed in 1936.[^2] In July 1937 the tower was moved across the river to a hill near the golf course.[^2] The Forest Fire Lookout Association lists the headquarters tower as removed.[^3] Visitors can see wildlife by hiking the trails or driving the auto route.[^4] Tens of thousands of birds use the refuge both to migrate and to nest.[^1] Interpretive and education programs are also available through headquarters.[^4] No source describes what remains of the tower at either spot today.
+
+[^1]: Des Lacs National Wildlife Refuge, Wikipedia, https://en.wikipedia.org/wiki/Des_Lacs_National_Wildlife_Refuge (accessed 2026-10-10).
+[^2]: North Dakota - Forest Lookouts, West Lookouts, https://westlookouts.weebly.com/north-dakota.html (accessed 2026-10-10).
+[^3]: North Dakota Lookouts, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/nd/ (accessed 2026-10-10).
+[^4]: The Des Lacs Wildlife Refuge, Dakota Datebook, Prairie Public, https://news.prairiepublic.org/dakota-datebook/2020-03-02/the-des-lacs-wildlife-refuge (accessed 2026-10-10).

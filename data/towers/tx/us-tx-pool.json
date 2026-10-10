@@ -1,6 +1,7 @@
 {
   "id": "us-tx-pool",
   "name": "Pool",
+  "summary": "Montgomery County, TX lookout that the Forest Fire Lookout Association lists as gone; the sources read give no build, staffing or removal dates.",
   "other_names": [],
   "country": "US",
   "region": "TX",
@@ -19,9 +20,9 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Listed as gone; no removal date in the sources read",
   "registers": [],
-  "agency": "National Forest",
+  "agency": "National Forest (per the Central US Lookouts list)",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -37,9 +38,22 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": null,
+      "event": "removed",
+      "note": "Forest Fire Lookout Association lists it as Tower Gone; no date or method given",
+      "from": "research",
+      "source_url": "https://firelookout.org/lookouts/us/tx/"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Bob Bowman's East Texas Fire Lookout Towers (Texas Escapes)",
+      "url": "https://texasescapes.com/BobBowman/Fire-lookout-towers.htm",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Texas lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/tx/",
@@ -72,12 +86,30 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tx-pool",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

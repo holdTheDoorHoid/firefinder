@@ -1,0 +1,39 @@
+{
+  "id": "us-ar-round-hill",
+  "researched": "2026-10-10",
+  "summary": "Searcy County, AR: 100-ft steel tower erected on Round Hill in 1929; the site was later dismantled and moved, and no source says where the tower went or what remains.",
+  "facts": {
+    "design": "Four-legged steel tower with a glass-enclosed house at the top",
+    "height_m": 30.5,
+    "status": "relocated",
+    "status_note": "Improvements dismantled and moved per the Central US Lookouts page; the page does not say when or where. No source describes the site today.",
+    "agency": "Ozark National Forest"
+  },
+  "events": [
+    {"year": 1929, "event": "built", "note": "Central US Lookouts page: a 100-foot steel tower erected using an Emergency Conservation Works program", "cite": [1]},
+    {"year": 1954, "event": "other", "note": "Coast and Geodetic Survey station description: tower about 110 feet high with a glass-enclosed house at the top", "cite": [1]},
+    {"event": "relocated", "note": "Page says the improvements on the site were dismantled and moved; no date or destination given", "cite": [1]}
+  ],
+  "evidence": [
+    {"cite": [1], "supports": "site is in Searcy County, Ozark National Forest", "quote": "Arkansas - Searcy County - Ozark National Forest"},
+    {"cite": [1], "supports": "tower erected in 1929 as a 100-foot steel tower under an Emergency Conservation Works program", "quote": "1929: A 100-foot steel tower was erected using an Emergency Conservation Works program"},
+    {"cite": [1], "supports": "the improvements on the site were dismantled and moved", "quote": "The improvements on the site were dismantled and moved."},
+    {"cite": [1], "supports": "station described by the Coast and Geodetic Survey in 1954", "quote": "DESCRIBED BY COAST AND GEODETIC SURVEY 1954 (JCM)"},
+    {"cite": [1], "supports": "station is in the Ozark National Forest", "quote": "THE STATION IS IN THE OZARK NATIONAL FOREST, ABOUT 6-3/4"},
+    {"cite": [1], "supports": "station about a quarter mile east of the Searcy-Newton county line", "quote": "AND 4 MILES WEST OF WITTS SPRINGS AND 1/4 MILE EAST OF THE SEARCY-NEWTON COUNTY LINE."},
+    {"cite": [1], "supports": "the 1954 description calls the tower a four-legged steel tower", "quote": "IT IS A FOUR-LEGGED STEEL TOWER"},
+    {"cite": [1], "supports": "the 1954 description gives about 110 feet with a glass-enclosed house at the top", "quote": "ABOUT 110 FEET HIGH WITH A GLASS ENCLOSED HOUSE AT THE TOP."}
+  ],
+  "corrections": [
+    {"field": "status", "current": "gone", "proposed": "relocated", "cite": [1], "why": "Applied in the 2026-10-10 fact-check. The page says the improvements were dismantled and moved, which is not the same as gone. relocated is the repo status for a moved lookout (DESIGN.md section 3.4); the events record from and to, and the destination is unknown, so no moved_to is given."}
+  ],
+  "resolved_conflicts": [
+    {"field": "height_m", "explanation": "The Central US page gives 100 feet for the tower erected in 1929 (30.5 m, the value kept in the record). Its 1954 survey description says about 110 feet. The sources do not reconcile the two, so the story reports both.", "cite": [1]}
+  ],
+  "sources": [
+    {"n": 1, "title": "Round Hill - Forest Lookouts", "publisher": "Central US Lookouts (reproduces a Coast and Geodetic Survey station description)", "url": "https://centraluslookouts.weebly.com/round-hill.html", "accessed": "2026-10-10"}
+  ],
+  "verification": {"checked": "2026-10-10", "claims_checked": 9, "unsupported_removed": 0, "errors_fixed": 2, "quotes_spot_checked": 8, "quotes_not_found": 0, "verdict": "fixed"},
+  "confidence": "low",
+  "notes_for_editor": "Single source: the Central US Lookouts page, which reproduces a 1954 survey description. The NGS datasheet for FG1794 is withheld as non-public (nonpub code), so the survey could not be checked; the NGS listing gives an approximate position of 35 50 30 N, 092 56 23 W, which agrees with the brief's coordinates 35.84119, -92.94017. The status is now relocated (the brief had gone); the change is recorded under corrections and was applied in the 2026-10-10 fact-check. Destination of the tower is unknown. A search-result snippet from a ResearchGate PowerPoint table (the page returned HTTP 403 to our fetcher, so it is not verified) seems to say the tower went to a firing range at Fort Chaffee and cites 1939 and 1948 record maps. That claim is NOT in the story; check it against the original before it is used. No staffing, fire, access or photo evidence found."
+}

@@ -1,0 +1,10 @@
+Abbott Mountain is in Scott County, Arkansas, inside the Ouachita National Forest.[^1] The Forest Lookouts directory says the Civilian Conservation Corps built a lookout there in 1934.[^1] It also quotes a book on fire towers in the national forests of Arkansas and Oklahoma, which gives a different account: a steel tower built in 1942, standing 33 feet high with a 7-by-7-foot cab, that was most likely the second tower on that spot.[^1] The same passage dates the tower man's cabin beside it to 1937.[^1] A 1956 Coast and Geodetic Survey description, also quoted there, puts the structure at about 50 feet tall, with four steel legs and a cabin at the top.[^1] The directory's 1934 date and the book's 1942 date conflict, and the book's 33-foot height differs from the survey's 50 feet. We cannot tell from these sources which figures are right.
+
+The Oden Ranger District no longer used the tower in 1958, according to that book.[^1] A letter David Rosdahl wrote to the forest supervisor on January 6, 1959, also quoted there, says the Cold Springs Ranger District manned the tower during periods of high danger and low visibility.[^1] The passage also notes that the tower used a ladder instead of stairs and was seen as dangerous. The ranger noted that the part-time tower man, a woman, struggled to get into the tower.[^1]
+
+By 1970 the tower was listed as surplus.[^1] The book says it has since been removed, but it gives no date.[^1]
+
+A web page on the lookouts of the Mena and Oden ranger districts lists an "Abbot Mountain" lookout among the towers that once stood in those districts, which is probably this one.[^2] The same page says only Rich Mountain, Bee Mountain and Tall Peak remain standing today, so Abbot Mountain is not one of them.[^2] No source we read describes what, if anything, remains on the summit today, or whether the site is open to visitors.
+
+[^1]: Abbott Mountain, Forest Lookouts, https://centraluslookouts.weebly.com/abbott-mountain.html (accessed 2026-10-10).
+[^2]: Lookouts of the Mena & Oden Ranger Districts, Arkansas, https://argenweb.net/montgomery/lookouts.htm (accessed 2026-10-10).

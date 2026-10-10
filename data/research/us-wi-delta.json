@@ -1,0 +1,30 @@
+{
+  "id": "us-wi-delta",
+  "researched": "2026-10-10",
+  "summary": "Bayfield County lookout listed as gone by the FFLOS; a 1971 USGS map label and an OpenStreetMap tower node are the only other sources found.",
+  "facts": {
+    "status": "gone",
+    "status_note": "Listed as gone in the FFLOS index. An OpenStreetMap tower node with the same name is still on the map; a map node does not show that a structure stands."
+  },
+  "events": [
+    {"year": 1971, "event": "other", "note": "1971 USGS topographic map of the Lake Delta area names the Delta Lookout Tower as a fire observation site, per a map reseller's summary", "cite": [2]}
+  ],
+  "evidence": [
+    {"cite": [1], "supports": "status gone, coordinates, county", "quote": "Delta Bayfield 46.43229 -91.32354 Tower Gone"},
+    {"cite": [2], "supports": "fire observation use in the 1971 map", "quote": "specific sites like the Delta Lookout Tower used for fire observation"},
+    {"cite": [2], "supports": "Lake Delta in Chequamegon National Forest", "quote": "Lake Delta and the surrounding wilderness of the Chequamegon National Forest define this 1970s landscape in Bayfield County"},
+    {"cite": [3], "supports": "tower node tagged as observation tower", "quote": "tower:type observation"},
+    {"cite": [3], "supports": "elevation 412 meters", "quote": "ele 412"}
+  ],
+  "resolved_conflicts": [
+    {"field": "status", "explanation": "OpenStreetMap still shows a tower node at the site, while the FFLOS index lists the tower as gone. A map node is not evidence that a structure stands, so the FFLOS entry is used for status.", "cite": [1, 3]}
+  ],
+  "sources": [
+    {"n": 1, "title": "Wisconsin Lookouts", "publisher": "Forest Fire Lookout Association", "url": "https://firelookout.org/lookouts/us/wi/", "accessed": "2026-10-10"},
+    {"n": 2, "title": "1971 Map of Delta, Drummond, WI", "publisher": "Pastmaps", "url": "https://pastmaps.com/map/delta-bayfield-county-wi-usgs-topo-1971-p1989", "accessed": "2026-10-10"},
+    {"n": 3, "title": "Node: Delta Lookout Tower (353893422)", "publisher": "OpenStreetMap", "url": "https://www.openstreetmap.org/node/353893422", "accessed": "2026-10-10"}
+  ],
+  "confidence": "low",
+  "notes_for_editor": "Thin record: no build date, staffing, fire record or removal date in any source. The 1971 USGS map is known only through a map reseller's summary; the map itself was not opened, so treat the fire observation wording as secondhand. The OSM edit history shows the node was last edited more than two years ago. The Wisconsin Historical Society fire tower search for Bayfield County returned Long Mile and Iron River only, with no Delta entry; not used. Story is about 150 words. Brief record: coordinates, county and status match the FFLOS list; elevation 412 matches OSM; no correction proposed.",
+  "verification": {"checked": "2026-10-10", "claims_checked": 6, "unsupported_removed": 0, "errors_fixed": 1, "quotes_spot_checked": 5, "quotes_not_found": 0, "verdict": "fixed"}
+}

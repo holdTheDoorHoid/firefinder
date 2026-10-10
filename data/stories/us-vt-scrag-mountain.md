@@ -1,0 +1,16 @@
+The state's fire tower on Scrag Mountain, also called Mount Alice, stood in the town of Waitsfield in Washington County.[^1][^2] The state forest service finished it in the autumn of 1933 with Civilian Conservation Corps men from a nearby camp, according to a newspaper report.[^1] The crews hauled materials up the steep slope by horse and by hand, and the tower had a cabin for forest rangers with a telephone line.[^1] A later local history, which draws on Forest Service records, dates the wooden tower and cabin to 1934 instead.[^3]
+
+The state hired a Northfield woman as fire warden at the tower in July 1944.[^1] In August of that year, lightning struck the wooden tower during a storm and destroyed it.[^1] The town fire warden and several men put out the fire on the mountain, but the tower was already ruined.[^1]
+
+In September 1947 a state forest department official supervised the erection of a steel tower to replace the one that burned.[^1] The 1996 local history says the wooden tower was destroyed in 1947, which conflicts with the 1944 newspapers.[^3] A 1969 Coast and Geodetic Survey station description calls the steel tower 50 feet high with a glass-enclosed cabin.[^1] Ramona Shaw remembered her father, Carlos Shaw, a state ranger who climbed the mountain every day.[^3] After he retired, a series of rangers lived in the cabin during fire-danger periods.[^3] A May 1961 newspaper item names Frederick Fuller as the Department of Forestry staffer at the lookout.[^1]
+
+A 1949 to 1950 state report says the old wooden tower was removed.[^1] In 1972 the Boy Scouts bought the cabin from the state for one dollar.[^3] Later a new landowner took over a large area that includes the summit, and the cabin was sold to the owner of that land, ending the scouts' use of it.[^3]
+
+The steel tower was dismantled in the late 1970s.[^3] A Warren man bought it from the state for one dollar and arranged to take it down by helicopter.[^3] A few I-beams went into the woods during the trip and were never recovered.[^3] The 1996 history says he planned to re-erect it, and we found no later source saying he did.[^3]
+
+The 2012 blog post found the old warden's hut still standing at the summit. Its writer could not say when the tower came down.[^4] The 1996 history reported that the cabin was still there and that bolts drilled into the ledge to hold the tower can still be found.[^3] Landowners have closed off the old trail.[^3] The 2012 post describes signs warning people off the parking at the trailhead.[^4] The summit is on private land.[^3] Anyone curious should ask the landowner first. We found no source describing the site after 2012.
+
+[^1]: Scragg Mountain (Mount Alice), Forest Lookouts, https://easternuslookouts.weebly.com/scragg-mountain.html (accessed 2026-10-10).
+[^2]: Vermont lookout list, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/vt/ (accessed 2026-10-10).
+[^3]: A Valley Sampler, WCVT local history, https://www.wcvt.com/wp-content/uploads/2012/07/1996-history.pdf (accessed 2026-10-10).
+[^4]: Fathers' Day on Scrag Mountain, The Middlebury Sites Network, https://sites.middlebury.edu/middblogs/2012/06/19/fathers-day-on-scrag-mountain/ (accessed 2026-10-10).

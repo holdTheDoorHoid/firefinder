@@ -1,6 +1,7 @@
 {
   "id": "us-wi-delta",
   "name": "Delta Lookout Tower",
+  "summary": "Bayfield County lookout listed as gone by the FFLOS; a 1971 USGS map label and an OpenStreetMap tower node are the only other sources found.",
   "other_names": [],
   "country": "US",
   "region": "WI",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Listed as gone in the FFLOS index. An OpenStreetMap tower node with the same name is still on the map; a map node does not show that a structure stands.",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -37,9 +38,22 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1971,
+      "event": "other",
+      "note": "1971 USGS topographic map of the Lake Delta area names the Delta Lookout Tower as a fire observation site, per a map reseller's summary",
+      "from": "research",
+      "source_url": "https://pastmaps.com/map/delta-bayfield-county-wi-usgs-topo-1971-p1989"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "1971 Map of Delta, Drummond, WI (Pastmaps)",
+      "url": "https://pastmaps.com/map/delta-bayfield-county-wi-usgs-topo-1971-p1989",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Wisconsin lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/wi/",
@@ -71,12 +85,29 @@
         "elevation_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wi-delta",
+      "fields": [
+        "summary",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }
