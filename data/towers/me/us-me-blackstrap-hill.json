@@ -1,6 +1,7 @@
 {
   "id": "us-me-blackstrap-hill",
   "name": "Blackstrap Hill Tower Site",
+  "summary": "Falmouth, Cumberland County lookout built 1931, relocated to Opportunity Hill in 1942; a May 2026 trail report describes a fenced fire tower on the summit, so the gone status is disputed.",
   "other_names": [],
   "country": "US",
   "region": "ME",
@@ -18,8 +19,8 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "The FFLA list marks it gone after a 1942 relocation; a May 2026 trail report describes a fenced fire tower on the summit and does not say which tower it is",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,28 +29,57 @@
       "url": "http://firetower.org/lookouts/us/me/blackstrap-hill-tower-site/"
     }
   ],
-  "agency": null,
+  "agency": "State of Maine Forest Commissioner",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Trail report says the tower is off limits behind a fence; the access road is not posted against hikers"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Access road starts off Blackstrap Road and passes through a gate; the report calls the tower off limits"
   },
   "rental": null,
   "events": [
     {
+      "year": 1931,
+      "event": "built",
+      "note": "Lookout erected on Blackstrap Hill in Cumberland County, per the 1931 annual report",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/blackstrap-hill.html"
+    },
+    {
+      "year": 1932,
+      "event": "other",
+      "note": "A 1932 panoramic map centred on the Falmouth tower was issued (Internet Archive copy)",
+      "from": "research",
+      "source_url": "https://archive.org/details/statedocs_maine_arc_firetower-12"
+    },
+    {
+      "year": 1942,
+      "event": "relocated",
+      "note": "Relocated to Opportunity Hill; the sources read do not place Opportunity Hill",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/me/blackstrap-hill-tower-site/"
+    },
+    {
       "year": 2008,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 15, 2008",
-      "from": "fflos"
+      "note": "Registered September 15, 2008; nominated by Henry Isenberg",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/me/blackstrap-hill-tower-site/"
+    },
+    {
+      "year": 2026,
+      "event": "other",
+      "note": "May 2026 trail report describes a fire tower on the summit behind a fence, with commercial communications equipment",
+      "from": "research",
+      "source_url": "https://www.newenglandtrailconditions.com/me/viewreport.php?entryid=82075"
     }
   ],
   "photos": [],
@@ -58,6 +88,16 @@
       "label": "FFLOS register entry US 88 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/me/blackstrap-hill-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Blackstrap Hill (Falmouth) - Access road (New England Trail Conditions)",
+      "url": "https://www.newenglandtrailconditions.com/me/viewreport.php?entryid=82075",
+      "kind": "reference"
+    },
+    {
+      "label": "Blackstrap Hill 1932 (Maine Forestry Service, via Internet Archive)",
+      "url": "https://archive.org/details/statedocs_maine_arc_firetower-12",
+      "kind": "reference"
     },
     {
       "label": "FFLA Maine lookout list (firelookout.org)",
@@ -99,12 +139,48 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-me-blackstrap-hill",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

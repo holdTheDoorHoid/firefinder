@@ -1,6 +1,7 @@
 {
   "id": "us-ca-mount-lukens",
   "name": "Mount Lukens Lookout Site",
+  "summary": "Mount Lukens' first lookout, built 1922, burned in 1933; sources disagree on whether its tower moved to Josephine Peak in 1935 or 1936. The summit is now a radio site.",
   "other_names": [
     "Mount Lukens (sister elsie)"
   ],
@@ -18,10 +19,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Original 1922 lookout structure, burned in 1933; later California Region 5 Plan 4AR, a 10-foot open timber tower",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The first lookout burned in 1933. Sources disagree on where its tower went, and the summit is now a communications site.",
   "registers": [
     {
       "register": "FFLOS",
@@ -30,7 +31,7 @@
       "url": "http://firetower.org/lookouts/us/ca/mount-lukens-lookout-site/"
     }
   ],
-  "agency": "US Forest Service - Angeles National Forest",
+  "agency": "US Forest Service, Angeles National Forest",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -50,14 +51,73 @@
     {
       "year": 1922,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register gives 1922 as the build year of the first structure; a September 1922 newspaper reported the plan",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/mount-lukens-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/mount-lukens-lookout-site/",
+        "https://californialookouts.weebly.com/mount-lukens.html"
+      ]
+    },
+    {
+      "year": 1924,
+      "event": "staffed_first",
+      "note": "James Murray, government lookout, in the newspaper record",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mount-lukens.html"
+    },
+    {
+      "year": 1929,
+      "event": "staffed",
+      "note": "Ira W. Roberts, lookout; reported 110 fires in July 1929",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mount-lukens.html"
+    },
+    {
+      "year": 1933,
+      "event": "burned",
+      "note": "Original structure burned in a wildfire in late 1933",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/mount-lukens-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/mount-lukens-lookout-site/",
+        "https://californialookouts.weebly.com/mount-lukens.html"
+      ]
+    },
+    {
+      "year": 1933,
+      "event": "staffed",
+      "note": "L. W. Elliott, county fire department, held the lookout in November 1933",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mount-lukens.html"
     },
     {
       "year": 1935,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"1935\".",
-      "from": "fflos"
+      "note": "Register date for dismantling; reports suggest the structure was moved to Josephine Peak",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/mount-lukens-lookout-site/"
+    },
+    {
+      "year": 1936,
+      "event": "relocated",
+      "note": "Angeles Adventures dates the move of the tower to Josephine Peak to 1936",
+      "from": "research",
+      "source_url": "https://angelesadventures.com/josephine-peak-lookout/"
+    },
+    {
+      "year": 1975,
+      "event": "destroyed",
+      "note": "Josephine Peak lookout service ended in 1975 per Angeles Adventures; that page says it was then destroyed by the Big Tujunga (Mill) Fire, without giving the fire year",
+      "from": "research",
+      "source_url": "https://angelesadventures.com/josephine-peak-lookout/"
+    },
+    {
+      "year": 2012,
+      "event": "other",
+      "note": "Forest Service decision signed for a new tower at the Mt. Lukens Communication Site",
+      "from": "research",
+      "source_url": "https://www.fs.usda.gov/r05/angeles/projects/39085"
     },
     {
       "year": 2019,
@@ -123,6 +183,26 @@
       "kind": "register"
     },
     {
+      "label": "Josephine Peak Lookout (Angeles Adventures)",
+      "url": "https://angelesadventures.com/josephine-peak-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Mount Lukens (MRA)",
+      "url": "https://mra-raycom.com/locations/mount-lukens/",
+      "kind": "reference"
+    },
+    {
+      "label": "Angeles National Forest Project Summary #39085 (U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r05/angeles/projects/39085",
+      "kind": "reference"
+    },
+    {
+      "label": "Mount Lukens, Crescenta View and Rim of the Valley Loop (Komoot)",
+      "url": "https://www.komoot.com/smarttour/e1249608268/mount-lukens-crescenta-view-and-rim-of-the-valley-loop",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -164,12 +244,31 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:mount-lukens",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-mount-lukens",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

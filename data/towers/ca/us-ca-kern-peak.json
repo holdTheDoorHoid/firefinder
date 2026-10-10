@@ -1,6 +1,7 @@
 {
   "id": "us-ca-kern-peak",
   "name": "Kern Peak Lookout Site",
+  "summary": "Inyo NF ground cabin on Kern Peak, Tulare County, dated about 1917; register says nothing remains, but a 2008 trip report describes collapsed tower remains.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "Region 5 Plan 4A ground cabin (per register)",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Register says nothing remains; a 2008 trip report describes collapsed tower remains and one usable platform on the summit",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "US Forest Service - Inyo National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Inyo National Forest land; a 2008 trip report describes hikers reaching the summit"
   },
   "staffing": {
     "status": "unknown",
@@ -41,15 +42,37 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "A 2008 trip report describes hikers reaching the summit."
   },
   "rental": null,
   "events": [
     {
       "year": 1917,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register dates the ground cabin to circa 1917",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/kern-peak-lookout-site/"
+    },
+    {
+      "year": 1917,
+      "event": "other",
+      "note": "Lightning struck the cabin nine times in a storm on October 1",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/kern-peak.html"
+    },
+    {
+      "year": 1917,
+      "event": "staffed",
+      "note": "Lester E. Creasey named as government lookout at Kern Peak station",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/kern-peak.html"
+    },
+    {
+      "year": 2008,
+      "event": "other",
+      "note": "Trip report describes collapsed lookout tower remains and one usable platform on the summit",
+      "from": "research",
+      "source_url": "https://www.snwburd.com/bob/trip_reports/kern_1.html"
     },
     {
       "year": 2020,
@@ -89,6 +112,11 @@
       "label": "FFLOS register entry US 2051 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ca/kern-peak-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Kern Peak P2K trip report (snwburd.com)",
+      "url": "https://www.snwburd.com/bob/trip_reports/kern_1.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -133,12 +161,33 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:kern-peak",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-kern-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

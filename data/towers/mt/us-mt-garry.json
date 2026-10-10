@@ -1,6 +1,7 @@
 {
   "id": "us-mt-garry",
   "name": "Garry Lookout Site",
+  "summary": "Flathead NF 30-foot pole L-4 tower built 1934 half a mile above US 2; destroyed in 1974 per the register's description and two other sources; no source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "30-foot pole L-4 tower, about half a mile above U.S. Highway 2",
+  "height_m": 9.1,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Register description and two other sources say destroyed in 1974; no source describes what remains",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "U.S. Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Register says the site is accessible via the 2-mile Garry Lookout Trail #499 from US 2; no closure or permit requirement appears in the sources read"
   },
   "staffing": {
     "status": "unknown",
@@ -41,15 +42,33 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "2-mile Garry Lookout Trail #499 from US 2 along the Middle Fork Flathead River (per register)"
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Built 1934 per the register's Built field and description; firelookout.com and the Montana History Portal agree on 1934",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/mt/garry-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/mt/garry-lookout-site/",
+        "https://www.firelookout.com/mt/garry.html",
+        "https://www.mtmemory.org/nodes/view/5247"
+      ]
+    },
+    {
+      "year": 1974,
+      "event": "destroyed",
+      "note": "Register description, firelookout.com and Montana History Portal say destroyed in 1974; the register's Removed field also gives 1974",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/mt/garry-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/mt/garry-lookout-site/",
+        "https://www.firelookout.com/mt/garry.html",
+        "https://www.mtmemory.org/nodes/view/5247"
+      ]
     },
     {
       "year": 1974,
@@ -83,6 +102,11 @@
       "label": "FFLOS register entry US 1944 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/mt/garry-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Garry fire lookout (Montana History Portal (Glacier National Park Archives))",
+      "url": "https://www.mtmemory.org/nodes/view/5247",
+      "kind": "reference"
     },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
@@ -128,12 +152,34 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-garry",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

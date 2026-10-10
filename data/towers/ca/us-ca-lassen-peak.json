@@ -1,6 +1,7 @@
 {
   "id": "us-ca-lassen-peak",
   "name": "Lassen Peak Lookout Site",
+  "summary": "Summit cabin on Lassen Peak: the register dates it to 1912, 1913 newspapers and local history point to 1913; destroyed in the 1914 eruptions.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Wood ground cabin, Region 5 GDN plan; the register gives 12 ft 8 in square, 1913 newspapers give a planned 10 by 10 feet",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The cabin was destroyed in the 1914 eruptions and was never rebuilt.",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "National Park Service - Lassen Volcanic National Park",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The summit is inside Lassen Volcanic National Park and reached by trail. No source we read describes the cabin site today."
   },
   "staffing": {
     "status": "unknown",
@@ -40,28 +41,52 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Trail starts at the peak parking area and runs 2.5 miles one way to the summit (1981 trail record, may be out of date); vehicle pass required"
   },
   "rental": null,
   "events": [
     {
       "year": 1912,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register date. 1913 newspapers and local history point to 1913 construction; a 1912 first attempt reportedly did not function",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/lassen-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/lassen-peak-lookout-site/",
+        "https://californialookouts.weebly.com/lassen-peak.html",
+        "https://tipurdy.org/lassen-peak-lookout/"
+      ]
+    },
+    {
+      "year": 1913,
+      "event": "other",
+      "note": "Summit house packed up the mountain in June 1913; a December report says it was built that summer",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/lassen-peak.html",
+      "source_urls": [
+        "https://californialookouts.weebly.com/lassen-peak.html",
+        "https://tipurdy.org/lassen-peak-1913/"
+      ]
     },
     {
       "year": 1914,
       "event": "destroyed",
-      "note": "'Removed' field on FFLOS detail page: \"1914 Volcanic Eruption\".",
-      "from": "fflos"
+      "note": "Destroyed in the 1914 eruptions. Sources give June (newspapers), September (local history) and summer (register)",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/lassen-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/lassen-peak-lookout-site/",
+        "https://californialookouts.weebly.com/lassen-peak.html",
+        "https://tipurdy.org/lassen-peak-1913/"
+      ]
     },
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: April 12, 2020",
-      "from": "fflos"
+      "note": "Registered April 12, 2020",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/lassen-peak-lookout-site/"
     }
   ],
   "photos": [
@@ -133,6 +158,26 @@
       "kind": "register"
     },
     {
+      "label": "Lassen Peak, 1913 (Exploring Lassen County's Past)",
+      "url": "https://tipurdy.org/lassen-peak-1913/",
+      "kind": "reference"
+    },
+    {
+      "label": "Lassen Peak Lookout (Exploring Lassen County's Past)",
+      "url": "https://tipurdy.org/lassen-peak-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "The 1914-1917 Eruption of Lassen Peak (U.S. Geological Survey)",
+      "url": "https://www.usgs.gov/volcanoes/lassen-volcanic-center/science/1914-1917-eruption-lassen-peak",
+      "kind": "reference"
+    },
+    {
+      "label": "Lassen Peak (trail record) (National Recreation Trails)",
+      "url": "https://www.nationalrecreationtrails.com/trails/lassen-peak",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -174,12 +219,33 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:lassen-peak",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-lassen-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-ca-round-top",
   "name": "Round Top Lookout Site",
+  "summary": "Round Top lookout in the Berkeley Hills: 60-foot steel tower built 1927, active to 1973, removed before 1986; summit now in Sibley Volcanic Regional Preserve.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "7x7 observation-only cabin atop a 60-foot X-brace open steel tower",
+  "height_m": 18.3,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Removed after 1973 and before the 1986 Thornton survey; no source describes what remains at the site",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,37 +32,72 @@
   "agency": "Contra Costa Hills Protective Committee",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Summit lies in Sibley Volcanic Regional Preserve, a park established by the East Bay Regional Parks District; no source read gives current summit hours or rules"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
   "rental": null,
   "events": [
     {
+      "year": 1923,
+      "event": "other",
+      "note": "Lookout first planned",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/round-top-lookout-site/"
+    },
+    {
       "year": 1927,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "FFLOS: constructed and dedicated May 1927. Berkeley Daily Gazette (Sept 1927, quoted by Forest Lookouts): completed June 1, dedication planned that week",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/round-top-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/round-top-lookout-site/",
+        "https://californialookouts.weebly.com/round-top.html"
+      ]
+    },
+    {
+      "year": 1927,
+      "event": "fire",
+      "note": "Brush fire in Claremont Canyon reported by the new tower on July 1, 1927 and quickly extinguished",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/round-top.html"
+    },
+    {
+      "year": 1927,
+      "event": "other",
+      "note": "Committee started a graded road to the summit in January 1927",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/round-top.html"
+    },
+    {
+      "year": 1973,
+      "event": "other",
+      "note": "Tower described as active as late as 1973",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/round-top-lookout-site/"
     },
     {
       "year": 1986,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"After 1973, prior to 1986\".",
-      "from": "fflos"
+      "note": "Removed after 1973 and before the 1986 Thornton survey; 1986 is the latest possible date, not an exact one",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/round-top-lookout-site/"
     },
     {
       "year": 2021,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 9, 2021",
-      "from": "fflos"
+      "note": "Registered January 9, 2021; nominated by Brad Eells",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/round-top-lookout-site/"
     }
   ],
   "photos": [
@@ -83,6 +119,16 @@
       "label": "FFLOS register entry US 2066 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ca/round-top-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Round Top (Contra Costa County, California) (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Round_Top_(Contra_Costa_County,_California)",
+      "kind": "reference"
+    },
+    {
+      "label": "Robert Sibley Volcanic Regional Preserve (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Robert_Sibley_Volcanic_Regional_Preserve",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -126,12 +172,34 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:round-top",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-round-top",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

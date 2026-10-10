@@ -1,6 +1,7 @@
 {
   "id": "us-co-owl-mountain",
   "name": "Owl Mountain Tower Site",
+  "summary": "Former 40-foot steel tower on Owl Mountain, Jackson County, Routt NF; built 1954, taken down in the 1970s. The access road is unpaved, runs to a communication tower, and is closed by heavy snow.",
   "other_names": [],
   "country": "US",
   "region": "CO",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "40-foot steel tower",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Taken down in the 1970s; a 4x4 guide says the road climbs to a communication tower.",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/co/owl-mountain-tower-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "Routt National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Unpaved Forest Road 791 that allows hiking and highway vehicles; heavy snow closes it."
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,31 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Forest Road 791 (COTREX: Owl Mountain Lookout Road, trail 791.1), total length 5.7 miles, unpaved"
   },
   "rental": null,
   "events": [
     {
+      "year": 1954,
+      "event": "built",
+      "note": "40-foot steel tower, per the register",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/co/owl-mountain-tower-site/"
+    },
+    {
+      "year": 1970,
+      "event": "removed",
+      "note": "Register gives only 'the 1970s'; 1970 stands in for the decade",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/co/owl-mountain-tower-site/"
+    },
+    {
       "year": 2009,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: September 18, 2009",
-      "from": "fflos"
+      "note": "Registered September 18, 2009 as US 539, CO 11",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/co/owl-mountain-tower-site/"
     }
   ],
   "photos": [],
@@ -58,6 +74,16 @@
       "label": "FFLOS register entry US 539 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/co/owl-mountain-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Owl Mountain Lookout (4X4Explore.com)",
+      "url": "http://www.4x4explore.com/rds/o_rds/owl_mtn_lookout.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Owl Mountain Lookout Road (Colorado Trail Explorer (COTREX))",
+      "url": "https://trails.colorado.gov/roads/owl-mountain-lookout-6713",
+      "kind": "reference"
     },
     {
       "label": "FFLA Colorado lookout list (firelookout.org)",
@@ -108,12 +134,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-co-owl-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

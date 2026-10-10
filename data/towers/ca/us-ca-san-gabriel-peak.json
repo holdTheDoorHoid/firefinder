@@ -1,6 +1,7 @@
 {
   "id": "us-ca-san-gabriel-peak",
   "name": "San Gabriel Peak Lookout Site",
+  "summary": "Angeles NF peak lookout; planned 1922, built 1927-35 per one source (register says 1935); cab moved to Vetter Mountain and burned 2009; footings reported.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Region 5 Plan 4A cabin on a 10-foot X-brace open steel tower; may later have been replaced by a BC-301 design",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The cab was moved to Vetter Mountain in 1937 and burned there in 2009; a rebuilt lookout now stands on Vetter Mountain. Concrete footings are reported, but the sources do not say clearly whether they are on the summit or at Vetter Mountain.",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,7 +29,7 @@
       "url": "http://firetower.org/lookouts/us/ca/san-gabriel-peak-lookout-site/"
     }
   ],
-  "agency": "US Forest Service - Angeles National Forest",
+  "agency": "US Forest Service, Angeles National Forest",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -46,16 +47,74 @@
   "rental": null,
   "events": [
     {
+      "year": 1922,
+      "event": "other",
+      "note": "Trail being built to the summit and a fire lookout contemplated, per a 1922 Los Angeles Times item; a plan, not a build date",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/san-gabriel-peak.html"
+    },
+    {
+      "year": 1927,
+      "event": "built",
+      "note": "Angeles Adventures: a lookout tower built in 1927 or 1928; the site is dated 1927-1935",
+      "from": "research",
+      "source_url": "https://angelesadventures.com/san-gabriel-peak/"
+    },
+    {
+      "year": 1929,
+      "event": "staffed",
+      "note": "Observer for the previous season, per a February 1930 Monrovia News-Post report; Angeles Adventures names Glenn Moore as a lookout in 1929 instead",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/san-gabriel-peak.html",
+      "source_urls": [
+        "https://californialookouts.weebly.com/san-gabriel-peak.html",
+        "https://angelesadventures.com/san-gabriel-peak/"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "staffed",
+      "note": "Covina Argus, May 1934: lookouts stationed on San Gabriel Peak that Saturday",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/san-gabriel-peak.html"
+    },
+    {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register 'Built' field; the register's description also says the cabin was constructed as early as 1922; conflicts with the 1927-28 build date",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/san-gabriel-peak-lookout-site/"
+    },
+    {
+      "year": 1937,
+      "event": "relocated",
+      "note": "Cab dismantled in 1937 and moved to Vetter Mountain, per Angeles Adventures",
+      "from": "research",
+      "source_url": "https://angelesadventures.com/san-gabriel-peak/"
+    },
+    {
+      "year": 2009,
+      "event": "burned",
+      "note": "The structure at Vetter Mountain burned in the 2009 Station Fire, per Angeles Adventures; the Vetter Mountain lookout's original tower was destroyed in August 2009, per ANFFLA",
+      "from": "research",
+      "source_url": "https://angelesadventures.com/san-gabriel-peak/",
+      "source_urls": [
+        "https://angelesadventures.com/san-gabriel-peak/",
+        "http://www.anffla.org/vetter/"
+      ]
     },
     {
       "year": 2019,
       "event": "fflos_registered",
       "note": "Date registered per FFLOS detail page: December 4, 2019",
       "from": "fflos"
+    },
+    {
+      "year": 2019,
+      "event": "rebuilt",
+      "note": "Vetter Mountain lookout rebuilt with Southern California Edison, construction began 2019 and was completed April 2020 (ANFFLA); the sources do not say whether it reuses the San Gabriel cab",
+      "from": "research",
+      "source_url": "http://www.anffla.org/vetter/"
     }
   ],
   "photos": [
@@ -103,6 +162,16 @@
       "kind": "register"
     },
     {
+      "label": "San Gabriel Peak (Angeles Adventures)",
+      "url": "https://angelesadventures.com/san-gabriel-peak/",
+      "kind": "reference"
+    },
+    {
+      "label": "Vetter Mountain (Angeles National Forest Fire Lookout Association)",
+      "url": "http://www.anffla.org/vetter/",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -144,12 +213,31 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:san-gabriel-peak",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-san-gabriel-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

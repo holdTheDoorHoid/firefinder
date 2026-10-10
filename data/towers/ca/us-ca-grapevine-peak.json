@@ -1,6 +1,7 @@
 {
   "id": "us-ca-grapevine-peak",
   "name": "Grapevine Peak Lookout Site",
+  "summary": "Kern County lookout dated circa 1940 for the county fire department; removal date unknown; summit remains a communications site per the register.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "14x14 cabin similar to a US Forest Service L-4 design on a 30 ft open timber tower (register description)",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "The register gives no removal date and says the summit remains a busy communications site. No source describes what, if anything, of the lookout stands now.",
   "registers": [
     {
       "register": "FFLOS",
@@ -48,8 +49,16 @@
     {
       "year": 1940,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register says circa 1940 and that it may have been constructed before 1940",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/grapevine-peak-lookout-site/"
+    },
+    {
+      "year": 1941,
+      "event": "other",
+      "note": "July 15, 1941 (Bakersfield Californian item, quoted on Forest Lookouts): the board authorized Surveyor Thornton to survey a site for a new station atop the peak, at Harold P. Bowhay's request",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/grapevine-peak.html"
     },
     {
       "year": 2019,
@@ -134,12 +143,47 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-grapevine-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

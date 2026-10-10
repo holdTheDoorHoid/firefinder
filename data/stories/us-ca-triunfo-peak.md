@@ -1,0 +1,14 @@
+The Triunfo Peak lookout stood in the Santa Monica Mountains in Ventura County, California.[^1] A Ventura County history, quoted by the register, says Ventura County helped the Los Angeles County Fire Department put the lookout up in May 1930.[^1] A June 1930 newspaper item, quoted on the Forest Lookouts page, reported that telephone service had just completed the new station.[^2]
+
+The tower itself came from elsewhere.[^3] According to Angeles Adventures, the Los Angeles County forestry department moved a fire tower from Blue Ridge to Bodle Peak in 1930. After about four years there, it was dismantled and re-erected at Triunfo Peak.[^3] A November 1934 newspaper item says the Bodle Peak tower was being re-erected at Triunfo.[^2] The register dates the lookout to 1934 and gives the tower as 60 feet tall.[^1] A county annual report quoted on the Forest Lookouts page says a tower was constructed on Triunfo Peak in 1935, and a hiking blog also dates the reassembly to 1935.[^2][^4] The sources disagree on the year.
+
+On October 31, 1930, a newspaper reported that Jack Fletcher, the Triunfo lookout, was pulled out of a fire that climbed his frame tower. Fletcher and the deputy fire warden who went in after him escaped with minor burns.[^2] The register says the November 1930 Potrero fire destroyed the tower. Los Angeles County rebuilt it, and the lookout ran every fire season until the late 1960s.[^1] Later newspaper items also mention the station. A 1955 newspaper item describes a fire that burned all night behind the station, and a 1958 item says a house fire was discovered from the lookout.[^2]
+
+Both the register and the hiking blog date the end of the lookout to the late 1960s.[^1][^4] The register says a concrete base of unknown purpose remains, and a satellite image shows what appears to be a cabin foundation.[^1] The area burned in the 2018 Woolsey Fire.[^1]
+
+The peak lies within the Santa Monica Mountains National Recreation Area.[^1] A hiking account reaches the top from the Backbone Trail. A side trail leads to Yellow Hill Fire Road, the old lookout service road, and from the Backbone Trail sign it is about three-quarters of a mile to the top.[^4] That account is undated, and we found no report on the site's condition after the fire.
+
+[^1]: Triunfo Peak Lookout Site, Former Fire Lookout Sites Register, http://firetower.org/lookouts/us/ca/triunfo-peak-lookout-site/ (accessed 2026-10-09).
+[^2]: Triunfo, Forest Lookouts, https://californialookouts.weebly.com/triunfo.html (accessed 2026-10-09).
+[^3]: Bodle Peak Lookout, Angeles Adventures, https://angelesadventures.com/bodle-peak-lookout/ (accessed 2026-10-09).
+[^4]: Backbone Trail Run: Encinal Canyon to Triunfo Peak, Photography on the Run, https://photographyontherun.com/wp/?p=5820 (accessed 2026-10-09).

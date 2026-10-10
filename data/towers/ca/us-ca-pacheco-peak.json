@@ -1,6 +1,7 @@
 {
   "id": "us-ca-pacheco-peak",
   "name": "Pacheco Peak Lookout Site",
+  "summary": "Enclosed timber lookout on Pacheco Peak, Santa Clara County, built 1935; a 1988 state filing describes taking it apart and moving it. The record's 1980 removal date is wrong.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "Forest Service Region 5 plan BC-301 cabin atop an enclosed timber tower",
   "height_m": 12.2,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Taken down in the late 1980s; a 1988 state filing describes it being moved.",
   "registers": [
     {
       "register": "FFLOS",
@@ -48,8 +49,13 @@
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register: built 1935 for the Santa Clara County Fire Department; a September 1935 newspaper item describes construction starting",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/pacheco-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/pacheco-peak-lookout-site/",
+        "https://californialookouts.weebly.com/pacheco-peak.html"
+      ]
     },
     {
       "year": 1980,
@@ -58,10 +64,36 @@
       "from": "fflos"
     },
     {
+      "year": 1986,
+      "event": "removed",
+      "note": "Register: removed some time between 1986 and 1991. 1986 is the start of that window, not a dated record",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/pacheco-peak-lookout-site/"
+    },
+    {
+      "year": 1988,
+      "event": "relocated",
+      "note": "State negative declaration (received March 1988) describes disassembling the tower and re-erecting it in San Benito County; an August 1988 notice describes relocating the tower and building a radio vault",
+      "from": "research",
+      "source_url": "https://ceqanet.lci.ca.gov/1988030821",
+      "source_urls": [
+        "https://ceqanet.lci.ca.gov/1988030821",
+        "https://ceqanet.lci.ca.gov/1988030821/2"
+      ]
+    },
+    {
+      "year": 1994,
+      "event": "other",
+      "note": "State filing for a 120 ft self-supporting antenna tower at a Pacheco Peak communications facility",
+      "from": "research",
+      "source_url": "https://ceqanet.lci.ca.gov/1994107435"
+    },
+    {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: April 16, 2020",
-      "from": "fflos"
+      "note": "Register date April 16, 2020",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/pacheco-peak-lookout-site/"
     }
   ],
   "photos": [
@@ -95,6 +127,21 @@
       "label": "FFLOS register entry US 2019 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ca/pacheco-peak-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "PACHECO PEAK LOOKOUT (SCH 1988030821) (CEQAnet)",
+      "url": "https://ceqanet.lci.ca.gov/1988030821",
+      "kind": "reference"
+    },
+    {
+      "label": "PACHECO PEAK LOOKOUT, notice of determination (CEQAnet)",
+      "url": "https://ceqanet.lci.ca.gov/1988030821/2",
+      "kind": "reference"
+    },
+    {
+      "label": "PACHECO PEAK COMMUNICATIONS FACILITY CONSTRUCT ANTENNA (CEQAnet)",
+      "url": "https://ceqanet.lci.ca.gov/1994107435",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -140,12 +187,32 @@
       "fields": [
         "height_m"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-pacheco-peak",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

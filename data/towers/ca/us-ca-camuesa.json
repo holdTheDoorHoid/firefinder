@@ -1,6 +1,7 @@
 {
   "id": "us-ca-camuesa",
   "name": "Camuesa Lookout Site",
+  "summary": "Los Padres NF lookout on Camuesa Peak built 1935; register says only tower piers remain, while a Peakbagging note citing a USGS datasheet says it was torn down by 1953. Sources disagree.",
   "other_names": [
     "Camuesa Peak"
   ],
@@ -18,10 +19,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "design": "California Region 5 Plan BC-301 cabin on a 10-foot open timber tower",
+  "height_m": 3.0,
+  "status": "ruins",
+  "status_note": "Register says the tower piers are all that remains; Peakbagging says the lookout was torn down by 1953 per a USGS datasheet and probably nothing is left. Sources disagree",
   "registers": [
     {
       "register": "FFLOS",
@@ -34,7 +35,7 @@
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "Los Padres National Forest land (register and Peakbagging). A visitor trip report on Hike Los Padres describes a road reaching a turnaround about a quarter mile past the peak. No Forest Service access or closure notice was read, so public access is not confirmed."
   },
   "staffing": {
     "status": "unknown",
@@ -43,21 +44,41 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "A visitor's e-bike trip report describes riding the road to a turnaround about a quarter mile past the peak; the report does not mention the lookout site."
   },
   "rental": null,
   "events": [
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register says constructed in 1935; Peakbagging photo caption also says built in 1935",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/camuesa-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/camuesa-lookout-site/",
+        "http://www.peakbagging.com/CALookoutPhotos/Camuesa.html"
+      ]
+    },
+    {
+      "year": 1936,
+      "event": "other",
+      "note": "Oct 23, 1936 item: during a lightning storm, three lookouts including Camuesa reported a fire near a patrolman; it was the tail light of his car",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/camuesa-peak.html"
+    },
+    {
+      "year": 1953,
+      "event": "removed",
+      "note": "Peakbagging: torn down by 1953 according to a USGS datasheet (datasheet not read). Register says removal date is unknown",
+      "from": "research",
+      "source_url": "http://www.peakbagging.com/CALookoutPhotos/Camuesa.html"
     },
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: April 16, 2020",
-      "from": "fflos"
+      "note": "Register Date Registered: April 16, 2020",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/camuesa-lookout-site/"
     }
   ],
   "photos": [
@@ -91,6 +112,16 @@
       "label": "FFLOS register entry US 2015 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ca/camuesa-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Camuesa Peak Lookout, California (historic photo) (Peakbagging)",
+      "url": "http://www.peakbagging.com/CALookoutPhotos/Camuesa.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Camuesa Peak - Los Padres (Hike Los Padres (trip reports))",
+      "url": "https://www.hikelospadres.com/camuesa-peak.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -135,12 +166,34 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:camuesa-peak",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-camuesa",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

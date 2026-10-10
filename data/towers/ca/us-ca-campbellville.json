@@ -1,6 +1,7 @@
 {
   "id": "us-ca-campbellville",
   "name": "Campbellville Lookout Site",
+  "summary": "Tehama County, CA lookout site used since at least 1922; state cabin built 1937 was gone by 1986; parcel listed for possible sale in 2014. No current site description found.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "8x8 foot wood-frame observation cabin on a 60-foot treated timber tower (1937), with a BC-201 residence cabin",
+  "height_m": 18.3,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Register says the lookout structure was gone by 1986; no source describes what remains today",
   "registers": [
     {
       "register": "FFLOS",
@@ -46,16 +47,65 @@
   "rental": null,
   "events": [
     {
+      "year": 1922,
+      "event": "fire",
+      "note": "Brush fire in the Polk Springs district; the man who admitted starting it pleaded guilty and was fined $50; about 800 acres burned Plea dated May 3, 1922.",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/campellville.html"
+    },
+    {
+      "year": 1922,
+      "event": "staffed_first",
+      "note": "Earliest documented use. Register says a lookout has been here since at least 1922; a 1922 newspaper report has a ranger sighting a fire from the station",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/campbellville-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/campbellville-lookout-site/",
+        "https://californialookouts.weebly.com/campellville.html"
+      ]
+    },
+    {
       "year": 1937,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register: State of California built a new 8x8 foot observation cabin on a 60 foot treated timber tower, plus a BC-201 residence cabin",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/campbellville-lookout-site/"
+    },
+    {
+      "year": 1971,
+      "event": "other",
+      "note": "2011 Assembly analysis: CAL FIRE acquired the property in 1971 to construct a fire lookout tower. Conflicts with the register's 1937 state build date",
+      "from": "research",
+      "source_url": "https://www.leginfo.ca.gov/pub/11-12/bill/asm/ab_1251-1300/ab_1272_cfa_20110411_113553_asm_comm.html"
     },
     {
       "year": 1986,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"Pre 1986\".",
-      "from": "fflos"
+      "note": "Register Removed field reads 'Pre 1986'; description says the structure was gone by 1986. Year is an upper bound",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/campbellville-lookout-site/"
+    },
+    {
+      "year": 2011,
+      "event": "other",
+      "note": "AB 1272 (enrolled) would authorize the director to dispose of the parcel, described as about 5 acres; April 2011 analysis says about 20 acres",
+      "from": "research",
+      "source_url": "https://leginfo.ca.gov/pub/11-12/bill/asm/ab_1251-1300/ab_1272_bill_20110713_enrolled.html",
+      "source_urls": [
+        "https://leginfo.ca.gov/pub/11-12/bill/asm/ab_1251-1300/ab_1272_bill_20110713_enrolled.html",
+        "https://www.leginfo.ca.gov/pub/11-12/bill/asm/ab_1251-1300/ab_1272_cfa_20110411_113553_asm_comm.html"
+      ]
+    },
+    {
+      "year": 2014,
+      "event": "other",
+      "note": "April 25, 2014: site and five acres of forest land listed on a DGS excess-properties-under-review list for possible sale",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/campellville.html",
+      "source_urls": [
+        "https://californialookouts.weebly.com/campellville.html",
+        "http://firetower.org/lookouts/us/ca/campbellville-lookout-site/"
+      ]
     },
     {
       "year": 2020,
@@ -83,6 +133,16 @@
       "label": "FFLOS register entry US 2053 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ca/campbellville-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "AB 1272, State property: surplus (enrolled bill text) (California Legislative Information)",
+      "url": "https://leginfo.ca.gov/pub/11-12/bill/asm/ab_1251-1300/ab_1272_bill_20110713_enrolled.html",
+      "kind": "reference"
+    },
+    {
+      "label": "AB 1272 Assembly Committee analysis, April 11, 2011 (California Legislative Information)",
+      "url": "https://www.leginfo.ca.gov/pub/11-12/bill/asm/ab_1251-1300/ab_1272_cfa_20110411_113553_asm_comm.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -126,12 +186,32 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:campellville",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-campbellville",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

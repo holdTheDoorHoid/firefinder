@@ -1,6 +1,7 @@
 {
   "id": "us-ca-rocky-butte",
   "name": "Rocky Butte Lookout Site",
+  "summary": "Rocky Butte lookout, Santa Lucia Mtns, San Luis Obispo Co.: CCC-era L-701 tower, cab from Cerro Alto; removed after 1999 for a communications facility.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "CCC tower to USFS Plan No. L-701; original BC-301 cab replaced by a steel CL-30 cab in 1977",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Removed some time after 1999 to make way for a communications facility, per the register. Some items and photos are on display at the Cal Fire South Bay Training Center.",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,8 +32,8 @@
   "agency": "California Department of Forestry and Fire Protection (Cal Fire)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "The register says the site is not open to the public and is some 7 miles from paved road."
   },
   "staffing": {
     "status": "unknown",
@@ -40,28 +41,38 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "The register says the site is some 7 miles from paved road."
   },
   "rental": null,
   "events": [
     {
       "year": 1933,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register's build field reads 1933/1977. The tower is a CCC design, USFS Plan No. L-701.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/rocky-butte-lookout-site/"
+    },
+    {
+      "year": 1977,
+      "event": "replaced",
+      "note": "The original BC-301 cab was replaced with a steel CL-30 cab in 1977.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/rocky-butte-lookout-site/"
     },
     {
       "year": 1999,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"After 1999\".",
-      "from": "fflos"
+      "note": "Register: removed 'After 1999' to make way for a communications facility. The year is a lower bound, not an exact date.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/rocky-butte-lookout-site/"
     },
     {
       "year": 2019,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: December 22, 2019",
-      "from": "fflos"
+      "note": "Registered December 22, 2019.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/rocky-butte-lookout-site/"
     }
   ],
   "photos": [
@@ -169,6 +180,11 @@
       "kind": "register"
     },
     {
+      "label": "Cerro Alto Campground (Los Padres National Forest, Forest Service)",
+      "url": "https://www.fs.usda.gov/r05/lospadres/recreation/cerro-alto-campground",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -211,12 +227,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-rocky-butte",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

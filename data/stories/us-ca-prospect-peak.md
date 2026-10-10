@@ -1,0 +1,11 @@
+Prospect Peak lookout stood on the peak of the same name in what is now Lassen Volcanic National Park, in Shasta County, California, at 8,347 feet (2,544 meters).[^1] The register dates the cabin to 1912 and calls it a California Region 5 Plan 4A design.[^1] A 1981 Lassen County Times article, reprinted on a lookout history site, gives the same date from park research and says lookouts were preassembled in Red Bluff, then taken apart and packed onto mules.[^2] The two accounts disagree on where the mule trip began.[^1][^2] The register says Blue Lake, and the article says Butte Lake.[^1][^2]
+
+In July 1981 the cabin was flown off the peak by helicopter and taken to Manzanita Lake, where the park planned to restore it as a display.[^1][^2] The article dates the flight to July 21.[^2] The restoration never happened, according to the register.[^1] Some time in the early 2000s the cabin was moved to the San Bernardino National Forest.[^1] The register says the cabin was dismantled, trucked to a storage site on the Forest, and set to be put back together on the tower at Cajon Mountain.[^1] The Forest then decided to tear that tower down, and the plan was dropped.[^1]
+
+The register says the cabin's present condition and location are not known.[^1] Wikipedia tells a different story.[^3] Its article places the lookout on Prospect Peak and calls it otherwise intact, citing a nomination form dated June 16, 1977, four years before the helicopter flight described above.[^3][^2] Wikipedia also gives the date the site joined the National Register as March 30, 1978.[^3] We have given more weight to the register and the 1981 article, which are more specific.
+
+The register does not say what, if anything, is left on the summit today.[^1] The register names the National Park Service as the administrator of the site.[^1]
+
+[^1]: Prospect Peak Lookout Site, Former Fire Lookout Sites Register, http://firetower.org/lookouts/us/ca/prospect-peak-lookout-site/ (accessed 2026-10-09).
+[^2]: Prospect Peak, Forest Lookouts (California Lookouts), https://californialookouts.weebly.com/prospect-peak.html (accessed 2026-10-09).
+[^3]: Prospect Peak Fire Lookout, Wikipedia, https://en.wikipedia.org/wiki/Prospect_Peak_Fire_Lookout (accessed 2026-10-09).

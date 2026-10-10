@@ -1,6 +1,7 @@
 {
   "id": "us-ca-lava-peak",
   "name": "Lava Peak Lookout Site",
+  "summary": "Lassen County observation cabin, about the 1940s; the register describes a standing ruin with collapsed walls as of May 2025.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "8x8 observation-only wood ground cabin with a wood catwalk",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "ruins",
+  "status_note": "Walls have collapsed; the platform is mostly intact as of May 2025, per the register.",
   "registers": [
     {
       "register": "FFLOS",
@@ -48,14 +49,23 @@
     {
       "year": 1940,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register gives 'Circa 1940's', so the year is approximate",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/lava-peak-lookout-site/"
     },
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: February 1, 2020",
-      "from": "fflos"
+      "note": "Registered February 1, 2020",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/lava-peak-lookout-site/"
+    },
+    {
+      "year": 2025,
+      "event": "assessed",
+      "note": "As of May 2025 the walls had collapsed, the platform was mostly intact, and most of the roof lay about 50 feet downhill",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/lava-peak-lookout-site/"
     }
   ],
   "photos": [
@@ -89,6 +99,11 @@
       "label": "FFLOS register entry US 1906 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ca/lava-peak-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "California Lookouts (by County) (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/ca/ca-co/",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -134,12 +149,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-lava-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

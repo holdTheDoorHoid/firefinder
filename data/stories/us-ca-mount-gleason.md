@@ -1,0 +1,12 @@
+Mount Gleason, in the Angeles National Forest in Los Angeles County, got a steel lookout tower in 1926.[^2][^3] The county's forestry department paid $2,046 for it: a 60-foot steel tower topped by a steel cab.[^2] A rock cabin for the observer went up nearby.[^3] The county built and maintained the tower while the Forest Service furnished the observers, which made it the first co-operative tower between the two.[^3] The register dates the tower to 1927 instead.[^1]
+
+The first observer named in these sources is I.W. Elliot, listed for 1927 to 1932.[^3] In 1929 Paul Grey filled in as relief lookout.[^2] In 1932 a lightning bolt struck and shattered a tree a few feet from the tower, nearly knocking the lookout off a ladder he was climbing to it.[^3] A 1933 report says that during a recent lightning spell the observer spotted many fires near the peak, even after lightning had knocked out the Pasadena phone circuit.[^2] In 1940 a newly hired lookout, Chuck Callin, married at the summit, because the Forest Service would not give him leave until he had worked a month.[^2]
+
+The tower came down in 1955 to free space for radar that served the LA-04 Nike missile base on the ridge below.[^3] The register dates the demolition to the 1950s, when the site was cleared for a Nike installation.[^1] The Nike base operated from 1955 to 1974.[^4]
+
+Today the summit is a pine ridge without the tower.[^3] Angeles Adventures reports nothing left of the tower or the Nike radar towers, though an EarthScope GPS station now stands on the summit.[^3] A 2021 photo caption on the same page shows the walls of the lookout cabin still standing.[^3] The lower Nike site has been a correctional facility since 1981 and houses about 105 men, according to a Nike history.[^4] Forest Service Road 3N17 is the way up.[^3] It was closed for more than a decade after the 2009 Station Fire and reopened to motor traffic in 2021, subject to fire conditions.[^3]
+
+[^1]: Mount Gleason Lookout Site, Former Fire Lookout Sites Register, http://firetower.org/lookouts/us/ca/mount-gleason-lookout-site/ (accessed 2026-10-09).
+[^2]: Mount Gleason, Forest Lookouts, https://californialookouts.weebly.com/mount-gleason.html (accessed 2026-10-09).
+[^3]: Mount Gleason Lookout, Angeles Adventures, https://angelesadventures.com/mtgleasonlookout/ (accessed 2026-10-09).
+[^4]: Nike Missile Site LA-04 Mt Gleason CA, The Military Standard, https://www.themilitarystandard.com/missile/nike/la-04.php (accessed 2026-10-09).

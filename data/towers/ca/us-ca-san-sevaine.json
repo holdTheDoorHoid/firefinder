@@ -1,6 +1,7 @@
 {
   "id": "us-ca-san-sevaine",
   "name": "San Sevaine Lookout Site",
+  "summary": "San Bernardino NF knob lookout: built 1934/37, destroyed in the 1936 Etiwanda fire, replaced 1937; foundations and melted glass remain, reached by a forest road and brushy trail.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "10-foot steel tower with a 14-foot square cab (1937 replacement)",
   "height_m": 3.0,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The register gives no removal date. A 2025 trip report and a summit page describe foundations and melted glass on the knob.",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/ca/san-sevaine-lookout-site/"
     }
   ],
-  "agency": "US Forest Service - San Bernardino National Forest",
+  "agency": "US Forest Service, San Bernardino National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Free parking on Forest Road 1N34, which a 2025 trip report describes as gated and open seasonally. The same report says the road was about to close for the summer and reopen in September. No site-level rule appears in the sources read."
   },
   "staffing": {
     "status": "unknown",
@@ -41,15 +42,63 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "About 2 miles round trip on an overgrown use trail from Forest Road 1N34, per a 2025 trip report; the writer found the road needed a 4x4"
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register 'Built' field reads 1934/37; a March 1934 paper reports a lookout tower as planned work on San Sevaine ridge",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/san-sevaine-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/san-sevaine-lookout-site/",
+        "https://californialookouts.weebly.com/san-sevaine.html"
+      ]
+    },
+    {
+      "year": 1936,
+      "event": "destroyed",
+      "note": "Original tower destroyed; its two occupants escaped down a firebreak (report dated October 2, 1936)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/san-sevaine.html"
+    },
+    {
+      "year": 1936,
+      "event": "fire",
+      "note": "Etiwanda fire in the fall of 1936",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/san-sevaine-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/san-sevaine-lookout-site/",
+        "https://californialookouts.weebly.com/san-sevaine.html"
+      ]
+    },
+    {
+      "year": 1936,
+      "event": "staffed",
+      "note": "Lookout Oliver O. Mittman was one of the two occupants when the tower was destroyed",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/san-sevaine.html"
+    },
+    {
+      "year": 1937,
+      "event": "replaced",
+      "note": "Replacement 10-foot steel tower built under the San Bernardino forest building engineer",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/san-sevaine-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/san-sevaine-lookout-site/",
+        "https://californialookouts.weebly.com/san-sevaine.html"
+      ]
+    },
+    {
+      "year": 1938,
+      "event": "staffed",
+      "note": "Glenn E. Downer resigned as lookout to take a state lookout job on Gilman Peak; Raymond R. Higgins was to replace him",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/san-sevaine.html"
     },
     {
       "year": 2019,
@@ -115,6 +164,16 @@
       "kind": "register"
     },
     {
+      "label": "San Sevaine Lookout (SummitPost)",
+      "url": "https://www.summitpost.org/san-sevaine-lookout/374455",
+      "kind": "reference"
+    },
+    {
+      "label": "Iron Hiker: San Sevaine Lookout (Iron Hiker (blog))",
+      "url": "https://ironhiker.blogspot.com/2025/02/san-sevaine-lookout.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -160,12 +219,33 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-san-sevaine",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

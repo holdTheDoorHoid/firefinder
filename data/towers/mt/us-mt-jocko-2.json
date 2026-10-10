@@ -1,6 +1,7 @@
 {
   "id": "us-mt-jocko-2",
   "name": "Jocko #2 Lookout",
+  "summary": "Lake County steel tower, built 1934 per the register (1935 per firelookout.com), removed in the mid-1960s; only concrete footings remain and no source describes access.",
   "other_names": [
     "Jocko #1"
   ],
@@ -18,10 +19,10 @@
   "material": "steel",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "60-foot steel tower",
+  "height_m": 18.3,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Only concrete footings remain, per the register; firelookout.com says gone in 1965",
   "registers": [
     {
       "register": "FFLOS",
@@ -50,14 +51,34 @@
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register Built field and description give 1934; firelookout.com gives 1935",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/mt/jocko-2-lookout/"
+    },
+    {
+      "year": 1960,
+      "event": "other",
+      "note": "firelookout.com: not used until 1960; no source names who used it",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/jocko1.html"
+    },
+    {
+      "year": 1965,
+      "event": "removed",
+      "note": "Register says removed, possibly in the mid-1960s; firelookout.com says gone 1965",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/mt/jocko-2-lookout/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/mt/jocko-2-lookout/",
+        "https://www.firelookout.com/mt/jocko1.html"
+      ]
     },
     {
       "year": 2022,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: May 22, 2022",
-      "from": "fflos"
+      "note": "Date registered May 22, 2022 per the register",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/mt/jocko-2-lookout/"
     }
   ],
   "photos": [
@@ -125,12 +146,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-jocko-2",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

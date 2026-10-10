@@ -1,6 +1,7 @@
 {
   "id": "us-ca-ash-peak",
   "name": "Ash Peak Lookout Site",
+  "summary": "Sequoia National Park lookout tower in use by 1929 and staffed into 1944; register dates a first structure to 1934 and a 1966 replacement. Removal date unknown.",
   "other_names": [
     "Ash Peak (Mountain)"
   ],
@@ -18,10 +19,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "1934 observation-only cabin on a 40 ft X-brace steel tower with a residence cabin; 1966 CL-100 plan 13x13 cabin on a steel K-brace tower",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Register lists removal as Unknown and gives no removal date for the 1966 structure; no source describes the site now",
   "registers": [
     {
       "register": "FFLOS",
@@ -37,8 +38,8 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "1944"
   },
   "visit": {
     "climbable": null,
@@ -48,10 +49,70 @@
   "rental": null,
   "events": [
     {
+      "year": 1929,
+      "event": "built",
+      "note": "Newspaper notices show the Ash Peak lookout station open to visitors by August 1929; a 1932 notice speaks of the tower's completion in 1929. The register's first-structure date is 1934.",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/ash-peak.html"
+    },
+    {
+      "year": 1930,
+      "event": "staffed_first",
+      "note": "J. G. Wade had charge of the tower for three seasons as of September 1930; earliest named keeper in our sources",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/ash-peak.html"
+    },
+    {
+      "year": 1931,
+      "event": "staffed",
+      "note": "Homer Cooper, Wade's brother-in-law, took up the summer station at the tower",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/ash-peak.html"
+    },
+    {
+      "year": 1933,
+      "event": "staffed",
+      "note": "George Magley was fire lookout at Ash Peak for the 1933 season",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/ash-peak.html"
+    },
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "Register: first structure, an observation-only cabin on a 40 ft X-brace steel tower, with a residence cabin. April 1934 notices still have Magley in charge at the Ash Peak tower, with a new tower planned at Little Baldy.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/ash-peak-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/ash-peak-lookout-site/",
+        "https://californialookouts.weebly.com/ash-peak.html"
+      ]
+    },
+    {
+      "year": 1938,
+      "event": "staffed",
+      "note": "Paul Ortlipp was to have charge for the 1938 fire season; the Ash Peak station was used again instead of the newer Little Baldy station",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/ash-peak.html"
+    },
+    {
+      "year": 1944,
+      "event": "staffed",
+      "note": "Charles Miller was to take his post at the Ash Peak lookout; latest named keeper in our sources",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/ash-peak.html"
+    },
+    {
       "year": 1966,
       "event": "built",
       "note": "'Built' field on FFLOS detail page",
       "from": "fflos"
+    },
+    {
+      "year": 1966,
+      "event": "replaced",
+      "note": "Register: the structure was replaced by a CL-100 plan 13x13 cabin on a steel K-brace tower",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/ash-peak-lookout-site/"
     },
     {
       "year": 2021,
@@ -158,12 +219,48 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:ash-peak",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-ash-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

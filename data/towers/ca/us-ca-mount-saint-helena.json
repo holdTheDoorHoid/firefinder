@@ -1,6 +1,7 @@
 {
   "id": "us-ca-mount-saint-helena",
   "name": "Mount Saint Helena Lookout Site",
+  "summary": "Sonoma/Lake/Napa tri-county lookout on Mount St. Helena, dedicated 1935, replaced 1950 (809R plan); staffing ended 1992 and it was later removed. Summit now has communications towers.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "1935 lookout on a 30-foot enclosed tower, similar to a USFS BC-301 cabin plan; 1950 replacement tower conformed closely to the 809R plan",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Removed some time after staffing ended in 1992; the register gives no removal date and no source describes what remains",
   "registers": [
     {
       "register": "FFLOS",
@@ -31,25 +32,71 @@
   "agency": "California Department of Forestry and Fire Protection",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "On foot only, per a 1991 register note; hikers reach the summit from Robert Louis Stevenson State Park along a fire road"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "No lookout to climb. The Mount St. Helena Trail from Robert Louis Stevenson State Park is 5.3 miles with a 2,100-foot climb, to a summit with several communications towers"
   },
   "rental": null,
   "events": [
+    {
+      "year": 1935,
+      "event": "built",
+      "note": "Constructed and dedicated in 1935 on a 30-foot enclosed tower (register; newspapers of 1934-35 describe the tri-county station)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mount-st-helena.html",
+      "source_urls": [
+        "https://californialookouts.weebly.com/mount-st-helena.html",
+        "http://firetower.org/lookouts/us/ca/mount-saint-helena-lookout-site/"
+      ]
+    },
+    {
+      "year": 1935,
+      "event": "staffed_first",
+      "note": "Hjalmer Lundell, a former radio operator, named fire lookout in July 1935; a September 1935 report names Henry Lundell",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mount-st-helena.html"
+    },
+    {
+      "year": 1942,
+      "event": "other",
+      "note": "Became a repeater station for the Sonoma County police radio system",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mount-st-helena.html"
+    },
+    {
+      "year": 1946,
+      "event": "other",
+      "note": "An 85-mile-an-hour wind blew an aerial down and damaged the weather station",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mount-st-helena.html"
+    },
     {
       "year": 1950,
       "event": "built",
       "note": "'Built' field on FFLOS detail page",
       "from": "fflos"
+    },
+    {
+      "year": 1950,
+      "event": "replaced",
+      "note": "1935 lookout replaced by a tower that conformed closely to the 809R plan",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/mount-saint-helena-lookout-site/"
+    },
+    {
+      "year": 1992,
+      "event": "other",
+      "note": "After a statewide review of lookouts, a decision was made to cut funding for Mt. St. Helena",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/mount-st-helena.html"
     },
     {
       "year": 1992,
@@ -58,10 +105,18 @@
       "from": "fflos"
     },
     {
+      "year": 1992,
+      "event": "staffed_last",
+      "note": "Register: the lookout ceased to be staffed in 1992",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/mount-saint-helena-lookout-site/"
+    },
+    {
       "year": 2019,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: December 21, 2019",
-      "from": "fflos"
+      "note": "Date registered December 21, 2019",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/mount-saint-helena-lookout-site/"
     }
   ],
   "photos": [
@@ -95,6 +150,16 @@
       "label": "FFLOS register entry US 1866 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ca/mount-saint-helena-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Mount Saint Helena (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Mount_Saint_Helena",
+      "kind": "reference"
+    },
+    {
+      "label": "Robert Louis Stevenson State Park - Mount St. Helena (Napa Hiking (napahiking.com))",
+      "url": "https://www.napahiking.com/Robert_Louis_Stevenson.htm",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -137,12 +202,33 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:mount-st-helena",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-mount-saint-helena",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

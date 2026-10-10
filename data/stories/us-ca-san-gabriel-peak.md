@@ -1,0 +1,15 @@
+San Gabriel Peak rises to about 6,165 feet in the Angeles National Forest.[^1] Plans for a lookout there were reported as early as 1922, when the Los Angeles Times described a new trail to the summit and said the peak was contemplated as a fire lookout.[^2] The sources disagree on the build date.[^1][^3] The Former Fire Lookout Sites register gives 1935 as the build date. Its description, however, says the Region 5 Plan 4A cabin on a 10-foot steel tower went up as early as 1922, and that the cabin may have since been swapped for a BC-301 design.[^1] Angeles Adventures instead dates the lookout to 1927 through 1935, and says the Forest Service asked the city of Pasadena for help building it in November 1927.[^3]
+
+The early observers are named differently from one source to another.[^2][^3] A Monrovia News-Post report from February 1930 named Frank J. Mathys as the observer for the previous season.[^2] Angeles Adventures names Glenn Moore as a lookout in 1929, and quotes a recollection that Herb Hickam was the first lookout there.[^3] In May 1934 the Covina Argus reported lookouts stationed on San Gabriel Peak that Saturday, along with Mt. Lukens and San Dimas peak.[^2]
+
+Angeles Adventures says smog and poor visibility prompted the cabin's dismantling in 1937, after which it was moved to Vetter Mountain, where the 2009 Station Fire later burned it.[^3] The register lists its removal date as unknown.[^1]
+
+The Angeles National Forest Fire Lookout Association says the original Vetter Mountain tower was destroyed by the Station Fire in August 2009, and that a rebuilt lookout was completed in April 2020.[^4] Its page gives the original build year as 1937 in one place and 1935 in its statistics. It does not say whether the rebuilt lookout reuses the San Gabriel cab.[^4]
+
+Angeles Adventures says concrete footings are all that remain of the tower, and a photo caption describes a steel plank set across the footings as seating.[^3] The page does not say clearly whether those footings are on the summit or at Vetter Mountain, so we cannot describe what stands on San Gabriel Peak today. We found no source that sets out current access to the summit. The rebuilt Vetter Mountain lookout reopened for service in July 2020, overlooks the Chilao-Charlton Recreation Area, and the association calls it an easy destination.[^4] The Forest Fire Lookout Association lists the San Gabriel Peak tower as gone.[^5]
+
+[^1]: San Gabriel Peak Lookout Site, Former Fire Lookout Sites Register, http://firetower.org/lookouts/us/ca/san-gabriel-peak-lookout-site/ (accessed 2026-10-09).
+[^2]: San Gabriel Peak - FOREST LOOKOUTS, Forest Lookouts (Ron Kemnow), https://californialookouts.weebly.com/san-gabriel-peak.html (accessed 2026-10-09).
+[^3]: San Gabriel Peak, Angeles Adventures, https://angelesadventures.com/san-gabriel-peak/ (accessed 2026-10-09).
+[^4]: Vetter Mountain, Angeles National Forest Fire Lookout Association, http://www.anffla.org/vetter/ (accessed 2026-10-09).
+[^5]: California Lookouts, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/ca/ (accessed 2026-10-09).

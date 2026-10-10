@@ -1,0 +1,11 @@
+Ranger Peak lookout stood in the San Bernardino National Forest in Riverside County, California, at 5,035 feet (1,535 meters).[^1] The register says it was built in 1926, alongside a lookout on Barton Peak, to replace the Black Mountain lookout, which stood at a higher altitude.[^1] A climbers' page gives the build year as 1935 instead.[^2] The register says the lookout appears to have had a modified L-6 wood cab, 8 by 8 feet, with two window panes on each side, set atop a 20-foot open timber tower.[^1]
+
+The register says both lookouts were in service until 1962, when a new structure at Black Mountain took their place.[^1] The cab was taken down and stored at the Cranston Fire Station until 1963.[^1] Then it went to the newly opened Keenwild Helitack Base, where it became known as the Helishack.[^1][^3]
+
+The register says the cab was enlarged and changed over time, and stayed in service until the new Keenwild Helitack Operations Center opened on June 9, 2010.[^1] A news report on the base, from June 2010, tells a different story. It says the crew built a 560-square-foot office from the dismantled remains of the old lookout, and that the office was moved uphill in 1974.[^3] The two accounts do not agree on what happened to the cab itself.[^1][^3] The site was added to the Former Fire Lookout Sites register on October 17, 2010, nominated by Brad Eells.[^1]
+
+A climbers' log describes the summit, though the text we read gives no date for it. The log says only the pedestal mounts and some rock stairs remain of the lookout.[^2] It also describes a well-kept fire road to the top that a passenger car can handle with care, passing tall towers along the way.[^2] It advises checking the San Bernardino National Forest for current conditions before driving up.[^2] We found no official source that describes the site now.
+
+[^1]: Ranger Peak Lookout Site, Former Fire Lookout Sites Register, http://firetower.org/lookouts/us/ca/ranger-peak-lookout-site/ (accessed 2026-10-09).
+[^2]: Ranger Peak Lookout, SummitPost, https://www.summitpost.org/ranger-peak/367020 (accessed 2026-10-09).
+[^3]: New Keenwild helibase opens, Wildfire Today, https://wildfiretoday.com/new-keenwild-helibase-opens/ (accessed 2026-10-09).

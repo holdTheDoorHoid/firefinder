@@ -1,6 +1,7 @@
 {
   "id": "us-ca-black-butte",
   "name": "Black Butte Lookout Site",
+  "summary": "Glenn County, CA lookout site on the Mendocino NF; register dates the structure to about 1914 and names Winchester Riffe as lookout 1914-1928; removal date and current status unknown.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Unique design with a very narrow window set, per the register; no dimensions given",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Register lists removal as unknown; Peakbagging marks the site '(LO site)', meaning the building has been removed or its status is unknown",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,7 +29,7 @@
       "url": "http://firetower.org/lookouts/us/ca/black-butte-lookout-site/"
     }
   ],
-  "agency": "US Forest Service - Mendocino National Forest",
+  "agency": "US Forest Service, Mendocino National Forest",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -46,16 +47,67 @@
   "rental": null,
   "events": [
     {
+      "year": 1912,
+      "event": "other",
+      "note": "Site served as a lookout as early as 1912, with communication by heliograph",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/black-butte-lookout-site/"
+    },
+    {
       "year": 1914,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Register dates the structure to circa 1914",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/black-butte-lookout-site/"
+    },
+    {
+      "year": 1914,
+      "event": "staffed_first",
+      "note": "Register: Winchester Riffe served as lookout from at least 1914",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/black-butte-lookout-site/"
+    },
+    {
+      "year": 1919,
+      "event": "staffed",
+      "note": "1919 California District News Letter names 'Chess Riffe' as lookout on Black Butte for five years; the sources do not say he is Winchester Riffe",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/black-butte.html"
+    },
+    {
+      "year": 1927,
+      "event": "staffed",
+      "note": "1927 Ukiah Dispatch-Democrat item says 'Chas. Riffe' took up his duties as forest lookout there; not tied to Winchester Riffe",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/black-butte.html"
+    },
+    {
+      "year": 1928,
+      "event": "staffed",
+      "note": "Register's range for Winchester Riffe ends in 1928",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/black-butte-lookout-site/"
+    },
+    {
+      "year": 1930,
+      "event": "other",
+      "note": "1930 Ukiah Republican Press item describes a stone slab bearing Winchester Riffe's name near the station",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/black-butte.html"
+    },
+    {
+      "year": 1936,
+      "event": "replaced",
+      "note": "Register says the original structure may have been replaced in 1936",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/black-butte-lookout-site/"
     },
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 29, 2020",
-      "from": "fflos"
+      "note": "Registered January 29, 2020",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/black-butte-lookout-site/"
     }
   ],
   "photos": [
@@ -103,6 +155,11 @@
       "kind": "register"
     },
     {
+      "label": "California Fire Lookouts, Table 2 (Peakbagging)",
+      "url": "http://peakbagging.com/Peak%20Lists/CA_Lookout2.html",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -144,12 +201,47 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:black-butte",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-black-butte",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-09) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

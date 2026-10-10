@@ -1,6 +1,7 @@
 {
   "id": "us-ca-camel-peak",
   "name": "Camel Peak Lookout Site",
+  "summary": "Plumas County lookout built 1926 and staffed into the 1930s and 1946; listed as gone with removal date unknown, and no source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "California Region 5 Plan 4AR on an enclosed timber tower",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Listed as gone; the register gives no removal date and no source describes the site today",
   "registers": [
     {
       "register": "FFLOS",
@@ -48,8 +49,37 @@
     {
       "year": 1926,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Built 1926 per the register's Built field and description",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/camel-peak-lookout-site/"
+    },
+    {
+      "year": 1929,
+      "event": "staffed",
+      "note": "Tom Gray employed as the fire-season lookout (Plumas Independent, June 1929)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/camel-peak.html"
+    },
+    {
+      "year": 1936,
+      "event": "staffed",
+      "note": "Gray to resume duties at the lookout station near Cascade for summer 1936 (Plumas Independent, May 1936)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/camel-peak.html"
+    },
+    {
+      "year": 1938,
+      "event": "staffed",
+      "note": "Gray occupied the station through summer 1938 (Feather River Bulletin, March 1939)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/camel-peak.html"
+    },
+    {
+      "year": 1946,
+      "event": "fire",
+      "note": "Fire less than two miles south of the station, found by an army pilot and held to about eight acres by a logging crew (Portola Reporter, July 1946)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/camel-peak.html"
     },
     {
       "year": 2020,
@@ -77,6 +107,11 @@
       "label": "FFLOS register entry US 1911 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ca/camel-peak-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "California Lookouts by county (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/ca/ca-co/",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -121,12 +156,31 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:camel-peak",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-camel-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

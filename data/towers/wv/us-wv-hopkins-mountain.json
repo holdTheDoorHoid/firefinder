@@ -1,6 +1,7 @@
 {
   "id": "us-wv-hopkins-mountain",
   "name": "Hopkins Mountain Tower Site",
+  "summary": "Hopkins Mountain tower, Greenbrier County, WV: CCC-built 1935, removed 1979. The observer's cabin survives, restored 2016 and rentable since 2017.",
   "other_names": [],
   "country": "US",
   "region": "WV",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Fire tower with an observer's cabin on the same site; sources give the cabin as 14 by 13 ft or 14 by 20 ft",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The tower was removed in 1979; the observer's cabin still stands and was made available for rentals in 2017.",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/wv/hopkins-mountain-tower-site/"
     }
   ],
-  "agency": "U.S. Forest Service",
+  "agency": "U.S. Forest Service, Monongahela National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "The cabin is a Forest Service recreation site. A locked gate blocked the last few hundred yards of the road in 2020 (Bitter Southerner account); current gate status not verified."
   },
   "staffing": {
     "status": "unknown",
@@ -40,7 +41,7 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
@@ -48,20 +49,43 @@
     {
       "year": 1935,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Built with Civilian Conservation Corps labor; the Forest Service and Bitter Southerner credit the CCC with the cabin, tower site and road",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wv/hopkins-mountain-tower-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/wv/hopkins-mountain-tower-site/",
+        "https://www.fs.usda.gov/r09/monongahela/recreation/hopkins-mountain-firemans-cabin",
+        "https://bittersoutherner.com/feature/2022/less-alone-hopkins-cabin-monongahela-national-forest",
+        "https://easternuslookouts.weebly.com/hopkins-mountain.html"
+      ]
     },
     {
       "year": 1979,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"1979\".",
-      "from": "fflos"
+      "note": "Register: removed in 1979. No source describes remains at the site.",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wv/hopkins-mountain-tower-site/"
+    },
+    {
+      "year": 2016,
+      "event": "restored",
+      "note": "Observer's cabin renovated",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wv/hopkins-mountain-tower-site/"
     },
     {
       "year": 2017,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: January 26, 2017",
-      "from": "fflos"
+      "note": "Registered January 26, 2017, as FFLOS US 1669, WV 60",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wv/hopkins-mountain-tower-site/"
+    },
+    {
+      "year": 2017,
+      "event": "rental_opened",
+      "note": "Observer's cabin made available for rentals",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/wv/hopkins-mountain-tower-site/"
     }
   ],
   "photos": [
@@ -95,6 +119,16 @@
       "label": "FFLOS register entry US 1669 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/wv/hopkins-mountain-tower-site/",
       "kind": "register"
+    },
+    {
+      "label": "Hopkins Mountain Firemans Cabin (Monongahela National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r09/monongahela/recreation/hopkins-mountain-firemans-cabin",
+      "kind": "reference"
+    },
+    {
+      "label": "Less Alone (The Bitter Southerner)",
+      "url": "https://bittersoutherner.com/feature/2022/less-alone-hopkins-cabin-monongahela-national-forest",
+      "kind": "reference"
     },
     {
       "label": "FFLA West Virginia lookout list (firelookout.org)",
@@ -145,12 +179,33 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-wv-hopkins-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

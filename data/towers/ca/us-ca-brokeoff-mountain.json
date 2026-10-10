@@ -1,6 +1,7 @@
 {
   "id": "us-ca-brokeoff-mountain",
   "name": "Brokeoff Mountain Lookout Site",
+  "summary": "Lassen Volcanic lookout: an earlier station burned in 1915; the 1924 cabin was staffed by John Gransbury; the register says it was demolished in 1956 with nothing left, while Forest Lookouts says a trail crew burned it; the summit is a 7.4-mile round-trip hike.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "design",
   "roles": [],
-  "design": null,
+  "design": "California Region 5 Plan 4AR ground cabin",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The register says the tower was demolished in 1956 and nothing remains at the site; Forest Lookouts says a trail maintenance crew burned it that year.",
   "registers": [
     {
       "register": "FFLOS",
@@ -28,11 +29,11 @@
       "url": "http://firetower.org/lookouts/us/ca/brokeoff-mountain-lookout-site/"
     }
   ],
-  "agency": "National Park Service - Lassen Volcanic National Park",
+  "agency": "National Park Service, Lassen Volcanic National Park",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Hiking trail in Lassen Volcanic National Park, starting at the Brokeoff Mountain parking lot near the southwest entrance."
   },
   "staffing": {
     "status": "unknown",
@@ -41,27 +42,55 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Round trip 7.4 miles, about 6 hours; rocky, forested and alpine terrain; considered one of the toughest trails in the park."
   },
   "rental": null,
   "events": [
     {
+      "year": 1915,
+      "event": "burned",
+      "note": "Earlier frame-platform station under a canvas tent totally destroyed by fire; ranger Frank Hardin was away; report dated July 30, 1915",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/brokeoff-mountain.html"
+    },
+    {
       "year": 1924,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "California Region 5 Plan 4AR ground cabin",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/brokeoff-mountain-lookout-site/"
+    },
+    {
+      "year": 1924,
+      "event": "staffed",
+      "note": "John Gransbury held the lookout job from 1924, per a 1934 newspaper",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/brokeoff-mountain.html"
+    },
+    {
+      "year": 1929,
+      "event": "other",
+      "note": "Forest Ranger Hudson, in charge of the station, reported an eruption from the main peak of Mount Lassen (August 1929 item)",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/brokeoff-mountain.html"
     },
     {
       "year": 1956,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"1956\".",
-      "from": "fflos"
+      "note": "Tower demolished per the register, which says nothing remains at the site; Forest Lookouts says it was burned by a trail maintenance crew",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/brokeoff-mountain-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/brokeoff-mountain-lookout-site/",
+        "https://californialookouts.weebly.com/brokeoff-mountain.html"
+      ]
     },
     {
       "year": 2020,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: April 24, 2020",
-      "from": "fflos"
+      "note": "Registered April 24, 2020",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/brokeoff-mountain-lookout-site/"
     }
   ],
   "photos": [
@@ -145,6 +174,11 @@
       "kind": "register"
     },
     {
+      "label": "Hiking Brokeoff Mountain Trail (Lassen Volcanic National Park, National Park Service)",
+      "url": "https://www.nps.gov/lavo/planyourvisit/hiking_brokeoff_mountain.htm",
+      "kind": "reference"
+    },
+    {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
       "kind": "association"
@@ -187,12 +221,33 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:brokeoff-mountain",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-brokeoff-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "high"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

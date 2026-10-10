@@ -1,6 +1,7 @@
 {
   "id": "us-nc-big-stamp",
   "name": "Big Stamp Lookout Site",
+  "summary": "Forest Service steel fire tower on Big Stamp Bald, Clay/Cherokee Counties NC; removed in the 1960s, with footings, cistern and storm shelter reported there in 2018.",
   "other_names": [],
   "country": "US",
   "region": "NC",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "A 30-foot steel tower with a 14 x 14 observation cab",
   "height_m": 9.1,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Removed in the 1960s; the register says concrete footers, a water cistern and an underground storm shelter remained in 2018",
   "registers": [
     {
       "register": "FFLOS",
@@ -47,21 +48,30 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "The Forest Service lists the Big Stamp Trail (TR520) for hiking on the Tusquitee Ranger District; its listing does not describe the lookout site"
   },
   "rental": null,
   "events": [
     {
       "year": 1960,
       "event": "removed",
-      "note": "'Removed' field on FFLOS detail page: \"1960s\" (about 1960).",
-      "from": "fflos"
+      "note": "Register field reads 'Removed 1960s'; only the decade is given, so 1960 stands for the decade",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/nc/big-stamp-lookout-site/"
+    },
+    {
+      "year": 1960,
+      "event": "staffed_last",
+      "note": "Last fire warden Glen Beaver called in the final fire, burning near Tipton, NC, from the tower; the register gives only 'the 1960s', so 1960 stands for the decade",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/nc/big-stamp-lookout-site/"
     },
     {
       "year": 2018,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: December 11, 2018",
-      "from": "fflos"
+      "note": "Date registered December 11, 2018",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/nc/big-stamp-lookout-site/"
     }
   ],
   "photos": [
@@ -83,6 +93,11 @@
       "label": "FFLOS register entry US 1737 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/nc/big-stamp-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Big Stamp Trail (USDA Forest Service, National Forests in North Carolina)",
+      "url": "https://www.fs.usda.gov/r08/northcarolina/recreation/trails/big-stamp-trail",
+      "kind": "reference"
     },
     {
       "label": "Big Stamp (tnlandforms.us (Tom Dunigan))",
@@ -129,12 +144,33 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nc-big-stamp",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }

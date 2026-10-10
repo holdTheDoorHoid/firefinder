@@ -1,6 +1,7 @@
 {
   "id": "us-ca-three-peaks",
   "name": "Three Peaks Lookout Site",
+  "summary": "Los Padres lookout in Monterey County: CCC-built in 1934, staffed until 1958, torn down after the land went to the Army; remnants reported on the south summit.",
   "other_names": [],
   "country": "US",
   "region": "CA",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "fflos",
   "roles": [],
-  "design": null,
+  "design": "Ten-foot enclosed timber tower with a 14x14 cab, California Region 5 Plan BC-301 cabin",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Discontinued in 1958; land traded to the Army and the structure torn down later. A hiker's undated trip report found remnants on the south summit.",
   "registers": [
     {
       "register": "FFLOS",
@@ -32,7 +33,7 @@
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "Register says the land was traded to the US Army but still lists the Forest Service as administrator; no current access rule found in the sources"
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,28 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": "Dirt South Coast Ridge Road passes the site; the trip report says high clearance would have helped",
+    "trail_note": "The old road to the south summit is badly overgrown but has a serviceable use trail"
   },
   "rental": null,
   "events": [
     {
       "year": 1934,
       "event": "built",
-      "note": "'Built' field on FFLOS detail page",
-      "from": "fflos"
+      "note": "Constructed by the Civilian Conservation Corps for the US Forest Service",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/three-peaks-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/three-peaks-lookout-site/",
+        "https://californialookouts.weebly.com/three-peaks.html"
+      ]
+    },
+    {
+      "year": 1934,
+      "event": "other",
+      "note": "Radio receiving sets installed at the station, July 1934",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/three-peaks.html"
     },
     {
       "year": 1958,
@@ -58,10 +71,22 @@
       "from": "fflos"
     },
     {
+      "year": 1958,
+      "event": "staffed_last",
+      "note": "Discontinued due to lack of funds; register says not staffed after 1958",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/three-peaks-lookout-site/",
+      "source_urls": [
+        "http://firetower.org/lookouts/us/ca/three-peaks-lookout-site/",
+        "https://californialookouts.weebly.com/three-peaks.html"
+      ]
+    },
+    {
       "year": 2019,
       "event": "fflos_registered",
-      "note": "Date registered per FFLOS detail page: December 22, 2019",
-      "from": "fflos"
+      "note": "Registered December 22, 2019",
+      "from": "research",
+      "source_url": "http://firetower.org/lookouts/us/ca/three-peaks-lookout-site/"
     }
   ],
   "photos": [
@@ -95,6 +120,11 @@
       "label": "FFLOS register entry US 1872 (firetower.org)",
       "url": "http://firetower.org/lookouts/us/ca/three-peaks-lookout-site/",
       "kind": "register"
+    },
+    {
+      "label": "Three Peaks / Lion Peak (trip report) (Bob Burd's Trip Reports (snwburd.com), undated)",
+      "url": "https://www.snwburd.com/bob/trip_reports/alder_1.html",
+      "kind": "reference"
     },
     {
       "label": "FFLA California lookout list (firelookout.org)",
@@ -139,12 +169,33 @@
       "source": "west_us_lookouts",
       "key": "west_us_lookouts:ca:three-peaks",
       "fields": []
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-three-peaks",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-09",
+    "checked": "2026-10-09",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-09"
 }
