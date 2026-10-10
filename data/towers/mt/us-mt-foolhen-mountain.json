@@ -1,6 +1,7 @@
 {
   "id": "us-mt-foolhen-mountain",
   "name": "Foolhen Mountain",
+  "summary": "Powell County, MT camp with an elevated firefinder platform, built 1938 and abandoned 1960; the Association lists it as an abandoned platform, and no source describes it today.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,16 +17,16 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Camp with elevated firefinder platform",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "The Fire Lookout Association lists it as an abandoned platform; no source says whether any of it remains",
   "registers": [],
   "agency": "Lolo National Forest",
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "No access source found for the site"
   },
   "staffing": {
     "status": "unknown",
@@ -37,7 +38,22 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1938,
+      "event": "built",
+      "note": "Camp with elevated firefinder platform, per firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/foolhenmtn.html"
+    },
+    {
+      "year": 1960,
+      "event": "abandoned",
+      "note": "Abandoned, per firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/foolhenmtn.html"
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -84,12 +100,48 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-foolhen-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "pass",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

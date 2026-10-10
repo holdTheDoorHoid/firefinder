@@ -1,0 +1,11 @@
+Big Arm Lookout, also known as Jette Lake Lookout, stood on a hilltop about eight miles northwest of Polson, on the Flathead Indian Reservation in Lake County, Montana.[^1][^2] Sources disagree on when it went up.[^1][^2] Firelookout.com dates the tower to 1935 and describes a 50-foot pole L-4 tower.[^1] Newspaper items quoted by the Forest Lookouts site place the work in 1936.[^2] That fall a crew began cutting a right of way for a road about five miles long to a peak above Jette Lake, and the Indian Service received the new tower from the forestry service in October.[^2] The plan called for a station on a platform atop four tamarack poles, about 40 feet high.[^2] The station came packed in four-foot lengths of matched weight, ready to load onto burros.[^2] Work stopped for the winter in December, to resume the next spring.[^2]
+
+The lookout began taking fire weather readings in October 1957.[^2] In August 1959 a Daily Inter Lake item reported three brush and grass fires near Polson, at the lookout and at Rocky Point.[^2] The next summer Bill Dergelo manned the station, which the Flathead Courier said was a key part of spotting fires on the reservation.[^2] It was closed for the year in September 1960, after late-summer rain brought the burning indexes down.[^2]
+
+Firelookout.com gives 1969 as the year the tower was gone, without saying how it came down.[^1] Forest Lookouts marks the entry "Removed," and the Forest Fire Lookout Association's Montana list reads "Tower Gone."[^2][^3]
+
+No source describes what, if anything, still stands on the hilltop, and none says whether the site is open to visitors.[^1][^2][^3] A 1956 federal survey note gave road directions to the lookout tower and said the tower's proper name is now Jette Lake Lookout Tower.[^2] Because the hill lies within the Flathead Indian Reservation, anyone planning a visit should confirm access before going.[^1]
+
+[^1]: Big Arm (Jette) Fire Lookout Tower, firelookout.com (Rex Kamstra), https://www.firelookout.com/mt/bigarm.html (accessed 2026-10-10).
+[^2]: Jette (Big Arm) - FOREST LOOKOUTS, Forest Lookouts, western US (Ron Kemnow), https://montanalookouts.weebly.com/jette-big-arm.html (accessed 2026-10-10).
+[^3]: Montana fire lookout list, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/mt/ (accessed 2026-10-10).

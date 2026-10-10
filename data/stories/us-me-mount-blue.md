@@ -1,0 +1,12 @@
+In the fall of 1931 the state set out to give districts without a lookout tower one, and a lookout was erected on Mt. Blue in Franklin County.[^1] A 2021 Lewiston Sun Journal list, drawn from Forest Fire Lookout Association data, gives 1932 instead, so the dates do not quite agree.[^2] The Lewiston Daily Sun reported a 47-foot tower there in May 1935.[^1] The state's 1943–44 biennial report records roof repairs to the lookout cabin.[^1]
+
+In early September 2011, while the replacement was going up, the old steel came down.[^3] The lookout association looked for a new home for the two steel sections, but because they were only two sections with no stairs, nobody took them, and the report says they were to be sent for scrap.[^3] A 2011 report puts the mountain in Avon, and Wikipedia puts the summit there, but the 2012 report and a newspaper place the summit in Weld, inside Mount Blue State Park.[^3][^4][^5][^6] A newspaper later called the old lookout abandoned when it described the tower that replaced it.[^5]
+
+In 2012 a radio tower built to look like a forest fire tower was finished on the summit.[^4][^5] The cab is not accessible to the public, except for radio technicians doing maintenance and repairs.[^4][^5] A winding staircase leads up to a 20-foot observation platform with 360-degree views, and a newspaper reported that the platform had opened to the public.[^4][^5][^6] The walk is about 1.6 miles from the end of the Mount Blue Road.[^4] Just under halfway up, the old watchman's camp still stood in 2012, though the report says it was in bad shape.[^4]
+
+[^1]: Blue Mountain, Forest Lookouts, https://easternuslookouts.weebly.com/blue-mountain1.html (accessed 2026-10-10).
+[^2]: Maine fire towers: By the numbers, Lewiston Sun Journal, https://www.sunjournal.com/2021/04/25/maine-fire-towers-by-the-numbers/ (accessed 2026-10-10).
+[^3]: 2011 Maine Chapter Annual Report, Forest Fire Lookout Association, https://firelookout.org/wp-content/uploads/2024/11/cr-me-2011.pdf (accessed 2026-10-10).
+[^4]: 2012 Maine Annual Report, Forest Fire Lookout Association, https://firelookout.org/wp-content/uploads/2024/11/cr-me-2012.pdf (accessed 2026-10-10).
+[^5]: Mt. Blue antenna hiding in plain sight as fire tower, Daily Bulldog, https://dailybulldog.com/features/mt-blue-antenna-hiding-in-plain-sight-as-fire-tower/ (accessed 2026-10-10).
+[^6]: Mount Blue (Maine), Wikipedia, https://en.wikipedia.org/wiki/Mount_Blue_(Maine) (accessed 2026-10-10).

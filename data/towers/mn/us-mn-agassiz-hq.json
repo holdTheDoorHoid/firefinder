@@ -1,6 +1,7 @@
 {
   "id": "us-mn-agassiz-hq",
   "name": "Agassiz HQ",
+  "summary": "Fire observation tower in Agassiz NWR, Marshall County, MN, opened June 2005. Sources disagree on status: the refuge describes a climbable 100-ft tower; the FFLA list says gone.",
   "other_names": [
     "Agassiz",
     "Agassiz Headquarters Fire Observation Tower"
@@ -21,26 +22,34 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Sources disagree: the refuge visit page describes a climbable 100-foot tower near headquarters, while the FFLA Minnesota list marks Agassiz HQ as gone; neither page is dated",
   "registers": [],
-  "agency": ", Agassiz National Wildlife Refuge, 156N",
+  "agency": "U.S. Fish and Wildlife Service (Agassiz National Wildlife Refuge)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "permission",
+    "note": "Per the refuge visit page, climbing needs a key from the refuge office during office hours in snow-free months; not confirmed on site"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": true,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Near refuge headquarters. The refuge page says to call ahead before a trip. Climbing is per the refuge page and not confirmed on site"
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2005,
+      "event": "other",
+      "note": "Opening of the Agassiz Refuge Fire Tower in early June 2005, per the FFLA 2005 Minnesota report; construction date and builder not found",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-mn-2005.pdf"
+    }
+  ],
   "photos": [
     {
       "file": "0b/0b4e432727ddb5ffbc7c52dd9f8b4bac3e27a3ae.webp",
@@ -53,9 +62,34 @@
       "year": null,
       "w": 2736,
       "h": 3648
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://fws.gov/media/img5533jpg",
+      "source_url": "https://www.fws.gov/refuge/agassiz/visit-us",
+      "credit": "U.S. Fish and Wildlife Service",
+      "license": "unverified; federal agency photo, confirm before reuse",
+      "caption": "The 99-foot high observation tower provides a unique view of the western half of the refuge.",
+      "year": null
     }
   ],
   "links": [
+    {
+      "label": "Minnesota 2005 Tower Report (Fire Lookout Association)",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-mn-2005.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Visit Us (Agassiz National Wildlife Refuge, U.S. Fish and Wildlife Service)",
+      "url": "https://www.fws.gov/refuge/agassiz/visit-us",
+      "kind": "reference"
+    },
+    {
+      "label": "Agassiz NWR observation tower photo caption (U.S. Fish and Wildlife Service)",
+      "url": "https://fws.gov/media/img5533jpg",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Minnesota lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mn/",
@@ -100,12 +134,49 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mn-agassiz-hq",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "photos",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "pass",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-mt-cedar-point",
   "name": "Cedar Point",
+  "summary": "Lake County, MT Flathead NF lookout: a 30-ft L-4 tower built 1934 and since removed; a 1940 federal survey describes the lookout house.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "30-foot pole L-4 tower",
+  "height_m": 9.1,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Both sources list the tower as removed; no removal date given",
   "registers": [],
   "agency": "Flathead National Forest",
   "ownership": "federal",
@@ -37,9 +38,36 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "Firelookout.com: 30-foot pole L-4 tower built in 1934",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/cedarpoint.html"
+    },
+    {
+      "year": 1940,
+      "event": "assessed",
+      "note": "Coast and Geodetic Survey described the lookout house in 1940 and recorded its condition as good",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=ST0618"
+    },
+    {
+      "year": 1951,
+      "event": "fire",
+      "note": "August 5, 1951 Daily Inter Lake item places a fire about one mile east of Cedar lookout; the item does not say the lookout watched it",
+      "from": "research",
+      "source_url": "https://montanalookouts.weebly.com/cedar-point.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Datasheet for ST0618 (Cedar Lookout) (National Geodetic Survey, NOAA)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=ST0618",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
@@ -84,12 +112,32 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-cedar-point",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "pass",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

@@ -1,0 +1,12 @@
+Desert Mountain, in the Flathead National Forest, was the planned site of a lookout in 1915, when a ranger's crew was building a trail to the summit.[^2] In 1919 a two-story log cabin with a patrol post on Belton Point went up, according to firelookout.com and WillhiteWeb.[^1][^3] In 1930 a ten-foot timber tower went up half a mile south of the summit.[^1][^3] Its live-in cab was a pre-cut unit, 14 by 14, made by the Superior Building Company of Columbia Falls.[^2]
+
+Fred Novak was named as the lookout for the 1925 fire season.[^2] In July 1947 Mr. and Mrs. Melvin Yuhas reported two man-caused fires. One, in Martin City, was started by a youngster's sparkler. The other, up the Spotted Bear road, was caused by firecrackers or a smoker, the sources say.[^2][^3] In 1954 the station was used for a project looking for major cloud breeding areas and studying jet-stream airflow, using specially adapted cameras, and was manned by Mr. and Mrs. B. Harvey Kom.[^2][^3] Firelookout.com also lists other couples for 1952, 1957 and 1958.[^1]
+
+In November 1968 FBI agents investigated a burglary at the tower, when about $200 worth of government property was missing. Apart from the forced entry, there was no vandalism at the site.[^2] Firelookout.com and WillhiteWeb both say the lookout was destroyed in 1977.[^1][^3] The Weebly history lists it only as removed, with no date, so the sources do not agree on how it ended.[^2]
+
+WillhiteWeb places the old tower half a mile south of the summit, where communications sites stand today.[^3] His photo captions mention an old footing at the central communication site, but they do not say the footing belonged to the lookout.[^3] His visit note also puts the lookout structure at the south point hang-gliding site, and says he did not photograph that spot because he did not know about it then.[^3] He calls the summit road an easy drive in good conditions, popular with ATVs.[^3] The Forest Fire Lookout Association lists the site as a gone tower.[^4]
+
+[^1]: Desert Mtn. Fire Lookout Tower, firelookout.com, https://www.firelookout.com/mt/desertmtn.html (accessed 2026-10-10).
+[^2]: Desert Mountain, Forest Lookouts (Montana), https://montanalookouts.weebly.com/desert-mountain.html (accessed 2026-10-10).
+[^3]: Desert Mountain near Martin City, WillhiteWeb.com, https://willhiteweb.com/montana_lookouts/desert_mountain/coram_experimental_forest_140.htm (accessed 2026-10-10).
+[^4]: Montana Lookouts, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/mt/ (accessed 2026-10-10).

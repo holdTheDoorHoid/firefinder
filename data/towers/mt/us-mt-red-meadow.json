@@ -1,6 +1,7 @@
 {
   "id": "us-mt-red-meadow",
   "name": "Red Meadow",
+  "summary": "Red Meadow platform lookout in the Flathead National Forest: dated 1923, a 1921 forest lookout job at the site, abandoned in the 1930s; no source describes what remains.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,20 +17,20 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "platform tower",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Abandoned in the 1930s per firelookout.com. The Forest Fire Lookout Association lists it as Abandoned, not Gone, and no source says whether any part of the platform survived.",
   "registers": [],
   "agency": "Flathead National Forest",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "On Flathead National Forest land. The Forest Service runs a public campground at Red Meadow Lake whose access opening date varies. No source describes access to the old platform site itself."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1930s"
   },
   "visit": {
     "climbable": null,
@@ -37,9 +38,40 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1921,
+      "event": "staffed",
+      "note": "Frank Crause was employed for two months as a forest lookout at Red Meadow, per an October 1921 Columbian item quoted on montanalookouts.weebly.com. The item does not say what kind of post it was or whether it was this platform.",
+      "from": "research",
+      "source_url": "https://montanalookouts.weebly.com/red-meadow.html"
+    },
+    {
+      "year": 1923,
+      "event": "built",
+      "note": "firelookout.com dates the platform tower to 1923. This is two years after the 1921 item; see resolved_conflicts.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/redmeadow.html"
+    },
+    {
+      "year": 1930,
+      "event": "abandoned",
+      "note": "Abandoned in the 1930s per firelookout.com; the sources give only the decade, so the year is a placeholder.",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/redmeadow.html",
+      "source_urls": [
+        "https://www.firelookout.com/mt/redmeadow.html",
+        "https://firelookout.org/lookouts/us/mt/"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Red Meadow Lake Campground (Flathead National Forest, U.S. Forest Service)",
+      "url": "https://www.fs.usda.gov/r01/flathead/recreation/red-meadow-lake-campground",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
@@ -84,12 +116,49 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-red-meadow",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

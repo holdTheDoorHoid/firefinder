@@ -1,6 +1,7 @@
 {
   "id": "us-mt-crimson-peak",
   "name": "Crimson Peak",
+  "summary": "Flathead NF cabin near Seeley Lake, Powell County, MT; 1930s L-4 cab, abandoned 1956, burned 1959 per one listing; listed as gone.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "10' wooden L-4 cab",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Burned 1959 per firelookout.com; Forest Fire Lookout Association lists it as gone",
   "registers": [],
   "agency": "Flathead National Forest",
   "ownership": "federal",
@@ -37,9 +38,36 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1930,
+      "event": "built",
+      "note": "Source gives only the 1930s; 1930 stands in for the decade and is not a date from the source",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/crimsonpeak.html"
+    },
+    {
+      "year": 1956,
+      "event": "abandoned",
+      "note": "Abandoned 1956 per firelookout.com",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/crimsonpeak.html"
+    },
+    {
+      "year": 1959,
+      "event": "burned",
+      "note": "Burned 1959 per firelookout.com; only listing found for this date",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/crimsonpeak.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Crimson Peak (USGS Thesaurus)",
+      "url": "https://apps.usgs.gov/thesaurus/term-simple.php?thcode=1&code=q48114SWF2",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
@@ -84,12 +112,31 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-crimson-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

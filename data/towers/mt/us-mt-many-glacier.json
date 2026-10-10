@@ -1,6 +1,7 @@
 {
   "id": "us-mt-many-glacier",
   "name": "Many Glacier",
+  "summary": "Swiftcurrent Ridge lookout in Glacier County: a 1930s frame cabin, then a 60-foot steel tower moved to Red Eagle in 1959 (or 1960) and gone by 1986.",
   "other_names": [
     "Many Glacier (Swiftcurrent Ridge)"
   ],
@@ -18,10 +19,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "60-foot steel tower (1940s)",
+  "height_m": 18.3,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The 1930s frame cabin is gone; the 60-foot steel tower was moved to Red Eagle and was gone there by 1986. No source read describes either site today.",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -39,9 +40,49 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1959,
+      "event": "relocated",
+      "note": "60-foot steel tower moved from Swiftcurrent Ridge to Red Eagle, two miles SSW of Saint Mary (firelookout.com)",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/manyglacier.html",
+      "source_urls": [
+        "https://www.firelookout.com/mt/manyglacier.html",
+        "https://www.firelookout.com/mt/redeagle.html"
+      ]
+    },
+    {
+      "year": 1960,
+      "event": "relocated",
+      "note": "WillhiteWeb gives 1960 for the same move; see resolved_conflicts",
+      "from": "research",
+      "source_url": "https://willhiteweb.com/glacier_national_park/red_eagle_lookout/pictures_228.htm"
+    },
+    {
+      "year": 1986,
+      "event": "destroyed",
+      "note": "Red Eagle tower, the former Swiftcurrent Ridge tower, gone in 1986",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/redeagle.html",
+      "source_urls": [
+        "https://www.firelookout.com/mt/redeagle.html",
+        "https://willhiteweb.com/glacier_national_park/red_eagle_lookout/pictures_228.htm"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Red Eagle Fire Lookout Tower (firelookout.com (Rex Kamstra))",
+      "url": "https://www.firelookout.com/mt/redeagle.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Red Eagle Lookout (WillhiteWeb.com)",
+      "url": "https://willhiteweb.com/glacier_national_park/red_eagle_lookout/pictures_228.htm",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Montana lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/mt/",
@@ -84,12 +125,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-many-glacier",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

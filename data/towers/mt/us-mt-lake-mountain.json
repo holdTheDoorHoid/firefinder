@@ -1,6 +1,7 @@
 {
   "id": "us-mt-lake-mountain",
   "name": "Lake Mountain",
+  "summary": "Log cupola lookout cabin in Powell County, MT, dated 1922 and destroyed 1958; a 1960 survey description records the burned remains on the south hill.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "log cupola cabin",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Destroyed in 1958 per firelookout.com; a 1960 survey description records remains of a burned cabin; Montanalookouts says removed with no date.",
   "registers": [],
   "agency": "Helena National Forest",
   "ownership": "federal",
@@ -37,7 +38,33 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1922,
+      "event": "built",
+      "note": "firelookout.com dates a log cupola cabin to 1922",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/lakemtn.html"
+    },
+    {
+      "year": 1958,
+      "event": "destroyed",
+      "note": "firelookout.com says destroyed in 1958; Montanalookouts lists it as removed, undated",
+      "from": "research",
+      "source_url": "https://www.firelookout.com/mt/lakemtn.html",
+      "source_urls": [
+        "https://www.firelookout.com/mt/lakemtn.html",
+        "https://montanalookouts.weebly.com/lake-mountain.html"
+      ]
+    },
+    {
+      "year": 1960,
+      "event": "other",
+      "note": "Coast and Geodetic Survey station description (quoted on Montanalookouts) records remains of a burned lookout cabin on the south hill",
+      "from": "research",
+      "source_url": "https://montanalookouts.weebly.com/lake-mountain.html"
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -84,12 +111,31 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-lake-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

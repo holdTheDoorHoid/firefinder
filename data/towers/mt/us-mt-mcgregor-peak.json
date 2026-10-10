@@ -1,6 +1,7 @@
 {
   "id": "us-mt-mcgregor-peak",
   "name": "McGregor Peak",
+  "summary": "Flathead County, MT platform tower and camp from the 1930s on the Flathead NF; listings say abandoned, not gone; no source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "MT",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "platform tower with camp",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Firelookout.com says the platform tower is still there and the lookout is abandoned; the FFLA list says Abandoned. No cached source says gone.",
   "registers": [],
   "agency": "Flathead National Forest",
   "ownership": "federal",
@@ -85,12 +86,28 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mt-mcgregor-peak",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
     {
       "field": "status",
       "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
         {
           "source": "ffla",
           "value": "gone"
@@ -101,12 +118,18 @@
         }
       ],
       "distance_m": null,
-      "note": null
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }
