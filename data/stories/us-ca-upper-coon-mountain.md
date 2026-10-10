@@ -1,0 +1,12 @@
+The National Historic Lookout Register says the Civilian Conservation Corps built the Camp Six Lookout on Upper Coon Mountain in 1934.[^1] A peakbagging.com note says a structure stood on the site before 1935, but its author has no date for when it was abandoned.[^2] An earlier item complicates the picture. A September 1916 Siskiyou Bulletin notice, quoted on the Forest Lookouts page, mentions a lookout tower on U.P. Coon Mountain that had been abandoned. It gives the reason only as a lack of some prerequisite, which it does not name.[^3] We cannot tell from these sources whether the 1916 tower and the 1934 lookout were the same structure.
+
+The forest is in dispute too. The Forest Lookouts page files the site under the Siskiyou National Forest, while peakbagging.com places it in the Six Rivers National Forest.[^3][^2] The Forest Fire Lookout Association's California list calls it an enclosed tower and marks it gone.[^4]
+
+The Register says that in the 1950s the site was "compromised with a number of electronic facilities," and the lookout was decommissioned.[^1] Restoration of the Camp Six began in 1991. Vandals soon added to the damage, and the Forest Service removed the lookout, rebuilt it and moved it to Bear Basin Butte.[^1]
+
+Today the Camp Six stands at Bear Basin Butte. The Smith River National Recreation Area administers it, and the Register calls it a popular site for recreation cabin rentals.[^1] At the original site, the only description we found is a 2019 photo on peakbagging.com. The photo was taken by Dean on October 13, 2019, and the page credits Dean Gaudet with locating the site.[^2] The caption says the remains shown are all that is left of the lookout, but it does not say what those remains are.[^2] We found no source that says whether the Upper Coon site is open to visitors or how to reach it.
+
+[^1]: Camp Six Lookout at Bear Basin Butte, National Historic Lookout Register, http://nhlr.org/lookouts/us/ca/camp-six-lookout-at-bear-basin-butte/ (accessed 2026-10-10).
+[^2]: Upper Coon Mountain (LO site), California, Peakbagging.com, http://peakbagging.com/CALookoutPhotos/UpperCoonMtn.html (accessed 2026-10-10).
+[^3]: Upper Coon Mountain, Forest Lookouts, western US (Ron Kemnow), https://californialookouts.weebly.com/upper-coon-mountain.html (accessed 2026-10-10).
+[^4]: California Lookouts, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/ca/ (accessed 2026-10-10).

@@ -1,6 +1,7 @@
 {
   "id": "us-la-aimwell",
   "name": "Aimwell Lookout Tower",
+  "summary": "Catahoula Parish, LA tower built 1929; a 1929 report says International Paper land, a 1941 survey says Southern Kraft; Wikipedia says possibly torn down.",
   "other_names": [],
   "country": "US",
   "region": "LA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "90-foot steel tower of standard lookout tower construction",
   "height_m": 27.4,
-  "status": "gone",
-  "status_note": "Sources suggest it is gone.",
+  "status": "unknown",
+  "status_note": "Wikipedia lists it as possibly torn down (question mark) and says aerial imagery could not confirm it",
   "registers": [],
   "agency": "Louisiana Department of Conservation",
   "ownership": "unknown",
@@ -37,7 +38,29 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1929,
+      "event": "built",
+      "note": "1929 newspaper report says it was being erected in October 1929; the 1941 survey description says it was built in 1929",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/aimwell.html"
+    },
+    {
+      "year": 1955,
+      "event": "other",
+      "note": "Rainfall totals reported as recorded at the tower in 1955 and 1957 newspaper items",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/aimwell.html"
+    },
+    {
+      "year": 2015,
+      "event": "other",
+      "note": "Removed from USGS maps according to Wikipedia; the list gives no date for the tower coming down",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_fire_lookout_towers_in_Louisiana"
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -73,12 +96,48 @@
         "agency",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-la-aimwell",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "central_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-ca-charlie-peak",
   "name": "Charlie Peak",
+  "summary": "Los Angeles County lookout on Charlie (Castaic) Peak: CCC-built tower 1934, county-staffed 1965, closed 1971; listed gone; site today undocumented.",
   "other_names": [
     "Charlie Peak (castaic peak)"
   ],
@@ -21,7 +22,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Listed as gone by the Fire Lookout Association; no source gives the year it came down or what, if anything, remains",
   "registers": [],
   "agency": "Los Angeles County Forestry Department",
   "ownership": "unknown",
@@ -39,9 +40,40 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "Forest Lookouts: tower erected by the Civilian Conservation Corps",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/charlie-peak.html"
+    },
+    {
+      "year": 1965,
+      "event": "staffed_first",
+      "note": "Forest Lookouts says the county staffed it when Castaic Reservoir was filled; Wikipedia dates completion of Castaic Dam to 1973, so the date is disputed",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/charlie-peak.html",
+      "source_urls": [
+        "https://californialookouts.weebly.com/charlie-peak.html",
+        "https://en.wikipedia.org/wiki/Castaic_Dam"
+      ]
+    },
+    {
+      "year": 1971,
+      "event": "closed",
+      "note": "Closed September 1 for lack of funding, smog and better communications",
+      "from": "research",
+      "source_url": "https://californialookouts.weebly.com/charlie-peak.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Castaic Dam (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Castaic_Dam",
+      "kind": "reference"
+    },
     {
       "label": "FFLA California lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/ca/",
@@ -73,12 +105,30 @@
         "agency",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ca-charlie-peak",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

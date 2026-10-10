@@ -1,6 +1,7 @@
 {
   "id": "us-la-athens",
   "name": "Athens Lookout Tower",
+  "summary": "Athens Lookout Tower, Claiborne Parish, LA: Louisiana Forestry Commission tower, torn down and off USGS maps from 2015. No source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "LA",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Wikipedia says torn down; the Forest Lookouts page says removed. No source gives a date.",
   "registers": [],
   "agency": "Louisiana Forestry Commission",
   "ownership": "state",
@@ -37,9 +38,41 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1965,
+      "event": "other",
+      "note": "Coast and Geodetic Survey description of the station at the tower; it says the station was recovered and is in good condition",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/athens.html"
+    },
+    {
+      "year": 2012,
+      "event": "other",
+      "note": "USGS maps still labeled the tower",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_fire_lookout_towers_in_Louisiana"
+    },
+    {
+      "year": 2015,
+      "event": "other",
+      "note": "Left off the 2015 USGS map; the date the tower was torn down is not given",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_fire_lookout_towers_in_Louisiana"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "NGS Data Sheet listing for PID CQ2989 (National Geodetic Survey)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=CQ2989",
+      "kind": "reference"
+    },
+    {
+      "label": "Louisiana: Former Fire Lookout Sites (Forest Fire Lookout Association)",
+      "url": "http://www.firetower.org/lookouts/us/LA",
+      "kind": "reference"
+    },
     {
       "label": "Athens Lookout Tower (Wikipedia)",
       "url": "https://en.wikipedia.org/wiki/List_of_fire_lookout_towers_in_Louisiana",
@@ -72,12 +105,30 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-la-athens",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

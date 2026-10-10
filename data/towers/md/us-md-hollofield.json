@@ -1,6 +1,7 @@
 {
   "id": "us-md-hollofield",
   "name": "Hollofield",
+  "summary": "Hollofield tower near Ellicott City was removed and replaced by a comms tower; DNR puts its upper section at Merkle NRMA, FFLA at Patuxent River Park.",
   "other_names": [],
   "country": "US",
   "region": "MD",
@@ -19,13 +20,13 @@
   "design": null,
   "height_m": null,
   "status": "relocated",
-  "status_note": null,
+  "status_note": "DNR says the forestry tower was removed and replaced by a communications tower; its upper section without the cab is an observation platform at Merkle NRMA. FFLA lists the site as gone and a Patuxent River Park tower as relocated from it, which the DNR report does not support.",
   "registers": [],
-  "agency": null,
+  "agency": "Park Service (Maryland DNR), per DNR report",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "The former site is Patapsco Valley State Park land, but the tower base is a fenced communications compound. The report does not say the former lookout can be climbed."
   },
   "staffing": {
     "status": "unknown",
@@ -40,11 +41,24 @@
   "events": [
     {
       "year": null,
+      "event": "other",
+      "note": "DNR record gives the date of tower installation as unknown; the 9.43-acre parcel came to the state by deed dated December 5, 1935",
+      "from": "research",
+      "source_url": "https://dnr.maryland.gov/forests/documents/fire/Fire_Tower_Report.pdf"
+    },
+    {
+      "year": null,
       "event": "relocated",
-      "note": "The lookout was moved to Patuxent River Park.",
-      "from": "ffla",
-      "moved_from": "Hollofield",
-      "moved_to": "Patuxent River Park"
+      "note": "FFLA: Patuxent River Park tower relocated from Hollofield, marked Standing*; the DNR report does not agree",
+      "from": "research",
+      "source_url": "https://firelookout.org/lookouts/us/md/"
+    },
+    {
+      "year": null,
+      "event": "removed",
+      "note": "Forestry tower removed and replaced with a modern communications tower (DNR draft report dated April 2007; status as of December 2006)",
+      "from": "research",
+      "source_url": "https://dnr.maryland.gov/forests/documents/fire/Fire_Tower_Report.pdf"
     }
   ],
   "photos": [],
@@ -54,6 +68,16 @@
       "url": "../us-md-hollofield-at-patuxent-river-park/",
       "kind": "relocated_to",
       "id": "us-md-hollofield-at-patuxent-river-park"
+    },
+    {
+      "label": "DRAFT Fire Tower Report (Maryland Department of Natural Resources)",
+      "url": "https://dnr.maryland.gov/forests/documents/fire/Fire_Tower_Report.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Patuxent River Park (Prince George's County Department of Parks and Recreation)",
+      "url": "https://outdoors.pgparks.com/parks_trails/patuxent-river-park",
+      "kind": "reference"
     },
     {
       "label": "FFLA Maryland lookout list (firelookout.org)",
@@ -85,12 +109,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-md-hollofield",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

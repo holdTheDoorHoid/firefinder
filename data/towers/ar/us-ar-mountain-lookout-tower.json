@@ -1,6 +1,7 @@
 {
   "id": "us-ar-mountain-lookout-tower",
   "name": "White Oak Mountain",
+  "summary": "White Oak Mountain tower near Waldron: a 48-foot tower nearly complete in 1928, an 85-foot steel tower described in 1971, removed note in 1974; summit now a Forest Service electronic site.",
   "other_names": [],
   "country": "US",
   "region": "AR",
@@ -16,16 +17,16 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "1928 item: 48-foot lookout tower; 1971 Forest Service station description: four-legged steel tower with a metal cabin, 85 feet overall",
   "height_m": 14.6,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "The only removal note is '1974: Removed' on a page that covers both candidate towers without naming one; no source says what became of the 85-foot tower after 1971; the summit now hosts communications sites",
   "registers": [],
-  "agency": "Ouachita National Forest",
+  "agency": "U.S. Forest Service (per the 1971 station description); Ouachita National Forest (page heading); the station is on property the state leases",
   "ownership": "federal",
   "access": {
     "level": "unknown",
-    "note": null
+    "note": "No source read describes public access to the summit; Forest Service notices list communications sites under special use authorizations"
   },
   "staffing": {
     "status": "unknown",
@@ -37,9 +38,36 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1928,
+      "event": "other",
+      "note": "Harrison Times item of October 5, 1928, quoted on the Central lookouts page, calls a 'Waldron--48 foot lookout tower on White Oak Mt.' nearly complete",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/white-oak-mountain.html"
+    },
+    {
+      "year": 1971,
+      "event": "assessed",
+      "note": "Forest Service describes the White Oak station: four-legged steel tower with metal cabin, 85 feet overall, located by distance from Clarksville, Ozark and Altus",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/white-oak-mountain.html"
+    },
+    {
+      "year": 1974,
+      "event": "removed",
+      "note": "Central lookouts page entry reads '1974: Removed'; the page does not say which tower",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/white-oak-mountain.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Ouachita National Forest project archive (USDA Forest Service)",
+      "url": "https://www.fs.usda.gov/r08/ouachita/projects/archive",
+      "kind": "reference"
+    },
     {
       "label": "White Oak Mountain (centraluslookouts.weebly.com)",
       "url": "https://centraluslookouts.weebly.com/white-oak-mountain.html",
@@ -74,12 +102,49 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ar-mountain-lookout-tower",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "central_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

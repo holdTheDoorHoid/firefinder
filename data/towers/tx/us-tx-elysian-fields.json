@@ -1,6 +1,7 @@
 {
   "id": "us-tx-elysian-fields",
   "name": "Elysian Fields",
+  "summary": "Harrison County, TX lookout described in 1958 as a 100-ft steel tower; FFLA lists the original as gone and a relocated tower standing at Winston Ranch, with no move date.",
   "other_names": [],
   "country": "US",
   "region": "TX",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Four-legged steel structure with a glass-enclosed cab, painted gray (1958 survey description)",
+  "height_m": 30.5,
   "status": "relocated",
-  "status_note": null,
+  "status_note": "Original site listed Tower Gone; a relocated tower is listed Standing at Winston Ranch, Nacogdoches County. No move date or mover in the sources read.",
   "registers": [],
   "agency": "Texas Forest Service",
   "ownership": "unknown",
@@ -39,12 +40,32 @@
   "rental": null,
   "events": [
     {
+      "year": 1958,
+      "event": "other",
+      "note": "1958 survey description: glass-enclosed cab on a four-legged steel frame, painted gray, overall height 100 feet",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/elysian-fields.html"
+    },
+    {
+      "year": 1963,
+      "event": "other",
+      "note": "Survey recovery note: a new tower was to be built a few feet west of the present one in the near future; not confirmed whether it was",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/elysian-fields.html"
+    },
+    {
+      "year": null,
+      "event": "other",
+      "note": "Original Elysian Fields site listed as Tower Gone; no date given",
+      "from": "research",
+      "source_url": "https://firelookout.org/lookouts/us/tx/"
+    },
+    {
       "year": null,
       "event": "relocated",
-      "note": "The lookout was moved to Winston Ranch.",
-      "from": "ffla",
-      "moved_from": "Elysian Fields",
-      "moved_to": "Winston Ranch"
+      "note": "Relocated Elysian Fields tower listed as Tower Standing at Winston Ranch, Nacogdoches County; no date or mover in sources",
+      "from": "research",
+      "source_url": "https://firelookout.org/lookouts/us/tx/"
     }
   ],
   "photos": [],
@@ -54,6 +75,16 @@
       "url": "../us-tx-elysian-fields-at-winston-ranch/",
       "kind": "relocated_to",
       "id": "us-tx-elysian-fields-at-winston-ranch"
+    },
+    {
+      "label": "Nacogdoches County, Texas (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Nacogdoches_County,_Texas",
+      "kind": "reference"
+    },
+    {
+      "label": "Elysian Fields Lookout Tower, TX (TopoQuest)",
+      "url": "https://www.topoquest.com/place-detail.php?id=1384371",
+      "kind": "reference"
     },
     {
       "label": "FFLA Texas lookout list (firelookout.org)",
@@ -86,12 +117,32 @@
         "agency",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tx-elysian-fields",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

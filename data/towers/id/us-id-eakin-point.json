@@ -1,6 +1,7 @@
 {
   "id": "us-id-eakin-point",
   "name": "Eakin Point Lookout",
+  "summary": "A 1930s log cabin and platform tower on Eakin Point, abandoned in the 1960s; a 1973 draft history disputes the cabin.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "platform tower",
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Abandoned in the 1960s (a 1973 draft says before 1940); a statewide list says the platform is gone; no other source describes what remains",
   "registers": [],
   "agency": "Bitterroot National Forest",
   "ownership": "federal",
@@ -33,13 +34,48 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Hike-in per Idaho Fire Lookouts; no route is given"
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1930,
+      "event": "built",
+      "note": "1930s (decade only): platform tower one mile south of the summit, with a log cabin per three sources",
+      "from": "research",
+      "source_url": "https://firelookout.com/id/eakinpoint.html",
+      "source_urls": [
+        "https://firelookout.com/id/eakinpoint.html",
+        "https://www.idahofirelookouts.com/selway-region/eakin-point-lookout/",
+        "https://idaholookouts.weebly.com/eakin-point.html"
+      ]
+    },
+    {
+      "year": 1960,
+      "event": "abandoned",
+      "note": "1960s (decade only); the 1973 draft says before 1940, see resolved_conflicts",
+      "from": "research",
+      "source_url": "https://firelookout.com/id/eakinpoint.html",
+      "source_urls": [
+        "https://firelookout.com/id/eakinpoint.html",
+        "https://www.idahofirelookouts.com/selway-region/eakin-point-lookout/",
+        "https://idaholookouts.weebly.com/eakin-point.html"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Eakin Point Fire Lookout Cabin (firelookout.com)",
+      "url": "https://firelookout.com/id/eakinpoint.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Idaho Lookouts (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/id",
+      "kind": "reference"
+    },
     {
       "label": "Eakin Point Lookout on idahofirelookouts.com",
       "url": "https://www.idahofirelookouts.com/selway-region/eakin-point-lookout/",
@@ -71,12 +107,32 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-eakin-point",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

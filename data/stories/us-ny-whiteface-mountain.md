@@ -1,0 +1,13 @@
+Whiteface ranks fifth among New York's mountains by height, and it is the only peak above 4,000 feet with a fire tower on it.[^1] The state set up a fire observation station on the summit in July 1909, at a cost of $1,559.31.[^1][^2] The first station had no tower at all, just a pole frame covered by a canvas tent.[^1]
+
+The log-pole station was replaced by a steel tower in 1919.[^1] A July 1919 newspaper said the new tower would be 22 feet high.[^2] A Coast and Geodetic Survey description from 1942 disagrees. It calls the tower structural steel with a glass-enclosed cab, and puts it at about 50 feet.[^2] The state marker, originally on the summit, is dated 1935. The marker page says a stone tower built that year replaced the steel one.[^1] A visitor's note on the marker page says the sign is wrong and the steel tower was built in 1919.[^1] A 1972 newspaper item calls the dismantled tower "built in 1909," which does not match the 1919 date.[^2]
+
+Sam Cheltham was fire observer until November 1, 1918, and was back at work by May 1919.[^2] George Marshall was the state fire observer in 1920.[^2] In 1929, five caddy boys damaged a window sash. The district ranger offered to call it square if they bought and delivered a new one, and two days later they did.[^2] In 1934, Civilian Conservation Corps youths drilled the rock on the summit to set steel poles for a new telephone line from the base to the tower.[^2] Riley Lawrence held the job for the rest of the 1946 season.[^2]
+
+The tower came down in May 1972 under the state's wilderness plan.[^1][^2] A newspaper item from that month says 16 men rode the elevator up to bring the parts down, and that the tower had been taken apart and lay in about 200 pieces.[^2] It adds that the tower was no longer of primary importance, since men on duty at a meteorological station a few feet from the old tower site could handle the observing.[^2]
+
+The tower was re-erected at the Adirondack Museum on Blue Mountain Lake in 1973.[^1][^3] The state's list of fire towers places it there now as an outdoor exhibit that looks out over the museum grounds and the surrounding peaks and lakes.[^3] The marker page says the summit road was built in the 1930s and is open from May to October.[^1] No source I read describes what stands on the summit today.
+
+[^1]: Fire Tower Historical Marker, Historical Marker Database, https://www.hmdb.org/m.asp?m=44649 (accessed 2026-10-10).
+[^2]: Whiteface Mountain, Forest Lookouts, https://easternuslookouts.weebly.com/whiteface-mountain.html (accessed 2026-10-10).
+[^3]: Fire Towers, New York State Department of Environmental Conservation, https://dec.ny.gov/things-to-do/hiking/fire-towers (accessed 2026-10-10).

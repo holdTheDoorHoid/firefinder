@@ -1,6 +1,7 @@
 {
   "id": "us-az-derby-mine",
   "name": "Derby Mine",
+  "summary": "Prescott NF set up a full-time lookout at the Derby Mine in 1911; the mine area later became the Highland Pines subdivision, and no source describes the lookout's remains.",
   "other_names": [],
   "country": "US",
   "region": "AZ",
@@ -18,8 +19,8 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Forest Fire Lookout Association lists the type as unknown and the status as Abandoned; no source describes what stands at the site",
   "registers": [],
   "agency": "Prescott National Forest",
   "ownership": "federal",
@@ -37,9 +38,29 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1911,
+      "event": "staffed_first",
+      "note": "Prescott National Forest set up a 'constant' (full-time) lookout at the Derby Mine location; one of two full-time lookouts on the forest, the other at Mount Union",
+      "from": "research",
+      "source_url": "https://westlookouts.weebly.com/derby-mine.html"
+    },
+    {
+      "year": 1960,
+      "event": "other",
+      "note": "Around 1960 the area was classified as a real estate development called Highland Pines, with over 57 homes built; the mine shaft served as its water source",
+      "from": "research",
+      "source_url": "https://tucson.com/news/local/article_17fca598-55ba-5d29-a6f8-1ab0aac4bb15.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Mine Tales: Operation near Prescott became subdivision (Arizona Daily Star (tucson.com))",
+      "url": "https://tucson.com/news/local/article_17fca598-55ba-5d29-a6f8-1ab0aac4bb15.html",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Arizona lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/az/",
@@ -71,12 +92,46 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-az-derby-mine",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "ffla",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-10) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-10",
+    "checked": "2026-10-10",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-10"
 }

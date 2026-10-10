@@ -1,0 +1,13 @@
+Tooley Pond Mountain, near New Bridge in St. Lawrence County, got its first lookout station in 1913.[^2][^4] The Conservation Commission built the wooden station, and the R.W. Higbie Lumber Company paid for the material for the tower, cabin and lines.[^2][^4] The station had no one on duty that first season.[^2]
+
+In 1919 a steel tower replaced the wooden one.[^2][^4] Wikipedia describes it as a 47-foot Aermotor LS40.[^4][^2] Wikipedia's lead, though, says the tower was first built on the mountain in 1919, which does not match its own history section or the 1913 report.[^4] In April 1950 a Syracuse newspaper reported that Ralph Cole of DeKalb Junction would take over the fire tower.[^2] Lookout work ended with the 1971 season, and that year students from SUNY-ESF at Wanakena took the tower down from the mountain.[^4]
+
+The tower did not stay in the woods. Ranger School classes put an old fire tower up on Cathedral Rock, in the Ranger School Forest at Wanakena.[^3][^1] A February 1982 newspaper item, quoted by the Forest Lookouts site, already describes that work.[^3] The sources disagree on the dates. Wikipedia places the start of the rebuild in the 1980s, the cab in 1999 and the final restorations and dedication in 2000.[^4] The National Historic Lookout Register says students and staff re-erected the tower in the late 1990s.[^1]
+
+Tooley Pond Mountain has no tower today.[^5] A hike write-up says, "Well, the fire tower is still gone."[^5] It describes a trail up Tooley Mountain that starts from a parking area by the lake, and it says insulators from the fire tower's phone line have been reported on trees along the trail, though the writer did not see any.[^5] The tower that does stand is on Cathedral Rock, which the register lists as US 1698, registered on December 23, 2022.[^1] Visitors can follow the Latham Trail from the Ranger School to the summit, according to the register.[^1] Check with the school before you go.
+
+[^1]: Cathedral Rock Fire Tower, National Historic Lookout Register, http://nhlr.org/lookouts/us/ny/cathedral-rock-fire-tower/ (accessed 2026-10-10).
+[^2]: Tooley Pond Mountain, Forest Lookouts, https://easternuslookouts.weebly.com/tooley-pond-mountain.html (accessed 2026-10-10).
+[^3]: Cathedral Rock, Forest Lookouts, https://easternuslookouts.weebly.com/cathedral-rock.html (accessed 2026-10-10).
+[^4]: Cathedral Rock (New York), Wikipedia, https://en.wikipedia.org/wiki/Cathedral_Rock_(New_York) (accessed 2026-10-10).
+[^5]: Hikes, climbs along historic Tooley Pond Road, Adirondack Explorer, https://www.adirondackexplorer.org/?p=286634 (accessed 2026-10-10).
