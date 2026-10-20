@@ -495,6 +495,10 @@ LISTED_TWICE: dict[int, tuple[int, str]] = {
     # Nipissing Lake, Latchford" and Canada's Fire Lookouts "BRIGSTOCKE, Anima Nipissing Lake Latchford";
     # Land Information Ontario has one fire tower there, between the two pins.
     41033: (11395, "Brigstocke is the tower on Anima Nipissing Lake"),
+    # Skymount, twice: one name, one address (The Archipelago Township), both pins marked a guess, 3.8 km
+    # apart; the Ontario survey reads it as one tower listed twice (orchestrator's decision 2026-10-20).
+    # The kept record's pin stays a guess (position_approximate): no surveyed position exists.
+    41025: (41030, "Skymount is one tower; both of the index's pins are guesses"),
 }
 
 

@@ -2704,7 +2704,8 @@ def location_pick(members: list[Rec]):
     # (a position its own source calls a guess -- extra.position_approximate -- counts only when
     # no other source gives one, like a flagged row)
     good = [m for m in members if m.has_coords and not m.coordinate_problem and not m.extra.get("position_approximate")]
-    by_key = {m.key: m for m in good}
+    # a human's pick may name a point its own source calls approximate (LIO's "within 500 metres")
+    by_key = {m.key: m for m in members if m.has_coords and not m.coordinate_problem}
     for m in good:
         chosen = by_key.get(LOCATION_PICKS.get(m.key, ""))
         if chosen is not None:      # a human has checked which source is right (pipeline/record_joins.py)

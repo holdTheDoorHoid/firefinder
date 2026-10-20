@@ -312,6 +312,30 @@ _join("ca-on-kwagama-mountain", "canada_lookouts_weebly:on:index-kwagama-hill")
 # place point, not the building (BC/Yukon survey), so the survey's record carries no position.
 _join("ca-bc-historic-firetower", "survey_bc_yt:bc:summit-fire-lookout", "canada_lookouts_weebly:bc:mount-revelstoke")
 
+# ---- Canada: the orchestrator's decisions on the probable pairs (2026-10-20) ----
+# A fallback-named point of Land Information Ontario or of BC's base map, and the named tower a few hundred
+# metres away: one lookout. The named tower keeps its id; the surveyed point gives the position (LIO and
+# the base map rank above firelookout.ca's and Canada's Fire Lookouts' hand-placed pins for location).
+# Evidence in docs/sources/dedupe_review_canada.md.
+_join("ca-on-donovon", "ontario_lio:701163167")         # 453 m; LIO point within 10 m; retires ca-on-fire-tower-lio-701163167
+_join("ca-on-lyman", "ontario_lio:701163176")           # 474 m; LIO within 10 m; retires ca-on-fire-tower-lio-701163176
+_join("ca-on-boulter", "ontario_lio:701163178")         # 672 m; LIO within 10 m; retires ca-on-fire-tower-lio-701163178
+_join("ca-on-max-lake", "ontario_lio:151208102")        # 742 m; LIO within 100 m; retires ca-on-fire-tower-lio-151208102
+_join("ca-on-pickle-lake", "ontario_lio:1300479679")    # 761 m; LIO within 500 m (LOCATION_PICKS); retires ca-on-fire-tower-lio-1300479679
+# Base-map symbols beside Canada's Fire Lookouts' own pins (towers new in this round, so the target is the
+# page's record key, matched before the base map): Old Fort 467 m, Beaver Mountain 502 m (symbol 17110; the
+# second symbol on the mountain, 29111, 1.4 km away, stays apart), Bulldog Mountain 886 m.
+_join("canada_lookouts_weebly:bc:old-fort", "bc_trim_lookouts:bc:12405")
+_join("canada_lookouts_weebly:bc:beaver-mountain", "bc_trim_lookouts:bc:17110")
+_join("canada_lookouts_weebly:bc:bulldog-mountain", "bc_trim_lookouts:bc:33162")
+# One name, one tower, two sources' pins 2.9 to 3.2 km apart: the LIO tower survives with its position.
+# Wylie (Petawawa Research Forest, which has one Wylie tower): retires ca-on-wylie into ca-on-wylie-2.
+_join("ca-on-wylie-2", "firelookout_ca:11354")
+# Kwinkwaga Lake (firelookout.ca's pin is marked a guess): retires ca-on-kwinkwaga-lake-2.
+_join("ca-on-kwinkwaga-lake", "firelookout_ca:9988")
+# Skymount: firelookout.ca lists it twice (LISTED_TWICE folds 41025 into 41030): retires ca-on-skymount-2.
+_join("ca-on-skymount", "firelookout_ca:41025")
+
 
 # Where a joined tower shows its position from, when a human has checked which source is right: a record
 # key of the tower -> the key of the record whose position it shows. The default is merge.py's
@@ -332,6 +356,9 @@ LOCATION_PICKS: dict[str, str] = {
     # would keep the old pin, since another lineage "corroborates" it; FFLA's current row is shown.
     "ffla:mt:andesite:45.2646:-111.4062": "ffla:mt:andesite:45.2646:-111.4062",
     "ffla:or:madrona-park:45.6125:-122.7833": "ffla:or:madrona-park:45.6125:-122.7833",
+    # Pickle Lake, Ontario (2026-10-20, orchestrator's decision): Land Information Ontario's point (accurate to
+    # 500 m by its own note) over firelookout.ca's hand-placed pin 761 m away.
+    "firelookout_ca:11482": "ontario_lio:1300479679",
 }
 
 

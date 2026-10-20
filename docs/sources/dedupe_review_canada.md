@@ -11,8 +11,8 @@ within 25 km, or any names within 1 km, and every tower that carries only a fall
 record near it. Nothing was deleted: where two towers became one, one id was retired (its file kept,
 hidden, with `merged_into`, its address redirecting; DESIGN.md 3.5, "Retired towers").
 
-Story agents write stories for Canadian ids from tonight, so a join that would retire an existing id
-was made only where the evidence is clear; every "likely" pair is left for the owner below.
+Story agents write stories for Canadian ids from tonight, so the agent joined only the clear pairs; the
+orchestrator then decided 11 of the probable ones (2026-10-20), recorded below.
 
 ## Result
 
@@ -21,13 +21,18 @@ was made only where the evidence is clear; every "likely" pair is left for the o
 | Joined, clear: one tower that firelookout.ca lists twice under two names (an existing id retired) | 2 |
 | Joined, clear: a bare OpenStreetMap "Fire Tower" that is a named tower (an existing id retired) | 1 |
 | A new record named a fallback-named tower (no id retired; the tower keeps its id and gets a name) | 4 |
-| Left apart, probably the same lookout: for the owner | 13 |
+| Joined by the orchestrator's decision (2026-10-20) from the probable pairs: 8 existing ids retired, 3 new base-map records joined | 11 |
+| Left apart, probably the same lookout | 2 |
 | Left apart, two lookouts or not enough to tell | 9 |
 | **Reviewed** | **29** |
 
-**Retired Canadian ids** (all three existed before this round; none had a story or research file):
-`ca-on-freswick` (into `ca-on-big-crow-lake`), `ca-on-brigstocke` (into `ca-on-anima-nipissing`),
-`ca-on-fire-tower-2` (into `ca-on-elliot-lake`).
+**Retired Canadian ids** (11, all existing before this round): `ca-on-freswick` (into `ca-on-big-crow-lake`),
+`ca-on-brigstocke` (into `ca-on-anima-nipissing`), `ca-on-fire-tower-2` (into `ca-on-elliot-lake`), and by the
+orchestrator's decision `ca-on-fire-tower-lio-701163167` (into `ca-on-donovon`), `ca-on-fire-tower-lio-701163176`
+(into `ca-on-lyman`), `ca-on-fire-tower-lio-701163178` (into `ca-on-boulter`), `ca-on-fire-tower-lio-151208102`
+(into `ca-on-max-lake`), `ca-on-fire-tower-lio-1300479679` (into `ca-on-pickle-lake`), `ca-on-wylie` (into
+`ca-on-wylie-2`), `ca-on-kwinkwaga-lake-2` (into `ca-on-kwinkwaga-lake`), `ca-on-skymount-2` (into
+`ca-on-skymount`). The orchestrator moves or drops any story or research written for a retired id after merging.
 
 ## Joined
 
@@ -46,26 +51,36 @@ listing one tower twice under two names, so its two records are never pinned to 
 | `ca-on-kwagama-mountain` and Canada's Fire Lookouts' "Kwagama Hill" (Algoma) | 26 m from the hill | The CGNDB's Kwagama Hill (Algoma) is 26 m from firelookout.ca's Kwagama Mountain tower | the record joins `ca-on-kwagama-mountain` |
 | `ca-bc-historic-firetower` (OpenStreetMap "Historic Firetower"), the BC/Yukon survey's "Summit Fire Lookout" and Canada's Fire Lookouts' "Mount Revelstoke" | 350 m from the summit | The node stands 350 m from the CGNDB's Mount Revelstoke summit, where the 1927 Summit Fire Lookout stands; the Canadian Register's coordinate (51.0999, -118.067) is 6 km north-east of the summit, a place point, not the building, so the survey's record now carries no position (`survey_candidates.FLAGGED_POSITIONS`) | both records join; the tower is now "Mount Revelstoke" (id unchanged). Canada's Fire Lookouts' bare BC "Summit" is kept apart from it (`KEEP_APART`): nothing ties it to Mount Revelstoke, and the site has its own Mount Revelstoke page |
 
-## Left apart, probably the same lookout (for the owner)
+## Joined by the orchestrator's decision (2026-10-20)
 
-Each of these would retire an existing id. The tie is a name and a few kilometres, or a surveyed point
-and a hand-placed pin of a different name, with nothing more to settle it.
+These were listed as probable; the orchestrator decided them under the owner's rules. A fallback-named
+surveyed point joins the named tower beside it: the named id survives and the surveyed point gives the
+position (Land Information Ontario and the BC base map rank above firelookout.ca's and Canada's Fire
+Lookouts' hand-placed pins; Pickle Lake's LIO point, which LIO itself gives only to 500 m, is chosen by a
+`LOCATION_PICKS` entry). For one name and one tower under two pins, the LIO tower survives with its position.
+The base-map symbols joined towers new in this round, so their pins name the page's record key, and no
+published id changes.
+
+| Towers | Distance | Evidence | Survivor (position from) |
+|---|---|---|---|
+| `ca-on-donovon` and LIO 701163167 (unnamed) | 453 m | LIO's point is accurate to 10 m; firelookout.ca's pin is hand-placed (marked a guess) | `ca-on-donovon` (LIO) |
+| `ca-on-lyman` and LIO 701163176 (unnamed) | 474 m | LIO within 10 m | `ca-on-lyman` (LIO) |
+| `ca-on-boulter` and LIO 701163178 (unnamed) | 672 m | LIO within 10 m | `ca-on-boulter` (LIO) |
+| `ca-on-max-lake` and LIO 151208102 (unnamed) | 742 m | LIO within 100 m | `ca-on-max-lake` (LIO) |
+| `ca-on-pickle-lake` and LIO 1300479679 (unnamed) | 761 m | LIO within 500 m | `ca-on-pickle-lake` (LIO, by `LOCATION_PICKS`) |
+| `ca-bc-old-fort` (Canada's Fire Lookouts pin) and BC base-map symbol 12405 | 467 m | The page's pin is the author's (3 decimals); the symbol marks a fire lookout | `ca-bc-old-fort` (base map) |
+| `ca-bc-beaver-mountain` and BC base-map symbol 17110 | 502 m | as above; the second symbol on the mountain (29111, 1.4 km away) stays apart | `ca-bc-beaver-mountain` (base map) |
+| `ca-bc-bulldog-mountain` and BC base-map symbol 33162 | 886 m | as above | `ca-bc-bulldog-mountain` (base map) |
+| `ca-on-wylie` (firelookout.ca) and `ca-on-wylie-2` (LIO "Wylie") | 3.2 km | Same name in the Petawawa Research Forest, which has one Wylie tower (with Malone) | `ca-on-wylie-2` (LIO) |
+| `ca-on-kwinkwaga-lake` (LIO) and `ca-on-kwinkwaga-lake-2` (firelookout.ca) | 2.9 km | Same name; firelookout.ca marks its pin a guess | `ca-on-kwinkwaga-lake` (LIO) |
+| `ca-on-skymount` and `ca-on-skymount-2` (both firelookout.ca) | 3.8 km | One name, one address (The Archipelago Township), both pins marked a guess; the Ontario survey reads it as one tower listed twice (`firelookout_ca.LISTED_TWICE` folds 41025 into 41030) | `ca-on-skymount`; its position stays approximate (a guess: no surveyed position exists), as its page says |
+
+## Left apart, probably the same lookout
 
 | Towers | Distance | Evidence | Why left |
 |---|---|---|---|
-| `ca-on-kwinkwaga-lake` (LIO) and `ca-on-kwinkwaga-lake-2` (firelookout.ca) | 2.9 km | Same name; firelookout.ca marks its pin a guess; LIO's point is from its base map | likely one tower at LIO's point; retiring either id is the owner's call |
-| `ca-on-wylie` (firelookout.ca) and `ca-on-wylie-2` (LIO "Wylie") | 3.2 km | Same name in the Petawawa Research Forest, which has one Wylie tower (with Malone); the Ontario survey noted the two pins disagree | likely one tower; LIO's position is probably the better one |
-| `ca-on-skymount` and `ca-on-skymount-2` (both firelookout.ca) | 3.8 km | One name, one address (The Archipelago Township), both pins marked a guess; the Ontario survey reads it as one tower listed twice | one source's two records with two guessed pins: no position to choose |
-| `ca-on-donovon` and LIO 701163167 (unnamed) | 453 m | LIO's point is accurate to 10 m; firelookout.ca's pin is hand-placed | probably LIO's surveyed point of Donovon |
-| `ca-on-lyman` and LIO 701163176 (unnamed) | 474 m | as above (LIO within 10 m) | probably Lyman |
-| `ca-on-boulter` and LIO 701163178 (unnamed) | 672 m | as above (LIO within 10 m) | probably Boulter |
-| `ca-on-max-lake` and LIO 151208102 (unnamed) | 742 m | LIO within 100 m; firelookout.ca's Max Lake pin is a 2025 visit | probably Max Lake |
-| `ca-on-pickle-lake` and LIO 1300479679 (unnamed) | 761 m | LIO within 500 m only | probably Pickle Lake |
-| `ca-bc-old-fort` (Canada's Fire Lookouts pin) and BC base-map symbol 12405 (`ca-bc-unnamed-bc-base-map`) | 467 m | The page's pin is the author's (3 decimals); the symbol marks a fire lookout | probably Old Fort |
-| `ca-bc-beaver-mountain` (Canada's Fire Lookouts pin) and BC base-map symbol 17110 | 502 m | as above; a second symbol (29111) is 1.4 km away on the same mountain | probably Beaver Mountain; the second symbol may be an older or second structure |
-| `ca-bc-bulldog-mountain` (Canada's Fire Lookouts pin) and BC base-map symbol 33162 | 886 m | as above | probably Bulldog Mountain |
-| `ca-bc-sugar-mountain` (recreation site) and `ca-bc-sugarloaf-mountain` (Canada's Fire Lookouts pin) | 893 m | The BC/Yukon survey merged the two; but Canada's Fire Lookouts lists "Sugar Mountain" (index) and "Sugarloaf Mountain" (a page) as two entries | the author's two entries may be a double listing or two sites |
-| `ca-ab-ironstone` (OpenStreetMap) and `ca-ab-ironstone-2` (Alberta Wildfire and OpenStreetMap) | 1.1 km | Same name; OpenStreetMap maps both | may be the old site and the present tower, as at Baseline |
+| `ca-bc-sugar-mountain` (recreation site) and `ca-bc-sugarloaf-mountain` (Canada's Fire Lookouts pin) | 893 m | The BC/Yukon survey merged the two; but Canada's Fire Lookouts lists "Sugar Mountain" (index) and "Sugarloaf Mountain" (a page) as two entries | the author's two entries may be a double listing or two sites (orchestrator: leave apart) |
+| `ca-ab-ironstone` (OpenStreetMap) and `ca-ab-ironstone-2` (Alberta Wildfire and OpenStreetMap) | 1.1 km | Same name; OpenStreetMap maps both | may be the old site and the present tower, as at Baseline (orchestrator: leave apart) |
 
 ## Left apart: two lookouts, or not enough to tell
 
@@ -75,10 +90,10 @@ and a hand-placed pin of a different name, with nothing more to settle it.
 | `ca-on-joan` and `ca-on-bear-island` | 632 m | Different names and states (Joan destroyed by a tornado in 1969; Bear Island standing); nothing says they shared a site |
 | `ca-on-castlebar` and LIO 750714035 | 594 m | Two points of one source (LIO), one named, one "Data Load" |
 | LIO 750714031 and LIO 750714032 | 273 m | Two points of one source, both "Data Load" |
-| Unnamed BC base-map symbols 16245 and 24688 (`-26`, `-27`), near Black Knight, Kelowna | 421 m | Two symbols of one source |
-| Unnamed BC base-map symbols 29113, 17115, 17116 (`-39`, `-40`, `-41`) and 17114 (`-42`) | 0.7 to 3.8 km | Four symbols of one source near Rossland and Trail; Canada's Fire Lookouts places several lookouts there |
-| Unnamed BC base-map symbols `-36`/`-37` (17110/29111) | 1.4 km | See Beaver Mountain above |
-| Unnamed BC base-map symbols `-35`/`-38`, `-3`/`-5`, `-37`/`-42` | 10 to 24 km | Far apart; the shared name is the fallback, not a name |
+| Unnamed BC base-map symbols 16245 and 24688, near Black Knight, Kelowna | 421 m | Two symbols of one source |
+| Unnamed BC base-map symbols 29113, 17115, 17116 and 17114 | 0.7 to 3.8 km | Four symbols of one source near Rossland and Trail; Canada's Fire Lookouts places several lookouts there |
+| BC base-map symbol 29111 and `ca-bc-beaver-mountain` | 1.25 km | A second symbol on Beaver Mountain; perhaps an older or second structure (orchestrator: leave apart) |
+| Unnamed BC base-map symbols 24693/28941, 10948/23590, 29111/17114 | 10 to 24 km | Far apart; the shared name is the fallback, not a name |
 | `ca-qc-tour-a-feu-du-mont-morissette` and `ca-qc-tour-de-feu-de-maniwaki-rue-comeau` | 20 km | Two heritage-inventory towers (Blue Sea and Maniwaki); the shared words are "tour de feu" |
 
 ## Not duplicates, for the record
