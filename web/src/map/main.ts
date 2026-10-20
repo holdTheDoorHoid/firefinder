@@ -534,7 +534,8 @@ async function main(): Promise<void> {
     m.addControl(new GeolocateControl({ positionOptions: { enableHighAccuracy: false }, trackUserLocation: false }), 'top-right');
     m.addControl(new ScaleControl({ unit: 'imperial', maxWidth: 110 }), 'bottom-left');
     m.addControl(new ScaleControl({ unit: 'metric', maxWidth: 110 }), 'bottom-left');
-    m.addControl(new JumpControl(), 'top-left');
+    // bottom left, above the scales: the top left is under the count chip
+    m.addControl(new JumpControl(), 'bottom-left');
     if (!styleOk) {
       mapMessage.hidden = false;
       mapMessage.textContent = 'The background map could not be loaded, so only the lookouts are shown. Try reloading later.';

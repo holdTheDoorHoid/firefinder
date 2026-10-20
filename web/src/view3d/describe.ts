@@ -206,13 +206,26 @@ export function kmMiles(m: number): string {
   return `${d(km)} km (${d(mi)} mi)`;
 }
 
+/** "34 km" for compact labels. */
+export function kmShort(m: number): string {
+  const km = m / 1000;
+  return `${km < 10 ? km.toFixed(1) : nf.format(Math.round(km))} km`;
+}
+
 /**
- * Units by country (DESIGN.md 4, "Units"): miles and feet first in the US, kilometres and
- * metres first everywhere else.
+ * Units by country (DESIGN.md 3.3, "Countries and regions"): miles and feet first in the US,
+ * kilometres and metres first everywhere else.
  */
-export function unitsFor(country: string | null | undefined): { distance: (m: number) => string; aboutHeight: (m: number) => string; metric: boolean } {
+export function unitsFor(country: string | null | undefined): {
+  distance: (m: number) => string;
+  short: (m: number) => string;
+  aboutHeight: (m: number) => string;
+  metric: boolean;
+} {
   const metric = (country ?? 'US') !== 'US';
-  return metric ? { distance: kmMiles, aboutHeight: aboutMetres, metric } : { distance: milesKm, aboutHeight: aboutFeet, metric };
+  return metric
+    ? { distance: kmMiles, short: kmShort, aboutHeight: aboutMetres, metric }
+    : { distance: milesKm, short: milesShort, aboutHeight: aboutFeet, metric };
 }
 
 /** "412 sq mi (1,067 km²)" */

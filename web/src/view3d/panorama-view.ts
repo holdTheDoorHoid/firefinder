@@ -14,7 +14,6 @@ import {
   megabytes,
   metresFeet,
 
-  milesShort,
   quadrantBearing,
   reconstructionNote,
   wrap360,
@@ -492,7 +491,7 @@ export class PanoramaView {
         key: `p${p.gnisId}`,
         kind: 'peak',
         name: p.name,
-        sub: milesShort(p.distM),
+        sub: unitsFor(this.#o.tower.country).short(p.distM),
         sight: p,
         score: Math.min(p.clearance, 2) + (onSkyline ? 0.8 : 0) + Math.max(0, p.angle + 2) * 0.25 + p.groundM / 4000,
       });
@@ -504,7 +503,7 @@ export class PanoramaView {
         key: `l${l.id}`,
         kind: 'lookout',
         name: shortName(l.name),
-        sub: `${gone ? 'site, gone' : 'lookout'} · ${milesShort(l.distM)}`,
+        sub: `${gone ? 'site, gone' : 'lookout'} · ${unitsFor(this.#o.tower.country).short(l.distM)}`,
         sight: l,
         gone,
         score: 3 + (gone ? 0 : 1.5) - l.distM / 100_000,
@@ -655,7 +654,7 @@ export class PanoramaView {
                 ${where(l)} <a class="pv-page" href="${base}t/${l.id}/">page<span class="visually-hidden"> for ${l.name}</span></a></li>`,
             )}</ul>
             ${visibleLookouts.length > 8 ? html`<p><button type="button" class="linklike" data-pv-more>Show all ${visibleLookouts.length}</button></p>` : ''}`
-          : html`<p class="fine">No other lookout's cab is in line of sight within ${milesShort(this.#o.maxDistM ?? MAX_DIST_M)}.</p>`}
+          : html`<p class="fine">No other lookout's cab is in line of sight within ${unitsFor(this.#o.tower.country).short(this.#o.maxDistM ?? MAX_DIST_M)}.</p>`}
         <p class="fine">${hiddenLookouts ? `${hiddenLookouts} more lookout ${hiddenLookouts === 1 ? 'site is' : 'sites are'} within range but hidden by terrain. ` : ''}Gone lookouts are shown at their old sites, so you can see which ones once watched each other. Their cabs are taken at typical heights.</p>
       </section>
       <section aria-labelledby="${this.#id}-pk">
@@ -684,7 +683,7 @@ export class PanoramaView {
       <li><strong>Ground:</strong> ${metresFeet(o.groundM, 0)} from the terrain data${rec !== null ? html`; the lookout's records give ${metresFeet(rec, 0)}` : ''}.
         ${moved ? html`The eye stands on the highest ground within ${75} m of the recorded position (${Math.round(o.movedM)} m away), because recorded positions and coarse terrain can put a summit lookout on its own slope.` : ''}</li>
       <li><strong>Terrain:</strong> bare ground from <a href="https://registry.opendata.aws/terrain-tiles/" rel="noopener">AWS Terrain Tiles</a> (USGS 3DEP, SRTM and GMTED2010 elevations), about 30 m apart near the lookout, 110 m out to 25 miles and 220–300 m beyond. Trees, buildings, haze and weather are not shown, and sharp distant summits come out somewhat lower than they are.</li>
-      <li><strong>Geometry:</strong> earth curvature and the slight bending of light in the air (refraction coefficient 0.13) are included. Bearings are true (from true north), like a Firefinder's ring, not magnetic. The view reaches ${milesShort(this.#o.maxDistM ?? MAX_DIST_M)}.</li>
+      <li><strong>Geometry:</strong> earth curvature and the slight bending of light in the air (refraction coefficient 0.13) are included. Bearings are true (from true north), like a Firefinder's ring, not magnetic. The view reaches ${unitsFor(this.#o.tower.country).short(this.#o.maxDistM ?? MAX_DIST_M)}.</li>
       <li><strong>Names:</strong> a peak is named when its summit is in line of sight, even if it is a speck in the distance. Other lookouts are named when their cabs would be in sight at a typical height.</li>
       <li><strong>Computed</strong> in your browser in ${(d.ms.compute / 1000).toFixed(1)} s from ${d.tiles.needed} terrain tiles${d.tiles.bytes ? ` (${megabytes(d.tiles.bytes)} downloaded)` : ' (already downloaded)'}.
         ${d.tiles.failed ? html` <strong class="warn-text">${d.tiles.failed} tiles did not load, so parts of the view may be missing.</strong>` : ''}</li>

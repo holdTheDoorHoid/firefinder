@@ -716,7 +716,7 @@ export function sourcesSection(r: TowerRecord, ctx: RenderContext): SafeHtml {
       ? html`<ol class="sources">${refs.map((s) => {
           const info = ctx.sources.get(s.source);
           const title = info?.title ?? s.source;
-          const fields = (s.fields ?? []).map((f) => FIELD_NAMES[f] ?? f.replace(/_/g, ' '));
+          const fields = (s.fields ?? []).map((f) => (f === 'county' && towerCountry(r) !== 'US' ? 'district' : FIELD_NAMES[f] ?? f.replace(/_/g, ' ')));
           return html`<li id="src-${s.source}">
             <span class="src-title">${info?.url ? externalLink(info.url, title) : title}</span>
             ${fields.length ? html`<span class="src-fields">Gave us: ${fields.join(', ')}</span>` : ''}
