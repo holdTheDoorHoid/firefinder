@@ -73,7 +73,7 @@ class CoverageAudit(unittest.TestCase):
         self.ws.run({"ffla": [rec("ffla", "a", "Abbot Butte", 44.5577, -121.7088, "OR"),
                               rec("ffla", "swap", "Swapped", -121.7, 44.5, "OR")]})
         res = self.audit()
-        self.assertEqual([(r["key"], r["reason"]) for r in res["not_held"]], [("ffla:swap", "coordinates_outside_us")])
+        self.assertEqual([(r["key"], r["reason"]) for r in res["not_held"]], [("ffla:swap", "coordinates_outside_country")])
 
     def test_records_on_hidden_towers_count_as_held_but_are_shown_apart(self) -> None:
         self.ws.run({"ffla": [rec("ffla", "a", "Abbot Butte", 44.5577, -121.7088, "OR"),

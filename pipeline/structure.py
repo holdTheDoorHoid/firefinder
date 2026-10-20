@@ -221,8 +221,17 @@ FIRELOOKOUT_COM_TYPES: dict[str, TypeInfo] = {
     "bimetallic": T(None),
 }
 
+# firelookout.ca's "Tower Type" row (2026-10-20). "N/A" is left out by the fetcher.
+FIRELOOKOUT_CA_TYPES: dict[str, TypeInfo] = {
+    "steel tower": T("tower", material="steel"),
+    "aermotor ll-25": T("tower", material="steel", note="an Aermotor LL-25 steel tower"),
+    "d-6": T("ground", note="the D-6, a cupola lookout house on the ground"),
+    "other": T(None, note="the site's catch-all; says nothing about the structure"),
+}
+
 SIMPLE_TYPES: dict[str, dict[str, TypeInfo]] = {
     "ffla": FFLA_TYPES,
+    "firelookout_ca": FIRELOOKOUT_CA_TYPES,
     "firelookout_com": FIRELOOKOUT_COM_TYPES,
     "fire_lookouts_org": {"tower": T("tower")},
     "pa_storymap": {"tower": T("tower")},
@@ -334,6 +343,16 @@ WEEBLY_STATUS: dict[str, StatusInfo] = {
 
 SIMPLE_STATUS: dict[str, dict[str, StatusInfo]] = {
     "ffla": FFLA_STATUS,
+    # firelookout.ca has no status field: these are our readings of its records' notes, a closed
+    # set written by pipeline/regional/firelookout_ca.py (CURATED).
+    "firelookout_ca": {
+        "standing": S("standing"),
+        "standing, cab gone": S("standing", note="The tower still stands, but its cab is gone (Firelookout.ca)."),
+        "gone": S("gone"),
+        "replica": S("replica"),
+        "likely gone": S(None, note="Sources suggest it is gone."),
+        "replaced by an observation tower": S(None, note="An observation tower for visitors now stands on the site (Firelookout.ca)."),
+    },
     "eastern_us_lookouts": WEEBLY_STATUS,
     "central_us_lookouts": WEEBLY_STATUS,
     "west_us_lookouts": WEEBLY_STATUS,
@@ -364,7 +383,7 @@ SIMPLE_STATUS: dict[str, dict[str, StatusInfo]] = {
 
 # OSM lifecycle tags summarised in status_raw ("abandoned=yes; ruins=yes"). The fetcher reads
 # the full tags; each key here is understood.
-OSM_STATUS_KEYS = {"disused:emergency", "was:emergency", "was:operator", "disused:tourism", "ruins",
+OSM_STATUS_KEYS = {"disused:emergency", "was:emergency", "was:operator", "disused:tourism", "ruins", "was:building",
                    "abandoned", "abandoned:building", "demolished", "building:destroyed",
                    "destroyed:building"}
 WIKIDATA_STATUS_RE = re.compile(r"^(?:P31 instance of 'destroyed building or structure'|"
@@ -406,6 +425,7 @@ OSM_TOWER_CONSTRUCTION: dict[str, str | None] = {
     "lattice_steel": "steel", "steel": "steel", "brick": "masonry",
     "lattice": None, "freestanding": None, "building": None, "guyed_lattice": None,
     "guyed_tube": None, "ground": None, "tower": None, "clear_lake_fire_lookout": None,
+    "metal": "steel",  # three Alberta towers (2026-10-20)
 }
 OSM_BUILDING_MATERIAL: dict[str, str | None] = {
     "wood": "wood", "timber_framing": "wood", "log": "log", "steel": "steel", "metal": "steel",

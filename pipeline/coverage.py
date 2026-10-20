@@ -18,7 +18,8 @@ bare lookout points, ...) are still held, by a hidden tower, so they count as co
                        unique same-name tower in its state, or approximately, on the one
                        same-name GNIS high point in its county; the rest are listed on the site's
                        "Lookouts we can't place yet" pages.
-  coordinates_outside_us   the position is not in the United States (a swapped or mistyped pair)
+  coordinates_outside_country   the position is not in the record's own country (a swapped or
+                       mistyped pair; regions.py's boxes)
   duplicate_key        the key repeats inside the extract (merge keeps the first)
   unmatched            usable coordinates but no tower: this should never happen after a merge.
                        It means the tower files are older than the extracts: run merge.py.
@@ -48,7 +49,7 @@ import merge  # noqa: E402
 REPO = HERE.parent
 DATA = REPO / "data"
 
-REASONS = ("no_coordinates", "coordinates_outside_us", "duplicate_key", "unmatched")
+REASONS = ("no_coordinates", "coordinates_outside_country", "duplicate_key", "unmatched")
 
 
 def load_extracts(sources_dir: Path) -> dict[str, list[dict]]:
@@ -93,8 +94,8 @@ def reason_not_held(source: str, raw: dict, seen_keys: set) -> str:
     rec = merge.Rec.build(source, raw, 0)
     if rec.has_coords:
         return "unmatched"
-    if rec.bad_coords == "outside_us":
-        return "coordinates_outside_us"
+    if rec.bad_coords == "outside_country":
+        return "coordinates_outside_country"
     return "no_coordinates"
 
 
@@ -148,7 +149,7 @@ def audit(sources_dir: Path, towers_dir: Path, report_path: Path | None = None,
 
 def format_report(result: dict, show_list: bool = True) -> str:
     cols = [("records", "records"), ("held_visible", "on a visible tower"), ("held_approximate", "approx"), ("held_hidden_only", "hidden only"),
-            ("not_held", "NOT HELD"), ("no_coordinates", "no coords"), ("coordinates_outside_us", "outside US"),
+            ("not_held", "NOT HELD"), ("no_coordinates", "no coords"), ("coordinates_outside_country", "outside country"),
             ("duplicate_key", "dup key"), ("unmatched", "UNMATCHED")]
     rows = [["source", *[c[1] for c in cols]]]
     for s, v in sorted(result["per_source"].items()):

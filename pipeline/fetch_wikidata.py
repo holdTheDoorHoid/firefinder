@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
-"""Fetch US fire lookout towers from Wikidata via SPARQL.
+"""Fetch US and Canadian fire lookout towers from Wikidata via SPARQL.
 
-Writes data/sources/wikidata.json (DESIGN.md Â§3.2).
+Writes data/sources/wikidata.json (DESIGN.md Â§3.2): the United States (QUERY, P17 = Q30, which
+includes Alaska and Hawaii) and, since 2026-10-20, Canada (QUERY_CA, P17 = Q16), two cached
+answers read together. A Canadian item's province is the ISO 3166-2 code (P300, "CA-ON") of the
+province or territory it lies in (P131, followed upwards); its local unit is its P131 place only
+when that names a census division in its own words (a District, Regional District, County,
+Division No. ...), never a park or a town.
 
 Selection: instance of Q748998 ("fire lookout tower") or any transitive
 subclass of it (wdt:P31/wdt:P279*), with P17 (country) = Q30 (United
@@ -39,9 +44,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 import _common as c
+import regions
 
 SPARQL_URL = "https://query.wikidata.org/sparql"
 CACHE_PATH = c.raw_dir("wikidata") / "sparql_result.json"
+CACHE_PATH_CA = c.raw_dir("wikidata") / "sparql_result_ca.json"
 
 REPO_ROOT = Path(__file__).parent.parent
 OUT_PATH = REPO_ROOT / "data" / "sources" / "wikidata.json"
@@ -98,6 +105,28 @@ WHERE {
 GROUP BY ?item ?itemLabel
 """.strip()
 
+# Canada: the same selection and fields, P17 = Q16; the province is any P131 ancestor whose
+# ISO 3166-2 code starts "CA-" (provinces and territories carry P300).
+QUERY_CA = QUERY.replace("?item wdt:P17 wd:Q30 .", "?item wdt:P17 wd:Q16 .").replace(
+    """    ?stateItem wdt:P31 wd:Q35657 .
+    ?stateItem wdt:P300 ?stateIso .""",
+    """    ?stateItem wdt:P300 ?stateIso .
+    FILTER(STRSTARTS(?stateIso, "CA-"))""").replace(
+    "  (SAMPLE(?article) AS ?article)",
+    "  (SAMPLE(?article) AS ?article)\n  (SAMPLE(?frLabel) AS ?frLabel)\n"
+    "  (GROUP_CONCAT(DISTINCT ?crhp; separator=\"|\") AS ?crhps)").replace(
+    "  OPTIONAL { ?item wdt:P649 ?nrhp . }",
+    "  OPTIONAL { ?item wdt:P649 ?nrhp . }\n  OPTIONAL { ?item wdt:P477 ?crhp . }").replace(
+    "  OPTIONAL { ?item skos:altLabel ?alias . FILTER(LANG(?alias)=\"en\") }",
+    "  OPTIONAL { ?item skos:altLabel ?alias . FILTER(LANG(?alias)=\"en\") }\n"
+    "  OPTIONAL { ?item rdfs:label ?frLabel . FILTER(LANG(?frLabel)=\"fr\") }")
+# (Quebec items may have a French label only: the name falls back to it. P477 is the item's
+# Canadian Register of Historic Places id, linked to historicplaces.ca.)
+CRHP_URL = "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id={}"
+# A P131 place that is a Canadian census division, named in its own words.
+CA_UNIT_RE = re.compile(r"\b(?:District|Regional District|County|Division No\. ?\d+|Municipal District|"
+                        r"Regional Municipality|Regional County Municipality|Improvement District|Special Area)\b")
+
 # Wikidata QIDs for units of measure actually seen on these items (checked
 # 2026-10-04: foot and metre only). Anything else is left unconverted
 # rather than guessed.
@@ -111,17 +140,17 @@ COORD_RE = re.compile(r"Point\(([-\d.]+)\s+([-\d.]+)\)")
 COUNTY_SUFFIX_RE = re.compile(r"\s+(County|Parish|Borough|Census Area)$")
 
 
-def ensure_result() -> dict:
-    if not CACHE_PATH.exists():
+def ensure_result(path: Path = CACHE_PATH, query: str = QUERY) -> dict:
+    if not path.exists():
         print(f"Querying Wikidata SPARQL ({SPARQL_URL})...", file=sys.stderr)
-        body = urllib.parse.urlencode({"query": QUERY}).encode()
+        body = urllib.parse.urlencode({"query": query}).encode()
         raw = c.http_get(SPARQL_URL, data=body, timeout=180, headers={
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "application/sparql-results+json",
         })
-        CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
-        CACHE_PATH.write_bytes(raw)
-    return json.loads(CACHE_PATH.read_text())
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(raw)
+    return json.loads(path.read_text())
 
 
 def val(row: dict, key: str) -> str | None:
@@ -196,7 +225,7 @@ def infer_status(dissolved: str | None, class_labels: list[str]) -> tuple[str, s
     return "unknown", None
 
 
-def build_record(row: dict, state_lookup: c.StateLookup) -> dict | None:
+def build_record(row: dict, state_lookup: c.StateLookup, country: str = "US") -> dict | None:
     qid = row["item"]["value"].rsplit("/", 1)[-1]
     coord = val(row, "coord")
     m = COORD_RE.match(coord) if coord else None
@@ -204,21 +233,28 @@ def build_record(row: dict, state_lookup: c.StateLookup) -> dict | None:
         return None
     lon, lat = float(m.group(1)), float(m.group(2))
 
-    name = val(row, "itemLabel") or qid
+    name = val(row, "itemLabel") or val(row, "frLabel") or qid
     aliases = split_list(row, "aliases")
     class_labels = split_list(row, "classLabels")
 
     state_isos = split_list(row, "stateIsos")
     region = None
-    if state_isos:
-        region = c.normalize_state(state_isos[0].replace("US-", ""))
-    if not region:
-        region = state_lookup.state_for(lon, lat)
-
     counties = split_list(row, "locations")
     county = None
-    if counties:
-        county = COUNTY_SUFFIX_RE.sub("", counties[0])
+    if country == "CA":
+        codes = sorted({x.split("-", 1)[1] for x in state_isos if x.startswith("CA-")})
+        region = codes[0] if len(codes) == 1 else None
+        if region is None:
+            # no P131 chain: the province whose Natural Earth polygon holds the point
+            region = regions.admin1_lookup(c.RAW_ROOT).nearest_region(lat, lon)
+        county = next((x for x in counties if CA_UNIT_RE.search(x)), None)
+    else:
+        if state_isos:
+            region = c.normalize_state(state_isos[0].replace("US-", ""))
+        if not region:
+            region = state_lookup.state_for(lon, lat)
+        if counties:
+            county = COUNTY_SUFFIX_RE.sub("", counties[0])
 
     elev_m, elev_raw, elev_was_ft = convert_amount(val(row, "elevAmount"), val(row, "elevUnit"))
     height_m, height_raw, height_was_ft = convert_amount(val(row, "heightAmount"), val(row, "heightUnit"))
@@ -244,6 +280,8 @@ def build_record(row: dict, state_lookup: c.StateLookup) -> dict | None:
     article = val(row, "article")
     if article:
         links.append({"label": "Wikipedia", "url": article})
+    for crhp in split_list(row, "crhps"):
+        links.append({"label": "Canadian Register of Historic Places", "url": CRHP_URL.format(crhp), "kind": "register"})
 
     extra = {"wikidata_qid": qid}
     if aliases:
@@ -266,7 +304,7 @@ def build_record(row: dict, state_lookup: c.StateLookup) -> dict | None:
         "key": f"wikidata:{qid}",
         "url": f"https://www.wikidata.org/wiki/{qid}",
         "name": name,
-        "country": "US",
+        "country": country,
         "region": region,
         "county": county,
         "lat": round(lat, 6),
@@ -300,11 +338,20 @@ def main() -> None:
         rec = build_record(row, state_lookup)
         if rec:
             records.append(rec)
+    # Canada (2026-10-20): one more query, cached beside the US one.
+    rows_ca = ensure_result(CACHE_PATH_CA, QUERY_CA)["results"]["bindings"]
+    with_coord_ca = [r for r in rows_ca if "coord" in r]
+    seen = {r["key"] for r in records}
+    for row in with_coord_ca:
+        rec = build_record(row, state_lookup, "CA")
+        if rec and rec["key"] not in seen:
+            records.append(rec)
+    print(f"Canada: {len(rows_ca)} items, {len(with_coord_ca)} with coordinates", file=sys.stderr)
 
     c.write_source_json(
         OUT_PATH,
         source="wikidata",
-        title="Wikidata -- US fire lookout towers (Q748998 and subclasses)",
+        title="Wikidata -- US and Canadian fire lookout towers (Q748998 and subclasses)",
         url=SPARQL_URL,
         license_text="CC0 1.0 (Wikidata). Images keep their own Commons licence/credit.",
         records=records,

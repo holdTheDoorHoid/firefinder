@@ -64,23 +64,18 @@ REPO = Path(__file__).resolve().parent.parent
 DATA = REPO / "data"
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from state_bbox import STATE_BBOX, flag_coordinate  # noqa: E402
+import regions  # noqa: E402
 from photo_credit import extract_photo_credit  # noqa: E402
 import designs as design_names  # noqa: E402
 import structure  # noqa: E402
 from record_joins import LOCATION_PICKS, RECORD_JOINS  # noqa: E402
 
-# Rough boxes for the territories, which state_bbox does not cover.
-TERRITORY_BBOX = {"PR": (17.8, 18.6, -67.4, -65.2), "VI": (17.6, 18.5, -65.1, -64.5),
-                  "GU": (13.2, 13.7, 144.6, 145.0), "AS": (-14.6, -11.0, -171.1, -168.1),
-                  "MP": (14.0, 20.6, 144.8, 146.1), "DC": (38.7, 39.0, -77.2, -76.9)}
-
-
 def inside_us(lat: float, lon: float) -> bool:
-    return any(a <= lat <= b and c <= lon <= d for a, b, c, d in [*STATE_BBOX.values(), *TERRITORY_BBOX.values()])
+    return regions.in_country("US", lat, lon)
 
 # Files in data/sources that are not lists of lookouts.
-SKIP_FILES = {"designs_reference.json", "ridb_excluded.json", "peaks_gnis.json", "gnis_places.json"}
+SKIP_FILES = {"designs_reference.json", "ridb_excluded.json", "peaks_gnis.json", "peaks_cgndb.json",
+              "gnis_places.json"}
 # USGS GNIS names for the approximate positions (DESIGN.md 3.5, "Approximate locations"): an
 # extract of the gazetteer, written by pipeline/fetch_gnis_places.py, read from the sources folder.
 GNIS_FILE = "gnis_places.json"
@@ -93,7 +88,7 @@ GNIS_FILE = "gnis_places.json"
 # master-list sources first, so they seed the towers the others attach to. Sources not named
 # here (a future extract) are processed last, alphabetically, at the lowest precedence.
 SOURCE_ORDER = [
-    "nhlr", "fflos", "ffla", "ridb", "ffla_rentals", "fire_lookouts_org", "tnlandforms",
+    "nhlr", "fflos", "ffla", "ridb", "ffla_rentals", "firelookout_ca", "fire_lookouts_org", "tnlandforms",
     "nj_forest_fire_towers", "firelookout_com", "idaho_fl", "michigan_fire_tower",
     "pa_storymap", "andyarthur_ny", "wikipedia_lookout_lists", "cskt", "eastern_us_lookouts",
     "central_us_lookouts", "wikidata", "osm", "west_us_lookouts", "trailchick_wa", "cherylhill_oregon",
@@ -125,46 +120,46 @@ SOURCE_ORDER = [
 # or name) and ffla_groups (the lookout pages of FFLA's chapters and Friends groups: links, plus the
 # California-South chapter's register numbers and conditions).
 PRECEDENCE: dict[str, list[str]] = {
-    "name": ["nhlr", "fflos", "ridb", "ffla", "firelookout_com", "fire_lookouts_org",
+    "name": ["nhlr", "fflos", "ridb", "ffla", "firelookout_ca", "firelookout_com", "fire_lookouts_org",
              "tnlandforms", "nj_forest_fire_towers", "andyarthur_ny", "wikipedia_lookout_lists",
              "pa_storymap", "cskt", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
              "idaho_fl", "michigan_fire_tower", "osm",
              "west_us_lookouts", "trailchick_wa", "cherylhill_oregon", "ffla_groups",
              "willhiteweb_wa", "indiana_fire_towers"],
-    "location": ["nhlr", "fflos", "ffla", "fire_lookouts_org", "tnlandforms",
+    "location": ["nhlr", "fflos", "ffla", "firelookout_ca", "fire_lookouts_org", "tnlandforms",
                  "nj_forest_fire_towers", "firelookout_com", "osm", "eastern_us_lookouts",
                  "central_us_lookouts", "wikidata", "ridb", "andyarthur_ny",
                  "wikipedia_lookout_lists", "pa_storymap", "idaho_fl", "michigan_fire_tower",
                  "cskt",
                  "west_us_lookouts", "trailchick_wa", "indiana_fire_towers"],
-    "status": ["ffla", "nhlr", "fflos", "ridb", "fire_lookouts_org", "tnlandforms",
+    "status": ["ffla", "nhlr", "fflos", "firelookout_ca", "ridb", "fire_lookouts_org", "tnlandforms",
                "nj_forest_fire_towers", "andyarthur_ny", "wikipedia_lookout_lists", "pa_storymap",
                "cskt", "firelookout_com", "idaho_fl", "michigan_fire_tower", "osm",
                "eastern_us_lookouts", "central_us_lookouts", "wikidata",
                "west_us_lookouts", "trailchick_wa", "cherylhill_oregon", "ffla_groups",
              "willhiteweb_wa", "indiana_fire_towers"],
-    "kind": ["ffla", "nhlr", "fflos", "ridb", "firelookout_com", "fire_lookouts_org",
+    "kind": ["ffla", "nhlr", "fflos", "firelookout_ca", "ridb", "firelookout_com", "fire_lookouts_org",
              "tnlandforms", "nj_forest_fire_towers", "pa_storymap", "andyarthur_ny",
              "wikipedia_lookout_lists", "cskt", "osm", "eastern_us_lookouts",
              "central_us_lookouts", "wikidata", "idaho_fl", "michigan_fire_tower"],
-    "county": ["nhlr", "fflos", "ffla", "firelookout_com", "pa_storymap", "cskt",
+    "county": ["nhlr", "fflos", "ffla", "firelookout_ca", "firelookout_com", "pa_storymap", "cskt",
                "andyarthur_ny", "wikipedia_lookout_lists", "fire_lookouts_org", "tnlandforms",
                "nj_forest_fire_towers", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
                "michigan_fire_tower",
                "west_us_lookouts", "trailchick_wa", "indiana_fire_towers"],
-    "elevation_m": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "tnlandforms",
+    "elevation_m": ["nhlr", "fflos", "firelookout_ca", "firelookout_com", "fire_lookouts_org", "tnlandforms",
                     "nj_forest_fire_towers", "ridb", "wikidata", "cskt", "osm",
                     "trailchick_wa", "cherylhill_oregon"],
-    "built": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "pa_storymap", "ridb",
+    "built": ["nhlr", "fflos", "firelookout_ca", "firelookout_com", "fire_lookouts_org", "pa_storymap", "ridb",
               "wikidata", "cskt", "idaho_fl", "osm", "andyarthur_ny", "ffla",
               "trailchick_wa", "cherylhill_oregon"],
     "design": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "pa_storymap", "cskt",
                "eastern_us_lookouts", "central_us_lookouts",
                "west_us_lookouts", "trailchick_wa", "cherylhill_oregon"],
     # Explicit words only (a type value, a description, an OSM tag); the design comes after.
-    "material": ["ffla", "nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "ridb", "osm",
+    "material": ["ffla", "nhlr", "fflos", "firelookout_ca", "firelookout_com", "fire_lookouts_org", "ridb", "osm",
                  "andyarthur_ny"],
-    "height_m": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "nj_forest_fire_towers",
+    "height_m": ["nhlr", "fflos", "firelookout_ca", "firelookout_com", "fire_lookouts_org", "nj_forest_fire_towers",
                  "pa_storymap", "cskt", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
                  "osm",
                  "west_us_lookouts", "trailchick_wa", "cherylhill_oregon"],
@@ -179,7 +174,7 @@ PRECEDENCE: dict[str, list[str]] = {
     "access": ["cskt", "osm"],
     "staffing": ["firelookout_com", "fire_lookouts_org", "cskt", "idaho_fl"],
     "rental": ["ridb", "ffla_rentals"],
-    "events": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "pa_storymap", "ridb",
+    "events": ["nhlr", "fflos", "firelookout_ca", "firelookout_com", "fire_lookouts_org", "pa_storymap", "ridb",
                "wikidata", "cskt", "idaho_fl", "michigan_fire_tower", "ffla", "osm",
                "andyarthur_ny",
                "trailchick_wa", "cherylhill_oregon", "ffla_groups"],
@@ -251,7 +246,7 @@ register_associations(ASSOCIATION_SOURCES)
 # repeat posts at idahofirelookouts.com). Two records from one of these may share a tower if
 # they are within this many metres and their names agree.
 DOUBLE_LISTED = {"ffla": 50, "firelookout_com": 100, "idaho_fl": 100, "osm": 100,
-                 "ridb": 300, "wikidata": 100}
+                 "ridb": 300, "wikidata": 100, "firelookout_ca": 100}
 # Of those, sources whose duplicates may be unnamed or generically named ("Fire Tower").
 DOUBLE_LISTED_GENERIC = {"osm", "wikidata"}
 # FFLA lists a lookout on a state line under "(Border - see X)" in each state, with positions that
@@ -271,7 +266,8 @@ APPROXIMATE = {"cskt"}
 MATCH_SAME_SPOT_M = 100
 MATCH_NEAR_M = 400
 MATCH_STRONG_M = 1500
-STRONG_RADIUS_BY_SOURCE = {"idaho_fl": 3000, "ridb": 3000, "cskt": 15000, "west_us_lookouts": 3000}
+STRONG_RADIUS_BY_SOURCE = {"idaho_fl": 3000, "ridb": 3000, "cskt": 15000, "west_us_lookouts": 3000,
+                           "firelookout_ca": 3000}
 # A same-spot match (<= MATCH_SAME_SPOT_M) whose name is *clearly* different (score < PARTIAL)
 # from every member of the near tower may still be a plain coordinate error in the source: the
 # record really belongs to a different tower it strongly (score >= STRONG) and uniquely names,
@@ -362,6 +358,7 @@ SOURCE_SITE = {
     "ffla_groups": "FFLA chapters and Friends groups",
     "willhiteweb_wa": "WillhiteWeb.com Washington Fire Lookouts",
     "indiana_fire_towers": "Indiana Fire Towers (Mark Armantrout)",
+    "firelookout_ca": "Firelookout.ca, Open Canada Fire Lookout Index",
 }
 
 # Default photo licence per source, where the source states one (None = not stated).
@@ -375,19 +372,10 @@ PHOTO_LICENSE = {
     "nj_forest_fire_towers": "See Wikimedia Commons file page (varies per photo)",
 }
 
-STATE_NAMES = {
-    "AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas", "CA": "California",
-    "CO": "Colorado", "CT": "Connecticut", "DE": "Delaware", "FL": "Florida", "GA": "Georgia",
-    "HI": "Hawaii", "ID": "Idaho", "IL": "Illinois", "IN": "Indiana", "IA": "Iowa",
-    "KS": "Kansas", "KY": "Kentucky", "LA": "Louisiana", "ME": "Maine", "MD": "Maryland",
-    "MA": "Massachusetts", "MI": "Michigan", "MN": "Minnesota", "MS": "Mississippi",
-    "MO": "Missouri", "MT": "Montana", "NE": "Nebraska", "NV": "Nevada", "NH": "New Hampshire",
-    "NJ": "New Jersey", "NM": "New Mexico", "NY": "New York", "NC": "North Carolina",
-    "ND": "North Dakota", "OH": "Ohio", "OK": "Oklahoma", "OR": "Oregon", "PA": "Pennsylvania",
-    "RI": "Rhode Island", "SC": "South Carolina", "SD": "South Dakota", "TN": "Tennessee",
-    "TX": "Texas", "UT": "Utah", "VT": "Vermont", "VA": "Virginia", "WA": "Washington",
-    "WV": "West Virginia", "WI": "Wisconsin", "WY": "Wyoming", "DC": "District of Columbia",
-}
+# State, province and territory names, for link labels and names ("from Washington", "the FFLA
+# Oregon lookout list"). The table is regions.py's (US states and DC, Canada's provinces and
+# territories); the US's island territories are named there too.
+STATE_NAMES = {code: name for code, name in regions.REGION_NAMES.items() if code not in ("PR", "GU", "VI", "AS", "MP")}
 
 # Kinds the owner has chosen to hide, from data/structure_kinds.json ("hidden": true). Since
 # 2026-10-08 none is: camps, lookout trees and bare points are shown as sites with no structure.
@@ -569,6 +557,8 @@ _PLACE_NOTE_RE = re.compile(
     r"(?:\s*,\s*[A-Za-z]{2})?)\s*$", re.I)
 _ANNOTATION_RE = re.compile(r"\s*\((?P<body>[^()]*\b(?:relocated|replica|parts from)\b[^()]*)\)", re.I)
 STATE_BY_NAME = {v.lower(): k for k, v in STATE_NAMES.items()}
+# French names of Canada's provinces and territories, read like the English ones (accents folded).
+STATE_BY_NAME.update({regions.fold(v): k for k, v in regions.CA_FRENCH.items()})
 _BORDER_POINTER_RE = re.compile(r"^\(border\s*[-\u2013\u2014]\s*see\s+([A-Za-z ]+)\)", re.I)
 
 
@@ -576,7 +566,7 @@ def _state_code(text: str) -> str | None:
     t = text.strip().strip(".").lower()
     if t.upper() in STATE_NAMES:
         return t.upper()
-    return STATE_BY_NAME.get(t)
+    return STATE_BY_NAME.get(t) or STATE_BY_NAME.get(regions.fold(t))
 
 
 def expand_place(text: str) -> str:
@@ -1109,9 +1099,13 @@ class GnisIndex:
         (neither), "no_county" (the record names no county), "county_unknown" (its county is
         not a county of the state in GNIS: misspelt, or several counties), "no_name" (only
         generic words), "not_looked_up" (the extract predates this record: re-run
-        pipeline/fetch_gnis_places.py)."""
+        pipeline/fetch_gnis_places.py), "not_covered" (outside the US: GNIS is the US gazetteer,
+        so approximate placement is US-only for now; DESIGN.md 3.5)."""
         out: dict = {"outcome": None, "feature": None, "candidates": [], "town": None}
         st = (region or "").upper()
+        if regions.country_of(st) not in (None, "US"):
+            out["outcome"] = "not_covered"
+            return out
         if not keys:
             out["outcome"] = "no_name"
             return out
@@ -1173,6 +1167,7 @@ class Rec:
     order: int
     key: str = ""
     region: str | None = None
+    country: str = "US"             # the record's country (ISO 3166-1 alpha-2), regions.py
     lat: float | None = None
     lon: float | None = None
     display: str | None = None
@@ -1195,14 +1190,17 @@ class Rec:
         r.structure = reading
         r.key = str(raw.get("key") or "")
         r.region = (raw.get("region") or None) and str(raw["region"]).upper()
+        # The region decides the country (codes are unique across countries, regions.py); a record
+        # with no region keeps the one its source states, the US by default.
+        r.country = regions.country_of(r.region) or str(raw.get("country") or "US").upper()
         if _num(raw.get("lat")) and _num(raw.get("lon")) and (raw["lat"], raw["lon"]) != (0, 0):
             lat, lon = float(raw["lat"]), float(raw["lon"])
-            if inside_us(lat, lon):
+            if regions.in_country(r.country, lat, lon):
                 r.lat, r.lon = lat, lon
-                if r.region and r.region in STATE_BBOX and flag_coordinate(r.region, lat, lon):
+                if r.region and r.region in regions.REGION_BOXES and regions.flag_coordinate(r.region, lat, lon):
                     r.bad_coords = "outside_state"
             else:
-                r.bad_coords = "outside_us"   # e.g. latitude copied from longitude
+                r.bad_coords = "outside_country"   # e.g. latitude copied from longitude
         extra = raw.get("extra") or {}
         aliases = []
         for k in ("aliases", "alt_name", "old_name"):
@@ -2220,6 +2218,10 @@ def record_access(rec: Rec) -> dict | None:
     if rec.source == "cskt" or (rec.extra.get("permission") and rec.extra.get("ownership") == "tribal"):
         return {"level": "permission",
                 "note": "On the Flathead Reservation. Ask the Confederated Salish and Kootenai Tribes before visiting."}
+    if rec.extra.get("access_level") in ("public", "restricted", "permission", "private", "closed"):
+        # a fetcher's own reading of what its source says about access (firelookout.ca's "private
+        # property, no access"), with its note
+        return {"level": rec.extra["access_level"], "note": rec.extra.get("access_note")}
     if rec.source == "osm" and rec.extra.get("access"):
         # OSM's access tag describes the structure, often only the cab ("private" on a staffed
         # Forest Service lookout), not the land, so it does not set the level. Kept as a note.
@@ -2231,6 +2233,10 @@ def record_county(rec: Rec) -> str | None:
     c = rec.raw.get("county")
     if not isinstance(c, str) or not c.strip():
         return None
+    if rec.country != "US":
+        # Canada's local units carry their own words ("Sudbury District", "Cumberland County",
+        # "Division No. 18"), kept whole: the page shows them as the source writes them.
+        return re.sub(r"\s+", " ", c.strip()) or None
     c = re.sub(r"\s+(County|Parish|Borough)$", "", c.strip(), flags=re.I)
     return c or None
 
@@ -2390,6 +2396,8 @@ def record_links(rec: Rec) -> list[dict]:
             out.append({"label": f"{name} on WillhiteWeb.com Washington Fire Lookouts", "url": url, "kind": "site"})
         elif src == "indiana_fire_towers":
             out.append({"label": f"{name} on Indiana Fire Towers (Mark Armantrout)", "url": url, "kind": "site"})
+        elif src == "firelookout_ca":
+            out.append({"label": f"{name} on Firelookout.ca (Open Canada Fire Lookout Index)", "url": url, "kind": "site"})
         elif src in ASSOCIATION_SOURCES:
             assoc = (rec.extra.get("association") or {}).get("name") or SOURCE_SITE.get(src, src)
             out.append({"label": f"{assoc}: work on {name}", "url": url, "kind": "association"})
@@ -2474,7 +2482,9 @@ def location_pick(members: list[Rec]):
     source itself flags as outside its state are used only as a last resort. A tower with an
     entry in LOCATION_PICKS (pipeline/record_joins.py) shows the position of the record it names
     instead: a human has checked which source is right."""
-    good = [m for m in members if m.has_coords and not m.coordinate_problem]
+    # (a position its own source calls a guess -- extra.position_approximate -- counts only when
+    # no other source gives one, like a flagged row)
+    good = [m for m in members if m.has_coords and not m.coordinate_problem and not m.extra.get("position_approximate")]
     by_key = {m.key: m for m in good}
     for m in good:
         chosen = by_key.get(LOCATION_PICKS.get(m.key, ""))
@@ -2504,7 +2514,7 @@ def is_approximate_location(loc: object) -> bool:
 
 
 def precision_of(m: Rec) -> str:
-    if m.source in APPROXIMATE or m.coordinate_problem:
+    if m.source in APPROXIMATE or m.coordinate_problem or m.extra.get("position_approximate"):
         return "approximate"
     if round(m.lat, 2) == m.lat and round(m.lon, 2) == m.lon:
         return "approximate"
@@ -2760,7 +2770,6 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
             others.append(n)
         rec["other_names"] = others
 
-    rec["country"] = rec.get("country") or "US"
 
     # Location and region
     loc, loc_src = location_pick(members)
@@ -2777,6 +2786,8 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
             rec["region"] = region_src.region
         elif tower.old_region:
             rec["region"] = tower.old_region
+    # The region's country (regions.py); a tower whose region is unknown keeps what it had.
+    rec["country"] = regions.country_of(rec.get("region")) or rec.get("country") or "US"
 
     v, s = pick("county", members, record_county)
     set_field("county", v, s)
@@ -3138,7 +3149,8 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
 SHORT_NAME = {"ffla": "FFLA", "ffla_rentals": "the FFLA rentals list", "nhlr": "NHLR", "fflos": "FFLOS", "firelookout_com": "firelookout.com",
               "idaho_fl": "idahofirelookouts.com", "osm": "OpenStreetMap", "wikidata": "Wikidata",
               "fire_lookouts_org": "fire-lookouts.org", "pa_storymap": "the PA fire towers StoryMap",
-              "andyarthur_ny": "andyarthur.org", "cskt": "CSKT", "ridb": "recreation.gov"}
+              "andyarthur_ny": "andyarthur.org", "cskt": "CSKT", "ridb": "recreation.gov",
+              "firelookout_ca": "Firelookout.ca"}
 
 
 def rental_warning(rec: dict, status_src: Rec | None, rental: dict | None = None) -> str:
@@ -3250,13 +3262,35 @@ def conflicts_for(rec: dict, members: list[Rec], loc_src: Rec | None, status_src
     return out
 
 
+# Hawaii's Second World War coastal-artillery fire-control stations (base-end stations above the
+# batteries) are not fire lookouts, whatever a source files them under. Hawaii only: elsewhere
+# "fire control" is forestry ("Monticello Fire Control Headquarters Fire Tower", Florida).
+HI_FIRE_CONTROL_RE = re.compile(r"\bfire[\s-]+control\b|\bbase[\s-]+end\b|\bbattery\b|\bcoast(?:al)?\s+artillery\b", re.I)
+HI_FIRE_CONTROL_REASON = "Not a fire lookout (a Second World War coastal-artillery fire-control station)"
+
+
 def hidden_for(rec: dict, members: list[Rec]) -> tuple[bool, str | None]:
     for m in members:
         if m.key in HIDE_KEYS:
             return True, HIDE_KEYS[m.key]
+    for m in members:
+        if m.region == "HI" and HI_FIRE_CONTROL_RE.search(" ".join(
+                str(x) for x in (m.raw.get("name"), m.raw.get("type_raw"), m.extra.get("description")) if x)):
+            return True, HI_FIRE_CONTROL_REASON
     registered = any(m.source in ("nhlr", "fflos")
                      or any(str(r.get("register") or "").upper() in ("NHLR", "FFLOS") for r in (m.raw.get("registers") or []))
                      for m in members)
+    for m in members:
+        # A source's own word that the record is not a fire lookout (firelookout.ca's bird
+        # observatory tower; a Second World War coastal-artillery fire-control station in Hawaii):
+        # the fetcher says why in extra.not_fire_lookout.
+        if isinstance(m.extra.get("not_fire_lookout"), str) and m.extra["not_fire_lookout"].strip() and not registered:
+            return True, m.extra["not_fire_lookout"].strip()
+    # Records a source cannot confirm as a fire lookout (an OpenStreetMap observation tower in
+    # Canada whose tags and name say nothing of fire): hidden while they are all the tower has.
+    unconfirmed = [m for m in members if isinstance(m.extra.get("unconfirmed_lookout"), str)]
+    if unconfirmed and len(unconfirmed) == len(members) and not registered:
+        return True, unconfirmed[0].extra["unconfirmed_lookout"]
     for m in members:
         if (m.status_info or {}).get("hidden_reason") and not registered:
             return True, m.status_info["hidden_reason"]
@@ -3574,7 +3608,7 @@ def assign_ids(towers: list[tuple[Tower, dict]], taken: set[str]) -> None:
                 min((m.key for m in t.members), default=""))
 
     for t, r in sorted(new, key=sort_key):
-        base = f"us-{(r.get('region') or 'xx').lower()}-{slug_of(t, r)}"
+        base = f"{regions.id_prefix(r.get('country'), r.get('region'))}-{slug_of(t, r)}"
         cand, n = base, 1
         while cand in taken:
             n += 1
@@ -3739,7 +3773,7 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
             r["updated"] = today
             written += 1
             if not dry_run:
-                path = t.path or towers_dir / t.id.split("-")[1] / f"{t.id}.json"
+                path = t.path or towers_dir / regions.tower_dir(t.id) / f"{t.id}.json"
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text(dump(ordered(r)), encoding="utf-8")
 
@@ -4050,12 +4084,12 @@ def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, 
         "approximate": approximate_report(m, resolved, gnis, entries),
         "coordinates_not_used": [{"key": mem.key, "name": mem.display, "region": mem.region,
                                   "lat": mem.raw.get("lat"), "lon": mem.raw.get("lon")}
-                                 for t, _ in resolved for mem in t.members if mem.bad_coords == "outside_us"]
+                                 for t, _ in resolved for mem in t.members if mem.bad_coords == "outside_country"]
                                 + [{"key": r.key, "name": r.display, "region": r.region, "lat": r.raw.get("lat"), "lon": r.raw.get("lon")}
-                                   for r in m.unplaced if r.bad_coords == "outside_us"],
+                                   for r in m.unplaced if r.bad_coords == "outside_country"],
         "coordinates_outside_own_state": [
             {"key": mem.key, "name": mem.display, "region": mem.region, "lat": mem.lat, "lon": mem.lon,
-             "inside": [st for st, (a, b, c, d) in sorted(STATE_BBOX.items()) if a <= mem.lat <= b and c <= mem.lon <= d],
+             "inside": regions.regions_at(mem.lat, mem.lon, mem.country),
              "tower": r["id"], "used_for_location": (r.get("location") or {}).get("from") == mem.source}
             for t, r in resolved for mem in t.members if mem.bad_coords == "outside_state"],
         "relocations": relocations or [],
