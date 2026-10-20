@@ -88,7 +88,7 @@ GNIS_FILE = "gnis_places.json"
 # master-list sources first, so they seed the towers the others attach to. Sources not named
 # here (a future extract) are processed last, alphabetically, at the lowest precedence.
 SOURCE_ORDER = [
-    "nhlr", "fflos", "ffla", "ridb", "ffla_rentals", "firelookout_ca", "ontario_lio", "fire_lookouts_org", "tnlandforms",
+    "nhlr", "fflos", "ffla", "ridb", "ffla_rentals", "firelookout_ca", "ontario_lio", "alberta_wildfire", "fire_lookouts_org", "tnlandforms",
     "nj_forest_fire_towers", "firelookout_com", "idaho_fl", "michigan_fire_tower",
     "pa_storymap", "andyarthur_ny", "wikipedia_lookout_lists", "cskt", "eastern_us_lookouts",
     "central_us_lookouts", "wikidata", "osm", "west_us_lookouts", "trailchick_wa", "cherylhill_oregon",
@@ -120,25 +120,25 @@ SOURCE_ORDER = [
 # or name) and ffla_groups (the lookout pages of FFLA's chapters and Friends groups: links, plus the
 # California-South chapter's register numbers and conditions).
 PRECEDENCE: dict[str, list[str]] = {
-    "name": ["nhlr", "fflos", "ridb", "ffla", "firelookout_ca", "ontario_lio", "firelookout_com", "fire_lookouts_org",
+    "name": ["nhlr", "fflos", "ridb", "ffla", "firelookout_ca", "ontario_lio", "alberta_wildfire", "firelookout_com", "fire_lookouts_org",
              "tnlandforms", "nj_forest_fire_towers", "andyarthur_ny", "wikipedia_lookout_lists",
              "pa_storymap", "cskt", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
              "idaho_fl", "michigan_fire_tower", "osm",
              "west_us_lookouts", "trailchick_wa", "cherylhill_oregon", "ffla_groups",
              "willhiteweb_wa", "indiana_fire_towers"],
-    "location": ["nhlr", "fflos", "ffla", "ontario_lio", "firelookout_ca", "fire_lookouts_org", "tnlandforms",
+    "location": ["nhlr", "fflos", "ffla", "ontario_lio", "alberta_wildfire", "firelookout_ca", "fire_lookouts_org", "tnlandforms",
                  "nj_forest_fire_towers", "firelookout_com", "osm", "eastern_us_lookouts",
                  "central_us_lookouts", "wikidata", "ridb", "andyarthur_ny",
                  "wikipedia_lookout_lists", "pa_storymap", "idaho_fl", "michigan_fire_tower",
                  "cskt",
                  "west_us_lookouts", "trailchick_wa", "indiana_fire_towers"],
-    "status": ["ffla", "nhlr", "fflos", "firelookout_ca", "ridb", "fire_lookouts_org", "tnlandforms",
+    "status": ["ffla", "nhlr", "fflos", "firelookout_ca", "alberta_wildfire", "ridb", "fire_lookouts_org", "tnlandforms",
                "nj_forest_fire_towers", "andyarthur_ny", "wikipedia_lookout_lists", "pa_storymap",
                "cskt", "firelookout_com", "idaho_fl", "michigan_fire_tower", "osm",
                "eastern_us_lookouts", "central_us_lookouts", "wikidata",
                "west_us_lookouts", "trailchick_wa", "cherylhill_oregon", "ffla_groups",
              "willhiteweb_wa", "indiana_fire_towers"],
-    "kind": ["ffla", "nhlr", "fflos", "firelookout_ca", "ontario_lio", "ridb", "firelookout_com", "fire_lookouts_org",
+    "kind": ["ffla", "nhlr", "fflos", "firelookout_ca", "ontario_lio", "alberta_wildfire", "ridb", "firelookout_com", "fire_lookouts_org",
              "tnlandforms", "nj_forest_fire_towers", "pa_storymap", "andyarthur_ny",
              "wikipedia_lookout_lists", "cskt", "osm", "eastern_us_lookouts",
              "central_us_lookouts", "wikidata", "idaho_fl", "michigan_fire_tower"],
@@ -147,10 +147,10 @@ PRECEDENCE: dict[str, list[str]] = {
                "nj_forest_fire_towers", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
                "michigan_fire_tower",
                "west_us_lookouts", "trailchick_wa", "indiana_fire_towers"],
-    "elevation_m": ["nhlr", "fflos", "firelookout_ca", "ontario_lio", "firelookout_com", "fire_lookouts_org", "tnlandforms",
+    "elevation_m": ["nhlr", "fflos", "firelookout_ca", "ontario_lio", "alberta_wildfire", "firelookout_com", "fire_lookouts_org", "tnlandforms",
                     "nj_forest_fire_towers", "ridb", "wikidata", "cskt", "osm",
                     "trailchick_wa", "cherylhill_oregon"],
-    "built": ["nhlr", "fflos", "firelookout_ca", "ontario_lio", "firelookout_com", "fire_lookouts_org", "pa_storymap", "ridb",
+    "built": ["nhlr", "fflos", "firelookout_ca", "ontario_lio", "alberta_wildfire", "firelookout_com", "fire_lookouts_org", "pa_storymap", "ridb",
               "wikidata", "cskt", "idaho_fl", "osm", "andyarthur_ny", "ffla",
               "trailchick_wa", "cherylhill_oregon"],
     "design": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "pa_storymap", "cskt",
@@ -159,11 +159,11 @@ PRECEDENCE: dict[str, list[str]] = {
     # Explicit words only (a type value, a description, an OSM tag); the design comes after.
     "material": ["ffla", "nhlr", "fflos", "firelookout_ca", "firelookout_com", "fire_lookouts_org", "ridb", "osm",
                  "andyarthur_ny"],
-    "height_m": ["nhlr", "fflos", "firelookout_ca", "firelookout_com", "fire_lookouts_org", "nj_forest_fire_towers",
+    "height_m": ["nhlr", "fflos", "firelookout_ca", "alberta_wildfire", "firelookout_com", "fire_lookouts_org", "nj_forest_fire_towers",
                  "pa_storymap", "cskt", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
                  "osm",
                  "west_us_lookouts", "trailchick_wa", "cherylhill_oregon"],
-    "agency": ["nhlr", "fflos", "ridb", "firelookout_com", "fire_lookouts_org", "tnlandforms",
+    "agency": ["nhlr", "fflos", "ridb", "alberta_wildfire", "firelookout_com", "fire_lookouts_org", "tnlandforms",
                "nj_forest_fire_towers", "pa_storymap", "andyarthur_ny", "cskt",
                "eastern_us_lookouts", "central_us_lookouts", "osm", "michigan_fire_tower",
                "west_us_lookouts", "trailchick_wa", "cherylhill_oregon", "ffla_groups"],
@@ -171,10 +171,11 @@ PRECEDENCE: dict[str, list[str]] = {
                   "fire_lookouts_org", "nj_forest_fire_towers", "firelookout_com", "ffla",
                   "eastern_us_lookouts", "central_us_lookouts", "osm", "michigan_fire_tower",
                   "west_us_lookouts", "trailchick_wa"],
-    "access": ["cskt", "osm"],
-    "staffing": ["firelookout_com", "fire_lookouts_org", "cskt", "idaho_fl"],
+    # alberta_wildfire: the province's own word that a staffed lookout is the observer's home
+    "access": ["alberta_wildfire", "cskt", "osm"],
+    "staffing": ["alberta_wildfire", "firelookout_com", "fire_lookouts_org", "cskt", "idaho_fl"],
     "rental": ["ridb", "ffla_rentals"],
-    "events": ["nhlr", "fflos", "firelookout_ca", "ontario_lio", "firelookout_com", "fire_lookouts_org", "pa_storymap", "ridb",
+    "events": ["nhlr", "fflos", "firelookout_ca", "ontario_lio", "alberta_wildfire", "firelookout_com", "fire_lookouts_org", "pa_storymap", "ridb",
                "wikidata", "cskt", "idaho_fl", "michigan_fire_tower", "ffla", "osm",
                "andyarthur_ny",
                "trailchick_wa", "cherylhill_oregon", "ffla_groups"],
@@ -360,6 +361,7 @@ SOURCE_SITE = {
     "indiana_fire_towers": "Indiana Fire Towers (Mark Armantrout)",
     "firelookout_ca": "Firelookout.ca, Open Canada Fire Lookout Index",
     "ontario_lio": "Land Information Ontario (Ontario Ministry of Natural Resources)",
+    "alberta_wildfire": "Alberta Wildfire (Government of Alberta)",
 }
 
 # Default photo licence per source, where the source states one (None = not stated).
@@ -1062,13 +1064,17 @@ def county_keys(county: str | None) -> set[str]:
 
 @dataclass(frozen=True)
 class GnisFeature:
-    id: int
+    """One gazetteer feature. `gazetteer` names the gazetteer it came from ("gnis" for the USGS
+    GNIS; a second gazetteer such as Canada's CGNDB gives its own name), which the approximate
+    location records in `from` and `method`."""
+    id: int | str
     name: str
     cls: str
     region: str
     county: str
     lat: float
     lon: float
+    gazetteer: str = "gnis"
 
     def as_dict(self) -> dict:
         return {"id": self.id, "name": self.name, "class": self.cls, "county": self.county,
@@ -1111,7 +1117,7 @@ class GnisIndex:
         out: dict = {"outcome": None, "feature": None, "candidates": [], "town": None}
         st = (region or "").upper()
         if regions.country_of(st) not in (None, "US"):
-            out["outcome"] = "not_covered"
+            out["outcome"] = "not_covered"   # GNIS is the US gazetteer (see Gazetteers)
             return out
         if not keys:
             out["outcome"] = "no_name"
@@ -1144,6 +1150,32 @@ class GnisIndex:
         else:
             out["outcome"] = "town" if towns else "none"
         return out
+
+
+class Gazetteers:
+    """The gazetteers approximate placement reads, one per country, behind GnisIndex's interface
+    (lookup, retrieved). Today only the US has one (USGS GNIS). A record of a country without one
+    gets the outcome "not_covered" and goes to the "Lookouts we can't place yet" list. Adding
+    Canada's CGNDB is a second index object with the same `lookup(region, county, keys)` (its
+    features GnisFeature(..., gazetteer="cgndb")) registered here under "CA"; nothing else in the
+    merge changes (DESIGN.md 3.5, "Approximate locations")."""
+
+    def __init__(self, by_country: dict[str, object]) -> None:
+        self.by_country = {c: g for c, g in by_country.items() if g is not None}
+
+    @property
+    def retrieved(self):
+        g = self.by_country.get("US")
+        return getattr(g, "retrieved", None)
+
+    def lookup(self, region: str | None, county: str | None, keys: list[str]) -> dict:
+        g = self.by_country.get(regions.country_of(region) or "US")
+        if g is None:
+            return {"outcome": "not_covered", "feature": None, "candidates": [], "town": None}
+        return g.lookup(region, county, keys)
+
+    def __bool__(self) -> bool:
+        return bool(self.by_country)
 
 
 def gnis_keys_for(rec: "Rec") -> list[str]:
@@ -1746,12 +1778,13 @@ class Matcher:
         unrecognised county, several features, several same-name lookouts already on the map, a
         lookout already on the map within APPROX_GUARD_M of the feature or with a close name in
         the county, or two records of one source on one feature."""
-        # GNIS is the US gazetteer: outside the US a record without a position is listed as
-        # unplaced ("not_covered"), never pinned (DESIGN.md 3.5; CGNDB placement is a follow-up).
+        # A record of a country with no gazetteer (Canada, until CGNDB is added) is listed as
+        # unplaced ("not_covered"), never pinned (DESIGN.md 3.5).
+        covered = gnis.by_country if isinstance(gnis, Gazetteers) else ({"US": gnis} if gnis else {})
         for r in self.unplaced:
-            if r.country != "US" and r.source != "ffla_rentals" and not r.has_coords:
+            if r.country not in covered and r.source != "ffla_rentals" and not r.has_coords:
                 r.gnis = {"outcome": "not_covered", "feature": None, "candidates": [], "town": None}
-        if gnis is None:
+        if not gnis:
             return
         groups: dict[int, list[Rec]] = defaultdict(list)
         features: dict[int, GnisFeature] = {}
@@ -2413,6 +2446,8 @@ def record_links(rec: Rec) -> list[dict]:
             out.append({"label": f"{name} on Firelookout.ca (Open Canada Fire Lookout Index)", "url": url, "kind": "site"})
         elif src == "ontario_lio":
             out.append({"label": "Land Information Ontario: Tower layer (fire towers)", "url": url, "kind": "agency"})
+        elif src == "alberta_wildfire":
+            out.append({"label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)", "url": url, "kind": "agency"})
         elif src in ASSOCIATION_SOURCES:
             assoc = (rec.extra.get("association") or {}).get("name") or SOURCE_SITE.get(src, src)
             out.append({"label": f"{assoc}: work on {name}", "url": url, "kind": "association"})
@@ -2519,9 +2554,14 @@ def location_pick(members: list[Rec]):
 def approximate_location(f: GnisFeature) -> dict:
     """The location of a lookout no source places, shown on the one same-name GNIS high-ground
     feature in its county. The lowest precedence there is: any real position replaces it."""
-    return {"lat": round_coord(f.lat), "lon": round_coord(f.lon), "precision": "approximate", "from": "gnis",
-            "approximate": True, "method": "gnis_name_match",
-            "gnis": {"id": f.id, "name": f.name, "class": f.cls, "county": f.county}}
+    loc = {"lat": round_coord(f.lat), "lon": round_coord(f.lon), "precision": "approximate", "from": f.gazetteer,
+           "approximate": True, "method": f"{f.gazetteer}_name_match",
+           # the feature, under "gnis" whichever gazetteer gave it (the site reads it there);
+           # "gazetteer" says which one when it is not GNIS
+           "gnis": {"id": f.id, "name": f.name, "class": f.cls, "county": f.county}}
+    if f.gazetteer != "gnis":
+        loc["gazetteer"] = f.gazetteer
+    return loc
 
 
 def is_approximate_location(loc: object) -> bool:
@@ -3175,7 +3215,8 @@ SHORT_NAME = {"ffla": "FFLA", "ffla_rentals": "the FFLA rentals list", "nhlr": "
               "idaho_fl": "idahofirelookouts.com", "osm": "OpenStreetMap", "wikidata": "Wikidata",
               "fire_lookouts_org": "fire-lookouts.org", "pa_storymap": "the PA fire towers StoryMap",
               "andyarthur_ny": "andyarthur.org", "cskt": "CSKT", "ridb": "recreation.gov",
-              "firelookout_ca": "Firelookout.ca", "ontario_lio": "Land Information Ontario"}
+              "firelookout_ca": "Firelookout.ca", "ontario_lio": "Land Information Ontario",
+              "alberta_wildfire": "Alberta Wildfire"}
 
 
 def rental_warning(rec: dict, status_src: Rec | None, rental: dict | None = None) -> str:
@@ -3738,7 +3779,7 @@ def run(sources_dir: Path, towers_dir: Path, report_path: Path | None, today: st
     headers, records = load_sources(sources_dir, log)
     # USGS GNIS names for the approximate positions; without the extract nothing new is placed
     # approximately (towers placed so on an earlier run keep their pins).
-    gnis = GnisIndex.load(gnis_path or sources_dir / GNIS_FILE)
+    gnis = Gazetteers({"US": GnisIndex.load(gnis_path or sources_dir / GNIS_FILE)})
     research, research_problems = load_research(research_dir)
     existing = load_towers(towers_dir, log)
     m = Matcher(log)

@@ -41,6 +41,22 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(rows, [[1141004, "Diamond Peak", 43.52058, -122.14948, "OR"], [5, "Mauna Kea", 19.8207, -155.4681, "HI"]])
 
 
+class CgndbTest(unittest.TestCase):
+    def test_single_summits_kept_ranges_and_unofficial_names_left_out(self):
+        import fetch_peaks_cgndb as C
+        terms = {"2701": "Mountain", "2700": "Range", "2705": "Hill", "2702": "Mountains"}
+
+        def row(i, name, generic, lang="eng", status="official", feature=None, lat="47.0", lon="-84.0", prov="35"):
+            return {"id": i, "name": name, "generic.code": generic, "concise.code": "MTN", "status.code": status,
+                    "language.code": lang, "feature.id": feature or i, "latitude": lat, "longitude": lon, "province.code": prov}
+        rows = [row("A", "Batchawana Mountain", "2701"), row("B", "South La Cloche Range", "2700"),
+                row("C", "Blue Mountains", "2702"), row("D", "Old Hill", "2705", status="rescinded"),
+                row("E", "Mount Logan", "2701", feature="F1", lat="60.57", lon="-140.4", prov="60"),
+                row("F", "Mont Logan", "2701", lang="fra", feature="F1", lat="60.57", lon="-140.4", prov="60")]
+        got = C.pick_names(rows, terms)
+        self.assertEqual(got, [["A", "Batchawana Mountain", 47.0, -84.0, "ON"], ["E", "Mount Logan", 60.57, -140.4, "YT"]])
+
+
 class ChunkTest(unittest.TestCase):
     def test_cells_are_one_degree_from_the_south_west_corner(self):
         self.assertEqual(build_peaks.cell_of(43.52, -122.15), "43_-123")

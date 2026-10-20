@@ -22,7 +22,8 @@ not copy or validate photo files.
 
 towers.geojson properties (absent optional keys mean null / false; see meta.json "format"):
 
-  i  id            n  name           r  region (state code)
+  i  id            n  name           r  region (state, province or territory code)
+  cc country, only when not the US ("CA"); region codes are unique across countries
   k  kind          s  status         v  verification       a  access level
   b  built year    rt rentable (1)   rg on a register (1)   o  other names, "|"-joined
   c  county        y0 first year it stood   y1 year it came down   d  design ids, "|"-joined
@@ -76,6 +77,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import designs as design_names  # noqa: E402  (pipeline/designs.py)
+import regions  # noqa: E402  (pipeline/regions.py: countries and regions)
 import structure  # noqa: E402  (pipeline/structure.py: kinds, materials, the no-structure group)
 
 REPO = Path(__file__).resolve().parent.parent
@@ -89,7 +91,8 @@ ID_RE = re.compile(r"^[a-z]{2}-[a-z0-9]{1,3}-[a-z0-9]+(?:-[a-z0-9]+)*$")
 GEOJSON_FORMAT = {
     "i": "id",
     "n": "name",
-    "r": "region (state code)",
+    "r": "region: state, province or territory code (pipeline/regions.py; unique across countries)",
+    "cc": "country, ISO 3166-1 alpha-2 (absent = US)",
     "k": "kind (vocab.kind)",
     "s": "status (vocab.status)",
     "v": "verification (vocab.verification)",
@@ -328,6 +331,25 @@ KNOWN_SOURCES: dict[str, dict[str, str]] = {
         "url": "https://tnlandforms.us/towers/",
         "license": "No licence stated; facts only",
         "credit": "tnlandforms.us (Tom Dunigan)",
+    },
+    # Canada, Alaska and Hawaii (2026-10-20)
+    "firelookout_ca": {
+        "title": "Firelookout.ca, Open Canada Fire Lookout Index",
+        "url": "https://firelookout.ca/",
+        "license": "CC BY-NC-SA 4.0; facts only (names, positions, elevation, type, year built), with credit and a link to each record",
+        "credit": "Firelookout.ca, Open Canada Fire Lookout Index (CC BY-NC-SA 4.0)",
+    },
+    "ontario_lio": {
+        "title": "Land Information Ontario: Tower layer (fire towers)",
+        "url": "https://geohub.lio.gov.on.ca/datasets/mnrf::tower",
+        "license": "Open Government Licence – Ontario",
+        "credit": "Contains information licensed under the Open Government Licence – Ontario.",
+    },
+    "alberta_wildfire": {
+        "title": "Alberta Wildfire: wildfire lookouts (WF_WILDFIRE_LOOKOUT)",
+        "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
+        "license": "Open Government Licence – Alberta",
+        "credit": "Contains information licensed under the Open Government Licence – Alberta.",
     },
 }
 
@@ -609,7 +631,7 @@ def check_record(rec: object) -> str | None:
         return "not a JSON object"
     rid = rec.get("id")
     if not isinstance(rid, str) or not ID_RE.match(rid) or len(rid) > 120:
-        return f"id {rid!r} is missing or not of the form us-<st>-<slug>"
+        return f"id {rid!r} is missing or not of the form <country>-<region>-<slug>"
     if not isinstance(rec.get("name"), str) or not rec["name"].strip():
         return "name is missing"
     loc = rec.get("location")
@@ -709,11 +731,32 @@ def feature(rec: dict, this_year: int | None = None, design_ids: list[str] | Non
         props["m"] = rec["material"]
     if is_approximate(rec):
         props["ap"] = 1
+    country = country_of(rec)
+    if country != "US":
+        props["cc"] = country
     return {
         "type": "Feature",
         "geometry": {"type": "Point", "coordinates": [round(loc["lon"], 5), round(loc["lat"], 5)]},
         "properties": props,
     }
+
+
+def country_of(rec: dict) -> str:
+    """The tower's country: its own field, else its region's (regions.py), else the US."""
+    c = rec.get("country")
+    return c if isinstance(c, str) and c else (regions.country_of(rec.get("region")) or "US")
+
+
+def regions_meta(by_region: Counter) -> dict:
+    """The countries and regions the site shows, in the order it lists them (the US's states,
+    then Canada's provinces and territories, each alphabetically by name), with counts."""
+    out = []
+    for c in regions.COUNTRY_ORDER:
+        rows = sorted(((code, name) for code, name in regions.REGION_NAMES.items() if regions.REGION_COUNTRY[code] == c),
+                      key=lambda x: x[1])
+        out.append({"code": c, "name": regions.COUNTRY_NAMES[c], "region_words": list(regions.REGION_WORDS[c]),
+                    "regions": [{"code": code, "name": name, "towers": by_region.get(code, 0)} for code, name in rows]})
+    return {"countries": out}
 
 
 def _write_json(path: Path, obj: object) -> None:
@@ -1033,7 +1076,8 @@ def build(
     _prepare_out(out, log)
     features: list[dict] = []
     seen: dict[str, Path] = {}
-    counts: dict[str, Counter] = {k: Counter() for k in ("status", "kind", "region", "verification", "material")}
+    counts: dict[str, Counter] = {k: Counter() for k in ("status", "kind", "region", "verification", "material", "country")}
+    ranges_by_country: dict[str, list[tuple[int | None, int | None, str]]] = {}
     hidden = rentable = registered = stories = skipped = approximate = 0
     approximate_by_region: Counter = Counter()
     merged: dict[str, str] = {}      # retired tower id -> the tower that has its records
@@ -1108,9 +1152,11 @@ def build(
         if is_structure:
             # "Lookouts standing in 1935" counts structures; sites with no structure are left out.
             ranges.append((feat["properties"].get("y0"), feat["properties"].get("y1"), rec["status"]))
+            ranges_by_country.setdefault(country_of(rec), []).append(ranges[-1])
         counts["status"][rec["status"]] += 1
         counts["kind"][rec["kind"]] += 1
         counts["region"][rec["region"]] += 1
+        counts["country"][country_of(rec)] += 1
         counts["verification"][rec["verification"]] += 1
         if rec.get("material"):
             counts["material"][rec["material"]] += 1
@@ -1193,10 +1239,14 @@ def build(
             "by_status": dict(sorted(counts["status"].items())),
             "by_kind": dict(sorted(counts["kind"].items())),
             "by_region": dict(sorted(counts["region"].items())),
+            "by_country": dict(sorted(counts["country"].items())),
             "by_verification": dict(sorted(counts["verification"].items())),
             "by_material": dict(sorted(counts["material"].items())),
         },
         "history": history_counts(ranges, this_year),
+        # The same per country, for the year view's country choice.
+        "history_by_country": {c: history_counts(r, this_year) for c, r in sorted(ranges_by_country.items())},
+        "regions": regions_meta(counts["region"]),
         "designs": designs_meta,
         "sources": sources,
         "format": {"towers.geojson": GEOJSON_FORMAT},

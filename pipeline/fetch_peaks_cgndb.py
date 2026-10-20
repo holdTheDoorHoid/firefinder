@@ -15,7 +15,9 @@ request every 2 s, our honest User-Agent, every page cached once under
 $FIREFINDER_RAW_ROOT/cgndb/ (about 70 pages; --refresh fetches them again).
 
 Kept: names whose generic term is a single summit (Mountain, Mount, Peak, Hill, Butte, Knoll,
-Dome, Pinnacle, Summit, Mont, Montagne, Pic, Colline, Sommet...; SUMMIT_GENERICS below). Left out:
+Dome, Pinnacle, Summit, Cone, Tolt, Lookout...; SUMMIT_GENERICS below; the English service gives
+French generics their English terms, so Quebec's "Mont" and "Colline" come through as Mount and
+Hill). Left out:
 ranges, ridges, highlands, plural groups ("Blue Mountains", "Mono Hills"), cliffs and slopes,
 whose single point can be kilometres from any top. One name per feature: a feature with official
 names in English and French (features of pan-Canadian significance) is labelled with its English
@@ -62,7 +64,7 @@ PROVINCE_SGC = {
 # service's code list gives each code an English term; French generics carry French terms.
 SUMMIT_GENERICS = {
     "mountain", "mount", "peak", "hill", "butte", "knoll", "dome", "pinnacle", "summit", "spire",
-    "crag", "cone", "hump", "tor", "nunatak", "pingo", "tower", "lookout", "knob", "head", "monadnock",
+    "crag", "cone", "hump", "tor", "tolt", "nunatak", "pingo", "tower", "lookout", "knob", "head", "monadnock",
     "mont", "montagne", "pic", "colline", "sommet", "dôme", "dome", "piton", "buse", "butte",
     "mamelon", "morne", "montagnette", "tête", "pain de sucre", "aiguille", "cap",
 }
