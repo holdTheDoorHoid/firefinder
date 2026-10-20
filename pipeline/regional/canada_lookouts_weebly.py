@@ -482,6 +482,7 @@ def split_name(raw: str, alias_lines: list[str]) -> tuple[str, list[str], dict]:
     """(name, aliases, notes) from an index or page heading and the parenthetical lines under it."""
     aliases: list[str] = []
     notes: dict = {}
+    raw = re.sub(r"^\(\s*([^()]+?)\s*\)$", r"\1", raw.strip())     # a heading that is all parenthesis: "(SHELTER BAY)"
     m = re.match(r"^(?P<base>[^()]+?)\s*\((?P<par>[^()]+)\)\s*(?P<tail>.*)$", raw.strip())
     base, pars = (raw.strip(), []) if not m else (m.group("base") + (" " + m.group("tail") if m.group("tail") else ""), [m.group("par")])
     pars += [re.sub(r"^\(|\)$", "", a).strip() for a in alias_lines]

@@ -187,7 +187,8 @@ export function approximateNotice(r: TowerRecord, ctx: RenderContext): SafeHtml 
   if (!f) return html``;
   const gz = gazetteerOf(r);
   const wholeProvince = r.location.scope === 'province';
-  const county = wholeProvince ? null : r.location.gnis?.county ?? r.county;
+  // the unit as the lookout's source writes it ("Northumberland County"), else the gazetteer's
+  const county = wholeProvince ? null : (r.location.gazetteer === 'cgndb' ? r.county ?? r.location.gnis?.county : r.location.gnis?.county ?? r.county);
   const where = county ? placeLine({ county, region: r.region }) : `all of ${regionName(r.region)}`;
   const why = wholeProvince
     ? ` No source names the district or county it was in, so the whole ${regionKind(r.region)} was searched and this is the only one.`
