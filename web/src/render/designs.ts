@@ -15,6 +15,7 @@
  * the general sources). DesignsExtras.toc adds contents-list entries for sections other modules
  * render, such as Structure types.
  */
+import { countryOf, regionWithCountry } from '../lib/regions.ts';
 import { formatCount } from '../lib/format.ts';
 import { html, raw, safeUrl, type SafeHtml } from '../lib/html.ts';
 import { fillFor, markerSprite, markerUse, shapeFor } from '../lib/icons.ts';
@@ -100,9 +101,11 @@ function towerItem(t: DesignTower, ctx: DesignsContext): SafeHtml {
 function byState(towers: DesignTower[], ctx: DesignsContext): SafeHtml {
   const groups = new Map<string, DesignTower[]>();
   for (const t of towers) groups.set(t.r, [...(groups.get(t.r) ?? []), t]);
-  const states = [...groups.keys()].sort((a, b) => regionName(a).localeCompare(regionName(b)));
+  // US states first, then Canada's provinces and territories (lib/regions.ts), each by name
+  const order = (r: string) => (countryOf(r) === 'CA' ? 1 : 0);
+  const states = [...groups.keys()].sort((a, b) => order(a) - order(b) || regionName(a).localeCompare(regionName(b)));
   return html`${states.map(
-    (st) => html`<h6 class="dt-state">${regionName(st)} <span class="muted">(${formatCount(groups.get(st)!.length)})</span></h6>
+    (st) => html`<h6 class="dt-state">${regionWithCountry(st)} <span class="muted">(${formatCount(groups.get(st)!.length)})</span></h6>
       <ul class="dt-list">${groups.get(st)!.map((t) => towerItem(t, ctx))}</ul>`,
   )}`;
 }

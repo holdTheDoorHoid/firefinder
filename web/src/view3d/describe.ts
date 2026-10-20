@@ -192,6 +192,42 @@ export function aboutFeet(m: number): string {
   return `about ${nf.format(Math.round(m / 0.3048 / 10) * 10)} ft`;
 }
 
+/** "about 2,120 m" from metres. */
+export function aboutMetres(m: number): string {
+  return `about ${nf.format(Math.round(m / 10) * 10)} m`;
+}
+
+/** "34 km (21 mi)": kilometres first, for views outside the US. */
+export function kmMiles(m: number): string {
+  if (m < 300) return `${nf.format(Math.round(m / 10) * 10)} m (${nf.format(Math.round(m / 0.3048 / 10) * 10)} ft)`;
+  const mi = m / 1609.344;
+  const km = m / 1000;
+  const d = (v: number) => (v < 10 ? v.toFixed(1) : nf.format(Math.round(v)));
+  return `${d(km)} km (${d(mi)} mi)`;
+}
+
+/** "34 km" for compact labels. */
+export function kmShort(m: number): string {
+  const km = m / 1000;
+  return `${km < 10 ? km.toFixed(1) : nf.format(Math.round(km))} km`;
+}
+
+/**
+ * Units by country (DESIGN.md 3.3, "Countries and regions"): miles and feet first in the US,
+ * kilometres and metres first everywhere else.
+ */
+export function unitsFor(country: string | null | undefined): {
+  distance: (m: number) => string;
+  short: (m: number) => string;
+  aboutHeight: (m: number) => string;
+  metric: boolean;
+} {
+  const metric = (country ?? 'US') !== 'US';
+  return metric
+    ? { distance: kmMiles, short: kmShort, aboutHeight: aboutMetres, metric }
+    : { distance: milesKm, short: milesShort, aboutHeight: aboutFeet, metric };
+}
+
 /** "412 sq mi (1,067 km²)" */
 export function areaText(m2: number): string {
   const km2 = m2 / 1e6;

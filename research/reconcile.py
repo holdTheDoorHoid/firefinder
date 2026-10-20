@@ -5,16 +5,20 @@
 - A story footnote whose number is missing from the research file's `sources` gets a source entry
   built from the footnote text itself (title, URL, accessed date), so the two stay in step.
 Reports what it changed; run it after every story batch, then `pipeline/validate.py`."""
-import glob, json, os, re
+import glob, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEF = re.compile(r"^\[\^(\d+)\]:\s*(.+)$", re.M)
+# A URL may hold balanced parentheses (Wikipedia and archive pages: .../Tour_(Québec)); a lone ")" ends it.
+URL = re.compile(r"https?://(?:[^\s()<>]|\([^\s()<>]*\))+")
+# Footnotes are English ("accessed 2026-10-20"); a French "consulté le 2026-10-20" is read too.
+ACCESSED = re.compile(r"(?:accessed|consult[eé]e?(?:\s+le)?)\s+(\d{4}-\d{2}-\d{2})", re.I)
 
 
 def from_footnote(n, text):
-    url = re.search(r"https?://\S+?(?=[\s)]|\.?\s|$)", text)
-    url = url.group(0).rstrip(".,;)") if url else None
-    acc = re.search(r"accessed (\d{4}-\d{2}-\d{2})", text)
+    url = URL.search(text)
+    url = url.group(0).rstrip(".,;") if url else None
+    acc = ACCESSED.search(text)
     title = text.split(", http")[0].split(" http")[0].strip().rstrip(",")
     parts = [p.strip() for p in title.split(",")]
     src = {"n": n, "title": parts[0] if parts else title}
@@ -28,6 +32,8 @@ def from_footnote(n, text):
 
 
 def main():
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # accented ids and titles, whatever the locale
     fixed_cites = added = 0
     for p in sorted(glob.glob(os.path.join(ROOT, "data", "research", "*.json"))):
         rid = os.path.basename(p)[:-5]

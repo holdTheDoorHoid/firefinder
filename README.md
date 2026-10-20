@@ -1,7 +1,7 @@
 # Firefinder
 
-**Every fire lookout in the US on one map: standing or gone, with its history, how to visit,
-and how to stay.**
+**Every fire lookout in the United States (Alaska and Hawaii included) and Canada on one map:
+standing or gone, with its history, how to visit, and how to stay.**
 
 Firefinder pulls together information scattered across many lookout websites, registers
 and agency pages. It puts that information on a modern interactive map with a page for every

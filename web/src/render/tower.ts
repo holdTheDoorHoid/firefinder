@@ -3,7 +3,8 @@
  * scripts/prerender.ts at build time (one static page per lookout) and by the map's side
  * panel in the browser, so both say the same thing in the same words.
  */
-import { feetAndMetres, formatCoords, formatDate, formatDistance, distanceMetres, plainCoords, yesNo } from '../lib/format.ts';
+import { formatCoords, formatDate, formatDistance, distanceMetres, lengthFor, plainCoords, yesNo } from '../lib/format.ts';
+import { localUnitLabel, regionWithCountry, towerCountry } from '../lib/regions.ts';
 import { html, raw, safeUrl, isSafeStoryHtml, type SafeHtml } from '../lib/html.ts';
 import { fillFor, markerSvg, rentBadgeSvg, shapeFor } from '../lib/icons.ts';
 import { MARKS, MARK_LABELS } from '../lib/checklist.ts';
@@ -81,12 +82,14 @@ export function mapLink(r: Pick<TowerRecord, 'id' | 'location'>, ctx: Pick<Rende
   return `${ctx.base}?at=${zoom}/${lat.toFixed(4)}/${lon.toFixed(4)}&t=${r.id}`;
 }
 
-export function editIssueUrl(r: Pick<TowerRecord, 'id' | 'name'>, ctx: RenderContext, extra: Record<string, string> = {}): string {
+export function editIssueUrl(r: Pick<TowerRecord, 'id' | 'name'> & Partial<Pick<TowerRecord, 'region' | 'country'>>, ctx: RenderContext, extra: Record<string, string> = {}): string {
+  const where = r.region ? `${regionName(r.region)}, ${towerCountry(r) === 'US' ? 'United States' : towerCountry(r) === 'CA' ? 'Canada' : towerCountry(r)}` : '';
   const q = new URLSearchParams({
     template: 'edit.yml',
     title: `Edit: ${r.name} (${r.id})`,
     tower_id: r.id,
     tower_name: r.name,
+    ...(where ? { where } : {}),
     page_url: towerUrl(r.id, ctx),
     ...extra,
   });
@@ -94,7 +97,7 @@ export function editIssueUrl(r: Pick<TowerRecord, 'id' | 'name'>, ctx: RenderCon
 }
 
 /** The edit form for a lookout at an approximate location, opened on "Location on the map". */
-export function locationIssueUrl(r: Pick<TowerRecord, 'id' | 'name'>, ctx: RenderContext): string {
+export function locationIssueUrl(r: Pick<TowerRecord, 'id' | 'name'> & Partial<Pick<TowerRecord, 'region' | 'country'>>, ctx: RenderContext): string {
   return editIssueUrl(r, ctx, { title: `Location: ${r.name} (${r.id})`, topic: 'Location on the map' });
 }
 
@@ -109,13 +112,15 @@ export function takedownIssueUrl(r: Pick<TowerRecord, 'id' | 'name'> | null, ctx
 
 /* ---------- Small pieces ---------- */
 
-export function placeLine(r: Pick<TowerRecord, 'county' | 'region'>): string {
-  const state = regionName(r.region);
-  if (!r.county) return state;
-  const c = r.county.trim();
-  const hasSuffix = /\b(County|Parish|Borough|Census Area|Municipality|City)$/i.test(c);
-  const suffix = hasSuffix ? '' : r.region === 'LA' ? ' Parish' : r.region === 'AK' ? ' Borough' : ' County';
-  return `${c}${suffix}, ${state}`;
+/**
+ * "Jefferson County, Oregon"; "Sudbury District, Ontario, Canada". A US county gets its word
+ * (County, Parish, Borough, Census Area); a Canadian unit carries its own words and is shown as
+ * its source writes it (lib/regions.ts localUnitLabel).
+ */
+export function placeLine(r: Pick<TowerRecord, 'county' | 'region'> & { country?: string | null }): string {
+  const state = regionWithCountry(r.region);
+  if (!r.county || !r.county.trim()) return state;
+  return `${localUnitLabel(towerCountry(r), r.region, r.county)}, ${state}`;
 }
 
 /** "Fire lookout", or "Lookout site, no structure" for a camp, lookout tree or bare point. */
@@ -358,7 +363,8 @@ export function visitSection(r: TowerRecord): SafeHtml {
   if (v.trail_note) rows.push(['Trail', v.trail_note]);
   if (r.staffing && standingish) {
     const s = STAFFING[r.staffing.status] ?? r.staffing.status;
-    rows.push(['Staffing', r.staffing.as_of ? `${s} (as of ${r.staffing.as_of})` : s]);
+    const label = r.staffing.as_of ? `${s} (as of ${r.staffing.as_of})` : s;
+    rows.push(['Staffing', r.staffing.note ? html`${label}<span class="sub">${r.staffing.note}</span>` : label]);
   }
   const acc = accessInfo(r);
   return html`${lead}
@@ -425,9 +431,10 @@ export function factRows(r: TowerRecord, opts: { short?: boolean; base?: string 
     rows.push(['Also served as', html`${w.label}${w.meaning ? html`<span class="sub">${w.meaning}</span>` : ''}`]);
   }
   rows.push(['Built', built !== null ? html`${built}${disagree('built')}` : 'Unknown']);
-  const height = feetAndMetres(r.height_m, 1);
+  const country = towerCountry(r);
+  const height = lengthFor(country, r.height_m, 1);
   if (height || !opts.short) rows.push(['Height', height ?? 'Unknown']);
-  rows.push(['Elevation', feetAndMetres(r.elevation_m) ?? 'Unknown']);
+  rows.push(['Elevation', lengthFor(country, r.elevation_m) ?? 'Unknown']);
   rows.push(['Agency', r.agency ?? 'Unknown']);
   if (!opts.short) {
     rows.push(['Land', OWNERSHIP[r.ownership ?? 'unknown'] ?? r.ownership]);
@@ -499,7 +506,11 @@ export function topoViewUrl(lat: number, lon: number, zoom = 13): string {
 }
 
 export function oldMapsBlock(r: TowerRecord, ctx: RenderContext): SafeHtml {
-  if ((r.country ?? 'US') !== 'US') return html``;
+  if (towerCountry(r) !== 'US') {
+    // The old-map overlay is the USGS Historical Topographic Map Collection: the US only.
+    return html`<h3 class="h-small" id="old-maps">Old maps of this spot</h3>
+      <p class="muted">Not available outside the US yet: the old topographic maps Firefinder shows are the USGS collection, which covers the United States only.</p>`;
+  }
   const { lat, lon } = r.location;
   return html`<h3 class="h-small" id="old-maps">Old maps of this spot</h3>
     <p>USGS topographic maps from the years a lookout stood may show it, often as a small symbol labelled “Lookout”. <a href="${mapLink(r, ctx, 13)}&amp;base=old">See the old topo maps around it</a> on the Firefinder map, or find every scanned sheet of this spot on ${externalLink(topoViewUrl(lat, lon), 'USGS TopoView')} (click the spot there to list them, with dates and downloads).</p>`;
@@ -705,7 +716,7 @@ export function sourcesSection(r: TowerRecord, ctx: RenderContext): SafeHtml {
       ? html`<ol class="sources">${refs.map((s) => {
           const info = ctx.sources.get(s.source);
           const title = info?.title ?? s.source;
-          const fields = (s.fields ?? []).map((f) => FIELD_NAMES[f] ?? f.replace(/_/g, ' '));
+          const fields = (s.fields ?? []).map((f) => (f === 'county' && towerCountry(r) !== 'US' ? 'district' : FIELD_NAMES[f] ?? f.replace(/_/g, ' ')));
           return html`<li id="src-${s.source}">
             <span class="src-title">${info?.url ? externalLink(info.url, title) : title}</span>
             ${fields.length ? html`<span class="src-fields">Gave us: ${fields.join(', ')}</span>` : ''}
@@ -747,7 +758,8 @@ export function miniMap(r: TowerRecord, ctx: RenderContext): SafeHtml {
   const W = 360;
   const H = 210;
   const Z = 13;
-  const us = (r.country ?? 'US') === 'US';
+  // USGS's topo tiles cover the US only; elsewhere the frame shows the pin alone.
+  const us = towerCountry(r) === 'US';
   const tiles = us ? miniMapTiles(lat, lon, Z, W, H) : [];
   return html`<figure class="minimap">
     <a class="minimap-frame" href="${mapLink(r, ctx)}" aria-label="Open ${r.name} on the Firefinder map">
@@ -758,7 +770,7 @@ export function miniMap(r: TowerRecord, ctx: RenderContext): SafeHtml {
         <span class="minimap-pin" style="left:${W / 2}px;top:${H / 2}px">${icon(r.kind, r.status, isRentable(r), 26, isApproximate(r))}</span>
       </span>
     </a>
-    <figcaption><span>${isApproximate(r) ? 'Approximate location: ' : ''}${formatCoords(lat, lon)}</span><span class="credit-line">Map: <a href="https://www.usgs.gov/programs/national-geospatial-program/national-map" rel="noopener">USGS The National Map</a></span></figcaption>
+    <figcaption><span>${isApproximate(r) ? 'Approximate location: ' : ''}${formatCoords(lat, lon)}</span>${us ? html`<span class="credit-line">Map: <a href="https://www.usgs.gov/programs/national-geospatial-program/national-map" rel="noopener">USGS The National Map</a></span>` : html`<span class="credit-line">Open the Firefinder map for the area around it</span>`}</figcaption>
   </figure>`;
 }
 
@@ -781,6 +793,8 @@ export function panoramaPayload(r: TowerRecord): string {
     status: r.status,
     height_m: r.height_m ?? null,
     elevation_m: r.elevation_m ?? null,
+    // US payloads stay as they were (the country is the US by default)
+    ...(towerCountry(r) !== 'US' ? { country: towerCountry(r) } : {}),
   });
 }
 
@@ -794,7 +808,7 @@ export function viewSection(r: TowerRecord, ctx: RenderContext): SafeHtml {
   const recon = reconstructionNote(r.status, eye.source);
   const gone = r.status === 'gone' || r.status === 'ruins';
   const approx = approximateFeature(r);
-  return html`<p class="lede">${gone ? 'What the lookout saw from its cab' : 'What you see from the cab'}: every ridge out to about 93 miles, the named peaks in sight, and other fire lookouts within view, worked out from terrain data in your browser.</p>
+  return html`<p class="lede">${gone ? 'What the lookout saw from its cab' : 'What you see from the cab'}: every ridge out to about ${towerCountry(r) === 'US' ? '93 miles' : '150 km'}, the named peaks in sight, and other fire lookouts within view, worked out from terrain data in your browser.</p>
     ${approx ? html`<div class="notice tone-caution" role="note">${WARN}<div><p class="notice-title">From an approximate location</p><p>This view, and what it could see, are worked out from ${approx.name}, where the map places the lookout, not from a recorded site. The real view may differ.</p></div></div>` : ''}
     ${recon ? html`<div class="notice tone-unknown" role="note">${INFO}<div><p>${recon}</p></div></div>` : ''}
     <div class="pano-host" data-pano="${panoramaPayload(r)}">
@@ -902,7 +916,7 @@ export function describeTower(r: TowerRecord): string {
 }
 
 export function renderTowerHead(r: TowerRecord, ctx: RenderContext): SafeHtml {
-  const title = `${r.name}: fire lookout in ${regionName(r.region)} · Firefinder`;
+  const title = `${r.name}: fire lookout in ${regionWithCountry(r.region)} · Firefinder`;
   const desc = describeTower(r);
   const url = towerUrl(r.id, ctx);
   return html`<title>${title}</title>

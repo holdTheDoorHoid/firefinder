@@ -7,6 +7,7 @@
 import type { Mark } from './checklist.ts';
 import type { TowerProps } from './types.ts';
 import { isNoStructure } from './vocab.ts';
+import { countryOf } from './regions.ts';
 
 export interface Filters {
   status: Set<string> | null;
@@ -15,6 +16,8 @@ export interface Filters {
   rentable: boolean;
   registered: boolean;
   region: string | null;
+  /** A country ("US", "CA"), or null for every country. A region filter implies its own. */
+  country: string | null;
   /** Show only towers with any of these checklist marks; null = no checklist filter. */
   mine: Set<Mark> | null;
   /** A design id from designs.json ("l4"), "any" for any recognised design, or null. */
@@ -34,7 +37,7 @@ export interface Filters {
 }
 
 export function defaultFilters(): Filters {
-  return { status: null, kind: null, verification: null, rentable: false, registered: false, region: null, mine: null, design: null, material: null, noStructure: false, approximate: true };
+  return { status: null, kind: null, verification: null, rentable: false, registered: false, region: null, country: null, mine: null, design: null, material: null, noStructure: false, approximate: true };
 }
 
 /** The design ids of a map point ("l4|r6" -> ["l4", "r6"]). */
@@ -57,6 +60,7 @@ export function matches(p: TowerProps, f: Filters, checklist?: ChecklistLookup |
   if (f.rentable && !p.rt) return false;
   if (f.registered && !p.rg) return false;
   if (f.region && p.r !== f.region) return false;
+  if (f.country && (p.cc ?? countryOf(p.r) ?? 'US') !== f.country) return false;
   if (f.design && (f.design === 'any' ? !p.d : !designIds(p).includes(f.design))) return false;
   if (f.material && p.m !== f.material) return false;
   if (f.mine && f.mine.size > 0) {
@@ -81,7 +85,7 @@ export function activeFilterCount(f: Filters): number {
   if (f.verification) n++;
   if (f.rentable) n++;
   if (f.registered) n++;
-  if (f.region) n++;
+  if (f.region || f.country) n++;
   if (f.design) n++;
   if (f.material) n++;
   if (f.noStructure) n++;
@@ -103,7 +107,8 @@ export function facetCounts(
   facet: Facet,
   checklist?: ChecklistLookup | null,
 ): Map<string, number> {
-  const others: Filters = { ...f, [facet]: null };
+  // (the place select sets a region or a whole country: counting regions ignores both)
+  const others: Filters = { ...f, [facet]: null, ...(facet === 'region' ? { country: null } : {}) };
   const prop = FACET_PROP[facet];
   const counts = new Map<string, number>();
   for (const x of features) {

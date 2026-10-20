@@ -3,8 +3,11 @@
 
 Errors (exit status 1):
   * a file that is not a JSON object, or is missing a required key
-  * an id that is not us-<st>-<slug>, does not match its file name, or is used twice
-  * coordinates that are missing, not numbers, or outside the United States
+  * an id that is not <country>-<region>-<slug> (us-or-..., ca-on-...), does not match its file
+    name, or is used twice; an id whose country part is not the record's country
+  * a country that Firefinder does not cover (US, CA), or a region that is not one of that
+    country's states, provinces or territories (pipeline/regions.py)
+  * coordinates that are missing, not numbers, or outside the record's country
   * a kind, status, ownership, access level, staffing status, verification or event name
     that is not in data/vocab.json
   * malformed lists: registers, events, photos, links, sources, conflicts, locked
@@ -22,7 +25,8 @@ warnings errors.
 
 Warnings (reported, exit status 0):
   * coordinates outside the record's own state (border lookouts, or a bad source row)
-  * a record kept in a folder other than data/towers/<region>/
+  * a record kept in a folder other than data/towers/<dir>/ (regions.tower_dir: the state code for
+    a US tower, <country>-<region> for any other)
 
 An empty or missing towers folder is fine (the site then builds from fixtures).
 
@@ -44,7 +48,7 @@ from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from state_bbox import STATE_BBOX  # noqa: E402
+import regions  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 DATA = REPO / "data"
@@ -61,26 +65,8 @@ REQUIRED = [
 # Written by every merge since 2026-10-08 (pipeline/structure.py); checked when present so tower
 # files from an older merge still validate until the next one.
 
-# US states, DC and territories. The 50 states and DC come from state_bbox (padded boxes);
-# territories are added here.
-TERRITORY_BBOX = {
-    "PR": (17.8, 18.6, -67.4, -65.2),
-    "VI": (17.6, 18.5, -65.1, -64.5),
-    "GU": (13.2, 13.7, 144.6, 145.0),
-    "AS": (-14.6, -11.0, -171.1, -168.1),
-    "MP": (14.0, 20.6, 144.8, 146.1),
-    "DC": (38.7, 39.0, -77.2, -76.9),
-}
-US_BOXES = {**STATE_BBOX, **TERRITORY_BBOX}
-
-
 def _num(v: object) -> bool:
     return isinstance(v, (int, float)) and not isinstance(v, bool) and math.isfinite(v)
-
-
-def in_box(box: tuple, lat: float, lon: float) -> bool:
-    lat_min, lat_max, lon_min, lon_max = box
-    return lat_min <= lat <= lat_max and lon_min <= lon <= lon_max
 
 
 def vocab_set(vocab: dict, key: str) -> set:
@@ -104,7 +90,7 @@ def check(rec: object, path: Path, vocab: dict) -> tuple[list[str], list[str]]:
     rid = rec.get("id")
     m = ID_RE.match(rid) if isinstance(rid, str) else None
     if not m or len(rid) > 120:
-        errs.append(f"id {rid!r} is not of the form us-<st>-<slug>")
+        errs.append(f"id {rid!r} is not of the form <country>-<region>-<slug>")
     else:
         if path.stem != rid:
             errs.append(f"file name {path.name} does not match id {rid}")
@@ -112,25 +98,32 @@ def check(rec: object, path: Path, vocab: dict) -> tuple[list[str], list[str]]:
         if isinstance(region, str) and m.group("region") != region.lower():
             # ids never change, so a later region fix may leave them apart; flag, don't fail
             warns.append(f"id state {m.group('region')} differs from region {region}")
-        if path.parent.name != m.group("region"):
-            warns.append(f"kept in {path.parent.name}/, expected {m.group('region')}/")
+        if isinstance(rec.get("country"), str) and m.group("country") != rec["country"].lower():
+            errs.append(f"id country {m.group('country')} differs from country {rec['country']}")
+        want_dir = regions.tower_dir(rid)
+        if path.parent.name != want_dir:
+            warns.append(f"kept in {path.parent.name}/, expected {want_dir}/")
 
     if not isinstance(rec.get("name"), str) or not rec["name"].strip():
         errs.append("name is missing or empty")
-    if rec.get("country") != "US":
-        errs.append(f"country {rec.get('country')!r} is not US")
+    country = rec.get("country")
+    if country not in regions.COUNTRY_NAMES:
+        errs.append(f"country {country!r} is not one Firefinder covers ({', '.join(regions.COUNTRY_ORDER)})")
     region = rec.get("region")
-    if not isinstance(region, str) or region.upper() not in US_BOXES:
-        errs.append(f"region {region!r} is not a US state or territory code")
+    if not isinstance(region, str) or regions.country_of(region) is None:
+        errs.append(f"region {region!r} is not a state, province or territory code")
+    elif country in regions.COUNTRY_NAMES and regions.country_of(region) != country:
+        errs.append(f"region {region!r} is not in {regions.COUNTRY_NAMES[country]}")
 
     loc = rec.get("location")
     if not isinstance(loc, dict) or not _num(loc.get("lat")) or not _num(loc.get("lon")):
         errs.append("location.lat / location.lon missing or not numbers")
     else:
         lat, lon = loc["lat"], loc["lon"]
-        if not any(in_box(b, lat, lon) for b in US_BOXES.values()):
-            errs.append(f"coordinates {lat}, {lon} are outside the United States")
-        elif isinstance(region, str) and region.upper() in US_BOXES and not in_box(US_BOXES[region.upper()], lat, lon):
+        where = country if country in regions.COUNTRY_NAMES else regions.country_of(region) or "US"
+        if not regions.in_country(where, lat, lon):
+            errs.append(f"coordinates {lat}, {lon} are outside {regions.COUNTRY_IN_TEXT[where]}")
+        elif isinstance(region, str) and regions.country_of(region) and not regions.in_region_box(region, lat, lon):
             warns.append(f"coordinates {lat}, {lon} are outside {region}")
         if loc.get("precision") not in (None, "exact", "approximate"):
             errs.append(f"location.precision {loc.get('precision')!r} is not exact/approximate")

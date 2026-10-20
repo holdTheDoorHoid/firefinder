@@ -9,7 +9,7 @@ fetched again. A quote counts as found when it appears verbatim after normalisin
 punctuation and whitespace, when every part around an ellipsis appears, or when at least 85%
 of its four-word runs appear ("close": usually PDF line breaks or a small slip).
 Exit status is 1 when any quote is missing from a source that could be read."""
-import argparse, glob, json, os, re, subprocess, sys
+import argparse, glob, json, os, re, subprocess, sys, unicodedata
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "research"))
@@ -18,10 +18,25 @@ import fetch_text  # noqa: E402
 _texts = {}
 
 
+# Letters Unicode does not decompose into base letter + accent, folded the way people retype them.
+_FOLD = str.maketrans({"œ": "oe", "Œ": "oe", "æ": "ae", "Æ": "ae", "ß": "ss", "ø": "o", "Ø": "o",
+                       "đ": "d", "Đ": "d", "ł": "l", "Ł": "l", "ı": "i", "þ": "th", "ð": "d"})
+# Invisible characters that sit inside words in scraped text (soft hyphen, zero-width space and
+# joiners, word joiner, byte-order mark, directional marks) are dropped; every dash becomes "-".
+_CLEAN = {**dict.fromkeys(map(ord, "\u00ad\u200b\u200c\u200d\u2060\ufeff\u200e\u200f\u202a\u202b\u202c")),
+          **dict.fromkeys(map(ord, "\u2010\u2011\u2012\u2013\u2014\u2015\u2212"), "-")}
+
+
 def norm(s):
-    s = s.lower().replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"')
+    """Text reduced to lower-case words, so a quote and its page compare equal despite typography:
+    curly or straight quotes, « » guillemets, any dash, non-breaking and narrow spaces (French sets
+    one before : ; ? ! and inside « »), ligatures (ﬁ, œ), accents (Québec = Quebec, à = a) and
+    elision apostrophes (l’église = l'église). Everything that is not a letter or digit becomes a
+    single space; the same function runs on both sides, so what matters is that it is consistent."""
+    s = unicodedata.normalize("NFKD", s.translate(_CLEAN).lower())  # NFKD: ﬁ -> fi, NBSP -> space, é -> e + accent
+    s = "".join(ch for ch in s if not unicodedata.combining(ch)).translate(_FOLD)
     s = re.sub(r"-\s*\n\s*", "", s)  # words hyphenated across PDF lines
-    return " ".join(re.sub(r"[^a-z0-9]+", " ", s).split())
+    return " ".join(re.sub(r"[\W_]+", " ", s).split())
 
 
 def source_text(url):
@@ -100,12 +115,16 @@ def check(rid):
 
 
 def changed_ids():
-    p = subprocess.run(["git", "status", "--porcelain", "--untracked-files=all", "data/research"],
-                       cwd=ROOT, capture_output=True, text=True)
+    # core.quotepath=off: git would otherwise quote any path with a non-ASCII byte
+    p = subprocess.run(["git", "-c", "core.quotepath=off", "status", "--porcelain", "--untracked-files=all", "data/research"],
+                       cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
     return sorted({os.path.basename(l[3:].strip())[:-5] for l in p.stdout.splitlines() if l.strip().endswith(".json")})
 
 
 def main():
+    if hasattr(sys.stdout, "reconfigure"):  # accented quotes must print whatever the locale
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser()
     ap.add_argument("ids", nargs="*")
     ap.add_argument("--all", action="store_true")
@@ -125,7 +144,8 @@ def main():
                 print(f"           [{b.get('cite')}] {b.get('url', b.get('why'))}\n             \"{b['quote']}\"")
     print(f"{len(rows)} towers: {tot}")
     if a.json:
-        json.dump(rows, open(a.json, "w"), indent=1)
+        with open(a.json, "w", encoding="utf-8") as fh:
+            json.dump(rows, fh, indent=1, ensure_ascii=False)
     sys.exit(1 if tot["missing"] or tot["no_source"] else 0)
 
 

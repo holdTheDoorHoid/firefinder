@@ -14,6 +14,22 @@ export function feetAndMetres(metres: number | null | undefined, decimals = 0): 
   return `${nf.format(feet)} ft (${m} m)`;
 }
 
+/** "1,807 m (5,930 ft)": metres first, for lookouts outside the US. */
+export function metresAndFeet(metres: number | null | undefined, decimals = 0): string | null {
+  if (typeof metres !== 'number' || !Number.isFinite(metres)) return null;
+  const feet = Math.round(metres / 0.3048);
+  const m = decimals ? metres.toFixed(decimals) : nf.format(Math.round(metres));
+  return `${m} m (${nf.format(feet)} ft)`;
+}
+
+/**
+ * A height or elevation in the units its country reads first (DESIGN.md 4, "Units"): feet
+ * first in the US, metres first everywhere else, the other alongside.
+ */
+export function lengthFor(country: string | null | undefined, metres: number | null | undefined, decimals = 0): string | null {
+  return (country ?? 'US') === 'US' ? feetAndMetres(metres, decimals) : metresAndFeet(metres, decimals);
+}
+
 /** "44.55774, −121.70876" with a real minus sign. */
 export function formatCoords(lat: number, lon: number): string {
   const f = (v: number) => v.toFixed(5).replace('-', '−');

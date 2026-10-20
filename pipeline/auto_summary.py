@@ -4,18 +4,14 @@ Shown on tower pages that have no researched story yet, labelled as a summary fr
 Every clause comes straight from a field; nothing is inferred beyond what the record says."""
 from __future__ import annotations
 
-STATES = {
-    "AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas", "CA": "California", "CO": "Colorado",
-    "CT": "Connecticut", "DE": "Delaware", "FL": "Florida", "GA": "Georgia", "HI": "Hawaii", "ID": "Idaho",
-    "IL": "Illinois", "IN": "Indiana", "IA": "Iowa", "KS": "Kansas", "KY": "Kentucky", "LA": "Louisiana",
-    "ME": "Maine", "MD": "Maryland", "MA": "Massachusetts", "MI": "Michigan", "MN": "Minnesota",
-    "MS": "Mississippi", "MO": "Missouri", "MT": "Montana", "NE": "Nebraska", "NV": "Nevada",
-    "NH": "New Hampshire", "NJ": "New Jersey", "NM": "New Mexico", "NY": "New York", "NC": "North Carolina",
-    "ND": "North Dakota", "OH": "Ohio", "OK": "Oklahoma", "OR": "Oregon", "PA": "Pennsylvania",
-    "RI": "Rhode Island", "SC": "South Carolina", "SD": "South Dakota", "TN": "Tennessee", "TX": "Texas",
-    "UT": "Utah", "VT": "Vermont", "VA": "Virginia", "WA": "Washington", "WV": "West Virginia",
-    "WI": "Wisconsin", "WY": "Wyoming", "PR": "Puerto Rico", "GU": "Guam", "VI": "U.S. Virgin Islands",
-}
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import regions  # noqa: E402
+
+# State, province and territory names (regions.py).
+STATES = regions.REGION_NAMES
 KIND = {
     "tower": "fire lookout tower", "ground": "ground-level fire lookout cabin",
     "two_story": "two-story fire lookout building", "three_story": "three-story fire lookout building",
@@ -33,10 +29,21 @@ REGISTER = {
 }
 
 
+def _country(rec: dict) -> str:
+    return rec.get("country") or regions.country_of(rec.get("region")) or "US"
+
+
 def _place(rec: dict) -> str | None:
-    state = STATES.get(rec.get("region") or "", rec.get("region"))
+    """"Jefferson County, Oregon"; "Sudbury District, Ontario, Canada" (a Canadian unit carries its
+    own words); "Bethel Census Area, Alaska"."""
+    region = rec.get("region")
+    state = STATES.get(region or "", region)
+    if state and _country(rec) != "US":
+        state = f"{state}, {regions.COUNTRY_NAMES.get(_country(rec), _country(rec))}"
     county = rec.get("county")
     if county and state:
+        if _country(rec) != "US" or region == "AK":
+            return f"{regions.local_unit_label(_country(rec), region, county)}, {state}"
         suffix = "" if any(w in county for w in ("County", "Parish", "Borough", "Municipality")) else (
             " Parish" if rec.get("region") == "LA" else " County")
         return f"{county}{suffix}, {state}"
@@ -59,7 +66,12 @@ def summarize(rec: dict) -> str | None:
         what += f" ({design} design)"
     place = _place(rec)
     elev = rec.get("elevation_m")
-    at = f", at {round(elev / 0.3048):,} ft ({round(elev):,} m)," if isinstance(elev, (int, float)) and elev > 0 else ""
+    # Units: feet first in the US, metres first everywhere else (DESIGN.md 4, "Units").
+    if isinstance(elev, (int, float)) and elev > 0:
+        at = (f", at {round(elev / 0.3048):,} ft ({round(elev):,} m)," if _country(rec) == "US"
+              else f", at {round(elev):,} m ({round(elev / 0.3048):,} ft),")
+    else:
+        at = ""
     where = f" in {place}" if place else ""
     out = []
     if status == "standing":
@@ -97,11 +109,13 @@ def summarize(rec: dict) -> str | None:
         out.append(f"It is recorded on {joined}.")
     if status == "standing" and rec.get("agency"):
         agency = rec["agency"]
-        the = "the " if agency.startswith(("U.S.", "US ", "USDA", "Bureau", "National", "Forest Service", "Department", "State ")) else ""
+        the = "the " if agency.startswith(("U.S.", "US ", "USDA", "Bureau", "National", "Forest Service", "Department", "State ",
+                                           "Ministry", "Government", "Province")) else ""
         out.append(f"It is administered by {the}{agency}.")
     rental = rec.get("rental") or {}
     if rental.get("available") is True:
-        out.append("It can be rented for overnight stays through recreation.gov.")
+        provider = rental.get("provider") or "recreation.gov"
+        out.append(f"It can be rented for overnight stays through {provider}.")
     loc = rec.get("location") or {}
     if loc.get("approximate") is True:
         feature = (loc.get("gnis") or {}).get("name")

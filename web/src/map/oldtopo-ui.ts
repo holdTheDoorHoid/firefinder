@@ -1,7 +1,8 @@
 /**
  * The "Old topo maps" card: shown under the base-map switch while the historical USGS topo
  * sheets are on. Era choice, opacity, and, plainly, which sheets (and so which years) are in
- * view, with a link to USGS TopoView for the spot at the centre of the map.
+ * view, with a link to USGS TopoView for the spot at the centre of the map. The collection
+ * covers the United States only (Alaska and Hawaii included); over Canada the card says so.
  */
 import type { IControl, Map as MlMap } from 'maplibre-gl';
 import { sheetsInView, onOldTopoFailures, type InView } from '../history/oldtopo/client.ts';
@@ -125,7 +126,7 @@ export class OldTopoControl implements IControl {
       return;
     }
     if (!r.sheets.length) {
-      out.textContent = `No scanned USGS sheet covers this view at this zoom.${problems}`;
+      out.textContent = `No scanned USGS sheet covers this view at this zoom. The collection covers the United States only, so there are no old maps of Canada here yet.${problems}`;
       return;
     }
     const years = r.sheets.map((s) => s.year);

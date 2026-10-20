@@ -38,12 +38,11 @@ import { initSearch } from './search-ui.ts';
 import { loadBaseStyle } from './style.ts';
 import type { SeenLayer } from '../view3d/viewshed-layer.ts';
 import type { HistoryCounts, TowerRecord } from '../lib/types.ts';
+import { DEFAULT_VIEW, MAP_VIEWS, towerCountry } from '../lib/regions.ts';
 
 const BASE = import.meta.env.BASE_URL;
-const US_BOUNDS: [[number, number], [number, number]] = [
-  [-125.0, 24.4],
-  [-66.9, 49.5],
-];
+/** The first view: the lower 48 and southern Canada; Alaska, Hawaii and the north are a jump away. */
+const START_BOUNDS = DEFAULT_VIEW;
 const PHONE = matchMedia('(max-width: 899px)');
 
 const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
@@ -92,6 +91,30 @@ class BasemapControl implements IControl {
   }
 }
 
+/** Quick jumps: the lower 48, Alaska, Hawaii, Canada, all of it. */
+class JumpControl implements IControl {
+  #el: HTMLDivElement | null = null;
+  #map: MlMap | null = null;
+  onAdd(map: MlMap): HTMLElement {
+    this.#map = map;
+    const el = document.createElement('div');
+    el.className = 'maplibregl-ctrl maplibregl-ctrl-group ff-basemap ff-jump';
+    el.setAttribute('role', 'group');
+    el.setAttribute('aria-label', 'Jump to');
+    el.innerHTML = html`${MAP_VIEWS.map((v) => html`<button type="button" data-view="${v.id}" title="Show ${v.id === 'all' ? 'every lookout, the US and Canada' : v.label}">${v.label}</button>`)}`.value;
+    el.addEventListener('click', (e) => {
+      const b = (e.target as Element).closest<HTMLElement>('[data-view]');
+      const v = b ? MAP_VIEWS.find((x) => x.id === b.dataset.view) : undefined;
+      if (v) this.#map?.fitBounds(v.bounds, { padding: 20, duration: 800, essential: true });
+    });
+    this.#el = el;
+    return el;
+  }
+  onRemove(): void {
+    this.#el?.remove();
+  }
+}
+
 async function main(): Promise<void> {
   initCommon();
   setWorkerUrl(workerUrl);
@@ -113,6 +136,7 @@ async function main(): Promise<void> {
   let features: TowerFeature[] = [];
   let filteredNoYear: TowerFeature[] = [];
   let historyCounts: HistoryCounts | null = null;
+  let historyByCountry: Record<string, HistoryCounts> | null = null;
   let unplacedByRegion: Record<string, number> | null = null;
   const thisYear = new Date().getFullYear();
   let byId = new Map<string, TowerFeature>();
@@ -245,12 +269,16 @@ async function main(): Promise<void> {
   const years = new YearPanel({
     host: mapbox,
     thisYear,
-    history: () => historyCounts,
-    all: () => features,
+    // the records' coverage for the country counted, when one is chosen
+    history: () => (state.filters.country && historyByCountry?.[state.filters.country]) || historyCounts,
+    all: () => (state.filters.country ? features.filter((f) => (f.properties.cc ?? 'US') === state.filters.country) : features),
     filtered: () => filteredNoYear,
     // Switching on sites with no structure is said separately, not as "your filters".
-    filtersActive: () => activeFilterCount(state.filters) - (state.filters.noStructure ? 1 : 0) > 0,
+    // (the place is said separately too: "in Canada")
+    filtersActive: () => activeFilterCount(state.filters) - (state.filters.noStructure ? 1 : 0) - (state.filters.region || state.filters.country ? 1 : 0) > 0,
     withNoStructure: () => state.filters.noStructure,
+    place: () => ({ country: state.filters.country, region: state.filters.region }),
+    onPlace: (country) => setFilters({ ...state.filters, country, region: null }),
     onChange: (year, maybe) => {
       const was = state.year;
       state.year = year;
@@ -348,7 +376,7 @@ async function main(): Promise<void> {
         host.insertAdjacentHTML('beforebegin', html`<p class="notice tone-caution" role="note"><span><strong>Approximate location.</strong> No source gives where this lookout stood. The view is from ${rec.location.gnis?.name ?? 'the hill of its name'}, where the map places it, so it may differ from what its lookout saw.</span></p>`.value);
       }
       const view = new PanoramaView(host, {
-        tower: { id, name: rec.name, lat: rec.location.lat, lon: rec.location.lon, kind: rec.kind, status: rec.status, height_m: rec.height_m, elevation_m: rec.elevation_m },
+        tower: { id, name: rec.name, lat: rec.location.lat, lon: rec.location.lon, kind: rec.kind, status: rec.status, height_m: rec.height_m, elevation_m: rec.elevation_m, country: towerCountry(rec) },
       });
       dlg.addEventListener('close', () => view.destroy(), { once: true });
       view.el.querySelector<HTMLElement>('.pv-viewport')?.focus();
@@ -423,6 +451,7 @@ async function main(): Promise<void> {
     index = buildIndex(features);
     if (meta) {
       historyCounts = meta.history ?? null;
+      historyByCountry = meta.history_by_country ?? null;
       unplacedByRegion = meta.counts.unplaced_by_region ?? null;
       ctx.sources = new Map<string, SourceInfo>(meta.sources.map((s) => [s.id, s]));
       if (meta.fixtures) $('fixture-banner').hidden = false;
@@ -475,7 +504,7 @@ async function main(): Promise<void> {
     map = new MlMap({
       container: 'map',
       style,
-      bounds: state.view ? undefined : US_BOUNDS,
+      bounds: state.view ? undefined : START_BOUNDS,
       fitBoundsOptions: { padding: 20 },
       center: state.view ? [state.view.lon, state.view.lat] : undefined,
       zoom: state.view?.zoom,
@@ -504,6 +533,9 @@ async function main(): Promise<void> {
     m.addControl(new NavigationControl({ showCompass: false }), 'top-right');
     m.addControl(new GeolocateControl({ positionOptions: { enableHighAccuracy: false }, trackUserLocation: false }), 'top-right');
     m.addControl(new ScaleControl({ unit: 'imperial', maxWidth: 110 }), 'bottom-left');
+    m.addControl(new ScaleControl({ unit: 'metric', maxWidth: 110 }), 'bottom-left');
+    // bottom left, above the scales: the top left is under the count chip
+    m.addControl(new JumpControl(), 'bottom-left');
     if (!styleOk) {
       mapMessage.hidden = false;
       mapMessage.textContent = 'The background map could not be loaded, so only the lookouts are shown. Try reloading later.';

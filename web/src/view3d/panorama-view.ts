@@ -8,13 +8,12 @@ import { html, raw } from '../lib/html.ts';
 import { effectiveTheme, onThemeChange } from '../ui/theme.ts';
 import { requestPanorama, progressText, siteBase } from './client.ts';
 import {
-  aboutFeet,
+  unitsFor,
   azimuthText,
   eyeHeight,
   megabytes,
   metresFeet,
-  milesKm,
-  milesShort,
+
   quadrantBearing,
   reconstructionNote,
   wrap360,
@@ -46,6 +45,8 @@ export interface PanoramaTower {
   status: string;
   height_m?: number | null;
   elevation_m?: number | null;
+  /** The lookout's country ("US", "CA"): units read feet and miles first in the US, metres and km elsewhere. */
+  country?: string | null;
 }
 
 export interface PanoramaOptions {
@@ -90,6 +91,16 @@ function shortName(name: string): string {
   return name.replace(/\s+(Lookout( Site| Tower)?|Fire Tower|L\.O\.)$/i, '').trim() || name;
 }
 
+/** Where the peak names come from: GNIS ids are numbers, CGNDB ids strings (pipeline/build_peaks.py). */
+function peakCredit(peaks: readonly PeakSight[]): string {
+  const us = peaks.some((p) => typeof p.gnisId === 'number');
+  const ca = peaks.some((p) => typeof p.gnisId === 'string');
+  const cgndb = 'the Canadian Geographical Names Database (contains information licensed under the Open Government Licence – Canada)';
+  if (ca && us) return `Names from the USGS Geographic Names Information System and ${cgndb}.`;
+  if (ca) return `Names from ${cgndb}.`;
+  return 'Names from the USGS Geographic Names Information System.';
+}
+
 export class PanoramaView {
   readonly el: HTMLElement;
   #o: PanoramaOptions;
@@ -111,6 +122,14 @@ export class PanoramaView {
   #theme = effectiveTheme();
   #run = 0;
   #offTheme: () => void = () => {};
+
+  get #metric(): boolean {
+    return unitsFor(this.#o.tower.country).metric;
+  }
+
+  #distance(m: number): string {
+    return unitsFor(this.#o.tower.country).distance(m);
+  }
 
   constructor(host: HTMLElement, opts: PanoramaOptions) {
     this.#o = opts;
@@ -166,13 +185,21 @@ export class PanoramaView {
             <p class="pv-eye-line"><span data-pv-eye-text>${this.#eye.sentence}</span> <button type="button" class="linklike" data-pv-eye-open aria-expanded="false" aria-controls="${this.#id}-eye">Change</button></p>
             <form class="pv-eye-form" id="${this.#id}-eye" hidden>
               <label for="${this.#id}-eye-ft">Eye height above the ground</label>
-              <span class="pv-eye-input"><input id="${this.#id}-eye-ft" type="number" inputmode="decimal" min="3" max="1000" step="1" required> <span>ft</span></span>
+              ${this.#metric
+                ? html`<span class="pv-eye-input"><input id="${this.#id}-eye-ft" type="number" inputmode="decimal" min="1" max="300" step="0.5" required> <span>m</span></span>
+              <span class="pv-eye-presets" role="group" aria-label="Typical heights">
+                <button type="button" class="chip-btn" data-eye-ft="2.5">Ground cab</button>
+                <button type="button" class="chip-btn" data-eye-ft="11">9 m tower</button>
+                <button type="button" class="chip-btn" data-eye-ft="26">24 m steel tower</button>
+                <button type="button" class="chip-btn" data-eye-ft="32">30 m tower</button>
+              </span>`
+                : html`<span class="pv-eye-input"><input id="${this.#id}-eye-ft" type="number" inputmode="decimal" min="3" max="1000" step="1" required> <span>ft</span></span>
               <span class="pv-eye-presets" role="group" aria-label="Typical heights">
                 <button type="button" class="chip-btn" data-eye-ft="8">Ground cab</button>
                 <button type="button" class="chip-btn" data-eye-ft="35">30-ft tower</button>
                 <button type="button" class="chip-btn" data-eye-ft="71">66-ft steel tower</button>
                 <button type="button" class="chip-btn" data-eye-ft="105">100-ft tower</button>
-              </span>
+              </span>`}
               <span class="pv-eye-actions"><button type="submit" class="btn">Update the view</button>
               <button type="button" class="linklike" data-pv-eye-reset>Use the ${this.#eye.source === 'recorded' ? 'recorded' : 'typical'} height</button></span>
             </form>
@@ -259,9 +286,10 @@ export class PanoramaView {
     });
     this.#q<HTMLFormElement>('.pv-eye-form')?.addEventListener('submit', (e) => {
       e.preventDefault();
-      const ft = Number(this.#q<HTMLInputElement>('.pv-eye-form input')?.value);
-      if (!Number.isFinite(ft) || ft <= 0) return;
-      this.#customEye = ft * 0.3048;
+      // feet in the US, metres elsewhere (the input's own unit)
+      const v = Number(this.#q<HTMLInputElement>('.pv-eye-form input')?.value);
+      if (!Number.isFinite(v) || v <= 0) return;
+      this.#customEye = this.#metric ? v : v * 0.3048;
       this.#eye = eyeHeight({ kind: this.#o.tower.kind, height_m: this.#o.tower.height_m, lon: this.#o.tower.lon }, this.#customEye);
       this.#toggleEyeForm(false);
       void this.start();
@@ -358,7 +386,7 @@ export class PanoramaView {
     btn.setAttribute('aria-expanded', String(show));
     if (show) {
       const input = form.querySelector('input')!;
-      input.value = String(Math.round(this.#eye.eyeM / 0.3048));
+      input.value = this.#metric ? String(Math.round(this.#eye.eyeM * 2) / 2) : String(Math.round(this.#eye.eyeM / 0.3048));
       input.focus();
     }
   }
@@ -463,7 +491,7 @@ export class PanoramaView {
         key: `p${p.gnisId}`,
         kind: 'peak',
         name: p.name,
-        sub: milesShort(p.distM),
+        sub: unitsFor(this.#o.tower.country).short(p.distM),
         sight: p,
         score: Math.min(p.clearance, 2) + (onSkyline ? 0.8 : 0) + Math.max(0, p.angle + 2) * 0.25 + p.groundM / 4000,
       });
@@ -475,7 +503,7 @@ export class PanoramaView {
         key: `l${l.id}`,
         kind: 'lookout',
         name: shortName(l.name),
-        sub: `${gone ? 'site, gone' : 'lookout'} · ${milesShort(l.distM)}`,
+        sub: `${gone ? 'site, gone' : 'lookout'} · ${unitsFor(this.#o.tower.country).short(l.distM)}`,
         sight: l,
         gone,
         score: 3 + (gone ? 0 : 1.5) - l.distM / 100_000,
@@ -573,7 +601,7 @@ export class PanoramaView {
       }
     }
     if (!best) return null;
-    return `${best.kind === 'lookout' ? (best.gone ? 'the site of ' : '') : ''}${best.name}${best.kind === 'lookout' ? ' lookout' : ''}, ${milesKm(best.sight.distM)}`;
+    return `${best.kind === 'lookout' ? (best.gone ? 'the site of ' : '') : ''}${best.name}${best.kind === 'lookout' ? ' lookout' : ''}, ${this.#distance(best.sight.distM)}`;
   }
 
   #tip(text: string | null, x = 0, y = 0): void {
@@ -600,7 +628,7 @@ export class PanoramaView {
     if (y < L.terrainTop || y > L.ringTop) return this.#tip(null);
     const p = pick(d, this.#view, L, x, y);
     const bearing = `bearing ${azimuthText(p.az)}`;
-    this.#tip(p.distM === null ? `Sky · ${bearing}` : `Ground about ${milesKm(p.distM)} away · ${bearing}`, x, y);
+    this.#tip(p.distM === null ? `Sky · ${bearing}` : `Ground about ${this.#distance(p.distM)} away · ${bearing}`, x, y);
   }
 
   #renderLists(d: PanoramaData): void {
@@ -615,7 +643,7 @@ export class PanoramaView {
     const base = import.meta.env.BASE_URL;
     const faceBtn = (s: Sighted, key: string, label: string) =>
       html`<button type="button" class="linklike" data-face="${s.az.toFixed(2)}" data-key="${key}" aria-label="Face ${label}">${label}</button>`;
-    const where = (s: Sighted) => html`<span class="pv-where">${milesKm(s.distM)} · ${azimuthText(s.az)} (${quadrantBearing(s.az)})</span>`;
+    const where = (s: Sighted) => html`<span class="pv-where">${this.#distance(s.distM)} · ${azimuthText(s.az)} (${quadrantBearing(s.az)})</span>`;
     host.innerHTML = html`
       <section aria-labelledby="${this.#id}-lk">
         <h3 class="h-small" id="${this.#id}-lk">Other lookouts in sight <span class="pv-count">${visibleLookouts.length}</span></h3>
@@ -626,18 +654,18 @@ export class PanoramaView {
                 ${where(l)} <a class="pv-page" href="${base}t/${l.id}/">page<span class="visually-hidden"> for ${l.name}</span></a></li>`,
             )}</ul>
             ${visibleLookouts.length > 8 ? html`<p><button type="button" class="linklike" data-pv-more>Show all ${visibleLookouts.length}</button></p>` : ''}`
-          : html`<p class="fine">No other lookout's cab is in line of sight within ${milesShort(this.#o.maxDistM ?? MAX_DIST_M)}.</p>`}
+          : html`<p class="fine">No other lookout's cab is in line of sight within ${unitsFor(this.#o.tower.country).short(this.#o.maxDistM ?? MAX_DIST_M)}.</p>`}
         <p class="fine">${hiddenLookouts ? `${hiddenLookouts} more lookout ${hiddenLookouts === 1 ? 'site is' : 'sites are'} within range but hidden by terrain. ` : ''}Gone lookouts are shown at their old sites, so you can see which ones once watched each other. Their cabs are taken at typical heights.</p>
       </section>
       <section aria-labelledby="${this.#id}-pk">
         <h3 class="h-small" id="${this.#id}-pk">Named peaks in sight <span class="pv-count">${named.length}</span></h3>
         ${named.length
           ? html`<ul class="pv-list">${byBearing.map(
-              (p: PeakSight) => html`<li ${top.has(p.gnisId) ? '' : raw('data-extra hidden')}>${faceBtn(p, `p${p.gnisId}`, p.name)} ${where(p)} <span class="pv-elev">${aboutFeet(p.groundM)}</span></li>`,
+              (p: PeakSight) => html`<li ${top.has(p.gnisId) ? '' : raw('data-extra hidden')}>${faceBtn(p, `p${p.gnisId}`, p.name)} ${where(p)} <span class="pv-elev">${unitsFor(this.#o.tower.country).aboutHeight(p.groundM)}</span></li>`,
             )}</ul>
             ${named.length > top.size ? html`<p><button type="button" class="linklike" data-pv-more>Show all ${named.length}</button></p>` : ''}`
           : html`<p class="fine">No named summits in line of sight${d.peaksChecked ? '' : ' (the list of peak names did not load)'}.</p>`}
-        <p class="fine">Names from the USGS Geographic Names Information System. Heights are read from the terrain data and are approximate. Sorted by bearing, clockwise from north.</p>
+        <p class="fine">${peakCredit(peaks)} Heights are read from the terrain data and are approximate. Sorted by bearing, clockwise from north.</p>
       </section>`.value;
     host.hidden = false;
   }
@@ -655,7 +683,7 @@ export class PanoramaView {
       <li><strong>Ground:</strong> ${metresFeet(o.groundM, 0)} from the terrain data${rec !== null ? html`; the lookout's records give ${metresFeet(rec, 0)}` : ''}.
         ${moved ? html`The eye stands on the highest ground within ${75} m of the recorded position (${Math.round(o.movedM)} m away), because recorded positions and coarse terrain can put a summit lookout on its own slope.` : ''}</li>
       <li><strong>Terrain:</strong> bare ground from <a href="https://registry.opendata.aws/terrain-tiles/" rel="noopener">AWS Terrain Tiles</a> (USGS 3DEP, SRTM and GMTED2010 elevations), about 30 m apart near the lookout, 110 m out to 25 miles and 220–300 m beyond. Trees, buildings, haze and weather are not shown, and sharp distant summits come out somewhat lower than they are.</li>
-      <li><strong>Geometry:</strong> earth curvature and the slight bending of light in the air (refraction coefficient 0.13) are included. Bearings are true (from true north), like a Firefinder's ring, not magnetic. The view reaches ${milesShort(this.#o.maxDistM ?? MAX_DIST_M)}.</li>
+      <li><strong>Geometry:</strong> earth curvature and the slight bending of light in the air (refraction coefficient 0.13) are included. Bearings are true (from true north), like a Firefinder's ring, not magnetic. The view reaches ${unitsFor(this.#o.tower.country).short(this.#o.maxDistM ?? MAX_DIST_M)}.</li>
       <li><strong>Names:</strong> a peak is named when its summit is in line of sight, even if it is a speck in the distance. Other lookouts are named when their cabs would be in sight at a typical height.</li>
       <li><strong>Computed</strong> in your browser in ${(d.ms.compute / 1000).toFixed(1)} s from ${d.tiles.needed} terrain tiles${d.tiles.bytes ? ` (${megabytes(d.tiles.bytes)} downloaded)` : ' (already downloaded)'}.
         ${d.tiles.failed ? html` <strong class="warn-text">${d.tiles.failed} tiles did not load, so parts of the view may be missing.</strong>` : ''}</li>

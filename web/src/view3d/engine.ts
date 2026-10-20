@@ -44,7 +44,8 @@ export interface Sighted {
   visible: boolean;
 }
 export interface PeakSight extends Sighted {
-  gnisId: number;
+  /** A USGS GNIS feature id (a number) or a CGNDB name id ("FEGTX") for a Canadian summit. */
+  gnisId: number | string;
 }
 export interface LookoutSight extends Sighted {
   id: string;
@@ -140,7 +141,7 @@ interface TowerFeature {
   properties: { i: string; n: string; k: string; s: string; ap?: 1 };
 }
 
-type PeakRow = [string, number, number, number];
+type PeakRow = [string, number, number, number | string];
 
 const now = () => performance.now();
 

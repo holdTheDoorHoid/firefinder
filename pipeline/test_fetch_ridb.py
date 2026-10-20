@@ -48,6 +48,18 @@ R = load_fetch_ridb()
 FFLA_LISTED_BUT_UNNAMED = ["234404", "234432", "234304", "234281", "272173", "234138", "233133"]
 
 
+class NameSelects(unittest.TestCase):
+    def test_lookout_names_are_selected(self) -> None:
+        for name in ("Hebgen Lookout", "Bald Mountain Fire Tower", "Spyglass L-4 cabin"):
+            self.assertTrue(R.name_selects(name), name)
+
+    def test_tongass_ccc_shelters_are_not_lookouts(self) -> None:
+        # Alaska survey 2026-10-20: the Forest Service lists 1930s CCC canoe-route shelters as
+        # "Shelter Lookout/Cabin"; they are camp shelters, not fire lookouts.
+        for name in ("Shelter Lookout/Cabin", "Pinta Cove Shelter Lookout/Cabin", "Lake Guerin West Shelter (Lookout)"):
+            self.assertFalse(R.name_selects(name), name)
+
+
 class SelectIncludeIds(unittest.TestCase):
     def test_name_matches_and_by_hand_includes_are_kept_and_false_positives_dropped(self) -> None:
         got = R.select_include_ids({"1", "2"}, extra_include={"3": "by hand"}, name_match_rejects={"2": "not a lookout"})
