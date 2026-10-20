@@ -88,7 +88,7 @@
   },
   "ffla_rentals": {
    "records": 88,
-   "retrieved": "2026-10-08",
+   "retrieved": "2026-10-19",
    "file": "ffla_rentals.json"
   },
   "ffla_sdrc": {
@@ -213,7 +213,7 @@
   },
   "ridb": {
    "records": 120,
-   "retrieved": "2026-10-08",
+   "retrieved": "2026-10-19",
    "file": "ridb.json"
   },
   "sand_mountain": {
@@ -283,8 +283,8 @@
   }
  },
  "files": {
-  "written": 425,
-  "unchanged": 8483
+  "written": 0,
+  "unchanged": 8908
  },
  "counts": {
   "towers": 8861,
@@ -426,7 +426,7 @@
   "note": "How each source record found its tower on this run. 'key' means it was matched on an earlier run and found again by its key; delete data/towers to see a fresh run's methods.",
   "by_source": {
    "alberta_wildfire": {
-    "new": 124
+    "key": 124
    },
    "andyarthur_ny": {
     "key": 34
@@ -458,7 +458,7 @@
     "key": 6
    },
    "curated_ak": {
-    "approximate": 4,
+    "key": 4,
     "unplaced": 2
    },
    "eastern_us_lookouts": {
@@ -492,16 +492,14 @@
     "key": 248
    },
    "fflos": {
-    "key": 1855,
-    "new": 2,
+    "key": 1857,
     "unplaced": 265
    },
    "fire_lookouts_org": {
     "key": 19
    },
    "firelookout_ca": {
-    "new": 174,
-    "spatial": 10,
+    "key": 184,
     "unplaced": 22
    },
    "firelookout_com": {
@@ -543,8 +541,7 @@
     "key": 5
    },
    "nhlr": {
-    "key": 1848,
-    "new": 18,
+    "key": 1866,
     "unplaced": 4
    },
    "nj_forest_fire_towers": {
@@ -557,13 +554,10 @@
     "key": 75
    },
    "ontario_lio": {
-    "new": 70,
-    "spatial": 25
+    "key": 95
    },
    "osm": {
-    "key": 1028,
-    "new": 32,
-    "spatial": 54
+    "key": 1114
    },
    "pa_storymap": {
     "key": 47
@@ -604,9 +598,7 @@
     "unplaced": 281
    },
    "wikidata": {
-    "key": 288,
-    "new": 1,
-    "spatial": 2
+    "key": 291
    },
    "wikipedia_lookout_lists": {
     "key": 35
@@ -2872,6 +2864,54 @@
    "distance_m": 8187
   },
   {
+   "type": "matched_different_names",
+   "key": "firelookout_ca:11721",
+   "name": "Griffin Lake Fire Tower",
+   "tower": "ca-on-griffin-lake",
+   "tower_name": "Griffin Lake Fire Tower",
+   "score": 0.171
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ontario_lio:800331863",
+   "name": "Batchawana Mountain",
+   "tower": "ca-on-griffin-lake",
+   "tower_name": "Griffin Lake Fire Tower",
+   "score": 0.086
+  },
+  {
+   "type": "matched_different_names",
+   "key": "firelookout_ca:11203",
+   "name": "River Aux Sables Fire Tower",
+   "tower": "ca-on-river-aux-sables",
+   "tower_name": "River Aux Sables Fire Tower",
+   "score": 0.164
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ontario_lio:500490749",
+   "name": "Big Trout Fire Tower",
+   "tower": "ca-on-river-aux-sables",
+   "tower_name": "River Aux Sables Fire Tower",
+   "score": 0.082
+  },
+  {
+   "type": "matched_different_names",
+   "key": "nhlr:CAN 12",
+   "name": "Luskville Fire Tower",
+   "tower": "ca-qc-luskville",
+   "tower_name": "Luskville Fire Tower",
+   "score": 0.212
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/1170985916",
+   "name": "Tour à feu",
+   "tower": "ca-qc-luskville",
+   "tower_name": "Luskville Fire Tower",
+   "score": 0.212
+  },
+  {
    "type": "register_match_far",
    "keys": [
     "fflos:US 535",
@@ -4314,54 +4354,6 @@
    "tower": "us-wv-gauley-mountain-tower-site-at-cass-scenic-rr",
    "tower_name": "Gauley Mountain Tower Site (now at Cass Scenic RR)",
    "score": 0.257
-  },
-  {
-   "type": "matched_different_names",
-   "key": "nhlr:CAN 12",
-   "name": "Luskville Fire Tower",
-   "tower": "ca-qc-luskville",
-   "tower_name": "Luskville Fire Tower",
-   "score": 0.212
-  },
-  {
-   "type": "matched_different_names",
-   "key": "osm:node/1170985916",
-   "name": "Tour à feu",
-   "tower": "ca-qc-luskville",
-   "tower_name": "Luskville Fire Tower",
-   "score": 0.212
-  },
-  {
-   "type": "matched_different_names",
-   "key": "firelookout_ca:11203",
-   "name": "River Aux Sables Fire Tower",
-   "tower": "ca-on-river-aux-sables",
-   "tower_name": "River Aux Sables Fire Tower",
-   "score": 0.164
-  },
-  {
-   "type": "matched_different_names",
-   "key": "ontario_lio:500490749",
-   "name": "Big Trout Fire Tower",
-   "tower": "ca-on-river-aux-sables",
-   "tower_name": "River Aux Sables Fire Tower",
-   "score": 0.082
-  },
-  {
-   "type": "matched_different_names",
-   "key": "firelookout_ca:11721",
-   "name": "Griffin Lake Fire Tower",
-   "tower": "ca-on-griffin-lake",
-   "tower_name": "Griffin Lake Fire Tower",
-   "score": 0.171
-  },
-  {
-   "type": "matched_different_names",
-   "key": "ontario_lio:800331863",
-   "name": "Batchawana Mountain",
-   "tower": "ca-on-griffin-lake",
-   "tower_name": "Griffin Lake Fire Tower",
-   "score": 0.086
   },
   {
    "type": "rental_on_gone_lookout",
