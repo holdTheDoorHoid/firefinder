@@ -168,6 +168,36 @@ class CountriesInMerge(unittest.TestCase):
         self.assertEqual(self.ws.tower_with_key("ontario_lio:2")["name"], "Fire tower (LIO 2)")
 
 
+class SiteData(unittest.TestCase):
+    def test_country_on_features_and_in_meta(self):
+        import build_site_data as B
+        from collections import Counter
+        base = {"name": "X", "kind": "tower", "status": "standing", "verification": "unverified", "events": [],
+                "location": {"lat": 47.5, "lon": -81.3}}
+        ca_feat = B.feature(dict(base, id="ca-on-x", region="ON", country="CA"))
+        us_feat = B.feature(dict(base, id="us-or-x", region="OR", country="US", location={"lat": 44.0, "lon": -121.0}))
+        self.assertEqual(ca_feat["properties"]["cc"], "CA")
+        self.assertNotIn("cc", us_feat["properties"])
+        meta = B.regions_meta(Counter({"ON": 3, "OR": 2}))
+        self.assertEqual([c["code"] for c in meta["countries"]], ["US", "CA"])
+        on = next(r for r in meta["countries"][1]["regions"] if r["code"] == "ON")
+        self.assertEqual(on["towers"], 3)
+
+    def test_place_hint_reaches_the_site(self):
+        import build_site_data as B
+        self.assertIn("hint", B.UNPLACED_KEYS)
+
+    def test_summary_names_the_country_and_reads_metres_first(self):
+        import auto_summary as A
+        text = A.summarize({"name": "Shining Tree Fire Tower", "country": "CA", "region": "ON", "county": "Sudbury District",
+                            "status": "standing", "kind": "tower", "elevation_m": 459})
+        self.assertIn("in Sudbury District, Ontario, Canada", text)
+        self.assertIn("459 m (1,506 ft)", text)
+        us = A.summarize({"name": "Abbot Butte Lookout", "country": "US", "region": "OR", "county": "Jefferson",
+                          "status": "gone", "kind": "tower", "elevation_m": 1500})
+        self.assertIn("in Jefferson County, Oregon, at 4,921 ft (1,500 m)", us)
+
+
 class FirelookoutCaAddresses(unittest.TestCase):
     def test_ontario_district(self):
         self.assertEqual(FCA.read_address("Unorganized North Sudbury, Sudbury District, Northeastern Ontario, Ontario, Canada",

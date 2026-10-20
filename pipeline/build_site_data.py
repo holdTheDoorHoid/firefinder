@@ -663,7 +663,7 @@ def is_approximate(rec: dict) -> bool:
 # What the "Lookouts we can't place yet" pages need of each unplaced lookout (merge.py
 # unplaced_lookouts), and of its records.
 UNPLACED_KEYS = ("anchor", "name", "region", "county", "gnis", "town", "feature", "candidates", "near", "near_m",
-                 "similar", "out_of_scope")
+                 "similar", "out_of_scope", "hint")
 
 
 def load_unplaced(report_path: Path | None, names: dict[str, str], log: Log) -> list[dict]:
