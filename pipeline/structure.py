@@ -364,6 +364,22 @@ SURVEY_STATUS: dict[str, StatusInfo] = {
     "likely gone": S(None, note="Sources suggest it is gone."),
     "unknown": S(None),
 }
+# The follow-up round's survey extracts (2026-10-20, pipeline/regional/survey_candidates.py: survey_on,
+# survey_prairies_north, survey_bc_yt, survey_qc_atl) add three dated rules, each a status value of its own
+# so its note travels with it (DESIGN.md 3.4):
+#   Nova Scotia: the Department of Natural Resources closed its lookout network in 2013 and had taken the
+#     towers down by 2015 (CBC News); a lookout no source says still stands is gone.
+#   Ontario: the hobbyist list of towers still standing (forestrangers.github.io, compiled about 2009-2013).
+#     Standing then; the Ministry began removing towers in 2013, so any newer source saying gone wins.
+SURVEY_STATUS_CA: dict[str, StatusInfo] = {
+    **SURVEY_STATUS,
+    "gone (nova scotia closure)": S("gone", note=(
+        "Nova Scotia closed its fire towers in 2013 and had taken them down by 2015 (CBC News); no source "
+        "says this one still stands.")),
+    "standing (ontario list c. 2009-2013)": S("standing", note=(
+        "Listed as still standing about 2009 to 2013 (Ontario's Fire Tower Lookouts); Ontario began removing "
+        "towers in 2013, so check before you go.")),
+}
 # Alberta Wildfire's layer: ACTIVE "Y" -> "active" (a lookout in the working network: standing);
 # "N" -> "inactive" (says nothing about the structure). pipeline/regional/alberta_wildfire.py.
 ALBERTA_WILDFIRE_STATUS: dict[str, StatusInfo] = {
@@ -375,6 +391,10 @@ ALBERTA_WILDFIRE_STATUS: dict[str, StatusInfo] = {
 SIMPLE_STATUS: dict[str, dict[str, StatusInfo]] = {
     "ffla": FFLA_STATUS,
     "curated_ak": SURVEY_STATUS,
+    "survey_on": SURVEY_STATUS_CA,
+    "survey_prairies_north": SURVEY_STATUS_CA,
+    "survey_bc_yt": SURVEY_STATUS_CA,
+    "survey_qc_atl": SURVEY_STATUS_CA,
     "alberta_wildfire": ALBERTA_WILDFIRE_STATUS,
     # firelookout.ca has no status field: these are our readings of its records' notes, a closed
     # set written by pipeline/regional/firelookout_ca.py (CURATED).
@@ -389,6 +409,9 @@ SIMPLE_STATUS: dict[str, dict[str, StatusInfo]] = {
     "eastern_us_lookouts": WEEBLY_STATUS,
     "central_us_lookouts": WEEBLY_STATUS,
     "west_us_lookouts": WEEBLY_STATUS,
+    # canada-lookouts.weebly.com (2026-10-20): the same standalone words, plus "Cut down", which the
+    # Ontario index writes beside a few names.
+    "canada_lookouts_weebly": {**WEEBLY_STATUS, "cut down": S("gone")},
     "firelookout_com": {
         "standing": S("standing"),
         # Listed on firelookout.com, but not on its map of standing lookouts.

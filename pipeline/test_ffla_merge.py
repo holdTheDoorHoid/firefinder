@@ -219,7 +219,7 @@ class RentalsList(unittest.TestCase):
     def test_every_override_in_the_real_table_points_at_something_that_exists(self) -> None:
         for key, target in M.FFLA_RENTAL_OVERRIDES.items():
             self.assertTrue(key.startswith("ffla_rentals:"), key)
-            self.assertTrue(target.startswith("us-") or ":" in target, (key, target))
+            self.assertTrue(target.startswith(("us-", "ca-")) or ":" in target, (key, target))
 
     def test_a_rental_with_its_own_position_makes_a_tower_of_its_own_and_two_listings_share_it(self) -> None:
         a = rental_rec("Moon Pass Replica Lookout", "ID", "https://www.airbnb.com/rooms/1", manager="private owner",
@@ -352,7 +352,7 @@ class RecordJoins(unittest.TestCase):
     def test_every_pin_in_the_real_table_names_a_record_and_a_tower(self) -> None:
         for key, target in self.saved.items():
             self.assertRegex(key, r"^[a-z_]+:\S+")
-            self.assertTrue(target.startswith("us-") or ":" in target, (key, target))
+            self.assertTrue(target.startswith(("us-", "ca-")) or ":" in target, (key, target))
 
 
 class VanishedListing(unittest.TestCase):

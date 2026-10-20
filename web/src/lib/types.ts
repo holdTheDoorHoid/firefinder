@@ -199,6 +199,10 @@ export interface TowerRecord {
     approximate?: boolean | null;
     method?: string | null;
     gnis?: GnisFeatureRef | null;
+    /** The gazetteer of an approximate location when it is not GNIS: "cgndb" (Canada, since 2026-10-20). */
+    gazetteer?: string | null;
+    /** "province": the source names no local unit, so the feature is the one of its name in the whole province. */
+    scope?: string | null;
   };
   elevation_m?: number | null;
   kind: string;
@@ -217,7 +221,7 @@ export interface TowerRecord {
   agency?: string | null;
   ownership?: string | null;
   access?: { level: string; note?: string | null } | null;
-  staffing?: { status: string; as_of?: string | null; note?: string | null } | null;
+  staffing?: { status: string; as_of?: string | number | null; note?: string | null } | null;
   visit?: { climbable?: boolean | null; drive_up?: boolean | null; trail_note?: string | null } | null;
   rental?: Rental | null;
   events?: TowerEvent[] | null;

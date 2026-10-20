@@ -4,15 +4,15 @@
  * locations"). Pure functions returning escaped
  * HTML, used by scripts/prerender.ts at build time and by the page script in dev.
  *
- * Each lookout shows its name, county, the sources that list it (linked), what the USGS
- * gazetteer had (a town of the name as a hint, the lookout on the map it may be), and a
+ * Each lookout shows its name, county, the sources that list it (linked), what the gazetteer had
+ * (USGS GNIS in the US, Canada's CGNDB: a town of the name as a hint, the lookout on the map it may be), and a
  * "Suggest a location" button that opens the site's Suggest-an-edit form on GitHub, filled in.
  */
 import { formatCount } from '../lib/format.ts';
 import { html, raw, type SafeHtml } from '../lib/html.ts';
 import type { Meta, UnplacedFile, UnplacedLookout } from '../lib/types.ts';
 import { regionName } from '../lib/vocab.ts';
-import { COUNTRY_IN_TEXT, countryOf, regionGroups, regionKind, regionWithCountry } from '../lib/regions.ts';
+import { countryOf, regionGroups, regionKind, regionWithCountry } from '../lib/regions.ts';
 import { externalLink, placeLine, sourceShortName, towerPath, type RenderContext } from './tower.ts';
 
 export type UnplacedContext = Pick<RenderContext, 'base' | 'siteUrl' | 'repo' | 'sources'>;
@@ -40,7 +40,21 @@ function place(u: Pick<UnplacedLookout, 'county' | 'region'>): string {
   return `${regionWithCountry(u.region ?? '')}, ${unit} not recorded`;
 }
 
-const CLASS_WORDS: Record<string, string> = { Summit: 'summit', Ridge: 'ridge', Gap: 'gap', Pillar: 'rock pillar', Cliff: 'cliff', Bench: 'bench' };
+const CLASS_WORDS: Record<string, string> = { Summit: 'summit', Ridge: 'ridge', Gap: 'gap', Pillar: 'rock pillar', Cliff: 'cliff', Bench: 'bench',
+  // Canada's CGNDB generic terms
+  Mount: 'mountain', Mountain: 'mountain', Hill: 'hill', Peak: 'peak', Lookout: 'lookout point', Lookoff: 'lookout point' };
+
+/** The place a source files the lookout under, when it gives one: a district office or a settlement
+ * whose position it gives (firelookout.ca), or the forest, association or fire district a Canadian list
+ * names. */
+function hintText(u: UnplacedLookout, ctx: UnplacedContext): SafeHtml | string {
+  const h = u.hint;
+  if (!h?.name) return '';
+  const at = typeof h.lat === 'number' && typeof h.lon === 'number' ? html` <a href="${mapAt(h.lat, h.lon, ctx, 10)}">See ${h.name} on the map</a>.` : '';
+  if (h.why === 'district_office') return html` The source files it under <strong>${h.name}</strong>, the old district office, and gives the office's position, not the tower's.${at}`;
+  if (h.why === 'settlement') return html` The source gives the centre of <strong>${h.name}</strong>, not the tower's position.${at}`;
+  return html` Its source files it under <strong>${h.name}</strong>.${at}`;
+}
 
 function sourceList(u: UnplacedLookout, ctx: UnplacedContext): string {
   return [...new Set(u.records.map((r) => sourceShortName(r.source, ctx as RenderContext)))].join(', ');
@@ -69,6 +83,10 @@ function mapAt(lat: number, lon: number, ctx: UnplacedContext, zoom = 12): strin
 export function reasonText(u: UnplacedLookout, ctx: UnplacedContext): SafeHtml {
   const state = regionName(u.region ?? '');
   const feature = u.feature?.name ?? 'the high point of its name';
+  const canada = countryOf(u.region) === 'CA';
+  // Canada's gazetteer (CGNDB): with no district or county, the whole province is searched.
+  const unitWords = canada ? (u.county ? 'the district' : `all of ${state}`) : 'the county';
+  const gazetteer = canada ? 'The Canadian Geographical Names Database' : 'The USGS gazetteer';
   switch (u.gnis) {
     case 'town': {
       const t = u.town;
@@ -77,14 +95,19 @@ export function reasonText(u: UnplacedLookout, ctx: UnplacedContext): SafeHtml {
       return html`No hill or ridge of this name in the county, but there is a town: <strong>${t.name}</strong>. Many fire towers were named for the nearest town.${see}`;
     }
     case 'none':
-      return html`The USGS gazetteer has no hill, ridge or town of this name in the county.`;
+      return canada
+        ? html`${gazetteer} has no hill, mountain or ridge of this name in ${unitWords}. Many lookouts were named for a lake, a river or the nearest town.${hintText(u, ctx)}`
+        : html`${gazetteer} has no hill, ridge or town of this name in the county.`;
     case 'no_county':
       return html`No source says which county it was in, so we cannot look it up.`;
     case 'county_unknown':
-      return html`We could not find the county “${u.county ?? ''}” in ${state}, so we cannot look it up.`;
+      return canada
+        ? html`Its source files it under “${u.county ?? ''}”, a unit the Canadian gazetteer cannot be searched by, so we cannot look it up.${hintText(u, ctx)}`
+        : html`We could not find the county “${u.county ?? ''}” in ${state}, so we cannot look it up.`;
     case 'ambiguous': {
       const c = u.candidates ?? [];
-      return html`The county has ${c.length} places of this name (${c.map((f, i) => html`${i ? ', ' : ''}${f.name}, a ${CLASS_WORDS[f.class] ?? f.class.toLowerCase()}`)}), so we cannot tell which one it stood on.`;
+      const where = canada ? (u.county ? 'The district' : state) : 'The county';
+      return html`${where} has ${c.length} places of this name (${c.map((f, i) => html`${i ? ', ' : ''}${f.name}, a ${CLASS_WORDS[f.class] ?? f.class.toLowerCase()}`)}), so we cannot tell which one it stood on.${canada ? hintText(u, ctx) : ''}`;
     }
     case 'near_mapped_lookout':
       return u.near && u.near_name
@@ -102,16 +125,8 @@ export function reasonText(u: UnplacedLookout, ctx: UnplacedContext): SafeHtml {
       return html`On the Forest Fire Lookout Association’s rentals list, but we could not match it to a lookout.`;
     case 'no_name':
       return html`Its name says only “lookout” or “tower”, so there is nothing to look up.`;
-    case 'not_covered': {
-      const h = u.hint;
-      const at = h && typeof h.lat === 'number' && typeof h.lon === 'number' ? html` <a href="${mapAt(h.lat, h.lon, ctx, 10)}">See ${h.name} on the map</a>.` : '';
-      const hint = h?.why === 'district_office'
-        ? html` The source files it under <strong>${h.name}</strong>, the old district office, and gives the office's position, not the tower's.${at}`
-        : h?.why === 'settlement'
-          ? html` The source gives the centre of <strong>${h.name}</strong>, not the tower's position.${at}`
-          : '';
-      return html`No source gives its position. Outside ${COUNTRY_IN_TEXT.US} we do not yet place lookouts approximately from a gazetteer.${hint}`;
-    }
+    case 'not_covered':
+      return html`No source gives its position, and Firefinder has no gazetteer to look it up in here yet.${hintText(u, ctx)}`;
     default:
       return html`No source says where it stood.`;
   }
@@ -153,7 +168,10 @@ function approxLine(meta: Pick<Meta, 'counts'> | null, region: string | null, ct
   if (!n) return '';
   const where = region ? ` in ${regionName(region)}` : '';
   const link = region ? `${ctx.base}?state=${region}` : ctx.base;
-  return html`<p>${formatCount(n)} more${where} are on <a href="${link}">the map</a> at <strong>approximate locations</strong>: no source gives their position either, but the USGS gazetteer has exactly one summit, ridge or similar high point of the same name in their county, so they are shown there with a dashed marker and an Unverified badge.</p>`;
+  const gz = region && countryOf(region) === 'CA' ? "Canada's gazetteer has exactly one hill, mountain or ridge of the same name in their district (or, when no source names the district, in the whole province or territory)"
+    : region ? 'the USGS gazetteer has exactly one summit, ridge or similar high point of the same name in their county'
+      : 'the gazetteer (USGS GNIS in the United States, the CGNDB in Canada) has exactly one summit, ridge or similar high point of the same name in their county or district';
+  return html`<p>${formatCount(n)} more${where} are on <a href="${link}">the map</a> at <strong>approximate locations</strong>: no source gives their position either, but ${gz}, so they are shown there with a dashed marker and an Unverified badge.</p>`;
 }
 
 /** The index: what this is, how we tried, and the states. */
@@ -164,7 +182,7 @@ export function unplacedIndexMain(file: UnplacedFile, meta: Pick<Meta, 'counts'>
   <p class="lede">${formatCount(file.count)} fire lookouts are named by at least one of our sources, but no source says where they stood, so they are not on the map. If you know where one stood, each has a <strong>Suggest a location</strong> button.</p>
   ${approxLine(meta, null, ctx)}
   <h2>How we looked</h2>
-  <p>For each one in the United States we searched the USGS Geographic Names Information System, the federal list of place names, for a hill, ridge, gap or cliff of the same name in the same county. Where it has exactly one, the lookout goes on the map there, marked approximate. A town of that name is not enough: many towers were named for the nearest town but stood miles away, so the town is shown here as a hint instead. In Canada we do not place lookouts this way yet, so every Canadian lookout without a position is listed here.</p>
+  <p>For each one in the United States we searched the USGS Geographic Names Information System, the federal list of place names, for a hill, ridge, gap or cliff of the same name in the same county. Where it has exactly one, the lookout goes on the map there, marked approximate. A town of that name is not enough: many towers were named for the nearest town but stood miles away, so the town is shown here as a hint instead. In Canada we search the Canadian Geographical Names Database the same way, for a hill, mountain or ridge of the same name in the lookout's district or county; most Canadian lists name a forest or an association instead of a district, and then the hill must be the only one of its name in the whole province or territory.</p>
   ${regionGroups(states.map(([r]) => r)).map((g) => {
     const n = new Map(states);
     return html`<h2>${g.country === 'US' ? 'By state' : `${g.name}: by province and territory`}</h2>
@@ -188,7 +206,7 @@ export function unplacedStateMain(file: UnplacedFile, region: string, meta: Pick
   <p class="lede">${shown.length
     ? html`${formatCount(shown.length)} ${shown.length === 1 ? 'lookout' : 'lookouts'} in ${state} ${shown.length === 1 ? 'is' : 'are'} named by our sources, but none says where ${shown.length === 1 ? 'it' : 'they'} stood, so ${shown.length === 1 ? 'it is' : 'they are'} not on the map. Know where one stood? Use its <strong>Suggest a location</strong> button: it opens a short form on GitHub with the lookout filled in.`
     : html`Every lookout our sources name in ${state} is on the map.`}</p>
-  ${countryOf(region) !== 'US' && shown.length ? html`<p>This ${regionKind(region)} is in Canada, where Firefinder does not yet place lookouts approximately from a gazetteer, so every lookout a source names without a position is listed here.</p>` : ''}
+  ${countryOf(region) !== 'US' && shown.length ? html`<p>This ${regionKind(region)} is in Canada. A lookout here goes on the map at an approximate location only when the Canadian Geographical Names Database has exactly one hill, mountain or ridge of its name in its district or county, or, when no source names the district, in the whole ${regionKind(region)}. Most Canadian lookouts were named for a lake or a town, so many stay on this list.</p>` : ''}
   ${approxLine(meta, region, ctx)}
   ${shown.length ? html`<h2 class="visually-hidden">The list</h2><ol class="up-list">${shown.map((u) => entry(u, ctx))}</ol>` : ''}
   ${out.length

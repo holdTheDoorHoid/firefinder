@@ -1,4 +1,5 @@
-"""Human decisions that source records are one lookout: RECORD_JOINS, and LOCATION_PICKS.
+"""Human decisions that source records are one lookout: RECORD_JOINS, LOCATION_PICKS, KEEP_APART and
+STATUS_PICKS.
 
 RECORD_JOINS maps a source record's key to the lookout it belongs to: a tower id (permanent) or the key
 of any record that tower holds (that form also works in a run from scratch). merge.py joins the record
@@ -281,6 +282,61 @@ _join("ffla:wy:barrett-ridge:41.3266:-106.5263", "west_us_lookouts:wy:barrett-ri
 _join("nhlr:US 1520", "west_us_lookouts:wy:deadline-ridge")
 
 
+# ---- Canada, the follow-up round (2026-10-20; evidence in docs/sources/dedupe_review_canada.md) ----
+# Firelookout.ca lists two towers twice under two names; pipeline/regional/firelookout_ca.py folds each
+# second record into the first (LISTED_TWICE), and these pins retire the towers the second records had made.
+# ca-on-freswick into ca-on-big-crow-lake: the same latitude 170 m apart, both "standing, cab gone";
+# Ontario's Fire Tower Lookouts lists "Freswick Tower - Big Crow Lake, Algonquin Park", Canada's Fire
+# Lookouts "BIG CROW LAKE (FRESWICK)".
+_join("ca-on-big-crow-lake", "firelookout_ca:9892")
+# ca-on-brigstocke into ca-on-anima-nipissing: one address (Anima Nipissing Road), 340 m apart; Ontario's
+# Fire Tower Lookouts "Brigstocke Tower - Anima Nipissing Lake, Latchford", Canada's Fire Lookouts
+# "BRIGSTOCKE, Anima Nipissing Lake Latchford"; Land Information Ontario has one tower there.
+_join("ca-on-anima-nipissing", "firelookout_ca:41033")
+# ca-on-fire-tower-2 into ca-on-elliot-lake: OpenStreetMap's "Fire Tower" (a 2010 GPS waypoint, tagged an
+# observation tower) is 499 m from Firelookout.ca's pin for the Elliot Lake tower (the replica lookout on
+# the hill above the town); the Ontario survey names that node as the Elliot Lake tower and no source
+# places a second tower there.
+_join("ca-on-elliot-lake", "osm:node/889596938")
+# Records that give a fallback-named tower its name (DESIGN.md 3.5): each lands where its own words put it.
+# Canada's Fire Lookouts' "Chester" page files the tower under "Dividing Lake - Gogama" and its map pin is
+# 107 m from Land Information Ontario's unnamed fire tower at Dividing Lake.
+_join("ca-on-unnamed-fire-tower-at-dividing-lake", "canada_lookouts_weebly:on:chester")
+# "Mount Champlain": the page puts a cupola cabin on the 1,462 ft summit; OpenStreetMap's "Fire Tower" is
+# 64 m from the CGNDB's Mount Champlain (Queens County), the only one in New Brunswick.
+_join("ca-nb-fire-tower", "canada_lookouts_weebly:nb:mount-champlain")
+# "Kwagama Hill" (Algoma): the CGNDB's Kwagama Hill is 26 m from Firelookout.ca's Kwagama Mountain tower.
+_join("ca-on-kwagama-mountain", "canada_lookouts_weebly:on:index-kwagama-hill")
+# Mount Revelstoke's Summit Fire Lookout: OpenStreetMap's "Historic Firetower" stands 350 m from the CGNDB's
+# Mount Revelstoke summit; the Canadian Register's coordinate (51.0999, -118.067) is 6 km north-east, a
+# place point, not the building (BC/Yukon survey), so the survey's record carries no position.
+_join("ca-bc-historic-firetower", "survey_bc_yt:bc:summit-fire-lookout", "canada_lookouts_weebly:bc:mount-revelstoke")
+
+# ---- Canada: the orchestrator's decisions on the probable pairs (2026-10-20) ----
+# A fallback-named point of Land Information Ontario or of BC's base map, and the named tower a few hundred
+# metres away: one lookout. The named tower keeps its id; the surveyed point gives the position (LIO and
+# the base map rank above firelookout.ca's and Canada's Fire Lookouts' hand-placed pins for location).
+# Evidence in docs/sources/dedupe_review_canada.md.
+_join("ca-on-donovon", "ontario_lio:701163167")         # 453 m; LIO point within 10 m; retires ca-on-fire-tower-lio-701163167
+_join("ca-on-lyman", "ontario_lio:701163176")           # 474 m; LIO within 10 m; retires ca-on-fire-tower-lio-701163176
+_join("ca-on-boulter", "ontario_lio:701163178")         # 672 m; LIO within 10 m; retires ca-on-fire-tower-lio-701163178
+_join("ca-on-max-lake", "ontario_lio:151208102")        # 742 m; LIO within 100 m; retires ca-on-fire-tower-lio-151208102
+_join("ca-on-pickle-lake", "ontario_lio:1300479679")    # 761 m; LIO within 500 m (LOCATION_PICKS); retires ca-on-fire-tower-lio-1300479679
+# Base-map symbols beside Canada's Fire Lookouts' own pins (towers new in this round, so the target is the
+# page's record key, matched before the base map): Old Fort 467 m, Beaver Mountain 502 m (symbol 17110; the
+# second symbol on the mountain, 29111, 1.4 km away, stays apart), Bulldog Mountain 886 m.
+_join("canada_lookouts_weebly:bc:old-fort", "bc_trim_lookouts:bc:12405")
+_join("canada_lookouts_weebly:bc:beaver-mountain", "bc_trim_lookouts:bc:17110")
+_join("canada_lookouts_weebly:bc:bulldog-mountain", "bc_trim_lookouts:bc:33162")
+# One name, one tower, two sources' pins 2.9 to 3.2 km apart: the LIO tower survives with its position.
+# Wylie (Petawawa Research Forest, which has one Wylie tower): retires ca-on-wylie into ca-on-wylie-2.
+_join("ca-on-wylie-2", "firelookout_ca:11354")
+# Kwinkwaga Lake (firelookout.ca's pin is marked a guess): retires ca-on-kwinkwaga-lake-2.
+_join("ca-on-kwinkwaga-lake", "firelookout_ca:9988")
+# Skymount: firelookout.ca lists it twice (LISTED_TWICE folds 41025 into 41030): retires ca-on-skymount-2.
+_join("ca-on-skymount", "firelookout_ca:41025")
+
+
 # Where a joined tower shows its position from, when a human has checked which source is right: a record
 # key of the tower -> the key of the record whose position it shows. The default is merge.py's
 # precedence with corroboration (DESIGN.md 3.5), which cannot tell that the top-ranked source is the one
@@ -300,6 +356,9 @@ LOCATION_PICKS: dict[str, str] = {
     # would keep the old pin, since another lineage "corroborates" it; FFLA's current row is shown.
     "ffla:mt:andesite:45.2646:-111.4062": "ffla:mt:andesite:45.2646:-111.4062",
     "ffla:or:madrona-park:45.6125:-122.7833": "ffla:or:madrona-park:45.6125:-122.7833",
+    # Pickle Lake, Ontario (2026-10-20, orchestrator's decision): Land Information Ontario's point (accurate to
+    # 500 m by its own note) over firelookout.ca's hand-placed pin 761 m away.
+    "firelookout_ca:11482": "ontario_lio:1300479679",
 }
 
 
@@ -312,5 +371,19 @@ KEEP_APART: list[tuple[str, str, str]] = [
     # active, staffed Alberta Wildfire lookout that OpenStreetMap maps (Prairies/North survey, 2026-10-20).
     ("nhlr:CAN 2", "osm:node/11803949555", "Baseline: the registered old ground house vs the active tower 1 km west"),
     ("nhlr:CAN 2", "alberta_wildfire:BL", "Baseline: the registered old ground house vs the active tower 1 km west"),
+    # Canada's Fire Lookouts lists a bare "Summit" in BC with nothing to say where, beside its own page for
+    # Mount Revelstoke: not the Summit Fire Lookout on Mount Revelstoke by name alone (2026-10-20).
+    ("canada_lookouts_weebly:bc:index-summit", "survey_bc_yt:bc:summit-fire-lookout",
+     "BC index's bare 'Summit' vs Mount Revelstoke's Summit Fire Lookout"),
 ]
 KEEP_APART_PAIRS: frozenset = frozenset(frozenset((a, b)) for a, b, _ in KEEP_APART)
+
+# STATUS_PICKS: records whose status a human found to be the newer word on a lookout, so it shows
+# whatever the field precedence says (2026-10-20). Each entry says why.
+STATUS_PICKS: dict[str, str] = {
+    # Nova Scotia's two registered towers: NHLR's entries (registered 1998, "staffed each summer") list
+    # them as standing, but the province closed its network in 2013 and, per CBC News (2025), had taken
+    # the towers down by 2015; no later source says either still stands (Quebec/Atlantic survey).
+    "survey_qc_atl:ns:barr-settlement": "NS closure (CBC 2025) is newer than NHLR's 1998 listing",
+    "survey_qc_atl:ns:johnson-hill": "NS closure (CBC 2025) is newer than NHLR's 1998 listing",
+}

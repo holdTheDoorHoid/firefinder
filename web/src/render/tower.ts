@@ -4,7 +4,7 @@
  * panel in the browser, so both say the same thing in the same words.
  */
 import { formatCoords, formatDate, formatDistance, distanceMetres, lengthFor, plainCoords, yesNo } from '../lib/format.ts';
-import { localUnitLabel, regionWithCountry, towerCountry } from '../lib/regions.ts';
+import { localUnitLabel, regionKind, regionWithCountry, towerCountry } from '../lib/regions.ts';
 import { html, raw, safeUrl, isSafeStoryHtml, type SafeHtml } from '../lib/html.ts';
 import { fillFor, markerSvg, rentBadgeSvg, shapeFor } from '../lib/icons.ts';
 import { MARKS, MARK_LABELS } from '../lib/checklist.ts';
@@ -60,6 +60,7 @@ const SHORT_SOURCE: Record<string, string> = {
   wikidata: 'Wikidata',
   research: 'Firefinder research',
   gnis: 'USGS GNIS',
+  cgndb: 'CGNDB',
 };
 
 export function sourceShortName(id: string | null | undefined, ctx: RenderContext): string {
@@ -132,7 +133,7 @@ function icon(kind: string, status: string, rentable = false, size = 20, approxi
   return raw(markerSvg(shapeFor(kind), fillFor(status), { rentable, size, approximate, className: 'marker-icon' }));
 }
 
-/* ---------- Approximate locations (USGS GNIS name match) ---------- */
+/* ---------- Approximate locations (gazetteer name match: USGS GNIS, Canada's CGNDB) ---------- */
 
 /** GNIS feature classes in plain words ("the one ridge of that name"). */
 const GNIS_CLASS_WORDS: Record<string, string> = {
@@ -143,19 +144,39 @@ const GNIS_CLASS_WORDS: Record<string, string> = {
   Cliff: 'cliff or bluff',
   Bench: 'bench',
 };
+/** The CGNDB's generic terms in plain words (pipeline/merge.py CGNDB_HIGH_GROUND). */
+const CGNDB_CLASS_WORDS: Record<string, string> = {
+  mount: 'mountain', mountain: 'mountain', hill: 'hill', peak: 'peak', butte: 'butte', summit: 'summit', dome: 'dome',
+  cone: 'cone', knob: 'knob', knoll: 'knoll', pinnacle: 'pinnacle', spire: 'spire', tower: 'rock tower', tolt: 'hill',
+  head: 'headland hill', hump: 'hill', tor: 'tor', crag: 'crag', nunatak: 'nunatak', monadnock: 'hill',
+  lookout: 'lookout point', lookoff: 'lookout point', viewpoint: 'lookout point', ridge: 'ridge', spur: 'ridge',
+  shoulder: 'ridge', bluff: 'bluff', cliff: 'cliff', rock: 'rock', ledge: 'ledge',
+};
 
 const GNIS_URL = 'https://www.usgs.gov/tools/geographic-names-information-system-gnis';
+const CGNDB_URL = 'https://natural-resources.canada.ca/earth-sciences/geography/geographical-names-board-canada/about-canadian-geographical-names-database';
+
+/** The gazetteer an approximate pin comes from, for the page's words and credit. */
+export function gazetteerOf(r: Pick<TowerRecord, 'location'>): { id: string; name: string; short: string; url: string; credit: string } {
+  return r.location.gazetteer === 'cgndb'
+    ? { id: 'cgndb', name: 'Canadian Geographical Names Database', short: 'CGNDB', url: CGNDB_URL,
+        credit: 'Canadian Geographical Names Database (Natural Resources Canada) · Contains information licensed under the Open Government Licence – Canada' }
+    : { id: 'gnis', name: 'USGS Geographic Names Information System', short: 'USGS GNIS', url: GNIS_URL,
+        credit: 'USGS Geographic Names Information System (GNIS) · Public domain' };
+}
 
 /** What the approximate pin stands on, in words: {name: "Black Jack Ridge", what: "ridge"}. */
 export function approximateFeature(r: Pick<TowerRecord, 'location'>): { name: string; what: string; cls: string } | null {
   if (!isApproximate(r)) return null;
   const g = r.location.gnis;
-  return { name: g?.name ?? 'a hill of its name', what: GNIS_CLASS_WORDS[g?.class ?? ''] ?? 'high point', cls: g?.class ?? '' };
+  const cls = g?.class ?? '';
+  const what = r.location.gazetteer === 'cgndb' ? CGNDB_CLASS_WORDS[cls.toLowerCase()] : GNIS_CLASS_WORDS[cls];
+  return { name: g?.name ?? 'a hill of its name', what: what ?? 'high point', cls };
 }
 
 /** How far off the pin may be, by what it stands on. */
 function approximateCaveat(cls: string): string {
-  if (cls === 'Ridge') return 'A ridge can run for miles, so the lookout may have stood some way along it.';
+  if (cls === 'Ridge' || cls === 'Spur' || cls === 'Shoulder') return 'A ridge can run for miles, so the lookout may have stood some way along it.';
   if (cls === 'Gap') return 'A gap is a low pass, so the lookout probably stood on higher ground beside it.';
   return 'The lookout may have stood on it or nearby.';
 }
@@ -164,11 +185,17 @@ function approximateCaveat(cls: string): string {
 export function approximateNotice(r: TowerRecord, ctx: RenderContext): SafeHtml {
   const f = approximateFeature(r);
   if (!f) return html``;
-  const county = r.location.gnis?.county ?? r.county;
-  const where = county ? placeLine({ county, region: r.region }) : regionName(r.region);
+  const gz = gazetteerOf(r);
+  const wholeProvince = r.location.scope === 'province';
+  // the unit as the lookout's source writes it ("Northumberland County"), else the gazetteer's
+  const county = wholeProvince ? null : (r.location.gazetteer === 'cgndb' ? r.county ?? r.location.gnis?.county : r.location.gnis?.county ?? r.county);
+  const where = county ? placeLine({ county, region: r.region }) : `all of ${regionName(r.region)}`;
+  const why = wholeProvince
+    ? ` No source names the district or county it was in, so the whole ${regionKind(r.region)} was searched and this is the only one.`
+    : '';
   return html`<div class="notice tone-caution approx-notice" role="note">${raw(markerSvg(shapeFor(r.kind), fillFor(r.status), { size: 22, approximate: true, className: 'notice-icon' }))}<div>
     <p class="notice-title">Approximate location</p>
-    <p>No source gives where this lookout stood, so the map shows it on <strong>${f.name}</strong>, the one ${f.what} of that name in ${where} in the ${externalLink(GNIS_URL, 'USGS Geographic Names Information System')}. ${approximateCaveat(f.cls)} Know where it stood? <a href="${locationIssueUrl(r, ctx)}">Suggest an edit</a>.</p>
+    <p>No source gives where this lookout stood, so the map shows it on <strong>${f.name}</strong>, the one ${f.what} of that name in ${where} in the ${externalLink(gz.url, gz.name)}.${why} ${approximateCaveat(f.cls)} Know where it stood? <a href="${locationIssueUrl(r, ctx)}">Suggest an edit</a>.</p>
   </div></div>`;
 }
 
@@ -441,7 +468,7 @@ export function factRows(r: TowerRecord, opts: { short?: boolean; base?: string 
     rows.push(['Location', placeLine(r)]);
     const approx = approximateFeature(r);
     const prec = approx
-      ? html`<span class="sub">Approximate: placed on ${approx.name} (a ${approx.what}), from USGS GNIS. No source gives where it stood.</span>`
+      ? html`<span class="sub">Approximate: placed on ${approx.name} (a ${approx.what}), from ${gazetteerOf(r).short}. No source gives where it stood.</span>`
       : r.location.precision && r.location.precision !== 'exact' ? ` (${r.location.precision})` : '';
     rows.push([
       'Coordinates',
@@ -704,11 +731,12 @@ export function sourcesSection(r: TowerRecord, ctx: RenderContext): SafeHtml {
   const refs = r.sources ?? [];
   const links = (r.links ?? []).filter((l) => safeUrl(l.url) && !String(l.kind ?? '').startsWith('relocated_'));
   const approx = approximateFeature(r);
+  const gz = gazetteerOf(r);
   const gnisItem = approx
-    ? html`<li id="src-gnis">
-        <span class="src-title">${externalLink(GNIS_URL, 'USGS Geographic Names Information System (GNIS)')}</span>
+    ? html`<li id="src-${gz.id}">
+        <span class="src-title">${externalLink(gz.url, `${gz.name} (${gz.short.replace('USGS ', '')})`)}</span>
         <span class="src-fields">Gave us: an approximate location, on ${approx.name} (a ${approx.what})</span>
-        <span class="credit-line">USGS Geographic Names Information System (GNIS) · Public domain</span>
+        <span class="credit-line">${gz.credit}</span>
       </li>`
     : '';
   return html`
@@ -961,7 +989,7 @@ export function renderPanel(r: TowerRecord, ctx: RenderContext, opts: { hiddenBy
     ${movedNotice(r, ctx)}
     ${r.status_note ? html`<p class="fine status-note">${r.status_note}</p>` : ''}
     ${isApproximate(r)
-      ? html`<p class="fine warn-text approx-line"><strong>Approximate location.</strong> No source gives where it stood, so it is shown on ${approximateFeature(r)!.name} (USGS GNIS). Unverified.</p>`
+      ? html`<p class="fine warn-text approx-line"><strong>Approximate location.</strong> No source gives where it stood, so it is shown on ${approximateFeature(r)!.name} (${gazetteerOf(r).short}). Unverified.</p>`
       : r.verification === 'unverified' ? html`<p class="fine warn-text">Unverified: from a single source, not yet checked.</p>` : ''}
     ${stay}
     <dl class="kv kv-panel">${factRows(r, { short: true, base: ctx.base }).map(([k, v]) => html`<div><dt>${k}</dt><dd>${v}</dd></div>`)}</dl>

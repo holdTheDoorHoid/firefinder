@@ -33,6 +33,36 @@ const approx: TowerRecord = {
   sources: [{ source: 'eastern_us_lookouts', key: 'eastern_us_lookouts:al:black-jack-ridge', fields: ['name', 'county'] }],
 };
 
+describe("an approximate location in Canada (the CGNDB)", () => {
+  const ca: TowerRecord = {
+    ...approx,
+    id: 'ca-ab-mount-kidd',
+    name: 'Mount Kidd',
+    region: 'AB',
+    country: 'CA',
+    county: null,
+    location: {
+      lat: 50.88, lon: -115.2, precision: 'approximate', from: 'cgndb', approximate: true, method: 'cgndb_name_match',
+      gazetteer: 'cgndb', scope: 'province', gnis: { id: 'EBXYZ', name: 'Mount Kidd', class: 'Mount', county: null },
+    },
+  };
+
+  it('names the Canadian gazetteer and says the whole province was searched', () => {
+    const main = renderTowerMain(ca, ctx).value;
+    expect(main).toContain('the one mountain of that name in all of Alberta');
+    expect(main).toContain('Canadian Geographical Names Database');
+    expect(main).toContain('the whole province was searched');
+    expect(main).toContain('id="src-cgndb"');
+    expect(main).toContain('Open Government Licence');
+  });
+
+  it("uses the source's own words for the unit", () => {
+    const nb = { ...ca, id: 'ca-nb-ashton-hill', region: 'NB', county: 'Northumberland County',
+      location: { ...ca.location, scope: null, gnis: { id: 'DAAAA', name: 'Ashton Hill', class: 'Hill', county: 'Northumberland' } } };
+    expect(renderTowerMain(nb, ctx).value).toContain('the one hill of that name in Northumberland County, New Brunswick');
+  });
+});
+
 describe('an approximate location on the tower page', () => {
   const main = renderTowerMain(approx, ctx).value;
 

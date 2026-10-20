@@ -351,6 +351,31 @@ KNOWN_SOURCES: dict[str, dict[str, str]] = {
         "license": "Open Government Licence – Alberta",
         "credit": "Contains information licensed under the Open Government Licence – Alberta.",
     },
+    # The follow-up Canadian round (2026-10-20)
+    "canada_lookouts_weebly": {
+        "title": "Canada's Fire Lookouts (Ron Kemnow)",
+        "url": "https://canada-lookouts.weebly.com/",
+        "license": "No licence stated; facts only (names, places, the pages' own positions, dated events in our words)",
+        "credit": "Canada's Fire Lookouts, by Ron Kemnow (canada-lookouts.weebly.com)",
+    },
+    "websiteservice_sk": {
+        "title": "Firetowers of Saskatchewan (websiteservice.ca)",
+        "url": "https://www.websiteservice.ca/firetowers_page4.htm",
+        "license": "No licence stated; facts only (names, positions, heights), photos shown with credit",
+        "credit": "Firetowers of Saskatchewan (websiteservice.ca), Chris Rule, from the work of Maurice Bourassa",
+    },
+    "bc_rec_sites": {
+        "title": "Recreation Sites and Trails BC: lookout recreation sites",
+        "url": "https://open.canada.ca/data/en/dataset/bc37b35d-8d00-45ab-9ab2-57cae75637ad",
+        "license": "Open Government Licence – British Columbia",
+        "credit": "Contains information licensed under the Open Government Licence – British Columbia.",
+    },
+    "bc_trim_lookouts": {
+        "title": "BC base map (TRIM Enhanced Base Map): fire lookout symbols",
+        "url": "https://catalogue.data.gov.bc.ca/dataset/d1fc9c40-c3ba-4ae4-ae5a-838ad3c43289",
+        "license": "Licence not confirmed; positions used as facts only, with credit and a link",
+        "credit": "Government of British Columbia, TRIM Enhanced Base Map (BC Geographic Warehouse)",
+    },
 }
 
 

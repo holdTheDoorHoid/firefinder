@@ -70,6 +70,14 @@ REGNUM_RE = re.compile(r"US\s*#?\s*(\d+)(?:\s*,\s*([A-Za-z]{2})\s*#?\s*(\d+))?",
 # Canadian entries: "CAN 16, ON 1".
 CAN_REGNUM_RE = re.compile(r"\bCAN\s*#?\s*(\d+)(?:\s*,\s*([A-Za-z]{2})\s*#?\s*(\d+))?", re.I)
 CA_PROVINCES = ["AB", "BC", "MB", "NB", "NL", "NS", "NT", "NU", "ON", "PE", "QC", "SK", "YT"]
+# Some Canadian provinces are filed under their English name, not their code (2026-10-20: NHLR's New
+# Brunswick entries are under /lookouts/can/new-brunswick/, North Cabin under /lookouts/can/saskatchewan/;
+# the code's list page answers 404). The name's list page is read when the code's has no entries.
+CA_PROVINCE_SLUGS = {
+    "AB": "alberta", "BC": "british-columbia", "MB": "manitoba", "NB": "new-brunswick",
+    "NL": "newfoundland-and-labrador", "NS": "nova-scotia", "NT": "northwest-territories", "NU": "nunavut",
+    "ON": "ontario", "PE": "prince-edward-island", "QC": "quebec", "SK": "saskatchewan", "YT": "yukon",
+}
 MONTHS = (
     "january|february|march|april|may|june|july|august|september|october|november|december"
 )
@@ -443,6 +451,12 @@ def build_source(source: str, states: list[str], rl: RateLimiter, robots: Robots
     for abbr in states:
         list_url = f"{base}/lookouts/{seg}/{abbr.lower()}/"
         status, body, cached = fetch(source, list_url, rl, robots, log=log)
+        entries = parse_list_page(body, base) if status == 200 else []
+        if not entries and country == "CA" and abbr in CA_PROVINCE_SLUGS:
+            alt_url = f"{base}/lookouts/{seg}/{CA_PROVINCE_SLUGS[abbr]}/"
+            alt_status, alt_body, _ = fetch(source, alt_url, rl, robots, log=log)
+            if alt_status == 200 and parse_list_page(alt_body, base):
+                list_url, status, body = alt_url, alt_status, alt_body
         if status != 200:
             log(f"{source} {abbr}: list page status={status}")
             fetch_fail.append(list_url)
