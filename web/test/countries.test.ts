@@ -108,9 +108,20 @@ describe("lookouts we can't place yet, outside the US", () => {
 
   it('says why and gives the district-office hint', () => {
     const text = reasonText(u, ctx).value;
-    expect(text).toContain('Outside the United States');
+    expect(text).toContain('no gazetteer');
     expect(text).toContain('Lindsay');
     expect(text).toContain('district office');
+  });
+
+  it("names Canada's gazetteer and searches the whole province when no district is given", () => {
+    const none = reasonText({ ...u, gnis: 'none', hint: { name: 'Pembrooke District - Algonquin Park', why: 'filed_under' } }, ctx).value;
+    expect(none).toContain('Canadian Geographical Names Database');
+    expect(none).toContain('all of Ontario');
+    expect(none).toContain('Pembrooke District - Algonquin Park');
+    const withUnit = reasonText({ ...u, gnis: 'none', county: 'Renfrew County', hint: null }, ctx).value;
+    expect(withUnit).toContain('in the district');
+    // the district-office hint still reads as before
+    expect(reasonText({ ...u, gnis: 'ambiguous', candidates: [] }, ctx).value).toContain('district office');
   });
 
   it('lists the provinces under Canada, after the states', () => {

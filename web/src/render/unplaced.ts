@@ -44,11 +44,15 @@ const CLASS_WORDS: Record<string, string> = { Summit: 'summit', Ridge: 'ridge', 
   // Canada's CGNDB generic terms
   Mount: 'mountain', Mountain: 'mountain', Hill: 'hill', Peak: 'peak', Lookout: 'lookout point', Lookoff: 'lookout point' };
 
-/** A place the source files the lookout under (a forest, an association, a district office), when it gives one. */
-function placeHint(u: UnplacedLookout, ctx: UnplacedContext): SafeHtml | string {
+/** The place a source files the lookout under, when it gives one: a district office or a settlement
+ * whose position it gives (firelookout.ca), or the forest, association or fire district a Canadian list
+ * names. */
+function hintText(u: UnplacedLookout, ctx: UnplacedContext): SafeHtml | string {
   const h = u.hint;
   if (!h?.name) return '';
   const at = typeof h.lat === 'number' && typeof h.lon === 'number' ? html` <a href="${mapAt(h.lat, h.lon, ctx, 10)}">See ${h.name} on the map</a>.` : '';
+  if (h.why === 'district_office') return html` The source files it under <strong>${h.name}</strong>, the old district office, and gives the office's position, not the tower's.${at}`;
+  if (h.why === 'settlement') return html` The source gives the centre of <strong>${h.name}</strong>, not the tower's position.${at}`;
   return html` Its source files it under <strong>${h.name}</strong>.${at}`;
 }
 
@@ -91,14 +95,19 @@ export function reasonText(u: UnplacedLookout, ctx: UnplacedContext): SafeHtml {
       return html`No hill or ridge of this name in the county, but there is a town: <strong>${t.name}</strong>. Many fire towers were named for the nearest town.${see}`;
     }
     case 'none':
-      return html`The USGS gazetteer has no hill, ridge or town of this name in the county.`;
+      return canada
+        ? html`${gazetteer} has no hill, mountain or ridge of this name in ${unitWords}. Many lookouts were named for a lake, a river or the nearest town.${hintText(u, ctx)}`
+        : html`${gazetteer} has no hill, ridge or town of this name in the county.`;
     case 'no_county':
       return html`No source says which county it was in, so we cannot look it up.`;
     case 'county_unknown':
-      return html`We could not find the county “${u.county ?? ''}” in ${state}, so we cannot look it up.`;
+      return canada
+        ? html`Its source files it under “${u.county ?? ''}”, a unit the Canadian gazetteer cannot be searched by, so we cannot look it up.${hintText(u, ctx)}`
+        : html`We could not find the county “${u.county ?? ''}” in ${state}, so we cannot look it up.`;
     case 'ambiguous': {
       const c = u.candidates ?? [];
-      return html`The county has ${c.length} places of this name (${c.map((f, i) => html`${i ? ', ' : ''}${f.name}, a ${CLASS_WORDS[f.class] ?? f.class.toLowerCase()}`)}), so we cannot tell which one it stood on.`;
+      const where = canada ? (u.county ? 'The district' : state) : 'The county';
+      return html`${where} has ${c.length} places of this name (${c.map((f, i) => html`${i ? ', ' : ''}${f.name}, a ${CLASS_WORDS[f.class] ?? f.class.toLowerCase()}`)}), so we cannot tell which one it stood on.${canada ? hintText(u, ctx) : ''}`;
     }
     case 'near_mapped_lookout':
       return u.near && u.near_name
@@ -116,16 +125,8 @@ export function reasonText(u: UnplacedLookout, ctx: UnplacedContext): SafeHtml {
       return html`On the Forest Fire Lookout Association’s rentals list, but we could not match it to a lookout.`;
     case 'no_name':
       return html`Its name says only “lookout” or “tower”, so there is nothing to look up.`;
-    case 'not_covered': {
-      const h = u.hint;
-      const at = h && typeof h.lat === 'number' && typeof h.lon === 'number' ? html` <a href="${mapAt(h.lat, h.lon, ctx, 10)}">See ${h.name} on the map</a>.` : '';
-      const hint = h?.why === 'district_office'
-        ? html` The source files it under <strong>${h.name}</strong>, the old district office, and gives the office's position, not the tower's.${at}`
-        : h?.why === 'settlement'
-          ? html` The source gives the centre of <strong>${h.name}</strong>, not the tower's position.${at}`
-          : '';
-      return html`No source gives its position, and we have no gazetteer to look it up in here.${hint}`;
-    }
+    case 'not_covered':
+      return html`No source gives its position, and Firefinder has no gazetteer to look it up in here yet.${hintText(u, ctx)}`;
     default:
       return html`No source says where it stood.`;
   }
