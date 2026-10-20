@@ -64,7 +64,7 @@ def wanted_keys(sources_dir: Path) -> dict[str, set[str]]:
     out: dict[str, set[str]] = defaultdict(set)
     for recs in records.values():
         for r in recs:
-            if r.has_coords or not r.region:
+            if r.has_coords or not r.region or r.country != "US":   # GNIS is the US gazetteer
                 continue
             out[r.region].update(merge.gnis_keys_for(r))
     return out

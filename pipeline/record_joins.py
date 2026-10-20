@@ -301,3 +301,16 @@ LOCATION_PICKS: dict[str, str] = {
     "ffla:mt:andesite:45.2646:-111.4062": "ffla:mt:andesite:45.2646:-111.4062",
     "ffla:or:madrona-park:45.6125:-122.7833": "ffla:or:madrona-park:45.6125:-122.7833",
 }
+
+
+# KEEP_APART: pairs of records a human has found to be two different lookouts, which a position or a
+# name would otherwise put in one tower (2026-10-20). Neither the key memory, the register, the
+# position nor the name joins a record to a tower holding the other of its pair. Each entry says why.
+KEEP_APART: list[tuple[str, str, str]] = [
+    # Baseline, Alberta: NHLR CAN 2 is the old ground house the federal Forest Service built (registered;
+    # abandoned in the late 1940s), replaced by an 80 ft tower and cabin about 1 km west, which is the
+    # active, staffed Alberta Wildfire lookout that OpenStreetMap maps (Prairies/North survey, 2026-10-20).
+    ("nhlr:CAN 2", "osm:node/11803949555", "Baseline: the registered old ground house vs the active tower 1 km west"),
+    ("nhlr:CAN 2", "alberta_wildfire:BL", "Baseline: the registered old ground house vs the active tower 1 km west"),
+]
+KEEP_APART_PAIRS: frozenset = frozenset(frozenset((a, b)) for a, b, _ in KEEP_APART)

@@ -68,7 +68,7 @@ import regions  # noqa: E402
 from photo_credit import extract_photo_credit  # noqa: E402
 import designs as design_names  # noqa: E402
 import structure  # noqa: E402
-from record_joins import LOCATION_PICKS, RECORD_JOINS  # noqa: E402
+from record_joins import KEEP_APART_PAIRS, LOCATION_PICKS, RECORD_JOINS  # noqa: E402
 
 def inside_us(lat: float, lon: float) -> bool:
     return regions.in_country("US", lat, lon)
@@ -362,6 +362,7 @@ SOURCE_SITE = {
     "firelookout_ca": "Firelookout.ca, Open Canada Fire Lookout Index",
     "ontario_lio": "Land Information Ontario (Ontario Ministry of Natural Resources)",
     "alberta_wildfire": "Alberta Wildfire (Government of Alberta)",
+    "curated_ak": "Alaska lookouts compiled by Firefinder from BLM and UAF reports",
 }
 
 # Default photo licence per source, where the source states one (None = not stated).
@@ -1584,7 +1585,14 @@ class Matcher:
                 return False
         return True
 
+    @staticmethod
+    def kept_apart(rec: Rec, tower: Tower) -> bool:
+        """A human has found the record and one of the tower's records to be two lookouts (KEEP_APART)."""
+        return any(frozenset((rec.key, m.key)) in KEEP_APART_PAIRS for m in tower.members)
+
     def can_join(self, rec: Rec, tower: Tower) -> bool:
+        if self.kept_apart(rec, tower):
+            return False
         if rec.source == "ffla_rentals":
             return True     # one lookout can have several booking pages (two cabins, two sites)
         same = [m for m in tower.members if m.source == rec.source]
@@ -2057,7 +2065,7 @@ class Matcher:
                     self.attach(r, target, "override", f"RECORD_JOINS -> {pin}")
                     continue
             t = self.by_key.get(r.key)
-            if t is not None:
+            if t is not None and not self.kept_apart(r, t):
                 self.attach(r, t, "key")
             else:
                 pending.append(r)

@@ -159,6 +159,23 @@ class CountriesInMerge(unittest.TestCase):
         self.ws.run({"nhlr": nhlr, "survey_on": other})
         self.assertEqual(self.ws.tower_with_key("nhlr:CAN 16"), self.ws.tower_with_key("survey_on:x"))
 
+    def test_keep_apart_splits_two_lookouts_a_name_would_join(self):
+        import record_joins
+        pair = frozenset(("nhlr:CAN 2", "osm:node/11803949555"))
+        self.assertIn(pair, record_joins.KEEP_APART_PAIRS)
+        nhlr = [ca("nhlr", "CAN 2", "Baseline Lookout", 52.137417, -115.415733, "AB",
+                   registers=[{"register": "NHLR", "number": "CAN 2", "state_number": "AB 2"}])]
+        osm = [ca("osm", "node/11803949555", "Baseline Fire Lookout", 52.1311, -115.428935, "AB")]
+        ab = [ca("alberta_wildfire", "BL", "Baseline", None, None, "AB")]
+        self.ws.run({"nhlr": nhlr, "osm": osm, "alberta_wildfire": ab})
+        old = self.ws.tower_with_key("nhlr:CAN 2")
+        active = self.ws.tower_with_key("osm:node/11803949555")
+        self.assertNotEqual(old["id"], active["id"])
+        self.assertEqual(self.ws.tower_with_key("alberta_wildfire:BL")["id"], active["id"])
+        # and a second run keeps them apart (the key memory honours it too)
+        self.ws.run()
+        self.assertNotEqual(self.ws.tower_with_key("nhlr:CAN 2")["id"], self.ws.tower_with_key("osm:node/11803949555")["id"])
+
     def test_fallback_name_only_when_no_source_names_it(self):
         lio = [ca("ontario_lio", "1", None, 48.37, -83.30, extra={"fallback_name": "Fire tower (LIO 1)"}),
                ca("ontario_lio", "2", None, 46.0, -80.0, extra={"fallback_name": "Fire tower (LIO 2)"})]
