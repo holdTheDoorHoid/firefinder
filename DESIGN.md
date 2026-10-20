@@ -1,7 +1,8 @@
 # Firefinder — design
 
 Firefinder brings together the scattered, often outdated fire-lookout websites on one modern
-interactive map. Every lookout site in the US gets an entry, standing or gone. Each tower page
+interactive map. Every lookout site in the United States (Alaska and Hawaii included) and Canada
+gets an entry, standing or gone. Each tower page
 has practical information (can I visit, can I stay, what are the rules) and a sourced history.
 There is a simulated view from the cab, including for towers that no longer exist.
 
@@ -18,16 +19,16 @@ DECIDED came from the owner's interview on 2026-10-03. Do not change them withou
 | Topic | Decision |
 |---|---|
 | Audience | Balanced, in layers. A clean map for anyone. Each tower page puts practical info first (visit / stay / access) and history below. |
-| Geography | US at launch. The data model carries `country` + `region` so Canada and others can be added without rework. |
+| Geography | US at launch. The data model carries `country` + `region` so Canada and others can be added without rework. **Owner changed 2026-10-20: Alaska, Hawaii and all of Canada join the lower 48, under the same scope rules** (structures first, standing and gone, the no-structure group, the non-fire and never-built rules). Ids, folders, units and what is US-only so far: 3.3, "Countries and regions". |
 | Scope | **Structures first**: elevated towers and ground cabs/houses, standing or gone. Tree platforms, tent camps and bare "lookout points" were out of scope (`hidden: true` with a reason). **Owner changed 2026-10-08: no-structure sites shown, off by default**: camps, lookout trees and bare points are a "no structure" group with their own label on the map and tower pages; the map leaves them off until the visitor switches them on; their tower pages are public; structure counts leave them out, "all sites" counts include them. Non-fire towers, never-built sites and human `HIDE_KEYS` stay hidden. Hiding a kind again is one edit (`"hidden": true`) in `data/structure_kinds.json`. |
 | 3D | (a) 360° **panorama from the cab** at eye height, with labeled peaks and a Firefinder compass ring; (b) **"what it could see"** viewshed shading on the map, several towers at once, to show network coverage; (c) **smoke-spotting demo**: take a bearing from two towers and cross the lines. No free-roam 3D flyover. Gone towers use their recorded site and height. |
 | Extras | Historical USGS topo overlay (the map from when the tower stood); then-and-now timeline per tower plus a national "towers standing per year" slider; tower-designs guide (L-4, Aermotor, CCC cupola…) linking to surviving examples. Not now: live wildfire layer, offline mode. |
 | Contributing | GitHub only: a "Suggest an edit" button on each tower opens a pre-filled GitHub issue. |
 | Checklist | Visited / stayed / want-to-go, saved in the browser (localStorage) with export/import. No accounts, nothing collected. |
 | Publishing | Public from the start. Thin or unchecked entries show a visible **Unverified** badge. |
-| Access | Exact location for every site. Private, tribal and closed sites get a prominent access label. Warn, don't hide. **Owner changed 2026-10-08: approximate pins, clearly marked**, for lookouts a source names with their county but no position: when USGS GNIS has exactly one same-name high-ground feature (summit, ridge, gap, pillar, cliff, bench) in that county, the lookout is shown there with a dashed marker, an "Approximate location" note on its page and always the Unverified badge; any real position from any source replaces it on the next merge, the lookout keeping its id. A town of that name only, or no match: not on the map, but listed per state on "Lookouts we can't place yet" with a pre-filled "Suggest a location" issue link. Rules in 3.5, "Approximate locations". |
+| Access | Exact location for every site. Private, tribal and closed sites get a prominent access label. Warn, don't hide. **Owner decided 2026-10-20: Alberta's staffed lookouts at their exact positions too**, from the Government of Alberta's wildfire-lookout layer (its description marks the layer "Protected" and its lookouts are the observers' seasonal homes; the owner was told and chose the exact-location rule; the portal lists the layer under the Open Government Licence – Alberta). Every Alberta lookout staffed now carries a prominent access label: "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited." **Owner changed 2026-10-08: approximate pins, clearly marked**, for lookouts a source names with their county but no position: when USGS GNIS has exactly one same-name high-ground feature (summit, ridge, gap, pillar, cliff, bench) in that county, the lookout is shown there with a dashed marker, an "Approximate location" note on its page and always the Unverified badge; any real position from any source replaces it on the next merge, the lookout keeping its id. A town of that name only, or no match: not on the map, but listed per state on "Lookouts we can't place yet" with a pre-filled "Suggest a location" issue link. Rules in 3.5, "Approximate locations". |
 | History tone | Story first: readable narrative with footnoted sources at the end of every page. |
-| Registry data | Use **facts** (location, type, status, years, register numbers, agency) from FFLA / NHLR / FFLOS, with credit and a link on every tower page. Write our own prose; never copy their text. The owner sends a partnership / permission note (draft in `docs/outreach/`). |
+| Registry data | Use **facts** (location, type, status, years, register numbers, agency) from FFLA / NHLR / FFLOS, with credit and a link on every tower page (owner 2026-10-20: the same posture for firelookout.ca, whose records are CC BY-NC-SA 4.0: facts only, credit and a link per tower). Write our own prose; never copy their text. The owner sends a partnership / permission note (draft in `docs/outreach/`). |
 | Photos | Mirror photos from all sources now, **with credit and a takedown note**, including hobbyist and registry sites. The owner chose this knowingly; do not relitigate. |
 | Research depth | Researched stories for every rentable or standing lookout first (~2,500). Gone sites get a facts card now and stories later, in batches the owner approves. |
 | License | Code GPL-3.0; database ODbL 1.0; our prose CC BY-SA 4.0; photos keep their own rights. |
@@ -43,11 +44,11 @@ Cache raw responses under `data/raw/` (git-ignored) so nothing is fetched twice.
 | Source | What it gives | Form | Rights |
 |---|---|---|---|
 | **FFLA** firelookout.org/lookouts/us/`<st>`/ | Master table per state: Name, County, Lat, Long, Type, Status, NHLR/FFLOS number. 6,157 rows in 30 states (crawled 2026-10-08, `pipeline/fetch_ffla.py --refresh`). 20 states have no table yet: Georgia, North Carolina and New Jersey show counts on the index and "Under construction" on their pages. Each state page links other sorts of the same list: by county (`<st>-co`), standing only (`<st>-st`), by region (`<st>-rg`; MT, ID, OR, WA) and CA's "Unknown/Undocumented" list (`ca-un`: 174 emergency, planned and never-built sites from one survey, 34 with a position). A row seen in several views is one record (the alphabetical list names its key). `<st>-add/` pages hold "additional information". | HTML tables | No licence stated; facts only |
-| **NHLR** nhlr.org (standing) | Per-lookout page: register numbers, date registered, location, coordinates, elevation, year built, administering agency, cooperators, prose, photo, links | Per-state lists → `/lookouts/us/<state>/<slug>/` | "All rights reserved" (American Resources Inc.); facts only, photos mirrored with credit |
-| **FFLOS** firetower.org (former sites) | Same schema as NHLR for gone lookouts; often historical photos with credits | Same as NHLR | Same as NHLR |
+| **NHLR** nhlr.org (standing) | Per-lookout page: register numbers, date registered, location, coordinates, elevation, year built, administering agency, cooperators, prose, photo, links. Canada (2026-10-20): `/lookouts/can/<province>/` (not `ca`), numbered "CAN 16, ON 1"; 20 entries (BC 9, AB 5, QC 3, NS 2, ON 1) read by `fetch_registers.py --canada`, which replaces only the extracts' Canadian records | Per-state lists → `/lookouts/us/<state>/<slug>/` | "All rights reserved" (American Resources Inc.); facts only, photos mirrored with credit |
+| **FFLOS** firetower.org (former sites) | Same schema as NHLR for gone lookouts; often historical photos with credits. Canada: 2 entries (BC 1, ON 1) | Same as NHLR | Same as NHLR |
 | **RIDB** (recreation.gov) | Rentable lookouts: description, rules, season, occupancy, pets, fees, reservation URL, coordinates | Daily bulk export `ridb.recreation.gov/downloads/RIDBFullExport_V1_JSON.zip` (~572 MB, no key). Activities "FIRE LOOKOUTS/CABINS OVERNIGHT", "LOOKOUT TOWER". Selected by name, plus the hand-checked `EXTRA_INCLUDE` list in `pipeline/fetch_ridb.py` (a reason per facility) for lookout rentals whose RIDB names carry no "lookout" (the FFLA lists them as lookout rentals: Post Creek, Mt. Baldy, Bishop Mountain, Gird Point, Strawberry, Tamarack, Timber Butte). | Public; credit "Data source: ridb.recreation.gov" |
-| **OpenStreetMap** | `emergency=fire_lookout` (~1,035) plus `man_made=tower`+`tower:type=observation` named *Lookout* | Overpass API | ODbL (compatible) |
-| **Wikidata** | Q748998 "fire lookout tower" (~319 with coords): Wikipedia links, NRHP ids (P649), Commons images (P18), inception | SPARQL | CC0 |
+| **OpenStreetMap** | `emergency=fire_lookout` (~1,035) plus `man_made=tower`+`tower:type=observation` named *Lookout*. Canada, Alaska and Hawaii (2026-10-20): a second cached query (`overpass_ca_ak_hi.json`, 86 elements, all in Canada; none in Alaska or Hawaii) with the disused:/was: forms and French names (tour à feu, tour d'observation, vigie); province by Natural Earth admin-1 polygon. A Canadian observation tower with no fire tag and no fire word in its name is marked `unconfirmed_lookout` and stays hidden unless another source describes it | Overpass API | ODbL (compatible) |
+| **Wikidata** | Q748998 "fire lookout tower" (~319 with coords): Wikipedia links, NRHP ids (P649), Commons images (P18), inception. Canada (2026-10-20): one more query (P17 = Q16; 11 items, 3 with coordinates), province from P131/P300, the French label when there is no English one, and the Canadian Register of Historic Places id (P477) as a link | SPARQL | CC0 |
 | **Regional** | firelookout.com state maps (MT: 134 `GV_Draw_Marker` points, plus WA/OR/ID/WY/SD); PA StoryMap (48 towers, `…/items/ed47c97ebe7246868ce8ef3e7139a0b4/data?f=json`); andyarthur.org NY towers (CC BY 3.0); CSKT Flathead Reservation (6); fire-lookouts.org Sierra NF (~18, reuse allowed with credit); idahofirelookouts.com (not yet surveyed) | Mixed | Per source |
 | **Gap-state regional** (2026-10-04) | easternuslookouts.weebly.com / centraluslookouts.weebly.com, the same hobby-site template split by region (one page per tower; AL/CT/FL/GA/KY/MA/MI/MS/NJ/NC/PA/SC/TN and AR/LA/MO/OK); Wikipedia *List of fire lookout towers in Louisiana* and *List of New Jersey Forest Fire Service fire towers* (coordinate-bearing wikitables, CC BY-SA, facts only); michiganfiretower.com (a small young single-author site, 8 towers); tnlandforms.us (Tom Dunigan's independently surveyed GA/NC/TN tower lists, 929 towers, every one with coordinates) | Mixed | Per source; no licence stated on the two weebly sites or tnlandforms.us |
 | **Links-page sites** (2026-10-08) | The sites FFLA's links page (`firelookout.org/resources/links/`) points to, surveyed in `docs/sources/links_survey.md`. Ron Kemnow's *western* weebly sites (westlookouts, californialookouts, idaholookouts, montanalookouts, oregonlookouts, washingtonlookouts; ~3,700 pages, ~60% with a map-widget position), and the eastern / central sites now read for **every** state they cover (they had been limited to the gap states, and a mislabelled nav header had hidden 178 Michigan, 27 Missouri and 30 Indiana towers); TrailChick's Washington guide (93 visited lookouts with coordinates); *Every Lookout in Oregon* (155 standing lookouts, no coordinates, matched by register number or name); the per-lookout pages of FFLA chapters and Friends groups (`ffla_groups`: links, and the California-South chapter's table of register numbers and conditions); WillhiteWeb.com's Washington lookout pages (names and links); Indiana Fire Towers (Mark Armantrout's guide to ~40 Indiana tower sites, each with coordinates) | HTML | None stated on any; facts and links only |
@@ -55,6 +56,12 @@ Cache raw responses under `data/raw/` (git-ignored) so nothing is fetched twice.
 | **Association project reports** (2026-10-08) | Year-by-year reports of the work lookout associations do on particular lookouts, one source per association, one shared record shape (3.7). First: the Northwest Montana Lookout Association, nwmt-ffla.org: project posts 2025-26, "Completed Projects" PDFs 2014-24 (print-outs of its old website) and the yearly newsletters, 37 lookouts in Glacier NP, the Flathead and Kootenai NFs and Montana DNRC, about 180 dated restoration, repair and assessment events | WordPress posts, PDFs (pdftotext) | No licence stated; facts only, notes in our words, every event linked to its report |
 | **Western association project reports** (2026-10-08) | Fifteen more sources in the same family (3.7) for the West and the Rockies: the FFLA chapter and restoration-grant reports 2003-2025 (212 PDFs from the AZ, CA, CO-UT, ID, NM, OR, WA and WY chapters; `ffla_west_reports`, 248 lookouts, 491 events), the Sand Mountain Society (OR), Mountaineers Everett (WA), Snoqualmie Fire Lookouts, Methow Valley FFLA, Buck Rock Foundation, Angeles NF FLA, Southern California Mountains Foundation, FFLA San Diego-Riverside, Monterey and California South, Hi Mountain Lookout Project, Siskiyou Mountain Club, HistoriCorps and the Green Mountain Lookout story (Washington Trust, WTA). 308 lookouts, 680 dated events in all; survey in `docs/sources/associations_west.md` | WordPress/Squarespace/Wix pages, PDFs (pdftotext) | No licence stated; facts only, notes in our words, every event linked to its page or PDF |
 | **Eastern association projects** (2026-10-08) | The same shape for the East, the South and the Midwest: the FFLA New York State Chapter's monthly newsletters 2016-2026 (121 issues, 75 NY towers, 227 events), nine single-tower "Friends of" and similar groups with dated logs or newsletters (St. Regis, Hurricane, Mount Arab, Azure, Bald/Rondaxe, Bramley, Stillwater, the Kent Conservation Foundation for Nimham, Friends of the Smokies for Mount Cammerer), and the FFLA's own yearly chapter and restoration-grant reports 2003-2025 for the eastern chapters (236 PDFs, 122 lookouts, 217 events; the only written record of the chapters that otherwise exist on Facebook). Survey of every group considered, with why the others were not read: `docs/sources/associations_east.md` | WordPress and hand-made pages, PDFs (pdftotext) | No licence stated; facts only, notes in our words, every event linked to its report |
+| **Firelookout.ca** (2026-10-20) `firelookout_ca` | The "Open Canada Fire Lookout Index": 206 records (ON 142, BC 50, SK 14) in a JS array `rawTowers` on the home page (id, title, slug, lat, lng, address, region), each with a record page `/lookouts/?slug=<slug>` (the pretty URLs return the home page) giving elevation, "Tower Type", height and year built for a few. No robots.txt (the path returns the home page). Province and local unit read from the address (District, Regional District, County, Division No., rural municipality), never appended to. Position checks: a point three or more differently named records share is a district office, not a tower (Lindsay 9, Tweed 8, Pembroke 3), and a settlement-centre pin (Cumberland House) or one the site calls unknown (Clear Lake) is dropped, the record going to the can't-place-yet list with the place as a hint; positions the site calls a guess are `position_approximate` (used only when no other source gives one). A short curated table records the status and dated events read from the record notes, in our words (`CURATED` in `pipeline/regional/firelookout_ca.py`); the notes themselves are not copied | HTML + JS array, 206 pages at 2 s | CC BY-NC-SA 4.0; facts only, credit and a link per tower (owner 2026-10-20) |
+| **Land Information Ontario** (2026-10-20) `ontario_lio` | The Ontario Ministry of Natural Resources' Tower layer, subtype "Fire Tower": 95 points with good positions (10-50 m), 42 named; comments give a few build years; no status field (the layer keeps towers removed later). One query (`…/LIO_Open10/MapServer/14/query?where=CLASS_SUBTYPE='Fire Tower'&outSR=4326&f=geojson`). An unnamed point is named by any other source at the spot, otherwise "Unnamed fire tower near <place>" (from its location note) or "Fire tower (LIO <id>)" (`extra.fallback_name`) | ArcGIS REST | Open Government Licence – Ontario; credit "Contains information licensed under the Open Government Licence – Ontario." |
+| **Alberta Wildfire** (2026-10-20) `alberta_wildfire` | The Government of Alberta's WF_WILDFIRE_LOOKOUT layer: 124 current lookouts (101 steel towers, 23 cabins) with name, type, year built, height, elevation and active flag. Exact positions by the owner's decision (section 1, Access); every active lookout is `staffed` and carries the "observer's seasonal home" access label (level `closed`), ranked first for access and staffing | ArcGIS REST (`f=json`; `f=geojson` answers HTTP 500), one cached request | Open Government Licence – Alberta; credit "Contains information licensed under the Open Government Licence – Alberta." |
+| **Alaska, hand-compiled** (2026-10-20) `curated_ak` | The six Alaska lookouts the Alaska/Hawaii survey found (BLM Alaska Fire Report 1970, UAF bulletins: Murphy Dome, Birch Hill, Bald Mountain, Lazy Mountain, Gordon Lyon Peak, Jean Lake), with their evidence links and no tower positions. Placed by the existing approximate-pin rule (3.5) or listed on Alaska's can't-place-yet page; the survey's GNIS hill coordinates are never used as a position. Hawaii: no fire lookouts found; Glacier Lookout (Valdez) and the Tongass CCC "Shelter Lookout/Cabin" shelters are excluded (3.5, "Out of scope") | `pipeline/regional/survey_candidates.py` from the survey's candidate file | Facts with links to each source |
+| **Canadian Geographical Names Database** (reference, 2026-10-20) | Named summits in Canada for the panorama's labels (`peaks_cgndb.json`, `pipeline/fetch_peaks_cgndb.py`): every name of concise class MTN whose generic term is a single summit (Mountain, Mount, Peak, Hill, Butte, Knoll, Dome, Cone, Tolt, Lookout...; ranges, ridges and plural groups left out), official names only, one per feature (the English name for a bilingual one), 12,420 summits | NRCan's GeoNames service (`geogratis.gc.ca/services/geoname/en/geonames.csv?concise=MTN&province=<SGC>`, 1,000 rows a page, 28 pages, cached under `data/raw/cgndb/`). The bulk files on ftp.maps.canada.ca are not used: its robots.txt disallows `/pub` | Open Government Licence – Canada; credit "Contains information licensed under the Open Government Licence – Canada" |
+| **Natural Earth admin-1** (reference, fetch time only) | State and province polygons (1:10m, public domain) for the fetchers that need a province for a point with none (OSM, Wikidata without P131); `regions.Admin1Lookup`, cached once under `data/raw/natural_earth/`. The merge never reads it | GeoJSON, one download | Public domain |
 | **USGS GNIS** (reference) | Named summits for the panorama's labels (`peaks_gnis.json`, `fetch_peaks.py`), and the high-ground features and towns behind approximate locations (`gnis_places.json`, `fetch_gnis_places.py`, 3.5) | Domestic Names bulk file (`prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/DomesticNames/`), one cached download | Public domain; credit "USGS Geographic Names Information System (GNIS)" |
 | Later | USGS historical topos (public domain, `ngmdb.usgs.gov/arcgis/rest/services/topoview/ustOverlay(Auto)/MapServer`), NRHP NPS dataset, Library of Congress HABS/HAER (measured drawings, public domain), Forest History Society, state forestry lists, newspapers | — | — |
 
@@ -67,7 +74,9 @@ Cache raw responses under `data/raw/` (git-ignored) so nothing is fetched twice.
 ```
 data/
   sources/<source>.json     normalized extract from one source (list of source records, §3.2); committed
-  towers/<region>/<id>.json one canonical record per lookout site (§3.3); the source of truth
+  towers/<dir>/<id>.json    one canonical record per lookout site (§3.3); the source of truth.
+                            <dir> is the state code for a US tower (or/), <country>-<region>
+                            for any other country (ca-on/): 3.3, "Countries and regions"
   stories/<id>.md           researched narrative with footnotes (stage 2)
   research/<id>.json        that research's facts, events, sources and fact-check (research/STORY_GUIDE.md)
   photos_manifest.json      pipeline/mirror_photos.py's output (§3.5 "Photos"); committed. The
@@ -124,10 +133,11 @@ in the crawl cache (NHLR, FFLOS, firelookout.com) store short structure facts fr
 `extra.structure_words` (a closed vocabulary: "steel tower", "wood cab", "kind ground",
 "role aws"; never prose), refreshed from the cache with `python3 pipeline/structure.py --backfill`.
 
-### 3.3 Canonical tower (`data/towers/<region>/<id>.json`)
+### 3.3 Canonical tower (`data/towers/<dir>/<id>.json`)
 
-`id` = `us-<st>-<slug>`, with `-2`, `-3`… for same-name sites in one state (there are dozens of
-"Bald Mountain"s). **Ids never change once published** (they are URLs and checklist keys). When two
+`id` = `<country>-<region>-<slug>`, lower case (`us-or-abbot-butte`, `us-ak-…`, `ca-on-shining-tree`),
+with `-2`, `-3`… for same-name sites in one state or province (there are dozens of
+"Bald Mountain"s). US ids are as they always were. **Ids never change once published** (they are URLs and checklist keys). When two
 towers turn out to be one lookout, one id is retired, never deleted: its file stays, hidden, with
 `"merged_into": "<id of the tower that has its records>"` and no sources, and the site redirects its
 address (3.5, "Retired towers").
@@ -183,6 +193,41 @@ does not list gets its rental from the FFLA entry alone: `source: "ffla"`, `prov
 booking site ("Airbnb", "Washington State Parks"), `url` its booking page, `ridb_facility_id`
 the recreation.gov number when the link has one; the page then credits the FFLA list, not RIDB.
 
+**Countries and regions** (owner decision 2026-10-20: Alaska, Hawaii and Canada). `pipeline/regions.py`
+(mirrored for the site by `web/src/lib/regions.ts`) is the one table:
+
+- `country` is the ISO 3166-1 alpha-2 code (`US`, `CA`); `region` the state, province or territory
+  code inside it, as the postal services write them (`OR`, `AK`, `HI`, `ON`, `QC`, `NT`). Region
+  codes are **unique across the countries listed** today (checked when the module loads), so a
+  tower's region alone says its country, and the merge's indexes keyed by region keep working. A
+  future country whose codes repeat another's (Australia's WA, NT, SA) needs those indexes
+  country-qualified first; the module says so where it checks.
+- **Tower folders**: `data/towers/<dir>/<id>.json`, `<dir>` = the bare state code for a US tower (`or/`,
+  as since 2026-10-03, so no existing file moved and no US address changed) and `<country>-<region>`
+  for every other country (`ca-on/`, `ca-bc/`). A two-letter folder is always a US state or
+  territory; a hyphenated one always names its country, so `data/towers/ca/` stays California and a
+  future `au-wa/` can never share Washington's folder (`regions.tower_dir`). Chosen over moving the
+  8,483 US files to `us/<st>/`: same clarity, no churn in history or in branches in flight.
+- A tower's `country` is its region's; the merge sets it after the region (`regions.country_of`).
+  A record's coordinates are used only inside its own country's boxes (a US row slipped into Canada is
+  "outside_country", as a swapped pair always was). The boxes are padded and for sanity checks only;
+  Alaska has two, either side of the 180th meridian (Attu is at 172.9 E), and Hawaii's second covers
+  the Northwestern Hawaiian Islands.
+- **Local units** live in `county`. A US county gets its word on pages ("Jefferson County", "Caddo
+  Parish"; Alaska's census areas "Census Area", its other units "Borough"); a Canadian unit is kept
+  and shown exactly as its source writes it ("Sudbury District", "Regional District of Central
+  Kootenay", "Division No. 18", "Torch River No. 488"), nothing appended. Pages write a Canadian
+  place with its country: "Sudbury District, Ontario, Canada".
+- **Units** (one rule, site and summaries): a lookout in the United States reads feet first with
+  metres alongside ("5,930 ft (1,807 m)"); a lookout anywhere else reads metres first with feet
+  alongside ("459 m (1,506 ft)"). Distances in the panorama follow it (miles first in the US, km
+  elsewhere), and so does its eye-height control (feet in the US, metres in Canada). The map carries
+  both an imperial and a metric scale. Data is always metres.
+- **US-only for now** (said on the pages): the old topo maps and the USGS mini-map (USGS
+  collections), and approximate pins (GNIS is the US gazetteer). A Canadian lookout no source places
+  is listed on its province's "Lookouts we can't place yet" page ("not_covered"). Follow-up, not
+  built: CGNDB as a second gazetteer for Canada (3.5, "Approximate locations").
+
 ### 3.4 Vocabularies (`data/vocab.json`)
 
 - `kind` (plain words, groups and the hide switch in `data/structure_kinds.json`):
@@ -234,12 +279,18 @@ file, `data/merge_report.json` (counts, conflicts, near misses, records it could
 Re-running with unchanged inputs writes nothing. A new source extract in `data/sources/` is
 picked up with no code change (unknown sources rank last in every field).
 
-**Matching**, per source in the order NHLR, FFLOS, FFLA, RIDB, fire-lookouts.org, tnlandforms.us,
+**Matching**, per source in the order NHLR, FFLOS, FFLA, RIDB, (2026-10-20) firelookout.ca, Land
+Information Ontario and Alberta Wildfire, fire-lookouts.org, tnlandforms.us,
 the NJ Forest Fire Service Wikipedia table, firelookout.com, idahofirelookouts.com,
 michiganfiretower.com, PA StoryMap, andyarthur.org, the Wikipedia per-state lookout lists, CSKT,
 the easternuslookouts and centraluslookouts weebly sites, the association project sources (3.7: the Northwest Montana Lookout Association, the western and the eastern associations, in the order of `ASSOCIATION_SOURCES`), Wikidata, OSM, and then (2026-10-08) Ron
 Kemnow's western weebly sites, TrailChick (WA), Every Lookout in Oregon, the FFLA chapter and Friends
-pages, WillhiteWeb (WA), and Indiana Fire Towers:
+pages, WillhiteWeb (WA), and Indiana Fire Towers (sources not named, such as `curated_ak`, come last).
+The Canadian sources rank in the field lists right after the US registers and FFLA (they never meet a
+US record, so US towers are unaffected): name firelookout.ca > LIO > Alberta Wildfire; location LIO >
+Alberta Wildfire > firelookout.ca (LIO's and Alberta's positions are surveyed, firelookout.ca's
+hand-placed); staffing and access Alberta Wildfire first. A register's Canadian numbers ("NHLR CAN 16")
+count like its US numbers in matching:
 
 0. **Pinned by a human.** A record named in `RECORD_JOINS` (`pipeline/record_joins.py`; each entry
    says why) goes to its pinned tower before anything else, even when an earlier run put it in a
@@ -422,6 +473,15 @@ name different materials in words;
 helpers above it in `pipeline/merge.py`, tests in `pipeline/test_approx_pins.py`). About 2,000 source
 records name a lookout and its county but give no coordinates (most from the hobby sites).
 
+- *Countries* (2026-10-20). The merge reads gazetteers through `Gazetteers`, one per country, each
+  with GnisIndex's `lookup(region, county, keys)`; today only the US has one (USGS GNIS, which covers
+  Alaska and Hawaii). A record of a country without one is not pinned: its outcome is `not_covered`
+  and it is listed on its province's can't-place-yet page, with any place its source files it under
+  (`hint`: firelookout.ca's district offices, a settlement). **Follow-up, not built**: Canada's CGNDB
+  as a second gazetteer, an index object registered under "CA" whose features are
+  `GnisFeature(..., gazetteer="cgndb")`; the location then says `from: "cgndb"`,
+  `method: "cgndb_name_match"` and `gazetteer`, and nothing else in the merge changes.
+
 - *Gazetteer.* `pipeline/fetch_gnis_places.py` reads the USGS GNIS Domestic Names file (cached under
   `$FIREFINDER_RAW_ROOT/gnis/`, shared with `fetch_peaks.py`, never committed) and writes the small
   committed extract `data/sources/gnis_places.json` (`"kind": "reference"`): the high-ground features
@@ -480,7 +540,8 @@ every source, that no tower holds, with the reason, and per source how many reco
 visible tower, on a hidden one only, or on none. `--strict` exits 1 if a record with a usable
 position is held by no tower (the tower files are older than the extracts). Records with no
 position (FFLA rows it publishes without coordinates, rentals no name settles) are the expected
-remainder: a tower needs a position.
+remainder: a tower needs a position. A position outside the record's own country is
+`coordinates_outside_country` (it was `coordinates_outside_us` before 2026-10-20).
 
 **Verification**: `facts` when two independent sources agree on location (within 500 m of the
 shown position) and status; otherwise `unverified`. An approximate (GNIS) position is never `facts`. NHLR, FFLOS, FFLA and firelookout.com count
@@ -493,9 +554,18 @@ shown as sites with no structure); FFLA "Proposed/Planned/Never Built"; FFLA's "
 NOT to have been used as wildland fire lookouts"; non-fire towers; sites only FFLA's "Unknown/Undocumented" list (ca-un) has, with no
 register or structure from another source; single records hidden by a
 human decision (`HIDE_KEYS` in merge.py, e.g. OSM's "East Lookout Tower" on Guam: "Not
-confirmed as a fire lookout").
+confirmed as a fire lookout"). Since 2026-10-20 also: a record whose source says it is not a fire
+lookout (`extra.not_fire_lookout`, its reason shown: firelookout.ca's Thunder Cape Bird Observatory);
+a tower whose records are all `extra.unconfirmed_lookout` (Canadian OpenStreetMap observation towers with
+no fire tag or word: Tay Marsh, "Tour d'observation - canards et cervidés"), visible as soon as another
+source describes it; in **Hawaii**, anything named or typed for coastal-artillery fire control, a base
+end or a battery (the Second World War fire-control stations are not fire lookouts; elsewhere "fire
+control" is forestry, as at Florida's Monticello Fire Control Headquarters tower); in **Alaska**, the
+Tongass CCC canoe-route shelters listed as "Shelter Lookout/Cabin", Curry Lookout (a railroad hotel
+shelter) and Glacier Lookout at Valdez (a glacier observatory). RIDB's name match skips any
+facility with "shelter" in its name (`fetch_ridb.name_selects`).
 
-**Ids**: `us-<st>-<slug>` from the display name without trailing "Lookout"/"Tower" words (also
+**Ids**: `<country>-<region>-<slug>` (`us-<st>-<slug>` in the US; 3.3) from the display name without trailing "Lookout"/"Tower" words (also
 before a parenthetical: "Pilot Peak Lookout (Payette NF)" → `pilot-peak-payette-nf`); moved and
 replica structures as above; new
 towers are numbered `-2`, `-3`… in a fixed order (state, slug, north to south, first key), so a
@@ -546,7 +616,8 @@ tower (`--research` to point elsewhere), so a re-merge never loses research:
 
 - `towers.geojson`: every visible tower as a point, coordinates rounded to 5 dp. Short
   property names (missing key = null/false; the legend is repeated in `meta.json` → `format`):
-  `i` id, `n` name, `r` state, `c` county, `k` kind, `s` status, `v` verification, `a` access,
+  `i` id, `n` name, `r` state, province or territory, `cc` country when not the US (`CA`),
+  `c` county or local unit, `k` kind, `s` status, `v` verification, `a` access,
   `b` year built, `rt` 1 if rentable, `rg` 1 if on a register, `o` other names joined by `|`,
   `y0` / `y1` first year it stood / year it came down (only when an event records it; §4.2),
   `d` recognised design ids joined by `|`, `m` material, `ap` 1 for an approximate (GNIS)
@@ -561,7 +632,9 @@ tower (`--research` to point elsewhere), so a re-merge never loses research:
   old address (`dist/t/<old id>/index.html`), and the map follows `?t=<old id>`. `meta.json` counts
   them (`counts.merged`).
 - `t/<id>.json`: the full canonical record plus the story HTML, when one exists.
-- `meta.json`: counts, source list with retrieved dates, and build date; `history` (how many
+- `meta.json`: counts (with `by_country`), source list with retrieved dates, and build date;
+  `regions` (the countries and their regions in listing order, with counts) and
+  `history_by_country` beside `history`; `history` (how many
   towers have a start year, an end year, neither) and `designs` (design coverage). `counts.total`
   is every site shown; `counts.structures` and `counts.no_structure` split it; `history` and the
   design coverage count structures only; `counts.by_material` too.
@@ -572,9 +645,12 @@ tower (`--research` to point elsewhere), so a re-merge never loses research:
   tower's `design`, its sources' `type_raw` / `extra.design` / OSM design tags, the design names
   in its sources' prose, and `data/design_mentions.json`; it never guesses). §4.2 has the model.
 - `peaks/` (from `pipeline/build_peaks.py`, run after `build_site_data.py`): named summits from
-  USGS GNIS (`data/sources/peaks_gnis.json`, fetched by `pipeline/fetch_peaks.py`) cut into
-  1° cells, `peaks/<floor lat>_<floor lon>.json` = `[[name, lat, lon, gnis_id], …]` (4 dp), plus
-  `peaks/index.json` listing the cells. Files in `data/sources/` with `"kind": "reference"` are
+  USGS GNIS (`data/sources/peaks_gnis.json`, fetched by `pipeline/fetch_peaks.py`; Alaska's 2,958
+  and Hawaii's 1,085 included) and, since 2026-10-20, Canada's CGNDB (`data/sources/peaks_cgndb.json`,
+  `pipeline/fetch_peaks_cgndb.py`) cut into 1° cells, `peaks/<floor lat>_<floor lon>.json` =
+  `[[name, lat, lon, id], …]` (4 dp; the id is a GNIS number or a CGNDB string such as "FEGTX", and
+  the panorama credits the gazetteer by it), plus `peaks/index.json` listing the cells and both
+  sources. Files in `data/sources/` with `"kind": "reference"` are
   not lookout sources: `merge.py` and `build_site_data.py` skip them (the other one is
   `gnis_places.json`, the GNIS names behind approximate locations, 3.5).
 
@@ -704,6 +780,13 @@ Friends of Sterling Forest's domain has been hijacked for spam; New Hampshire's 
   and the count adds "…, 109 at approximate locations". The count says what it counts: "All 7,523
   towers and buildings shown", or with the switch on "All 8,093 lookout sites shown, including
   570 with no structure".
+- **Countries on the map** (2026-10-20): the map opens on the lower 48 and southern Canada; quick
+  jumps (Lower 48, Alaska, Hawaii, Canada, All) sit top left; an imperial and a metric scale. The
+  place filter lists the US's states, then Canada's provinces and territories, each group with an
+  "All of …" option (`&state=ON`, `&country=CA`). The year view counts both countries, the US or
+  Canada (its "Count" buttons set the place filter), and its notes use that country's date coverage.
+  The "Topo" base map and the old topo maps are USGS and cover the US only; over Canada the old-maps
+  card says so. Units: 3.3, "Countries and regions".
 - **Tower pages**: prerendered static HTML at `/t/<id>/` (shareable, findable by search
   engines). Layout from the top: name, status, access badges; *Visit & stay* (rental rules
   and the recreation.gov button, access, staffing); facts card; timeline; story with
@@ -711,9 +794,10 @@ Friends of Sterling Forest's domain has been hijacked for spam; New Hampshire's 
   checklist buttons. A lookout at an approximate location gets an "Approximate location" badge
   beside Unverified and a notice under the title: placed on <feature>, the one <class> of that name
   in <county> in USGS GNIS, how far off that may be, and "Know where it stood? Suggest an edit"
-  (the edit form, titled "Location: ..."); the facts card, mini-map pin and Sources (GNIS credited)
+  (the edit form, titled "Location: ..."; the form's "Where" box carries the state or province and
+  country since 2026-10-20); the facts card, mini-map pin and Sources (GNIS credited)
   say so too.
-- **Lookouts we can't place yet** (`/unplaced/`, one page per state `/unplaced/<st>/`, prerendered from
+- **Lookouts we can't place yet** (`/unplaced/`, one page per state, province or territory `/unplaced/<code>/`, the index grouped by country, prerendered from
   `unplaced.json`): every lookout a source names but none places, alphabetical: name, county, the
   sources that list it (linked), what the gazetteer had (a town of the name with a map link, the
   lookout on the map it may be, several places of the name...), and a **Suggest a location** button
@@ -755,7 +839,7 @@ Friends of Sterling Forest's domain has been hijacked for spam; New Hampshire's 
   says which applies and lets the visitor change it. The eye stands on the highest terrain
   within 75 m of the recorded position (said in "How this view is made").
 - **Panorama**: 36 distance layers drawn far to near, paler with distance; only true ridgelines
-  are inked; peak labels for GNIS summits whose top clears the nearer terrain (the last 2 % of
+  are inked; peak labels for GNIS summits (CGNDB summits in Canada, since 2026-10-20) whose top clears the nearer terrain (the last 2 % of
   the distance, 150 m–1.5 km, is ignored so a mountain is not hidden by its own slope); other
   lookouts at typical heights, gone ones at their old sites. Where the whole skyline varies by
   less than 1.5°, heights start drawn ×2, labelled on the view and on the pressed button.
@@ -773,7 +857,8 @@ Friends of Sterling Forest's domain has been hijacked for spam; New Hampshire's 
 
 ### 4.2 History extras (stage 4, built 2026-10-04)
 
-- **Old topo maps**: a third base map, "Old topo", draws the USGS Historical Topographic Map
+- **Old topo maps** (United States only; a Canadian tower page and the map card say it is not
+  available there yet): a third base map, "Old topo", draws the USGS Historical Topographic Map
   Collection (public domain, 1880s–2006) under the lookouts. Sheet list: USGS TopoView's
   overlay service (`energy.usgs.gov/arcgis/rest/services/topoview/ustOverlay/MapServer/0`,
   CORS open, one query per 1° cell). Scans: each sheet's cloud-optimised GeoTIFF on The
@@ -888,7 +973,14 @@ Friends of Sterling Forest's domain has been hijacked for spam; New Hampshire's 
 3. **3D**: Rust/WASM panorama + viewshed + smoke-spotting demo.
 4. **History extras**: historical topo overlay, per-tower timeline, national
    standing-per-year slider, tower-designs guide.
-5. Later: Canada, more states' gone sites, photo contributions.
+5. **Alaska, Hawaii and Canada** (first round 2026-10-20, agent countries): the multi-country
+   plumbing (3.3), firelookout.ca, Land Information Ontario, Alberta Wildfire, NHLR/FFLOS Canada,
+   OSM and Wikidata for Canada, the Alaska records, CGNDB peak names, the site's country grouping and
+   units. Follow-up round (one agent, from this branch): canada-lookouts.weebly.com for every province,
+   websiteservice.ca's Saskatchewan list, the expansion surveys' candidate files as hand-compiled
+   sources (`survey_candidates.py` already reads them; only Alaska is written by default), CGNDB
+   approximate pins for Canada (3.5), the BC sources, replica and Nova Scotia status rules.
+6. Later: more states' gone sites, photo contributions.
 
 ---
 
