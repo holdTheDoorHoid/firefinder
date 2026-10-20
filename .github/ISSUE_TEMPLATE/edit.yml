@@ -6,14 +6,14 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping. Usually this form is opened from **Suggest an edit** on a lookout's page, which fills in the first three boxes for you.
+        Thanks for helping. Usually this form is opened from **Suggest an edit** on a lookout's page, which fills in the first four boxes for you.
         Tell us what is wrong, what is right, and how you know. Short is fine.
         This issue is public, so please do not include private details such as your phone number or home address.
   - type: input
     id: tower_id
     attributes:
       label: Lookout id
-      description: The id on the lookout's page, like us-or-warner-mountain. Leave empty if the lookout is missing from Firefinder.
+      description: The id on the lookout's page, like us-or-warner-mountain or ca-on-shining-tree. Leave empty if the lookout is missing from Firefinder.
       placeholder: us-or-warner-mountain
     validations:
       required: false
@@ -24,6 +24,14 @@ body:
       placeholder: Warner Mountain Lookout
     validations:
       required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where (state or province, country)
+      description: Filled in from the lookout's page. For a lookout missing from Firefinder, say where it is.
+      placeholder: Oregon, United States / Ontario, Canada
+    validations:
+      required: false
   - type: input
     id: page_url
     attributes:

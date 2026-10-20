@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """Web search from the shell, for research agents when the WebSearch tool is unavailable.
 
-  scripts/websearch.py "LayerOne 2019 badge" [-n 10]
+  research/websearch.py "Mont-Tremblant tour a feu" [-n 10] [--country CA] [--lang fr]
+
+Results are not tied to a country unless asked: DuckDuckGo's region defaults to "wt-wt" (no region).
+--country US or CA (with --lang en or fr, default en) leans results towards that country and
+language ("us-en", "ca-en", "ca-fr"); --kl takes any DuckDuckGo region code as-is.
 
 Uses DuckDuckGo's lite endpoint (POST, text-browser user agent; the html endpoint and Bing/Google
 block or garble scripted queries). Prints one result per line: title | url | snippet.
@@ -28,8 +32,18 @@ UA = "Lynx/2.8.9rel.1 libwww-FM/2.14 SSL-MM/1.4.1 OpenSSL/1.1.1"
 
 def clean(s): return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", s))).strip()
 
-def ddg_lite(q, n):
-    data = urllib.parse.urlencode({"q": q, "kl": "us-en"}).encode()
+def ddg_region(country=None, lang=None, kl=None):
+    """DuckDuckGo's region code: "wt-wt" (none) by default, "us-en", "ca-en", "ca-fr"..."""
+    if kl:
+        return kl
+    if not country:
+        if lang:
+            raise ValueError("--lang needs --country (the region code is country-language, such as ca-fr)")
+        return "wt-wt"
+    return f"{country.lower()}-{(lang or 'en').lower()}"
+
+def ddg_lite(q, n, kl="wt-wt"):
+    data = urllib.parse.urlencode({"q": q, "kl": kl}).encode()
     req = urllib.request.Request("https://lite.duckduckgo.com/lite/", data=data, headers={"User-Agent": UA, "Referer": "https://lite.duckduckgo.com/"})
     for attempt in range(3):
         try:
@@ -49,10 +63,17 @@ def ddg_lite(q, n):
     return out
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("query"); ap.add_argument("-n", type=int, default=10); a = ap.parse_args()
-    try: res = ddg_lite(a.query, a.n)
+    ap = argparse.ArgumentParser(); ap.add_argument("query"); ap.add_argument("-n", type=int, default=10)
+    ap.add_argument("--country", choices=["US", "CA", "us", "ca"], help="lean results towards this country (default: none)")
+    ap.add_argument("--lang", choices=["en", "fr"], help="with --country: results language (default en)")
+    ap.add_argument("--kl", help="a DuckDuckGo region code such as wt-wt or ca-fr, overriding --country/--lang")
+    a = ap.parse_args()
+    try: kl = ddg_region(a.country, a.lang, a.kl)
+    except ValueError as e: ap.error(str(e))
+    try: res = ddg_lite(a.query, a.n, kl)
     except Exception as e: print(f"# search failed: {e}"); return
     if not res: print("# no results"); return
+    if hasattr(sys.stdout, "reconfigure"): sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     for t, u, d in res: print(f"{t} | {u} | {d[:220]}")
 
 if __name__ == "__main__":
