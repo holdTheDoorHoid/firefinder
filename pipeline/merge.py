@@ -88,7 +88,7 @@ GNIS_FILE = "gnis_places.json"
 # master-list sources first, so they seed the towers the others attach to. Sources not named
 # here (a future extract) are processed last, alphabetically, at the lowest precedence.
 SOURCE_ORDER = [
-    "nhlr", "fflos", "ffla", "ridb", "ffla_rentals", "firelookout_ca", "fire_lookouts_org", "tnlandforms",
+    "nhlr", "fflos", "ffla", "ridb", "ffla_rentals", "firelookout_ca", "ontario_lio", "fire_lookouts_org", "tnlandforms",
     "nj_forest_fire_towers", "firelookout_com", "idaho_fl", "michigan_fire_tower",
     "pa_storymap", "andyarthur_ny", "wikipedia_lookout_lists", "cskt", "eastern_us_lookouts",
     "central_us_lookouts", "wikidata", "osm", "west_us_lookouts", "trailchick_wa", "cherylhill_oregon",
@@ -120,13 +120,13 @@ SOURCE_ORDER = [
 # or name) and ffla_groups (the lookout pages of FFLA's chapters and Friends groups: links, plus the
 # California-South chapter's register numbers and conditions).
 PRECEDENCE: dict[str, list[str]] = {
-    "name": ["nhlr", "fflos", "ridb", "ffla", "firelookout_ca", "firelookout_com", "fire_lookouts_org",
+    "name": ["nhlr", "fflos", "ridb", "ffla", "firelookout_ca", "ontario_lio", "firelookout_com", "fire_lookouts_org",
              "tnlandforms", "nj_forest_fire_towers", "andyarthur_ny", "wikipedia_lookout_lists",
              "pa_storymap", "cskt", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
              "idaho_fl", "michigan_fire_tower", "osm",
              "west_us_lookouts", "trailchick_wa", "cherylhill_oregon", "ffla_groups",
              "willhiteweb_wa", "indiana_fire_towers"],
-    "location": ["nhlr", "fflos", "ffla", "firelookout_ca", "fire_lookouts_org", "tnlandforms",
+    "location": ["nhlr", "fflos", "ffla", "ontario_lio", "firelookout_ca", "fire_lookouts_org", "tnlandforms",
                  "nj_forest_fire_towers", "firelookout_com", "osm", "eastern_us_lookouts",
                  "central_us_lookouts", "wikidata", "ridb", "andyarthur_ny",
                  "wikipedia_lookout_lists", "pa_storymap", "idaho_fl", "michigan_fire_tower",
@@ -138,7 +138,7 @@ PRECEDENCE: dict[str, list[str]] = {
                "eastern_us_lookouts", "central_us_lookouts", "wikidata",
                "west_us_lookouts", "trailchick_wa", "cherylhill_oregon", "ffla_groups",
              "willhiteweb_wa", "indiana_fire_towers"],
-    "kind": ["ffla", "nhlr", "fflos", "firelookout_ca", "ridb", "firelookout_com", "fire_lookouts_org",
+    "kind": ["ffla", "nhlr", "fflos", "firelookout_ca", "ontario_lio", "ridb", "firelookout_com", "fire_lookouts_org",
              "tnlandforms", "nj_forest_fire_towers", "pa_storymap", "andyarthur_ny",
              "wikipedia_lookout_lists", "cskt", "osm", "eastern_us_lookouts",
              "central_us_lookouts", "wikidata", "idaho_fl", "michigan_fire_tower"],
@@ -147,10 +147,10 @@ PRECEDENCE: dict[str, list[str]] = {
                "nj_forest_fire_towers", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
                "michigan_fire_tower",
                "west_us_lookouts", "trailchick_wa", "indiana_fire_towers"],
-    "elevation_m": ["nhlr", "fflos", "firelookout_ca", "firelookout_com", "fire_lookouts_org", "tnlandforms",
+    "elevation_m": ["nhlr", "fflos", "firelookout_ca", "ontario_lio", "firelookout_com", "fire_lookouts_org", "tnlandforms",
                     "nj_forest_fire_towers", "ridb", "wikidata", "cskt", "osm",
                     "trailchick_wa", "cherylhill_oregon"],
-    "built": ["nhlr", "fflos", "firelookout_ca", "firelookout_com", "fire_lookouts_org", "pa_storymap", "ridb",
+    "built": ["nhlr", "fflos", "firelookout_ca", "ontario_lio", "firelookout_com", "fire_lookouts_org", "pa_storymap", "ridb",
               "wikidata", "cskt", "idaho_fl", "osm", "andyarthur_ny", "ffla",
               "trailchick_wa", "cherylhill_oregon"],
     "design": ["nhlr", "fflos", "firelookout_com", "fire_lookouts_org", "pa_storymap", "cskt",
@@ -174,7 +174,7 @@ PRECEDENCE: dict[str, list[str]] = {
     "access": ["cskt", "osm"],
     "staffing": ["firelookout_com", "fire_lookouts_org", "cskt", "idaho_fl"],
     "rental": ["ridb", "ffla_rentals"],
-    "events": ["nhlr", "fflos", "firelookout_ca", "firelookout_com", "fire_lookouts_org", "pa_storymap", "ridb",
+    "events": ["nhlr", "fflos", "firelookout_ca", "ontario_lio", "firelookout_com", "fire_lookouts_org", "pa_storymap", "ridb",
                "wikidata", "cskt", "idaho_fl", "michigan_fire_tower", "ffla", "osm",
                "andyarthur_ny",
                "trailchick_wa", "cherylhill_oregon", "ffla_groups"],
@@ -359,6 +359,7 @@ SOURCE_SITE = {
     "willhiteweb_wa": "WillhiteWeb.com Washington Fire Lookouts",
     "indiana_fire_towers": "Indiana Fire Towers (Mark Armantrout)",
     "firelookout_ca": "Firelookout.ca, Open Canada Fire Lookout Index",
+    "ontario_lio": "Land Information Ontario (Ontario Ministry of Natural Resources)",
 }
 
 # Default photo licence per source, where the source states one (None = not stated).
@@ -890,6 +891,12 @@ def register_keys(reg: dict) -> list[str]:
     if reg.get("state_number"):
         keys.append(f"{reg['register']} {reg['state_number']}")
     return keys
+
+
+def is_national_number(key: str) -> bool:
+    """"NHLR US 592" or "NHLR CAN 16": a register's own national number, not a state or
+    province number ("NHLR OR 23", "NHLR ON 1")."""
+    return " US " in key or " CAN " in key
 
 
 def register_url(reg: dict) -> str | None:
@@ -1514,7 +1521,8 @@ class Matcher:
         """Towers sharing a register number with the record. US numbers decide; state numbers
         ("WI 49") are used only when no US number matches, since FFLA's state-number column
         is out of step with its US numbers in places."""
-        us = {self.by_register[k] for k in r.reg_keys if " US " in k and k in self.by_register}
+        # (a register's Canadian numbers, "NHLR CAN 16", count like its US ones)
+        us = {self.by_register[k] for k in r.reg_keys if is_national_number(k) and k in self.by_register}
         if us:
             return us
         return {self.by_register[k] for k in r.reg_keys if k in self.by_register}
@@ -1538,8 +1546,8 @@ class Matcher:
         if score < STRONG:
             return False
         for reg in ("NHLR", "FFLOS"):
-            ka = {k for k in a.reg_keys if k.startswith(reg + " US ")}
-            kb = {k for k in b.reg_keys if k.startswith(reg + " US ")}
+            ka = {k for k in a.reg_keys if k.startswith(reg + " ") and is_national_number(k)}
+            kb = {k for k in b.reg_keys if k.startswith(reg + " ") and is_national_number(k)}
             if ka and kb and not (ka & kb):
                 return False
         return True
@@ -1738,6 +1746,11 @@ class Matcher:
         unrecognised county, several features, several same-name lookouts already on the map, a
         lookout already on the map within APPROX_GUARD_M of the feature or with a close name in
         the county, or two records of one source on one feature."""
+        # GNIS is the US gazetteer: outside the US a record without a position is listed as
+        # unplaced ("not_covered"), never pinned (DESIGN.md 3.5; CGNDB placement is a follow-up).
+        for r in self.unplaced:
+            if r.country != "US" and r.source != "ffla_rentals" and not r.has_coords:
+                r.gnis = {"outcome": "not_covered", "feature": None, "candidates": [], "town": None}
         if gnis is None:
             return
         groups: dict[int, list[Rec]] = defaultdict(list)
@@ -2398,6 +2411,8 @@ def record_links(rec: Rec) -> list[dict]:
             out.append({"label": f"{name} on Indiana Fire Towers (Mark Armantrout)", "url": url, "kind": "site"})
         elif src == "firelookout_ca":
             out.append({"label": f"{name} on Firelookout.ca (Open Canada Fire Lookout Index)", "url": url, "kind": "site"})
+        elif src == "ontario_lio":
+            out.append({"label": "Land Information Ontario: Tower layer (fire towers)", "url": url, "kind": "agency"})
         elif src in ASSOCIATION_SOURCES:
             assoc = (rec.extra.get("association") or {}).get("name") or SOURCE_SITE.get(src, src)
             out.append({"label": f"{assoc}: work on {name}", "url": url, "kind": "association"})
@@ -2734,6 +2749,12 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
 
     # Name and other names
     name, name_src = display_name(members)
+    if name is None:
+        # a fetcher's name for a lookout its source leaves unnamed ("Unnamed fire tower near
+        # Upsala", "Fire tower (LIO 301092334)"), used only when no source names it
+        fb = next((m for m in members if isinstance(m.extra.get("fallback_name"), str)), None)
+        if fb is not None:
+            name, name_src = fb.extra["fallback_name"], fb
     if name is None and "name" not in rec:
         name = "Unnamed lookout"
     history_event = None
@@ -2936,8 +2957,12 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
 
     if "staffing" not in locked:
         st, st_src = pick("staffing", members, lambda m: m.extra.get("staffing_hint") if m.extra.get("staffing_hint") in ("staffed", "emergency", "volunteer", "unstaffed") else None)
+        st_note = st_src.extra.get("staffing_note") if st_src is not None and isinstance(st_src.extra.get("staffing_note"), str) else None
         if st is not None:
             rec["staffing"] = {"status": st, "as_of": None}
+            if st_note:
+                # what the staffing is, in a few words ("Detection camera, no observer")
+                rec["staffing"]["note"] = st_note
             contributed[st_src.key].add("staffing")
         elif not isinstance(rec.get("staffing"), dict):
             rec["staffing"] = {"status": "unknown", "as_of": None}
@@ -3150,7 +3175,7 @@ SHORT_NAME = {"ffla": "FFLA", "ffla_rentals": "the FFLA rentals list", "nhlr": "
               "idaho_fl": "idahofirelookouts.com", "osm": "OpenStreetMap", "wikidata": "Wikidata",
               "fire_lookouts_org": "fire-lookouts.org", "pa_storymap": "the PA fire towers StoryMap",
               "andyarthur_ny": "andyarthur.org", "cskt": "CSKT", "ridb": "recreation.gov",
-              "firelookout_ca": "Firelookout.ca"}
+              "firelookout_ca": "Firelookout.ca", "ontario_lio": "Land Information Ontario"}
 
 
 def rental_warning(rec: dict, status_src: Rec | None, rental: dict | None = None) -> str:
@@ -3267,6 +3292,15 @@ def conflicts_for(rec: dict, members: list[Rec], loc_src: Rec | None, status_src
 # "fire control" is forestry ("Monticello Fire Control Headquarters Fire Tower", Florida).
 HI_FIRE_CONTROL_RE = re.compile(r"\bfire[\s-]+control\b|\bbase[\s-]+end\b|\bbattery\b|\bcoast(?:al)?\s+artillery\b", re.I)
 HI_FIRE_CONTROL_REASON = "Not a fire lookout (a Second World War coastal-artillery fire-control station)"
+# Alaska places named "Lookout" that are not fire lookouts (Alaska survey, 2026-10-20): the Tongass
+# CCC canoe-route shelters the Forest Service lists as "Shelter Lookout/Cabin", the Alaska Railroad's
+# Curry Lookout (a 1920s hotel shelter for tourists) and Glacier Lookout at Valdez (built as a glacier
+# observatory). Alaska only.
+AK_NOT_LOOKOUT = [
+    (re.compile(r"\bshelters?\b", re.I), "Not a fire lookout (a shelter cabin: the Tongass CCC shelters are listed as \"Shelter Lookout/Cabin\")"),
+    (re.compile(r"^curry\s+lookout\b", re.I), "Not a fire lookout (Curry Lookout was an Alaska Railroad hotel shelter)"),
+    (re.compile(r"^glacier\s+lookout\b", re.I), "Not a fire lookout (Glacier Lookout at Valdez was built as a glacier observatory)"),
+]
 
 
 def hidden_for(rec: dict, members: list[Rec]) -> tuple[bool, str | None]:
@@ -3277,6 +3311,10 @@ def hidden_for(rec: dict, members: list[Rec]) -> tuple[bool, str | None]:
         if m.region == "HI" and HI_FIRE_CONTROL_RE.search(" ".join(
                 str(x) for x in (m.raw.get("name"), m.raw.get("type_raw"), m.extra.get("description")) if x)):
             return True, HI_FIRE_CONTROL_REASON
+        if m.region == "AK":
+            for pattern, why in AK_NOT_LOOKOUT:
+                if pattern.search(str(m.raw.get("name") or "")):
+                    return True, why
     registered = any(m.source in ("nhlr", "fflos")
                      or any(str(r.get("register") or "").upper() in ("NHLR", "FFLOS") for r in (m.raw.get("registers") or []))
                      for m in members)
@@ -3848,6 +3886,11 @@ def unplaced_entry(r: Rec) -> dict:
            "url": r.raw.get("url") if isinstance(r.raw.get("url"), str) else None,
            "reason": r.match_note, "gnis": res.get("outcome"),
            "town": town.as_dict() if town else None}
+    hint = r.extra.get("place_hint")
+    if isinstance(hint, dict) and hint.get("name"):
+        # a place the source files the lookout under (firelookout.ca's district offices), with
+        # the position it gave, which is the place's and not the tower's
+        out["hint"] = hint
     if res.get("feature") is not None and res.get("outcome") != "summit":
         out["feature"] = res["feature"].as_dict()
     if res.get("candidates"):
@@ -3879,6 +3922,9 @@ def unplaced_lookouts(m: Matcher, entries: dict[str, dict]) -> list[dict]:
         row = {"name": recs[0].display or "Unnamed lookout", "region": region or None, "county": county,
                "records": [{"source": x.source, "key": x.key, "name": x.display, "url": entries[x.key]["url"]} for x in recs],
                "gnis": first.get("gnis"), "town": town}
+        hint = next((entries[x.key]["hint"] for x in recs if entries[x.key].get("hint")), None)
+        if hint:
+            row["hint"] = hint
         for k in ("feature", "candidates", "near", "near_m", "similar"):
             if first.get(k) is not None:
                 row[k] = first[k]
@@ -3994,7 +4040,7 @@ def build_report(m: Matcher, resolved: list[tuple[Tower, dict]], headers: dict, 
                                "tower": r["id"], "tower_name": r["name"], "score": s_})
         for i, a in enumerate(mems):
             for b in mems[i + 1:]:
-                shared = {k for k in a.reg_keys if " US " in k} & {k for k in b.reg_keys if " US " in k}
+                shared = {k for k in a.reg_keys if is_national_number(k)} & {k for k in b.reg_keys if is_national_number(k)}
                 d = a.dist(b)
                 if shared and d is not None and d > REGISTER_FAR_M:
                     review.append({"type": "register_match_far", "keys": [a.key, b.key], "registers": sorted(shared),

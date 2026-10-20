@@ -122,7 +122,7 @@ def check(rec: object, path: Path, vocab: dict) -> tuple[list[str], list[str]]:
         lat, lon = loc["lat"], loc["lon"]
         where = country if country in regions.COUNTRY_NAMES else regions.country_of(region) or "US"
         if not regions.in_country(where, lat, lon):
-            errs.append(f"coordinates {lat}, {lon} are outside {regions.COUNTRY_NAMES[where]}")
+            errs.append(f"coordinates {lat}, {lon} are outside {regions.COUNTRY_IN_TEXT[where]}")
         elif isinstance(region, str) and regions.country_of(region) and not regions.in_region_box(region, lat, lon):
             warns.append(f"coordinates {lat}, {lon} are outside {region}")
         if loc.get("precision") not in (None, "exact", "approximate"):

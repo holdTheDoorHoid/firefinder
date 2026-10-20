@@ -15,6 +15,12 @@ Usage:
     python3 pipeline/fetch_registers.py                 # both registers, full crawl
     python3 pipeline/fetch_registers.py --only nhlr      # one register only
     python3 pipeline/fetch_registers.py --states or,wa   # limit states (debugging)
+    python3 pipeline/fetch_registers.py --canada         # Canada only, into the existing extracts
+
+Canada (2026-10-20): both registers list Canadian lookouts under /lookouts/can/<province>/ (not
+`ca`), numbered "CAN 16, ON 1". --canada reads those 13 list pages per register and their detail
+pages and replaces only the extracts' Canadian records, leaving every US record (and anything a
+later step added to it, such as structure words) exactly as it is.
 
 Resumable: every page fetched is cached under
 /home/hoid/Desktop/firefinder/data/raw/<nhlr|fflos>/ ; a re-run reads from that cache
@@ -61,6 +67,9 @@ SITES = {
 TAG_RE = re.compile(r"<[^>]+>")
 A_HREF_RE = re.compile(r'<a\s+[^>]*href="([^"]*)"[^>]*>(.*?)</a>', re.S | re.I)
 REGNUM_RE = re.compile(r"US\s*#?\s*(\d+)(?:\s*,\s*([A-Za-z]{2})\s*#?\s*(\d+))?", re.I)
+# Canadian entries: "CAN 16, ON 1".
+CAN_REGNUM_RE = re.compile(r"\bCAN\s*#?\s*(\d+)(?:\s*,\s*([A-Za-z]{2})\s*#?\s*(\d+))?", re.I)
+CA_PROVINCES = ["AB", "BC", "MB", "NB", "NL", "NS", "NT", "NU", "ON", "PE", "QC", "SK", "YT"]
 MONTHS = (
     "january|february|march|april|may|june|july|august|september|october|november|december"
 )
@@ -300,11 +309,12 @@ def parse_detail_page(html: str, base: str, source: str, default_status: str) ->
     reg_text = fields.get("registry numbers")
     reg_text = strip_tags(reg_text) if reg_text else subtitle
     rm = REGNUM_RE.search(reg_text or "")
-    if rm:
-        us_num, st_abbr, st_num = rm.groups()
+    cm = None if rm else CAN_REGNUM_RE.search(reg_text or "")
+    if rm or cm:
+        us_num, st_abbr, st_num = (rm or cm).groups()
         register = {
             "register": source.upper() if source != "fflos" else "FFLOS",
-            "number": f"US {us_num}",
+            "number": f"{'US' if rm else 'CAN'} {us_num}",
             "state_number": f"{st_abbr.upper()} {st_num}" if st_abbr and st_num else None,
         }
         result["registers"].append(register)
@@ -418,9 +428,11 @@ def slugify(name: str) -> str:
     return s.strip("-")
 
 
-def build_source(source: str, states: list[str], rl: RateLimiter, robots: RobotsCache, progress: dict) -> dict:
+def build_source(source: str, states: list[str], rl: RateLimiter, robots: RobotsCache, progress: dict,
+                 country: str = "US") -> dict:
     conf = SITES[source]
     base = conf["base"]
+    seg = "can" if country == "CA" else "us"
     all_records = []
     seen_keys: dict[str, int] = {}
     zero_states = []
@@ -429,7 +441,7 @@ def build_source(source: str, states: list[str], rl: RateLimiter, robots: Robots
 
     worklist = []
     for abbr in states:
-        list_url = f"{base}/lookouts/us/{abbr.lower()}/"
+        list_url = f"{base}/lookouts/{seg}/{abbr.lower()}/"
         status, body, cached = fetch(source, list_url, rl, robots, log=log)
         if status != 200:
             log(f"{source} {abbr}: list page status={status}")
@@ -460,12 +472,12 @@ def build_source(source: str, states: list[str], rl: RateLimiter, robots: Robots
             registers = parsed["registers"]
             if not registers:
                 # fall back to the registry number shown on the state list page
-                rm = REGNUM_RE.search(entry["registry_text"])
+                rm = (REGNUM_RE if country == "US" else CAN_REGNUM_RE).search(entry["registry_text"])
                 if rm:
                     us_num, st_abbr, st_num = rm.groups()
                     registers = [{
                         "register": conf["register_name"],
-                        "number": f"US {us_num}",
+                        "number": f"{'US' if country == 'US' else 'CAN'} {us_num}",
                         "state_number": f"{st_abbr.upper()} {st_num}" if st_abbr and st_num else None,
                     }]
             if registers:
@@ -485,7 +497,7 @@ def build_source(source: str, states: list[str], rl: RateLimiter, robots: Robots
                 "key": key,
                 "url": entry["detail_url"],
                 "name": name,
-                "country": "US",
+                "country": country,
                 "region": abbr,
                 "county": parsed["county"],
                 "lat": parsed["lat"],
@@ -536,7 +548,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", choices=["nhlr", "fflos"], default=None)
     ap.add_argument("--states", default=None, help="comma-separated state abbrs, for debugging")
+    ap.add_argument("--canada", action="store_true",
+                    help="Canadian entries only (/lookouts/can/<province>/), replacing only the extracts' Canadian records")
     args = ap.parse_args()
+    if args.canada:
+        return main_canada([args.only] if args.only else ["nhlr", "fflos"])
 
     rl = RateLimiter()
     robots = RobotsCache(rl)
@@ -562,6 +578,19 @@ def main():
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
     REPORT_PATH.write_text(json.dumps(full_report, indent=2), encoding="utf-8")
     log("=== fetch_registers.py done ===")
+
+
+def main_canada(sources: list[str]) -> None:
+    rl = RateLimiter()
+    robots = RobotsCache(rl)
+    for source in sources:
+        out, report = build_source(source, CA_PROVINCES, rl, robots, {}, country="CA")
+        path = SITES[source]["out"]
+        data = json.loads(path.read_text(encoding="utf-8"))
+        kept = [r for r in data["records"] if r.get("country", "US") != "CA"]
+        data["records"] = kept + out["records"]
+        path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+        log(f"{source}: {len(out['records'])} Canadian records ({report['list_counts']}) written into {path}")
 
 
 if __name__ == "__main__":

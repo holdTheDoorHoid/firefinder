@@ -31,6 +31,8 @@ import unicodedata
 from pathlib import Path
 
 COUNTRY_NAMES = {"US": "United States", "CA": "Canada"}
+# The same, as running text writes them ("outside the United States", "in Canada").
+COUNTRY_IN_TEXT = {"US": "the United States", "CA": "Canada"}
 # Words for a country's regions, singular and plural, for page copy.
 REGION_WORDS = {"US": ("state", "states"), "CA": ("province or territory", "provinces and territories")}
 # Shown order: the US first (its states alphabetically), then Canada.

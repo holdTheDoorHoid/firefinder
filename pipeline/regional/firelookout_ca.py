@@ -337,6 +337,8 @@ NOT_FIRE = {
 POSITION_GUESS = {41038, 41031, 41030, 41025, 11757, 11752, 11777, 9988, 9919, 11685, 41017, 41022}
 # Positions the site says are unknown.
 POSITION_UNKNOWN = {11839: "Firelookout.ca says the location is not known."}
+# Points on a settlement's centre, not a tower (the Prairies survey, 2026-10-20), with the place.
+SETTLEMENT_PINS = {11901: "Cumberland House"}
 # A point shared by three or more lookouts of different names is a district office the index
 # geocoded, not a tower (Lindsay, Tweed and Pembroke in 2026-10): such records are kept without a
 # position. Two names close together are left alone: they may be one tower under two names
@@ -353,9 +355,20 @@ def _dist_m(a: dict, b: dict) -> float:
     return 2 * 6371000 * math.asin(math.sqrt(x))
 
 
-def shared_points(towers: list[dict]) -> set[int]:
-    """Ids of records in a cluster (points within SHARED_POINT_M of each other, chained) that
-    holds SHARED_POINT_NAMES or more different names."""
+def _town_of(address: str | None) -> str | None:
+    """The first part of an address that reads as a place name (not a house number or a street)."""
+    for part in (address or "").split(","):
+        p = part.strip()
+        if p and not re.search(r"\d|\b(?:Street|Road|Lane|Drive|Avenue|Highway|Trail|Downtown)\b", p):
+            return p
+    return None
+
+
+def shared_points(towers: list[dict]) -> dict[int, dict]:
+    """{id: {"name": town, "lat", "lon"}} for the records in a cluster (points within SHARED_POINT_M
+    of each other, chained) that holds SHARED_POINT_NAMES or more different names. The town is the
+    one most of the cluster's addresses name (Lindsay, Tweed, Pembroke): a hint for the "Lookouts
+    we can't place yet" page, where the tower is listed instead of being pinned on the town."""
     def core(t):
         return re.sub(r"\s+", " ", re.sub(r"\b(fire|tower|lookout)\b", "", t["title"].lower())).strip()
     parent = list(range(len(towers)))
@@ -372,10 +385,15 @@ def shared_points(towers: list[dict]) -> set[int]:
     groups: dict[int, list[dict]] = {}
     for i, t in enumerate(towers):
         groups.setdefault(find(i), []).append(t)
-    out = set()
+    from collections import Counter
+    out: dict[int, dict] = {}
     for members in groups.values():
         if len({core(t) for t in members}) >= SHARED_POINT_NAMES:
-            out.update(int(t["id"]) for t in members)
+            towns = Counter(x for x in (_town_of(t.get("address")) for t in members) if x)
+            town = towns.most_common(1)[0][0] if towns else None
+            for t in members:
+                out[int(t["id"])] = {"name": town, "lat": round(float(t["lat"]), 5), "lon": round(float(t["lng"]), 5),
+                                     "why": "district_office"} if town else None
     return out
 
 
@@ -384,7 +402,7 @@ def shared_points(towers: list[dict]) -> set[int]:
 # ---------------------------------------------------------------------------------------------
 
 
-def build_record(t: dict, page: str | None, shared: set[int]) -> dict:
+def build_record(t: dict, page: str | None, shared: dict[int, dict]) -> dict:
     tid = int(t["id"])
     name = htmlmod.unescape(t["title"]).strip()
     facts = page_facts(page)
@@ -399,9 +417,15 @@ def build_record(t: dict, page: str | None, shared: set[int]) -> dict:
     if tid in POSITION_UNKNOWN:
         extra["position_note"] = POSITION_UNKNOWN[tid]
         lat = lon = None
+    elif tid in SETTLEMENT_PINS:
+        extra["position_note"] = "Firelookout.ca's point is the centre of a settlement, not the tower, so it is not used."
+        extra["place_hint"] = {"name": SETTLEMENT_PINS[tid], "lat": round(lat, 5), "lon": round(lon, 5), "why": "settlement"}
+        lat = lon = None
     elif tid in shared:
         extra["position_note"] = ("Firelookout.ca gives the same point for several lookouts (a district "
                                   "office, not a tower), so it is not used.")
+        if shared[tid]:
+            extra["place_hint"] = shared[tid]
         lat = lon = None
     elif tid in POSITION_GUESS:
         extra["position_approximate"] = True

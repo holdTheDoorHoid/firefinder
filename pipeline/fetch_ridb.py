@@ -76,6 +76,18 @@ OUT_PATH = REPO_ROOT / "data" / "sources" / "ridb.json"
 EXCLUDED_PATH = REPO_ROOT / "data" / "sources" / "ridb_excluded.json"
 
 NAME_RE = re.compile(r"lookout|fire\s*tower|\bl-?4\b", re.IGNORECASE)
+# Names that carry "lookout" but describe a shelter, never a fire lookout (2026-10-20, Alaska survey):
+# the Tongass National Forest lists its 1930s CCC three-sided log shelters on Admiralty Island's
+# canoe route (14 on the NRHP) and others such as Pinta Cove as "Shelter Lookout/Cabin". A shelter
+# in the name keeps a facility out of the name match; EXTRA_INCLUDE can still list a real one.
+SHELTER_RE = re.compile(r"\bshelters?\b", re.IGNORECASE)
+
+
+def name_selects(name: str | None) -> bool:
+    """Does a facility name select it as a lookout? "Lookout", "Fire Tower", "L-4" -- but not a
+    shelter ("Shelter Lookout/Cabin")."""
+    n = name or ""
+    return bool(NAME_RE.search(n)) and not SHELTER_RE.search(n)
 LOOKOUT_ACTIVITY_IDS = {30, 100052}  # confirmed by name against Activities_API_v1.json
 FACILITY_LIKE_TYPES = {"Facility", "Campground"}
 
@@ -503,7 +515,7 @@ def main() -> None:
     def name_matches(fac: dict) -> bool:
         if fac.get("FacilityTypeDescription") not in FACILITY_LIKE_TYPES:
             return False
-        return bool(NAME_RE.search(fac.get("FacilityName") or ""))
+        return name_selects(fac.get("FacilityName"))
 
     name_matched_ids = {fid for fid, fac in facilities_by_id.items() if name_matches(fac)}
 
