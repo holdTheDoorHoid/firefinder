@@ -1,8 +1,9 @@
 /**
- * The national year view: "Lookouts standing in 1935". A slider from 1900 to today, the count
+ * The year view: "Lookouts standing in 1935". A slider from 1900 to today, the count
  * the records support, an honest count of those whose dates are incomplete (shown faded on the
  * map when asked), a small chart of every year, the numbers as a table, and how it is worked
- * out. Counts follow the map's other filters.
+ * out. Counts follow the map's other filters, including its place filter; the card's own
+ * "Count" buttons switch between both countries, the United States and Canada.
  */
 import { formatCount } from '../lib/format.ts';
 import { html, raw } from '../lib/html.ts';
@@ -10,6 +11,7 @@ import { SLIDER_FIRST_YEAR, yearSeries, type YearCounts } from '../lib/history.t
 import type { HistoryCounts, TowerFeature } from '../lib/types.ts';
 import { isNoStructure } from '../lib/vocab.ts';
 import { YearChart } from './year-chart.ts';
+import { COUNTRY_IN_TEXT, regionName } from '../lib/regions.ts';
 
 export interface YearPanelDeps {
   host: HTMLElement;
@@ -23,8 +25,14 @@ export interface YearPanelDeps {
   filtersActive: () => boolean;
   /** Whether sites with no structure (camps, lookout trees, bare points) are switched on. */
   withNoStructure?: () => boolean;
+  /** The map's place filter: a whole country, or one state, province or territory. */
+  place?: () => { country: string | null; region: string | null };
+  /** Count one country (or both, null): sets the map's place filter. */
+  onPlace?: (country: string | null) => void;
   onChange: (year: number | null, maybe: boolean) => void;
 }
+
+const PLACES: [string, string][] = [['', 'US and Canada'], ['US', 'United States'], ['CA', 'Canada']];
 
 const CLOSE = '<svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
 const PREV = '<svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M12.5 4.5 7 10l5.5 5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -125,6 +133,11 @@ export class YearPanel {
           ${[1910, 1935, 1960, 1990].map((y) => html`<button type="button" class="years-jump" data-jump="${y}">${y}</button>`)}
           <button type="button" class="years-jump" data-jump="${T}">Today</button>
         </div>
+        ${this.#d.onPlace
+          ? html`<div class="years-jumps years-places" role="group" aria-label="Count the lookouts in">
+          <span class="fine">Count:</span>${PLACES.map(([c, label]) => html`<button type="button" class="years-jump" data-place="${c}">${label}</button>`)}
+        </div>`
+          : ''}
         <p class="years-count" data-count></p>
         <p class="fine years-scope" data-scope></p>
         <p class="years-maybe" data-maybe></p>
@@ -154,6 +167,8 @@ export class YearPanel {
       if (step && this.#year !== null) this.#set(this.#year + Number(step.dataset.step));
       const jump = t.closest<HTMLElement>('[data-jump]');
       if (jump) this.#set(Number(jump.dataset.jump));
+      const place = t.closest<HTMLElement>('[data-place]');
+      if (place) this.#d.onPlace?.(place.dataset.place || null);
     });
     el.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
@@ -190,7 +205,12 @@ export class YearPanel {
     el.querySelector<HTMLButtonElement>('[data-step="-1"]')!.disabled = this.#year <= SLIDER_FIRST_YEAR;
     el.querySelector<HTMLButtonElement>('[data-step="1"]')!.disabled = this.#year >= T;
 
-    const of = filtered ? ' of the lookouts your filters show' : '';
+    const pl = this.#d.place?.() ?? { country: null, region: null };
+    for (const b of el.querySelectorAll<HTMLButtonElement>('[data-place]')) {
+      b.setAttribute('aria-pressed', String(!pl.region && (b.dataset.place || null) === pl.country));
+    }
+    const where = pl.region ? ` in ${regionName(pl.region)}` : pl.country ? ` in ${COUNTRY_IN_TEXT[pl.country] ?? pl.country}` : '';
+    const of = filtered ? `${where}, of the lookouts your filters show` : where;
     el.querySelector('[data-count]')!.innerHTML = today
       ? html`<strong>${formatCount(c.stood)}</strong> ${c.stood === 1 ? 'lookout stands' : 'lookouts stand'} today${of}, going by their current status.`.value
       : html`<strong>${formatCount(c.stood)}</strong> ${c.stood === 1 ? 'lookout' : 'lookouts'}${of} stood in ${this.#year}, going by their recorded dates.`.value;

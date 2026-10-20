@@ -6,7 +6,9 @@
  *
  *   i   id                    "us-or-warner-mountain"   (always)
  *   n   name                  "Warner Mountain Lookout" (always)
- *   r   region (state code)   "OR"                      (always)
+ *   r   region                "OR", "ON"                (always; state, province or territory
+ *                             code, unique across countries: lib/regions.ts)
+ *   cc  country               "CA"                      (absent = US)
  *   k   kind                  vocab.kind                (always)
  *   s   status                vocab.status              (always)
  *   v   verification          vocab.verification        (always)
@@ -48,6 +50,7 @@ export interface TowerProps {
   d?: string;
   m?: string;
   ap?: 1;
+  cc?: string;
 }
 
 export interface TowerFeature {
@@ -214,7 +217,7 @@ export interface TowerRecord {
   agency?: string | null;
   ownership?: string | null;
   access?: { level: string; note?: string | null } | null;
-  staffing?: { status: string; as_of?: string | null } | null;
+  staffing?: { status: string; as_of?: string | null; note?: string | null } | null;
   visit?: { climbable?: boolean | null; drive_up?: boolean | null; trail_note?: string | null } | null;
   rental?: Rental | null;
   events?: TowerEvent[] | null;
@@ -238,7 +241,7 @@ export interface TowerRecord {
 
 /** The USGS GNIS feature an approximate location is placed on. */
 export interface GnisFeatureRef {
-  id: number;
+  id: number | string;
   name: string;
   /** GNIS feature class: Summit, Ridge, Gap, Pillar, Cliff, Bench (or Populated Place for a town). */
   class: string;
@@ -265,10 +268,17 @@ export interface UnplacedLookout {
    * What the USGS gazetteer had: "town" (a town of the name only), "none", "ambiguous" (several
    * high points of the name), "no_county", "county_unknown", "near_mapped_lookout" (a lookout
    * already on the map stands at the one high point of the name), "similar_name_on_map",
-   * "same_name_on_map", "same_source_twice", "rental_unmatched", "no_name", "not_looked_up".
+   * "same_name_on_map", "same_source_twice", "rental_unmatched", "no_name", "not_looked_up",
+   * "not_covered" (outside the US: no gazetteer to place it with yet).
    */
   gnis?: string | null;
   town?: GnisFeatureRef | null;
+  /**
+   * A place the source files the lookout under, with that place's position (not the tower's):
+   * firelookout.ca's district offices ("Tweed", why "district_office") and a settlement centre
+   * ("Cumberland House", why "settlement").
+   */
+  hint?: { name: string; lat?: number | null; lon?: number | null; why?: string | null } | null;
   feature?: GnisFeatureRef | null;
   candidates?: GnisFeatureRef[] | null;
   near?: string | null;
@@ -318,6 +328,7 @@ export interface Meta {
     by_status?: Record<string, number>;
     by_kind?: Record<string, number>;
     by_region?: Record<string, number>;
+    by_country?: Record<string, number>;
     by_verification?: Record<string, number>;
     by_material?: Record<string, number>;
     /** Shown at an approximate (GNIS) position, by state too. */
@@ -330,6 +341,10 @@ export interface Meta {
   sources: SourceInfo[];
   /** How many lookouts can be placed in time (pipeline build_site_data.history_counts). */
   history?: HistoryCounts;
+  /** The same per country ("US", "CA"). */
+  history_by_country?: Record<string, HistoryCounts>;
+  /** Countries and their regions with tower counts, in listing order (pipeline/regions.py). */
+  regions?: { countries: { code: string; name: string; region_words?: string[]; regions: { code: string; name: string; towers: number }[] }[] };
   /** How many lookouts have a recognisable design (pipeline build_site_data.write_designs). */
   designs?: DesignCoverage;
 }

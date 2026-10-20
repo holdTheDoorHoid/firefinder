@@ -8,12 +8,12 @@ import { html, raw } from '../lib/html.ts';
 import { effectiveTheme, onThemeChange } from '../ui/theme.ts';
 import { requestPanorama, progressText, siteBase } from './client.ts';
 import {
-  aboutFeet,
+  unitsFor,
   azimuthText,
   eyeHeight,
   megabytes,
   metresFeet,
-  milesKm,
+
   milesShort,
   quadrantBearing,
   reconstructionNote,
@@ -46,6 +46,8 @@ export interface PanoramaTower {
   status: string;
   height_m?: number | null;
   elevation_m?: number | null;
+  /** The lookout's country ("US", "CA"): units read feet and miles first in the US, metres and km elsewhere. */
+  country?: string | null;
 }
 
 export interface PanoramaOptions {
@@ -90,6 +92,16 @@ function shortName(name: string): string {
   return name.replace(/\s+(Lookout( Site| Tower)?|Fire Tower|L\.O\.)$/i, '').trim() || name;
 }
 
+/** Where the peak names come from: GNIS ids are numbers, CGNDB ids strings (pipeline/build_peaks.py). */
+function peakCredit(peaks: readonly PeakSight[]): string {
+  const us = peaks.some((p) => typeof p.gnisId === 'number');
+  const ca = peaks.some((p) => typeof p.gnisId === 'string');
+  const cgndb = 'the Canadian Geographical Names Database (contains information licensed under the Open Government Licence – Canada)';
+  if (ca && us) return `Names from the USGS Geographic Names Information System and ${cgndb}.`;
+  if (ca) return `Names from ${cgndb}.`;
+  return 'Names from the USGS Geographic Names Information System.';
+}
+
 export class PanoramaView {
   readonly el: HTMLElement;
   #o: PanoramaOptions;
@@ -111,6 +123,14 @@ export class PanoramaView {
   #theme = effectiveTheme();
   #run = 0;
   #offTheme: () => void = () => {};
+
+  get #metric(): boolean {
+    return unitsFor(this.#o.tower.country).metric;
+  }
+
+  #distance(m: number): string {
+    return unitsFor(this.#o.tower.country).distance(m);
+  }
 
   constructor(host: HTMLElement, opts: PanoramaOptions) {
     this.#o = opts;
@@ -166,13 +186,21 @@ export class PanoramaView {
             <p class="pv-eye-line"><span data-pv-eye-text>${this.#eye.sentence}</span> <button type="button" class="linklike" data-pv-eye-open aria-expanded="false" aria-controls="${this.#id}-eye">Change</button></p>
             <form class="pv-eye-form" id="${this.#id}-eye" hidden>
               <label for="${this.#id}-eye-ft">Eye height above the ground</label>
-              <span class="pv-eye-input"><input id="${this.#id}-eye-ft" type="number" inputmode="decimal" min="3" max="1000" step="1" required> <span>ft</span></span>
+              ${this.#metric
+                ? html`<span class="pv-eye-input"><input id="${this.#id}-eye-ft" type="number" inputmode="decimal" min="1" max="300" step="0.5" required> <span>m</span></span>
+              <span class="pv-eye-presets" role="group" aria-label="Typical heights">
+                <button type="button" class="chip-btn" data-eye-ft="2.5">Ground cab</button>
+                <button type="button" class="chip-btn" data-eye-ft="11">9 m tower</button>
+                <button type="button" class="chip-btn" data-eye-ft="26">24 m steel tower</button>
+                <button type="button" class="chip-btn" data-eye-ft="32">30 m tower</button>
+              </span>`
+                : html`<span class="pv-eye-input"><input id="${this.#id}-eye-ft" type="number" inputmode="decimal" min="3" max="1000" step="1" required> <span>ft</span></span>
               <span class="pv-eye-presets" role="group" aria-label="Typical heights">
                 <button type="button" class="chip-btn" data-eye-ft="8">Ground cab</button>
                 <button type="button" class="chip-btn" data-eye-ft="35">30-ft tower</button>
                 <button type="button" class="chip-btn" data-eye-ft="71">66-ft steel tower</button>
                 <button type="button" class="chip-btn" data-eye-ft="105">100-ft tower</button>
-              </span>
+              </span>`}
               <span class="pv-eye-actions"><button type="submit" class="btn">Update the view</button>
               <button type="button" class="linklike" data-pv-eye-reset>Use the ${this.#eye.source === 'recorded' ? 'recorded' : 'typical'} height</button></span>
             </form>
@@ -259,9 +287,10 @@ export class PanoramaView {
     });
     this.#q<HTMLFormElement>('.pv-eye-form')?.addEventListener('submit', (e) => {
       e.preventDefault();
-      const ft = Number(this.#q<HTMLInputElement>('.pv-eye-form input')?.value);
-      if (!Number.isFinite(ft) || ft <= 0) return;
-      this.#customEye = ft * 0.3048;
+      // feet in the US, metres elsewhere (the input's own unit)
+      const v = Number(this.#q<HTMLInputElement>('.pv-eye-form input')?.value);
+      if (!Number.isFinite(v) || v <= 0) return;
+      this.#customEye = this.#metric ? v : v * 0.3048;
       this.#eye = eyeHeight({ kind: this.#o.tower.kind, height_m: this.#o.tower.height_m, lon: this.#o.tower.lon }, this.#customEye);
       this.#toggleEyeForm(false);
       void this.start();
@@ -358,7 +387,7 @@ export class PanoramaView {
     btn.setAttribute('aria-expanded', String(show));
     if (show) {
       const input = form.querySelector('input')!;
-      input.value = String(Math.round(this.#eye.eyeM / 0.3048));
+      input.value = this.#metric ? String(Math.round(this.#eye.eyeM * 2) / 2) : String(Math.round(this.#eye.eyeM / 0.3048));
       input.focus();
     }
   }
@@ -573,7 +602,7 @@ export class PanoramaView {
       }
     }
     if (!best) return null;
-    return `${best.kind === 'lookout' ? (best.gone ? 'the site of ' : '') : ''}${best.name}${best.kind === 'lookout' ? ' lookout' : ''}, ${milesKm(best.sight.distM)}`;
+    return `${best.kind === 'lookout' ? (best.gone ? 'the site of ' : '') : ''}${best.name}${best.kind === 'lookout' ? ' lookout' : ''}, ${this.#distance(best.sight.distM)}`;
   }
 
   #tip(text: string | null, x = 0, y = 0): void {
@@ -600,7 +629,7 @@ export class PanoramaView {
     if (y < L.terrainTop || y > L.ringTop) return this.#tip(null);
     const p = pick(d, this.#view, L, x, y);
     const bearing = `bearing ${azimuthText(p.az)}`;
-    this.#tip(p.distM === null ? `Sky · ${bearing}` : `Ground about ${milesKm(p.distM)} away · ${bearing}`, x, y);
+    this.#tip(p.distM === null ? `Sky · ${bearing}` : `Ground about ${this.#distance(p.distM)} away · ${bearing}`, x, y);
   }
 
   #renderLists(d: PanoramaData): void {
@@ -615,7 +644,7 @@ export class PanoramaView {
     const base = import.meta.env.BASE_URL;
     const faceBtn = (s: Sighted, key: string, label: string) =>
       html`<button type="button" class="linklike" data-face="${s.az.toFixed(2)}" data-key="${key}" aria-label="Face ${label}">${label}</button>`;
-    const where = (s: Sighted) => html`<span class="pv-where">${milesKm(s.distM)} · ${azimuthText(s.az)} (${quadrantBearing(s.az)})</span>`;
+    const where = (s: Sighted) => html`<span class="pv-where">${this.#distance(s.distM)} · ${azimuthText(s.az)} (${quadrantBearing(s.az)})</span>`;
     host.innerHTML = html`
       <section aria-labelledby="${this.#id}-lk">
         <h3 class="h-small" id="${this.#id}-lk">Other lookouts in sight <span class="pv-count">${visibleLookouts.length}</span></h3>
@@ -633,11 +662,11 @@ export class PanoramaView {
         <h3 class="h-small" id="${this.#id}-pk">Named peaks in sight <span class="pv-count">${named.length}</span></h3>
         ${named.length
           ? html`<ul class="pv-list">${byBearing.map(
-              (p: PeakSight) => html`<li ${top.has(p.gnisId) ? '' : raw('data-extra hidden')}>${faceBtn(p, `p${p.gnisId}`, p.name)} ${where(p)} <span class="pv-elev">${aboutFeet(p.groundM)}</span></li>`,
+              (p: PeakSight) => html`<li ${top.has(p.gnisId) ? '' : raw('data-extra hidden')}>${faceBtn(p, `p${p.gnisId}`, p.name)} ${where(p)} <span class="pv-elev">${unitsFor(this.#o.tower.country).aboutHeight(p.groundM)}</span></li>`,
             )}</ul>
             ${named.length > top.size ? html`<p><button type="button" class="linklike" data-pv-more>Show all ${named.length}</button></p>` : ''}`
           : html`<p class="fine">No named summits in line of sight${d.peaksChecked ? '' : ' (the list of peak names did not load)'}.</p>`}
-        <p class="fine">Names from the USGS Geographic Names Information System. Heights are read from the terrain data and are approximate. Sorted by bearing, clockwise from north.</p>
+        <p class="fine">${peakCredit(peaks)} Heights are read from the terrain data and are approximate. Sorted by bearing, clockwise from north.</p>
       </section>`.value;
     host.hidden = false;
   }

@@ -22,6 +22,11 @@
  *
  *   &ap=0
  *
+ * Place: one state, province or territory (&state=ON; the codes are unique across countries), or
+ * one whole country (&country=CA):
+ *
+ *   &state=OR    &country=CA
+ *
  * Defaults are left out, so a plain visit has a clean URL. Unknown or malformed values are
  * dropped rather than causing an error.
  */
@@ -117,6 +122,9 @@ export function parseState(search: string): AppState {
   f.registered = q.get('reg') === '1';
   const region = (q.get('state') ?? '').toUpperCase();
   f.region = /^[A-Z]{2}$/.test(region) ? region : null;
+  // &country=CA: one whole country (a state or province, &state=, wins when both are given)
+  const country = (q.get('country') ?? '').toUpperCase();
+  f.country = !f.region && (country === 'US' || country === 'CA') ? country : null;
   const mine = (q.get('mine') ?? '').split(',').filter((m): m is Mark => (MARKS as readonly string[]).includes(m));
   f.mine = mine.length ? new Set(mine) : null;
   state.view = parseView(q.get('at'));
@@ -158,6 +166,7 @@ export function serializeState(state: AppState): string {
   if (f.rentable) q.set('rent', '1');
   if (f.registered) q.set('reg', '1');
   if (f.region) q.set('state', f.region);
+  else if (f.country) q.set('country', f.country);
   if (f.mine && f.mine.size) q.set('mine', MARKS.filter((m) => f.mine!.has(m)).join(','));
   if (f.design) q.set('design', f.design);
   if (f.material) q.set('mat', f.material);

@@ -1,6 +1,7 @@
 /**
  * "Lookouts we can't place yet": the lookouts our sources name but none places, one page per
- * state plus an index (DESIGN.md 3.5, "Approximate locations"). Pure functions returning escaped
+ * state, province or territory plus an index grouped by country (DESIGN.md 3.5, "Approximate
+ * locations"). Pure functions returning escaped
  * HTML, used by scripts/prerender.ts at build time and by the page script in dev.
  *
  * Each lookout shows its name, county, the sources that list it (linked), what the USGS
@@ -11,6 +12,7 @@ import { formatCount } from '../lib/format.ts';
 import { html, raw, type SafeHtml } from '../lib/html.ts';
 import type { Meta, UnplacedFile, UnplacedLookout } from '../lib/types.ts';
 import { regionName } from '../lib/vocab.ts';
+import { COUNTRY_IN_TEXT, countryOf, regionGroups, regionKind, regionWithCountry } from '../lib/regions.ts';
 import { externalLink, placeLine, sourceShortName, towerPath, type RenderContext } from './tower.ts';
 
 export type UnplacedContext = Pick<RenderContext, 'base' | 'siteUrl' | 'repo' | 'sources'>;
@@ -33,7 +35,9 @@ export function unplacedPageStates(file: UnplacedFile): string[] {
 }
 
 function place(u: Pick<UnplacedLookout, 'county' | 'region'>): string {
-  return u.county ? placeLine({ county: u.county, region: u.region ?? '' }) : `${regionName(u.region ?? '')}, county not recorded`;
+  if (u.county) return placeLine({ county: u.county, region: u.region ?? '' });
+  const unit = countryOf(u.region) === 'US' || !countryOf(u.region) ? 'county' : 'district';
+  return `${regionWithCountry(u.region ?? '')}, ${unit} not recorded`;
 }
 
 const CLASS_WORDS: Record<string, string> = { Summit: 'summit', Ridge: 'ridge', Gap: 'gap', Pillar: 'rock pillar', Cliff: 'cliff', Bench: 'bench' };
@@ -98,6 +102,16 @@ export function reasonText(u: UnplacedLookout, ctx: UnplacedContext): SafeHtml {
       return html`On the Forest Fire Lookout Association’s rentals list, but we could not match it to a lookout.`;
     case 'no_name':
       return html`Its name says only “lookout” or “tower”, so there is nothing to look up.`;
+    case 'not_covered': {
+      const h = u.hint;
+      const at = h && typeof h.lat === 'number' && typeof h.lon === 'number' ? html` <a href="${mapAt(h.lat, h.lon, ctx, 10)}">See ${h.name} on the map</a>.` : '';
+      const hint = h?.why === 'district_office'
+        ? html` The source files it under <strong>${h.name}</strong>, the old district office, and gives the office's position, not the tower's.${at}`
+        : h?.why === 'settlement'
+          ? html` The source gives the centre of <strong>${h.name}</strong>, not the tower's position.${at}`
+          : '';
+      return html`No source gives its position. Outside ${COUNTRY_IN_TEXT.US} we do not yet place lookouts approximately from a gazetteer.${hint}`;
+    }
     default:
       return html`No source says where it stood.`;
   }
@@ -124,7 +138,7 @@ export function unplacedHead(file: UnplacedFile, region: string | null): Unplace
   if (!region) {
     return {
       title: "Lookouts we can't place yet · Firefinder",
-      description: `${formatCount(file.count)} fire lookouts our sources name but none places on a map, by state. Know where one stood? Suggest a location.`,
+      description: `${formatCount(file.count)} fire lookouts our sources name but none places on a map, by state, province and territory. Know where one stood? Suggest a location.`,
     };
   }
   const n = file.lookouts.filter((u) => u.region === region && !u.out_of_scope).length;
@@ -150,9 +164,12 @@ export function unplacedIndexMain(file: UnplacedFile, meta: Pick<Meta, 'counts'>
   <p class="lede">${formatCount(file.count)} fire lookouts are named by at least one of our sources, but no source says where they stood, so they are not on the map. If you know where one stood, each has a <strong>Suggest a location</strong> button.</p>
   ${approxLine(meta, null, ctx)}
   <h2>How we looked</h2>
-  <p>For each one we searched the USGS Geographic Names Information System, the federal list of place names, for a hill, ridge, gap or cliff of the same name in the same county. Where it has exactly one, the lookout goes on the map there, marked approximate. A town of that name is not enough: many towers were named for the nearest town but stood miles away, so the town is shown here as a hint instead.</p>
-  <h2>By state</h2>
-  <ul class="up-states">${states.map(([r, n]) => html`<li><a href="${unplacedPath(r, ctx)}">${regionName(r)}</a> <span class="up-count">${formatCount(n)}</span></li>`)}</ul>`;
+  <p>For each one in the United States we searched the USGS Geographic Names Information System, the federal list of place names, for a hill, ridge, gap or cliff of the same name in the same county. Where it has exactly one, the lookout goes on the map there, marked approximate. A town of that name is not enough: many towers were named for the nearest town but stood miles away, so the town is shown here as a hint instead. In Canada we do not place lookouts this way yet, so every Canadian lookout without a position is listed here.</p>
+  ${regionGroups(states.map(([r]) => r)).map((g) => {
+    const n = new Map(states);
+    return html`<h2>${g.country === 'US' ? 'By state' : `${g.name}: by province and territory`}</h2>
+  <ul class="up-states">${g.regions.map((r) => html`<li><a href="${unplacedPath(r.code, ctx)}">${r.name}</a> <span class="up-count">${formatCount(n.get(r.code) ?? 0)}</span></li>`)}</ul>`;
+  })}`;
 }
 
 /** One state's list: every lookout we cannot place, alphabetical, then the ones out of scope. */
@@ -171,6 +188,7 @@ export function unplacedStateMain(file: UnplacedFile, region: string, meta: Pick
   <p class="lede">${shown.length
     ? html`${formatCount(shown.length)} ${shown.length === 1 ? 'lookout' : 'lookouts'} in ${state} ${shown.length === 1 ? 'is' : 'are'} named by our sources, but none says where ${shown.length === 1 ? 'it' : 'they'} stood, so ${shown.length === 1 ? 'it is' : 'they are'} not on the map. Know where one stood? Use its <strong>Suggest a location</strong> button: it opens a short form on GitHub with the lookout filled in.`
     : html`Every lookout our sources name in ${state} is on the map.`}</p>
+  ${countryOf(region) !== 'US' && shown.length ? html`<p>This ${regionKind(region)} is in Canada, where Firefinder does not yet place lookouts approximately from a gazetteer, so every lookout a source names without a position is listed here.</p>` : ''}
   ${approxLine(meta, region, ctx)}
   ${shown.length ? html`<h2 class="visually-hidden">The list</h2><ol class="up-list">${shown.map((u) => entry(u, ctx))}</ol>` : ''}
   ${out.length
@@ -179,5 +197,5 @@ export function unplacedStateMain(file: UnplacedFile, region: string, meta: Pick
         <ul class="plain up-out-list">${out.map((u) => html`<li id="${u.anchor}"><strong>${u.name}</strong>, ${place(u)}. <span class="fine">${u.out_of_scope}. Listed by ${u.records.map((r, i) => html`${i ? ', ' : ''}${r.url ? externalLink(r.url, sourceShortName(r.source, ctx as RenderContext)) : sourceShortName(r.source, ctx as RenderContext)}`)}.</span></li>`)}</ul>
       </details>`
     : ''}
-  <p class="up-back"><a href="${unplacedPath(null, ctx)}">All states</a> · <a href="${ctx.base}?state=${region}">${state} on the map</a></p>`;
+  <p class="up-back"><a href="${unplacedPath(null, ctx)}">All ${countryOf(region) === 'CA' ? 'provinces, territories and states' : 'states, provinces and territories'}</a> · <a href="${ctx.base}?state=${region}">${state} on the map</a></p>`;
 }

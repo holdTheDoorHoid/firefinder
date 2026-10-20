@@ -27,6 +27,7 @@ import {
   regionName,
 } from '../lib/vocab.ts';
 import { mapKey } from '../render/site.ts';
+import { COUNTRY_NAMES, regionGroups } from '../lib/regions.ts';
 
 export interface FilterPanelDeps {
   root: HTMLElement;
@@ -112,10 +113,13 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
       <label class="opt"><input type="checkbox" name="registered" value="1"><span class="opt-icon" aria-hidden="true">${raw('<svg width="18" height="18" viewBox="0 0 20 20"><path d="M5 2.5h10v15l-5-3.4-5 3.4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>')}</span><span class="opt-label">Only lookouts on a historic register<span class="opt-hint">NHLR, FFLOS or the National Register</span></span><span class="opt-count" data-count="registered"></span></label>
     </fieldset>
     <div class="fs fs-select">
-      <label for="f-state" class="fs-label">State</label>
+      <label for="f-state" class="fs-label">State, province or territory</label>
       <select id="f-state" name="region">
-        <option value="">All states</option>
-        ${regions.map((r) => html`<option value="${r}">${regionName(r)}</option>`)}
+        <option value="">Everywhere</option>
+        ${regionGroups(regions).map((g) => html`<optgroup label="${g.name}">
+          <option value="@${g.country}" data-country="${g.country}">All of ${g.country === 'US' ? 'the United States' : g.name}</option>
+          ${g.regions.map((r) => html`<option value="${r.code}">${r.name}</option>`)}
+        </optgroup>`)}
       </select>
     </div>
     <div class="fs fs-select">
@@ -179,7 +183,9 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
         f.registered = (input as HTMLInputElement).checked;
         break;
       case 'region':
-        f.region = input.value || null;
+        // "@CA": a whole country; a code: one state, province or territory
+        f.country = input.value.startsWith('@') ? input.value.slice(1) : null;
+        f.region = input.value && !input.value.startsWith('@') ? input.value : null;
         break;
       case 'design':
         f.design = input.value || null;
@@ -234,7 +240,7 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
       if (f.region && !sel.querySelector(`option[value="${f.region}"]`)) {
         sel.insertAdjacentHTML('beforeend', html`<option value="${f.region}">${regionName(f.region)} (no lookouts yet)</option>`.value);
       }
-      sel.value = f.region ?? '';
+      sel.value = f.region ?? (f.country ? `@${f.country}` : '');
     }
     for (const facet of ['status', 'kind', 'verification'] as const) {
       const btn = root.querySelector<HTMLElement>(`[data-all="${facet}"]`);
@@ -252,8 +258,17 @@ export function renderFilterPanel(d: FilterPanelDeps): () => void {
     }
     const regionCounts = facetCounts(feats, f, 'region', d.checklist);
     if (sel) {
+      const byCountry = new Map<string, number>();
+      for (const g of regionGroups(regionCounts.keys())) {
+        byCountry.set(g.country, g.regions.reduce((a, r) => a + (regionCounts.get(r.code) ?? 0), 0));
+      }
       for (const opt of sel.options) {
         if (!opt.value) continue;
+        if (opt.value.startsWith('@')) {
+          const c = opt.value.slice(1);
+          opt.textContent = `All of ${c === 'US' ? 'the United States' : COUNTRY_NAMES[c] ?? c} (${formatCount(byCountry.get(c) ?? 0)})`;
+          continue;
+        }
         const n = regionCounts.get(opt.value) ?? 0;
         opt.textContent = `${regionName(opt.value)} (${formatCount(n)})`;
       }
