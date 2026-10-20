@@ -1,0 +1,105 @@
+{
+  "id": "ca-bc-gibraltar",
+  "name": "Gibraltar Fire Lookout",
+  "other_names": [],
+  "country": "CA",
+  "region": "BC",
+  "county": "Regional District of East Kootenay",
+  "location": {
+    "lat": 50.30075,
+    "lon": -115.62482,
+    "precision": "exact",
+    "from": "firelookout_ca"
+  },
+  "elevation_m": null,
+  "kind": "two_story",
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": null,
+  "height_m": null,
+  "status": "standing",
+  "status_note": null,
+  "registers": [],
+  "agency": "Recreation Sites and Trails BC",
+  "ownership": "unknown",
+  "access": {
+    "level": "unknown",
+    "note": "OpenStreetMap tags the structure access=yes."
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Gibraltar Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
+      "url": "https://firelookout.ca/lookouts/?slug=gibraltar-fire-lookout",
+      "kind": "site"
+    },
+    {
+      "label": "OpenStreetMap way 1395093559",
+      "url": "https://www.openstreetmap.org/way/1395093559",
+      "kind": "osm"
+    }
+  ],
+  "sources": [
+    {
+      "source": "firelookout_ca",
+      "key": "firelookout_ca:13946",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/1395093559",
+      "fields": [
+        "kind",
+        "status",
+        "agency",
+        "access",
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "firelookout_ca",
+          "value": {
+            "lat": 50.30075,
+            "lon": -115.62482
+          }
+        },
+        {
+          "source": "osm",
+          "value": {
+            "lat": 50.295417,
+            "lon": -115.614243
+          }
+        }
+      ],
+      "distance_m": 957,
+      "note": null
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-20"
+}

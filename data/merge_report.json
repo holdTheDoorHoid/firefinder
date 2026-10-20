@@ -1,6 +1,11 @@
 {
- "merged": "2026-10-10",
+ "merged": "2026-10-20",
  "inputs": {
+  "alberta_wildfire": {
+   "records": 124,
+   "retrieved": "2026-10-20",
+   "file": "alberta_wildfire.json"
+  },
   "andyarthur_ny": {
    "records": 34,
    "retrieved": "2026-10-04",
@@ -45,6 +50,11 @@
    "records": 6,
    "retrieved": "2026-10-04",
    "file": "cskt.json"
+  },
+  "curated_ak": {
+   "records": 6,
+   "retrieved": "2026-10-20",
+   "file": "curated_ak.json"
   },
   "eastern_us_lookouts": {
    "records": 2135,
@@ -92,7 +102,7 @@
    "file": "ffla_west_reports.json"
   },
   "fflos": {
-   "records": 2120,
+   "records": 2122,
    "retrieved": "2026-10-04",
    "file": "fflos.json"
   },
@@ -100,6 +110,11 @@
    "records": 19,
    "retrieved": "2026-10-04",
    "file": "fire_lookouts_org.json"
+  },
+  "firelookout_ca": {
+   "records": 206,
+   "retrieved": "2026-10-20",
+   "file": "firelookout_ca.json"
   },
   "firelookout_com": {
    "records": 3266,
@@ -162,7 +177,7 @@
    "file": "mvffla.json"
   },
   "nhlr": {
-   "records": 1850,
+   "records": 1870,
    "retrieved": "2026-10-04",
    "file": "nhlr.json"
   },
@@ -181,9 +196,14 @@
    "retrieved": "2026-10-08",
    "file": "nysffla_projects.json"
   },
+  "ontario_lio": {
+   "records": 95,
+   "retrieved": "2026-10-20",
+   "file": "ontario_lio.json"
+  },
   "osm": {
-   "records": 1028,
-   "retrieved": "2026-10-04",
+   "records": 1114,
+   "retrieved": "2026-10-20",
    "file": "osm.json"
   },
   "pa_storymap": {
@@ -247,8 +267,8 @@
    "file": "west_us_lookouts.json"
   },
   "wikidata": {
-   "records": 288,
-   "retrieved": "2026-10-04",
+   "records": 291,
+   "retrieved": "2026-10-20",
    "file": "wikidata.json"
   },
   "wikipedia_lookout_lists": {
@@ -263,70 +283,77 @@
   }
  },
  "files": {
-  "written": 200,
-  "unchanged": 8283
+  "written": 425,
+  "unchanged": 8483
  },
  "counts": {
-  "towers": 8436,
+  "towers": 8861,
   "merged_away": 47,
-  "visible": 8395,
-  "hidden": 41,
+  "visible": 8803,
+  "hidden": 58,
   "hidden_by_reason": {
    "Not confirmed as a lookout (FFLA lists it only as unknown or undocumented)": 36,
+   "Not confirmed as a fire lookout (an observation tower OpenStreetMap does not tag or name as one)": 16,
    "Not a fire lookout (FFLA lists it as a non-fire tower)": 2,
    "Never built (FFLA lists it as \"Planned\")": 1,
    "Not a fire lookout (FFLA: determined not to have been used as a wildland fire lookout)": 1,
+   "Not a fire lookout (Firelookout.ca lists the Thunder Cape Bird Observatory's tower)": 1,
    "Not confirmed as a fire lookout": 1
   },
   "visible_by_status": {
-   "gone": 4578,
-   "standing": 2187,
-   "unknown": 1416,
+   "gone": 4587,
+   "standing": 2386,
+   "unknown": 1614,
    "relocated": 136,
-   "ruins": 66,
-   "replica": 12
+   "ruins": 67,
+   "replica": 13
   },
   "visible_by_kind": {
-   "tower": 5616,
-   "ground": 1056,
-   "unknown": 481,
+   "tower": 5881,
+   "ground": 1091,
+   "unknown": 584,
    "camp": 469,
-   "two_story": 267,
+   "two_story": 271,
    "platform": 236,
    "enclosed_tower": 110,
    "tree": 66,
    "point": 36,
-   "three_story": 29,
+   "three_story": 30,
    "rooftop": 17,
    "mobile": 12
   },
   "visible_with_no_structure": 571,
   "visible_by_material": {
-   "null": 5998,
-   "wood": 1254,
-   "steel": 1068,
-   "stone": 34,
+   "null": 6245,
+   "wood": 1261,
+   "steel": 1219,
+   "stone": 36,
    "log": 26,
    "mixed": 12,
-   "masonry": 2,
+   "masonry": 3,
    "concrete": 1
   },
   "visible_by_material_from": {
-   "null": 5998,
-   "design": 1116,
+   "null": 6245,
+   "design": 1117,
    "fflos": 598,
-   "nhlr": 540,
+   "nhlr": 544,
+   "alberta_wildfire": 97,
    "firelookout_com": 90,
-   "osm": 23,
+   "firelookout_ca": 49,
+   "osm": 33,
    "ffla": 21,
    "cherylhill_oregon": 3,
    "ridb": 3,
    "trailchick_wa": 3
   },
   "visible_by_region": {
+   "AB": 131,
+   "AK": 4,
    "AL": 140,
    "AR": 109,
    "AZ": 159,
+   "BC": 60,
    "CA": 560,
    "CO": 56,
    "CT": 21,
@@ -347,21 +374,26 @@
    "MO": 157,
    "MS": 103,
    "MT": 689,
+   "NB": 1,
    "NC": 235,
    "ND": 10,
    "NE": 8,
    "NH": 78,
    "NJ": 37,
+   "NL": 1,
    "NM": 116,
    "NV": 6,
    "NY": 176,
    "OH": 53,
    "OK": 26,
+   "ON": 194,
    "OR": 955,
    "PA": 188,
+   "QC": 4,
    "RI": 22,
    "SC": 112,
    "SD": 31,
+   "SK": 12,
    "TN": 275,
    "TX": 164,
    "UT": 18,
@@ -370,28 +402,32 @@
    "WA": 716,
    "WI": 218,
    "WV": 116,
-   "WY": 80
+   "WY": 80,
+   "YT": 1
   },
   "visible_by_verification": {
    "verified": 6053,
-   "unverified": 2143,
-   "facts": 199
+   "unverified": 2511,
+   "facts": 239
   },
-  "multi_source_towers": 6141,
+  "multi_source_towers": 6219,
   "towers_by_number_of_sources": {
-   "1": 1595,
-   "2": 1072,
-   "3": 1719,
-   "4": 1505,
+   "1": 1942,
+   "2": 1142,
+   "3": 1725,
+   "4": 1507,
    "5+": 2545
   },
   "rentable": 91,
-  "registered": 4025,
-  "approximate": 110
+  "registered": 4045,
+  "approximate": 114
  },
  "matching": {
   "note": "How each source record found its tower on this run. 'key' means it was matched on an earlier run and found again by its key; delete data/towers to see a fresh run's methods.",
   "by_source": {
+   "alberta_wildfire": {
+    "new": 124
+   },
    "andyarthur_ny": {
     "key": 34
    },
@@ -420,6 +456,10 @@
    },
    "cskt": {
     "key": 6
+   },
+   "curated_ak": {
+    "approximate": 4,
+    "unplaced": 2
    },
    "eastern_us_lookouts": {
     "key": 1451,
@@ -453,10 +493,16 @@
    },
    "fflos": {
     "key": 1855,
+    "new": 2,
     "unplaced": 265
    },
    "fire_lookouts_org": {
     "key": 19
+   },
+   "firelookout_ca": {
+    "new": 174,
+    "spatial": 10,
+    "unplaced": 22
    },
    "firelookout_com": {
     "key": 3266
@@ -498,7 +544,8 @@
    },
    "nhlr": {
     "key": 1848,
-    "unplaced": 2
+    "new": 18,
+    "unplaced": 4
    },
    "nj_forest_fire_towers": {
     "key": 23
@@ -509,8 +556,14 @@
    "nysffla_projects": {
     "key": 75
    },
+   "ontario_lio": {
+    "new": 70,
+    "spatial": 25
+   },
    "osm": {
-    "key": 1028
+    "key": 1028,
+    "new": 32,
+    "spatial": 54
    },
    "pa_storymap": {
     "key": 47
@@ -551,7 +604,9 @@
     "unplaced": 281
    },
    "wikidata": {
-    "key": 288
+    "key": 288,
+    "new": 1,
+    "spatial": 2
    },
    "wikipedia_lookout_lists": {
     "key": 35
@@ -567,8 +622,8 @@
  "conflicts": {
   "by_field": {
    "status": 429,
-   "location": 421,
-   "built": 282,
+   "location": 422,
+   "built": 283,
    "kind": 22,
    "material": 11,
    "registers": 5
@@ -644,13 +699,28 @@
    }
   },
   "location_distance": {
-   "0.5-1 km": 157,
+   "0.5-1 km": 158,
    "1-5 km": 219,
    "5-25 km": 34,
    ">25 km": 11
   },
   "examples": {
    "built": [
+    {
+     "id": "ca-bc-lavina",
+     "name": "Lavina Lookout",
+     "values": [
+      {
+       "source": "nhlr",
+       "value": 1959
+      },
+      {
+       "source": "osm",
+       "value": 1974
+      }
+     ],
+     "distance_m": null
+    },
     {
      "id": "us-ca-baker-point",
      "name": "Baker Point Lookout",
@@ -873,21 +943,6 @@
       {
        "source": "ffla_sdrc",
        "value": 1925
-      }
-     ],
-     "distance_m": null
-    },
-    {
-     "id": "us-ca-lyons-peak",
-     "name": "Lyons Peak Lookout",
-     "values": [
-      {
-       "source": "nhlr",
-       "value": 1964
-      },
-      {
-       "source": "ffla_sdrc",
-       "value": 1913
       }
      ],
      "distance_m": null
@@ -1129,6 +1184,27 @@
     }
    ],
    "location": [
+    {
+     "id": "ca-bc-gibraltar",
+     "name": "Gibraltar Fire Lookout",
+     "values": [
+      {
+       "source": "firelookout_ca",
+       "value": {
+        "lat": 50.30075,
+        "lon": -115.62482
+       }
+      },
+      {
+       "source": "osm",
+       "value": {
+        "lat": 50.295417,
+        "lon": -115.614243
+       }
+      }
+     ],
+     "distance_m": 957
+    },
     {
      "id": "us-al-longleaf",
      "name": "Longleaf Lookout Tower",
@@ -1429,27 +1505,6 @@
       }
      ],
      "distance_m": 2303
-    },
-    {
-     "id": "us-ca-black-butte-shasta-trinity-national-forest",
-     "name": "Black Butte Lookout Site (Shasta-Trinity National Forest)",
-     "values": [
-      {
-       "source": "fflos",
-       "value": {
-        "lat": 41.366537,
-        "lon": -122.348119
-       }
-      },
-      {
-       "source": "west_us_lookouts",
-       "value": {
-        "lat": 41.39348,
-        "lon": -122.36486
-       }
-      }
-     ],
-     "distance_m": 3306
     }
    ],
    "material": [
@@ -1946,11 +2001,81 @@
   }
  },
  "near_misses": {
-  "count": 24,
+  "count": 27,
   "by_type": {
-   "same_name_apart": 24
+   "same_name_apart": 27
   },
   "pairs": [
+   {
+    "type": "same_name_apart",
+    "distance_m": 1110,
+    "name_score": 1.0,
+    "a": {
+     "id": "ca-ab-baseline",
+     "name": "Baseline Lookout",
+     "status": "standing",
+     "sources": [
+      "nhlr"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "ca-ab-baseline-2",
+     "name": "Baseline Fire Lookout",
+     "status": "standing",
+     "sources": [
+      "alberta_wildfire",
+      "osm"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 2851,
+    "name_score": 1.0,
+    "a": {
+     "id": "ca-on-kwinkwaga-lake",
+     "name": "Kwinkwaga Lake Fire Tower",
+     "status": "unknown",
+     "sources": [
+      "ontario_lio"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "ca-on-kwinkwaga-lake-2",
+     "name": "Kwinkwaga Lake Fire Tower",
+     "status": "unknown",
+     "sources": [
+      "firelookout_ca"
+     ],
+     "hidden": false
+    }
+   },
+   {
+    "type": "same_name_apart",
+    "distance_m": 3242,
+    "name_score": 1.0,
+    "a": {
+     "id": "ca-on-wylie",
+     "name": "Wylie Fire Tower",
+     "status": "standing",
+     "sources": [
+      "firelookout_ca"
+     ],
+     "hidden": false
+    },
+    "b": {
+     "id": "ca-on-wylie-2",
+     "name": "Wylie",
+     "status": "unknown",
+     "sources": [
+      "ontario_lio"
+     ],
+     "hidden": false
+    }
+   },
    {
     "type": "same_name_apart",
     "distance_m": 2506,
@@ -4191,12 +4316,82 @@
    "score": 0.257
   },
   {
+   "type": "matched_different_names",
+   "key": "nhlr:CAN 12",
+   "name": "Luskville Fire Tower",
+   "tower": "ca-qc-luskville",
+   "tower_name": "Luskville Fire Tower",
+   "score": 0.212
+  },
+  {
+   "type": "matched_different_names",
+   "key": "osm:node/1170985916",
+   "name": "Tour à feu",
+   "tower": "ca-qc-luskville",
+   "tower_name": "Luskville Fire Tower",
+   "score": 0.212
+  },
+  {
+   "type": "matched_different_names",
+   "key": "firelookout_ca:11203",
+   "name": "River Aux Sables Fire Tower",
+   "tower": "ca-on-river-aux-sables",
+   "tower_name": "River Aux Sables Fire Tower",
+   "score": 0.164
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ontario_lio:500490749",
+   "name": "Big Trout Fire Tower",
+   "tower": "ca-on-river-aux-sables",
+   "tower_name": "River Aux Sables Fire Tower",
+   "score": 0.082
+  },
+  {
+   "type": "matched_different_names",
+   "key": "firelookout_ca:11721",
+   "name": "Griffin Lake Fire Tower",
+   "tower": "ca-on-griffin-lake",
+   "tower_name": "Griffin Lake Fire Tower",
+   "score": 0.171
+  },
+  {
+   "type": "matched_different_names",
+   "key": "ontario_lio:800331863",
+   "name": "Batchawana Mountain",
+   "tower": "ca-on-griffin-lake",
+   "tower_name": "Griffin Lake Fire Tower",
+   "score": 0.086
+  },
+  {
    "type": "rental_on_gone_lookout",
    "tower": "us-or-flag-point",
    "note": "FFLA reports this lookout burned in 2026, but recreation.gov still lists it. Check with the forest before booking."
   }
  ],
  "unplaced": [
+  {
+   "key": "nhlr:CAN 6",
+   "source": "nhlr",
+   "name": "Barr Settlement Fire Tower",
+   "region": "NS",
+   "county": "Barr Settlement, Hants",
+   "url": "http://nhlr.org/lookouts/can/ns/barr-settlement-fire-tower/",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null
+  },
+  {
+   "key": "nhlr:CAN 7",
+   "source": "nhlr",
+   "name": "Johnson Hill Fire Tower",
+   "region": "NS",
+   "county": "Meagher's Grant, Halifax",
+   "url": "http://nhlr.org/lookouts/can/ns/johnson-hill-fire-tower/",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null
+  },
   {
    "key": "nhlr:US 619",
    "source": "nhlr",
@@ -11021,6 +11216,374 @@
    "reason": "no coordinates; no same-name lookout in the state",
    "gnis": "no_county",
    "town": null
+  },
+  {
+   "key": "firelookout_ca:11839",
+   "source": "firelookout_ca",
+   "name": "Clear Lake Fire Tower",
+   "region": "SK",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=clear-lake-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null
+  },
+  {
+   "key": "firelookout_ca:11901",
+   "source": "firelookout_ca",
+   "name": "Cumberland House Fire Tower",
+   "region": "SK",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=cumberland-house-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Cumberland House",
+    "lat": 53.9523,
+    "lon": -102.2624,
+    "why": "settlement"
+   }
+  },
+  {
+   "key": "firelookout_ca:26908",
+   "source": "firelookout_ca",
+   "name": "Ashby Fire Tower",
+   "region": "ON",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=ashby-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Tweed",
+    "lat": 44.47473,
+    "lon": -77.31025,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:26913",
+   "source": "firelookout_ca",
+   "name": "Cashel Fire Tower",
+   "region": "ON",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=cashel-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Tweed",
+    "lat": 44.47473,
+    "lon": -77.31025,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:26917",
+   "source": "firelookout_ca",
+   "name": "Hinchinbrooke Fire Tower",
+   "region": "ON",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=hinchinbrooke",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Tweed",
+    "lat": 44.47473,
+    "lon": -77.31025,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:26919",
+   "source": "firelookout_ca",
+   "name": "Hungerford Fire Tower",
+   "region": "ON",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=hungerford-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Tweed",
+    "lat": 44.47473,
+    "lon": -77.31025,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:27605",
+   "source": "firelookout_ca",
+   "name": "Kaladar Fire Tower",
+   "region": "ON",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=kaladar",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Tweed",
+    "lat": 44.47473,
+    "lon": -77.31025,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:27609",
+   "source": "firelookout_ca",
+   "name": "Limerick Fire Tower",
+   "region": "ON",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=limerick-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Tweed",
+    "lat": 44.47473,
+    "lon": -77.31025,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:27611",
+   "source": "firelookout_ca",
+   "name": "Marmora Fire Tower",
+   "region": "ON",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=marmora-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Tweed",
+    "lat": 44.47473,
+    "lon": -77.31025,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:27777",
+   "source": "firelookout_ca",
+   "name": "Olden Fire Tower",
+   "region": "ON",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=olden-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Tweed",
+    "lat": 44.47473,
+    "lon": -77.31025,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:38563",
+   "source": "firelookout_ca",
+   "name": "Bruton Fire Tower",
+   "region": "ON",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=bruton-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.355,
+    "lon": -78.73702,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:38565",
+   "source": "firelookout_ca",
+   "name": "Cardiff Fire Tower",
+   "region": "ON",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=cardiff-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.355,
+    "lon": -78.73702,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:38631",
+   "source": "firelookout_ca",
+   "name": "Eyre Fire Tower",
+   "region": "ON",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=eyre-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.355,
+    "lon": -78.73702,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:38787",
+   "source": "firelookout_ca",
+   "name": "Faraday Fire Tower",
+   "region": "ON",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=faraday-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.355,
+    "lon": -78.73702,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:38790",
+   "source": "firelookout_ca",
+   "name": "Gooderham Fire Tower",
+   "region": "ON",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=gooderham-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.355,
+    "lon": -78.73702,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:38791",
+   "source": "firelookout_ca",
+   "name": "Gull Lake Fire Tower",
+   "region": "ON",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=gull-lake-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.355,
+    "lon": -78.73702,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:38794",
+   "source": "firelookout_ca",
+   "name": "Harburn Fire Tower",
+   "region": "ON",
+   "county": "Kawartha Lakes",
+   "url": "https://firelookout.ca/lookouts/?slug=harburn-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.355,
+    "lon": -78.73702,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:38796",
+   "source": "firelookout_ca",
+   "name": "Methuen Fire Tower",
+   "region": "ON",
+   "county": "Kawartha Lakes",
+   "url": "https://firelookout.ca/lookouts/?slug=methuen-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.35657,
+    "lon": -78.74075,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:38799",
+   "source": "firelookout_ca",
+   "name": "White Fire Tower",
+   "region": "ON",
+   "county": "Kawartha Lakes",
+   "url": "https://firelookout.ca/lookouts/?slug=white-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.35657,
+    "lon": -78.74075,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:38840",
+   "source": "firelookout_ca",
+   "name": "Highview Fire Tower",
+   "region": "ON",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=highview-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Pembroke",
+    "lat": 45.82665,
+    "lon": -77.11088,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:38844",
+   "source": "firelookout_ca",
+   "name": "Montgomery Fire Tower",
+   "region": "ON",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=montgomery-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Pembroke",
+    "lat": 45.82665,
+    "lon": -77.11088,
+    "why": "district_office"
+   }
+  },
+  {
+   "key": "firelookout_ca:39034",
+   "source": "firelookout_ca",
+   "name": "Mount Martin Fire Tower",
+   "region": "ON",
+   "county": null,
+   "url": "https://firelookout.ca/lookouts/?slug=mount-martin-fire-tower",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Pembroke",
+    "lat": 45.82665,
+    "lon": -77.11088,
+    "why": "district_office"
+   }
   },
   {
    "key": "michigan_fire_tower:mi:barbeau-fire-tower",
@@ -29938,9 +30501,99 @@
    "reason": "no coordinates; no same-name lookout in the state",
    "gnis": "no_county",
    "town": null
+  },
+  {
+   "key": "curated_ak:ak:bald-mountain-lookout",
+   "source": "curated_ak",
+   "name": "Bald Mountain Lookout",
+   "region": "AK",
+   "county": "Matanuska-Susitna",
+   "url": "https://archive.org/details/alaskafirereportunit",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "ambiguous",
+   "town": null,
+   "candidates": [
+    {
+     "id": 1398565,
+     "name": "Bald Mountain Ridge",
+     "class": "Ridge",
+     "county": "Matanuska-Susitna",
+     "lat": 61.74455,
+     "lon": -149.32921
+    },
+    {
+     "id": 1893466,
+     "name": "Bald Mountain",
+     "class": "Summit",
+     "county": "Matanuska-Susitna",
+     "lat": 62.30796,
+     "lon": -149.75401
+    }
+   ]
+  },
+  {
+   "key": "curated_ak:ak:jean-lake-lookout",
+   "source": "curated_ak",
+   "name": "Jean Lake Lookout",
+   "region": "AK",
+   "county": "Matanuska-Susitna",
+   "url": "https://archive.org/details/alaskafirereportunit",
+   "reason": "no coordinates; no same-name lookout in the state",
+   "gnis": "none",
+   "town": null
   }
  ],
  "unplaced_lookouts": [
+  {
+   "name": "Bald Mountain Lookout",
+   "region": "AK",
+   "county": "Matanuska-Susitna",
+   "records": [
+    {
+     "source": "curated_ak",
+     "key": "curated_ak:ak:bald-mountain-lookout",
+     "name": "Bald Mountain Lookout",
+     "url": "https://archive.org/details/alaskafirereportunit"
+    }
+   ],
+   "gnis": "ambiguous",
+   "town": null,
+   "candidates": [
+    {
+     "id": 1398565,
+     "name": "Bald Mountain Ridge",
+     "class": "Ridge",
+     "county": "Matanuska-Susitna",
+     "lat": 61.74455,
+     "lon": -149.32921
+    },
+    {
+     "id": 1893466,
+     "name": "Bald Mountain",
+     "class": "Summit",
+     "county": "Matanuska-Susitna",
+     "lat": 62.30796,
+     "lon": -149.75401
+    }
+   ],
+   "anchor": "bald-mountain-lookout-matanuska-susitna"
+  },
+  {
+   "name": "Jean Lake Lookout",
+   "region": "AK",
+   "county": "Matanuska-Susitna",
+   "records": [
+    {
+     "source": "curated_ak",
+     "key": "curated_ak:ak:jean-lake-lookout",
+     "name": "Jean Lake Lookout",
+     "url": "https://archive.org/details/alaskafirereportunit"
+    }
+   ],
+   "gnis": "none",
+   "town": null,
+   "anchor": "jean-lake-lookout-matanuska-susitna"
+  },
   {
    "name": "Albert Russell",
    "region": "AL",
@@ -48876,6 +49529,38 @@
    "anchor": "whitewater-baldy"
   },
   {
+   "name": "Barr Settlement Fire Tower",
+   "region": "NS",
+   "county": "Barr Settlement, Hants",
+   "records": [
+    {
+     "source": "nhlr",
+     "key": "nhlr:CAN 6",
+     "name": "Barr Settlement Fire Tower",
+     "url": "http://nhlr.org/lookouts/can/ns/barr-settlement-fire-tower/"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "anchor": "barr-settlement-fire-tower-barr-settlement-hants"
+  },
+  {
+   "name": "Johnson Hill Fire Tower",
+   "region": "NS",
+   "county": "Meagher's Grant, Halifax",
+   "records": [
+    {
+     "source": "nhlr",
+     "key": "nhlr:CAN 7",
+     "name": "Johnson Hill Fire Tower",
+     "url": "http://nhlr.org/lookouts/can/ns/johnson-hill-fire-tower/"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "anchor": "johnson-hill-fire-tower-meaghers-grant-halifax"
+  },
+  {
    "name": "Alert Wildfire.Org",
    "region": "NV",
    "county": null,
@@ -49388,6 +50073,446 @@
    "near": "us-ok-polecat-peak",
    "near_m": 21,
    "anchor": "walnut-mountain-le-flore"
+  },
+  {
+   "name": "Ashby Fire Tower",
+   "region": "ON",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:26908",
+     "name": "Ashby Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=ashby-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Tweed",
+    "lat": 44.47473,
+    "lon": -77.31025,
+    "why": "district_office"
+   },
+   "anchor": "ashby"
+  },
+  {
+   "name": "Bruton Fire Tower",
+   "region": "ON",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:38563",
+     "name": "Bruton Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=bruton-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.355,
+    "lon": -78.73702,
+    "why": "district_office"
+   },
+   "anchor": "bruton"
+  },
+  {
+   "name": "Cardiff Fire Tower",
+   "region": "ON",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:38565",
+     "name": "Cardiff Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=cardiff-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.355,
+    "lon": -78.73702,
+    "why": "district_office"
+   },
+   "anchor": "cardiff"
+  },
+  {
+   "name": "Cashel Fire Tower",
+   "region": "ON",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:26913",
+     "name": "Cashel Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=cashel-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Tweed",
+    "lat": 44.47473,
+    "lon": -77.31025,
+    "why": "district_office"
+   },
+   "anchor": "cashel"
+  },
+  {
+   "name": "Eyre Fire Tower",
+   "region": "ON",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:38631",
+     "name": "Eyre Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=eyre-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.355,
+    "lon": -78.73702,
+    "why": "district_office"
+   },
+   "anchor": "eyre"
+  },
+  {
+   "name": "Faraday Fire Tower",
+   "region": "ON",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:38787",
+     "name": "Faraday Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=faraday-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.355,
+    "lon": -78.73702,
+    "why": "district_office"
+   },
+   "anchor": "faraday"
+  },
+  {
+   "name": "Gooderham Fire Tower",
+   "region": "ON",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:38790",
+     "name": "Gooderham Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=gooderham-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.355,
+    "lon": -78.73702,
+    "why": "district_office"
+   },
+   "anchor": "gooderham"
+  },
+  {
+   "name": "Gull Lake Fire Tower",
+   "region": "ON",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:38791",
+     "name": "Gull Lake Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=gull-lake-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.355,
+    "lon": -78.73702,
+    "why": "district_office"
+   },
+   "anchor": "gull-lake"
+  },
+  {
+   "name": "Harburn Fire Tower",
+   "region": "ON",
+   "county": "Kawartha Lakes",
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:38794",
+     "name": "Harburn Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=harburn-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.355,
+    "lon": -78.73702,
+    "why": "district_office"
+   },
+   "anchor": "harburn-fire-tower-kawartha-lakes"
+  },
+  {
+   "name": "Highview Fire Tower",
+   "region": "ON",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:38840",
+     "name": "Highview Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=highview-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Pembroke",
+    "lat": 45.82665,
+    "lon": -77.11088,
+    "why": "district_office"
+   },
+   "anchor": "highview"
+  },
+  {
+   "name": "Hinchinbrooke Fire Tower",
+   "region": "ON",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:26917",
+     "name": "Hinchinbrooke Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=hinchinbrooke"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Tweed",
+    "lat": 44.47473,
+    "lon": -77.31025,
+    "why": "district_office"
+   },
+   "anchor": "hinchinbrooke"
+  },
+  {
+   "name": "Hungerford Fire Tower",
+   "region": "ON",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:26919",
+     "name": "Hungerford Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=hungerford-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Tweed",
+    "lat": 44.47473,
+    "lon": -77.31025,
+    "why": "district_office"
+   },
+   "anchor": "hungerford"
+  },
+  {
+   "name": "Kaladar Fire Tower",
+   "region": "ON",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:27605",
+     "name": "Kaladar Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=kaladar"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Tweed",
+    "lat": 44.47473,
+    "lon": -77.31025,
+    "why": "district_office"
+   },
+   "anchor": "kaladar"
+  },
+  {
+   "name": "Limerick Fire Tower",
+   "region": "ON",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:27609",
+     "name": "Limerick Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=limerick-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Tweed",
+    "lat": 44.47473,
+    "lon": -77.31025,
+    "why": "district_office"
+   },
+   "anchor": "limerick"
+  },
+  {
+   "name": "Marmora Fire Tower",
+   "region": "ON",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:27611",
+     "name": "Marmora Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=marmora-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Tweed",
+    "lat": 44.47473,
+    "lon": -77.31025,
+    "why": "district_office"
+   },
+   "anchor": "marmora"
+  },
+  {
+   "name": "Methuen Fire Tower",
+   "region": "ON",
+   "county": "Kawartha Lakes",
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:38796",
+     "name": "Methuen Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=methuen-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.35657,
+    "lon": -78.74075,
+    "why": "district_office"
+   },
+   "anchor": "methuen-fire-tower-kawartha-lakes"
+  },
+  {
+   "name": "Montgomery Fire Tower",
+   "region": "ON",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:38844",
+     "name": "Montgomery Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=montgomery-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Pembroke",
+    "lat": 45.82665,
+    "lon": -77.11088,
+    "why": "district_office"
+   },
+   "anchor": "montgomery"
+  },
+  {
+   "name": "Mount Martin Fire Tower",
+   "region": "ON",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:39034",
+     "name": "Mount Martin Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=mount-martin-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Pembroke",
+    "lat": 45.82665,
+    "lon": -77.11088,
+    "why": "district_office"
+   },
+   "anchor": "mount-martin"
+  },
+  {
+   "name": "Olden Fire Tower",
+   "region": "ON",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:27777",
+     "name": "Olden Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=olden-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Tweed",
+    "lat": 44.47473,
+    "lon": -77.31025,
+    "why": "district_office"
+   },
+   "anchor": "olden"
+  },
+  {
+   "name": "White Fire Tower",
+   "region": "ON",
+   "county": "Kawartha Lakes",
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:38799",
+     "name": "White Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=white-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Lindsay",
+    "lat": 44.35657,
+    "lon": -78.74075,
+    "why": "district_office"
+   },
+   "anchor": "white-fire-tower-kawartha-lakes"
   },
   {
    "name": "Black Butte",
@@ -57168,6 +58293,44 @@
    "anchor": "sand-lake-nwr-2-brown"
   },
   {
+   "name": "Clear Lake Fire Tower",
+   "region": "SK",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:11839",
+     "name": "Clear Lake Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=clear-lake-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "anchor": "clear-lake"
+  },
+  {
+   "name": "Cumberland House Fire Tower",
+   "region": "SK",
+   "county": null,
+   "records": [
+    {
+     "source": "firelookout_ca",
+     "key": "firelookout_ca:11901",
+     "name": "Cumberland House Fire Tower",
+     "url": "https://firelookout.ca/lookouts/?slug=cumberland-house-fire-tower"
+    }
+   ],
+   "gnis": "not_covered",
+   "town": null,
+   "hint": {
+    "name": "Cumberland House",
+    "lat": 53.9523,
+    "lon": -102.2624,
+    "why": "settlement"
+   },
+   "anchor": "cumberland-house"
+  },
+  {
    "name": "Beaver Bald",
    "region": "TN",
    "county": null,
@@ -63668,8 +64831,9 @@
    "Ridge",
    "Summit"
   ],
-  "towers": 110,
+  "towers": 114,
   "by_state": {
+   "AK": 4,
    "AL": 3,
    "AR": 2,
    "CA": 7,
@@ -63697,7 +64861,7 @@
    "WV": 1
   },
   "by_class": {
-   "Summit": 84,
+   "Summit": 88,
    "Ridge": 17,
    "Gap": 4,
    "Cliff": 3,
@@ -63717,7 +64881,7 @@
    }
   ],
   "unplaced_by_gnis_outcome": {
-   "none": 929,
+   "none": 930,
    "town": 325,
    "no_county": 280,
    "same_name_on_map": 150,
@@ -63725,11 +64889,80 @@
    "out_of_scope": 60,
    "near_mapped_lookout": 47,
    "no_name": 36,
-   "ambiguous": 31,
+   "ambiguous": 32,
+   "not_covered": 24,
    "same_source_twice": 7,
    "similar_name_on_map": 4
   },
   "placed": [
+   {
+    "id": "us-ak-birch-hill",
+    "name": "Birch Hill Fire Tower",
+    "region": "AK",
+    "county": "Fairbanks North Star",
+    "feature": {
+     "id": 1399063,
+     "name": "Birch Hill",
+     "class": "Summit",
+     "county": "Fairbanks North Star"
+    },
+    "lat": 64.86363,
+    "lon": -147.6433,
+    "records": [
+     "curated_ak:ak:birch-hill-fire-tower"
+    ]
+   },
+   {
+    "id": "us-ak-gordon-lyon-peak",
+    "name": "Gordon Lyon Peak Lookout",
+    "region": "AK",
+    "county": "Anchorage",
+    "feature": {
+     "id": 1419531,
+     "name": "Mount Gordon Lyon",
+     "class": "Summit",
+     "county": "Anchorage"
+    },
+    "lat": 61.26195,
+    "lon": -149.50641,
+    "records": [
+     "curated_ak:ak:gordon-lyon-peak-lookout"
+    ]
+   },
+   {
+    "id": "us-ak-lazy-mountain",
+    "name": "Lazy Mountain Lookout",
+    "region": "AK",
+    "county": "Matanuska-Susitna",
+    "feature": {
+     "id": 1405258,
+     "name": "Lazy Mountain",
+     "class": "Summit",
+     "county": "Matanuska-Susitna"
+    },
+    "lat": 61.62271,
+    "lon": -148.96616,
+    "records": [
+     "curated_ak:ak:lazy-mountain-lookout"
+    ]
+   },
+   {
+    "id": "us-ak-murphy-dome",
+    "name": "Murphy Dome Fire Tower",
+    "region": "AK",
+    "county": "Fairbanks North Star",
+    "feature": {
+     "id": 1406726,
+     "name": "Murphy Dome",
+     "class": "Summit",
+     "county": "Fairbanks North Star"
+    },
+    "lat": 64.95239,
+    "lon": -148.35644,
+    "records": [
+     "curated_ak:ak:murphy-dome-fire-tower"
+    ]
+   },
    {
     "id": "us-al-craig-mountain",
     "name": "Craig Mountain",

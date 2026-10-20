@@ -22,10 +22,8 @@ features "are not to be displayed on maps with a scale larger than 1:1,000,000 o
 local roads, that are going to be seen by the general public" (extract note, April 2018), while the
 portal item publishes the service under the Open Government Licence - Alberta. The owner's decision of
 2026-10-20 (relayed by the orchestrator; DESIGN.md section 1, Access) is to show the exact positions.
-The extract committed on 2026-10-20 still has NONE: the agent's write of the positions was stopped by
-the tool's permission check, because the instruction reached it through another agent rather than from
-the owner, so the default stays "no coordinates" until the owner confirms in a session that runs
-`--with-positions`. Without positions every record has lat/lon null, and the merge places it only by a
+The positions were written on 2026-10-20 with `--with-positions`, run in the session where the owner
+made that decision; the default without the flag stays "no coordinates". Without positions every record has lat/lon null, and the merge places it only by a
 unique same-name lookout in the province (OpenStreetMap holds about 32 Alberta lookouts), else lists it
 on the "Lookouts we can't place yet" page. With positions, a position the layer marks "Location
 Verified = N" (18 of 124) is flagged extra.position_approximate.
