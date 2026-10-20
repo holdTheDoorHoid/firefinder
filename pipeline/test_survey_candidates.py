@@ -131,8 +131,11 @@ class StatusTest(unittest.TestCase):
 
     def test_survey_status_table(self):
         for value in sc.STATUS_VALUES:
-            self.assertEqual(self.read(value)["unmapped"], [], value)
-            self.assertEqual(self.read(value)["status"], sc.STATUS_OF[value], value)
+            # the Canadian surveys' dated values ("gone (nova scotia closure)") are theirs only
+            source = "survey_qc_atl" if "(" in value else "curated_ak"
+            got = structure.read_record(source, {"status_raw": value, "status": "unknown", "extra": {}})
+            self.assertEqual(got["unmapped"], [], value)
+            self.assertEqual(got["status"], sc.STATUS_OF[value], value)
         self.assertEqual(self.read("likely gone")["status_note"], "Sources suggest it is gone.")
         self.assertEqual(self.read("unknown")["status"], "unknown")
         # anything outside the closed set is written as "unknown"

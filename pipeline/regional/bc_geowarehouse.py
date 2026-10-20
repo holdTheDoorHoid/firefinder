@@ -10,7 +10,10 @@ BC's open map services (openmaps.gov.bc.ca, WFS; no robots.txt) hold two layers 
   road or trail access, and a closure notice when the site has one (quoted: a short government notice
   under the Open Government Licence). A build or removal year the description states exactly ("The
   present tower was built in 1974", "dismantled in the fall of 2007") becomes an event in our words.
-  Licence: Open Government Licence - British Columbia (the open.canada.ca record of the dataset, which
+  Each record's `county` is the regional district whose legal boundary holds it (the province's
+  ABMS_REGIONAL_DISTRICTS_SP layer, Open Government Licence - British Columbia; see
+  pipeline/fetch_cgndb_places.py), so a same-name lookout another source files in another district is
+  not joined to it by name. Licence: Open Government Licence - British Columbia (the open.canada.ca record of the dataset, which
   the federal portal carries only for open-licensed BC data, 2026-10-20). Credit "Contains information
   licensed under the Open Government Licence - British Columbia."
 
@@ -121,6 +124,28 @@ def rec_name(name: str) -> str:
     return n
 
 
+_DISTRICTS = None
+
+
+def district_at(lat: float | None, lon: float | None) -> str | None:
+    """The regional district (as the province names it, "Regional District of Central Kootenay") whose
+    legal boundary holds the point: pipeline/fetch_cgndb_places.BcDistricts, the polygons cached once
+    under $FIREFINDER_RAW_ROOT/ca_units/. None without a point or the polygons."""
+    global _DISTRICTS
+    if lat is None or lon is None:
+        return None
+    if _DISTRICTS is None:
+        try:
+            import fetch_cgndb_places
+            _DISTRICTS = fetch_cgndb_places.BcDistricts()
+        except Exception:  # noqa: BLE001
+            _DISTRICTS = False
+    if not _DISTRICTS:
+        return None
+    short = _DISTRICTS.district_at(lat, lon)
+    return _DISTRICTS.official.get(short) if short else None
+
+
 def rec_records(path: pathlib.Path) -> list[dict]:
     data = json.loads(path.read_text(encoding="utf-8"))
     out = []
@@ -166,7 +191,7 @@ def rec_records(path: pathlib.Path) -> list[dict]:
             name, extra["aliases"] = m.group(2), [m.group(1)]
         out.append({
             "key": f"bc_rec_sites:bc:{rec.lower()}", "url": REC_PAGE.format(rec=rec), "name": name,
-            "country": "CA", "region": "BC", "county": None,
+            "country": "CA", "region": "BC", "county": district_at(lat, lon),
             "lat": round(float(lat), 6) if lat is not None else None, "lon": round(float(lon), 6) if lon is not None else None,
             "elevation_m": None, "type_raw": None, "kind": "unknown", "status_raw": None, "status": "unknown",
             "registers": [], "built": next((e["year"] for e in events if e["event"] == "built"), None),
@@ -184,9 +209,10 @@ def rec_records(path: pathlib.Path) -> list[dict]:
 def centroid(geom: dict) -> tuple[float, float]:
     """Area centroid of a (multi)polygon's outer rings, (lat, lon)."""
     polys = geom["coordinates"] if geom.get("type") == "MultiPolygon" else [geom["coordinates"]]
+    x0, y0 = polys[0][0][0]           # measured from the first vertex, so the products stay small
     a_sum = x_sum = y_sum = 0.0
     for poly in polys:
-        ring = poly[0]
+        ring = [(x - x0, y - y0) for x, y in poly[0]]
         for (x1, y1), (x2, y2) in zip(ring, ring[1:] + ring[:1]):
             c = x1 * y2 - x2 * y1
             a_sum += c
@@ -196,7 +222,7 @@ def centroid(geom: dict) -> tuple[float, float]:
         xs = [x for poly in polys for x, _ in poly[0]]
         ys = [y for poly in polys for _, y in poly[0]]
         return sum(ys) / len(ys), sum(xs) / len(xs)
-    return y_sum / (3 * a_sum), x_sum / (3 * a_sum)
+    return y0 + y_sum / (3 * a_sum), x0 + x_sum / (3 * a_sum)
 
 
 def trim_symbols(path: pathlib.Path) -> list[dict]:
@@ -334,7 +360,7 @@ def trim_records(symbols: list[dict], names: dict[int, dict]) -> list[dict]:
             extra["fallback_name"] = "Unnamed lookout (BC base map)"
         out.append({
             "key": f"bc_trim_lookouts:bc:{s['objectid']}", "url": TRIM_DATASET, "name": nm["name"] if nm else None,
-            "country": "CA", "region": "BC", "county": None, "lat": s["lat"], "lon": s["lon"], "elevation_m": None,
+            "country": "CA", "region": "BC", "county": district_at(s["lat"], s["lon"]), "lat": s["lat"], "lon": s["lon"], "elevation_m": None,
             "type_raw": None, "kind": "tower", "status_raw": None, "status": "unknown", "registers": [], "built": None,
             "agency": None, "events": [], "photos": [],
             "links": [{"label": f"BC base map (TRIM): fire lookout tower symbol {s['objectid']}", "url": TRIM_DATASET, "kind": "agency"}],

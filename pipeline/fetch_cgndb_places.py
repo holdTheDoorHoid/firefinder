@@ -119,9 +119,12 @@ class BcDistricts:
             tmp.replace(path)
         data = json.loads(path.read_text(encoding="utf-8"))
         self.items = []
+        self.official: dict[str, str] = {}      # short name -> the name the province writes
         for f in data.get("features") or []:
             name = (f.get("properties") or {}).get("ADMIN_AREA_NAME") or ""
             short = next(iter(ca_units.bc_current_districts(name.replace("(Unincorporated)", ""))), None)
+            if short:
+                self.official[short] = name.strip()
             g = f.get("geometry") or {}
             polys = g.get("coordinates") if g.get("type") == "MultiPolygon" else [g.get("coordinates")]
             boxes = []

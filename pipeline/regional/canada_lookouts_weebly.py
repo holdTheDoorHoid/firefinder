@@ -25,7 +25,10 @@ each with a note in our words and the page as its source. The clippings' text is
 
 Local units. `county` carries only a real local unit the page names: a BC regional district (the
 author's pre-2000s names kept as he writes them, "Thompson-Nicola", "Fraser-Cheam"), an Ontario district
-or county, a New Brunswick or Nova Scotia county. A forest, district office, park, association or
+or county, a New Brunswick or Nova Scotia county. A BC district is kept only when the page's own
+position lies in it (the province's legal boundaries): 14 of the 60 BC pages with a position file the
+lookout under another district, so an unchecked one is a place hint (`extra.place_line`) and the
+gazetteer then needs the hill to be the one of its name in all of BC. A forest, district office, park, association or
 community the author files a lookout under is a place hint (`extra.place_line`), not a unit. Quebec
 names are given their official spelling (Commission de toponymie, read through the CGNDB's GeoNames
 service, one cached query per name) when exactly one spelling there folds to the author's accent-free
@@ -489,12 +492,14 @@ def split_name(raw: str, alias_lines: list[str]) -> tuple[str, list[str], dict]:
             continue
         if re.fullmatch(r"secondary", p, re.I):
             notes["secondary"] = True
+        elif p.strip().lower().rstrip(".") in W.STATUS_EXACT or re.fullmatch(r"abandoned|cut down", p, re.I):
+            notes["status_word"] = p.strip().rstrip(".")      # "PIGEON (Removed)": a status, not a name
         elif KEEP_QUALIFIER_RE.match(p):
             keep.append(p.title())
         elif re.fullmatch(r"\?+", p):
             notes["name_doubt"] = True
         else:
-            for part in re.split(r"\s+or\s+|\s*/\s*|\s*,\s*", AKA_RE.sub("", p)):
+            for part in re.split(r"\s+or\s+|\s*/\s*|\s*,\s*", AKA_RE.sub("", p), flags=re.I):
                 if part.strip():
                     aliases.append(tidy_name(part))
     base = base.strip()
@@ -516,11 +521,33 @@ def place_parts(region: str, lines: list[str]) -> tuple[str | None, list[str]]:
             continue
         parts = [p.strip() for p in re.split(r"\s+[-–]\s+", line) if p.strip()]
         for p in parts:
+            if JUNK_LINE_RE.match(p.strip(" .")) or p.strip().upper() == "BEAR CAUSES FOREST FIRE":
+                continue
+            if regions.fold(p).startswith("notes"):
+                break
             if unit is None and ca_units.named_unit(region, p):
                 unit = ca_units.named_unit(region, p)
-            elif p not in places:
+            else:
                 places.append(p)
-    return unit, places
+    return unit, dedupe_places(places)
+
+
+def dedupe_places(places: list[str]) -> list[str]:
+    """Each place once: "The Laurentian Forest Protective Association" and "..., Ltd" are one."""
+    def k(p: str) -> str:
+        t = regions.fold(re.sub(r",?\s*(?:ltd|limited)\.?$", "", p.strip(), flags=re.I)).removeprefix("the ")
+        return re.sub(r"[^a-z0-9]+", "", t)
+    out: list[str] = []
+    for p in places:
+        kp = k(p)
+        if not kp:
+            continue
+        hit = next((i for i, q in enumerate(out) if kp in k(q) or k(q) in kp), None)
+        if hit is None:
+            out.append(p)
+        elif len(p) > len(out[hit]):
+            out[hit] = p
+    return out
 
 
 def head_lines(lines: list[str]) -> tuple[list[str], list[str], list[str]]:
@@ -699,6 +726,17 @@ def official_qc_name(name: str) -> str | None:
 # Records
 # ---------------------------------------------------------------------------------------------
 
+# Lookouts the author files under another province than the one the page itself names (the Alberta
+# index lists three Atlantic national-park lookouts). Matched on the place line.
+REGION_BY_PLACE = [
+    (re.compile(r"\bcape br[ie]ton highlands\b", re.I), "NS"),
+]
+# Index entries that repeat a lookout listed again under its right province: left out, with the reason.
+MISFILED_REPEATS = {
+    "canada_lookouts_weebly:ab:hastings-hill": "Hastings Hill, filed under Alberta, is the lookout in Fundy Park, New Brunswick, "
+                                               "which the New Brunswick list gives as Hastings (Fundy National Park)",
+}
+
 # Page positions the expansion surveys found wrong; never used, never "fixed" (DESIGN.md 3.2).
 FLAGGED_POSITIONS = {
     # 55.606, -121.431: Mount Bickford is at 55.618, -122.422, 62 km west, near Chetwynd; the
@@ -707,6 +745,41 @@ FLAGGED_POSITIONS = {
     # 49.554, -118.519 is Bluejoint's position (BC/Yukon survey): a copied pin.
     "/blueberry.html": "The page repeats Bluejoint's position, not this lookout's.",
 }
+
+
+_BC = None
+
+
+def check_bc_unit(r: dict) -> None:
+    """A BC page that gives its own position: when the position lies in another regional district than
+    the one the author files it under, the district is a slip ("Cornwall Hills ... Powell River", at
+    Ashcroft), kept only as a place hint (the province's legal boundaries, cached once; see
+    pipeline/fetch_cgndb_places.py)."""
+    global _BC
+    if r["region"] != "BC" or not r["county"]:
+        return
+    if r["lat"] is None:
+        # Unchecked: of the 60 BC pages that give a position, 14 file the lookout under another district
+        # than the one the position lies in (Tenas, Cummins and Sugarloaf all "Bulkley-Nechako"), so a
+        # district with nothing to check it against is a hint only. Without a unit the gazetteer needs the
+        # hill to be the one of its name in all of BC, which a wrong district cannot mislead.
+        r["extra"]["place_line"] = " - ".join(x for x in (r["county"], r["extra"].get("place_line")) if x)
+        r["extra"]["unit_not_used"] = "The author's regional district, not checked against a position (see the module notes)."
+        r["county"] = None
+        return
+    if _BC is None:
+        try:
+            import fetch_cgndb_places
+            _BC = fetch_cgndb_places.BcDistricts()
+        except Exception:  # noqa: BLE001
+            _BC = False
+    if not _BC:
+        return
+    here = _BC.district_at(r["lat"], r["lon"])
+    if here and here not in ca_units.bc_current_districts(r["county"]):
+        r["extra"]["unit_not_used"] = (f"The page files it under {r['county']}, but its own position lies in "
+                                       f"{_BC.official.get(here, here)}.")
+        r["county"] = None
 
 
 def province_index_url(region: str) -> str:
@@ -739,6 +812,9 @@ def record_from(region: str, page: dict | None, entry: dict | None, rel: str | N
     status, status_raw = status_of(lines_page)
     if status == "unknown" and entry:
         status, status_raw = status_of(lines_index)
+    word = ((page or {}).get("notes") or {}).get("status_word") or ((entry or {}).get("notes") or {}).get("status_word")
+    if status == "unknown" and word and word.lower() in W.STATUS_EXACT:
+        status, status_raw = W.STATUS_EXACT[word.lower()]
     # a status word written into the place line ("Quetico Provincial Park - Standing, used as a repeater
     # station", "Cut down"): taken as the status, not as a place
     for p in list(places):
@@ -842,6 +918,14 @@ def build(nav: list[dict], log=print) -> list[dict]:
             key = f"{SOURCE}:{region.lower()}:{slug}" + (f"-{count[slug]}" if count[slug] > 1 else "")
             records.append(record_from(region, None, ent, None, key, None))
         log(f"  {region}: {len(pages)} pages, {len(index)} index names, {len(paired)} paired")
+    records = [r for r in records if r["key"] not in MISFILED_REPEATS]
+    for r in records:
+        for rx, reg in REGION_BY_PLACE:
+            if rx.search(r["extra"].get("place_line") or "") and r["region"] != reg:
+                r["extra"]["filed_under"] = regions.region_name(r["region"])
+                r["key"] = r["key"].replace(f":{r['region'].lower()}:", f":{reg.lower()}:", 1)
+                r["region"] = reg
+        check_bc_unit(r)
     seen = set()
     for r in records:
         assert r["key"] not in seen, r["key"]

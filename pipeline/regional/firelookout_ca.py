@@ -481,6 +481,37 @@ def build_record(t: dict, page: str | None, shared: dict[int, dict]) -> dict:
     return rec
 
 
+# One tower the index lists twice under two names (2026-10-20, dedupe review for Canada,
+# docs/sources/dedupe_review_canada.md): the second record is folded into the first, its name kept as
+# another name and its record page as a link, so the extract has the tower once. The merge retires the
+# tower the second record had made (pipeline/record_joins.py).
+LISTED_TWICE: dict[int, tuple[int, str]] = {
+    # Freswick and Big Crow Lake: the index gives both the same latitude (45.82152) 170 m apart and the
+    # same state (standing, cab gone); Ontario's Fire Tower Lookouts lists "Freswick Tower - Big Crow
+    # Lake, Algonquin Park" and Canada's Fire Lookouts "BIG CROW LAKE (FRESWICK)".
+    9892: (11730, "Freswick is the Big Crow Lake tower (Algonquin Park)"),
+    # Brigstocke and Anima-Nipissing: both records give the address "Anima Nipissing Road, Unorganized
+    # West Timiskaming", 340 m apart; Ontario's Fire Tower Lookouts lists "Brigstocke Tower - Anima
+    # Nipissing Lake, Latchford" and Canada's Fire Lookouts "BRIGSTOCKE, Anima Nipissing Lake Latchford";
+    # Land Information Ontario has one fire tower there, between the two pins.
+    41033: (11395, "Brigstocke is the tower on Anima Nipissing Lake"),
+}
+
+
+def fold_twice_listed(records: list[dict]) -> list[dict]:
+    by_id = {r["extra"]["firelookout_ca_id"]: r for r in records}
+    for dup, (keep, why) in LISTED_TWICE.items():
+        d, k = by_id.get(dup), by_id.get(keep)
+        if d is None or k is None:
+            continue
+        k["extra"].setdefault("aliases", []).append(d["name"])
+        k["extra"]["listed_twice"] = {"key": d["key"], "name": d["name"], "url": d["url"], "why": why,
+                                      "lat": d["lat"], "lon": d["lon"]}
+        k["links"].append({"label": f"{d['name']} on Firelookout.ca (the same tower, listed again)", "url": d["url"],
+                           "kind": "site"})
+    return [r for r in records if r["extra"]["firelookout_ca_id"] not in LISTED_TWICE]
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--no-fetch", action="store_true", help="read the cache only")
@@ -495,7 +526,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.fetch_only:
         return 0
     shared = shared_points(towers)
-    records = [build_record(t, pages[t["id"]], shared) for t in towers]
+    records = fold_twice_listed([build_record(t, pages[t["id"]], shared) for t in towers])
     records.sort(key=lambda r: r["key"])
     newest = max((p.stat().st_mtime for p in (RAW_ROOT / SOURCE / "lookouts").glob("*.html")), default=None)
     retrieved = datetime.date.fromtimestamp(newest).isoformat() if newest else datetime.date.today().isoformat()

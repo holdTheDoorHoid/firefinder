@@ -68,7 +68,7 @@ import regions  # noqa: E402
 from photo_credit import extract_photo_credit  # noqa: E402
 import designs as design_names  # noqa: E402
 import structure  # noqa: E402
-from record_joins import KEEP_APART_PAIRS, LOCATION_PICKS, RECORD_JOINS  # noqa: E402
+from record_joins import KEEP_APART_PAIRS, LOCATION_PICKS, RECORD_JOINS, STATUS_PICKS  # noqa: E402
 
 def inside_us(lat: float, lon: float) -> bool:
     return regions.in_country("US", lat, lon)
@@ -157,7 +157,8 @@ PRECEDENCE: dict[str, list[str]] = {
                "andyarthur_ny", "wikipedia_lookout_lists", "fire_lookouts_org", "tnlandforms",
                "nj_forest_fire_towers", "eastern_us_lookouts", "central_us_lookouts", "wikidata",
                "michigan_fire_tower",
-               "west_us_lookouts", "trailchick_wa", "indiana_fire_towers", "canada_lookouts_weebly", *CA_SURVEY_SOURCES],
+               "west_us_lookouts", "trailchick_wa", "indiana_fire_towers", "bc_rec_sites", "bc_trim_lookouts",
+               "canada_lookouts_weebly", *CA_SURVEY_SOURCES],
     "elevation_m": ["nhlr", "fflos", "firelookout_ca", "ontario_lio", "alberta_wildfire", "firelookout_com", "fire_lookouts_org", "tnlandforms",
                     "nj_forest_fire_towers", "ridb", "wikidata", "cskt", "osm",
                     "trailchick_wa", "cherylhill_oregon", "canada_lookouts_weebly", *CA_SURVEY_SOURCES],
@@ -280,7 +281,7 @@ MATCH_SAME_SPOT_M = 100
 MATCH_NEAR_M = 400
 MATCH_STRONG_M = 1500
 STRONG_RADIUS_BY_SOURCE = {"idaho_fl": 3000, "ridb": 3000, "cskt": 15000, "west_us_lookouts": 3000,
-                           "firelookout_ca": 3000, "canada_lookouts_weebly": 3000}
+                           "firelookout_ca": 3000, "canada_lookouts_weebly": 3000, "websiteservice_sk": 3000}
 # A same-spot match (<= MATCH_SAME_SPOT_M) whose name is *clearly* different (score < PARTIAL)
 # from every member of the near tower may still be a plain coordinate error in the source: the
 # record really belongs to a different tower it strongly (score >= STRONG) and uniquely names,
@@ -1758,6 +1759,8 @@ class Matcher:
                 d = t.min_dist(rec.lat, rec.lon)
                 if d is None:
                     continue
+                if rec.region and t.regions() and all(regions.country_of(x) not in (None, rec.country) for x in t.regions()):
+                    continue        # never across a national border: Monument 83 has a lookout on each side
                 score = name_score(rec.forms, t.forms())
                 same_region = rec.region is None or not t.regions() or rec.region in t.regions()
                 if same_region:
@@ -1935,8 +1938,8 @@ class Matcher:
                 r.gnis = {"outcome": "not_covered", "feature": None, "candidates": [], "town": None}
         if not gnis:
             return
-        groups: dict[int, list[Rec]] = defaultdict(list)
-        features: dict[int, GnisFeature] = {}
+        groups: dict[tuple, list[Rec]] = defaultdict(list)
+        features: dict[tuple, GnisFeature] = {}
         for r in self.unplaced:
             if r.source == "ffla_rentals" or r.has_coords:
                 continue
@@ -1956,8 +1959,8 @@ class Matcher:
             if similar:
                 res["outcome"], res["similar"] = "similar_name_on_map", similar[0]
                 continue
-            groups[f.id].append(r)
-            features[f.id] = f
+            groups[(f.gazetteer, f.id)].append(r)     # GNIS ids are numbers, CGNDB's strings
+            features[(f.gazetteer, f.id)] = f
         # A record of the same lookout that GNIS could not place by itself (no county given, or a
         # town-only match) joins its group as place_without_coords() would join the tower on a later
         # run: a strong same name (>= 0.95) in the state, a county that agrees when it gives one, and
@@ -2597,6 +2600,16 @@ def record_links(rec: Rec) -> list[dict]:
             out.append({"label": "Land Information Ontario: Tower layer (fire towers)", "url": url, "kind": "agency"})
         elif src == "alberta_wildfire":
             out.append({"label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)", "url": url, "kind": "agency"})
+        elif src == "canada_lookouts_weebly":
+            out.append({"label": f"{name} on Canada's Fire Lookouts (Ron Kemnow)", "url": url, "kind": "site"})
+        elif src == "websiteservice_sk":
+            out.append({"label": f"{name} on Firetowers of Saskatchewan (websiteservice.ca)", "url": url, "kind": "site"})
+        elif src == "bc_rec_sites":
+            out.append({"label": f"Recreation Sites and Trails BC: {name} ({rec.extra.get('rec_site_id') or 'site page'})", "url": url, "kind": "agency"})
+        elif src == "bc_trim_lookouts":
+            out.append({"label": f"BC base map (TRIM): fire lookout symbol {rec.extra.get('trim_objectid')}", "url": url, "kind": "agency"})
+        elif src in CA_SURVEY_SOURCES:
+            pass            # a compiled record: its own links name each page it cites (below)
         elif src in ASSOCIATION_SOURCES:
             assoc = (rec.extra.get("association") or {}).get("name") or SOURCE_SITE.get(src, src)
             out.append({"label": f"{assoc}: work on {name}", "url": url, "kind": "association"})
@@ -2624,7 +2637,7 @@ def record_links(rec: Rec) -> list[dict]:
             continue  # a regional index page, not about this lookout
         elif src == "osm" and low == "website":
             out.append({"label": f"Website ({host.removeprefix('www.')})", "url": lurl, "kind": "website"})
-        elif lurl == url:
+        elif lurl == url and src not in CA_SURVEY_SOURCES:
             continue
         else:
             out.append({"label": label or host, "url": lurl, "kind": kind or ("agency" if src in ("ridb", "cskt") else "site")})
@@ -2667,9 +2680,16 @@ def lineage(source: str) -> str:
     return LOCATION_LINEAGE.get(source, source)
 
 
+def rec_lineage(m: Rec) -> str:
+    """A record's position lineage: its source's, or, for a position its source copied from another
+    source (a survey's candidate citing OpenStreetMap's node: extra.position_copied_from), that one's."""
+    copied = m.extra.get("position_copied_from")
+    return lineage(copied if isinstance(copied, str) and copied else m.source)
+
+
 def corroborated(m: Rec, members: list[Rec]) -> bool:
     """Does a source of another lineage put the lookout within 500 m of this record?"""
-    return any(o.has_coords and o.source not in APPROXIMATE and lineage(o.source) != lineage(m.source)
+    return any(o.has_coords and o.source not in APPROXIMATE and rec_lineage(o) != rec_lineage(m)
                and haversine_m(m.lat, m.lon, o.lat, o.lon) <= CONFLICT_LOCATION_M for o in members)
 
 
@@ -3045,6 +3065,10 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
     v, s = pick("height_m", members, record_height)
     set_field("height_m", v, s)
     status, status_src = pick("status", members, record_status)
+    picked = next((m for m in sorted(members, key=lambda m: m.key) if m.key in STATUS_PICKS and record_status(m)), None)
+    if picked is not None:
+        # a human has found this record's status the newer word (pipeline/record_joins.py STATUS_PICKS)
+        status, status_src = record_status(picked), picked
     if status is None and "status" not in rec:
         status = "unknown"
     set_field("status", status, status_src)
@@ -3053,6 +3077,8 @@ def resolve(tower: Tower, today: str, headers: dict, photos_manifest: dict | Non
     if "status" not in locked:
         note, note_src = pick("status", members, lambda m: ((m.status_info or {}).get("note") if not (m.status_info or {}).get("access") else None)
                               or m.structure.get("status_note"))
+        if picked is not None:
+            note, note_src = (picked.status_info or {}).get("note") or picked.structure.get("status_note"), picked
         rec["status_note"] = note
         if note_src is not None:
             contributed[note_src.key].add("status")
@@ -3569,7 +3595,7 @@ def verification_for(rec: dict, members: list[Rec]) -> str:
             continue
         if haversine_m(loc["lat"], loc["lon"], m.lat, m.lon) > CONFLICT_LOCATION_M:
             continue
-        groups.add(LOCATION_LINEAGE.get(m.source, m.source))
+        groups.add(rec_lineage(m))
     return "facts" if len(groups) >= 2 else "unverified"
 
 
@@ -4087,6 +4113,9 @@ def unplaced_entry(r: Rec) -> dict:
         # a place the source files the lookout under (firelookout.ca's district offices), with
         # the position it gave, which is the place's and not the tower's
         out["hint"] = hint
+    elif r.country == "CA" and isinstance(r.extra.get("place_line"), str) and r.extra["place_line"].strip():
+        # the forest, association, fire district or community a Canadian list files it under
+        out["hint"] = {"name": r.extra["place_line"].strip(), "why": "filed_under"}
     if res.get("feature") is not None and res.get("outcome") != "summit":
         out["feature"] = res["feature"].as_dict()
     if res.get("candidates"):
@@ -4109,6 +4138,29 @@ def unplaced_lookouts(m: Matcher, entries: dict[str, dict]) -> list[dict]:
     for r in m.unplaced:
         keys = gnis_keys_for(r) or [loose_key(r.display or "") or r.key]
         groups[(r.region or "", county_key(record_county(r)) or "", keys[0])].append(r)
+    # Canada (2026-10-20): one lookout that several sources list, each writing its unit its own way
+    # ("Hants County", "Hants", NHLR's "Barr Settlement, Hants") or not at all, is one entry: groups of
+    # one name whose units share a county, and a group with no unit joining the one group that has one.
+    by_name: dict[tuple, list[tuple]] = defaultdict(list)
+    for g in list(groups):
+        if regions.country_of(g[0]) not in (None, "US"):
+            by_name[(g[0], g[2])].append(g)
+    for (region, key), gs in by_name.items():
+        if len(gs) < 2:
+            continue
+        units = {g: set().union(*(county_keys(record_county(x)) for x in groups[g])) for g in gs}
+        with_unit = [g for g in gs if units[g]]
+        merged: list[tuple] = []
+        for g in with_unit:
+            home = next((h for h in merged if units[h] & units[g]), None)
+            if home is None:
+                merged.append(g)
+            else:
+                groups[home].extend(groups.pop(g))
+                units[home] |= units[g]
+        for g in [g for g in gs if not units[g]]:
+            if len(merged) == 1:
+                groups[merged[0]].extend(groups.pop(g))
     out = []
     for (region, ck, key), recs in groups.items():
         recs = sorted(recs, key=lambda x: (source_rank("name", x.source), x.key))

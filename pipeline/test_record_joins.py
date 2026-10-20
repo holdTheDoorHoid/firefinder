@@ -172,13 +172,13 @@ class TheTable(unittest.TestCase):
     def test_every_entry_names_a_record_and_a_target(self) -> None:
         for key, target in record_joins.RECORD_JOINS.items():
             self.assertRegex(key, r"^[a-z_]+:\S+", key)
-            self.assertTrue(target.startswith("us-") or ":" in target, (key, target))
+            self.assertTrue(target.startswith(("us-", "ca-")) or ":" in target, (key, target))
             self.assertNotEqual(key, target)
 
     def test_a_key_target_comes_from_a_source_matched_before_the_record_it_receives(self) -> None:
         order = {s: i for i, s in enumerate(M.SOURCE_ORDER)}
         for key, target in record_joins.RECORD_JOINS.items():
-            if target.startswith("us-"):
+            if target.startswith(("us-", "ca-")):     # a tower id: no order to keep
                 continue
             self.assertLess(order[target.split(":")[0]], order[key.split(":")[0]], (key, target))
 
