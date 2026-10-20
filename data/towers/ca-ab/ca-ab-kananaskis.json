@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-kananaskis",
   "name": "Kananaskis Fire Lookout",
+  "summary": "Active Alberta cabin lookout in Kananaskis Country: first lookout 1952, present building 1976, staffed by a lookout observer as a home and workplace.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,16 +17,16 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Cabin-type lookout building (Alberta record)",
   "height_m": 5.0,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": "Alberta Wildfire",
+  "agency": "Alberta Wildfire, within Agriculture and Forestry",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "Active staffed lookout; the buildings are a workplace. Visitors may use the picnic tables and the trails. OpenStreetMap tags access as private, which conflicts with the guide."
   },
   "staffing": {
     "status": "staffed",
@@ -34,21 +35,54 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Walk up from Highway 40 (about an hour, 280 m height gain) or by the Whiskey Jack trail from Boulton Creek campground. The guide calls it a popular cross-country ski destination, right on the Lookout trail."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1952,
+      "event": "built",
+      "note": "First lookout on the site, per the Friends of Kananaskis Country guide.",
+      "from": "research",
+      "source_url": "https://kananaskis.org/kananaskis-fire-lookout/"
+    },
     {
       "year": 1976,
       "event": "built",
       "note": "The present structure (Alberta Wildfire's year of construction).",
       "from": "alberta_wildfire",
       "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+    },
+    {
+      "year": 1976,
+      "event": "replaced",
+      "note": "Present building put up in 1976 (guide). Alberta record also gives 1976 as year constructed.",
+      "from": "research",
+      "source_url": "https://kananaskis.org/kananaskis-fire-lookout/",
+      "source_urls": [
+        "https://kananaskis.org/kananaskis-fire-lookout/",
+        "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=(LATITUDE%3E53.95%20AND%20LATITUDE%3C54.02%20AND%20LONGITUDE%3E-118.25%20AND%20LONGITUDE%3C-118.1)%20OR%20(LATITUDE%3E49.5%20AND%20LATITUDE%3C49.62%20AND%20LONGITUDE%3E-114.6%20AND%20LONGITUDE%3C-114.4)%20OR%20(LATITUDE%3E50.58%20AND%20LATITUDE%3C50.65%20AND%20LONGITUDE%3E-115.12%20AND%20LONGITUDE%3C-115.02)&outFields=*&f=json&returnGeometry=false"
+      ]
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Kananaskis Fire Lookout (Friends of Kananaskis Country)",
+      "url": "https://kananaskis.org/kananaskis-fire-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Alberta wildfire lookout layer (friaa_firesmart_vector_data), attribute query for three sites (Government of Alberta, geospatial.alberta.ca)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=(LATITUDE%3E53.95%20AND%20LATITUDE%3C54.02%20AND%20LONGITUDE%3E-118.25%20AND%20LONGITUDE%3C-118.1)%20OR%20(LATITUDE%3E49.5%20AND%20LATITUDE%3C49.62%20AND%20LONGITUDE%3E-114.6%20AND%20LONGITUDE%3C-114.4)%20OR%20(LATITUDE%3E50.58%20AND%20LATITUDE%3C50.65%20AND%20LONGITUDE%3E-115.12%20AND%20LONGITUDE%3C-115.02)&outFields=*&f=json&returnGeometry=false",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Alberta.ca)",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -84,10 +118,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-kananaskis",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

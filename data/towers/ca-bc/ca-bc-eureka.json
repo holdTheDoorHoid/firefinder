@@ -1,6 +1,7 @@
 {
   "id": "ca-bc-eureka",
   "name": "Eureka Fire Lookout",
+  "summary": "Two-level lookout on Eureka Mountain near Cherryville, built in 1957 after a 1930 horse trail and a 1953 road; now a summer-access recreation site.",
   "other_names": [],
   "country": "CA",
   "region": "BC",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Two-level building with a white roof",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -24,8 +25,8 @@
   "agency": "Recreation Sites and Trails BC",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=yes."
+    "level": "public",
+    "note": "Listed as a recreation site. The summit road is unpaved and steep, and is typically reachable only in summer. No source gives a closure or permit rule for the lookout."
   },
   "staffing": {
     "status": "unknown",
@@ -33,20 +34,49 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
   "events": [
     {
+      "year": 1930,
+      "event": "other",
+      "note": "A horse trail to the summit was established.",
+      "from": "research",
+      "source_url": "https://www.dangerousroads.org/north-america/canada/13200-how-to-get-to-the-lookout-at-eureka-mountain-by-car.html"
+    },
+    {
+      "year": 1953,
+      "event": "other",
+      "note": "The road to the summit was completed.",
+      "from": "research",
+      "source_url": "https://www.dangerousroads.org/north-america/canada/13200-how-to-get-to-the-lookout-at-eureka-mountain-by-car.html"
+    },
+    {
       "year": 1957,
       "event": "built",
-      "note": null,
-      "from": "osm"
+      "note": "Present structure built to support wildfire management; the OpenStreetMap start date agrees.",
+      "from": "research",
+      "source_url": "https://www.dangerousroads.org/north-america/canada/13200-how-to-get-to-the-lookout-at-eureka-mountain-by-car.html",
+      "source_urls": [
+        "https://www.dangerousroads.org/north-america/canada/13200-how-to-get-to-the-lookout-at-eureka-mountain-by-car.html",
+        "https://www.openstreetmap.org/way/220297228"
+      ]
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "How to Get to the Lookout at Eureka Mountain by Car (Dangerous Roads)",
+      "url": "https://www.dangerousroads.org/north-america/canada/13200-how-to-get-to-the-lookout-at-eureka-mountain-by-car.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Eureka Lookout (Cherryville) Recreation Site (Mapcarta)",
+      "url": "https://mapcarta.com/W168091493",
+      "kind": "reference"
+    },
     {
       "label": "Eureka Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=eureka-fire-lookout",
@@ -80,10 +110,31 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-eureka",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

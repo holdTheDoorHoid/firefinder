@@ -1,6 +1,7 @@
 {
   "id": "ca-qc-saint-remi-damherst",
   "name": "Saint-Remi-d'Amherst Fire Tower",
+  "summary": "Fire tower erected in 1930 in Amherst, Laurentides, restored and owned by the municipality; a free trail leads to it, but climbing is forbidden.",
   "other_names": [],
   "country": "CA",
   "region": "QC",
@@ -31,31 +32,68 @@
   "agency": "Saint-Remi-d'Amherst Municipality",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "The trail and site are open and free; the register says the public may not climb the tower, and a visitor account says climbing is forbidden."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "About 1.5 km trail from chemin Saint-Louis, maintained by the municipality; a visitor account gives May to November as the access period."
   },
   "rental": null,
   "events": [
     {
       "year": 1930,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Erected in 1930 per the register; the Quebec heritage record gives 1930 as the construction date",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/qc/saint-remi-damherst-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/can/qc/saint-remi-damherst-fire-tower/",
+        "https://www.patrimoine-culturel.gouv.qc.ca/rpcq/detail.do?methode=consulter&id=196596&type=bien"
+      ]
+    },
+    {
+      "year": 1987,
+      "event": "other",
+      "note": "Bought by the municipality, according to a visitor account",
+      "from": "research",
+      "source_url": "https://www.onvasepromener.ca/les-endroits//tour-a-feu"
+    },
+    {
+      "year": 1997,
+      "event": "restored",
+      "note": "Restored by the municipality, which took ownership, per the register; a visitor account gives 1996 for the restoration",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/qc/saint-remi-damherst-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/can/qc/saint-remi-damherst-fire-tower/",
+        "https://www.onvasepromener.ca/les-endroits//tour-a-feu"
+      ]
+    },
+    {
+      "year": 2013,
+      "event": "other",
+      "note": "Listed in the Laurentides MRC heritage inventory (2013), recorded in the Quebec heritage register (RPCQ 196596)",
+      "from": "research",
+      "source_url": "https://www.patrimoine-culturel.gouv.qc.ca/rpcq/detail.do?methode=consulter&id=196596&type=bien"
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
       "note": "Date registered per NHLR detail page: December 25, 2022",
       "from": "nhlr"
+    },
+    {
+      "year": 2022,
+      "event": "other",
+      "note": "Listed on the National Historic Lookout Register as CAN 11, QC 1",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/qc/saint-remi-damherst-fire-tower/"
     }
   ],
   "photos": [
@@ -75,6 +113,26 @@
       "label": "NHLR register entry CAN 11 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/can/qc/saint-remi-damherst-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "Tour à feu (Répertoire du patrimoine culturel du Québec (Ministère de la Culture et des Communications))",
+      "url": "https://www.patrimoine-culturel.gouv.qc.ca/rpcq/detail.do?methode=consulter&id=196596&type=bien",
+      "kind": "reference"
+    },
+    {
+      "label": "Tour à feu (Municipalité d'Amherst)",
+      "url": "https://municipalite.amherst.qc.ca/tour-a-feu/",
+      "kind": "reference"
+    },
+    {
+      "label": "Tour à Feu (On va se promener)",
+      "url": "https://www.onvasepromener.ca/les-endroits//tour-a-feu",
+      "kind": "reference"
+    },
+    {
+      "label": "Tour à feux St-Rémi-d'Amherst (Sentiers Laurentides)",
+      "url": "https://letsgoplayoutside.com/fr/randonnee-pedestre/emplacements/canada/quebec/laurentides/explore/tour-a-feu-st-remi-amherst",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -92,10 +150,29 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-qc-saint-remi-damherst",
+      "fields": [
+        "summary",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

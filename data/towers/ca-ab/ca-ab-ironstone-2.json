@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-ironstone-2",
   "name": "Ironstone Fire Lookout",
+  "summary": "Active Alberta cabin lookout on Willoughby Peak in the Crowsnest Pass, recorded as built in 1966; a blog lists it as abandoned, which the Alberta record contradicts.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,16 +17,16 @@
   "material": "wood",
   "material_from": "osm",
   "roles": [],
-  "design": null,
+  "design": "Cabin (Alberta record) with wood tower construction (OpenStreetMap)",
   "height_m": 5.0,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": "Alberta Wildfire",
+  "agency": "Alberta Wildfire, within Agriculture and Forestry",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "Active lookout with buildings on the summit. Hikers use the trail; the 2022 hiker stayed away from the buildings. No source read says the public may enter them."
   },
   "staffing": {
     "status": "staffed",
@@ -34,21 +35,51 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "On foot from the York Creek staging area south of Coleman; a 2022 hiker's ascent took about 1 h 40 min."
   },
   "rental": null,
   "events": [
     {
       "year": 1966,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Alberta wildfire lookout layer gives 1966 as the year constructed.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=(LATITUDE%3E53.95%20AND%20LATITUDE%3C54.02%20AND%20LONGITUDE%3E-118.25%20AND%20LONGITUDE%3C-118.1)%20OR%20(LATITUDE%3E49.5%20AND%20LATITUDE%3C49.62%20AND%20LONGITUDE%3E-114.6%20AND%20LONGITUDE%3C-114.4)%20OR%20(LATITUDE%3E50.58%20AND%20LATITUDE%3C50.65%20AND%20LONGITUDE%3E-115.12%20AND%20LONGITUDE%3C-115.02)&outFields=*&f=json&returnGeometry=false"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Ironstone Fire Lookout (Life is Adventure)",
+      "url": "https://steveamie.com/ironstone-fire-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Alberta wildfire lookout layer (friaa_firesmart_vector_data), attribute query for three sites (Government of Alberta, geospatial.alberta.ca)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=(LATITUDE%3E53.95%20AND%20LATITUDE%3C54.02%20AND%20LONGITUDE%3E-118.25%20AND%20LONGITUDE%3C-118.1)%20OR%20(LATITUDE%3E49.5%20AND%20LATITUDE%3C49.62%20AND%20LONGITUDE%3E-114.6%20AND%20LONGITUDE%3C-114.4)%20OR%20(LATITUDE%3E50.58%20AND%20LATITUDE%3C50.65%20AND%20LONGITUDE%3E-115.12%20AND%20LONGITUDE%3C-115.02)&outFields=*&f=json&returnGeometry=false",
+      "kind": "reference"
+    },
+    {
+      "label": "Abandoned Canadian Fire Lookouts (Life is Adventure)",
+      "url": "https://steveamie.com/canadian-fire-lookouts/",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Alberta.ca)",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
+    {
+      "label": "Ironstone Lookout (Willoughby Peak) (Hiking With Par)",
+      "url": "https://hikingwithpar.com/2022/06/07/ironstone-lookout-willoughby-peak/",
+      "kind": "reference"
+    },
+    {
+      "label": "Ironstone Fire Lookout (Pontistang's Adventures (blog))",
+      "url": "https://pontistangwalking.blogspot.com/2014/08/ironstone-fire-lookout-crowsnest-pass.html",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -85,10 +116,31 @@
         "material",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-ironstone-2",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

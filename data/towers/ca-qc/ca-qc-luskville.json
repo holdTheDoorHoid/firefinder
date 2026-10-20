@@ -1,6 +1,7 @@
 {
   "id": "ca-qc-luskville",
   "name": "Luskville Fire Tower",
+  "summary": "Gatineau Park, Pontiac, QC: wooden-cab fire tower on steel legs, built 1940, still standing but weathered; NCC says not open to public; NHLR-registered 2022.",
   "other_names": [
     "Tour à feu"
   ],
@@ -18,7 +19,7 @@
   "material": "steel",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "Wooden cab on steel support beams, similar to other metal fire lookouts such as the Aermotor LS-40; small exterior balcony",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -30,34 +31,40 @@
       "url": "http://nhlr.org/lookouts/can/qc/luskville-fire-tower/"
     }
   ],
-  "agency": "Ministère des Forêts, de la Faune et des Parcs",
+  "agency": "Ministère des Forêts, de la Faune et des Parcs (administrator per NHLR); National Capital Commission (cooperator per NHLR; manages Gatineau Park per NCC)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "NCC says the tower is not accessible to the public; the trail passes it and closes in winter"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "4.2 km loop with 300 m of climbing up the Eardley Escarpment (Chute-de-Luskville trail); two viewpoints and the tower are on the trail; closed in winter"
   },
   "rental": null,
   "events": [
     {
       "year": 1940,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built in 1940 (NCC French page; NHLR 'Built' field also gives 1940)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/qc/luskville-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/can/qc/luskville-fire-tower/",
+        "https://ccn-ncc.gc.ca/endroits/chute-de-luskville"
+      ]
     },
     {
       "year": 2022,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 25, 2022",
-      "from": "nhlr"
+      "note": "Date registered December 25, 2022; nominated by William Haddad",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/qc/luskville-fire-tower/"
     }
   ],
   "photos": [
@@ -77,6 +84,16 @@
       "label": "NHLR register entry CAN 12 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/can/qc/luskville-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "La chute de Luskville (Commission de la capitale nationale)",
+      "url": "https://ccn-ncc.gc.ca/endroits/chute-de-luskville",
+      "kind": "reference"
+    },
+    {
+      "label": "Chute de Luskville (Municipalité de Pontiac)",
+      "url": "https://municipalitepontiac.com/chute-de-luskville/",
+      "kind": "reference"
     },
     {
       "label": "OpenStreetMap node 1170985916",
@@ -108,10 +125,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-qc-luskville",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

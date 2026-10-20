@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-muskwa",
   "name": "Muskwa Fire Tower",
+  "summary": "Steel observation tower the register dates to 2019, 30 m tall and reached by air; no source found describes its history, so the story is thin and low confidence.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "osm",
   "roles": [],
-  "design": null,
+  "design": "Steel observation tower",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -24,8 +25,8 @@
   "agency": "Alberta Wildfire",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "The register codes the site as fly access. Alberta says the public may not climb lookout towers."
   },
   "staffing": {
     "status": "staffed",
@@ -33,7 +34,7 @@
     "note": "Seasonal lookout observer (Alberta Wildfire)"
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
@@ -42,13 +43,28 @@
     {
       "year": 2019,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Register construction year (YEAR_CONSTRUCTED) for the steel tower.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25MOBERLY%25%27%20OR%20NAME%20LIKE%20%27%25MOCKINGBIRD%25%27%20OR%20NAME%20LIKE%20%27%25MUSKWA%25%27&outFields=*&returnGeometry=false&f=json"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25MOBERLY%25%27%20OR%20NAME%20LIKE%20%27%25MOCKINGBIRD%25%27%20OR%20NAME%20LIKE%20%27%25MUSKWA%25%27&outFields=*&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "How we fight wildfires (Government of Alberta)",
+      "url": "https://www.alberta.ca/how-we-fight-wildfires.aspx",
+      "kind": "reference"
+    },
+    {
+      "label": "Lonely Lookouts (RETROactive, Alberta Historic Places)",
+      "url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -85,10 +101,31 @@
         "material",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-muskwa",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

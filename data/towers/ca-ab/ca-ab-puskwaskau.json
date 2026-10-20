@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-puskwaskau",
   "name": "Puskwaskau",
+  "summary": "Puskwaskau lookout in Alberta: an earlier tower in service by the mid-1940s, and a 30 m steel tower dated 2015 that the provincial record lists as active.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "Steel lookout tower, 30 m (98 ft) tall, per the provincial record",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -24,8 +25,8 @@
   "agency": "Alberta Wildfire",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "The provincial record gives the access mode as drive and marks the tower active. A regional archive says the public may no longer climb Alberta lookout towers. No source read says the site is open to visitors."
   },
   "staffing": {
     "status": "staffed",
@@ -33,8 +34,8 @@
     "note": "Seasonal lookout observer (Alberta Wildfire)"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
+    "climbable": false,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
@@ -42,13 +43,35 @@
     {
       "year": 2015,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Provincial record: year constructed 2015 for the steel tower listed at Puskwaskau. The record does not say whether it replaced the mid-1940s tower.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25Ponton%25%27%20OR%20NAME%20LIKE%20%27%25Puskwaskau%25%27%20OR%20NAME%20LIKE%20%27%25Rainbow%25%27&outFields=*&returnGeometry=false&f=json"
+    },
+    {
+      "year": null,
+      "event": "built",
+      "note": "Archive, quoting a Department of Lands and Mines annual report: the Puskwaskau tower was completed and began operation in the mid-1940s. The archive gives no single year.",
+      "from": "research",
+      "source_url": "https://www.southpeacearchives.org/blog/movie-monday-outdoor-activities/"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Fire lookouts (Open Government, Government of Alberta)",
+      "url": "https://open.alberta.ca/publications/fire-lookouts",
+      "kind": "reference"
+    },
+    {
+      "label": "Movie Monday: Outdoor Activities (South Peace Regional Archives)",
+      "url": "https://www.southpeacearchives.org/blog/movie-monday-outdoor-activities/",
+      "kind": "reference"
+    },
+    {
+      "label": "Wildfire Lookouts of Alberta, layer records for Puskwaskau, Ponton and Rainbow (Government of Alberta geospatial service)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25Ponton%25%27%20OR%20NAME%20LIKE%20%27%25Puskwaskau%25%27%20OR%20NAME%20LIKE%20%27%25Rainbow%25%27&outFields=*&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -73,10 +96,31 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-puskwaskau",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-teepee-lake",
   "name": "Teepee Lake Fire Tower",
+  "summary": "Steel fire tower, 30 m, built 2011 per Alberta's register; register flags the location as not verified and lists no weather station. Little other documentation found.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "osm",
   "roles": [],
-  "design": null,
+  "design": "Steel tower",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -24,8 +25,8 @@
   "agency": "Alberta Wildfire",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "Register lists access mode as fly and the tower as active. No source describes public visits today."
   },
   "staffing": {
     "status": "staffed",
@@ -42,13 +43,23 @@
     {
       "year": 2011,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Register construction year for the steel tower now listed.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25SUGARLOAF%25%27%20OR%20NAME%20LIKE%20%27%25TEEPEE%25%27%20OR%20NAME%20LIKE%20%27%25TOM%25%27&outFields=*&returnGeometry=false&f=json"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25SUGARLOAF%25%27%20OR%20NAME%20LIKE%20%27%25TEEPEE%25%27%20OR%20NAME%20LIKE%20%27%25TOM%25%27&outFields=*&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Alberta.ca)",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -85,10 +96,31 @@
         "material",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-teepee-lake",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

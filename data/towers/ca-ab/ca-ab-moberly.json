@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-moberly",
   "name": "Moberly Fire Lookout",
+  "summary": "Alberta's register dates the Moberly cabin to 1967; the only firsthand account is a 2014 trip report, and no source describes the site today.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Cabin",
   "height_m": 5.0,
   "status": "standing",
   "status_note": null,
@@ -24,8 +25,8 @@
   "agency": "Alberta Wildfire",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "Alberta says the public may not climb lookout towers and lookout dwellings are for private use. The register codes the site as drive access. No source describes its access today."
   },
   "staffing": {
     "status": "staffed",
@@ -33,7 +34,7 @@
     "note": "Seasonal lookout observer (Alberta Wildfire)"
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
@@ -42,13 +43,28 @@
     {
       "year": 1967,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Register year of construction (YEAR_CONSTRUCTED) for the cabin listed at this site.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25MOBERLY%25%27%20OR%20NAME%20LIKE%20%27%25MOCKINGBIRD%25%27%20OR%20NAME%20LIKE%20%27%25MUSKWA%25%27&outFields=*&returnGeometry=false&f=json"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25MOBERLY%25%27%20OR%20NAME%20LIKE%20%27%25MOCKINGBIRD%25%27%20OR%20NAME%20LIKE%20%27%25MUSKWA%25%27&outFields=*&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Moberly Lookout (Steven's Peak-bagging Journey)",
+      "url": "https://stevensong.com/moberly-lookout",
+      "kind": "reference"
+    },
+    {
+      "label": "How we fight wildfires (Government of Alberta)",
+      "url": "https://www.alberta.ca/how-we-fight-wildfires.aspx",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -84,10 +100,32 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-moberly",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

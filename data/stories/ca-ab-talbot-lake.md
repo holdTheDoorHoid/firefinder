@@ -1,0 +1,10 @@
+In February 1963 the Peace River Record Gazette reported a new forestry tower near Talbot Lake.[^1] The tower stood in the Slave Lake Forestry division, about 240 km (150 miles) north east of Peace River, and was reached by the Three Creeks road.[^1]
+
+The register gives 1962 as the construction year for the steel tower it lists today, 30 m (98 ft) tall and about 822 m (2,697 ft) above sea level.[^2] The newspaper describes a 12-man crew that spent most of January at the site and came out on 5 February.[^1] Heavy snow meant a D6 machine had to clear the road for the vehicles and the camp.[^1] The register's 1962 and the newspaper's 1963 do not agree, so the build date is uncertain.[^1][^2]
+
+The register codes access as "fly" rather than road access, and lists the tower as active.[^2] A 2022 South Peace News feature says most of the towers in the Slave Lake Forest Area can be reached only by helicopter, though it does not name Talbot Lake.[^3] Alberta reports that each of its 127 wildfire lookout sites has a lookout observer on watch, usually from April to October.[^4] No source describes the site itself today or any public visits, so treat it as an active fire tower, not a place to visit.
+
+[^1]: Talbot Lake, Canada Lookouts (transcriptions of Peace River Record Gazette items), https://canada-lookouts.weebly.com/talbot-lake.html (accessed 2026-10-20).
+[^2]: Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract, Government of Alberta, https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25SWEAT%25%27%20OR%20NAME%20LIKE%20%27%25TALBOT%25%27%20OR%20NAME%20LIKE%20%27%25TONY%25%27&outFields=*&returnGeometry=false&f=json (accessed 2026-10-20).
+[^3]: Life at the top of the world, South Peace News, https://www.southpeacenews.com/life-at-the-top-of-the-world/ (accessed 2026-10-20).
+[^4]: Bears and fire lookouts, Government of Alberta (Alberta.ca), https://www.alberta.ca/bears-and-fire-lookouts (accessed 2026-10-20).

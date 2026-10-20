@@ -1,0 +1,42 @@
+{
+  "id": "ca-ab-junction-mountain",
+  "researched": "2026-10-20",
+  "summary": "A cabin-type lookout built in 1974 in Kananaskis Country, still listed as active. An 8.5 km fire road on public land leads to it.",
+  "facts": {
+    "design": "Cabin",
+    "height_m": 5.0,
+    "agency": "Alberta Wildfire",
+    "visit": {"trail_note": "An 8.5 km fire road trail starts at a trailhead 4.4 km up Sheep Trail from Indian Oils Day Use Area; 13.7 km to the summit of Junction Mountain. The trail is on public land and is not regularly maintained."}
+  },
+  "events": [
+    {"year": 1974, "event": "built", "note": "Year constructed in the Alberta lookout dataset; coded as a cabin", "cite": [2]}
+  ],
+  "evidence": [
+    {"cite": [1], "supports": "Alberta Parks places the lookout in Kananaskis Country", "quote": "Junction Mountain | Trail | Kananaskis Country | Alberta Parks"},
+    {"cite": [1], "supports": "trail follows a fire road to the lookout", "quote": "This 8.5 km trail follows a fire road to the Junction Fire Lookout."},
+    {"cite": [1], "supports": "trailhead 4.4 km up Sheep Trail", "quote": "The trailhead is 4.4 km up Sheep Trail from Indian Oils Day Use Area."},
+    {"cite": [1], "supports": "route totals 13.7 km to the summit", "quote": "The total distance (including 0.2 km from Indian Oils Day Use Area to Sheep Trail and 0.6 km on Green Mountain Trail) is 13.7 km to the summit of Junction Mountain."},
+    {"cite": [1], "supports": "trail on public land, not regularly maintained", "quote": "This trail is on Public Lands and is not regularly maintained."},
+    {"cite": [2], "supports": "year constructed 1974", "quote": "YEAR_CONSTRUCTED\":1974"},
+    {"cite": [2], "supports": "coded as a cabin", "quote": "LOOKOUT_TYPE\":\"Cabin\""},
+    {"cite": [2], "supports": "tower height 5 m", "quote": "TOWER_HEIGHT\":5.0"},
+    {"cite": [2], "supports": "elevation 2,240.5 m", "quote": "ELEVATION\":2240.5"},
+    {"cite": [2], "supports": "still listed as active", "quote": "ACTIVE\":\"Y\""},
+    {"cite": [2], "supports": "access mode coded drive", "quote": "ACCESS_MODE\":\"drive\""},
+    {"cite": [3], "supports": "wildfire staff with Agriculture and Forestry adopted BearSmart recommendations for many sites, key among them electric fencing", "quote": "To help prevent conflict with bears, Wildfire staff with Agriculture and Forestry have adopted a number of Alberta BearSmart recommendations for many of their sites, key amongst them is the installation of electric fencing."},
+    {"cite": [3], "supports": "127 lookout sites in Alberta", "quote": "127 wildfire lookout sites are located throughout Alberta's boreal forest and along the Rocky Mountains."},
+    {"cite": [3], "supports": "each site staffed by a lookout observer, April to October", "quote": "Each site is staffed by a lookout observer whose job is to watch for wildfire all day, each day, generally from April to October."},
+    {"cite": [4], "supports": "visitor comment dated 2016", "quote": "Oct 29, 2016"},
+    {"cite": [4], "supports": "visitor: great jumping-off point for nearby peaks, Junction Mountain included", "quote": "A fantastic launching point for some of the local peaks including Junction Mountain itself."},
+    {"cite": [4], "supports": "visitor: downtown Calgary visible on a clear day", "quote": "On a clear day you can actually see downtown Calgary."}
+  ],
+  "sources": [
+    {"n": 1, "title": "Junction Mountain trail report", "publisher": "Alberta Parks", "url": "https://albertaparks.ca/parks/kananaskis/kananaskis-country/advisories-public-safety/trail-reports/sheep-and-highwood/junction-mountain/", "accessed": "2026-10-20"},
+    {"n": 2, "title": "WF_WILDFIRE_LOOKOUT layer query (Wildfire lookouts of Alberta)", "publisher": "Government of Alberta", "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME+LIKE+%27%25KEG%25%27+OR+NAME+LIKE+%27%25KAKWA%25%27+OR+NAME+LIKE+%27%25JUNCTION%25%27&outFields=NAME,LOOKOUT_ID,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACTIVE,ACCESS_MODE,KEY_LOOKOUT,MAP_NUMBER,LOCATION_VERIFIED,WEATHER_STATION&returnGeometry=false&f=json", "accessed": "2026-10-20"},
+    {"n": 3, "title": "Bears and fire lookouts", "publisher": "Alberta.ca", "url": "https://www.alberta.ca/bears-and-fire-lookouts", "accessed": "2026-10-20"},
+    {"n": 4, "title": "Junction Fire Lookout", "publisher": "Peakery", "url": "https://peakery.com/junction-fire-lookout-alberta/", "accessed": "2026-10-20"}
+  ],
+  "confidence": "medium",
+  "notes_for_editor": "The 1974 build year, the cabin code and the 5 m height come only from the Alberta WF_WILDFIRE_LOOKOUT attribute table; no page describes the building or any earlier structure. Access: the brief says 'closed', but no source says that. The Alberta Parks trail to the lookout is public, and the dataset codes access as drive, so the access level is left out of facts for the editor to set. The brief's kind 'ground' is not stated by any source; the dataset codes the type as Cabin. No site-specific staffing source was found: the staffing sentence is the province-wide statement for all 127 sites. A 2019 Wildfire Today report says 15 to 30 of the 127 towers would lose staffing, but names none, so it is not used. The layer's metadata marks the dataset 'Protected' and asks that features not be shown on public maps larger than 1:1,000,000. The story uses attribute values only, not coordinates, but the publishing team should confirm it may cite this layer.",
+  "verification": {"checked": "2026-10-20", "claims_checked": 15, "unsupported_removed": 0, "errors_fixed": 3, "quotes_spot_checked": 17, "quotes_not_found": 0, "verdict": "fixed"}
+}

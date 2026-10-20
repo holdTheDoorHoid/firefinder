@@ -1,0 +1,81 @@
+{
+  "id": "ca-ab-wadlin",
+  "researched": "2026-10-20",
+  "summary": "Alberta's register dates this 30 m steel fire tower to 2015 and lists it as active; the sources say little more.",
+  "facts": {
+    "design": "Steel tower",
+    "height_m": 30.0,
+    "status": "standing",
+    "access": {
+      "level": "restricted",
+      "note": "Register lists the tower as active and reached by road. No source describes public visits."
+    },
+    "visit": {
+      "drive_up": true
+    }
+  },
+  "events": [
+    {
+      "year": 2015,
+      "event": "built",
+      "note": "Register construction year (YEAR_CONSTRUCTED) for the tower it lists.",
+      "cite": [1]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [1],
+      "supports": "Wadlin record: steel tower, built 2015, 30 m tall, elevation 848 m",
+      "quote": "\"NAME\":\"WADLIN\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2015,\"TOWER_HEIGHT\":30.0,\"ELEVATION\":848.0"
+    },
+    {
+      "cite": [1],
+      "supports": "Wadlin record: map sheet 84G/14, location verified",
+      "quote": "\"MAP_NUMBER\":\"84G/14\",\"LOCATION_VERIFIED\":\"Y\""
+    },
+    {
+      "cite": [1],
+      "supports": "Wadlin record: active, reached by road",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"drive\""
+    },
+    {
+      "cite": [1],
+      "supports": "Wadlin record: has a weather station",
+      "quote": "\"WEATHER_STATION\":\"Y\""
+    },
+    {
+      "cite": [2],
+      "supports": "lookouts described as a key part of wildfire detection and sited where the view is good",
+      "quote": "Fire lookouts are an integral component of wildfire detection in Alberta and are located where visibility is favourable to detect and report wildfires."
+    },
+    {
+      "cite": [2],
+      "supports": "provincial map page shows 127 lookout sites across the boreal forest and along the Rockies",
+      "quote": "Map showing the locations of Alberta's 127 wildfire lookout sites, which are situated throughout the province's boreal forest and along the Rocky Mountains."
+    },
+    {
+      "cite": [2],
+      "supports": "listing carries a 2009 issue date",
+      "quote": "'issuedate': '2009-01-01'"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract",
+      "publisher": "Government of Alberta",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25WADLIN%25%27%20OR%20NAME%20LIKE%20%27%25WATT%20MOUNTAIN%25%27%20OR%20NAME%20LIKE%20%27%25WHITE%20MOUNTAIN%25%27&outFields=*&returnGeometry=false&f=json",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Fire lookouts",
+      "publisher": "Alberta Open Government",
+      "url": "https://open.alberta.ca/publications/fire-lookouts",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "confidence": "medium",
+  "verification": {"checked": "2026-10-20", "claims_checked": 5, "unsupported_removed": 0, "errors_fixed": 1, "quotes_spot_checked": 7, "quotes_not_found": 0, "verdict": "fixed"},
+  "notes_for_editor": "Single-source story: the Alberta register supports the build year, size, location and active status. Two searches for a Wadlin lookout history, and one for Wadlin Lake, found nothing linking a tower to the lake or to earlier years, so none is used. A 2009 Alberta lookout map text cached locally (data/raw/expansion/prairies-north/ab_lookout_map_2009.txt, no source URL known) lists WADLIN. If that map is right, a site of that name predates the 2015 build year; the editor should find its URL before citing it. The brief record's access 'closed' and staffing note ('staffed March-October') are not traced to any source I could read, so the story uses the register's drive-access flag instead."
+}

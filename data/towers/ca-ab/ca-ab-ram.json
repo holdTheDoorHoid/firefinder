@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-ram",
   "name": "Ram",
+  "summary": "Alberta fire lookout on Ram Mountain near Nordegg; the provincial dataset dates it to 1982 and lists it active. Entry to the fenced area needs permission.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,16 +17,16 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Cabin-type lookout inside a fenced area, with a small firewatch structure, solar panels and a helicopter landing pad",
   "height_m": 2.0,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": "Alberta Wildfire",
+  "agency": "Alberta Wildfire, with Agriculture and Forestry",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "permission",
+    "note": "Entry to the fenced lookout area needs permission; the guide advises against crossing the fence if the attendant cannot be asked."
   },
   "staffing": {
     "status": "staffed",
@@ -35,20 +36,45 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Remote hike of 19.1 km return with about 1,055 m of total elevation change, rated moderate, estimated at 6.5 to 9 hours; roughly an hour's drive from Nordegg."
   },
   "rental": null,
   "events": [
     {
       "year": 1982,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Alberta's lookout dataset gives 1982 as the year constructed and classes the site as a cabin",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=UPPER(NAME)%20LIKE%20%27%25RAM%25%27%20OR%20UPPER(NAME)%20LIKE%20%27%25ROCK%25%27&outFields=NAME,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACTIVE,ACCESS_MODE&f=json&returnGeometry=false&resultRecordCount=50"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire Lookouts of Alberta (FIReS layer query) (Government of Alberta, geospatial.alberta.ca)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=UPPER(NAME)%20LIKE%20%27%25RAM%25%27%20OR%20UPPER(NAME)%20LIKE%20%27%25ROCK%25%27&outFields=NAME,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACTIVE,ACCESS_MODE&f=json&returnGeometry=false&resultRecordCount=50",
+      "kind": "reference"
+    },
+    {
+      "label": "Ram Mountain Hike near David Thompson Hwy, Alberta (10Adventures)",
+      "url": "https://www.10adventures.com/hikes/david-thompson-country/ram-mountain-hike/",
+      "kind": "reference"
+    },
+    {
+      "label": "Ram Mountain (2170 m) (Peak Bliss)",
+      "url": "https://peakbliss.ca/2023/11/21/ram-mountain/",
+      "kind": "reference"
+    },
+    {
+      "label": "Ram Mountain (Spectacular Mountains)",
+      "url": "https://www.spectacularmountains.com/canada/ram/ram-mountain/",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Alberta.ca)",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -72,10 +98,30 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-ram",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

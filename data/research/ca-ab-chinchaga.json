@@ -1,0 +1,108 @@
+{
+  "id": "ca-ab-chinchaga",
+  "researched": "2026-10-20",
+  "summary": "Steel tower, 30 m, that Alberta's register dates to 2004; listed as active with road access. No other source found describes it.",
+  "facts": {
+    "design": "Steel tower",
+    "height_m": 30.0,
+    "status": "standing",
+    "agency": "Alberta Wildfire (Alberta Agriculture and Forestry)",
+    "access": {
+      "level": "restricted",
+      "note": "Register lists the tower as active with drive access. No source found says whether the public may visit the site."
+    },
+    "visit": {
+      "drive_up": true
+    }
+  },
+  "events": [
+    {
+      "year": 2004,
+      "event": "built",
+      "note": "Register gives 2004 as the year of construction for the tower.",
+      "cite": [1]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [1],
+      "supports": "Chinchaga record: steel tower, built 2004, 30 m tall",
+      "quote": "\"NAME\":\"CHINCHAGA\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2004,\"TOWER_HEIGHT\":30.0"
+    },
+    {
+      "cite": [1],
+      "supports": "Chinchaga record: elevation 881.0 m",
+      "quote": "\"ELEVATION\":881.0"
+    },
+    {
+      "cite": [1],
+      "supports": "Chinchaga record: active, access mode drive (reached by road)",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"drive\""
+    },
+    {
+      "cite": [1],
+      "supports": "Chinchaga record: has a weather station",
+      "quote": "\"WEATHER_STATION\":\"Y\""
+    },
+    {
+      "cite": [2],
+      "supports": "Alberta operates 127 fire lookouts from April to October",
+      "quote": "The province operates 127 fire lookouts from April to October"
+    },
+    {
+      "cite": [2],
+      "supports": "Lookout operators detect about 30% of wildfire starts each year",
+      "quote": "lookout operators detecting approximately 30% of wildfire starts each year"
+    },
+    {
+      "cite": [2],
+      "supports": "Each operator covers a 40 km radius for locating and reporting fires",
+      "quote": "each lookout operator is responsible for locating and reporting wildfires within a 40-kilometre (25-mile) radius"
+    },
+    {
+      "cite": [3],
+      "supports": "Each lookout site is staffed by an observer, generally from April to October",
+      "quote": "Each site is staffed by a lookout observer whose job is to watch for wildfire all day, each day, generally from April to October."
+    },
+    {
+      "cite": [3],
+      "supports": "Wildfire staff sit within Agriculture and Forestry (agency)",
+      "quote": "Wildfire staff with Agriculture and Forestry have adopted a number of Alberta BearSmart recommendations"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "access.level",
+      "current": "closed",
+      "proposed": "restricted",
+      "cite": [1],
+      "why": "The register lists the tower as active with drive access. It does not describe the site as closed."
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract",
+      "publisher": "Government of Alberta",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Wildfire Innovations: Camera Tower",
+      "publisher": "International Association of Wildland Fire (Wildfire magazine)",
+      "url": "https://www.iawfonline.org/article/wildfire-innovations-camera-tower/",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "Bears and fire lookouts",
+      "publisher": "Alberta.ca",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "verification": {"checked": "2026-10-20", "claims_checked": 8, "unsupported_removed": 0, "errors_fixed": 2, "quotes_spot_checked": 9, "quotes_not_found": 0, "verdict": "fixed"},
+  "confidence": "low",
+  "notes_for_editor": "Thin record. Only the Alberta register row and two general Alberta pages were found. Two searches turned up no Chinchaga-specific history. The name matches the 1950 Chinchaga fire and Chinchaga Wildland Provincial Park (whose centre lies about 1.2 degrees of longitude west of the tower), but no source found ties the tower to either, so the story does not. Brief built 2004 matches the register. Brief access closed is corrected to restricted (active, drive access). The register query is the all-records query (where=1=1) because the name-filtered query returned a server error. The agency name follows the Alberta.ca bears page wording; the brief said Alberta Wildfire."
+}

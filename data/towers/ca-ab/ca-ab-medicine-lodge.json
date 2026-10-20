@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-medicine-lodge",
   "name": "Medicine Lodge Lookout",
+  "summary": "Cypress Hills, AB: 1967 steel tower dismantled 1993, reestablished as a 20 ft tower; site now holds the Tom Trott Forestry Museum; tower's current state unconfirmed.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "steel tower with a round crow's nest cab (1967); reestablished as a 20 ft tower after 1993",
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Register describes the reestablished 20 ft tower; no source read says whether it stands today",
   "registers": [
     {
       "register": "NHLR",
@@ -28,11 +29,11 @@
       "url": "http://nhlr.org/lookouts/can/ab/medicine-lodge-lookout/"
     }
   ],
-  "agency": "Dept. of Environmental Protection, Natural Resources Service-Parks",
+  "agency": "Dept. of Environmental Protection, Natural Resources Service-Parks (NHLR)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Park staff invite visitors to the Tom Trott Forestry Museum (VAC plaque text); no source says whether the tower itself can be entered or climbed"
   },
   "staffing": {
     "status": "unknown",
@@ -46,10 +47,32 @@
   "rental": null,
   "events": [
     {
+      "year": 1967,
+      "event": "built",
+      "note": "Originally erected 1967 as a steel tower with a round crow's nest cab (NHLR); the register's height figure reads '100,' with no unit and is not used",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/ab/medicine-lodge-lookout/"
+    },
+    {
+      "year": 1993,
+      "event": "removed",
+      "note": "Dismantled in 1993 (NHLR)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/ab/medicine-lodge-lookout/"
+    },
+    {
       "year": 1997,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: July 15, 1997",
-      "from": "nhlr"
+      "note": "Date registered July 15, 1997 as CAN 5, AB 5 (NHLR)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/ab/medicine-lodge-lookout/"
+    },
+    {
+      "year": 1997,
+      "event": "other",
+      "note": "Tom Trott Forestry Museum completed by colleagues in July 1997 and dedicated on the site (VAC); the plaque is dated 19 July 1997",
+      "from": "research",
+      "source_url": "https://www.veterans.gc.ca/en/remembrance/memorials/canada/tom-trott-forestry-museum"
     }
   ],
   "photos": [
@@ -69,6 +92,11 @@
       "label": "NHLR register entry CAN 5 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/can/ab/medicine-lodge-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Tom Trott Forestry Museum (Veterans Affairs Canada (National Inventory of Canadian Military Memorials))",
+      "url": "https://www.veterans.gc.ca/en/remembrance/memorials/canada/tom-trott-forestry-museum",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -87,10 +115,46 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-medicine-lodge",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-20) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

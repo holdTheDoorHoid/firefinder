@@ -1,6 +1,7 @@
 {
   "id": "us-ak-murphy-dome",
   "name": "Murphy Dome Fire Tower",
+  "summary": "BLM lookout on Murphy Dome, about 20 mi NW of Fairbanks, was in use in 1970 per the BLM Alaska fire report; no source gives its build date, fate or site today.",
   "other_names": [],
   "country": "US",
   "region": "AK",
@@ -27,13 +28,13 @@
   "design": null,
   "height_m": null,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "No source after 1970 says whether the lookout stood, was removed or survives; sources describe the radar site on the summit, not the lookout",
   "registers": [],
-  "agency": "Bureau of Land Management (Alaska)",
+  "agency": "Bureau of Land Management, Alaska State Office (per the 1970 Alaska Fire Report)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Most of the summit can be roamed, but the still-active radar facility is a restricted area; no source places the 1970 tower relative to it"
   },
   "staffing": {
     "status": "unknown",
@@ -41,11 +42,18 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
   "events": [
+    {
+      "year": 1970,
+      "event": "other",
+      "note": "In use as a lookout in 1970 (staffing not documented), one of two near Fairbanks (the other at Birch Hill)",
+      "from": "research",
+      "source_url": "https://archive.org/stream/alaskafirereportunit/alaskafirereportunit_djvu.txt"
+    },
     {
       "year": 1970,
       "event": "staffed",
@@ -56,6 +64,21 @@
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Alaska Fire Report, 1970 (full text) (Bureau of Land Management, Alaska State Office (Internet Archive))",
+      "url": "https://archive.org/stream/alaskafirereportunit/alaskafirereportunit_djvu.txt",
+      "kind": "reference"
+    },
+    {
+      "label": "Peaceful Murphy Dome was once a Cold War radar surveillance site (Sketches of Alaska)",
+      "url": "https://www.sketchesofalaska.com/2022/03/peaceful-murphy-dome-was-once-a-cold-war-radar-surveillance-site.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Alaska Lookouts (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/ak/",
+      "kind": "reference"
+    },
     {
       "label": "Murphy Dome Fire Tower (Alaska lookouts compiled by Firefinder from BLM and UAF reports)",
       "url": "https://archive.org/details/alaskafirereportunit",
@@ -74,9 +97,29 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ak-murphy-dome",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
   "verification": "unverified",
   "locked": [],
   "hidden": false,

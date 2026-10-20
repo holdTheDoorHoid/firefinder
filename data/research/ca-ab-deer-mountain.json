@@ -1,0 +1,94 @@
+{
+  "id": "ca-ab-deer-mountain",
+  "researched": "2026-10-20",
+  "summary": "Steel tower, 30 m, dated 2016 in Alberta's register; listed as active with access mode drive.",
+  "facts": {
+    "design": "Steel tower",
+    "height_m": 30.0,
+    "status": "standing",
+    "access": {
+      "level": "restricted",
+      "note": "Register lists the tower as active, with access mode drive. It does not describe public access."
+    }
+  },
+  "events": [
+    {
+      "year": 2016,
+      "event": "built",
+      "note": "Register gives 2016 as the year of construction.",
+      "cite": [1]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [1],
+      "supports": "Deer Mountain record: steel tower, built 2016, 30 m tall",
+      "quote": "\"NAME\":\"DEER MOUNTAIN\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2016,\"TOWER_HEIGHT\":30.0"
+    },
+    {
+      "cite": [1],
+      "supports": "Deer Mountain record: elevation 1161 m, map sheet 83J/14",
+      "quote": "\"ELEVATION\":1161.14,\"MAP_NUMBER\":\"83J/14\""
+    },
+    {
+      "cite": [1],
+      "supports": "Deer Mountain record: active, access mode drive",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"drive\""
+    },
+    {
+      "cite": [1],
+      "supports": "Deer Mountain record: no weather station on site",
+      "quote": "\"WEATHER_STATION\":\"N\""
+    },
+    {
+      "cite": [2],
+      "supports": "Lookout sites are placed where visibility is favourable to detect and report wildfires",
+      "quote": "are located where visibility is favourable to detect and report wildfires"
+    },
+    {
+      "cite": [2],
+      "supports": "Alberta runs 127 wildfire lookout sites",
+      "quote": "Map showing the locations of Alberta's 127 wildfire lookout sites"
+    },
+    {
+      "cite": [3],
+      "supports": "Each site is staffed by a lookout observer, generally April to October",
+      "quote": "Each site is staffed by a lookout observer whose job is to watch for wildfire all day, each day, generally from April to October."
+    }
+  ],
+  "corrections": [
+    {
+      "field": "access.level",
+      "current": "closed",
+      "proposed": "restricted",
+      "cite": [1],
+      "why": "The register lists the tower as active with access mode drive. It does not describe the site as closed."
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract",
+      "publisher": "Government of Alberta",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25DEER%25%27&outFields=*&returnGeometry=false&f=json",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Fire lookouts",
+      "publisher": "Open Government Alberta",
+      "url": "https://open.alberta.ca/publications/fire-lookouts",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "Alberta BearSmart and Alberta's fire lookouts",
+      "publisher": "Open Government Alberta",
+      "url": "https://open.alberta.ca/dataset/alberta-bearsmart-and-alberta-s-fire-lookouts",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "confidence": "medium",
+  "verification": {"checked": "2026-10-20", "claims_checked": 7, "unsupported_removed": 1, "errors_fixed": 0, "quotes_spot_checked": 7, "quotes_not_found": 0, "verdict": "fixed"},
+  "notes_for_editor": "Only the register record and general Alberta sources were found. Two web searches and a fallback search for Alberta Deer Mountain returned nothing about this tower; results for Deer Mountain lookouts in Montana and New Hampshire were not used. No source describes this tower's history. Reading access mode 'drive' as reached by road follows the Adair record and is not defined in any source. The brief's access value 'closed' is not supported and is corrected to restricted. Fact-check 2026-10-20: the access mode 'drive' is not defined in any source, so the story no longer glosses it as road access."
+}

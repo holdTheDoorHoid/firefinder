@@ -1,0 +1,27 @@
+{
+  "id": "ca-ab-torrens",
+  "researched": "2026-10-20",
+  "summary": "Alberta cabin lookout built 1962, 5 m high and listed as active. Sources are thin: a provincial data record and an undated photo credit.",
+  "facts": {
+    "design": "Cabin",
+    "height_m": 5.0,
+    "agency": "Alberta Wildfire"
+  },
+  "events": [
+    {"year": 1962, "event": "built", "note": "Listed as a cabin, 5 m tall, in the provincial lookout data", "cite": [1]}
+  ],
+  "evidence": [
+    {"cite": [1], "supports": "cabin, built 1962, 5 m tall, elevation 1814.7 m, active, weather station, access mode drive", "quote": "\"NAME\":\"TORRENS\",\"LOOKOUT_TYPE\":\"Cabin\",\"YEAR_CONSTRUCTED\":1962,\"TOWER_HEIGHT\":5.0,\"ELEVATION\":1814.7,\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"drive\",\"WEATHER_STATION\":\"Y\""},
+    {"cite": [2], "supports": "undated photograph from the Alberta ESRD online collection", "quote": "TORRENS no date - Alberta ESRD online collection"},
+    {"cite": [3], "supports": "each site staffed by a lookout observer, generally April to October", "quote": "Each site is staffed by a lookout observer whose job is to watch for wildfire all day, each day, generally from April to October."},
+    {"cite": [3], "supports": "sites are isolated; staff must be ready for a wide range of possibilities including a curious bear", "quote": "Wildfire lookout sites are isolated and the staff that work them must be prepared for a wide range of possibilities, including an encounter with a curious bear."}
+  ],
+  "sources": [
+    {"n": 1, "title": "Wildfire lookouts: Torrens, Vega and Trout Mountain (FRIAA FireSmart vector data, lookout layer query)", "publisher": "Government of Alberta (geospatial.alberta.ca)", "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME+IN+%28%27TORRENS%27%2C%27VEGA%27%2C%27TROUT+MOUNTAIN%27%29&outFields=NAME%2CLOOKOUT_TYPE%2CYEAR_CONSTRUCTED%2CTOWER_HEIGHT%2CELEVATION%2CACTIVE%2CACCESS_MODE%2CWEATHER_STATION&returnGeometry=false&f=json", "accessed": "2026-10-20"},
+    {"n": 2, "title": "Alberta lookout list with photo captions", "publisher": "Canada Lookouts (canada-lookouts.weebly.com)", "url": "https://canada-lookouts.weebly.com/alberta1.html", "accessed": "2026-10-20"},
+    {"n": 3, "title": "Bears and fire lookouts", "publisher": "Government of Alberta (Alberta.ca)", "url": "https://www.alberta.ca/bears-and-fire-lookouts", "accessed": "2026-10-20"}
+  ],
+  "confidence": "low",
+  "verification": {"checked": "2026-10-20", "claims_checked": 7, "unsupported_removed": 1, "errors_fixed": 1, "quotes_spot_checked": 5, "quotes_not_found": 0, "verdict": "fixed"},
+  "notes_for_editor": "Thin sourcing. The provincial lookout record (year, type, height, elevation, active, weather station) and an undated photo credit are the only sources read. The AllTrails listing, whose snippet gives 1962, returned HTTP 403 and is not cited. The brief's access 'closed' is not supported by any source read; the provincial record gives ACCESS_MODE 'drive', so no access fact is recorded. The staffing sentence is Alberta-wide, not site-specific, so no staffing fact is recorded. The brief has no local_unit, so the place is Alberta only."
+}

@@ -1,0 +1,111 @@
+{
+  "id": "ca-ab-watt-mountain",
+  "researched": "2026-10-20",
+  "summary": "Alberta's register dates the 30 m steel tower to 2003, but a 1959 newspaper item shows a forestry tower on the mountain earlier.",
+  "facts": {
+    "design": "Steel tower",
+    "height_m": 30.0,
+    "status": "standing",
+    "staffing": {
+      "status": "seasonal forestry staff",
+      "as_of": "1960"
+    },
+    "access": {
+      "level": "restricted",
+      "note": "Register lists the tower as active and reached by road. No source describes public visits."
+    },
+    "visit": {
+      "drive_up": true
+    }
+  },
+  "events": [
+    {
+      "year": 1959,
+      "event": "other",
+      "note": "A couple spent the summer at the forestry tower on Watt Mountain, per a Peace River Record Gazette item (Nov. 1959) quoted by Canada Lookouts.",
+      "cite": [2]
+    },
+    {
+      "year": 1960,
+      "event": "staffed",
+      "note": "Forestry men taken to the Watt Mountain tower by helicopter (Apr. 1960 item); W. Carruthers and family to live there for seven months.",
+      "cite": [2]
+    },
+    {
+      "year": 2003,
+      "event": "built",
+      "note": "Register construction year (YEAR_CONSTRUCTED) for the tower it lists.",
+      "cite": [1]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [1],
+      "supports": "Watt record: steel tower, built 2003, 30 m tall, elevation 793 m",
+      "quote": "\"NAME\":\"WATT MOUNTAIN\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2003,\"TOWER_HEIGHT\":30.0,\"ELEVATION\":793.0"
+    },
+    {
+      "cite": [1],
+      "supports": "Watt record: active, reached by road",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"drive\""
+    },
+    {
+      "cite": [1],
+      "supports": "Watt record: has a weather station",
+      "quote": "\"WEATHER_STATION\":\"Y\""
+    },
+    {
+      "cite": [2],
+      "supports": "a couple spent the summer of 1959 at the forestry tower on Watt Mountain",
+      "quote": "Mr. and Mrs. G. Mackinnon have come down from Watt mountain where they spent the summer at the forestry tower."
+    },
+    {
+      "cite": [2],
+      "supports": "April 1960: forestry men taken to the Watt Mountain and Buffalo Head Hills towers by helicopter because roads were impassable",
+      "quote": "The forestry men were taken to the lookout towers on Buffalo Head Hills and Watt Mountain by helicopter as roads were impassable."
+    },
+    {
+      "cite": [2],
+      "supports": "W. Carruthers had taken his wife and four children to Watt Mountain, where they would live for seven months",
+      "quote": "W. Carruthers took his wife and four children to Watt Mountain. That will be their home for the next seven months."
+    },
+    {
+      "cite": [3],
+      "supports": "protected natural area on the southeastern slope, about 25 km northwest of High Level",
+      "quote": "Located about 25 km northwest of High Level, west of the Mackenzie highway, this PNT occupies the southeastern slope of Watt Mountain."
+    }
+  ],
+  "resolved_conflicts": [
+    {
+      "field": "built",
+      "explanation": "The register's 2003 year is for the tower it lists. A 1959 newspaper item already mentions a forestry tower on Watt Mountain, so the site had a tower before 2003.",
+      "cite": [1, 2]
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract",
+      "publisher": "Government of Alberta",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25WADLIN%25%27%20OR%20NAME%20LIKE%20%27%25WATT%20MOUNTAIN%25%27%20OR%20NAME%20LIKE%20%27%25WHITE%20MOUNTAIN%25%27&outFields=*&returnGeometry=false&f=json",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Watt Mountain, Canada Lookouts (quoting the Peace River Record Gazette, 1959 and 1960)",
+      "publisher": "Canada Lookouts",
+      "url": "https://canada-lookouts.weebly.com/watt-mountain.html",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "Watt Mountain (PNT) Natural Area",
+      "publisher": "SAPAA",
+      "url": "https://sapaastewards.com/protected-areas/list-of-protected-areas/watt-mountain-pnt-natural-area",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "confidence": "medium",
+  "verification": {"checked": "2026-10-20", "claims_checked": 7, "unsupported_removed": 0, "errors_fixed": 4, "quotes_spot_checked": 7, "quotes_not_found": 0, "verdict": "fixed"},
+  "notes_for_editor": "The 1959 and 1960 items are the Peace River Record Gazette as quoted on the Canada Lookouts volunteer site; the newspaper itself was not read, so check the 1959-60 issues before printing the names. Two searches found no other Watt Mountain lookout history. What became of the 1959 tower is not in these sources, and the story does not say. The brief record's access 'closed' and staffing note ('staffed March-October') are not traced to any source I could read, so the story uses the register's drive-access flag. A 2009 Alberta lookout map text cached locally (data/raw/expansion/prairies-north/ab_lookout_map_2009.txt, no source URL known) also lists WATT MTN."
+}

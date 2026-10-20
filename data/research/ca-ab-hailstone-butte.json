@@ -1,0 +1,142 @@
+{
+  "id": "ca-ab-hailstone-butte",
+  "researched": "2026-10-20",
+  "summary": "Hailstone Butte station named as taking over from Cameron in 1953; Alberta Wildfire's layer dates the cabin now listed at the site to 1980.",
+  "facts": {
+    "design": "Cabin rather than a tower, per Alberta Wildfire's layer",
+    "height_m": 5.0,
+    "access": {
+      "level": "restricted",
+      "note": "A 2015 hiking report says hikers stopped at a sign reading 'authorized persons only' near the summit. No newer rule was found in the sources read."
+    }
+  },
+  "events": [
+    {
+      "year": 1953,
+      "event": "other",
+      "note": "Newer stations on Raspberry Ridge and Hailstone Butte took over when the Cameron lookout stopped operating. The sources do not give the first season of a Hailstone station.",
+      "cite": [
+        1
+      ]
+    },
+    {
+      "year": 1980,
+      "event": "built",
+      "note": "Year of construction for the cabin listed at the site, per the Alberta layer. The sources do not say whether it stands where the 1953 station was.",
+      "cite": [
+        3
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [
+        2
+      ],
+      "supports": "trip report dated 2015 (September 20, 2015)",
+      "quote": "September 20, 2015"
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "site is in Kananaskis, Alberta",
+      "quote": "Kananaskis, Alberta"
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "a fire lookout topped the north summit",
+      "quote": "Nearby, a fire lookout topped the north summit of Hailstone Butte."
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "hikers stopped at a sign reading 'authorized persons only'",
+      "quote": "Respecting the wishes of a sign – “authorized persons only” – we didn't venture further."
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "Cameron lookout is on Mount Burke",
+      "quote": "hiked up Mount Burke in Kananaskis Country"
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "the Cameron lookout is the abandoned lookout the blog visited",
+      "quote": "the abandoned Cameron fire lookout"
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "Cameron operated until 1953; newer stations on Raspberry Ridge and Hailstone Butte took over",
+      "quote": "It operated until 1953, when newer stations on Raspberry Ridge and Hailstone Butte took over."
+    },
+    {
+      "cite": [
+        3
+      ],
+      "supports": "cabin type; 1980 year of construction; 5.0 m height; 2,370 m elevation",
+      "quote": "\"NAME\":\"HAILSTONE BUTTE\",\"LOOKOUT_TYPE\":\"Cabin\",\"YEAR_CONSTRUCTED\":1980,\"TOWER_HEIGHT\":5.0,\"ELEVATION\":2370.0"
+    },
+    {
+      "cite": [
+        3
+      ],
+      "supports": "active; access mode drive",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"drive\",\"KEY_LOOKOUT\":\"N\",\"RESERVATION_NUMBER\":850173"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "access.level",
+      "current": "closed",
+      "proposed": "restricted",
+      "cite": [
+        2,
+        3
+      ],
+      "why": "The Alberta layer has no access or staffing field. The 'closed' level and the 'staffed' note are identical on all 124 records in data/sources/alberta_wildfire.json, so they look like a blanket default. The 2015 hiking report describes an 'authorized persons only' sign near the summit."
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Exploring Alberta's Historic Fire Lookout - Mount Burke Summit Hike",
+      "publisher": "DanOCan (blog)",
+      "url": "https://danocan.com/2025/09/01/exploring-albertas-historic-fire-lookout-mount-burke-summit-hike/",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Hailstone Butte",
+      "publisher": "bobspirko.ca (trip report)",
+      "url": "https://bobspirko.ca/Hiking/HailstoneButte/HailstoneButte.html",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "WF_WILDFIRE_LOOKOUT layer (all lookouts query)",
+      "publisher": "Government of Alberta (geospatial.alberta.ca)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json&resultRecordCount=1000",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "confidence": "low",
+  "notes_for_editor": "Thin record. The only history beyond the 1980 cabin date is a 2025 blog's account of the 1953 Cameron closure, which names Hailstone Butte among the newer stations (the same point is in the ca-ab-cameron story). The sources do not say when a station first stood on the butte, or whether the 1980 cabin is on the 1953 site. No source read gives staffing for this site. Search results describing Hailstone as an active lookout reached by a hike from Highway 532 were snippets only and were not cited. The 2015 trip report is a hiking account, not an agency record. Searches: 2 WebSearch. Page reads: 3 (DanOCan 2025, bobspirko.ca 2015, Alberta layer query); a Calgary's Child magazine article returned no text. No photos added. Fact-check 2026-10-20: the 'status: standing' fact was dropped because no cited source describes the cabin's current condition.",
+  "verification": {
+    "checked": "2026-10-20",
+    "claims_checked": 8,
+    "unsupported_removed": 1,
+    "errors_fixed": 3,
+    "quotes_spot_checked": 9,
+    "quotes_not_found": 0,
+    "verdict": "fixed"
+  }
+}

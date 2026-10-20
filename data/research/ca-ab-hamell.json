@@ -1,0 +1,30 @@
+{
+  "id": "ca-ab-hamell",
+  "researched": "2026-10-20",
+  "summary": "Cabin lookout built 1962 on Mount Hamell near Grande Cache, per Alberta Wildfire's layer; active, with no source describing public visits.",
+  "facts": {
+    "design": "cabin",
+    "staffing": {"status": "staffed"},
+    "access": {"level": "closed", "note": "Active Alberta Wildfire site; the layer lists access mode as fly. No source found says the public may visit."},
+    "agency": "Alberta Wildfire (Alberta Agriculture and Forestry)"
+  },
+  "events": [
+    {"year": 1962, "event": "built", "note": "Cabin; year of construction per the Alberta Wildfire lookout layer", "cite": [1]}
+  ],
+  "evidence": [
+    {"cite": [1], "supports": "cabin, built 1962, elevation 2131.6 m", "quote": "\"NAME\":\"HAMELL\",\"LOOKOUT_TYPE\":\"Cabin\",\"YEAR_CONSTRUCTED\":1962,\"TOWER_HEIGHT\":2.0,\"ELEVATION\":2131.6"},
+    {"cite": [1], "supports": "active; access mode fly", "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"fly\""},
+    {"cite": [2], "supports": "location on Mount Hamell near Grande Cache", "quote": "Mount Hamell is a challenging and rewarding backcountry trail near Grande Cache"},
+    {"cite": [2], "supports": "fire lookout near the summit of Mount Hamell", "quote": "with the trail eventually reaching the fire lookout near the summit"},
+    {"cite": [2], "supports": "trail listing asks people on the trail to respect the privacy of whoever is on duty at the fire lookout", "quote": "Please be mindful of the on-duty fire lookout's privacy."},
+    {"cite": [3], "supports": "each site staffed by an observer, generally April to October", "quote": "Each site is staffed by a lookout observer whose job is to watch for wildfire all day, each day, generally from April to October."}
+  ],
+  "sources": [
+    {"n": 1, "title": "Alberta Wildfire: Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT) layer query", "publisher": "Government of Alberta, FireSmart vector data service", "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json&resultRecordCount=1000", "accessed": "2026-10-20"},
+    {"n": 2, "title": "Mount Hamell Route", "publisher": "onX Offroad", "url": "https://www.onxmaps.com/offroad/trails/ca/alberta/mount-hamell-route-n2qvd87e9q95", "accessed": "2026-10-20"},
+    {"n": 3, "title": "Bears and fire lookouts", "publisher": "Alberta.ca", "url": "https://www.alberta.ca/bears-and-fire-lookouts", "accessed": "2026-10-20"}
+  ],
+  "verification": {"checked": "2026-10-20", "claims_checked": 5, "unsupported_removed": 1, "errors_fixed": 0, "quotes_spot_checked": 6, "quotes_not_found": 0, "verdict": "fixed"},
+  "confidence": "medium",
+  "notes_for_editor": "Only the build year (1962), cabin type and elevation come from the provincial layer; no history of staffing, fires, rebuilds or the cabin's condition was found. The layer gives TOWER_HEIGHT 2.0 for this cabin, which is probably not a tower height, so height_m is not carried into facts; the existing record's height_m of 2.0 may warrant clearing. The access level 'closed' is carried from the existing record. The onX trail-map page is a commercial trail guide used only for location and a visitor caveat. An AllTrails listing for the same lookout returned HTTP 403 and was not read. Corrections: none."
+}

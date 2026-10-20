@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-livock",
   "name": "Livock Fire Tower",
+  "summary": "Alberta's lookout dataset dates the present 30 m steel tower to 2017 and lists it active; no history, staffing or fire record was found.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "osm",
   "roles": [],
-  "design": null,
+  "design": "Steel tower, 30 m (98 ft) high, per the provincial lookout dataset",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -42,13 +43,38 @@
     {
       "year": 2017,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Year the present steel tower was built, per the provincial dataset",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25LIMESTONE%25%27%20OR%20NAME%20LIKE%20%27%25LIVOCK%25%27%20OR%20NAME%20LIKE%20%27%25MAYBERNE%25%27%20OR%20NAME%20LIKE%20%27%25CLARKE%25%27&outFields=NAME,LABEL,LOOKOUT_ID,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACTIVE,ACCESS_MODE,KEY_LOOKOUT,LATITUDE,LONGITUDE,MAP_NUMBER,LOCATION_VERIFIED&returnGeometry=false&f=json"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire lookout records for Limestone, Livock and Mayberne (FRIAA FireSmart vector data, query) (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25LIMESTONE%25%27%20OR%20NAME%20LIKE%20%27%25LIVOCK%25%27%20OR%20NAME%20LIKE%20%27%25MAYBERNE%25%27%20OR%20NAME%20LIKE%20%27%25CLARKE%25%27&outFields=NAME,LABEL,LOOKOUT_ID,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACTIVE,ACCESS_MODE,KEY_LOOKOUT,LATITUDE,LONGITUDE,MAP_NUMBER,LOCATION_VERIFIED&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Lonely Lookouts (RETROactive, Alberta Historic Places)",
+      "url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
+      "kind": "reference"
+    },
+    {
+      "label": "The man in the sky; 100 feet high (Lakeside Leader)",
+      "url": "https://www.lakesideleader.com/the-man-in-the-sky-100-feet-high/",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Government of Alberta (Alberta.ca))",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
+    {
+      "label": "Livock Fire Tower Worksite (Mapcarta)",
+      "url": "https://mapcarta.com/W760870523",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -85,10 +111,28 @@
         "material",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-livock",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

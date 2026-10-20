@@ -1,0 +1,34 @@
+{
+  "id": "ca-ab-grande",
+  "researched": "2026-10-20",
+  "summary": "Steel tower, 30 m (98 ft), present structure built 2017 per Alberta Wildfire's lookout layer; active and staffed, with no source describing public visits.",
+  "facts": {
+    "design": "steel tower",
+    "height_m": 30,
+    "staffing": {"status": "staffed"},
+    "access": {"level": "closed", "note": "Active, staffed Alberta Wildfire lookout. No source found says the public may visit."},
+    "agency": "Alberta Wildfire (Alberta Agriculture and Forestry)"
+  },
+  "events": [
+    {"year": 2017, "event": "built", "note": "Present steel tower; year of construction per the Alberta Wildfire lookout layer", "cite": [1]}
+  ],
+  "evidence": [
+    {"cite": [1], "supports": "steel tower, 30 m tall, elevation 559 m, present structure built 2017", "quote": "\"NAME\":\"GRANDE\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2017,\"TOWER_HEIGHT\":30.0,\"ELEVATION\":559.0"},
+    {"cite": [1], "supports": "active; access mode fly", "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"fly\""},
+    {"cite": [2], "supports": "each site staffed by a lookout observer, generally April to October", "quote": "Each site is staffed by a lookout observer whose job is to watch for wildfire all day, each day, generally from April to October."},
+    {"cite": [2], "supports": "sites are isolated; staff must be ready for a curious bear", "quote": "Wildfire lookout sites are isolated and the staff that work them must be prepared for a wide range of possibilities, including an encounter with a curious bear."},
+    {"cite": [2], "supports": "Wildfire staff sit within Agriculture and Forestry", "quote": "Wildfire staff with Agriculture and Forestry have adopted a number of Alberta BearSmart recommendations for many of their sites"},
+    {"cite": [3], "supports": "steel introduced in the 1920s and increasingly replaced wood", "quote": "Introduced in the 1920s, steel increasingly replaced wood for tower construction."}
+  ],
+  "resolved_conflicts": [
+    {"field": "access", "explanation": "The existing record's access note says staffed March to October; the cited Alberta.ca page says generally April to October. The story uses the page's wording.", "cite": [2]}
+  ],
+  "sources": [
+    {"n": 1, "title": "Alberta Wildfire: Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT) layer query", "publisher": "Government of Alberta, FireSmart vector data service", "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json&resultRecordCount=1000", "accessed": "2026-10-20"},
+    {"n": 2, "title": "Bears and fire lookouts", "publisher": "Alberta.ca", "url": "https://www.alberta.ca/bears-and-fire-lookouts", "accessed": "2026-10-20"},
+    {"n": 3, "title": "Lonely Lookouts", "publisher": "RETROactive blog, albertashistoricplaces.com", "url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/", "accessed": "2026-10-20"}
+  ],
+  "verification": {"checked": "2026-10-20", "claims_checked": 6, "unsupported_removed": 2, "errors_fixed": 1, "quotes_spot_checked": 6, "quotes_not_found": 0, "verdict": "fixed"},
+  "confidence": "medium",
+  "notes_for_editor": "Built year 2017, steel type, 30 m height and 559 m elevation come only from the provincial layer. Staffing is from Alberta.ca's general statement about all sites, not Grande-specific. The access level 'closed' is carried from the existing record; no source says the site is closed to the public in those words. The record's 'staffed March-October' note has no support in the cited pages. The layer returned 124 features while Alberta.ca says 127 sites. A CTV item (Oct 2024) about an old fire lookout removed from the Alberta Forestry offices in Grande Prairie is not linked to this site by any source, and the coordinates are far from Grande Prairie. No fire, staffing-history or rebuild information was found. No photos."
+}

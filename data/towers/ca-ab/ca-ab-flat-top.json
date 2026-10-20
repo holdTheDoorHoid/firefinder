@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-flat-top",
   "name": "Flat Top",
+  "summary": "Flat Top Lookout at Slave Lake, Alberta: a weather station and a mapped tower point have similar names; no public source gives its built, staffing, fire or access history.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -45,10 +46,22 @@
       "note": "The present structure (Alberta Wildfire's year of construction).",
       "from": "alberta_wildfire",
       "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+    },
+    {
+      "year": 2011,
+      "event": "other",
+      "note": "Iowa Environmental Mesonet: the data archive for station FLTQ1 begins 28 October 2011. This is a weather-station data start, not a construction date.",
+      "from": "research",
+      "source_url": "https://mesonet1.agron.iastate.edu/sites/site.php?station=FLTQ1&network=CA_AB_DCP"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "IEM :: Site Info: FLTQ1 Flat Top Lookout at Slave Lake (Iowa Environmental Mesonet)",
+      "url": "https://mesonet1.agron.iastate.edu/sites/site.php?station=FLTQ1&network=CA_AB_DCP",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -85,10 +98,26 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-flat-top",
+      "fields": [
+        "summary",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-sweathouse",
   "name": "Sweathouse",
+  "summary": "Sweathouse Creek lookout: a tower was under construction in 1952, mid-1950s towermen appear in newspaper items, and the register dates today's steel tower to 2003.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,16 +17,16 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "Steel tower",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": "Alberta Wildfire",
+  "agency": "Wildfire staff with Agriculture and Forestry, Government of Alberta",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "Register lists the tower as active with access mode drive (road). The brief's 'closed' is not stated by any source read. No source describes public visits."
   },
   "staffing": {
     "status": "staffed",
@@ -34,21 +35,71 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
   "events": [
     {
+      "year": 1952,
+      "event": "other",
+      "note": "Newspaper item (1 Jan 1952): a new tower under construction at Sweathouse Creek, south of Sunset House. Completion not confirmed.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/sweathouse.html"
+    },
+    {
+      "year": 1955,
+      "event": "fire",
+      "note": "Newspaper item on the 1955 season: only a few small fires started, and these were quickly put out.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/sweathouse.html"
+    },
+    {
+      "year": 1955,
+      "event": "staffed",
+      "note": "A towerman is named in an August 1955 newspaper item, which mentions his cabin and a three-room cabin at the tower.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/sweathouse.html"
+    },
+    {
+      "year": 1958,
+      "event": "staffed",
+      "note": "Newspaper item (20 Nov 1958): a farming family returned to their farm from the Sweathouse fire tower.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/sweathouse.html"
+    },
+    {
+      "year": 1959,
+      "event": "staffed",
+      "note": "Newspaper item (26 Mar 1959) reports a planned season as lookout after a course for tower men in Grande Prairie.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/sweathouse.html"
+    },
+    {
       "year": 2003,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Register construction year (YEAR_CONSTRUCTED) for the present 30 m steel tower.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25SWEAT%25%27%20OR%20NAME%20LIKE%20%27%25TALBOT%25%27%20OR%20NAME%20LIKE%20%27%25TONY%25%27&outFields=*&returnGeometry=false&f=json"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Sweathouse Creek (newspaper transcriptions from the Peace River Record Gazette) (Canada Lookouts)",
+      "url": "https://canada-lookouts.weebly.com/sweathouse.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25SWEAT%25%27%20OR%20NAME%20LIKE%20%27%25TALBOT%25%27%20OR%20NAME%20LIKE%20%27%25TONY%25%27&outFields=*&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Government of Alberta (Alberta.ca))",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -73,10 +124,32 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-sweathouse",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

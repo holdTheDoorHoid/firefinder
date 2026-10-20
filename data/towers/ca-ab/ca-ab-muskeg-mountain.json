@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-muskeg-mountain",
   "name": "Muskeg Mountain",
+  "summary": "Steel lookout tower, 30 m (98 ft), recorded by Alberta as built in 2012 and still marked active; no history beyond the province's layer was found.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "Steel lookout tower, 30 m (98 ft) tall per the Alberta wildfire lookout layer",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -25,7 +26,7 @@
   "ownership": "unknown",
   "access": {
     "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "note": "No public visiting arrangement found. The layer's access mode is fly. Level carried from the brief's record; no source read states a closure."
   },
   "staffing": {
     "status": "staffed",
@@ -34,21 +35,36 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "No visitor route described; the layer lists the access mode as fly, which suggests access by air"
   },
   "rental": null,
   "events": [
     {
       "year": 2012,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Present structure per Alberta's wildfire lookout layer (year of construction). No earlier tower on this site is described in the sources read.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=1%3D1&outFields=NAME,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACCESS_MODE,ACTIVE,KEY_LOOKOUT,LOCATION_VERIFIED,LABEL,LOOKOUT_ID&returnGeometry=false&resultRecordCount=1000&f=json"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "WF_WILDFIRE_LOOKOUT, Wildfire Lookouts of Alberta layer query (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=1%3D1&outFields=NAME,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACCESS_MODE,ACTIVE,KEY_LOOKOUT,LOCATION_VERIFIED,LABEL,LOOKOUT_ID&returnGeometry=false&resultRecordCount=1000&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Alberta.ca, Government of Alberta)",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
+    {
+      "label": "Lonely Lookouts (RETROactive, Alberta Historic Places)",
+      "url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -73,10 +89,32 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-muskeg-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

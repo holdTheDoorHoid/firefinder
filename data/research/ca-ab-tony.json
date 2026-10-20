@@ -1,0 +1,111 @@
+{
+  "id": "ca-ab-tony",
+  "researched": "2026-10-20",
+  "summary": "Tony lookout: a 1963 Canada Lookouts entry for Tony Creek may or may not match the register's 2005 steel tower, which is listed as active with fly access.",
+  "facts": {
+    "design": "Steel tower",
+    "height_m": 30.0,
+    "status": "standing",
+    "access": {
+      "level": "restricted",
+      "note": "Register lists the tower as active with access mode fly (not road). The brief's 'closed' is not stated by any source read. No source describes public visits."
+    },
+    "visit": {
+      "drive_up": false
+    },
+    "agency": "Wildfire staff with Agriculture and Forestry, Government of Alberta"
+  },
+  "events": [
+    {
+      "year": 1963,
+      "event": "built",
+      "note": "Canada Lookouts entry for Tony Creek, under Whitecourt Division: 'A tower erected.' Matched to the register TONY by name only; may be an earlier tower.",
+      "cite": [1]
+    },
+    {
+      "year": 2005,
+      "event": "built",
+      "note": "Register construction year (YEAR_CONSTRUCTED) for the present 30 m steel tower.",
+      "cite": [2]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [1],
+      "supports": "Tony Creek entry: a tower erected in 1963",
+      "quote": "1963: A tower erected."
+    },
+    {
+      "cite": [1],
+      "supports": "Tony Creek entry sits under the Whitecourt Division heading",
+      "quote": "Whitecourt Division"
+    },
+    {
+      "cite": [2],
+      "supports": "TONY register record: steel tower, built 2005, 30 m tall, elevation 1006.9 m",
+      "quote": "\"NAME\":\"TONY\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2005,\"TOWER_HEIGHT\":30.0,\"ELEVATION\":1006.9"
+    },
+    {
+      "cite": [2],
+      "supports": "TONY register record: active, access mode fly",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"fly\""
+    },
+    {
+      "cite": [3],
+      "supports": "each of Alberta's 127 wildfire lookout sites is staffed by a lookout observer, generally April to October",
+      "quote": "Each site is staffed by a lookout observer whose job is to watch for wildfire all day, each day, generally from April to October."
+    },
+    {
+      "cite": [3],
+      "supports": "127 wildfire lookout sites in Alberta",
+      "quote": "127 wildfire lookout sites are located throughout Alberta's boreal forest and along the Rocky Mountains."
+    },
+    {
+      "cite": [3],
+      "supports": "agency: wildfire staff sit with Agriculture and Forestry",
+      "quote": "Wildfire staff with Agriculture and Forestry have adopted a number of Alberta BearSmart recommendations"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Tony Creek",
+      "publisher": "Canada Lookouts",
+      "url": "https://canada-lookouts.weebly.com/tony-creek.html",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract",
+      "publisher": "Government of Alberta",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25SWEAT%25%27%20OR%20NAME%20LIKE%20%27%25TALBOT%25%27%20OR%20NAME%20LIKE%20%27%25TONY%25%27&outFields=*&returnGeometry=false&f=json",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "Bears and fire lookouts",
+      "publisher": "Government of Alberta (Alberta.ca)",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "resolved_conflicts": [
+    {
+      "field": "built",
+      "explanation": "The Canada Lookouts entry (1963) and the register (2005) may describe different towers. The only link is the name Tony Creek versus TONY, so the story does not treat the 1963 tower as the same structure.",
+      "cite": [1, 2]
+    }
+  ],
+  "corrections": [
+    {
+      "field": "access",
+      "current": "closed",
+      "proposed": "restricted",
+      "cite": [2],
+      "why": "The register lists the tower as active with access mode fly. No source read says the tower is closed to the public."
+    }
+  ],
+  "confidence": "low",
+  "notes_for_editor": "Thin record: one line from a hobby transcription site (Tony Creek, Whitecourt Division) and the register. The name match is unverified; the register's coordinates (54.405346, -117.491473) were not checked against Tony Creek. No newspaper or other source on this tower was found in two searches. Brief's 'closed' access is not supported by any source read; recorded as restricted. Agency uses the alberta.ca wording. No photos found.",
+  "verification": {"checked": "2026-10-20", "claims_checked": 9, "unsupported_removed": 0, "errors_fixed": 1, "quotes_spot_checked": 7, "quotes_not_found": 0, "verdict": "fixed"}
+}

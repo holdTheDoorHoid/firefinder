@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-rock-island-lake",
   "name": "Rock Island Lake",
+  "summary": "Steel lookout tower, 30 m (98 ft), with a 2014 construction year in Alberta's lookout dataset; listed active. No source describes public visits.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,12 +17,12 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "Steel tower, 30 m (98 ft) tall",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": "Alberta Wildfire",
+  "agency": "Alberta Wildfire, with Agriculture and Forestry",
   "ownership": "unknown",
   "access": {
     "level": "closed",
@@ -42,13 +43,33 @@
     {
       "year": 2014,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Alberta's lookout dataset gives 2014 as the year constructed; the listed type is steel",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=UPPER(NAME)%20LIKE%20%27%25RAM%25%27%20OR%20UPPER(NAME)%20LIKE%20%27%25ROCK%25%27&outFields=NAME,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACTIVE,ACCESS_MODE&f=json&returnGeometry=false&resultRecordCount=50"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire Lookouts of Alberta (FIReS layer query) (Government of Alberta, geospatial.alberta.ca)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=UPPER(NAME)%20LIKE%20%27%25RAM%25%27%20OR%20UPPER(NAME)%20LIKE%20%27%25ROCK%25%27&outFields=NAME,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACTIVE,ACCESS_MODE&f=json&returnGeometry=false&resultRecordCount=50",
+      "kind": "reference"
+    },
+    {
+      "label": "Lonely Lookouts (RETROactive, Alberta Historic Places)",
+      "url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Alberta.ca)",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
+    {
+      "label": "Area Campgrounds (MD of Opportunity)",
+      "url": "https://www.mdopportunity.ab.ca/area-campground/",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -73,10 +94,29 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-rock-island-lake",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

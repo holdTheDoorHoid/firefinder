@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-cameron",
   "name": "Cameron Lookout",
+  "summary": "Mount Burke summit cabin built in 1929 (a 1937 article says the cabin dates to 1930), closed in 1953; it still stands empty, reached by a 12.5 km round-trip hike in Kananaskis Country.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Wooden cabin with shuttered windows along its west, south and east walls, guyed with cables to the treeline",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -31,8 +32,8 @@
   "agency": "Environmental Protection, Land & Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Hike to the summit in Kananaskis Country; no closure or permit described in the sources read"
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,43 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Start at the parking area; the old approach began at the lot outside Cataract Creek campground, and a cutline now replaces it after the 2013 floods. The 2020 round trip was 12.5 km, about four hours up and three down; the trail is well marked."
   },
   "rental": null,
   "events": [
     {
+      "year": 1929,
+      "event": "built",
+      "note": "Alberta Historic Places, DanOCan 2025 and Canada Lookouts (citing a 1998 book) give 1929 for the first lookout structure. A 1937 Calgary Herald article quoted by DanOCan 2020 and Canada Lookouts says the cabin was built in 1930; see resolved_conflicts.",
+      "from": "research",
+      "source_url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
+      "source_urls": [
+        "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
+        "https://danocan.com/2020/08/04/the-abandoned-cameron-fire-lookout-on-mount-burke/",
+        "https://danocan.com/2025/09/01/exploring-albertas-historic-fire-lookout-mount-burke-summit-hike/",
+        "https://canada-lookouts.weebly.com/cameron.html"
+      ]
+    },
+    {
+      "year": 1953,
+      "event": "closed",
+      "note": "Closed in favor of two lower sites, Raspberry Ridge and Hailstone Butte. A 2020 blog gave 1954 from another blog; the author found no firsthand source for 1954.",
+      "from": "research",
+      "source_url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
+      "source_urls": [
+        "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
+        "https://danocan.com/2025/09/01/exploring-albertas-historic-fire-lookout-mount-burke-summit-hike/",
+        "https://canada-lookouts.weebly.com/cameron.html",
+        "https://danocan.com/2020/08/04/the-abandoned-cameron-fire-lookout-on-mount-burke/"
+      ]
+    },
+    {
       "year": 1996,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 5, 1996",
-      "from": "nhlr"
+      "note": "Registered June 5, 1996; nominated by Bob Young, Alberta Land and Forest Service",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/ab/cameron-lookout/"
     }
   ],
   "photos": [
@@ -69,6 +97,26 @@
       "label": "NHLR register entry CAN 4 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/can/ab/cameron-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Lonely Lookouts (RETROactive, Alberta Historic Places)",
+      "url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
+      "kind": "reference"
+    },
+    {
+      "label": "The Abandoned Cameron Fire Lookout on Mount Burke (DanOCan (blog))",
+      "url": "https://danocan.com/2020/08/04/the-abandoned-cameron-fire-lookout-on-mount-burke/",
+      "kind": "reference"
+    },
+    {
+      "label": "Exploring Alberta's Historic Fire Lookout - Mount Burke Summit Hike (DanOCan (blog))",
+      "url": "https://danocan.com/2025/09/01/exploring-albertas-historic-fire-lookout-mount-burke-summit-hike/",
+      "kind": "reference"
+    },
+    {
+      "label": "CAMERON ON MOUNT BURKE (Canada Lookouts (canada-lookouts.weebly.com))",
+      "url": "https://canada-lookouts.weebly.com/cameron.html",
+      "kind": "reference"
     }
   ],
   "sources": [
@@ -87,10 +135,30 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-cameron",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

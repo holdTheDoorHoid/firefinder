@@ -1,0 +1,80 @@
+{
+  "id": "ca-ab-aurora",
+  "researched": "2026-10-20",
+  "summary": "Steel tower of 30 m that Alberta's register dates to 2014; the register is the only site record found, and no history or staffing is recorded.",
+  "facts": {
+    "design": "Steel tower",
+    "height_m": 30.0,
+    "status": "standing",
+    "access": {
+      "level": "restricted",
+      "note": "Register codes access as 'fly' and lists the site as active. No source describes public visits."
+    }
+  },
+  "events": [
+    {
+      "year": 2014,
+      "event": "built",
+      "note": "Register construction year (YEAR_CONSTRUCTED) for the steel tower.",
+      "cite": [1]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [1],
+      "supports": "Aurora record: steel tower, built 2014, 30 m tall, elevation 1,330.69 m",
+      "quote": "\"NAME\":\"AURORA\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2014,\"TOWER_HEIGHT\":30.0,\"ELEVATION\":1330.69"
+    },
+    {
+      "cite": [1],
+      "supports": "Aurora record: active, access mode fly",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"fly\""
+    },
+    {
+      "cite": [1],
+      "supports": "Aurora record: has a weather station",
+      "quote": "\"WEATHER_STATION\":\"Y\""
+    },
+    {
+      "cite": [2],
+      "supports": "Alberta says its lookouts are placed where visibility is favourable to detect and report wildfires",
+      "quote": "are located where visibility is favourable to detect and report wildfires"
+    },
+    {
+      "cite": [3],
+      "supports": "From 1912 Alberta used summit lookouts built low to the ground or on short stilts",
+      "quote": "After 1912 there were two types of lookouts: summit lookouts, built on the ground or on short stilts"
+    },
+    {
+      "cite": [3],
+      "supports": "Towers on high forested hills raised the observer above obstacles to vision",
+      "quote": "towers, built on high hills in the boreal forest, which elevated the observer over any obstacles to vision"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract",
+      "publisher": "Government of Alberta",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25ATHAB%25%27%20OR%20NAME%20LIKE%20%27%25AURORA%25%27%20OR%20NAME%20LIKE%20%27%25BALDY%25%27&outFields=*&returnGeometry=false&f=json",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Fire lookouts",
+      "publisher": "Open Government Alberta",
+      "url": "https://open.alberta.ca/publications/fire-lookouts",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "Lonely Lookouts",
+      "publisher": "RETROactive, Alberta Historic Places",
+      "url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "confidence": "low",
+  "notes_for_editor": "Thin record. The only site-specific source is the Alberta register extract, which is the same query URL used for ca-ab-athabasca and ca-ab-baldy. No news, archive or trail-guide source for Aurora was found in the searches run. OpenStreetMap way 1557410030 tags a 30 m tower (height=30) and was not quoted because its tags span several lines. Brief's access 'closed' is not stated by any source; recorded as restricted. The open.alberta.ca and Lonely Lookouts evidence is general Alberta context, not a claim about this site. The story's 'summit' and 'tower' types are context only, not a claim that Aurora is one or the other beyond its steel-tower register type. Mapcarta (not used) places the site near Aurora Natural Area. Fact-check 2026-10-20: removed 'helps staff' (staff not in the source), replaced 'above the trees' with the source's 'obstacles to vision', and restored the 'After 1912' qualifier from the Alberta Historic Places source.",
+  "verification": {"checked": "2026-10-20", "claims_checked": 5, "unsupported_removed": 0, "errors_fixed": 3, "quotes_spot_checked": 6, "quotes_not_found": 0, "verdict": "fixed"}
+}

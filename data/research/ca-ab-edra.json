@@ -1,0 +1,128 @@
+{
+  "id": "ca-ab-edra",
+  "researched": "2026-10-20",
+  "summary": "Steel fire lookout, 30 m, that Alberta's register dates to 2016; a 2009 provincial lookout map already labels a lookout Edra.",
+  "facts": {
+    "design": "Steel tower",
+    "height_m": 30.0,
+    "status": "standing",
+    "access": {
+      "level": "restricted",
+      "note": "Register lists the lookout as active with access mode fly, so it is reached by air. No source found gives public visiting rules for Edra."
+    },
+    "agency": "Alberta Wildfire (Agriculture and Forestry)"
+  },
+  "events": [
+    {
+      "year": 2009,
+      "event": "other",
+      "note": "Labelled EDRA on Alberta's 2009 lookout towers map",
+      "cite": [2]
+    },
+    {
+      "year": 2016,
+      "event": "built",
+      "note": "Register gives 2016 as the year the present structure was constructed",
+      "cite": [1]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [1],
+      "supports": "Register: steel lookout, year constructed 2016, tower height 30 m",
+      "quote": "\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2016,\"TOWER_HEIGHT\":30.0"
+    },
+    {
+      "cite": [1],
+      "supports": "Register: elevation 802 m",
+      "quote": "\"ELEVATION\":802.0"
+    },
+    {
+      "cite": [1],
+      "supports": "Register: coordinates 57.847915, -113.252529",
+      "quote": "\"LATITUDE\":57.847915,\"LONGITUDE\":-113.252529"
+    },
+    {
+      "cite": [1],
+      "supports": "Register: map sheet 84H/14",
+      "quote": "\"MAP_NUMBER\":\"84H/14\""
+    },
+    {
+      "cite": [1],
+      "supports": "Register: active, access mode fly (reached by air)",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"fly\""
+    },
+    {
+      "cite": [1],
+      "supports": "Register: weather station on site",
+      "quote": "\"WEATHER_STATION\":\"Y\""
+    },
+    {
+      "cite": [2],
+      "supports": "2009 lookout towers map labels a lookout EDRA",
+      "quote": "EDRA"
+    },
+    {
+      "cite": [3],
+      "supports": "127 wildfire lookout sites across the boreal forest and along the Rocky Mountains",
+      "quote": "127 wildfire lookout sites are located throughout Alberta's boreal forest and along the Rocky Mountains."
+    },
+    {
+      "cite": [3],
+      "supports": "Each site staffed by a lookout observer, generally April to October",
+      "quote": "Each site is staffed by a lookout observer whose job is to watch for wildfire all day, each day, generally from April to October."
+    },
+    {
+      "cite": [3],
+      "supports": "Lookout sites are isolated",
+      "quote": "Wildfire lookout sites are isolated"
+    },
+    {
+      "cite": [3],
+      "supports": "Wildfire staff with Agriculture and Forestry have adopted BearSmart recommendations for many of their sites",
+      "quote": "Wildfire staff with Agriculture and Forestry have adopted a number of Alberta BearSmart recommendations for many of their sites"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "access.level",
+      "current": "closed",
+      "proposed": "restricted",
+      "cite": [1],
+      "why": "The register lists Edra as active with access mode fly. It does not describe the site as closed, and no source found says it is closed to the public."
+    }
+  ],
+  "resolved_conflicts": [
+    {
+      "field": "built",
+      "explanation": "The register's 2016 date is for the present structure. The 2009 map labels a lookout Edra, so the name predates this tower; the map does not say whether it stood on the same spot.",
+      "cite": [1, 2]
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract",
+      "publisher": "Government of Alberta",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25EDRA%25%27&outFields=*&returnGeometry=false&f=json",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Lookout towers map, 2009 (srd-lookout-towers-map-2009.pdf)",
+      "publisher": "Government of Alberta (Sustainable Resource Development), Open Government",
+      "url": "https://open.alberta.ca/dataset/ed8b1916-03c2-4eb0-84c8-f2ea49d57866/resource/d0d2c0d7-0951-4937-92c0-8194ec362620/download/srd-lookout-towers-map-2009.pdf",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "Bears and fire lookouts",
+      "publisher": "Alberta.ca",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "confidence": "low",
+  "verification": {"checked": "2026-10-20", "claims_checked": 16, "unsupported_removed": 0, "errors_fixed": 3, "quotes_spot_checked": 11, "quotes_not_found": 0, "verdict": "fixed"},
+  "notes_for_editor": "Thin record. The only Edra-specific sources are the Alberta register row (cite 1) and the 2009 Alberta lookout towers map, whose label EDRA (cite 2) is the only Edra mention used. Two web searches and three page reads found no history of the 2016 build, any earlier lookout, fires or Edra's own staffing. The brief's access 'closed' and 'no public access' note is not traced to any source here, so access is corrected to restricted, as in the Adair record. The brief's 'staffed March-October' is not confirmed for Edra; cite 3 gives generally April to October for all sites. Staffing and the Agriculture and Forestry wording come from cite 3, which covers all sites, not Edra alone. The register marks LOCATION_VERIFIED as N."
+}

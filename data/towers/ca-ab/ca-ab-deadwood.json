@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-deadwood",
   "name": "Deadwood",
+  "summary": "Steel tower, 30 m, dated 2017 in Alberta's register; a 2009 lookout towers map already labels a Deadwood site.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "Steel tower",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -24,8 +25,8 @@
   "agency": "Alberta Wildfire",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "Register lists the tower as active, with access mode drive and a weather station. It does not describe public access."
   },
   "staffing": {
     "status": "staffed",
@@ -40,15 +41,42 @@
   "rental": null,
   "events": [
     {
+      "year": 2009,
+      "event": "other",
+      "note": "A 2009 Alberta lookout towers map labels a site DEADWOOD. The label predates the register's 2017 construction year and does not say what stood on the site.",
+      "from": "research",
+      "source_url": "https://open.alberta.ca/dataset/ed8b1916-03c2-4eb0-84c8-f2ea49d57866/resource/d0d2c0d7-0951-4937-92c0-8194ec362620/download/srd-lookout-towers-map-2009.pdf"
+    },
+    {
       "year": 2017,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Register gives 2017 as the year of construction.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25DEAD%25%27&outFields=*&returnGeometry=false&f=json"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25DEAD%25%27&outFields=*&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Alberta lookout towers map (2009) (Sustainable Resource Development, Government of Alberta)",
+      "url": "https://open.alberta.ca/dataset/ed8b1916-03c2-4eb0-84c8-f2ea49d57866/resource/d0d2c0d7-0951-4937-92c0-8194ec362620/download/srd-lookout-towers-map-2009.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "All Along the Watchtower (Alberta Views)",
+      "url": "https://albertaviews.ca/all-along-the-watchtower/",
+      "kind": "reference"
+    },
+    {
+      "label": "Alberta BearSmart and Alberta's fire lookouts (Open Government Alberta)",
+      "url": "https://open.alberta.ca/dataset/alberta-bearsmart-and-alberta-s-fire-lookouts",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -73,10 +101,30 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-deadwood",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

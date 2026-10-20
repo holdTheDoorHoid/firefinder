@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-grande",
   "name": "Grande",
+  "summary": "Steel tower, 30 m (98 ft), present structure built 2017 per Alberta Wildfire's lookout layer; active and staffed, with no source describing public visits.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,21 +17,20 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "steel tower",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": "Alberta Wildfire",
+  "agency": "Alberta Wildfire (Alberta Agriculture and Forestry)",
   "ownership": "unknown",
   "access": {
     "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "note": "Active, staffed Alberta Wildfire lookout. No source found says the public may visit."
   },
   "staffing": {
     "status": "staffed",
-    "as_of": null,
-    "note": "Seasonal lookout observer (Alberta Wildfire)"
+    "as_of": null
   },
   "visit": {
     "climbable": null,
@@ -42,13 +42,28 @@
     {
       "year": 2017,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Present steel tower; year of construction per the Alberta Wildfire lookout layer",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json&resultRecordCount=1000"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Alberta Wildfire: Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT) layer query (Government of Alberta, FireSmart vector data service)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json&resultRecordCount=1000",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Alberta.ca)",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
+    {
+      "label": "Lonely Lookouts (RETROactive blog, albertashistoricplaces.com)",
+      "url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -73,10 +88,31 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-grande",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

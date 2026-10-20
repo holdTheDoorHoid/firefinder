@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-kimiwan",
   "name": "Kimiwan",
+  "summary": "Alberta lookout; an online index says it opened for service in 1976 and a new steel tower was completed in January 2012. No public source describes the site today.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "steel tower (new structure completed January 2012)",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -40,15 +41,49 @@
   "rental": null,
   "events": [
     {
+      "year": 1976,
+      "event": "built",
+      "note": "Index says the lookout opened for service; it gives no construction details",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/kimiwan.html"
+    },
+    {
       "year": 2012,
       "event": "built",
       "note": "The present structure (Alberta Wildfire's year of construction).",
       "from": "alberta_wildfire",
       "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+    },
+    {
+      "year": 2012,
+      "event": "replaced",
+      "note": "Index says a new steel tower was completed in January 2012",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/kimiwan.html"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Kimiwan (Canada Lookouts)",
+      "url": "https://canada-lookouts.weebly.com/kimiwan.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Fire lookouts (Government of Alberta, Open Government)",
+      "url": "https://open.alberta.ca/publications/fire-lookouts",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Alberta.ca)",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
+    {
+      "label": "Lonely Lookouts (RETROactive, Alberta Historic Places)",
+      "url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -73,10 +108,27 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-kimiwan",
+      "fields": [
+        "summary",
+        "design",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

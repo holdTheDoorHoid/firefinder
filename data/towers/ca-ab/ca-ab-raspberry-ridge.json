@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-raspberry-ridge",
   "name": "Raspberry Ridge Fire Lookout",
+  "summary": "Ridge lookout in Kananaskis Country that succeeded the Cameron lookout on Mount Burke; the present building dates to 1977 and sits behind a locked fence.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,21 +17,20 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Cabin (register type); present building dates to 1977",
   "height_m": 2.0,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": "Alberta Wildfire",
+  "agency": "Alberta Agriculture and Forestry (Wildfire)",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "private",
+    "note": "Friends of Kananaskis Country describe a workplace and private residence behind a locked, gated barbed wire fence. The register lists access by air. No source describes public visits."
   },
   "staffing": {
     "status": "staffed",
-    "as_of": null,
-    "note": "Seasonal lookout observer (Alberta Wildfire)"
+    "as_of": "2026"
   },
   "visit": {
     "climbable": null,
@@ -40,15 +40,62 @@
   "rental": null,
   "events": [
     {
+      "year": 1953,
+      "event": "other",
+      "note": "Cameron lookout on Mount Burke decommissioned; a road was built to the top of Raspberry Ridge.",
+      "from": "research",
+      "source_url": "https://kananaskis.org/raspberry-ridge-fire-lookout/"
+    },
+    {
+      "year": 1954,
+      "event": "staffed_first",
+      "note": "A new 12 ft by 12 ft lookout was staffed for the first time.",
+      "from": "research",
+      "source_url": "https://kananaskis.org/raspberry-ridge-fire-lookout/"
+    },
+    {
       "year": 1977,
       "event": "built",
       "note": "The present structure (Alberta Wildfire's year of construction).",
       "from": "alberta_wildfire",
       "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+    },
+    {
+      "year": 1977,
+      "event": "replaced",
+      "note": "The present building replaced the 1954 lookout; the register gives 1977 as its construction year.",
+      "from": "research",
+      "source_url": "https://kananaskis.org/raspberry-ridge-fire-lookout/",
+      "source_urls": [
+        "https://kananaskis.org/raspberry-ridge-fire-lookout/",
+        "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20IN%20(%27PORCUPINE%27%2C%27RASPBERRY%20RIDGE%27%2C%27RED%20EARTH%27)&outFields=*&returnGeometry=false&f=json"
+      ]
+    },
+    {
+      "year": 1986,
+      "event": "modified",
+      "note": "Access road reclaimed; helicopters had made it unnecessary from the 1980s.",
+      "from": "research",
+      "source_url": "https://kananaskis.org/raspberry-ridge-fire-lookout/"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Raspberry Ridge Fire Lookout (Friends of Kananaskis Country)",
+      "url": "https://kananaskis.org/raspberry-ridge-fire-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Wildfire lookout records, WF_WILDFIRE_LOOKOUT query for Porcupine, Raspberry Ridge and Red Earth (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20IN%20(%27PORCUPINE%27%2C%27RASPBERRY%20RIDGE%27%2C%27RED%20EARTH%27)&outFields=*&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Government of Alberta (Alberta.ca))",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -84,10 +131,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-raspberry-ridge",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

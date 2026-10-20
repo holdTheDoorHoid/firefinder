@@ -1,0 +1,36 @@
+{
+  "id": "ca-ab-whitefish",
+  "researched": "2026-10-20",
+  "summary": "Alberta's register dates the steel tower to 2003; 1958-1967 newspaper items show tower men posted to an earlier Whitefish tower.",
+  "facts": {
+    "design": "Steel tower",
+    "height_m": 30.0,
+    "staffing": {"status": "tower men posted seasonally, per 1958-1967 newspaper items", "as_of": "1967"},
+    "visit": {"drive_up": true}
+  },
+  "events": [
+    {"year": 1958, "event": "staffed", "note": "A tower man resigned from the Whitefish tower in May and a replacement was to be taken on; a season's work at the tower ended in November", "cite": [2]},
+    {"year": 1959, "event": "staffed", "note": "Fire season ended and tower men left; one had been stationed at the Whitefish tower", "cite": [2]},
+    {"year": 1967, "event": "staffed", "note": "Tower men back on the job in May", "cite": [2]},
+    {"year": 2003, "event": "built", "note": "Register construction year for the present steel tower", "cite": [1]}
+  ],
+  "evidence": [
+    {"cite": [1], "supports": "steel tower, 30 m tall, 705 m elevation, in the register record for Whitefish", "quote": "\"NAME\":\"WHITEFISH\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2003,\"TOWER_HEIGHT\":30.0,\"ELEVATION\":705.34"},
+    {"cite": [1], "supports": "register lists the tower as active and reached by road", "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"drive\""},
+    {"cite": [1], "supports": "register lists no weather station", "quote": "\"WEATHER_STATION\":\"N\""},
+    {"cite": [2], "supports": "May 1958: tower man resigned, replacement to be taken on", "quote": "Malcolm Gardiner has resigned as tower man at the Whitefish tower and a new man will be taken in very shortly."},
+    {"cite": [2], "supports": "November 1958: a season's work at the Whitefish tower finished", "quote": "George Tissington has finished his season's work at Whitefish tower and returning to his home in Edmonton."},
+    {"cite": [2], "supports": "November 1959: fire season over and tower men leaving", "quote": "Fire season is over and tower men are leaving."},
+    {"cite": [2], "supports": "November 1959: one man had been stationed at the Whitefish tower", "quote": "who has been stationed at Whitefish tower"},
+    {"cite": [2], "supports": "May 1967: tower men back on the job", "quote": "The tower men are back on the job again"},
+    {"cite": [3], "supports": "lookouts are an integral component of detection and sited where visibility is favourable", "quote": "Fire lookouts are an integral component of wildfire detection in Alberta and are located where visibility is favourable to detect and report wildfires."}
+  ],
+  "sources": [
+    {"n": 1, "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract", "publisher": "Government of Alberta", "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25WHITE%25%27&outFields=*&returnGeometry=false&f=json", "accessed": "2026-10-20"},
+    {"n": 2, "title": "Whitefish (newspaper items quoted by Canada Lookouts)", "publisher": "Canada Lookouts", "url": "https://canada-lookouts.weebly.com/whitefish.html", "accessed": "2026-10-20"},
+    {"n": 3, "title": "Fire lookouts", "publisher": "Open Government Alberta", "url": "https://open.alberta.ca/publications/fire-lookouts", "accessed": "2026-10-20"}
+  ],
+  "verification": {"checked": "2026-10-20", "claims_checked": 9, "unsupported_removed": 0, "errors_fixed": 1, "quotes_spot_checked": 9, "quotes_not_found": 0, "verdict": "fixed"},
+  "confidence": "medium",
+  "notes_for_editor": "The 2003 date is the register's YEAR_CONSTRUCTED for the present structure. The 1958-1967 items show a Whitefish tower staffed before 2003, so the steel tower was not the first at this name; no source read says whether the earlier tower stood on the same spot. The newspaper items are read through a lookout-history site that quotes the Peace River Record Gazette; the newspapers themselves were not read. Brief's access 'closed' is not stated by any source, so no access level is recorded; visit.drive_up comes from the register's ACCESS_MODE 'drive'. Agency is left out: the brief's 'Alberta Wildfire' is not named in any source read for this site. The staffing as_of 1967 is the latest item found; current staffing is unknown. Tower men are not named in the story."
+}

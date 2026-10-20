@@ -1,0 +1,103 @@
+{
+  "id": "ca-ab-chipewyan-lakes",
+  "researched": "2026-10-20",
+  "summary": "Steel tower, 30 m, that Alberta's register dates to 2015; listed as active and reached by air. No other source found describes it.",
+  "facts": {
+    "design": "Steel tower",
+    "height_m": 30.0,
+    "status": "standing",
+    "agency": "Alberta Wildfire (Alberta Agriculture and Forestry)",
+    "access": {
+      "level": "restricted",
+      "note": "Register lists the tower as active with fly access (reached by air). No source found says whether the public may visit the site."
+    },
+    "visit": {
+      "drive_up": false
+    }
+  },
+  "events": [
+    {
+      "year": 2015,
+      "event": "built",
+      "note": "Register gives 2015 as the year of construction for the tower.",
+      "cite": [1]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [1],
+      "supports": "Chipewyan Lakes record: steel tower, built 2015, 30 m tall",
+      "quote": "\"NAME\":\"CHIPEWYAN LAKES\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2015,\"TOWER_HEIGHT\":30.0"
+    },
+    {
+      "cite": [1],
+      "supports": "Chipewyan Lakes record: elevation 615.06 m",
+      "quote": "\"ELEVATION\":615.06"
+    },
+    {
+      "cite": [1],
+      "supports": "Chipewyan Lakes record: active, access mode fly (reached by air)",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"fly\""
+    },
+    {
+      "cite": [1],
+      "supports": "Chipewyan Lakes record: no weather station",
+      "quote": "\"WEATHER_STATION\":\"N\""
+    },
+    {
+      "cite": [2],
+      "supports": "Alberta operates 127 fire lookouts from April to October",
+      "quote": "The province operates 127 fire lookouts from April to October"
+    },
+    {
+      "cite": [2],
+      "supports": "Lookout operators detect about 30% of wildfire starts each year",
+      "quote": "lookout operators detecting approximately 30% of wildfire starts each year"
+    },
+    {
+      "cite": [2],
+      "supports": "Each operator covers a 40 km radius for locating and reporting fires",
+      "quote": "each lookout operator is responsible for locating and reporting wildfires within a 40-kilometre (25-mile) radius"
+    },
+    {
+      "cite": [3],
+      "supports": "Each lookout site is staffed by an observer, generally from April to October",
+      "quote": "Each site is staffed by a lookout observer whose job is to watch for wildfire all day, each day, generally from April to October."
+    }
+  ],
+  "corrections": [
+    {
+      "field": "access.level",
+      "current": "closed",
+      "proposed": "restricted",
+      "cite": [1],
+      "why": "The register lists the tower as active with fly access. It does not describe the site as closed."
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract",
+      "publisher": "Government of Alberta",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Wildfire Innovations: Camera Tower",
+      "publisher": "International Association of Wildland Fire (Wildfire magazine)",
+      "url": "https://www.iawfonline.org/article/wildfire-innovations-camera-tower/",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "Bears and fire lookouts",
+      "publisher": "Alberta.ca",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "verification": {"checked": "2026-10-20", "claims_checked": 9, "unsupported_removed": 0, "errors_fixed": 1, "quotes_spot_checked": 8, "quotes_not_found": 0, "verdict": "fixed"},
+  "confidence": "low",
+  "notes_for_editor": "Thin record. Only the Alberta register row and two general Alberta pages were found. Two searches turned up no Chipewyan Lakes-specific history, and the search results held no lookout-specific pages for this tower. Brief built 2015 matches the register. Brief access closed is corrected to restricted (active, fly access). The register query is the all-records query (where=1=1) because the name-filtered query returned a server error. The agency name follows the Alberta.ca bears page wording; the brief said Alberta Wildfire. The brief gave no local unit, so the story names only the province."
+}

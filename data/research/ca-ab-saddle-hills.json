@@ -1,0 +1,143 @@
+{
+  "id": "ca-ab-saddle-hills",
+  "researched": "2026-10-20",
+  "summary": "Steel tower, 30 m, built 2016 per Alberta's wildfire register; a September 2023 news report used it as a reference point for a seven-hectare wildfire nearby.",
+  "facts": {
+    "design": "Steel tower",
+    "height_m": 30.0,
+    "status": "standing",
+    "staffing": {
+      "status": "observer on duty, generally April to October (Alberta's description of its 127 lookout sites)",
+      "as_of": "undated"
+    },
+    "access": {
+      "level": "restricted",
+      "note": "Register lists the tower as active with drive access (ACCESS_MODE drive). No source describes public visits."
+    },
+    "visit": {
+      "drive_up": true
+    },
+    "agency": "Alberta Wildfire"
+  },
+  "events": [
+    {
+      "year": 2016,
+      "event": "built",
+      "note": "Register gives 2016 as the construction year for the steel tower.",
+      "cite": [1]
+    },
+    {
+      "year": 2023,
+      "event": "fire",
+      "note": "News report dated 18 September 2023: a seven-hectare wildfire near the Saddle Hills forest tower was listed as being held. The report does not give the fire's exact location, so the link to this tower rests on the shared name.",
+      "cite": [4]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [1],
+      "supports": "Saddle Hills record: steel tower, built 2016, 30 m tall, elevation 967.0 m",
+      "quote": "\"NAME\":\"SADDLE HILLS\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2016,\"TOWER_HEIGHT\":30.0,\"ELEVATION\":967.0"
+    },
+    {
+      "cite": [1],
+      "supports": "Saddle Hills record: coordinates about 55.62 N, 119.72 W",
+      "quote": "\"LATITUDE\":55.623388,\"LONGITUDE\":-119.716873"
+    },
+    {
+      "cite": [1],
+      "supports": "Saddle Hills record: active, drive access",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"drive\""
+    },
+    {
+      "cite": [1],
+      "supports": "Saddle Hills record: has a weather station",
+      "quote": "\"WEATHER_STATION\":\"Y\",\"WildfirePrimary.GDB.WF_WILDFIRE_LOOKOUT.FID\":502426"
+    },
+    {
+      "cite": [2],
+      "supports": "Alberta has 127 wildfire lookout sites; each is staffed by an observer, generally April to October",
+      "quote": "Each site is staffed by a lookout observer whose job is to watch for wildfire all day, each day, generally from April to October."
+    },
+    {
+      "cite": [2],
+      "supports": "Alberta has 127 wildfire lookout sites across its boreal forest and along the Rockies",
+      "quote": "127 wildfire lookout sites are located throughout Alberta's boreal forest and along the Rocky Mountains."
+    },
+    {
+      "cite": [3],
+      "supports": "observer's main duty is early detection of smoke and fires",
+      "quote": "provide early detection of smoke and fires"
+    },
+    {
+      "cite": [3],
+      "supports": "observers report smoke, fire and lightning observations",
+      "quote": "report smoke, fire and lightning observations"
+    },
+    {
+      "cite": [4],
+      "supports": "report dated 18 September 2023",
+      "quote": "September 18, 2023"
+    },
+    {
+      "cite": [4],
+      "supports": "seven-hectare wildfire near the Saddle Hills forest tower, listed as being held",
+      "quote": "Despite a seven hectare wildfire listed as being held near the Saddle Hills forest tower, officials with Alberta Wildfire are urging everyone in the Grande Prairie Forest Area to be extra diligent with fire safety."
+    },
+    {
+      "cite": [4],
+      "supports": "air tanker drops and ground crews placing containment lines slowed the fire",
+      "quote": "multiple air tanker drops along with ground crews placing containment lines helped slow the growth of the blaze"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "access.level",
+      "current": "closed",
+      "proposed": "restricted",
+      "cite": [1],
+      "why": "Register lists the tower as active with drive access (ACCESS_MODE drive). No source says it is closed. Restricted fits a staffed station where no public visits are described."
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract",
+      "publisher": "Government of Alberta",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=UPPER(NAME)%20LIKE%20%27%25ROCKY%25%27%20OR%20UPPER(NAME)%20LIKE%20%27%25ROUND%25%27%20OR%20UPPER(NAME)%20LIKE%20%27%25SADDLE%25%27&outFields=*&f=json",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Bears and fire lookouts",
+      "publisher": "Alberta.ca, Government of Alberta",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "Lookout observers, Employment standards exceptions",
+      "publisher": "Alberta.ca, Government of Alberta",
+      "url": "https://www.alberta.ca/lookout-observers-employment-standards-exceptions",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 4,
+      "title": "Seven hectare wildfire sparked in Saddle Hills listed as being held",
+      "publisher": "My Grande Prairie Now",
+      "url": "https://www.mygrandeprairienow.com/111403/news/7-hectare-wildfire-sparked-in-saddle-hills-listed-as-being-held/",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "verification": {
+    "checked": "2026-10-20",
+    "claims_checked": 10,
+    "unsupported_removed": 0,
+    "errors_fixed": 3,
+    "quotes_spot_checked": 11,
+    "quotes_not_found": 0,
+    "verdict": "fixed"
+  },
+  "confidence": "medium",
+  "notes_for_editor": "Register record plus one 2023 news item. The news report names the Saddle Hills forest tower but gives no coordinates for the fire, so linking the fire to this tower rests on the shared name and area. The brief has no local_unit for this tower, so the story names no municipality. Brief lists access as closed; see corrections. Staffing text is Alberta's program-wide description, not a tower-specific record."
+}

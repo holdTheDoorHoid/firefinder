@@ -1,0 +1,157 @@
+{
+  "id": "ca-ab-buffalo",
+  "researched": "2026-10-20",
+  "summary": "Alberta register lists a 30 m steel lookout tower built 2011 and active; no source found describes its history, public access or current condition.",
+  "facts": {
+    "design": "Steel tower (register lookout type)",
+    "height_m": 30.0,
+    "status": "standing",
+    "staffing": {
+      "status": "staffed, generally April to October (general Alberta description)",
+      "as_of": "undated (Alberta.ca page)"
+    },
+    "access": {
+      "level": "restricted",
+      "note": "No source says the public may visit. The register codes access mode as drive. Alberta describes its lookout sites as isolated working sites."
+    },
+    "agency": "Alberta Wildfire"
+  },
+  "events": [
+    {
+      "year": 2011,
+      "event": "built",
+      "note": "Register Year Constructed for the steel tower.",
+      "cite": [1]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [1],
+      "supports": "Register row for Buffalo: steel lookout type, year constructed 2011, tower height 30 m, elevation 801.0 m",
+      "quote": "\"NAME\":\"BUFFALO\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2011,\"TOWER_HEIGHT\":30.0,\"ELEVATION\":801.0"
+    },
+    {
+      "cite": [1],
+      "supports": "Register: Buffalo is active and its access mode is drive",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"drive\""
+    },
+    {
+      "cite": [1],
+      "supports": "Register: the site has a weather station",
+      "quote": "\"WEATHER_STATION\":\"Y\""
+    },
+    {
+      "cite": [3],
+      "supports": "The province says its sites are picked for clear sightlines, so fires can be detected and reported",
+      "quote": "are located where visibility is favourable to detect and report wildfires"
+    },
+    {
+      "cite": [2],
+      "supports": "After 1912 Alberta had summit lookouts built on the ground or on short stilts, and towers on high hills in the boreal forest",
+      "quote": "After 1912 there were two types of lookouts: summit lookouts, built on the ground or on short stilts"
+    },
+    {
+      "cite": [2],
+      "supports": "Towers were built on high hills in the boreal forest",
+      "quote": "towers, built on high hills in the boreal forest, which elevated the observer over any obstacles to vision"
+    },
+    {
+      "cite": [2],
+      "supports": "Steel came into use in the 1920s and gradually took over from wood in tower building",
+      "quote": "Introduced in the 1920s, steel increasingly replaced wood for tower construction."
+    },
+    {
+      "cite": [4],
+      "supports": "Alberta says each lookout site has an observer on watch, generally from April to October",
+      "quote": "Each site is staffed by a lookout observer whose job is to watch for wildfire all day, each day, generally from April to October."
+    },
+    {
+      "cite": [5],
+      "supports": "A 2015 Alberta Wildfire review says most lookouts run through the core fire season, while the rest are crewed only when hazard and risk peak",
+      "quote": "majority of lookouts are staffed throughout the core fire season with the remainder staffed only during high hazard and risk."
+    },
+    {
+      "cite": [4],
+      "supports": "Alberta calls its lookout sites isolated and says staff need to be ready for a varied set of situations, including a run-in with a curious bear",
+      "quote": "Wildfire lookout sites are isolated and the staff that work them must be prepared for a wide range of possibilities, including an encounter with a curious bear."
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract",
+      "publisher": "Government of Alberta",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20IN%20(%27BLACKSTONE%27,%27BRAZEAU%27,%27BUFFALO%27)&outFields=*&returnGeometry=false&f=json",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Lonely Lookouts",
+      "publisher": "RETROactive, Alberta Historic Places",
+      "url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "Fire lookouts",
+      "publisher": "Open Government Alberta",
+      "url": "https://open.alberta.ca/publications/fire-lookouts",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 4,
+      "title": "Bears and fire lookouts",
+      "publisher": "Alberta.ca",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 5,
+      "title": "Wildfire Management Program and the 2015 Fire Season (2015 Alberta Wildfire Review)",
+      "publisher": "Alberta Agriculture and Forestry, hosted by FireSmart Alberta",
+      "url": "https://firesmartalberta.ca/wp-content/uploads/2023/09/2015WildfireReviewDetailed-Dec2016.pdf",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "access.level",
+      "current": "closed",
+      "proposed": "restricted",
+      "cite": [1],
+      "why": "The register has no access-level field. The pipeline derives 'closed' from ACTIVE=Y (pipeline/regional/alberta_wildfire.py lines 36-39 and 146-149). No source found says the site is closed or open to the public."
+    },
+    {
+      "field": "access.note",
+      "current": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited.",
+      "proposed": "No source says the public may visit. The register codes access mode as drive.",
+      "cite": [1],
+      "why": "The March–October dates, the 'seasonal home' wording and the visit warning come from the pipeline's ACCESS_NOTE template (alberta_wildfire.py lines 79-82), set on every active record. The register's fields do not contain them."
+    },
+    {
+      "field": "events.built.note",
+      "current": "The present structure (Alberta Wildfire's year of construction).",
+      "proposed": "Register Year Constructed for the steel tower.",
+      "cite": [1],
+      "why": "The register field is Year Constructed. 'Present structure' is a pipeline gloss, not register text."
+    }
+  ],
+  "resolved_conflicts": [
+    {
+      "field": "staffing",
+      "explanation": "Alberta.ca says each lookout site is staffed by an observer, generally April to October. The 2015 Alberta Wildfire review says most lookouts were staffed through the core fire season and the rest only during high hazard and risk. The story reports both and does not choose.",
+      "cite": [4, 5]
+    }
+  ],
+  "verification": {
+    "checked": "2026-10-20",
+    "claims_checked": 8,
+    "unsupported_removed": 0,
+    "errors_fixed": 1,
+    "quotes_spot_checked": 10,
+    "quotes_not_found": 0,
+    "verdict": "fixed"
+  },
+  "confidence": "low",
+  "notes_for_editor": "Thin record. The register row gives type (Steel), year (2011), height (30.0 m), elevation (801.0 m), map sheet 84F/16, active flag, access mode drive and weather station, and nothing else for this site. The brief's access 'closed' and the March-October staffing wording are pipeline inferences, not register fields; see corrections. Staffing in facts rests on Alberta's general description of all sites, and the 2015 review qualifies it. No Buffalo-specific history, fire, photo or rental source was found. The Canadian Geographical Names cache has a 'Buffalo Hill' under a kilometre from the register point; it was not used as a source for the tower. A Fort McMurray Today article on Alberta lookout towers mentions the Wood Buffalo region but not this site, so it was not cited. Access is set to restricted for the same reason as Blackstone."
+}

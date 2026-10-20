@@ -1,0 +1,157 @@
+{
+  "id": "ca-ab-moberly",
+  "researched": "2026-10-20",
+  "summary": "Alberta's register dates the Moberly cabin to 1967; the only firsthand account is a 2014 trip report, and no source describes the site today.",
+  "facts": {
+    "design": "Cabin",
+    "height_m": 5.0,
+    "status": "standing",
+    "access": {
+      "level": "restricted",
+      "note": "Alberta says the public may not climb lookout towers and lookout dwellings are for private use. The register codes the site as drive access. No source describes its access today."
+    },
+    "visit": {
+      "climbable": false
+    },
+    "agency": "Alberta Wildfire"
+  },
+  "events": [
+    {
+      "year": 1967,
+      "event": "built",
+      "note": "Register year of construction (YEAR_CONSTRUCTED) for the cabin listed at this site.",
+      "cite": [
+        1
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [
+        1
+      ],
+      "supports": "Register: Moberly is a cabin, built 1967, 5.0 m tower height, 1,676.2 m elevation",
+      "quote": "\"NAME\":\"MOBERLY\",\"LOOKOUT_TYPE\":\"Cabin\",\"YEAR_CONSTRUCTED\":1967,\"TOWER_HEIGHT\":5.0,\"ELEVATION\":1676.2"
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "Register: lookout is active; access code drive (reached by road)",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"drive\""
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "Summit is in the Rock Lake area of the Willmore Wilderness",
+      "quote": "Rock Lake / Willmore Wilderness, AB"
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "Trip report dated March 2014",
+      "quote": "March 22, 2014"
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "Lookout building and official plaque on the summit",
+      "quote": "An official plaque"
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "Lookout building seen on the summit",
+      "quote": "Another photo showing the lookout building"
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "Trees cover the summit; views limited even in good weather",
+      "quote": "the summit is treed and there’s limited views even during good weather periods"
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "Rock Lake road unmaintained; the writer's car could not handle it",
+      "quote": "The road wasn’t maintained and there’s absolutely no way for my car to handle it."
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "Road detour added 2.2 km one way",
+      "quote": "That added 2.2 km one-way to the trip right away"
+    },
+    {
+      "cite": [
+        3
+      ],
+      "supports": "Public may not climb lookout towers",
+      "quote": "For safety reasons, the public is forbidden to climb the lookout tower."
+    },
+    {
+      "cite": [
+        3
+      ],
+      "supports": "Lookout dwellings are for private use",
+      "quote": "Lookout dwellings are for private, not public, use."
+    },
+    {
+      "cite": [
+        3
+      ],
+      "supports": "Visitors should not expect a tour of the cabin",
+      "quote": "Please do not expect a tour of the cabin."
+    },
+    {
+      "cite": [
+        3
+      ],
+      "supports": "Alberta Wildfire is the agency that recruits and runs lookout observers",
+      "quote": "Alberta Wildfire recruitment"
+    }
+  ],
+  "resolved_conflicts": [
+    {
+      "field": "access",
+      "explanation": "The register codes the site as drive access, but the 2014 trip report found the access road unmaintained and beyond the writer's car. Both are reported; neither is treated as current.",
+      "cite": [
+        1,
+        2
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract",
+      "publisher": "Government of Alberta",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25MOBERLY%25%27%20OR%20NAME%20LIKE%20%27%25MOCKINGBIRD%25%27%20OR%20NAME%20LIKE%20%27%25MUSKWA%25%27&outFields=*&returnGeometry=false&f=json",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Moberly Lookout",
+      "publisher": "Steven's Peak-bagging Journey",
+      "url": "https://stevensong.com/moberly-lookout",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "How we fight wildfires",
+      "publisher": "Government of Alberta",
+      "url": "https://www.alberta.ca/how-we-fight-wildfires.aspx",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "confidence": "low",
+  "notes_for_editor": "Register values (YEAR_CONSTRUCTED 1967, TOWER_HEIGHT 5.0, ELEVATION 1676.2, ACCESS_MODE drive, ACTIVE Y) come from the public query on the Alberta lookout layer, the same way the Athabasca record sourced its year. That layer's metadata labels the dataset Protected, so the editor should confirm these values may be published. Status 'standing' rests only on the 2014 trip report; no later source describes the site. The brief's access 'closed' is not stated by any source read, so it is recorded as restricted, as in the Athabasca record. Two searches and the page reads found nothing on staffing or fires.",
+  "verification": {"checked": "2026-10-20", "claims_checked": 8, "unsupported_removed": 0, "errors_fixed": 2, "quotes_spot_checked": 13, "quotes_not_found": 0, "verdict": "fixed"}
+}

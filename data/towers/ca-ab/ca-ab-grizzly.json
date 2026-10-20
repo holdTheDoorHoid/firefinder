@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-grizzly",
   "name": "Grizzly Tower",
+  "summary": "Alberta wooden lookout built 1922 by the Canadian Forest Service, abandoned 1929, NHLR-registered June 1996; the 1996 standing claim is the latest source found.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,10 +17,10 @@
   "material": "wood",
   "material_from": "nhlr",
   "roles": [],
-  "design": null,
+  "design": "guyed tamarack pole tower with a 7 by 7 ft wooden cab and a log ground house",
   "height_m": null,
-  "status": "standing",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "Register describes it as still standing at its 1996 inspection; no later source read",
   "registers": [
     {
       "register": "NHLR",
@@ -28,15 +29,15 @@
       "url": "http://nhlr.org/lookouts/can/ab/grizzly-tower/"
     }
   ],
-  "agency": null,
+  "agency": "Canadian Forest Service (builder, per NHLR); no current managing agency named in sources read",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1929"
   },
   "visit": {
     "climbable": null,
@@ -46,10 +47,32 @@
   "rental": null,
   "events": [
     {
+      "year": 1922,
+      "event": "built",
+      "note": "Constructed by the federal Canadian Forest Service and staffed by Provincial Forest Rangers (NHLR)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/ab/grizzly-tower/"
+    },
+    {
+      "year": 1929,
+      "event": "abandoned",
+      "note": "Abandoned when a replacement lookout was established at a better location (NHLR)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/ab/grizzly-tower/"
+    },
+    {
+      "year": 1996,
+      "event": "assessed",
+      "note": "Inspected May 1996 and found suitable for restoration with the Alberta Chapter of FFLA (NHLR); no completed restoration found",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/ab/grizzly-tower/"
+    },
+    {
       "year": 1996,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: June 5, 1996",
-      "from": "nhlr"
+      "note": "Registered June 5, 1996 as CAN 1, AB 1 (NHLR)",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/ab/grizzly-tower/"
     }
   ],
   "photos": [
@@ -87,10 +110,46 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-grizzly",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "nhlr",
+          "value": "standing"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-20) gives unknown where the source records give standing. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

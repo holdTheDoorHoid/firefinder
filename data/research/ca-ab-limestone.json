@@ -1,0 +1,47 @@
+{
+  "id": "ca-ab-limestone",
+  "researched": "2026-10-20",
+  "summary": "Alberta's lookout dataset dates the present 5 m summit cabin to 1963 and lists it active; a 2010 visit found an observer at the summit.",
+  "facts": {
+    "design": "Summit cabin, 5 m (16 ft) high, per the provincial lookout dataset",
+    "height_m": 5.0,
+    "staffing": {
+      "status": "observer at the summit when a visitor arrived",
+      "as_of": "2010-07-08"
+    }
+  },
+  "events": [
+    {"year": 1963, "event": "built", "note": "Year the present cabin was built, per the provincial dataset", "cite": [1]},
+    {"year": 2010, "event": "staffed", "note": "Observer greeted a visitor at the summit on 8 July 2010", "cite": [2]}
+  ],
+  "evidence": [
+    {"cite": [1], "supports": "the dataset gives 1963 as the year the present cabin was built and calls it a cabin", "quote": "\"NAME\":\"LIMESTONE\",\"LABEL\":\"LI\",\"LOOKOUT_ID\":\"LI\",\"LOOKOUT_TYPE\":\"Cabin\",\"YEAR_CONSTRUCTED\":1963"},
+    {"cite": [1], "supports": "the cabin is 5 m high at an elevation of 2,254.3 m", "quote": "\"TOWER_HEIGHT\":5.0,\"ELEVATION\":2254.3"},
+    {"cite": [1], "supports": "the dataset lists the lookout as active", "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"fly\""},
+    {"cite": [2], "supports": "the lookout sits on the highest point of its ridge", "quote": "the distant lookout building sitting on the highest point"},
+    {"cite": [2], "supports": "the visit was on 8 July 2010", "quote": "Thurs. 8 July: Limestone Lookout"},
+    {"cite": [2], "supports": "the blog post is dated July 2010", "quote": "Sunday, July 11, 2010"},
+    {"cite": [2], "supports": "an observer greeted the visitor at the summit", "quote": "Reaching the summit, I was greeted by a pleasant middle-aged lady observer."},
+    {"cite": [2], "supports": "the observer went back inside to fetch the visitors' book", "quote": "to get the visitors book for me to sign"},
+    {"cite": [2], "supports": "a sign on the access road called it a private road owned by Shell", "quote": "this was a private road owned by Shell"},
+    {"cite": [3], "supports": "the snowshoe ascent was on 5 April 2014", "quote": "On 5 April 2014, I invited Bob Spirko to"},
+    {"cite": [3], "supports": "the route passed communication towers at the normal starting point", "quote": "communication towers at the normal start"},
+    {"cite": [3], "supports": "the ascent reached the summit lookout", "quote": "I grinded it out for another hour and a half to reach the summit lookout."},
+    {"cite": [4], "supports": "OpenStreetMap maps the site as Limestone Fire Lookout", "quote": "Limestone Fire Lookout"},
+    {"cite": [4], "supports": "OpenStreetMap tags the site as an observation tower", "quote": "observation"},
+    {"cite": [5], "supports": "early summit lookouts were built on the ground or on short stilts", "quote": "summit lookouts, built on the ground or on short stilts"}
+  ],
+  "sources": [
+    {"n": 1, "title": "Wildfire lookout records for Limestone, Livock and Mayberne (FRIAA FireSmart vector data, query)", "publisher": "Government of Alberta", "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25LIMESTONE%25%27%20OR%20NAME%20LIKE%20%27%25LIVOCK%25%27%20OR%20NAME%20LIKE%20%27%25MAYBERNE%25%27%20OR%20NAME%20LIKE%20%27%25CLARKE%25%27&outFields=NAME,LABEL,LOOKOUT_ID,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACTIVE,ACCESS_MODE,KEY_LOOKOUT,LATITUDE,LONGITUDE,MAP_NUMBER,LOCATION_VERIFIED&returnGeometry=false&f=json", "accessed": "2026-10-20"},
+    {"n": 2, "title": "Three more Alberta fire lookouts!", "publisher": "The Passionate Hiker (blog)", "url": "https://thepassionatehiker.blogspot.com/2010/07/three-more-alberta-fire-lookouts.html", "accessed": "2026-10-20"},
+    {"n": 3, "title": "Limestone Mountain Lookout", "publisher": "Sonny Bou", "url": "http://sonnybou.ca/ssbou2014/limestonemountainlookout.html", "accessed": "2026-10-20"},
+    {"n": 4, "title": "Limestone Fire Lookout (OpenStreetMap relation 19232681)", "publisher": "OpenStreetMap", "url": "https://www.openstreetmap.org/relation/19232681", "accessed": "2026-10-20"},
+    {"n": 5, "title": "Lonely Lookouts", "publisher": "RETROactive, Alberta Historic Places", "url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/", "accessed": "2026-10-20"}
+  ],
+  "resolved_conflicts": [
+    {"field": "type", "explanation": "The provincial dataset calls the Limestone structure a cabin; OpenStreetMap tags the site as an observation tower. The story follows the provincial label and mentions the OpenStreetMap tag.", "cite": [1, 4]}
+  ],
+  "verification": {"checked": "2026-10-20", "claims_checked": 9, "unsupported_removed": 1, "errors_fixed": 2, "quotes_spot_checked": 15, "quotes_not_found": 0, "verdict": "fixed"},
+  "confidence": "medium",
+  "notes_for_editor": "Build year, height, elevation and active status come only from the Alberta dataset (the same values as our record). Staffing is a single 2010 visit. No fire history, no agency statement and no current access rule was found, so no access fact is recorded. The brief's access 'closed' is not backed by any source I read, and the 2010 account describes visitors signing a book, so please check it against the agency. The 2010 route description is a private industrial road, and the story gives no directions on purpose. The firelookout.ca Alberta index returned no usable text. Web search budget for this tower was used on the two queries."
+}

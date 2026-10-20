@@ -1,6 +1,7 @@
 {
   "id": "ca-bc-mara-mountain",
   "name": "Mara Mountain Lookout",
+  "summary": "Forest Service lookout on Morton Peak: built 1925, replaced 1950, used until 1998, restored from 2012. Reached by a 9.4 km trail or a rough 4x4 road.",
   "other_names": [
     "Mara Fire Lookout"
   ],
@@ -18,7 +19,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Fire watch hut on the summit",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -26,8 +27,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=yes."
+    "level": "public",
+    "note": "Reached by a 9.4 km trail with flagged, less obvious route near the summit, or by a rough 4x4 road from Kingfisher that may be closed by snow until August. No source says whether the building is open to visitors."
   },
   "staffing": {
     "status": "unknown",
@@ -35,13 +36,91 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "9.4 km trail; the maintained trail ends at a 4x4 post where it enters Kingfisher Creek Provincial Park."
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1925,
+      "event": "built",
+      "note": "BC Forest Service first constructed the Mara lookout.",
+      "from": "research",
+      "source_url": "https://www.vernonmorningstar.com/2012/09/28/historic-lookout-restored/",
+      "source_urls": [
+        "https://www.vernonmorningstar.com/2012/09/28/historic-lookout-restored/",
+        "https://shuswappassion.ca/recreation/an-expedition-into-the-mara-alpine/"
+      ]
+    },
+    {
+      "year": 1950,
+      "event": "replaced",
+      "note": "A new structure replaced the 1925 lookout; it was used until 1998.",
+      "from": "research",
+      "source_url": "https://www.vernonmorningstar.com/2012/09/28/historic-lookout-restored/",
+      "source_urls": [
+        "https://www.vernonmorningstar.com/2012/09/28/historic-lookout-restored/",
+        "https://shuswappassion.ca/recreation/an-expedition-into-the-mara-alpine/"
+      ]
+    },
+    {
+      "year": 1998,
+      "event": "staffed_last",
+      "note": "Used by the Forest Service until 1998.",
+      "from": "research",
+      "source_url": "https://www.vernonmorningstar.com/2012/09/28/historic-lookout-restored/",
+      "source_urls": [
+        "https://www.vernonmorningstar.com/2012/09/28/historic-lookout-restored/",
+        "https://shuswappassion.ca/recreation/an-expedition-into-the-mara-alpine/"
+      ]
+    },
+    {
+      "year": 2012,
+      "event": "other",
+      "note": "BC government paid for restoration and took over management of the site through Recreation Sites and Trails BC.",
+      "from": "research",
+      "source_url": "https://shuswappassion.ca/recreation/an-expedition-into-the-mara-alpine/"
+    },
+    {
+      "year": 2012,
+      "event": "restored",
+      "note": "Province announced initial restoration and upgrading, due to finish mid-October 2012. A local account calls the 2012 funding a complete restoration.",
+      "from": "research",
+      "source_url": "https://news.gov.bc.ca/releases/2012FOR0177-001436",
+      "source_urls": [
+        "https://news.gov.bc.ca/releases/2012FOR0177-001436",
+        "https://www.vernonmorningstar.com/2012/09/28/historic-lookout-restored/",
+        "https://shuswappassion.ca/recreation/an-expedition-into-the-mara-alpine/"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Historic lookout restored (Vernon Morning Star)",
+      "url": "https://www.vernonmorningstar.com/2012/09/28/historic-lookout-restored/",
+      "kind": "reference"
+    },
+    {
+      "label": "An expedition into the Mara alpine (Shuswap Passion)",
+      "url": "https://shuswappassion.ca/recreation/an-expedition-into-the-mara-alpine/",
+      "kind": "reference"
+    },
+    {
+      "label": "Forest fire lookout restoration preserves history (BC Government News)",
+      "url": "https://news.gov.bc.ca/releases/2012FOR0177-001436",
+      "kind": "reference"
+    },
+    {
+      "label": "Driving the Rough 4x4 Road to the Lookout at Mara Mountain in BC (Dangerous Roads)",
+      "url": "https://www.dangerousroads.org/north-america/canada/13201-driving-the-rough-4x4-road-to-the-lookout-at-mara-mountain-in-bc.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Mara Lookout (Shuswap Trails)",
+      "url": "https://shuswaptrails.com/trails.php?area=0&id=40",
+      "kind": "reference"
+    },
     {
       "label": "OpenStreetMap way 597917668",
       "url": "https://www.openstreetmap.org/way/597917668",
@@ -60,10 +139,30 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-mara-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

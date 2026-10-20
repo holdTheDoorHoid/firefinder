@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-porcupine",
   "name": "Porcupine Fire Lookout",
+  "summary": "Porcupine Hills tower: a 1977 jet crash on its ridge killed the pilot and started fires; the register dates the present steel tower to 2003.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,21 +17,20 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "Steel tower",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": "Alberta Wildfire",
+  "agency": "Alberta Agriculture and Forestry (Wildfire)",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "Register lists the tower as active with drive access. The observer lives at the lookout, and a 2018 visitor went in with the observer's permission. No source describes public visits."
   },
   "staffing": {
     "status": "staffed",
-    "as_of": null,
-    "note": "Seasonal lookout observer (Alberta Wildfire)"
+    "as_of": "2018"
   },
   "visit": {
     "climbable": null,
@@ -40,15 +40,70 @@
   "rental": null,
   "events": [
     {
+      "year": 1970,
+      "event": "replaced",
+      "note": "Steel tower replaced the earliest, wooden tower, according to a 2018 hiking blog that draws on a guidebook (guidebook not read).",
+      "from": "research",
+      "source_url": "https://peaksandstreams.com/2018/04/29/porcupine-fire-lookout-28-april-2018/"
+    },
+    {
+      "year": 1977,
+      "event": "fire",
+      "note": "F-106A jet crashed into the ridge during a mock-attack exercise; fires broke out in the wreckage. The 37 m (120 ft) tower narrowly missed.",
+      "from": "research",
+      "source_url": "https://www.passheraldarchive.ca/archives/181121/index4.htm"
+    },
+    {
+      "year": 1977,
+      "event": "other",
+      "note": "Pilot died in the crash.",
+      "from": "research",
+      "source_url": "https://www.passheraldarchive.ca/archives/181121/index4.htm"
+    },
+    {
+      "year": 1977,
+      "event": "staffed",
+      "note": "George Hames and his wife, who had duties at the lookout, were in the station trailer near the tower when the crash woke them.",
+      "from": "research",
+      "source_url": "https://www.passheraldarchive.ca/archives/181121/index4.htm"
+    },
+    {
       "year": 2003,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Register construction year for the present steel tower.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20IN%20(%27PORCUPINE%27%2C%27RASPBERRY%20RIDGE%27%2C%27RED%20EARTH%27)&outFields=*&returnGeometry=false&f=json"
+    },
+    {
+      "year": 2018,
+      "event": "staffed",
+      "note": "Observer lives at the lookout; the 2018 season opened almost a month late because of snow.",
+      "from": "research",
+      "source_url": "https://peaksandstreams.com/2018/04/29/porcupine-fire-lookout-28-april-2018/"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Disaster at Porcupine Lookout (John Kinnear, Looking Back column) (Crowsnest Pass Herald)",
+      "url": "https://www.passheraldarchive.ca/archives/181121/index4.htm",
+      "kind": "reference"
+    },
+    {
+      "label": "Wildfire lookout records, WF_WILDFIRE_LOOKOUT query for Porcupine, Raspberry Ridge and Red Earth (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20IN%20(%27PORCUPINE%27%2C%27RASPBERRY%20RIDGE%27%2C%27RED%20EARTH%27)&outFields=*&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Porcupine Fire Lookout, 28 April 2018 (peaks and streams (Dave McMurray))",
+      "url": "https://peaksandstreams.com/2018/04/29/porcupine-fire-lookout-28-april-2018/",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Government of Alberta (Alberta.ca))",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -85,10 +140,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-porcupine",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

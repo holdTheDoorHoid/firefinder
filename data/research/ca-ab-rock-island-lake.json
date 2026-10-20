@@ -1,0 +1,120 @@
+{
+  "id": "ca-ab-rock-island-lake",
+  "researched": "2026-10-20",
+  "summary": "Steel lookout tower, 30 m (98 ft), with a 2014 construction year in Alberta's lookout dataset; listed active. No source describes public visits.",
+  "facts": {
+    "design": "Steel tower, 30 m (98 ft) tall",
+    "height_m": 30,
+    "staffing": {
+      "status": "listed active; Alberta says its lookout sites are each staffed by an observer, generally April to October",
+      "as_of": "undated Alberta page, accessed 2026-10-20"
+    },
+    "agency": "Alberta Wildfire, with Agriculture and Forestry"
+  },
+  "events": [
+    {
+      "year": 2014,
+      "event": "built",
+      "note": "Alberta's lookout dataset gives 2014 as the year constructed; the listed type is steel",
+      "cite": [1]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [1],
+      "supports": "2014 year constructed; steel type",
+      "quote": "\"NAME\":\"ROCK ISLAND LAKE\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2014"
+    },
+    {
+      "cite": [1],
+      "supports": "30 m tower height",
+      "quote": "\"TOWER_HEIGHT\":30.0"
+    },
+    {
+      "cite": [1],
+      "supports": "listed active",
+      "quote": "\"ELEVATION\":722.0,\"ACTIVE\":\"Y\""
+    },
+    {
+      "cite": [2],
+      "supports": "steel entered boreal tower construction in the 1920s and gradually displaced wood",
+      "quote": "Introduced in the 1920s, steel increasingly replaced wood for tower construction."
+    },
+    {
+      "cite": [2],
+      "supports": "boreal forest context for the tower types",
+      "quote": "In the boreal forest area, a variety of tower types evolved"
+    },
+    {
+      "cite": [3],
+      "supports": "127 lookout sites",
+      "quote": "127 wildfire lookout sites are located throughout Alberta's boreal forest"
+    },
+    {
+      "cite": [3],
+      "supports": "each site staffed by a lookout observer, generally April to October",
+      "quote": "Each site is staffed by a lookout observer whose job is to watch for wildfire all day, each day, generally from April to October."
+    },
+    {
+      "cite": [3],
+      "supports": "sites described as isolated",
+      "quote": "Wildfire lookout sites are isolated"
+    },
+    {
+      "cite": [3],
+      "supports": "wildfire staff with Agriculture and Forestry have adopted BearSmart recommendations for many sites",
+      "quote": "Wildfire staff with Agriculture and Forestry have adopted a number of Alberta BearSmart recommendations for many of their sites"
+    },
+    {
+      "cite": [4],
+      "supports": "campground bearing the lake's name",
+      "quote": "Tanasiuk Rock Island Lake Campground"
+    },
+    {
+      "cite": [4],
+      "supports": "campground open seasonally May to October",
+      "quote": "Open seasonally May-October"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Wildfire Lookouts of Alberta (FIReS layer query)",
+      "publisher": "Government of Alberta, geospatial.alberta.ca",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=UPPER(NAME)%20LIKE%20%27%25RAM%25%27%20OR%20UPPER(NAME)%20LIKE%20%27%25ROCK%25%27&outFields=NAME,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACTIVE,ACCESS_MODE&f=json&returnGeometry=false&resultRecordCount=50",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Lonely Lookouts",
+      "publisher": "RETROactive, Alberta Historic Places",
+      "url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "Bears and fire lookouts",
+      "publisher": "Alberta.ca",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 4,
+      "title": "Area Campgrounds",
+      "publisher": "MD of Opportunity",
+      "url": "https://www.mdopportunity.ab.ca/area-campground/",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "confidence": "medium",
+  "notes_for_editor": "1) Year, type, height and active flag come from one provincial dataset that its own metadata marks Protected (not for general-public maps). The story uses only those four values, no coordinates or access codes; an editor should confirm that citing the layer is acceptable. 2) No source read describes public access to this site, so the brief's 'closed' is neither confirmed nor corrected, and no access fact is recorded. 3) The staffing and BearSmart sentences are Alberta's general descriptions of all 127 lookout sites, not site-specific records. 4) No history before 2014 was found. 5) The MD of Opportunity campground page names the lake's campground but says nothing about the lookout, so the story keeps the two apart and no local unit is named for the lookout. 6) Search budget: 3 websearch.py queries, because the first two returned no lookout-specific pages.",
+  "verification": {
+    "checked": "2026-10-20",
+    "claims_checked": 8,
+    "unsupported_removed": 0,
+    "errors_fixed": 1,
+    "quotes_spot_checked": 11,
+    "quotes_not_found": 0,
+    "verdict": "fixed"
+  }
+}

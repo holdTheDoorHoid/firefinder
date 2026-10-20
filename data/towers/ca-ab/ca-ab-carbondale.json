@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-carbondale",
   "name": "Carbondale",
+  "summary": "Cabin-type lookout on Carbondale Hill, 5 m, dated 1982 by the register and still listed active; a 2020 visitor account describes a gate on the access road.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Cabin-type lookout",
   "height_m": 5.0,
   "status": "standing",
   "status_note": null,
@@ -24,8 +25,8 @@
   "agency": "Alberta Wildfire",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "Register lists the site as active with access mode drive. A 2020 visitor account describes a gate that blocks motor vehicles on the fire road. The public may not climb the lookout tower, and the province does not open lookouts for public viewing."
   },
   "staffing": {
     "status": "staffed",
@@ -33,22 +34,47 @@
     "note": "Seasonal lookout observer (Alberta Wildfire)"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": false,
+    "trail_note": "A 2020 visitor hiked up the gated fire road past a gate that blocks motor vehicles. The public may not climb the tower."
   },
   "rental": null,
   "events": [
     {
       "year": 1982,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Register gives 1982 as the year the present structure was built.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25CARBON%25%27&outFields=*&returnGeometry=false&f=json"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25CARBON%25%27&outFields=*&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Carbondale Hill August 2020 (on-top.ca)",
+      "url": "https://on-top.ca/Outings/2020/Carbondale-Hill-August-2020.html",
+      "kind": "reference"
+    },
+    {
+      "label": "The View from Here: Panoramas of Change from Alberta's Fire Lookouts (Mountain Legacy Project)",
+      "url": "https://mountainlegacy.ca/?p=365",
+      "kind": "reference"
+    },
+    {
+      "label": "Keeping eyes on the forest: A look at Alberta's wildfire lookouts (Lethbridge News Now)",
+      "url": "https://lethbridgenewsnow.com/?p=132432",
+      "kind": "reference"
+    },
+    {
+      "label": "How we fight wildfires (Alberta Wildfire, Government of Alberta)",
+      "url": "https://www.alberta.ca/how-we-fight-wildfires.aspx",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -72,10 +98,32 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-carbondale",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

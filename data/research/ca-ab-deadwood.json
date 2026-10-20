@@ -1,0 +1,127 @@
+{
+  "id": "ca-ab-deadwood",
+  "researched": "2026-10-20",
+  "summary": "Steel tower, 30 m, dated 2017 in Alberta's register; a 2009 lookout towers map already labels a Deadwood site.",
+  "facts": {
+    "design": "Steel tower",
+    "height_m": 30.0,
+    "status": "standing",
+    "access": {
+      "level": "restricted",
+      "note": "Register lists the tower as active, with access mode drive and a weather station. It does not describe public access."
+    }
+  },
+  "events": [
+    {
+      "year": 2009,
+      "event": "other",
+      "note": "A 2009 Alberta lookout towers map labels a site DEADWOOD. The label predates the register's 2017 construction year and does not say what stood on the site.",
+      "cite": [
+        2
+      ]
+    },
+    {
+      "year": 2017,
+      "event": "built",
+      "note": "Register gives 2017 as the year of construction.",
+      "cite": [
+        1
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [
+        1
+      ],
+      "supports": "Deadwood record: steel tower, built 2017, 30 m tall",
+      "quote": "\"NAME\":\"DEADWOOD\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2017,\"TOWER_HEIGHT\":30.0"
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "Deadwood record: elevation 648 m, map sheet 84C/11",
+      "quote": "\"ELEVATION\":648.0,\"MAP_NUMBER\":\"84C/11\""
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "2009 lookout towers map labels a site DEADWOOD",
+      "quote": "DEADWOOD"
+    },
+    {
+      "cite": [
+        3
+      ],
+      "supports": "Alberta towers have been taken down or moved and others built as settlement encroached",
+      "quote": "Over the years, with settlement encroachment, some of the towers have been taken down or moved and others have been built."
+    },
+    {
+      "cite": [
+        4
+      ],
+      "supports": "Each lookout site is staffed by a lookout observer, generally April to October",
+      "quote": "Each site is staffed by a lookout observer whose job is to watch for wildfire all day, each day, generally from April to October."
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "Deadwood record: active, access mode drive",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"drive\""
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "Deadwood record: weather station on site",
+      "quote": "\"WEATHER_STATION\":\"Y\""
+    }
+  ],
+  "corrections": [
+    {
+      "field": "access.level",
+      "current": "closed",
+      "proposed": "restricted",
+      "cite": [
+        1
+      ],
+      "why": "The register lists the tower as active with access mode drive. It does not describe the site as closed."
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract",
+      "publisher": "Government of Alberta",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25DEAD%25%27&outFields=*&returnGeometry=false&f=json",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Alberta lookout towers map (2009)",
+      "publisher": "Sustainable Resource Development, Government of Alberta",
+      "url": "https://open.alberta.ca/dataset/ed8b1916-03c2-4eb0-84c8-f2ea49d57866/resource/d0d2c0d7-0951-4937-92c0-8194ec362620/download/srd-lookout-towers-map-2009.pdf",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "All Along the Watchtower",
+      "publisher": "Alberta Views",
+      "url": "https://albertaviews.ca/all-along-the-watchtower/",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 4,
+      "title": "Alberta BearSmart and Alberta's fire lookouts",
+      "publisher": "Open Government Alberta",
+      "url": "https://open.alberta.ca/dataset/alberta-bearsmart-and-alberta-s-fire-lookouts",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "confidence": "medium",
+  "verification": {"checked": "2026-10-20", "claims_checked": 7, "unsupported_removed": 2, "errors_fixed": 0, "quotes_spot_checked": 7, "quotes_not_found": 0, "verdict": "fixed"},
+  "notes_for_editor": "Register facts are direct. The 2009 map label DEADWOOD shows the name was on the provincial map before the 2017 construction year, but the label alone does not show whether it marks the same site or what stood there, so the story does not say so. A Deadwood Peak lookout in Madera County, California, also turns up in search; it is not used. The register marks the location as not verified (LOCATION_VERIFIED N, verified by GPS). The Grande Prairie museum tower articles (CTV, Town & Country News) were checked and do not name Deadwood, so they are not linked. The brief's access value 'closed' is not supported and is corrected to restricted. The 2009 date comes from the map file name (srd-lookout-towers-map-2009.pdf) and the dataset record; the map text itself shows no date. Fact-check 2026-10-20: the dataset record shows Date Issued 2009-01-01, which supports the 2009 date. The access-mode gloss and the 'working government lookout' wording were removed from the story as unsupported."
+}

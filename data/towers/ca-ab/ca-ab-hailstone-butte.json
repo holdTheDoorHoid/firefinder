@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-hailstone-butte",
   "name": "Hailstone Butte Fire Lookout",
+  "summary": "Hailstone Butte station named as taking over from Cameron in 1953; Alberta Wildfire's layer dates the cabin now listed at the site to 1980.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Cabin rather than a tower, per Alberta Wildfire's layer",
   "height_m": 5.0,
   "status": "standing",
   "status_note": null,
@@ -24,8 +25,8 @@
   "agency": "Alberta Wildfire",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "A 2015 hiking report says hikers stopped at a sign reading 'authorized persons only' near the summit. No newer rule was found in the sources read."
   },
   "staffing": {
     "status": "staffed",
@@ -40,15 +41,37 @@
   "rental": null,
   "events": [
     {
+      "year": 1953,
+      "event": "other",
+      "note": "Newer stations on Raspberry Ridge and Hailstone Butte took over when the Cameron lookout stopped operating. The sources do not give the first season of a Hailstone station.",
+      "from": "research",
+      "source_url": "https://danocan.com/2025/09/01/exploring-albertas-historic-fire-lookout-mount-burke-summit-hike/"
+    },
+    {
       "year": 1980,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Year of construction for the cabin listed at the site, per the Alberta layer. The sources do not say whether it stands where the 1953 station was.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json&resultRecordCount=1000"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Exploring Alberta's Historic Fire Lookout - Mount Burke Summit Hike (DanOCan (blog))",
+      "url": "https://danocan.com/2025/09/01/exploring-albertas-historic-fire-lookout-mount-burke-summit-hike/",
+      "kind": "reference"
+    },
+    {
+      "label": "Hailstone Butte (bobspirko.ca (trip report))",
+      "url": "https://bobspirko.ca/Hiking/HailstoneButte/HailstoneButte.html",
+      "kind": "reference"
+    },
+    {
+      "label": "WF_WILDFIRE_LOOKOUT layer (all lookouts query) (Government of Alberta (geospatial.alberta.ca))",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json&resultRecordCount=1000",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -84,10 +107,29 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-hailstone-butte",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

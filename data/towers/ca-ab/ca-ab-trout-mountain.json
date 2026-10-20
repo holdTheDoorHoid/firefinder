@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-trout-mountain",
   "name": "Trout Mountain",
+  "summary": "Steel lookout tower, 30 m high, built 2003 per provincial data; a 1959 newspaper item says a tower was then planned at Trout Mountain.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "Steel tower",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -40,15 +41,37 @@
   "rental": null,
   "events": [
     {
+      "year": 1959,
+      "event": "other",
+      "note": "December 1959 Peace River Record Gazette item, quoted by Canada Lookouts, says a fire lookout tower was to be built at Trout Mountain. No source read confirms that it was completed.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/trout-mountain.html"
+    },
+    {
       "year": 2003,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Present steel tower, 30 m, per the provincial lookout data",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME+IN+%28%27TORRENS%27%2C%27VEGA%27%2C%27TROUT+MOUNTAIN%27%29&outFields=NAME%2CLOOKOUT_TYPE%2CYEAR_CONSTRUCTED%2CTOWER_HEIGHT%2CELEVATION%2CACTIVE%2CACCESS_MODE%2CWEATHER_STATION&returnGeometry=false&f=json"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Trout Mountain (Canada Lookouts (canada-lookouts.weebly.com))",
+      "url": "https://canada-lookouts.weebly.com/trout-mountain.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Wildfire lookouts: Torrens, Vega and Trout Mountain (FRIAA FireSmart vector data, lookout layer query) (Government of Alberta (geospatial.alberta.ca))",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME+IN+%28%27TORRENS%27%2C%27VEGA%27%2C%27TROUT+MOUNTAIN%27%29&outFields=NAME%2CLOOKOUT_TYPE%2CYEAR_CONSTRUCTED%2CTOWER_HEIGHT%2CELEVATION%2CACTIVE%2CACCESS_MODE%2CWEATHER_STATION&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Government of Alberta (Alberta.ca))",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -73,10 +96,29 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-trout-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

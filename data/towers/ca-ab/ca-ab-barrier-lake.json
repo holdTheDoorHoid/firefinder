@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-barrier-lake",
   "name": "Barrier Lake",
+  "summary": "Cabin lookout in Kananaskis Country, built 1982 to replace the Pigeon lookout; sources disagree on which building was a POW-camp guard tower.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Cabin lookout house",
   "height_m": 2.0,
   "status": "standing",
   "status_note": null,
@@ -24,8 +25,8 @@
   "agency": "Alberta Wildfire",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "The lookout house is a private residence. The official trail does not reach it; visitors use the Prairie View Trail and the picnic tables the manager keeps near the helipad."
   },
   "staffing": {
     "status": "staffed",
@@ -34,21 +35,53 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Hike in on the Prairie View Trail from Barrier Dam Day Use Area; the official trail does not go to the lookout house."
   },
   "rental": null,
   "events": [
     {
       "year": 1982,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Year of construction for the cabin in Alberta's wildfire lookout database (YEAR_CONSTRUCTED); the Friends' write-up and the directory give 1982 for the current lookout.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25BALD%25%27%20OR%20NAME%20LIKE%20%27%25BASSET%25%27%20OR%20NAME%20LIKE%20%27%25BARRIER%25%27&outFields=*&f=json",
+      "source_urls": [
+        "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25BALD%25%27%20OR%20NAME%20LIKE%20%27%25BASSET%25%27%20OR%20NAME%20LIKE%20%27%25BARRIER%25%27&outFields=*&f=json",
+        "https://kananaskis.org/barrier-lake-fire-lookout/",
+        "https://canada-lookouts.weebly.com/barrier-lake.html"
+      ]
+    },
+    {
+      "year": 1982,
+      "event": "relocated",
+      "note": "The original Pigeon building was moved from the lookout site to the university's field station.",
+      "from": "research",
+      "source_url": "https://kananaskis.org/barrier-lake-fire-lookout/"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25BALD%25%27%20OR%20NAME%20LIKE%20%27%25BASSET%25%27%20OR%20NAME%20LIKE%20%27%25BARRIER%25%27&outFields=*&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Barrier Lake Fire Lookout (Friends of Kananaskis Country)",
+      "url": "https://kananaskis.org/barrier-lake-fire-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Barrier Lake (Explore Kananaskis)",
+      "url": "https://explorekananaskis.com/hikes/barrier-lake/",
+      "kind": "reference"
+    },
+    {
+      "label": "Barrier Lake (Canada Lookouts directory)",
+      "url": "https://canada-lookouts.weebly.com/barrier-lake.html",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -72,10 +105,30 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-barrier-lake",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-keg",
   "name": "Keg",
+  "summary": "A 30 m steel lookout built in 2016 that Alberta's dataset codes as reached by air and lists as active. No source here describes it further.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "Steel tower",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -42,13 +43,23 @@
     {
       "year": 2016,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Year constructed in the Alberta lookout dataset; coded as a steel structure",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME+LIKE+%27%25KEG%25%27+OR+NAME+LIKE+%27%25KAKWA%25%27+OR+NAME+LIKE+%27%25JUNCTION%25%27&outFields=NAME,LOOKOUT_ID,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACTIVE,ACCESS_MODE,KEY_LOOKOUT,MAP_NUMBER,LOCATION_VERIFIED,WEATHER_STATION&returnGeometry=false&f=json"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "WF_WILDFIRE_LOOKOUT layer query (Wildfire lookouts of Alberta) (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME+LIKE+%27%25KEG%25%27+OR+NAME+LIKE+%27%25KAKWA%25%27+OR+NAME+LIKE+%27%25JUNCTION%25%27&outFields=NAME,LOOKOUT_ID,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACTIVE,ACCESS_MODE,KEY_LOOKOUT,MAP_NUMBER,LOCATION_VERIFIED,WEATHER_STATION&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Alberta.ca)",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -73,10 +84,29 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-keg",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

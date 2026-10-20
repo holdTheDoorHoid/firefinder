@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-mayberne",
   "name": "Mayberne Fire Lookout",
+  "summary": "Mayberne was one of four 1938 radio lookouts near Edson; the provincial dataset dates the present 18 m steel tower to 2011 and lists it active.",
   "other_names": [
     "Clarke Lake Tower"
   ],
@@ -18,7 +19,7 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "Steel tower, 18 m (59 ft) high, per the provincial lookout dataset",
   "height_m": 18.0,
   "status": "standing",
   "status_note": null,
@@ -42,15 +43,51 @@
   "rental": null,
   "events": [
     {
+      "year": 1938,
+      "event": "staffed_first",
+      "note": "Radio lookout station placed in operation northwest of Edson; each unit's cabin gave the lookout man living quarters",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/mayberne.html"
+    },
+    {
+      "year": 1944,
+      "event": "modified",
+      "note": "New ladder built on the tower, legs creosoted, radio poles and stubs replaced",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/mayberne.html"
+    },
+    {
+      "year": 1949,
+      "event": "modified",
+      "note": "Cabin shingled outside; inside finished and painted",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/mayberne.html"
+    },
+    {
       "year": 2011,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Year the present steel tower was built, per the provincial dataset",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25LIMESTONE%25%27%20OR%20NAME%20LIKE%20%27%25LIVOCK%25%27%20OR%20NAME%20LIKE%20%27%25MAYBERNE%25%27%20OR%20NAME%20LIKE%20%27%25CLARKE%25%27&outFields=NAME,LABEL,LOOKOUT_ID,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACTIVE,ACCESS_MODE,KEY_LOOKOUT,LATITUDE,LONGITUDE,MAP_NUMBER,LOCATION_VERIFIED&returnGeometry=false&f=json"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "MAYBERNE (Canada Lookouts)",
+      "url": "https://canada-lookouts.weebly.com/mayberne.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Wildfire lookout records for Limestone, Livock and Mayberne (FRIAA FireSmart vector data, query) (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25LIMESTONE%25%27%20OR%20NAME%20LIKE%20%27%25LIVOCK%25%27%20OR%20NAME%20LIKE%20%27%25MAYBERNE%25%27%20OR%20NAME%20LIKE%20%27%25CLARKE%25%27&outFields=NAME,LABEL,LOOKOUT_ID,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACTIVE,ACCESS_MODE,KEY_LOOKOUT,LATITUDE,LONGITUDE,MAP_NUMBER,LOCATION_VERIFIED&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Lonely Lookouts (RETROactive, Alberta Historic Places)",
+      "url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -87,10 +124,28 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-mayberne",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

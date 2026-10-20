@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-huckleberry",
   "name": "Huckleberry Fire Lookout",
+  "summary": "Active Alberta wildfire lookout, a 30 m steel lattice tower that Alberta's lookout layer dates to 2004; no site-specific history or access source found.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,16 +17,16 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "Steel tower (Alberta record), lattice observation tower (OpenStreetMap)",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": "Alberta Wildfire",
+  "agency": "Alberta Wildfire, within Agriculture and Forestry",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "Active Alberta wildfire lookout (record ACTIVE Y, access mode drive). No source read says the public may enter the grounds or climb the tower."
   },
   "staffing": {
     "status": "staffed",
@@ -42,13 +43,23 @@
     {
       "year": 2004,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Alberta wildfire lookout layer gives 2004 as the year constructed.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=(LATITUDE%3E53.95%20AND%20LATITUDE%3C54.02%20AND%20LONGITUDE%3E-118.25%20AND%20LONGITUDE%3C-118.1)%20OR%20(LATITUDE%3E49.5%20AND%20LATITUDE%3C49.62%20AND%20LONGITUDE%3E-114.6%20AND%20LONGITUDE%3C-114.4)%20OR%20(LATITUDE%3E50.58%20AND%20LATITUDE%3C50.65%20AND%20LONGITUDE%3E-115.12%20AND%20LONGITUDE%3C-115.02)&outFields=*&f=json&returnGeometry=false"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Alberta wildfire lookout layer (friaa_firesmart_vector_data), attribute query for three sites (Government of Alberta, geospatial.alberta.ca)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=(LATITUDE%3E53.95%20AND%20LATITUDE%3C54.02%20AND%20LONGITUDE%3E-118.25%20AND%20LONGITUDE%3C-118.1)%20OR%20(LATITUDE%3E49.5%20AND%20LATITUDE%3C49.62%20AND%20LONGITUDE%3E-114.6%20AND%20LONGITUDE%3C-114.4)%20OR%20(LATITUDE%3E50.58%20AND%20LATITUDE%3C50.65%20AND%20LONGITUDE%3E-115.12%20AND%20LONGITUDE%3C-115.02)&outFields=*&f=json&returnGeometry=false",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Alberta.ca)",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -85,10 +96,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-huckleberry",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

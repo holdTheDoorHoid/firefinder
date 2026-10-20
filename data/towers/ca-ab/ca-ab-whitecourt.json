@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-whitecourt",
   "name": "Whitecourt",
+  "summary": "Alberta's register dates the steel tower to 2017; 1946-48 government annual reports describe an earlier tower on the site being replaced.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "Steel tower",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -34,21 +35,57 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
   "events": [
     {
+      "year": 1946,
+      "event": "other",
+      "note": "Material taken to the Whitecourt Lookout Tower site to replace an old tower becoming unsafe; road, culverts and a well built (annual report year ended 31 March 1947, quoted by Canada Lookouts)",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/whitecourt.html"
+    },
+    {
+      "year": 1947,
+      "event": "replaced",
+      "note": "Tower replaced by a new one on the same site (annual report year ended 31 March 1948, quoted by Canada Lookouts)",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/whitecourt.html"
+    },
+    {
+      "year": 1948,
+      "event": "modified",
+      "note": "Tower road improved and maintained (annual report year ended 31 March 1949, quoted by Canada Lookouts)",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/whitecourt.html"
+    },
+    {
       "year": 2017,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Register construction year for the present steel tower",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25WHITECOURT%25%27%20OR%20NAME%20LIKE%20%27%25WHITEMUD%25%27&outFields=*&returnGeometry=false&f=json"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25WHITECOURT%25%27%20OR%20NAME%20LIKE%20%27%25WHITEMUD%25%27&outFields=*&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Whitecourt (quoting annual reports of the Department of Lands and Mines) (Canada Lookouts)",
+      "url": "https://canada-lookouts.weebly.com/whitecourt.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Fire lookouts (Open Government Alberta)",
+      "url": "https://open.alberta.ca/publications/fire-lookouts",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -73,10 +110,29 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-whitecourt",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

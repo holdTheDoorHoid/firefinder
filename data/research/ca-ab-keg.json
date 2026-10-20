@@ -1,0 +1,33 @@
+{
+  "id": "ca-ab-keg",
+  "researched": "2026-10-20",
+  "summary": "A 30 m steel lookout built in 2016 that Alberta's dataset codes as reached by air and lists as active. No source here describes it further.",
+  "facts": {
+    "design": "Steel tower",
+    "height_m": 30.0,
+    "agency": "Alberta Wildfire"
+  },
+  "events": [
+    {"year": 2016, "event": "built", "note": "Year constructed in the Alberta lookout dataset; coded as a steel structure", "cite": [1]}
+  ],
+  "evidence": [
+    {"cite": [1], "supports": "steel structure built 2016", "quote": "LOOKOUT_TYPE\":\"Steel\""},
+    {"cite": [1], "supports": "built 2016", "quote": "YEAR_CONSTRUCTED\":2016"},
+    {"cite": [1], "supports": "tower height 30 m", "quote": "TOWER_HEIGHT\":30.0"},
+    {"cite": [1], "supports": "elevation 950.0 m", "quote": "ELEVATION\":950.0"},
+    {"cite": [1], "supports": "map sheet 84E/09", "quote": "MAP_NUMBER\":\"84E/09\""},
+    {"cite": [1], "supports": "listed as active", "quote": "ACTIVE\":\"Y\""},
+    {"cite": [1], "supports": "weather station recorded", "quote": "WEATHER_STATION\":\"Y\""},
+    {"cite": [1], "supports": "access mode coded fly", "quote": "ACCESS_MODE\":\"fly\""},
+    {"cite": [2], "supports": "lookout sites isolated; staff prepared for a bear encounter", "quote": "Wildfire lookout sites are isolated and the staff that work them must be prepared for a wide range of possibilities, including an encounter with a curious bear."},
+    {"cite": [2], "supports": "127 lookout sites; each staffed April to October", "quote": "127 wildfire lookout sites are located throughout Alberta's boreal forest and along the Rocky Mountains. Each site is staffed by a lookout observer whose job is to watch for wildfire all day, each day, generally from April to October."},
+    {"cite": [2], "supports": "wildfire staff with Agriculture and Forestry adopted BearSmart recommendations for many sites, key among them electric fencing", "quote": "To help prevent conflict with bears, Wildfire staff with Agriculture and Forestry have adopted a number of Alberta BearSmart recommendations for many of their sites, key amongst them is the installation of electric fencing."}
+  ],
+  "sources": [
+    {"n": 1, "title": "WF_WILDFIRE_LOOKOUT layer query (Wildfire lookouts of Alberta)", "publisher": "Government of Alberta", "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME+LIKE+%27%25KEG%25%27+OR+NAME+LIKE+%27%25KAKWA%25%27+OR+NAME+LIKE+%27%25JUNCTION%25%27&outFields=NAME,LOOKOUT_ID,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACTIVE,ACCESS_MODE,KEY_LOOKOUT,MAP_NUMBER,LOCATION_VERIFIED,WEATHER_STATION&returnGeometry=false&f=json", "accessed": "2026-10-20"},
+    {"n": 2, "title": "Bears and fire lookouts", "publisher": "Alberta.ca", "url": "https://www.alberta.ca/bears-and-fire-lookouts", "accessed": "2026-10-20"}
+  ],
+  "confidence": "low",
+  "notes_for_editor": "Only the Alberta attribute table is site-specific: year, type, height, elevation, map sheet, active flag, weather station and access mode. The staffing sentences are province-wide statements about all 127 sites. No source describes the site's history, any earlier tower, fires or visitor access. The brief's access 'closed' is not confirmed by any source, so no access level is set in facts; the editor should decide. A 2023 Alberta fire alert for the Keg River area is not linked to this tower in any source, so it is left out. The 2019 staffing cut (15 to 30 of 127 towers) names no tower. The layer is marked 'Protected' with a no-public-map-above-1:1,000,000 note; the story cites attribute values only, not coordinates.",
+  "verification": {"checked": "2026-10-20", "claims_checked": 11, "unsupported_removed": 0, "errors_fixed": 1, "quotes_spot_checked": 11, "quotes_not_found": 0, "verdict": "fixed"}
+}

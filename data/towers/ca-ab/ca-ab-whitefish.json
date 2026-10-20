@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-whitefish",
   "name": "Whitefish",
+  "summary": "Alberta's register dates the steel tower to 2003; 1958-1967 newspaper items show tower men posted to an earlier Whitefish tower.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "Steel tower",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -34,21 +35,57 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
   "events": [
     {
+      "year": 1958,
+      "event": "staffed",
+      "note": "A tower man resigned from the Whitefish tower in May and a replacement was to be taken on; a season's work at the tower ended in November",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/whitefish.html"
+    },
+    {
+      "year": 1959,
+      "event": "staffed",
+      "note": "Fire season ended and tower men left; one had been stationed at the Whitefish tower",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/whitefish.html"
+    },
+    {
+      "year": 1967,
+      "event": "staffed",
+      "note": "Tower men back on the job in May",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/whitefish.html"
+    },
+    {
       "year": 2003,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Register construction year for the present steel tower",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25WHITE%25%27&outFields=*&returnGeometry=false&f=json"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25WHITE%25%27&outFields=*&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Whitefish (newspaper items quoted by Canada Lookouts)",
+      "url": "https://canada-lookouts.weebly.com/whitefish.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Fire lookouts (Open Government Alberta)",
+      "url": "https://open.alberta.ca/publications/fire-lookouts",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -73,10 +110,29 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-whitefish",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

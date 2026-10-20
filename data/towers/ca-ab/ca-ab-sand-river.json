@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-sand-river",
   "name": "Sand River",
+  "summary": "Alberta Wildfire steel lookout tower, about 30 m, constructed 2017 per the provincial database; no earlier history or staffing record found.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "steel lookout tower",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -25,7 +26,7 @@
   "ownership": "unknown",
   "access": {
     "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "note": "The public is forbidden to climb lookout towers and lookout dwellings are for private use (Alberta's general rules for lookout sites); the provincial database lists access mode as drive. No site-specific closure notice was found."
   },
   "staffing": {
     "status": "staffed",
@@ -33,8 +34,8 @@
     "note": "Seasonal lookout observer (Alberta Wildfire)"
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
+    "climbable": false,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
@@ -42,13 +43,28 @@
     {
       "year": 2017,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Database field Year Constructed. The sources read do not say whether an earlier structure stood on the site.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%3D%27SAND%20RIVER%27&outFields=*&f=json&returnGeometry=false"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire lookout record for Sand River (WF_WILDFIRE_LOOKOUT, FRIAA FireSmart vector data) (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%3D%27SAND%20RIVER%27&outFields=*&f=json&returnGeometry=false",
+      "kind": "reference"
+    },
+    {
+      "label": "How we fight wildfires (Government of Alberta)",
+      "url": "https://www.alberta.ca/how-we-fight-wildfires",
+      "kind": "reference"
+    },
+    {
+      "label": "Lonely Lookouts (RETROactive) (Alberta Historic Places)",
+      "url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -73,10 +89,32 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-sand-river",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

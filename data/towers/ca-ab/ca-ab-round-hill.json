@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-round-hill",
   "name": "Round Hill",
+  "summary": "Steel tower, 30 m, built 2013 per Alberta's wildfire register; listed active with road access and no weather station. No tower-specific history found.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "Steel tower",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -24,8 +25,8 @@
   "agency": "Alberta Wildfire",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "Register lists the tower as active with drive access (ACCESS_MODE drive). No source describes public visits."
   },
   "staffing": {
     "status": "staffed",
@@ -34,7 +35,7 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
@@ -42,13 +43,33 @@
     {
       "year": 2013,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Register gives 2013 as the construction year for the steel tower.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=UPPER(NAME)%20LIKE%20%27%25ROCKY%25%27%20OR%20UPPER(NAME)%20LIKE%20%27%25ROUND%25%27%20OR%20UPPER(NAME)%20LIKE%20%27%25SADDLE%25%27&outFields=*&f=json"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=UPPER(NAME)%20LIKE%20%27%25ROCKY%25%27%20OR%20UPPER(NAME)%20LIKE%20%27%25ROUND%25%27%20OR%20UPPER(NAME)%20LIKE%20%27%25SADDLE%25%27&outFields=*&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Fire lookouts (Open Government, Government of Alberta)",
+      "url": "https://open.alberta.ca/publications/fire-lookouts",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Alberta.ca, Government of Alberta)",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
+    {
+      "label": "Lookout observers, Employment standards exceptions (Alberta.ca, Government of Alberta)",
+      "url": "https://www.alberta.ca/lookout-observers-employment-standards-exceptions",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -73,10 +94,32 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-round-hill",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

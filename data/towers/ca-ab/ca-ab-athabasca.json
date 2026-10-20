@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-athabasca",
   "name": "Athabasca Fire Lookout",
+  "summary": "Steel tower near Hinton that Alberta's register dates to 2011; a 2006 spotter disappearance and the security changes after it shaped the later story.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "Steel tower",
   "height_m": 18.0,
   "status": "standing",
   "status_note": null,
@@ -24,8 +25,8 @@
   "agency": "Alberta Wildfire",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "Register lists the tower as active and reached by road (ACCESS_MODE drive). News reports say lookouts with road access got locked gates. No source describes public visits."
   },
   "staffing": {
     "status": "staffed",
@@ -34,21 +35,70 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
   "events": [
     {
+      "year": 2006,
+      "event": "other",
+      "note": "Seasonal spotter reported missing from the lookout on 26 August 2006 after missing a radio check-in; presumed dead in later reporting.",
+      "from": "research",
+      "source_url": "https://globalnews.ca/news/2902724/10-years-since-wildfire-spotter-stephanie-stewart-vanished-near-hinton-alta/",
+      "source_urls": [
+        "https://globalnews.ca/news/2902724/10-years-since-wildfire-spotter-stephanie-stewart-vanished-near-hinton-alta/",
+        "https://edmontonjournal.com/news/local-news/a-pot-of-boiling-water-and-a-smear-of-blood-12-years-later-fresh-clues-sought-in-stephanie-stewarts-disappearance"
+      ]
+    },
+    {
+      "year": 2006,
+      "event": "staffed",
+      "note": "A seasonal fire spotter worked every April through September at the Athabasca watch tower, which had an onsite cabin.",
+      "from": "research",
+      "source_url": "https://globalnews.ca/news/2902724/10-years-since-wildfire-spotter-stephanie-stewart-vanished-near-hinton-alta/"
+    },
+    {
       "year": 2011,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Register construction year (YEAR_CONSTRUCTED) for the tower now listed on the site.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25ATHAB%25%27%20OR%20NAME%20LIKE%20%27%25AURORA%25%27%20OR%20NAME%20LIKE%20%27%25BALDY%25%27&outFields=*&returnGeometry=false&f=json"
+    },
+    {
+      "year": 2018,
+      "event": "other",
+      "note": "RCMP historical homicide unit led a ground-and-water search around the tower; about 100 people combed the area.",
+      "from": "research",
+      "source_url": "https://livewirecalgary.com/2018/08/24/disappeared-12-years-ago-new-search-underway-for-missing-fire-tower-woman/",
+      "source_urls": [
+        "https://livewirecalgary.com/2018/08/24/disappeared-12-years-ago-new-search-underway-for-missing-fire-tower-woman/",
+        "https://edmontonjournal.com/news/local-news/a-pot-of-boiling-water-and-a-smear-of-blood-12-years-later-fresh-clues-sought-in-stephanie-stewarts-disappearance"
+      ]
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "10 years since wildfire spotter Stephanie Stewart vanished near Hinton, Alta. (Global News)",
+      "url": "https://globalnews.ca/news/2902724/10-years-since-wildfire-spotter-stephanie-stewart-vanished-near-hinton-alta/",
+      "kind": "reference"
+    },
+    {
+      "label": "A pot of boiling water and a smear of blood: 12 years later, fresh clues sought in Stephanie Stewart's disappearance (Edmonton Journal)",
+      "url": "https://edmontonjournal.com/news/local-news/a-pot-of-boiling-water-and-a-smear-of-blood-12-years-later-fresh-clues-sought-in-stephanie-stewarts-disappearance",
+      "kind": "reference"
+    },
+    {
+      "label": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25ATHAB%25%27%20OR%20NAME%20LIKE%20%27%25AURORA%25%27%20OR%20NAME%20LIKE%20%27%25BALDY%25%27&outFields=*&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Disappeared 12 years ago: New search underway for missing fire tower woman (LiveWire Calgary (The Canadian Press))",
+      "url": "https://livewirecalgary.com/2018/08/24/disappeared-12-years-ago-new-search-underway-for-missing-fire-tower-woman/",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -85,10 +135,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-athabasca",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

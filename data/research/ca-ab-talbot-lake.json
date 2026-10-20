@@ -1,0 +1,138 @@
+{
+  "id": "ca-ab-talbot-lake",
+  "researched": "2026-10-20",
+  "summary": "Forestry tower near Talbot Lake: the register dates it to 1962, a February 1963 newspaper item describes a crew at the site over winter, and it is listed as active with fly access.",
+  "facts": {
+    "design": "Steel tower",
+    "height_m": 30.0,
+    "status": "standing",
+    "access": {
+      "level": "restricted",
+      "note": "Register lists the tower as active with access mode fly (not road). The brief's 'closed' is not stated by any source read. No source describes public visits."
+    },
+    "visit": {
+      "drive_up": false
+    },
+    "agency": "Wildfire staff with Agriculture and Forestry, Government of Alberta"
+  },
+  "events": [
+    {
+      "year": 1962,
+      "event": "built",
+      "note": "Register construction year (YEAR_CONSTRUCTED) for the present 30 m steel tower.",
+      "cite": [2]
+    },
+    {
+      "year": 1963,
+      "event": "other",
+      "note": "Newspaper item (14 Feb 1963): a new forestry tower had been constructed near Talbot Lake, in the Slave Lake Forestry division. A 12-man crew worked most of January and left on 5 Feb. The date conflicts with the register's 1962.",
+      "cite": [1]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [2],
+      "supports": "Talbot Lake register record: steel tower, built 1962, 30 m tall, elevation 822 m",
+      "quote": "\"NAME\":\"TALBOT LAKE\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":1962,\"TOWER_HEIGHT\":30.0,\"ELEVATION\":822.0"
+    },
+    {
+      "cite": [2],
+      "supports": "Talbot Lake register record: active, access mode fly, location not verified",
+      "quote": "\"LOCATION_VERIFIED\":\"N\",\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"fly\""
+    },
+    {
+      "cite": [1],
+      "supports": "a new forestry tower had been constructed near Talbot Lake by February 1963",
+      "quote": "A new Forestry Tower has been constructed near Talbot Lake."
+    },
+    {
+      "cite": [1],
+      "supports": "tower in the Slave Lake Forestry division, reached by the Three Creeks road, about 150 miles north east of Peace River",
+      "quote": "This Tower is in the Slave Lake Forestry division, but reached by the Three Creeks road and is about 150 miles north east of Peace River."
+    },
+    {
+      "cite": [1],
+      "supports": "a 12-man crew worked on the tower",
+      "quote": "was in charge of the work and had 12 men on the job."
+    },
+    {
+      "cite": [1],
+      "supports": "crew at the site most of January 1963 and left on 5 February",
+      "quote": "They have been at the tower site for most of January, and came out on Feb. 5."
+    },
+    {
+      "cite": [1],
+      "supports": "heavy snow meant a D6 machine had to clear the road for the vehicles and the camp",
+      "quote": "Because of the heavy snow it was necessary to take a D6 to plow the road ahead of the trucks and the camp."
+    },
+    {
+      "cite": [3],
+      "supports": "South Peace News feature dated Aug 4, 2022: most fire towers in the Slave Lake Forest Area are only accessible by helicopter; it does not name Talbot Lake",
+      "quote": "Most fire towers in the Slave Lake Forest Area are only accessible by helicopter."
+    },
+    {
+      "cite": [4],
+      "supports": "each of Alberta's 127 wildfire lookout sites is staffed by a lookout observer, generally April to October",
+      "quote": "Each site is staffed by a lookout observer whose job is to watch for wildfire all day, each day, generally from April to October."
+    },
+    {
+      "cite": [4],
+      "supports": "127 wildfire lookout sites in Alberta",
+      "quote": "127 wildfire lookout sites are located throughout Alberta's boreal forest and along the Rocky Mountains."
+    },
+    {
+      "cite": [4],
+      "supports": "agency: wildfire staff sit with Agriculture and Forestry",
+      "quote": "Wildfire staff with Agriculture and Forestry have adopted a number of Alberta BearSmart recommendations"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Talbot Lake (newspaper transcriptions from the Peace River Record Gazette)",
+      "publisher": "Canada Lookouts",
+      "url": "https://canada-lookouts.weebly.com/talbot-lake.html",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract",
+      "publisher": "Government of Alberta",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25SWEAT%25%27%20OR%20NAME%20LIKE%20%27%25TALBOT%25%27%20OR%20NAME%20LIKE%20%27%25TONY%25%27&outFields=*&returnGeometry=false&f=json",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "Life at the top of the world",
+      "publisher": "South Peace News",
+      "url": "https://www.southpeacenews.com/life-at-the-top-of-the-world/",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 4,
+      "title": "Bears and fire lookouts",
+      "publisher": "Government of Alberta (Alberta.ca)",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "resolved_conflicts": [
+    {
+      "field": "built",
+      "explanation": "The register gives 1962. The 14 Feb 1963 newspaper item reports the tower as already constructed, after a crew worked most of January 1963. The story gives both dates and does not choose between them.",
+      "cite": [2, 1]
+    }
+  ],
+  "corrections": [
+    {
+      "field": "access",
+      "current": "closed",
+      "proposed": "restricted",
+      "cite": [2],
+      "why": "The register lists the tower as active with access mode fly. No source read says the tower is closed to the public."
+    }
+  ],
+  "confidence": "medium",
+  "notes_for_editor": "Brief's 1962 matches the register; the 1963 newspaper report is the only conflicting date. Two crew members are named in the transcription and are left out. Register LOCATION_VERIFIED is N, so coordinates are unverified. 'Fly' is read as access by air, not by road; the register does not define the code. The Slave Lake link runs through the 1963 division name and a 2022 feature about the Slave Lake Forest Area. That feature does not name Talbot Lake, and the story says so. No photos found. Agency uses the alberta.ca wording.",
+  "verification": {"checked": "2026-10-20", "claims_checked": 13, "unsupported_removed": 0, "errors_fixed": 3, "quotes_spot_checked": 11, "quotes_not_found": 0, "verdict": "fixed"}
+}

@@ -1,6 +1,7 @@
 {
   "id": "ca-bc-greenstone",
   "name": "Greenstone Lookout",
+  "summary": "Summit lookout above Kamloops, BC; sources disagree on the first tower (1916 or the 1920s). A hip-roof cab now serves as a backcountry warming hut in a provincial park.",
   "other_names": [],
   "country": "CA",
   "region": "BC",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Hip-roof style cabin (current cab)",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -31,8 +32,8 @@
   "agency": "British Columbia Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Inside a provincial park. The register calls the cabin a warming hut for backcountry users. Reached by 4x4, ATV or snowmobile, or on foot; no closure reported in the sources read."
   },
   "staffing": {
     "status": "unknown",
@@ -40,16 +41,31 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "The last stretch is steep and rocky, and many drivers park and walk it. Winter access is by snowmobile, per a blog account."
   },
   "rental": null,
   "events": [
     {
+      "year": 1916,
+      "event": "built",
+      "note": "First lookout on the summit, per steveamie. ourwestcoast says around 1915 to 1916; the register says a federal Dominion lookout in the 1920s",
+      "from": "research",
+      "source_url": "https://steveamie.com/greenstone-fire-lookout-overnight/"
+    },
+    {
       "year": 2023,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: December 31, 2023",
-      "from": "nhlr"
+      "note": "Registered December 31, 2023; cooperators Four Wheel Drive Association of British Columbia and Logan Lake ATV Club",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/bc/greenstone-lookout/"
+    },
+    {
+      "year": 2023,
+      "event": "other",
+      "note": "Partnership with Recreation Sites and Trails BC announced for ongoing care and repairs (post dated 2023/03/25 by its URL)",
+      "from": "research",
+      "source_url": "https://4wdabc.ca/2023/03/25/greenstone-mountain-fire-tower/"
     }
   ],
   "photos": [
@@ -69,6 +85,21 @@
       "label": "NHLR register entry CAN 14 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/can/bc/greenstone-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Greenstone Lookout - British Columbia (OurWestCoast)",
+      "url": "https://ourwestcoast.com/greenstone-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Greenstone Mountain Fire Tower (4WDABC (Four Wheel Drive Association of BC))",
+      "url": "https://4wdabc.ca/2023/03/25/greenstone-mountain-fire-tower/",
+      "kind": "reference"
+    },
+    {
+      "label": "Greenstone Fire Lookout Overnight (Life is Adventure (steveamie.com))",
+      "url": "https://steveamie.com/greenstone-fire-lookout-overnight/",
+      "kind": "reference"
     },
     {
       "label": "Greenstone Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
@@ -100,10 +131,31 @@
         "county",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-greenstone",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

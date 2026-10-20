@@ -1,0 +1,127 @@
+{
+  "id": "ca-ab-rocky",
+  "researched": "2026-10-20",
+  "summary": "Steel tower, 30 m, built 2017 per Alberta's wildfire register; listed active with road access and a weather station. No tower-specific history found.",
+  "facts": {
+    "design": "Steel tower",
+    "height_m": 30.0,
+    "status": "standing",
+    "staffing": {
+      "status": "observer on duty, generally April to October (Alberta's description of its 127 lookout sites)",
+      "as_of": "undated"
+    },
+    "access": {
+      "level": "restricted",
+      "note": "Register lists the tower as active with drive access (ACCESS_MODE drive). No source describes public visits."
+    },
+    "visit": {
+      "drive_up": true
+    },
+    "agency": "Alberta Wildfire"
+  },
+  "events": [
+    {
+      "year": 2017,
+      "event": "built",
+      "note": "Register gives 2017 as the construction year for the steel tower.",
+      "cite": [1]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [1],
+      "supports": "Rocky record: steel tower, built 2017, 30 m tall, elevation 1,106 m",
+      "quote": "\"NAME\":\"ROCKY\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2017,\"TOWER_HEIGHT\":30.0,\"ELEVATION\":1106.0"
+    },
+    {
+      "cite": [1],
+      "supports": "Rocky record: coordinates about 52.52 N, 114.88 W",
+      "quote": "\"LATITUDE\":52.522325,\"LONGITUDE\":-114.87742"
+    },
+    {
+      "cite": [1],
+      "supports": "Rocky record: active, drive access",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"drive\""
+    },
+    {
+      "cite": [1],
+      "supports": "Rocky record: has a weather station",
+      "quote": "\"WEATHER_STATION\":\"Y\",\"WildfirePrimary.GDB.WF_WILDFIRE_LOOKOUT.FID\":502439"
+    },
+    {
+      "cite": [2],
+      "supports": "Alberta places lookouts where visibility is favourable to detect and report wildfires",
+      "quote": "located where visibility is favourable to detect and report wildfires"
+    },
+    {
+      "cite": [3],
+      "supports": "Alberta has 127 wildfire lookout sites in the boreal forest and along the Rockies",
+      "quote": "127 wildfire lookout sites are located throughout Alberta's boreal forest and along the Rocky Mountains."
+    },
+    {
+      "cite": [3],
+      "supports": "each site is staffed by an observer, generally April to October",
+      "quote": "Each site is staffed by a lookout observer whose job is to watch for wildfire all day, each day, generally from April to October."
+    },
+    {
+      "cite": [4],
+      "supports": "observer's main duty is early detection of smoke and fires",
+      "quote": "provide early detection of smoke and fires"
+    },
+    {
+      "cite": [4],
+      "supports": "observers report smoke, fire and lightning observations",
+      "quote": "report smoke, fire and lightning observations"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "access.level",
+      "current": "closed",
+      "proposed": "restricted",
+      "cite": [1],
+      "why": "Register lists the tower as active with drive access (ACCESS_MODE drive). No source says it is closed. Restricted fits a staffed station where no public visits are described."
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract",
+      "publisher": "Government of Alberta",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=UPPER(NAME)%20LIKE%20%27%25ROCKY%25%27%20OR%20UPPER(NAME)%20LIKE%20%27%25ROUND%25%27%20OR%20UPPER(NAME)%20LIKE%20%27%25SADDLE%25%27&outFields=*&f=json",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Fire lookouts",
+      "publisher": "Open Government, Government of Alberta",
+      "url": "https://open.alberta.ca/publications/fire-lookouts",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "Bears and fire lookouts",
+      "publisher": "Alberta.ca, Government of Alberta",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 4,
+      "title": "Lookout observers, Employment standards exceptions",
+      "publisher": "Alberta.ca, Government of Alberta",
+      "url": "https://www.alberta.ca/lookout-observers-employment-standards-exceptions",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "verification": {
+    "checked": "2026-10-20",
+    "claims_checked": 9,
+    "unsupported_removed": 0,
+    "errors_fixed": 2,
+    "quotes_spot_checked": 9,
+    "quotes_not_found": 0,
+    "verdict": "fixed"
+  },
+  "confidence": "medium",
+  "notes_for_editor": "Register-only record for this tower: no tower-specific page or news item found in two searches. Brief lists access as closed; the register shows drive access and an active status, so the story uses restricted (see corrections). The brief has no local_unit for this tower, so the story names no municipality. Staffing text is Alberta's program-wide description of its 127 sites, not a tower-specific record."
+}

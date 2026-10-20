@@ -1,0 +1,126 @@
+{
+  "id": "ca-ab-adair",
+  "researched": "2026-10-20",
+  "summary": "Steel tower, 30 m, that Alberta's register dates to 2013; still listed as active and reached by air.",
+  "facts": {
+    "design": "Steel tower",
+    "height_m": 30.0,
+    "status": "standing",
+    "access": {
+      "level": "restricted",
+      "note": "Register lists the access mode as Fly and the tower as active. It does not describe the site as closed."
+    }
+  },
+  "events": [
+    {
+      "year": 2013,
+      "event": "built",
+      "note": "Register gives 2013 as the year of construction for the tower.",
+      "cite": [
+        1
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [
+        1
+      ],
+      "supports": "Adair record: steel tower, built 2013, 30 m tall",
+      "quote": "\"NAME\":\"ADAIR\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2013,\"TOWER_HEIGHT\":30.0"
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "Adair record: elevation 394 m",
+      "quote": "\"ELEVATION\":394.0"
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "Adair record: active, access mode Fly (reached by air)",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"Fly\""
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "Adair record: has a weather station",
+      "quote": "\"WEATHER_STATION\":\"Y\""
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "Alberta has 127 wildfire lookout sites",
+      "quote": "Map showing the locations of Alberta's 127 wildfire lookout sites"
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "Sites are in the boreal forest and along the Rocky Mountains",
+      "quote": "situated throughout the province's boreal forest and along the Rocky Mountains"
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "Sites are placed where visibility is favourable to detect and report fires",
+      "quote": "are located where visibility is favourable to detect and report wildfires."
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "Fire lookouts are an integral part of wildfire detection in Alberta",
+      "quote": "Fire lookouts are an integral component of wildfire detection in Alberta"
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "Register: coordinates 59.16, -118.33",
+      "quote": "\"LATITUDE\":59.160627,\"LONGITUDE\":-118.329472"
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "Register: map sheet 84M/01",
+      "quote": "\"MAP_NUMBER\":\"84M/01\""
+    }
+  ],
+  "corrections": [
+    {
+      "field": "access.level",
+      "current": "closed",
+      "proposed": "restricted",
+      "cite": [
+        1
+      ],
+      "why": "The register lists the tower as active with access mode Fly. It does not describe the site as closed."
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract",
+      "publisher": "Government of Alberta",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25ADAIR%25%27&outFields=*&returnGeometry=false&f=json",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Fire lookouts",
+      "publisher": "Open Government Alberta",
+      "url": "https://open.alberta.ca/publications/fire-lookouts",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "verification": {"checked": "2026-10-20", "claims_checked": 12, "unsupported_removed": 0, "errors_fixed": 1, "quotes_spot_checked": 10, "quotes_not_found": 0, "verdict": "fixed"},
+  "confidence": "low",
+  "notes_for_editor": "Thin record. Only the Alberta register row and one Alberta program page were found; no Adair-specific history, agency page or news was located in two searches. The story gives only the construction year, height, elevation and status. Brief access closed is corrected to restricted because the register lists the tower as active with fly-in access. Brief agency Alberta Wildfire is not stated in the fetched register row and is left out of facts."
+}

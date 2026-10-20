@@ -1,6 +1,7 @@
 {
   "id": "ca-bc-joss-mountain",
   "name": "Joss Mountain Fire Lookout",
+  "summary": "Dominion Forestry lookout of 1921 on Joss Mountain; sources differ on abandonment in 1930 or 1931, and a 2005 restoration left it in excellent condition.",
   "other_names": [],
   "country": "CA",
   "region": "BC",
@@ -16,7 +17,7 @@
   "material": "stone",
   "material_from": "firelookout_ca",
   "roles": [],
-  "design": null,
+  "design": "Square lookout building on a stone foundation",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -24,8 +25,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": "OpenStreetMap tags the structure access=yes."
+    "level": "public",
+    "note": "Reached by a hiking trail. Shuswap Trails says recreational access is monitored and seasonal closures apply. No source says whether the building is locked."
   },
   "staffing": {
     "status": "unknown",
@@ -33,20 +34,56 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Joss Mountain Pass trail, 7.5 km one-way from the East Trailhead. Steep forestry roads, 4WD recommended. Serious alpine backcountry hike in grizzly country."
   },
   "rental": null,
   "events": [
     {
       "year": 1921,
       "event": "built",
-      "note": "Built by the Dominion Forestry Branch.",
-      "from": "firelookout_ca"
+      "note": "Built by the Dominion Forestry Service, per Firelookout.ca.",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=joss-mountain-fire-lookout"
+    },
+    {
+      "year": 1921,
+      "event": "other",
+      "note": "Packhorse trail built to service the lookout.",
+      "from": "research",
+      "source_url": "https://shuswappassion.ca/recreation/hiking-with-the-deities-at-joss-mountain/"
+    },
+    {
+      "year": 1930,
+      "event": "abandoned",
+      "note": "Shuswap Passion gives 1930. Firelookout.ca says the lookout was abandoned after 1931. See resolved_conflicts.",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=joss-mountain-fire-lookout",
+      "source_urls": [
+        "https://firelookout.ca/lookouts/?slug=joss-mountain-fire-lookout",
+        "https://shuswappassion.ca/recreation/hiking-with-the-deities-at-joss-mountain/"
+      ]
+    },
+    {
+      "year": 2005,
+      "event": "restored",
+      "note": "Columbia Helicopters restored the lookout with a new roof and windows, in conjunction with the BC Wildfire Management Branch.",
+      "from": "research",
+      "source_url": "https://shuswappassion.ca/recreation/hiking-with-the-deities-at-joss-mountain/"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Hiking with the deities at Joss Mountain (Shuswap Passion)",
+      "url": "https://shuswappassion.ca/recreation/hiking-with-the-deities-at-joss-mountain/",
+      "kind": "reference"
+    },
+    {
+      "label": "Joss Mountain Pass (Shuswap Trails)",
+      "url": "https://shuswaptrails.com/trails/system/16/Joss-Mountain-Pass/",
+      "kind": "reference"
+    },
     {
       "label": "Joss Mountain Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=joss-mountain-fire-lookout",
@@ -80,10 +117,30 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-joss-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

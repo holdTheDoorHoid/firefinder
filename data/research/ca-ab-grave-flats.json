@@ -1,0 +1,121 @@
+{
+  "id": "ca-ab-grave-flats",
+  "researched": "2026-10-20",
+  "summary": "Edson Forest lookout site with a telephone spur named in a 1946 Lands and Mines annual report; Alberta Wildfire's layer dates the cabin listed there to 1974.",
+  "facts": {
+    "design": "Cabin rather than a tower, per Alberta Wildfire's layer",
+    "height_m": 5.0,
+    "access": {
+      "level": "private",
+      "note": "OpenStreetMap tags the way access=private. The Alberta layer gives its access mode as drive. No public-visit rule was found in the sources read."
+    }
+  },
+  "events": [
+    {
+      "year": 1945,
+      "event": "other",
+      "note": "Entry headed 1945 (report for the fiscal year ending 31 March 1946) on a telephone spur built to the Grave Flats L.O.",
+      "cite": [
+        1
+      ]
+    },
+    {
+      "year": 1974,
+      "event": "built",
+      "note": "Year of construction for the cabin listed at the site, per the Alberta layer",
+      "cite": [
+        2
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [
+        1
+      ],
+      "supports": "site lies in the Edson Forest",
+      "quote": "Edson Forest"
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "telephone spur built to the Grave Flats L.O. to end a loop in the Brazeau Forestry telephone system",
+      "quote": "A spur line 3 1/2 miles in length was constructed from Mile 55 Big Horn grounded line to Grave Flats L.O., in order to break the circle which previously existed on the Brazeau Forestry telephone system."
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "report of the Department of Lands and Mines for the year ending 31 March 1946",
+      "quote": "(Annual Report of the Department of Lands and Mines, FY ended 3/31/1946)"
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "1974 year of construction; cabin type; 5.0 m height; 2,076 m elevation",
+      "quote": "\"NAME\":\"GRAVE FLATS\",\"LOOKOUT_TYPE\":\"Cabin\",\"YEAR_CONSTRUCTED\":1974,\"TOWER_HEIGHT\":5.0,\"ELEVATION\":2076.0"
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "active; access mode drive; weather station",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"drive\",\"KEY_LOOKOUT\":\"N\",\"RESERVATION_NUMBER\":850081,\"DECLINATION_EAST\":20.0166,\"DECLINATION_YEAR\":2000,\"LOCATION_VERIFIED_BY\":\"AC1\",\"WEATHER_STATION\":\"Y\""
+    },
+    {
+      "cite": [
+        3
+      ],
+      "supports": "OpenStreetMap tags the way access as private",
+      "quote": "access\nprivate"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "access.level",
+      "current": "closed",
+      "proposed": "private",
+      "cite": [
+        2,
+        3
+      ],
+      "why": "The Alberta layer has no access or staffing field. The 'closed' level and the 'staffed' note are identical on all 124 records in data/sources/alberta_wildfire.json, so they look like a blanket default, not tower-specific data. OpenStreetMap tags this site access=private."
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Grave Flats",
+      "publisher": "Canada Lookouts",
+      "url": "https://canada-lookouts.weebly.com/grave-flats.html",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "WF_WILDFIRE_LOOKOUT layer (all lookouts query)",
+      "publisher": "Government of Alberta (geospatial.alberta.ca)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json&resultRecordCount=1000",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "Grave Flats Lookout",
+      "publisher": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1083588056",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "confidence": "low",
+  "notes_for_editor": "Thin record. History rests on a 1945 telephone-spur entry (headed 1945, fiscal year ending 31 March 1946) and Alberta's 1974 construction year for the cabin. The 1945 entry names the Grave Flats L.O. but does not say a lookout was built then. The sources do not say whether the 1974 cabin replaced an earlier structure. The brief's access 'closed' and the staffing note ('staffed March-October', 'No public access') are not in the raw Alberta fields and were not used as evidence. Staffing is left out: no source read gives dated staffing. A directory snippet (staffed every summer; Edson Forest, south of Hinton; last updated 2008) appeared only in search results, was not fetched and is not cited. Searches: 2 WebSearch. Page reads: 3 (Canada Lookouts, OpenStreetMap, Alberta layer query). No photos added. Fact-check 2026-10-20: the Canada Lookouts page does not call the report provincial, so the story no longer does; the 'status: standing' fact was dropped because the story says no source read describes current condition.",
+  "verification": {
+    "checked": "2026-10-20",
+    "claims_checked": 7,
+    "unsupported_removed": 1,
+    "errors_fixed": 3,
+    "quotes_spot_checked": 6,
+    "quotes_not_found": 0,
+    "verdict": "fixed"
+  }
+}

@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-sugarloaf",
   "name": "Sugarloaf Fire Lookout",
+  "summary": "Cinder block cabin at 2,516 m in southwestern Alberta that replaced a 1954 cabin in 1978; register lists it active with access mode fly, while a 2007 trip report describes a road.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Cinder block cabin built on the ground",
   "height_m": 2.0,
   "status": "standing",
   "status_note": null,
@@ -24,8 +25,8 @@
   "agency": "Alberta Wildfire",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "Register lists access mode as fly and the lookout as active. A 2007 trip report describes driving a rough road part of the way. No source describes public visits today."
   },
   "staffing": {
     "status": "staffed",
@@ -40,15 +41,61 @@
   "rental": null,
   "events": [
     {
+      "year": 1954,
+      "event": "built",
+      "note": "First lookout on the site, a 12 x 12 cabin, per a Canada Lookouts history.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/sugarloaf.html"
+    },
+    {
       "year": 1978,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Register construction year for the present cabin.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25SUGARLOAF%25%27%20OR%20NAME%20LIKE%20%27%25TEEPEE%25%27%20OR%20NAME%20LIKE%20%27%25TOM%25%27&outFields=*&returnGeometry=false&f=json"
+    },
+    {
+      "year": 1978,
+      "event": "replaced",
+      "note": "Cinder block ground cabin replaced the first cabin.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/sugarloaf.html"
+    },
+    {
+      "year": 1980,
+      "event": "modified",
+      "note": "Stonework mosaic created by one of the lookout operators, around 1980 (blog account).",
+      "from": "research",
+      "source_url": "https://steveamie.com/sugarloaf-fire-lookout/"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25SUGARLOAF%25%27%20OR%20NAME%20LIKE%20%27%25TEEPEE%25%27%20OR%20NAME%20LIKE%20%27%25TOM%25%27&outFields=*&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Sugarloaf Fire Lookout (Life is Adventure)",
+      "url": "https://steveamie.com/sugarloaf-fire-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Sugarloaf Lookout (bobspirko.ca)",
+      "url": "https://bobspirko.ca/OtherScrambles/Crowsnest/Sugarloaf/Sugarloaf.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Sugarloaf (Canada Lookouts)",
+      "url": "https://canada-lookouts.weebly.com/sugarloaf.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Alberta.ca)",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -84,10 +131,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-sugarloaf",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

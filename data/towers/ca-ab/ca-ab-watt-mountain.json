@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-watt-mountain",
   "name": "Watt Mountain",
+  "summary": "Alberta's register dates the 30 m steel tower to 2003, but a 1959 newspaper item shows a forestry tower on the mountain earlier.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "Steel tower",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
@@ -24,8 +25,8 @@
   "agency": "Alberta Wildfire",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "Register lists the tower as active and reached by road. No source describes public visits."
   },
   "staffing": {
     "status": "staffed",
@@ -34,21 +35,50 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
   "events": [
     {
+      "year": 1959,
+      "event": "other",
+      "note": "A couple spent the summer at the forestry tower on Watt Mountain, per a Peace River Record Gazette item (Nov. 1959) quoted by Canada Lookouts.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/watt-mountain.html"
+    },
+    {
+      "year": 1960,
+      "event": "staffed",
+      "note": "Forestry men taken to the Watt Mountain tower by helicopter (Apr. 1960 item); W. Carruthers and family to live there for seven months.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/watt-mountain.html"
+    },
+    {
       "year": 2003,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Register construction year (YEAR_CONSTRUCTED) for the tower it lists.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25WADLIN%25%27%20OR%20NAME%20LIKE%20%27%25WATT%20MOUNTAIN%25%27%20OR%20NAME%20LIKE%20%27%25WHITE%20MOUNTAIN%25%27&outFields=*&returnGeometry=false&f=json"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25WADLIN%25%27%20OR%20NAME%20LIKE%20%27%25WATT%20MOUNTAIN%25%27%20OR%20NAME%20LIKE%20%27%25WHITE%20MOUNTAIN%25%27&outFields=*&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Watt Mountain, Canada Lookouts (quoting the Peace River Record Gazette, 1959 and 1960)",
+      "url": "https://canada-lookouts.weebly.com/watt-mountain.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Watt Mountain (PNT) Natural Area (SAPAA)",
+      "url": "https://sapaastewards.com/protected-areas/list-of-protected-areas/watt-mountain-pnt-natural-area",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -73,10 +103,31 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-watt-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

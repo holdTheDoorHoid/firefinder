@@ -1,0 +1,169 @@
+{
+  "id": "ca-ab-adams-creek",
+  "researched": "2026-10-20",
+  "summary": "Old mountain cabin moved to Grande Cache in the 2000s; the register lists a separate active cabin on the mountain, dated 2005.",
+  "facts": {
+    "design": "Cabin (register type); old-style mountain lookout cabin for the original",
+    "height_m": 5.0,
+    "status": "standing",
+    "status_note": "The old cabin was removed to Grande Cache and is preserved there; the register lists a separate active cabin at the mountain site.",
+    "access": {
+      "level": "restricted",
+      "note": "Register lists the active mountain cabin with access mode fly and a weather station. The old cabin is in a town park per a visitor photo caption."
+    }
+  },
+  "events": [
+    {
+      "year": 1940,
+      "event": "built",
+      "note": "Visitor photo caption dates the Adams Creek Fire Lookout to 1940. Not confirmed by a second source.",
+      "cite": [
+        3
+      ]
+    },
+    {
+      "year": 2004,
+      "event": "removed",
+      "note": "Old mountain cabin removed by the forest service to the grounds of the Grande Cache museum to be renovated. Reported in a 2004 Alberta report letter.",
+      "cite": [
+        1
+      ]
+    },
+    {
+      "year": 2005,
+      "event": "built",
+      "note": "Register year of construction for the active Adams Creek cabin. The 2004 letter says the old cabin had already been replaced by a newer structure, so the two dates do not fit.",
+      "cite": [
+        2,
+        1
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [
+        2
+      ],
+      "supports": "Register: active Adams Creek cabin, type Cabin, built 2005, 5 m tall",
+      "quote": "\"NAME\":\"ADAMS CREEK\",\"LOOKOUT_TYPE\":\"Cabin\",\"YEAR_CONSTRUCTED\":2005,\"TOWER_HEIGHT\":5.0"
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "Register: elevation 2,177.6 m",
+      "quote": "\"ELEVATION\":2177.63"
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "Register: active, access mode fly",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"fly\""
+    },
+    {
+      "cite": [
+        2
+      ],
+      "supports": "Register: has a weather station",
+      "quote": "\"WEATHER_STATION\":\"Y\""
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "The old cabin had been replaced years ago by a newer structure",
+      "quote": "replaced years ago by a newer structure but the forest service just got"
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "Forest service removed the old cabin in the period the letter describes",
+      "quote": "around to removing the old cabin this past fall."
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "Removal of the Adams Creek lookout, an old style mountain cabin, to the Grande Cache museum grounds",
+      "quote": "The second project was the removal of Adams Creek lookout, an old style"
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "The cabin was to be renovated and put on public display",
+      "quote": "is to be renovated & ultimately on display to the public."
+    },
+    {
+      "cite": [
+        1
+      ],
+      "supports": "The old removal method would have been to torch the structure, so the letter credits the forest service for moving away from it",
+      "quote": "would have been simply to \"torch\" the structure."
+    },
+    {
+      "cite": [
+        3
+      ],
+      "supports": "Visitor photo caption dates the Adams Creek Fire Lookout to 1940 and says it is preserved at Bird's Eye View",
+      "quote": "This is the Adams Creek Fire Lookout, dating back to 1940, now preserved at Bird's Eye View Interpretive Park."
+    }
+  ],
+  "corrections": [
+    {
+      "field": "access.level",
+      "current": "closed",
+      "proposed": "restricted",
+      "cite": [
+        2
+      ],
+      "why": "The register lists the active mountain cabin with access mode fly and no closure. Restricted better fits a fly-in active cabin."
+    }
+  ],
+  "resolved_conflicts": [
+    {
+      "field": "location of the old cabin",
+      "explanation": "The 2004 letter says the old cabin went to the grounds of the Grande Cache museum. A later visitor photo caption places it at Bird's Eye View Interpretive Park. The story gives both.",
+      "cite": [
+        1,
+        3
+      ]
+    },
+    {
+      "field": "construction year of the active cabin",
+      "explanation": "The register gives 2005. The 2004 letter says the old cabin was replaced years earlier by a newer structure. The sources do not show which structure replaced the old cabin, so the story gives both facts without linking them.",
+      "cite": [
+        2,
+        1
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "2004 Alberta Report (letter)",
+      "publisher": "firelookout.org",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ab-2004.pdf",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract",
+      "publisher": "Government of Alberta",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25ADAMS%25%27&outFields=*&returnGeometry=false&f=json",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "Adams Creek Fire Lookout at Bird's Eye View Park (photo page)",
+      "publisher": "EH Canada Travel",
+      "url": "https://www.ehcanadatravel.com/community/photos/51331-adams-creek-fire-lookout-at-bird-s-eye-view-park.html",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "verification": {"checked": "2026-10-20", "claims_checked": 13, "unsupported_removed": 0, "errors_fixed": 3, "quotes_spot_checked": 10, "quotes_not_found": 0, "verdict": "fixed"},
+  "confidence": "medium",
+  "notes_for_editor": "Two different cabins share the Adams Creek name. The 1940 date rests on one visitor photo caption and was not confirmed elsewhere in fetched sources; a search snippet for Waymarking gives 1940 too but was not fetched, so it is not cited. The 2004 letter (firelookout.org) is the best primary source but is an informal newsletter letter, and its removal date ('this past fall') is not clear from the text. The register gives 2005 for the active cabin, which conflicts with the letter's 'replaced years ago' timeline. The brief status standing is accurate but covers two structures. Brief agency Alberta Wildfire is not named in the fetched sources; the letter says 'the forest service' and is left out. Brief access closed is corrected to restricted."
+}

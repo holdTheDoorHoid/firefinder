@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-torrens",
   "name": "Torrens",
+  "summary": "Alberta cabin lookout built 1962, 5 m high and listed as active. Sources are thin: a provincial data record and an undated photo credit.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Cabin",
   "height_m": 5.0,
   "status": "standing",
   "status_note": null,
@@ -42,13 +43,28 @@
     {
       "year": 1962,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Listed as a cabin, 5 m tall, in the provincial lookout data",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME+IN+%28%27TORRENS%27%2C%27VEGA%27%2C%27TROUT+MOUNTAIN%27%29&outFields=NAME%2CLOOKOUT_TYPE%2CYEAR_CONSTRUCTED%2CTOWER_HEIGHT%2CELEVATION%2CACTIVE%2CACCESS_MODE%2CWEATHER_STATION&returnGeometry=false&f=json"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire lookouts: Torrens, Vega and Trout Mountain (FRIAA FireSmart vector data, lookout layer query) (Government of Alberta (geospatial.alberta.ca))",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME+IN+%28%27TORRENS%27%2C%27VEGA%27%2C%27TROUT+MOUNTAIN%27%29&outFields=NAME%2CLOOKOUT_TYPE%2CYEAR_CONSTRUCTED%2CTOWER_HEIGHT%2CELEVATION%2CACTIVE%2CACCESS_MODE%2CWEATHER_STATION&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Alberta lookout list with photo captions (Canada Lookouts (canada-lookouts.weebly.com))",
+      "url": "https://canada-lookouts.weebly.com/alberta1.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Government of Alberta (Alberta.ca))",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -72,10 +88,29 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-torrens",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

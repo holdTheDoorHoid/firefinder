@@ -1,0 +1,52 @@
+{
+  "id": "ca-ab-rainbow",
+  "researched": "2026-10-20",
+  "summary": "Rainbow lookout in Alberta: a 30 m steel tower that the provincial record dates to 2016 and lists as active. No history found.",
+  "facts": {
+    "design": "Steel lookout tower, 30 m (98 ft) tall, per the provincial record",
+    "height_m": 30,
+    "status": "standing",
+    "access": {
+      "level": "restricted",
+      "note": "The provincial record gives the access mode as fly and marks the tower active. A regional archive says the public may no longer climb Alberta lookout towers. No source read says the site is open to visitors."
+    },
+    "visit": {
+      "climbable": false
+    }
+  },
+  "events": [
+    {
+      "year": 2016,
+      "event": "built",
+      "note": "Provincial record: year constructed 2016 for the steel tower listed at Rainbow. No source read describes an earlier lookout on the site.",
+      "cite": [2]
+    }
+  ],
+  "evidence": [
+    {"cite": [1], "supports": "Alberta has 127 wildfire lookout sites spread through the boreal forest and along the Rocky Mountains", "quote": "Map showing the locations of Alberta's 127 wildfire lookout sites"},
+    {"cite": [1], "supports": "the lookout sites are situated throughout the boreal forest and along the Rocky Mountains", "quote": "which are situated throughout the province's boreal forest and along the Rocky Mountains"},
+    {"cite": [1], "supports": "lookouts are an integral part of wildfire detection and sit where visibility is favourable", "quote": "Fire lookouts are an integral component of wildfire detection in Alberta and are located where visibility is favourable to detect and report wildfires."},
+    {"cite": [2], "supports": "Rainbow is a steel wildfire lookout built in 2016", "quote": "\"NAME\":\"RAINBOW\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2016"},
+    {"cite": [2], "supports": "the tower is 30 m tall and the site is at 601 m elevation", "quote": "\"TOWER_HEIGHT\":30.0,\"ELEVATION\":601.0"},
+    {"cite": [2], "supports": "the location is verified, the tower is active, and the access mode is fly", "quote": "\"LOCATION_VERIFIED\":\"Y\",\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"fly\""},
+    {"cite": [2], "supports": "the tower has a weather station", "quote": "\"WEATHER_STATION\":\"Y\""},
+    {"cite": [3], "supports": "the public is no longer permitted to climb the towers", "quote": "it is no longer permitted for the public to climb these towers"}
+  ],
+  "corrections": [
+    {
+      "field": "access.level",
+      "current": "closed",
+      "proposed": "restricted",
+      "cite": [2, 3],
+      "why": "No source read says the site is closed. The record marks the tower active with access mode fly, and the archive says the public may not climb the towers. Restricted fits the sources better than closed."
+    }
+  ],
+  "sources": [
+    {"n": 1, "title": "Fire lookouts", "publisher": "Open Government, Government of Alberta", "url": "https://open.alberta.ca/publications/fire-lookouts", "accessed": "2026-10-20"},
+    {"n": 2, "title": "Wildfire Lookouts of Alberta, layer records for Puskwaskau, Ponton and Rainbow", "publisher": "Government of Alberta geospatial service", "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25Ponton%25%27%20OR%20NAME%20LIKE%20%27%25Puskwaskau%25%27%20OR%20NAME%20LIKE%20%27%25Rainbow%25%27&outFields=*&returnGeometry=false&f=json", "accessed": "2026-10-20"},
+    {"n": 3, "title": "Movie Monday: Outdoor Activities", "publisher": "South Peace Regional Archives", "url": "https://www.southpeacearchives.org/blog/movie-monday-outdoor-activities/", "accessed": "2026-10-20"}
+  ],
+  "verification": {"checked": "2026-10-20", "claims_checked": 7, "unsupported_removed": 0, "errors_fixed": 1, "quotes_spot_checked": 8, "quotes_not_found": 0, "verdict": "fixed"},
+  "confidence": "low",
+  "notes_for_editor": "The only source for this tower is the provincial layer record: build year, height, elevation, active flag and access mode. One search for Rainbow lookout history (Rainbow Lake Alberta fire lookout tower history) returned nothing about this tower; its results about the 2023 Rainbow Lake wildfire and the Long Lake Fire are not about a lookout and are not used. The regional archive quote is about all Alberta lookout towers, not this site. The layer metadata classifies the dataset as Protected, so only single attribute values are quoted. The brief's access value 'closed' is not supported; see the correction."
+}

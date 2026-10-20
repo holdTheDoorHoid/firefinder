@@ -1,6 +1,7 @@
 {
   "id": "ca-bc-botanie",
   "name": "Botanie Lookout",
+  "summary": "1954 lookout near Lytton, BC; the register says the building is in rough shape but still holds communications gear. A 2021 wildfire destroyed Lytton and spared the lookout.",
   "other_names": [],
   "country": "CA",
   "region": "BC",
@@ -31,8 +32,8 @@
   "agency": "British Columbia Forest Service",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Summit buildings were all locked on a 2019 visit; the site houses communications equipment. No current public-access arrangement was found."
   },
   "staffing": {
     "status": "unknown",
@@ -41,21 +42,30 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "A 2019 trip report describes a steep, narrow, rough road to the summit from Botanie Valley Road. Wikipedia says the roads are no longer driveable above a certain elevation."
   },
   "rental": null,
   "events": [
     {
       "year": 1954,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Register 'Built' field",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/bc/botanie-lookout/"
+    },
+    {
+      "year": 2021,
+      "event": "fire",
+      "note": "Wildfire destroyed the nearby village of Lytton; the lookout was narrowly spared",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/bc/botanie-lookout/"
     },
     {
       "year": 2026,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 2, 2026",
-      "from": "nhlr"
+      "note": "Registered January 2, 2026; nominated by Jake Lockwood",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/bc/botanie-lookout/"
     }
   ],
   "photos": [
@@ -75,6 +85,16 @@
       "label": "NHLR register entry CAN 22 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/can/bc/botanie-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Botanie Mountain (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Botanie_Mountain",
+      "kind": "reference"
+    },
+    {
+      "label": "Conte Peak (Botanie Fire Lookout) (Steven's Peak-bagging Journey (blog))",
+      "url": "https://stevensong.com/coastal-interior-bc/fraser-valley/conte-peak-botanie-fire-lookout/",
+      "kind": "reference"
     },
     {
       "label": "Botanie Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
@@ -106,10 +126,30 @@
         "county",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-botanie",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

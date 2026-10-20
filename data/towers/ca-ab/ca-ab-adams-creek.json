@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-adams-creek",
   "name": "Adams Creek",
+  "summary": "Old mountain cabin moved to Grande Cache in the 2000s; the register lists a separate active cabin on the mountain, dated 2005.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Cabin (register type); old-style mountain lookout cabin for the original",
   "height_m": 5.0,
   "status": "standing",
   "status_note": null,
@@ -24,8 +25,8 @@
   "agency": "Alberta Wildfire",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "Register lists the active mountain cabin with access mode fly and a weather station. The old cabin is in a town park per a visitor photo caption."
   },
   "staffing": {
     "status": "staffed",
@@ -40,15 +41,48 @@
   "rental": null,
   "events": [
     {
+      "year": 1940,
+      "event": "built",
+      "note": "Visitor photo caption dates the Adams Creek Fire Lookout to 1940. Not confirmed by a second source.",
+      "from": "research",
+      "source_url": "https://www.ehcanadatravel.com/community/photos/51331-adams-creek-fire-lookout-at-bird-s-eye-view-park.html"
+    },
+    {
+      "year": 2004,
+      "event": "removed",
+      "note": "Old mountain cabin removed by the forest service to the grounds of the Grande Cache museum to be renovated. Reported in a 2004 Alberta report letter.",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ab-2004.pdf"
+    },
+    {
       "year": 2005,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Register year of construction for the active Adams Creek cabin. The 2004 letter says the old cabin had already been replaced by a newer structure, so the two dates do not fit.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25ADAMS%25%27&outFields=*&returnGeometry=false&f=json",
+      "source_urls": [
+        "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25ADAMS%25%27&outFields=*&returnGeometry=false&f=json",
+        "https://firelookout.org/wp-content/uploads/2024/11/cr-ab-2004.pdf"
+      ]
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "2004 Alberta Report (letter) (firelookout.org)",
+      "url": "https://firelookout.org/wp-content/uploads/2024/11/cr-ab-2004.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25ADAMS%25%27&outFields=*&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Adams Creek Fire Lookout at Bird's Eye View Park (photo page) (EH Canada Travel)",
+      "url": "https://www.ehcanadatravel.com/community/photos/51331-adams-creek-fire-lookout-at-bird-s-eye-view-park.html",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -72,10 +106,30 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-adams-creek",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,0 +1,92 @@
+{
+  "id": "ca-ab-yellowhead",
+  "researched": "2026-10-20",
+  "summary": "Steel tower of 30 m that Alberta's wildfire register dates to 2012; listed active, reached by road, with a weather station. No earlier history found.",
+  "facts": {
+    "design": "Steel tower",
+    "height_m": 30.0,
+    "status": "standing",
+    "access": {
+      "level": "restricted",
+      "note": "Register lists the tower as active and reached by road (ACCESS_MODE drive). No source read describes public visits."
+    },
+    "visit": {
+      "drive_up": true
+    }
+  },
+  "events": [
+    {
+      "year": 2012,
+      "event": "built",
+      "note": "Register construction year (YEAR_CONSTRUCTED) for the tower as it stands now.",
+      "cite": [1]
+    }
+  ],
+  "evidence": [
+    {
+      "cite": [1],
+      "supports": "Yellowhead record: steel tower, built 2012, 30 m tall, elevation 1,477.2 m",
+      "quote": "\"NAME\":\"YELLOWHEAD\",\"LOOKOUT_TYPE\":\"Steel\",\"YEAR_CONSTRUCTED\":2012,\"TOWER_HEIGHT\":30.0,\"ELEVATION\":1477.2"
+    },
+    {
+      "cite": [1],
+      "supports": "Yellowhead record: active, reached by road",
+      "quote": "\"ACTIVE\":\"Y\",\"ACCESS_MODE\":\"drive\""
+    },
+    {
+      "cite": [1],
+      "supports": "Yellowhead record: has a weather station",
+      "quote": "\"WEATHER_STATION\":\"Y\""
+    },
+    {
+      "cite": [2],
+      "supports": "Alberta has 127 wildfire lookout sites",
+      "quote": "127 wildfire lookout sites are located throughout"
+    },
+    {
+      "cite": [3],
+      "supports": "lookouts are placed where visibility is favourable to detect and report wildfires",
+      "quote": "are located where visibility is favourable to detect and report wildfires."
+    },
+    {
+      "cite": [2],
+      "supports": "each site has a lookout observer watching for wildfire, generally April to October",
+      "quote": "Each site is staffed by a lookout observer whose job is to watch for wildfire all day, each day, generally from April to October."
+    }
+  ],
+  "corrections": [
+    {
+      "field": "access",
+      "current": "closed",
+      "proposed": "restricted",
+      "cite": [1],
+      "why": "The register lists the site ACTIVE with ACCESS_MODE drive. No source read says the site is closed."
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract",
+      "publisher": "Government of Alberta",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25YELLOWHEAD%25%27&outFields=*&returnGeometry=false&f=json",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 2,
+      "title": "Bears and fire lookouts",
+      "publisher": "Alberta.ca",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "accessed": "2026-10-20"
+    },
+    {
+      "n": 3,
+      "title": "Fire lookouts",
+      "publisher": "Open Government, Alberta",
+      "url": "https://open.alberta.ca/publications/fire-lookouts",
+      "accessed": "2026-10-20"
+    }
+  ],
+  "confidence": "medium",
+  "verification": {"checked": "2026-10-20", "claims_checked": 7, "unsupported_removed": 0, "errors_fixed": 2, "quotes_spot_checked": 6, "quotes_not_found": 0, "verdict": "fixed"},
+  "notes_for_editor": "The only Yellowhead-specific record found is the register entry (built 2012, steel, 30 m, active, drive access, weather station). Two web searches turned up no Yellowhead history, so the story is short. The register is the query endpoint used for ca-ab-athabasca. The brief's access 'closed' is not supported by any source read; see corrections. The brief's agency 'Alberta Wildfire' is not quoted in any source read, so the story does not name an agency. The 127-site count and the observer sentence apply to all Alberta sites, not to Yellowhead alone; the story says so."
+}

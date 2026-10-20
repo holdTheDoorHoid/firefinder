@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-algar",
   "name": "Algar",
+  "summary": "Steel tower dated to 2008 by Alberta's register; a Lookout Network item dated 1995 reports fire damage and a quick repair at Algar.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,16 +17,16 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "Steel tower",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": "Alberta Wildfire",
+  "agency": "Alberta Agriculture and Forestry (wildfire staff)",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "Register lists the tower as active, with access coded Drive and a weather station. No source describes public visits."
   },
   "staffing": {
     "status": "staffed",
@@ -34,21 +35,66 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
   "events": [
     {
+      "year": 1995,
+      "event": "burned",
+      "note": "Newsletter says the heat melted aluminum bracing pipe and totally destroyed the engine house at Algar.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/algar.html"
+    },
+    {
+      "year": 1995,
+      "event": "fire",
+      "note": "Heavy fire activity in June; newsletter item dated November 1995 says three steel lookout towers were evacuated and later burned over, Algar among them. A 1995 photo of Algar Tower is captioned in a Facebook post.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/algar.html",
+      "source_urls": [
+        "https://canada-lookouts.weebly.com/algar.html",
+        "https://www.facebook.com/groups/2232600507/posts/10171112655910508/"
+      ]
+    },
+    {
+      "year": 1995,
+      "event": "restored",
+      "note": "Repaired by mid-July, per the newsletter; the lookout returned to service.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/algar.html"
+    },
+    {
       "year": 2008,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Register year of construction for the present steel tower.",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25ALGAR%25%27%20OR%20NAME%20LIKE%20%27%25AMBER%25%27%20OR%20NAME%20LIKE%20%27%25ANSELL%25%27&outFields=*&returnGeometry=false&f=json"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire Lookouts of Alberta (WF_WILDFIRE_LOOKOUT), FIRES database extract (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25ALGAR%25%27%20OR%20NAME%20LIKE%20%27%25AMBER%25%27%20OR%20NAME%20LIKE%20%27%25ANSELL%25%27&outFields=*&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Bears and fire lookouts (Government of Alberta)",
+      "url": "https://www.alberta.ca/bears-and-fire-lookouts",
+      "kind": "reference"
+    },
+    {
+      "label": "ALGAR (Canada Lookouts)",
+      "url": "https://canada-lookouts.weebly.com/algar.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Photo from 1995, Algar Tower (Alberta Wildland Firefighters (Facebook group))",
+      "url": "https://www.facebook.com/groups/2232600507/posts/10171112655910508/",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -73,10 +119,32 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-algar",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-grave-flats",
   "name": "Grave Flats Lookout",
+  "summary": "Edson Forest lookout site with a telephone spur named in a 1946 Lands and Mines annual report; Alberta Wildfire's layer dates the cabin listed there to 1974.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Cabin rather than a tower, per Alberta Wildfire's layer",
   "height_m": 5.0,
   "status": "standing",
   "status_note": null,
@@ -24,8 +25,8 @@
   "agency": "Alberta Wildfire",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "private",
+    "note": "OpenStreetMap tags the way access=private. The Alberta layer gives its access mode as drive. No public-visit rule was found in the sources read."
   },
   "staffing": {
     "status": "staffed",
@@ -40,15 +41,32 @@
   "rental": null,
   "events": [
     {
+      "year": 1945,
+      "event": "other",
+      "note": "Entry headed 1945 (report for the fiscal year ending 31 March 1946) on a telephone spur built to the Grave Flats L.O.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/grave-flats.html"
+    },
+    {
       "year": 1974,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Year of construction for the cabin listed at the site, per the Alberta layer",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json&resultRecordCount=1000"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Grave Flats (Canada Lookouts)",
+      "url": "https://canada-lookouts.weebly.com/grave-flats.html",
+      "kind": "reference"
+    },
+    {
+      "label": "WF_WILDFIRE_LOOKOUT layer (all lookouts query) (Government of Alberta (geospatial.alberta.ca))",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json&resultRecordCount=1000",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -84,10 +102,29 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-grave-flats",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

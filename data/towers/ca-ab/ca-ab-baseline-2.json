@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-baseline-2",
   "name": "Baseline Fire Lookout",
+  "summary": "Active Alberta lookout on Baseline Mountain, successor to a 1920s groundhouse; the register and Travel Alberta disagree on its build date.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,16 +17,16 @@
   "material": "steel",
   "material_from": "alberta_wildfire",
   "roles": [],
-  "design": null,
+  "design": "Successor tower and cabin, described in the register as a new 80 ft (24 m) tower",
   "height_m": 30.0,
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": "Alberta Wildfire",
+  "agency": "Alberta Land & Forest Service (per the register)",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Active fire lookout, staffed March–October; it is the observer's seasonal home. No public access to the tower or cabin — please don't visit uninvited."
+    "level": "restricted",
+    "note": "Active, staffed lookout. Travel Alberta says hikers and off-highway vehicles reach the summit by the main access road, but no source read says the tower may be climbed and none says it is closed."
   },
   "staffing": {
     "status": "staffed",
@@ -34,11 +35,25 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Route guide: the way to the top is the Baseline service road."
   },
   "rental": null,
   "events": [
+    {
+      "year": 1948,
+      "event": "built",
+      "note": "Register: a new 80 ft tower and cabin about half a mile west of the groundhouse was completed by the late 1940s, and the register calls it the successor that remains active. 1948 is a placeholder year for 'late 1940s', not a stated date.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/ab/baseline-lookout/"
+    },
+    {
+      "year": 1990,
+      "event": "relocated",
+      "note": "Travel Alberta: the fire tower was upgraded in the 1990s to a new site on the adjacent summit, with an access road. 1990 is a placeholder year; it does not match the register's late-1940s date.",
+      "from": "research",
+      "source_url": "https://www.travelalberta.com/listings/baseline-mountain-22218"
+    },
     {
       "year": 2012,
       "event": "built",
@@ -49,6 +64,26 @@
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Baseline Lookout (National Historic Lookout Register)",
+      "url": "http://nhlr.org/lookouts/can/ab/baseline-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Old Baseline Lookout Trail - David Thompson Highway Hike (10Adventures)",
+      "url": "https://www.10adventures.com/hikes/david-thompson-country/old-basline-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Baseline Fire Towers Loop (AB, Canada) (Fastest Known Time)",
+      "url": "https://fastestknowntime.com/route/baseline-fire-towers-loop-ab-canada",
+      "kind": "reference"
+    },
+    {
+      "label": "Baseline Mountain (Travel Alberta)",
+      "url": "https://www.travelalberta.com/listings/baseline-mountain-22218",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -85,10 +120,30 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-baseline-2",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

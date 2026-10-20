@@ -1,6 +1,7 @@
 {
   "id": "us-ak-birch-hill",
   "name": "Birch Hill Fire Tower",
+  "summary": "BLM fire tower on Birch Hill near Fairbanks; in use in 1970, and a 1979 study says the Bureau refused public access. No current source describes it.",
   "other_names": [
     "Birch Hill BLM Fire Tower"
   ],
@@ -29,13 +30,13 @@
   "design": null,
   "height_m": null,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "Last described in a 1979 study; no current source confirms that it stands.",
   "registers": [],
   "agency": "Bureau of Land Management (Alaska)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "A 1979 study says the Bureau of Land Management would not allow public access to the tower, citing liability or injury. No current source describes access."
   },
   "staffing": {
     "status": "unknown",
@@ -50,6 +51,13 @@
   "events": [
     {
       "year": 1970,
+      "event": "other",
+      "note": "Alaska Fire Report lists Birch Hill as one of two lookout towers in use near Fairbanks that year. It does not say the tower was manned.",
+      "from": "research",
+      "source_url": "https://archive.org/stream/alaskafirereportunit/alaskafirereportunit_djvu.txt"
+    },
+    {
+      "year": 1970,
       "event": "staffed",
       "note": "In use as a lookout this year (BLM Alaska Fire Report).",
       "from": "curated_ak",
@@ -61,6 +69,16 @@
     {
       "label": "University of Alaska Agricultural Experiment Station, Bulletin 51 (1979)",
       "url": "https://www.uaf.edu/afes/publications/database/bulletin/files/pdfs/Bulletin_51.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Alaska Fire Report (report covering 1970) (Bureau of Land Management, Alaska State Office (via Internet Archive))",
+      "url": "https://archive.org/stream/alaskafirereportunit/alaskafirereportunit_djvu.txt",
+      "kind": "reference"
+    },
+    {
+      "label": "Birch Hill Recreation Area (ALASKA.ORG)",
+      "url": "https://www.alaska.org/detail/birch-hill-recreation-area",
       "kind": "reference"
     },
     {
@@ -81,9 +99,28 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ak-birch-hill",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
   "verification": "unverified",
   "locked": [],
   "hidden": false,

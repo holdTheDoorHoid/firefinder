@@ -1,6 +1,7 @@
 {
   "id": "ca-bc-jubilee",
   "name": "Jubilee Lookout",
+  "summary": "Jubilee Mountain, BC: 1957 wooden lookout lost to lightning c.1989-90, replaced by a steel tower; 2023 wildfire spared it; closed and locked by 2026.",
   "other_names": [],
   "country": "CA",
   "region": "BC",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Steel tower that replaced a 1957 wooden timber lookout; NHLR calls the design rare in British Columbia",
   "height_m": null,
   "status": "standing",
   "status_note": null,
@@ -28,34 +29,68 @@
       "url": "http://nhlr.org/lookouts/can/bc/jubilee-lookout/"
     }
   ],
-  "agency": "British Columbia Forest Service",
+  "agency": "British Columbia Forest Service (per NHLR)",
   "ownership": "federal",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Tower reported closed and locked in July 2026 (Columbia Valley Pioneer); no public climbing access described"
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": false,
+    "drive_up": true,
+    "trail_note": "Forest service road up Jubilee Mountain reported in great shape in late September 2025; the tower itself is closed"
   },
   "rental": null,
   "events": [
     {
       "year": 1957,
       "event": "built",
-      "note": null,
-      "from": "firelookout_ca"
+      "note": "Original lookout on a wooden timber tower (firelookout.ca)",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=jubilee-fire-lookout"
+    },
+    {
+      "year": 1989,
+      "event": "destroyed",
+      "note": "Original wooden tower destroyed by lightning around 1989-90 (firelookout.ca gives no single year)",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=jubilee-fire-lookout"
+    },
+    {
+      "year": 1990,
+      "event": "replaced",
+      "note": "Steel tower erected shortly afterward; source gives no exact year, 1990 is an estimate from the 1989-90 loss",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=jubilee-fire-lookout"
+    },
+    {
+      "year": 2023,
+      "event": "fire",
+      "note": "Wildfire swept a large section of Jubilee on July 31, 2023; NHLR says the tower was nearly destroyed but saved",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/bc/jubilee-lookout/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/can/bc/jubilee-lookout/",
+        "https://www.columbiavalleypioneer.com/then-and-now-a-mountains-journey-back/"
+      ]
+    },
+    {
+      "year": 2026,
+      "event": "closed",
+      "note": "Tower described as closed and locked in a July 2026 report",
+      "from": "research",
+      "source_url": "https://www.columbiavalleypioneer.com/then-and-now-a-mountains-journey-back/"
     },
     {
       "year": 2026,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 2, 2026",
-      "from": "nhlr"
+      "note": "Date registered January 2, 2026",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/bc/jubilee-lookout/"
     }
   ],
   "photos": [
@@ -75,6 +110,16 @@
       "label": "NHLR register entry CAN 20 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/can/bc/jubilee-lookout/",
       "kind": "register"
+    },
+    {
+      "label": "Then and now: a mountain's journey back (Columbia Valley Pioneer)",
+      "url": "https://www.columbiavalleypioneer.com/then-and-now-a-mountains-journey-back/",
+      "kind": "reference"
+    },
+    {
+      "label": "Event Report - VE7KPZ SOTA at Jubilee Mountain Fire Lookout (NORAC)",
+      "url": "https://norac.bc.ca/index.php/news/1396-event-report-ve7kpz-sota-at-jubilee-mountain-fire-lookout",
+      "kind": "reference"
     },
     {
       "label": "Jubilee Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
@@ -107,10 +152,31 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-jubilee",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

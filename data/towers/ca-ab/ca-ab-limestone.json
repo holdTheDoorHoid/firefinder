@@ -1,6 +1,7 @@
 {
   "id": "ca-ab-limestone",
   "name": "Limestone Fire Lookout",
+  "summary": "Alberta's lookout dataset dates the present 5 m summit cabin to 1963 and lists it active; a 2010 visit found an observer at the summit.",
   "other_names": [],
   "country": "CA",
   "region": "AB",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "osm",
   "roles": [],
-  "design": null,
+  "design": "Summit cabin, 5 m (16 ft) high, per the provincial lookout dataset",
   "height_m": 5.0,
   "status": "standing",
   "status_note": null,
@@ -42,13 +43,40 @@
     {
       "year": 1963,
       "event": "built",
-      "note": "The present structure (Alberta Wildfire's year of construction).",
-      "from": "alberta_wildfire",
-      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0"
+      "note": "Year the present cabin was built, per the provincial dataset",
+      "from": "research",
+      "source_url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25LIMESTONE%25%27%20OR%20NAME%20LIKE%20%27%25LIVOCK%25%27%20OR%20NAME%20LIKE%20%27%25MAYBERNE%25%27%20OR%20NAME%20LIKE%20%27%25CLARKE%25%27&outFields=NAME,LABEL,LOOKOUT_ID,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACTIVE,ACCESS_MODE,KEY_LOOKOUT,LATITUDE,LONGITUDE,MAP_NUMBER,LOCATION_VERIFIED&returnGeometry=false&f=json"
+    },
+    {
+      "year": 2010,
+      "event": "staffed",
+      "note": "Observer greeted a visitor at the summit on 8 July 2010",
+      "from": "research",
+      "source_url": "https://thepassionatehiker.blogspot.com/2010/07/three-more-alberta-fire-lookouts.html"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Wildfire lookout records for Limestone, Livock and Mayberne (FRIAA FireSmart vector data, query) (Government of Alberta)",
+      "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25LIMESTONE%25%27%20OR%20NAME%20LIKE%20%27%25LIVOCK%25%27%20OR%20NAME%20LIKE%20%27%25MAYBERNE%25%27%20OR%20NAME%20LIKE%20%27%25CLARKE%25%27&outFields=NAME,LABEL,LOOKOUT_ID,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACTIVE,ACCESS_MODE,KEY_LOOKOUT,LATITUDE,LONGITUDE,MAP_NUMBER,LOCATION_VERIFIED&returnGeometry=false&f=json",
+      "kind": "reference"
+    },
+    {
+      "label": "Three more Alberta fire lookouts! (The Passionate Hiker (blog))",
+      "url": "https://thepassionatehiker.blogspot.com/2010/07/three-more-alberta-fire-lookouts.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Limestone Mountain Lookout (Sonny Bou)",
+      "url": "http://sonnybou.ca/ssbou2014/limestonemountainlookout.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Lonely Lookouts (RETROactive, Alberta Historic Places)",
+      "url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
+      "kind": "reference"
+    },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
@@ -85,10 +113,28 @@
         "material",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ab-limestone",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "facts",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
