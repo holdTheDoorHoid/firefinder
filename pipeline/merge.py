@@ -148,7 +148,7 @@ PRECEDENCE: dict[str, list[str]] = {
                "eastern_us_lookouts", "central_us_lookouts", "wikidata",
                "west_us_lookouts", "trailchick_wa", "cherylhill_oregon", "ffla_groups",
              "willhiteweb_wa", "indiana_fire_towers", "canada_lookouts_weebly", *CA_SURVEY_SOURCES],
-    "kind": ["ffla", "nhlr", "fflos", "firelookout_ca", "ontario_lio", "alberta_wildfire", "websiteservice_sk", "bc_trim_lookouts", "ridb", "firelookout_com", "fire_lookouts_org",
+    "kind": ["ffla", "nhlr", "fflos", "firelookout_ca", "ontario_lio", "alberta_wildfire", "websiteservice_sk", "ridb", "firelookout_com", "fire_lookouts_org",
              "tnlandforms", "nj_forest_fire_towers", "pa_storymap", "andyarthur_ny",
              "wikipedia_lookout_lists", "cskt", "osm", "eastern_us_lookouts",
              "central_us_lookouts", "wikidata", "idaho_fl", "michigan_fire_tower", "canada_lookouts_weebly",

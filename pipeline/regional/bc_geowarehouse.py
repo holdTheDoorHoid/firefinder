@@ -361,7 +361,8 @@ def trim_records(symbols: list[dict], names: dict[int, dict]) -> list[dict]:
         out.append({
             "key": f"bc_trim_lookouts:bc:{s['objectid']}", "url": TRIM_DATASET, "name": nm["name"] if nm else None,
             "country": "CA", "region": "BC", "county": district_at(s["lat"], s["lon"]), "lat": s["lat"], "lon": s["lon"], "elevation_m": None,
-            "type_raw": None, "kind": "tower", "status_raw": None, "status": "unknown", "registers": [], "built": None,
+            # the base map's one symbol for any fire lookout, tower or cabin: says nothing about the structure
+            "type_raw": None, "kind": "unknown", "status_raw": None, "status": "unknown", "registers": [], "built": None,
             "agency": None, "events": [], "photos": [],
             "links": [{"label": f"BC base map (TRIM): fire lookout tower symbol {s['objectid']}", "url": TRIM_DATASET, "kind": "agency"}],
             "rental": None, "extra": extra,

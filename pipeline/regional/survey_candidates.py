@@ -362,7 +362,9 @@ def build_record(c: dict, source: str, kinds: set[str]) -> dict:
             events.append(e)
     cx = c.get("extra") or {}
     extra: dict = {}
-    aliases = [n for n in c.get("other_names") or [] if isinstance(n, str) and n.strip() and n != c.get("name")]
+    # (a survey's note on a spelling, "Mont Morisette (CGNDB spelling)", is not part of the name)
+    aliases = [re.sub(r"\s*\((?:CGNDB|official|source) spelling\)$", "", n).strip()
+               for n in c.get("other_names") or [] if isinstance(n, str) and n.strip() and n != c.get("name")]
     if aliases:
         extra["aliases"] = aliases
     if why_not:
