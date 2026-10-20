@@ -222,7 +222,13 @@ def normalize_state(value: str | None) -> str | None:
     value = value.strip()
     if len(value) == 2:
         return value.upper()
-    return STATE_NAME_TO_ABBR.get(value.lower())
+    found = STATE_NAME_TO_ABBR.get(value.lower())
+    if found:
+        return found
+    # Canada's provinces and territories, in English or French ("Ontario", "Québec",
+    # "Colombie-Britannique"): pipeline/regions.py, 2026-10-20.
+    import regions
+    return regions.parse_region(value)
 
 
 def get_state_lookup() -> StateLookup:
