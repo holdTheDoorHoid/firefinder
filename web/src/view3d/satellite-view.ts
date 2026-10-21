@@ -21,19 +21,19 @@ import {
   cabFrame,
   cameraSpace,
   clipNear,
+  demZoomFor,
+  discBounds,
   firstImagery,
   focalPx,
   horizontalFov,
   lookTarget,
   mercatorBearing,
   metresPerMercatorUnit,
-  demZoomFor,
-  discBounds,
-  tileDistanceM,
   orbitEye,
   project,
   safeTilt,
   targetDistanceM,
+  tileDistanceM,
   tileZoomFor,
   toScreen,
   unproject,
@@ -43,11 +43,12 @@ import {
 } from './earth-geo.ts';
 import { earthSources, type EarthSources, type Tally } from './earth-tiles.ts';
 import type { PanoramaData } from './engine.ts';
+import { mercY } from './tiles.ts';
 import { FONT, PALETTES, drawLabels, drawRingWith, placeLabels, type LabelItem, type Layout, type Palette, type Theme } from './panorama-draw.ts';
 
 /** Field of view, degrees: wide as the eye down to binoculars. */
-export const FOV_MAX = 60;
-export const FOV_MIN = 4;
+const FOV_MAX = 60;
+const FOV_MIN = 4;
 const TILT_MIN = -60;
 const TILT_MAX = 20;
 /** Outside: pitch from straight down, distance from the cab's foot. */
@@ -102,7 +103,10 @@ export interface SatelliteOptions {
   theme: Theme;
   frame: boolean;
   highlight: string | null;
+  /** The lookout's short name, for its marker outside. */
   name: string;
+  /** A distance in the lookout's units ("0.4 mi (700 m)"). */
+  distance: (m: number) => string;
   /** The visitor turned the view: the new bearing, and whether to say it (keys, end of a drag). */
   onTurn: (az: number, announce: boolean) => void;
   /** Tilt, zoom or inside/outside changed. */
@@ -141,7 +145,6 @@ export class SatelliteView {
   #fov: number;
   #orbit: { bearing: number; pitch: number; dist: number } | null = null;
   #flight = 0;
-  #overlayFrame = 0;
   #marker: Marker | null = null;
   #anchors = new Map<string, number>();
   #widths = new Map<string, number>();
@@ -207,7 +210,7 @@ export class SatelliteView {
         renderWorldCopies: false,
         // The camera hangs in the air at the eye; MapLibre must not pull the centre down to the ground.
         centerClampedToGround: false,
-        maxPitch: 90 - TILT_MIN + 30,
+        maxPitch: 90 + TILT_MAX + 5,
         maxZoom: 24,
         pixelRatio: Math.min(window.devicePixelRatio || 1, 2),
         center: [ob.lon, ob.lat],
@@ -288,10 +291,10 @@ export class SatelliteView {
   /** In words, for screen readers: tilt and zoom, or where you are outside. */
   describe(): string {
     if (this.#orbit) {
-      return `Outside, about ${Math.round(this.#orbit.dist / 10) * 10} metres from the cab, looking at it from the ${compassWord(this.#orbit.bearing + 180)}.`;
+      return `Outside, about ${this.#o.distance(this.#orbit.dist)} from the cab, looking at it from the ${compassWord(this.#orbit.bearing + 180)}.`;
     }
     const t = Math.round(this.#tilt);
-    const tilt = t === 0 ? 'level' : `${Math.abs(t)} degrees ${t > 0 ? 'up' : 'down'}`;
+    const tilt = t === 0 ? 'level' : `${Math.abs(t)} degree${Math.abs(t) === 1 ? '' : 's'} ${t > 0 ? 'up' : 'down'}`;
     return `Looking ${tilt}, ${Math.round(this.spanDeg)} degrees of the circle in view.`;
   }
 
@@ -381,7 +384,6 @@ export class SatelliteView {
   destroy(): void {
     this.#destroyed = true;
     cancelAnimationFrame(this.#flight);
-    cancelAnimationFrame(this.#overlayFrame);
     this.#resize.disconnect();
     for (const off of this.#unbind) off();
     this.#marker?.remove();
@@ -726,9 +728,7 @@ export class SatelliteView {
       // Before the first tile: the source the lookout's own spot will use.
       const o = this.#o.data.observer;
       const n = 2 ** 12;
-      const x = Math.floor(((o.lon + 180) / 360) * n);
-      const y = Math.floor(((1 - Math.asinh(Math.tan((o.lat * Math.PI) / 180)) / Math.PI) / 2) * n);
-      used.add(firstImagery(12, x, y));
+      used.add(firstImagery(12, Math.floor(((o.lon + 180) / 360) * n), Math.floor(mercY(o.lat) * n)));
     }
     const credit = (s: ImagerySource) => html`<a href="${IMAGERY_CREDITS[s].href}" rel="noopener">${IMAGERY_CREDITS[s].text}</a>`;
     this.#o.credit.innerHTML = html`${used.has('usgs') ? html`<span>${credit('usgs')}</span>` : ''}
@@ -761,9 +761,8 @@ const RTT_ORTHO = new Float32Array([2 / 8192, 0, 0, 0, 0, -2 / 8192, 0, 0, 0, 0,
  * kilometre out (see `tileZoomFor`) whatever the photo source asks for. MapLibre 6.12 has no
  * setting for those tiles (`setSourceTileLodParams` reaches sources only), so on this one map
  * the terrain tile manager's `update` is replaced by the same steps with our rule (and only the
- * tiles `wanted`: within the view's reach). Where
- * MapLibre's internals are not what this expects, it leaves the built-in rule alone: the view
- * still works, only blurrier.
+ * tiles `wanted`: within the view's reach). Where MapLibre's internals are not what this expects,
+ * it leaves the built-in rule alone: the view still works, only blurrier.
  */
 function useTerrainLod(map: MlMap, calc: CalculateTileZoomFunction, wanted: (z: number, x: number, y: number) => boolean): void {
   const ttm = (map as unknown as { terrain?: { tileManager?: TerrainTiles } }).terrain?.tileManager;

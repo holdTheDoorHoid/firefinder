@@ -218,9 +218,10 @@ export class PanoramaView {
     this.#o.onTurn?.(this.#view.az);
   }
 
-  /** Put the keyboard focus on the view that is showing. */
+  /** Put the keyboard focus on the view that is showing (on phones, maybe the satellite view's "Load" button). */
   focus(): void {
-    (this.#satShowing() ? this.#satView : this.#viewport).focus({ preventScroll: true });
+    const target = !this.#satShowing() ? this.#viewport : this.#satView.hidden ? this.#q<HTMLElement>('[data-pv-sat-load]') : this.#satView;
+    target?.focus({ preventScroll: true });
   }
 
   #satShowing(): boolean {
@@ -559,11 +560,7 @@ export class PanoramaView {
     this.#q('[data-stretch]')!.hidden = sat;
     this.#syncSatTools();
     // Keep the keyboard on the view when one box gives way to the other.
-    if (hadFocus && document.activeElement !== active) {
-      const load = gate ? this.#q<HTMLElement>('[data-pv-sat-load]') : null;
-      if (load) load.focus({ preventScroll: true });
-      else this.focus();
-    }
+    if (hadFocus && document.activeElement !== active) this.focus();
   }
 
   #syncSatTools(): void {
@@ -617,6 +614,7 @@ export class PanoramaView {
         frame: this.#frame,
         highlight: this.#highlight,
         name: shortName(t.name),
+        distance: (m) => this.#distance(m),
         onTurn: (az, announce) => this.turnTo(az, announce),
         onChange: () => {
           this.#updateHeading(false);

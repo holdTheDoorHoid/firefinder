@@ -37,9 +37,9 @@ function initPanorama(): void {
     const terrain = mb(phone ? size.dataset.light : size.dataset.full);
     // The view opens on Satellite where it can (DESIGN.md 4.1); phones ask again before its photos.
     const satellite = webgl2Likely() && storedCabMode() !== 'drawn';
-    const photos = mb(phone ? size.dataset.satLight : size.dataset.sat);
-    if (satellite && phone) size.textContent = `Downloads about ${terrain} of terrain data the first time; the satellite view asks before loading about ${photos} of photos.`;
-    else if (satellite) size.textContent = `Downloads about ${terrain} of terrain data and ${photos} of satellite photos the first time, more as you look around.`;
+    const more = mb(phone ? size.dataset.satLight : size.dataset.sat);
+    if (satellite && phone) size.textContent = `Downloads about ${terrain} of terrain data the first time; the satellite view asks before downloading about ${more} more.`;
+    else if (satellite) size.textContent = `Downloads about ${terrain} of terrain data, and ${more} more for the satellite view, the first time; more as you look around.`;
     else if (phone) size.textContent = `Downloads about ${terrain} of terrain data the first time.`;
   }
   btn.addEventListener('click', async () => {
