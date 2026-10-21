@@ -1,10 +1,12 @@
 /**
  * "View from the cab": the interactive 360° panorama. Mounts into any element (a tower page
  * section, a dialog on the map, the smoke-spotting lesson) and loads its terrain only when
- * started.
+ * started. Where `satellite` is set (tower pages, the map's dialog) it has two modes: the
+ * satellite view of today's land (satellite-view.ts, loaded with MapLibre only when shown) and
+ * the drawn panorama, sharing one terrain result, the bearing, the eye height and the lists.
  */
 import '../styles/view3d.css';
-import { html, raw } from '../lib/html.ts';
+import { html, raw, type SafeHtml } from '../lib/html.ts';
 import { effectiveTheme, onThemeChange } from '../ui/theme.ts';
 import { requestPanorama, progressText, siteBase } from './client.ts';
 import {
@@ -35,6 +37,9 @@ import {
   type View,
 } from './panorama-draw.ts';
 import { estimateBytes, panoramaLevels, planTiles } from './tiles.ts';
+import { chooseMode, satelliteDownload, type CabMode } from './earth-geo.ts';
+import { askBeforeSatellite, saveCabMode, saveFrame, storedCabMode, storedFrame, webgl2Works, zoomKeys } from './cab-prefs.ts';
+import type { SatelliteView } from './satellite-view.ts';
 
 export interface PanoramaTower {
   id: string;
@@ -69,6 +74,8 @@ export interface PanoramaOptions {
   onTurn?: (az: number) => void;
   /** Called once the view is ready. */
   onReady?: (data: PanoramaData) => void;
+  /** Offer the satellite view beside the drawn one (default false: the smoke lesson stays drawn). */
+  satellite?: boolean;
 }
 
 const ZOOMS = [2, 3, 4.5, 6.5, 9, 12, 16, 22, 30, 42];
@@ -85,6 +92,17 @@ export function lightDetail(width = window.innerWidth): boolean {
 export function panoramaDownload(t: { lat: number; lon: number }, light = lightDetail()): { tiles: number; bytes: number } {
   const keys = planTiles([t], panoramaLevels(MAX_DIST_M, light ? 'light' : 'full'));
   return { tiles: keys.length, bytes: estimateBytes(keys) };
+}
+
+/** Kinds with a cab to look out of (the window frame is offered only for these). */
+const CAB_KINDS = new Set(['tower', 'enclosed_tower', 'ground', 'two_story', 'three_story', 'rooftop', 'mobile', 'unknown']);
+
+/** The satellite view of a lookout that is gone (or was moved) shows today's land, not its land. */
+function todaysLandNote(status: string): string | null {
+  if (status === 'gone' || status === 'ruins' || status === 'relocated') {
+    return "The photos show the land today, not as it was when the lookout stood here: reservoirs, clear-cuts, roads and towns may be newer than the tower.";
+  }
+  return null;
 }
 
 function shortName(name: string): string {
@@ -116,12 +134,24 @@ export class PanoramaView {
   #canvas!: HTMLCanvasElement;
   #overview!: HTMLCanvasElement;
   #viewport!: HTMLElement;
-  #frame = 0;
+  #frameReq = 0;
   #liveTimer = 0;
   #resize: ResizeObserver | null = null;
   #theme = effectiveTheme();
   #run = 0;
   #offTheme: () => void = () => {};
+  /** Which view shows: the satellite view or the drawn panorama. */
+  #mode: CabMode = 'drawn';
+  /** Why the satellite view is not available here, when it was offered but cannot be shown. */
+  #satBlocked: string | null = null;
+  #sat: SatelliteView | null = null;
+  #satLoad: Promise<typeof import('./satellite-view.ts')> | null = null;
+  /** Phones: the visitor tapped to load the satellite view's photos. */
+  #satConfirmed = false;
+  #frame = storedFrame();
+  #stage!: HTMLElement;
+  #satEl!: HTMLElement;
+  #satView!: HTMLElement;
 
   get #metric(): boolean {
     return unitsFor(this.#o.tower.country).metric;
@@ -135,6 +165,11 @@ export class PanoramaView {
     this.#o = opts;
     this.#view.az = opts.initialAz ?? 0;
     this.#eye = eyeHeight({ kind: opts.tower.kind, height_m: opts.tower.height_m, lon: opts.tower.lon });
+    if (opts.satellite) {
+      const choice = chooseMode({ offered: true, capable: webgl2Works(), stored: storedCabMode() });
+      this.#mode = choice.mode;
+      if (choice.unavailable) this.#satBlocked = "This browser can't draw the satellite view (it needs WebGL 2), so the view is drawn.";
+    }
     this.el = document.createElement('div');
     this.el.className = 'pv';
     this.el.dataset.state = 'idle';
@@ -142,6 +177,7 @@ export class PanoramaView {
     this.#build();
     this.#offTheme = onThemeChange((t) => {
       this.#theme = t;
+      this.#sat?.setOptions({ theme: t });
       this.#draw();
     });
   }
@@ -168,17 +204,40 @@ export class PanoramaView {
     return `Smoke ${Math.abs(d).toFixed(1)} degrees to the ${d > 0 ? 'right' : 'left'} of the sight.`;
   }
 
+  /** Which view is showing. */
+  get mode(): CabMode {
+    return this.#mode;
+  }
+
   /** Turn to an azimuth (degrees). */
   turnTo(az: number, announce = false): void {
     this.#view.az = wrap360(az);
+    this.#sat?.setBearing(this.#view.az);
     this.#updateHeading(announce);
     this.#draw();
     this.#o.onTurn?.(this.#view.az);
   }
 
+  /** Put the keyboard focus on the view that is showing (on phones, maybe the satellite view's "Load" button). */
+  focus(): void {
+    const target = !this.#satShowing() ? this.#viewport : this.#satView.hidden ? this.#q<HTMLElement>('[data-pv-sat-load]') : this.#satView;
+    target?.focus({ preventScroll: true });
+  }
+
+  #satShowing(): boolean {
+    return this.#mode === 'satellite' && !!this.#data && !this.#satEl.hidden;
+  }
+
+  /** Turn by some degrees from the buttons: outside the cab this circles the lookout instead. */
+  #turnBy(deg: number): void {
+    if (this.#satShowing() && this.#sat?.outside) this.#sat.turnBy(deg);
+    else this.turnTo(this.#view.az + deg, true);
+  }
+
   #build(): void {
     const t = this.#o.tower;
     const recon = reconstructionNote(t.status, this.#eye.source);
+    const sat = !!this.#o.satellite;
     this.el.innerHTML = html`
       ${this.#o.eyeControl !== false
         ? html`<div class="pv-eye">
@@ -206,6 +265,16 @@ export class PanoramaView {
             ${recon && this.#o.recon !== false ? html`<p class="pv-recon">${recon}</p>` : ''}
           </div>`
         : ''}
+      ${sat
+        ? html`<div class="pv-modes">
+            <div class="pv-mode-switch" role="group" aria-label="Kind of view">
+              <button type="button" class="pv-mode" data-mode="satellite" aria-pressed="false" ${this.#satBlocked ? raw('disabled') : ''}>${raw(SAT_ICON)}Satellite</button>
+              <button type="button" class="pv-mode" data-mode="drawn" aria-pressed="false">${raw(DRAWN_ICON)}Drawn</button>
+            </div>
+            <p class="pv-mode-hint" data-pv-mode-hint></p>
+          </div>
+          ${todaysLandNote(t.status) ? html`<p class="pv-sat-note" data-pv-sat-note hidden>${todaysLandNote(t.status)}</p>` : ''}`
+        : ''}
       <div class="pv-stage">
         <div class="pv-viewport" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="359" aria-valuenow="0"
           aria-label="View from ${t.name}. Left and right arrow keys turn, Shift turns faster, plus and minus zoom."
@@ -217,6 +286,21 @@ export class PanoramaView {
           </div>
           <div class="pv-tip" data-pv-tip hidden></div>
         </div>
+        ${sat
+          ? html`<div class="pv-sat" data-pv-sat hidden>
+              <div class="pv-sat-view" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="359" aria-valuenow="0"
+                aria-label="Satellite view from ${t.name}. Left and right arrow keys turn, up and down tilt, plus and minus zoom."
+                aria-describedby="${this.#id}-keys ${this.#id}-sat-alt"></div>
+              <div class="pv-sat-gate" data-pv-sat-gate hidden>
+                <p class="pv-sat-gate-title">Satellite view</p>
+                <p>Photos of today's land, laid over the terrain. It downloads about ${megabytes(satelliteDownload(true).start)} to start, and up to about ${megabytes(satelliteDownload(true).around)} if you look all the way round.</p>
+                <p class="pv-sat-gate-actions"><button type="button" class="btn btn-primary" data-pv-sat-load>Load the satellite view</button>
+                  <button type="button" class="linklike" data-mode="drawn">Use the drawn view</button></p>
+              </div>
+              <p class="pv-sat-credit" data-pv-sat-credit></p>
+              <p class="visually-hidden" id="${this.#id}-sat-alt">The satellite view is a picture of the land around the lookout with the names of the peaks and lookouts in sight. They are listed below the view, and the drawn view gives their exact bearings.</p>
+            </div>`
+          : ''}
         <p class="visually-hidden" id="${this.#id}-keys">N, E, S and W keys face north, east, south and west.</p>
         <div class="pv-bar">
           <div class="pv-turn" role="group" aria-label="Turn">
@@ -232,6 +316,10 @@ export class PanoramaView {
               <button type="button" class="pv-btn" data-zoom="1" aria-label="Zoom in" title="Zoom in">+</button>
             </span>
             <button type="button" class="pv-btn pv-stretch" data-stretch aria-pressed="false" title="Draw heights twice as tall, to read low ridges">Heights ×2</button>
+            ${sat
+              ? html`<button type="button" class="pv-btn pv-text-btn" data-pv-frame aria-pressed="${String(this.#frame)}" title="Draw the cab's window posts and sill" ${CAB_KINDS.has(t.kind) ? '' : raw('data-no-cab')} hidden>Window frame</button>
+                <button type="button" class="pv-btn pv-text-btn" data-pv-outside hidden>Step outside</button>`
+              : ''}
           </div>
         </div>
         <div class="pv-overview-wrap">
@@ -245,7 +333,11 @@ export class PanoramaView {
     this.#canvas = this.el.querySelector('.pv-canvas')!;
     this.#overview = this.el.querySelector('.pv-overview')!;
     this.#viewport = this.el.querySelector('.pv-viewport')!;
+    this.#stage = this.el.querySelector('.pv-stage')!;
+    this.#satEl = this.el.querySelector('[data-pv-sat]') ?? document.createElement('div');
+    this.#satView = this.el.querySelector('.pv-sat-view') ?? this.#viewport;
     this.#bind();
+    this.#syncMode();
   }
 
   #q<T extends HTMLElement>(sel: string): T | null {
@@ -258,9 +350,24 @@ export class PanoramaView {
     this.el.addEventListener('click', (e) => {
       const b = (e.target as Element).closest<HTMLElement>('button');
       if (!b || !this.el.contains(b)) return;
-      if (b.dataset.turn) this.turnTo(this.#view.az + Number(b.dataset.turn), true);
-      else if (b.dataset.zoom) this.#zoom(Number(b.dataset.zoom));
-      else if (b.hasAttribute('data-stretch')) {
+      if (b.dataset.turn) this.#turnBy(Number(b.dataset.turn));
+      else if (b.dataset.zoom) {
+        if (this.#satShowing() && this.#sat) this.#sat.zoom(Number(b.dataset.zoom));
+        else this.#zoom(Number(b.dataset.zoom));
+      } else if (b.dataset.mode) this.#setMode(b.dataset.mode as CabMode, true);
+      else if (b.hasAttribute('data-pv-sat-load')) {
+        this.#satConfirmed = true;
+        void this.#showSatellite(true);
+      } else if (b.hasAttribute('data-pv-outside')) {
+        if (this.#sat?.outside) this.#sat.backInCab();
+        else this.#sat?.stepOutside();
+        this.#syncSatTools();
+      } else if (b.hasAttribute('data-pv-frame')) {
+        this.#frame = !this.#frame;
+        saveFrame(this.#frame);
+        b.setAttribute('aria-pressed', String(this.#frame));
+        this.#sat?.setOptions({ frame: this.#frame });
+      } else if (b.hasAttribute('data-stretch')) {
         this.#view.exaggeration = this.#view.exaggeration === 1 ? 2 : 1;
         b.setAttribute('aria-pressed', String(this.#view.exaggeration === 2));
         this.#relayout();
@@ -275,9 +382,14 @@ export class PanoramaView {
         void this.start();
       } else if (b.dataset.face) {
         this.#highlight = b.dataset.key ?? null;
+        this.#sat?.setOptions({ highlight: this.#highlight });
         this.turnTo(Number(b.dataset.face), true);
-        vp.focus({ preventScroll: true });
-        vp.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        if (this.#sat?.outside) {
+          this.#sat.backInCab();
+          this.#syncSatTools();
+        }
+        this.focus();
+        (this.#satShowing() ? this.#satEl : vp).scrollIntoView({ block: 'nearest', behavior: 'smooth' });
       } else if (b.hasAttribute('data-pv-retry')) void this.start();
       else if (b.hasAttribute('data-pv-more')) {
         b.closest('section')?.querySelectorAll<HTMLElement>('[data-extra]').forEach((li) => (li.hidden = false));
@@ -401,7 +513,141 @@ export class PanoramaView {
   }
 
   #canvasWidth(): number {
-    return this.#viewport.clientWidth || 600;
+    return this.#stage?.clientWidth || this.#viewport.clientWidth || 600;
+  }
+
+  /* ---------- Satellite and drawn ---------- */
+
+  #setMode(mode: CabMode, byVisitor: boolean): void {
+    if (mode === this.#mode || (mode === 'satellite' && this.#satBlocked)) return;
+    if (mode === 'drawn') this.#sat?.backInCab(true);
+    this.#mode = mode;
+    if (byVisitor) saveCabMode(mode);
+    this.#syncMode();
+    this.#relayout();
+    this.#updateHeading(false);
+    if (mode === 'satellite') void this.#showSatellite(false);
+    this.#announce(mode === 'satellite' ? 'Satellite view.' : 'Drawn view.');
+  }
+
+  /** Show what the mode and the loading state call for. */
+  #syncMode(): void {
+    if (!this.#o.satellite) return;
+    const sat = this.#mode === 'satellite';
+    const ready = this.el.dataset.state === 'ready';
+    const gate = sat && ready && !this.#sat && askBeforeSatellite() && !this.#satConfirmed;
+    for (const b of this.el.querySelectorAll<HTMLButtonElement>('.pv-mode[data-mode]')) {
+      b.setAttribute('aria-pressed', String(b.dataset.mode === this.#mode));
+      if (b.dataset.mode === 'satellite') b.disabled = !!this.#satBlocked;
+    }
+    const hint = this.#q('[data-pv-mode-hint]');
+    if (hint) {
+      hint.textContent =
+        this.#satBlocked ??
+        (sat ? `Photos of today's land on the terrain. Drag to look around and tilt; pinch or ${zoomKeys()} + scroll to zoom.` : 'Ridgelines worked out from terrain data, with exact bearings.');
+      hint.classList.toggle('is-warn', !!this.#satBlocked);
+    }
+    const note = this.#q('[data-pv-sat-note]');
+    if (note) note.hidden = !sat;
+    // While the terrain loads (or reloads) the drawn view's box carries the progress.
+    const active = document.activeElement;
+    const hadFocus = active === this.#viewport || active === this.#satView;
+    this.#viewport.hidden = sat && ready;
+    this.#satEl.hidden = !(sat && ready);
+    this.#q('[data-pv-sat-gate]')!.hidden = !gate;
+    this.#satView.hidden = gate;
+    this.#q('[data-pv-sat-credit]')!.hidden = gate;
+    this.#q('[data-stretch]')!.hidden = sat;
+    this.#syncSatTools();
+    // Keep the keyboard on the view when one box gives way to the other.
+    if (hadFocus && document.activeElement !== active) this.focus();
+  }
+
+  #syncSatTools(): void {
+    const on = this.#satShowing() && !!this.#sat;
+    const outside = this.#q<HTMLButtonElement>('[data-pv-outside]');
+    if (outside) {
+      outside.hidden = !on;
+      outside.textContent = this.#sat?.outside ? 'Back in the cab' : 'Step outside';
+    }
+    const frame = this.#q<HTMLButtonElement>('[data-pv-frame]');
+    if (frame) {
+      frame.hidden = !on || frame.hasAttribute('data-no-cab');
+      frame.disabled = !!this.#sat?.outside;
+    }
+  }
+
+  /** Where the view's centre starts: a little below level, more where mountains rise all round. */
+  #initialTilt(d: PanoramaData): number {
+    const last = (d.layersM.length - 1) * d.columns;
+    let hi = -90;
+    for (let c = 0; c < d.columns; c++) hi = Math.max(hi, d.horizon[last + c]!);
+    return Math.min(Math.max(hi * 0.5 - 3, -6), 4);
+  }
+
+  /** Start (or show again) the satellite view, once the terrain result is in. */
+  async #showSatellite(focus: boolean): Promise<void> {
+    if (this.#mode !== 'satellite' || !this.#data || this.el.dataset.state !== 'ready') return;
+    this.#syncMode();
+    if (this.#sat) {
+      this.#sat.setBearing(this.#view.az);
+      if (focus) this.#sat.focus();
+      return;
+    }
+    if (!this.#q('[data-pv-sat-gate]')!.hidden) return; // phones: wait for the tap
+    const run = this.#run;
+    try {
+      const { SatelliteView } = await (this.#satLoad ??= import('./satellite-view.ts'));
+      if (this.#mode !== 'satellite' || this.#sat || run !== this.#run || !this.#data) return;
+      const t = this.#o.tower;
+      this.#sat = new SatelliteView({
+        host: this.#satView,
+        credit: this.#q('[data-pv-sat-credit]')!,
+        data: this.#data,
+        eyeAboveGroundM: this.#eye.eyeM,
+        items: this.#items,
+        bearing: this.#view.az,
+        tilt: this.#initialTilt(this.#data),
+        light: lightDetail(this.#canvasWidth()),
+        sharedTiles: planTiles([t], panoramaLevels(this.#o.maxDistM ?? MAX_DIST_M, lightDetail(this.#canvasWidth()) ? 'light' : 'full')),
+        theme: this.#theme,
+        frame: this.#frame,
+        highlight: this.#highlight,
+        name: shortName(t.name),
+        distance: (m) => this.#distance(m),
+        onTurn: (az, announce) => this.turnTo(az, announce),
+        onChange: () => {
+          this.#updateHeading(false);
+          this.#syncSatTools();
+          this.#draw();
+        },
+        onReady: () => this.#data && this.#renderNotes(this.#data),
+        onSources: () => this.#data && this.#renderNotes(this.#data),
+        onIdle: () => {
+          const li = this.#q('[data-pv-sat-tally]');
+          if (li) li.innerHTML = this.#satTally().value;
+        },
+        onFail: (err) => this.#satFailed(err),
+      });
+      this.#syncMode();
+      this.#updateHeading(false);
+      this.#draw();
+      if (focus) this.#sat.focus();
+    } catch (err) {
+      this.#satFailed(err);
+    }
+  }
+
+  /** The satellite view could not start: fall back to the drawn view and say so. */
+  #satFailed(err: unknown): void {
+    console.error(err);
+    this.#sat?.destroy();
+    this.#sat = null;
+    this.#satBlocked = "The satellite view couldn't start in this browser, so the view is drawn.";
+    this.#mode = 'drawn';
+    this.#syncMode();
+    this.#relayout();
+    this.#updateHeading(false);
   }
 
   /** Load terrain and names (again, after an eye-height change) and draw. */
@@ -416,6 +662,9 @@ export class PanoramaView {
     const meter = this.#q<HTMLElement>('[data-pv-meter]')!;
     const light = lightDetail(this.#canvasWidth());
     const smoke = this.#o.smoke;
+    this.#syncMode();
+    // The satellite view's code (and MapLibre) loads while the terrain does; phones wait for a tap.
+    if (this.#mode === 'satellite' && !light) this.#satLoad ??= import('./satellite-view.ts');
     try {
       if (document.fonts?.load) await Promise.race([document.fonts.load(`600 12px ${FONT}`), new Promise((r) => setTimeout(r, 1500))]);
       const data = await requestPanorama(
@@ -463,15 +712,19 @@ export class PanoramaView {
           this.#q('[data-stretch]')?.setAttribute('aria-pressed', 'true');
         }
       }
+      this.#sat?.update(data, this.#eye.eyeM, this.#items);
+      this.#syncMode();
       this.#relayout();
       this.#updateHeading(false);
       this.#renderLists(data);
       this.#renderNotes(data);
       this.#o.onReady?.(data);
+      void this.#showSatellite(false);
     } catch (err) {
       if (run !== this.#run) return;
       console.error(err);
       this.el.dataset.state = 'error';
+      this.#syncMode();
       status.innerHTML = html`<strong>The view could not be made.</strong> ${navigator.onLine === false ? 'You seem to be offline. ' : 'The terrain or the engine did not load. '}<button type="button" class="linklike" data-pv-retry>Try again</button>`.value;
       meter.style.width = '0%';
     }
@@ -532,11 +785,16 @@ export class PanoramaView {
 
   #draw(): void {
     if (!this.#data || !this.#layout) return;
-    cancelAnimationFrame(this.#frame);
-    this.#frame = requestAnimationFrame(() => {
+    cancelAnimationFrame(this.#frameReq);
+    this.#frameReq = requestAnimationFrame(() => {
       const d = this.#data!;
       const L = this.#layout!;
       const P = PALETTES[this.#theme];
+      const sat = this.#satShowing() ? this.#sat : null;
+      if (sat) {
+        this.#drawOverview(d, L, P, sat.viewBearing, sat.spanDeg);
+        return;
+      }
       const dpr = this.#canvas.width / L.width;
       const ctx = this.#canvas.getContext('2d')!;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -557,27 +815,41 @@ export class PanoramaView {
         ctx.fillStyle = P.accent;
         ctx.fillText(text, 12, L.ringTop - 11);
       }
-      const ov = this.#overview;
-      const octx = ov.getContext('2d')!;
-      const odpr = ov.width / (ov.clientWidth || L.width);
-      octx.setTransform(odpr, 0, 0, odpr, 0, 0);
-      drawOverview(octx, d, this.#view, ov.clientWidth || L.width, 46, P, L.width / this.#view.pxPerDeg);
+      this.#drawOverview(d, L, P, this.#view.az, L.width / this.#view.pxPerDeg);
     });
   }
 
+  /** The whole-circle strip, its window on the part in view. */
+  #drawOverview(d: PanoramaData, L: Layout, P: (typeof PALETTES)[keyof typeof PALETTES], az: number, spanDeg: number): void {
+    const ov = this.#overview;
+    const octx = ov.getContext('2d')!;
+    const odpr = ov.width / (ov.clientWidth || L.width);
+    octx.setTransform(odpr, 0, 0, odpr, 0, 0);
+    drawOverview(octx, d, { ...this.#view, az }, ov.clientWidth || L.width, 46, P, spanDeg);
+  }
+
   #updateHeading(announce: boolean): void {
-    const az = this.#view.az;
+    const sat = this.#satShowing() ? this.#sat : null;
+    const outside = !!sat?.outside;
+    const az = outside ? sat!.viewBearing : this.#view.az;
     const bearing = quadrantBearing(az);
     const azText = azimuthText(az);
     const b = this.#q('[data-pv-bearing]');
     if (b) b.textContent = bearing;
     const a = this.#q('[data-pv-az]');
     if (a) a.textContent = azText;
-    const ahead = this.#ahead();
+    const label = this.#q('.pv-heading-label');
+    if (label) label.textContent = outside ? 'Outside, facing' : 'Looking';
+    const ahead = outside ? null : this.#ahead();
     const smoke = this.#smokeWords();
     const azWords = this.#o.stepDeg && this.#o.stepDeg < 1 ? azimuthText(Math.round(az * 2) / 2, 1).replace('°', ' degrees') : `${Math.round(az) % 360} degrees`;
+    const valuetext = `Looking ${bearing}, azimuth ${azWords}.${ahead ? ` Ahead: ${ahead}.` : ''}${smoke ? ` ${smoke}` : ''}`;
     this.#viewport.setAttribute('aria-valuenow', String(Math.round(az) % 360));
-    this.#viewport.setAttribute('aria-valuetext', `Looking ${bearing}, azimuth ${azWords}.${ahead ? ` Ahead: ${ahead}.` : ''}${smoke ? ` ${smoke}` : ''}`);
+    this.#viewport.setAttribute('aria-valuetext', valuetext);
+    if (this.#satView !== this.#viewport) {
+      this.#satView.setAttribute('aria-valuenow', String(Math.round(az) % 360));
+      this.#satView.setAttribute('aria-valuetext', outside ? sat!.describe() : `${valuetext}${sat ? ` ${sat.describe()}` : ''}`);
+    }
     if (announce) {
       clearTimeout(this.#liveTimer);
       this.#liveTimer = window.setTimeout(() => this.#announce(`${bearing}.${ahead ? ` Ahead: ${ahead}.` : ''}${smoke ? ` ${smoke}` : ''}`), 350);
@@ -687,14 +959,45 @@ export class PanoramaView {
       <li><strong>Names:</strong> a peak is named when its summit is in line of sight, even if it is a speck in the distance. Other lookouts are named when their cabs would be in sight at a typical height.</li>
       <li><strong>Computed</strong> in your browser in ${(d.ms.compute / 1000).toFixed(1)} s from ${d.tiles.needed} terrain tiles${d.tiles.bytes ? ` (${megabytes(d.tiles.bytes)} downloaded)` : ' (already downloaded)'}.
         ${d.tiles.failed ? html` <strong class="warn-text">${d.tiles.failed} tiles did not load, so parts of the view may be missing.</strong>` : ''}</li>
-    </ul>`.value;
+    </ul>
+    ${this.#o.satellite ? this.#satNotes(d) : ''}`.value;
     box.hidden = false;
+  }
+
+  /** "How this view is made", the satellite view's part. */
+  #satNotes(d: PanoramaData): SafeHtml {
+    const o = d.observer;
+    const t = this.#o.tower;
+    const tally = this.#sat?.tally;
+    return html`<h4 class="pv-notes-sub">The satellite view</h4>
+      <ul class="pv-notes-list">
+        <li><strong>Photos:</strong> in the United States, aerial photos from the U.S. Geological Survey's
+          <a href="https://www.usgs.gov/programs/national-geospatial-program/national-map" rel="noopener">The National Map</a>: mostly the USDA's
+          National Agriculture Imagery Program (NAIP), about 1 m detail, flown in summer in recent years (the service was last refreshed in June 2024), with
+          Landsat and Blue Marble images far off. In Canada and Alaska, and wherever the USGS has none, <a href="https://cloudless.eox.at" rel="noopener">Sentinel-2 cloudless 2024</a>
+          by EOX: cloud-free summer 2024 satellite images, about 10 m detail. A view across the border uses both, each where it has photos.</li>
+        <li><strong>Terrain and the earth's curve:</strong> the same AWS Terrain Tiles as the drawn view, in finer tiles near the cab. The map under the photos is flat, so Firefinder lowers every height by the
+          earth's curve less the bending of light (the drawn view's numbers): about 4 m at 8 km, 250 m at 60 km and 1.5 km at 150 km. Far ridges sink behind nearer ones as they do from the cab.</li>
+        <li><strong>Eye:</strong> the camera stands where the drawn view's eye does, ${metresFeet(o.eyeM, 0)} above sea level. Names follow the drawn view's rule: a peak or lookout is named only when it is in line of sight.</li>
+        <li><strong>Bearings:</strong> the ring reads true bearings. Because the photos lie on a flat (Web Mercator) map, a far peak can sit up to about half a degree from its true bearing (a degree in the far north); read exact bearings in the drawn view.</li>
+        <li><strong>Not shown as they are:</strong> the sky and haze are drawn, not photographed, and trees and buildings lie flat on the photos instead of standing up.${CAB_KINDS.has(t.kind) ? " The window frame, if you switch it on, is a typical cab's (the Forest Service's L-4, 14 ft square, walls facing north, east, south and west), not this lookout's own." : ''}</li>
+        ${tally ? html`<li data-pv-sat-tally>${this.#satTally()}</li>` : ''}
+      </ul>`;
+  }
+
+  /** What the satellite view has downloaded so far, for the notes. */
+  #satTally(): SafeHtml {
+    const t = this.#sat?.tally;
+    if (!t) return html``;
+    return html`<strong>Downloaded</strong> so far: ${megabytes(t.photoBytes)} of photos (${t.photoTiles} tiles) and ${megabytes(t.demBytes - t.demSharedBytes)} of terrain, besides ${megabytes(t.demSharedBytes)} of terrain the drawn view had already downloaded. Some may have come from your browser's cache; looking around loads more.${t.failed ? html` <strong class="warn-text">${t.failed} tiles did not load, so parts of the view may be blank.</strong>` : ''}`;
   }
 
   destroy(): void {
     this.#offTheme();
     this.#resize?.disconnect();
-    cancelAnimationFrame(this.#frame);
+    cancelAnimationFrame(this.#frameReq);
+    this.#sat?.destroy();
+    this.#sat = null;
     this.#run++;
   }
 }
@@ -717,6 +1020,8 @@ function scorePeak(p: PeakSight): number {
   return Math.min(p.clearance, 2) + Math.max(0, p.angle + 2) * 0.25 + p.groundM / 4000;
 }
 
+const SAT_ICON = '<svg class="pv-mode-icon" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M1.5 14.5 6 8l3 3.5L12.5 6l4 8.5Z" fill="currentColor" opacity=".35"/><path d="M1.5 14.5 6 8l3 3.5L12.5 6l4 8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="13.5" cy="3.5" r="1.6" fill="currentColor"/></svg>';
+const DRAWN_ICON = '<svg class="pv-mode-icon" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M1 12.5 5 8l3 3 3.5-4.5 5.5 6M1 15.5h16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 const ARROW_L = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 const ARROW_R = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 const ARROW2_L = '<svg width="18" height="16" viewBox="0 0 18 16" aria-hidden="true" focusable="false"><path d="M9 3 4 8l5 5M15 3l-5 5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';

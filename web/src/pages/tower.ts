@@ -2,6 +2,7 @@
 import '../styles/tower.css';
 import { enhanceCoords, initCommon } from '../ui/common.ts';
 import { initChecklistOnPage } from '../ui/checklist-ui.ts';
+import { askBeforeSatellite, storedCabMode, webgl2Likely } from '../view3d/cab-prefs.ts';
 
 async function devRender(): Promise<void> {
   // `npm run dev` serves the raw template; render a tower client-side from ?id=… so the page
@@ -27,9 +28,20 @@ function initPanorama(): void {
   if (!host || !btn) return;
   btn.disabled = false;
   const size = host.querySelector<HTMLElement>('[data-pano-size]');
-  if (size && window.innerWidth < 600 && size.dataset.light) {
-    const mb = Number(size.dataset.light) / 1_048_576;
-    size.textContent = `Downloads about ${mb < 10 ? mb.toFixed(1) : Math.round(mb)} MB of terrain data the first time.`;
+  const phone = window.innerWidth < 600;
+  const mb = (bytes: string | undefined) => {
+    const v = Number(bytes) / 1_048_576;
+    return `${v < 10 ? v.toFixed(1) : Math.round(v)} MB`;
+  };
+  if (size?.dataset.light) {
+    const terrain = mb(phone ? size.dataset.light : size.dataset.full);
+    // The view opens on Satellite where it can (DESIGN.md 4.1); phones and tablets ask again
+    // before its photos.
+    const satellite = webgl2Likely() && storedCabMode() !== 'drawn';
+    const more = mb(phone ? size.dataset.satLight : size.dataset.sat);
+    if (satellite && askBeforeSatellite()) size.textContent = `Downloads about ${terrain} of terrain data the first time; the satellite view asks before downloading about ${more} more.`;
+    else if (satellite) size.textContent = `Downloads about ${terrain} of terrain data, and ${more} more for the satellite view, the first time; more as you look around.`;
+    else if (phone) size.textContent = `Downloads about ${terrain} of terrain data the first time.`;
   }
   btn.addEventListener('click', async () => {
     btn.disabled = true;
@@ -37,8 +49,8 @@ function initPanorama(): void {
     try {
       const tower = JSON.parse(host.dataset.pano!);
       const { PanoramaView } = await import('../view3d/panorama-view.ts');
-      const view = new PanoramaView(host, { tower, recon: false });
-      view.el.querySelector<HTMLElement>('.pv-viewport')?.focus({ preventScroll: true });
+      const view = new PanoramaView(host, { tower, recon: false, satellite: true });
+      view.focus();
       await view.start();
     } catch (err) {
       console.error(err);

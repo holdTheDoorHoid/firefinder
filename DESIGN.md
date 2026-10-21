@@ -21,7 +21,7 @@ DECIDED came from the owner's interview on 2026-10-03. Do not change them withou
 | Audience | Balanced, in layers. A clean map for anyone. Each tower page puts practical info first (visit / stay / access) and history below. |
 | Geography | US at launch. The data model carries `country` + `region` so Canada and others can be added without rework. **Owner changed 2026-10-20: Alaska, Hawaii and all of Canada join the lower 48, under the same scope rules** (structures first, standing and gone, the no-structure group, the non-fire and never-built rules). Ids, folders, units and what is US-only so far: 3.3, "Countries and regions". |
 | Scope | **Structures first**: elevated towers and ground cabs/houses, standing or gone. Tree platforms, tent camps and bare "lookout points" were out of scope (`hidden: true` with a reason). **Owner changed 2026-10-08: no-structure sites shown, off by default**: camps, lookout trees and bare points are a "no structure" group with their own label on the map and tower pages; the map leaves them off until the visitor switches them on; their tower pages are public; structure counts leave them out, "all sites" counts include them. Non-fire towers, never-built sites and human `HIDE_KEYS` stay hidden. Hiding a kind again is one edit (`"hidden": true`) in `data/structure_kinds.json`. |
-| 3D | (a) 360° **panorama from the cab** at eye height, with labeled peaks and a Firefinder compass ring; (b) **"what it could see"** viewshed shading on the map, several towers at once, to show network coverage; (c) **smoke-spotting demo**: take a bearing from two towers and cross the lines. No free-roam 3D flyover. Gone towers use their recorded site and height. |
+| 3D | (a) 360° **panorama from the cab** at eye height, with labeled peaks and a Firefinder compass ring; (b) **"what it could see"** viewshed shading on the map, several towers at once, to show network coverage; (c) **smoke-spotting demo**: take a bearing from two towers and cross the lines. No free-roam 3D flyover. Gone towers use their recorded site and height. **Owner added 2026-10-21: a Satellite mode** of the view from the cab (photos of today's land on the terrain, free and keyless), opening by default where the device can draw it, with the drawn panorama kept beside it; its "Step outside" orbit around the tower is a recorded exception to "no free-roam flyover" (an orbit, not free flight). Details in 4.1, "Satellite mode". |
 | Extras | Historical USGS topo overlay (the map from when the tower stood); then-and-now timeline per tower plus a national "towers standing per year" slider; tower-designs guide (L-4, Aermotor, CCC cupola…) linking to surviving examples. Not now: live wildfire layer, offline mode. |
 | Contributing | GitHub only: a "Suggest an edit" button on each tower opens a pre-filled GitHub issue. |
 | Checklist | Visited / stayed / want-to-go, saved in the browser (localStorage) with export/import. No accounts, nothing collected. |
@@ -888,6 +888,111 @@ Friends of Sterling Forest's domain has been hijacked for spam; New Hampshire's 
   three; the smoke is placed on ground both see, 4–28 km from each, where the lines cut at
   35–145°. Readings round to the nearest half degree. Screen readers hear how far the smoke is
   from the sight; a hint turns the view to within a few degrees of it (and the result says so).
+
+#### Satellite mode (owner decision 2026-10-21, built 2026-10-21)
+
+The owner asked for a Google-Earth-like view from the cab showing the real land, free and with no
+keys. Decided with the owner, not to be changed without asking:
+
+- **Two modes, one result.** On tower pages and in the map's cab dialog the view has a
+  "Satellite | Drawn" switch. It **opens on Satellite** wherever the browser gives a WebGL 2
+  context, unless the visitor last chose Drawn (localStorage `firefinder.cab-view`, wrapped in
+  try/catch). Without WebGL 2, or if the 3D map fails to start, it falls back to Drawn and says
+  so above the view. Both modes share one terrain result (the engine's `PanoramaData`: observer,
+  peaks, lookouts), the bearing (switching keeps it), the eye-height control, the lists and "How
+  this view is made". The drawn panorama stays the exact sightline tool; the smoke lesson is
+  drawn only.
+- **Imagery.** United States (lower 48 and Hawaii): USGS The National Map, "USGS Imagery Only"
+  (`basemap.nationalmap.gov/.../USGSImageryOnly/MapServer/tile/{z}/{y}/{x}`, public domain;
+  mostly USDA NAIP, about 1 m, leaf-on; Landsat and Blue Marble at small scales; to zoom 16).
+  Canada, Alaska and anywhere USGS has nothing: EOX Sentinel-2 cloudless 2024
+  (`tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2024_3857/default/g/{z}/{y}/{x}.jpg`, CC BY-NC-SA
+  4.0, about 10 m; the service answers every zoom but past 14 only enlarges, so zoom 15–16 tiles
+  are cut from the zoom-14 one). Alaska is EOX's because USGS serves it only as 10 m SPOT
+  imagery under licence. No Esri, Google, Cesium ion or Mapbox. NonCommercial: Firefinder is
+  non-commercial; if that ever changed, the EOX layer would need EOX's commercial licence.
+- **No holes at borders, one download per tile.** Outside the US, USGS answers with white tiles
+  (zooms 9–12), black ones (13) and 404s (14 and finer), and with world imagery at 8 and below,
+  so a plain layer stack would show white or black holes. One custom protocol (`ffsat://`,
+  `web/src/view3d/earth-tiles.ts`) decides per tile: tiles outside coarse US boxes go straight
+  to EOX; the rest ask USGS first: a 404 or a tile at least 98.5 % fill → EOX instead; 1–98.5 %
+  fill (the border, a coast) → EOX underneath with the USGS photo on top where it has one; else
+  USGS alone. The waste is a 0.5–2.4 KB fill tile or 404 along the border strip. The view lists
+  the sources it has actually drawn, under the photos: "Imagery: U.S. Geological Survey, The
+  National Map" and EOX's required "EOxCloudless https://cloudless.eox.at by EOX IT Services
+  GmbH (Contains modified Copernicus Sentinel data 2024)" (linked), and "Terrain: AWS Terrain
+  Tiles". The About page credits both photo sources; its privacy note names their servers.
+- **The earth's curve.** MapLibre draws on a flat (Web Mercator) map. A second protocol
+  (`ffdem://`) serves the AWS Terrarium tiles with every pixel lowered by d²/(2R'), R' =
+  R/(1 − k), k = 0.13 (the engine's numbers), d measured from the engine's eye, re-encoded as
+  Terrarium in whole 1/256 m steps and handed to MapLibre as an ImageBitmap (about 3 ms a tile on
+  the main thread). The eye drops nothing; far ridges sink (4 m at 8 km, 246 m at 60 km, 1.5 km
+  at 150 km), so a peak the drawn view hides stays hidden. The eye's position is in the URL so
+  tiles never mix lookouts. Land beyond 170 km is neither loaded nor drawn.
+- **Camera: locked in the cab.** MapLibre option `centerClampedToGround: false`; the camera
+  stands at the engine's eye (the snapped position, ground + structure + 1.6 m), placed with
+  `calculateCameraOptionsFromTo(eye, target)` where the target lies on the line of sight
+  40–400 m out: MapLibre's near plane (height/50 px, that is distance × tan(fov/2)/25 m) stays
+  within a third of the eye's height, so the summit under the cab is drawn (a far target put the
+  near plane ~200 m out and exposed tile skirts). The target's height is scaled so MapLibre's
+  pitch comes out exact; exactly level (pitch 90°) is avoided. MapLibre's own handlers are off:
+  drag turns and tilts (−60° to +20°), a pinch or Ctrl/⌘ + wheel (a trackpad pinch arrives as
+  Ctrl + wheel) zooms like binoculars by narrowing the vertical field of view
+  (`setVerticalFieldOfView`, 60° to 4°, toward the pointer), arrow keys, + and −, N/E/S/W, and
+  the shared turn and zoom buttons do the same. A plain wheel scrolls the page, as over the drawn
+  view, so the view never traps a visitor scrolling down the tower page; a hint says how to zoom,
+  and a sideways swipe turns.
+- **MapLibre settings that make it work** (MapLibre GL JS 6.12): its tile level-of-detail rule
+  thins tiles by the camera's pitch against the map centre's height, which at eye level blurs
+  everything past a few hundred metres; so the photo source gets its own `calculateTileZoom`
+  (about one photo pixel per screen pixel, coarser past 15 km), and the terrain's
+  render-to-texture tiles the same rule through an override of the terrain tile manager's
+  `update` on that one map (MapLibre internals; if they change, it falls back to MapLibre's rule,
+  blurrier but working). Terrain heights use the drawn view's own zooms (12 to 4 km, 10 to 40 km,
+  9 to 100 km, 8 beyond; 13 within 1.5 km for the summit), so most terrain tiles are ones the
+  drawn view already downloaded, and the names, worked out from the same heights, sit on their
+  peaks. Tile skirts are set to 1.5 km (MapLibre sizes them from the zoom, which here would give
+  15 m and hairline gaps of sky). Daylight sky with haze toward the horizon (sky #6f9fdc,
+  horizon #dfe8f0, fog #c8d4e0, blends 0.5 / 0.8 / 0.35), the same in both site themes; only the
+  chrome follows the theme.
+- **Overlays.** Peak and lookout names are the drawn view's (same items, same rule: named only
+  when in line of sight; same rows and style), anchored by projecting the engine's elevation
+  angle and the bearing as the flat map draws it through a pinhole camera matching MapLibre's
+  (bearing, tilt, field of view). Labels are not clickable in either mode; the lists below face
+  and link to each one. A ring of true bearings runs along the bottom, styled as the drawn view's,
+  with the sight marked. Bearings are exact at the eye; toward far points the flat map drifts from
+  the great-circle bearing by about half the longitude difference times the sine of the latitude
+  (0.3° at 60 km due east at 49° N, up to about 1° in Alaska), said in the notes. A **window
+  frame** toggle (default off, localStorage `firefinder.cab-frame`), offered only for kinds with
+  a cab (not camp, tree, bare point or open platform): a typical L-4 cab, 14 ft square with walls
+  facing N, E, S and W, posts and sill drawn in 3D from the eye, fading out below a 22° field of
+  view (binoculars look past it). No viewshed shading (not chosen).
+- **Step outside** (the recorded exception): an orbit around the cab's foot from the air, 150 m
+  to 4 km out, 25–82° from straight down; drag circles, a pinch or Ctrl/⌘ + wheel moves in and out;
+  no panning, so it stays an orbit. The cab is marked; names, ring and frame are hidden outside.
+  "Back in the cab" flies back to the eye and the bearing you left at (instantly for visitors
+  who ask for reduced motion).
+- **Honesty.** For gone, ruined and moved lookouts the satellite view says above itself that the
+  photos show the land today, not when the lookout stood (reservoirs, clear-cuts, roads and towns
+  may be newer). Approximate locations keep the caution shown above both modes. "How this view
+  is made" gains a satellite part: photo sources and dates, the curve, the eye, the bearing
+  drift, drawn sky and flat trees, the frame, and a running count of what the satellite view has
+  downloaded (photos, new terrain, and terrain shared with the drawn view).
+- **Data use.** Code-split: tower pages load MapLibre (about 0.45 MB compressed with its worker)
+  only when the satellite view starts. On phones and tablets (no mouse or trackpad, or a screen
+  under 600 px) and with the browser's Save-Data on, the view asks first: estimate and a "Load
+  the satellite view" button (`askBeforeSatellite` in `cab-prefs.ts`); computers, which are
+  rarely on metered data, load it straight after the tower page's start button, whose text names
+  the photos too. A narrow window on a computer is not a phone: the width only picks the lighter
+  terrain set.
+  Measured in the browser (October 2026) at Desolation Peak, high mountains where terrain tiles
+  run to 100 KB, beyond the drawn view's own terrain: computer, 750 px view: 2.9 MB for the first
+  look (1.6 MB new terrain, 1.3 MB photos), 9.6 MB after turning all the way round (3.7 + 5.9);
+  phone, 343 px: 2.6 MB first look, 9.2 MB all round. Flat Pennsylvania (Hays Lot) took about
+  2 MB to start. The estimates (`SATELLITE_BYTES` in `earth-geo.ts`) add the code.
+- **Files.** `satellite-view.ts` (the view, MapLibre), `earth-tiles.ts` (the two protocols),
+  `earth-geo.ts` (pure geometry and choices, `test/earth-view.test.ts`), `cab-prefs.ts` (what
+  is remembered, WebGL 2 check); `panorama-view.ts` hosts both modes.
 
 ### 4.2 History extras (stage 4, built 2026-10-04)
 
