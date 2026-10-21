@@ -625,6 +625,10 @@ export class PanoramaView {
         },
         onReady: () => this.#data && this.#renderNotes(this.#data),
         onSources: () => this.#data && this.#renderNotes(this.#data),
+        onIdle: () => {
+          const li = this.#q('[data-pv-sat-tally]');
+          if (li) li.innerHTML = this.#satTally().value;
+        },
         onFail: (err) => this.#satFailed(err),
       });
       this.#syncMode();
@@ -967,7 +971,6 @@ export class PanoramaView {
     const o = d.observer;
     const t = this.#o.tower;
     const tally = this.#sat?.tally;
-    const used = tally ? tally.photoBytes + tally.demBytes : 0;
     return html`<h4 class="pv-notes-sub">The satellite view</h4>
       <ul class="pv-notes-list">
         <li><strong>Photos:</strong> in the United States, aerial photos from the U.S. Geological Survey's
@@ -980,11 +983,15 @@ export class PanoramaView {
         <li><strong>Eye:</strong> the camera stands where the drawn view's eye does, ${metresFeet(o.eyeM, 0)} above sea level. Names follow the drawn view's rule: a peak or lookout is named only when it is in line of sight.</li>
         <li><strong>Bearings:</strong> the ring reads true bearings. Because the photos lie on a flat (Web Mercator) map, a far peak can sit up to about half a degree from its true bearing (a degree in the far north); read exact bearings in the drawn view.</li>
         <li><strong>Not shown as they are:</strong> the sky and haze are drawn, not photographed, and trees and buildings lie flat on the photos instead of standing up.${CAB_KINDS.has(t.kind) ? " The window frame, if you switch it on, is a typical cab's (the Forest Service's L-4, 14 ft square, walls facing north, east, south and west), not this lookout's own." : ''}</li>
-        ${tally
-          ? html`<li><strong>Downloaded:</strong> ${megabytes(used)} of photos and terrain so far (${tally.photoTiles} photo tiles, ${tally.demTiles} terrain tiles; some may have come from your browser's cache). Looking around loads more.
-              ${tally.failed ? html` <strong class="warn-text">${tally.failed} tiles did not load, so parts of the view may be blank.</strong>` : ''}</li>`
-          : ''}
+        ${tally ? html`<li data-pv-sat-tally>${this.#satTally()}</li>` : ''}
       </ul>`;
+  }
+
+  /** What the satellite view has downloaded so far, for the notes. */
+  #satTally(): SafeHtml {
+    const t = this.#sat?.tally;
+    if (!t) return html``;
+    return html`<strong>Downloaded</strong> so far: ${megabytes(t.photoBytes)} of photos (${t.photoTiles} tiles) and ${megabytes(t.demBytes - t.demSharedBytes)} of terrain, besides ${megabytes(t.demSharedBytes)} of terrain the drawn view had already downloaded. Some may have come from your browser's cache; looking around loads more.${t.failed ? html` <strong class="warn-text">${t.failed} tiles did not load, so parts of the view may be blank.</strong>` : ''}`;
   }
 
   destroy(): void {

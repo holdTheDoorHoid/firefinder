@@ -113,6 +113,8 @@ export interface SatelliteOptions {
   onFail: (err: unknown) => void;
   /** A photo source was used for the first time. */
   onSources: () => void;
+  /** Everything in view has loaded (after a turn, a zoom…): the notes' download count. */
+  onIdle: () => void;
 }
 
 interface Pose {
@@ -142,6 +144,7 @@ export class SatelliteView {
   #overlayFrame = 0;
   #marker: Marker | null = null;
   #anchors = new Map<string, number>();
+  #widths = new Map<string, number>();
   #frameQuads = cabFrame();
   #resize: ResizeObserver;
   #ready = false;
@@ -215,7 +218,6 @@ export class SatelliteView {
       throw err;
     }
     const map = this.#map;
-    if (import.meta.env.DEV) Object.assign(window, { __ffsat: { map, view: this, sources: this.#sources } }); // DEBUG-REMOVE
     map.on('error', (e: ErrorEvent) => {
       // Single tiles that fail are counted in the tally and said in the notes.
       const msg = String(e.error?.message ?? e.error ?? '');
@@ -244,6 +246,7 @@ export class SatelliteView {
     });
     map.once('load', () => this.#applyCamera());
     map.once('idle', () => this.#readyNow());
+    map.on('idle', () => this.#ready && o.onIdle());
     // Lots of tiles on a slow line: show what has come so far after a while.
     window.setTimeout(() => this.#readyNow(), 15_000);
     map.getCanvas().addEventListener('webglcontextlost', () => this.#o.onFail(new Error('The WebGL context was lost.')), { once: true });
@@ -474,7 +477,11 @@ export class SatelliteView {
     on('pointerdown', (e) => {
       if (this.#flight || (e.pointerType === 'mouse' && e.button !== 0)) return;
       pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
-      el.setPointerCapture(e.pointerId);
+      try {
+        el.setPointerCapture(e.pointerId);
+      } catch {
+        /* the pointer is already gone */
+      }
       el.classList.add('is-dragging');
       if (pointers.size === 2) {
         drag = null;
@@ -635,9 +642,16 @@ export class SatelliteView {
       const p = project(this.#anchors.get(it.key) ?? it.sight.az, it.sight.angle, cam);
       return p && p.y > L.terrainTop + 4 && p.y < ringTop - 2 ? p : null;
     };
+    // Text widths are kept: the overlay is redrawn on every frame MapLibre draws.
     const measure = (s: string, bold: boolean) => {
-      ctx.font = `${bold ? 700 : 600} 12px ${FONT}`;
-      return ctx.measureText(s).width;
+      const key = `${bold ? 'b' : 'n'}${s}`;
+      let w = this.#widths.get(key);
+      if (w === undefined) {
+        ctx.font = `${bold ? 700 : 600} 12px ${FONT}`;
+        w = ctx.measureText(s).width;
+        this.#widths.set(key, w);
+      }
+      return w;
     };
     const placed = placeLabels(this.#o.items, { az: cam.bearing, pxPerDeg: 1, exaggeration: 1 }, L, measure, at);
     ctx.save();

@@ -53,27 +53,34 @@ export function encodeTerrarium(h: number, out: Uint8ClampedArray | Uint8Array, 
  * z/x/y) by the curve drop at its distance from the eye. MapLibre draws terrain on a flat map;
  * after this the satellite view shows what a round earth shows: far ridges sink, and a summit the
  * drawn view hides behind a nearer ridge stays hidden. The eye's own spot drops nothing.
+ *
+ * It runs on the main thread for every terrain tile, so it is written for speed: the haversine
+ * term `a` is split into a row part and a column part, d² is taken as (2R)²·a (asin x ≈ x; under
+ * 0.01 % off at 200 km, a fifth of a metre of a 2.7 km drop), and heights are handled as whole
+ * 1/256 m steps, Terrarium's own resolution, so a tile costs about a millisecond.
  */
 export function dropTerrariumTile(px: Uint8ClampedArray | Uint8Array, size: number, z: number, x: number, y: number, eyeLat: number, eyeLon: number): void {
   const n = 2 ** z;
   const phi1 = rad(eyeLat);
   const cos1 = Math.cos(phi1);
-  // Haversine, split into a row part and a column part.
   const col = new Float64Array(size);
   for (let c = 0; c < size; c++) {
     const lon = ((x + (c + 0.5) / size) / n) * 360 - 180;
     col[c] = Math.sin(rad(lon - eyeLon) / 2) ** 2;
   }
-  const twoR = 2 * EARTH_RADIUS_M;
-  const inv2r = 1 / (2 * EFFECTIVE_RADIUS_M);
+  // drop = d² / 2R' = (2R)² a / 2R', in 1/256 m steps
+  const k256 = ((4 * EARTH_RADIUS_M * EARTH_RADIUS_M) / (2 * EFFECTIVE_RADIUS_M)) * 256;
   for (let r = 0; r < size; r++) {
     const phi2 = rad(unmercY((y + (r + 0.5) / size) / n));
     const a0 = Math.sin((phi2 - phi1) / 2) ** 2;
     const k = cos1 * Math.cos(phi2);
-    for (let c = 0; c < size; c++) {
-      const d = twoR * Math.asin(Math.min(1, Math.sqrt(a0 + k * col[c]!)));
-      const i = (r * size + c) * 4;
-      encodeTerrarium(decodeTerrarium(px[i]!, px[i + 1]!, px[i + 2]!) - d * d * inv2r, px, i);
+    let i = r * size * 4;
+    for (let c = 0; c < size; c++, i += 4) {
+      const v = px[i]! * 65536 + px[i + 1]! * 256 + px[i + 2]! - Math.round((a0 + k * col[c]!) * k256);
+      const w = v < 0 ? 0 : v;
+      px[i] = w >>> 16;
+      px[i + 1] = (w >>> 8) & 255;
+      px[i + 2] = w & 255;
     }
   }
 }
@@ -420,12 +427,18 @@ export function isFillPixel(r: number, g: number, b: number): boolean {
   return (r >= 250 && g >= 250 && b >= 250) || (r <= 3 && g <= 3 && b <= 3);
 }
 
-/** Share of a tile's pixels that are USGS fill. */
-export function fillFraction(px: Uint8ClampedArray | Uint8Array): number {
+/**
+ * Share of a tile's pixels that are USGS fill, from every `step`th pixel (every one by default;
+ * the photo protocol samples every third, enough to tell a fill tile from a photo).
+ */
+export function fillFraction(px: Uint8ClampedArray | Uint8Array, step = 1): number {
   let fill = 0;
-  const n = px.length / 4;
-  for (let i = 0; i < px.length; i += 4) if (isFillPixel(px[i]!, px[i + 1]!, px[i + 2]!)) fill++;
-  return n ? fill / n : 1;
+  let seen = 0;
+  for (let i = 0; i < px.length; i += 4 * step) {
+    seen++;
+    if (isFillPixel(px[i]!, px[i + 1]!, px[i + 2]!)) fill++;
+  }
+  return seen ? fill / seen : 1;
 }
 
 /**
@@ -445,14 +458,14 @@ export function usgsVerdict(fill: number): 'usgs' | 'eox' | 'blend' {
  * measured in the browser in October 2026 at Desolation Peak, Washington (high mountains, the
  * dearest case: terrain tiles there run to 100 KB) with a 750 px view on a computer and a 343 px
  * one on a phone: photo and terrain tiles for the first look, and for turning once all the way
- * round; plus the 3D map code (MapLibre GL, about 0.3 MB compressed), which tower pages load
- * only for this view. A flat eastern view (Hays Lot, Pennsylvania) took about 2 MB to start.
+ * round; plus the 3D map code (MapLibre GL and its worker, about 0.45 MB compressed), which
+ * tower pages load only for this view. A flat eastern view (Hays Lot, Pennsylvania) took about 2 MB to start.
  * DESIGN.md 4.1, "Satellite mode", has the figures.
  */
 export const SATELLITE_BYTES = {
   start: { full: 2_900_000, light: 2_600_000 },
   around: { full: 9_600_000, light: 9_200_000 },
-  code: 300_000,
+  code: 450_000,
 } as const;
 
 /** About how much the satellite view downloads to start, and in all after a full turn. */

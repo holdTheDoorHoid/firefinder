@@ -181,7 +181,7 @@ async function satTile(url: string, abort: AbortController): Promise<{ data: Ima
         if (tally) tally.photoBytes += blob.size;
         const img = await createImageBitmap(blob);
         const usgs = pixels(img);
-        const verdict = usgsVerdict(fillFraction(usgs.data));
+        const verdict = usgsVerdict(fillFraction(usgs.data, 3));
         if (verdict === 'usgs') {
           if (tally) tally.photoTiles++;
           noteSource(id, 'usgs');
