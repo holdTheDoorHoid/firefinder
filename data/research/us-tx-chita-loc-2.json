@@ -1,0 +1,41 @@
+{
+  "id": "us-tx-chita-loc-2",
+  "researched": "2026-10-21",
+  "summary": "Texas Forest Service tower moved to Chita Loc 2 from Loc 1 in 1970; the table says it was removed and sold in 1981; no source describes the site today.",
+  "facts": {
+    "design": "Tower moved from Chita (Loc 1); the 1942 survey description of that station says all steel with an enclosed cab",
+    "height_m": 38.1,
+    "status": "gone",
+    "status_note": "Listed as Gone on firelookout.org; the table records removal in 1981 and a sale that year",
+    "agency": "Texas Forest Service"
+  },
+  "events": [
+    {"year": 1970, "event": "relocated", "note": "Table gives 1970 as the date for Chita (Loc 2), which it says came from Chita (Loc 1)", "cite": [2]},
+    {"year": 1942, "event": "other", "note": "Survey station description (PID BL2168, the Loc 1 station) describes a Texas Forest Service lookout tower about 125 feet high before the move", "cite": [3]},
+    {"year": 1981, "event": "removed", "note": "Table gives 1981 as the removal year and says the tower was sold that year", "cite": [2]}
+  ],
+  "evidence": [
+    {"cite": [1], "supports": "Chita (Loc 2) listed in Trinity County at its coordinates as Tower Gone", "quote": "Chita (Loc 2) Trinity 31.01442 -95.23913 Tower Gone"},
+    {"cite": [2], "supports": "Table row: Chita (Loc 2) date 1970, removed 1981, sold 1981, moved from Chita Loc 1", "quote": "Chita (Loc 2) 3 1970 1981 sold 1981 fr Chita Loc 1"},
+    {"cite": [2], "supports": "Table row for Chita (Loc 1): date 1934, removed 1970, EMSCO, height 100", "quote": "Chita (Loc 1) 3 BL2168 1934 1970 EMSCO 100"},
+    {"cite": [2], "supports": "Chita (Loc 1) row says the tower moved to Chita Loc 2", "quote": "to Chita Loc 2"},
+    {"cite": [3], "supports": "Survey designation for the Chita station, 1942, Texas Forest Service", "quote": "DESIGNATION - CHITA TEX FOREST SERV LOT 1942"},
+    {"cite": [3], "supports": "Station PID is BL2168", "quote": "PID - BL2168"},
+    {"cite": [3], "supports": "Station described by the Coast and Geodetic Survey in 1942", "quote": "DESCRIBED BY COAST AND GEODETIC SURVEY 1942 (FBQ)"},
+    {"cite": [3], "supports": "Survey: tower of the Texas Forest Service, all steel, with an enclosed cabin", "quote": "LOOKOUT TOWER OF THE TEXAS FOREST SERVICE, IS OF ALL STEEL CONSTRUCTION AND HAS AN ENCLOSED CABIN AT THE TOP."},
+    {"cite": [3], "supports": "Survey: tower about 125 feet high", "quote": "IT IS ABOUT 125 FEET HIGH."},
+    {"cite": [4], "supports": "Forest Lookouts list: Chita, Trinity County, Texas Forest Service", "quote": "CHITA Trinity County - Texas Forest Service"}
+  ],
+  "resolved_conflicts": [
+    {"field": "height_m", "explanation": "The 1942 survey description says about 125 feet (38.1 m) for the Loc 1 station tower. The table gives 100 for that tower, and the Loc 2 row repeats it by a repeat mark. The record keeps the survey figure, as the Chita (Loc 1) record does.", "cite": [2, 3]}
+  ],
+  "sources": [
+    {"n": 1, "title": "Texas Lookouts, alphabetical list", "publisher": "Forest Fire Lookout Association (firelookout.org)", "url": "https://firelookout.org/lookouts/us/tx/", "accessed": "2026-10-21"},
+    {"n": 2, "title": "TX expanded, Texas lookout tower table", "publisher": "firelookout.org", "url": "https://firelookout.org/wp-content/uploads/2025/07/TX-expanded.pdf", "accessed": "2026-10-21"},
+    {"n": 3, "title": "Chita (Loc 1), National Geodetic Survey station description", "publisher": "Forest Lookouts (centraluslookouts.weebly.com)", "url": "https://centraluslookouts.weebly.com/chita.html", "accessed": "2026-10-21"},
+    {"n": 4, "title": "Texas - Forest Lookouts", "publisher": "Forest Lookouts (centraluslookouts.weebly.com)", "url": "https://centraluslookouts.weebly.com/texas.html", "accessed": "2026-10-21"}
+  ],
+  "confidence": "low",
+  "notes_for_editor": "The 1942 NGS station description (PID BL2168) belongs to the Loc 1 station, not Loc 2; the story uses it only for the tower before the move. The Loc 2 dates (1970 to 1981) and the sale come from the table alone. Loc 2 has its own coordinates only on the lookout list; the 2011 list and the Forest Lookouts Chita page tie the Chita tower to Loc 1. The table prints no units, so the story gives the Loc 1 figure of 100 with no unit. The Loc 2 row carries ditto marks in its manufacturer and height cells (checked on the table page), so it repeats the Loc 1 figure. No staffing, fire, access or current-site sources found. The companion record for Chita (Loc 1) is data/research/us-tx-chita-loc-1.json. No photos added.",
+  "verification": {"checked": "2026-10-21", "claims_checked": 16, "unsupported_removed": 0, "errors_fixed": 1, "quotes_spot_checked": 10, "quotes_not_found": 0, "verdict": "fixed"}
+}

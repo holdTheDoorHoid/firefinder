@@ -1,0 +1,14 @@
+Pinnacle Peak, which locals also call Mount Peak or Mount Pete, is a 335-acre volcanic cone that King County Parks manages, one mile southeast of downtown Enumclaw, Washington.[^1] A 30-foot (9 m) pole tower went up near the summit in 1929, and a 60-foot (18 m) tower replaced it in 1934.[^1][^2] The county's trail page, quoting a local historian, says the trails were first built to reach a state Division of Forestry lookout.[^1] A local history site credits the Washington Forest Fire Association with both towers.[^2] The Washington Trails Association hike page says a lookout on the mountain was called Pinnacle Peak Lookout between 1928 and 1971, a range that differs from the 1929 build and 1966 removal in the other sources.[^3]
+
+In 1942 an aircraft warning station was set up on the summit to watch for enemy planes during the Second World War.[^1] At least 30 men and women staffed the lookouts over the years.[^1] The last full-time observer was Linda Makela, in 1964, and the tower was manned on four days in 1965.[^1][^2]
+
+On May 13, 1966, a Caterpillar tractor pulled the tower down, ending 37 years of fire detection.[^1][^2] Officials cited vandalism and break-ins, and the risk to children playing on it.[^1] The county's trail page also mentions old concrete footings at the top from a lookout that is long gone.[^1]
+
+King County finished a replica in late October 2021.[^4] It is 33 feet tall and stands on the same spot as the old tower.[^4] Patch calls it a replica of the lookout that the Washington Department of Natural Resources retired in 1966.[^4] Warren Jimenez, the county's parks division director, thanked the volunteers of the Mt. Peak Historical Fire Lookout Association for their vision and dedication.[^4]
+
+The viewing deck is reached by an optional 22-foot climb, which one volunteer put at 45 steps up the tower.[^4] The Cal Magnusson Trail climbs 1,000 feet in a mile, and the South Trail is an old gravel road where mountain bikes are allowed.[^3] A Washington Trails Association notice dated October 13, 2026, says the Cal Magnusson trail is closed until further notice, citing trail instability.[^3] Patch expected the tower to open before the end of October 2021.[^4] No source I read confirms that it is open today, so check with King County Parks before you go.[^4]
+
+[^1]: Pinnacle Peak, King County Parks, https://kingcounty.gov/services/parks-recreation/parks/trails/backcountry-trails/pinnacle-peak.aspx (accessed 2026-10-21).
+[^2]: Pinnacle Peak Park - Mt. Peak - Mt. Pete, Willhite Web, https://www.willhiteweb.com/washington/enumclaw/pinnacle_peak_park/mount_pete_263.htm (accessed 2026-10-21).
+[^3]: Mount Peak (Pinnacle Peak), Washington Trails Association, https://www.wta.org/go-hiking/hikes/mount-peak-pinnacle-peak (accessed 2026-10-21).
+[^4]: Work On Mt. Peak Fire Tower In King County Finished, Patch, https://patch.com/washington/seattle/work-mt-peak-fire-tower-king-county-finished (accessed 2026-10-21).

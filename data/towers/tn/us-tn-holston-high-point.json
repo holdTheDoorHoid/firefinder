@@ -1,6 +1,7 @@
 {
   "id": "us-tn-holston-high-point",
   "name": "Holston High Point",
+  "summary": "Holston Mountain's highest summit, with a fire lookout erected nearby by 1932; the state list marks the tower removed, and the sources disagree on its site.",
   "other_names": [],
   "country": "US",
   "region": "TN",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The state list marks the Cherokee National Forest tower as removed. Wikipedia describes television and radio towers in an antenna farm on the summit's southwest slope.",
   "registers": [
     {
       "register": "NGS",
@@ -31,22 +32,40 @@
   "agency": "Cherokee National Forest",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "Wikipedia says an iron gate closes Panhandle Road during heavy snow and ice, hunting season, or nesting season."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1932,
+      "event": "other",
+      "note": "The NGS datasheet says a fire lookout tower had been erected nearby by 1932, on property leased to the state forestry department.",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=GA3370"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Holston Mountain (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Holston_Mountain",
+      "kind": "reference"
+    },
+    {
+      "label": "GA3370 (HOLSTON 2) datasheet (National Geodetic Survey)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=GA3370",
+      "kind": "reference"
+    },
     {
       "label": "Holston High Point (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/towers/",
@@ -68,12 +87,32 @@
         "agency",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tn-holston-high-point",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-20"
 }

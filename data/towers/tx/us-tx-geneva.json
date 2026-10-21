@@ -1,6 +1,7 @@
 {
   "id": "us-tx-geneva",
   "name": "Geneva",
+  "summary": "Sabine County lookout the association's county list marks gone, with unknown type; its inventory dates it 1934 to about 1938. No site description found.",
   "other_names": [],
   "country": "US",
   "region": "TX",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Listed as gone. No source describes what, if anything, remains at the site.",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -37,9 +38,34 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1934,
+      "event": "built",
+      "note": "Inventory date column reads 1934, read here as the build year.",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2025/07/TX-expanded.pdf"
+    },
+    {
+      "year": 1938,
+      "event": "removed",
+      "note": "Inventory removal column reads c1938, an approximate year.",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2025/07/TX-expanded.pdf"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Texas Lookouts (By County) (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/tx/tx-co/",
+      "kind": "reference"
+    },
+    {
+      "label": "Texas lookout inventory, expanded list (PDF) (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/wp-content/uploads/2025/07/TX-expanded.pdf",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Texas lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/tx/",
@@ -57,12 +83,29 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tx-geneva",
+      "fields": [
+        "summary",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-20"
 }

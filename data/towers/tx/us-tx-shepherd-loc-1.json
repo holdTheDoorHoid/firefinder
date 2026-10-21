@@ -1,6 +1,7 @@
 {
   "id": "us-tx-shepherd-loc-1",
   "name": "Shepherd (Loc 1)",
+  "summary": "Shepherd (Loc 1), San Jacinto County: listed as gone; a 1947 survey description places its benchmark about 124 feet from an abandoned lookout tower. No build or current-site details found.",
   "other_names": [],
   "country": "US",
   "region": "TX",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Listed as Tower Gone by the Forest Fire Lookout Association; a 1947 survey description calls the tower abandoned",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -37,9 +38,27 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1947,
+      "event": "abandoned",
+      "note": "A 1947 Coast and Geodetic Survey description of benchmark Shepherd RM 1 refers to an abandoned lookout tower with a concrete base about 124 feet from the mark; the year is the survey date, not a confirmed abandonment date",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=BL1105"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Texas lookout towers (tnlandforms.us)",
+      "url": "https://tnlandforms.us/txtowers.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Datasheet for station BL1105 (Shepherd RM 1) (National Geodetic Survey (NOAA))",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=BL1105",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Texas lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/tx/",
@@ -58,12 +77,29 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tx-shepherd-loc-1",
+      "fields": [
+        "summary",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-20"
 }

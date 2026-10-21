@@ -1,6 +1,7 @@
 {
   "id": "us-tx-hi-point-ziegler-hill",
   "name": "Hi Point (Ziegler Hill)",
+  "summary": "San Augustine County tower the inventory dates to about 1937 and removes in 1968, with a Moved To note reading 'to Poyner' that the sources do not confirm.",
   "other_names": [],
   "country": "US",
   "region": "TX",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Listed as gone. No source describes what, if anything, remains on the hill.",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -37,9 +38,41 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1937,
+      "event": "built",
+      "note": "Inventory date column reads c1937, an approximate year.",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2025/07/TX-expanded.pdf"
+    },
+    {
+      "year": 1968,
+      "event": "removed",
+      "note": "Inventory removal column reads 1968.",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2025/07/TX-expanded.pdf"
+    },
+    {
+      "year": null,
+      "event": "relocated",
+      "note": "Moved To column reads 'to Poyner'. The inventory gives no date for the move, so no year is recorded. The Poyner it names is not confirmed as Poyner (Fincastle).",
+      "from": "research",
+      "source_url": "https://firelookout.org/wp-content/uploads/2025/07/TX-expanded.pdf"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Texas Lookouts (By County) (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/tx/tx-co/",
+      "kind": "reference"
+    },
+    {
+      "label": "Texas lookout inventory, expanded list (PDF) (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/wp-content/uploads/2025/07/TX-expanded.pdf",
+      "kind": "reference"
+    },
     {
       "label": "FFLA Texas lookout list (firelookout.org)",
       "url": "https://firelookout.org/lookouts/us/tx/",
@@ -58,12 +91,29 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-tx-hi-point-ziegler-hill",
+      "fields": [
+        "summary",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-20"
 }

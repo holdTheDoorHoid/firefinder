@@ -1,0 +1,7 @@
+Cope Mountain is a peak of about 1,250 feet (381 m) in Warren County, Tennessee, and it carried a tower of the state's Division of Forestry.[^1][^2] The state's landform survey gives the site the number 5-1, a district-and-tower code from the Division's 1976 list of towers.[^1][^2] The Division was responsible for building 208 fire lookout towers between about 1930 and 1970, and many were built in the 1930s through a partnership with the Civilian Conservation Corps.[^3] Many of the network's towers were later removed or left awaiting demolition after disuse or the end of a lease on private land.[^3] The survey marks the Cope Mountain tower as removed.[^1][^2]
+
+The sources used here do not describe what, if anything, remains on the site today. The survey notes that most former tower locations in Tennessee are now private property, so check who owns the land before visiting.[^1]
+
+[^1]: Tennessee Lookout Towers, Tennessee Landforms (Tom Dunigan), https://tnlandforms.us/towers/ (accessed 2026-10-21).
+[^2]: TN lookout tower: WAT001 Cope Mountain, Tennessee Landforms (Tom Dunigan), https://tnlandforms.us/towers/m.php?wpt=WAT001 (accessed 2026-10-21).
+[^3]: Tennessee Division of Forestry Fire Lookout Towers, 1933 to 1975, National Register of Historic Places multiple property document, National Park Service, https://npgallery.nps.gov/pdfhost/docs/NRHP/Text/64501237.pdf (accessed 2026-10-21).
