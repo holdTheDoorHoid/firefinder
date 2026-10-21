@@ -1,0 +1,5 @@
+The Canada Lookouts site lists a lookout under the name Dauphin and gives its location as Riding Mountain National Park.[^1] The park lies on Riding Mountain, which forms part of the Manitoba Escarpment, and Parks Canada manages it.[^2] A 2018 blog post says about ten lookout towers were built in the park in 1938 and 1939, and that counting them precisely is difficult.[^3] That post does not name the Dauphin lookout, so these sources do not tie this site to those dates. Nothing found describes what remains at the site today or whether it can be visited.[^1]
+
+[^1]: Dauphin lookout listing, Canada Lookouts, https://canada-lookouts.weebly.com/dauphin.html (accessed 2026-10-20).
+[^2]: Riding Mountain National Park, Wikipedia, https://en.wikipedia.org/wiki/Riding_Mountain_National_Park (accessed 2026-10-20).
+[^3]: The view from here: Fire Lookout Towers, everybodyhastobesomewhere.blogspot.com (blog by Jason Paul Sailer), https://everybodyhastobesomewhere.blogspot.com/2018/09/fire-lookout-towers.html (accessed 2026-10-20).

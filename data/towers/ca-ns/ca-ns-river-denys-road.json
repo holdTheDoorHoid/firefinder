@@ -1,6 +1,7 @@
 {
   "id": "ca-ns-river-denys-road",
   "name": "River Denys Road",
+  "summary": "Listed under a tentative name on the Big Ridge, Inverness, Nova Scotia, in a 2009 Nova Scotia DNR tower list; no source describes the site today.",
   "other_names": [],
   "country": "CA",
   "region": "NS",
@@ -18,8 +19,8 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "gone",
-  "status_note": "Nova Scotia closed its fire towers in 2013 and had taken them down by 2015 (CBC News); no source says this one still stands.",
+  "status": "unknown",
+  "status_note": "CBC says the department's towers were decommissioned in 2015 and later dismantled, but CBC does not name this tower, so its fate is unconfirmed. No source describes this site today.",
   "registers": [],
   "agency": "Nova Scotia Department of Natural Resources",
   "ownership": "unknown",
@@ -37,7 +38,22 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2009,
+      "event": "other",
+      "note": "Listed as River Denys Rd (starred, so a tentative name) on the Big Ridge in a Nova Scotia DNR tower list last updated 18 September 2009 (Marscan). The list says some listed towers are likely decommissioned.",
+      "from": "research",
+      "source_url": "http://marscan.com/nsdnrfiretowers.htm"
+    },
+    {
+      "year": 2015,
+      "event": "other",
+      "note": "Province-wide: CBC says the department decommissioned its towers in 2015 and then dismantled them. CBC does not name this tower, so this is not a dated fact about this site.",
+      "from": "research",
+      "source_url": "https://ca.news.yahoo.com/not-relics-past-firefighters-think-090000982.html"
+    }
+  ],
   "photos": [],
   "links": [
     {
@@ -76,10 +92,44 @@
         "agency",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-ns-river-denys-road",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "survey_qc_atl",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-20) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

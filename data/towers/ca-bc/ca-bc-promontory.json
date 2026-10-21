@@ -1,6 +1,7 @@
 {
   "id": "ca-bc-promontory",
   "name": "Promontory Lookout",
+  "summary": "Promontory Lookout northwest of Lower Nicola: established 1948, new tower by 1951, dismantled 2007; the recreation site stays open for day use.",
   "other_names": [],
   "country": "CA",
   "region": "BC",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Plywood building on a concrete foundation, anchored to bedrock with steel cables (1951 description)",
   "height_m": null,
   "status": "unknown",
   "status_note": null,
@@ -24,30 +25,70 @@
   "agency": "Recreation Sites and Trails BC",
   "ownership": "unknown",
   "access": {
-    "level": "closed",
-    "note": "Recreation Sites and Trails BC lists the site as closed: “Notice: The Promontory Lookout has been closed due to wildfire activity in the area. No public access.”"
+    "level": "public",
+    "note": "Recreation site open for day use. Reached by a rough forest service road that is seasonally deactivated in winter."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "1967"
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "About 13 km of forest service road from Highway 8; very rough, narrow and winding; active logging near the 6 or 7 km mark; radio towers just past the recreation site."
   },
   "rental": null,
   "events": [
     {
+      "year": 1948,
+      "event": "built",
+      "note": "A May 1951 Merritt Herald item says the lookout was established in 1948.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/promontory-point.html"
+    },
+    {
+      "year": 1950,
+      "event": "replaced",
+      "note": "New tower and permanent building. The 1951 item says they were constructed late the previous summer, so 1950 is inferred from that wording.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/promontory-point.html"
+    },
+    {
+      "year": 1967,
+      "event": "staffed",
+      "note": "A May 1967 Merritt Herald notice describes a round-the-clock fire watcher at the lookout, reached by collect call.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/promontory-point.html"
+    },
+    {
       "year": 2007,
       "event": "removed",
-      "note": "The site's description says the lookout was taken down this year.",
-      "from": "bc_rec_sites",
-      "source_url": "https://www.sitesandtrailsbc.ca/resource/REC1831"
+      "note": "The lookout was dismantled. Joy of Exploring says this followed constant vandalism.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/promontory-point.html",
+      "source_urls": [
+        "https://canada-lookouts.weebly.com/promontory-point.html",
+        "https://joyofexploring.ca/promontory-lookout/"
+      ]
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Promontory Point (Canada Lookouts)",
+      "url": "https://canada-lookouts.weebly.com/promontory-point.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Promontory Lookout in Merritt BC (Experience Merritt)",
+      "url": "https://experiencemerritt.com/parks-trails/promontory-lookout-18353/",
+      "kind": "reference"
+    },
+    {
+      "label": "Promontory Lookout (The Joy of Exploring Backroads of BC)",
+      "url": "https://joyofexploring.ca/promontory-lookout/",
+      "kind": "reference"
+    },
     {
       "label": "Recreation Sites and Trails BC: Promontory Lookout (REC1831)",
       "url": "https://www.sitesandtrailsbc.ca/resource/REC1831",
@@ -79,10 +120,31 @@
       "fields": [
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-promontory",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "staffing",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

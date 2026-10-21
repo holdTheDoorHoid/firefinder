@@ -1,6 +1,7 @@
 {
   "id": "ca-on-fire-tower",
   "name": "Bonheur Tower (now at Ignace)",
+  "summary": "Built 1941 about 25 km east of Ignace, used until 1969, then dismantled and rebuilt at Ignace in 1991, where a fire tower exhibit now stands by the library.",
   "other_names": [
     "Ignace",
     "Bonheur Tower (display)",
@@ -25,11 +26,11 @@
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": "Ontario Department of Lands and Forests (to 1972), then Ministry of Natural Resources",
+  "agency": "Ontario Department of Lands and Forests",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The marker and fire tower exhibit are on the south side of the Ignace Public Library, reached from Main Street. The marker page does not say the tower can be climbed."
   },
   "staffing": {
     "status": "unknown",
@@ -37,7 +38,7 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": true,
     "trail_note": null
   },
   "rental": null,
@@ -45,8 +46,34 @@
     {
       "year": 1941,
       "event": "built",
-      "note": null,
-      "from": "survey_on"
+      "note": "Built about 25 km east of Ignace on land obtained in a swap with the Canadian Pacific Railway; cost $1500.00 for materials and ranger labour.",
+      "from": "research",
+      "source_url": "https://www.hmdb.org/m.asp?m=243299"
+    },
+    {
+      "year": 1969,
+      "event": "staffed_last",
+      "note": "Marker says the tower was used until 1969, with successive towermen.",
+      "from": "research",
+      "source_url": "https://www.hmdb.org/m.asp?m=243299"
+    },
+    {
+      "year": 1991,
+      "event": "modified",
+      "note": "Marker says the tower was originally 80 ft high and was reconstructed at 66 ft.",
+      "from": "research",
+      "source_url": "https://www.hmdb.org/m.asp?m=243299"
+    },
+    {
+      "year": 1991,
+      "event": "relocated",
+      "note": "Dismantled at the Bonheur site and reconstructed at Ignace. The Ontario still-standing list records it at Ignace as removed from Bonheur Township.",
+      "from": "research",
+      "source_url": "https://www.hmdb.org/m.asp?m=243299",
+      "source_urls": [
+        "https://www.hmdb.org/m.asp?m=243299",
+        "https://forestrangers.github.io/ontariofiretowers/stillstanding2.html"
+      ]
     },
     {
       "year": null,
@@ -62,6 +89,16 @@
     {
       "label": "The Historical Marker Database (hmdb.org)",
       "url": "https://www.hmdb.org/m.asp?m=243299",
+      "kind": "reference"
+    },
+    {
+      "label": "Bonheur Fire Tower: Dismantling and Erection (agreement) (Township of Ignace council records)",
+      "url": "https://ignace.civicweb.net/document/4328/",
+      "kind": "reference"
+    },
+    {
+      "label": "Ontario Fire Towers Still Standing (Ontario's Fire Tower Lookouts)",
+      "url": "https://forestrangers.github.io/ontariofiretowers/stillstanding2.html",
       "kind": "reference"
     },
     {
@@ -104,6 +141,21 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-fire-tower",
+      "fields": [
+        "summary",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [
@@ -123,7 +175,13 @@
       "note": null
     }
   ],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

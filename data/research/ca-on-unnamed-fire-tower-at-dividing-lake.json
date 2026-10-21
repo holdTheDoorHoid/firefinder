@@ -1,0 +1,38 @@
+{
+  "id": "ca-on-unnamed-fire-tower-at-dividing-lake",
+  "researched": "2026-10-20",
+  "summary": "Old Ontario fire tower at Dividing Lake near Gogama; the register says it is not used, and no source gives its build date or height.",
+  "facts": {
+    "agency": "Ontario Ministry of Natural Resources (MNR)",
+    "status_note": "The register says the tower is not used. A Forest Rangers list counts it among still-standing towers, with no date.",
+    "visit": {"climbable": false}
+  },
+  "evidence": [
+    {"cite": [1], "supports": "Chester listed with the place name Dividing Lake", "quote": "Dividing Lake"},
+    {"cite": [1], "supports": "Chester listed with the place name Gogama", "quote": "Gogama"},
+    {"cite": [2], "supports": "Chester Tower at Dividing Lake, Gogama, in the Mid-Northern Ontario list", "quote": "39- Chester Tower- Dividing Lake, Gogama, Ont."},
+    {"cite": [2], "supports": "list headed Ontario Fire Towers Still Standing", "quote": "Ontario Fire Towers Still Standing"},
+    {"cite": [2], "supports": "the ministry has decided, as of 2013, to remove many still-standing towers", "quote": "The Ontario MNR has decided, as of 2013, to remove many of these still standing towers."},
+    {"cite": [2], "supports": "the ministry no longer maintains the towers; visitors should not climb", "quote": "The MNR no longer maintains them so please refrain from climbing."},
+    {"cite": [2], "supports": "the ministry removed the bottom 20 ft of ladder; climbing is hazardous", "quote": "that is why the MNR has removed the bottom 20 ft of ladder"},
+    {"cite": [2], "supports": "climbing is hazardous; the ladder was removed because of it", "quote": "It is hazardous to try to climb one"},
+    {"cite": [3], "supports": "register record: an old fire tower", "quote": "\"PURPOSE_OF_TOWER_DESCR\":\"Old Fire Tower\""},
+    {"cite": [3], "supports": "register location: Dividing Lake Ontario Ranger Camp", "quote": "\"LOCATION_DESCR\":\"Dividing Lake Ontario Ranger Camp\""},
+    {"cite": [3], "supports": "location accurate to within 100 metres", "quote": "\"LOCATION_ACCURACY\":\"Within 100 metres\""},
+    {"cite": [3], "supports": "register comment: tower not used", "quote": "\"GENERAL_COMMENTS\":\"Tower not used\""},
+    {"cite": [3], "supports": "no construction date in the register", "quote": "\"TOWER_CONSTRUCTION_DATE\":null"},
+    {"cite": [3], "supports": "no height in the register", "quote": "\"HEIGHT_ABOVE_GROUND_NUM\":null"},
+    {"cite": [3], "supports": "record OGF_ID 70699531, the LIO point the story describes", "quote": "\"OGF_ID\":70699531"}
+  ],
+  "sources": [
+    {"n": 1, "title": "Chester, Canada's Fire Lookouts (Ron Kemnow)", "publisher": "canada-lookouts.weebly.com", "url": "https://canada-lookouts.weebly.com/chester.html", "accessed": "2026-10-20"},
+    {"n": 2, "title": "stillstanding (Ontario fire tower list)", "publisher": "Forest Rangers", "url": "https://forestrangers.github.io/ontariofiretowers/stillstanding2.html", "accessed": "2026-10-20"},
+    {"n": 3, "title": "Tower layer, Fire Tower subtype (OGF_ID 70699531)", "publisher": "Land Information Ontario, Ministry of Natural Resources and Forestry", "url": "https://ws.lioservices.lrc.gov.on.ca/arcgis2/rest/services/LIO_OPEN_DATA/LIO_Open10/MapServer/14/query?where=CLASS_SUBTYPE%3D%27Fire+Tower%27&outFields=%2A&outSR=4326&f=geojson", "accessed": "2026-10-20"}
+  ],
+  "resolved_conflicts": [
+    {"field": "status", "explanation": "The register says the tower is not used; the Forest Rangers list counts it among still-standing towers, with no date. Both can be true, and neither says what stands at the site today.", "cite": [2, 3]}
+  ],
+  "verification": {"checked": "2026-10-20", "claims_checked": 9, "unsupported_removed": 0, "errors_fixed": 5, "quotes_spot_checked": 15, "quotes_not_found": 0, "verdict": "fixed"},
+  "confidence": "low",
+  "notes_for_editor": "Name and place match in two sources (Canada Lookouts and Forest Rangers #39, Mid-Northern Ontario). The LIO point (OGF_ID 70699531, Old Fire Tower, Verified, within 100 m) matches the record's coordinates. The Forest Rangers list is an undated private page, so its 'still standing' heading is weak evidence. Ontario records carry no local_unit, so the story says only 'near Gogama'. No build year, height, staffing or fate in any source read. Consider renaming the record's id slug (it says unnamed) since two sources give the name Chester; no correction is proposed."
+}

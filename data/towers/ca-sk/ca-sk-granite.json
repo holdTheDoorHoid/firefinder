@@ -1,6 +1,7 @@
 {
   "id": "ca-sk-granite",
   "name": "Granite Fire Tower",
+  "summary": "Granite Mountain's 20-foot steel tower dates to 1962 per Canada Lookouts; towermen lists tie staff to Granite until 2001, and no source describes the site today.",
   "other_names": [
     "Granite Mountain"
   ],
@@ -18,8 +19,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Steel tower",
+  "height_m": 6.1,
   "status": "unknown",
   "status_note": null,
   "registers": [],
@@ -30,9 +31,8 @@
     "note": null
   },
   "staffing": {
-    "status": "unstaffed",
-    "as_of": null,
-    "note": "No observer: Saskatchewan moved its towers to detection cameras from 2013-14."
+    "status": "unknown",
+    "as_of": "2001"
   },
   "visit": {
     "climbable": null,
@@ -44,13 +44,32 @@
     {
       "year": 1962,
       "event": "built",
-      "note": "A lookout structure was built this year. (Dated on Canada's Fire Lookouts.)",
-      "from": "canada_lookouts_weebly",
+      "note": "Canada Lookouts says the smokejumpers erected a new 20-foot steel tower at Granite Mountain in 1962, citing a Department of Natural Resources annual report for 1962-63.",
+      "from": "research",
       "source_url": "https://canada-lookouts.weebly.com/granite-mountain.html"
+    },
+    {
+      "year": 1968,
+      "event": "staffed",
+      "note": "Towermen list says Basil Natamogen was full time on the Granite and Petitte towers in 1968; the entry does not clearly separate the two.",
+      "from": "research",
+      "source_url": "https://www.websiteservice.ca/firetowermen.htm"
+    },
+    {
+      "year": 2001,
+      "event": "staffed_last",
+      "note": "Towermen list says he went back to Granite until 2001; the same entry does not clearly separate Granite Mountain from Petitte Granite.",
+      "from": "research",
+      "source_url": "https://www.websiteservice.ca/firetowermen.htm"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Firetowermen & Women (websiteservice.ca)",
+      "url": "https://www.websiteservice.ca/firetowermen.htm",
+      "kind": "reference"
+    },
     {
       "label": "Granite Fire Tower on Firetowers of Saskatchewan (websiteservice.ca)",
       "url": "https://www.websiteservice.ca/firetowers_page4.htm",
@@ -88,10 +107,29 @@
         "agency",
         "staffing"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-sk-granite",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

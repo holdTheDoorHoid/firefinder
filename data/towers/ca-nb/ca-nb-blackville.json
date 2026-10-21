@@ -1,6 +1,7 @@
 {
   "id": "ca-nb-blackville",
   "name": "Blackville Fire Tower",
+  "summary": "Steel watchtower, built 1929 per the register and CBC, moved to a private Blackville backyard in 1981 and rebuilt by 1984; still standing.",
   "other_names": [],
   "country": "CA",
   "region": "NB",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Steel watchtower with an unusual oval-shaped cabin",
+  "height_m": 31.7,
   "status": "standing",
   "status_note": null,
   "registers": [
@@ -31,8 +32,8 @@
   "agency": "Alvin Stewart (Private Owner)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "On the owner's private land in Blackville. The register lists the owner, Alvin Stewart, as administrator."
   },
   "staffing": {
     "status": "unknown",
@@ -48,14 +49,38 @@
     {
       "year": 1929,
       "event": "built",
-      "note": "'Built' field on NHLR detail page",
-      "from": "nhlr"
+      "note": "Built field and CBC account give 1929. The register's description gives 1950 in Bettsburg.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/new-brunswick/blackville-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/can/new-brunswick/blackville-fire-tower/",
+        "https://www.theweathernetwork.com/en/news/lifestyle/health/the-guardian-of-blackvilles-tallest-historic-landmark-new-brunswick"
+      ]
+    },
+    {
+      "year": 1981,
+      "event": "relocated",
+      "note": "Rescued in winter 1980 and moved piece by piece to a Blackville backyard in spring 1981 (CBC). The register dates the relocation to 1980.",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/new-brunswick/blackville-fire-tower/",
+      "source_urls": [
+        "http://nhlr.org/lookouts/can/new-brunswick/blackville-fire-tower/",
+        "https://www.theweathernetwork.com/en/news/lifestyle/health/the-guardian-of-blackvilles-tallest-historic-landmark-new-brunswick"
+      ]
+    },
+    {
+      "year": 1984,
+      "event": "restored",
+      "note": "Completely resurrected by summer 1984 (CBC)",
+      "from": "research",
+      "source_url": "https://www.theweathernetwork.com/en/news/lifestyle/health/the-guardian-of-blackvilles-tallest-historic-landmark-new-brunswick"
     },
     {
       "year": 2026,
       "event": "nhlr_registered",
-      "note": "Date registered per NHLR detail page: January 2, 2026",
-      "from": "nhlr"
+      "note": "Registered January 2, 2026",
+      "from": "research",
+      "source_url": "http://nhlr.org/lookouts/can/new-brunswick/blackville-fire-tower/"
     }
   ],
   "photos": [
@@ -85,6 +110,11 @@
       "label": "NHLR register entry CAN 17 (nhlr.org)",
       "url": "http://nhlr.org/lookouts/can/new-brunswick/blackville-fire-tower/",
       "kind": "register"
+    },
+    {
+      "label": "The guardian of Blackville's tallest historic landmark (The Weather Network (originally published for CBC News))",
+      "url": "https://www.theweathernetwork.com/en/news/lifestyle/health/the-guardian-of-blackvilles-tallest-historic-landmark-new-brunswick",
+      "kind": "reference"
     },
     {
       "label": "CBC article: \"The guardian of Blackville's tallest historic landmark\"",
@@ -120,10 +150,30 @@
         "county",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-nb-blackville",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "ca-on-unnamed-fire-tower-at-dividing-lake",
   "name": "Chester",
+  "summary": "Old Ontario fire tower at Dividing Lake near Gogama; the register says it is not used, and no source gives its build date or height.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
@@ -19,9 +20,9 @@
   "design": null,
   "height_m": null,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "The register says the tower is not used. A Forest Rangers list counts it among still-standing towers, with no date.",
   "registers": [],
-  "agency": null,
+  "agency": "Ontario Ministry of Natural Resources (MNR)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -32,7 +33,7 @@
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
@@ -40,6 +41,16 @@
   "events": [],
   "photos": [],
   "links": [
+    {
+      "label": "stillstanding (Ontario fire tower list) (Forest Rangers)",
+      "url": "https://forestrangers.github.io/ontariofiretowers/stillstanding2.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Tower layer, Fire Tower subtype (OGF_ID 70699531) (Land Information Ontario, Ministry of Natural Resources and Forestry)",
+      "url": "https://ws.lioservices.lrc.gov.on.ca/arcgis2/rest/services/LIO_OPEN_DATA/LIO_Open10/MapServer/14/query?where=CLASS_SUBTYPE%3D%27Fire+Tower%27&outFields=%2A&outSR=4326&f=geojson",
+      "kind": "reference"
+    },
     {
       "label": "Chester on Canada's Fire Lookouts (Ron Kemnow)",
       "url": "https://canada-lookouts.weebly.com/chester.html",
@@ -68,10 +79,28 @@
         "name",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-unnamed-fire-tower-at-dividing-lake",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "visit",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

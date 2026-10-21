@@ -1,6 +1,7 @@
 {
   "id": "ca-mb-baldy-mountain",
   "name": "Baldy Mountain Fire Tower",
+  "summary": "Manitoba's highest point; one of the first fire lookout towers was built here in the early 1900s, and a 12 m observation tower stands on the summit today.",
   "other_names": [
     "Baldy Mountain Fire Tower (Duck Mountain)",
     "Baldy Mountain Viewing Tower"
@@ -19,34 +20,38 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Built of poles cut nearby, per a 1915 report; the tower standing today is a 12 m observation tower",
+  "height_m": 12.0,
   "status": "standing",
   "status_note": null,
   "registers": [],
   "agency": "Manitoba Conservation / Parks",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Visitors can drive to the top of the mountain, per the Manitoba park sheet. The site is on Provincial Road 366, 32 km north of Grandview."
   },
   "staffing": {
     "status": "unstaffed",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "climbable": true,
+    "drive_up": true,
+    "trail_note": "Trail begins at a parking area near the summit, about 2 km in total and mostly paved. The stairs can be icy in early spring and late autumn."
   },
   "rental": null,
   "events": [
     {
       "year": 1915,
       "event": "built",
-      "note": "A lookout structure was built this year. (Dated on Canada's Fire Lookouts.)",
-      "from": "canada_lookouts_weebly",
-      "source_url": "https://canada-lookouts.weebly.com/baldy-mountain.html"
+      "note": "Earliest dated record. A 1915 forestry report describes the tower as already built, so it may be older. The Manitoba park sheet dates one of the first towers on the mountain to the early 1900s.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/baldy-mountain.html",
+      "source_urls": [
+        "https://canada-lookouts.weebly.com/baldy-mountain.html",
+        "https://www.gov.mb.ca/sd/pubs/parks-protected-spaces/park_info/duck_mountain_pp.pdf"
+      ]
     }
   ],
   "photos": [],
@@ -59,6 +64,11 @@
     {
       "label": "borealbase.ca",
       "url": "https://borealbase.ca/trips/trails/manitoba/baldy-mountain-lookout-trail",
+      "kind": "reference"
+    },
+    {
+      "label": "Duck Mountain Provincial Park (Western Parks park information sheet) (Province of Manitoba)",
+      "url": "https://www.gov.mb.ca/sd/pubs/parks-protected-spaces/park_info/duck_mountain_pp.pdf",
       "kind": "reference"
     },
     {
@@ -88,10 +98,31 @@
         "staffing",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-mb-baldy-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

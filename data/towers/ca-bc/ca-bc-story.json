@@ -1,6 +1,7 @@
 {
   "id": "ca-bc-story",
   "name": "Story Fire Lookout",
+  "summary": "Cabin on Morice Mountain near Houston, BC, built 1988 as a lookout; sources differ on whether fire watch or illegal burning was the main purpose. Shelter reported destroyed in September 2026.",
   "other_names": [],
   "country": "CA",
   "region": "BC",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Square cabin on a ridge",
   "height_m": null,
   "status": "unknown",
   "status_note": null,
@@ -25,7 +26,7 @@
   "ownership": "unknown",
   "access": {
     "level": "public",
-    "note": "A Recreation Sites and Trails BC site (REC262283). Access: trail (non-motorized)."
+    "note": "Trail reopened in 2024 after the 2023 fire reroute, per Interior News. The hikers society says overnight stays are not recommended."
   },
   "staffing": {
     "status": "unknown",
@@ -33,13 +34,94 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "About 4.4 km trail, round trip about 5 hours per the hikers society. Trailhead moved about 800 m closer to town after the reroute. Overnight stays not recommended."
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1988,
+      "event": "built",
+      "note": "Interior News and the hikers society both give 1988. Sources differ on the main purpose.",
+      "from": "research",
+      "source_url": "https://interior-news.com/2026/09/25/hiking-shelter-at-story-lookout-destroyed/",
+      "source_urls": [
+        "https://interior-news.com/2026/09/25/hiking-shelter-at-story-lookout-destroyed/",
+        "https://houstonhikers.ca/adventures/story-lookout"
+      ]
+    },
+    {
+      "year": 1988,
+      "event": "staffed_first",
+      "note": "Northword says the Ministry of Forests decided to place a lookout observer on a knob near Houston, in the context of the 1988 build. The article does not give a separate staffing start date.",
+      "from": "research",
+      "source_url": "https://www.hesperus-wild.org/GIS_carto/BVTrailMaps/Story_Lookout_Trail_Northword.pdf"
+    },
+    {
+      "year": 1994,
+      "event": "other",
+      "note": "Northword says regulation changes under the new Forest Practices Code in 1994 removed the need to watch for illegal burning. It does not say the lookout closed that year.",
+      "from": "research",
+      "source_url": "https://www.hesperus-wild.org/GIS_carto/BVTrailMaps/Story_Lookout_Trail_Northword.pdf"
+    },
+    {
+      "year": 2010,
+      "event": "other",
+      "note": "Story Lookout trail first ribboned out in summer 2010 to reach the lookout.",
+      "from": "research",
+      "source_url": "https://interior-news.com/2026/09/25/hiking-shelter-at-story-lookout-destroyed/",
+      "source_urls": [
+        "https://interior-news.com/2026/09/25/hiking-shelter-at-story-lookout-destroyed/",
+        "https://houstonhikers.ca/adventures/story-lookout"
+      ]
+    },
+    {
+      "year": 2023,
+      "event": "fire",
+      "note": "2023 Peacock fire damaged the trail; the lower 1 km burned.",
+      "from": "research",
+      "source_url": "https://interior-news.com/2026/09/25/hiking-shelter-at-story-lookout-destroyed/",
+      "source_urls": [
+        "https://interior-news.com/2026/09/25/hiking-shelter-at-story-lookout-destroyed/",
+        "https://houstonhikers.ca/adventures/story-lookout"
+      ]
+    },
+    {
+      "year": 2024,
+      "event": "other",
+      "note": "Trail reopened after the reroute. Interior News says reopened in 2024; the hikers society says the lower section was re-routed in late 2024.",
+      "from": "research",
+      "source_url": "https://interior-news.com/2026/09/25/hiking-shelter-at-story-lookout-destroyed/",
+      "source_urls": [
+        "https://interior-news.com/2026/09/25/hiking-shelter-at-story-lookout-destroyed/",
+        "https://houstonhikers.ca/adventures/story-lookout"
+      ]
+    },
+    {
+      "year": 2026,
+      "event": "destroyed",
+      "note": "Shelter reported destroyed in the week before 25 Sep 2026.",
+      "from": "research",
+      "source_url": "https://interior-news.com/2026/09/25/hiking-shelter-at-story-lookout-destroyed/"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Hiking shelter at Story Lookout destroyed (The Interior News)",
+      "url": "https://interior-news.com/2026/09/25/hiking-shelter-at-story-lookout-destroyed/",
+      "kind": "reference"
+    },
+    {
+      "label": "Story Lookout (Houston Hikers)",
+      "url": "https://houstonhikers.ca/adventures/story-lookout",
+      "kind": "reference"
+    },
+    {
+      "label": "Story Lookout: On the Watch for Illegal Burning (Morgan Hite, Northword (PDF hosted by BV Trail Maps))",
+      "url": "https://www.hesperus-wild.org/GIS_carto/BVTrailMaps/Story_Lookout_Trail_Northword.pdf",
+      "kind": "reference"
+    },
     {
       "label": "Recreation Sites and Trails BC: Story Fire Lookout (REC262283)",
       "url": "https://www.sitesandtrailsbc.ca/resource/REC262283",
@@ -58,10 +140,30 @@
         "access",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-story",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
