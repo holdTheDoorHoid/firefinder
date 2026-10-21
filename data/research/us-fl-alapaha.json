@@ -1,0 +1,120 @@
+{
+  "id": "us-fl-alapaha",
+  "researched": "2026-10-21",
+  "summary": "Forest Lookouts files Alapaha under Florida, but the Georgia tower list places it in Berrien County, GA. No build, staffing or fate found.",
+  "facts": {},
+  "events": [],
+  "evidence": [
+    {
+      "cite": [1],
+      "supports": "Forest Lookouts files its Alapaha entry under Florida, with the county and a township, range and section code",
+      "quote": "Berrien County - 2N-13E-32"
+    },
+    {
+      "cite": [1],
+      "supports": "Forest Lookouts' Florida index lists Alapaha",
+      "quote": "FLORIDA Adams Ainsley Alapaha Alaqua"
+    },
+    {
+      "cite": [1],
+      "supports": "Forest Lookouts' state index has a Georgia section",
+      "quote": "GEORGIA Adams"
+    },
+    {
+      "cite": [1],
+      "supports": "Forest Lookouts' Georgia index also lists Alapaha",
+      "quote": "Airport Alapaha Allentown"
+    },
+    {
+      "cite": [2],
+      "supports": "The statewide Georgia list has a tower named alapaha in Berrien County, with coordinates",
+      "quote": "GA396,alapaha, 31.373553,-83.224914 ,Berrien,286"
+    },
+    {
+      "cite": [3],
+      "supports": "The town of Alapaha is in Berrien County",
+      "quote": "Alapaha is a town in Berrien County"
+    },
+    {
+      "cite": [3],
+      "supports": "The town lies along the Alapaha River",
+      "quote": "along the Alapaha River"
+    },
+    {
+      "cite": [4],
+      "supports": "A second Forest Lookouts Alapaha page gives only the county, with no township code",
+      "quote": "ALAPAHA Berrien County"
+    }
+  ],
+  "corrections": [
+    {
+      "field": "region",
+      "current": "FL",
+      "proposed": "GA",
+      "cite": [2, 4],
+      "why": "Berrien County is in Georgia, and the statewide Georgia list places a tower named alapaha there. The Florida entry looks like a misfiling of the Georgia tower."
+    },
+    {
+      "field": "location",
+      "current": "30.53083, -83.04111",
+      "proposed": "31.373553, -83.224914",
+      "cite": [2],
+      "why": "The current coordinates fall in Florida, well south of Berrien County. The Georgia list gives 31.373553, -83.224914 for alapaha in Berrien County."
+    },
+    {
+      "field": "agency",
+      "current": "2N",
+      "proposed": "unknown",
+      "cite": [1],
+      "why": "2N-13E-32 is a township, range and section code, not a managing agency. The Forest Lookouts entry names no agency."
+    }
+  ],
+  "resolved_conflicts": [
+    {
+      "field": "region",
+      "explanation": "Forest Lookouts files the Alapaha entry under Florida, but the statewide Georgia list places a tower named alapaha in Berrien County, Georgia. Berrien County is a Georgia county, so the Florida entry is treated as a misfiling of the Georgia tower. The Georgia tower already has its own record, us-ga-alapaha.",
+      "cite": [1, 2, 3]
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "title": "Alapaha - Forest Lookouts",
+      "publisher": "Forest Lookouts (Eastern US Lookouts)",
+      "url": "https://easternuslookouts.weebly.com/alapaha.html",
+      "accessed": "2026-10-21"
+    },
+    {
+      "n": 2,
+      "title": "Georgia lookout towers",
+      "publisher": "tnlandforms.us",
+      "url": "https://tnlandforms.us/gatowers.html",
+      "accessed": "2026-10-21"
+    },
+    {
+      "n": 3,
+      "title": "Alapaha, Georgia",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Alapaha,_Georgia",
+      "accessed": "2026-10-21"
+    },
+    {
+      "n": 4,
+      "title": "Alapaha - Forest Lookouts (second page)",
+      "publisher": "Forest Lookouts (Eastern US Lookouts)",
+      "url": "https://easternuslookouts.weebly.com/alapaha1.html",
+      "accessed": "2026-10-21"
+    }
+  ],
+  "confidence": "medium",
+  "notes_for_editor": "This Florida record appears to duplicate the Georgia tower in us-ga-alapaha (same name, same county; the statewide list puts it at 31.373553, -83.224914). Recommend hiding or merging this record into us-ga-alapaha. I did not change any tower record. The Forest Lookouts Florida entry and the Georgia list disagree on state; the Georgia list is the stronger evidence because it gives coordinates in Berrien County. The us-ga-alapaha story says 286 feet, but the tnlandforms list gives 286 with no unit, so the unit is not supported by that source; that story may need a fix. The Wikipedia page for the town gives its own coordinates; the tower's offset from the town was not used in this record. The Forest Lookouts state index lists Alapaha under both Florida and Georgia, so the site does not settle the state by itself. No source gives status, build, staffing or access, so those stay unknown.",
+  "verification": {
+    "checked": "2026-10-21",
+    "claims_checked": 9,
+    "unsupported_removed": 0,
+    "errors_fixed": 1,
+    "quotes_spot_checked": 8,
+    "quotes_not_found": 0,
+    "verdict": "fixed"
+  }
+}

@@ -1,0 +1,4 @@
+OpenStreetMap has a point named Gilchrist County Lookout Tower, at 29.6315° N, 82.8246° W, with an elevation of 17 m.[^1] The point is tagged as an observation tower. The edit note on its current version describes removing unnecessary tags that came from an import.[^1] TopoZone lists a tower of the same name in Gilchrist County, Florida, on the Fourmile Lake map, at about 17 m (56 ft) above sea level.[^2] No source we could read describes what remains at the site today, or whether the public can reach it.
+
+[^1]: OpenStreetMap node 358719774, Gilchrist County Lookout Tower, OpenStreetMap, https://www.openstreetmap.org/node/358719774 (accessed 2026-10-21).
+[^2]: Gilchrist County Lookout Tower Topo Map FL, Gilchrist County (Fourmile Lake Area), TopoZone, https://www.topozone.com/florida/gilchrist-fl/tower/gilchrist-county-lookout-tower/ (accessed 2026-10-21).

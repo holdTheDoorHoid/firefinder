@@ -1,6 +1,7 @@
 {
   "id": "us-ar-bethel",
   "name": "Bethel",
+  "summary": "Sevier County, AR lookout tower described in a 1951 Coast and Geodetic Survey description as a steel structure about 115 feet tall; no later source found.",
   "other_names": [],
   "country": "US",
   "region": "AR",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Four-legged steel structure with an enclosed platform at the top (1951 description)",
+  "height_m": 35.0,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "No source we found says whether the steel tower still stands.",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -37,9 +38,27 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1951,
+      "event": "other",
+      "note": "Coast and Geodetic Survey description of the tower; the station is listed as Bethel Lookout Tower",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/bethel.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "NGS Data Sheet listing for station EK0869 (Bethel Lookout Tower) (National Geodetic Survey, NOAA)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=EK0869",
+      "kind": "reference"
+    },
+    {
+      "label": "Forest Fire Lookouts (Encyclopedia of Arkansas)",
+      "url": "https://encyclopediaofarkansas.net/entries/forest-fire-lookouts-7905/",
+      "kind": "reference"
+    },
     {
       "label": "Bethel (centraluslookouts.weebly.com)",
       "url": "https://centraluslookouts.weebly.com/bethel.html",
@@ -57,12 +76,31 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ar-bethel",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-21"
 }

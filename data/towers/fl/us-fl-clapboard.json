@@ -1,6 +1,7 @@
 {
   "id": "us-fl-clapboard",
   "name": "Clapboard",
+  "summary": "Duval County fire tower on Clapboard Creek, described as an 87-foot steel skeleton in a 1934 federal station description. No managing agency, build date or current condition found.",
   "other_names": [],
   "country": "US",
   "region": "FL",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "87-foot steel skeleton structure",
   "height_m": 26.5,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "No source reviewed says whether the tower still stands.",
   "registers": [],
   "agency": "From: National Geodetic Survey Data Shee",
   "ownership": "unknown",
@@ -37,9 +38,22 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1934,
+      "event": "other",
+      "note": "A federal station description dated 1934 refers to the Clapboard Creek fire tower as an existing structure",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/clapboard.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Datasheet for station PID BC2010 (NOAA National Geodetic Survey)",
+      "url": "https://geodesy.noaa.gov/cgi-bin/ds_mark.prl?PidBox=BC2010",
+      "kind": "reference"
+    },
     {
       "label": "Clapboard (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/clapboard.html",
@@ -59,12 +73,31 @@
         "agency",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-fl-clapboard",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-21"
 }

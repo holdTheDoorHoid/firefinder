@@ -1,6 +1,7 @@
 {
   "id": "us-id-wounded-doe-ridge",
   "name": "Wounded Doe Ridge",
+  "summary": "Tent camp on Wounded Doe Ridge, Clearwater National Forest: first manned 1923 or camped 1933 (sources differ), last manned 1939, now abandoned.",
   "other_names": [],
   "country": "US",
   "region": "ID",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Tent camp",
   "height_m": null,
   "status": "unknown",
   "status_note": null,
@@ -33,13 +34,66 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
+    "drive_up": false,
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1923,
+      "event": "staffed_first",
+      "note": "First manned, from a tent camp, per the 1981 Lochsa history quoted on Forest Lookouts; the Forest Service list and firelookout.com date the camp to 1933.",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/wounded-doe-ridge.html"
+    },
+    {
+      "year": 1933,
+      "event": "other",
+      "note": "Listed as a camp in 1933 by the Forest Service list and firelookout.com.",
+      "from": "research",
+      "source_url": "http://www.firelookout.com/id/woundeddoe.html",
+      "source_urls": [
+        "http://www.firelookout.com/id/woundeddoe.html",
+        "https://www.fs.usda.gov/media/259185"
+      ]
+    },
+    {
+      "year": 1939,
+      "event": "abandoned",
+      "note": "Listed as abandoned in 1939.",
+      "from": "research",
+      "source_url": "http://www.firelookout.com/id/woundeddoe.html",
+      "source_urls": [
+        "http://www.firelookout.com/id/woundeddoe.html",
+        "https://www.idahofirelookouts.com/selway-region/wounded-doe/",
+        "https://www.fs.usda.gov/media/259185"
+      ]
+    },
+    {
+      "year": 1939,
+      "event": "staffed_last",
+      "note": "Manned by Keith McGee from a tent camp; never manned again after 1939.",
+      "from": "research",
+      "source_url": "https://idaholookouts.weebly.com/wounded-doe-ridge.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Wounded Doe - Idaho Fire Lookouts",
+      "url": "https://www.idahofirelookouts.com/selway-region/wounded-doe/",
+      "kind": "reference"
+    },
+    {
+      "label": "Clearwater National Forest Lookouts (USDA Forest Service)",
+      "url": "https://www.fs.usda.gov/media/259185",
+      "kind": "reference"
+    },
+    {
+      "label": "Idaho Lookouts (by County) (Forest Fire Lookout Association)",
+      "url": "https://firelookout.org/lookouts/us/id/id-co/",
+      "kind": "reference"
+    },
     {
       "label": "Wounded Doe Ridge on Forest Lookouts, western US (Ron Kemnow)",
       "url": "https://idaholookouts.weebly.com/wounded-doe-ridge.html",
@@ -63,12 +117,31 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-id-wounded-doe-ridge",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-21"
 }

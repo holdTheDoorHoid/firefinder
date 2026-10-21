@@ -1,6 +1,7 @@
 {
   "id": "us-ar-mcnab",
   "name": "McNab",
+  "summary": "Steel fire tower near McNab, Hempstead County; a 1950 newspaper says it burned, but a 1951 survey describes it standing.",
   "other_names": [],
   "country": "US",
   "region": "AR",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Four-legged steel tower with a glass-enclosed crow's nest",
   "height_m": 34.1,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "A 1950 newspaper says the tower burned; a 1951 survey describes it standing. Condition today not described.",
   "registers": [],
   "agency": "Arkansas Forestry Commission",
   "ownership": "state",
@@ -28,8 +29,8 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "1950"
   },
   "visit": {
     "climbable": null,
@@ -37,9 +38,36 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1950,
+      "event": "burned",
+      "note": "Hope Star column of 14 July 1950 reports the tower burned",
+      "from": "research",
+      "source_url": "https://archive.org/download/hope-star-1950-07-14/hope-star-1950-07-14_djvu.txt"
+    },
+    {
+      "year": 1950,
+      "event": "staffed",
+      "note": "A lookout was posted at the tower, according to a Hope Star column of 14 July 1950",
+      "from": "research",
+      "source_url": "https://archive.org/download/hope-star-1950-07-14/hope-star-1950-07-14_djvu.txt"
+    },
+    {
+      "year": 1951,
+      "event": "other",
+      "note": "Survey station description dated 1951 describes a standing steel tower about 112 ft (34 m) tall",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/mcnab.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Hope Star, 14 July 1950 (Internet Archive (Hope Star newspaper scan))",
+      "url": "https://archive.org/download/hope-star-1950-07-14/hope-star-1950-07-14_djvu.txt",
+      "kind": "reference"
+    },
     {
       "label": "McNab (centraluslookouts.weebly.com)",
       "url": "https://centraluslookouts.weebly.com/mcnab.html",
@@ -60,12 +88,33 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ar-mcnab",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-21"
 }

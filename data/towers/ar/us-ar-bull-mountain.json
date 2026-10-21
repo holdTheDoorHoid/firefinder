@@ -1,6 +1,7 @@
 {
   "id": "us-ar-bull-mountain",
   "name": "Bull Mountain",
+  "summary": "Clark County, AR steel lookout of the Arkansas Forestry Commission; 1941 survey says about 100 ft, 1957 note says 110 ft and good condition; no later record found.",
   "other_names": [],
   "country": "US",
   "region": "AR",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Steel tower with an enclosed cab at the top (1941 description); the 1957 recovery note describes a glass-enclosed observation cab on a four-legged steel structure",
   "height_m": 30.5,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "The last recorded condition is a 1957 survey note listing the station as good; no later source confirms whether the tower stands",
   "registers": [],
   "agency": "Arkansas Forestry Commission",
   "ownership": "state",
@@ -37,9 +38,39 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1941,
+      "event": "assessed",
+      "note": "Coast and Geodetic Survey description: lookout tower of the Arkansas Forestry Commission, steel, about 100 feet, enclosed cab; the station was not visited",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=DL1426"
+    },
+    {
+      "year": 1957,
+      "event": "assessed",
+      "note": "Recovery note: glass-enclosed observation cab on a four-legged steel structure, overall height 110 feet; condition listed as good; probably the same station as in 1941",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=DL1426"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Bull Mountain Fire Lot (PID DL1426), datasheet (National Geodetic Survey)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=DL1426",
+      "kind": "reference"
+    },
+    {
+      "label": "Forest Fire Lookouts (Encyclopedia of Arkansas)",
+      "url": "https://encyclopediaofarkansas.net/entries/forest-fire-lookouts-7905/",
+      "kind": "reference"
+    },
+    {
+      "label": "Forest Fire Lookout Stations (Preserve Arkansas)",
+      "url": "https://preservearkansas.org/forest-fire-lookout-stations",
+      "kind": "reference"
+    },
     {
       "label": "Bull Mountain (centraluslookouts.weebly.com)",
       "url": "https://centraluslookouts.weebly.com/bull-mountain.html",
@@ -60,12 +91,32 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ar-bull-mountain",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-21"
 }
