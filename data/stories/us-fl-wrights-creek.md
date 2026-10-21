@@ -1,0 +1,5 @@
+The Forest Lookouts website quotes a Panama City News-Herald report of May 30, 1950, about a Florida Forest Service lookout tower at Wright's Creek, north of Bonifay in Holmes County.[^1] According to the report, District Forester J. Edwin Moore, of Panama City, announced that a contract had been let for the tower and that building would begin right away.[^1] A second tower was expected before July 1, which would give the county a pair of lookout posts for spotting forest fires.[^1] The towers were to have two-way radios for quick contact with fire-fighting trucks and ranger headquarters.[^1] The report also said that fire suppression work would begin shortly after July 1.[^1]
+
+The report describes construction still to come and does not say the tower was finished.[^1] The listing says nothing about what, if anything, remains at the Wrights Creek site today.[^1]
+
+[^1]: Wrights Creek - Forest Lookouts, quoting the Panama City News-Herald of May 30, 1950, Forest Lookouts website, https://easternuslookouts.weebly.com/wrights-creek.html (accessed 2026-10-21).

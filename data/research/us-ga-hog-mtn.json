@@ -1,0 +1,30 @@
+{
+  "id": "us-ga-hog-mtn",
+  "researched": "2026-10-21",
+  "summary": "Lamar County tower 'hog mtn' (GA244) on a Georgia tower list; a MyTopo summit record confirms the mountain. No source describes its build, staffing or the site today.",
+  "evidence": [
+    {"cite": [1], "supports": "Tower list entry GA244 hog mtn, Lamar County, 1,020 feet, codes BLL-63471 and gfc-424", "quote": "GA244,hog mtn, 33.06946,-84.14394 ,Lamar,1020,BLL-63471 gfc-424"},
+    {"cite": [1], "supports": "Names for towers 73 and above are the list compiler's own, so the name is a label", "quote": "(For towers 73 and above, names are my creation.)"},
+    {"cite": [1], "supports": "The gfc-nnn numbers come from an older GFC list", "quote": "an older GFC list described the locations of 203 towers (gfc-nnn)."},
+    {"cite": [1], "supports": "BLL-nnn codes are for coordinates GFC provided for 118 towers", "quote": "GFC provided coordinates for 118 towers (BLL-nnn)"},
+    {"cite": [2], "supports": "Summit coordinates match the list's coordinates", "quote": "33.0695164, -84.1440184"},
+    {"cite": [2], "supports": "Summit is in Lamar County", "quote": "Hog Mountain is a summit located in Lamar County, Georgia."},
+    {"cite": [2], "supports": "Summit appears on the Barnesville quadrangle", "quote": "It appears on the Barnesville USGS 7.5-minute topographic quadrangle."},
+    {"cite": [2], "supports": "Nearest populated place is Barnesville, about 1.2 miles to the SSW", "quote": "approximately 1.2 miles to the SSW"},
+    {"cite": [2], "supports": "Summit elevation given as about 1,025 feet (312 m)", "quote": "approximately 1,025.07 feet (312.44 m) above sea level"}
+  ],
+  "corrections": [
+    {"field": "registers", "current": "BLL US 63471", "proposed": "BLL-63471 (list code, not a register number)", "cite": [1], "why": "The list gives the code as BLL-63471 with no US prefix, and says BLL-nnn is the code for coordinates GFC provided for 118 towers."},
+    {"field": "registers", "current": "GFC US 424", "proposed": "GFC 424", "cite": [1], "why": "The list gives gfc-424 with no US prefix, and says gfc-nnn numbers come from an older GFC list."}
+  ],
+  "resolved_conflicts": [
+    {"field": "elevation", "explanation": "The tower list gives 1,020 feet (310.9 m) for the site; MyTopo's summit record gives 1,025.07 feet (312.44 m). These are different sources and the story gives both, saying the summit record is a little higher.", "cite": [1, 2]}
+  ],
+  "sources": [
+    {"n": 1, "title": "Georgia lookout towers", "publisher": "tnlandforms.us", "url": "https://tnlandforms.us/gatowers.html", "accessed": "2026-10-21"},
+    {"n": 2, "title": "Hog Mountain - Summit in Lamar, Georgia", "publisher": "MyTopo", "url": "https://geo.mytopo.com/feature/georgia/lamar/summit/332001/hog-mountain/", "accessed": "2026-10-21"}
+  ],
+  "verification": {"checked": "2026-10-21", "claims_checked": 7, "unsupported_removed": 0, "errors_fixed": 0, "quotes_spot_checked": 9, "quotes_not_found": 0, "verdict": "pass"},
+  "confidence": "low",
+  "notes_for_editor": "Thin: the tower list gives coordinates, elevation and two codes; the MyTopo page is a GNIS-based summit record, not a tower record. No build date, builder, staffing, fire or status was found. The name 'hog mtn' is the list's own label (tower 244 is above 73). The corrections drop the US prefix that the list does not use. BLL-nnn in the list is the code for coordinates GFC provided, so it is recorded as a list code, not a register; the editor may want to confirm that reading. towerdex.com returned HTTP 403 and was not used. The NHLR and FFLOS Georgia pages (fetched 2026-10-21) have no Hog Mountain entry."
+}

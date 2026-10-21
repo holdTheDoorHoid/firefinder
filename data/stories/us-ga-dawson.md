@@ -1,0 +1,4 @@
+Dawson is a city in Terrell County, and it is where the county government sits.[^2] The Georgia lookout list on tnlandforms.us gives a tower named dawson in Terrell County, at 31.75191 north and 84.45062 west, with the number gfc-318.[^1] The list says it was prompted by a gap: in 2010 the FFLA site listed none of Georgia's towers, and an older Forestry Commission list described the locations of its gfc-numbered towers.[^1] This row is number 80, and the author says names from 73 up were invented by the author, so the name may echo the town rather than a name the tower carried.[^1][^2] No source I found describes the tower or its site today, so I cannot say whether a tower stands there or whether it is open to visitors.[^1]
+
+[^1]: Georgia lookout towers, tnlandforms.us, https://tnlandforms.us/gatowers.html (accessed 2026-10-21).
+[^2]: Dawson, Georgia, Wikipedia, https://en.wikipedia.org/wiki/Dawson,_Georgia (accessed 2026-10-21).

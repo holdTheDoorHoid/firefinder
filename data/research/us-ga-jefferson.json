@@ -1,0 +1,27 @@
+{
+  "id": "us-ga-jefferson",
+  "researched": "2026-10-21",
+  "summary": "Jefferson County, GA: a listed tower with a USGS name on the Louisville South topo map; no history, staffing or current-status source found.",
+  "evidence": [
+    {"cite": [1], "supports": "tower listed at 32.95099 N, 82.39763 W in Jefferson County, elevation 329 on the list", "quote": "GA029,Jefferson Lookout Tower, 32.95099,-82.39763 ,Jefferson,329,BLL-50814 gfc-619"},
+    {"cite": [1], "supports": "entries 1 to 72 are taken from the USGS name database", "quote": "Map shows GA fire towers listed by USGS name database (1-72) and as discovered"},
+    {"cite": [1], "supports": "GFC provided coordinates for 118 towers under BLL numbers", "quote": "GFC provided coordinates for 118 towers (BLL-nnn) and"},
+    {"cite": [1], "supports": "an older GFC list described locations of 203 towers under gfc numbers", "quote": "an older GFC list described the locations of 203 towers (gfc-nnn)."},
+    {"cite": [2], "supports": "coordinates 32.9509865 N, 82.3976266 W", "quote": "Coordinates: 32.9509865°N, -82.3976266°W"},
+    {"cite": [2], "supports": "approximate elevation 328 feet (100 meters)", "quote": "Approx. Elevation: 328 feet (100 meters)"},
+    {"cite": [2], "supports": "tower shown on the Louisville South USGS topo map", "quote": "USGS Map Area: Louisville South"}
+  ],
+  "corrections": [
+    {"field": "registers", "current": "BLL US 50814; GFC US 619", "proposed": "remove from registers; keep as Georgia Forestry Commission list tags BLL-50814 and gfc-619", "cite": [1], "why": "The list explains BLL-nnn as coordinates the Georgia Forestry Commission provided and gfc-nnn as entries in an older commission list. Neither is a register listing."}
+  ],
+  "resolved_conflicts": [
+    {"field": "elevation", "explanation": "The list gives 329 with no unit and TopoZone gives an approximate 328 feet (100 meters); the story reports the list's 329 with no unit stated and TopoZone's figure as approximate", "cite": [1, 2]}
+  ],
+  "sources": [
+    {"n": 1, "title": "Georgia lookout towers", "publisher": "Tom Dunigan, tnlandforms.us", "url": "https://tnlandforms.us/gatowers.html", "accessed": "2026-10-21"},
+    {"n": 2, "title": "Jefferson Lookout Tower Topo Map in Jefferson County GA", "publisher": "TopoZone", "url": "https://www.topozone.com/georgia/jefferson-ga/tower/jefferson-lookout-tower/", "accessed": "2026-10-21"}
+  ],
+  "verification": {"checked": "2026-10-21", "claims_checked": 8, "unsupported_removed": 0, "errors_fixed": 1, "quotes_spot_checked": 7, "quotes_not_found": 0, "verdict": "fixed"},
+  "confidence": "medium",
+  "notes_for_editor": "Name, coordinates and map sheet agree between the tnlandforms list and TopoZone (feature type Tower, Louisville South map). The record's registers field holds the list's GFC coordinate tags (BLL-50814, gfc-619), not register numbers; see the proposed correction. Record elevation 100.3 m matches the list's 329. No build, staffing, fire, status or access source found after two searches and about six page reads (the Jefferson County history page has no mention of a tower; anyplaceamerica.com returned HTTP 403). The status field should stay unknown until someone checks the site."
+}

@@ -1,6 +1,7 @@
 {
   "id": "us-ga-bonneyman",
   "name": "bonneyman",
+  "summary": "Pierce County site near Waycross: a Forest Service fire tower stood beside a survey marker by 1961 and had been dismantled by 1978; only its foundation is mentioned.",
   "other_names": [],
   "country": "US",
   "region": "GA",
@@ -18,8 +19,8 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "unknown",
-  "status_note": null,
+  "status": "gone",
+  "status_note": "Dismantled by 1978; no source describes what remains at the site.",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -37,9 +38,29 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1961,
+      "event": "other",
+      "note": "Survey marker described near the southwest edge of the concrete base of a Forest Service fire tower, so the tower was standing",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=BS0174"
+    },
+    {
+      "year": 1978,
+      "event": "removed",
+      "note": "Tower dismantled by the 1978 NGS recovery; the note gives no removal date",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=BS0174"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "NGS Data Sheet, PID BS0174 (National Geodetic Survey (NOAA))",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=BS0174",
+      "kind": "reference"
+    },
     {
       "label": "bonneyman (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/gatowers.html",
@@ -58,12 +79,29 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ga-bonneyman",
+      "fields": [
+        "summary",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-21"
 }

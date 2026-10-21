@@ -1,0 +1,17 @@
+The earliest entry in the Oregon Lookouts timeline for this peak is a lookout tree, set up in 1912 on Huckleberry Mountain.[^2] By 1917 a trail was being built to the top, where a fire lookout station was going up.[^2] In 1921 the Morning Register reported that Mrs. Lewis Flock had spent that summer as forest fire lookout there, one of the few women in that work in the Northwest.[^2]
+
+The cabin that stands today is dated 1938.[^4][^5] That October the Eugene Register-Guard reported that new cabins were replacing old structures on the same sites, with CCC crews expected to finish the Huckleberry station within ten days.[^2] The new cabins matched the old ones in size, but had glass on all sides of the ground floor, and both were cabins rather than towers.[^2] Sand Mountain Society calls it a hip-roofed L-4 with outriggers.[^5] A 1953 Coast and Geodetic Survey description puts the house at about 10 feet high.[^2]
+
+The sources disagree on the year.[^1][^3] The register says 1934, and firelookout.com says 1939.[^1][^3] An Oregon Lookouts timeline says a CCC-built L-4 was erected and first staffed in 1939.[^2] The newspaper, the Forest Service and the Society point to 1938 for construction, so this account uses 1938 for the build.[^2][^4][^5]
+
+The register says volunteers and the Forest Service restored the original structure in 1990 and 1991.[^1] Sand Mountain Society tells it differently.[^5] When the district wanted to replace the lookout with a modern structure in the early 1990s, Roxie Metzler objected and offered to lead the restoration, forming a group called Friends of Huckleberry that restored it.[^5] The Society lists 1992 for the original restoration.[^5] Firelookout.com gives 1994 and says the cabin was made handicap-accessible.[^3]
+
+The Society replaced rotted outrigger framing and original shutters in 2017, and broken glass in 2025.[^5] The cabin also serves as a radio repeater site, with solar panels and an ADA-compliant catwalk.[^5] The Society says these changes take away from its historic look, though it rates the cabin itself highly.[^5]
+
+The Forest Service page, last updated March 26, 2026, reads "Site Closed" and cites a Cedar Creek Fire closure order.[^4] Check before you go, and stay away while the closure stands. When open, it is a staffed fire lookout with limited access during operational periods, and the Forest Service lists it as seasonally staffed by the Middle Fork Ranger District.[^4] The cabin sits about 10 miles northeast of Oakridge, with sweeping views toward Mount Hood, Mount Scott and Thielsen.[^3][^4] The Forest Service gives the trail as a half mile and easy, while the Society describes a good gravel road and a moderate hike of about a third of a mile, in a season from late June to late October.[^4][^5]
+
+[^1]: Huckleberry Mountain Lookout, National Historic Lookout Register, http://nhlr.org/lookouts/us/or/huckleberry-mountain-lookout/ (accessed 2026-10-21).
+[^2]: Huckleberry Mountain, Forest Lookouts (western US), Ron Kemnow, https://oregonlookouts.weebly.com/huckleberry-mountain3.html (accessed 2026-10-21).
+[^3]: Huckleberry Mtn. Fire Lookout Cabin, firelookout.com, http://www.firelookout.com/or/huckleberry.html (accessed 2026-10-21).
+[^4]: Huckleberry Mountain Lookout, Willamette National Forest, U.S. Forest Service, https://www.fs.usda.gov/r06/willamette/recreation/huckleberry-mountain-lookout (accessed 2026-10-21).
+[^5]: Huckleberry Mountain Lookout, Sand Mountain Society, https://sandmountain.org/projects/huckleberry-mountain-lookout/ (accessed 2026-10-21).

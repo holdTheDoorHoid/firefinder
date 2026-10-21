@@ -1,0 +1,6 @@
+The tnlandforms.us list of Georgia lookout towers places a tower named Elberton in Elbert County, at 34.08974, -82.92170, with an elevation of 678 (the list shows no unit).[^1] The list gives it GFC number 001, a code that points to an older Georgia Forestry Commission list covering 203 towers.[^1] It also carries the reference BLL-50810, from the set of towers whose coordinates the GFC supplied.[^1] The compiler says names for towers numbered 73 and above are the compiler's own creation, so "Elberton" is a label rather than a documented name for the tower.[^1]
+
+No source describes what remains at the site today, or whether the site is open to the public. The Georgia Forestry Commission's county contact page places the Elbert County office on Ga. 72, four miles west of Elberton.[^2] Check with the Forestry Commission before visiting, and do not climb a tower whose access you have not confirmed.
+
+[^1]: Georgia lookout towers (GA tower list with coordinates, elevation and GFC number), tnlandforms.us, https://tnlandforms.us/gatowers.html (accessed 2026-10-21).
+[^2]: County Contacts, Georgia Forestry Commission, https://gatrees.org/gfc-contacts-2/county-contacts/ (accessed 2026-10-21).
