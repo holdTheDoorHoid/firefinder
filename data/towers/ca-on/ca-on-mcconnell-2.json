@@ -1,6 +1,7 @@
 {
   "id": "ca-on-mcconnell-2",
   "name": "McConnell 2 Tower",
+  "summary": "Provincial tower-layer entry for a McConnell 2 Tower, with a position and name only; no source found gives its history or present state.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
@@ -41,6 +42,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Land Information Ontario tower layer (fire towers), open data query result (Government of Ontario)",
+      "url": "https://ws.lioservices.lrc.gov.on.ca/arcgis2/rest/services/LIO_OPEN_DATA/LIO_Open10/MapServer/14/query?where=CLASS_SUBTYPE%3D%27Fire+Tower%27&outFields=%2A&outSR=4326&f=geojson",
+      "kind": "reference"
+    },
+    {
       "label": "Land Information Ontario: Tower layer (fire towers)",
       "url": "https://geohub.lio.gov.on.ca/datasets/mnrf::tower",
       "kind": "agency"
@@ -56,10 +62,25 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-mcconnell-2",
+      "fields": [
+        "summary",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

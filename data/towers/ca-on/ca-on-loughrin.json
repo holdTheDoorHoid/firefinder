@@ -1,6 +1,7 @@
 {
   "id": "ca-on-loughrin",
   "name": "Loughrin Fire Tower",
+  "summary": "Listed as a verified fire tower point in Ontario's open tower layer; no other source reached describes its history, staffing or present site.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
@@ -41,6 +42,16 @@
   "photos": [],
   "links": [
     {
+      "label": "Fire tower points, Land Information Ontario open data",
+      "url": "https://ws.lioservices.lrc.gov.on.ca/arcgis2/rest/services/LIO_OPEN_DATA/LIO_Open10/MapServer/14/query?where=CLASS_SUBTYPE%3D%27Fire%20Tower%27&outFields=*&outSR=4326&f=geojson",
+      "kind": "reference"
+    },
+    {
+      "label": "Ontario's Fire Tower Lookouts (Ontario's Fire Tower Lookouts (personal history site))",
+      "url": "https://forestrangers.github.io/ontariofiretowers/",
+      "kind": "reference"
+    },
+    {
       "label": "Land Information Ontario: Tower layer (fire towers)",
       "url": "https://geohub.lio.gov.on.ca/datasets/mnrf::tower",
       "kind": "agency"
@@ -56,10 +67,25 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-loughrin",
+      "fields": [
+        "summary",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

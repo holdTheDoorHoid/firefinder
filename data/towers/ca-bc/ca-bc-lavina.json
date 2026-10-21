@@ -5,7 +5,7 @@
   "other_names": [],
   "country": "CA",
   "region": "BC",
-  "county": null,
+  "county": "Regional District of Central Kootenay",
   "location": {
     "lat": 50.24921,
     "lon": -116.89445,
@@ -157,6 +157,21 @@
       "kind": "reference"
     },
     {
+      "label": "Lavina on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/lavina.html",
+      "kind": "site"
+    },
+    {
+      "label": "Recreation Sites and Trails BC: Lavina Lookout (REC204276)",
+      "url": "https://www.sitesandtrailsbc.ca/resource/REC204276",
+      "kind": "agency"
+    },
+    {
+      "label": "BC base map (TRIM): fire lookout symbol 18832",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/d1fc9c40-c3ba-4ae4-ae5a-838ad3c43289",
+      "kind": "agency"
+    },
+    {
       "label": "OpenStreetMap way 972140180",
       "url": "https://www.openstreetmap.org/way/972140180",
       "kind": "osm"
@@ -180,11 +195,33 @@
       ]
     },
     {
+      "source": "bc_rec_sites",
+      "key": "bc_rec_sites:bc:rec204276",
+      "fields": [
+        "county",
+        "access",
+        "links"
+      ]
+    },
+    {
       "source": "osm",
       "key": "osm:way/972140180",
       "fields": [
         "kind",
-        "access",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:lavina",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "bc_trim_lookouts",
+      "key": "bc_trim_lookouts:bc:18832",
+      "fields": [
         "links"
       ]
     },
@@ -229,6 +266,10 @@
         },
         {
           "source": "osm",
+          "value": 1974
+        },
+        {
+          "source": "bc_rec_sites",
           "value": 1974
         }
       ],

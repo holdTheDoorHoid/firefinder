@@ -1,6 +1,7 @@
 {
   "id": "ca-on-richards",
   "name": "Richards Fire Tower",
+  "summary": "Light steel tower with guy wires in eastern Ontario; unstaffed from 1974; sold for scrap metal value with no date given; site today not described.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
@@ -16,10 +17,10 @@
   "material": "steel",
   "material_from": "firelookout_ca",
   "roles": [],
-  "design": null,
+  "design": "Light steel tower with guy wires and an octagonal cupola",
   "height_m": null,
-  "status": "gone",
-  "status_note": null,
+  "status": "unknown",
+  "status_note": "The entry says the tower was sold to a private concern for scrap metal value, with no date. It does not say the tower was removed or that anything remains at the site.",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -28,8 +29,8 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1974"
   },
   "visit": {
     "climbable": null,
@@ -41,8 +42,9 @@
     {
       "year": 1974,
       "event": "staffed_last",
-      "note": "No longer staffed from 1974; later sold for scrap.",
-      "from": "firelookout_ca"
+      "note": "The entry says the tower ceased to be manned as of 1974.",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=richards-fire-tower"
     }
   ],
   "photos": [],
@@ -68,10 +70,45 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-richards",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "unknown"
+        },
+        {
+          "source": "firelookout_ca",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-20) gives unknown where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

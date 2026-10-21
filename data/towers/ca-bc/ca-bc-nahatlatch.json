@@ -1,31 +1,32 @@
 {
   "id": "ca-bc-nahatlatch",
-  "name": "Nahatlatch Fire Lookout",
+  "name": "Nahatlatch Lookout",
+  "summary": "Fire lookout near Boston Bar, BC: manned from 1957, decommissioned 1993, rebuilt 2012-13, burned in the Kookipi Creek wildfire on 17 August 2023.",
   "other_names": [],
   "country": "CA",
   "region": "BC",
-  "county": null,
+  "county": "Fraser Valley Regional District",
   "location": {
-    "lat": 50.021564,
-    "lon": -121.571396,
+    "lat": 50.020682,
+    "lon": -121.569918,
     "precision": "exact",
-    "from": "wikidata"
+    "from": "bc_rec_sites"
   },
   "elevation_m": null,
   "kind": "tower",
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Tapered wooden lookout tower; the 2012-13 rebuild matched the original's look and dimensions",
   "height_m": null,
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "BC Forest Service (original tower)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Recreation Sites and Trails BC lists the site as closed: “The Recreation Site is closed due to wildfire rehab needed.”"
   },
   "staffing": {
     "status": "unknown",
@@ -37,9 +38,102 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1956,
+      "event": "built",
+      "note": "Built between 1956 and 1958 per Recreation Sites and Trails BC, as quoted by Global News; the club says late 1950s. 1956 is the earliest year of that range",
+      "from": "research",
+      "source_url": "https://globalnews.ca/news/9905756/bc-nahatlatch-lookout-tower-burns",
+      "source_urls": [
+        "https://globalnews.ca/news/9905756/bc-nahatlatch-lookout-tower-burns",
+        "https://4wdabc.ca/2023/08/22/nahatlatch-lookout-loss/"
+      ]
+    },
+    {
+      "year": 1957,
+      "event": "staffed_first",
+      "note": "Manned from 1957",
+      "from": "research",
+      "source_url": "https://ourwestcoast.com/nahatlatch-fire-lookout/"
+    },
+    {
+      "year": 1993,
+      "event": "other",
+      "note": "Officially decommissioned as a fire lookout tower",
+      "from": "research",
+      "source_url": "https://ourwestcoast.com/nahatlatch-fire-lookout/",
+      "source_urls": [
+        "https://ourwestcoast.com/nahatlatch-fire-lookout/",
+        "https://globalnews.ca/news/9905756/bc-nahatlatch-lookout-tower-burns"
+      ]
+    },
+    {
+      "year": 2011,
+      "event": "other",
+      "note": "Collapsed under heavy snow in winter",
+      "from": "research",
+      "source_url": "https://ourwestcoast.com/nahatlatch-fire-lookout/"
+    },
+    {
+      "year": 2012,
+      "event": "rebuilt",
+      "note": "Rebuilt by the Four Wheel Drive Association and Southwest All Terrain Trails; a Canada Lookouts timeline says work began in August 2012 and was completed in September 2013",
+      "from": "research",
+      "source_url": "https://ourwestcoast.com/nahatlatch-fire-lookout/",
+      "source_urls": [
+        "https://ourwestcoast.com/nahatlatch-fire-lookout/",
+        "https://4wdabc.ca/2023/08/22/nahatlatch-lookout-loss/",
+        "https://canada-lookouts.weebly.com/nahatlatch.html"
+      ]
+    },
+    {
+      "year": 2013,
+      "event": "other",
+      "note": "Formally established as a BC recreation site",
+      "from": "research",
+      "source_url": "https://ourwestcoast.com/nahatlatch-fire-lookout/"
+    },
+    {
+      "year": 2023,
+      "event": "burned",
+      "note": "Consumed by the Kookipi Creek wildfire on 17 August 2023; the fire had started from lightning on 8 July",
+      "from": "research",
+      "source_url": "https://ourwestcoast.com/nahatlatch-fire-lookout/",
+      "source_urls": [
+        "https://ourwestcoast.com/nahatlatch-fire-lookout/",
+        "https://globalnews.ca/news/9905756/bc-nahatlatch-lookout-tower-burns",
+        "https://4wdabc.ca/2023/08/22/nahatlatch-lookout-loss/"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Nahatlatch Fire Lookout (Our West Coast)",
+      "url": "https://ourwestcoast.com/nahatlatch-fire-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "Historic Nahatlatch Lookout tower burns in B.C. wildfire (Global News)",
+      "url": "https://globalnews.ca/news/9905756/bc-nahatlatch-lookout-tower-burns",
+      "kind": "reference"
+    },
+    {
+      "label": "Nahatlatch Lookout Loss (Four Wheel Drive Association of British Columbia)",
+      "url": "https://4wdabc.ca/2023/08/22/nahatlatch-lookout-loss/",
+      "kind": "reference"
+    },
+    {
+      "label": "Nahatlatch on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/nahatlatch.html",
+      "kind": "site"
+    },
+    {
+      "label": "Recreation Sites and Trails BC: Nahatlatch Lookout (REC166414)",
+      "url": "https://www.sitesandtrailsbc.ca/resource/REC166414",
+      "kind": "agency"
+    },
     {
       "label": "Wikidata item Q131312883",
       "url": "https://www.wikidata.org/wiki/Q131312883",
@@ -48,18 +142,54 @@
   ],
   "sources": [
     {
-      "source": "wikidata",
-      "key": "wikidata:Q131312883",
+      "source": "bc_rec_sites",
+      "key": "bc_rec_sites:bc:rec166414",
       "fields": [
         "name",
         "location",
+        "county",
+        "agency",
+        "access",
+        "links"
+      ]
+    },
+    {
+      "source": "wikidata",
+      "key": "wikidata:Q131312883",
+      "fields": [
         "kind",
         "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:nahatlatch",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-nahatlatch",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

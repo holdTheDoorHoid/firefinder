@@ -5,12 +5,12 @@
   "other_names": [],
   "country": "CA",
   "region": "BC",
-  "county": null,
+  "county": "Thompson-Nicola Regional District",
   "location": {
-    "lat": 51.662216,
-    "lon": -120.550484,
+    "lat": 51.66077,
+    "lon": -120.5514,
     "precision": "exact",
-    "from": "osm"
+    "from": "bc_trim_lookouts"
   },
   "elevation_m": null,
   "kind": "tower",
@@ -47,6 +47,11 @@
       "kind": "reference"
     },
     {
+      "label": "BC base map (TRIM): fire lookout symbol 23100",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/d1fc9c40-c3ba-4ae4-ae5a-838ad3c43289",
+      "kind": "agency"
+    },
+    {
       "label": "OpenStreetMap way 475561977",
       "url": "https://www.openstreetmap.org/way/475561977",
       "kind": "osm"
@@ -58,9 +63,17 @@
       "key": "osm:way/475561977",
       "fields": [
         "name",
-        "location",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "bc_trim_lookouts",
+      "key": "bc_trim_lookouts:bc:23100",
+      "fields": [
+        "location",
+        "county",
         "links"
       ]
     },

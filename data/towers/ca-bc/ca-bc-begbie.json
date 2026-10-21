@@ -2,17 +2,19 @@
   "id": "ca-bc-begbie",
   "name": "Begbie Fire Lookout",
   "summary": "Begbie lookout beside Highway 97 south of 100 Mile House, BC: a lookout here since 1923, current tower from the 1970s, now a short public trail and recreation site.",
-  "other_names": [],
+  "other_names": [
+    "Begbie Mountain"
+  ],
   "country": "CA",
   "region": "BC",
   "county": "Cariboo Regional District",
   "location": {
-    "lat": 51.47598,
-    "lon": -121.36674,
+    "lat": 51.475981,
+    "lon": -121.366671,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "bc_rec_sites"
   },
-  "elevation_m": null,
+  "elevation_m": 1262.0,
   "kind": "tower",
   "material": null,
   "material_from": null,
@@ -22,7 +24,7 @@
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Recreation Sites and Trails BC",
   "ownership": "unknown",
   "access": {
     "level": "public",
@@ -76,9 +78,19 @@
       "kind": "site"
     },
     {
-      "label": "Website (sitesandtrailsbc.ca)",
+      "label": "Begbie Mountain on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/begbie-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "Recreation Sites and Trails BC: Begbie Fire Lookout (REC160875)",
       "url": "https://www.sitesandtrailsbc.ca/resource/REC160875",
-      "kind": "website"
+      "kind": "agency"
+    },
+    {
+      "label": "BC base map (TRIM): fire lookout symbol 23101",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/d1fc9c40-c3ba-4ae4-ae5a-838ad3c43289",
+      "kind": "agency"
     },
     {
       "label": "OpenStreetMap way 983430467",
@@ -92,8 +104,17 @@
       "key": "firelookout_ca:12541",
       "fields": [
         "name",
-        "location",
         "county",
+        "links"
+      ]
+    },
+    {
+      "source": "bc_rec_sites",
+      "key": "bc_rec_sites:bc:rec160875",
+      "fields": [
+        "location",
+        "agency",
+        "access",
         "links"
       ]
     },
@@ -103,6 +124,21 @@
       "fields": [
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:begbie-mountain",
+      "fields": [
+        "elevation_m",
+        "links"
+      ]
+    },
+    {
+      "source": "bc_trim_lookouts",
+      "key": "bc_trim_lookouts:bc:23101",
+      "fields": [
         "links"
       ]
     },

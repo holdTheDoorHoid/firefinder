@@ -5,12 +5,12 @@
   "other_names": [],
   "country": "CA",
   "region": "BC",
-  "county": null,
+  "county": "Regional District of Central Kootenay",
   "location": {
-    "lat": 50.155592,
-    "lon": -117.895108,
+    "lat": 50.155432,
+    "lon": -117.895006,
     "precision": "exact",
-    "from": "osm"
+    "from": "bc_rec_sites"
   },
   "elevation_m": null,
   "kind": "tower",
@@ -22,7 +22,7 @@
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Recreation Sites and Trails BC, with Nakusp And Area Community Trails Society",
   "ownership": "unknown",
   "access": {
     "level": "public",
@@ -120,9 +120,14 @@
       "kind": "reference"
     },
     {
-      "label": "Saddle Mountain (Canada Lookouts)",
+      "label": "Saddle Mountain on Canada's Fire Lookouts (Ron Kemnow)",
       "url": "https://canada-lookouts.weebly.com/saddle-mountain.html",
-      "kind": "reference"
+      "kind": "site"
+    },
+    {
+      "label": "Recreation Sites and Trails BC: Saddle Mountain Fire Lookout (REC169731)",
+      "url": "https://www.sitesandtrailsbc.ca/resource/REC169731",
+      "kind": "agency"
     },
     {
       "label": "OpenStreetMap way 629973202",
@@ -132,13 +137,30 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:way/629973202",
+      "source": "bc_rec_sites",
+      "key": "bc_rec_sites:bc:rec169731",
       "fields": [
         "name",
         "location",
+        "county",
+        "agency",
+        "access",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/629973202",
+      "fields": [
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:saddle-mountain",
+      "fields": [
         "links"
       ]
     },

@@ -1,35 +1,38 @@
 {
   "id": "ca-bc-eagle-pass",
   "name": "Eagle Pass Fire Lookout",
-  "other_names": [],
+  "summary": "Stone cabin built 1921 by the Dominion Forestry Branch on Eagle Pass Mountain; closed 1931, roof lost before 1975, and a 2016 shelter was set for dismantling.",
+  "other_names": [
+    "Eagle Pass Ridge"
+  ],
   "country": "CA",
   "region": "BC",
   "county": "Columbia Shuswap Regional District",
   "location": {
-    "lat": 51.06587,
-    "lon": -118.54267,
+    "lat": 51.065478,
+    "lon": -118.543064,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "bc_rec_sites"
   },
   "elevation_m": null,
   "kind": "ground",
   "material": "stone",
   "material_from": "firelookout_ca",
   "roles": [],
-  "design": null,
+  "design": "Mortared stone cabin, 3.7 by 3.7 m (12 by 12 ft), with a pyramidal hip roof",
   "height_m": null,
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Rec Sites and Trails BC",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "A Recreation Sites and Trails BC site (REC1934). Access: road (4 wheel drive)."
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "1931"
   },
   "visit": {
     "climbable": null,
@@ -41,8 +44,51 @@
     {
       "year": 1921,
       "event": "built",
-      "note": "A stone cabin built by the Dominion Forestry Branch.",
-      "from": "firelookout_ca"
+      "note": "Built by the Dominion Forestry Branch, which administered the Railway Belt forest lands",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=eagle-pass-fire-lookout"
+    },
+    {
+      "year": 1922,
+      "event": "other",
+      "note": "Opened on the peak at 2311 m (7,700 ft) as a lookout",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=eagle-pass-fire-lookout"
+    },
+    {
+      "year": 1924,
+      "event": "staffed",
+      "note": "J. H. Aubrey, said to be the first lookout man, is known to have occupied it 1924-1928 at $120 a month",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=eagle-pass-fire-lookout"
+    },
+    {
+      "year": 1931,
+      "event": "closed",
+      "note": "Active until 1931; closed by the impacts of the Great Depression and never reopened",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=eagle-pass-fire-lookout"
+    },
+    {
+      "year": 1975,
+      "event": "other",
+      "note": "Roof swept away by heavy snow sometime before 1975, leaving lower walls 1.2 m (4 ft) high",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=eagle-pass-fire-lookout"
+    },
+    {
+      "year": 2016,
+      "event": "other",
+      "note": "Two local enthusiasts built a new shelter on the stone walls; Ministry stop-work order and a $20,000 fine",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=eagle-pass-fire-lookout"
+    },
+    {
+      "year": 2022,
+      "event": "other",
+      "note": "Rec Sites and Trails BC decided to dismantle the new cabin, scheduled for summer 2022; the page does not say whether this happened",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=eagle-pass-fire-lookout"
     }
   ],
   "photos": [],
@@ -51,6 +97,16 @@
       "label": "Eagle Pass Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=eagle-pass-fire-lookout",
       "kind": "site"
+    },
+    {
+      "label": "Eagle Pass on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/eagle-pass.html",
+      "kind": "site"
+    },
+    {
+      "label": "Recreation Sites and Trails BC: Eagle Pass Ridge (REC1934)",
+      "url": "https://www.sitesandtrailsbc.ca/resource/REC1934",
+      "kind": "agency"
     }
   ],
   "sources": [
@@ -59,17 +115,52 @@
       "key": "firelookout_ca:13026",
       "fields": [
         "name",
-        "location",
         "county",
         "kind",
         "material",
         "events",
         "links"
       ]
+    },
+    {
+      "source": "bc_rec_sites",
+      "key": "bc_rec_sites:bc:rec1934",
+      "fields": [
+        "location",
+        "agency",
+        "access",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:eagle-pass",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-eagle-pass",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,31 +1,34 @@
 {
   "id": "ca-bc-hamilton",
   "name": "Hamilton Fire Lookout",
-  "other_names": [],
+  "summary": "Forest Service lookout planned for Hamilton Mountain near Merritt in 1951; now surrounded by private land with no public access.",
+  "other_names": [
+    "Mount Hamilton"
+  ],
   "country": "CA",
   "region": "BC",
   "county": "Thompson-Nicola Regional District",
   "location": {
-    "lat": 50.12649,
-    "lon": -120.36083,
+    "lat": 50.12654,
+    "lon": -120.3608,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "bc_trim_lookouts"
   },
   "elevation_m": null,
   "kind": "unknown",
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Planned as a permanent pre-fabricated building, with a tent used first",
   "height_m": null,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "B.C. Forest Service (1951 plans)",
   "ownership": "private",
   "access": {
     "level": "private",
-    "note": "Firelookout.ca: private property, no public access."
+    "note": "Surrounded by private property; landowners have stopped public access up the service road. Firelookout.ca: private property, no access."
   },
   "staffing": {
     "status": "unknown",
@@ -37,13 +40,46 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1951,
+      "event": "built",
+      "note": "Planned in May 1951 and expected to be in operation in July 1951, per the Merritt Herald as reproduced by Canada Lookouts. Completion is not confirmed by these sources.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/mount-hamilton.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Hamilton Fire Lookout (Life is Adventure)",
+      "url": "https://steveamie.com/hamilton-fire-lookout/",
+      "kind": "reference"
+    },
+    {
+      "label": "BC's Historic Fire Lookout Hikes (The Rainlander)",
+      "url": "https://therainlander.ca/bcs-historic-fire-lookout-hikes/",
+      "kind": "reference"
+    },
+    {
+      "label": "Fire Lookouts of British Columbia: History, Hikes & Where to Stay (Wild Bluebell)",
+      "url": "https://wildbluebell.ca/fire-lookouts-british-columbia",
+      "kind": "reference"
+    },
     {
       "label": "Hamilton Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=hamilton-fire-lookout",
       "kind": "site"
+    },
+    {
+      "label": "Mount Hamilton on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/mount-hamilton.html",
+      "kind": "site"
+    },
+    {
+      "label": "BC base map (TRIM): fire lookout symbol 5825",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/d1fc9c40-c3ba-4ae4-ae5a-838ad3c43289",
+      "kind": "agency"
     }
   ],
   "sources": [
@@ -52,16 +88,50 @@
       "key": "firelookout_ca:13971",
       "fields": [
         "name",
-        "location",
         "county",
         "ownership",
         "access",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:mount-hamilton",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "bc_trim_lookouts",
+      "key": "bc_trim_lookouts:bc:5825",
+      "fields": [
+        "location",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-hamilton",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

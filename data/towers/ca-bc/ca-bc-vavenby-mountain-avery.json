@@ -3,16 +3,17 @@
   "name": "Vavenby Mountain (Avery) Fire Lookout",
   "summary": "Two listings date the Vavenby Mountain lookout to 1956 at 1,866 m; no source found describes the site, its staffing, its fate or its state today.",
   "other_names": [
+    "Avery Lookout",
     "Vavenby Fire Lookout"
   ],
   "country": "CA",
   "region": "BC",
   "county": "Thompson-Nicola Regional District",
   "location": {
-    "lat": 51.52682,
-    "lon": -119.69511,
+    "lat": 51.526774,
+    "lon": -119.694997,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "bc_rec_sites"
   },
   "elevation_m": 1866.0,
   "kind": "tower",
@@ -24,11 +25,11 @@
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Recreation Sites and Trails BC, with Clearwater Sno-Drifters",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "A Recreation Sites and Trails BC site (REC98150). Access: road (4 wheel drive)."
   },
   "staffing": {
     "status": "unknown",
@@ -56,11 +57,6 @@
   "photos": [],
   "links": [
     {
-      "label": "Avery (Vavenby) (Canada Lookouts)",
-      "url": "https://canada-lookouts.weebly.com/avery-vavenby.html",
-      "kind": "reference"
-    },
-    {
       "label": "BC's Historic Fire Lookout Hikes (The Rainlander)",
       "url": "https://therainlander.ca/bcs-historic-fire-lookout-hikes/",
       "kind": "reference"
@@ -69,6 +65,16 @@
       "label": "Vavenby Mountain (Avery) Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=vavenby-mountain-avery-fire-lookout",
       "kind": "site"
+    },
+    {
+      "label": "Avery on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/avery-vavenby.html",
+      "kind": "site"
+    },
+    {
+      "label": "Recreation Sites and Trails BC: Avery Lookout (REC98150)",
+      "url": "https://www.sitesandtrailsbc.ca/resource/REC98150",
+      "kind": "agency"
     },
     {
       "label": "OpenStreetMap node 13958171423",
@@ -82,10 +88,19 @@
       "key": "firelookout_ca:40826",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "bc_rec_sites",
+      "key": "bc_rec_sites:bc:rec98150",
+      "fields": [
+        "location",
+        "agency",
+        "access",
         "links"
       ]
     },
@@ -95,6 +110,13 @@
       "fields": [
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:avery-vavenby",
+      "fields": [
         "links"
       ]
     },
@@ -109,7 +131,29 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "bc_rec_sites",
+          "value": {
+            "lat": 51.526774,
+            "lon": -119.694997
+          }
+        },
+        {
+          "source": "canada_lookouts_weebly",
+          "value": {
+            "lat": 51.515,
+            "lon": -119.665
+          }
+        }
+      ],
+      "distance_m": 2454,
+      "note": null
+    }
+  ],
   "research": {
     "researched": "2026-10-20",
     "checked": "2026-10-20",

@@ -66,6 +66,11 @@
       "kind": "reference"
     },
     {
+      "label": "Goose Mountain on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/goose-mountain.html",
+      "kind": "site"
+    },
+    {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
       "kind": "agency"
@@ -103,6 +108,13 @@
       ]
     },
     {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:ab:goose-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:ca-ab-goose-mountain",
       "fields": [
@@ -114,7 +126,23 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "alberta_wildfire",
+          "value": 1998
+        },
+        {
+          "source": "canada_lookouts_weebly",
+          "value": 1941
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "research": {
     "researched": "2026-10-20",
     "checked": "2026-10-20",

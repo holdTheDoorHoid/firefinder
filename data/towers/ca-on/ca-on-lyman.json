@@ -7,18 +7,18 @@
   "region": "ON",
   "county": null,
   "location": {
-    "lat": 46.57568,
-    "lon": -79.66485,
+    "lat": 46.571664,
+    "lon": -79.666943,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "ontario_lio"
   },
   "elevation_m": null,
-  "kind": "unknown",
+  "kind": "tower",
   "material": null,
   "material_from": null,
   "roles": [],
   "design": null,
-  "height_m": null,
+  "height_m": 30.5,
   "status": "standing",
   "status_note": null,
   "registers": [],
@@ -55,6 +55,16 @@
       "label": "Lyman Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=lyman-fire-tower",
       "kind": "site"
+    },
+    {
+      "label": "Lyman on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/ontario.html",
+      "kind": "site"
+    },
+    {
+      "label": "Land Information Ontario: Tower layer (fire towers)",
+      "url": "https://geohub.lio.gov.on.ca/datasets/mnrf::tower",
+      "kind": "agency"
     }
   ],
   "sources": [
@@ -63,8 +73,24 @@
       "key": "firelookout_ca:9931",
       "fields": [
         "name",
-        "location",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "ontario_lio",
+      "key": "ontario_lio:701163176",
+      "fields": [
+        "location",
+        "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:on:index-lyman",
+      "fields": [
+        "height_m",
         "links"
       ]
     },

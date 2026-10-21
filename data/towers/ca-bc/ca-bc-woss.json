@@ -5,12 +5,12 @@
   "other_names": [],
   "country": "CA",
   "region": "BC",
-  "county": null,
+  "county": "Regional District of Mount Waddington",
   "location": {
-    "lat": 50.229808,
-    "lon": -126.616467,
+    "lat": 50.229511,
+    "lon": -126.616402,
     "precision": "exact",
-    "from": "osm"
+    "from": "bc_rec_sites"
   },
   "elevation_m": null,
   "kind": "tower",
@@ -149,6 +149,16 @@
       "kind": "reference"
     },
     {
+      "label": "Woss on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/british-columbia-index.html",
+      "kind": "site"
+    },
+    {
+      "label": "Recreation Sites and Trails BC: Woss Fire Lookout (REC135981)",
+      "url": "https://www.sitesandtrailsbc.ca/resource/REC135981",
+      "kind": "agency"
+    },
+    {
       "label": "Website (sitesandtrailsbc.ca)",
       "url": "https://www.sitesandtrailsbc.ca/resources/REC135981/sitemaps/Woss%20Fire%20Lookout%20Brochure.pdf",
       "kind": "website"
@@ -161,13 +171,30 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:way/597914893",
+      "source": "bc_rec_sites",
+      "key": "bc_rec_sites:bc:rec135981",
       "fields": [
         "name",
         "location",
+        "county",
+        "agency",
+        "access",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/597914893",
+      "fields": [
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:index-woss",
+      "fields": [
         "links"
       ]
     },

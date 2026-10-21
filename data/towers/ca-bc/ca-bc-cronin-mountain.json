@@ -1,24 +1,27 @@
 {
   "id": "ca-bc-cronin-mountain",
   "name": "Cronin Mountain Fire Lookout",
-  "other_names": [],
+  "summary": "Cronin Mountain lookout in the Bulkley-Nechako area of BC, near Smithers: a 2026 guide lists it as likely standing; no build, staffing or fire history found.",
+  "other_names": [
+    "Cronin"
+  ],
   "country": "CA",
   "region": "BC",
   "county": "Regional District of Bulkley-Nechako",
   "location": {
-    "lat": 54.93517,
-    "lon": -126.78424,
+    "lat": 54.9353,
+    "lon": -126.78464,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "bc_trim_lookouts"
   },
-  "elevation_m": null,
+  "elevation_m": 1417.0,
   "kind": "unknown",
   "material": null,
   "material_from": null,
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
   "registers": [],
   "agency": null,
@@ -37,13 +40,36 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2026,
+      "event": "other",
+      "note": "Rainlander guide lists the Cronin Fire Lookout (Smithers) among lookouts confirmed or likely to have standing structures.",
+      "from": "research",
+      "source_url": "https://therainlander.ca/bcs-historic-fire-lookout-hikes/"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "BC's Historic Fire Lookout Hikes (The Rainlander)",
+      "url": "https://therainlander.ca/bcs-historic-fire-lookout-hikes/",
+      "kind": "reference"
+    },
     {
       "label": "Cronin Mountain Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=cronin-mountain-fire-lookout",
       "kind": "site"
+    },
+    {
+      "label": "Cronin on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/cronin.html",
+      "kind": "site"
+    },
+    {
+      "label": "BC base map (TRIM): fire lookout symbol 11928",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/d1fc9c40-c3ba-4ae4-ae5a-838ad3c43289",
+      "kind": "agency"
     }
   ],
   "sources": [
@@ -52,14 +78,68 @@
       "key": "firelookout_ca:13746",
       "fields": [
         "name",
-        "location",
         "county",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:cronin",
+      "fields": [
+        "elevation_m",
+        "links"
+      ]
+    },
+    {
+      "source": "bc_trim_lookouts",
+      "key": "bc_trim_lookouts:bc:11928",
+      "fields": [
+        "location",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-cronin-mountain",
+      "fields": [
+        "summary",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "bc_trim_lookouts",
+          "value": {
+            "lat": 54.9353,
+            "lon": -126.78464
+          }
+        },
+        {
+          "source": "canada_lookouts_weebly",
+          "value": {
+            "lat": 54.935,
+            "lon": -126.77
+          }
+        }
+      ],
+      "distance_m": 936,
+      "note": null
+    }
+  ],
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

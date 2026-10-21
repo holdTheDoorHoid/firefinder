@@ -1,6 +1,7 @@
 {
   "id": "ca-sk-clarke",
   "name": "Clarke Fire Tower",
+  "summary": "Clarke Fire Tower in unorganized Division No. 18, Saskatchewan; a towermen list gives Sam Roberts four towers including Clarke for 1970 to 1989.",
   "other_names": [],
   "country": "CA",
   "region": "SK",
@@ -9,10 +10,10 @@
     "lat": 54.66494,
     "lon": -104.77897,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "websiteservice_sk"
   },
   "elevation_m": null,
-  "kind": "unknown",
+  "kind": "tower",
   "material": null,
   "material_from": null,
   "roles": [],
@@ -21,15 +22,16 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Saskatchewan Public Safety Agency (formerly Dept. of Natural Resources)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": null,
+    "note": "No observer: Saskatchewan moved its towers to detection cameras from 2013-14."
   },
   "visit": {
     "climbable": null,
@@ -37,12 +39,86 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
-  "photos": [],
+  "events": [
+    {
+      "year": 1970,
+      "event": "staffed",
+      "note": "Sam Roberts is listed for 1970 to 1989 with four towers, Clarke among them, on the websiteservice.ca towermen list.",
+      "from": "research",
+      "source_url": "https://www.websiteservice.ca/firetowermen.htm"
+    }
+  ],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://www.websiteservice.ca/towerstuff/clark/c1.jpg",
+      "source_url": "https://www.websiteservice.ca/firetowers_page4.htm",
+      "credit": "Firetowers of Saskatchewan (websiteservice.ca), Chris Rule, from the work of Maurice Bourassa",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://www.websiteservice.ca/towerstuff/clark/c2.jpg",
+      "source_url": "https://www.websiteservice.ca/firetowers_page4.htm",
+      "credit": "Firetowers of Saskatchewan (websiteservice.ca), Chris Rule, from the work of Maurice Bourassa",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://www.websiteservice.ca/towerstuff/clark/c3.jpg",
+      "source_url": "https://www.websiteservice.ca/firetowers_page4.htm",
+      "credit": "Firetowers of Saskatchewan (websiteservice.ca), Chris Rule, from the work of Maurice Bourassa",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://www.websiteservice.ca/towerstuff/clark/c4.jpg",
+      "source_url": "https://www.websiteservice.ca/firetowers_page4.htm",
+      "credit": "Firetowers of Saskatchewan (websiteservice.ca), Chris Rule, from the work of Maurice Bourassa",
+      "license": null,
+      "caption": null,
+      "year": null
+    },
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://www.websiteservice.ca/towerstuff/clark/c5.jpg",
+      "source_url": "https://www.websiteservice.ca/firetowers_page4.htm",
+      "credit": "Firetowers of Saskatchewan (websiteservice.ca), Chris Rule, from the work of Maurice Bourassa",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
   "links": [
+    {
+      "label": "Firetowers of Saskatchewan: Firetowermen and Women (websiteservice.ca)",
+      "url": "https://www.websiteservice.ca/firetowermen.htm",
+      "kind": "reference"
+    },
     {
       "label": "Clarke Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=clarke-fire-tower",
+      "kind": "site"
+    },
+    {
+      "label": "Clarke Fire Tower on Firetowers of Saskatchewan (websiteservice.ca)",
+      "url": "https://www.websiteservice.ca/firetowers_page4.htm",
+      "kind": "site"
+    },
+    {
+      "label": "Clarke on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/saskatchewan.html",
       "kind": "site"
     }
   ],
@@ -52,14 +128,54 @@
       "key": "firelookout_ca:11836",
       "fields": [
         "name",
-        "location",
         "county",
         "links"
+      ]
+    },
+    {
+      "source": "websiteservice_sk",
+      "key": "websiteservice_sk:sk:clarke-fire-tower",
+      "fields": [
+        "location",
+        "kind",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:sk:index-clarke",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "survey_prairies_north",
+      "key": "survey_prairies_north:sk:clarke-fire-tower",
+      "fields": [
+        "agency",
+        "staffing"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-sk-clarke",
+      "fields": [
+        "summary",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

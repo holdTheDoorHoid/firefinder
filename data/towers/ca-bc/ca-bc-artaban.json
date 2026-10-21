@@ -1,6 +1,7 @@
 {
   "id": "ca-bc-artaban",
   "name": "Artaban Fire Lookout",
+  "summary": "Prefabricated fire lookout on Mount Artaban, Gambier Island, dated to 1957; the plan's text says it fell and its survey table says it was removed, leaving a footing and an iron hook. The summit is a public hiking destination.",
   "other_names": [],
   "country": "CA",
   "region": "BC",
@@ -11,38 +12,80 @@
     "precision": "exact",
     "from": "firelookout_ca"
   },
-  "elevation_m": null,
+  "elevation_m": 622.0,
   "kind": "unknown",
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Pre-fabricated tower; pre-assembled panels lifted in by helicopter",
   "height_m": null,
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Islands Trust Fund",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Hiking trails reach the summit inside the Mount Artaban Nature Reserve, which the Islands Trust Fund holds."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "No tower stands on the summit. Start from public docks at Camp Fircom, Halkett Bay Marine Park or Camp Artaban; about two hours' walk from Camp Fircom. No campsites."
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1922,
+      "event": "fire",
+      "note": "Human-caused fire burned the whole reserve area, decades before the tower was built",
+      "from": "research",
+      "source_url": "https://doczz.net/doc/1229154/mount-artaban-nature-reserve-management-plan--gambier-island"
+    },
+    {
+      "year": 1957,
+      "event": "built",
+      "note": "Fire lookout tower on the summit, dated 1957 in the reserve plan on a personal communication from John Parminter",
+      "from": "research",
+      "source_url": "https://islandstrust.bc.ca/document/mt-artaban-management-plan-2023/"
+    },
+    {
+      "year": 1970,
+      "event": "other",
+      "note": "Last use of the tower, probably around 1970; the plan says the exact date is not known",
+      "from": "research",
+      "source_url": "https://islandstrust.bc.ca/document/mt-artaban-management-plan-2023/"
+    }
+  ],
   "photos": [],
   "links": [
     {
+      "label": "Mount Artaban Nature Reserve Management Plan (Islands Trust)",
+      "url": "https://islandstrust.bc.ca/document/mt-artaban-management-plan-2023/",
+      "kind": "reference"
+    },
+    {
+      "label": "Mount Artaban Nature Reserve Management Plan (copy) (Islands Trust Fund, via doczz.net)",
+      "url": "https://doczz.net/doc/1229154/mount-artaban-nature-reserve-management-plan--gambier-island",
+      "kind": "reference"
+    },
+    {
+      "label": "Mt. Artban (Gambier Island Conservancy)",
+      "url": "https://gambierislandconservancy.ca/the-trails/mtartaban",
+      "kind": "reference"
+    },
+    {
       "label": "Artaban Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=artaban-fire-lookout",
+      "kind": "site"
+    },
+    {
+      "label": "Artaban on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/artaban.html",
       "kind": "site"
     }
   ],
@@ -55,10 +98,38 @@
         "location",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:artaban",
+      "fields": [
+        "elevation_m",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-artaban",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "ca-on-lyndoch",
   "name": "Lyndoch Fire Tower",
+  "summary": "Register describes a steel tower with its address at Tweed, Ontario; a map note says it is missing from the 4th-edition Pembroke sheet 31F.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
@@ -16,7 +17,7 @@
   "material": "steel",
   "material_from": "firelookout_ca",
   "roles": [],
-  "design": null,
+  "design": "Steel tower",
   "height_m": null,
   "status": "unknown",
   "status_note": null,
@@ -37,12 +38,30 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1977,
+      "event": "other",
+      "note": "Register map note: the tower appears on the 3rd (1977) edition of Pembroke topographic map 31F.",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=lyndoch-fire-tower"
+    }
+  ],
   "photos": [],
   "links": [
     {
+      "label": "Ontario's Fire Tower Lookouts: Preserving Their History (Clay (fire tower history site))",
+      "url": "https://forestrangers.github.io/ontariofiretowers/",
+      "kind": "reference"
+    },
+    {
       "label": "Lyndoch Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=lyndoch-fire-tower",
+      "kind": "site"
+    },
+    {
+      "label": "Lyndoch on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/ontario.html",
       "kind": "site"
     }
   ],
@@ -57,10 +76,34 @@
         "material",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:on:index-lyndoch",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-lyndoch",
+      "fields": [
+        "summary",
+        "design",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

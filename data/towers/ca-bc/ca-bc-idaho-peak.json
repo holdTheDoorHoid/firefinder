@@ -2,15 +2,17 @@
   "id": "ca-bc-idaho-peak",
   "name": "Idaho Peak Fire Lookout",
   "summary": "Idaho Peak lookout above New Denver, listed on BC's community heritage register; trail public, lookout locked, and no staffing or fire record found.",
-  "other_names": [],
+  "other_names": [
+    "Idaho Fire Lookout"
+  ],
   "country": "CA",
   "region": "BC",
   "county": "Regional District of Central Kootenay",
   "location": {
-    "lat": 49.97237,
-    "lon": -117.30177,
+    "lat": 49.972403,
+    "lon": -117.301779,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "bc_rec_sites"
   },
   "elevation_m": null,
   "kind": "tower",
@@ -22,7 +24,7 @@
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Recreation Sites and Trails BC, with North Slocan Trails Society",
   "ownership": "unknown",
   "access": {
     "level": "restricted",
@@ -77,6 +79,21 @@
       "kind": "site"
     },
     {
+      "label": "Idaho Peak on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/idaho-peak.html",
+      "kind": "site"
+    },
+    {
+      "label": "Recreation Sites and Trails BC: Idaho Fire Lookout (REC205622)",
+      "url": "https://www.sitesandtrailsbc.ca/resource/REC205622",
+      "kind": "agency"
+    },
+    {
+      "label": "BC base map (TRIM): fire lookout symbol 17105",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/d1fc9c40-c3ba-4ae4-ae5a-838ad3c43289",
+      "kind": "agency"
+    },
+    {
       "label": "OpenStreetMap way 981907790",
       "url": "https://www.openstreetmap.org/way/981907790",
       "kind": "osm"
@@ -88,9 +105,18 @@
       "key": "firelookout_ca:13990",
       "fields": [
         "name",
-        "location",
         "county",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "bc_rec_sites",
+      "key": "bc_rec_sites:bc:rec205622",
+      "fields": [
+        "location",
+        "agency",
+        "access",
         "links"
       ]
     },
@@ -99,6 +125,20 @@
       "key": "osm:way/981907790",
       "fields": [
         "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:idaho-peak",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "bc_trim_lookouts",
+      "key": "bc_trim_lookouts:bc:17105",
+      "fields": [
         "links"
       ]
     },

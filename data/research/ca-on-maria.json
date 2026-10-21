@@ -1,0 +1,42 @@
+{
+  "id": "ca-on-maria",
+  "researched": "2026-10-20",
+  "summary": "Firelookout.ca places this steel tower at Les Lacs-du-Témiscamingue, Quebec, though its region field says Ontario; the only dated record is a 1963 Lands and Forests map.",
+  "facts": {
+    "design": "Steel tower",
+    "agency": "Department of Lands and Forests"
+  },
+  "events": [
+    {
+      "year": 1963,
+      "event": "other",
+      "note": "Listed on the Department of Lands and Forests Tower Detection System Map (1963), as Firelookout.ca cites it. No build date is given.",
+      "cite": [1]
+    }
+  ],
+  "evidence": [
+    {"cite": [1], "supports": "Address is Les Lacs-du-Témiscamingue, Abitibi-Témiscamingue, Quebec", "quote": "Les Lacs-du-Témiscamingue, Témiscamingue, Abitibi-Témiscamingue, Quebec, Canada"},
+    {"cite": [1], "supports": "Same page's region field reads Ontario", "quote": "Region Ontario"},
+    {"cite": [1], "supports": "Tower type is steel", "quote": "Steel Tower"},
+    {"cite": [1], "supports": "Elevation 412 m (1352 ft)", "quote": "412 m (1352 ft)"},
+    {"cite": [1], "supports": "Appears on the 1963 Department of Lands and Forests Tower Detection System Map", "quote": "Appears on the Department of Lands and Forests Tower Detection System Map (1963)."},
+    {"cite": [2], "supports": "Name 'Maria' appears in Head, Clara and Maria, which is bordered on the north by the Ottawa River", "quote": "Head, Clara and Maria is bordered on the north by the Ottawa River and on the south by Algonquin Provincial Park."},
+    {"cite": [3], "supports": "Quebec's observation-tower network began around 1910 to 1911", "quote": "around 1910-1911, replacing the land patrols of the time."},
+    {"cite": [3], "supports": "Quebec's network was replaced by aerial control around the end of the 1960s", "quote": "This system being efficient but expensive was replaced by air control around the end of the 60's."}
+  ],
+  "corrections": [
+    {"field": "region", "current": "ON", "proposed": "QC", "cite": [1], "why": "Firelookout.ca gives the address as Les Lacs-du-Témiscamingue, Quebec, and the coordinates fall inside Quebec's boundary. The same page's region field reads Ontario, so a human should confirm before changing."},
+    {"field": "region_name", "current": "Ontario", "proposed": "Quebec", "cite": [1], "why": "Follows from the region correction above, if confirmed."}
+  ],
+  "resolved_conflicts": [
+    {"field": "region", "explanation": "Firelookout.ca's address points to Quebec while its region field and our record say Ontario. The name appears in Head, Clara and Maria, a municipality on the Ottawa River, which may explain the label, but no source says so.", "cite": [1, 2]}
+  ],
+  "sources": [
+    {"n": 1, "title": "Maria Fire Tower", "publisher": "Firelookout.ca", "url": "https://firelookout.ca/lookouts/?slug=maria-fire-tower", "accessed": "2026-10-20"},
+    {"n": 2, "title": "Head, Clara and Maria", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Head,_Clara_and_Maria", "accessed": "2026-10-20"},
+    {"n": 3, "title": "Fire towers", "publisher": "recre-eaudesquinze.qc.ca", "url": "http://www.recre-eaudesquinze.qc.ca/a_cadre_tour.htm", "accessed": "2026-10-20"}
+  ],
+  "confidence": "low",
+  "notes_for_editor": "Record says Ontario, but Firelookout.ca's address is Les Lacs-du-Témiscamingue, Quebec, and the local Natural Earth province file puts the coordinates inside Quebec. Firelookout.ca's own region field still says Ontario, so decide whether this belongs in the Ontario list. Leads not cited because they could not be read as pages: a Facebook group snippet says the Head, Clara and Maria Public Library archives hold a photo of a tower built on the Quebec side of the Ottawa River for a better view; a 2027 Firelookout.ca listing gives 'Pembroke, Ontario' for the same coordinates. Only the 1963 map dates it. No build date, height, status, access, staffing or fire record was found, so the story is short.",
+  "verification": {"checked": "2026-10-20", "claims_checked": 8, "unsupported_removed": 0, "errors_fixed": 2, "quotes_spot_checked": 8, "quotes_not_found": 0, "verdict": "fixed"}
+}

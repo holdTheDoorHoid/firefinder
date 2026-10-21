@@ -5,15 +5,15 @@
   "other_names": [],
   "country": "CA",
   "region": "ON",
-  "county": null,
+  "county": "Thunder Bay District",
   "location": {
-    "lat": 49.15265,
-    "lon": -89.38688,
+    "lat": 49.159027,
+    "lon": -89.383887,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "ontario_lio"
   },
   "elevation_m": null,
-  "kind": "unknown",
+  "kind": "tower",
   "material": null,
   "material_from": null,
   "roles": [],
@@ -63,6 +63,16 @@
       "label": "Max Lake Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=max-lake-lookout",
       "kind": "site"
+    },
+    {
+      "label": "Max Lake on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/ontario.html",
+      "kind": "site"
+    },
+    {
+      "label": "Land Information Ontario: Tower layer (fire towers)",
+      "url": "https://geohub.lio.gov.on.ca/datasets/mnrf::tower",
+      "kind": "agency"
     }
   ],
   "sources": [
@@ -71,8 +81,24 @@
       "key": "firelookout_ca:35801",
       "fields": [
         "name",
-        "location",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "ontario_lio",
+      "key": "ontario_lio:151208102",
+      "fields": [
+        "location",
+        "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:on:index-max-lake",
+      "fields": [
+        "county",
         "links"
       ]
     },
@@ -87,7 +113,29 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ontario_lio",
+          "value": {
+            "lat": 49.159027,
+            "lon": -89.383887
+          }
+        },
+        {
+          "source": "firelookout_ca",
+          "value": {
+            "lat": 49.15265,
+            "lon": -89.38688
+          }
+        }
+      ],
+      "distance_m": 742,
+      "note": null
+    }
+  ],
   "research": {
     "researched": "2026-10-20",
     "checked": "2026-10-20",

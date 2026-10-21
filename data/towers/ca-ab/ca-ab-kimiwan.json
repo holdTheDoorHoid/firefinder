@@ -7,10 +7,10 @@
   "region": "AB",
   "county": null,
   "location": {
-    "lat": 55.993852,
-    "lon": -116.606623,
-    "precision": "approximate",
-    "from": "alberta_wildfire"
+    "lat": 55.9938,
+    "lon": -116.6068,
+    "precision": "exact",
+    "from": "canada_lookouts_weebly"
   },
   "elevation_m": 770.0,
   "kind": "tower",
@@ -65,11 +65,6 @@
   "photos": [],
   "links": [
     {
-      "label": "Kimiwan (Canada Lookouts)",
-      "url": "https://canada-lookouts.weebly.com/kimiwan.html",
-      "kind": "reference"
-    },
-    {
       "label": "Fire lookouts (Government of Alberta, Open Government)",
       "url": "https://open.alberta.ca/publications/fire-lookouts",
       "kind": "reference"
@@ -85,6 +80,11 @@
       "kind": "reference"
     },
     {
+      "label": "Kimiwan on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/kimiwan.html",
+      "kind": "site"
+    },
+    {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
       "kind": "agency"
@@ -96,7 +96,6 @@
       "key": "alberta_wildfire:KM",
       "fields": [
         "name",
-        "location",
         "elevation_m",
         "kind",
         "material",
@@ -106,6 +105,14 @@
         "access",
         "staffing",
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:ab:kimiwan",
+      "fields": [
+        "location",
         "links"
       ]
     },

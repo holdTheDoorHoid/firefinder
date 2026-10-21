@@ -10,10 +10,10 @@
     "lat": 55.9805,
     "lon": -109.29692,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "websiteservice_sk"
   },
   "elevation_m": 665.0,
-  "kind": "unknown",
+  "kind": "tower",
   "material": null,
   "material_from": null,
   "roles": [],
@@ -22,15 +22,16 @@
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Saskatchewan Public Safety Agency (formerly Dept. of Natural Resources)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": null,
+    "note": "No observer: Saskatchewan moved its towers to detection cameras from 2013-14."
   },
   "visit": {
     "climbable": null,
@@ -45,6 +46,16 @@
       "label": "Buffalo Hills Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=buffalo-hills-fire-tower",
       "kind": "site"
+    },
+    {
+      "label": "Buffalo Hills Fire Tower on Firetowers of Saskatchewan (websiteservice.ca)",
+      "url": "https://www.websiteservice.ca/firetowers_page4.htm",
+      "kind": "site"
+    },
+    {
+      "label": "Buffalo Hills on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/saskatchewan.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -53,11 +64,34 @@
       "key": "firelookout_ca:11831",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "status",
         "links"
+      ]
+    },
+    {
+      "source": "websiteservice_sk",
+      "key": "websiteservice_sk:sk:buffalo-hills-fire-tower",
+      "fields": [
+        "location",
+        "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:sk:index-buffalo-hills",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "survey_prairies_north",
+      "key": "survey_prairies_north:sk:buffalo-hills-fire-tower",
+      "fields": [
+        "agency",
+        "staffing"
       ]
     },
     {

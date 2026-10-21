@@ -1,6 +1,7 @@
 {
   "id": "ca-on-loring",
   "name": "Loring Fire Tower",
+  "summary": "Steel fire tower in Parry Sound District, Ontario, shown on a 1963 map; a 1996 map shows a communications tower on the spot, possibly its successor. Present site unknown.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
@@ -16,12 +17,12 @@
   "material": "steel",
   "material_from": "firelookout_ca",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "steel",
+  "height_m": 24.4,
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Ontario's former Department of Lands and Forests (now the MNR)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,12 +38,44 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1963,
+      "event": "other",
+      "note": "Department of Lands and Forests Tower Detection System Map shows an 80-foot steel lookout at this location. The height in facts is converted from that figure and describes the 1963 structure.",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=loring-fire-tower"
+    },
+    {
+      "year": 1969,
+      "event": "other",
+      "note": "Not among the four towers in the Parry Sound Forest Fire District still actively staffed in 1969.",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Parry_Sound_District"
+    },
+    {
+      "year": 1996,
+      "event": "other",
+      "note": "Huntsville topographic map (3rd ed.) shows a communications tower at this location. Firelookout.ca suggests it may have been a fire tower.",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=loring-fire-tower"
+    }
+  ],
   "photos": [],
   "links": [
     {
+      "label": "Parry Sound District (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Parry_Sound_District",
+      "kind": "reference"
+    },
+    {
       "label": "Loring Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=loring-fire-tower",
+      "kind": "site"
+    },
+    {
+      "label": "Loring on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/ontario.html",
       "kind": "site"
     }
   ],
@@ -59,10 +92,36 @@
         "material",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:on:index-loring",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-loring",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

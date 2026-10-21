@@ -1,17 +1,18 @@
 {
   "id": "ca-bc-hicks-hill",
   "name": "Hicks Hill Fire Lookout",
+  "summary": "BC Geographical Names marks Hicks Hill as the site of the Hicks Hill (wildfire) Lookout; no build, staffing or fate source was reached.",
   "other_names": [],
   "country": "CA",
   "region": "BC",
   "county": "Regional District of Bulkley-Nechako",
   "location": {
-    "lat": 54.11584,
-    "lon": -125.30373,
+    "lat": 54.11603,
+    "lon": -125.30367,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "bc_trim_lookouts"
   },
-  "elevation_m": null,
+  "elevation_m": 853.0,
   "kind": "unknown",
   "material": null,
   "material_from": null,
@@ -41,9 +42,24 @@
   "photos": [],
   "links": [
     {
+      "label": "Hicks Hill (BC Geographical Names)",
+      "url": "https://apps.gov.bc.ca/pub/bcgnws/names/14602.html",
+      "kind": "reference"
+    },
+    {
       "label": "Hicks Hill Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=hicks-hill-fire-lookout",
       "kind": "site"
+    },
+    {
+      "label": "Hicks Hill on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/hicks-hill.html",
+      "kind": "site"
+    },
+    {
+      "label": "BC base map (TRIM): fire lookout symbol 11665",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/d1fc9c40-c3ba-4ae4-ae5a-838ad3c43289",
+      "kind": "agency"
     }
   ],
   "sources": [
@@ -52,14 +68,66 @@
       "key": "firelookout_ca:13982",
       "fields": [
         "name",
-        "location",
         "county",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:hicks-hill",
+      "fields": [
+        "elevation_m",
+        "links"
+      ]
+    },
+    {
+      "source": "bc_trim_lookouts",
+      "key": "bc_trim_lookouts:bc:11665",
+      "fields": [
+        "location",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-hicks-hill",
+      "fields": [
+        "summary",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "bc_trim_lookouts",
+          "value": {
+            "lat": 54.11603,
+            "lon": -125.30367
+          }
+        },
+        {
+          "source": "canada_lookouts_weebly",
+          "value": {
+            "lat": 54.121,
+            "lon": -125.298
+          }
+        }
+      ],
+      "distance_m": 665,
+      "note": null
+    }
+  ],
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

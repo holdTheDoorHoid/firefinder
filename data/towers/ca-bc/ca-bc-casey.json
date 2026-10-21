@@ -1,7 +1,10 @@
 {
   "id": "ca-bc-casey",
   "name": "Casey Fire Lookout",
-  "other_names": [],
+  "summary": "Casey Mountain lookout near Cranbrook, BC: a 1919 Forest Branch station, a 1934 fire report, a 1943 fire count, and a 2026 listing as likely standing.",
+  "other_names": [
+    "Casey Mountain"
+  ],
   "country": "CA",
   "region": "BC",
   "county": "Regional District of East Kootenay",
@@ -11,17 +14,17 @@
     "precision": "exact",
     "from": "firelookout_ca"
   },
-  "elevation_m": null,
+  "elevation_m": 1638.0,
   "kind": "unknown",
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Lookout with a cupola and painted window grid, per a 1944 letter",
   "height_m": null,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Forest Branch, Department of Lands (B.C.)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,12 +40,65 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1919,
+      "event": "built",
+      "note": "Forest Branch listed a Casey Mountain Lookout among Cranbrook district improvements ($960.18). A June 1919 Creston Review item says a new lookout station had been built at Casey Mountain.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/casey-mountain.html"
+    },
+    {
+      "year": 1920,
+      "event": "modified",
+      "note": "An additional $22.00 was spent on improvements at the Casey Mountain Lookout.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/casey-mountain.html"
+    },
+    {
+      "year": 1934,
+      "event": "fire",
+      "note": "Forest fire reported from the lookout on July 30, 1934; the fire was fought at a cost of $1,017 (Victoria Daily Colonist, March 1935, as reproduced on Canada Lookouts).",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/casey-mountain.html"
+    },
+    {
+      "year": 1934,
+      "event": "staffed_first",
+      "note": "A. Pascuzzo was on duty at Casey Lookout on July 30, 1934.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/casey-mountain.html"
+    },
+    {
+      "year": 1943,
+      "event": "staffed",
+      "note": "Ray Monesmith of Casey Mountain Lookout reported sixty fires in 1943, eleven of them from one thunderstorm (letter printed October 1944).",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/casey-mountain.html"
+    },
+    {
+      "year": 2026,
+      "event": "other",
+      "note": "Rainlander guide lists the Casey Fire Lookout / Plumbob Mtn among lookouts confirmed or likely to have standing structures.",
+      "from": "research",
+      "source_url": "https://therainlander.ca/bcs-historic-fire-lookout-hikes/"
+    }
+  ],
   "photos": [],
   "links": [
     {
+      "label": "BC's Historic Fire Lookout Hikes (The Rainlander)",
+      "url": "https://therainlander.ca/bcs-historic-fire-lookout-hikes/",
+      "kind": "reference"
+    },
+    {
       "label": "Casey Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=casey-fire-lookout",
+      "kind": "site"
+    },
+    {
+      "label": "Casey Mountain on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/casey-mountain.html",
       "kind": "site"
     }
   ],
@@ -56,10 +112,60 @@
         "county",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:casey-mountain",
+      "fields": [
+        "elevation_m",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-casey",
+      "fields": [
+        "summary",
+        "design",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "firelookout_ca",
+          "value": {
+            "lat": 49.25112,
+            "lon": -115.42126
+          }
+        },
+        {
+          "source": "canada_lookouts_weebly",
+          "value": {
+            "lat": 49.246,
+            "lon": -115.417
+          }
+        }
+      ],
+      "distance_m": 648,
+      "note": null
+    }
+  ],
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -5,12 +5,12 @@
   "other_names": [],
   "country": "CA",
   "region": "BC",
-  "county": null,
+  "county": "Regional District of Kootenay Boundary",
   "location": {
-    "lat": 49.41409,
-    "lon": -119.01528,
+    "lat": 49.41414,
+    "lon": -119.01529,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "bc_trim_lookouts"
   },
   "elevation_m": null,
   "kind": "tower",
@@ -57,6 +57,16 @@
       "kind": "site"
     },
     {
+      "label": "Goat Peak on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/goat-peak.html",
+      "kind": "site"
+    },
+    {
+      "label": "BC base map (TRIM): fire lookout symbol 16262",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/d1fc9c40-c3ba-4ae4-ae5a-838ad3c43289",
+      "kind": "agency"
+    },
+    {
       "label": "OpenStreetMap way 1072526721",
       "url": "https://www.openstreetmap.org/way/1072526721",
       "kind": "osm"
@@ -68,7 +78,6 @@
       "key": "firelookout_ca:13950",
       "fields": [
         "name",
-        "location",
         "links"
       ]
     },
@@ -78,6 +87,22 @@
       "fields": [
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:goat-peak",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "bc_trim_lookouts",
+      "key": "bc_trim_lookouts:bc:16262",
+      "fields": [
+        "location",
+        "county",
         "links"
       ]
     },

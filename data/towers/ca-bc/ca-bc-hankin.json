@@ -7,12 +7,12 @@
   "region": "BC",
   "county": "Regional District of Bulkley-Nechako",
   "location": {
-    "lat": 54.88007,
-    "lon": -127.56914,
+    "lat": 54.880103,
+    "lon": -127.569257,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "bc_rec_sites"
   },
-  "elevation_m": null,
+  "elevation_m": 1441.0,
   "kind": "ground",
   "material": null,
   "material_from": null,
@@ -22,7 +22,7 @@
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Recreation Sites and Trails BC",
   "ownership": "unknown",
   "access": {
     "level": "restricted",
@@ -75,6 +75,16 @@
       "kind": "site"
     },
     {
+      "label": "Hankin on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/hankin.html",
+      "kind": "site"
+    },
+    {
+      "label": "Recreation Sites and Trails BC: Hankin Fire Lookout (REC203828)",
+      "url": "https://www.sitesandtrailsbc.ca/resource/REC203828",
+      "kind": "agency"
+    },
+    {
       "label": "OpenStreetMap way 1227522699",
       "url": "https://www.openstreetmap.org/way/1227522699",
       "kind": "osm"
@@ -86,8 +96,17 @@
       "key": "firelookout_ca:13974",
       "fields": [
         "name",
-        "location",
         "county",
+        "links"
+      ]
+    },
+    {
+      "source": "bc_rec_sites",
+      "key": "bc_rec_sites:bc:rec203828",
+      "fields": [
+        "location",
+        "agency",
+        "access",
         "links"
       ]
     },
@@ -97,6 +116,14 @@
       "fields": [
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:hankin",
+      "fields": [
+        "elevation_m",
         "links"
       ]
     },

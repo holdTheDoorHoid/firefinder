@@ -2,10 +2,12 @@
   "id": "ca-on-fort-frances",
   "name": "Fort Frances Lookout Tower",
   "summary": "Built near Atikokan as a Cold War radar and lookout tower, moved to Fort Frances in 1972 and to the Sorting Gap Marina in 2009; summer access by pass.",
-  "other_names": [],
+  "other_names": [
+    "Pal Lake Tower"
+  ],
   "country": "CA",
   "region": "ON",
-  "county": null,
+  "county": "Rainy River District",
   "location": {
     "lat": 48.606964,
     "lon": -93.375864,
@@ -13,7 +15,7 @@
     "from": "nhlr"
   },
   "elevation_m": 338.6,
-  "kind": "unknown",
+  "kind": "tower",
   "material": null,
   "material_from": null,
   "roles": [],
@@ -114,7 +116,7 @@
       "kind": "register"
     },
     {
-      "label": "History of the Lookout Tower (Historical Marker Database)",
+      "label": "The Historical Marker Database (hmdb.org)",
       "url": "https://www.hmdb.org/m.asp?m=262093",
       "kind": "reference"
     },
@@ -151,6 +153,16 @@
       ]
     },
     {
+      "source": "survey_on",
+      "key": "survey_on:on:fort-frances-lookout-tower",
+      "fields": [
+        "county",
+        "kind",
+        "registers",
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:ca-on-fort-frances",
       "fields": [
@@ -166,7 +178,23 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": "standing"
+        },
+        {
+          "source": "survey_on",
+          "value": "relocated"
+        }
+      ],
+      "distance_m": null,
+      "note": "NHLR lists lookouts that were standing when registered."
+    }
+  ],
   "research": {
     "researched": "2026-10-20",
     "checked": "2026-10-20",

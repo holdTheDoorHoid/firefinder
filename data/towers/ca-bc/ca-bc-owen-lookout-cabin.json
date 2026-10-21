@@ -1,0 +1,106 @@
+{
+  "id": "ca-bc-owen-lookout-cabin",
+  "name": "Owen Lookout Cabin",
+  "other_names": [
+    "Owen Hill"
+  ],
+  "country": "CA",
+  "region": "BC",
+  "county": "Regional District of Bulkley-Nechako",
+  "location": {
+    "lat": 54.186349,
+    "lon": -126.86827,
+    "precision": "exact",
+    "from": "bc_rec_sites"
+  },
+  "elevation_m": 1083.0,
+  "kind": "unknown",
+  "material": null,
+  "material_from": null,
+  "roles": [],
+  "design": null,
+  "height_m": null,
+  "status": "unknown",
+  "status_note": null,
+  "registers": [],
+  "agency": "Recreation Sites and Trails BC, with Houston Hikers Society",
+  "ownership": "unknown",
+  "access": {
+    "level": "public",
+    "note": "A Recreation Sites and Trails BC site (REC32715)."
+  },
+  "staffing": {
+    "status": "unknown",
+    "as_of": null
+  },
+  "visit": {
+    "climbable": null,
+    "drive_up": null,
+    "trail_note": null
+  },
+  "rental": null,
+  "events": [],
+  "photos": [],
+  "links": [
+    {
+      "label": "Owen Hill on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/owen-hill.html",
+      "kind": "site"
+    },
+    {
+      "label": "Recreation Sites and Trails BC: Owen Lookout Cabin (REC32715)",
+      "url": "https://www.sitesandtrailsbc.ca/resource/REC32715",
+      "kind": "agency"
+    }
+  ],
+  "sources": [
+    {
+      "source": "bc_rec_sites",
+      "key": "bc_rec_sites:bc:rec32715",
+      "fields": [
+        "name",
+        "location",
+        "county",
+        "agency",
+        "access",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:owen-hill",
+      "fields": [
+        "elevation_m",
+        "links"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "bc_rec_sites",
+          "value": {
+            "lat": 54.186349,
+            "lon": -126.86827
+          }
+        },
+        {
+          "source": "canada_lookouts_weebly",
+          "value": {
+            "lat": 54.182,
+            "lon": -126.853
+          }
+        }
+      ],
+      "distance_m": 1105,
+      "note": null
+    }
+  ],
+  "verification": "unverified",
+  "locked": [],
+  "hidden": false,
+  "hidden_reason": null,
+  "updated": "2026-10-20"
+}

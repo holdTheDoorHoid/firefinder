@@ -4,7 +4,8 @@
   "summary": "Abandoned summit lookout north of Lillooet; trip reports describe its condition, but no source gives a build date or staffing history.",
   "other_names": [
     "Camel Fire Lookout",
-    "Camelshoof Fire Lookout"
+    "Camelshoof Fire Lookout",
+    "Camel Mountain"
   ],
   "country": "CA",
   "region": "BC",
@@ -15,7 +16,7 @@
     "precision": "exact",
     "from": "firelookout_ca"
   },
-  "elevation_m": null,
+  "elevation_m": 1117.0,
   "kind": "ground",
   "material": null,
   "material_from": null,
@@ -100,6 +101,11 @@
       "kind": "site"
     },
     {
+      "label": "Camel Mountain on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/camel-mountain.html",
+      "kind": "site"
+    },
+    {
       "label": "OpenStreetMap way 806554192",
       "url": "https://www.openstreetmap.org/way/806554192",
       "kind": "osm"
@@ -127,6 +133,14 @@
       ]
     },
     {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:camel-mountain",
+      "fields": [
+        "elevation_m",
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:ca-bc-camelsfoot",
       "fields": [
@@ -141,7 +155,29 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "firelookout_ca",
+          "value": {
+            "lat": 50.77965,
+            "lon": -121.88649
+          }
+        },
+        {
+          "source": "canada_lookouts_weebly",
+          "value": {
+            "lat": 50.767,
+            "lon": -121.871
+          }
+        }
+      ],
+      "distance_m": 1779,
+      "note": null
+    }
+  ],
   "research": {
     "researched": "2026-10-20",
     "checked": "2026-10-20",

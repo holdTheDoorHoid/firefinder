@@ -1,6 +1,7 @@
 {
   "id": "ca-bc-alex-graham",
   "name": "Alex Graham Fire Lookout",
+  "summary": "Cariboo, BC lookout sharing its name with Mount Alex Graham; burned down in 2017, and a 2021 Facebook post is titled as showing its remains.",
   "other_names": [],
   "country": "CA",
   "region": "BC",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Burned down in 2017; no source describes the site today.",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -41,15 +42,38 @@
     {
       "year": 2017,
       "event": "burned",
-      "note": "Burned.",
-      "from": "firelookout_ca"
+      "note": "Burned down, per Firelookout.ca",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=alex-graham-fire-lookout"
+    },
+    {
+      "year": 2021,
+      "event": "other",
+      "note": "Facebook group post titled 'Remains of the Alex Graham Fire Lookout, August 2021' (only the title could be read)",
+      "from": "research",
+      "source_url": "https://www.facebook.com/groups/bcforestfirelookouts/posts/4242559289192639/"
     }
   ],
   "photos": [],
   "links": [
     {
+      "label": "Mount Alex Graham (BC Geographical Names)",
+      "url": "https://apps.gov.bc.ca/pub/bcgnws/names/38836.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Remains of the Alex Graham Fire Lookout, August 2021 (BC Forest Fire Lookouts (Facebook group))",
+      "url": "https://www.facebook.com/groups/bcforestfirelookouts/posts/4242559289192639/",
+      "kind": "reference"
+    },
+    {
       "label": "Alex Graham Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=alex-graham-fire-lookout",
+      "kind": "site"
+    },
+    {
+      "label": "Alex Graham on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/alex-graham.html",
       "kind": "site"
     }
   ],
@@ -65,10 +89,34 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:alex-graham",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-alex-graham",
+      "fields": [
+        "summary",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

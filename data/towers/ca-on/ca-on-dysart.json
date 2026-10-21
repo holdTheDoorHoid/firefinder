@@ -1,10 +1,11 @@
 {
   "id": "ca-on-dysart",
   "name": "Dysart Fire Tower",
+  "summary": "A 1956 Ontario fire tower on a hill beside Highway 118 at Haliburton; the cupola has been removed and the frame still stands, per undated sources.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
-  "county": null,
+  "county": "Haliburton County",
   "location": {
     "lat": 45.04639,
     "lon": -78.50864,
@@ -16,33 +17,61 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "unknown",
+  "design": "Frame tower with a cupola on top; the cupola has since been removed",
+  "height_m": 30.0,
+  "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Ontario Ministry of Natural Resources (built by the former Department of Lands and Forests)",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "restricted",
+    "note": "The still-standing list says the MNR no longer maintains these towers, has removed the bottom 20 ft of ladder, and asks visitors not to climb. The tower can be seen from Highway 118. No source says whether the hill is open to the public."
   },
   "staffing": {
     "status": "unknown",
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1956,
+      "event": "built",
+      "note": "Erected by Ontario's former Department of Lands and Forests, per Wikipedia.",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Dysart_et_al"
+    }
+  ],
   "photos": [],
   "links": [
     {
+      "label": "Dysart et al (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Dysart_et_al",
+      "kind": "reference"
+    },
+    {
+      "label": "Ontario Fire Towers Still Standing (GeoCities archive (geocities.ws))",
+      "url": "https://www.geocities.ws/ontarioftl/stillstanding.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Ontario's Fire Tower Lookouts: Preserving Their History (Ontario's Fire Tower Lookouts site (forestrangers.github.io))",
+      "url": "https://forestrangers.github.io/ontariofiretowers/",
+      "kind": "reference"
+    },
+    {
       "label": "Dysart Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=dysart-fire-tower",
+      "kind": "site"
+    },
+    {
+      "label": "Dysart on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/ontario.html",
       "kind": "site"
     }
   ],
@@ -55,10 +84,40 @@
         "location",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:on:index-dysart",
+      "fields": [
+        "county",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-dysart",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

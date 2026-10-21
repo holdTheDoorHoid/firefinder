@@ -1,35 +1,38 @@
 {
   "id": "ca-sk-bodmin",
   "name": "Bodmin Fire Tower",
-  "other_names": [],
+  "summary": "Steel tower on Bodmin Hill near Big River, replacing a 1926 wooden tower; the Big River district towers were condemned in 2001. No source describes the site today.",
+  "other_names": [
+    "Bodmin Hill"
+  ],
   "country": "CA",
   "region": "SK",
   "county": "Big River No. 555",
   "location": {
     "lat": 53.783,
-    "lon": -106.94833,
+    "lon": -106.98167,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "websiteservice_sk"
   },
   "elevation_m": null,
-  "kind": "unknown",
+  "kind": "tower",
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Steel tower",
+  "height_m": 18.3,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "Firelookout.ca is not sure the tower still stands. The Big River district towers were condemned in 2001, and no source says what became of this one.",
   "registers": [],
-  "agency": null,
+  "agency": "Saskatchewan Department of Natural Resources",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": "2001"
   },
   "visit": {
     "climbable": null,
@@ -37,12 +40,106 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
-  "photos": [],
+  "events": [
+    {
+      "year": 1926,
+      "event": "built",
+      "note": "Wooden tower, 35 ft, built on Bodmin Hill six miles east of Big River.",
+      "from": "research",
+      "source_url": "https://www.jkcc.com/century/environment/"
+    },
+    {
+      "year": 1945,
+      "event": "staffed",
+      "note": "Bruce McTaggart took over Bodmin Tower in 1945 and retired in 1962.",
+      "from": "research",
+      "source_url": "https://www.jkcc.com/century/environment/"
+    },
+    {
+      "year": 1965,
+      "event": "replaced",
+      "note": "Old lookout torn down and replaced by a sixty-foot steel tower. The history dates the change to the end of Arnold Fonos's 1963-65 stint; the DNR report records replacement in 1965.",
+      "from": "research",
+      "source_url": "https://www.jkcc.com/century/environment/",
+      "source_urls": [
+        "https://www.jkcc.com/century/environment/",
+        "https://canada-lookouts.weebly.com/bodmin.html"
+      ]
+    },
+    {
+      "year": 1965,
+      "event": "staffed",
+      "note": "Stan Brettle took over as towerman in 1965 and stayed until 1979. A towermen list gives 1966-1978.",
+      "from": "research",
+      "source_url": "https://www.jkcc.com/century/environment/",
+      "source_urls": [
+        "https://www.jkcc.com/century/environment/",
+        "https://www.websiteservice.ca/firetowermen.htm"
+      ]
+    },
+    {
+      "year": 1999,
+      "event": "staffed",
+      "note": "John Fonos took over the duties at Bodmin Tower in May 1999.",
+      "from": "research",
+      "source_url": "https://www.jkcc.com/century/environment/"
+    },
+    {
+      "year": 2001,
+      "event": "closed",
+      "note": "All fire towers in the Big River district were condemned in August 2001 over safety concerns.",
+      "from": "research",
+      "source_url": "https://www.jkcc.com/century/environment/"
+    },
+    {
+      "year": 2001,
+      "event": "staffed_last",
+      "note": "John Fonos retired in September 2001, when the district's towers were closed.",
+      "from": "research",
+      "source_url": "https://www.jkcc.com/century/environment/"
+    }
+  ],
+  "photos": [
+    {
+      "file": null,
+      "thumb": null,
+      "url": "https://www.websiteservice.ca/towerstuff/bodmin26.jpg",
+      "source_url": "https://www.websiteservice.ca/firetowers_page4.htm",
+      "credit": "Firetowers of Saskatchewan (websiteservice.ca), Chris Rule, from the work of Maurice Bourassa",
+      "license": null,
+      "caption": null,
+      "year": null
+    }
+  ],
   "links": [
+    {
+      "label": "Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/saskatchewan.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Towers and Saskatchewan Environment, Big River and Area (jkcc.com)",
+      "url": "https://www.jkcc.com/century/environment/",
+      "kind": "reference"
+    },
+    {
+      "label": "Firetowermen & Women (Firetowers of Saskatchewan (websiteservice.ca))",
+      "url": "https://www.websiteservice.ca/firetowermen.htm",
+      "kind": "reference"
+    },
     {
       "label": "Bodmin Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=bodmin-fire-tower",
+      "kind": "site"
+    },
+    {
+      "label": "Bodmin Fire Tower on Firetowers of Saskatchewan (websiteservice.ca)",
+      "url": "https://www.websiteservice.ca/firetowers_page4.htm",
+      "kind": "site"
+    },
+    {
+      "label": "Bodmin on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/bodmin.html",
       "kind": "site"
     }
   ],
@@ -52,14 +149,84 @@
       "key": "firelookout_ca:11819",
       "fields": [
         "name",
-        "location",
         "county",
         "links"
       ]
+    },
+    {
+      "source": "websiteservice_sk",
+      "key": "websiteservice_sk:sk:bodmin-fire-tower",
+      "fields": [
+        "location",
+        "kind",
+        "height_m",
+        "photos",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:sk:bodmin",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "survey_prairies_north",
+      "key": "survey_prairies_north:sk:bodmin-fire-tower",
+      "fields": [
+        "agency",
+        "staffing",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-sk-bodmin",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "websiteservice_sk",
+          "value": {
+            "lat": 53.783,
+            "lon": -106.98167
+          }
+        },
+        {
+          "source": "firelookout_ca",
+          "value": {
+            "lat": 53.783,
+            "lon": -106.94833
+          }
+        }
+      ],
+      "distance_m": 2190,
+      "note": null
+    }
+  ],
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

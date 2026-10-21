@@ -1,7 +1,10 @@
 {
   "id": "ca-sk-big-sandy",
   "name": "Big Sandy Fire Lookout",
-  "other_names": [],
+  "summary": "Heavy steel tower at Big Sandy Lake, erected by 1950; a 1962 report says it was dismantled, but later towermen entries conflict. No source describes the site now.",
+  "other_names": [
+    "Big Sandy Lake"
+  ],
   "country": "CA",
   "region": "SK",
   "county": "Division No. 18",
@@ -9,19 +12,19 @@
     "lat": 54.44197,
     "lon": -104.33831,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "websiteservice_sk"
   },
   "elevation_m": 662.0,
-  "kind": "unknown",
+  "kind": "tower",
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Heavy steel tower",
+  "height_m": 24.4,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "A 1962-63 report says the tower was dismantled, while later staffing entries name towermen there. No source says what stands at the site today.",
   "registers": [],
-  "agency": null,
+  "agency": "Department of Natural Resources",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -29,7 +32,7 @@
   },
   "staffing": {
     "status": "unknown",
-    "as_of": null
+    "as_of": "undated"
   },
   "visit": {
     "climbable": null,
@@ -37,12 +40,56 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1950,
+      "event": "built",
+      "note": "Canada Lookouts quotes a Department of Natural Resources annual report for 1950-51 recording a new steel tower at Big Sandy Lake in the Northern District.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/big-sandy-lake.html"
+    },
+    {
+      "year": 1962,
+      "event": "removed",
+      "note": "The same page quotes the 1962-63 annual report: the tower was dismantled and its material removed by helicopter. Later staffing entries conflict.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/big-sandy-lake.html"
+    },
+    {
+      "year": 1976,
+      "event": "staffed",
+      "note": "Local history quoted on the Firetowers site gives Albert Sager as towerman from the late 1960s until his death in 1976.",
+      "from": "research",
+      "source_url": "https://www.websiteservice.ca/firetowers_page4.htm"
+    },
+    {
+      "year": 1992,
+      "event": "staffed",
+      "note": "Towermen list gives Richard Sevigny's years as 1992-2002, with Big Sandy among four towers.",
+      "from": "research",
+      "source_url": "https://www.websiteservice.ca/firetowermen.htm"
+    }
+  ],
   "photos": [],
   "links": [
     {
+      "label": "Firetowermen & Women (Firetowers of Saskatchewan (websiteservice.ca))",
+      "url": "https://www.websiteservice.ca/firetowermen.htm",
+      "kind": "reference"
+    },
+    {
       "label": "Big Sandy Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=big-sandy-fire-lookout",
+      "kind": "site"
+    },
+    {
+      "label": "Big Sandy Fire Tower on Firetowers of Saskatchewan (websiteservice.ca)",
+      "url": "https://www.websiteservice.ca/firetowers_page4.htm",
+      "kind": "site"
+    },
+    {
+      "label": "Big Sandy Lake on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/big-sandy-lake.html",
       "kind": "site"
     }
   ],
@@ -52,15 +99,61 @@
       "key": "firelookout_ca:11783",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "links"
       ]
+    },
+    {
+      "source": "websiteservice_sk",
+      "key": "websiteservice_sk:sk:big-sandy-fire-tower",
+      "fields": [
+        "location",
+        "kind",
+        "height_m",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:sk:big-sandy-lake",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "survey_prairies_north",
+      "key": "survey_prairies_north:sk:big-sandy-fire-tower",
+      "fields": [
+        "agency",
+        "staffing"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-sk-big-sandy",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

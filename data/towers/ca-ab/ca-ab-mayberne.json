@@ -74,11 +74,6 @@
   "photos": [],
   "links": [
     {
-      "label": "MAYBERNE (Canada Lookouts)",
-      "url": "https://canada-lookouts.weebly.com/mayberne.html",
-      "kind": "reference"
-    },
-    {
       "label": "Wildfire lookout records for Limestone, Livock and Mayberne (FRIAA FireSmart vector data, query) (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=NAME%20LIKE%20%27%25LIMESTONE%25%27%20OR%20NAME%20LIKE%20%27%25LIVOCK%25%27%20OR%20NAME%20LIKE%20%27%25MAYBERNE%25%27%20OR%20NAME%20LIKE%20%27%25CLARKE%25%27&outFields=NAME,LABEL,LOOKOUT_ID,LOOKOUT_TYPE,YEAR_CONSTRUCTED,TOWER_HEIGHT,ELEVATION,ACTIVE,ACCESS_MODE,KEY_LOOKOUT,LATITUDE,LONGITUDE,MAP_NUMBER,LOCATION_VERIFIED&returnGeometry=false&f=json",
       "kind": "reference"
@@ -87,6 +82,11 @@
       "label": "Lonely Lookouts (RETROactive, Alberta Historic Places)",
       "url": "https://albertashistoricplaces.com/2014/04/24/lonely-lookouts/",
       "kind": "reference"
+    },
+    {
+      "label": "Mayberne on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/mayberne.html",
+      "kind": "site"
     },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
@@ -121,6 +121,13 @@
     {
       "source": "osm",
       "key": "osm:node/1399128186",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:ab:mayberne",
       "fields": [
         "links"
       ]

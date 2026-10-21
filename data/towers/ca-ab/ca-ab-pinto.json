@@ -2,7 +2,9 @@
   "id": "ca-ab-pinto",
   "name": "Pinto",
   "summary": "Active steel Alberta lookout whose provincial record gives a 2019 tower, 30 m tall, with a weather station; no history or public-access source was found.",
-  "other_names": [],
+  "other_names": [
+    "Pinto Mountain"
+  ],
   "country": "CA",
   "region": "AB",
   "county": null,
@@ -66,6 +68,11 @@
       "kind": "reference"
     },
     {
+      "label": "Pinto Mountain on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/pinto-mountain.html",
+      "kind": "site"
+    },
+    {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0",
       "kind": "agency"
@@ -91,6 +98,13 @@
       ]
     },
     {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:ab:pinto-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:ca-ab-pinto",
       "fields": [
@@ -105,7 +119,23 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "alberta_wildfire",
+          "value": 2019
+        },
+        {
+          "source": "canada_lookouts_weebly",
+          "value": 1959
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "research": {
     "researched": "2026-10-20",
     "checked": "2026-10-20",

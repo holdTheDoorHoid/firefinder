@@ -1,6 +1,7 @@
 {
   "id": "ca-on-kwinkwaga-lake",
   "name": "Kwinkwaga Lake Fire Tower",
+  "summary": "Ontario's tower layer lists a verified Kwinkwaga Lake Fire Tower east of the lake, with no height or build date; no source describes the site today.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
@@ -41,6 +42,26 @@
   "photos": [],
   "links": [
     {
+      "label": "Fire Tower records, tower layer (LIO_Open10, layer 14) (Land Information Ontario, Government of Ontario)",
+      "url": "https://ws.lioservices.lrc.gov.on.ca/arcgis2/rest/services/LIO_OPEN_DATA/LIO_Open10/MapServer/14/query?where=CLASS_SUBTYPE%3D%27Fire%20Tower%27&outFields=*&outSR=4326&f=geojson",
+      "kind": "reference"
+    },
+    {
+      "label": "The History of the Fire Tower: From World War II to Jack Kerouac to Temagami (Northern Ontario Travel)",
+      "url": "https://northernontario.travel/northeastern-ontario/history-of-the-fire-tower-temagami",
+      "kind": "reference"
+    },
+    {
+      "label": "Ontario Fire Towers Still Standing (Forest Rangers)",
+      "url": "https://forestrangers.github.io/ontariofiretowers/stillstanding2.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Kwinkwaga Lake Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
+      "url": "https://firelookout.ca/lookouts/?slug=kwinkwaga-lake-fire-tower",
+      "kind": "site"
+    },
+    {
       "label": "Land Information Ontario: Tower layer (fire towers)",
       "url": "https://geohub.lio.gov.on.ca/datasets/mnrf::tower",
       "kind": "agency"
@@ -48,18 +69,62 @@
   ],
   "sources": [
     {
+      "source": "firelookout_ca",
+      "key": "firelookout_ca:9988",
+      "fields": [
+        "name",
+        "links"
+      ]
+    },
+    {
       "source": "ontario_lio",
       "key": "ontario_lio:156650525",
       "fields": [
-        "name",
         "location",
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-kwinkwaga-lake",
+      "fields": [
+        "summary",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ontario_lio",
+          "value": {
+            "lat": 48.818704,
+            "lon": -85.305791
+          }
+        },
+        {
+          "source": "firelookout_ca",
+          "value": {
+            "lat": 48.81731,
+            "lon": -85.34467
+          }
+        }
+      ],
+      "distance_m": 2851,
+      "note": null
+    }
+  ],
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

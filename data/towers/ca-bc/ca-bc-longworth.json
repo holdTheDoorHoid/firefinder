@@ -2,15 +2,17 @@
   "id": "ca-bc-longworth",
   "name": "Longworth Fire Lookout",
   "summary": "Mountain lookout cabin north of the Fraser River near Prince George; a trail history dates the lookout to 1929 and sources say it was renovated in 2024.",
-  "other_names": [],
+  "other_names": [
+    "Longworth Mountain"
+  ],
   "country": "CA",
   "region": "BC",
-  "county": null,
+  "county": "Regional District of Fraser-Fort George",
   "location": {
-    "lat": 53.947693,
-    "lon": -121.432364,
+    "lat": 53.94766,
+    "lon": -121.43193,
     "precision": "exact",
-    "from": "osm"
+    "from": "bc_trim_lookouts"
   },
   "elevation_m": null,
   "kind": "ground",
@@ -70,6 +72,16 @@
       "kind": "reference"
     },
     {
+      "label": "Longworth Mountain on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/longworth-mountain.html",
+      "kind": "site"
+    },
+    {
+      "label": "BC base map (TRIM): fire lookout symbol 10915",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/d1fc9c40-c3ba-4ae4-ae5a-838ad3c43289",
+      "kind": "agency"
+    },
+    {
       "label": "OpenStreetMap way 1376921362",
       "url": "https://www.openstreetmap.org/way/1376921362",
       "kind": "osm"
@@ -81,10 +93,25 @@
       "key": "osm:way/1376921362",
       "fields": [
         "name",
-        "location",
         "kind",
         "status",
         "access",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:longworth-mountain",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "bc_trim_lookouts",
+      "key": "bc_trim_lookouts:bc:10915",
+      "fields": [
+        "location",
+        "county",
         "links"
       ]
     },

@@ -1,6 +1,7 @@
 {
   "id": "ca-bc-gleam",
   "name": "Gleam Fire Lookout",
+  "summary": "Firelookout.ca places a Gleam lookout at Peace River, BC, and says it is unknown whether it still stands; no other source found.",
   "other_names": [],
   "country": "CA",
   "region": "BC",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "Firelookout.ca says it is unknown whether the lookout is still standing.",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -44,6 +45,11 @@
       "label": "Gleam Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=gleam-fire-lookout",
       "kind": "site"
+    },
+    {
+      "label": "Gleam on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/british-columbia-index.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -56,10 +62,33 @@
         "county",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:index-gleam",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-gleam",
+      "fields": [
+        "summary",
+        "status",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

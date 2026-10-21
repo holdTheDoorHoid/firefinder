@@ -1,6 +1,7 @@
 {
   "id": "ca-on-pinetorch",
   "name": "Pinetorch Fire Tower",
+  "summary": "Ontario provincial tower record named Pinetorch Fire Tower, with its point on Ishpatina Ridge; a volunteer list and a directory name an Acadia Tower at Pinetorch Lake, Temagami, an MNR repeater tower, and the two may not be the same structure.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
@@ -19,9 +20,9 @@
   "design": null,
   "height_m": null,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "A volunteer list of still-standing towers describes it as an MNR repeater tower (Acadia Tower); no source confirms its condition today.",
   "registers": [],
-  "agency": null,
+  "agency": "Ontario Ministry of Natural Resources",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -32,7 +33,7 @@
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
@@ -41,12 +42,28 @@
     {
       "year": 1935,
       "event": "built",
-      "note": null,
-      "from": "ontario_lio"
+      "note": "Construction date stored in the provincial tower layer as 1 June 1935. The layer gives no builder or purpose.",
+      "from": "research",
+      "source_url": "https://ws.lioservices.lrc.gov.on.ca/arcgis2/rest/services/LIO_OPEN_DATA/LIO_Open10/MapServer/14/query?where=CLASS_SUBTYPE%3D%27Fire+Tower%27&outFields=*&outSR=4326&f=geojson"
     }
   ],
   "photos": [],
   "links": [
+    {
+      "label": "Pinetorch Fire Tower, Land Information Ontario tower layer (Fire Tower subtype) (Government of Ontario, Land Information Ontario)",
+      "url": "https://ws.lioservices.lrc.gov.on.ca/arcgis2/rest/services/LIO_OPEN_DATA/LIO_Open10/MapServer/14/query?where=CLASS_SUBTYPE%3D%27Fire+Tower%27&outFields=*&outSR=4326&f=geojson",
+      "kind": "reference"
+    },
+    {
+      "label": "Ontario's Fire Tower Lookouts, still-standing towers list (forestrangers.github.io (volunteer list))",
+      "url": "https://forestrangers.github.io/ontariofiretowers/stillstanding2.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Ontario lookouts directory (Canada Lookouts (canada-lookouts.weebly.com))",
+      "url": "https://canada-lookouts.weebly.com/ontario.html",
+      "kind": "reference"
+    },
     {
       "label": "Land Information Ontario: Tower layer (fire towers)",
       "url": "https://geohub.lio.gov.on.ca/datasets/mnrf::tower",
@@ -65,10 +82,29 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-pinetorch",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

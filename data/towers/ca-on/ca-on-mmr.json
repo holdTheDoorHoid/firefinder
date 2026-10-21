@@ -1,6 +1,7 @@
 {
   "id": "ca-on-mmr",
   "name": "MMR Fire Tower",
+  "summary": "Ontario tower-layer point for an MMR fire-detection tower on the Pakashkan road, south of Pakashkan Lake; no build, height or status data found.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
@@ -41,6 +42,16 @@
   "photos": [],
   "links": [
     {
+      "label": "Fire Tower records, tower layer (LIO_Open10, layer 14) (Land Information Ontario, Government of Ontario)",
+      "url": "https://ws.lioservices.lrc.gov.on.ca/arcgis2/rest/services/LIO_OPEN_DATA/LIO_Open10/MapServer/14/query?where=CLASS_SUBTYPE%3D%27Fire%20Tower%27&outFields=*&outSR=4326&f=geojson",
+      "kind": "reference"
+    },
+    {
+      "label": "Multiple tourist lodges and trailers destroyed or damaged by wildfires (NWONewsWatch.com)",
+      "url": "https://www.nwonewswatch.com/local-news/multiple-tourist-lodges-destroyed-or-damaged-by-wildfires-12553128",
+      "kind": "reference"
+    },
+    {
       "label": "Land Information Ontario: Tower layer (fire towers)",
       "url": "https://geohub.lio.gov.on.ca/datasets/mnrf::tower",
       "kind": "agency"
@@ -56,10 +67,25 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-mmr",
+      "fields": [
+        "summary",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

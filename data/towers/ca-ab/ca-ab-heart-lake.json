@@ -72,14 +72,14 @@
   "photos": [],
   "links": [
     {
-      "label": "Heart Lake (Canada Lookouts)",
-      "url": "https://canada-lookouts.weebly.com/heart-lake.html",
-      "kind": "reference"
-    },
-    {
       "label": "WF_WILDFIRE_LOOKOUT layer (all lookouts query) (Government of Alberta (geospatial.alberta.ca))",
       "url": "https://geospatial.alberta.ca/titan/rest/services/friaa/friaa_firesmart_vector_data/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json&resultRecordCount=1000",
       "kind": "reference"
+    },
+    {
+      "label": "Heart Lake on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/heart-lake.html",
+      "kind": "site"
     },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
@@ -119,6 +119,13 @@
       ]
     },
     {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:ab:heart-lake",
+      "fields": [
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:ca-ab-heart-lake",
       "fields": [
@@ -131,7 +138,23 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "alberta_wildfire",
+          "value": 2012
+        },
+        {
+          "source": "canada_lookouts_weebly",
+          "value": 1946
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "research": {
     "researched": "2026-10-20",
     "checked": "2026-10-20",

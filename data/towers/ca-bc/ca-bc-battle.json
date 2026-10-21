@@ -1,17 +1,18 @@
 {
   "id": "ca-bc-battle",
   "name": "Battle Fire Lookout",
+  "summary": "Old fire lookout cabin on the lower summit of Battle Mountain in Wells Gray Provincial Park, seen in 2017 and listed as likely standing in a 2026 guide; no build history found.",
   "other_names": [],
   "country": "CA",
   "region": "BC",
-  "county": null,
+  "county": "Thompson-Nicola",
   "location": {
     "lat": 51.95264,
     "lon": -119.85493,
     "precision": "exact",
     "from": "firelookout_ca"
   },
-  "elevation_m": null,
+  "elevation_m": 2316.0,
   "kind": "unknown",
   "material": null,
   "material_from": null,
@@ -19,13 +20,13 @@
   "design": null,
   "height_m": null,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "The last on-site description found is from 2017. A 2026 guide lists the lookout as confirmed or likely to have standing structures.",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "The mountain is a popular summer destination in Wells Gray Provincial Park. No source says whether the cabin itself is open to visitors."
   },
   "staffing": {
     "status": "unknown",
@@ -33,16 +34,60 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": false,
+    "trail_note": "Gravel road from Clearwater Valley Road, high clearance needed for the last 5 km to the parking lot; a trail starts at the lot. Meadows are a day outing; the summit should be planned for two days with overnight gear. Hiking season late June to September."
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2017,
+      "event": "other",
+      "note": "A route description records an old fire lookout cabin on the lower summit; the cabin was snowbound on March 28, 2017.",
+      "from": "research",
+      "source_url": "https://trailpeak.com/trails/wells-gray-park-fight-meadow-to-battle-mountain-near-clearwater-bc-12708"
+    },
+    {
+      "year": 2026,
+      "event": "other",
+      "note": "A 2026 guide lists the lookout as confirmed or likely to have standing structures; another guide lists it as confirmed or believed to still stand.",
+      "from": "research",
+      "source_url": "https://therainlander.ca/bcs-historic-fire-lookout-hikes/",
+      "source_urls": [
+        "https://therainlander.ca/bcs-historic-fire-lookout-hikes/",
+        "https://wildbluebell.ca/fire-lookouts-british-columbia"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
     {
+      "label": "Battle Mountain (British Columbia) (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Battle_Mountain_%28British_Columbia%29",
+      "kind": "reference"
+    },
+    {
+      "label": "Wells Gray Park, Fight Meadow to Battle Mountain (Trailpeak)",
+      "url": "https://trailpeak.com/trails/wells-gray-park-fight-meadow-to-battle-mountain-near-clearwater-bc-12708",
+      "kind": "reference"
+    },
+    {
+      "label": "BC's Historic Fire Lookout Hikes (The Rainlander)",
+      "url": "https://therainlander.ca/bcs-historic-fire-lookout-hikes/",
+      "kind": "reference"
+    },
+    {
+      "label": "Fire Lookouts of British Columbia: History, Hikes & Where to Stay (Wild Bluebell)",
+      "url": "https://wildbluebell.ca/fire-lookouts-british-columbia",
+      "kind": "reference"
+    },
+    {
       "label": "Battle Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=battle-fire-lookout",
+      "kind": "site"
+    },
+    {
+      "label": "Battle on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/battle.html",
       "kind": "site"
     }
   ],
@@ -55,10 +100,38 @@
         "location",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:battle",
+      "fields": [
+        "county",
+        "elevation_m",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-battle",
+      "fields": [
+        "summary",
+        "status",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

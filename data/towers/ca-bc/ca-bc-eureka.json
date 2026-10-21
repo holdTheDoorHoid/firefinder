@@ -7,10 +7,10 @@
   "region": "BC",
   "county": "Regional District of Central Kootenay",
   "location": {
-    "lat": 50.07778,
-    "lon": -118.38064,
+    "lat": 50.077847,
+    "lon": -118.3806,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "bc_rec_sites"
   },
   "elevation_m": null,
   "kind": "two_story",
@@ -83,6 +83,16 @@
       "kind": "site"
     },
     {
+      "label": "Eureka on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/eureka.html",
+      "kind": "site"
+    },
+    {
+      "label": "Recreation Sites and Trails BC: Eureka Lookout (REC135963)",
+      "url": "https://www.sitesandtrailsbc.ca/resource/REC135963",
+      "kind": "agency"
+    },
+    {
       "label": "OpenStreetMap way 220297228",
       "url": "https://www.openstreetmap.org/way/220297228",
       "kind": "osm"
@@ -94,8 +104,16 @@
       "key": "firelookout_ca:13823",
       "fields": [
         "name",
-        "location",
         "county",
+        "links"
+      ]
+    },
+    {
+      "source": "bc_rec_sites",
+      "key": "bc_rec_sites:bc:rec135963",
+      "fields": [
+        "location",
+        "access",
         "links"
       ]
     },
@@ -106,8 +124,14 @@
         "kind",
         "status",
         "agency",
-        "access",
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:eureka",
+      "fields": [
         "links"
       ]
     },

@@ -1,7 +1,10 @@
 {
   "id": "ca-bc-hunter",
   "name": "Hunter Fire Lookout",
-  "other_names": [],
+  "summary": "Index lists a Hunter Fire Lookout in Columbia-Shuswap, BC, with only a map point; no source found confirms a tower at it.",
+  "other_names": [
+    "Mount Hunter (Lower)"
+  ],
   "country": "CA",
   "region": "BC",
   "county": "Columbia Shuswap Regional District",
@@ -18,17 +21,17 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Parks Canada",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "unknown",
+    "status": "unstaffed",
     "as_of": null
   },
   "visit": {
@@ -41,8 +44,23 @@
   "photos": [],
   "links": [
     {
+      "label": "parks.canada.ca",
+      "url": "https://parks.canada.ca/pn-np/bc/yoho/activ/randonnee-hike/jour-day",
+      "kind": "reference"
+    },
+    {
+      "label": "Mount Hunter (Upper) (Canada Lookouts)",
+      "url": "https://canada-lookouts.weebly.com/mount-hunter-upper.html",
+      "kind": "reference"
+    },
+    {
       "label": "Hunter Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=hunter-fire-lookout",
+      "kind": "site"
+    },
+    {
+      "label": "Mount Hunter (Lower) on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/mount-hunter-lower.html",
       "kind": "site"
     }
   ],
@@ -56,10 +74,42 @@
         "county",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:mount-hunter-lower",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "survey_bc_yt",
+      "key": "survey_bc_yt:bc:hunter-lookout",
+      "fields": [
+        "status",
+        "agency",
+        "staffing",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-hunter",
+      "fields": [
+        "summary",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

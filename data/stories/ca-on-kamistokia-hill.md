@@ -1,0 +1,19 @@
+The hill called Mount Jamieson, also known as Mount Kamiskotia, lies roughly 13 km (8 mi) west of Timmins, Ontario.[^1][^2] A 1959 reconnaissance report, written for a planned Gap Filler radar station, describes a 24 m (80 ft) forestry tower on top of the hill.[^1]
+
+The 1959 report says a forest fire had gone through the area about twelve years earlier and destroyed the forestry tower.[^1] Yet in the same report, Dan McCrory occupies the tower and a cabin at the base of the hill.[^1] A 1960 survey describes a 24 m (80 ft) forestry tower on the summit, with a ranger's cabin at the base, and says a fire had cleared the trees there some twelve years earlier.[^2] The 1959 report is hard to square with itself on this point: it says the fire destroyed the tower, yet also describes the tower as occupied. The 1960 survey describes a standing tower and does not mention any loss, so whether the tower survived the fire is unclear.[^1][^2]
+
+A Treasury Board minute approved the Gap Filler radar station at Timmins in late September 1960.[^3] The land papers that followed name the province as owner, and show a clearing with a 107 m (350 ft) radius for fire protection.[^3][^4] The memos disagree on the day: a May 1961 memo gives 29 September, and a September 1961 memo gives 24 September.[^3][^5]
+
+A letter of 31 May 1961 said the Ontario tower should be removed once the radar was built, because the new defence tower would include a lookout post for forest rangers.[^4] The letter also suggested that, if the site were ever abandoned, the provincial officials agree to use the defence tower or re-erect the existing one.[^4] A memo from September 1961 describes a joint radar and forestry tower for the site.[^5]
+
+The sources do not fully agree on what happened next. A SooToday column reports that the remains of a fire tower stand atop the old Kamiskotia Resort, since rebranded as Mount Jamieson Resort, and that the remains are now a communications node.[^6] A photo caption in the same column says the original Timmins fire tower is now on its ski hill.[^6] Firelookout.ca says the hill is now a ski area known as the Kamiskotia Snow Resort, and that the fire lookout tower at the top looks suspiciously like a combined-use radar tower.[^7]
+
+None of these sources says whether the public may visit the tower. Because the SooToday column calls the remains a communications node, do not plan a climb.[^6]
+
+[^1]: Gap Filler Detail, 1959 reconnaissance report on the Timmins site, candemuseum.org (National Archives of Canada record), https://www.candemuseum.org/sites/default/files/archives/Pinetreeline/gap/gap574.html (accessed 2026-10-20).
+[^2]: Gap Filler Detail, 1960 Timmins station report (job 5069), candemuseum.org (National Archives of Canada record), https://www.candemuseum.org/sites/default/files/archives/Pinetreeline/gap/gap575.html (accessed 2026-10-20).
+[^3]: Gap Filler Detail, 1961 memorandum on the Timmins radar station, candemuseum.org (National Archives of Canada record), https://www.candemuseum.org/sites/default/files/archives/Pinetreeline/gap/gap581.html (accessed 2026-10-20).
+[^4]: Gap Filler Detail, 1961 letter on land acquisition at Timmins, candemuseum.org (National Archives of Canada record), https://www.candemuseum.org/sites/default/files/archives/Pinetreeline/gap/gap582.html (accessed 2026-10-20).
+[^5]: Gap Filler Detail, 1961 memorandum on the Timmins radar station, part 1, candemuseum.org (National Archives of Canada record), https://www.candemuseum.org/sites/default/files/archives/Pinetreeline/gap/gap593.html (accessed 2026-10-20).
+[^6]: Sentinels of the forest, SooToday, https://www.sootoday.com/columns/back-roads-bill/sentinals-of-the-forest-3-photos-3299597 (accessed 2026-10-20).
+[^7]: Kamistokia Hill Fire Tower, Firelookout.ca, https://firelookout.ca/lookouts/?slug=kamistokia-hill-fire-tower (accessed 2026-10-20).

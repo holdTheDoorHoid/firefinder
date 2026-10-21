@@ -1,6 +1,7 @@
 {
   "id": "ca-on-mount-st-patrick",
   "name": "Mount St. Patrick Fire Tower",
+  "summary": "Light steel fire tower of the Tweed Fire District, built with the district's 1922 towers; no source found describes the site today.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
@@ -16,8 +17,8 @@
   "material": "steel",
   "material_from": "firelookout_ca",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Light steel tower with an octagonal cupola; 80 ft tall per a fan site",
+  "height_m": 24.4,
   "status": "unknown",
   "status_note": null,
   "registers": [],
@@ -37,12 +38,42 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1922,
+      "event": "built",
+      "note": "Fan-site district notes say towers of the Tweed Fire District, including Mt. St. Patrick, were built in 1922; no separate date for this tower",
+      "from": "research",
+      "source_url": "https://www.geocities.ws/ontarioftl/oldtowers2.html"
+    },
+    {
+      "year": 1977,
+      "event": "other",
+      "note": "Appears on the Pembroke topographic map, sheet 31F, 3rd edition, as cited by firelookout.ca",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=mount-st-patrick-fire-tower"
+    }
+  ],
   "photos": [],
   "links": [
     {
+      "label": "Ontario Fire Towers: Tweed Fire District tower history notes (Ontario's Fire Tower Lookouts (fan site, archived on Geocities.ws))",
+      "url": "https://www.geocities.ws/ontarioftl/oldtowers2.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Ontario Fire Towers Still Standing (Ontario's Fire Tower Lookouts (fan site, forestrangers.github.io))",
+      "url": "https://forestrangers.github.io/ontariofiretowers/stillstanding2.html",
+      "kind": "reference"
+    },
+    {
       "label": "Mount St. Patrick Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=mount-st-patrick-fire-tower",
+      "kind": "site"
+    },
+    {
+      "label": "Mt. St. Patrick on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/ontario.html",
       "kind": "site"
     }
   ],
@@ -57,10 +88,35 @@
         "material",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:on:index-mt-st-patrick",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-mount-st-patrick",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

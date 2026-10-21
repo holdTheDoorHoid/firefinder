@@ -1,27 +1,28 @@
 {
   "id": "ca-on-boulter",
   "name": "Boulter Fire Tower",
+  "summary": "Steel tower recorded in Nipissing District; a 1963 map shows a 100 ft steel tower here, and a fan list still counts it as standing.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
   "county": "Nipissing District",
   "location": {
-    "lat": 46.130556,
-    "lon": -79.042778,
+    "lat": 46.133616,
+    "lon": -79.050303,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "ontario_lio"
   },
   "elevation_m": 421.0,
   "kind": "tower",
   "material": "steel",
   "material_from": "firelookout_ca",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "heavy steel tower",
+  "height_m": 30.5,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "Listed as still standing on a fan site's list, with the cupola removed and the tower used for communications; no dated source confirms it.",
   "registers": [],
-  "agency": null,
+  "agency": "Ontario Ministry of Natural Resources (formerly Department of Lands and Forests)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -32,18 +33,53 @@
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1963,
+      "event": "other",
+      "note": "Shown as a 100 ft steel tower on the Department of Lands and Forests Tower Detection System Map (1963), per the Firelookout record",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=boulter-fire-tower"
+    },
+    {
+      "year": 1985,
+      "event": "other",
+      "note": "Proposed as a repeater station, per the Firelookout record (courtesy of Dave Fluri, MNR)",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=boulter-fire-tower"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Ontario fire tower index (Canada Lookouts)",
+      "url": "https://canada-lookouts.weebly.com/ontario.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Ontario Fire Towers Still Standing (Ontario's Fire Tower Lookouts fan site (archived copy))",
+      "url": "https://www.geocities.ws/ontarioftl/stillstanding.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Ontario's Fire Tower Lookouts: Preserving Their History (Ontario's Fire Tower Lookouts fan site (archived copy))",
+      "url": "https://www.oocities.org/ontarioftl/index.html",
+      "kind": "reference"
+    },
     {
       "label": "Boulter Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=boulter-fire-tower",
       "kind": "site"
+    },
+    {
+      "label": "Land Information Ontario: Tower layer (fire towers)",
+      "url": "https://geohub.lio.gov.on.ca/datasets/mnrf::tower",
+      "kind": "agency"
     }
   ],
   "sources": [
@@ -52,17 +88,67 @@
       "key": "firelookout_ca:41035",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "kind",
         "material",
         "links"
       ]
+    },
+    {
+      "source": "ontario_lio",
+      "key": "ontario_lio:701163178",
+      "fields": [
+        "location",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-boulter",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ontario_lio",
+          "value": {
+            "lat": 46.133616,
+            "lon": -79.050303
+          }
+        },
+        {
+          "source": "firelookout_ca",
+          "value": {
+            "lat": 46.130556,
+            "lon": -79.042778
+          }
+        }
+      ],
+      "distance_m": 672,
+      "note": null
+    }
+  ],
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,6 +1,7 @@
 {
   "id": "ca-on-laurier",
   "name": "Laurier Fire Tower",
+  "summary": "Steel lookout on Chemical Road in Parry Sound District; 1963 map shows a 24 m tower; not one of four towers staffed in 1969.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
@@ -16,12 +17,12 @@
   "material": "steel",
   "material_from": "firelookout_ca",
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Steel tower",
+  "height_m": 24.4,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "Sources do not describe what remains at the site.",
   "registers": [],
-  "agency": null,
+  "agency": "Ontario Department of Lands and Forests",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,12 +38,37 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1963,
+      "event": "other",
+      "note": "Shown as an 80 foot steel tower on the Department of Lands and Forests Tower Detection System Map (1963)",
+      "from": "research",
+      "source_url": "https://firelookout.ca/lookouts/?slug=laurier-fire-tower"
+    },
+    {
+      "year": 1969,
+      "event": "other",
+      "note": "Not among the four towers still actively staffed in 1969 (Ardbeg, Go Home, Stormy Lake, Boulter)",
+      "from": "research",
+      "source_url": "https://en.wikipedia.org/wiki/Parry_Sound_District"
+    }
+  ],
   "photos": [],
   "links": [
     {
+      "label": "Parry Sound District (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Parry_Sound_District",
+      "kind": "reference"
+    },
+    {
       "label": "Laurier Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=laurier-fire-tower",
+      "kind": "site"
+    },
+    {
+      "label": "Laurier on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/ontario.html",
       "kind": "site"
     }
   ],
@@ -59,10 +85,37 @@
         "material",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:on:index-laurier",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-laurier",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

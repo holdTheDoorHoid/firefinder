@@ -1,0 +1,22 @@
+{
+  "id": "ca-on-moses",
+  "researched": "2026-10-20",
+  "summary": "Land Information Ontario lists a Moses Fire Tower point, verified in 2010, with no height, build date or status; no other source found.",
+  "evidence": [
+    {"cite": [1], "supports": "point at about 46.5653 N, 81.9986 W", "quote": "\"coordinates\":[-81.998604516247553,46.565308938727028]"},
+    {"cite": [1], "supports": "record name is Moses Fire Tower", "quote": "\"OFFICIAL_NAME\":\"Moses Fire Tower\""},
+    {"cite": [1], "supports": "point accurate to within 50 metres", "quote": "\"LOCATION_ACCURACY\":\"Within 50 metres\""},
+    {"cite": [1], "supports": "record marked verified", "quote": "\"VERIFICATION_STATUS_FLG\":\"Verified\""},
+    {"cite": [1], "supports": "verified in February 2010", "quote": "\"VERIFICATION_STATUS_DATE\":1265241600000"},
+    {"cite": [1], "supports": "second entry SF-56 listed with location description Moses Twp.", "quote": "\"TOWER_IDENT\":\"SF-56\""},
+    {"cite": [1], "supports": "second entry location description Moses Twp.", "quote": "\"LOCATION_DESCR\":\"Moses Twp.\""},
+    {"cite": [1], "supports": "SF-56 point about 4 km north-west of the Moses point", "quote": "\"coordinates\":[-82.042989633070519,46.587019039726663]"},
+    {"cite": [1], "supports": "SF-56 entry marked verified in April 1998", "quote": "\"VERIFICATION_STATUS_DATE\":893116800000"}
+  ],
+  "sources": [
+    {"n": 1, "title": "Fire Tower records, tower layer (LIO_Open10, layer 14)", "publisher": "Land Information Ontario, Government of Ontario", "url": "https://ws.lioservices.lrc.gov.on.ca/arcgis2/rest/services/LIO_OPEN_DATA/LIO_Open10/MapServer/14/query?where=CLASS_SUBTYPE%3D%27Fire%20Tower%27&outFields=*&outSR=4326&f=geojson", "accessed": "2026-10-20"}
+  ],
+  "verification": {"checked": "2026-10-20", "claims_checked": 4, "unsupported_removed": 0, "errors_fixed": 1, "quotes_spot_checked": 9, "quotes_not_found": 0, "verdict": "fixed"},
+  "confidence": "low",
+  "notes_for_editor": "Only the Land Information Ontario tower-layer record. The layer has no height, build date, purpose, power or status for this point. Two web searches returned nothing relevant, and a guessed firelookout.ca slug returned a 404, so there is no second source. The second layer entry, SF-56 (location 'Moses Twp.', about 4.2 km north-west by straight-line distance from the two coordinates), may be a separate tower or a duplicate; check before merging or hiding either. The story gives Ontario only because the brief has no local_unit or county. The brief's record matches the layer point, so no corrections."
+}

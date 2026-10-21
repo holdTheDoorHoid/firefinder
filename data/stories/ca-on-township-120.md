@@ -1,0 +1,8 @@
+Township 120 Fire Tower is a point in Land Information Ontario's tower layer, where it is classed as a fire tower with a verified location accurate to within 50 metres.[^1] The layer places it at about 46.62 N, 81.97 W, and says its location came from an AFFM tower dataset.[^1]
+
+The record has no build date, height or manufacturer for the tower.[^1] Wider context comes from a hobbyist history of Ontario's towers. That history dates most of them to the decades from the 1920s to the 1950s, a high point for forest-fire control, and places them under the former Department of Lands and Forests, which gave way to the Ministry of Natural Resources in 1972.[^2] As the 1960s went on, aerial spotting and fire-fighting crews took over, and the towers saw steadily less use.[^2] The same history says the government decided to have many of them destroyed because it wanted no lawsuits from people who might be hurt climbing unmanned towers, and that the work was done either by blowing them down with explosives or by forest ranger crews dismantling them bit by bit.[^2]
+
+No source I could read describes what, if anything, remains at the site today, or whether the public can visit it.[^1][^2]
+
+[^1]: Tower layer record, LIO_Open10 layer 14 (Fire Tower subtype), Land Information Ontario, Government of Ontario, https://ws.lioservices.lrc.gov.on.ca/arcgis2/rest/services/LIO_OPEN_DATA/LIO_Open10/MapServer/14/query?where=CLASS_SUBTYPE%3D%27Fire+Tower%27&outFields=%2A&outSR=4326&f=geojson (accessed 2026-10-20).
+[^2]: Ontario's Fire Tower Lookouts: Preserving Their History, forestrangers.github.io (hobbyist site), https://forestrangers.github.io/ontariofiretowers/ (accessed 2026-10-20).

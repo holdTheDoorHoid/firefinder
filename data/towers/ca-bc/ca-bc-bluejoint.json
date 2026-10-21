@@ -7,14 +7,14 @@
   ],
   "country": "CA",
   "region": "BC",
-  "county": null,
+  "county": "Regional District of Kootenay Boundary",
   "location": {
-    "lat": 49.55365,
-    "lon": -118.52049,
+    "lat": 49.55368,
+    "lon": -118.52048,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "bc_trim_lookouts"
   },
-  "elevation_m": null,
+  "elevation_m": 2363.0,
   "kind": "two_story",
   "material": null,
   "material_from": null,
@@ -59,11 +59,6 @@
   "photos": [],
   "links": [
     {
-      "label": "Bluejoint (Canada Lookouts)",
-      "url": "https://canada-lookouts.weebly.com/bluejoint.html",
-      "kind": "reference"
-    },
-    {
       "label": "Bluejoint Mountain (trip report, July 2025) (sonnybou.ca)",
       "url": "http://sonnybou.ca/ssbou2025/bluejoint.html",
       "kind": "reference"
@@ -79,6 +74,16 @@
       "kind": "site"
     },
     {
+      "label": "Bluejoint on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/bluejoint.html",
+      "kind": "site"
+    },
+    {
+      "label": "BC base map (TRIM): fire lookout symbol 16255",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/d1fc9c40-c3ba-4ae4-ae5a-838ad3c43289",
+      "kind": "agency"
+    },
+    {
       "label": "OpenStreetMap way 1459963351",
       "url": "https://www.openstreetmap.org/way/1459963351",
       "kind": "osm"
@@ -90,7 +95,6 @@
       "key": "firelookout_ca:12544",
       "fields": [
         "name",
-        "location",
         "links"
       ]
     },
@@ -101,6 +105,23 @@
         "kind",
         "status",
         "access",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:bluejoint",
+      "fields": [
+        "elevation_m",
+        "links"
+      ]
+    },
+    {
+      "source": "bc_trim_lookouts",
+      "key": "bc_trim_lookouts:bc:16255",
+      "fields": [
+        "location",
+        "county",
         "links"
       ]
     },

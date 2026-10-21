@@ -1,6 +1,7 @@
 {
   "id": "ca-on-wylie-2",
-  "name": "Wylie",
+  "name": "Wylie Fire Tower",
+  "summary": "Ontario tower listed at Laurentian Hills and called active by firelookout.ca; fan lists place it in Petawawa Research Forest; no build date found.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
@@ -18,7 +19,7 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
   "registers": [],
   "agency": null,
@@ -41,6 +42,21 @@
   "photos": [],
   "links": [
     {
+      "label": "Ontario's Fire Tower Lookouts (Forest Rangers fan site)",
+      "url": "https://forestrangers.github.io/ontariofiretowers/",
+      "kind": "reference"
+    },
+    {
+      "label": "Ontario Fire Towers Still Standing (Forest Rangers fan site)",
+      "url": "https://forestrangers.github.io/ontariofiretowers/stillstanding2.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Wylie Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
+      "url": "https://firelookout.ca/lookouts/?slug=wylie-fire-tower",
+      "kind": "site"
+    },
+    {
       "label": "Land Information Ontario: Tower layer (fire towers)",
       "url": "https://geohub.lio.gov.on.ca/datasets/mnrf::tower",
       "kind": "agency"
@@ -48,18 +64,64 @@
   ],
   "sources": [
     {
+      "source": "firelookout_ca",
+      "key": "firelookout_ca:11354",
+      "fields": [
+        "name",
+        "status",
+        "links"
+      ]
+    },
+    {
       "source": "ontario_lio",
       "key": "ontario_lio:900862195",
       "fields": [
-        "name",
         "location",
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-wylie-2",
+      "fields": [
+        "summary",
+        "status",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "ontario_lio",
+          "value": {
+            "lat": 45.949422,
+            "lon": -77.580794
+          }
+        },
+        {
+          "source": "firelookout_ca",
+          "value": {
+            "lat": 45.96532,
+            "lon": -77.54564
+          }
+        }
+      ],
+      "distance_m": 3242,
+      "note": null
+    }
+  ],
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,10 +1,13 @@
 {
   "id": "ca-on-st-nora",
   "name": "St. Nora Fire Tower",
-  "other_names": [],
+  "summary": "Wooden lookouts from 1922, then a 100-foot steel tower manned until 1970; the standing tower is a reassembled replacement, not open to the public.",
+  "other_names": [
+    "Sherbourne"
+  ],
   "country": "CA",
   "region": "ON",
-  "county": null,
+  "county": "Haliburton County",
   "location": {
     "lat": 45.162526,
     "lon": -78.845027,
@@ -16,16 +19,16 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "unknown",
+  "design": "100-foot heavy steel tower, reassembled from a Pembroke District replacement",
+  "height_m": 30.5,
+  "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Ontario Ministry of Natural Resources",
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "closed",
+    "note": "Not open to the public, per the Algonquin Highlands heritage map. The Frost Centre site was reported sold in April 2026; no source says whether the tower is part of the sale."
   },
   "staffing": {
     "status": "unknown",
@@ -37,12 +40,97 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1922,
+      "event": "built",
+      "note": "First tower, wooden and 50 ft (15 m) high, on the west side of the channel to Kushog Lake",
+      "from": "research",
+      "source_url": "https://heritagemapsalgonquin.com/map/historic-sites/attractions/st-nora-fire-tower",
+      "source_urls": [
+        "https://heritagemapsalgonquin.com/map/historic-sites/attractions/st-nora-fire-tower",
+        "https://canada-lookouts.weebly.com/st-nora.html"
+      ]
+    },
+    {
+      "year": 1939,
+      "event": "built",
+      "note": "Second wooden tower on the hill west of Highway 35, opposite the present Frost Centre campus",
+      "from": "research",
+      "source_url": "https://heritagemapsalgonquin.com/map/historic-sites/attractions/st-nora-fire-tower"
+    },
+    {
+      "year": 1949,
+      "event": "replaced",
+      "note": "100-foot steel tower erected on the present site, replacing the earlier structure",
+      "from": "research",
+      "source_url": "https://heritagemapsalgonquin.com/map/historic-sites/attractions/st-nora-fire-tower",
+      "source_urls": [
+        "https://heritagemapsalgonquin.com/map/historic-sites/attractions/st-nora-fire-tower",
+        "https://canada-lookouts.weebly.com/st-nora.html"
+      ]
+    },
+    {
+      "year": 1970,
+      "event": "staffed_last",
+      "note": "Manned until 1970, when aircraft detection had gradually replaced lookout towers",
+      "from": "research",
+      "source_url": "https://heritagemapsalgonquin.com/map/historic-sites/attractions/st-nora-fire-tower"
+    },
+    {
+      "year": 1974,
+      "event": "relocated",
+      "note": "Replacement tower acquired from Pembroke District and reassembled for demonstration; Canada Lookouts instead says a new tower was built",
+      "from": "research",
+      "source_url": "https://heritagemapsalgonquin.com/map/historic-sites/attractions/st-nora-fire-tower",
+      "source_urls": [
+        "https://heritagemapsalgonquin.com/map/historic-sites/attractions/st-nora-fire-tower",
+        "https://canada-lookouts.weebly.com/st-nora.html"
+      ]
+    },
+    {
+      "year": 1974,
+      "event": "removed",
+      "note": "Steel tower demolished under a policy of removing towers no longer in use for safety reasons",
+      "from": "research",
+      "source_url": "https://heritagemapsalgonquin.com/map/historic-sites/attractions/st-nora-fire-tower"
+    }
+  ],
   "photos": [],
   "links": [
     {
+      "label": "St. Nora Fire Tower - Algonquin Highlands Heritage Map",
+      "url": "https://heritagemapsalgonquin.com/map/historic-sites/attractions/st-nora-fire-tower",
+      "kind": "reference"
+    },
+    {
+      "label": "St. Nora (Canada Lookouts)",
+      "url": "https://canada-lookouts.weebly.com/st-nora.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Frost Centre - Algonquin Highlands Heritage Map",
+      "url": "https://heritagemapsalgonquin.com/map/historic-sites/attractions/frost-centre",
+      "kind": "reference"
+    },
+    {
+      "label": "Frost Centre is Sold! (Canoe FM)",
+      "url": "https://canoefm.com/2026/04/frost-centre-is-sold/",
+      "kind": "reference"
+    },
+    {
+      "label": "Remembering the Leslie M. Frost Centre & reimagining its future (Frequency News)",
+      "url": "https://www.frequencynews.ca/news/remembering-the-leslie-m-frost-centre-reimagining-its-future/",
+      "kind": "reference"
+    },
+    {
       "label": "St. Nora Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=st-nora-fire-tower",
+      "kind": "site"
+    },
+    {
+      "label": "Sherbourne on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/ontario.html",
       "kind": "site"
     },
     {
@@ -68,10 +156,39 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:on:index-sherbourne",
+      "fields": [
+        "county",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-st-nora",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

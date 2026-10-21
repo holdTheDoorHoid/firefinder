@@ -1,6 +1,7 @@
 {
   "id": "ca-on-bullbrook",
   "name": "Bullbrook",
+  "summary": "Bullbrook fire tower point in Ontario's Land Information Ontario tower layer at 47.34 N, 82.82 W; no history source found.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
@@ -41,6 +42,16 @@
   "photos": [],
   "links": [
     {
+      "label": "Fire Tower records, tower layer (LIO_Open10, layer 14) (Land Information Ontario, Government of Ontario)",
+      "url": "https://ws.lioservices.lrc.gov.on.ca/arcgis2/rest/services/LIO_OPEN_DATA/LIO_Open10/MapServer/14/query?where=CLASS_SUBTYPE%3D%27Fire+Tower%27&outFields=%2A&outSR=4326&f=geojson",
+      "kind": "reference"
+    },
+    {
+      "label": "Ontario's Fire Tower Lookouts: Preserving Their History (Clay (forestrangers.github.io))",
+      "url": "https://forestrangers.github.io/ontariofiretowers/",
+      "kind": "reference"
+    },
+    {
       "label": "Land Information Ontario: Tower layer (fire towers)",
       "url": "https://geohub.lio.gov.on.ca/datasets/mnrf::tower",
       "kind": "agency"
@@ -56,10 +67,25 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-bullbrook",
+      "fields": [
+        "summary",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

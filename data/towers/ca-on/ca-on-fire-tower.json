@@ -1,10 +1,14 @@
 {
   "id": "ca-on-fire-tower",
-  "name": "Fire Tower",
-  "other_names": [],
+  "name": "Bonheur Tower (now at Ignace)",
+  "other_names": [
+    "Ignace",
+    "Bonheur Tower (display)",
+    "History of the Fire Tower marker"
+  ],
   "country": "CA",
   "region": "ON",
-  "county": null,
+  "county": "Kenora District",
   "location": {
     "lat": 49.416233,
     "lon": -91.666064,
@@ -21,7 +25,7 @@
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Ontario Department of Lands and Forests (to 1972), then Ministry of Natural Resources",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,9 +41,34 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1941,
+      "event": "built",
+      "note": null,
+      "from": "survey_on"
+    },
+    {
+      "year": null,
+      "event": "relocated",
+      "note": "Moved from Bonheur Tower to Ignace.",
+      "from": "survey_on",
+      "moved_from": "Bonheur Tower",
+      "moved_to": "Ignace"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "The Historical Marker Database (hmdb.org)",
+      "url": "https://www.hmdb.org/m.asp?m=243299",
+      "kind": "reference"
+    },
+    {
+      "label": "Ignace on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/ignace.html",
+      "kind": "site"
+    },
     {
       "label": "OpenStreetMap node 6610059192",
       "url": "https://www.openstreetmap.org/node/6610059192",
@@ -51,16 +80,49 @@
       "source": "osm",
       "key": "osm:node/6610059192",
       "fields": [
-        "name",
         "location",
         "kind",
         "height_m",
         "status",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:on:ignace",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "survey_on",
+      "key": "survey_on:on:ignace-fire-tower-relocated-bonheur-tower",
+      "fields": [
+        "name",
+        "county",
+        "agency",
+        "events",
+        "links"
+      ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "osm",
+          "value": "standing"
+        },
+        {
+          "source": "survey_on",
+          "value": "relocated"
+        }
+      ],
+      "distance_m": null,
+      "note": null
+    }
+  ],
   "verification": "unverified",
   "locked": [],
   "hidden": false,

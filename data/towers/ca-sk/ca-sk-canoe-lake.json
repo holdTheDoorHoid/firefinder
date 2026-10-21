@@ -1,6 +1,7 @@
 {
   "id": "ca-sk-canoe-lake",
   "name": "Canoe Lake Fire Tower",
+  "summary": "Firelookout.ca lists the Canoe Lake tower at Canoe Lake 165; a towermen list ties Canoe Lake to several men, but no source describes the site today.",
   "other_names": [],
   "country": "CA",
   "region": "SK",
@@ -9,10 +10,10 @@
     "lat": 55.11914,
     "lon": -108.19814,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "websiteservice_sk"
   },
   "elevation_m": null,
-  "kind": "unknown",
+  "kind": "tower",
   "material": null,
   "material_from": null,
   "roles": [],
@@ -21,15 +22,16 @@
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Saskatchewan Public Safety Agency (formerly Dept. of Natural Resources)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": null,
+    "note": "No observer: Saskatchewan moved its towers to detection cameras from 2013-14."
   },
   "visit": {
     "climbable": null,
@@ -37,12 +39,42 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1989,
+      "event": "staffed",
+      "note": "Clement Durocher is listed at Canoe Lake for 1989 to 2002 on the websiteservice.ca towermen list.",
+      "from": "research",
+      "source_url": "https://www.websiteservice.ca/firetowermen.htm"
+    },
+    {
+      "year": 1999,
+      "event": "staffed",
+      "note": "Kevin Durocher is listed at Canoe Lake for 1999 to 2002 on the same list.",
+      "from": "research",
+      "source_url": "https://www.websiteservice.ca/firetowermen.htm"
+    }
+  ],
   "photos": [],
   "links": [
     {
+      "label": "Firetowers of Saskatchewan: Firetowermen and Women (websiteservice.ca)",
+      "url": "https://www.websiteservice.ca/firetowermen.htm",
+      "kind": "reference"
+    },
+    {
       "label": "Canoe Lake Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=canoe-lake-fire-tower",
+      "kind": "site"
+    },
+    {
+      "label": "Canoe Lake Fire Tower on Firetowers of Saskatchewan (websiteservice.ca)",
+      "url": "https://www.websiteservice.ca/firetowers_page4.htm",
+      "kind": "site"
+    },
+    {
+      "label": "Canoe Lake on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/canoe-lake.html",
       "kind": "site"
     }
   ],
@@ -52,13 +84,52 @@
       "key": "firelookout_ca:11834",
       "fields": [
         "name",
-        "location",
         "links"
+      ]
+    },
+    {
+      "source": "websiteservice_sk",
+      "key": "websiteservice_sk:sk:canoe-lake-fire-tower",
+      "fields": [
+        "location",
+        "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:sk:canoe-lake",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "survey_prairies_north",
+      "key": "survey_prairies_north:sk:canoe-lake-fire-tower",
+      "fields": [
+        "agency",
+        "staffing"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-sk-canoe-lake",
+      "fields": [
+        "summary",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "pass",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

@@ -1,10 +1,13 @@
 {
   "id": "ca-on-kwagama-mountain",
   "name": "Kwagama Mountain Fire Tower",
-  "other_names": [],
+  "summary": "Fire tower on Kwagama Hill near Agawa Canyon, Ontario, brought down in 1965; a hiking guide says the twisted remains are still visible at the summit.",
+  "other_names": [
+    "Kwagama Hill"
+  ],
   "country": "CA",
   "region": "ON",
-  "county": null,
+  "county": "Algoma District",
   "location": {
     "lat": 47.41475,
     "lon": -84.55923,
@@ -19,7 +22,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Brought down in 1965 (register: windstorm; guide: heavy ice storm); a hiking guide says the twisted metal remains are still visible at the summit",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -32,24 +35,39 @@
     "as_of": null
   },
   "visit": {
-    "climbable": null,
+    "climbable": false,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "The tower is gone. The guide describes a route along logging roads, a gate at kilometre 16 that is often open, and a bushwhack to the summit"
   },
   "rental": null,
   "events": [
     {
       "year": 1965,
       "event": "destroyed",
-      "note": "Blown down in a windstorm.",
-      "from": "firelookout_ca"
+      "note": "Register says the tower blew down in a 1965 windstorm; the hiking guide says a heavy ice storm knocked it down in 1965",
+      "from": "research",
+      "source_url": "http://www.ontariohighpoints.com/kwagama-hill/",
+      "source_urls": [
+        "http://www.ontariohighpoints.com/kwagama-hill/",
+        "https://firelookout.ca/lookouts/?slug=kwagama-mountain-fire-tower"
+      ]
     }
   ],
   "photos": [],
   "links": [
     {
+      "label": "Kwagama Hill (Ontario High Points)",
+      "url": "http://www.ontariohighpoints.com/kwagama-hill/",
+      "kind": "reference"
+    },
+    {
       "label": "Kwagama Mountain Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=kwagama-mountain-fire-tower",
+      "kind": "site"
+    },
+    {
+      "label": "Kwagama Hill on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/ontario.html",
       "kind": "site"
     }
   ],
@@ -64,10 +82,36 @@
         "events",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:on:index-kwagama-hill",
+      "fields": [
+        "county",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-kwagama-mountain",
+      "fields": [
+        "summary",
+        "status",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

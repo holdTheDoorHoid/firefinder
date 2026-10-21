@@ -1,6 +1,7 @@
 {
   "id": "ca-on-moses",
   "name": "Moses Fire Tower",
+  "summary": "Land Information Ontario lists a Moses Fire Tower point, verified in 2010, with no height, build date or status; no other source found.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
@@ -41,6 +42,11 @@
   "photos": [],
   "links": [
     {
+      "label": "Fire Tower records, tower layer (LIO_Open10, layer 14) (Land Information Ontario, Government of Ontario)",
+      "url": "https://ws.lioservices.lrc.gov.on.ca/arcgis2/rest/services/LIO_OPEN_DATA/LIO_Open10/MapServer/14/query?where=CLASS_SUBTYPE%3D%27Fire%20Tower%27&outFields=*&outSR=4326&f=geojson",
+      "kind": "reference"
+    },
+    {
       "label": "Land Information Ontario: Tower layer (fire towers)",
       "url": "https://geohub.lio.gov.on.ca/datasets/mnrf::tower",
       "kind": "agency"
@@ -56,10 +62,25 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-moses",
+      "fields": [
+        "summary",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

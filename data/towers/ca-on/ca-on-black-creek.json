@@ -5,7 +5,7 @@
   "other_names": [],
   "country": "CA",
   "region": "ON",
-  "county": null,
+  "county": "Algoma District",
   "location": {
     "lat": 46.82836,
     "lon": -83.28312,
@@ -50,6 +50,11 @@
       "label": "Black Creek Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=black-creek-fire-tower",
       "kind": "site"
+    },
+    {
+      "label": "Black Creek on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/ontario.html",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -60,6 +65,14 @@
         "name",
         "location",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:on:index-black-creek",
+      "fields": [
+        "county",
         "links"
       ]
     },

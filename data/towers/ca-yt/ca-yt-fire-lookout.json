@@ -1,7 +1,10 @@
 {
   "id": "ca-yt-fire-lookout",
-  "name": "Fire Lookout",
-  "other_names": [],
+  "name": "Dome Lookout",
+  "other_names": [
+    "Second Dome",
+    "Dawson Lookout"
+  ],
   "country": "CA",
   "region": "YT",
   "county": null,
@@ -21,15 +24,15 @@
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Yukon Wildland Fire Management (Government of Yukon)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": 2024
   },
   "visit": {
     "climbable": null,
@@ -37,9 +40,31 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1963,
+      "event": "built",
+      "note": null,
+      "from": "survey_bc_yt"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "trinamoyles.com",
+      "url": "https://www.trinamoyles.com/field-notes/keeping-watch-dawson-fire-tower",
+      "kind": "reference"
+    },
+    {
+      "label": "explorenorth.com",
+      "url": "https://explorenorth.com/yukon/haeckel_hill-forestry_tower.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Dome on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/dome.html",
+      "kind": "site"
+    },
     {
       "label": "OpenStreetMap node 2661618350",
       "url": "https://www.openstreetmap.org/node/2661618350",
@@ -51,10 +76,27 @@
       "source": "osm",
       "key": "osm:node/2661618350",
       "fields": [
-        "name",
         "location",
         "kind",
         "status",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:yt:dome",
+      "fields": [
+        "name",
+        "links"
+      ]
+    },
+    {
+      "source": "survey_bc_yt",
+      "key": "survey_bc_yt:yt:dome-lookout",
+      "fields": [
+        "agency",
+        "staffing",
+        "events",
         "links"
       ]
     }

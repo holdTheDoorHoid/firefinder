@@ -36,7 +36,7 @@
     "note": "Hiking access in E.C. Manning Provincial Park, administered by BC Parks. A 2004 visit report says the tower was completely open to visitors. No source read describes current access."
   },
   "staffing": {
-    "status": "unknown",
+    "status": "unstaffed",
     "as_of": null
   },
   "visit": {
@@ -87,6 +87,11 @@
       "kind": "register"
     },
     {
+      "label": "openmaps.gov.bc.ca",
+      "url": "https://openmaps.gov.bc.ca/geo/pub/ows?service=WFS&typeNames=pub:WHSE_BASEMAPPING.TRIM_EBM_LANDMARKSTRUCTURES",
+      "kind": "reference"
+    },
+    {
       "label": "Windy Joe Lookout, Canadian Register of Historic Places entry 18052 (Heritage Guide)",
       "url": "https://heritageguide.ca/windy-joe-lookout-princeton-british-columbia",
       "kind": "reference"
@@ -102,8 +107,23 @@
       "kind": "site"
     },
     {
+      "label": "Windy Joe on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/windy-joe.html",
+      "kind": "site"
+    },
+    {
+      "label": "BC base map (TRIM): fire lookout symbol 22340",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/d1fc9c40-c3ba-4ae4-ae5a-838ad3c43289",
+      "kind": "agency"
+    },
+    {
       "label": "Wikidata item Q86120559",
       "url": "https://www.wikidata.org/wiki/Q86120559",
+      "kind": "wikidata"
+    },
+    {
+      "label": "Wikidata item Q86120559",
+      "url": "http://www.wikidata.org/entity/Q86120559",
       "kind": "wikidata"
     },
     {
@@ -149,6 +169,28 @@
       "key": "osm:way/319466257",
       "fields": [
         "events",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:windy-joe",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "bc_trim_lookouts",
+      "key": "bc_trim_lookouts:bc:22340",
+      "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "survey_bc_yt",
+      "key": "survey_bc_yt:bc:windy-joe-lookout",
+      "fields": [
+        "staffing",
         "links"
       ]
     },

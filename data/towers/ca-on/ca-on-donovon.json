@@ -1,22 +1,23 @@
 {
   "id": "ca-on-donovon",
   "name": "Donovon Fire Tower",
+  "summary": "Steel fire tower in the Timiskaming District at 587 m; the only source found is a Firelookout.ca record with no build date, agency or history.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
   "county": "Timiskaming District",
   "location": {
-    "lat": 47.4785,
-    "lon": -80.78207,
-    "precision": "approximate",
-    "from": "firelookout_ca"
+    "lat": 47.474439,
+    "lon": -80.781628,
+    "precision": "exact",
+    "from": "ontario_lio"
   },
   "elevation_m": 587.0,
   "kind": "tower",
   "material": "steel",
   "material_from": "firelookout_ca",
   "roles": [],
-  "design": null,
+  "design": "Steel tower",
   "height_m": null,
   "status": "unknown",
   "status_note": null,
@@ -44,6 +45,11 @@
       "label": "Donovon Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=donovon-fire-tower",
       "kind": "site"
+    },
+    {
+      "label": "Land Information Ontario: Tower layer (fire towers)",
+      "url": "https://geohub.lio.gov.on.ca/datasets/mnrf::tower",
+      "kind": "agency"
     }
   ],
   "sources": [
@@ -52,17 +58,40 @@
       "key": "firelookout_ca:9919",
       "fields": [
         "name",
-        "location",
         "county",
         "elevation_m",
         "kind",
         "material",
         "links"
       ]
+    },
+    {
+      "source": "ontario_lio",
+      "key": "ontario_lio:701163167",
+      "fields": [
+        "location",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-donovon",
+      "fields": [
+        "summary",
+        "design",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "pass",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

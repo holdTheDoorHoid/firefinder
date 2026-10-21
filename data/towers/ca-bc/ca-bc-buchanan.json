@@ -61,6 +61,13 @@
       "source_url": "https://www.francisbaileyh.com/2022/10/09/mount-buchanan/"
     },
     {
+      "year": 1949,
+      "event": "built",
+      "note": "A lookout structure was built this year. (Dated on Canada's Fire Lookouts.)",
+      "from": "canada_lookouts_weebly",
+      "source_url": "https://canada-lookouts.weebly.com/buchanan.html"
+    },
+    {
       "year": 1965,
       "event": "replaced",
       "note": "Present cab and 18 ft concrete block tower replaced the first lookout.",
@@ -133,9 +140,14 @@
       "kind": "site"
     },
     {
-      "label": "Website (sitesandtrailsbc.ca)",
+      "label": "Buchanan on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/buchanan.html",
+      "kind": "site"
+    },
+    {
+      "label": "Recreation Sites and Trails BC: Buchanan Lookout (REC2105)",
       "url": "https://www.sitesandtrailsbc.ca/resource/REC2105",
-      "kind": "website"
+      "kind": "agency"
     },
     {
       "label": "Wikidata item Q86927234",
@@ -175,6 +187,14 @@
       ]
     },
     {
+      "source": "bc_rec_sites",
+      "key": "bc_rec_sites:bc:rec2105",
+      "fields": [
+        "access",
+        "links"
+      ]
+    },
+    {
       "source": "wikidata",
       "key": "wikidata:Q86927234",
       "fields": [
@@ -185,6 +205,14 @@
       "source": "osm",
       "key": "osm:way/220292294",
       "fields": [
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:buchanan",
+      "fields": [
+        "events",
         "links"
       ]
     },
@@ -204,7 +232,29 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "nhlr",
+          "value": {
+            "lat": 49.938044,
+            "lon": -116.947154
+          }
+        },
+        {
+          "source": "canada_lookouts_weebly",
+          "value": {
+            "lat": 49.95,
+            "lon": -116.95
+          }
+        }
+      ],
+      "distance_m": 1345,
+      "note": null
+    }
+  ],
   "research": {
     "researched": "2026-10-20",
     "checked": "2026-10-20",

@@ -1,35 +1,37 @@
 {
   "id": "ca-sk-divide",
   "name": "Divide Fire Tower",
+  "summary": "Meadow Lake No. 588 tower; remodelled 1951, replaced by a modern steel tower in 1965; towermen listed in 1998-2002; no source describes the site today.",
   "other_names": [],
   "country": "CA",
   "region": "SK",
   "county": "Meadow Lake No. 588",
   "location": {
-    "lat": 53.872,
-    "lon": -108.4301,
+    "lat": 53.87644,
+    "lon": -108.44533,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "websiteservice_sk"
   },
   "elevation_m": null,
-  "kind": "unknown",
+  "kind": "tower",
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Modern steel tower (replacement, 1965)",
   "height_m": null,
   "status": "unknown",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Saskatchewan Public Safety Agency (formerly Dept. of Natural Resources)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "unstaffed",
+    "as_of": null,
+    "note": "No observer: Saskatchewan moved its towers to detection cameras from 2013-14."
   },
   "visit": {
     "climbable": null,
@@ -37,12 +39,56 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1951,
+      "event": "modified",
+      "note": "Remodelled with new cables and aerials as part of a maintenance programme, per the Department of Natural Resources annual report for 1951-52.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/divide.html"
+    },
+    {
+      "year": 1965,
+      "event": "replaced",
+      "note": "Old lookout structure replaced with a modern steel tower, per the Department of Natural Resources annual report for 1965-66.",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/divide.html"
+    },
+    {
+      "year": 1998,
+      "event": "staffed",
+      "note": "Vallery Morin is listed at Divide from 1998 to 2002.",
+      "from": "research",
+      "source_url": "https://www.websiteservice.ca/firetowermen.htm"
+    },
+    {
+      "year": 2002,
+      "event": "staffed_last",
+      "note": "Last year of the only dated Divide towerman entry.",
+      "from": "research",
+      "source_url": "https://www.websiteservice.ca/firetowermen.htm"
+    }
+  ],
   "photos": [],
   "links": [
     {
+      "label": "Firetowermen & Women (Website Service (websiteservice.ca))",
+      "url": "https://www.websiteservice.ca/firetowermen.htm",
+      "kind": "reference"
+    },
+    {
       "label": "Divide Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=divide-fire-tower",
+      "kind": "site"
+    },
+    {
+      "label": "Divide Fire Tower on Firetowers of Saskatchewan (websiteservice.ca)",
+      "url": "https://www.websiteservice.ca/firetowers_page4.htm",
+      "kind": "site"
+    },
+    {
+      "label": "Divide on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/divide.html",
       "kind": "site"
     }
   ],
@@ -52,14 +98,77 @@
       "key": "firelookout_ca:11916",
       "fields": [
         "name",
-        "location",
         "county",
         "links"
       ]
+    },
+    {
+      "source": "websiteservice_sk",
+      "key": "websiteservice_sk:sk:divide-fire-tower",
+      "fields": [
+        "location",
+        "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:sk:divide",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "survey_prairies_north",
+      "key": "survey_prairies_north:sk:divide-fire-tower",
+      "fields": [
+        "agency",
+        "staffing"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-sk-divide",
+      "fields": [
+        "summary",
+        "design",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "websiteservice_sk",
+          "value": {
+            "lat": 53.87644,
+            "lon": -108.44533
+          }
+        },
+        {
+          "source": "firelookout_ca",
+          "value": {
+            "lat": 53.872,
+            "lon": -108.4301
+          }
+        }
+      ],
+      "distance_m": 1114,
+      "note": null
+    }
+  ],
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

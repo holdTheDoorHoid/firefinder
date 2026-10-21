@@ -1,6 +1,7 @@
 {
   "id": "ca-sk-blue-jay",
   "name": "Blue Jay Fire Tower",
+  "summary": "Saskatchewan tower listed at Moose Range No. 486 with coordinates only; Firelookout.ca doubts it still stands. No source describes the site today.",
   "other_names": [],
   "country": "CA",
   "region": "SK",
@@ -9,19 +10,19 @@
     "lat": 53.39781,
     "lon": -103.39556,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "websiteservice_sk"
   },
   "elevation_m": null,
-  "kind": "unknown",
+  "kind": "tower",
   "material": null,
   "material_from": null,
   "roles": [],
   "design": null,
   "height_m": null,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "Firelookout.ca says the writer is not sure the tower still stands. No other source gives a status.",
   "registers": [],
-  "agency": null,
+  "agency": "Saskatchewan Public Safety Agency (formerly Dept. of Natural Resources)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -29,7 +30,7 @@
   },
   "staffing": {
     "status": "unknown",
-    "as_of": null
+    "as_of": "undated"
   },
   "visit": {
     "climbable": null,
@@ -44,6 +45,11 @@
       "label": "Blue Jay Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=blue-jay-fire-tower",
       "kind": "site"
+    },
+    {
+      "label": "Blue Jay Fire Tower on Firetowers of Saskatchewan (websiteservice.ca)",
+      "url": "https://www.websiteservice.ca/firetowers_page4.htm",
+      "kind": "site"
     }
   ],
   "sources": [
@@ -52,14 +58,47 @@
       "key": "firelookout_ca:11821",
       "fields": [
         "name",
-        "location",
         "county",
         "links"
+      ]
+    },
+    {
+      "source": "websiteservice_sk",
+      "key": "websiteservice_sk:sk:blue-jay-fire-tower",
+      "fields": [
+        "location",
+        "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "survey_prairies_north",
+      "key": "survey_prairies_north:sk:blue-jay-fire-tower",
+      "fields": [
+        "agency",
+        "staffing"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-sk-blue-jay",
+      "fields": [
+        "summary",
+        "status",
+        "staffing",
+        "links",
+        "verification"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

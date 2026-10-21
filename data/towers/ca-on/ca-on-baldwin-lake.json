@@ -1,6 +1,7 @@
 {
   "id": "ca-on-baldwin-lake",
   "name": "Baldwin Lake Fire Tower",
+  "summary": "A guyed steel tower at Agnew Lake, Espanola went up in 1931 and was replaced by a steel tower in 1966; no recent site report found.",
   "other_names": [
     "Baldwin Fire Tower"
   ],
@@ -18,9 +19,9 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "unknown",
+  "design": "Guyed steel tower (1931), 24 m (80 ft); replaced in 1966 by a self-supporting steel tower, 30.5 m (100 ft)",
+  "height_m": 30.5,
+  "status": "standing",
   "status_note": null,
   "registers": [],
   "agency": null,
@@ -39,12 +40,37 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1931,
+      "event": "built",
+      "note": "Guyed steel tower, 24 m (80 ft)",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/baldwin.html"
+    },
+    {
+      "year": 1966,
+      "event": "replaced",
+      "note": "New self-supporting steel tower, 100 ft, replaced the earlier structure",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/baldwin.html"
+    }
+  ],
   "photos": [],
   "links": [
     {
+      "label": "Still standing towers (Ontario's Fire Tower Lookouts)",
+      "url": "https://forestrangers.github.io/ontariofiretowers/stillstanding2.html",
+      "kind": "reference"
+    },
+    {
       "label": "Baldwin Lake Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=baldwin-lake-fire-tower",
+      "kind": "site"
+    },
+    {
+      "label": "Baldwin on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/baldwin.html",
       "kind": "site"
     },
     {
@@ -70,10 +96,37 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:on:baldwin",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-baldwin-lake",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

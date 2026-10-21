@@ -1,6 +1,6 @@
 {
   "id": "ca-on-fire-tower-lio-200219944",
-  "name": "Fire tower (LIO 200219944)",
+  "name": "Bayly Fire Tower",
   "other_names": [],
   "country": "CA",
   "region": "ON",
@@ -18,17 +18,17 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "unknown",
-  "status_note": null,
+  "status": "standing",
+  "status_note": "Listed as still standing about 2009 to 2013 (Ontario's Fire Tower Lookouts); Ontario began removing towers in 2013, so check before you go.",
   "registers": [],
-  "agency": null,
+  "agency": "Ontario Department of Lands and Forests (to 1972), then Ministry of Natural Resources (network-wide, per source intro)",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
     "note": null
   },
   "staffing": {
-    "status": "unknown",
+    "status": "unstaffed",
     "as_of": null
   },
   "visit": {
@@ -41,6 +41,16 @@
   "photos": [],
   "links": [
     {
+      "label": "Ontario's Fire Tower Lookouts (forestrangers.github.io)",
+      "url": "https://forestrangers.github.io/ontariofiretowers/stillstanding2.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Bayly on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/bayly.html",
+      "kind": "site"
+    },
+    {
       "label": "Land Information Ontario: Tower layer (fire towers)",
       "url": "https://geohub.lio.gov.on.ca/datasets/mnrf::tower",
       "kind": "agency"
@@ -51,9 +61,26 @@
       "source": "ontario_lio",
       "key": "ontario_lio:200219944",
       "fields": [
-        "name",
         "location",
         "kind",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:on:bayly",
+      "fields": [
+        "name",
+        "links"
+      ]
+    },
+    {
+      "source": "survey_on",
+      "key": "survey_on:on:bayly-fire-tower",
+      "fields": [
+        "status",
+        "agency",
+        "staffing",
         "links"
       ]
     }

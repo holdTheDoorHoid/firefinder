@@ -1,10 +1,11 @@
 {
   "id": "ca-on-mctavish",
   "name": "McTavish Fire Tower",
+  "summary": "Steel tower built in 1950 in McTavish Township, Thunder Bay District; listed standing in 2018 and visible from the Amethyst Mine site.",
   "other_names": [],
   "country": "CA",
   "region": "ON",
-  "county": null,
+  "county": "Thunder Bay District",
   "location": {
     "lat": 48.708603,
     "lon": -88.729238,
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
-  "status": "unknown",
+  "design": "Steel tower with an octagon cab",
+  "height_m": 30.5,
+  "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Ontario Department of Lands and Forests",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -37,12 +38,37 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1949,
+      "event": "other",
+      "note": "Forest access road built north of Loon Lake to bring in supplies for the tower and towerman's cabin",
+      "from": "research",
+      "source_url": "https://www.amethystmine.com/mine-facilities/history/"
+    },
+    {
+      "year": 1950,
+      "event": "built",
+      "note": "Steel tower of about 30.5 m (100 ft) with octagon cab constructed",
+      "from": "research",
+      "source_url": "https://canada-lookouts.weebly.com/mctavish.html"
+    }
+  ],
   "photos": [],
   "links": [
     {
+      "label": "History of the Mine (Amethyst Mine Panorama)",
+      "url": "https://www.amethystmine.com/mine-facilities/history/",
+      "kind": "reference"
+    },
+    {
       "label": "McTavish Fire Tower on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=mctavish-fire-tower",
+      "kind": "site"
+    },
+    {
+      "label": "McTavish on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/mctavish.html",
       "kind": "site"
     },
     {
@@ -68,10 +94,39 @@
         "kind",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:on:mctavish",
+      "fields": [
+        "county",
+        "events",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-on-mctavish",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

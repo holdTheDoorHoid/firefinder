@@ -1,31 +1,32 @@
 {
   "id": "ca-bc-agate",
   "name": "Agate Fire Lookout",
+  "summary": "Commissioned 1955 and abandoned in the 1980s; a September 2021 trip report still found a fire lookout on the summit near Princeton, BC.",
   "other_names": [],
   "country": "CA",
   "region": "BC",
   "county": "Regional District of Okanagan-Similkameen",
   "location": {
-    "lat": 49.38203,
-    "lon": -120.40813,
+    "lat": 49.3832,
+    "lon": -120.40811,
     "precision": "exact",
-    "from": "firelookout_ca"
+    "from": "bc_trim_lookouts"
   },
-  "elevation_m": null,
+  "elevation_m": 1593.0,
   "kind": "unknown",
   "material": null,
   "material_from": null,
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "unknown",
+  "status": "standing",
   "status_note": null,
   "registers": [],
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Reached by forest roads and a walk. The sources name no gate or permit and describe no closure of the lookout itself."
   },
   "staffing": {
     "status": "unknown",
@@ -34,16 +35,63 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "Stock 4x4 route, 31.5 km (19.6 mi) one way from Copper Mountain Road, per one trip report. The accounts disagree on whether the Wolf Creek road is open."
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1955,
+      "event": "built",
+      "note": "Commissioned in 1955, per an undated visitor account.",
+      "from": "research",
+      "source_url": "https://steveamie.com/agate-fire-lookout-tower/"
+    },
+    {
+      "year": 1980,
+      "event": "abandoned",
+      "note": "The account gives only the decade (the 1980s); 1980 is entered as a stand-in for that decade.",
+      "from": "research",
+      "source_url": "https://steveamie.com/agate-fire-lookout-tower/"
+    },
+    {
+      "year": 2021,
+      "event": "other",
+      "note": "Trip report of September 2021 describes a fire lookout still on the summit.",
+      "from": "research",
+      "source_url": "https://stevensong.com/agate-mountain"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Agate Fire Lookout Tower (Life is Adventure (steveamie.com))",
+      "url": "https://steveamie.com/agate-fire-lookout-tower/",
+      "kind": "reference"
+    },
+    {
+      "label": "Agate Mountain (Steven's Peak-bagging Journey)",
+      "url": "https://stevensong.com/agate-mountain",
+      "kind": "reference"
+    },
+    {
+      "label": "Agate Mountain Fire Lookout - Willis Creek FSR (Untrammelled Travels)",
+      "url": "https://www.untrammelledtravels.ca/agate-mountain-fire-lookout-willis-creek-fsr",
+      "kind": "reference"
+    },
     {
       "label": "Agate Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=agate-fire-lookout",
       "kind": "site"
+    },
+    {
+      "label": "Agate on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/agate.html",
+      "kind": "site"
+    },
+    {
+      "label": "BC base map (TRIM): fire lookout symbol 4674",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/d1fc9c40-c3ba-4ae4-ae5a-838ad3c43289",
+      "kind": "agency"
     }
   ],
   "sources": [
@@ -52,14 +100,48 @@
       "key": "firelookout_ca:11991",
       "fields": [
         "name",
-        "location",
         "county",
         "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:agate",
+      "fields": [
+        "elevation_m",
+        "links"
+      ]
+    },
+    {
+      "source": "bc_trim_lookouts",
+      "key": "bc_trim_lookouts:bc:4674",
+      "fields": [
+        "location",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-agate",
+      "fields": [
+        "summary",
+        "status",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
       ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

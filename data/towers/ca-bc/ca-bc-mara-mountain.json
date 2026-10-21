@@ -1,18 +1,18 @@
 {
   "id": "ca-bc-mara-mountain",
-  "name": "Mara Mountain Lookout",
+  "name": "Mara Lookout",
   "summary": "Forest Service lookout on Morton Peak: built 1925, replaced 1950, used until 1998, restored from 2012. Reached by a 9.4 km trail or a rough 4x4 road.",
   "other_names": [
-    "Mara Fire Lookout"
+    "Mara Mountain Lookout"
   ],
   "country": "CA",
   "region": "BC",
-  "county": null,
+  "county": "Regional District of North Okanagan",
   "location": {
-    "lat": 50.765523,
-    "lon": -118.842923,
+    "lat": 50.765213,
+    "lon": -118.842678,
     "precision": "exact",
-    "from": "osm"
+    "from": "bc_rec_sites"
   },
   "elevation_m": null,
   "kind": "two_story",
@@ -24,7 +24,7 @@
   "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": null,
+  "agency": "Recreation Sites and Trails BC",
   "ownership": "unknown",
   "access": {
     "level": "public",
@@ -122,6 +122,16 @@
       "kind": "reference"
     },
     {
+      "label": "Mara on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/mara.html",
+      "kind": "site"
+    },
+    {
+      "label": "Recreation Sites and Trails BC: Mara Lookout (REC160153)",
+      "url": "https://www.sitesandtrailsbc.ca/resource/REC160153",
+      "kind": "agency"
+    },
+    {
       "label": "OpenStreetMap way 597917668",
       "url": "https://www.openstreetmap.org/way/597917668",
       "kind": "osm"
@@ -129,14 +139,30 @@
   ],
   "sources": [
     {
-      "source": "osm",
-      "key": "osm:way/597917668",
+      "source": "bc_rec_sites",
+      "key": "bc_rec_sites:bc:rec160153",
       "fields": [
         "name",
         "location",
+        "county",
+        "agency",
+        "access",
+        "links"
+      ]
+    },
+    {
+      "source": "osm",
+      "key": "osm:way/597917668",
+      "fields": [
         "kind",
         "status",
-        "access",
+        "links"
+      ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:mara",
+      "fields": [
         "links"
       ]
     },

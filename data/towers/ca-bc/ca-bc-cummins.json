@@ -1,7 +1,10 @@
 {
   "id": "ca-bc-cummins",
   "name": "Cummins Fire Lookout",
-  "other_names": [],
+  "summary": "Former BC fire lookout north of Revelstoke, reached by boat and a 5.5 km overgrown service road; no build or staffing history in the sources read.",
+  "other_names": [
+    "Cummins Mountain"
+  ],
   "country": "CA",
   "region": "BC",
   "county": "Columbia Shuswap Regional District",
@@ -11,7 +14,7 @@
     "precision": "exact",
     "from": "firelookout_ca"
   },
-  "elevation_m": null,
+  "elevation_m": 2363.0,
   "kind": "unknown",
   "material": null,
   "material_from": null,
@@ -19,7 +22,7 @@
   "design": null,
   "height_m": null,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "Firelookout.ca calls it a former BC Fire Lookout; no source read says whether the tower still stands.",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -34,15 +37,25 @@
   "visit": {
     "climbable": null,
     "drive_up": null,
-    "trail_note": null
+    "trail_note": "5.5 km (3.4 mi) one-way hike along an overgrown lookout tower service road, reached by a branch of the Wood River Forest Service Road and a boat ride across Kinbasket Lake."
   },
   "rental": null,
   "events": [],
   "photos": [],
   "links": [
     {
+      "label": "Fire Lookouts of British Columbia: History, Hikes & Where to Stay (Wild Bluebell)",
+      "url": "https://wildbluebell.ca/fire-lookouts-british-columbia",
+      "kind": "reference"
+    },
+    {
       "label": "Cummins Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=cummins-fire-lookout",
+      "kind": "site"
+    },
+    {
+      "label": "Cummins Mountain on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/cummins-mountain.html",
       "kind": "site"
     }
   ],
@@ -56,10 +69,57 @@
         "county",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:cummins-mountain",
+      "fields": [
+        "elevation_m",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-cummins",
+      "fields": [
+        "summary",
+        "status",
+        "visit",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "location",
+      "values": [
+        {
+          "source": "firelookout_ca",
+          "value": {
+            "lat": 52.10586,
+            "lon": -118.29685
+          }
+        },
+        {
+          "source": "canada_lookouts_weebly",
+          "value": {
+            "lat": 52.1,
+            "lon": -118.3
+          }
+        }
+      ],
+      "distance_m": 686,
+      "note": null
+    }
+  ],
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,

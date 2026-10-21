@@ -79,6 +79,13 @@
       "source_url": "https://canada-lookouts.weebly.com/moose-mountain1.html"
     },
     {
+      "year": 1953,
+      "event": "replaced",
+      "note": "A lookout structure was built this year. (Dated on Canada's Fire Lookouts.)",
+      "from": "canada_lookouts_weebly",
+      "source_url": "https://canada-lookouts.weebly.com/moose-mountain1.html"
+    },
+    {
       "year": 1974,
       "event": "built",
       "note": "The present structure (Alberta Wildfire's year of construction).",
@@ -108,11 +115,6 @@
       "kind": "reference"
     },
     {
-      "label": "Moose Mountain (Canada Lookouts)",
-      "url": "https://canada-lookouts.weebly.com/moose-mountain1.html",
-      "kind": "reference"
-    },
-    {
       "label": "Moose Mountain Fire Lookout (Bragg Creek Gateway to Kananaskis)",
       "url": "https://braggcreek.ca/kananaskis/day-use-recreation-area/moosemountain/",
       "kind": "reference"
@@ -126,6 +128,11 @@
       "label": "Bears and fire lookouts (Government of Alberta (Alberta.ca))",
       "url": "https://www.alberta.ca/bears-and-fire-lookouts",
       "kind": "reference"
+    },
+    {
+      "label": "Moose Mountain on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/moose-mountain1.html",
+      "kind": "site"
     },
     {
       "label": "Alberta Wildfire: wildfire lookouts (Government of Alberta)",
@@ -152,6 +159,14 @@
       ]
     },
     {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:ab:moose-mountain1",
+      "fields": [
+        "events",
+        "links"
+      ]
+    },
+    {
       "source": "research",
       "key": "research:ca-ab-moose-mountain",
       "fields": [
@@ -167,7 +182,23 @@
       ]
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "field": "built",
+      "values": [
+        {
+          "source": "alberta_wildfire",
+          "value": 1974
+        },
+        {
+          "source": "canada_lookouts_weebly",
+          "value": 1929
+        }
+      ],
+      "distance_m": null,
+      "note": "Sources give different build years. Often one counts the first lookout on the site and another the structure there now."
+    }
+  ],
   "research": {
     "researched": "2026-10-20",
     "checked": "2026-10-20",

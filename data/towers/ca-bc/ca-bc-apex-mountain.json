@@ -1,7 +1,10 @@
 {
   "id": "ca-bc-apex-mountain",
   "name": "Apex Mountain Fire Lookout",
-  "other_names": [],
+  "summary": "Apex Mountain fire lookout in the Okanagan-Similkameen area; readable sources give a 1959 visit and a 1988 post title, but no build date, staffing or fate.",
+  "other_names": [
+    "Apex"
+  ],
   "country": "CA",
   "region": "BC",
   "county": "Regional District of Okanagan-Similkameen",
@@ -11,7 +14,7 @@
     "precision": "exact",
     "from": "firelookout_ca"
   },
-  "elevation_m": null,
+  "elevation_m": 2257.0,
   "kind": "unknown",
   "material": null,
   "material_from": null,
@@ -37,12 +40,42 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1959,
+      "event": "other",
+      "note": "YouTube video title records a visit to the lookout in 1959, travelling by Willys truck",
+      "from": "research",
+      "source_url": "https://www.youtube.com/watch?v=aRHZXHkJ4Hs"
+    },
+    {
+      "year": 1988,
+      "event": "other",
+      "note": "Facebook group post title records the lookout in 1988, with a friend in the doorway",
+      "from": "research",
+      "source_url": "https://www.facebook.com/groups/bcforestfirelookouts/posts/2346584148790172/"
+    }
+  ],
   "photos": [],
   "links": [
     {
+      "label": "Visiting a British Columbia Forest Fire Lookout on Apex Moutnain in 1959 via a Willys truck (YouTube)",
+      "url": "https://www.youtube.com/watch?v=aRHZXHkJ4Hs",
+      "kind": "reference"
+    },
+    {
+      "label": "APEX MOUNTAIN Lookout in 1988 (BC Forest Fire Lookouts (Facebook group))",
+      "url": "https://www.facebook.com/groups/bcforestfirelookouts/posts/2346584148790172/",
+      "kind": "reference"
+    },
+    {
       "label": "Apex Mountain Fire Lookout on Firelookout.ca (Open Canada Fire Lookout Index)",
       "url": "https://firelookout.ca/lookouts/?slug=apex-mountain-fire-lookout",
+      "kind": "site"
+    },
+    {
+      "label": "Apex on Canada's Fire Lookouts (Ron Kemnow)",
+      "url": "https://canada-lookouts.weebly.com/apex.html",
       "kind": "site"
     }
   ],
@@ -56,10 +89,34 @@
         "county",
         "links"
       ]
+    },
+    {
+      "source": "canada_lookouts_weebly",
+      "key": "canada_lookouts_weebly:bc:apex",
+      "fields": [
+        "elevation_m",
+        "links"
+      ]
+    },
+    {
+      "source": "research",
+      "key": "research:ca-bc-apex-mountain",
+      "fields": [
+        "summary",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-20",
+    "checked": "2026-10-20",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
