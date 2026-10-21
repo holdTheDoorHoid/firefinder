@@ -1,0 +1,9 @@
+A lookout was set up on Beaver Lake Mountain in Herkimer County, New York, in July 1910, at a cost of $308.39, according to the Sixteenth Annual Report of the Forest, Fish and Game Commission.[^1] The first structure was a log tower, and in 1919 the state put up a steel one in its place.[^2] Accounts of the 1919 tower differ.[^1] One Forest Lookouts entry calls it a 60-foot Aermotor tower, and another says a steel tower was erected. A 1942 survey describes an all-steel lookout about 30 feet high, which does not fit the 60-foot figure.[^1]
+
+By 1942 the station was property of the New York Conservation Department.[^1] The state closed it in 1945, judging it redundant given other nearby towers.[^2] After a brief revival of interest following the 1950 windstorm, it was refurbished, but it was closed for good in the mid-1950s.[^2][^3] The state took down the tower and its observer's cabin in 1977, although the Forest Lookouts page gives c.1985 as the removal date.[^3][^1]
+
+Today the site is an unnamed rocky ridge north of Threemile Beaver Meadow, inside the Pepperbox Wilderness.[^3] The area has few official facilities, and its visitation is among the lowest in the Forest Preserve.[^3] The trailhead lies off Moshier Road, by the Beaver River. The trails are faint and obscure, and reaching the tower site calls for patience and strong off-trail navigation.[^3] No source describes what, if anything, remains on the ridge today.
+
+[^1]: Beaver Lake Mountain - FOREST LOOKOUTS, Forest Lookouts, https://easternuslookouts.weebly.com/beaver-lake-mountain.html (accessed 2026-10-21).
+[^2]: A Brief History of the Pepperbox Wilderness, Adirondack Wilderness Advocates, https://adirondackwilderness.org/wild-thoughts-articles/a-brief-history-of-the-pepperbox-wilderness (accessed 2026-10-21).
+[^3]: Threemile Beaver Meadow and Beaver Lake Mountain, Upstate Sports, https://www.adksports.com/2020-03-hiking (accessed 2026-10-21).

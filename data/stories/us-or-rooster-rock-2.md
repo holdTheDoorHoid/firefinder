@@ -1,0 +1,4 @@
+The Forest Lookouts listing for Oregon names a Rooster Rock in Clackamas County.[^1] Its entry gives the legal location as 7S-4E-21 and files the site under the Clackamas - Marion FPA.[^1] The only date it gives is 1946, when a Mount Hood National Forest map showed the site as a state lookout.[^1] Oregon also has a separate Rooster Rock lookout site in Linn County, which the Former Fire Lookout Sites register records on its own.[^2] No source describes what, if anything, remains at the Clackamas County site today, or whether the public can reach it.
+
+[^1]: Rooster Rock - Forest Lookouts, Forest Lookouts (Ron Kemnow), https://oregonlookouts.weebly.com/rooster-rock1.html (accessed 2026-10-21).
+[^2]: Rooster Rock Lookout Site, Former Fire Lookout Sites register, http://www.firetower.org/lookouts/us/or/rooster-rock-lookout-site/ (accessed 2026-10-21).

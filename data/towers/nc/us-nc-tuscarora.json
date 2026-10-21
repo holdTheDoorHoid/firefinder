@@ -1,6 +1,7 @@
 {
   "id": "us-nc-tuscarora",
   "name": "Tuscarora",
+  "summary": "Steel lookout tower, 90 ft overall, described by NGS in 1975 as NC Forest Service property; no source says whether it still stands.",
   "other_names": [],
   "country": "US",
   "region": "NC",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Four-legged, self-supported steel tower",
+  "height_m": 27.4,
   "status": "unknown",
   "status_note": null,
   "registers": [
@@ -28,7 +29,7 @@
       "url": null
     }
   ],
-  "agency": null,
+  "agency": "North Carolina Forest Service",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -44,9 +45,29 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1975,
+      "event": "assessed",
+      "note": "NGS station description: four-legged, self-supported steel lookout tower, 90 ft overall, property of the NC Forest Service",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=EY2382"
+    },
+    {
+      "year": 2003,
+      "event": "other",
+      "note": "US Power Squadron recovery note for survey station EY2382: station recovered in good condition; the note does not describe the tower",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=EY2382"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "EY2382 Tuscarora Lot, National Geodetic Survey station datasheet (National Geodetic Survey (NOAA))",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=EY2382",
+      "kind": "reference"
+    },
     {
       "label": "Tuscarora (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/nctowers.html",
@@ -65,12 +86,31 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nc-tuscarora",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-21"
 }
