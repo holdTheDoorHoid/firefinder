@@ -1,0 +1,4 @@
+Tarversville is a community in Twiggs County, Georgia, that is not incorporated as a town.[^1] Its name honors Hartwell Hill Tarver, whose sizable plantation lay close by.[^1] The community's post office opened in 1826 as Tarver's Store, switched to the Tarversville name in 1831, and closed in 1880.[^1] A historical marker went up at the community in 1960.[^1] A published list titled "Georgia lookout towers" places a lookout tower at 32.54611, -83.43436.[^2] The list's map was last revised in March 2016.[^2] No source describes what remains at the site today or whether it is open to the public.
+
+[^1]: Tarversville, Georgia, Wikipedia, https://en.wikipedia.org/wiki/Tarversville,_Georgia (accessed 2026-10-21).
+[^2]: Georgia lookout towers, TN Landforms, https://tnlandforms.us/gatowers.html (accessed 2026-10-21).

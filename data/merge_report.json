@@ -342,9 +342,9 @@
   },
   "visible_by_status": {
    "gone": 4638,
-   "standing": 2458,
-   "unknown": 1723,
-   "relocated": 145,
+   "standing": 2462,
+   "unknown": 1717,
+   "relocated": 147,
    "ruins": 76,
    "replica": 14
   },
@@ -449,15 +449,15 @@
    "YT": 5
   },
   "visible_by_verification": {
-   "verified": 7527,
-   "unverified": 1305,
+   "verified": 7724,
+   "unverified": 1105,
    "facts": 199,
-   "researched": 23
+   "researched": 26
   },
   "multi_source_towers": 6510,
   "towers_by_number_of_sources": {
-   "1": 949,
-   "2": 1850,
+   "1": 749,
+   "2": 2050,
    "3": 2108,
    "4": 1631,
    "5+": 2574
@@ -104842,12 +104842,12 @@
  },
  "unmapped_structure_values": {},
  "research": {
-  "files": 7591,
-  "applied": 7591,
+  "files": 7791,
+  "applied": 7791,
   "by_verdict": {
-   "None": 20,
-   "fixed": 6970,
-   "pass": 601
+   "None": 23,
+   "fixed": 7142,
+   "pass": 626
   },
   "problems": [
    {
@@ -106703,8 +106703,28 @@
     "problem": "facts.staffing {'status': 'Register staffing field reads Yes; the 2016 steward report names no lookout', 'as_of': '2016'} is not valid; not applied"
    },
    {
+    "file": "us-ga-old-kinderlou.json",
+    "problem": "facts.staffing {'status': 'retired', 'as_of': '1993'} is not valid; not applied"
+   },
+   {
+    "file": "us-ga-reynolds.json",
+    "problem": "facts.status 'relocation planned' is not valid; not applied"
+   },
+   {
+    "file": "us-ga-sweat-mtn.json",
+    "problem": "facts.status 'removed' is not valid; not applied"
+   },
+   {
+    "file": "us-ga-tattnall.json",
+    "problem": "facts.status 'dismantled' is not valid; not applied"
+   },
+   {
     "file": "us-ga-thomas-thomasville.json",
     "problem": "facts.staffing {'status': 'as-needed'} is not valid; not applied"
+   },
+   {
+    "file": "us-ga-trail-ridge.json",
+    "problem": "facts.staffing {'status': 'unmanned', 'as_of': 'latter part of the 20th century'} is not valid; not applied"
    },
    {
     "file": "us-id-acorn-butte.json",
@@ -120957,12 +120977,112 @@
     "note": "Identity and move: the list's grand bay entry (GA425) carries the note Ron GA097-relocated, and GA097 is kinderlou. The 2012 essay says the 54-foot Kinderlou Tower served in Kinderlou Forest from 1939 to 1993, and the Encyclopedia and essay tie the same tower to the Grand Bay boardwalk. The move is inferred from those links; no source dates it or describes it, so no relocation event is recorded. Height is the essay's 54 ft converted to metres. Construction date, builder and design are not in any source read. The list's kinderlou coordinates are its own; the list's grand bay point is roughly 21 km northeast of them by our calculation, so the two list points do not coincide. The old kinderlou entry (GA232) is about 1.6 km away by our calculation; no source explains it, and it may or may not be the earlier site. Access: the DNR notice dated 10/8/26 closes the boardwalk; an undated gate alert on the same page gives hours. The story follows the dated notice; recheck with DNR before giving visit advice. Elevation 213 in the list is unitless and is not used in the story. Not used: the 2012 essay's climbing, wasp and GORP remarks, which are dated. Searches: two web searches; the Forest Fire Lookout Association Georgia index had no kinderlou line in the crawl. The Kinderlou Forest neighbourhood site home page was read but has no tower content; its history article was not read. Page reads ran over the six-read budget (about eight distinct pages, several cached and re-grepped), because the Grand Bay sources were needed to confirm the move. Sources shared with us-ga-grand-bay; the quotes are from the same cached pages."
    },
    {
+    "id": "us-ga-kings-bay",
+    "note": "One list entry (tnlandforms.us, map dated March 2016) is the only source for this tower. Its name matches Kings Bay Base, a Navy submarine base, but no source places the tower on or off the base, so the base is not treated as its location. The list gives elevation 40 with no unit label, so it is left out. Neither NHLR nor the former-sites register lists it (absence checked against the full Georgia lists). Two WebSearch queries, plus Georgia Forestry Commission pages that timed out or refused connection, produced nothing on this tower. The brief's status and access stay unknown; none of the sources support a status, height, design or access level."
+   },
+   {
+    "id": "us-ga-kingsland",
+    "note": "One list entry (tnlandforms.us) is the only source for this tower; the list's entry carries an unexplained 'datasheet' tag, which the story does not rely on. Neither NHLR nor the former-sites register lists it (absence checked against the full Georgia lists). The Kingsland city history page mentions a 1939 water tower; it is not a lookout and is not used. The easternuslookouts.weebly.com Georgia list has no Kingsland entry. No WebSearch result or source describes the tower's build, staffing, fate or the site today. The brief's status and access stay unknown; no source supports a status, height, design or access level."
+   },
+   {
+    "id": "us-ga-kirkland",
+    "note": "One list entry (tnlandforms.us) is the only source for this tower. The list's coordinates sit close to Wikipedia's coordinates for the community. BLL-65209 is an identifier whose meaning the sources do not explain, so the story gives it only as an identifier. The Wikipedia history mentions a forest fire that destroyed houses and machinery in the Kirkland family's time; it does not mention a lookout, so it is not used. Neither NHLR nor the former-sites register lists it (absence checked against the full Georgia lists). Two WebSearch queries and the Georgia Forestry Commission history page (timed out, then refused) produced nothing on this tower. The brief's status and access stay unknown; no source supports a status, height, design or access level."
+   },
+   {
+    "id": "us-ga-knoxville",
+    "note": "Thin record: the only source is the tnlandforms.us list (row GA164, page marked 2016). The record is not in the cached NHLR or FFLOS Georgia folders (data/raw/nhlr/nhlr.org/lookouts/us/ga and data/raw/fflos/firetower.org/lookouts/us/ga). Live nhlr.org and firetower.org fetches failed with connection resets, so retry those before publishing. Brief status and access remain unknown. Two WebSearch queries and a check of the Knoxville, Georgia Wikipedia page found no tower. The codes are copied as printed and not interpreted. The list's elevation column has no unit on the page, so the story gives 697 without one; feet is likely but not stated. Fact-check pass 2026-10-21: removed the unstated feet and metre conversion, and reworded the 'Many were scrapped and sold' sentence. The story is about 115 words, short of the 120-word target, because the sources support no more."
+   },
+   {
     "id": "us-ga-lafayette",
     "note": "Only the two register pages and one Georgia tower list were found. Web searches for news of the 2019 auction, a GFC record, or a buyer returned nothing relevant. The removal is recorded by both registers but not confirmed on site or by photo. Staffing and fire history: none found. Build date is only 'the 1930s' in both registers. Both registers name the GFC as administrator; the FFLOS entry says 'previously'."
    },
    {
+    "id": "us-ga-lake-tara",
+    "note": "Thin record and doubtful identity. The only source is list row GA341 (datasheet tag). The same list has a Reynolds entry (GA423) in Clayton County at 33.596801,-84.349829, marked relocated. A 2012 Forest Fire Lookout Association report (https://firelookout.org/wp-content/uploads/2024/11/cr-restoration-2012.pdf) says a 100-foot Henry County tower was to be moved to Reynolds Nature Preserve near Morrow; it does not say the move happened. The Reynolds Nature Preserve Wikipedia page does not mention a tower. No source found ties the Lake Tara entry to any of these. The record is not in the cached NHLR or FFLOS Georgia folders, and live fetches of those sites failed with connection resets. Editor should check the list's datasheet and whether these coordinates are a separate tower or a mis-keyed Reynolds record before publishing. The list's elevation column has no unit on the page, so the story gives 950 without one; feet is likely but not stated. Fact-check pass 2026-10-21: removed the unstated feet and metre conversion, and reworded the 'Many were scrapped and sold' sentence. The story is about 134 words, a little over the 120-word target."
+   },
+   {
+    "id": "us-ga-lakeland",
+    "note": "Thin record: the only source is list row GA295 on the tnlandforms.us page (codes BLL-65152, usgs, gfc-814, all copied as printed and not interpreted). Searches and a check of the Lakeland, Georgia Wikipedia page found no tower or fire-lookout mention. The record is not in the cached NHLR or FFLOS Georgia folders, and live fetches of those sites failed with connection resets, so retry before publishing. A search hit for a Lanier overlook tower concerned Lake Martin in Alabama and is not this site. The list's elevation column has no unit on the page, so the story gives 183 without one; the brief's elevation_m 55.8 assumes feet. Status and access remain unknown. Fact-check pass 2026-10-21: removed the unstated feet and metre conversion, and reworded the 'Many were scrapped and sold' sentence. The story is about 116 words, short of the 120-word target, because the sources support no more."
+   },
+   {
+    "id": "us-ga-lavender-mtn",
+    "note": "Thin evidence: one 2016 map entry (tnlandforms GA141, no source note) and a Wikipedia stub. The name 'lavender mtn' is the map compiler's own label (entries 73 and above are named by the compiler), not a documented tower name. LOCATION CONFLICT, unresolved: the map point 34.33511,-85.24571 is about 7 km (4.4 mi) west of the Wikipedia summit coordinates 34.336,-85.168, and the heights differ (1,534 vs 1,526 ft). Possibly the record location is off; a human should check the point against imagery before publishing. The map gives elevations with no unit; this story reads them as feet, consistent with the record's 467.6 m and Wikipedia's 1,526 ft. No source found says a tower was built, staffed or removed here, and nothing found says whether the summit is accessible or private. Wikipedia's House o' Dreams caption is the only mention of anything on the summit."
+   },
+   {
+    "id": "us-ga-lawson",
+    "note": "Very thin: one 2016 map entry (tnlandforms GA393), whose only source note is 'aerial imagery'. The name 'lawson' is the map compiler's own label (entries 73 and above are named by the compiler). Searches found no Georgia record of a lookout called Lawson in Liberty County. A Wikidata item (Q107507016) and a Commons category name a different 'Lawson Lookout Tower' in Marshall County, Minnesota; the story mentions it only to warn against mixing them up. The map gives elevation with no unit; read as feet (record 25.6 m). Nothing found on build date, staffing, fate or access."
+   },
+   {
+    "id": "us-ga-leah",
+    "note": "Very thin: one 2016 map entry (tnlandforms GA319) and nothing else found. The name 'leah' is the map compiler's own label (entries 73 and above are named by the compiler), not a documented name. Searches for a Leah or Harlem Columbia County fire tower found nothing relevant. The map's gfc-022 code is consistent with the record's GFC register but the record's 'US' prefix is not in the source. Elevation is given with no unit; read as feet (record 152.4 m). Not found in the cached NHLR Georgia index. Nothing found on build date, staffing, fate or access."
+   },
+   {
+    "id": "us-ga-leary",
+    "note": "Only source is the tnlandforms.us Georgia list. Two web searches and one more check found no build, staffing, fire or fate history for a Leary tower. The Georgia index of the National Historic Lookout Register (29 registered lookouts, read from the cache) and the Eastern U.S. Lookouts Georgia directory list no Leary tower. The list gives the elevation with no unit; the record's 67.4 m assumes feet (221 ft). The list explains the gfc-nnn code form (towers in an older GFC list of locations), so the GFC label is sourced, not an interpretation. Unverified search lead, not a lookout: an antenna database entry for a 250-ft structure in Leary. Story is about 143 words because the evidence is thin. Fact-check 2026-10-21: the codes were previously called unexplained; the page explains gfc-nnn."
+   },
+   {
+    "id": "us-ga-leesburg",
+    "note": "Only source is the tnlandforms.us Georgia list. Two web searches and one more check found no build, staffing, fire or fate history for a Leesburg tower. The Eastern U.S. Lookouts page titled Leesburg is a Florida tower (Lake County), not this one. The NHLR Georgia index (29 registered lookouts, read from the cache) and the Eastern U.S. Lookouts Georgia directory list no Leesburg tower. The list gives the elevation with no unit; the record's 79.2 m assumes feet (260 ft). Search leads that are not evidence of a lookout: a 97.5 m structure in Leesburg in an FCC antenna database, listed as owned by Lee County and apparently a communications tower; a Firetower Road in Leesburg that appears in real-estate listings. Story is about 155 words because the evidence is thin. Fact-check 2026-10-21: the page explains the BLL-nnn and gfc-nnn codes, which the story now says."
+   },
+   {
+    "id": "us-ga-lexington",
+    "note": "Only source is the tnlandforms.us Georgia list. Two web searches and one more check found no build, staffing, fire or fate history for a Lexington tower. The Eastern U.S. Lookouts page titled Lexington is a Mississippi tower (Holmes County), not this one. The NHLR Georgia index (29 registered lookouts, read from the cache) and the Eastern U.S. Lookouts Georgia directory list no Lexington tower. The list's Lexington row has an unexplained word, deer, before the codes; the story leaves it out. The list gives the elevation with no unit; the record's 232.6 m matches 763 feet. The record's GFC US 9 is the list's gfc-009 with the zero dropped, so it is not a correction. A search result for a proposed 199-ft telecom monopole in Lexington is not a lookout and is not used. Story is about 155 words because the evidence is thin. Fact-check 2026-10-21: the page explains the BLL-nnn and gfc-nnn codes, which the story now says."
+   },
+   {
+    "id": "us-ga-liberty",
+    "note": "Only one source places this tower: the tnlandforms.us compiled list, row GA032, no GFC or BLL code on the row. Searches and the local caches found no Franklin County or Georgia Liberty tower history, and no Georgia Forestry Commission record. The Liberty Lookout Tower on the National Historic Lookout Register (nhlr.org/lookouts/us/tn/liberty-lookout-tower/) is in Tennessee; do not conflate. The NHLR Georgia state list (29 entries) does not include this tower. The list gives elevation with no unit; the brief's 244.1 m assumes feet, and the tower record's elevation_m is that conversion, so the metre figure is unverified. Fact-check 2026-10-21: removed the claim that this tower's name comes from the USGS name database, because the map caption only says towers numbered 1 to 72 are listed that way. Story is about 113 words, in line with the guide's length for thin sources; the editor may prefer to hold it as a stub. No photos. Next checks if time allows: Georgia Forestry Commission tower records, Franklin County or Lavonia and Carnesville newspaper archives, and the NHLR Former Fire Lookout Sites register."
+   },
+   {
+    "id": "us-ga-lincolnton",
+    "note": "Only the tnlandforms.us compiled list places this tower. Two WebSearches and the local caches found no Lincoln County lookout record, no GFC record and no removal notice. The vanishinggeorgia.com page titled Lincolnton Fire Department is a fire station building, not a lookout; it is not used. The name lincolnton is the compiler's label (entry 240 is at or above 73), not a documented name; do not treat it as the historic name. The brief's registers values are not supported by the list (see corrections). The record's elevation_m (155.4) assumes the 510 is feet; the page gives no unit. Story is about 146 words, close to the guide's figure for thin sources, and no other source describes the tower. Editor may want to hold it. No photos. Next checks: GFC tower records by county, Lincoln County Historical Society, Lincoln Journal or Lincolnton newspaper archives."
+   },
+   {
+    "id": "us-ga-little-neck",
+    "note": "Only the tnlandforms.us compiled list places this tower. Two WebSearches and the local caches found no Little Neck tower, no Chatham County lookout history and no removal notice. The Ron topo note is not explained on the page, and the story does not connect it to Ron Stafford, whom the page credits only in general terms. Do not conflate with Savannah Lookout Tower (GA049, Chatham, elevation 36, 32.04215,-81.18428), a separate entry in the same list. A Georgia Forestry Commission county contacts page (gatrees.org/gfc-contacts-2/county-contacts/) says Chatham has no local unit and is covered by the N. Bryan Unit; its date is unverified and it does not describe this tower, so it is left out of the story. The Red Bird Creek tower found in search is in Bryan County. The record's elevation_m (5.2) assumes the 17 is feet; the page gives no unit. Story is about 118 words, close to the guide's figure for thin sources; no other source describes the tower, so the editor may want to hold it. No photos."
+   },
+   {
     "id": "us-ga-lowndes-county",
     "note": "The newest status in any source read is from 2020 (NHLR), so current access is unverified. The 1937 newspaper item is known only through the Forest Lookouts quote; the newspaper itself was not read. The Moody AFB airspace explanation is the NHLR's, not checked against Air Force sources. No staffing or fire history found. Record aliases include 'lowndes'."
+   },
+   {
+    "id": "us-ga-ludowici",
+    "note": "Thin record: only the tnlandforms row supports this tower, so the story is well under the 120-word floor. Unverified leads, NOT cited: a GovDeals/AllSurplus surplus listing (asset 50329/357) names a fire tower at 1128 US Hwy 84 East, Ludowici (Long County), and says the Georgia Forestry Commission acquired it and the buyer must remove it. Both pages returned HTTP 403 to fetch_text, so no quote could be taken. If a person confirms a removal or sale, status and the story need rewriting. The record's elevation (19.5 m) matches the table value 64 only if that column is in feet; the table header was not read. Status and access stay unknown. No photos found."
+   },
+   {
+    "id": "us-ga-lula",
+    "note": "Two sources. The Gainesville Times page returned only about 617 characters (headline, a photo caption and the opening text), so the article's own publication date and its account of the demolition threats were not read; the story says only what the headline and opening text support, and dates only the photo caption (3 Jan 2019). Height 100 ft is converted to 30.5 m. The tnlandforms row also carries a usgs tag (BLL-64456 usgs gfc-915) that the record omits. The article photo by Austin Steele (January 2019) exists, but no image URL was retrieved, so there is no photos entry. Unverified lead, NOT cited: search results list a Hall County Forester office at 5707 Lula Road, which may help check access. Current status and public access are unknown after 2019. Confidence is medium for location and height, low for history. Fact-check 2026-10-21: the article date '2019' was unsupported and was replaced with the caption date; the caption's 100 ft and still-in-use sentence was added as its own quote."
+   },
+   {
+    "id": "us-ga-lumber-city",
+    "note": "Only the tnlandforms row supports this tower, so the story is well under the 120-word floor. Wikipedia's Lumber City article and the Telfair County GenWeb history were read and do not mention a tower. A Wikimedia Commons photo titled 'Georgia Forestry Commission Tower, Telfair County' (CC BY-SA 4.0, Michael Rivera, 2014) was checked and not used: its camera position, about 31.9529, -82.9334, is roughly 20 km west of this record's coordinates, so it may be a different tower. Status and access unknown. Confidence low."
+   },
+   {
+    "id": "us-ga-luthersville",
+    "note": "The Georgia list is the only source that names a luthersville tower. Its name is the list's own label, since the entry is numbered 254 (the list says names for 73 and above are the compiler's own). Eastern U.S. Lookouts has no Luthersville page (404), and the NHLR and FFLOS Georgia index pages in the cache list no Luthersville entry. Wikipedia is used only for the town's location, as a lead rather than a primary source. The story is about 105 words, under the 120-word floor, because no further evidence exists. The Meriwether Lookout Tower (us-ga-meriwether) is a different entry about 20 km to the south; keep the two apart. Leave the record unverified until a Georgia Forestry Commission or Meriwether County source turns up."
+   },
+   {
+    "id": "us-ga-lynch-mountain",
+    "note": "Two independent sources agree that a fire tower stood on Lynch Mountain: the Georgia Archives photo (about 1911) and the directory listing. Neither gives a build date, design, staffing, fires, fate or a current status, and no source describes the site today, so the story is short. The photo predates the 1949 commission, so the directory's agency label may describe a later tower or later management; the sources do not say which. The brief's ownership value 'state' is an inference from the agency being a state body and is not stated in any source, so it was not used. The Digital Library point (34.6851, -83.71046) is a Nacoochee place pin, not the mountain; the brief's coordinates were kept. The Digital Library photo could be a photo candidate, but its rights are held by the Georgia Archives and it needs permission, so no photo entry was added. Access is unknown; nothing here suggests the summit is open."
+   },
+   {
+    "id": "us-ga-lynn",
+    "note": "Only the Georgia list names a lynn tower; no other source was found in two searches, the NHLR and FFLOS Georgia indexes, or the cached GFC history. Its 151 in the elevation column is read as feet, matching the record's 46.0 m. The lynn point is about 11 km north of the NHLR Decatur County Fire Tower (us-ga-decatur-county, 30.91748, -84.59603) and the list gives it no codes, so the two are kept separate. If an editor finds that they are one tower, merge this record into us-ga-decatur-county and use the register's details there; the 1953 date, the ranger-station siting and the staffing and communications notes describe the other tower and were not applied to lynn. No corrections to the brief's record. The story is about 120 words."
+   },
+   {
+    "id": "us-ga-macon",
+    "note": "Very thin record. Only the state list entry (coordinates, elevation 515, tag gfc-601, page revised March 2016) and the GFC history were usable. The list gives no unit for elevation; the story reads it as feet, which matches the brief's elevation_m of 157.0. The name 'macon' is the list author's own label, since entry 203 is above 72; it is not an official name and should not be presented as one. The gfc-601 tag matches the brief's 'GFC US 601' register number, but no source explains the tag. The GFC headquarters move to Macon in 1956 is context only; no source links it to this tower and the story does not imply a link. Two web searches found nothing on this tower's build, staffing, status or access. Not on NHLR or FFLOS in the local cache. Worth asking the Georgia Forestry Commission about the tower's history and whether it still stands."
+   },
+   {
+    "id": "us-ga-macon-2",
+    "note": "Very thin record: one state list entry (coordinates, elevation 433, no tag) and the GFC history, which is used only for context about the Ware Hotel tower in Waycross, a different place. The brief's elevation_m of 132.0 matches 433 feet. The name 'Macon Lookout Tower' comes from the USGS name database per the page's note (tower 33 is in the 1-72 range), so it is probably an official-database name, not an author's label. A business directory (hubbiz.com) lists a 'Fire Tower' at the Macon County Forestry Unit in Oglethorpe; that listing is unverified and not used, and nothing in the sources ties it to this list entry. Worth checking locally or with the Georgia Forestry Commission's Macon County office. Two web searches found no build, staffing, status or access information. An anyplaceamerica.com listing for this tower returned HTTP 403 and was not used."
+   },
+   {
+    "id": "us-ga-manor",
+    "note": "Very thin record: the state list entry (coordinates, elevation 149, tag gfc-834), the Wikipedia article on the community of Manor, and the GFC history for the Ware Hotel context. The brief's elevation_m of 45.4 matches 149 feet. The name 'manor' is the list author's own label (entry 132 is above 72). The gfc-834 tag matches the brief's 'GFC US 834' register number, but no source explains the tag. The list's coordinates sit south-east of the community's centre point in Wikipedia; that is expected for a tower site and is not treated as a conflict. Web searches found nothing on this tower's build, staffing, status or access; a government auction listing for a different Ware County GFC tower (Bickley, list entry GA131, marked to be removed) came up and was not used. Worth asking the Georgia Forestry Commission about this tower and whether it stands."
+   },
+   {
+    "id": "us-ga-marietta",
+    "note": "Only one source names this tower: a tnlandforms.us list last revised March 2016 that gives county, coordinates, an unlabelled elevation (702, taken as feet; the record's 214 m assumes that) and a gfc-308 tag. No register entry, agency page, build date, design, status or access source was found in the NHLR or FFLOS caches, the FFLA Georgia page (no data) or the web. The story's only context sentence is about a different tower in Waycross. Needs a field check or a Marion County source before it is treated as more than a location."
    },
    {
     "id": "us-ga-martins-knob",
@@ -120973,36 +121093,132 @@
     "note": "Thin record: NHLR page and one table-style list. The brief's county 'Putman' is corrected to Putnam (list and standard spelling). Elevation disagreement noted (NHLR 662 ft vs list 687 ft). The Forest Lookouts pages for Mathis (easternuslookouts.weebly.com/mathis.html) return 404, so no second history source was found. Two web searches. No staffing, fire, closure or access sources found; visit status unknown and the access level is left unset. Oconee National Forest pages were not checked."
    },
    {
+    "id": "us-ga-mccollum",
+    "note": "Two listings name the tower: the tnlandforms Georgia list (2016; coordinates, Coweta County, elevation 996 with no unit label, read as feet) and a Topo Zone tower list (name and USGS quad Madras only). Neither describes the structure or its condition. The NHLR and FFLOS Georgia lists do not include it, and the record has no register number. The Waycross sentence is general context, not about this site. Field check needed before any claim about the tower standing."
+   },
+   {
     "id": "us-ga-mcduffie",
     "note": "Thin record: NHLR detail page is the only substantive source; the Georgia list is a bare table. Brief record checked: registration, registry numbers, elevation and agency match. No build date, staffing, fire or access sources found after two web searches. A 2017 blog post titled 'Old Fire Watch Tower in Thomson' (forgottengeorgia2.blogspot.com) mentions a watch tower in Thomson but gives no location or date, so it is not linked to this tower. A 2019 McDuffie County wildfire plan (gatrees.org/resources/mcduffie-cwpp-2019/) mentions a GFC unit in the county; only grepped, not cited. Access level left unset."
+   },
+   {
+    "id": "us-ga-mcduffie-2",
+    "note": "Identity is from the tnlandforms list alone (name 'mcduffie', Wilcox County, coordinates, BLL-64703 and gfc-521 tags). Do not merge with us-ga-mcduffie (NHLR US 1069, McDuffie County, 33.445348, -82.542365), which is a different tower. No source found on the Wilcox tower's build, design, owner or state. The BLL code's meaning is not stated by any source read here. Field check needed."
    },
    {
     "id": "us-ga-mcgaughey",
     "note": "Two sources only. No build year, design or height appears in any source read. The obituary is used only for the lookout role and the death date; the story does not repeat her name. The NHLR photo credit (Justin Peel) has no image URL, so no photo entry. The latest report is the February 2019 visit; the Register's staffing field is undated. Brief's access 'unknown' is updated to private."
    },
    {
+    "id": "us-ga-mcgregor",
+    "note": "Thin record. The only tower-specific source is one row of the tnlandforms Georgia index (coordinates, county, tags); no build date, design, staffing, status or access is documented in any source read. The name 'mcgregor' is the index compiler's own label (the page says names for towers 73 and above are its creation), so the record name may not be a historical name; no correction proposed without a historical source. Not in the cached NHLR Georgia index (which says 29 lookouts are registered) or the cached FFLOS Georgia index. Tag meanings 'usgs' and 'BLL' are not explained on the page; the story says only what the page states about GFC numbering. The index map was last revised in 2016, so it cannot show current condition. Two web searches and the cached pages yielded no tower-specific history. Story is about 123 words; the evidence supports no more."
+   },
+   {
+    "id": "us-ga-mcintosh",
+    "note": "Thin record. The only tower-specific source is one row of the tnlandforms Georgia index. No build date, design, staffing, status or access is documented in any source read. The name 'mcintosh' is the index compiler's own label (names for towers 73 and above are its creation), so it may not be a historical name; no correction proposed without a historical source. Not in the cached NHLR Georgia index or the cached FFLOS Georgia index. Two web searches gave nothing tower-specific. Story is about 130 words; the evidence supports no more."
+   },
+   {
+    "id": "us-ga-meda",
+    "note": "Thin record. The only tower-specific source is one row of the tnlandforms Georgia index. No build date, design, staffing, status or access is documented in any source read. The name 'meda' is the index compiler's own label (names for towers 73 and above are its creation), so it may not be a historical name; no correction proposed without a historical source. The RoadsideThoughts page is a genealogy site used only to place the name in Putnam County; the story does not call Meda a community. Not in the cached NHLR Georgia index or the cached FFLOS Georgia index. Two web searches gave nothing tower-specific. Story is about 127 words; the evidence supports no more."
+   },
+   {
+    "id": "us-ga-meinhard",
+    "note": "One source only: the TN Landforms list gives the name, county, coordinates, elevation and the code 'topo'. The name is the compiler's own label (entry 381 is above 73), and the page does not say what the 'topo' code means for this entry; the list's note says its map shows towers as discovered on 1:100,000 USGS topo maps and NGS data sheets, so the story does not claim the site rests on a map reading or on an agency record. Two searches and several reads found no history, build date, staffing, fate or access. A Forest Lookouts directory has a SAVANNAH entry in Chatham County with no history; it is not known to be this site. The brief's kind 'tower' comes from the list; nothing confirms a structure stood there. Status and access stay unknown. Check the USGS topo map and Georgia Forestry Commission records before publishing."
+   },
+   {
     "id": "us-ga-meriwether",
     "note": "The brief's coordinates and elevation (292.9 m) match the list. The only agency evidence is one Forest Lookouts index label, and no source gives a build year, staffing, fire history or status; two WebSearch queries found nothing specific. The list gives no units; feet are assumed, matching the brief's metres. The code BLL-63472 is not explained by any source read. The story is short for that reason."
+   },
+   {
+    "id": "us-ga-milford-historical",
+    "note": "Two lists only: the TN Landforms list (name, historical label, county, coordinates, elevation) and the Forest Lookouts directory (name and county, no agency or history). The directory layout is jumbled. Its 1956 'International-Stacey' 99-foot tower line follows the MILLER COUNTY entry and belongs to Miller County, not Milford; one search summary attached it to Milford, and it is not used here. No managing agency is named for Milford in any source found. Status and access stay unknown; the 'historical' label is the list's only word on its state. Not a correction to the brief, which matches the TN Landforms entry."
+   },
+   {
+    "id": "us-ga-millen",
+    "note": "Two sources: the TN Landforms list and Wikipedia for the county seat. The list's codes show where its coordinates came from (GFC-provided, BLL) and an older GFC list (gfc), but neither says what stood on the site, when, or whether anything survives. The name 'millen' is the compiler's label (entry 178 is above 73) and is lowercase on the list; a human may want to decide how to show it. Two searches found no GFC or Jenkins County record of a tower here. The cached NHLR Georgia index is truncated and was not used. Status and access stay unknown. A GFC records request would be the best next check."
    },
    {
     "id": "us-ga-miller-county",
     "note": "Two sources. The Register is the main source; Forest Lookouts repeats the 1956 build and design in one line. No fire history, no current condition check and no visiting information were found. The brief's record matches the Register (built 1956, registered 2006, elevation 44 m), so no corrections are proposed. The 99 ft height is converted to 30.2 m. Standing and maintained are taken from the Register's present-tense text, which is undated."
    },
    {
+    "id": "us-ga-monticello",
+    "note": "Thin sources. The tnlandforms list (cite 1) and the Eastern US Lookouts directory (cite 2) give only name, county, elevation and codes (cite 1) and the agency (cite 2); neither gives a build date, design, status or access. The GFC county contact page (cite 3) gives Jasper County's location as a firetower on Hwy 212, but its layout is jumbled, so the Firetower Road address rows could not be matched to Jasper with certainty and were not used. Web search leads not used because no page read tied them to this tower: a 2024 US Topo map label and a 2006 auction note. A cached newspaper article about a 'Monticello' fire tower (data/raw/web/3d8a8decf766fdff51e63ede2815d24a82369f48.bin) is about Monticello, Florida (Jefferson County, Florida Division of Forestry) and was excluded. Jasper Lookout Tower (GA028, 33.39707,-83.77101) is a different Jasper County tower and was not used. Status, access and build date need a human check, for example a GFC Jasper County enquiry or recent imagery at 33.31901,-83.72434. No corrections proposed; record fields match the tnlandforms list. Verification 2026-10-21: the story's elevation (627 ft, 191 m) was removed because the list gives no unit; the phase-out sentence was reworded from the source's wording."
+   },
+   {
+    "id": "us-ga-moody",
+    "note": "Very thin sources. The only source naming this tower is the tnlandforms list (cite 1), which gives the name in lower case as 'moody', county, elevation and code. No Georgia directory entry was found for it, and the web search turned up no history. Name variants excluded: Moody Tower in Ebro, Washington County, Florida (dismantled 2021, per a cached Washington County News item at data/raw/web/8e3cc3bb4d7c35230e3724ec39bd3f6a4b22bc31.bin), and Moody Air Force Base in Lowndes County, Georgia. Neither is this tower. The record's name 'moody' matches the tnlandforms list, so no correction is proposed. Agency is not stated by any source read, so no agency fact is recorded. Status, access and any build date need a human check, for example a GFC Troup County unit enquiry or recent imagery at 33.09999,-85.08370. Story is about 96 words, under the 120-word floor, because the sources hold little more. Verification 2026-10-21: the elevation (821 ft, 250 m) was removed from the story because the list gives no unit; the phase-out and endangered sentences were reworded from the source's wording."
+   },
+   {
+    "id": "us-ga-moseley",
+    "note": "Very thin sources. The tnlandforms list (cite 1) gives name, county, elevation and code; the Eastern US Lookouts directory (cite 2) gives only the county and agency. Neither gives a build date, design, status or access. The Eastern US Lookouts page carries a September 2006 auction note ($600, removal within 30 days), but it sits under the MUSCOGEE heading on that page, not MOSELEY, so it is not used; a web search summary attributed it to Moseley and that attribution is wrong. The list gives no units, so the story gives no elevation. Story is about 102 words, under the 120-word floor, because the sources hold nothing more about this tower. Verification 2026-10-21: the phase-out and endangered sentences were reworded from the source's wording. Status and access need a human check (GFC Putnam County office, or recent imagery at 33.39957,-83.49183). No corrections proposed; record fields match the tnlandforms list."
+   },
+   {
     "id": "us-ga-moultrie",
     "note": "The coordinates disagree: the list gives 31.10399, -83.79805, while the Georgia Archives photo pin gives 31.18839, -83.76885, about 9.8 km apart. The photo is the only image evidence and does not name the tower. The list's sunset note may refer to Sunset School, but no source links the two. Two WebSearch queries and the cached pages found nothing on build date, staffing, fires or status. The list gives no units; feet are assumed, matching the brief's metres. The brief's lowercase name is the proposed correction."
+   },
+   {
+    "id": "us-ga-mountain-springs",
+    "note": "Thin record. The only source naming this tower is the tnlandforms Georgia lookout index (row GA219). A WebSearch on the name and Griswoldville found no tower history, and the NHLR Georgia index in the local cache does not list it. The Griswoldville link for the note 'griswoldville' is unconfirmed and the story says so. The brief's GFC US 607 matches the index's gfc-607 and needs no correction. Before publishing a status, check with the Georgia Forestry Commission or the Jones County historical society. Story is short by necessity."
+   },
+   {
+    "id": "us-ga-mt-vernon",
+    "note": "Thin record. The name in the index is 'mt vernon?' with a question mark, and it is the only source that mentions a tower here. Two WebSearch calls (Mt. Vernon fire tower; Montgomery County and Fire Tower Road) returned only county pages and an unrelated Chenocetah item; the NHLR Georgia index and the Vanishing Georgia tag pages do not list this site. Verify with the Montgomery County Rural Fire Protection/Forestry office or the Georgia Forestry Commission whether a tower ever stood here before publishing any status. The brief's name 'mt vernon?' is kept as the index gives it. Story is short by necessity."
+   },
+   {
+    "id": "us-ga-mullinax-mtn",
+    "note": "Thin record. The tnlandforms index (row GA121) is the only source that calls this site a lookout tower. The MyTopo summit list confirms a Mullinax Mountain exists in Bartow County but says nothing about a tower. Searches (two WebSearch calls) found no tower history, and the NHLR Georgia index in the local cache does not list it. The index gives an elevation of 1066 but the story leaves it out because the index does not state a unit. Check with the Georgia Forestry Commission or a Bartow County GIS source before publishing any status. Story is short by necessity."
    },
    {
     "id": "us-ga-murray",
     "note": "Thin record. The Register is the only source with detail on this frame. Build date, builder, staffing and fire history were not found in any source read. The Freedman article names no replacement steel tower, so any link to this frame is unproven. The brief's status 'standing' is kept but qualified by status_note. Patrick H. Warren is the Register nominator, named as recorded. A Georgia DNR or Fort Mountain State Park enquiry is the best next step for the history."
    },
    {
+    "id": "us-ga-muscogee",
+    "note": "Only one source has anything on this tower: the Georgia tower list (tnlandforms.us), which gives its coordinates, county and gfc-310 code. Two searches and several register and lookout-site pages found no history. It is not on the NHLR Georgia list (29 registered lookouts) or the FFLOS Georgia former-sites list (2 entries), so the NHLR-style registration is not supported. Brief elevation_m 192.6 assumes the list's 632 is feet; the page prints no unit, so the story omits elevation. Status and access stay unknown; the story says no source describes the site today."
+   },
+   {
+    "id": "us-ga-nahunta",
+    "note": "The name nahunta is the list's own label (tower 397 is above 73, so the list says it created the name). The only lead on a physical tower is the Commons photo; its description places a tower beside US 82 between Hoboken and Nahunta, but nothing ties it to the list entry or its coordinates, which were not checked against the town. Photo url is the Commons file page, not the direct image; the direct image URL was not retrieved. Brief elevation_m 19.8 assumes the list's 65 is feet; the page prints no unit, so the story omits elevation. No corrections to the brief's record. Status and access stay unknown; no source describes access."
+   },
+   {
     "id": "us-ga-narrows",
     "note": "Single historical source: the Eastern US Forest Lookouts page quotes a history of the Armuchee Ranger District (not located). Two web searches found nothing about this tower beyond the list entry. Coordinates and elevation come only from the TN Landforms table. Do not confuse with Narrows, Georgia (Banks County), a different place. Lead: Chattahoochee-Oconee National Forest heritage staff, or the district history the Eastern US page quotes. Fact-check 2026-10-10: the Armuchee Ranger District attribution is confirmed on the Eastern US page, and all dates and dimensions match its quotes. Elevation units: the TN Landforms list does not label them; 1,657 is read as feet, because the same list gives Brasstown Lookout Tower as 4,735 and Brasstown Bald, Georgia's highest point, is about 4,784 feet, so the figure cannot be metres."
    },
    {
+    "id": "us-ga-nelsons-bluff",
+    "note": "Only the tower list names a tower here; the Mapcarta page describes a cliff (a landform), not a tower, so it is cited for place context only. The 'topo 1954' note is unexplained on the list, so the story quotes it without interpreting it. Not on the NHLR Georgia list (29 registered lookouts) or the FFLOS Georgia former-sites list (2 entries). Brief elevation_m 3.0 assumes the list's 10 is feet; the page prints no unit, so the story omits elevation. Status and access stay unknown; no source describes the site today."
+   },
+   {
+    "id": "us-ga-nevils",
+    "note": "Two sources only. The list row matches the record's coordinates and county. The list's elevation 164 has no unit on the page; the record's 50 m assumes feet, which the NGS mark's height (167.37 ft) supports, though that is a different point. The NGS datasheet describes survey mark CK0191, not the tower. Its scaled position (32 15 44 N, 81 46 04 W, 'an estimated accuracy of +/- 6 seconds') matches the record's point to the arc-second, but the mark lies about 353 feet from the tower, so the record's point may be the map position of the mark rather than the tower. No correction proposed; a human could check the point against the topo. 'Forest Service' is not identified further. No build date, staffing, fire, status or access source was found. The NHLR Georgia index and the Forest Lookouts Georgia index, as cached, do not list a Nevils tower."
+   },
+   {
+    "id": "us-ga-new-bethel",
+    "note": "One source only. The row's coordinates match the record (34.413611, -84.055). The elevation 1366 has no unit on the page; the record's 416.4 m assumes feet. The note 'Ron FL relocate' is not explained on the page and 'FL' is not defined, so its meaning is open; it may bear on whether the tower was moved, which the story says is unclear. The name is a compiler label (the entry is number 418, above the 1-72 USGS range). The row has no NGS datasheet or GFC number. The NHLR Georgia index and the Forest Lookouts Georgia index, as cached, do not list a New Bethel. The Forest Lookouts index lists a Frosty Mountain tower in Dawson County (Chattahoochee National Forest); it is a different site and is not linked. Nothing about build, staffing, fires or fate was found."
+   },
+   {
+    "id": "us-ga-new-hope",
+    "note": "One source only. The row's coordinates match the record (34.74800, -84.51531). The elevation 2063 has no unit on the page; the record's 628.8 m assumes feet. The row carries no note and no datasheet number, and the list gives no PID to look up. The name is a compiler label (the entry is number 84, above the 1-72 USGS range). The NHLR Georgia index and the Forest Lookouts Georgia index, as cached, do not list a New Hope in Gilmer County. The Forest Lookouts index lists an Amicalola Mountain tower in Gilmer County; it is a different entry and is not linked. Nothing about build, staffing, fires, status or access was found."
+   },
+   {
+    "id": "us-ga-new-lacy",
+    "note": "Thin: a single compiled list (tnlandforms.us) is the only tower-specific source; it gives a datasheet reference (BS0276) that the page does not explain and I did not look up. The county plan's 'New Lacy District' is a local fire district name; the plan does not mention the tower, so the story does not link them. Not on the NHLR or former-sites lists per the cached indexes. No build date, design, height, staffing, fires, status or access found. The list says names for towers 73 and above are the compiler's own creation, so 'New Lacy' may be a list name. Elevation (188) has no unit on the page. Two web searches found nothing tower-specific. Not verified on the ground. Re-checked 2026-10-21 against the live register HTML: the NHLR table (29 tower rows) and the former-sites table (2 rows) contain no New Lacy entry; the county plan's New Lacy District fire chief line was confirmed in the plan text."
+   },
+   {
+    "id": "us-ga-newark",
+    "note": "Thin: a single compiled list (tnlandforms.us) is the only source found that names this tower; it gives no register number. Not on the NHLR or former-sites lists per the cached indexes. No build date, design, height, staffing, fires, status or access found. The list says names for towers 73 and above are the compiler's own creation, so 'Newark' may be a list name. A separate list entry 'thomas' (GA311, 30.88113,-83.93087) lies a few kilometres away; it was not compared further. Two web searches found nothing tower-specific. Not verified on the ground. Re-checked 2026-10-21 against the live register HTML: the NHLR table (29 tower rows) and the former-sites table (2 rows) contain no Newark entry."
+   },
+   {
+    "id": "us-ga-newman",
+    "note": "Thin: one compiled list (tnlandforms.us, map revised 2016) is the only tower-specific source; not on the NHLR or former-sites lists per the cached indexes. No build date, design, height, staffing, fires, status or access found. The list says names for towers 73 and above are the compiler's own creation, so 'Newman' may be a list name rather than a historic one. The page does not explain the BLL or gfc numbering beyond the two lines quoted, and gives elevation (976) with no unit; the tower record converts it to 297.5 m. Two web searches found nothing tower-specific. A 2006 Savannah Morning News piece on Georgia fire towers (search snippet only; the site returned 403) is a lead for state context, not used. Not verified on the ground. Re-checked 2026-10-21 against the live register HTML: the NHLR table (29 tower rows) and the former-sites table (2 rows) contain no Newman entry; the story's wording was rewritten to avoid copying the source phrase for the 203-tower list."
+   },
+   {
     "id": "us-ga-newton",
     "note": "One source (the NHLR page). Height converted from the Register's 80 ft to 24.4 m; the Register does not give metres for the tower itself. Staffing date is the 2013 registration, not a dated staffing report. No fire history or later condition report found. Photo is from Wikimedia Commons, CC BY-SA 4.0, not checked against the image itself. Brief's access 'unknown' kept as unknown."
+   },
+   {
+    "id": "us-ga-nix",
+    "note": "Only the statewide list entry names Nix. Two web searches and the cached NHLR Georgia index found no Nix history; NHLR's index does not list it. The March 1954 Georgia Forestry issue, reprinting an Atlanta Constitution article, says three Henry County towers were available in 1953 but names none, so it is county background and is not tied to Nix in the story. The DLG text has no mention of Nix. Possible lead for a human to check, unconfirmed: the Eastern US Lookouts Georgia page has an unnamed Henry County entry reporting that a 100-foot Aermotor MC-40 was sold in 2012 and would be relocated to Reynolds Nature Preserve near Morrow. Nothing links it to Nix. Brief's status unknown and access unknown are unchanged."
    },
    {
     "id": "us-ga-nopone",
@@ -121013,72 +121229,676 @@
     "note": "Thin record. Forest Lookouts' Norman Park page gives only the name and county. The tower list gives coordinates, 358 ft elevation and gfc-229, and nothing about construction, staffing, fires or fate. The DLG photo (about 1955) shows a fire tower at a Colquitt Forestry Unit site behind Sunset School, but its map point (31.18839, -83.76885) is not the Norman Park point in the tower list, and the record does not name the tower. Treat the link between the photo and Norman Park as unconfirmed. Wikipedia's Norman Park article and the Vanishing Georgia Norman Park archive mention no tower. Two web searches found no Norman Park tower history. The brief's status 'unknown' is kept."
    },
    {
+    "id": "us-ga-oak-mtn",
+    "note": "Only the statewide list (coordinates, elevation, two registry tags) and the county plan's description of the mountain. Two web searches found no tower history, and the NHLR Georgia index does not list an Oak Mountain tower. The 2018 date comes from the document title in search results. The BLL tag is kept as the list prints it; its expansion is not known. Ownership and public access are unverified, and the story says so. Brief's access 'unknown' is unchanged."
+   },
+   {
+    "id": "us-ga-oak-park",
+    "note": "The move from Oak Park to Flat Creek Lodge rests on the statewide list entry and one 2007 Georgia Trend article. No source gives the move date or confirms the tower stands at the lodge now. A search snippet titled a Yelp listing for the lodge 'CLOSED - Updated September 2026', but Yelp returned HTTP 403 on fetch and the snippet is not cited; a human should call the lodge before anyone plans a visit. Brief status 'unknown' updated to relocated. Brief's coordinates, elevation (72.2 m = 237 ft) and gfc-111 tag match the list. The Eastern US Lookouts page does not say who runs it, so 'fan-run' was dropped from the story. The lodge site, fetched 2026-10-21, shows no closure notice; the Yelp CLOSED snippet is still unverified."
+   },
+   {
     "id": "us-ga-oakland",
     "note": "One source only: the NHLR page with its 2016 steward report. Two web searches found no staffing history, fire history or post-2016 report. Brief's access 'unknown' updated to restricted from the locked gate. Height converted from 80 ft to 24.4 m. Brief's registry and coordinates match the NHLR page."
+   },
+   {
+    "id": "us-ga-oakland-2",
+    "note": "Only one source: a single line in Tom Dunigan's list. Two WebSearch calls, the Marion County Wikipedia article and the cached Georgia lists turned up nothing else. Do not merge with us-ga-oakland (Greene County, NHLR US 704, Oconee National Forest, built 1942), which is a different tower with a different county and coordinates. The list's 'Ron topo' note is unexplained. One search result mentioned a Firetower Road address in Buena Vista, from a real-estate listing; not footnoted and not verified. Worth checking GFC records or historic USGS Buena Vista maps before publishing more than this stub."
    },
    {
     "id": "us-ga-oaky-woods-kathleen",
     "note": "Two sources only. The register is the main source for the build and status; the access and condition details come from a reprinted Macon Telegraph column whose original date is unclear on the page. The macon.com original timed out twice and was not used. Current (2026) access is not documented in the sources read, so the access note may be out of date. The record's access field 'unknown' can now read restricted. The register says circa 1950 and the column says built in the 1950s; these agree and are not treated as a conflict."
    },
    {
+    "id": "us-ga-oatland-island",
+    "note": "The list line's note reads 'wildlife center from ?', and the elevation (13 ft) is low for a lookout. The only description found, a 2015 Vanishing Georgia post (the date is from the web address; the page shows none), calls it an old water tower scheduled for demolition, so this entry may not be a fire lookout. The proposed hidden correction is for a human to decide. A WebSearch summary of a Wikipedia article reported a 2004 transfer of the site to the school district, which conflicts with the blog's 1973 reading; unverified and not used. The Wikipedia article on the center has no lookout mention. No register, agency or news source found after two searches."
+   },
+   {
+    "id": "us-ga-obarr",
+    "note": "Only the list line names this tower. Two WebSearch calls found no source for O'Barr. The business directory's Dodge County Lookout Tower at 126 Jim Harp Rd., Eastman may or may not be this structure; the address was not geolocated and the list coordinates (32.0574, -83.13098) were not checked against it. The directory points to gfc.state.ga.us, which was not fetched; check Georgia Forestry Commission records before linking the two. Dodge County's other list entries, 'dodge' (GA135) and 'chester' (GA136), are separate points and already have their own records (us-ga-dodge, us-ga-chester)."
+   },
+   {
+    "id": "us-ga-ochlocknee",
+    "note": "Thin: one list entry (tnlandforms GA186) with name, county, coordinates, an elevation value the page gives no unit for (the record's 82.9 m assumes feet), and gfc 230. The page's notes say gfc numbers come from an older GFC list of 203 towers; GFC is not spelled out on the page, so the story keeps the abbreviation. The cited Georgia page does not name Tom Dunigan (the name appears only on sibling tnlandforms pages), so the story and footnote omit it. I read the full 29-name NHLR Georgia list: ochlocknee is not on it, and Thomas (Thomasville) Lookout Tower is. No build, staffing, fate or site description found in two searches and the register pages. A search snippet pointed to WJEP-AM (Ochlocknee), a broadcast tower near the town, which is not a lookout; do not confuse it with this record. Lead for a human: the Georgia Forestry Commission Thomas County office. Story is about 141 words."
+   },
+   {
+    "id": "us-ga-ocilla",
+    "note": "Thin: one list entry (tnlandforms GA127) with county, coordinates, an elevation value the page gives no unit for (the record's 103.6 m assumes feet), BLL 64707 and gfc 516. The page's notes do explain the codes: BLL-nnn marks the 118 towers whose coordinates GFC provided, and gfc-nnn marks towers from an older GFC list of 203. The story now uses that wording instead of calling them register references. GFC is not spelled out on the page. The cited Georgia page does not name Tom Dunigan, so the story and footnote omit him. I read the full 29-name NHLR Georgia list; Ocilla is not on it. No build, staffing, fate or site description found in two searches and the register pages. Do not confuse with the tnlandforms entry 'adams' in Irwin County at 31.68602, -83.38340 (GA227), a different tower; see us-ga-adams. Lead for a human: the Georgia Forestry Commission Irwin County unit in Ocilla (a directory listing, not read). Story is about 134 words."
+   },
+   {
+    "id": "us-ga-odum",
+    "note": "Thin: two list entries in Wayne County. 'odum' (GA179, gfc 807) and 'odum old' (GA373, with an unexplained 'datasheet BS1567' note); their coordinates are about 3 km apart. The list does not say how the two relate, so the story presents them side by side. The record's 45.4 m and 46.0 m assume feet. The page's notes say gfc numbers come from an older GFC list of 203 towers; GFC is not spelled out on the page, so the story keeps the abbreviation. The cited Georgia page does not name Tom Dunigan, so the story and footnote omit him. I read the full 29-name NHLR Georgia list; neither Odum entry is on it. No build, staffing or fate source found in two searches and the register pages. A Library of Congress HABS record for the Town of Odum mentions a 1992 demolition, but it concerns town buildings, not this tower, and is not used. Lead for a human: the Georgia Forestry Commission Wayne County unit. Story is about 141 words."
+   },
+   {
+    "id": "us-ga-odum-old",
+    "note": "Thin record. The GA list is the only tower-specific source. No source dates the tower, gives its height or design, describes staffing or fires, or says whether it stands; the story says the site today is undocumented and does not guess. The name 'odum old' may mean it is the older of two Odum towers (the other is GA179 'odum', gfc-807, about 3.1 km north-north-west), but no source says so and the story does not claim it. Not retrieved: NGS datasheet BS1567 (the NGS lookup page returned a generic listing, not the sheet). Mapcarta's 'Old Odum Water Tower' is a different structure about 0.6 km west; it appears only as a warning against confusion. Check whether a separate record for the GA179 'odum' entry exists and whether it should be linked. Searches used: 2. Pages read: about 5."
+   },
+   {
+    "id": "us-ga-oglethorge",
+    "note": "Thin record. The list, the town page and one Commons photo file are the only sources; the photo file page was read but the image itself was not viewed. No source dates the tower, describes its design, staffing or fires, or says whether it stands today. The list spells the name 'oglethorge'; the town is Oglethorpe. The story keeps the list's spelling in quotes and does not propose a rename. The list's 'montezuma' code is not explained by any source read and is not used. A business directory lists a county forestry unit fire tower in Oglethorpe at two different street addresses; that directory refused the fetch (HTTP 403), so it is not used. The photo URL matches the Wikimedia hash path for the file name and returned HTTP 200 (image/jpeg) on the 2026-10-21 check. The photo position is about 54 m from the list point, which supports that the photo shows the listed site. Searches used: 2. Pages read: about 4."
+   },
+   {
+    "id": "us-ga-okefenokee",
+    "note": "Classification is the main issue. The list puts 'okefenokee' among its fire towers, but the sources describe a park observation tower and the list's own footnote mentions wildlife observation towers in the Okefenokee swamp. Recommend the editor decide whether GA348 belongs in the lookout set at all; the story is written as a park-tower history with that caveat. Wikipedia gives no build date for the tower itself, only that boardwalks built in 1940 led to it, so the 1940 event is marked 'other'. The park website is undated in the copy read. Not checked: GFC or NWR records for any fire lookout at this spot; the list's 'okefenokee' label may be a naming choice rather than a fire-lookout record. Confidence is medium on the facts stated and low on the lookout classification. Searches used: 2. Pages read: about 4."
+   },
+   {
+    "id": "us-ga-old-dixie",
+    "note": "Only tower-specific source is the tnlandforms index (page revised 2016, one compiler). The index says names for towers 73 and above are its author's own, so 'Old Dixie' is a label, not verified as the tower's name. The index gives the elevation (220) with no unit; the story reads it as feet, which fits the rest of the list but is not stated. No source found on build date, staffing, fire history, fate or present condition. Story body is about 135 words and rests on one index source, so consider holding for editor review. Neither register lists a Georgia tower called Old Dixie (checked the full NHLR Georgia list of 29 and the FFLOS Georgia list of 2; both lists are now quoted in evidence). A web search returned an unopened result mentioning Old Dixie School Road near Alma, Bacon County; it may explain the label but is unverified and not cited. The elevation of 220 is read as feet (67.1 m). Coordinates were not checked against any map."
+   },
+   {
     "id": "us-ga-old-fort",
     "note": "Seven sources. The conflicts are the build year (1935, 1936 or 1938), the cause of the 1971 fire, the restoration date, and the cost. Staffing: the 2018 Register visit report answers yes to a staffing question, but its meaning is not stated; the fire watch ended in the early 1960s per the state report. Access is marked public because of the park trail and guided-tour evidence; current hours were not verified. The brief's height of 15.2 m matches 50 ft in the Register and Forest Lookouts."
+   },
+   {
+    "id": "us-ga-old-kinderlou",
+    "note": "Index has two Kinderlou entries: GA097 'kinderlou' (30.79958, -83.35439, 213 ft) and GA232 'old kinderlou' (30.79228, -83.36838, 234 ft, this record), about 1.6 km apart. The index says names for towers 73 and up are its author's own, so the names are not official. This record's point is about 24 km from the Wikipedia coordinates for Grand Bay (30.93472, -83.17333), so it may mark the original Kinderlou Forest site rather than the tower at Grand Bay. The story describes the Grand Bay tower, which the 2012 essay and encyclopedia entry support; no source links this index row to that tower. Not verified against a map; no coordinates for the current tower were found. Sources do not date the move or the donation, so no relocated event is recorded. Do not confuse with the NHLR 'Lowndes County Fire Tower' (US 1474, GA 28), a 100-ft steel tower near Delmar, built 1937 and still in use, which is a different structure. Access and pass details come from a 2012 essay; check current rules before publishing. Brief elevation (71.3 m) matches the index's 234 only if read as feet; the index gives no unit."
+   },
+   {
+    "id": "us-ga-oliver",
+    "note": "Only tower-specific source is the tnlandforms index (page revised 2016, one compiler). The index says names for towers 73 and above are its author's own, so 'Oliver' is a label, not verified as the tower's name. The index gives the elevation (159) with no unit; the story reads it as feet, which fits the rest of the list but is not stated. The index row carries the annotation 'topo army'; I found no key for that code, so I did not interpret it. No source found on build date, staffing, fire history, fate or present condition. Story body is about 130 words and rests on one index source, so consider holding for editor review. Neither register lists a Georgia tower called Oliver (checked the full NHLR Georgia list of 29 and the FFLOS Georgia list of 2; both lists are now quoted in evidence). Evans County's Wikipedia page mentions a community called Camp Oliver (with the Glisson Store), a possible naming lead that I did not verify or cite. Do not confuse with Oliver, Georgia, a different community in Screven County. The elevation of 159 is read as feet (48.5 m). Coordinates were not checked against any map."
+   },
+   {
+    "id": "us-ga-peacock-creek",
+    "note": "Only one source places this tower: the tnlandforms.us compiled list, row GA211, which gives the codes BLL-64698 and gfc-127 without explaining them (the record carries them as BLL US 64698 and GFC US 127). Not on the NHLR Georgia list (29 entries, read in full) or the Former Fire Lookout Sites Georgia list (2 sites, Lafayette and Yonah Mountain). Not on the Eastern US Lookouts Georgia list either, which is undated. Two web searches (general Peacock Creek fire tower, and one adding Fort Stewart) found no tower record; the hits were USGS stream gauges named Peacock Creek near Midway and McIntosh, which are streams, not towers, and nothing ties this entry to Fort Stewart. The list gives elevation 17 with no unit; the record's 5.2 m assumes feet, which fits the rest of the list (Brasstown at 4735 is only plausible in feet). The story is about 90 words, below the 120-word floor, because nothing else describes the tower; suggest holding it as a stub. No photos. Next checks if time allows: Georgia Forestry Commission tower records, Liberty County or Midway newspapers, Fort Stewart public affairs."
+   },
+   {
+    "id": "us-ga-pearson",
+    "note": "Only one source places this tower: the tnlandforms.us compiled list, row GA116, with no codes and no unit on the elevation (the record's 59.1 m assumes feet, which fits the rest of the list). Not on the NHLR Georgia list (29 entries, read in full), the Former Fire Lookout Sites Georgia list (2 sites), or the Eastern US Lookouts Georgia list, which has no Atkinson County or Pearson tower entry. Two web searches (general Pearson or Atkinson County fire lookout, and Atkinson forestry) found no tower record. The Vanishing Georgia tag page mentions Pearson GA only as a place caption. The search snippets mention a Georgia Forestry Commission office in Pearson, but that is unrelated to any tower and was not read. The story is about 80 words, below the 120-word floor, because nothing else describes the tower; suggest holding it as a stub. No photos. Next checks if time allows: Georgia Forestry Commission tower records for Atkinson County, Atkinson County Historical Society, Willacoochee or Pearson newspaper archives."
+   },
+   {
+    "id": "us-ga-pecan-city",
+    "note": "Three sources name a Pecan City tower, but none describes it: tnlandforms.us row GA102 (coordinates, elevation 255 with no unit, no codes); the Eastern US Lookouts Georgia list, which gives only the name and county and is undated; and its Pretoria entry, which has a March 1931 note on a tower near Albany, 60 feet high on a 20-foot hill, that its own note says may be the Pecan City tower. The identity is the main open question; the story reports it as unresolved and does not claim a build date. Wikipedia gives the community's coordinates as 31.51778, -84.07, about 2 km from the tnlandforms tower point; the story uses the tower point and does not cite the Wikipedia coordinates. Searches: a Pecan City fire tower and Forestry Commission history query found no tower record, and a query on the Pine Island Timber Protective Organization and 1931 tower found nothing relevant. An Albany Herald piece returned a 403 and was not read. Not on NHLR or the Former Fire Lookout Sites Georgia lists. The story is about 190 words, within the range. No photos. Next checks if time allows: Georgia Forestry Commission Dougherty County records, Albany newspapers from 1931 for the Pine Island tower, Georgia Archives. If an Albany-area source ties the 1931 tower to a named site, this entry's build, staffing and fate can be rewritten."
+   },
+   {
+    "id": "us-ga-peeks-crossing",
+    "note": "Single source for the tower: the tnlandforms Georgia list (entry GA336, page revision dated 2016 on the page itself, retrieved 2026-10-04). Two web searches and the cached NHLR and FFLOS pages gave no build, staffing, fire or status source; the story says so. The NHLR Georgia page is an undated crawl, so re-check nhlr.org/lookouts/us/ga/ before publishing the absence claim. On 2026-10-21 the cached page's 29 listed names were read in full and none matches Peek's Crossing or peeks crossing. The list spells it 'peeks crossing'; the history center spells its whistle stop 'Peek's Crossing' and no source links that stop to the tower. The list's 'tower' kind is not confirmed as a fire lookout, and lowercase-name entries carry unexplained notes. Coordinates and elevation agree with the record. No corrections; no photos found."
+   },
+   {
+    "id": "us-ga-pegamore",
+    "note": "Single source for the tower: the tnlandforms Georgia list (entry GA421, coordinates 34.002138,-84.922788). Its only note, 'datasheet EE1803', is not explained by the list; it may be a survey reference, but that is unverified and the story does not say so. Two web searches and the cached NHLR and FFLOS pages gave no build, fire, staffing or status source. The name matches Pegamore Creek and Pegamore Lake Dam (Heritage Index); no source links the dam or creek to the tower. The NHLR Georgia page is an undated crawl, so re-check it before publishing the absence claim. On 2026-10-21 the cached page's 29 listed names were read in full and none matches Pegamore. Elevation agrees with the record. No corrections; no photos found. Possible next step for a human: Paulding County or Georgia Forestry Commission records, or historic USGS topographic maps of the site."
+   },
+   {
+    "id": "us-ga-pembroke",
+    "note": "Two Bryan County list entries: GA210 'pembroke' (74 ft) and GA411 'pembroke nw' (106 ft). Their coordinates are about 6 km apart by my calculation from the list coordinates, so a human should decide whether they are one tower or two before publishing. The 'Ron' note on GA411 is unexplained. Do not merge with the Pembroke tower in Robeson County, North Carolina (tnlandforms nct130; the cached easternuslookouts.weebly.com 'Pembroke' page documents a 1928-1930 tower there): that is a different structure. The town link is by name only; no source ties either entry to the town. Two web searches and the cached NHLR and FFLOS pages gave no build, fire, staffing or status source. The NHLR Georgia page is an undated crawl; its 29 listed names were read in full on 2026-10-21 and none matches either Pembroke entry. No corrections; no photos found."
+   },
+   {
+    "id": "us-ga-pembroke-nw",
+    "note": "Only source is the tnlandforms.us Georgia list (one page). The list also has a 'pembroke' entry (GA210) in Bryan County, so the record us-ga-pembroke should be checked: it may be the same tower or a different one. Two WebSearch calls and the Bryan County 2018 wildfire plan (gatrees.org, read with fetch_text) mention no tower here. The savannahnow.com 2006 article linked from the list's More info block ('fire towers are fading into history') returned 403 to fetch_text and WebFetch, and the Georgia Forestry Commission history page timed out; both may cover coastal Georgia towers and are worth a retry. The story is short because the list gives no build, design, fate or access. The elevation of 106 has no unit on the page, so the story does not state feet or metres as fact. The 'Ron' note is only quoted from the page credit; the story does not say who supplied these coordinates."
+   },
+   {
+    "id": "us-ga-perkins",
+    "note": "Only source is the tnlandforms.us Georgia list (one page). The list gives the elevation 505 with no unit, so the story says so rather than converting it. Two WebSearch calls turned up the Perkins Memorial Tower at Bear Mountain, New York (search snippets only, not read). It is a different tower and is not used; a reviewer should keep it apart from this record. The Georgia Forestry Commission history page linked from the list timed out, and the savannahnow.com 2006 article returned 403, so neither was read. The story is short because the list gives no build, design, fate or access."
+   },
+   {
+    "id": "us-ga-pierce",
+    "note": "Only source is the tnlandforms.us Georgia list (one page). The brief's register numbers (BLL US 65210, GFC US 804) match the list, which prints them as BLL-65210 and gfc-804; the page's key calls the third column 'GFC number'. The list names the tower only 'pierce', the same as the county name, so the real tower name is unknown and the record name may be a placeholder. A reviewer could check the GFC number 804 against a Georgia Forestry Commission source. Two WebSearch calls found nothing about this tower. The Georgia Forestry Commission history page linked from the list timed out and the savannahnow.com 2006 article returned 403, so neither was read. A second Pierce County entry, bonneyman (GA369), is on the same list and is not this tower."
+   },
+   {
+    "id": "us-ga-pike",
+    "note": "Single source: one row in the tnlandforms.us list. Not on the NHLR or FFLOS Georgia lists. A Wikimedia Commons photo titled 'Abandoned Tower, Concord Rd, Pike County' (https://commons.wikimedia.org/wiki/File:Abandoned_Tower,_Concord_Rd,_Pike_County.JPG, taken 15 March 2014) has its viewpoint at about 33.157, -84.462, which is close to the tnlandforms Hollinville entry (GA110, 33.156, -84.462) and about 20 km from this record's point. Do not use that photo for this tower without checking. Two web searches and several reads found no history, staffing or status. Story is 58 words, well under the 120 guideline, because the evidence is one list row."
+   },
+   {
+    "id": "us-ga-pilots",
+    "note": "Single source: one row in the tnlandforms.us list. Not on the NHLR or FFLOS Georgia lists, and not in the Forest Lookouts Georgia index, which lists Camden County towers Hazzards Neck and Georgia Forest Products Corporation but no Pilots. The datasheet reference is marked with a question mark on the source page, so it is not used as a fact. Searches and reads found nothing about this tower. Story is 54 words, well under the 120 guideline, because the evidence is one list row."
    },
    {
     "id": "us-ga-pine-log",
     "note": "The only build-era source is a February 1938 newspaper report of a plan (50-foot tower, to follow a truck trail built by CCC workers). No built event is recorded, and the planned 50 ft is not in facts.height_m because it is future tense. No source we read confirms the tower was built, when it was staffed, or what became of it. Wikipedia describes a radio tower on the summit and no lookout. The tower list gives 2,314 ft; Wikipedia gives the summit as 2,338 ft (713 m), so the point and the summit may differ. The Georgia Trust's older text warns of demolition threats; its September 2026 update says the state has agreed to acquire the land, which is not yet a completed purchase. Web search snippets were not used as evidence. The 2013 FFLA report concerns a Pulaski County tower, not this one."
    },
    {
+    "id": "us-ga-pine-mtn",
+    "note": "Only two sources. Build date, design, height, staffing, access and any fate after the 2006 sale are not in any source we read; the story says so only where it matters for a visitor. The sale required removal within 30 days, but no source confirms removal. The brief's register 'GFC US 717' appears to be a Georgia Forestry Commission cross-reference; NHLR US 717 is the Seminole County Fire Tower (GA 12), so do not read it as an NHLR number. The Savannah Morning News 2006 fire-tower article may cover this sale but was unreadable (403 via fetch_text, refused by WebFetch). Story is 110 words, short of the 120 guideline, because evidence is thin."
+   },
+   {
+    "id": "us-ga-pine-mtn-2",
+    "note": "Thin record: no source gives a build date, design, status, staffing, access or site-today description for this tower. Checked the cached NHLR and FFLOS Georgia listings (this tower is not on either) and ran two searches. Possible duplicate: the tnlandforms list also has 'Harris County Lookout Tower' (GA023, matched to us-ga-harris-county) a few hundred metres away; an editor should decide whether these are one structure. The tnlandforms page names an 'elevation' field with no unit, so the 1,166 figure is read as feet (record elevation_m 355.4). The same page says names for towers 73 and above are its author's own creation; this tower is GA196, so 'pine mtn' is not evidence of a historical name. Harris Tower and William Mountain Tower (1955) have no locations in any source, so they must not be linked to this record. A 2006 Savannah Morning News article on Georgia fire towers (archived copy) names no Harris or Echols County tower. Name collision: 'pine mtn' also appears in Polk County (GA120); the story says Harris County throughout."
+   },
+   {
+    "id": "us-ga-pineland",
+    "note": "Thin record: one tower list is the only source; no build, design, staffing, status or access source was found. Two Echols entries (this record, GA095, and us-ga-pineland-gfc, GA265) sit about 4.8 km apart by the listed coordinates (distance computed); GA265 lies at a bearing of about 163 degrees from this tower, i.e. south-south-east. The editor should check whether they are two towers or one. The list's elevation column has no unit; 141 is read as feet. The list's naming note says names for towers 73 and above are the author's own creation (this tower is GA095), so 'pineland' is not evidence of a historical name. The record's register reads 'GFC US 828', but the list tags it 'gfc-828' with no 'US'; check the format before changing it. Searches turned up the 2026 Pineland Road Fire in Echols and Clinch counties, but no source ties that fire to this tower, so it is not used. Searches ran through websearch.py (three queries covering Echols/Pineland; no tower-specific history found)."
+   },
+   {
+    "id": "us-ga-pineland-gfc",
+    "note": "Thin record: one tower list is the only source; no build, design, staffing, status or access source was found. The companion entry us-ga-pineland (GA095) sits about 4.8 km north-north-west of this tower by the listed coordinates (distance computed; bearing about 343 degrees); the editor should check whether these are two towers or one. The list's elevation column has no unit; 136 is read as feet. The list's naming note says names for towers 73 and above are the author's own creation (this tower is GA265), so 'pineland GFC' is not evidence of a historical name. The record's register reads 'BLL US 65194', but the list tags it 'BLL-65194' with no 'US'; check the format before changing it. The 2026 Pineland Road Fire in Echols and Clinch counties turned up in searches but no source ties it to this tower, so it is not used. Searches ran through websearch.py and were shared with us-ga-pineland."
+   },
+   {
     "id": "us-ga-piney-mountain",
     "note": "Only one substantive source (the NHLR register entry, which is short). No build year, builder, design, height, staffing or access found. Two WebSearch queries and one websearch.py query returned nothing about this tower in Georgia (Virginia Piney Mountain results were ignored). Fannin County history page checked: no lookout mention. Access level and staffing left unknown rather than guessed; do not climb until a source says otherwise."
+   },
+   {
+    "id": "us-ga-point-peter",
+    "note": "Only tower-specific source is one index line (name, county, coordinates, elevation 673 with no unit). It gives no build date, height, operator, status or access. Searches and cached NHLR/FFLOS pages found nothing specific to this tower, only genealogy and place-name pages. The index's elevation has no unit; 673 matches the record's 205.1 m only if read as feet. The BLL and gfc codes are not defined in any source found; the index gives this tower none. Story is short because the evidence is thin."
+   },
+   {
+    "id": "us-ga-pooler",
+    "note": "Only tower-specific source is one index line (name, county, coordinates, codes; the index's elevation of 18 has no unit, and the record's 5.5 m matches feet). It gives no build date, height, operator, status or access. The 2006 article describes two staffed Savannah-area towers (near Midway, near Ludowici) and does not mention Pooler (full-text search for 'Pooler' found no match); that does not establish whether the Pooler tower was staffed or standing. BLL and gfc codes are not defined in any source found; gfc is probably Georgia Forestry Commission, unverified. A search snippet (countyoffice.org, not fetched because it returned 403) lists a Georgia Forestry Commission Chatham unit at 836 U.S. 80, Pooler; not used, since the tower's own address is unknown. Story is short because the evidence is thin."
+   },
+   {
+    "id": "us-ga-preston",
+    "note": "Only tower-specific source is one index line (name, county, coordinates, codes; the index's elevation of 555 has no unit, and the record's 169.2 m matches feet). It gives no build date, height, operator, status or access. Two search snippets (governmentstate.org and countyoffice.org; neither could be fetched, one DNS failure and one 403) list a 'Fire Tower' at 5720 GA Highway 41, Preston, at the same address as a Georgia Forestry Commission Webster County unit. Not cited, since the pages are not cached and the link to this tower is unconfirmed. Worth a manual check, because it may be the tower's address and would support a site-today paragraph. BLL and gfc codes are not defined in any source found. Story is short because the evidence is thin."
+   },
+   {
+    "id": "us-ga-pretoria",
+    "note": "The sale sheet is undated and does not show the sale outcome. A GovDeals listing (asset 54154) appeared only in a search snippet; the page returned 403 to fetch_text and WebFetch, so it is not cited. The record's registers say GFC US 213 (tnlandforms gfc-213), but the sheet says GFC #10001 for the same coordinates; the conflict is not resolved here. BLL US 41110 is unsourced. The index name 'pretoria' is the tnlandforms author's label (the index says names for towers 73 and above are the author's creation). The sheet gives an overall height of about 100 feet, not a cab-floor height, so no height_m is set. No source on public access was found. The photo url is the Commons file page; its EXIF date is a camera date, not a verified photo date. Checked 2026-10-21: the fetched sale sheet text shows no date. The story attributes the 100-foot height to the sheet (undated, so it does not show present state), and the advice not to climb the tower was removed because the sheet does not say it."
+   },
+   {
+    "id": "us-ga-price-mtn",
+    "note": "Index-only evidence from tnlandforms (GA359). Not listed on the NHLR Georgia list or the FFLOS and FFLA Georgia pages. The index tag 'datasheet ED1735' is not explained on the page and is not used. A search snippet from anyplaceamerica.com (page returned 403, not read) calls the peak Chestnut Mountain in Hall County; unverified and not cited. The story is about 73 words, well under the roughly 120-word floor for thin evidence; consider holding it. The index states no unit for elevation. Feet are an inference: the record's metres match 1,210 ft, and the index's largest values (4735 for GA006) cannot be metres in Georgia. The Tom Dunigan attribution does not appear on the page and was removed. The name 'price mtn' is the index author's label, not an official name."
+   },
+   {
+    "id": "us-ga-providence",
+    "note": "Index-only evidence from tnlandforms (GA379). Checked and empty for this tower: Wikipedia Stewart County and Providence Canyon State Park pages, gastateparks.org, the NHLR Georgia list, the FFLOS and FFLA Georgia pages, two web searches. The story is about 72 words, well under the roughly 120-word floor for thin evidence; consider holding it. The index states no unit for elevation. Feet are an inference: the record's metres match 662 ft, and the index's largest values (4735 for GA006) cannot be metres in Georgia. The Tom Dunigan attribution does not appear on the page and was removed. The gfc-314 tag is the index's own tag and has not been checked against Georgia Forestry Commission records. The name 'providence' is the index author's label, not an official name."
    },
    {
     "id": "us-ga-pulaski",
     "note": "Thin record. The tower list gives coordinates, a 302-ft elevation and the numbers BLL-64710 and gfc-335. The OSM point is tagged as a lattice observation tower, with no history. The only history is the 2013 FFLA report, which is secondhand and does not name the tower; the report concerns a tower 'in Pulaski County', which may or may not be this site. Forest Lookouts' Pulaski page gives only the name and county. Two web searches found no Pulaski tower history. A 2024 Hawkinsville survey describes a proposed Verizon cell tower called the Pulaski Tower; it is not a lookout and is not used. The brief's status 'unknown' is kept."
    },
    {
+    "id": "us-ga-quitman",
+    "note": "The only tower-specific sources are one list line (tnlandforms, 2016 map) and a directory entry that files the Quitman tower under 'Quitman County - Georgia Forestry Commission', with no text or date. No source gives a build date, design, staffing, status or present condition, so the story is short. The list does not state its elevation unit, so the story gives 499 with no unit and no metric conversion; no cited source gives metres. The list's BLL tag is not explained in any source; the list's column header calls the gfc tag a GFC number. The National Historic Lookout Register and Former Lookout Sites Georgia lists (cached copies) do not include this tower. The Forest Lookouts Georgia page shows a photo for this entry with no credit or licence, so no photo was added. Do not merge with us-ga-quitman-2 (Brooks County, 'quitman'), which is a different site."
+   },
+   {
+    "id": "us-ga-quitman-2",
+    "note": "Bare list line only. Two searches and the cached Georgia lookout directories (Forest Lookouts, NHLR, Former Lookout Sites, Vanishing Georgia Brooks County posts) gave nothing tower-specific. The story is about 60 words, far below the roughly 120-word norm for thin sources; hold it if the page would look empty. The list writes the name in lower case, as it does for other entries; capitalise or rename if the editor prefers. The name matches the county seat, but no source links the two. The list does not state its elevation unit, so the story gives 169 with no unit and no metric conversion. Different from us-ga-quitman (Quitman County, GA046), which should not be merged with it."
+   },
+   {
     "id": "us-ga-rabun-bald",
     "note": "Build date is disputed: a November 1922 Atlanta Constitution item (via Forest Lookouts) describes a 14-ft Forest Service tower on the summit, while NHLR and Chattooga say the first tower dates to the 1930s. The story reports both and does not reconcile them. Trail length also disagrees (4.2 vs 5.8 mi round trip) and is reported as such. No staffing, fire or NRHP sources were found. The YCC conversion has no date in any source, so it is not in events. Access is inferred from trail-based public visits; no gate or climbing rule was found."
+   },
+   {
+    "id": "us-ga-ranger",
+    "note": "Bare list line only, with no registry number, agency or status. Searches and the cached Georgia directories (Forest Lookouts, NHLR, Former Lookout Sites) found nothing about this tower. The story is about 45 words, far below the roughly 120-word norm; hold it if the page would look empty. The list does not state its elevation unit, so the story gives 1,393 with no unit and no metric conversion. The NHLR Georgia list includes Brogdon Hill (Gordon) Lookout (US 1238, GA 22), but the list's Brogdon Hill point (GA223, 34.54209, -84.92789) is about 20 km west of this one, so it is a different site and was not used."
+   },
+   {
+    "id": "us-ga-reid",
+    "note": "Thin record. The only sources are the tnlandforms list entry (name, county, elevation; the page is dated as revised 2016) and a 2013 FFLA report that says one Richmond County tower was to go to auction for removal without naming it. Two WebSearch queries found no Georgia Reid lookout history. A Mississippi lookout is also called Reid (nhlr reid-lookout-tower); it is a different structure. The Augusta Broad Street bell tower that search turned up is not a forestry lookout and is left out. Worth checking Georgia Forestry Commission property records for whether the Richmond County tower sold, and whether it was this one. Story is below the 120-word floor because no source supports more."
+   },
+   {
+    "id": "us-ga-reidsville",
+    "note": "The Journal article carries no date in the copy we could read, so the move is dated only as 'the third time'. Its cached text stops mid-sentence ('just west of the Tattnall'), so the new site's name and the tower's current use are not confirmed. A search summary (not a page we read) also described a Highway 147 site, a 1950s move and a Heart of Dixie Outdoors observation tower; these are unverified and kept out of the story. The tnlandforms entry is named for the town, so it is probably this tower, but the list does not say so. The record point (32.08314, -82.11401) is near the town centre, while the article puts the tower on the western outskirts, so the point may not be the original site. Status changed from unknown to relocated in facts; no built or move year is given, so no events are listed."
+   },
+   {
+    "id": "us-ga-renfroe",
+    "note": "Very thin. Only the tnlandforms list entry supports anything (name, county, elevation); two WebSearch queries and a scan of the local cache found no Renfroe tower history in Washington County or Sandersville. A tower database lists an unrelated 1952 structure in Sandersville registered to the county; it does not say it was a fire lookout, so it is not used. Do not merge with the Alabama data (data/towers/al/us-al-renfroe.json): an OpenStreetMap node named 'Renfroe Lookout Tower' sits in Alabama near 33.41, -86.21, a different structure. Story is below the 120-word floor because no source supports more. A person with Georgia Forestry Commission or Washington County records would be the next step."
+   },
+   {
+    "id": "us-ga-reno",
+    "note": "Only one list names this tower, and the list has no notes, dates, owner or design. The 2026 searches found no Reno lookout in the Georgia Forest Lookouts index or in the Vanishing Georgia category pages. Two near matches are not this site: the Forest Lookouts index records a Grady County Forestry Commission tower at Hawthorne Trail, sold at auction in 2006, about 25 km north of this point; and a 2020 cultural survey concerns a Reno cell tower in Cairo, which is not a lookout. The list's 269 is read as feet, matching other entries. Wikipedia is used for the place only; a Grady County history source would help."
+   },
+   {
+    "id": "us-ga-reynolds",
+    "note": "The link between this entry and the Henry County tower (list code GA109, called greenwood) rests on the list note and the 2012 reports; see us-ga-greenwood. The 2012 sources describe a plan. No source found places a tower at the preserve now, and the Wikipedia article on the preserve (checked 2026-10-21) does not mention a tower or lookout. Clayton County Parks and Recreation is the place to confirm. Preserve facts come from Wikipedia, not a county page."
+   },
+   {
+    "id": "us-ga-rich-mtn",
+    "note": "The only source for a tower on the summit is a Komoot route page, which gives no dates or citations for the CCC claim. The list entry has no notes. The searches turned up a Rich Mountain fire tower near Hot Springs, Madison County, North Carolina, which is a different tower and is not used here. The list coordinates sit near the wilderness's listed coordinates, so the tower may or may not lie inside the wilderness; no source settles that. Checking the Chattahoochee National Forest ranger district or the Georgia Forestry Commission would be the next step."
+   },
+   {
+    "id": "us-ga-richmond-hill",
+    "note": "Only one source: a single line in a Google-map Georgia lookout list (tnlandforms.us, revised 2016). The elevation column (18) has no unit stated; the brief's 5.5 m assumes feet. The brief's record (coordinates, county, elevation, no registers) matches that line. The Eastern U.S. Lookouts Georgia directory and the NHLR Georgia index have no Richmond Hill tower. The Eastern U.S. Lookouts Richmond Hill page is a Massachusetts tower and is not this one. Two web searches turned up nothing about this tower. Build date, design, staffing, access and site status are all unknown. The story is about 90 words, below the 120-word target, because the evidence is one line; it has not been padded."
+   },
+   {
+    "id": "us-ga-richwood",
+    "note": "Only the tnlandforms.us list (Google map revised 2016) places a tower here. The Eastern U.S. Lookouts Georgia directory and the NHLR Georgia index have no Richwood tower. The directory does list a 'WALTON' tower in Dooly County with no operator or detail. The sources do not say whether it is this structure, so the story makes no link. The list's elevation (363) has no unit stated; the brief's 110.6 m assumes feet. The list's coordinates (32.03313, -83.79330) are about 1.2 km from the Wikipedia coordinates for the community (32.04194, -83.78639); this is my own calculation, not a source's. The community sentences come from Wikipedia and the New Georgia Encyclopedia and describe the place, not the tower. The brief's register numbers (BLL US 41114, GFC US 330) match the list's codes. Two web searches and a few page reads found no construction, staffing or site-status detail. The story is about 110 words, short because the evidence is thin."
+   },
+   {
+    "id": "us-ga-riddleville",
+    "note": "Two lists agree on the place: the tnlandforms.us list (Google map revised 2016) gives Riddleville in Washington County at elevation 431 (no unit stated; the brief's 131.4 m assumes feet) with code gfc-625. The brief's record matches. The Eastern U.S. Lookouts Georgia directory gives the operator (Georgia Forestry Commission) and the September 2006 auction. The auction line comes only from that hobbyist directory; a web-search snippet repeated the $700 figure, but it is not an independent source. The sale required removal within 30 days; no source confirms removal or what the site looks like now. No construction date or design was found, so the story has no build paragraph. The marker is used only for the 1859 incorporation and the naming. The story is about 135 words. The Prescott sentence shows the same 2006 sale note recurs in the directory; it is context, not a claim about Riddleville."
+   },
+   {
+    "id": "us-ga-ridge-road",
+    "note": "No source found for a Ridge Road tower in Hall County. Two web searches and the caches turned up only the tnlandforms row. The Gainesville Times pieces are about the Lula tower (GA291), a separate tower; they are cited only to separate the two. The record's status is still unknown and the story does not claim one. The coordinates are the list's; not checked on a map. Unverified lead: the FFLA Georgia/SC chapter report for 2013 (https://firelookout.org/wp-content/uploads/2024/11/cr-rp-gasc-2013.pdf) mentions a planned Georgia tower status list; it was not found. Recommend holding as list-only."
+   },
+   {
+    "id": "us-ga-ringgold",
+    "note": "Thinnest case in the batch: one source, the tnlandforms table and its code notes. Two web searches, the cached NHLR Georgia index, the FFLA cache and the tnlandforms cache found no build, staffing, fate or present-site record. The story says so only where the list itself is silent. The name 'ringgold' is the list author's label, not a historic name. Proposed correction: the BLL and gfc codes are location references, not register numbers. Unverified lead: the FFLA Georgia/SC chapter report for 2013 (https://firelookout.org/wp-content/uploads/2024/11/cr-rp-gasc-2013.pdf) says Ron Stafford was compiling a Georgia tower status list; that list was not found. Recommend holding this entry as list-only until a Georgia source is found."
+   },
+   {
+    "id": "us-ga-ripley",
+    "note": "No Georgia source found. Two web searches (one on Ripley and Twiggs County, one on the Tennessee tower) and the caches turned up only the tnlandforms row and the Tennessee Ripley Fire Lookout Tower, which is a different structure. The Twiggs County results covered county and Jeffersonville history with no lookout mention. Coordinates and the 541 ft figure are the list's; the record's 164.9 m is a conversion. Unverified lead: the FFLA Georgia/SC chapter report for 2013 (https://firelookout.org/wp-content/uploads/2024/11/cr-rp-gasc-2013.pdf) says Ron Stafford was compiling a Georgia tower status list; not found. Recommend a human check of the coordinates before this entry is shown with a map pin, and holding it as list-only."
+   },
+   {
+    "id": "us-ga-rockingham",
+    "note": "Only one source places a tower named rockingham here: the tnlandforms.us Georgia list (GA287), whose page carries a March 2016 revision stamp. The record's register numbers (BLL US 65212, GFC US 522) and the list's usgs tag come from that same line; the list does not define the abbreviations on the page read. Elevation is listed as 191 with no unit (the record's 58.2 m corresponds to feet). The record's status and access stay unknown: no source found describes build date, design, height, staffing, fires, fate or the site today. Two searches and the NHLR/FFLOS crawl cache had no Georgia entry for this tower; firelookout.org's Georgia page is marked under construction. Worth a human check with the Georgia Forestry Commission (Alma office or property division) before any status change. Fact-check 2026-10-21: the tnlandforms.us home page carries unrelated gambling spam text, so the site may have been tampered with; the Georgia list page itself shows none. The name Tom Dunigan appears on the home page (\"Tom Dunigan's old UT home page\"), not on the list page."
+   },
+   {
+    "id": "us-ga-rockridge",
+    "note": "Only source is the tnlandforms.us list (map marked revised 22 March 2016). Two WebSearch queries (Heard County, Rockridge, Hogansville, Franklin) found no history for this tower. NHLR has no page for it (404 on nhlr.org/lookouts/us/ga/rockridge/) and the cached FFLOS Georgia index does not list it; firetower.org was unreachable. The list prints no unit for elevation; feet is inferred, and 988 ft = 301.1 m matches the record. The page header labels the last field 'GFC number', but the page does not explain gfc-416 further; the record's GFC 'US 416' is not verified against any Georgia Forestry Commission source. Status and access unknown, so no status or access keys are set. Story is deliberately short because no history source was found."
+   },
+   {
+    "id": "us-ga-rockville",
+    "note": "Only source is the tnlandforms.us list. Name and county match the record. The GFC number field, the last on the line, is blank for this entry, so the list gives no register code (the record has none either). Two WebSearch queries (Putnam County, Rockville, GFC fire tower) found no history. NHLR has no page for it (404 on nhlr.org/lookouts/us/ga/rockville-lookout-tower/). A cached TopoZone page for Jefferson Lookout Tower (data/raw/web/80a4c1fcfea6 family of files) lists a 'Rockville Lookout Tower' among nearby USGS features with map area 'Rockville'; it gives no coordinates or history and is not cited. A Putnam Examiner search hit describing a 1940 CCC fire tower is about Putnam County, New York, and was not used. Elevation unit (feet) is inferred as for Rockridge; the page prints none. Status and access unknown, so no keys are set. Low confidence; deliberately short."
+   },
+   {
+    "id": "us-ga-rocky",
+    "note": "Only source is the tnlandforms.us list. Name, county and coordinates match the record (record rounds 34.824). The list prints no elevation unit; feet is inferred, and 1,613 ft = 491.6 m matches the record. The datasheet reference EE1967 is unexplained; a search for EE1967 with Whitfield County returned no NGS datasheet page. Two WebSearch queries found no Rocky tower in Whitfield County. The hits were Rocky Face Mountain (a place name and an October 2016 brush fire) and a Dug Gap Mountain communications tower; neither is linked to this entry and neither is cited. NHLR has no page for it (404 on nhlr.org/lookouts/us/ga/rocky/). Status and access unknown, so no keys are set. Low confidence; deliberately short."
+   },
+   {
+    "id": "us-ga-rocky-top",
+    "note": "Three sources, none of which describes a lookout built, staffed, or removed on this summit, so the story covers the list entry and today only. Elevations disagree: list 3051 (unit not stated), Wikipedia 3,071 ft, tower-site listing 3075.0 ft. The listing's coordinates (34.9820833, -84.0036944) are nearly the list's point, but no source says the listed tower and the radio tower site are one structure, and the story does not claim it. Record status and access stay unknown; the radio site listing does not say whether the summit is public."
+   },
+   {
+    "id": "us-ga-roopville",
+    "note": "One source. Searched twice; the NHLR and FFLOS Georgia indexes list no Roopville tower, and the Carroll County Historical Society Roopville page mentions no tower or lookout. The list's 1289 matches the record's elevation_m of 392.9 when read as feet, so the story gives the bare value. The story is short because the list is the only evidence; it names nothing about build, staffing or fate."
+   },
+   {
+    "id": "us-ga-rose-creek",
+    "note": "One list row carries the only evidence. The directory page is a stub: its name and county are the only details, and its index entry sits in the directory's Florida list, which may explain the different county, though the page does not say so. Searches found no Georgia index entry (NHLR, FFLOS, or the firelookout.org Georgia list, which is a placeholder) for this tower. The list's 'datasheet' tag is not explained anywhere checked, so the story does not mention it. The record's elevation_m of 5.8 matches 19 feet read as a list value in feet."
+   },
+   {
+    "id": "us-ga-rose-hill",
+    "note": "Only one source names this tower: the 2016 tnlandforms list (county, coordinates, elevation number, GFC number). Not on the cached NHLR or FFLOS Georgia lists, not on the Forest Lookouts Georgia list, and two searches turned up no history, status, access or photo source. The record's registers entry 'GFC US 2' is a Georgia Forestry Commission list number (gfc-002), not a national register number, so the registers field may need relabelling. The list's elevation column gives no unit; the record's 190.8 m assumes feet. The name 'rose hill' is the list author's, not a checked place name. Rose Hill Plantation in Elbert County (a historic house) and the Rose Hill lookout in Oregon are different places and were not used."
+   },
+   {
+    "id": "us-ga-round-oak",
+    "note": "Status, access and history are unknown: the sources are the 2016 list, a TopoZone listing and an undated Weebly list. Not on the cached NHLR or FFLOS Georgia lists. The record's registers entries 'BLL US 41099' and 'GFC US 608' are Georgia Forestry Commission reference numbers as the 2016 list uses them (BLL-nnn = GFC-supplied coordinates; gfc-nnn = older GFC list), not national register numbers, so the registers field may need relabelling. The list's elevation column gives no unit; the record's 189.6 m assumes feet. The cached Wikipedia article on Round Oak, Georgia shows no tower. Do not confuse with the 2026 wildfire called Jones Round Oak Juliette Rd, which is unrelated."
+   },
+   {
+    "id": "us-ga-round-oak-old",
+    "note": "The name 'round oak old' is the list author's label (entry 406 is above 73, so the name is the author's creation), not a historical or local name. 'Old' may suggest an earlier site near Round Oak Lookout Tower, but no source says so and the story does not claim it. The list's elevation column gives no unit; the record's 201.5 m assumes feet. The only source is the 2016 list; the Weebly Georgia list and TopoZone's Jones County list name Round Oak but not this point. Status, history and access are unknown. Visitors could confuse it with Round Oak Lookout Tower about 2 km away; the two records are separate points."
+   },
+   {
+    "id": "us-ga-rowena",
+    "note": "Only one source names this tower: the tnlandforms Georgia list (2016 revision). It gives name, county, coordinates and the gfc-207 code, but no date, height, status, builder or access. The list's unlabelled number 242 is probably elevation in feet; it is not used in the story. Not in the NHLR Georgia register. The NHLR Early County Fire Tower in Blakely is a different registered structure, roughly 22 km away by the two sets of coordinates; do not merge the records. Two WebSearch queries, a combined FFLA chapter-report search, and Wikipedia pages (Rowena, Georgia; the Early County NRHP list) found nothing about this tower. Status and access are unknown and left out. The story is short on purpose, since no source supports more."
+   },
+   {
+    "id": "us-ga-run-creek",
+    "note": "Only one source names this site: the tnlandforms Georgia list (2016 revision), a single row with name, coordinates, county and elevation-like figure 41 (feet, unlabelled; not used in the story). The name is lowercase in the source and carries no 'Lookout Tower' suffix. The list's own note says names for towers 73 and above are the author's creation, and GA212 falls in that range, so 'run creek' is the list's label, not an official name; the story says so. Of the 427 list rows, 301 carry a register code (counted from the page), so 'unlike many entries' holds. Not in the NHLR Georgia register. No WebSearch hit, Wikipedia page or FFLA chapter report found anything on this site (one combined WebSearch covered it with the other two). Status, access and history are unknown and left out. The story is short on purpose; padding would invent facts."
    },
    {
     "id": "us-ga-saggus",
     "note": "Current status is unknown. No source after the 1957 dedication says whether the tower stands, was removed or was moved, and no visit or access information was found. Height and construction are not in any source. The Georgia list gives the elevation as 605 with no unit, and no map site for this record was found to confirm feet, so the story gives the number alone. The parade detail comes from the magazine's account of the day; the newspaper item (dated November 28, 1957) only announced the parade. The tnlandforms page names no author, so its footnote gives the site name only. tnlandforms also lists a second, unsure entry 'taliaferro?' (GA315, 33.54833,-82.87851, marked 'loc?'), about 5 km south-southwest of this record's point; it may be the same tower. This record keeps GA197 because the 1957 directions (four miles northeast, or a few miles north, of Crawfordville) fit it. The newspaper spells the town Crawfordsville and the magazine Crawfordville. The 1957 built year is the dedication year, not a sourced construction date. The agency comes from the Eastern US Lookouts page heading and the magazine."
    },
    {
+    "id": "us-ga-sapelo",
+    "note": "Only one source names this tower: the tnlandforms Georgia list (2016 revision), which gives name, coordinates, county, an unlabelled figure 22 (feet, probably elevation; not used in the story) and the gfc-133 code. Not in the NHLR Georgia register. The name overlaps Sapelo Island, which has its own lighthouse (Wikipedia: Sapelo Island Light). The story mentions the lighthouse only to prevent confusion; no source ties this list site to the island or confirms its location, so do not link the lighthouse record to this tower. Two WebSearch queries, a combined FFLA chapter-report search, and Wikipedia pages (Sapelo Island, Sapelo Island Light, the Georgia tower list) found nothing about a tower here. Status and access are unknown and left out."
+   },
+   {
+    "id": "us-ga-sappville",
+    "note": "Only two sources. Dunigan's list gives name, county, elevation and a datasheet reference, but no build date, operator, height or status. TopoQuest only confirms the Sappville community at about the same coordinates (about 105 m apart by our calculation; the story says about 100 m and labels it as our calculation). Elevation units are not stated on the list; 154 is read as feet, which matches TopoQuest's 150 ft. A Georgia Archives search snippet names a cell tower 'Sappville (W361)' north of Highway 82 in Ware County; that archive page returned 403 and was not read, so it may or may not be this site. Status unknown; a field check or a Georgia Forestry Commission tower list would be needed before writing more."
+   },
+   {
+    "id": "us-ga-savannah",
+    "note": "The name Lookout appears only on Dunigan's list. Mapcarta, which draws on OpenStreetMap, types the feature only as a tower, so it may not be a fire lookout (possibly a communications or other tower). Needs a check of the local tower and its use. Elevation units are not stated on the list; 36 is read as feet, matching the record's 11.0 m. A 2006 Savannah Morning News article on fading fire towers returned 403 and was not read; its search snippet mentioned a fire tower near Statesboro, not this one. Current status unknown."
+   },
+   {
+    "id": "us-ga-sawnee-mtn",
+    "note": "Sources are thin: Dunigan's list (no build date, operator or status; register codes BLL-64454 and gfc-917 not checked), one 2000 trip report that is the only description of the tower, and Wikipedia for the radio tower. Whether the lookout still stands and who owns it is unknown. The 2000 report places the tower beside a house and its directions mention a private driveway, so access is recorded as private; a site check should confirm. The story's visitor advice was removed because the report does not support it. The county preserve page lists tower climbing among party experiences; this does not describe the lookout. Preserve acreage differs between sources (963 on Wikipedia, over 820 on the county page); acreage is not used in the story. Do not encourage climbing."
+   },
+   {
+    "id": "us-ga-screamer-mtn",
+    "note": "Story is about 90 words, short of the roughly 120 the story guide aims for when sources are thin, because the only sources are a list entry and an encyclopedia article; no build, staffing or fate evidence was found. One web search returned Rabun Bald fire tower history, which is a different peak and is not used. The list cites datasheet ED1449, which was not available to read. The 1971 purchase is from Wikipedia and may be out of date, so check current ownership before making any access claim. No access level is set."
+   },
+   {
+    "id": "us-ga-seminole",
+    "note": "Most facts rest on one register page (NHLR, cached crawl). One web search found no Georgia Forestry Commission or Donalsonville tower history; a search snippet about tower phase-out in the late 1980s was not read as a page and is not used. Height 30.5 m is 100 ft converted, not stated in the register in metres. Position differs by about 3.9 km between the list and the register, and the record keeps the list's position; check which is right before any map use. No source states public access, so no access key is set. Status 'standing' is from 'still operational for emergencies'."
+   },
+   {
     "id": "us-ga-seminole-county",
     "note": "One register page carries the tower facts. The statewide blog is context only. Two web searches (Seminole County tower; Donalsonville history) returned no tower-specific pages. Local history pages checked had no mention. Access, fire history and current owner are not in any source read, so they are left out of facts. The register's nominator is not in the story. Height 100 ft converted to 30.5 m. The record's 43 m elevation is the NHLR site elevation, not tower height."
+   },
+   {
+    "id": "us-ga-sfw-museum",
+    "note": "The move claim rests on two directory-style sources: Eastern U.S. Lookouts and the tnlandforms annotation 'Ron brasstown-relocated'. The Southern Forest World page (exploregeorgia.org) returned HTTP 403 to fetch_text; a WebFetch read found no mention of a tower and no tower on the grounds, and that page is not quoted. No independent museum or Forest Service confirmation was found. A search snippet gave a 1935 Civilian Conservation Corps build date for the Brasstown tower; it was not read as a page and is not used, since the directory says 1939. Wikipedia has no build history for the tower. The directory's admission-fee sentence does not say which tower it means, so the story attributes it to the directory. Record status is still unknown and the editor may want a status note saying it was relocated from Brasstown Bald. No photos found."
+   },
+   {
+    "id": "us-ga-sharp-mtn",
+    "note": "Confidence low: one list entry and one Wikipedia mention of a peak with the same name. The list has no units; the story gives the 717 m figure only as a conditional on the figure being feet (the brief's 717.2 m matches 2,353 ft). Nothing ties the Wikipedia Sharp Mountain to the list's coordinates. A search snippet mentioned a 2022 Pickens County Progress item about a Firetower Road near Sharp Mountain; its cached page returned no text, so it is unverified and not cited. No build, staffing or fate evidence was found. Status and access in the brief stay unknown."
+   },
+   {
+    "id": "us-ga-signal-mtn",
+    "note": "Confidence low. The list and Wikipedia both place a peak named Signal Mountain in Polk County, but no source ties the list's coordinates to Wikipedia's Rockmart peak, and no source describes a tower. Elevations differ slightly (list 1286 with no unit; Wikipedia 1,290 ft / 393 m). Search snippets (not read, not cited) named other peaks called Signal Mountain in Tennessee, New Hampshire and near Atlanta, so the coordinates should be checked before any use. The list's 'datasheet' tag is unexplained. Status and access in the brief stay unknown."
+   },
+   {
+    "id": "us-ga-siloam",
+    "note": "Confidence low. The only tower-specific source is the list entry, which gives no date, owner or description. Greene County is supported by the list and by the Wikipedia infobox. The 'datasheet DF2236' tag is unexplained; the cached list page links to NOAA datasheets, which were not checked. Search snippets (not read, not cited) mentioned a 97.5 m commercial antenna registered in Siloam and a Siloam Historic District; neither is a lookout. Thin story, about 60 words, because no build, staffing or fate evidence was found. Status and access in the brief stay unknown."
+   },
+   {
+    "id": "us-ga-simonton",
+    "note": "Single source: the tnlandforms Georgia tower list (entry GA112). Two web searches found no fire lookout in Gwinnett County; the results were water towers and unrelated fire towers, and none is cited. No cached NHLR, FFLOS or eastern-lookout page mentions this tower. The datasheet code DF2743 is not explained by the page, which cites NGS data sheets; a search for the code found nothing relevant. The list prints no unit for elevation; the record converts it as feet, which the story follows. Nothing is known about build date, staffing, fate or access. Checks worth making: NGS datasheet lookup for DF2743; Gwinnett County historical sources; the NHLR and FFLOS registers if a listing exists."
+   },
+   {
+    "id": "us-ga-smarr",
+    "note": "Single source: the tnlandforms Georgia tower list (entry GA105). Searches turned up the Smarr community and an unrelated 2021 fire station story in Monroe County, but no lookout history; none of that is cited. Wikipedia's Smarr article gives a community point about 1 km from the list coordinates, so the name may not tie the tower to the community; the story does not say it does. The list prints no unit for elevation; read as feet, as the record does. Nothing is known about build date, staffing, fate or access. Checks worth making: Monroe County Historical Society; Georgia Archives; NHLR and FFLOS registers if a listing exists."
+   },
+   {
+    "id": "us-ga-smithville",
+    "note": "Two sources: the tnlandforms Georgia tower list (entry GA050) and the 2017 Lee County wildfire plan, used only for the town of Smithville. Searches found no lookout history for Smithville or Lee County and no cached NHLR, FFLOS or eastern-lookout page. The list's name for the tower is its own; its number is below the 73 cut-off in the list's note on names. Wikipedia's Smithville article puts the town centre about 4 km west of the tower point; the story does not link the two. The list prints no unit for elevation; read as feet, as the record does. Nothing is known about build date, staffing, fate or access. For tower records, the 2017 plan names the Georgia Forestry Commission's Dougherty/Lee County unit in Albany, which is a possible lead."
+   },
+   {
+    "id": "us-ga-snow-spring",
+    "note": "Only source is the tnlandforms Georgia list (page dated 2016), which gives name, county, coordinates and a bare number 460 with no unit. The record's elevation_m 140.2 assumes feet; verify. Two web searches and reads of the Wikipedia article on Snow Spring, Georgia and of Vanishing Georgia tower pages found no tower history; the community article mentions no tower. No story written: the evidence is a single list entry, below the 120-word floor, and filling it would mean padding with community facts that are not about the tower. Next steps: Georgia Forestry Commission tower records, Dooly County historical society or Vienna library, historic USGS topographic maps of the site."
+   },
+   {
+    "id": "us-ga-soperton",
+    "note": "Only source is the tnlandforms Georgia list, which carries the codes BLL-64717 and gfc-510 without explaining them, so they are recorded only as listed, not as facts. The bare number 344 has no unit; the record's elevation_m 104.8 assumes feet; verify. Searches and reads of the Wikipedia article on Soperton, Georgia found no tower history. One web-search snippet (unverified, a telecom registry aggregator) described a 38 m structure registered to the State of Georgia in Soperton with unknown status; it is not tied to a lookout, so it is not used. Worth checking whether that is the old GFC site. No story written: the evidence is one list entry, below the 120-word floor. Next steps: Georgia Forestry Commission records for tower 510, Treutlen County historical society, historic USGS topographic maps."
+   },
+   {
+    "id": "us-ga-south-newington",
+    "note": "Only source is the tnlandforms Georgia list, which gives Chatham County, coordinates 32.09312, -81.33702 and a bare number 18 with no unit (the record's elevation_m 5.5 assumes feet). Searches found no tower history. A search snippet said the town of Newington is in Effingham County, not Chatham; I did not verify that, so the county is open. Check the county against the coordinates before this record is used. No story written: the evidence is one list entry, below the 120-word floor. Next steps: Georgia Forestry Commission records, Chatham County or Savannah local history collections, historic USGS topographic maps, and a check on whether South Newington is a separate place."
+   },
+   {
+    "id": "us-ga-spooner",
+    "note": "Thin evidence. The only source for this tower is the tnlandforms list: coordinates, elevation and GFC number 825. The list's column headers name the elevation without a unit. The record's elevation_m of 42.7 matches 140 ft, so the story reads the figure as feet and says so. The same page says GFC provided coordinates for 118 towers (BLL-nnn) and an older GFC list covers 203 towers (gfc-nnn); the story gives the codes without expanding them. Nothing found on build, staffing, fate or the site today. The story is about 110 words, under the 120-word guide floor, on purpose: padding would not be honest. A 2026 Spooner Road wildfire in Clinch County appeared in searches (Watch Duty, local news); it is unrelated to the tower and not used. The NHLR and FFLOS counts come from the local crawl copy, not a live check; that copy's full NHLR list has 29 names and no Spooner, and its two FFLOS sites are Lafayette and Yonah Mountain. Fact-check 2026-10-21: removed the US that had been added to the GFC reference (the list reads gfc-825), replaced the unlabelled feet figure with a stated reading, added the missing footnote to the first sentence, and narrowed 'No source describes' to the sources read. The Tom Dunigan credit is not on the Georgia page; it comes from the same site's Tennessee page footer."
+   },
+   {
+    "id": "us-ga-springfield",
+    "note": "Thin evidence, same pattern as Spooner. The only source is the tnlandforms list: coordinates, elevation (no unit labelled) and the codes BLL-64692 and gfc-125. The record's elevation_m of 30.5 matches 100 ft, so the story reads the figure as feet and says so. The same page says GFC provided coordinates for 118 towers (BLL-nnn) and an older GFC list covers 203 towers (gfc-nnn); the story gives the codes as the list writes them. Searches found no fire tower history for Springfield or Effingham County. A search snippet (towerdex.com/tower/1255815, not fetched) describes a 299.9 ft antenna structure in Springfield registered to the Effingham County Board of Commissioners. It is probably a communications structure and is not treated as this lookout; a human could check whether it sits on the same site. The story is about 100 words, under the 120-word guide floor, on purpose. The NHLR and FFLOS counts come from the local crawl copy; its full NHLR list has no Springfield. Fact-check 2026-10-21: removed the US that had been added to the BLL and GFC codes (the list reads BLL-64692 and gfc-125), replaced the unlabelled feet figure with a stated reading, added the missing footnote to the first sentence, and narrowed 'No source describes' to the sources read. The Tom Dunigan credit is not on the Georgia page; it comes from the same site's Tennessee page footer."
+   },
+   {
+    "id": "us-ga-st-clair",
+    "note": "Thinnest of the three. The only source is the tnlandforms list (coordinates and an elevation of 362 with no unit labelled); the list gives no register cross-reference, and the record has none either. The record's elevation_m of 110.3 matches 362 ft, so the story reads the figure as feet and says so. Searches found no fire tower history for St. Clair or Burke County. A Watch Duty entry for a January 2026 fire on St. Clair Road in Keysville is unrelated and not used. A towerdex snippet about a roughly 315 ft Keysville structure looks like a communications tower and is not used. The story is about 100 words, under the 120-word guide floor, on purpose. The NHLR and FFLOS counts come from the local crawl copy; its full NHLR list has no St. Clair. Fact-check 2026-10-21: flagged the unlabelled elevation unit in the story, added the missing footnote to the first sentence, and narrowed 'No source describes' to the sources read. The Tom Dunigan credit is not on the Georgia page; it comes from the same site's Tennessee page footer."
+   },
+   {
+    "id": "us-ga-statenville",
+    "note": "Thin record. The only sources are the tnlandforms list (coordinates, county, BLL and gfc numbers) and one 2017 Commons photo. Nothing read gives a build date, staffing, fire history or current status, so status should stay unknown until someone checks. The Commons file's geodata (30.707684, -83.028515, in page metadata, not visible text, so not quoted) sits about 100 m from the list point, which supports the photo being at this site. Brief registers read 'BLL US 65193' and 'GFC US 829'; the list writes BLL-65193 and gfc-829, so the 'US' is not in the source. Not named in the cached NHLR Georgia list (29 lookouts) and the Statenville Wikipedia article has no tower mention."
+   },
+   {
+    "id": "us-ga-staunton",
+    "note": "The Staunton tower has almost no direct record. The list gives a point at 31.28226, -83.46507 with no register number. The two 2014 Commons photos (MJ Taylor Rd. and I-75 Exit 37) are the only tower description found for Cook County, and their file descriptions do not name Staunton. Their geodata (about 31.109, -83.426 and 31.112, -83.428; page metadata, not visible text, so not quoted) sits roughly 20 km south-east of the list point, so they may show a different tower. The story keeps the two apart and says it is unclear. If the editor confirms the link with a source, the 2018 demolition can move into the fate section. Photos are included captioned as unconfirmed; drop them if preferred. No cached register (NHLR, FFLOS) lists a Staunton tower. Vanishing Georgia's Staunton page is about the community, not the tower."
+   },
+   {
+    "id": "us-ga-steadman",
+    "note": "Thinnest record of the three: one source (the tnlandforms list) names Steadman. The cached NHLR Georgia pages, the cached FFLOS Georgia pages and the Commons Georgia Forestry Commission tower category (29 files) do not name it. Search results showed a Steadman Cemetery in Richmond County; it is not used because nothing ties it to the tower. No photo, history, staffing or status was found. The 'topo' tag is the list's own label, and the reading that the point may be a map position is an inference from the list's notes, flagged as such in the story. Brief status and access are unknown and remain so. Confidence is low and the story is short because the sources are."
+   },
+   {
+    "id": "us-ga-stewart",
+    "note": "Story is about 40 words, far under the 120-word floor, because the only source is one index row (GA051). The index elevation column has no unit label, so no elevation is used in the story. Two web searches, the Stewart County history page (stewartcountyga.gov, no tower mentioned), the NHLR Georgia index (no Stewart entry) and the FFLOS Georgia listing (two entries, neither Stewart) gave no build, staffing, fire or fate record. A Crown Castle inventory lists a 'Stewart 1' tower in the county, but it is a telecom list and was not used. Keep separate from us-ga-black-creek (GA217) and the GA379 providence row, which are other index rows in the same county. Recommend holding from publication until a second source turns up."
+   },
+   {
+    "id": "us-ga-stockridge",
+    "note": "Story is about 35 words, far under the 120-word floor, because the only source is one index row (GA163). The index elevation column has no unit label, so no elevation is used. Two web searches turned up one Henry County fire tower, in a 2012 FFLA restoration report (https://firelookout.org/wp-content/uploads/2024/11/cr-restoration-2012.pdf). That report describes a 100-foot Aermotor LS-40 at the abandoned GFC Henry County headquarters off Highway 42, south of McDonough, bought from the GFC for relocation to Reynolds Nature Preserve near Morrow. It is NOT used for this record: the index gives that tower's origin as GA109 greenwood (Henry, 33.40166, -84.13762), which lies south of stockridge's latitude (33.5427), and the index note 'Ron GA109-relocated' sits on the GA423 reynolds entry. So the 2012 tower is probably greenwood, not stockridge, but this is unconfirmed; please check it before linking the two. A city of Stockbridge exists in Henry County and the name may be a misspelling, but no source ties the entry to it. Recommend holding from publication until a second source turns up."
+   },
+   {
+    "id": "us-ga-stockton-plantation",
+    "note": "Story is about 35 words, far under the 120-word floor, because the only source is one index row (GA419). The index elevation column has no unit label, so no elevation is used. The row's notes column reads 'Ron restored'; the page credits 'Ron Stafford' with supplying tower locations, but the note is not explained, so it is left out of the story rather than read as a restoration claim. Two web searches found nothing about a tower at Stockton Plantation in Screven County. The Stockton in those results is in Lanier County, unrelated. Screven County's registered tower is the Sylvania Lookout Tower (NHLR US 957, GA 15, https://www.nhlr.org/lookouts/us/ga/sylvania-lookout-tower/), about 29 km away at its listed coordinates; do not merge the two. Recommend holding from publication until a second source turns up."
+   },
+   {
+    "id": "us-ga-stokesville",
+    "note": "One source only. Two searches, the Georgia lists in the local NHLR and FFLOS caches, and a Wikipedia lookup (no article) found nothing else that names Stokesville. The list's author says names for towers 73 and above are the author's own creation, so 'Stokesville' may be a list name rather than a local or historical one; the story says so. The list gives elevation as 166 with no units; the record converts it to 50.6 m as feet. That conversion is unverified and was left out of the story. The list's last column for this entry reads 'zoom out', which the list does not explain, so the coordinates may be approximate. The record's location precision is 'exact' and was not changed. Nearby: Clarking (GA174, 30.51678, -82.10855) is about 13 km north. The Wikimedia Commons photo 'SR94 unused tower, Charlton County' (camera at 30.5172, -82.1081) matches Clarking, not Stokesville, so it was not attached. No photos were found for this tower."
+   },
+   {
+    "id": "us-ga-stone-mountain",
+    "note": "Staffing (1958, 1963) is firm: the newspaper items are quoted on the Eastern US Lookouts page, and I did not reach the original newspapers. No source I reached gives the fire tower's build date, height beyond the 40-foot figure, or its fate. The 1973 NGS note's observation tower may or may not be the 1958 fire tower; the 1838 and 1851 towers were earlier tourist structures. Access is inferred from the Wikipedia summit route and the state ownership of the park; the fire tower itself is not described, so check the access and visit notes before publishing. The record's county is null and was not filled; the Wikipedia text I read does not name a county for the summit itself. The record's status is unknown and no status was added."
    },
    {
     "id": "us-ga-sumter",
     "note": "Thin record: a list entry, two OpenStreetMap tags and one map-site page. No build date, agency, staffing, fires, history or current status was found in the pages read. The story is about 100 words, under the 120-word floor, because nothing more is sourced; it was not padded. The list gives the elevation as a bare number; the map site reads 463 feet (141 metres), which settles the unit, and the story now cites that map site for the feet and metres. A search snippet from aboutus.com gave 141 ft (463 m), which reverses the units; that page was rate-limited and not read, so it is not used. The map site's coordinates (32.09586, -84.22831) differ from the list's by about 25 m. The gfc-324 and BLL-41120 labels are printed as the list has them; the pages read do not explain them. The name is generic, so check the coordinates on a map before a human relies on the record. The tnlandforms page names no author, so its footnote gives the site name only."
    },
    {
+    "id": "us-ga-surrency",
+    "note": "Two sources only. The list's author says names for towers 73 and above are the author's own creation, so the match with the town's name may be the author's choice rather than a historical name; the story says so. The record's registers entry ('GFC US 802') is a Georgia Forestry Commission list reference (gfc-802) from the tnlandforms list, not a heritage register; consider moving it to a note or clearing it. The list gives elevation 183 with no units; the record converts it to 55.8 m as feet, which is unverified, so the story does not give an elevation. The Wikimedia Commons photo 'Appling County lookout tower' (CC BY-SA 4.0, Michael Rivera, 2016) was taken just outside Baxley at about 31.7225, -82.3764, near the tnlandforms Baxley entry (GA125), so it is not this tower and was not attached. Wikipedia's Surrency article does not mention a tower. A 2026 wildfire listing and property listings name a Fire Tower Road in Surrency; no source ties that road to this tower, so it is not used. No history, staffing or current condition was found."
+   },
+   {
+    "id": "us-ga-swainsboro",
+    "note": "Only one source (the tnlandforms list) mentions this lookout, and it gives location, elevation and a GFC number only. No build date, design, staffing, fires, fate or current condition found in the sources reached. No managing agency is stated in any source reached, so no agency fact is recorded. The list page gives no elevation unit anywhere (no 'feet' or 'metre' wording appears), so the story gives 287 unitless and says that if it is feet it is about 87 m. Feet is an inference, consistent with Wikipedia's USGS figure for Sweat Mountain being close to the list's 1678 for that peak. The brief's 'registers' entries are list catalogue numbers, not register listings (see corrections). Story body is about 150 words, above the 120-word guideline, even though the evidence is thin. Worth a check with the Emanuel County GFC unit or old GFC records."
+   },
+   {
+    "id": "us-ga-swainsboro-old",
+    "note": "Only the tnlandforms list mentions this entry, with coordinates, elevation (feet inferred, units not stated on the list) and a 'datasheet' tag. The story gives 310 unitless and says that if it is feet it is about 94.5 m. The list does not explain what 'old' means, and no source says whether it is an earlier tower on the same site as the Swainsboro entry 1.5 km away. The 1.5 km and under-a-mile distances are our calculation from the two listed coordinate pairs, not a figure the list gives. The 'datasheet' tag may point to the NGS datasheet lookup, which was not searched and may describe a survey mark at the site; the story only says the list links to an NGS lookup and does not expand NGS, which the page does not spell out. No build date, staffing, fires or fate found. Story body is about 145 words, above the 120-word guideline, even though the evidence is thin."
+   },
+   {
+    "id": "us-ga-sweat-mtn",
+    "note": "The tower's history rests on one Wikipedia section that cites no sources (the article flags this). No build date, designer, owner or removal date was found. The summary and status depend on that section. The list page gives 1678 with no unit anywhere; if it is feet, it sits ten feet below Wikipedia's USGS 1,688 ft, and neither source explains the gap. The story no longer gives the list figure in metres, because no metre value appears on the list page. Wikipedia says the mountain inspired the naming of nearby establishments including Sweat Mountain Park, so the story links the park to the mountain by name only and does not claim a link to the summit. Not searched: Cobb County Historical Society, Marietta Daily Journal archives, USFS or GFC records, and the NGS datasheet for the benchmark. Access to the summit is not described in any source reached."
+   },
+   {
     "id": "us-ga-sylvania",
     "note": "Register is the main source; the CWPP only places the Commission's Screven County unit on Buttermilk Road and does not mention the tower, so it is not shown to be the same site as the tower. Register elevation 218 ft matches tnlandforms. WebSearch returned nothing specific to a Screven County tower. Access level and staffing as-of date unknown and left out. The build year is the main open question (1940 in the build field, late 1930s or early 1940s in the description); a Georgia Forestry Commission history or 1930s-40s county newspapers might settle it."
+   },
+   {
+    "id": "us-ga-talbotton",
+    "note": "One source only: the tnlandforms list entry. It gives no build date, builder, design, height, staffing, fire or fate, and the list states no unit for its elevation value (832). Two web searches (Talbotton fire lookout; Talbot County GFC tower) returned no page about this tower. The NHLR Georgia list (29 towers) and the FFLOS Georgia pages in the crawl do not name Talbotton. The record's GFC US 311 register comes from the list's tag gfc-311, and the page does not explain that tag. Story is 38 words, well under the 120-word floor, because the evidence stops at the list entry. A human could look for a Georgia Forestry Commission or Talbot County history before anyone writes more."
+   },
+   {
+    "id": "us-ga-taliaferro",
+    "note": "Identity is unresolved. The brief's record is 'taliaferro?' from tnlandforms entry GA315, flagged 'loc?', with GFC US 17 and BLL US 50820. Its coordinates (33.54833, -82.87851) are not the park's listed point (33.57028N, 82.89417W per Wikipedia), so the record may describe the 1935 park tower, the 1957 GFC county tower, or neither. Sources read give no site or fate for the 1957 tower. The tnlandforms list also has an entry 'saggus' (GA197, 33.59149, -82.85631, Taliaferro County) that might be the 1957 site; not checked. The restored park tower is documented; the restoration year is not in the text read. The Georgia Trust page's cached HTML shows a 2019 restoration award, which is not in the fetched text and is not used. A Taliaferro County Fire Department Facebook post (search snippet only, not fetched) calls the 1935 tower a wooden tower; not used. No height_m is given because the Georgia Trust gives only the overall 60-foot height, not the cab floor. The 1957 article spells the town 'Crawfordsville'; the park page uses 'Crawfordville', which the story follows. The record name 'taliaferro?' is a placeholder; a human should decide whether to split this into two lookouts or rename it. Story is 241 words."
+   },
+   {
+    "id": "us-ga-tally-mtn",
+    "note": "Weakest of the three. The only tower evidence is one list entry, 'tally mtn', with no register number, height, date or notes. The coordinates and the 1,522 ft elevation match the Haralson County summit on Wikipedia (USGS-based), so the record's point is a real summit; no source read says a tower stands or stood on it. Reads with no tower text: the Haralson County GFC page, a MountainZone summit page, and the Wikipedia article. A Haralson County E911 Facebook search snippet mentions a woods fire on the side of Tally Mountain, with no tower named; not fetched and not used. Two web searches on the Haralson tower found nothing else. Editor should decide whether the record should stay as a tower or be reviewed as a possible list error (kind 'tower' on an unconfirmed summit). No correction is proposed because no source contradicts the record. Story is 71 words, well under the 120-word floor, because the evidence stops at the list entry and the summit article."
+   },
+   {
+    "id": "us-ga-talona-mtn",
+    "note": "Thin. The only tower-specific source is one line on the tnlandforms list (coordinates, county, elevation, gfc-909 tag). Two searches and the Wikipedia pages found no build date, staffing, fire or fate for a tower here, and no source for the site today. The gfc-909 tag is read as the Georgia Forestry Commission number the record already holds (GFC US 909); the list itself does not say so. The record's list credit ('Tom Dunigan') does not appear in the fetched page text, so the story does not name him. The story runs about 92 words, below the guide's ~120-word floor for thin sources; hold or publish as a stub. Unverified lead: the 2013 FFLA chapter report (https://firelookout.org/wp-content/uploads/2024/11/cr-rp-gasc-2013.pdf) says a Georgia fire-tower status list was being compiled; no copy was located."
+   },
+   {
+    "id": "us-ga-tarver",
+    "note": "Thin. Sources are the tnlandforms list line (coordinates, county, elevation, no tag) and Wikipedia's community article. Two searches and the cache found no tower history. The Wikipedia point (30.70167, -82.92417) is about 100 m from the list point; no correction proposed. The list gives elevation 153 with no units; the record converts it as feet. The story runs about 88 words, below the guide's ~120-word floor; hold or publish as a stub."
+   },
+   {
+    "id": "us-ga-tarversville",
+    "note": "Thin, and the tower itself is unconfirmed beyond the list line. A search surfaced a 103.6 m (339.9 ft) antenna structure registered at Tarversville (towerdex.com, tower 1242420), which appears commercial. That page returns HTTP 403 to the cache reader, so it is neither footnoted nor described in the story; whether it stands on the lookout site is unknown and should be checked before any 'today' wording is written. Search hits on Fort Twiggs (1813 blockhouses) and the 1901 courthouse fire are unrelated to a lookout and are excluded. The story runs about 92 words, below the guide's ~120-word floor; hold or publish as a stub."
+   },
+   {
+    "id": "us-ga-tate",
+    "note": "One source only: a coordinate list with no build date, height, staffing, fire or condition entry for Tate. Two web searches and the list read found nothing else about this tower. The record elevation_m 477.3 is the list's 1566 converted from feet; the list header was not in the text read, so the unit is inferred. The name Tate also belongs to the Pickens County village (a marble company town). A Digital Library of Georgia photo record (dlg_vang_pck005) concerns the village homestead, not the tower, and was not used. A search hit mentioned a 2022 brushfire on Firetower Road near Sharp Mountain in Pickens County; it was not read and does not confirm a tower, so it is a lead only. The story runs to about 120 words because the evidence is thin."
+   },
+   {
+    "id": "us-ga-tattnall",
+    "note": "Main source is one Journal article. The cached copy holds only the opening paragraphs (about 945 characters), so the article's date, its earlier-site detail and any staffing are not verified. Two web searches returned summary text with more detail (an earlier site on Highway 147, a mid-1950s move to a Forestry Commission site on Highway 57, two named staff members), but none of it appeared in a page we could read, so none is in the story. The record point 32.07700, -82.09198 lies east of the list's 'reidsville' row (GA376, 32.08314, -82.11401, 205 ft). The Journal places the original tower on Reidsville's western outskirts, nearer the 'reidsville' row, so the two rows may describe the same tower at different dates; not confirmed. The record location is out of date because the tower has been moved, and the Old River Road coordinates are unknown, so no location correction is proposed. The article gives no year for the moves or the build, so no events are entered. The Digital Library of Georgia photos checked (dlg_vang_tat078, Reidsville High School) do not show the tower and were not used."
+   },
+   {
+    "id": "us-ga-taylor",
+    "note": "One source only: a single list row for 'taylor' (Long County, 31.943529, -81.753868, 86 ft, note 'aerial imagery'). Its name is a bare lowercase word like other list entries (pineland, statenville), so it may be a locality rather than the tower's own name; a human should check against Georgia Forestry Commission records before publishing. No proposed name correction is made because no source gives one. Two web searches found no Taylor or Long County lookout tower record. A Fire Tower Rd SE in Ludowici appears only in real-estate listings and was not read; it is an unconfirmed lead. The list's GFC-provided-coordinates note covers the BLL-numbered rows and may not apply to this row. Confidence low."
+   },
+   {
+    "id": "us-ga-telfair",
+    "note": "Only two sources. The 2007 UGA report (Keel, report 4219) is the only source describing the tower; it says National Register eligible, not listed. No build date, builder, staffing, fires, or present condition found. Status left as the record's unknown. The brief's registers (BLL US 64705, GFC US 531) come from the tnlandforms codes 'BLL-64705 gfc-531'; what BLL and GFC refer to is not stated in the sources. Not on the NHLR Georgia list (29 entries) or the FFLOS Georgia list (2 sites). The Wikipedia NRHP list for Telfair County mentions no lookout; the eligibility claim should be checked on NPGallery. A Flickr photo of the tower (2019) was seen only in search results; the page returned 404, so it is not used."
+   },
+   {
+    "id": "us-ga-tenmile",
+    "note": "Single source: the tnlandforms.us Georgia list, whose header reads 'google map revised Tue Mar 22 07:15:01 2016'. Two web searches turned up no source on a tower by this name. Not on the NHLR Georgia list (29 entries) or the FFLOS Georgia list (2 sites), so no register event. No build date, staffing, fires, fate, or present condition found. The roughly 82 m distance to tenmile old is computed from the listed coordinates. The name 'old' is the list's own; no source says which tower came first. Story is shorter than the usual minimum because nothing else describes the site. Worth checking with the Georgia Forestry Commission."
+   },
+   {
+    "id": "us-ga-tenmile-old",
+    "note": "Single source: the tnlandforms.us Georgia list, which gives this entry the name 'tenmile old' and cites datasheet BS1563. The distance of roughly 82 m to Tenmile Lookout Tower is computed from the two listed coordinates. The list does not say whether this is a former tower, a replacement, or the same site as Tenmile; the 'old' in the name is the list's. Not on the NHLR or FFLOS Georgia lists. No build date, staffing, fires, fate, or present condition found. The datasheet BS1563 was not checked. Worth checking with the Georgia Forestry Commission before the record is trusted."
+   },
+   {
+    "id": "us-ga-tennille",
+    "note": "Both sources are general: one county-level list entry, and a Vanishing Georgia post about a Clay County tower that gives statewide context only. No NHLR, FFLOS, Commons or other page for this tower was found. The list's elevation column (457) has no unit; the record's 139.3 m assumes feet. The Wikipedia town centre is 32.93806, -82.81056, so the list point lies a few kilometres west of town by my own calculation; no source confirms the exact site."
    },
    {
     "id": "us-ga-thomas-thomasville",
     "note": "Register is the only detailed source; its condition and staffing notes are undated. Build year 1937 comes from the register's build field alone. The Aermotor model is stated by the register as uncertain. Two WebSearch queries and one websearch.py query found nothing on a Thomasville GA tower; Chenocetah Fire Tower results (Habersham County) are a different tower and were not used. Access and as-of date for staffing left unknown."
    },
    {
+    "id": "us-ga-thomson",
+    "note": "The NHLR McDuffie Lookout (US 1069, GA 18) is at 33.445348, -82.542365, roughly 12 km from the list point by my own calculation, so the story does not treat it as the list's thomson tower. A human should check whether the list point is mis-plotted, or whether the blog's Thomson tower is the NHLR one. The blog note is a personal recollection with no date. The list's elevation (531) has no unit; the record's 161.8 m assumes feet. The Wikipedia town centre (33.46722, -82.49944) is about 9 km south of the list point by my calculation."
+   },
+   {
+    "id": "us-ga-tift",
+    "note": "The photo matches the tift record by camera position only, well under 100 m by my own estimate; no sign or plaque is described. A separate list entry 'tifton' (GA207, 31.49091, -83.43880, elevation 364) lies about 8 km east in the same county; a human should check whether it is a second tower or a duplicate. No NHLR, FFLOS or FFLA page for this tower was found. The record status is unknown and no source after 2014 was found."
+   },
+   {
+    "id": "us-ga-tifton",
+    "note": "The list gives elevation with no unit; the story reads it as feet.Only one 2016 list supports this record, and the list gives no register number for it. No source found for build date, status, access, staffing, height, design or photos, so none is set. The name is the list author's label, not a documented name. A Wikimedia Commons photo, 'Georgia Forestry Commission Tower, US 41 N, Tift County' (CC BY-SA 3.0), is captioned Tifton, but its camera location (31.488847, -83.518972) is about 7.5 km west of this record's coordinates, so it is not attached. The Savannah Now article is read from a Wayback Machine copy because the live site returned 403; statewide context only. The NHLR Georgia list (29 registered lookouts) does not name this tower."
+   },
+   {
+    "id": "us-ga-tignall",
+    "note": "The list gives elevation with no unit; the story reads it as feet.Only one 2016 list supports this record. No source found for build date, status, access, staffing, height, design or photos, so none is set. Agency is not set: the list shows GFC numbers, not ownership. The name is the list author's label, not a documented name. The Savannah Now article is read from a Wayback Machine copy because the live site returned 403; it is used for statewide context only. The NHLR Georgia list (29 registered lookouts) does not name this tower, and the FFLOS Georgia list has only two sites (Lafayette, Yonah Mountain). GFC history page timed out and was not used."
+   },
+   {
+    "id": "us-ga-tobacoo-rd",
+    "note": "The list gives elevation with no unit; the story reads it as feet.Only one 2016 list supports this record. No source found for build date, status, access, staffing, height, design or photos, so none is set. Agency is not set: the list shows GFC and BLL numbers, not ownership. The name is the list author's label, not a documented name. The list tags the tower 'usgs' without explaining the tag, so the story does not use it. A business directory lists the GFC Richmond County unit at 2615 Tobacco Rd, Hephzibah; not used, since nothing ties this tower to that road. The Savannah Now article is read from a Wayback Machine copy because the live site returned 403; statewide context only. The NHLR Georgia list (29 registered lookouts) does not name this tower."
+   },
+   {
+    "id": "us-ga-tobler",
+    "note": "The name is the weak point. The index says names for towers 73 and above are its author's own creation, and Tobler is entry 182, so 'tobler' is a label, not a name from a register or map. Roadside Thoughts' Tobler page is a placeholder about a post office of that name, with no location, and nothing links it to this tower. Consider a descriptive label or a human decision on the name. Two searches and several page reads found no build, staffing, status or fire history. The index elevation (621) is not used because the page does not state its unit. Status and access unknown."
+   },
+   {
+    "id": "us-ga-toledo",
+    "note": "Thin record. The only source for the tower itself is the Dunigan index (coordinates, register numbers, naming note). Two searches and several page reads turned up no build date, staffing, status or fire history. Mapcarta gives the community's position, not the tower's history. The Wikimedia Commons photo 'SR94 unused tower, Charlton County.JPG' has its camera about 13 km south of this tower's coordinates, so it is a different structure and is not used. The index elevation (137) is not used because the page does not state its unit. Status and access are unknown."
+   },
+   {
+    "id": "us-ga-toombs-county",
+    "note": "Thin record. The only source is the Dunigan index (coordinates, register numbers, naming note). Two searches and several page reads found no build date, staffing, status or fire history. The cached NHLR Georgia list (29 registered lookouts) does not name this tower, but the cache date is unknown, so the story does not rely on that. The index elevation (263) is not used because the page does not state its unit. Status and access unknown."
+   },
+   {
+    "id": "us-ga-townsend",
+    "note": "Stub. The only source is a 2016 table that places a tower at Townsend and gives its coordinates, elevation and GFC number. It gives no build date, staffing, condition or access. Two web searches, the Wikipedia article on Townsend, the McIntosh County historic resources survey (Phase Two) and the GFC history PDF found nothing on this tower. Grokipedia's Townsend article is an AI-written wiki and mentions no tower, so it was not used. Editor decision needed: hold the stub until GFC tower records or a McIntosh County historical source is checked, or publish it as a short stub. The 2016 table is not proof the tower still stands. The table gives no unit label; feet is inferred from its values (the Brasstown row reads 4735, which only fits feet)."
+   },
+   {
+    "id": "us-ga-trail-ridge",
+    "note": "The build date comes from one local history page (The GAGenWeb Project, Brantley County) that gives only 'late 1930's'. The record has no built event: the 1937 year was a placeholder with no documented source, so it was removed and the story gives only 'late 1930s'. Check Civilian Conservation Corps or Georgia Forestry Commission records before adding a year. Location: the Digital Library of Georgia gives coordinates 31.18106, -82.13484, about 5 km west of the marker database point (31° 11.364′ N, 82° 4.799′ W), which matches this record. Elevation: the 2016 tower table gives 135 ft; the marker says the ridge top is about 160 ft and the local history says 100 ft. Not used. Unverified lead: a search-result snippet from a Brantley County History Facebook post (the page could not be read) mentions a Highway 82 fire in April 2026. No readable source says it reached the tower; check before publishing condition. Possible photo: Wikimedia Commons file by DanTD, CC BY-SA 4.0, dated 29 December 2022; not added because the direct image URL was not read. Ownership and climb status are unknown."
+   },
+   {
+    "id": "us-ga-treat-mtn",
+    "note": "Stub. The only source is a 2016 table that places a tower on Treat Mountain and gives its coordinates, elevation and GFC number. It gives no build date, staffing, condition or access. Two web searches and fetches of the Wikipedia article (no Treat Mountain article at the URLs tried), the NHLR and FFLOS Georgia lists (Treat Mountain is on neither) found nothing on this tower. Fires on the mountain are on record but name no tower, so they are left out of the story: a 2016 Polk Standard Journal report (page read) of a 583-acre fire on Treat Mountain, reported by the Georgia Forestry Commission, and a 2026 Watch Duty listing (search snippet only) for a Polk Treat Mountain fire created by GFC on March 22, 2026. Editor decision needed: hold the stub until GFC tower records or Polk County historical sources are checked, or publish it as a short stub. The 2016 table is not proof the tower still stands. The table gives no unit label; feet is inferred from its values (the Brasstown row reads 4735, which only fits feet)."
+   },
+   {
+    "id": "us-ga-trenton",
+    "note": "Only one list entry (tnlandforms, row GA330) and the Dade County Wikipedia page for place context. Two searches and the Wikipedia Trenton page found nothing on build date, design, staffing, fires, fate or current status. The list gives no elevation unit. The record's 487.1 m would match 1598 ft, but no fetched source confirms feet, so the story gives no unit. The record's Tom Dunigan link label does not appear in the fetched text, so the story does not name him. GFC is not expanded in any fetched source. Story is under the 120-word floor because the evidence is one line."
+   },
+   {
+    "id": "us-ga-ty-ty",
+    "note": "Only one list entry (tnlandforms, row GA058). Two searches, a towerdex lookup (blocked, HTTP 403), the FFLA homepage and the Ty Ty Wikipedia page turned up nothing on a tower there, including its build, removal or current status. The list gives no elevation unit, so the story gives none. Story is under the 120-word floor because one list line is all the evidence supports. The record's status and access fields cannot be sourced."
+   },
+   {
+    "id": "us-ga-uga",
+    "note": "Only one list entry (tnlandforms, row GA271). The list name 'uga' is not explained in any fetched source. No source ties the tower to the University of Georgia, and the story does not say so. Two searches and the Whitehall Forest page (warnell.uga.edu) found no tower; the grep of that page was truncated, so a later mention is not ruled out. BLL is not expanded in any fetched source. The list gives no elevation unit, so the story gives none. Story is under the 120-word floor because the evidence is one line."
+   },
+   {
+    "id": "us-ga-union-city",
+    "note": "Only source is the tnlandforms Georgia list row GA111. Two web searches and a sweep of the local caches (eastern_us_lookouts, nhlr, wikidata, gnis) found nothing on this tower. The story is below the 120-word floor because the evidence is one list entry. The list's note 'stonewall' and the 'gfc' prefix are not explained on the page, so neither is interpreted. The record's elevation (1023, read as feet) is left out because the cached page does not label its units. Records: no corrections found."
+   },
+   {
+    "id": "us-ga-union-point",
+    "note": "Only source is the tnlandforms Georgia list row GA279. Two web searches and a cache sweep found no history of a tower at Union Point, and the search results about Union Point describe the town only. Do not confuse with us-ga-saggus, which mentions a Union Point parade at a different Georgia Forestry Commission tower dedication; it is not used here. The list's gfc and BLL prefixes are not expanded on the page. Records: no corrections found."
+   },
+   {
+    "id": "us-ga-van",
+    "note": "Only source is the tnlandforms Georgia list row GA370. Two web searches and a cache sweep found no Van tower. A 1957 Rome News-Tribune article in the eastern_us_lookouts cache (hermitage.html) describes the Hermitage tower in Floyd County, not this one, and is not used. The 'datasheet EE2185' reference is not explained on the list. The record's elevation (1214, read as feet) is left out because the cached page does not label its units. Records: no corrections found."
+   },
+   {
+    "id": "us-ga-van-creek",
+    "note": "Only the 2016 list names this tower, and its entry has no survey, Forestry Commission or register tag and no date. The elevation 682 is assumed to be feet: the list's other figures (for example 4699 for Rabun Bald) fit feet, and the record converts 682 ft to 207.9 m. The USGS GNIS gazetteer (Georgia file, feature 324658) lists a stream called Van Creek in Elbert County, with a primary point about 3 km from the tower's listed point; the tower may or may not be named for it. That bulk file cannot be quote-checked, so the stream is not in the story or cited. Land status and any remains are unknown; treat the site as unverified. Possible leads: an NGS station named VAN CREEK in Elbert County, or old topographic maps showing a tower symbol near the coordinates."
+   },
+   {
+    "id": "us-ga-vaughn",
+    "note": "Identity link is inferred, not proven. The list and the datasheet share the name and the DF1298 tag, and the list point (33.48647, -82.12272) lies about 0.28 km southwest of the station position (our calculation from the NAD 83 coordinates), which fits the 1955 note's direction and rough distance. The 1955 note is the only fire-tower mention in the datasheet. The list elevation 523 is assumed to be feet (the record converts it to 159.4 m); the station's NAVD 88 height is 518 ft (157.9 m). The name may come from the station, which the 1934 description places on W.F. Vaughn's property, but no source says where the list's name came from. The datasheet notes that photos may exist for the station; not checked. No source gives a build date, staffing, fate or current access. Next steps: a Georgia Forestry Commission or Columbia County record, or old topo maps, for a tower near the station."
+   },
+   {
+    "id": "us-ga-vidette",
+    "note": "Only the 2016 list names this tower. Its 'datasheet' tag has no survey ID, so the NGS record it points to was not located; if a Vidette station with a PID turns up, its description may say whether a tower stood there, as the Vaughn datasheet does. The list point lies about 8 km (5 mi) east of the Wikipedia city coordinates (our calculation). The USGS GNIS gazetteer places the populated place Vidette at about 33.03765, -82.24735; that bulk file cannot be quote-checked, so it is not cited. The elevation 331 is assumed to be feet (see the Van Creek notes). No source gives a build date, staffing, fate, or current access."
+   },
+   {
+    "id": "us-ga-vining",
+    "note": "Site identity rests on coordinates alone. The list gives 33.86970, -84.46803 for vining; Wikipedia gives 33.8696172, -84.4682877 for Mount Wilkinson (also Vinings Mountain). No source names the mountain as this lookout's site. The list's 1175 has no unit stated; the record converts it as feet (358.1 m), and Wikipedia's mountain figure is 1,165 ft, so the two differ by about ten feet. Searches of Vinings and Cobb sources and the NHLR Georgia list (no Vining entry) found no build date, staffing, or fate history. The Forest Fire Lookout Association Georgia list was not readable. Brief record county and elevation are consistent with the list; no corrections. Access and public reachability of the summit are not established by any source read."
+   },
+   {
     "id": "us-ga-walton",
     "note": "Thin record: a list entry, an OpenStreetMap tag and one map-site page. No build date, agency, staffing, fires, history or current status was found in the pages read. The list gives 451 with no unit. The map site gives 453 feet (138 metres) for a point about 50 m west of the list's coordinates, and it lists the same OpenStreetMap node (358748756), so the story compares the two figures as numbers and does not convert the list's figure. The map site's nearby-place list is generated from map data, so treat the Lamb Town distance as approximate. The list has no register numbers for this tower. The story does not name a town for the site because no source read names one. The tnlandforms page names no author, so its footnote gives the site name only."
+   },
+   {
+    "id": "us-ga-walton-2",
+    "note": "Single source. The list entry is the only record found for a Richmond County walton. NHLR's Georgia list has no Walton entry. A search for Richmond County forestry tower history returned only Augusta's Big Steve bell tower, a downtown fire-alarm tower; it is not a forestry lookout, is not this site, and is not used. The list's 353 has no unit stated; the brief's 107.6 m matches 353 feet. The Dooly County Walton Lookout Tower (GA059) is a different tower and is not covered here. The story is at the 120-word floor because the list is the only source found."
+   },
+   {
+    "id": "us-ga-ware-hotel",
+    "note": "The Georgia Forestry Commission history places the first fire observation tower on the Ware Hotel after a 1928 Waycross forestry fair, hedged with the word perhaps; it gives no erection date. The hotel opened on 21 February 1929 (Vanishing Georgia; the Florida Times-Union piece says February 1929), so the tower's erection date falls on or after the fair and is not fixed by any source. The list's ware hotel entry (note first tower, 31.20980, -82.36091, 134 ft) is linked to the hotel by name and by the history's wording; the coordinates were not checked against the building footprint, and the hotel address per Fairway Management is 604 Elizabeth Street. No source describes the tower's removal, fate, or whether any part remains on the building. No staffing source found. The agency is not stated as a fact because the history does not name the tower's operator. The 2011 reconstruction is supported by a photo caption and the Florida Times-Union piece. The NRHP number NRIS 92000125 is from the UNF record."
+   },
+   {
+    "id": "us-ga-waynesboro",
+    "note": "Thin record, low confidence. Two sources only: the tnlandforms list (county, older GFC list number) and a 1940 'Looking Back' column that does not name the site. The column may describe a different tower. Girard (Burke County, NHLR gives 1940 as the build year) lies east of this point on the tnlandforms list and may fit the 'easternmost of five' description better; check before using the column as this tower's history. The record's 'GFC US 101' register appears in no source (tnlandforms gives gfc-101). The NHLR and FFLOS Georgia lists do not include this tower. Two readable pages failed: the waynesboroga.com history page timed out and the Georgia historic newspaper 1940 page did not render, so the local newspaper archive is not checked. Status, access and staffing are unknown. The story is below the 120-word target because nothing else was found."
+   },
+   {
+    "id": "us-ga-waynesville",
+    "note": "Stub, low confidence. The only source is the tnlandforms list (county and coordinates). Wikipedia's Waynesville, Georgia page and the GAGenWeb Waynesville history page do not mention a tower. The RootsWeb Brantley County history pages returned HTTP 403, so they were not read. A RootsWeb search snippet mentioned a 'fire tower ridge' in Brantley County history. That lead is unverified and not used in the story. Do not confuse this record with Trail Ridge (tnlandforms GA153, also Brantley County), a different tower that has a Wikimedia Commons photo. No status, access or staffing found. The story is well under the 120-word target."
+   },
+   {
+    "id": "us-ga-wellborn",
+    "note": "Stub, low confidence, and the location is doubtful. The tnlandforms entry cites datasheet EE1922, but NGS describes EE1922 as a 1972 triangulation disk stamped WARMACK in Whitfield County, at about 34 57 28.51 N, 084 51 37.31 W. That is far from the record's point (34.86662, -83.95582). Either the citation is a copy error or the list's coordinates are off. Check the location on a map and against a field source before publishing a map pin. No Wellborn tower appears in the NHLR or FFLOS Georgia lists. Wikipedia's Wellborn, Georgia URL returned 404. Union County history pages read (a Union Sentinel reprint and the Early Settlers blog, plus an N-Georgia forest history page) mention Brasstown Bald's tower and CCC work but not this site. The story is well under the 120-word target."
    },
    {
     "id": "us-ga-wenona",
     "note": "The only tower-specific source is a January 1950 newspaper report, quoted on Forest Lookouts; the Macon News original was not checked. Nothing found on completion, staffing, fire history, fate or present condition after two WebSearch queries and the cached pages. The state list entry (wenona, Crisp County, 451 ft, gfc-329) is assumed to be this tower on county and name grounds only; the story says it may be. The 1950 event is recorded as other, not built, because completion is not documented. The list gives the name in lower case. Access and status left unknown. Fact-check 2026-10-21: the list header says only 'elevation' with no unit; feet is read from the list's own values (Brasstown Lookout Tower at 4735 only fits feet), so the 137 m figure is a conversion. The story now paraphrases the Macon News wording instead of copying it, says the lookout site 'quotes' the report rather than 'kept a copy', and gives the full name-match reason for the list entry."
    },
    {
+    "id": "us-ga-west-green",
+    "note": "Only tnlandforms.us names this tower; its entry has coordinates, county and an unexplained note 'datasheet BS0397', with no build date, agency, status or access. Not on NHLR's Georgia list or FFLOS's Georgia list (2 former sites), both checked in the local crawl. The list point is about 1.5 km north of Wikipedia's community coordinates (31.61306, -82.73472), so the tower position is unverified. The GFC sentence is statewide context only; no source ties it to this site. Brief status and access 'unknown' left unchanged. Two WebSearch queries run, neither returned a tower-specific page."
+   },
+   {
+    "id": "us-ga-wheeler",
+    "note": "Only tnlandforms.us names this tower. The page has no key for the codes BLL-64713 and gfc-511, so the story does not name the agency or the register behind them. No build date, status or access found. Not on NHLR's Georgia list or FFLOS's Georgia list, checked in the local crawl. Both WebSearch queries returned no tower-specific page. The GFC sentence is statewide context only. Brief status and access 'unknown' left unchanged."
+   },
+   {
+    "id": "us-ga-white-hill",
+    "note": "Only tnlandforms.us names this tower; the code gfc-107 has no key on the page. Mapcarta (OpenStreetMap and GeoNames based) is used only for the place description. Do not confuse with NHLR's Sylvania Lookout Tower (US 957, GA 15) at 32.76496, -81.64955, about 12 km away at different coordinates. Not on NHLR's Georgia list or FFLOS's Georgia list, checked in the local crawl. No build date, status or access found. The GFC sentence is statewide context only."
+   },
+   {
+    "id": "us-ga-white-house",
+    "note": "Single-source record: the tnlandforms list gives coordinates, elevation and a tag but no build date, design, height, agency, status or access. The name 'white house' is the list author's own, not a USGS or official name, so treat the name as provisional. The GFC number is probably a Georgia Forestry Commission number, but the list does not say what 'gfc' means; the correction proposes dropping the US prefix only. Not on the NHLR Georgia list. Story body is about 90 words because nothing more was found. Not verified on the ground."
+   },
+   {
+    "id": "us-ga-white-oak",
+    "note": "Single-source record for the tower: the tnlandforms list gives coordinates, elevation and a 1959 topo note, with no build date, design, height, agency, status or access. The name 'white oak' is the list author's own, not a USGS or official name. The Camden County community of the same name is cited for context only; no source ties the tower to it. Wikipedia is used as a lead, not for the tower. Story body is about 125 words. Not verified on the ground."
+   },
+   {
+    "id": "us-ga-wilbanks",
+    "note": "Thin evidence: one tower list with coordinates, elevation and a 1964 note; one independent list with only the name; one DOT plan label with no date visible in the cached text. Not on the NHLR or FFLOS Georgia lists. No build date, height, design, agency, status or access found. The 1964 note is not explained by the list. Reading it as a map date is an inference, and it is weaker here than for discovered towers because tower 60 is in the 1-72 name-database group. The story runs about 160 words; the sources are thin, so nothing is padded. Gwinnett Historical Society archive pages appeared in search results but were not read. Not verified on the ground."
+   },
+   {
+    "id": "us-ga-wilkes",
+    "note": "Single source: the tnlandforms list. The name 'wilkes' is the list author's own label (towers 73 and above). The elevation 605 is read as feet because no unit is stated (184 m). The note 'Ron 1953 topo' is unexplained. 'Ron' appears on many rows, so it may be a contributor's initials; that is a guess. Other places checked: Forest Lookouts has no Wilkes page under wilkes, tignall or wilkes-county (all 404). Neither the NHLR Georgia list nor the cached FFLOS pages name this site. Do not confuse with GA263 tignall (gfc-011, Wilkes, 642), another tower in the same county. Nothing is known of the site today; the status should stay unknown."
+   },
+   {
     "id": "us-ga-wilkinson",
     "note": "Only a state list entry and an OpenStreetMap node. Two WebSearch queries (Wilkinson County history; Irwinton fire tower) found no fire tower record there. The list gives 512 ft (156 m); the OSM ele tag gives 155 m; the story uses the list figure only. The list header gives no unit; feet is read from the list's own values (Brasstown Lookout Tower at 4735 only fits feet). A map point does not show that the tower still stands; status and access are left unknown. The list's notes explain the codes: BLL marks coordinates GFC supplied, gfc marks the older GFC list; the brief's GFC US 617 is the gfc code. Fact-check 2026-10-21: the list's notes do not say the 203 towers are additional to the 118, so the story no longer says '203 more'. The story also no longer says no source describes the site, because the OpenStreetMap node does map a tower there; it now says no source gives its condition or public access."
+   },
+   {
+    "id": "us-ga-williams-mtn",
+    "note": "Identity: the 1955 William Mountain tower is taken to be the list's williams mtn (GA202, Harris, 935, gfc-307). No source says so outright, so the staffing event is only as firm as that link. Harris County also had a Harris Tower in 1955 (operator Henry M. Koone), and the list has other Harris County rows (GA023 Harris County Lookout Tower, GA034 Martins Knob, GA196 pine mtn, GA208 cataula). Do not merge them. The list's name is the author's own label. Status, build date, design, height, access and present condition are not in any source read, so they are left unknown. Confidence medium: one list row and one 1955 newspaper item quoted second-hand."
+   },
+   {
+    "id": "us-ga-winder",
+    "note": "Identity: the 1995 lease concerns the lookout site on the Forest Lookouts Barrow County page. That page gives no tnlandforms number or height, so the link to GA226 (Barrow, 970, gfc-928) rests on the county and the name. The list coordinates (33.97633, -83.71709) sit about 1.4 km from the park's Wikipedia coordinates (33.969621, -83.729612). That is our own arithmetic, not a source, and it fits the tower lying inside the park. The lookout parcel's present use and whether the tower still stands are unknown. The city page names two stations but no addresses, so no link to the lookout site is made. A Mainstreet News story on Winder fire services was not read (HTTP 429). The registers tag has the same problem as Williams Mountain; see corrections. Confidence medium: one documented 1995 event from one page."
    },
    {
     "id": "us-ga-winokur",
     "note": "Only a state list entry and a Forest Lookouts page with a heading and county. Two WebSearch queries (Charlton County; Folkston and Okefenokee) found no record of a Winokur fire tower. The page's one image is the same file as on the Crisp County page, so it is probably a site template image; not used, no photos added. The list's Charlton County and 21.9 m (72 ft) match the brief; feet is read from the list's own values, since the header gives no unit. Status, access and history left unknown. Fact-check 2026-10-21: the index claim (Winokur under Georgia) was not backed by an evidence entry before; the sidebar index on the Forest Lookouts page lists Winokur between the GEORGIA and INDIANA headings, and the evidence now records that. The story's list-notes sentence was reworded so it no longer copies the list notes' wording."
    },
    {
+    "id": "us-ga-withers",
+    "note": "Thin record and a possible hold. The only source that names this tower is the tnlandforms.us Georgia list: position, county and elevation. Its entry has no Forestry Commission or register code, unlike many others on that list. The list does not state its elevation unit; 163 is read as feet because the record's 49.7 m equals 163 ft. Paragraphs 2 and 3 are statewide and register context, not facts about this tower. If you prefer the Copton approach, hold the story and keep the research file. Build date, status, staffing and access are all unknown. The Savannah article was read from its Wayback copy because savannahnow.com returns 403. Fact-check 2026-10-21: the NHLR and Former Fire Lookout Sites Georgia lists were read in full, and neither includes this tower. The story and summary now say the tnlandforms list gives no elevation unit; feet is a reading, not a source figure. Web searches used: 2."
+   },
+   {
+    "id": "us-ga-woodcliff",
+    "note": "Thin record. The GFC US 108 register entry in the record is not supported by any source read; a correction is proposed. The tnlandforms entry also carries a code 'stoop-to' that I could not interpret and did not use. Elevation unit read as feet (the record's 91.4 m equals 300 ft); the list does not state its unit. No build date, status, staffing or access data was found. Paragraphs 3 and 4 are statewide and register context, not facts about this tower; drop them if the story is held. Fact-check 2026-10-21: the NHLR and Former Fire Lookout Sites Georgia lists were read in full, and neither includes this tower. The story now says the tnlandforms list gives no elevation unit. The proposed removal of GFC US 108 in corrections is not applied here, because the tower record is outside this check's scope. Web searches used: 2."
+   },
+   {
+    "id": "us-ga-woodland",
+    "note": "Thin record and a possible hold. The only source that names this Georgia tower is the tnlandforms.us list: position, county and elevation. The name collides with the registered Woodland Lookout Tower in Chickasaw County, Mississippi (US 1676, MS 39); the story flags it. A Woodland Lookout Tower page on anyplaceamerica.com appeared in search results but returned 403 and was not read; it may be worth a human check for coordinates and photos. Elevation unit read as feet (the record's 294.4 m equals 966 ft). No build date, status, staffing or access data was found. Paragraphs 2 and 3 are statewide and register context, not facts about this tower; drop them if the story is held. Fact-check 2026-10-21: the NHLR and Former Fire Lookout Sites Georgia lists were read in full, and neither includes this tower. The Mississippi cross-reference page was read and matches. The story now says the tnlandforms list gives no elevation unit. Web searches used: 2."
+   },
+   {
+    "id": "us-ga-woodville",
+    "note": "Thin record. The only tower-specific source is one row in the tnlandforms Georgia list (location, county, elevation, and a last field 'topo'). The list gives no unit for elevation; the story reads 738 as feet (about 225 m), which matches the 224.9 m in the record, and says so in the text. The 'topo' field is quoted as written and is not labelled a data source, because the list does not label it that way. No source read or searched gives a build date, builder, design, height, staffing, fire history, fate or access for this site, so the story has no built, staffing or fate sentences. Name collisions to avoid: Woodville, Texas (nhlr tx/woodville-fire-tower) and a Woodville lookout in Bertie County, North Carolina (cached FOREST LOOKOUTS page) are different towers. A federal antenna registry record for a structure of about 370 ft in Woodville, registered to Greene County in 2011, appeared in a search snippet only; it was not fetched or linked and may be a communications tower. The Flickr photo titled 'Woodville Fire Tower' (credit RandomConnections, via MAPLOGS) was not added to photos because its license and Flickr page were not checked. Verification pass 2026-10-21: removed 'small' (the population figure does not establish it); replaced 'data source' with 'last field'; flagged the missing elevation unit; reworded the statewide sentence so it no longer copies the Vanishing Georgia wording; added the 2020-census quote. The brief's county, coordinates and elevation match the list."
+   },
+   {
+    "id": "us-ga-wrens",
+    "note": "Thin record. The only tower-specific source is one row in the tnlandforms Georgia list: name, coordinates, county, elevation 501 (no unit given; read as feet this matches the 152.7 m in the record), and two codes, BLL-50812 and gfc-620. The list's own description of its fields reads 'lat/lon, elevation, GFC number', next to a link to the Georgia Forestry Commission, which supports reading gfc-620 as a Georgia Forestry Commission number. No source read or searched explains the BLL code, so the story says only that the list carries it. Nothing found gives a build date, staffing, fire history, fate or access. Searches for a Wrens fire tower returned only the Chenocetah tower (Habersham County, GA) and Jefferson County, Alabama towers (Rock Mountain, Wharton), which are different structures. The Georgia Forest Fire Lookout Association chapter reports in the cache (2013) and the Georgia/SC reports do not name Wrens. The cached NHLR Georgia index does not list a Wrens tower. Verification pass 2026-10-21: flagged the missing elevation unit; replaced 'BLL number' with 'a code ... that the list does not explain'; changed 'the town's Wikipedia entry' to 'the Wikipedia article'; added the GFC field-description quote. The brief's county, coordinates and elevation match the list."
+   },
+   {
+    "id": "us-ga-wright",
+    "note": "Thin record. The only tower-specific source is one row in the tnlandforms Georgia list: name 'wright', coordinates, county Montgomery, elevation 283 (no unit given; read as feet this matches the 86.3 m in the record), and a last field 'datasheet CL2136'. Other rows in the list carry 'datasheet' followed by a code, but no source read explains what the code means, so the story quotes the field and does not call it a source. Nothing found gives a build date, staffing, fire history, fate or access. Name collisions to avoid: Wright Mountain (Fentress County, Tennessee, in the cached FOREST LOOKOUTS pages), Wright's Tower (Medford, Massachusetts, WPA 1937), and Wrightsboro (Columbia County, Georgia, a separate list entry, GA269). A search hit titled 'Fire Tower Rd' was a listing at an Atlanta address and was not used. Verification pass 2026-10-21: flagged the missing elevation unit; replaced 'names a datasheet ... as its source' with a quote of the last field; the Continental army wording is now 'brigadier general', as the source says; the statewide sentence no longer copies the Vanishing Georgia wording. The brief's county, coordinates and elevation match the list."
+   },
+   {
+    "id": "us-ga-wrightsboro",
+    "note": "Only one list line (GA269) supports this record. Its only tag is 'usgs' and it has no register number, so nothing confirms it is a documented fire lookout rather than another tower type. No build, design, staffing, height or current-status source was found; two searches (Wrightsboro, Columbia County) returned nothing about it. Not on the NHLR or FFLOS Georgia lists (both cached and checked). The record's elevation of 139.3 m equals 457 ft, so the list's elevation column is in feet. A search snippet for the list page says names for towers 73 and above are the author's own; the cached copy does not carry that line, so it is not relied on. If it is true, the name 'wrightsboro' is a label, not an official name. Possible duplicate of us-ga-wrightsboro-gfc, about 436 m away by the list's coordinates."
+   },
+   {
+    "id": "us-ga-wrightsboro-gfc",
+    "note": "Only one list line (GA270) supports this record. The tags 'gfc-021' and 'BLL-50809' are printed as on the list and are not expanded there; 'gfc' is probably the Georgia Forestry Commission numbering, but no source here says so. The record's register entry GFC US 21 matches gfc-021. No build, design, staffing, height or current-status source was found, and no NHLR or FFLOS Georgia entry matches (both cached lists checked). The list gives two Wrightsboro entries about 436 m apart; no source says whether they are one structure or two, so this may duplicate us-ga-wrightsboro. The record's elevation of 140.5 m equals 461 ft, so the list's elevation column is in feet."
+   },
+   {
+    "id": "us-ga-wrigthsville",
+    "note": "Only one list line (GA243) supports this record. No build, design, staffing, height, current-status or site-condition source was found. The 'wrigthsville' spelling is treated as a typo; the name correction is for a human to accept or reject. The coordinates put the tower about 2.5 km south of Wikipedia's point for the city, which may not be the exact centre. Tags BLL-41091 and gfc-624 are printed as on the list and not expanded there. Not on the NHLR or FFLOS Georgia lists (both cached and checked). A web search turned up nothing about this tower. The johnsonco.org county history page returned HTTP 403 and was not read."
+   },
+   {
     "id": "us-ga-yonah-mountain",
     "note": "Confidence is low. The build year (around 1925) and the end of service (1980s) come only from a county public safety Instagram post, which is a social post rather than an archival record. The FFLOS page gives no build, removal or staffing date. The Facebook copy of the same post would not load (login wall), so only the Instagram copy is cited. Elevation: FFLOS gives 3,164 ft (964 m), matching the brief's elevation_m; the tnlandforms Georgia list gives 3138 for the Yonah Mountain entry in a column with no label, so it is not used. Nothing found describes remains or access today; the brief's access 'unknown' is left unfilled. A county historical society or Forest Service record would firm up the 1925 date."
+   },
+   {
+    "id": "us-ga-yorkville",
+    "note": "Only one source places this tower: the tnlandforms.us Georgia lookout list, which gives a name, county, coordinates, elevation (1,405, no unit stated on the page; the story reads it as feet) and a GFC number, and its page footer is marked revised 22 March 2016. Two WebSearch queries and a firetower.org Georgia lookup found nothing about a Yorkville tower or GFC 721. The list does not say what gfc stands for, so the story does not name an agency. The brief's register reads 'GFC US 721'; the list reads 'gfc-721'. Wikipedia gives 1,362 ft (415 m) for the community area, a different point from the tower, not a conflict. No build date, design, height, status, staffing or access level appears in any source, so the story covers the list entry only. Do not add height, status or access without a new source. The brief's status and access stay unknown."
    },
    {
     "id": "us-ia-yellow-river",
@@ -150767,6 +151587,33 @@
    "researched": "2026-10-08"
   },
   {
+   "id": "us-ga-leah",
+   "name": "leah",
+   "field": "registers",
+   "current": "GFC US 22",
+   "proposed": "GFC 022",
+   "evidence": null,
+   "sources": [
+    "https://tnlandforms.us/gatowers.html"
+   ],
+   "researched": "2026-10-21"
+  },
+  {
+   "id": "us-ga-lincolnton",
+   "name": "lincolnton",
+   "field": "registers",
+   "current": [
+    "BLL US 50815",
+    "GFC US 6"
+   ],
+   "proposed": "Remove from registers. Keep as source codes only: BLL-50815 (coordinates GFC provided) and gfc-006 (older GFC list).",
+   "evidence": null,
+   "sources": [
+    "https://tnlandforms.us/gatowers.html"
+   ],
+   "researched": "2026-10-21"
+  },
+  {
    "id": "us-ga-mathis",
    "name": "Mathis Fire Tower",
    "field": "county",
@@ -150802,6 +151649,18 @@
     "http://nhlr.org/lookouts/us/ga/old-fort-fire-tower/"
    ],
    "researched": "2026-10-08"
+  },
+  {
+   "id": "us-ga-muscogee",
+   "name": "Muscogee Lookout Tower",
+   "field": "registers",
+   "current": "GFC US 310",
+   "proposed": "GFC 310",
+   "evidence": null,
+   "sources": [
+    "https://tnlandforms.us/gatowers.html"
+   ],
+   "researched": "2026-10-21"
   },
   {
    "id": "us-ga-narrows",
@@ -150840,6 +151699,30 @@
    "researched": "2026-10-21"
   },
   {
+   "id": "us-ga-oatland-island",
+   "name": "oatland island",
+   "field": "hidden",
+   "current": false,
+   "proposed": true,
+   "evidence": null,
+   "sources": [
+    "https://vanishinggeorgia.com/2015/04/28/oatland-island-savannah/"
+   ],
+   "researched": "2026-10-21"
+  },
+  {
+   "id": "us-ga-oglethorge",
+   "name": "oglethorge",
+   "field": "registers",
+   "current": "BLL US 41126; GFC US 322",
+   "proposed": "remove: these are list codes, not register numbers",
+   "evidence": null,
+   "sources": [
+    "https://tnlandforms.us/gatowers.html"
+   ],
+   "researched": "2026-10-21"
+  },
+  {
    "id": "us-ga-old-fort",
    "name": "Old Fort Fire Tower",
    "field": "built",
@@ -150851,6 +151734,152 @@
     "https://www.freedmanengineering.com/uploads/3/4/0/3/34031442/ft_mtn_network_magazine_article_for_website.pdf"
    ],
    "researched": "2026-10-08"
+  },
+  {
+   "id": "us-ga-ringgold",
+   "name": "ringgold",
+   "field": "registers",
+   "current": [
+    {
+     "register": "BLL",
+     "number": "US 41143"
+    },
+    {
+     "register": "GFC",
+     "number": "US 708"
+    }
+   ],
+   "proposed": [],
+   "evidence": null,
+   "sources": [
+    "https://tnlandforms.us/gatowers.html"
+   ],
+   "researched": "2026-10-21"
+  },
+  {
+   "id": "us-ga-rowena",
+   "name": "Rowena Lookout Tower",
+   "field": "registers",
+   "current": "GFC US 207",
+   "proposed": "gfc-207 (the list's note says gfc-nnn codes come from an older GFC list of 203 towers)",
+   "evidence": null,
+   "sources": [
+    "https://tnlandforms.us/gatowers.html"
+   ],
+   "researched": "2026-10-21"
+  },
+  {
+   "id": "us-ga-sapelo",
+   "name": "sapelo",
+   "field": "registers",
+   "current": "GFC US 133",
+   "proposed": "gfc-133 (the list's note says gfc-nnn codes come from an older GFC list of 203 towers)",
+   "evidence": null,
+   "sources": [
+    "https://tnlandforms.us/gatowers.html"
+   ],
+   "researched": "2026-10-21"
+  },
+  {
+   "id": "us-ga-swainsboro",
+   "name": "swainsboro",
+   "field": "registers",
+   "current": [
+    "BLL US 41156",
+    "GFC US 110"
+   ],
+   "proposed": [],
+   "evidence": null,
+   "sources": [
+    "https://tnlandforms.us/gatowers.html"
+   ],
+   "researched": "2026-10-21"
+  },
+  {
+   "id": "us-ga-tattnall",
+   "name": "tattnall",
+   "field": "name",
+   "current": "tattnall",
+   "proposed": "Reidsville fire tower",
+   "evidence": null,
+   "sources": [
+    "https://tattnalljournal.net/local-news/historic-fire-tower-taken-down-tattnall-county-forestry-commission/",
+    "https://tnlandforms.us/gatowers.html"
+   ],
+   "researched": "2026-10-21"
+  },
+  {
+   "id": "us-ga-waynesboro",
+   "name": "waynesboro",
+   "field": "registers",
+   "current": "GFC US 101",
+   "proposed": "gfc-101 (older Georgia Forestry Commission list number)",
+   "evidence": null,
+   "sources": [
+    "https://tnlandforms.us/gatowers.html"
+   ],
+   "researched": "2026-10-21"
+  },
+  {
+   "id": "us-ga-white-house",
+   "name": "white house",
+   "field": "registers",
+   "current": "GFC US 317",
+   "proposed": "GFC 317",
+   "evidence": null,
+   "sources": [
+    "https://tnlandforms.us/gatowers.html"
+   ],
+   "researched": "2026-10-21"
+  },
+  {
+   "id": "us-ga-williams-mtn",
+   "name": "williams mtn",
+   "field": "registers",
+   "current": "GFC US 307",
+   "proposed": "GFC 307",
+   "evidence": null,
+   "sources": [
+    "https://tnlandforms.us/gatowers.html"
+   ],
+   "researched": "2026-10-21"
+  },
+  {
+   "id": "us-ga-winder",
+   "name": "winder",
+   "field": "registers",
+   "current": "GFC US 928",
+   "proposed": "GFC 928",
+   "evidence": null,
+   "sources": [
+    "https://tnlandforms.us/gatowers.html"
+   ],
+   "researched": "2026-10-21"
+  },
+  {
+   "id": "us-ga-woodcliff",
+   "name": "woodcliff",
+   "field": "registers",
+   "current": "GFC US 108",
+   "proposed": "Remove. 108 is a number from an older Georgia Forestry Commission list (gfc-108 on the tnlandforms list), not a lookout register number.",
+   "evidence": null,
+   "sources": [
+    "https://tnlandforms.us/gatowers.html",
+    "http://nhlr.org/lookouts/us/ga/"
+   ],
+   "researched": "2026-10-21"
+  },
+  {
+   "id": "us-ga-wrigthsville",
+   "name": "wrigthsville",
+   "field": "name",
+   "current": "wrigthsville",
+   "proposed": "Wrightsville",
+   "evidence": null,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Wrightsville,_Georgia"
+   ],
+   "researched": "2026-10-21"
   },
   {
    "id": "us-id-agatha-creek",

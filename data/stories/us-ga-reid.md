@@ -1,0 +1,4 @@
+Georgia's lookout tower list at tnlandforms.us includes a lookout called Reid in Richmond County, at 519 feet (158 m) elevation.[^1] A 2013 report from the Forest Fire Lookout Association says the writer understood that two Georgia towers were about to go to auction for removal, one in Richmond County near Augusta and one in Pulaski County.[^2] The report does not name the Richmond County tower, so it cannot be linked to Reid. No source we could find describes the site today, or whether the public can visit it.
+
+[^1]: Georgia lookout towers list, tnlandforms.us (Tom Dunigan), https://tnlandforms.us/gatowers.html (accessed 2026-10-21).
+[^2]: Forest Fire Lookout Association chapter report, 2013, Forest Fire Lookout Association, https://firelookout.org/wp-content/uploads/2024/11/cr-rp-gasc-2013.pdf (accessed 2026-10-21).
