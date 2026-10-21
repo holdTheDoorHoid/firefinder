@@ -1,6 +1,7 @@
 {
   "id": "us-nc-rocky-knob",
   "name": "Rocky Knob",
+  "summary": "Caldwell County tower site listed under the U.S. Forest Service; NGS notes place a survey station beside the fire tower in 1971 and say the tower was gone by 2010.",
   "other_names": [],
   "country": "US",
   "region": "NC",
@@ -28,7 +29,7 @@
       "url": null
     }
   ],
-  "agency": null,
+  "agency": "U.S. Forest Service",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -44,9 +45,34 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1971,
+      "event": "other",
+      "note": "NCGS station described near the northeast corner of a fire tower",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=FZ2013"
+    },
+    {
+      "year": 2010,
+      "event": "other",
+      "note": "NGS recovery note: the fire tower is gone",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=FZ2013"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "North Carolina - Forest Lookouts",
+      "url": "https://easternuslookouts.weebly.com/north-carolina.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Rocky Knob (FZ2013) datasheet (National Geodetic Survey)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=FZ2013",
+      "kind": "reference"
+    },
     {
       "label": "Rocky Knob (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/nctowers.html",
@@ -65,12 +91,29 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nc-rocky-knob",
+      "fields": [
+        "summary",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-21"
 }

@@ -1,6 +1,7 @@
 {
   "id": "us-nc-siler-city",
   "name": "Siler City",
+  "summary": "Listed with NGS point EZ1268; an FCC tower record about 26 m away dates to 2001 but does not say it is a lookout.",
   "other_names": [],
   "country": "US",
   "region": "NC",
@@ -44,9 +45,32 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 2001,
+      "event": "other",
+      "note": "FCC tower registration gives a constructed date of January 15, 2001 for a 36.6 m structure about 26 m from the listed coordinates. The registration does not say whether it is the lookout on the list.",
+      "from": "research",
+      "source_url": "https://celltowerfinder.com/advanced-tower-details.php?registration_number=1211753"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "NGS Data Sheet for PID EZ1268 (SILER) (National Geodetic Survey, NOAA)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=EZ1268",
+      "kind": "reference"
+    },
+    {
+      "label": "FCC Tower #1211753, Siler City, NC (Constructed) (Cellular Finder)",
+      "url": "https://celltowerfinder.com/advanced-tower-details.php?registration_number=1211753",
+      "kind": "reference"
+    },
+    {
+      "label": "Siler City, North Carolina (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Siler_City,_North_Carolina",
+      "kind": "reference"
+    },
     {
       "label": "Siler City (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/nctowers.html",
@@ -65,12 +89,28 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nc-siler-city",
+      "fields": [
+        "summary",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-21"
 }

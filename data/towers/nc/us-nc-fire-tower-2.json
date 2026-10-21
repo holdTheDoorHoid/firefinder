@@ -1,6 +1,7 @@
 {
   "id": "us-nc-fire-tower-2",
   "name": "Fire Tower 2",
+  "summary": "Onslow County survey mark FIRE TOWER 2 (EA2358): a 1950 NGS description of a 135-foot green steel skeleton tower; last recovered in 2003 in good condition.",
   "other_names": [],
   "country": "US",
   "region": "NC",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Steel skeleton tower, painted green (1950 description)",
+  "height_m": 41.1,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "No source says whether the tower still stands. The last recovery, in 2003, found the survey station in good condition.",
   "registers": [
     {
       "register": "NGS",
@@ -44,9 +45,36 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1950,
+      "event": "other",
+      "note": "Coast and Geodetic Survey description: the station was at the centre of a 135-foot steel skeleton tower, painted green, and was recovered in good condition.",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=EA2358"
+    },
+    {
+      "year": 1993,
+      "event": "assessed",
+      "note": "North Carolina Geodetic Survey recovery note; the history line records the condition as good.",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=EA2358"
+    },
+    {
+      "year": 2003,
+      "event": "assessed",
+      "note": "US Power Squadron recovery note; the station was recovered in good condition.",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=EA2358"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "NGS Data Sheet, PID EA2358 (FIRE TOWER 2) (National Geodetic Survey, NOAA)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=EA2358",
+      "kind": "reference"
+    },
     {
       "label": "Fire Tower 2 (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/nctowers.html",
@@ -65,12 +93,31 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nc-fire-tower-2",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-21"
 }

@@ -1,0 +1,11 @@
+The Buick tower went up in 1934 in southwest Iron County, near the old community of Buick.[^1][^2][^3] In March 1934 a newspaper reported that material had arrived for a 100-foot steel lookout tower in what it called the Clark Unit of the Missouri National Forests, to be erected at once near Buick.[^1] A later Salem News feature credits Company 732 of the Civilian Conservation Corps, working from Boss Camp F-1, with building the Buick tower.[^4] The Clark National Forest was combined with the Mark Twain National Forest in 1973 and absorbed by it in 1976.[^5]
+
+A November 1934 newspaper item about the Marcoot tower, quoted by the National Historic Lookout Register, described the Buick and Czar towers as already standing, with ladders rather than stairs to reach the cab.[^2] A 1939 Coast and Geodetic Survey description, transcribed on the Forest Lookouts page, calls the Buick tower a four-legged steel structure with an eight-foot square cab on top.[^1] The same description gives the height as 100 feet in one place and about 110 feet in another, so the height figures conflict.[^1]
+
+Today the Buick area is not a town at all.[^3] Wikipedia describes Buick as an extinct town on Missouri Route KK, and says the area is home to the Buick Mine, which the Doe Run Company owns.[^3] The community had a post office from 1918 to 1955, and its name is traced to the area's first car owner, who drove a Buick.[^3] None of the sources read describes the tower itself today, including whether anything of it remains or whether the site is open to visitors.
+
+[^1]: Buick - FOREST LOOKOUTS, Forest Lookouts (central US), https://centraluslookouts.weebly.com/buick.html (accessed 2026-10-21).
+[^2]: Marcoot Lookout Station, National Historic Lookout Register, https://nhlr.org/lookouts/us/mo/marcoot-lookout-station/ (accessed 2026-10-21).
+[^3]: Buick, Missouri, Wikipedia, https://en.wikipedia.org/wiki/Buick,_Missouri (accessed 2026-10-21).
+[^4]: Journey through history in the Mark Twain National Forest, Salem News, https://www.thesalemnewsonline.com/news/local_news/article_3c24d5d4-1e04-11ef-8a02-8ff27c5ec157.html (accessed 2026-10-21).
+[^5]: Clark National Forest, Wikipedia, https://en.wikipedia.org/wiki/Clark_National_Forest (accessed 2026-10-21).

@@ -1,0 +1,4 @@
+Lone Star Lookout Tower is in Metcalfe County, Kentucky.[^1] TopoQuest gives its elevation as 1,079 feet above sea level and shows it on the USGS 1:24,000 map for Edmonton.[^1] OpenStreetMap's elevation tag gives the same height as 329 m.[^2] OpenStreetMap maps it as a lattice tower of the observation type.[^2] The changeset that last edited that point describes the work as adding or modifying a communication mast.[^2] OpenStreetMap still shows the tower, but no source describes what remains at the site today or whether visitors can reach it.[^2]
+
+[^1]: Lone Star Lookout Tower, KY, TopoQuest, https://topoquest.com/place/kentucky/tower/lone-star-lookout-tower/517230 (accessed 2026-10-21).
+[^2]: Node: Lone Star Lookout Tower (358614125), OpenStreetMap, https://www.openstreetmap.org/node/358614125 (accessed 2026-10-21).

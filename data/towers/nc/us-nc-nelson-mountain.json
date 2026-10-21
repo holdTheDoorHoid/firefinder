@@ -1,6 +1,7 @@
 {
   "id": "us-nc-nelson-mountain",
   "name": "Nelson Mountain",
+  "summary": "Stanly County fire tower on Nelson Mountain near Albemarle; standing in 1967, gone by 2009 with old leg supports left; the site is private.",
   "other_names": [],
   "country": "US",
   "region": "NC",
@@ -18,8 +19,8 @@
   "roles": [],
   "design": null,
   "height_m": null,
-  "status": "unknown",
-  "status_note": null,
+  "status": "gone",
+  "status_note": "Gone by 2009, when only the old leg supports remained (NGS 2009 recovery note)",
   "registers": [
     {
       "register": "NGS",
@@ -31,8 +32,8 @@
   "agency": null,
   "ownership": "unknown",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "private",
+    "note": "A 2014 recovery note says the station and its reference marks are on private property and permission for access was not granted"
   },
   "staffing": {
     "status": "unknown",
@@ -44,9 +45,29 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1967,
+      "event": "assessed",
+      "note": "Survey recovery found the fire tower standing",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=FA2122"
+    },
+    {
+      "year": 2009,
+      "event": "removed",
+      "note": "Survey recovery found the lookout gone, with its old leg supports still on the site; the removal date is not recorded",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=FA2122"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Datasheet for NGS station FA2122 (National Geodetic Survey, NOAA)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=FA2122",
+      "kind": "reference"
+    },
     {
       "label": "Nelson Mountain (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/nctowers.html",
@@ -65,12 +86,30 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nc-nelson-mountain",
+      "fields": [
+        "summary",
+        "status",
+        "access",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "pass",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-21"
 }

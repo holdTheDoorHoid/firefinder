@@ -1,6 +1,7 @@
 {
   "id": "us-mi-down-river",
   "name": "Down River",
+  "summary": "NGS survey mark for a steel lookout tower about 125 ft high, seven miles NE of Grayling; described 1949. No build date, staffing or fate found.",
   "other_names": [],
   "country": "US",
   "region": "MI",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Four-legged steel tower, about 125 feet high, painted black and white, with an enclosed cab at the top",
   "height_m": 38.1,
   "status": "unknown",
   "status_note": null,
@@ -37,9 +38,33 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1932,
+      "event": "other",
+      "note": "First survey observation of the station. The datasheet gives no construction date for the tower.",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=PL0482"
+    },
+    {
+      "year": 1949,
+      "event": "assessed",
+      "note": "Coast and Geodetic Survey described the station and its tower, and recorded the mark in good condition.",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/down-river.html",
+      "source_urls": [
+        "https://easternuslookouts.weebly.com/down-river.html",
+        "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=PL0482"
+      ]
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "NGS Data Sheet, PID PL0482 (Down River) (National Geodetic Survey, NOAA)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=PL0482",
+      "kind": "reference"
+    },
     {
       "label": "Down River (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/down-river.html",
@@ -59,12 +84,30 @@
         "agency",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mi-down-river",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-21"
 }

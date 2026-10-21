@@ -1,6 +1,7 @@
 {
   "id": "us-la-dutchtown",
   "name": "Dutchtown",
+  "summary": "Webster Parish, LA tower on a ridge near Minden; NGS describes a 100-ft steel cab tower and a 1954 towerman item; no source found on its current state.",
   "other_names": [],
   "country": "US",
   "region": "LA",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Four-legged steel structure supporting a cab, overall height 100 feet",
   "height_m": 30.5,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "No source we read says whether the tower still stands",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -28,8 +29,8 @@
     "note": null
   },
   "staffing": {
-    "status": "unknown",
-    "as_of": null
+    "status": "staffed",
+    "as_of": "1954"
   },
   "visit": {
     "climbable": null,
@@ -37,9 +38,29 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1950,
+      "event": "other",
+      "note": "Coast and Geodetic Survey first observed the station and described it; overall tower height 100 feet",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=CQ3022"
+    },
+    {
+      "year": 1954,
+      "event": "staffed",
+      "note": "Towerman Gus Nathanial White had been at the tower seven years; state-provided home across the road",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/dutchtown.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "NGS Datasheet for PID CQ3022 (Dutchtown Fire Tower LFC) (National Geodetic Survey)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=CQ3022",
+      "kind": "reference"
+    },
     {
       "label": "Dutchtown (centraluslookouts.weebly.com)",
       "url": "https://centraluslookouts.weebly.com/dutchtown.html",
@@ -58,12 +79,32 @@
         "height_m",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-la-dutchtown",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "staffing",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-21"
 }

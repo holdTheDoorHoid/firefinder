@@ -1,0 +1,6 @@
+The Williamsville lookout tower in Wayne County, Missouri, was described in 1963 as a steel tower that the U.S. Forest Service owns and runs.[^1][^2] The Coast and Geodetic Survey's description gives a steel structure on four legs, with a closed-in observing room at its top and an overall height of about 120 feet (37 m).[^1] The survey's directions start where County Roads A and O meet in Williamsville, then run east on Road O for 2.05 miles and head north on a gravel road for 1.1 miles to the tower.[^1]
+
+The survey's history section has a single entry, a 1963 first observation, and nothing later.[^1] The Central US Lookouts page names the Mark Twain National Forest for the site.[^2] No source describes the tower or its site today, so it is not known whether the structure still stands or whether the public can reach it. Anyone planning a visit should check with the Mark Twain National Forest first.
+
+[^1]: Datasheet GE1065, Williamsville Lookout Tower, National Geodetic Survey, NOAA, https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=GE1065 (accessed 2026-10-21).
+[^2]: Williamsville - Forest Lookouts, Central US Lookouts, https://centraluslookouts.weebly.com/williamsville.html (accessed 2026-10-21).

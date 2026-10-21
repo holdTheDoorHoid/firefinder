@@ -1,6 +1,7 @@
 {
   "id": "us-nc-jackson",
   "name": "Jackson",
+  "summary": "Four-legged steel lookout tower, 110 ft overall, first observed by the Coast and Geodetic Survey in 1959; no source found describes it since.",
   "other_names": [],
   "country": "US",
   "region": "NC",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Four-legged steel frame supporting a square metal cabin",
+  "height_m": 33.5,
   "status": "unknown",
   "status_note": null,
   "registers": [
@@ -44,9 +45,22 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1959,
+      "event": "other",
+      "note": "Coast and Geodetic Survey first observed and described the tower for survey mark FX4177",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=FX4177"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "NGS Data Sheet for survey mark FX4177, Jackson Lookout Tower (National Geodetic Survey, NOAA)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=FX4177",
+      "kind": "reference"
+    },
     {
       "label": "Jackson (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/nctowers.html",
@@ -65,12 +79,30 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nc-jackson",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-21"
 }

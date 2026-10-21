@@ -1,6 +1,7 @@
 {
   "id": "us-ms-benton",
   "name": "Benton",
+  "summary": "An NGS data sheet gives a 1966 Coast and Geodetic Survey description of the Benton County fire tower: 110 feet (33.5 m) tall, a metal cab on a skeleton structure; no source found gives its current status.",
   "other_names": [],
   "country": "US",
   "region": "MS",
@@ -16,8 +17,8 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Metal cab on a four-legged skeleton structure",
+  "height_m": 33.5,
   "status": "unknown",
   "status_note": null,
   "registers": [],
@@ -37,9 +38,29 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1966,
+      "event": "other",
+      "note": "Coast and Geodetic Survey first observed and described the station in 1966. The sheet gives no build date for the tower.",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=EG1649"
+    },
+    {
+      "year": 2009,
+      "event": "other",
+      "note": "Condition report in the NGS history rates the survey station GOOD. It does not say whether the tower stands.",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=EG1649"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "NGS Data Sheet EG1649, Benton Fire Tower (National Geodetic Survey, NOAA)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=EG1649",
+      "kind": "reference"
+    },
     {
       "label": "Benton (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/benton1.html",
@@ -58,12 +79,31 @@
         "agency",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ms-benton",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-21"
 }

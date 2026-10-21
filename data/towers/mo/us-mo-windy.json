@@ -1,6 +1,7 @@
 {
   "id": "us-mo-windy",
   "name": "Windy",
+  "summary": "Forest Service steel lookout about 50 ft high in Oregon County, MO, described by the Coast and Geodetic Survey in 1956; no later source describes it.",
   "other_names": [],
   "country": "US",
   "region": "MO",
@@ -16,12 +17,12 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Steel skeleton framework with a small house mounted on top",
   "height_m": 15.2,
   "status": "unknown",
-  "status_note": null,
+  "status_note": "Last described in a 1956 survey record; no source found describes its condition since.",
   "registers": [],
-  "agency": "Mark Twain National Forest",
+  "agency": "U.S. Forest Service (Mark Twain National Forest)",
   "ownership": "federal",
   "access": {
     "level": "unknown",
@@ -37,9 +38,22 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1956,
+      "event": "other",
+      "note": "Coast and Geodetic Survey first observed and described the tower. The survey record gives no construction date.",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=GE0810"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Datasheet GE0810, Windy Lookout Tower (National Geodetic Survey, NOAA)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=GE0810",
+      "kind": "reference"
+    },
     {
       "label": "Windy (centraluslookouts.weebly.com)",
       "url": "https://centraluslookouts.weebly.com/windy.html",
@@ -60,12 +74,32 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mo-windy",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-21"
 }

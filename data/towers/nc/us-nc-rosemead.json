@@ -1,6 +1,7 @@
 {
   "id": "us-nc-rosemead",
   "name": "Rosemead",
+  "summary": "Bertie County, NC tower that a state lookout history dates to 1948 (120 ft); the 1959 survey gives 110 ft. No source describes the site today.",
   "other_names": [],
   "country": "US",
   "region": "NC",
@@ -16,7 +17,7 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Square metal cabin on a four-legged steel structure",
   "height_m": null,
   "status": "unknown",
   "status_note": null,
@@ -28,7 +29,7 @@
       "url": null
     }
   ],
-  "agency": null,
+  "agency": "North Carolina Forest Service",
   "ownership": "unknown",
   "access": {
     "level": "unknown",
@@ -44,9 +45,34 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1948,
+      "event": "built",
+      "note": "A 120-foot tower was erected by the State Forest Service, per the lookout history. The 1959 survey gives 110 ft overall; the sources disagree on height.",
+      "from": "research",
+      "source_url": "https://easternuslookouts.weebly.com/north-carolina.html"
+    },
+    {
+      "year": 1959,
+      "event": "assessed",
+      "note": "Coast and Geodetic Survey first observed and described the station: square metal cabin, 110 feet overall.",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=FX3886"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "North Carolina - Forest Lookouts (Forest Lookouts website)",
+      "url": "https://easternuslookouts.weebly.com/north-carolina.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Survey data sheet for PID FX3886 (Rosemeade Lookout Tower) (National Geodetic Survey, NOAA)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=FX3886",
+      "kind": "reference"
+    },
     {
       "label": "Rosemead (tnlandforms.us (Tom Dunigan))",
       "url": "https://tnlandforms.us/nctowers.html",
@@ -65,12 +91,30 @@
         "registers",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-nc-rosemead",
+      "fields": [
+        "summary",
+        "design",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-21"
 }

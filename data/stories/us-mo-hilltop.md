@@ -1,0 +1,5 @@
+In fiscal 1949-50 the Missouri Conservation Commission acquired 3.3 acres for a towersite in Taney County.[^1] The Department operated 102 fire towers statewide by 1966, a 2022 Missouri Conservationist history reports.[^3] Those towers were between 60 and 120 feet high, most were steel, and the early ones were wood.[^3] A map database, TopoQuest, lists a Hill Top Lookout Tower in Taney County, and the Forest Lookouts page uses the name Hilltop.[^2][^1] No source I found describes the site today, so I cannot say whether a tower stands there or whether the public can reach it.[^1][^2]
+
+[^1]: Hilltop - Forest Lookouts, Forest Lookouts, https://centraluslookouts.weebly.com/hilltop.html (accessed 2026-10-21).
+[^2]: Hill Top Lookout Tower, TopoQuest, https://topoquest.com/place/missouri/tower/hill-top-lookout-tower/755212 (accessed 2026-10-21).
+[^3]: Shooting the Smoke, Missouri Conservationist, Missouri Department of Conservation, https://mdc.mo.gov/magazines/missouri-conservationist/2022-07/shooting-smoke (accessed 2026-10-21).
