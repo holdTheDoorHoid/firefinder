@@ -1,0 +1,11 @@
+The Newkirk Fire Tower stood beside Fire Tower Road near Harrells in Sampson County, North Carolina.[^2] The Civilian Conservation Corps erected a 99-foot 9-inch (30.4 m) steel tower there in November 1935, at a cost of $1,423.80, and the funding came through the Emergency Conservation Works program.[^1] A 2018 newspaper gives the height from the bottom of the platform to the top as 99 feet (30.2 m), and it dates the tower to 1936.[^2]
+
+The CCC's Camp P-68 completed a four-room frame house at the tower in 1939.[^1] At the top was a fold-down map case of the surrounding area, with magnets for marking fires.[^2] Before GPS, satellites and cell phones, an operator would climb to the top to watch for smoke, using an azimuth wheel to pinpoint a direction.[^2] A Sampson County ranger, Grant Jones, said nobody could say how many fires the tower's operators had found.[^2]
+
+Bidding on the surplus state property opened on March 22, 2018.[^1] The tower stood on state property, and a reversion clause in the deed required its removal once it was no longer used for its original purpose.[^1] Larry and Beth Horrell bought it for $384, and the job of taking it down and moving it cost $2,000.[^2] Their plan was to reassemble it on a 50-acre farm in McGrady, a community in Wilkes County.[^2] A genealogy blog gives the sale year as 2021, which conflicts with the 2018 auction notice and the 2018 newspaper, so this story follows 2018.[^3][^1][^2] The same blog says the tower was named for county forest warden William King Newkirk (1909–1982).[^3]
+
+A 2018 newspaper article says dismantling had begun, but no source I found describes what remains at the Harrells site today.[^2] Reassembly on the Horrells' farm was only a plan in 2018, and no source confirms it was finished.[^2] The tower was to stand on the Horrells' private farm, and no source says whether the public could visit it.[^2]
+
+[^1]: Newkirk - FOREST LOOKOUTS, Forest Lookouts (easternuslookouts.weebly.com), https://easternuslookouts.weebly.com/newkirk.html (accessed 2026-10-21).
+[^2]: Tower of History, Sampson Independent, https://www.clintonnc.com/news/31613/tower-of-history (accessed 2026-10-21).
+[^3]: Newkirk Fire Tower – Harrells, North Carolina, Newkirk Genealogy (WordPress), https://newkirk.wordpress.com/2022/05/28/newkirk-fire-tower-harrells-north-carolina/ (accessed 2026-10-21).

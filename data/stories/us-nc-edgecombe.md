@@ -1,0 +1,10 @@
+The Edgecombe fire tower was erected in 1932, about four miles southwest of Tarboro, as a 93-foot (28.3 m) steel tower.[^1][^2] The state's 1930 to 1932 biennial report describes an inside stairway and a glass-enclosed cab.[^1] The 2018 survey describes a four-sided truss frame of heavy galvanized steel, with a one-room cabin under a pyramidal roof.[^2] The cabin appears to have sheet-metal walls under bands of nine-light windows, and some of those windows are broken.[^2] The two accounts agree on the tower but stress different things about the cab.
+
+A state report covering 1958 to 1960 records a new towerman's residence built at the tower.[^1] The survey calls the Edgecombe tower the only remaining fire tower in the county.[^2] A second one, the Fountain tower of about 1959, was demolished in 2017.[^2] It also notes that about 210 fire lookout towers were built in North Carolina in the period it covers, from 1915 through the 1990s.[^2]
+
+The 2018 survey found the tower out of service but still standing where it was first erected.[^2] It recommended the tower as eligible for the National Register of Historic Places under Criterion A, for its link to North Carolina's organized fire protection.[^2] The State Historic Preservation Office agreed on November 15, 2018.[^2]
+
+The survey places the tower about 35 feet back from West Wilson Street, in a row of tall pines, near the intersection with McNair Road.[^2] A small office, a shed and an equipment shelter from the mid to late twentieth century stand to the south.[^2] No source I found describes the tower after 2018, or says whether the public may enter the grounds. Please do not climb it.
+
+[^1]: Edgecombe - Forest Lookouts, Eastern US Lookouts, https://easternuslookouts.weebly.com/edgecombe.html (accessed 2026-10-21).
+[^2]: Historic Structures Survey Report, Widen NC 111 from US 64 Alternate to NC 122, Edgecombe County (ER 18-3396), North Carolina Department of Natural and Cultural Resources, State Historic Preservation Office, https://files.nc.gov/ncdcr/historic-preservation-office/PDFs/ER%2018-3396.pdf (accessed 2026-10-21).

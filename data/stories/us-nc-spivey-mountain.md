@@ -1,0 +1,9 @@
+A state report covering 1928 to 1930 records a 35-foot steel tower erected near Candler, in Buncombe County.[^1] A September 1936 item in the Asheville Citizen-Times described a fire tower on top of Spivey Mountain, at 3,331 feet above sea level. It called the tower the nearest forest fire tower to Asheville and praised the view from it.[^1] The two accounts may describe the same tower, but no source ties them together.[^1]
+
+In April 2023, WLOS reported that a conservation-minded owner held 342 acres on Spivey Mountain, and that county leaders were exploring a park there.[^2] 828 News NOW reported that a conservation-minded buyer secured the Deaverview Mountain property in 2023.[^3] In March 2026 Buncombe County completed the purchase of that 342-acre property.[^3] The acreage matches the land WLOS described in 2023.[^2][^3] Officials expect it to open eventually for public recreation, but it is not yet accessible to the public.[^3]
+
+A March 2026 news report describes a 3,118-foot peak on the property. The 1936 item put the summit at 3,331 feet, and no source explains the difference.[^3][^1] The records cited here do not say what, if anything, remains of a tower on the summit today.[^1]
+
+[^1]: Spivey Mountain - Forest Lookouts (quoting the state's 1928-30 biennial report and the Asheville Citizen-Times, September 20, 1936), https://easternuslookouts.weebly.com/spivey-mountain.html (accessed 2026-10-21).
+[^2]: 'Most spectacular view in Asheville:' Creation of park on Spivey Mountain being considered (April 9, 2023), WLOS, https://wlos.com/news/local/spivey-mountain-park-creation-consideration-buncombe-county-leaders-commissioners-southern-appalachian-highlands-conservancy-preserving-land-sahc (accessed 2026-10-21).
+[^3]: Buncombe County closes on Deaverview Mountain land (March 20, 2026), 828 News NOW, https://828newsnow.com/news/228822-buncombe-county-closes-on-deaverview-mountain-land/ (accessed 2026-10-21).

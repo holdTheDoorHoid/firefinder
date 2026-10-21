@@ -1,0 +1,13 @@
+Alamance County got its first fire lookout in 1959.[^1] An August 1958 newspaper item cited a report that a tower had been bought and delivered that June. The plan to erect it on Cane Mountain, in the county's south, was only provisional.[^1] A June 1959 newspaper item describes the finished tower as 100 feet (30.5 m) high, with a base of about 22 feet square and a small observation house at the top.[^1] Climbers faced 133 steps and eight landings.[^1]
+
+The tower sat roughly ten miles south of Graham, between highways 37 and 49.[^1] The same 1959 item says it was built on Bass' Mountain, even though the Forest Service called it the Cane Mountain tower.[^1] A Wikipedia article says Cane Creek Mountain is the range's highest point and that Bass Mountain is not.[^2] The sources do not settle which peak the 1959 tower stood on.
+
+The tower was to get a two-way radio and telephone before it went into full operation in September 1959.[^1] The expected $600 equipment cost was to be shared: the county would pay 40 percent and the state the rest.[^1] A 1967 clipping says 1960 was the first year the tower ran for an entire fire season, and that it helped detect fires in Alamance County and several neighbouring counties.[^1]
+
+A July 2025 blog post describes an abandoned fire tower on the highest point of Cane Creek Mountain, with microwave and communication equipment nearby.[^3] According to Wikipedia, a fire tower on Cane Creek Mountain's summit is now unsafe.[^2] Neither source ties that tower to the 1959 structure, so the two may not be the same.
+
+In 2025 a new 80-foot (24 m) steel observation tower opened on a secondary peak of Cane Creek Mountain.[^3] The blog says the state Parks and Recreation Trust Fund, along with donations to Piedmont Land Conservancy, The Conservation Fund and Alamance Parks, paid for it and for the Cane Creek Mountains Natural Area.[^3] To reach it, hikers can follow the Lookout Trail, which begins at the Oak Hill Trailhead off Bass Mountain Road.[^3] The blog reports that inspections once shut the tower briefly, and that it has reopened.[^3] Please do not climb the old fire tower, which Wikipedia says is not safe to use.[^2]
+
+[^1]: Cane Mountain - FOREST LOOKOUTS (1958-1967 clippings from The Daily Times-News), Forest Lookouts, https://easternuslookouts.weebly.com/cane-mountain.html (accessed 2026-10-21).
+[^2]: Cane Creek Mountains, Wikipedia, https://en.wikipedia.org/wiki/Cane_Creek_Mountains (accessed 2026-10-21).
+[^3]: Jul 3 Cane Creek Mountain Observation Tower, greenmon's folly (blog, July 2025), https://itsgreenmon.blogspot.com/2025/07/jul-3-cane-creek-mountain-observation.html (accessed 2026-10-21).

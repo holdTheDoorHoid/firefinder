@@ -1,0 +1,9 @@
+The Bolivia lookout is in Brunswick County, North Carolina.[^1] The Forest Lookouts page dates the tower to 1929: an Aermotor LS-40 model, 100 feet (30.5 m) tall, set up about four miles south of Bolivia.[^1] It names the North Carolina Division of Forest Resources as the agency.[^1] A federal survey description from 1942 puts the height at about 110 feet (34 m), so the two sources disagree.[^1][^2] That description gives the structure four legs and says the top holds an enclosed metal cab.[^2] Its directions start at the Bolivia post office, head southwest on U.S. 17, and put the tower 4.2 miles along on the right.[^2]
+
+Workers from Civilian Conservation Corps camp P-62 finished a five-room house, 30 by 36 feet (9.1 by 11 m), at the lookout site in September 1936.[^1] The tower stopped being staffed in November 2005.[^1] A WECT report dated November 14, 2005 said Brunswick County would leave all four of its fire towers unstaffed when the next fire season began in February, and that the towers would not be demolished.[^3] The text we read does not name the Bolivia tower.[^3]
+
+A 2001 recovery of the federal survey station there, noted by the US Power Squadron, found it in good condition.[^2] No source we read describes the site today, including whether the tower still stands, who owns the land, or whether the public may visit. Ask the North Carolina Division of Forest Resources before going, and do not climb any tower without permission.
+
+[^1]: Bolivia, Forest Lookouts, https://easternuslookouts.weebly.com/bolivia.html (accessed 2026-10-21).
+[^2]: Bolivia Fire Tower, NGS data sheet PID EB2126, National Geodetic Survey, https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=EB2126 (accessed 2026-10-21).
+[^3]: Fire Towers No Longer Needed in Brunswick County, WECT, https://www.wect.com/story/4118197/fire-towers-no-longer-needed-in-brunswick-county/ (accessed 2026-10-21).

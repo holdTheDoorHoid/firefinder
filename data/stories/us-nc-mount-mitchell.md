@@ -1,0 +1,17 @@
+The first lookout on the summit was a covered wooden platform, roughly 15 feet tall, which the state put up in 1916, when the state park was established.[^2][^3] A 1923-24 state report describes the earlier tower as sixteen feet tall.[^1]
+
+In 1923-24 the state contracted for a steel tower to replace it.[^1] The report says the state reached an agreement with the National Forest Service to share the cost, and that the new tower would include a watchman's cottage and an observation platform thirty feet above the summit.[^1] A Forest Service watchman was to be posted there during the spring and fall fire seasons.[^1]
+
+The Asheville Citizen-Times reported in January 1925 that a 35-foot steel tower had been blown down.[^1] A state report covering 1925 and 1926 says the steel tower was erected that fall, which does not fit a January collapse, so the sources disagree on the dates.[^1]
+
+Col. C.J. Harris then promised a stone tower to replace the steel one.[^1] The Forest History Society says a stone tower in a medieval style replaced the wooden platform in 1926.[^2] It opened on June 17, 1927 as a memorial to Elisha Mitchell, who first determined the peak's height.[^1] A 1927 notice puts it at about 35 feet, says it would serve tourists and also help spot forest fires, and notes that the U.S. Forest Service and the state both used it.[^1]
+
+The later history is disputed. The Forest History Society says the stone tower was replaced in 1959, and that the 1959 tower was replaced in 2009.[^2] The Center for Land Use Interpretation says the stone tower was torn down in 1959, that a new, architect-designed successor incorporated the stone tower's original form and opened in 1960, and that the successor was removed in 2006.[^3] Wikipedia dates the removal of a 40-foot stone structure on the summit to late 2006.[^4] The 35-foot and 40-foot figures may describe different structures.[^1][^4]
+
+Today the summit has a visitor observation deck, built and opened in January 2009.[^4] The Center for Land Use Interpretation describes the platform that replaced the 2006 tower as about ten feet above the ground.[^3] The sources do not say whether that platform is the deck that opened in 2009. The summit is part of Mount Mitchell State Park and is surrounded by Pisgah National Forest land.[^1] The state park describes an observation deck with mountain views, and says the park may close often and for long stretches in winter because of its elevation.[^5] From the Blue Ridge Parkway, NC 128 runs 4.6 miles to a parking lot. From there, a steep, paved trail of about 980 feet (300 m) climbs through conifer forest to the summit.[^4]
+
+[^1]: Mount Mitchell, Forest Lookouts (easternuslookouts.weebly.com), https://easternuslookouts.weebly.com/mount-mitchell.html (accessed 2026-10-21).
+[^2]: Mt. Mitchell, Where Mystery, Intrigue, and Forest History Meet!, Forest History Society, https://foresthistory.org/mt-mitchell-where-mystery-intrigue-and-forest-history-meet/ (accessed 2026-10-21).
+[^3]: Mount Mitchell Summit Observation Platform, Center for Land Use Interpretation, https://clui.org/ludb/site/mount-mitchell-summit-observation-platform (accessed 2026-10-21).
+[^4]: Mount Mitchell, Wikipedia, https://en.wikipedia.org/wiki/Mount_Mitchell (accessed 2026-10-21).
+[^5]: Mount Mitchell State Park, North Carolina State Parks, https://www.ncparks.gov/state-parks/mount-mitchell-state-park (accessed 2026-10-21).
