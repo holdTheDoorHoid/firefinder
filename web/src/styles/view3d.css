@@ -141,6 +141,14 @@
   padding: 5px 10px; border-radius: 8px; background: color-mix(in srgb, var(--surface) 88%, transparent); color: var(--ink);
   font: 600 0.82rem/1.35 var(--font-sans); pointer-events: none;
 }
+.pv-sat-hint {
+  position: absolute; left: 50%; top: 50%; z-index: 3; margin: 0; padding: 8px 14px; border-radius: 8px;
+  transform: translate(-50%, -50%); background: rgb(20 26 22 / 0.78); color: #fffdf7;
+  font: 600 0.9rem/1.3 var(--font-sans); white-space: nowrap; pointer-events: none;
+  opacity: 0; transition: opacity 0.25s;
+}
+.pv-sat-hint.is-on { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .pv-sat-hint { transition: none; } }
 .pv-sat-marker { display: grid; justify-items: center; gap: 2px; pointer-events: none; }
 .pv-sat-marker-label {
   padding: 2px 7px; border-radius: 6px; background: rgb(255 253 247 / 0.92); color: #1c2620;

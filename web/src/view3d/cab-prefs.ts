@@ -61,3 +61,25 @@ export function webgl2Works(): boolean {
   }
   return works;
 }
+
+/**
+ * Whether the satellite view asks before downloading its photos: on phones and tablets (no
+ * mouse or trackpad, or a small screen), which are the devices most often on metered data, and
+ * wherever the browser says the visitor wants to save data. Computers load it straight away.
+ */
+export function askBeforeSatellite(): boolean {
+  try {
+    const c = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
+    if (c?.saveData) return true;
+    if (!matchMedia('(any-pointer: fine)').matches) return true;
+    const side = Math.min(screen.width, screen.height);
+    return side > 0 && side < 600; // some embedded browsers report a screen of 0
+  } catch {
+    return window.innerWidth < 600;
+  }
+}
+
+/** The key that turns the wheel into a zoom: ⌘ on Apple devices, Ctrl elsewhere. */
+export function zoomKeys(): string {
+  return /Mac|iPhone|iPad|iPod/.test(navigator.platform || navigator.userAgent) ? '⌘' : 'Ctrl';
+}

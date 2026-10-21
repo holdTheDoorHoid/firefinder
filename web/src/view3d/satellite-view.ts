@@ -1,7 +1,7 @@
 /**
  * "Satellite": the view from the cab as photos of today's land draped over the terrain, drawn
  * by MapLibre GL, with the drawn view's peak and lookout names and its ring of bearings. You are
- * locked in the cab: drag turns and tilts, the wheel or a pinch zooms like binoculars (the field
+ * locked in the cab: drag turns and tilts, a pinch or Ctrl/⌘ + wheel zooms like binoculars (the field
  * of view narrows), the arrow keys and + and − do the same. "Step outside" circles the lookout
  * from the air, an orbit around the tower rather than free flight (DESIGN.md 4.1), and "Back in
  * the cab" flies back to the eye and the bearing you left at.
@@ -14,6 +14,7 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import { LngLat, Map as MlMap, Marker, setWorkerUrl, type CalculateTileZoomFunction, type ErrorEvent, type OverscaledTileID, type StyleSpecification } from 'maplibre-gl';
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 import { html } from '../lib/html.ts';
+import { zoomKeys } from './cab-prefs.ts';
 import { angleDiff, wrap360 } from './describe.ts';
 import {
   IMAGERY_CREDITS,
@@ -139,6 +140,8 @@ export class SatelliteView {
   #mapEl: HTMLElement;
   #overlay: HTMLCanvasElement;
   #note: HTMLElement;
+  #wheelHint: HTMLElement;
+  #wheelHintTimer = 0;
   #loading: HTMLElement;
   #bearing: number;
   #tilt: number;
@@ -163,6 +166,7 @@ export class SatelliteView {
     o.host.innerHTML = html`<div class="pv-sat-map"></div>
       <canvas class="pv-sat-overlay" aria-hidden="true"></canvas>
       <p class="pv-sat-outside" data-sat-outside-note hidden></p>
+      <p class="pv-sat-hint" data-sat-wheel-hint aria-hidden="true">${zoomKeys()} + scroll to zoom</p>
       <div class="pv-loading pv-sat-loading" data-sat-loading>
         <p class="pv-loading-text" role="status" aria-live="polite">Loading the photos and terrain…</p>
         <div class="pv-meter is-busy" aria-hidden="true"><span></span></div>
@@ -170,6 +174,7 @@ export class SatelliteView {
     this.#mapEl = o.host.querySelector('.pv-sat-map')!;
     this.#overlay = o.host.querySelector('.pv-sat-overlay')!;
     this.#note = o.host.querySelector('[data-sat-outside-note]')!;
+    this.#wheelHint = o.host.querySelector('[data-sat-wheel-hint]')!;
     this.#loading = o.host.querySelector('[data-sat-loading]')!;
     this.#setAnchors(o.items);
 
@@ -384,6 +389,7 @@ export class SatelliteView {
   destroy(): void {
     this.#destroyed = true;
     cancelAnimationFrame(this.#flight);
+    window.clearTimeout(this.#wheelHintTimer);
     this.#resize.disconnect();
     for (const off of this.#unbind) off();
     this.#marker?.remove();
@@ -537,12 +543,22 @@ export class SatelliteView {
     on('pointerup', end);
     on('pointercancel', end);
 
-    // The wheel zooms (toward the pointer, like binoculars aimed there). At either end of the
-    // zoom it lets the page scroll on.
+    // A plain wheel scrolls the page, as over the drawn view, so the view never traps a visitor
+    // scrolling down the tower page; a sideways swipe turns. Ctrl or ⌘ with the wheel (and a
+    // trackpad pinch, which browsers send as Ctrl + wheel) zooms toward the pointer, like
+    // binoculars aimed there.
     on(
       'wheel',
       (e) => {
         if (this.#flight) return;
+        if (!e.ctrlKey && !e.metaKey) {
+          if (!this.#orbit && Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+            e.preventDefault();
+            const k = this.#fov / (this.#mapEl.clientHeight || 400);
+            this.#o.onTurn(this.#bearing + e.deltaX * k, false);
+          } else if (e.deltaY) this.#showWheelHint();
+          return;
+        }
         const dy = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaMode === 2 ? e.deltaY * 400 : e.deltaY;
         if (!dy) return;
         const f = Math.exp(Math.max(-1, Math.min(1, dy * 0.0015)));
@@ -716,8 +732,15 @@ export class SatelliteView {
   }
 
   #showOutsideNote(): void {
-    this.#note.textContent = 'Outside the cab: drag to circle the lookout, scroll or pinch to come closer or go farther.';
+    this.#note.textContent = `Outside the cab: drag to circle the lookout; pinch or ${zoomKeys()} + scroll to come closer or go farther.`;
     this.#note.hidden = false;
+  }
+
+  /** Says how to zoom when a plain wheel over the view scrolled the page instead. */
+  #showWheelHint(): void {
+    this.#wheelHint.classList.add('is-on');
+    window.clearTimeout(this.#wheelHintTimer);
+    this.#wheelHintTimer = window.setTimeout(() => this.#wheelHint.classList.remove('is-on'), 1400);
   }
 
   /* ---------- Credits ---------- */

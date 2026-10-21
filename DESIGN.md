@@ -936,10 +936,12 @@ keys. Decided with the owner, not to be changed without asking:
   within a third of the eye's height, so the summit under the cab is drawn (a far target put the
   near plane ~200 m out and exposed tile skirts). The target's height is scaled so MapLibre's
   pitch comes out exact; exactly level (pitch 90°) is avoided. MapLibre's own handlers are off:
-  drag turns and tilts (−60° to +20°), the wheel or a pinch zooms like binoculars by narrowing
-  the vertical field of view (`setVerticalFieldOfView`, 60° to 4°, toward the pointer), arrow
-  keys, + and −, N/E/S/W, and the shared turn and zoom buttons do the same. At either end of the
-  zoom the wheel scrolls the page on.
+  drag turns and tilts (−60° to +20°), a pinch or Ctrl/⌘ + wheel (a trackpad pinch arrives as
+  Ctrl + wheel) zooms like binoculars by narrowing the vertical field of view
+  (`setVerticalFieldOfView`, 60° to 4°, toward the pointer), arrow keys, + and −, N/E/S/W, and
+  the shared turn and zoom buttons do the same. A plain wheel scrolls the page, as over the drawn
+  view, so the view never traps a visitor scrolling down the tower page; a hint says how to zoom,
+  and a sideways swipe turns.
 - **MapLibre settings that make it work** (MapLibre GL JS 6.12): its tile level-of-detail rule
   thins tiles by the camera's pitch against the map centre's height, which at eye level blurs
   everything past a few hundred metres; so the photo source gets its own `calculateTileZoom`
@@ -966,7 +968,7 @@ keys. Decided with the owner, not to be changed without asking:
   facing N, E, S and W, posts and sill drawn in 3D from the eye, fading out below a 22° field of
   view (binoculars look past it). No viewshed shading (not chosen).
 - **Step outside** (the recorded exception): an orbit around the cab's foot from the air, 150 m
-  to 4 km out, 25–82° from straight down; drag circles, the wheel or a pinch moves in and out;
+  to 4 km out, 25–82° from straight down; drag circles, a pinch or Ctrl/⌘ + wheel moves in and out;
   no panning, so it stays an orbit. The cab is marked; names, ring and frame are hidden outside.
   "Back in the cab" flies back to the eye and the bearing you left at (instantly for visitors
   who ask for reduced motion).
@@ -977,8 +979,12 @@ keys. Decided with the owner, not to be changed without asking:
   drift, drawn sky and flat trees, the frame, and a running count of what the satellite view has
   downloaded (photos, new terrain, and terrain shared with the drawn view).
 - **Data use.** Code-split: tower pages load MapLibre (about 0.45 MB compressed with its worker)
-  only when the satellite view starts. On phones (under 600 px) the view asks first: estimate and
-  a "Load the satellite view" button; the tower page's start button names the photos too.
+  only when the satellite view starts. On phones and tablets (no mouse or trackpad, or a screen
+  under 600 px) and with the browser's Save-Data on, the view asks first: estimate and a "Load
+  the satellite view" button (`askBeforeSatellite` in `cab-prefs.ts`); computers, which are
+  rarely on metered data, load it straight after the tower page's start button, whose text names
+  the photos too. A narrow window on a computer is not a phone: the width only picks the lighter
+  terrain set.
   Measured in the browser (October 2026) at Desolation Peak, high mountains where terrain tiles
   run to 100 KB, beyond the drawn view's own terrain: computer, 750 px view: 2.9 MB for the first
   look (1.6 MB new terrain, 1.3 MB photos), 9.6 MB after turning all the way round (3.7 + 5.9);

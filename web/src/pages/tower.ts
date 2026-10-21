@@ -2,7 +2,7 @@
 import '../styles/tower.css';
 import { enhanceCoords, initCommon } from '../ui/common.ts';
 import { initChecklistOnPage } from '../ui/checklist-ui.ts';
-import { storedCabMode, webgl2Likely } from '../view3d/cab-prefs.ts';
+import { askBeforeSatellite, storedCabMode, webgl2Likely } from '../view3d/cab-prefs.ts';
 
 async function devRender(): Promise<void> {
   // `npm run dev` serves the raw template; render a tower client-side from ?id=… so the page
@@ -35,10 +35,11 @@ function initPanorama(): void {
   };
   if (size?.dataset.light) {
     const terrain = mb(phone ? size.dataset.light : size.dataset.full);
-    // The view opens on Satellite where it can (DESIGN.md 4.1); phones ask again before its photos.
+    // The view opens on Satellite where it can (DESIGN.md 4.1); phones and tablets ask again
+    // before its photos.
     const satellite = webgl2Likely() && storedCabMode() !== 'drawn';
     const more = mb(phone ? size.dataset.satLight : size.dataset.sat);
-    if (satellite && phone) size.textContent = `Downloads about ${terrain} of terrain data the first time; the satellite view asks before downloading about ${more} more.`;
+    if (satellite && askBeforeSatellite()) size.textContent = `Downloads about ${terrain} of terrain data the first time; the satellite view asks before downloading about ${more} more.`;
     else if (satellite) size.textContent = `Downloads about ${terrain} of terrain data, and ${more} more for the satellite view, the first time; more as you look around.`;
     else if (phone) size.textContent = `Downloads about ${terrain} of terrain data the first time.`;
   }

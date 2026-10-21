@@ -38,7 +38,7 @@ import {
 } from './panorama-draw.ts';
 import { estimateBytes, panoramaLevels, planTiles } from './tiles.ts';
 import { chooseMode, satelliteDownload, type CabMode } from './earth-geo.ts';
-import { saveCabMode, saveFrame, storedCabMode, storedFrame, webgl2Works } from './cab-prefs.ts';
+import { askBeforeSatellite, saveCabMode, saveFrame, storedCabMode, storedFrame, webgl2Works, zoomKeys } from './cab-prefs.ts';
 import type { SatelliteView } from './satellite-view.ts';
 
 export interface PanoramaTower {
@@ -535,7 +535,7 @@ export class PanoramaView {
     if (!this.#o.satellite) return;
     const sat = this.#mode === 'satellite';
     const ready = this.el.dataset.state === 'ready';
-    const gate = sat && ready && !this.#sat && lightDetail(this.#canvasWidth()) && !this.#satConfirmed;
+    const gate = sat && ready && !this.#sat && askBeforeSatellite() && !this.#satConfirmed;
     for (const b of this.el.querySelectorAll<HTMLButtonElement>('.pv-mode[data-mode]')) {
       b.setAttribute('aria-pressed', String(b.dataset.mode === this.#mode));
       if (b.dataset.mode === 'satellite') b.disabled = !!this.#satBlocked;
@@ -544,7 +544,7 @@ export class PanoramaView {
     if (hint) {
       hint.textContent =
         this.#satBlocked ??
-        (sat ? "Photos of today's land on the terrain. Drag to look around and tilt; the wheel or a pinch zooms." : 'Ridgelines worked out from terrain data, with exact bearings.');
+        (sat ? `Photos of today's land on the terrain. Drag to look around and tilt; pinch or ${zoomKeys()} + scroll to zoom.` : 'Ridgelines worked out from terrain data, with exact bearings.');
       hint.classList.toggle('is-warn', !!this.#satBlocked);
     }
     const note = this.#q('[data-pv-sat-note]');
