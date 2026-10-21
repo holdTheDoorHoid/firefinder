@@ -1,6 +1,7 @@
 {
   "id": "us-ms-banner",
   "name": "Banner",
+  "summary": "Calhoun County lookout listed as removed; a federal survey station at the site was first observed in 1967, with little else on record.",
   "other_names": [],
   "country": "US",
   "region": "MS",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Listed as removed; no source describes what remains at the site.",
   "registers": [],
   "agency": null,
   "ownership": "unknown",
@@ -37,9 +38,27 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1967,
+      "event": "other",
+      "note": "Coast and Geodetic Survey first observed the survey station; datasheet codes the marker as a lookout tower",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=EG1739"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "NGS Data Sheet, PID EG1739 (Banner Fire Tower) (National Geodetic Survey (NOAA))",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=EG1739",
+      "kind": "reference"
+    },
+    {
+      "label": "Banner, Mississippi (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Banner,_Mississippi",
+      "kind": "reference"
+    },
     {
       "label": "Banner (easternuslookouts.weebly.com)",
       "url": "https://easternuslookouts.weebly.com/banner.html",
@@ -58,12 +77,29 @@
         "status",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-ms-banner",
+      "fields": [
+        "summary",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "low"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-20"
 }

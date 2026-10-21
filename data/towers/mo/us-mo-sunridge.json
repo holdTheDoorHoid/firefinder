@@ -1,6 +1,7 @@
 {
   "id": "us-mo-sunridge",
   "name": "Sunridge",
+  "summary": "Missouri Conservation Commission lookout on a Jefferson County ridge; the 1968 steel tower still stands in Sunridge Park, so the brief's gone status is wrong.",
   "other_names": [],
   "country": "US",
   "region": "MO",
@@ -16,16 +17,16 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
+  "design": "Steel tower erected in 1968 on the site of a wooden tower",
   "height_m": 24.4,
-  "status": "gone",
+  "status": "standing",
   "status_note": null,
   "registers": [],
-  "agency": "Missouri Conservation Commission",
+  "agency": "Jefferson County Parks and Recreation",
   "ownership": "state",
   "access": {
-    "level": "unknown",
-    "note": null
+    "level": "public",
+    "note": "Jefferson County park open from dawn until dusk. The county listing does not say whether the tower can be climbed."
   },
   "staffing": {
     "status": "unknown",
@@ -33,13 +34,76 @@
   },
   "visit": {
     "climbable": null,
-    "drive_up": null,
-    "trail_note": null
+    "drive_up": true,
+    "trail_note": "Park has walking trails, picnic tables, a pavilion and a playground."
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1940,
+      "event": "built",
+      "note": "First wooden tower. State records as relayed in a 2014 history give 1940; a 1968 newspaper report gives 1949.",
+      "from": "research",
+      "source_url": "http://jeffcomohistory.org/LisasHistoryArticles/SunridgeFireTower.pdf"
+    },
+    {
+      "year": 1948,
+      "event": "other",
+      "note": "Conservation Commission bought the 6.06-acre site from Roy and Milerna Yates on 16 December 1948.",
+      "from": "research",
+      "source_url": "http://jeffcomohistory.org/LisasHistoryArticles/SunridgeFireTower.pdf"
+    },
+    {
+      "year": 1951,
+      "event": "other",
+      "note": "Public dedication of the Sun Ridge Fire Tower, announced for 17 June 1951.",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/sun-ridge.html"
+    },
+    {
+      "year": 1968,
+      "event": "fire",
+      "note": "Forest agent Jack Koch reported four fires in one day in April 1968.",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/sun-ridge.html"
+    },
+    {
+      "year": 1968,
+      "event": "replaced",
+      "note": "Wooden tower dismantled by early September 1968. An 80-foot steel tower was erected on the same site; a state report for FY 1968-69 confirms it.",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/sun-ridge.html"
+    },
+    {
+      "year": 1980,
+      "event": "other",
+      "note": "Conservation Commission deeded the site to Jefferson County Parks, which said the state no longer had use for it.",
+      "from": "research",
+      "source_url": "http://jeffcomohistory.org/LisasHistoryArticles/SunridgeFireTower.pdf"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Sunridge Fire Tower (Dave Hallemann) (Jefferson County Historical Society)",
+      "url": "http://jeffcomohistory.org/LisasHistoryArticles/SunridgeFireTower.pdf",
+      "kind": "reference"
+    },
+    {
+      "label": "Sunridge Park (Jefferson County Parks and Recreation)",
+      "url": "https://www.jeffcomo.gov/611/Sunridge-Park",
+      "kind": "reference"
+    },
+    {
+      "label": "Looking back to the lookout tower at Sunridge Park (myleaderpaper.com)",
+      "url": "https://www.myleaderpaper.com/features/looking_back/looking-back-to-the-lookout-tower-at-sunridge-park/article_d8b879a6-0510-11e7-90b3-af1232ae2217.html",
+      "kind": "reference"
+    },
+    {
+      "label": "Weird and Spooky Month, Vol. 3: Climbing the Creaky Sunridge Park Tower (St. Louis Magazine)",
+      "url": "https://www.stlmag.com/news/Weird-and-Spooky-Month-Vol-3-Climbing-the-Creaky-Sunridge-Park-Tower/",
+      "kind": "reference"
+    },
     {
       "label": "Sunridge (centraluslookouts.weebly.com)",
       "url": "https://centraluslookouts.weebly.com/sun-ridge.html",
@@ -61,12 +125,50 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mo-sunridge",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "access",
+        "visit",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
-  "conflicts": [],
-  "verification": "unverified",
+  "conflicts": [
+    {
+      "field": "status",
+      "values": [
+        {
+          "source": "research",
+          "value": "standing"
+        },
+        {
+          "source": "central_us_lookouts",
+          "value": "gone"
+        }
+      ],
+      "distance_m": null,
+      "note": "Research (2026-10-21) gives standing where the source records give gone. The page shows the researched status; please tell us if it is wrong."
+    }
+  ],
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-20"
 }

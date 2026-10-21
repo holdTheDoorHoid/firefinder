@@ -1,0 +1,10 @@
+The Skibo lookout shared its name with the unincorporated community of Skibo, which sits in Bassett Township, Saint Louis County, eight miles east of Hoyt Lakes.[^1] A 1936 Forest Service station description for the Pike Mountain lookout lists a station called Skibo among the points visible from the ground there.[^2] In October 1940 the Minnesota Department of Natural Resources photographed Carl Oyen in the Skibo Fire Lookout Tower.[^3] A 2019 state study captions that photo and describes the tower as razed.[^3] The Forest Fire Lookout Association places the tower at 47.43202, -92.01557 and marks it gone.[^4]
+
+The Skibo Vista Scenic Overlook sits just outside Hoyt Lakes and is a stop on the Superior National Forest Scenic Byway Tour, with views of more than 30 miles.[^5] A local listing says the overlook was once home to a fire tower, and that an interpretive panel there now covers the communities and mines that once lay in sight of the peak.[^6] Visitors pay no admission and need no permit, the listing says, unless they travel into the Boundary Waters Canoe Area Wilderness.[^6] No source I could open confirms that this was the Skibo lookout, gives its dates, or describes what, if anything, remains at the site.
+
+[^1]: Skibo, Minnesota, Wikipedia, https://en.wikipedia.org/wiki/Skibo,_Minnesota (accessed 2026-10-21).
+[^2]: Pike (Minnesota lookout page with transcribed station description), Central US Lookouts, https://centraluslookouts.weebly.com/pike.html (accessed 2026-10-21).
+[^3]: Rehabilitation Planning Study: Scenic Fire Lookout Tower (February 2019), Minnesota Legislative Reference Library, https://www.lrl.mn.gov/docs/2019/other/c190003.pdf (accessed 2026-10-21).
+[^4]: Minnesota Lookouts (By County), Forest Fire Lookout Association, https://firelookout.org/lookouts/us/mn/mn-co/ (accessed 2026-10-21).
+[^5]: Skibo Vista, hoytlakesmn.gov, https://hoytlakesmn.gov/html/what-to-do/skibo-vista.html (accessed 2026-10-21).
+[^6]: Skibo Vista, ironrange.org, https://ironrange.org/listings/skibo-vista/ (accessed 2026-10-21).

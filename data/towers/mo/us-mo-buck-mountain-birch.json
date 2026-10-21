@@ -1,6 +1,7 @@
 {
   "id": "us-mo-buck-mountain-birch",
   "name": "Buck Mountain / Birch",
+  "summary": "St. Francois County, MO Birch fire tower: an NGS datasheet dates it to 1938 and 1956; Forest Lookouts lists it as Removed and records a 1962 Conservation Commission land purchase.",
   "other_names": [],
   "country": "US",
   "region": "MO",
@@ -19,7 +20,7 @@
   "design": null,
   "height_m": null,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Forest Lookouts lists the tower as Removed; no removal date or method is given",
   "registers": [],
   "agency": "Missouri Conservation Commission",
   "ownership": "state",
@@ -37,9 +38,36 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1938,
+      "event": "other",
+      "note": "Coast and Geodetic Survey first observed the station; the 1938 description gives the tower as about 60 feet high",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=HC1042"
+    },
+    {
+      "year": 1956,
+      "event": "assessed",
+      "note": "Survey condition noted as GOOD; the 1956 recovery note gives the tower as 50 feet high with a crow's nest about four feet square and places the station in the Clark National Forest",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=HC1042"
+    },
+    {
+      "year": 1962,
+      "event": "other",
+      "note": "Conservation Commission acquired 194 acres for the Buck Mountain Tower site, at a cost of $970",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/buck-mountain.html"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Birch Fire Tower, station HC1042 (National Geodetic Survey)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=HC1042",
+      "kind": "reference"
+    },
     {
       "label": "Buck Mountain / Birch (centraluslookouts.weebly.com)",
       "url": "https://centraluslookouts.weebly.com/buck-mountain.html",
@@ -60,12 +88,30 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mo-buck-mountain-birch",
+      "fields": [
+        "summary",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-20"
 }

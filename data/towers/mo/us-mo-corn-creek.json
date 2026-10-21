@@ -1,6 +1,7 @@
 {
   "id": "us-mo-corn-creek",
   "name": "Corn Creek",
+  "summary": "Phelps County lookout that the Coast and Geodetic Survey described in 1947 as a steel tower about 60 feet tall; the index marks it removed.",
   "other_names": [],
   "country": "US",
   "region": "MO",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "four-legged steel tower with an enclosed cage on top",
+  "height_m": 18.3,
   "status": "gone",
-  "status_note": null,
+  "status_note": "Removed. No source we found describes what remains at the site now.",
   "registers": [],
   "agency": "Mark Twain National Forest",
   "ownership": "federal",
@@ -37,7 +38,15 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1947,
+      "event": "other",
+      "note": "Coast and Geodetic Survey observed the station and described a four-legged steel tower with an enclosed cage, about 60 feet high",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=HC0896"
+    }
+  ],
   "photos": [
     {
       "file": null,
@@ -51,6 +60,11 @@
     }
   ],
   "links": [
+    {
+      "label": "NGS Data Sheet for PID HC0896, Corn Creek Lookout Tower (National Geodetic Survey)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=HC0896",
+      "kind": "reference"
+    },
     {
       "label": "Corn Creek (centraluslookouts.weebly.com)",
       "url": "https://centraluslookouts.weebly.com/corn-creek.html",
@@ -72,12 +86,31 @@
         "photos",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mo-corn-creek",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-20"
 }

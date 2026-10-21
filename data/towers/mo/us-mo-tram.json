@@ -1,6 +1,7 @@
 {
   "id": "us-mo-tram",
   "name": "Tram",
+  "summary": "Shannon County lookout on Tram Ridge, begun in 1938 and recorded at about 75 ft by NGS in 1962 and 1978; the Central US record says removed, with no date.",
   "other_names": [],
   "country": "US",
   "region": "MO",
@@ -16,10 +17,10 @@
   "material": null,
   "material_from": null,
   "roles": [],
-  "design": null,
-  "height_m": null,
+  "design": "Four-legged steel tower with an enclosed observation room at the top",
+  "height_m": 22.9,
   "status": "gone",
-  "status_note": null,
+  "status_note": "The Central US Lookouts record marks the tower as removed, with no date. The last survey recovery found on the tower apex was in 1978.",
   "registers": [],
   "agency": "Clark National Forest",
   "ownership": "federal",
@@ -37,9 +38,43 @@
     "trail_note": null
   },
   "rental": null,
-  "events": [],
+  "events": [
+    {
+      "year": 1938,
+      "event": "built",
+      "note": "Work began on the Tram Ridge site in February 1938. The Possum Trot tower was torn down and re-erected there, per a 1938 local paper.",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/tram.html"
+    },
+    {
+      "year": 1940,
+      "event": "staffed",
+      "note": "Willie Martin and his wife moved from Tram Tower to High Tower, per a July 1940 local paper.",
+      "from": "research",
+      "source_url": "https://centraluslookouts.weebly.com/tram.html"
+    },
+    {
+      "year": 1962,
+      "event": "assessed",
+      "note": "U.S. Coast and Geodetic Survey described the station on the tower top: four-legged steel structure with an enclosed observation room, about 75 feet high.",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=GE0827"
+    },
+    {
+      "year": 1978,
+      "event": "assessed",
+      "note": "NGS recovered the station at the apex of the tower, described as a four-legged structure about 75 feet high, condition good.",
+      "from": "research",
+      "source_url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=GE0827"
+    }
+  ],
   "photos": [],
   "links": [
+    {
+      "label": "Datasheet GE0827, Tram Lookout Tower (National Geodetic Survey)",
+      "url": "https://www.ngs.noaa.gov/cgi-bin/ds_mark.prl?PidBox=GE0827",
+      "kind": "reference"
+    },
     {
       "label": "Tram (centraluslookouts.weebly.com)",
       "url": "https://centraluslookouts.weebly.com/tram.html",
@@ -60,12 +95,32 @@
         "ownership",
         "links"
       ]
+    },
+    {
+      "source": "research",
+      "key": "research:us-mo-tram",
+      "fields": [
+        "summary",
+        "design",
+        "height_m",
+        "status",
+        "agency",
+        "events",
+        "links",
+        "verification"
+      ]
     }
   ],
   "conflicts": [],
-  "verification": "unverified",
+  "research": {
+    "researched": "2026-10-21",
+    "checked": "2026-10-21",
+    "verdict": "fixed",
+    "confidence": "medium"
+  },
+  "verification": "verified",
   "locked": [],
   "hidden": false,
   "hidden_reason": null,
-  "updated": "2026-10-08"
+  "updated": "2026-10-20"
 }

@@ -1,0 +1,10 @@
+The Santa Fe National Forest built a lookout tower in the town of Truchas in 1922, and added lightning protection in 1926. The report says it was the only lookout tower the Forest built inside a town.[^1] By 1915 the Forest's maps showed a single lookout site near the center of town, close to the current highway junction.[^1] The 1922 tower stood nearby, and no photographs of it are known.[^1]
+
+In 1923 an inspector praised the Tesuque Ranger for building the tower, which relied on volunteer spotters, among them Manuel Martinez, the town's storekeeper and postmaster.[^1] In the early 1930s Martinez installed a wind charger to power his house and store. The wind tower was a 40-foot steel tripod that carried wind vanes and a small platform. Martinez and his four sons climbed it most days, and after lightning, to watch for fires, and they reported where smoke was seen by telephone.[^1] The report suggests Martinez may have taken the original tower down when he erected the wind tower.[^1]
+
+Fire plans for 1940 to 1955 named a per diem guard as the Truchas lookout when fire danger was high.[^1] In 1963 Gilbert, one of the sons, became storekeeper and fire warden.[^1] By the late 1960s the tower had stopped being used to spot fires.[^1] By the early 1970s, aerial reconnaissance had become a major reason secondary lookouts were given up, and Truchas was among them.[^1]
+
+In 2013 Gilbert's son handed the tower over to friends in Truchas. By 2015 it was down on the ground in their pasture.[^1] The Forest Fire Lookout Association's list also marks the Truchas tower as gone.[^2] The pasture belongs to those friends, not the Forest, and the report gives no further detail about the site.[^1]
+
+[^1]: Fire Lookout History of the Santa Fe National Forest (2017), USDA Forest Service, https://npshistory.com/publications/usfs/region/3/santa-fe/fire-lookout-history.pdf (accessed 2026-10-21).
+[^2]: New Mexico Lookouts, Forest Fire Lookout Association, https://firelookout.org/lookouts/us/nm/ (accessed 2026-10-21).
