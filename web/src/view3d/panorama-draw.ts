@@ -96,6 +96,8 @@ export interface Layout {
   horizonY: number;
   /** Vertical px per degree. */
   vScale: number;
+  /** Top of the first label row (default 6). */
+  labelTop?: number;
 }
 
 const RING_H = 40;
@@ -186,14 +188,23 @@ export function clip(name: string, max = 28): string {
   return name.length <= max ? name : `${name.slice(0, max - 1).trimEnd()}…`;
 }
 
-export function placeLabels(items: LabelItem[], view: View, layout: Layout, measure: (text: string, bold: boolean) => number): PlacedLabel[] {
+export function placeLabels(
+  items: LabelItem[],
+  view: View,
+  layout: Layout,
+  measure: (text: string, bold: boolean) => number,
+  /** Where an item's anchor is on screen, null to leave it out (the satellite view's camera); default the drawn view's. */
+  at?: (item: LabelItem) => { x: number; y: number } | null,
+): PlacedLabel[] {
   const rows: [number, number][][] = Array.from({ length: layout.labelRows }, () => []);
   const placed: PlacedLabel[] = [];
   const sorted = [...items].sort((a, b) => b.score - a.score);
   for (const item of sorted) {
-    const ax = xOf(view, layout, item.sight.az);
+    const p = at ? at(item) : { x: xOf(view, layout, item.sight.az), y: yOf(layout, item.sight.angle) };
+    if (!p) continue;
+    const ax = p.x;
     if (ax < -40 || ax > layout.width + 40) continue;
-    const ay = yOf(layout, item.sight.angle);
+    const ay = p.y;
     const w = Math.max(measure(clip(item.name), item.kind !== 'peak'), measure(item.sub, false)) + (item.kind === 'lookout' ? 16 : 0) + 8;
     const x = Math.min(Math.max(ax - w / 2, 2), layout.width - w - 2);
     if (ax < x + 3 || ax > x + w - 3) continue; // its leader would miss the label: wait until panned into view
@@ -303,12 +314,35 @@ export function drawPanorama(ctx: CanvasRenderingContext2D, data: PanoramaData, 
 
   if (o.smoke) drawSmoke(ctx, view, L, o.smoke, P);
 
-  // Labels.
+  drawLabels(ctx, o.labels, L, P, o.highlight ?? null);
+
+  drawRing(ctx, view, L, P);
+
+  if (o.reticle !== false) {
+    const x = Math.round(W / 2) + 0.5;
+    ctx.strokeStyle = P.accent;
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(x, L.terrainTop - 8);
+    ctx.lineTo(x, L.ringTop);
+    ctx.stroke();
+    ctx.fillStyle = P.accent;
+    ctx.beginPath();
+    ctx.moveTo(x - 6, L.terrainTop - 14);
+    ctx.lineTo(x + 6, L.terrainTop - 14);
+    ctx.lineTo(x, L.terrainTop - 6);
+    ctx.closePath();
+    ctx.fill();
+  }
+}
+
+/** Names in their rows, each with a leader down to its anchor (the drawn and satellite views). */
+export function drawLabels(ctx: CanvasRenderingContext2D, labels: PlacedLabel[], L: Layout, P: Palette, highlight: string | null): void {
   ctx.textBaseline = 'alphabetic';
-  for (const p of o.labels) {
-    const top = 6 + p.row * L.rowHeight;
+  for (const p of labels) {
+    const top = (L.labelTop ?? 6) + p.row * L.rowHeight;
     const isLookout = p.item.kind === 'lookout';
-    const hl = o.highlight === p.item.key;
+    const hl = highlight === p.item.key;
     ctx.strokeStyle = hl ? P.accent : isLookout ? P.lookout : P.leader;
     ctx.lineWidth = hl ? 1.6 : 1;
     ctx.beginPath();
@@ -342,25 +376,6 @@ export function drawPanorama(ctx: CanvasRenderingContext2D, data: PanoramaData, 
     ctx.font = `500 10.5px ${FONT}`;
     ctx.fillText(p.item.sub, tx, top + 23);
   }
-
-  drawRing(ctx, view, L, P);
-
-  if (o.reticle !== false) {
-    const x = Math.round(W / 2) + 0.5;
-    ctx.strokeStyle = P.accent;
-    ctx.lineWidth = 1.5;
-    ctx.beginPath();
-    ctx.moveTo(x, L.terrainTop - 8);
-    ctx.lineTo(x, L.ringTop);
-    ctx.stroke();
-    ctx.fillStyle = P.accent;
-    ctx.beginPath();
-    ctx.moveTo(x - 6, L.terrainTop - 14);
-    ctx.lineTo(x + 6, L.terrainTop - 14);
-    ctx.lineTo(x, L.terrainTop - 6);
-    ctx.closePath();
-    ctx.fill();
-  }
 }
 
 function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number): void {
@@ -385,40 +400,57 @@ const POINT_NAMES: Record<number, string> = { 0: 'N', 45: 'NE', 90: 'E', 135: 'S
 
 /** The azimuth ring: degrees clockwise from true north, numbered every 10°. */
 export function drawRing(ctx: CanvasRenderingContext2D, view: View, L: Layout, P: Palette): void {
-  const { width: W } = L;
-  const top = L.ringTop;
+  const W = L.width;
+  drawRingWith(ctx, W, L.ringTop, L.height, P, view.az, view.pxPerDeg, W / 2 / view.pxPerDeg, (a) => W / 2 + (a - view.az) * view.pxPerDeg);
+}
+
+/**
+ * The ring for any camera: `xAt` gives the screen column of a bearing (degrees, not wrapped),
+ * `pxPerDeg` the scale at the centre (it sets how fine the graduations are) and `half` how far
+ * either side of `az` to draw.
+ */
+export function drawRingWith(
+  ctx: CanvasRenderingContext2D,
+  W: number,
+  top: number,
+  bottom: number,
+  P: Palette,
+  az: number,
+  pxPerDeg: number,
+  half: number,
+  xAt: (a: number) => number,
+): void {
   ctx.fillStyle = P.ringBg;
-  ctx.fillRect(0, top, W, L.height - top);
+  ctx.fillRect(0, top, W, bottom - top);
   ctx.strokeStyle = P.ringLine;
   ctx.lineWidth = 1;
   ctx.beginPath();
   ctx.moveTo(0, top + 0.5);
   ctx.lineTo(W, top + 0.5);
   ctx.stroke();
-  const half = W / 2 / view.pxPerDeg;
-  const minor = view.pxPerDeg >= 5 ? 1 : view.pxPerDeg >= 1.5 ? 5 : 10;
-  const numberEvery = view.pxPerDeg >= 3 ? 10 : view.pxPerDeg >= 1.2 ? 30 : 45;
-  const start = Math.floor((view.az - half) / minor) * minor;
+  const minor = pxPerDeg >= 5 ? 1 : pxPerDeg >= 1.5 ? 5 : 10;
+  const numberEvery = pxPerDeg >= 3 ? 10 : pxPerDeg >= 1.2 ? 30 : 45;
+  const start = Math.floor((az - half) / minor) * minor;
   ctx.textAlign = 'center';
   ctx.strokeStyle = P.ringInk;
-  for (let a = start; a <= view.az + half + minor; a += minor) {
-    const x = Math.round(W / 2 + (a - view.az) * view.pxPerDeg) + 0.5;
-    const az = wrap360(a);
-    const len = az % 10 === 0 ? 11 : az % 5 === 0 ? 7 : 4;
-    ctx.lineWidth = az % 10 === 0 ? 1.2 : 1;
+  for (let a = start; a <= az + half + minor; a += minor) {
+    const x = Math.round(xAt(a)) + 0.5;
+    const deg = wrap360(a);
+    const len = deg % 10 === 0 ? 11 : deg % 5 === 0 ? 7 : 4;
+    ctx.lineWidth = deg % 10 === 0 ? 1.2 : 1;
     ctx.beginPath();
     ctx.moveTo(x, top);
     ctx.lineTo(x, top + len);
     ctx.stroke();
-    const point = POINT_NAMES[az];
-    if (point && (az % 90 === 0 || view.pxPerDeg >= 1.2)) {
-      ctx.fillStyle = az % 90 === 0 ? P.accent : P.ringInk;
-      ctx.font = `800 ${az % 90 === 0 ? 14 : 12}px ${FONT}`;
+    const point = POINT_NAMES[deg];
+    if (point && (deg % 90 === 0 || pxPerDeg >= 1.2)) {
+      ctx.fillStyle = deg % 90 === 0 ? P.accent : P.ringInk;
+      ctx.font = `800 ${deg % 90 === 0 ? 14 : 12}px ${FONT}`;
       ctx.fillText(point, x, top + 30);
-    } else if (az % numberEvery === 0) {
+    } else if (deg % numberEvery === 0) {
       ctx.fillStyle = P.ringInk;
       ctx.font = `600 11px ${FONT}`;
-      ctx.fillText(String(az), x, top + 27);
+      ctx.fillText(String(deg), x, top + 27);
     }
   }
   ctx.textAlign = 'start';

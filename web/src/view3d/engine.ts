@@ -5,10 +5,8 @@
  */
 import init, { Engine, initSync } from './wasm/firefinder_view.js';
 import { EYE_ABOVE_FLOOR_M, typicalFloor } from './describe.ts';
-import { distanceM, flatLevels, panoramaLevels, planTiles, tileUrl, viewshedLevels, type Level, type TileKey } from './tiles.ts';
+import { REFRACTION_K, distanceM, flatLevels, panoramaLevels, planTiles, tileUrl, viewshedLevels, type Level, type TileKey } from './tiles.ts';
 
-/** Atmospheric refraction coefficient (daytime, over land). */
-export const REFRACTION_K = 0.13;
 /** Move the eye to the highest ground this close to the recorded position, m. */
 export const SNAP_M = 75;
 /** Summits: look this far around a GNIS point for its top, m. */

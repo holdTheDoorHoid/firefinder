@@ -6,6 +6,9 @@
 
 export const EARTH_RADIUS_M = 6_371_008.8;
 
+/** Atmospheric refraction coefficient (daytime, over land). */
+export const REFRACTION_K = 0.13;
+
 /**
  * AWS Terrain Tiles (Mapzen / Tilezen "joerd"), Terrarium-encoded PNG, 256 px, no key, CORS
  * open. In the US the heights come from USGS 3DEP (formerly NED) and SRTM, with GMTED2010 at
@@ -56,13 +59,15 @@ export function flatLevels(levels: Level[]): Float64Array {
 const rad = (d: number) => (d * Math.PI) / 180;
 const deg = (r: number) => (r * 180) / Math.PI;
 
-function mercY(lat: number): number {
+/** Latitude to normalised Web Mercator y (0 at the top, 1 at the bottom). */
+export function mercY(lat: number): number {
   const s = Math.sin(rad(lat));
   const clamped = Math.max(-0.9999999, Math.min(0.9999999, s));
   return 0.5 - Math.atanh(clamped) / (2 * Math.PI);
 }
 
-function unmercY(my: number): number {
+/** Normalised Web Mercator y back to latitude. */
+export function unmercY(my: number): number {
   return deg(Math.atan(Math.sinh((0.5 - my) * 2 * Math.PI)));
 }
 

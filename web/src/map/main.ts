@@ -377,9 +377,10 @@ async function main(): Promise<void> {
       }
       const view = new PanoramaView(host, {
         tower: { id, name: rec.name, lat: rec.location.lat, lon: rec.location.lon, kind: rec.kind, status: rec.status, height_m: rec.height_m, elevation_m: rec.elevation_m, country: towerCountry(rec) },
+        satellite: true,
       });
       dlg.addEventListener('close', () => view.destroy(), { once: true });
-      view.el.querySelector<HTMLElement>('.pv-viewport')?.focus();
+      view.focus();
       await view.start();
     } catch (err) {
       console.error(err);

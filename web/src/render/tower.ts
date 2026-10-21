@@ -12,6 +12,7 @@ import { renderTimeline } from './timeline.ts';
 import { builtYear, isApproximate, isRentable, type Conflict, type SourceInfo, type TowerEvent, type TowerProps, type TowerRecord } from '../lib/types.ts';
 import { eyeHeight, megabytes, reconstructionNote } from '../view3d/describe.ts';
 import { estimateBytes, panoramaLevels, planTiles } from '../view3d/tiles.ts';
+import { satelliteDownload } from '../view3d/earth-geo.ts';
 import {
   ACCESS,
   OWNERSHIP,
@@ -841,7 +842,7 @@ export function viewSection(r: TowerRecord, ctx: RenderContext): SafeHtml {
     ${recon ? html`<div class="notice tone-unknown" role="note">${INFO}<div><p>${recon}</p></div></div>` : ''}
     <div class="pano-host" data-pano="${panoramaPayload(r)}">
       <p class="pano-start"><button type="button" class="btn btn-primary btn-view" data-pano-start disabled>${PANO_ICON}<span>Show the view from the cab</span></button>
-        <span class="fine pano-size" data-pano-size data-full="${sizes.full}" data-light="${sizes.light}">Downloads about ${megabytes(sizes.full)} of terrain data the first time.</span></p>
+        <span class="fine pano-size" data-pano-size data-full="${sizes.full}" data-light="${sizes.light}" data-sat="${satelliteDownload(false).start}" data-sat-light="${satelliteDownload(true).start}">Downloads about ${megabytes(sizes.full)} of terrain data the first time.</span></p>
       <noscript><p class="fine">The view needs JavaScript.</p></noscript>
     </div>
     <p class="fine">Or see <a href="${mapLink(r, ctx, 10)}&amp;vs=${r.id}">what it could see on the map</a>: the ground in its line of sight.</p>`;
